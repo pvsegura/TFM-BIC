@@ -1,0 +1,44 @@
+@import "tailwindcss";
+
+/* Manual dark mode, toggled by adding/removing `.dark` on <html> — driven by
+   the Zustand theme store (src/state/theme-store.ts), not just OS
+   preference, per docs M1 "dark mode at the foundation level" requirement. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Brand palette from the M0 project constitution — original, not derived
+     from any third-party corporate identity. */
+  --color-primary: rgb(20 35 60);
+  --color-accent: rgb(255 107 53);
+  --color-surface: rgb(248 249 250);
+  --color-surface-dark: rgb(15 20 30);
+}
+
+@layer base {
+  html {
+    color-scheme: light;
+  }
+
+  html.dark {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-surface text-primary dark:bg-surface-dark dark:text-surface;
+  }
+
+  :focus-visible {
+    @apply outline-accent outline-2 outline-offset-2;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+}
