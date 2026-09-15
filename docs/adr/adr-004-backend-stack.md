@@ -1,7 +1,7 @@
 # ADR-004: Backend Stack
 
-Status: PROPOSED
-Date: 2026-09-15
+Status: ACCEPTED (finalized at M1 scaffold time)
+Date: 2026-09-15 (finalized 2026-09-15)
 
 ## Context
 
@@ -12,11 +12,23 @@ overhead consistent with the modular-monolith decision (ADR-001).
 
 ## Decision
 
-**Recommend Fastify** as the HTTP framework, Node.js LTS runtime. **Not yet ACCEPTED** — final
-selection happens at scaffold time after re-verifying current Fastify major version, Node LTS
-compatibility, and plugin ecosystem status (per
-[dependency-management.md](../development/dependency-management.md)); this ADR records the
-architectural reasoning, not a pinned version.
+**Fastify, finalized at M1 scaffold time.** Verified against official sources on 2026-09-15 per
+[dependency-management.md](../development/dependency-management.md):
+
+- Fastify `^5.12.4` (current stable; v5 requires Node.js ≥ 20, well within the Node 24 LTS choice
+  below).
+- Node.js runtime: **24 (Active LTS)**. Verified LTS status: Node 24 is Active LTS as of mid-2026
+  (Active until ~Oct 2027, Maintenance after); Node 22 is already in Maintenance LTS. Node 24 also
+  still bundles Corepack (removed starting Node 25), which this repo's pnpm workspace setup
+  depends on — see the workspace-tooling note in ADR-002.
+- No JSON-schema/type-provider plugin adopted yet (`@fastify/type-provider-zod` /
+  `fastify-type-provider-zod` exist and were evaluated, but M1's only endpoints — `/health`,
+  `/ready` — have no request input to validate; the response is shaped by calling
+  `packages/contracts`'s Zod schema directly in the route handler. Revisit once a route needs
+  request validation).
+
+Runtime/tooling versions actually pinned in `package.json` are the source of truth if this note
+and the lockfile ever disagree.
 
 ## Options considered
 
@@ -37,9 +49,10 @@ architectural reasoning, not a pinned version.
 ## Consequences
 
 - REST is the API style; GraphQL/tRPC not adopted without a documented reason.
-- Whichever framework is picked, controllers/routes stay a thin adapter layer — no business logic
-  in route handlers (mirrors the React rule in ADR-003).
-- Final pick and version go into a follow-up note in this ADR (or a superseding ADR) once made.
+- Controllers/routes stay a thin adapter layer — no business logic in route handlers (mirrors the
+  React rule in ADR-003); see `apps/api/src/routes/health.route.ts` for the pattern.
+- CORS is not configured in M1 — `apps/web` does not call `apps/api` yet (see ADR-003/M1 scope).
+  Add an explicit, non-wildcard CORS policy when that integration lands (see security baseline).
 
 ## References
 

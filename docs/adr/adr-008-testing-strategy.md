@@ -22,7 +22,7 @@ process.
 ## Options considered
 
 Not re-derived — tooling (Vitest, RTL, Playwright) and the 80/20 split were specified directly by
-the brief. The open question was *how* to prevent the percentage target from becoming an excuse
+the brief. The open question was _how_ to prevent the percentage target from becoming an excuse
 to skip critical-flow tests — resolved by making critical-flow coverage an explicit, separate
 requirement rather than folding it into the aggregate number.
 

@@ -11,7 +11,7 @@ recommended — no AWS, not decided). ORM/query-builder: not chosen.
 ## Rules
 
 - Domain/application never import a DB driver or write SQL — they depend on repository
-  *interfaces* they own; `packages/data` implements them.
+  _interfaces_ they own; `packages/data` implements them.
 - Parameterized queries / query builder only — never string-concatenated SQL (SQL injection).
 - Teacher/student queries must use pagination + filtering and avoid N+1 (constitution §15) —
   check any query that loads "students for a teacher" or similar fan-out for this before merging.

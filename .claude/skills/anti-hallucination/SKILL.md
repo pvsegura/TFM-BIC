@@ -30,11 +30,13 @@ most-likely-sounding answer.
 ## When multiple valid solutions exist
 
 Present as:
+
 ```
 OPTION A — ...
 OPTION B — ...
 OPTION C — ...
 ```
+
 with pros/cons/recommendation, not a silent single choice — unless the decision has already been
 made and recorded in an ADR with `Status: ACCEPTED`.
 

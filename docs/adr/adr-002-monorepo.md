@@ -14,11 +14,28 @@ application, API route, and a React component). Shared TypeScript types between 
 
 Single **TypeScript monorepo** with `apps/`, `packages/`, `content/`, `infrastructure/`, `tests/`,
 `docs/`, `.claude/` as top-level folders (see
-[folder-structure.md](../architecture/folder-structure.md)). Package-manager workspace tooling
-(exact tool: npm workspaces vs pnpm vs turborepo) is **PENDING** — deferred to the milestone that
-actually scaffolds `package.json`/tooling, per constitution §33 (Husky/scaffolding is next
-milestone's concern) and the dependency-management policy (no tool chosen without checking
-current stable versions and Node compatibility at scaffold time).
+[folder-structure.md](../architecture/folder-structure.md)).
+
+**Workspace tooling (finalized at M1 scaffold time, 2026-09-15): pnpm workspaces**, not npm
+workspaces or Turborepo. Verified per
+[dependency-management.md](../development/dependency-management.md):
+
+- pnpm `12.x` is the current stable release line on npm's `latest` dist-tag (a Rust rewrite of the
+  CLI; the project team's own release notes describe it as preserving pnpm 11 lockfile/workflow
+  compatibility, with only narrow, correctness-focused breaking changes — see `package.json`'s
+  `packageManager` field for the exact pinned version).
+  Corepack is used to keep the pinned version reproducible per machine/CI.
+- No Turborepo/Nx: a plain `pnpm -r` (topological, dependency-graph-ordered) recursive run is
+  sufficient for this repo's size (11 workspace projects) — adding a task-orchestration layer on
+  top would be complexity without a proven need, per the constitution's simplicity bias.
+- Workspace packages resolve to their **TypeScript source** (`package.json` `main`/`types` point
+  at `src/index.ts`, not a pre-built `dist/`), consumed on the fly by Vite/Vitest (esbuild) and
+  `tsx` (apps/api's dev runtime, also esbuild-based). Each package still has a `build` script
+  (`tsc --emitDeclarationOnly` for libraries, a real `vite build`/`tsc` for the two apps) as a
+  compile-correctness check and — for `apps/web` — the actual deployable artifact. A pre-built
+  `dist/` that plain `node` can run standalone (e.g. for `apps/api` outside `tsx`) is not needed by
+  anything in M1 (which excludes production deployment) and is deferred to the milestone that adds
+  it.
 
 ## Options considered
 
@@ -31,10 +48,13 @@ current stable versions and Node compatibility at scaffold time).
 
 ## Consequences
 
-- Requires an explicit dependency-direction rule (enforced conceptually now, by lint later)
-  between packages to prevent `packages/domain` from importing `packages/data`.
-- Workspace tool selection is itself a future ADR-adjacent decision, tracked as PENDING here
-  rather than invented now.
+- Requires an explicit dependency-direction rule between packages to prevent `packages/domain`
+  from importing `packages/data` — enforced today by an ESLint `no-restricted-imports` rule scoped
+  to `packages/domain/src/**` (see `eslint.config.mjs`) and by code review; a dedicated
+  dependency-boundary tool (e.g. `dependency-cruiser`) is deferred until the rule set outgrows what
+  ESLint can express.
+- `packages/*` are `"private": true` and never published — the source-resolution approach above
+  (no dist for libraries) would need revisiting if that changes.
 
 ## References
 

@@ -18,8 +18,8 @@ no AWS, no assumption of a specific non-AWS host without a decision owner.
 
 ## Options considered
 
-Not applicable to the tool choice (Jenkins is specified). Open option space is *where Jenkins
-runs* and *what the SonarQube instance is* (self-hosted vs SonarCloud) — both PENDING, to be
+Not applicable to the tool choice (Jenkins is specified). Open option space is _where Jenkins
+runs_ and _what the SonarQube instance is_ (self-hosted vs SonarCloud) — both PENDING, to be
 resolved in ADR-015/deployment planning with real cost/verification, not guessed here.
 
 ## Consequences

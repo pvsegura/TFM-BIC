@@ -12,16 +12,16 @@ documented ADR shows a real scaling/ownership need.
 
 ## Layers
 
-| Layer | Lives in | Responsibility | May depend on |
-|---|---|---|---|
-| Presentation | `apps/web` | React components, pages, layouts | Application (via hooks/services), Contracts |
-| Application (client) | `apps/web/src/services`, hooks | Orchestrate UI use cases, call API client | API client, Contracts |
-| API / Presentation (server) | `apps/api` | HTTP routes, controllers, DTO validation | Application, Contracts |
-| Application (server) | `packages/application` | Use cases, orchestration, transactions | Domain, repository interfaces, service interfaces |
-| Domain | `packages/domain` | Entities, value objects, domain services, business rules | Nothing external (no infra, no DB driver, no SDKs) |
-| Data / Infrastructure | `packages/data` | Repository implementations, PostgreSQL access, external provider adapters | Domain (to implement interfaces), external SDKs |
-| Contracts | `packages/contracts` | Shared DTOs, Zod schemas, API types | Nothing (pure types/schemas) |
-| Content | `content/` | Language data, lessons, vocabulary, phonetics (JSON, schema-validated) | Nothing (data, not code) |
+| Layer                       | Lives in                       | Responsibility                                                            | May depend on                                      |
+| --------------------------- | ------------------------------ | ------------------------------------------------------------------------- | -------------------------------------------------- |
+| Presentation                | `apps/web`                     | React components, pages, layouts                                          | Application (via hooks/services), Contracts        |
+| Application (client)        | `apps/web/src/services`, hooks | Orchestrate UI use cases, call API client                                 | API client, Contracts                              |
+| API / Presentation (server) | `apps/api`                     | HTTP routes, controllers, DTO validation                                  | Application, Contracts                             |
+| Application (server)        | `packages/application`         | Use cases, orchestration, transactions                                    | Domain, repository interfaces, service interfaces  |
+| Domain                      | `packages/domain`              | Entities, value objects, domain services, business rules                  | Nothing external (no infra, no DB driver, no SDKs) |
+| Data / Infrastructure       | `packages/data`                | Repository implementations, PostgreSQL access, external provider adapters | Domain (to implement interfaces), external SDKs    |
+| Contracts                   | `packages/contracts`           | Shared DTOs, Zod schemas, API types                                       | Nothing (pure types/schemas)                       |
+| Content                     | `content/`                     | Language data, lessons, vocabulary, phonetics (JSON, schema-validated)    | Nothing (data, not code)                           |
 
 ## Dependency flow (request path)
 

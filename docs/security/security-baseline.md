@@ -36,7 +36,7 @@ Principles to be applied from the first line of implementation code, not retrofi
 
 ## Secrets
 
-- No secret ever committed to Git. `.env.example` documents variable *names* only.
+- No secret ever committed to Git. `.env.example` documents variable _names_ only.
 - Environment variables validated (presence + shape) at process startup, failing fast rather than
   behaving unpredictably with a missing secret.
 - CI secrets (DB URL, provider API keys, SonarQube token) stored as Jenkins credentials.

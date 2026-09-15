@@ -15,7 +15,7 @@ REST, per [ADR-004](../../../docs/adr/adr-004-backend-stack.md). No endpoints ex
 - Request/response shapes defined once as Zod schemas in `packages/contracts`, imported by both
   `apps/api` (validation) and `apps/web` (typed API client) — never duplicated.
 - Consistent error response shape across all endpoints (status code + machine-readable error code
-  + message) — exact shape TBD at implementation time, but must be consistent once chosen.
+  - message) — exact shape TBD at implementation time, but must be consistent once chosen.
 - Auth/role checks happen in the route/controller layer before calling the use case, using the
   mechanism decided in [ADR-006](../../../docs/adr/adr-006-authentication.md).
 - Pagination/filtering query params are standard on any list endpoint likely to grow (teacher's

@@ -24,5 +24,5 @@ per [commit-convention.md](commit-convention.md)).
 
 Every dependency decision left PENDING in the ADRs (workspace tool in ADR-002, backend framework
 version in ADR-004, ORM in ADR-005, etc.) goes through this checklist when it's finally installed
-— the ADR records the *architectural* reasoning; this policy governs the *mechanical* act of
+— the ADR records the _architectural_ reasoning; this policy governs the _mechanical_ act of
 adding it to `package.json`.

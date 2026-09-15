@@ -27,7 +27,7 @@ requires a new adapter — no change to use cases or domain.
 - It is free to self-host, no per-render fees, no commercial-use threshold under Apache 2.0.
   Source: search aggregation citing the HyperFrames docs/license (see ADR-012 for full citation
   list).
-- Local/self-hosted rendering does not depend on AWS; AWS Lambda is one *optional* deployment
+- Local/self-hosted rendering does not depend on AWS; AWS Lambda is one _optional_ deployment
   target mentioned in the docs among others — not a requirement. This satisfies the "no AWS"
   constraint.
 - **UNKNOWN**: exact CLI/API surface, authentication (if any is needed for local rendering),

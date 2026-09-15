@@ -68,3 +68,11 @@ purpose and the milestone that will populate it with real code/config — per th
 against generating implementation code or installing dependencies. `content/languages/pl/`
 additionally has the level (a1–c2) subfolder skeleton per
 [content-architecture.md](content-architecture.md), still empty of actual lesson content.
+
+## What exists after M1
+
+`apps/{web,api}` and `packages/{domain,application,contracts,data,shared,ui,config,testing}` are
+now real, installable, tested TypeScript packages (each still described by its own README, now
+updated to say what's actually in it) — see
+[.claude/current-state.md](../../.claude/current-state.md) for the concrete list.
+`infrastructure/` and `content/` remain placeholder-only; both are explicitly out of M1 scope.

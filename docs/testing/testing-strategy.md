@@ -9,12 +9,12 @@ guides effort allocation; it is never used to justify skipping tests for critica
 
 ## Tooling by layer
 
-| Layer | Tool |
-|---|---|
-| Domain, Application (use cases) | Vitest, no I/O — pure logic, fast |
-| Data/Infrastructure adapters | Vitest with test doubles for external SDKs/DB (integration tests separately, in `tests/integration/`, may hit a real test DB) |
-| React components/hooks | Vitest + React Testing Library |
-| Cross-app flows | Playwright, `tests/e2e/` |
+| Layer                           | Tool                                                                                                                          |
+| ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- |
+| Domain, Application (use cases) | Vitest, no I/O — pure logic, fast                                                                                             |
+| Data/Infrastructure adapters    | Vitest with test doubles for external SDKs/DB (integration tests separately, in `tests/integration/`, may hit a real test DB) |
+| React components/hooks          | Vitest + React Testing Library                                                                                                |
+| Cross-app flows                 | Playwright, `tests/e2e/`                                                                                                      |
 
 ## Coverage baseline
 
@@ -48,9 +48,16 @@ faked driver/client, and a slower integration test in `tests/integration/` again
 [dependency-upgrades](../../.claude/skills/dependency-upgrades/SKILL.md)-style rigor applied to
 infra code generally.
 
-## Not decided in M0
+## Decided in M1
 
-- Exact coverage-tool configuration (e.g., `vitest --coverage` provider) — implementation detail,
-  deferred.
+Coverage tool: Vitest's `v8` coverage provider (`@vitest/coverage-v8`), configured once at the
+repo root (`vitest.config.ts`) with `test.projects` aggregating every package/app's own
+`vitest.config.ts` — see [current-state.md](../../.claude/current-state.md). Reports:
+`text`/`html`/`lcov` under `./coverage`, `lcov.info` being the format SonarQube consumes (see
+[sonarqube skill](../../.claude/skills/sonarqube/SKILL.md)).
+
+## Not decided in M0/M1
+
 - Whether integration tests run against a containerized Postgres in CI or a managed test DB —
-  depends on ADR-005/ADR-015 outcomes.
+  depends on ADR-005/ADR-015 outcomes. `tests/integration/` stays empty until a real database
+  adapter exists to integration-test.
