@@ -98,3 +98,24 @@ la suite completa de tests. Detalle: [docs/development/husky-hooks.md](docs/deve
   `renderWithProviders`/`render` de forma normal — el cleanup de React Testing Library está
   registrado explícitamente en `src/test-setup.ts` (necesario porque `vitest.shared.ts` fija
   `globals: false`).
+
+# CI/CD (Milestone 2)
+
+Pipeline Jenkins declarativo (`Jenkinsfile`, raíz del repo) + análisis SonarQube
+(`sonar-project.properties`). Detalle completo, decisiones de reproducibilidad y troubleshooting:
+[docs/deployment/ci-cd-pipeline.md](docs/deployment/ci-cd-pipeline.md);
+decisión: [ADR-010](docs/adr/adr-010-ci-cd.md).
+
+**Aún no ejecutado contra una instancia real de Jenkins/SonarQube** — ninguna de las dos está
+desplegada todavía (hosting PENDING). Lo que sí se puede reproducir en local, sin Jenkins, son
+exactamente las mismas puertas de calidad:
+
+```bash
+pnpm check      # lint + format:check + typecheck + test + build
+pnpm test:e2e   # Playwright
+```
+
+Requisitos de una instancia Jenkins real (agente con Docker, plugins necesarios, nombres exactos de
+configuración esperados): [infrastructure/jenkins/README.md](infrastructure/jenkins/README.md).
+Reglas de protección de rama recomendadas para GitHub (a aplicar manualmente, no automatizado desde
+este repo): [git-branching-strategy.md](docs/development/git-branching-strategy.md#branch-protection-github-repository-settings).

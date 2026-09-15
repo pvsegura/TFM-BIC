@@ -41,3 +41,29 @@ PENDING until the first release is actually cut.
 
 `hotfix/*` branches off `main`, fixes the issue, merges back into both `main` and `develop` to
 keep them in sync.
+
+## Branch protection (GitHub repository settings)
+
+This repo is hosted on GitHub (see root `README.md`), so branch protection is configured in GitHub
+repository settings, not in code — **not** something Claude or CI config in this repo enforces
+automatically (no credentials/access to the GitHub org are assumed here). Recommended settings,
+to be applied by whoever has admin access to the repository:
+
+**`develop`:**
+
+- Require the Jenkins pipeline (see [ci-cd-pipeline.md](../deployment/ci-cd-pipeline.md)) to pass
+  as a required status check before merging.
+- Require at least one review before merging.
+- No unresolved merge conflicts.
+
+**`main`:**
+
+- Everything `develop` requires, plus:
+- No direct pushes — only merges from `develop` or `hotfix/*`, via PR.
+- Branch marked "protected" in GitHub, including for admins (no bypass).
+- A controlled release/merge process once one exists (tagging convention still PENDING — see
+  git-branching-strategy §Release above).
+
+Configuring the Jenkins job as a GitHub Multibranch Pipeline (via the GitHub Branch Source plugin)
+is what makes the Jenkins build show up as a GitHub status check in the first place — see
+[ci-cd-pipeline.md](../deployment/ci-cd-pipeline.md#branch-triggers-and-merge-gates).

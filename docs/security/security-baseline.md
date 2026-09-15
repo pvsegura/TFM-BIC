@@ -39,13 +39,19 @@ Principles to be applied from the first line of implementation code, not retrofi
 - No secret ever committed to Git. `.env.example` documents variable _names_ only.
 - Environment variables validated (presence + shape) at process startup, failing fast rather than
   behaving unpredictably with a missing secret.
-- CI secrets (DB URL, provider API keys, SonarQube token) stored as Jenkins credentials.
+- CI secrets (DB URL, provider API keys, SonarQube token) stored as Jenkins credentials, never in
+  `Jenkinsfile`/`sonar-project.properties`/shell steps/logs — see
+  [ci-cd-pipeline.md](../deployment/ci-cd-pipeline.md#secrets) (implemented M2: the SonarQube
+  token today, via the SonarQube Scanner plugin's own credential binding).
 
 ## Dependency security
 
 - Dependency updates follow [dependency-management.md](../development/dependency-management.md),
   including a security-advisory check before upgrading.
-- Automated dependency audit as a CI step (mechanism TBD with ADR-010's pipeline implementation).
+- Automated dependency audit as a CI step — **not yet added** to the M2 `Jenkinsfile` (its stage
+  list is lint/format/typecheck/test/coverage/build/E2E/SonarQube/Quality Gate only); mechanism
+  (`pnpm audit` as an explicit stage vs. relying on SonarQube's dependency-vulnerability checks)
+  still open.
 
 ## Audit logging
 

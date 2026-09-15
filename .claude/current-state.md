@@ -4,11 +4,25 @@ Last updated: 2026-09-15
 
 ## Milestone
 
-**M1 — Monorepo, Tooling & Technical Foundation** — complete. M0 (architecture/governance) is
-still the base — see [docs/product/project-constitution.md](../docs/product/project-constitution.md).
+**M2 — Git, CI/CD, Jenkins & SonarQube** — pipeline implemented and statically verified; **not yet
+executed against a real Jenkins/SonarQube instance** (neither is provisioned — hosting is PENDING,
+see [ADR-010](../docs/adr/adr-010-ci-cd.md)). M1 (monorepo/tooling foundation) is complete. M0
+(architecture/governance) is still the base — see
+[docs/product/project-constitution.md](../docs/product/project-constitution.md).
 
 ## What actually exists
 
+- **CI/CD (M2)**: `Jenkinsfile` (repo root, declarative) + `sonar-project.properties` — stages
+  Environment/Tool Validation → Install → Lint → Format Check → Typecheck → Unit/Component Tests
+  (+coverage) → Coverage Report → Build → E2E (Playwright, pinned `mcr.microsoft.com/playwright:
+v1.63.0-noble` image) → SonarQube Analysis → Quality Gate. No deploy stage (M2 scope excludes
+  it). Full detail: [docs/deployment/ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md),
+  [ADR-010](../docs/adr/adr-010-ci-cd.md). **Not executed for real** — no Jenkins/SonarQube
+  instance exists yet to run it against; only statically reviewed against verified official docs
+  and reproduced locally via `pnpm check`/`pnpm test:e2e` (see § below).
+- Branch protection rules (GitHub) documented but not applied (no repo-admin access from this
+  session) — see
+  [git-branching-strategy.md](../docs/development/git-branching-strategy.md#branch-protection-github-repository-settings).
 - A working, installable TypeScript monorepo: `pnpm install && pnpm check` passes (lint,
   format:check, typecheck, test, build all green; `pnpm test:e2e` and `pnpm test:coverage` also
   pass — coverage well above the 80/80/80/75 baseline).
@@ -56,8 +70,11 @@ still the base — see [docs/product/project-constitution.md](../docs/product/pr
 - No database connection — `packages/data` has one adapter (`SystemClock`), no PostgreSQL/ORM.
 - No Hyperframes or Gemini integration code.
 - No real lesson/vocabulary content.
-- No CI pipeline actually running (Jenkinsfile not written yet — M2 scope, see
-  [docs/deployment/ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md)).
+- No CI pipeline actually **executed** — the `Jenkinsfile`/`sonar-project.properties` exist (M2)
+  but no Jenkins or SonarQube instance is provisioned to run them against yet (hosting PENDING,
+  ADR-010).
+- No dependency-audit CI step (e.g. `pnpm audit`) — not in the M2 stage list; see
+  [security-baseline.md](../docs/security/security-baseline.md).
 - `apps/web` does not call `apps/api` — no CORS policy configured because nothing needs one yet.
 - No standalone-`node`-runnable build of `apps/api` — workspace packages resolve to TypeScript
   source (see [ADR-002](../docs/adr/adr-002-monorepo.md)); `apps/api` runs via `tsx` in dev, and
@@ -82,6 +99,19 @@ see [docs/adr/README.md](../docs/adr/README.md) for current status on everything
   domain-must-not-import-infra rule is enforced by one ESLint `no-restricted-imports` rule plus
   code review, not by a graph-analysis tool. Fine at 8 packages; revisit if that stops scaling.
 
+## Known risks / rough edges from M2
+
+- The `Jenkinsfile`/`sonar-project.properties` are unverified against a real Jenkins/SonarQube run
+  — only statically reviewed. The first real Jenkins execution may surface a syntax or plugin-
+  config issue that static review couldn't catch (e.g. exact behavior of `tool 'SonarScanner'`
+  inside a Docker agent, which is expected to work but wasn't exercised for real).
+- `node:24-bookworm-slim`'s Docker image tag floats across Node 24.x patch releases rather than
+  pinning an exact patch/digest — a documented trade-off, see
+  [ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md#node-image-pinning-trade-off).
+- The Playwright Docker image tag (`v1.63.0-noble`) must be bumped by hand whenever
+  `@playwright/test` is upgraded, or the E2E stage will fail on a version mismatch — no automated
+  check for this yet.
+
 ## Next milestone
 
-`M2 — Git + CI/CD Base` (not started).
+`M3 — Authentication` (not started).

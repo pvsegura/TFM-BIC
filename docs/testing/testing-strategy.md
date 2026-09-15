@@ -20,7 +20,9 @@ guides effort allocation; it is never used to justify skipping tests for critica
 
 Lines ≥ 80%, Statements ≥ 80%, Functions ≥ 80%, Branches ≥ 75%. This is a **baseline gate in CI**,
 not a target to game — a change that hits the number while leaving a critical flow untested does
-not pass review.
+not pass review. Enforced in CI (M2) by Vitest's own `coverage.thresholds` in the "Unit / Component
+Tests" Jenkins stage — a build fails the same way whether the failure is a broken test or an unmet
+threshold. See [ci-cd-pipeline.md](../deployment/ci-cd-pipeline.md#coverage-baseline).
 
 ## Critical flows — tested regardless of coverage numbers
 

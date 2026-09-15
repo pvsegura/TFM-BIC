@@ -5,29 +5,36 @@ description: Jenkins-specific conventions for this project's pipeline (Jenkinsfi
 
 # Jenkins
 
-No Jenkinsfile exists yet as of M0 (see `infrastructure/jenkins/README.md`). When it's written:
+`Jenkinsfile` implemented as of M2 (repo root) — see `infrastructure/jenkins/README.md` for
+instance setup prerequisites (plugins, Docker daemon, required tool/server connection names).
 
 ## Structure
 
-- Declarative pipeline preferred over scripted, for readability by the whole team.
-- Stages match [ci-cd skill](../ci-cd/SKILL.md) order exactly: checkout, install, lint, typecheck,
-  unit tests, integration tests, coverage, build, SonarQube, Playwright E2E, artifact, deploy.
+- Declarative pipeline (not scripted), for readability by the whole team.
+- Stages match [ci-cd skill](../ci-cd/SKILL.md) order — see it for the exact, current list and why
+  it differs slightly from M0's original conceptual draft.
 - Each stage should have a clear pass/fail signal — don't swallow failures to "keep the pipeline
   green."
+- Main stages run inside a pinned `node:24-bookworm-slim` Docker agent; the E2E stage overrides
+  its agent to the pinned Playwright image (`reuseNode: true` to share the workspace, not a fresh
+  checkout).
 
 ## Credentials
 
-Use Jenkins' credential store for every secret (DB URL, API keys, SonarQube token) — bound to
-pipeline steps via the credentials plugin, never hardcoded in the Jenkinsfile.
+Use Jenkins' credential store for every secret — bound via the SonarQube Scanner plugin's own
+server-connection config (`withSonarQubeEnv`) for the SonarQube token today; the `credentials()`
+helper or `withCredentials` step for any future secret (DB URL, provider API keys). Never
+hardcoded in the Jenkinsfile.
 
 ## Hosting
 
 Where the Jenkins controller/agents run is PENDING (no AWS —
 [ADR-015](../../../docs/adr/adr-015-deployment.md)). Don't assume a specific host.
 
-## Before writing the Jenkinsfile
+## Before changing the Jenkinsfile
 
-Verify the current stable Jenkins version and plugin compatibility (pipeline, credentials, any
-Node/Docker plugin needed) rather than assuming — per
+Verify current Jenkins/plugin syntax rather than assuming — per
 [anti-hallucination](../anti-hallucination/SKILL.md) and
-[dependency-upgrades](../dependency-upgrades/SKILL.md).
+[dependency-upgrades](../dependency-upgrades/SKILL.md). In particular, if `@playwright/test` is
+upgraded, the Playwright Docker image tag in the `Jenkinsfile` must be bumped to match in the same
+commit (see [ci-cd-pipeline.md](../../../docs/deployment/ci-cd-pipeline.md#reproducibility)).

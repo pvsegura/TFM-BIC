@@ -5,14 +5,18 @@ description: SonarQube quality-gate conventions - what it checks, how it fits th
 
 # SonarQube
 
-[ADR-010](../../../docs/adr/adr-010-ci-cd.md), [ci-cd-pipeline.md](../../../docs/deployment/ci-cd-pipeline.md).
-Hosting (self-hosted vs SonarCloud) is PENDING — don't assume one.
+Implemented as of M2: [`sonar-project.properties`](../../../sonar-project.properties) (repo root),
+integrated in the `Jenkinsfile` via the SonarQube Scanner for Jenkins plugin. Design/rationale:
+[ADR-010](../../../docs/adr/adr-010-ci-cd.md),
+[ci-cd-pipeline.md](../../../docs/deployment/ci-cd-pipeline.md#sonarqube-integration).
+Hosting (self-hosted "SonarQube Server"/Community Build vs. SonarQube Cloud) is PENDING — don't
+assume one; nothing in the repo hardcodes a host.
 
 ## What the quality gate checks
 
 Bugs, vulnerabilities, code smells, duplication, coverage, maintainability, reliability, security
-— runs after `build`, before `Playwright E2E`, in the pipeline order (see
-[ci-cd skill](../ci-cd/SKILL.md)).
+— analysis runs after `Playwright E2E`, then `Quality Gate` is the final stage, in the pipeline
+order (see [ci-cd skill](../ci-cd/SKILL.md)).
 
 ## Quality gate as a merge blocker
 
@@ -26,8 +30,9 @@ A failing SonarQube gate blocks merge, same as failing tests — not treated as 
 - Keep functions/files at a complexity level a static analyzer (and a human reviewer) can
   reasonably assess — this is a proxy for maintainability, not a target to game.
 
-## Not decided in M0
+## Not decided yet
 
 Exact quality-gate thresholds beyond the coverage baseline already set in
 [testing-strategy.md](../../../docs/testing/testing-strategy.md); SonarQube-specific rule
-customization — deferred to implementation time.
+customization — both deferred until a real SonarQube instance exists to tune them against
+(hosting itself is PENDING, see above).

@@ -34,6 +34,15 @@ Detail: [docs/development/git-branching-strategy.md](../docs/development/git-bra
 small, atomic, one intention each.
 Detail: [docs/development/commit-convention.md](../docs/development/commit-convention.md).
 
+## CI/CD (since M2)
+
+`Jenkinsfile` + `sonar-project.properties` (repo root) — stages, reproducibility decisions, and
+troubleshooting: [docs/deployment/ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md). Not yet
+executed against a real Jenkins/SonarQube instance (neither is provisioned). Reproduce the same
+gates locally before pushing: `pnpm check` (lint/format/typecheck/test/build) + `pnpm test:e2e`.
+Whenever `@playwright/test` is upgraded, the Playwright Docker image tag in the `Jenkinsfile` must
+be bumped to match in the same commit, or the E2E stage breaks.
+
 ## Code style
 
 TypeScript strict mode everywhere, no `any`. No business logic in React components (belongs in
