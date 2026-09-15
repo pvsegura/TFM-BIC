@@ -1,7 +1,13 @@
 import { defineConfig } from "vitest/config";
 
+// CI-only JUnit output for Jenkins' native `junit` step (Jenkins test result trend/reporting) —
+// left off locally so `pnpm test` doesn't litter the workspace with test-results/junit.xml.
+const isCI = !!process.env.CI;
+
 export default defineConfig({
   test: {
+    reporters: isCI ? ["default", "junit"] : ["default"],
+    outputFile: isCI ? { junit: "./test-results/junit.xml" } : undefined,
     projects: [
       "packages/shared/vitest.config.ts",
       "packages/domain/vitest.config.ts",
