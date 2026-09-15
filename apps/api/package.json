@@ -1,0 +1,27 @@
+{
+  "name": "@tfm-bic/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "typecheck": "tsc --noEmit",
+    "build": "tsc",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@tfm-bic/application": "workspace:*",
+    "@tfm-bic/config": "workspace:*",
+    "@tfm-bic/contracts": "workspace:*",
+    "@tfm-bic/data": "workspace:*",
+    "@tfm-bic/domain": "workspace:*",
+    "fastify": "^5.12.4"
+  },
+  "devDependencies": {
+    "@types/node": "^24.5.2",
+    "tsx": "^4.23.13",
+    "typescript": "~6.0.3",
+    "vitest": "^5.0.0"
+  }
+}
