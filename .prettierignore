@@ -1,0 +1,10 @@
+node_modules
+dist
+build
+coverage
+playwright-report
+test-results
+.vite
+pnpm-lock.yaml
+content/**/*.md
+CHANGELOG.md
