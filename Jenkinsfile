@@ -47,6 +47,7 @@ pipeline {
                 sh '''
                     set -eu
                     node --version
+                    mkdir -p "${WORKSPACE}/.corepack-bin"
                     corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
                     pnpm --version
                 '''
@@ -122,6 +123,7 @@ pipeline {
             steps {
                 sh '''
                     set -eu
+                    mkdir -p "${WORKSPACE}/.corepack-bin"
                     corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
                     pnpm exec playwright test --config tests/e2e/playwright.config.ts
                 '''
