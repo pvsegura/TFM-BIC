@@ -1,8 +1,19 @@
 // Declarative Jenkins pipeline for TFM-BIC (M2 scope: quality validation only, no deploy).
 //
-// Prerequisites on the Jenkins controller/agent (see infrastructure/jenkins/README.md):
-//   - "Docker Pipeline" plugin, with a Docker daemon reachable from the agent (the `docker {}`
-//     agent blocks below need it).
+// Prerequisites on the Jenkins controller (see infrastructure/jenkins/README.md /
+// infrastructure/jenkins/Dockerfile): Node 24 + pnpm and the Docker CLI (talking to the host's
+// Docker daemon via a mounted socket) are baked into the controller's own image — main stages
+// run directly on the controller (`agent any`), not in a separate `docker {}` sub-agent. Only
+// the E2E stage spins up a sibling container (Playwright's image), which needs the controller's
+// Docker CLI/socket access to do so; nesting a SECOND docker agent from inside a first one
+// doesn't work (a first version of this Jenkinsfile ran main stages inside a plain
+// `agent { docker { image: 'node:24-bookworm-slim' } }`, and the E2E stage then failed with
+// "docker: not found" trying to start its own sibling container from inside that one — only the
+// controller itself has the Docker CLI. See docs/deployment/ci-cd-pipeline.md for the full story,
+// including the corepack-non-root-permission detour that approach also required and no longer
+// needs since Node/pnpm are baked into the controller image instead).
+//
+// Also needed:
 //   - "SonarQube Scanner for Jenkins" plugin, with:
 //       - a SonarQube Scanner tool installation named exactly `SonarScanner`
 //         (Manage Jenkins > Tools), auto-install is fine — the scanner bundles its own JRE.
@@ -11,7 +22,7 @@
 //         "Secret text" credential — never the literal token in this file.
 //       - a webhook on the SonarQube server pointing to `<jenkins-url>/sonarqube-webhook/`
 //         (required for waitForQualityGate to work without polling).
-//   - "JUnit" and "HTML Publisher" plugins for test/coverage/E2E report visualization.
+//   - "Docker Pipeline", "JUnit" and "HTML Publisher" plugins.
 //   - Configured as a Multibranch Pipeline (or per-branch Pipeline) job so every
 //     feature/fix/test/refactor/docs/ci/chore/build/perf/hotfix branch, develop, and main
 //     get this same pipeline (see docs/deployment/ci-cd-pipeline.md).
@@ -20,11 +31,7 @@
 // "Declarative: Checkout SCM" before any stage runs, when this Jenkinsfile is loaded via
 // "Pipeline script from SCM".
 pipeline {
-    agent {
-        docker {
-            image 'node:24-bookworm-slim'
-        }
-    }
+    agent any
 
     options {
         timestamps()
@@ -36,29 +43,14 @@ pipeline {
         CI = 'true'
     }
 
-    // corepack's default shim location (/usr/local/bin) is root-owned in the official
-    // Node/Playwright images; the Docker Pipeline plugin runs agent containers as the
-    // Jenkins controller's own non-root UID, so corepack needs a writable install
-    // directory instead (verified: `corepack enable --install-directory`, nodejs/corepack).
-    // Every stage below computes that directory as "$WORKSPACE/.corepack-bin" *inside the
-    // shell step itself* (bash resolving Jenkins' always-injected $WORKSPACE), NOT via a
-    // custom variable declared in the environment{} block above — a first real Jenkins run
-    // showed that a bare `${WORKSPACE}`/`${PATH}` reference inside environment{}'s own
-    // Groovy-level string interpolation does not reliably propagate into `sh` steps (pnpm
-    // stayed "not found" immediately after a successful `corepack enable`). Do not
-    // "simplify" this back into an environment{} variable without re-verifying against a
-    // real Jenkins run first.
-
     stages {
         stage('Environment / Tool Validation') {
             steps {
                 sh '''
                     set -eu
                     node --version
-                    mkdir -p "$WORKSPACE/.corepack-bin"
-                    corepack enable --install-directory "$WORKSPACE/.corepack-bin"
-                    export PATH="$WORKSPACE/.corepack-bin:$PATH"
                     pnpm --version
+                    docker --version
                 '''
             }
         }
@@ -66,25 +58,25 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // --frozen-lockfile: fail instead of silently updating pnpm-lock.yaml.
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm install --frozen-lockfile'
+                sh 'pnpm install --frozen-lockfile'
             }
         }
 
         stage('Lint') {
             steps {
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm lint'
+                sh 'pnpm lint'
             }
         }
 
         stage('Format Check') {
             steps {
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm format:check'
+                sh 'pnpm format:check'
             }
         }
 
         stage('Typecheck') {
             steps {
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm typecheck'
+                sh 'pnpm typecheck'
             }
         }
 
@@ -94,7 +86,7 @@ pipeline {
         // coverage threshold (vitest.config.ts), so both gates are enforced here.
         stage('Unit / Component Tests') {
             steps {
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm test:coverage'
+                sh 'pnpm test:coverage'
             }
         }
 
@@ -115,7 +107,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm build'
+                sh 'pnpm build'
             }
         }
 
@@ -130,6 +122,12 @@ pipeline {
                 }
             }
             steps {
+                // This image (unlike the Jenkins controller) doesn't have pnpm baked in, and
+                // the Docker Pipeline plugin runs it as the controller's own non-root UID, so
+                // corepack's default shim location (/usr/local/bin) isn't writable here either
+                // — same fix as the controller-side attempt that was abandoned for the *main*
+                // stages (see docs/deployment/ci-cd-pipeline.md), kept here since this one
+                // remaining stage still runs in an ad-hoc external image, not a custom one.
                 sh '''
                     set -eu
                     mkdir -p "$WORKSPACE/.corepack-bin"
