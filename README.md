@@ -16,6 +16,13 @@
 
 - Jenkins
 - SonarQube
+- Docker
+
+# Comandos Docker
+
+- docker compose stop # parar sin borrar nada
+- docker compose up -d # volver a arrancar
+- docker compose down # parar y quitar el contenedor (el volumen jenkins_home sobrevive)
 
 # Arquitectura
 
