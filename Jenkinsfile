@@ -128,10 +128,14 @@ pipeline {
                 // — same fix as the controller-side attempt that was abandoned for the *main*
                 // stages (see docs/deployment/ci-cd-pipeline.md), kept here since this one
                 // remaining stage still runs in an ad-hoc external image, not a custom one.
+                // `pnpm` restricts corepack to that one package manager — a bare `corepack
+                // enable` also tries (and fails) to link yarn against something already
+                // present at /usr/local/bin/yarn in this image (same issue hit while building
+                // the Jenkins controller's own image; this project doesn't use yarn at all).
                 sh '''
                     set -eu
                     mkdir -p "$WORKSPACE/.corepack-bin"
-                    corepack enable --install-directory "$WORKSPACE/.corepack-bin"
+                    corepack enable --install-directory "$WORKSPACE/.corepack-bin" pnpm
                     export PATH="$WORKSPACE/.corepack-bin:$PATH"
                     pnpm exec playwright test --config tests/e2e/playwright.config.ts
                 '''
