@@ -18,10 +18,14 @@ export default defineConfig({
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   // CI-only JUnit output for Jenkins' native `junit` step; HTML report always generated.
+  // outputFile is resolved relative to this config file's directory (tests/e2e/), not the
+  // process cwd, so it's anchored to repoRoot explicitly — otherwise it lands at
+  // tests/e2e/test-results/e2e-junit.xml, which the Jenkinsfile's `junit` step (looking at
+  // $WORKSPACE/test-results/e2e-junit.xml) never finds.
   reporter: process.env.CI
     ? [
         ["html", { open: "never" }],
-        ["junit", { outputFile: "test-results/e2e-junit.xml" }],
+        ["junit", { outputFile: path.join(repoRoot, "test-results/e2e-junit.xml") }],
       ]
     : [["html", { open: "never" }]],
   use: {
