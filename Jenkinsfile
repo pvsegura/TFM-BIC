@@ -34,12 +34,20 @@ pipeline {
 
     environment {
         CI = 'true'
-        // corepack's default shim location (/usr/local/bin) is root-owned in the official
-        // Node/Playwright images; the Docker Pipeline plugin runs agent containers as the
-        // Jenkins controller's own non-root UID, so corepack needs a writable install
-        // directory instead (verified: `corepack enable --install-directory`, nodejs/corepack).
-        PATH = "${WORKSPACE}/.corepack-bin:${PATH}"
     }
+
+    // corepack's default shim location (/usr/local/bin) is root-owned in the official
+    // Node/Playwright images; the Docker Pipeline plugin runs agent containers as the
+    // Jenkins controller's own non-root UID, so corepack needs a writable install
+    // directory instead (verified: `corepack enable --install-directory`, nodejs/corepack).
+    // Every stage below computes that directory as "$WORKSPACE/.corepack-bin" *inside the
+    // shell step itself* (bash resolving Jenkins' always-injected $WORKSPACE), NOT via a
+    // custom variable declared in the environment{} block above — a first real Jenkins run
+    // showed that a bare `${WORKSPACE}`/`${PATH}` reference inside environment{}'s own
+    // Groovy-level string interpolation does not reliably propagate into `sh` steps (pnpm
+    // stayed "not found" immediately after a successful `corepack enable`). Do not
+    // "simplify" this back into an environment{} variable without re-verifying against a
+    // real Jenkins run first.
 
     stages {
         stage('Environment / Tool Validation') {
@@ -47,8 +55,9 @@ pipeline {
                 sh '''
                     set -eu
                     node --version
-                    mkdir -p "${WORKSPACE}/.corepack-bin"
-                    corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
+                    mkdir -p "$WORKSPACE/.corepack-bin"
+                    corepack enable --install-directory "$WORKSPACE/.corepack-bin"
+                    export PATH="$WORKSPACE/.corepack-bin:$PATH"
                     pnpm --version
                 '''
             }
@@ -57,25 +66,25 @@ pipeline {
         stage('Install Dependencies') {
             steps {
                 // --frozen-lockfile: fail instead of silently updating pnpm-lock.yaml.
-                sh 'pnpm install --frozen-lockfile'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm install --frozen-lockfile'
             }
         }
 
         stage('Lint') {
             steps {
-                sh 'pnpm lint'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm lint'
             }
         }
 
         stage('Format Check') {
             steps {
-                sh 'pnpm format:check'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm format:check'
             }
         }
 
         stage('Typecheck') {
             steps {
-                sh 'pnpm typecheck'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm typecheck'
             }
         }
 
@@ -85,7 +94,7 @@ pipeline {
         // coverage threshold (vitest.config.ts), so both gates are enforced here.
         stage('Unit / Component Tests') {
             steps {
-                sh 'pnpm test:coverage'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm test:coverage'
             }
         }
 
@@ -106,7 +115,7 @@ pipeline {
 
         stage('Build') {
             steps {
-                sh 'pnpm build'
+                sh 'export PATH="$WORKSPACE/.corepack-bin:$PATH"; pnpm build'
             }
         }
 
@@ -123,8 +132,9 @@ pipeline {
             steps {
                 sh '''
                     set -eu
-                    mkdir -p "${WORKSPACE}/.corepack-bin"
-                    corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
+                    mkdir -p "$WORKSPACE/.corepack-bin"
+                    corepack enable --install-directory "$WORKSPACE/.corepack-bin"
+                    export PATH="$WORKSPACE/.corepack-bin:$PATH"
                     pnpm exec playwright test --config tests/e2e/playwright.config.ts
                 '''
             }
