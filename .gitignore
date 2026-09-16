@@ -33,3 +33,6 @@ Thumbs.db
 
 # Vite
 .vite/
+
+# SonarQube scanner working directory
+.scannerwork/

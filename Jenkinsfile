@@ -64,7 +64,14 @@ pipeline {
 
         stage('Lint') {
             steps {
-                sh 'pnpm lint'
+                // ESLint's type-aware rules (eslint.config.mjs: projectService: true) build a
+                // full TS program per workspace tsconfig in one process — on this Jenkins
+                // controller's memory-constrained container that hit Node/V8's *default*
+                // ~2.2GB old-space ceiling and crashed with a heap OOM, even though the system
+                // itself still had free memory/swap. Raising the ceiling explicitly (not
+                // relevant/needed on a typical local machine, which is why this never showed up
+                // outside CI) fixes it without touching system-wide memory.
+                sh 'NODE_OPTIONS="--max-old-space-size=3072" pnpm lint'
             }
         }
 
