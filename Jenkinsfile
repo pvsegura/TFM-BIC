@@ -34,6 +34,11 @@ pipeline {
 
     environment {
         CI = 'true'
+        // corepack's default shim location (/usr/local/bin) is root-owned in the official
+        // Node/Playwright images; the Docker Pipeline plugin runs agent containers as the
+        // Jenkins controller's own non-root UID, so corepack needs a writable install
+        // directory instead (verified: `corepack enable --install-directory`, nodejs/corepack).
+        PATH = "${WORKSPACE}/.corepack-bin:${PATH}"
     }
 
     stages {
@@ -42,7 +47,7 @@ pipeline {
                 sh '''
                     set -eu
                     node --version
-                    corepack enable
+                    corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
                     pnpm --version
                 '''
             }
@@ -117,7 +122,7 @@ pipeline {
             steps {
                 sh '''
                     set -eu
-                    corepack enable
+                    corepack enable --install-directory "${WORKSPACE}/.corepack-bin"
                     pnpm exec playwright test --config tests/e2e/playwright.config.ts
                 '''
             }

@@ -73,6 +73,15 @@ failure and a coverage-threshold failure are still distinguishable from the cons
   upgrades Playwright.
 - **Docker image pinning**: `node:24-bookworm-slim` is pinned to the major version, not an exact
   patch or digest — a deliberate, documented trade-off (§ below), not an oversight.
+- **Corepack under a non-root Docker agent**: the Docker Pipeline plugin runs agent containers as
+  the Jenkins controller's own non-root UID (for workspace file-ownership consistency), not root.
+  `corepack enable`'s default shim location (`/usr/local/bin`) is root-owned in the official
+  Node/Playwright images, so a plain `corepack enable` fails with `EACCES` under Jenkins even
+  though it works locally (where Docker isn't forcing a UID). Fixed by pointing corepack at a
+  writable, workspace-relative directory instead: `corepack enable --install-directory
+"${WORKSPACE}/.corepack-bin"`, with that same directory prepended to `PATH` in the pipeline's
+  `environment` block. Found by running the pipeline for real — exactly the kind of thing static
+  review can't catch (see [current-state.md](../../.claude/current-state.md)).
 
 ### Node image pinning trade-off
 
@@ -206,6 +215,12 @@ development; only useful when iterating on SonarQube rule configuration itself.
 
 ## Troubleshooting
 
+- **`Invalid agent type "docker" specified. Must be one of [any, label, none]`**: the "Docker
+  Pipeline" plugin isn't installed on this Jenkins instance — install it (Manage Jenkins > Plugins
+  > Available), no restart usually required.
+- **`corepack enable` fails with `EACCES: permission denied, symlink ... -> /usr/local/bin/...`**:
+  see § Reproducibility above — the Jenkinsfile already works around this
+  (`--install-directory`); if you see this, something reverted that fix.
 - **A stage fails and the log doesn't say why**: each stage runs exactly one concern (lint OR
   typecheck OR tests, etc. — see § stage list above) specifically so a red stage name alone
   narrows the failure category; read that stage's log next, not the whole build log.
