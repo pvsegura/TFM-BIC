@@ -39,6 +39,15 @@ export default defineConfig({
         "apps/web/src/app.tsx",
         "apps/web/src/router.tsx",
         "apps/api/src/index.ts",
+        // Constructs the real Drizzle/Argon2/Crypto adapters from a live
+        // DATABASE_URL — exercised by actually running the server, not by
+        // apps/api's own tests (which inject fakes via buildTestDeps, see
+        // auth-use-cases.ts, which those tests do exercise for real).
+        "apps/api/src/composition/auth-dependencies.ts",
+        // Real `pg.Pool`/Drizzle connection factory — repository tests use
+        // the PGlite test-support factory instead (see
+        // db/test-support/create-test-db.ts), never this one.
+        "packages/data/src/identity/db/client.ts",
       ],
       thresholds: {
         lines: 80,

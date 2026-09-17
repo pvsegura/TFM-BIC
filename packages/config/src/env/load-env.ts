@@ -1,18 +1,45 @@
 import { z } from "zod";
 
 /**
- * Only the environment variables apps/api actually reads in M1. The rest of
- * .env.example (DATABASE_URL, AUTH_SECRET, EMAIL_PROVIDER_API_KEY,
- * GEMINI_API_KEY, HYPERFRAMES_CONFIG) stay undeclared here on purpose —
- * making them required would break plain local/frontend development before
- * those integrations exist (see docs/deployment/environments.md). Extend
- * this schema when the feature that needs a given variable is implemented.
+ * Environment variables read across apps/api. See .env.example and
+ * docs/deployment/environments.md for the authoritative list/grouping.
  */
-const envSchema = z.object({
-  NODE_ENV: z.enum(["development", "test", "staging", "production"]).default("development"),
-  PORT: z.coerce.number().int().positive().default(3000),
-  DEFAULT_LANGUAGE: z.string().default("pl"),
-});
+const envSchema = z
+  .object({
+    NODE_ENV: z.enum(["development", "test", "staging", "production"]).default("development"),
+    PORT: z.coerce.number().int().positive().default(3000),
+    DEFAULT_LANGUAGE: z.string().default("pl"),
+    // Database (M3, ADR-005) — required everywhere except NODE_ENV=test,
+    // which uses an in-process PGlite instance instead (see packages/data).
+    DATABASE_URL: z.string().min(1).optional(),
+    // Auth (M3, ADR-006) — required only in staging/production; missing in
+    // development/test falls back to an ephemeral per-process secret
+    // (apps/api's composition root), since dev/test sessions don't need to
+    // survive a restart.
+    AUTH_SESSION_SECRET: z.string().min(1).optional(),
+    APP_BASE_URL: z.string().min(1).default("http://localhost:5173"),
+  })
+  .check((ctx) => {
+    const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET } = ctx.value;
+
+    if (NODE_ENV !== "test" && !DATABASE_URL) {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["DATABASE_URL"],
+        message: `DATABASE_URL is required when NODE_ENV is not "test" (see docs/adr/adr-005-database.md).`,
+      });
+    }
+
+    if ((NODE_ENV === "production" || NODE_ENV === "staging") && !AUTH_SESSION_SECRET) {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["AUTH_SESSION_SECRET"],
+        message: `AUTH_SESSION_SECRET is required when NODE_ENV is "production" or "staging" (see docs/adr/adr-006-authentication.md).`,
+      });
+    }
+  });
 
 export type AppEnv = z.infer<typeof envSchema>;
 
