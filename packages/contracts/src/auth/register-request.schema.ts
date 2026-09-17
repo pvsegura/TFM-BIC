@@ -1,4 +1,4 @@
-import { MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH } from "@tfm-bic/domain";
+import { isValidEmail, MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH } from "@tfm-bic/domain";
 import { z } from "zod";
 
 /**
@@ -11,8 +11,11 @@ import { z } from "zod";
  */
 export const registerRequestSchema = z
   .object({
-    email: z.string().trim().min(1).max(254),
-    password: z.string().min(MIN_PASSWORD_LENGTH).max(MAX_PASSWORD_LENGTH),
+    email: z.string().trim().min(1).max(254).refine(isValidEmail, "Not a valid email address."),
+    password: z
+      .string()
+      .min(MIN_PASSWORD_LENGTH, `Password must be at least ${MIN_PASSWORD_LENGTH} characters long.`)
+      .max(MAX_PASSWORD_LENGTH),
   })
   .strict();
 

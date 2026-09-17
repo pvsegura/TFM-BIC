@@ -25,4 +25,10 @@ describe("loginRequestSchema", () => {
   it("rejects a missing email", () => {
     expect(loginRequestSchema.safeParse({ password: "anything" }).success).toBe(false);
   });
+
+  it("rejects a syntactically invalid email", () => {
+    expect(
+      loginRequestSchema.safeParse({ email: "not-an-email", password: "anything" }).success,
+    ).toBe(false);
+  });
 });

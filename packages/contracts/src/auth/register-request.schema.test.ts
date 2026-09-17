@@ -14,6 +14,13 @@ describe("registerRequestSchema", () => {
     expect(registerRequestSchema.safeParse({ password: "a-good-password" }).success).toBe(false);
   });
 
+  it("rejects a syntactically invalid email", () => {
+    expect(
+      registerRequestSchema.safeParse({ email: "not-an-email", password: "a-good-password" })
+        .success,
+    ).toBe(false);
+  });
+
   it("rejects a too-short password", () => {
     expect(
       registerRequestSchema.safeParse({ email: "user@example.com", password: "short" }).success,

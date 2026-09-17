@@ -12,4 +12,10 @@ describe("resendVerificationRequestSchema", () => {
   it("rejects a missing email", () => {
     expect(resendVerificationRequestSchema.safeParse({}).success).toBe(false);
   });
+
+  it("rejects a syntactically invalid email", () => {
+    expect(resendVerificationRequestSchema.safeParse({ email: "not-an-email" }).success).toBe(
+      false,
+    );
+  });
 });

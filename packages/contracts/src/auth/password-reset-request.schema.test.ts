@@ -10,4 +10,8 @@ describe("passwordResetRequestSchema", () => {
   it("rejects a missing email", () => {
     expect(passwordResetRequestSchema.safeParse({}).success).toBe(false);
   });
+
+  it("rejects a syntactically invalid email", () => {
+    expect(passwordResetRequestSchema.safeParse({ email: "not-an-email" }).success).toBe(false);
+  });
 });
