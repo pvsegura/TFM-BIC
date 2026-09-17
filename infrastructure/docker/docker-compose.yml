@@ -1,0 +1,26 @@
+name: tfm-bic-dev
+
+# Local development Postgres only — see docs/adr/adr-005-database.md. Not the production
+# architecture (production targets Neon, a remote managed Postgres); automated tests do not use
+# this either (they run against an in-process PGlite instance, see packages/data). This container
+# is purely a convenience for `pnpm --filter @tfm-bic/api dev` against a real local database.
+services:
+  postgres:
+    image: postgres:17-bookworm
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: tfm_bic
+      POSTGRES_PASSWORD: tfm_bic_dev_only
+      POSTGRES_DB: tfm_bic
+    ports:
+      - "5432:5432"
+    volumes:
+      - tfm-bic-postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U tfm_bic -d tfm_bic"]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+
+volumes:
+  tfm-bic-postgres-data:

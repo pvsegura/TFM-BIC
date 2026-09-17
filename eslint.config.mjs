@@ -71,9 +71,46 @@ export default tseslint.config(
         {
           patterns: [
             {
-              group: ["react", "react-dom", "fastify", "pg", "@fastify/*"],
+              group: [
+                "react",
+                "react-dom",
+                "fastify",
+                "pg",
+                "@fastify/*",
+                "drizzle-orm*",
+                "argon2",
+              ],
               message:
                 "packages/domain must not import infrastructure, React, or framework code — see docs/architecture/architecture-overview.md.",
+            },
+          ],
+        },
+      ],
+    },
+  },
+
+  // packages/application depends on packages/domain and its own port interfaces only — never a
+  // concrete DB driver/query builder/hashing/HTTP framework (those belong behind an adapter in
+  // packages/data / apps/api). See docs/architecture/architecture-overview.md and ADR-006.
+  {
+    files: ["packages/application/src/**/*.ts"],
+    rules: {
+      "no-restricted-imports": [
+        "error",
+        {
+          patterns: [
+            {
+              group: [
+                "react",
+                "react-dom",
+                "fastify",
+                "pg",
+                "@fastify/*",
+                "drizzle-orm*",
+                "argon2",
+              ],
+              message:
+                "packages/application must depend only on packages/domain and its own port interfaces — concrete infrastructure belongs in packages/data or apps/api.",
             },
           ],
         },

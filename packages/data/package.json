@@ -14,9 +14,16 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tfm-bic/application": "workspace:*"
+    "@tfm-bic/application": "workspace:*",
+    "@tfm-bic/domain": "workspace:*",
+    "argon2": "0.45.1",
+    "drizzle-orm": "0.45.2",
+    "pg": "8.23.0"
   },
   "devDependencies": {
+    "@electric-sql/pglite": "0.5.8",
+    "@types/pg": "8.15.5",
+    "drizzle-kit": "0.31.10",
     "typescript": "~6.0.3",
     "vitest": "^5.0.0"
   }

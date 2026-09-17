@@ -6,3 +6,8 @@ allowBuilds:
   # by Vite/Vitest/tsx, which all depend on it transitively. Trusted, widely
   # used build tool; approved per pnpm 12's build-script allowlist.
   esbuild: true
+  # argon2's postinstall fetches/builds its native binding (prebuilt binary
+  # for common platforms, falls back to node-gyp) — required for password
+  # hashing (ADR-006). Official Node.js bindings for the reference Argon2
+  # implementation, actively maintained.
+  argon2: true
