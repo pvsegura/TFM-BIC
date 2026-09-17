@@ -13,16 +13,22 @@ PENDING (ADR-015).
 `.env.example` at the repo root (created in M0) lists every required variable **name**, grouped by
 concern, with no real values. Never commit a populated `.env`.
 
-Planned variable groups (names only — actual list finalized when `apps/api`/`apps/web` are
-scaffolded):
+Variable groups (see `.env.example` for the authoritative current list):
 
-- `NODE_ENV`
-- Database: `DATABASE_URL`
-- Auth: session/JWT secret(s) — name PENDING (ADR-006)
-- Email provider: API key — provider PENDING (ADR-014)
-- Gemini: API key
-- Hyperframes: config, if any auth is required (UNKNOWN — see ADR-012)
-- App: `PORT`, `API_BASE_URL`, `WEB_BASE_URL`
+- `NODE_ENV`, `PORT`, `DEFAULT_LANGUAGE` — read since M1.
+- Database: `DATABASE_URL` (Postgres connection string; Neon in production, local Docker Postgres
+  in dev, in-process PGlite in `test` — see ADR-005) — read since M3.
+- Auth: `AUTH_SESSION_SECRET` (signs the session cookie), `APP_BASE_URL` (verification/reset
+  links + Origin validation) — see ADR-006 — read since M3.
+- Email provider: `EMAIL_PROVIDER_API_KEY`, `EMAIL_FROM` — provider account PENDING (ADR-014);
+  not read by M3 code (dev/test use the in-memory email adapter).
+- Gemini: API key — not yet read (M12, out of scope until then).
+- Hyperframes: config, if any auth is required (UNKNOWN — see ADR-012) — not yet read.
+- App: `API_BASE_URL`, `WEB_BASE_URL` — reserved, not yet read. In M3 dev, `apps/web`'s Vite dev
+  server proxies `/auth/*` to `apps/api` (see `apps/web/vite.config.ts`) so the browser sees a
+  single origin and no CORS policy is needed — this also keeps `SameSite=Strict` on the session
+  cookie workable. Production same-origin serving (reverse proxy or single origin) is a
+  deployment concern tracked under ADR-015, not solved in M3.
 
 ## Startup validation
 
