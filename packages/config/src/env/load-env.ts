@@ -18,6 +18,17 @@ const envSchema = z
     // survive a restart.
     AUTH_SESSION_SECRET: z.string().min(1).optional(),
     APP_BASE_URL: z.string().min(1).default("http://localhost:5173"),
+    // Set only by tests/e2e/playwright.config.ts, never by a developer or
+    // CI env file — raises auth rate-limit ceilings so a full E2E run
+    // (many registrations/logins against one shared server) doesn't trip
+    // them. Deliberately NOT the same signal as NODE_ENV=test: the Vitest
+    // unit test for rate limiting (apps/api/src/routes/auth.route.test.ts)
+    // also runs under NODE_ENV=test and must keep proving the real,
+    // strict limits work — see docs/adr/adr-006-authentication.md.
+    E2E_RELAXED_RATE_LIMITS: z
+      .enum(["true", "false"])
+      .default("false")
+      .transform((value) => value === "true"),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET } = ctx.value;

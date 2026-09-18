@@ -1,16 +1,30 @@
 import { loadEnv } from "@tfm-bic/config";
 
-import { createAuthDependencies } from "./composition/auth-dependencies.js";
+import {
+  createAuthDependencies,
+  createTestAuthDependencies,
+  type AuthDependencies,
+} from "./composition/auth-dependencies.js";
 import { buildServer } from "./server.js";
 
 const env = loadEnv();
-// loadEnv() already fails fast if DATABASE_URL is missing outside
-// NODE_ENV=test (see packages/config) — this is a defensive re-check, not
-// the primary guard.
-if (!env.DATABASE_URL) {
-  throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
+
+// NODE_ENV=test: an in-process PGlite instance instead of a live Postgres
+// connection (see docs/adr/adr-005-database.md) — lets E2E tests run the
+// real server/HTTP stack with no Docker/network database. loadEnv() does
+// not require DATABASE_URL in this case. Every other environment requires
+// a real DATABASE_URL and fails fast without one (defensive re-check below
+// — the primary guard is loadEnv() itself).
+let authDeps: AuthDependencies;
+if (env.NODE_ENV === "test") {
+  authDeps = await createTestAuthDependencies();
+} else {
+  if (!env.DATABASE_URL) {
+    throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
+  }
+  authDeps = createAuthDependencies(env.DATABASE_URL);
 }
-const authDeps = createAuthDependencies(env.DATABASE_URL);
+
 const app = buildServer(env, authDeps);
 
 async function start(): Promise<void> {

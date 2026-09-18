@@ -11,7 +11,15 @@ describe("loadEnv", () => {
       PORT: 3000,
       DEFAULT_LANGUAGE: "pl",
       APP_BASE_URL: "http://localhost:5173",
+      E2E_RELAXED_RATE_LIMITS: false,
     });
+  });
+
+  it("parses E2E_RELAXED_RATE_LIMITS=true, defaults to false otherwise", () => {
+    expect(loadEnv({ NODE_ENV: "test" }).E2E_RELAXED_RATE_LIMITS).toBe(false);
+    expect(
+      loadEnv({ NODE_ENV: "test", E2E_RELAXED_RATE_LIMITS: "true" }).E2E_RELAXED_RATE_LIMITS,
+    ).toBe(true);
   });
 
   it("coerces PORT from a string and respects provided values", () => {

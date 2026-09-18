@@ -11,6 +11,7 @@ import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
+import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 
 export function buildServer(env: AppEnv, authDeps: AuthDependencies): FastifyInstance {
   const app = Fastify({
@@ -48,6 +49,8 @@ export function buildServer(env: AppEnv, authDeps: AuthDependencies): FastifyIns
 
     const authUseCases = createAuthUseCases(authDeps, env.APP_BASE_URL);
     registerAuthRoutes(app, { useCases: authUseCases, env });
+
+    registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });
   });
 
   app.setErrorHandler((error: FastifyError, request, reply) => {
