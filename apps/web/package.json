@@ -11,6 +11,7 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@hookform/resolvers": "5.9.1",
     "@tanstack/react-query": "^5.102.8",
     "@tfm-bic/contracts": "workspace:*",
     "@tfm-bic/ui": "workspace:*",

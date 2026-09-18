@@ -1,8 +1,10 @@
-import { render, screen } from "@testing-library/react";
+import { renderWithProviders } from "@tfm-bic/testing";
+import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";
-import { beforeEach, describe, expect, it } from "vitest";
+import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 
+import * as authApi from "../services/auth-api.js";
 import { useThemeStore } from "../state/theme-store.js";
 import { RootLayout } from "./root-layout.js";
 
@@ -15,7 +17,7 @@ function renderRootLayout() {
     },
   ]);
 
-  return render(<Stub initialEntries={["/"]} />);
+  return renderWithProviders(<Stub initialEntries={["/"]} />);
 }
 
 describe("RootLayout", () => {
@@ -25,22 +27,41 @@ describe("RootLayout", () => {
     document.documentElement.classList.remove("dark");
   });
 
-  it("renders the primary navigation with links to every top-level public route", () => {
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  it("renders login/register links when no session is restored", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
     renderRootLayout();
 
-    const nav = screen.getByRole("navigation", { name: "Primary" });
-    expect(nav).toBeInTheDocument();
-    expect(screen.getByRole("link", { name: "Log in" })).toHaveAttribute("href", "/login");
+    expect(await screen.findByRole("link", { name: "Log in" })).toHaveAttribute("href", "/login");
     expect(screen.getByRole("link", { name: "Register" })).toHaveAttribute("href", "/register");
   });
 
-  it("renders the routed child content via Outlet", () => {
+  it("renders the current user's email and a log-out control when authenticated", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
+      id: "1",
+      email: "user@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
     renderRootLayout();
 
-    expect(screen.getByText("Home content")).toBeInTheDocument();
+    expect(await screen.findByText("user@example.com")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Log out" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Log in" })).not.toBeInTheDocument();
+  });
+
+  it("renders the routed child content via Outlet", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    renderRootLayout();
+
+    expect(await screen.findByText("Home content")).toBeInTheDocument();
   });
 
   it("toggles the .dark class on <html> when the theme button is activated", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
     const user = userEvent.setup();
     renderRootLayout();
 

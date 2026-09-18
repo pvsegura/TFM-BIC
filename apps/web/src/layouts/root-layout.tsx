@@ -2,18 +2,17 @@ import { Button } from "@tfm-bic/ui";
 import { useEffect } from "react";
 import { Link, Outlet } from "react-router";
 
+import { useCurrentUser } from "../hooks/use-current-user.js";
+import { useLogout } from "../hooks/use-logout.js";
 import { useThemeStore } from "../state/theme-store.js";
 
-const NAV_LINKS = [
-  { to: "/", label: "Home" },
-  { to: "/login", label: "Log in" },
-  { to: "/register", label: "Register" },
-  { to: "/dashboard", label: "Dashboard" },
-];
+const NAV_LINKS = [{ to: "/", label: "Home" }];
 
 export function RootLayout() {
   const theme = useThemeStore((state) => state.theme);
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
+  const { data: currentUser } = useCurrentUser();
+  const logoutMutation = useLogout();
 
   useEffect(() => {
     document.documentElement.classList.toggle("dark", theme === "dark");
@@ -43,6 +42,40 @@ export function RootLayout() {
                   </Link>
                 </li>
               ))}
+              {currentUser ? (
+                <>
+                  <li>
+                    <Link to="/dashboard" className="text-sm hover:underline">
+                      Dashboard
+                    </Link>
+                  </li>
+                  <li className="text-sm text-primary/70 dark:text-surface/70">
+                    {currentUser.email}
+                  </li>
+                  <li>
+                    <Button
+                      variant="secondary"
+                      onClick={() => logoutMutation.mutate()}
+                      disabled={logoutMutation.isPending}
+                    >
+                      Log out
+                    </Button>
+                  </li>
+                </>
+              ) : (
+                <>
+                  <li>
+                    <Link to="/login" className="text-sm hover:underline">
+                      Log in
+                    </Link>
+                  </li>
+                  <li>
+                    <Link to="/register" className="text-sm hover:underline">
+                      Register
+                    </Link>
+                  </li>
+                </>
+              )}
             </ul>
 
             <Button
