@@ -44,11 +44,23 @@ didn't change behavior.
 
 ## Integration vs unit boundary
 
-`packages/data` repository/adapter implementations are tested twice: a fast unit test with a
-faked driver/client, and a slower integration test in `tests/integration/` against a real
-(disposable/test) Postgres instance — both required before an adapter is considered done, per
-[dependency-upgrades](../../.claude/skills/dependency-upgrades/SKILL.md)-style rigor applied to
-infra code generally.
+**Revised in M3** from the M0/M1 plan below: `packages/data`'s Identity repositories
+(`packages/data/src/identity/*.repository.test.ts`) are tested once, colocated with the adapter,
+against **PGlite** (`@electric-sql/pglite`) — a real, WASM-compiled Postgres running in-process,
+not a hand-rolled driver fake and not a separate `tests/integration/` tier. This was chosen over
+the original two-tier plan because a faked driver can't catch real schema/constraint bugs (and
+didn't need to prove itself twice — see [ADR-005](../adr/adr-005-database.md) for the concrete bugs
+this caught during M3 development), and because it keeps Jenkins Docker-free (no Postgres service
+to provision for CI). `tests/integration/` remains empty; local Docker Postgres
+(`infrastructure/docker/docker-compose.yml`) is available for manual testing against a real
+networked database, and `apps/api` can boot against a real Neon connection once one is
+provisioned (deployment-time, M17) — neither is exercised by the automated test suite.
+
+## Testing rules for M4+ that follow M3's precedent
+
+Repository/adapter tests for a new bounded context should default to the same PGlite pattern
+(colocated, no live network dependency) rather than reviving the `tests/integration/` +
+hand-faked-driver split, unless a concrete reason emerges to deviate.
 
 ## Decided in M1
 
@@ -58,8 +70,8 @@ repo root (`vitest.config.ts`) with `test.projects` aggregating every package/ap
 `text`/`html`/`lcov` under `./coverage`, `lcov.info` being the format SonarQube consumes (see
 [sonarqube skill](../../.claude/skills/sonarqube/SKILL.md)).
 
-## Not decided in M0/M1
+## Resolved in M3 (was "Not decided in M0/M1")
 
-- Whether integration tests run against a containerized Postgres in CI or a managed test DB —
-  depends on ADR-005/ADR-015 outcomes. `tests/integration/` stays empty until a real database
-  adapter exists to integration-test.
+Integration tests do **not** run against a containerized Postgres in CI — see "Integration vs
+unit boundary" above. `tests/integration/` stays empty; PGlite fills the role that tier would
+have played.

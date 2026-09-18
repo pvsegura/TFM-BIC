@@ -14,11 +14,13 @@ React UI -> hooks/presentation services -> API client -> Contracts
 Domain (`packages/domain`) imports nothing external — no infra, no PostgreSQL client, no Gemini/
 Hyperframes SDK, no React (`packages/shared`'s pure type utilities are the one allowed dependency).
 This is the rule most likely to be violated by a careless change — check it before adding an
-import to anything in `packages/domain` or `packages/application`. Enforced today by an ESLint
-`no-restricted-imports` rule scoped to `packages/domain/src/**` in `eslint.config.mjs`, plus code
-review — see `apps/api/src/routes/health.route.ts` → `packages/application`'s
-`GetHealthStatusUseCase` → `packages/domain`'s `LanguageId` for a real, working example of the
-full chain (route → use case → domain, with `packages/data`'s `SystemClock` as the one adapter).
+import to anything in `packages/domain` or `packages/application`. Enforced by an ESLint
+`no-restricted-imports` rule scoped to both `packages/domain/src/**` and
+`packages/application/src/**` in `eslint.config.mjs`, plus code review — see
+`packages/domain/src/identity/` → `packages/application/src/identity/` →
+`packages/data/src/identity/` (Drizzle/Argon2/Crypto adapters) → `apps/api/src/routes/
+auth.route.ts` for the full, real Identity & Authentication chain (M3), or
+`apps/api/src/routes/health.route.ts` for the smaller M1 example.
 
 ## External services
 
@@ -26,7 +28,8 @@ Never called directly from domain/application logic. Always: interface (owned by
 application/contracts) → adapter (in `packages/data`) → real provider.
 `VideoGenerationService` → `HyperframesProvider` → Hyperframes.
 `AudioGenerationService` → `GeminiAudioProvider` → Gemini API.
-`EmailService` → provider adapter (provider PENDING, ADR-014).
+`EmailService` → `InMemoryEmailService` (the only adapter wired — no real provider account
+exists; Resend is the documented target, ADR-014).
 
 ## Content
 

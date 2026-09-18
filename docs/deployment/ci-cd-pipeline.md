@@ -132,14 +132,20 @@ declares its own `agent { docker { ... reuseNode true } }`, which runs that imag
 underlying Jenkins node and workspace as the rest of the pipeline (rather than a fresh node), so it
 sees the already-installed `node_modules` and build output without a second `pnpm install`. Known
 risk: `node_modules` was populated by the `node:24-bookworm-slim` (Debian) container earlier in the
-run; the Playwright image is Ubuntu-based. Both are glibc Linux, and nothing in this repo's
-dependency tree currently compiles native addons at install time, so this is not expected to be an
-issue — but it's a real cross-image assumption worth remembering if a future dependency adds one.
+run; the Playwright image is Ubuntu-based. Both are glibc Linux — **M3 update**: `argon2`
+(`packages/data`, password hashing — ADR-006) does resolve a native binding at install time, via a
+prebuilt binary for common glibc-Linux platforms (not a from-source compile in the normal case),
+so this is still not expected to be an issue in practice, but it is no longer accurate to say
+nothing in the dependency tree touches native addons — worth re-verifying on the first real
+Jenkins run rather than assuming.
 
-The Playwright config's `webServer` step (`pnpm --filter @tfm-bic/web dev`) starts `apps/web`
-inside the same container the tests run in — no separate "deploy to a preview environment" step
-exists yet (ADR-010's original draft mentioned this as PENDING; M2 doesn't need it since E2E only
-needs `apps/web` reachable, not a public URL).
+The Playwright config's `webServer` step now starts **two** servers inside the same container the
+tests run in: `pnpm --filter @tfm-bic/web dev` (`apps/web`) and `pnpm --filter @tfm-bic/api start`
+with `NODE_ENV=test` (`apps/api`, booting against an in-process PGlite instance — no
+Docker/network database needed even in CI, see [ADR-005](../adr/adr-005-database.md) and
+`tests/e2e/playwright.config.ts`). No separate "deploy to a preview environment" step exists yet
+(ADR-010's original draft mentioned this as PENDING; not needed since E2E only needs both apps
+reachable inside the CI container, not a public URL).
 
 ## SonarQube integration
 

@@ -1,17 +1,20 @@
 # Security Baseline
 
-Status: ACCEPTED (baseline principles) | Related: [ADR-006](../adr/adr-006-authentication.md)
+Status: ACCEPTED | Related: [ADR-006](../adr/adr-006-authentication.md)
 
 Principles to be applied from the first line of implementation code, not retrofitted.
 
-## Authentication & authorization
+## Authentication & authorization (M3 — implemented)
 
-- Passwords hashed with a modern, salted algorithm — exact algorithm/cost factor PENDING,
-  verified against current best practice at implementation time (see ADR-006).
-- All authorization checks enforced server-side (`apps/api`); UI-level role hiding is UX only,
-  never the security boundary.
-- Session/token mechanism PENDING (ADR-006) — whichever is chosen, tokens/session secrets are
-  never logged.
+- Passwords hashed with Argon2id (the `argon2` npm package, library-default cost parameters) —
+  see ADR-006 for why this was chosen over Node's native `crypto.argon2`.
+- All authorization checks enforced server-side (`apps/api`, via the `authenticate`/`requireRole`
+  preHandler hooks — `apps/api/src/hooks/`); UI-level role hiding
+  (`apps/web/src/components/protected-route.tsx`) is UX only, never the security boundary.
+- Session mechanism: server-managed session, referenced by an opaque CSPRNG token in an
+  `HttpOnly`/`Secure` (prod)/`SameSite=Strict` cookie, signed via `@fastify/cookie`. Session
+  tokens and reset/verification tokens are stored only as SHA-256 hashes, never in recoverable
+  form, and are never logged — see ADR-006 for the full threat model.
 
 ## Input/output validation
 
@@ -24,12 +27,16 @@ Principles to be applied from the first line of implementation code, not retrofi
 
 - **XSS**: rely on React's default escaping; sanitize any HTML explicitly allowed into the DOM
   (e.g., rich-text lesson content) with a vetted sanitizer at the point of storage or render.
-- **SQL injection**: repository implementations use parameterized queries/query builder, never
-  string-concatenated SQL.
-- **CSRF**: dependent on session mechanism choice (ADR-006) — SameSite cookies or CSRF tokens as
-  appropriate once decided.
-- **Rate limiting**: applied at the API layer for auth endpoints (login, password reset,
-  registration) at minimum, to blunt credential-stuffing/enumeration.
+- **SQL injection**: repository implementations use Drizzle's parameterized query builder
+  (`packages/data/src/identity/*.repository.ts`), never string-concatenated SQL.
+- **CSRF** (M3 — implemented): primary defense is `SameSite=Strict` on the session cookie;
+  defense in depth is an `Origin`-header check on every state-changing `/auth/*` route
+  (`apps/api/src/hooks/verify-origin.ts`) — see ADR-006 for the full rationale and accepted
+  trade-offs (no double-submit CSRF token in M3).
+- **Rate limiting** (M3 — implemented): `@fastify/rate-limit`, per-route, on every auth endpoint
+  — register/resend/reset-request: 5/hour; login: 10/15min; reset-confirm: 10/hour; verify-email:
+  20/15min (`apps/api/src/routes/auth.route.ts`). Enforcement is covered by an automated test
+  (`auth.route.test.ts`), not just configured and assumed to work.
 - **Secure headers**: standard security headers (CSP, HSTS, X-Content-Type-Options, etc.) set at
   the API/reverse-proxy layer (`infrastructure/nginx/`) — exact CSP policy deferred until frontend
   asset/CDN strategy (tied to ADR-015) is known.
@@ -57,7 +64,12 @@ Principles to be applied from the first line of implementation code, not retrofi
 
 - Privacy-relevant and destructive actions (account deletion, data export, role changes) are
   audit-logged — detail owned by the Privacy & Data Management context (see
-  [domain-model.md](../architecture/domain-model.md)).
+  [domain-model.md](../architecture/domain-model.md)), a later milestone.
+- M3: auth routes log structured events (login success/failure, logout, email verified,
+  password-reset requested/completed) via Fastify's request logger
+  (`apps/api/src/routes/auth.route.ts`) — user id where known, never email/password/tokens/
+  cookies (the logger's `redact` config additionally strips the `Cookie` and `Authorization`
+  headers and `Set-Cookie` response header from every log line, see `apps/api/src/server.ts`).
 
 ## Least privilege
 
