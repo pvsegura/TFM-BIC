@@ -62,6 +62,15 @@ pipeline {
             }
         }
 
+        // M5: validates every content file (schemas, ids, ordering, availability) with the same
+        // loader the API runs at startup, so malformed content fails here, before lint/tests, with
+        // a readable list of problems instead of failing later in a test or at server start.
+        stage('Content Validation') {
+            steps {
+                sh 'pnpm content:validate'
+            }
+        }
+
         stage('Lint') {
             steps {
                 // ESLint's type-aware rules (eslint.config.mjs: projectService: true) build a

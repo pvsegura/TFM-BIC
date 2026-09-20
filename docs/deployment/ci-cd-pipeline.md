@@ -9,7 +9,8 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
 ## Pipeline stages (implemented)
 
 ```
-(implicit) Checkout -> Environment/Tool Validation -> Install Dependencies -> Lint
+(implicit) Checkout -> Environment/Tool Validation -> Install Dependencies -> Content Validation
+  -> Lint
   -> Format Check -> Typecheck -> Unit/Component Tests -> Coverage Report -> Build -> E2E
   -> SonarQube Analysis -> Quality Gate
 ```
@@ -22,6 +23,9 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
   (`package.json#packageManager`, `.nvmrc`) rather than whatever the agent happens to have.
 - **Install Dependencies**: `pnpm install --frozen-lockfile` — fails instead of silently rewriting
   `pnpm-lock.yaml` if the lockfile and manifests disagree (see [§ Dependency installation](#dependency-installation)).
+- **Content Validation** (M5): `pnpm content:validate` — loads every file under `content/` with the
+  same loader the API runs at startup and prints every schema, location and catalog-consistency
+  problem at once. It sits before lint/tests so malformed content fails fast with a readable list.
 - **Lint / Format Check / Typecheck**: `pnpm lint`, `pnpm format:check`, `pnpm typecheck` — cheap,
   fail fast, before any test/build cost is paid.
 - **Unit / Component Tests**: `pnpm test:coverage` — see [§ Why one combined test+coverage run](#why-one-combined-testcoverage-run).
