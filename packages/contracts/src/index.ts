@@ -21,3 +21,11 @@ export {
   type PasswordResetConfirm,
 } from "./auth/password-reset-confirm.schema.js";
 export { messageResponseSchema, type MessageResponse } from "./auth/message-response.schema.js";
+
+// Student Profile (M4).
+export { AVATAR_CATALOG, avatarIdSchema, type AvatarId } from "./profile/avatar-catalog.schema.js";
+export {
+  updateProfileRequestSchema,
+  type UpdateProfileRequest,
+} from "./profile/update-profile-request.schema.js";
+export { profileResponseSchema, type ProfileResponse } from "./profile/profile-response.schema.js";
