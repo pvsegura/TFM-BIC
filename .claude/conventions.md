@@ -37,8 +37,9 @@ Detail: [docs/development/commit-convention.md](../docs/development/commit-conve
 ## CI/CD (since M2)
 
 `Jenkinsfile` + `sonar-project.properties` (repo root) — stages, reproducibility decisions, and
-troubleshooting: [docs/deployment/ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md). Not yet
-executed against a real Jenkins/SonarQube instance (neither is provisioned). Reproduce the same
+troubleshooting: [docs/deployment/ci-cd-pipeline.md](../docs/deployment/ci-cd-pipeline.md). A local
+Jenkins/SonarQube exist (WSL Docker) but a green build was not confirmed — see
+[current-state.md](current-state.md). Reproduce the same
 gates locally before pushing: `pnpm check` (lint/format/typecheck/test/build) + `pnpm test:e2e`.
 Whenever `@playwright/test` is upgraded, the Playwright Docker image tag in the `Jenkinsfile` must
 be bumped to match in the same commit, or the E2E stage breaks.
@@ -47,7 +48,8 @@ be bumped to match in the same commit, or the E2E stage breaks.
 
 TypeScript strict mode everywhere, no `any`. No business logic in React components (belongs in
 domain/application, invoked via hooks/services). No business logic in API route handlers (thin
-controllers only). No per-language `if` branching — parameterize by `languageId`.
+controllers only). No per-language `if` branching — parameterize by `languageId` (enforced by
+`packages/data/src/content/no-language-branching.test.ts`).
 
 ## Data, API and client-state conventions (since M4)
 
@@ -62,12 +64,33 @@ Rationale: [ADR-017](../docs/adr/adr-017-student-profile.md).
   schemas are `.strict()`, use-case input types carry no auth/role fields, and fields are mapped
   one by one — never spread from a body.
 - **A `GET` never writes.** Create-on-first-write with one atomic upsert.
-- **Every cached TanStack Query except `["auth", …]` is user-scoped** and is dropped on
-  logout/login (`apps/web/src/hooks/session-cache.ts`). Never cache another user's data under an
+- **Every cached TanStack Query except `["auth", …]` and the public `["catalog", …]` (M5) is
+  user-scoped** and is dropped on logout/login (`apps/web/src/hooks/session-cache.ts`). Never cache another user's data under an
   `auth` key, and never put user data in Zustand.
 - **Names/free text**: trim only — no case folding, diacritic stripping or alphabet allow-lists
   (the product is multilingual). Reject control characters; treat markup-looking text as inert data
   and rely on output escaping.
+
+## Content and catalog conventions (since M5)
+
+Rationale: [ADR-018](../docs/adr/adr-018-content-languages.md); reference:
+[content-architecture.md](../docs/architecture/content-architecture.md).
+
+- **Content is data** under `content/languages/<code>/` — one `language.json` per language and one
+  JSON file per content item (file name = id). Never hard-code language names, codes or educational
+  text in React, use cases or routes. A new language or level is files + `pnpm content:validate`.
+- **One schema system**: Zod in `packages/contracts` defines both the on-disk format and the API
+  shapes, built from the domain's own predicates. Content strings are plain text (no markup, no
+  control characters); block types are a closed set mapped to fixed UI components.
+- **Ids are permanent** and language-prefixed (`pl-greetings`); retire content by `status: archived`,
+  never by renaming. Ordering is the explicit `order` field.
+- **Visibility rules live in application use cases**, not repositories or the UI: active languages,
+  `available` levels, `published` content only; every hidden-content outcome is the same `404`.
+- **Public catalog routes** (`/languages`, `/content`) are unauthenticated and read-only. Web pages that
+  would share an API path get a different path (`/learn`) instead of another proxy bypass.
+- **Catalog queries** use the key root `["catalog", …]`: the one cached data that is _not_ user-scoped,
+  so `clearUserScopedCache` keeps it (with `["auth", …]`).
+- `pnpm content:validate` runs in Jenkins right after install and before lint.
 
 ## Dependencies
 

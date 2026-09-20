@@ -1,8 +1,9 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–4 complete**
-(architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile) —
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–5 complete**
+(architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
+Content & Languages) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -23,6 +24,13 @@ see [current-state.md](current-state.md) for what that means concretely.
   `student_profiles` table keyed to `users`; identity (email, role) stays on `users`. The two
   routes `GET /profile` and `PATCH /profile` act only on the session's user — see
   [ADR-017](../docs/adr/adr-017-student-profile.md).
+
+- Languages & Content (M5): languages, CEFR level availability and educational content are validated
+  JSON under `content/languages/<code>/` (the single source of truth, no DB copy), read through a
+  `ContentRepository` port and served by four **public, read-only** endpoints (`GET /languages`,
+  `/languages/:c/levels`, `/content`, `/content/:id`). Adding a language or level is data only —
+  `pnpm content:validate`. Polish A1 has a small seed set (not a course). UI pages live under
+  `/learn`. See [ADR-018](../docs/adr/adr-018-content-languages.md).
 
 ## Where things live
 

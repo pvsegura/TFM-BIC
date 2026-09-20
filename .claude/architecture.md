@@ -35,9 +35,14 @@ exists; Resend is the documented target, ADR-014).
 
 ## Content
 
-`content/languages/<languageId>/...` — data, not code. Never branch on language identity
-(`if (language === 'polish')`) in application or UI code; parameterize by `languageId` instead.
-See [docs/architecture/content-architecture.md](../docs/architecture/content-architecture.md).
+`content/languages/<code>/language.json` + `levels/<levelId>/content/<contentId>.json` — validated JSON,
+the single source of truth, read once at API start-up through the `ContentRepository` port
+(`packages/data` file-system adapter). Never branch on language identity; parameterize by `languageId`.
+CEFR levels are a fixed constant (`CEFR_LEVELS`, domain); per-language availability (`available` |
+`planned`) is data. Visibility rules (active / available / published, explicit order) are enforced by
+the application use cases. Public read-only API; UI under `/learn`. See
+[docs/architecture/content-architecture.md](../docs/architecture/content-architecture.md) and
+[ADR-018](../docs/adr/adr-018-content-languages.md).
 
 ## Monorepo layout
 
