@@ -4,102 +4,100 @@ Last updated: 2026-09-20
 
 ## Milestone
 
-**M4 — Student Profile** — implemented on `feature/student-profile`, branched from
-`feature/authentication` (M3), which sits on `ci/jenkins-sonarqube` (all of M1+M2; `main` only has
-M0). `feature/student-profile` was pushed to GitHub on 2026-09-20 (nothing merged); because it
-contains M3, that also published M3's commits — the `feature/authentication` branch _ref_ itself is
-still local-only. M0–M3 remain the base
-(architecture/governance, monorepo/tooling, Jenkins/SonarQube CI/CD, authentication — see
+**M5 — Content & Languages** — implemented on `feature/content-languages`, branched from
+`feature/student-profile` (M4), which sits on `feature/authentication` (M3) and `ci/jenkins-sonarqube`
+(M1+M2); `main` only has M0. **Nothing from M5 has been pushed or merged.** M0–M4 remain the base
+(architecture/governance, monorepo/tooling, CI/CD, authentication, student profile — see
 [docs/product/project-constitution.md](../docs/product/project-constitution.md)).
 
-## What actually exists (M4)
+## What actually exists (M5)
 
-An authenticated student can view and edit first name, last name, nickname and pick an avatar.
-Full rationale and trade-offs: [ADR-017](../docs/adr/adr-017-student-profile.md).
+The language/level/content foundation. Rationale and trade-offs: [ADR-018](../docs/adr/adr-018-content-languages.md);
+reference and the "add a language" steps: [content-architecture.md](../docs/architecture/content-architecture.md).
 
-- **Domain**: `packages/domain/src/profile/` (`StudentProfile`, `createProfileName` 1–100,
-  `createNickname` 2–30, `createAvatarId`, three domain errors) and `media/avatar-catalog.ts` (6
-  static avatars, `avatar-01`…`avatar-06`).
-- **Application**: `ProfileRepository` port; `GetCurrentStudentProfileUseCase` (read, no side
-  effects) and `UpdateCurrentStudentProfileUseCase` (validates every field, then one upsert).
-- **Contracts**: strict `updateProfileRequestSchema`, allowlisting `profileResponseSchema`,
-  `avatarIdSchema` + re-exported `AVATAR_CATALOG` (how the web app gets the catalog),
-  `profileValidationErrorResponseSchema` (per-field messages).
-- **Data**: `student_profiles` (`user_id` PK + cascading FK to `users`; nullable name/nickname/
-  avatar; `CHECK`s mirroring the domain rules). Own schema/client/migration folder under
-  `packages/data/src/profile/`, own tracking table, `db:generate:profile` / `db:migrate:profile`
-  (run Identity's `db:migrate` first). `DrizzleProfileRepository` = one atomic
-  `INSERT … ON CONFLICT DO UPDATE`.
-- **API**: `GET /profile`, `PATCH /profile` — session user only, no `:id`, `.strict()` body (any
-  extra key is a `400`), 4 KB body cap, `Origin` check, generic `500`. See
-  [docs/api/README.md](../docs/api/README.md). Under `NODE_ENV=test` auth and profile share one
-  PGlite instance (`apps/api/src/composition/test-dependencies.ts`).
-- **Frontend**: `/profile` page (replaces the placeholder; behind `ProtectedRoute`), `ProfileForm`
-  (React Hook Form + the shared schema), `AvatarPicker` (native radios, check-mark selected state)
-  and `Avatar` in `packages/ui`, `useCurrentProfile`/`useUpdateProfile` (TanStack Query), nav link.
-  Blank input ⇒ `null` ⇒ field cleared; an empty string is never stored. Vite proxies `/profile`
-  fetches to the API but serves the SPA for browser navigations (page and API share the path).
-- **Fixes to M3 found along the way**: logout/login now clear every cached query except `["auth"]`
-  (M3 leaked the previous user's cached data to the next login on the same tab); the header now
-  wraps on narrow screens (it overflowed a 375px viewport by ~200px).
+- **Source of truth**: validated JSON under `content/languages/<code>/` — `language.json` (metadata +
+  which CEFR levels exist, `available` | `planned`) and `levels/<id>/content/<contentId>.json` (one item
+  per file). No database tables, migrations or seeds in M5; no copy anywhere else.
+- **Domain**: `Language`, `LanguageLevel`, the `CEFR_LEVELS` constant (`a1`…`c2`), `ContentItem` with
+  structured blocks (`explanation`, `example`, `dialogue`), `ContentId`, ordering, and
+  `validateContentCatalog` (cross-file rules).
+- **Contracts**: one Zod system for the strict on-disk format and the allowlisting API shapes.
+- **Application**: `ContentRepository` port; `ListLanguages`, `ListLanguageLevels`, `ListContent`,
+  `GetContent` enforce visibility (active languages, `available` levels, `published` content, explicit
+  order) — the repository is storage only.
+- **Data**: `FileSystemContentRepository` (reads + validates everything at API start-up, fails fast) and
+  `pnpm content:validate` (same loader; a Jenkins stage after install).
+- **API** (public, read-only, rate-limited 120/min): `GET /languages`, `/languages/:languageCode/levels`,
+  `/content?language=&level=`, `/content/:contentId`. Optional `CONTENT_DIR` env var.
+- **Frontend**: `/learn`, `/learn/:languageCode`, `/learn/:languageCode/:levelId` (one generic page) and
+  `/learn/:languageCode/:levelId/:contentId` (read-only content view); reusable `LanguageSelector`,
+  `LevelSelector`, `ContentList`, `ContentBlocks`. Planned levels are visible but not selectable.
+  "Learn" nav link. Catalog queries (`["catalog", …]`) survive logout.
+- **Polish A1 seed**: five original items (greetings; introducing yourself with a dialogue; polite
+  words; Polish has no articles; first look at spelling and sounds). Representative only — **not** a
+  complete A1 course and not CEFR-certified. A2–C2 are `planned`.
+- **Extensibility proof**: fictional languages (`xx`, `qq`, one RTL) served by the unmodified use cases,
+  storage and routes; `no-language-branching.test.ts` scans production source for per-language logic.
+- **Not stored**: the student's selected language/level (URL only) — enrolment belongs to M6.
 
-## What actually exists (M3, on top of M1/M2)
+## Verification (M5, run locally on 2026-09-20)
 
-Full Identity & Authentication slice (register, verify email, login, logout, password reset;
-server-side sessions, Argon2id; `authenticate`/`requireRole` hooks; per-route rate limits; `Origin`
-CSRF check; `InMemoryEmailService` only — no real email provider). Repository tests run on PGlite
-(real WASM Postgres, no Docker). ADRs 005/006/014 resolved. Detail: ADR-006,
-[docs/security/security-baseline.md](../docs/security/security-baseline.md).
+- `pnpm install --frozen-lockfile`, `pnpm content:validate` (1 language, 5 items), `lint`, `typecheck`,
+  `build`: pass. `format:check`: passes for everything committed (the user's separate uncommitted
+  `README.md` edit is not formatted).
+- **1107 Vitest tests / 110 files** pass (637 / 75 at end of M4): domain 238, contracts 265, application
+  87, data 122, config 12, api 155, web 198, ui 29, shared 1. Coverage: 95.81% statements / 89.44%
+  branches / 96.51% functions / 95.66% lines (thresholds 80/75/80/80).
+- **46 Playwright E2E tests** pass (25 earlier + 21 in `tests/e2e/content-languages.spec.ts`). Ports 3000
+  and 5173 must be free (`reuseExistingServer`).
+- **Jenkins pipeline and SonarQube analysis / Quality Gate: NOT RUN for M5.** The branch is not on
+  GitHub, and there are no Jenkins/SonarQube credentials in this environment (see the M4 note below).
+  The new "Content Validation" stage and the extra `sonar.coverage.exclusions` entry
+  (`validate-content.cli.ts`, mirrored in `vitest.config.ts`) are untested against a real instance.
+- Accessibility rests on role/label/keyboard tests and manual review; there is no axe-style scanner.
+- CEFR level names and ISO 639-1 codes were confirmed from search-result summaries (coe.int and loc.gov
+  returned 403 to direct fetches); Polish facts were cross-checked against several references (ADR-018).
 
-## Verification (M4, run locally on 2026-09-20)
+## Earlier milestones (short)
 
-- `pnpm install --frozen-lockfile`, `lint`, `typecheck`, `build`: pass. `format:check`: passes for
-  everything committed (a separate, uncommitted `README.md` edit unrelated to M4 is not formatted).
-- **637 Vitest tests / 75 files** pass (258 at end of M3, +379 in M4). Coverage: 94.02% statements /
-  86.54% branches / 95.03% functions / 93.85% lines (thresholds 80/75/80/80).
-- **25 Playwright E2E tests** pass against the real server (12 from M3, +13 in
-  `tests/e2e/profile.spec.ts`). Ports 3000 and 5173 must be free (`reuseExistingServer`).
-- **Jenkins pipeline and SonarQube analysis / Quality Gate: not confirmed.** A local Jenkins
-  (Multibranch job `TFM-BIC` on GitHub, containers in WSL Ubuntu) and SonarQube were started and
-  the branch pushed, but Jenkins needs a login to scan/trigger a build (it re-scans GitHub every 4
-  hours, or use "Scan Repository Now") and no result was read back. Its stages mirror the local
-  checks above. `sonar.coverage.exclusions` was aligned with Vitest's exclusions in M4.
+- **M4 (student profile)**: `GET`/`PATCH /profile` on the session user only, `student_profiles` table,
+  avatar catalog — [ADR-017](../docs/adr/adr-017-student-profile.md). Its branch was pushed on
+  2026-09-20 (publishing M3 too); a local Jenkins (Multibranch `TFM-BIC`, containers in WSL Ubuntu) and
+  SonarQube exist but no build result was ever read back.
+- **M3 (auth)**: register/verify/login/logout/reset, server-side sessions, Argon2id, rate limits, `Origin`
+  CSRF check, in-memory email only — ADR-006, [security-baseline](../docs/security/security-baseline.md).
 
 ## What does NOT exist yet (do not assume otherwise)
 
-- Lessons, vocabulary, phonetics, exercises, scoring/progress, gamification, teacher dashboard,
-  subscriptions, newsletter, account deletion/data export, email/privacy preferences, AI services.
-- Email change (a separate, security-sensitive workflow), avatar upload/custom avatars, real avatar
-  artwork (emoji glyphs stand in).
-- A real email provider (`InMemoryEmailService` only, ADR-014); a real Neon connection was never
-  exercised (Docker Postgres in dev, PGlite in tests).
-- Automated accessibility checks (no axe-style tool in the repo) — a11y is covered by RTL
-  role/label/keyboard tests and manual review only.
-- CSRF double-submit token (`SameSite=Strict` + `Origin` check only, ADR-006); a dependency-audit
-  CI step.
+- Lessons as an experience, exercises, scoring/progress, vocabulary/phonetics content, gamification,
+  teacher dashboard, subscriptions, newsletter, account deletion/data export, AI services.
+- More than one real language, or any level beyond Polish A1; CEFR descriptors; interface localisation
+  (the UI is English-only; `instructionLanguage` is data, not behaviour).
+- Persistence of a student's chosen language/level; content hot-reload (content is read at start-up).
+- A real email provider (ADR-014); a real Neon connection was never exercised (Docker Postgres in dev,
+  PGlite in tests).
+- Automated accessibility checks (axe); CSRF double-submit token; a dependency-audit CI step.
 
-## Pending decisions blocking further implementation
+## Pending decisions
 
-None block M5. Hosting/deploy target ([ADR-015](../docs/adr/adr-015-deployment.md)) remains
-PENDING — relevant to a deployment milestone (M17), not to feature work.
+None block M6. Hosting/deploy ([ADR-015](../docs/adr/adr-015-deployment.md)) is PENDING; note that a
+deployment must now ship `content/` with the API or set `CONTENT_DIR`.
 
 ## Known risks / rough edges
 
-- **`/profile` is both the page and the API path.** Only the Vite dev proxy separates them
-  (`Sec-Fetch-Dest`/`Accept`); a production reverse proxy must do the same (ADR-017, ADR-015).
-- **Profile routes have no rate limit** (authenticated, own row only). No unsaved-changes
-  navigation guard. An avatar can be replaced but not cleared.
-- **Names are stored as typed, including markup-looking text** — safe only while every consumer
-  escapes on output; a future HTML email/PDF must escape them.
-- **Two `pg` pools** per API process (identity, profile) over one `DATABASE_URL`. Real Neon
-  connectivity is still unverified.
-- **One-off flake seen**: an M1 health-use-case test hit Vitest's default 5s timeout on a cold
-  worker once while WSL/Docker was starting; it passed on the next 3 full runs.
-- **`E2E_RELAXED_RATE_LIMITS`** raises (not removes) auth rate limits for E2E only (M3).
-- Jenkins lint stage may need a long timeout on this larger monorepo (M3 note).
-- Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is
-  unset (required in staging/production).
+- **Content changes need a restart/release** (read once at start-up); invalid content stops the API from
+  starting (by design).
+- **Public endpoints**: rate-limited but unauthenticated — they must never return anything not fine for
+  anyone to read. Gating content bodies later (subscriptions) is a deliberate route change.
+- **`/profile` is both page and API path** (only the Vite dev proxy separates them; ADR-017). M5 avoided
+  repeating this by using `/learn` for pages.
+- A first Playwright run once timed out (60s) waiting for the servers with both ports free; a rerun
+  passed. Not reproduced since.
+- Profile routes have no rate limit; no unsaved-changes guard; names stored as typed (escape on output).
+- Two `pg` pools per API process (identity, profile); real Neon connectivity unverified.
+- `E2E_RELAXED_RATE_LIMITS` raises (not removes) rate limits for E2E only, now for the catalog routes too.
+- Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is unset.
 
 ## Next milestone
 
-`M5 — Content & Languages` (not started).
+`M6 — Lessons` (not started).
