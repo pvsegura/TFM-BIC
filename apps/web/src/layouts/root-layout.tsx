@@ -28,13 +28,13 @@ export function RootLayout() {
       </a>
 
       <header className="border-b border-primary/10 dark:border-surface/10">
-        <div className="mx-auto flex max-w-5xl items-center justify-between px-4 py-4">
+        <div className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4">
           <Link to="/" className="text-lg font-semibold">
             TFM-BIC
           </Link>
 
-          <nav aria-label="Primary" className="flex items-center gap-4">
-            <ul className="flex items-center gap-4">
+          <nav aria-label="Primary" className="flex flex-wrap items-center gap-x-4 gap-y-2">
+            <ul className="flex flex-wrap items-center gap-x-4 gap-y-2">
               {NAV_LINKS.map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="text-sm hover:underline">
@@ -54,7 +54,7 @@ export function RootLayout() {
                       Profile
                     </Link>
                   </li>
-                  <li className="text-sm text-primary/70 dark:text-surface/70">
+                  <li className="break-all text-sm text-primary/70 dark:text-surface/70">
                     {currentUser.email}
                   </li>
                   <li>
