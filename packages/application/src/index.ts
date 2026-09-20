@@ -54,3 +54,16 @@ export {
   ConfirmPasswordResetUseCase,
   type ConfirmPasswordResetInput,
 } from "./identity/use-cases/confirm-password-reset.use-case.js";
+
+// Student Profile (M4) port — implemented in packages/data.
+export type { ProfilePatch, ProfileRepository } from "./profile/ports/profile-repository.js";
+
+// Student Profile (M4) use cases.
+export {
+  GetCurrentStudentProfileUseCase,
+  type GetCurrentStudentProfileInput,
+} from "./profile/use-cases/get-current-student-profile.use-case.js";
+export {
+  UpdateCurrentStudentProfileUseCase,
+  type UpdateCurrentStudentProfileInput,
+} from "./profile/use-cases/update-current-student-profile.use-case.js";
