@@ -1,7 +1,7 @@
 import { loadEnv } from "@tfm-bic/config";
 import type { ProfileResponse, ProfileValidationErrorResponse } from "@tfm-bic/contracts";
 import type { FastifyInstance } from "fastify";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { SESSION_COOKIE_NAME } from "../constants/session-cookie.js";
 import { buildServer } from "../server.js";
@@ -618,6 +618,37 @@ describe("PATCH /profile", () => {
       const response = await patchProfile(built, cookie, { lastName: payload });
 
       expect(response.json<ProfileResponse>().lastName).toBe(payload);
+    });
+  });
+
+  describe("unexpected failures", () => {
+    const INTERNAL_DETAIL =
+      'connect ECONNREFUSED 10.0.0.5:5432: password authentication failed for user "app_prod"';
+
+    it("returns a generic 500 that leaks nothing when saving fails inside the database layer", async () => {
+      const built = build();
+      const { cookie } = await signIn(built, "ana@example.com");
+      vi.spyOn(built.profileRepository, "upsert").mockRejectedValue(new Error(INTERNAL_DETAIL));
+
+      const response = await patchProfile(built, cookie, { firstName: "Ana" });
+
+      expect(response.statusCode).toBe(500);
+      expect(response.json()).toEqual({ error: "Internal Server Error" });
+      expect(response.body).not.toMatch(/ECONNREFUSED|password|app_prod|5432/i);
+    });
+
+    it("returns a generic 500 that leaks nothing when reading fails inside the database layer", async () => {
+      const built = build();
+      const { cookie } = await signIn(built, "ana@example.com");
+      vi.spyOn(built.profileRepository, "findByUserId").mockRejectedValue(
+        new Error(INTERNAL_DETAIL),
+      );
+
+      const response = await getProfile(built, cookie);
+
+      expect(response.statusCode).toBe(500);
+      expect(response.json()).toEqual({ error: "Internal Server Error" });
+      expect(response.body).not.toMatch(/ECONNREFUSED|password|app_prod|5432/i);
     });
   });
 
