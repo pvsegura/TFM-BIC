@@ -55,6 +55,25 @@ export {
   type ConfirmPasswordResetInput,
 } from "./identity/use-cases/confirm-password-reset.use-case.js";
 
+// Languages & Content (M5) port — implemented in packages/data — and use cases.
+export type { ContentRepository } from "./content/ports/content-repository.js";
+export { ListLanguagesUseCase } from "./content/use-cases/list-languages.use-case.js";
+export {
+  ListLanguageLevelsUseCase,
+  type LanguageLevelView,
+  type ListLanguageLevelsInput,
+  type ListLanguageLevelsResult,
+} from "./content/use-cases/list-language-levels.use-case.js";
+export {
+  ListContentUseCase,
+  type ContentSummary,
+  type ListContentInput,
+} from "./content/use-cases/list-content.use-case.js";
+export {
+  GetContentUseCase,
+  type GetContentInput,
+} from "./content/use-cases/get-content.use-case.js";
+
 // Student Profile (M4) port — implemented in packages/data.
 export type { ProfilePatch, ProfileRepository } from "./profile/ports/profile-repository.js";
 
