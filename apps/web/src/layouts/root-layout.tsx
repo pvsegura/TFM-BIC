@@ -49,6 +49,11 @@ export function RootLayout() {
                       Dashboard
                     </Link>
                   </li>
+                  <li>
+                    <Link to="/profile" className="text-sm hover:underline">
+                      Profile
+                    </Link>
+                  </li>
                   <li className="text-sm text-primary/70 dark:text-surface/70">
                     {currentUser.email}
                   </li>

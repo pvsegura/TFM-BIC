@@ -15,6 +15,22 @@ export default defineConfig({
         target: "http://localhost:3000",
         changeOrigin: true,
       },
+      // The profile page (SPA route) and the profile API (`GET`/`PATCH
+      // /profile`) share one path. A browser navigation — a typed URL, a
+      // reload, a link — must get the SPA, while the app's own `fetch` (which
+      // always sends `Accept: application/json`, see src/services/
+      // profile-api.ts) must reach the API. Any reverse proxy in front of
+      // production needs the same distinction.
+      "/profile": {
+        target: "http://localhost:3000",
+        changeOrigin: true,
+        bypass(req) {
+          const isPageNavigation =
+            req.headers["sec-fetch-dest"] === "document" ||
+            (req.headers.accept ?? "").includes("text/html");
+          return isPageNavigation ? "/index.html" : undefined;
+        },
+      },
     },
   },
 });

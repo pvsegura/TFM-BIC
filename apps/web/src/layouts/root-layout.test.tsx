@@ -53,6 +53,29 @@ describe("RootLayout", () => {
     expect(screen.queryByRole("link", { name: "Log in" })).not.toBeInTheDocument();
   });
 
+  it("links to the profile page when authenticated", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
+      id: "1",
+      email: "user@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
+    renderRootLayout();
+
+    expect(await screen.findByRole("link", { name: "Profile" })).toHaveAttribute(
+      "href",
+      "/profile",
+    );
+  });
+
+  it("does not offer the profile link to an anonymous visitor", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    renderRootLayout();
+
+    await screen.findByRole("link", { name: "Log in" });
+    expect(screen.queryByRole("link", { name: "Profile" })).not.toBeInTheDocument();
+  });
+
   it("renders the routed child content via Outlet", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
     renderRootLayout();

@@ -4,6 +4,7 @@ import { ProtectedRoute } from "./components/protected-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { ForgotPasswordPage } from "./pages/forgot-password-page.js";
 import { LoginPage } from "./pages/login-page.js";
+import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
 import { RoutePlaceholder } from "./pages/route-placeholder.js";
@@ -25,8 +26,9 @@ const PUBLIC_ROUTES = [
 
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
- * boundary on every request. Still placeholders for the features
- * themselves (M4+), real now only in that they require login. */
+ * boundary on every request. Profile is the real M4 page; the rest are
+ * still placeholders for their features (M5+), real now only in that they
+ * require login. */
 const APP_ROUTES = [
   { path: "dashboard", element: placeholder("Dashboard", "Student dashboard placeholder.") },
   { path: "lessons", element: placeholder("Lessons", "Lesson list placeholder.") },
@@ -38,7 +40,7 @@ const APP_ROUTES = [
     path: "achievements",
     element: placeholder("Achievements", "Gamification/achievements placeholder."),
   },
-  { path: "profile", element: placeholder("Profile", "User profile placeholder.") },
+  { path: "profile", element: <ProfilePage /> },
   { path: "settings", element: placeholder("Settings", "Account settings placeholder.") },
 ];
 
