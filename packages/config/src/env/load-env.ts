@@ -9,6 +9,9 @@ const envSchema = z
     NODE_ENV: z.enum(["development", "test", "staging", "production"]).default("development"),
     PORT: z.coerce.number().int().positive().default(3000),
     DEFAULT_LANGUAGE: z.string().default("pl"),
+    // Languages & Content (M5, ADR-018): where the content tree lives. Unset = the repository's own
+    // `content/` folder (resolved by packages/data); a deployment that ships content elsewhere sets it.
+    CONTENT_DIR: z.string().min(1).optional(),
     // Database (M3, ADR-005) — required everywhere except NODE_ENV=test,
     // which uses an in-process PGlite instance instead (see packages/data).
     DATABASE_URL: z.string().min(1).optional(),

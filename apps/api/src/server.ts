@@ -9,10 +9,14 @@ import Fastify, { type FastifyError, type FastifyInstance } from "fastify";
 
 import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
+import type { ContentDependencies } from "./composition/content-dependencies.js";
+import { createContentUseCases } from "./composition/content-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
+import { registerContentRoutes } from "./routes/content.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
+import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 
@@ -20,6 +24,7 @@ export function buildServer(
   env: AppEnv,
   authDeps: AuthDependencies,
   profileDeps: ProfileDependencies,
+  contentDeps: ContentDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -64,6 +69,11 @@ export function buildServer(
       resolveSession: authUseCases.resolveSession,
       env,
     });
+
+    // Language/content discovery is public and read-only (ADR-018): no session, no user data.
+    const contentUseCases = createContentUseCases(contentDeps);
+    registerLanguageRoutes(app, { useCases: contentUseCases, env });
+    registerContentRoutes(app, { useCases: contentUseCases, env });
 
     registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });
   });

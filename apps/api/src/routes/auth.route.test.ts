@@ -20,6 +20,7 @@ function build(testDeps = buildTestDeps()) {
     loadEnv({ NODE_ENV: "test", APP_BASE_URL, AUTH_SESSION_SECRET: "test-secret-value" }),
     testDeps.deps,
     testDeps.profileDeps,
+    testDeps.contentDeps,
   );
   return { app, ...testDeps };
 }

@@ -22,6 +22,14 @@ describe("loadEnv", () => {
     ).toBe(true);
   });
 
+  it("leaves CONTENT_DIR unset by default and accepts an override (a non-empty path)", () => {
+    expect(loadEnv({ NODE_ENV: "test" }).CONTENT_DIR).toBeUndefined();
+    expect(loadEnv({ NODE_ENV: "test", CONTENT_DIR: "/srv/content" }).CONTENT_DIR).toBe(
+      "/srv/content",
+    );
+    expect(() => loadEnv({ NODE_ENV: "test", CONTENT_DIR: "" })).toThrow(/CONTENT_DIR/);
+  });
+
   it("coerces PORT from a string and respects provided values", () => {
     const env = loadEnv({ NODE_ENV: "test", PORT: "4000", DEFAULT_LANGUAGE: "en" });
 

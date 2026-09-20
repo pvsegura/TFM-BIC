@@ -1,4 +1,5 @@
 import {
+  FakeContentRepository,
   FakeEmailService,
   FakeEmailVerificationTokenRepository,
   FakePasswordHasher,
@@ -8,9 +9,11 @@ import {
   FakeTokenGenerator,
   FakeUserRepository,
   FixedClock,
+  makeSampleCatalog,
 } from "@tfm-bic/application/testing";
 
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
+import type { ContentDependencies } from "../composition/content-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 
 /** Fast, in-memory dependencies for apps/api's own HTTP-layer tests —
@@ -27,6 +30,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   const tokenGenerator = new FakeTokenGenerator();
   const emailService = new FakeEmailService();
   const profileRepository = new FakeProfileRepository(clock);
+  const contentRepository = new FakeContentRepository(makeSampleCatalog());
 
   const deps: AuthDependencies = {
     userRepository,
@@ -45,9 +49,12 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const contentDeps: ContentDependencies = { contentRepository };
+
   return {
     deps,
     profileDeps,
+    contentDeps,
     clock,
     userRepository,
     sessionRepository,
@@ -57,5 +64,6 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     tokenGenerator,
     emailService,
     profileRepository,
+    contentRepository,
   };
 }

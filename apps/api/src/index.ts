@@ -5,6 +5,10 @@ import {
   createProfileDependencies,
   type ProfileDependencies,
 } from "./composition/profile-dependencies.js";
+import {
+  createContentDependencies,
+  type ContentDependencies,
+} from "./composition/content-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
@@ -18,17 +22,23 @@ const env = loadEnv();
 // — the primary guard is loadEnv() itself).
 let authDeps: AuthDependencies;
 let profileDeps: ProfileDependencies;
+let contentDeps: ContentDependencies;
 if (env.NODE_ENV === "test") {
-  ({ auth: authDeps, profile: profileDeps } = await createTestDependencies());
+  ({
+    auth: authDeps,
+    profile: profileDeps,
+    content: contentDeps,
+  } = await createTestDependencies(env.CONTENT_DIR));
 } else {
   if (!env.DATABASE_URL) {
     throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
   }
   authDeps = createAuthDependencies(env.DATABASE_URL);
   profileDeps = createProfileDependencies(env.DATABASE_URL);
+  contentDeps = await createContentDependencies(env.CONTENT_DIR);
 }
 
-const app = buildServer(env, authDeps, profileDeps);
+const app = buildServer(env, authDeps, profileDeps, contentDeps);
 
 async function start(): Promise<void> {
   try {

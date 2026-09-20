@@ -1,6 +1,7 @@
 import { createProfileTestDb } from "@tfm-bic/data/testing";
 
 import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
+import { createContentDependencies, type ContentDependencies } from "./content-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 
 /**
@@ -17,14 +18,17 @@ import { buildProfileDependencies, type ProfileDependencies } from "./profile-de
  * instance is closed once, via `auth.close`; `profile.close` is a no-op so
  * shutting both down never closes it twice.
  */
-export async function createTestDependencies(): Promise<{
+export async function createTestDependencies(contentDir?: string): Promise<{
   auth: AuthDependencies;
   profile: ProfileDependencies;
+  content: ContentDependencies;
 }> {
   const { db, identityDb, close } = await createProfileTestDb();
 
   return {
     auth: buildAuthDependencies(identityDb, close),
     profile: buildProfileDependencies(db, () => Promise.resolve()),
+    // The real content tree, so E2E exercises the shipped Polish A1 content end to end.
+    content: await createContentDependencies(contentDir),
   };
 }
