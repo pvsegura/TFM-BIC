@@ -7,6 +7,6 @@ import { z } from "zod";
  * on `packages/domain`), so this is how the picker gets the one source of
  * truth for which avatars exist without duplicating that list in the UI.
  */
-export const avatarIdSchema = z.enum(AVATAR_IDS);
+export const avatarIdSchema = z.enum(AVATAR_IDS, { error: "Choose one of the available avatars." });
 
 export { AVATAR_CATALOG, type AvatarId };

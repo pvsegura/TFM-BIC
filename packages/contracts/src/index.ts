@@ -29,3 +29,7 @@ export {
   type UpdateProfileRequest,
 } from "./profile/update-profile-request.schema.js";
 export { profileResponseSchema, type ProfileResponse } from "./profile/profile-response.schema.js";
+export {
+  profileValidationErrorResponseSchema,
+  type ProfileValidationErrorResponse,
+} from "./profile/profile-validation-error.schema.js";
