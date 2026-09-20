@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-introducing-yourself",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Introducing yourself",
+  "description": "Say your name, ask someone theirs, and say where you are from.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To say your name, use Mam na imię followed by your first name. To say where you are from, use Jestem z followed by the name of the country. The country name changes its ending after z, so for now it is best to learn these sentences as whole phrases."
+    },
+    {
+      "type": "example",
+      "text": "Mam na imię Anna.",
+      "translation": "My name is Anna."
+    },
+    {
+      "type": "example",
+      "text": "Jak masz na imię?",
+      "translation": "What is your name?",
+      "note": "Informal. Speaking to one person you know well, or a child."
+    },
+    {
+      "type": "example",
+      "text": "Jestem z Polski.",
+      "translation": "I am from Poland."
+    },
+    {
+      "type": "example",
+      "text": "Jestem z Hiszpanii.",
+      "translation": "I am from Spain."
+    },
+    {
+      "type": "example",
+      "text": "Miło mi cię poznać.",
+      "translation": "Nice to meet you.",
+      "note": "Informal. A polite version uses pana (to a man) or panią (to a woman) instead of cię."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "text": "Cześć! Mam na imię Anna.",
+          "translation": "Hi! My name is Anna."
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Cześć! Jestem Piotr.",
+          "translation": "Hi! I am Piotr."
+        },
+        {
+          "speaker": "Anna",
+          "text": "Miło mi cię poznać.",
+          "translation": "Nice to meet you."
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Mnie też.",
+          "translation": "Me too."
+        }
+      ]
+    }
+  ]
+}

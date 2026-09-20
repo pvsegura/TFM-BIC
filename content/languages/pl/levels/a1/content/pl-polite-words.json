@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-polite-words",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "Please, thank you and sorry",
+  "description": "A few short words that make everyday conversations polite.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Proszę and dziękuję are among the most useful Polish words. Proszę means please when you ask for something. It also means here you are when you hand something over, and you are welcome when someone thanks you. Dziękuję means thank you."
+    },
+    {
+      "type": "example",
+      "text": "Dziękuję.",
+      "translation": "Thank you."
+    },
+    {
+      "type": "example",
+      "text": "Dziękuję bardzo.",
+      "translation": "Thank you very much."
+    },
+    {
+      "type": "example",
+      "text": "Proszę.",
+      "translation": "Please. Here you are. You are welcome.",
+      "note": "One word, three uses. The situation tells you which."
+    },
+    {
+      "type": "example",
+      "text": "Przepraszam.",
+      "translation": "Sorry. Excuse me."
+    },
+    {
+      "type": "example",
+      "text": "Tak.",
+      "translation": "Yes."
+    },
+    {
+      "type": "example",
+      "text": "Nie.",
+      "translation": "No."
+    }
+  ]
+}

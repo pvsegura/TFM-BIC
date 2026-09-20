@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-no-articles",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "explanation",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Polish has no articles",
+  "description": "Why there is no word for a, an or the, and what to do about it.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish has no articles: there are no separate words for a, an or the. A bare noun can therefore mean a cat or the cat, and the meaning comes from the situation. When you translate into English, choose a, an or the from the context."
+    },
+    {
+      "type": "example",
+      "text": "Mam kota.",
+      "translation": "I have a cat.",
+      "note": "There is no word for a. The ending of kota changes because it is the object of the verb; that is a later topic."
+    },
+    {
+      "type": "example",
+      "text": "Kot śpi.",
+      "translation": "The cat is sleeping.",
+      "note": "It could also mean A cat is sleeping, depending on the situation."
+    },
+    {
+      "type": "example",
+      "text": "Mam psa.",
+      "translation": "I have a dog."
+    }
+  ]
+}

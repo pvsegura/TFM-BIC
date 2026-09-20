@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-spelling-and-sounds",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "explanation",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "A first look at Polish spelling and sounds",
+  "description": "A few letters and letter pairs that are new to English speakers.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Some Polish letters and letter pairs are new for English speakers. The English comparisons below are only approximate, to help you make a start. Listen to native speakers to fine-tune the sounds."
+    },
+    {
+      "type": "example",
+      "text": "szkoła",
+      "translation": "school",
+      "note": "The pair sz sounds like English sh, and ł sounds like English w. Roughly: SHKO-wa."
+    },
+    {
+      "type": "example",
+      "text": "czas",
+      "translation": "time",
+      "note": "The pair cz sounds like ch in church. Roughly: chahss."
+    },
+    {
+      "type": "example",
+      "text": "córka",
+      "translation": "daughter",
+      "note": "The letter c sounds like ts in cats, and ó sounds the same as u. Roughly: TSOOR-ka."
+    }
+  ]
+}

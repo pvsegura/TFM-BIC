@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-greetings",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Greetings and goodbyes",
+  "description": "Polite and informal ways to say hello and goodbye in Polish.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish has more than one way to greet people, and the choice depends on how formal the situation is. Dzień dobry is polite and works with people you do not know well. Cześć is informal: it is used with friends and family, both to say hello and to say goodbye."
+    },
+    {
+      "type": "example",
+      "text": "Dzień dobry.",
+      "translation": "Good day; hello.",
+      "note": "Polite. Used during the day."
+    },
+    {
+      "type": "example",
+      "text": "Dobry wieczór.",
+      "translation": "Good evening.",
+      "note": "Polite. Used in the evening."
+    },
+    {
+      "type": "example",
+      "text": "Cześć!",
+      "translation": "Hi! Bye!",
+      "note": "Informal. For friends and family."
+    },
+    {
+      "type": "example",
+      "text": "Do widzenia.",
+      "translation": "Goodbye.",
+      "note": "Polite."
+    },
+    {
+      "type": "example",
+      "text": "Na razie!",
+      "translation": "See you! Bye!",
+      "note": "Informal."
+    },
+    {
+      "type": "example",
+      "text": "Dobranoc.",
+      "translation": "Good night.",
+      "note": "Said when saying goodnight, not as a general goodbye."
+    }
+  ]
+}

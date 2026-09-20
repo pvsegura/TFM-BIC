@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "code": "pl",
+  "name": "Polish",
+  "nativeName": "polski",
+  "locale": "pl-PL",
+  "direction": "ltr",
+  "isActive": true,
+  "levels": [
+    { "id": "a1", "status": "available" },
+    { "id": "a2", "status": "planned" },
+    { "id": "b1", "status": "planned" },
+    { "id": "b2", "status": "planned" },
+    { "id": "c1", "status": "planned" },
+    { "id": "c2", "status": "planned" }
+  ]
+}
