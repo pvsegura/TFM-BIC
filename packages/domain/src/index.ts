@@ -24,3 +24,32 @@ export { DuplicateEmailError } from "./identity/errors/duplicate-email.error.js"
 export { InvalidTokenError } from "./identity/errors/invalid-token.error.js";
 export { TokenExpiredError } from "./identity/errors/token-expired.error.js";
 export { TokenAlreadyUsedError } from "./identity/errors/token-already-used.error.js";
+
+// Media (M4) — the static avatar catalog.
+export {
+  AVATAR_CATALOG,
+  AVATAR_IDS,
+  isValidAvatarId,
+  type AvatarDefinition,
+  type AvatarId,
+} from "./media/avatar-catalog.js";
+
+// Student Profile (M4) — see docs/architecture/domain-model.md.
+export type { StudentProfile } from "./profile/student-profile.js";
+export {
+  createProfileName,
+  isValidProfileName,
+  MAX_PROFILE_NAME_LENGTH,
+  normalizeProfileName,
+} from "./profile/profile-name.js";
+export {
+  createNickname,
+  isValidNickname,
+  MAX_NICKNAME_LENGTH,
+  MIN_NICKNAME_LENGTH,
+  normalizeNickname,
+} from "./profile/nickname.js";
+export { createAvatarId } from "./profile/avatar-selection.js";
+export { InvalidProfileNameError } from "./profile/errors/invalid-profile-name.error.js";
+export { InvalidNicknameError } from "./profile/errors/invalid-nickname.error.js";
+export { InvalidAvatarIdError } from "./profile/errors/invalid-avatar-id.error.js";
