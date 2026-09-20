@@ -17,7 +17,10 @@ Because the product may process EU users' personal data, the architecture is pre
 GDPR-shaped requirements without asserting they've been fully implemented or legally verified:
 
 - **Access** — a user can request/see what personal data is held about them.
-- **Rectification** — profile fields (name, nickname, etc.) are editable by the user.
+- **Rectification** — profile fields (name, nickname, etc.) are editable by the user. _Technical
+  control implemented in M4_: a student can edit or clear their first name, last name and nickname
+  and replace their avatar ([ADR-017](../adr/adr-017-student-profile.md)). This is a capability,
+  not a claim of GDPR compliance.
 - **Erasure** — account deletion is supported (Student Features §14 of the brief: "solicitar
   eliminación de cuenta"), including a defined retention/anonymization policy for data that can't
   be immediately hard-deleted (e.g., financial records if subscriptions exist) — policy content
@@ -39,6 +42,9 @@ GDPR-shaped requirements without asserting they've been fully implemented or leg
 - Account deletion is a domain-level use case, not an ad-hoc DB delete — allows enforcing
   retention/anonymization rules consistently.
 - Newsletter consent state is a first-class record, separate from "has an account."
+- The M4 `student_profiles` row has a cascading foreign key to `users`, so deleting a user cannot
+  leave orphaned profile data. The account-deletion _workflow_ itself (use case, retention rules,
+  confirmation) is not implemented yet.
 
 ## Explicitly deferred to a dedicated milestone
 

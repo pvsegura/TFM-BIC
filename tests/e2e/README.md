@@ -4,7 +4,7 @@ Playwright end-to-end tests (~20% of the suite by design). See
 [docs/testing/testing-strategy.md](../../docs/testing/testing-strategy.md) and
 [.claude/skills/playwright](../../.claude/skills/playwright/SKILL.md).
 
-## What's here (M3)
+## What's here (M3, M4)
 
 - `smoke.spec.ts` (M1) — the app boots and is reachable, dark-mode toggle works.
 - `registration.spec.ts`, `login.spec.ts`, `logout.spec.ts`, `password-reset.spec.ts`,
@@ -13,8 +13,19 @@ Playwright end-to-end tests (~20% of the suite by design). See
   nonexistent-account; logout → protected route inaccessible; full password-reset flow including
   the old password being rejected afterward; unauthenticated access to a protected route
   redirects to `/login`.
+- `profile.spec.ts` (M4) — the Student Profile flows: view (account email/role, empty profile);
+  edit name/nickname/avatar and see it persist across a reload; clear a field; client-side
+  validation blocks submission; markup-looking text is inert; a logged-out visit to `/profile`
+  reaches the login flow (which also proves the dev proxy serves the SPA for a page navigation
+  while `fetch('/profile')` reaches the API); unauthenticated and forged API access is rejected;
+  a second user on the same browser never sees the first user's profile; dark mode; a 375px mobile
+  viewport with no horizontal scroll.
 - `helpers/register-and-verify.ts` — arranges a verified user via direct API calls (not the UI)
   so specs other than `registration.spec.ts` stay focused on their own flow.
+- `helpers/ui.ts` (M4) — `signInViaUi` / `openProfileViaNav`: drive the real login form and nav.
+
+Port `3000` (API) and `5173` (web) must be free: `reuseExistingServer` would otherwise silently
+reuse whatever is already listening there.
 
 ## Running against a real backend, not a mock
 

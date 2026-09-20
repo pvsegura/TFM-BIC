@@ -42,3 +42,4 @@ Date: YYYY-MM-DD
 | [014](adr-014-email.md)                    | Email                                 | ACCEPTED (architecture; target provider Resend documented) / PENDING (real provider account) |
 | [015](adr-015-deployment.md)               | Deployment/hosting                    | PENDING                                                                                      |
 | [016](adr-016-typescript-node-baseline.md) | TypeScript & Node.js runtime baseline | ACCEPTED                                                                                     |
+| [017](adr-017-student-profile.md)          | Student Profile & avatar catalog      | ACCEPTED                                                                                     |

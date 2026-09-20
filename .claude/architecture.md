@@ -20,7 +20,9 @@ import to anything in `packages/domain` or `packages/application`. Enforced by a
 `packages/domain/src/identity/` → `packages/application/src/identity/` →
 `packages/data/src/identity/` (Drizzle/Argon2/Crypto adapters) → `apps/api/src/routes/
 auth.route.ts` for the full, real Identity & Authentication chain (M3), or
-`apps/api/src/routes/health.route.ts` for the smaller M1 example.
+`packages/domain/src/profile/` → `packages/application/src/profile/` →
+`packages/data/src/profile/` → `apps/api/src/routes/profile.route.ts` for the Student Profile chain
+(M4), or `apps/api/src/routes/health.route.ts` for the smaller M1 example.
 
 ## External services
 

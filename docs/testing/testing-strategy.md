@@ -62,6 +62,18 @@ Repository/adapter tests for a new bounded context should default to the same PG
 (colocated, no live network dependency) rather than reviving the `tests/integration/` +
 hand-faked-driver split, unless a concrete reason emerges to deviate.
 
+M4 followed this: `packages/data/src/profile/profile.repository.test.ts` runs against a PGlite
+instance with Identity's migrations applied first and Student Profile's second (the foreign key
+needs `users`), and asserts real database behaviour — constraint names on rejected rows, cascade
+delete, concurrent first saves. A context whose tables reference another's needs a harness like
+`packages/data/src/profile/db/test-support/create-test-db.ts`.
+
+Security-relevant behaviour is asserted explicitly rather than assumed: unauthenticated access,
+cross-user access, mass assignment, unknown avatar ids, oversized/malformed bodies, hostile text
+and error-message leakage each have their own tests (`apps/api/src/routes/profile.route.test.ts`,
+`packages/contracts/src/profile/`, `tests/e2e/profile.spec.ts`). They demonstrate those behaviours;
+they are not proof of complete security.
+
 ## Decided in M1
 
 Coverage tool: Vitest's `v8` coverage provider (`@vitest/coverage-v8`), configured once at the

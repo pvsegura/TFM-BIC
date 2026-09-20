@@ -49,6 +49,26 @@ TypeScript strict mode everywhere, no `any`. No business logic in React componen
 domain/application, invoked via hooks/services). No business logic in API route handlers (thin
 controllers only). No per-language `if` branching — parameterize by `languageId`.
 
+## Data, API and client-state conventions (since M4)
+
+Rationale: [ADR-017](../docs/adr/adr-017-student-profile.md).
+
+- **One bounded context = its own schema file, connection factory and migration folder** under
+  `packages/data/src/<context>/` (`identity/`, `profile/`). A context whose tables reference
+  another's keeps its own migration-tracking table (`migrations.table` in its drizzle config) and
+  its tests apply migrations in dependency order.
+- **User-owned data is reached only through the session.** Routes take the user from
+  `request.currentUser`, never from a URL/query/body id; no `:id` routes for "my own" data. Request
+  schemas are `.strict()`, use-case input types carry no auth/role fields, and fields are mapped
+  one by one — never spread from a body.
+- **A `GET` never writes.** Create-on-first-write with one atomic upsert.
+- **Every cached TanStack Query except `["auth", …]` is user-scoped** and is dropped on
+  logout/login (`apps/web/src/hooks/session-cache.ts`). Never cache another user's data under an
+  `auth` key, and never put user data in Zustand.
+- **Names/free text**: trim only — no case folding, diacritic stripping or alphabet allow-lists
+  (the product is multilingual). Reject control characters; treat markup-looking text as inert data
+  and rely on output escaping.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

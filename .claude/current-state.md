@@ -1,110 +1,102 @@
 # Current State
 
-Last updated: 2026-09-18
+Last updated: 2026-09-20
 
 ## Milestone
 
-**M3 — Authentication** — implemented on `feature/authentication` (branched from
-`ci/jenkins-sonarqube`, which carries all of M1+M2's work; `main` only has M0). M0–M2 remain the
-base (architecture/governance, monorepo/tooling, Jenkins/SonarQube CI/CD — see
+**M4 — Student Profile** — implemented on `feature/student-profile`, branched from
+`feature/authentication` (M3), which sits on `ci/jenkins-sonarqube` (all of M1+M2; `main` only has
+M0). **Only `main`, `feature/monorepo-foundation` and `ci/jenkins-sonarqube` exist on GitHub** —
+`feature/authentication` and `feature/student-profile` are local only. M0–M3 remain the base
+(architecture/governance, monorepo/tooling, Jenkins/SonarQube CI/CD, authentication — see
 [docs/product/project-constitution.md](../docs/product/project-constitution.md)).
+
+## What actually exists (M4)
+
+An authenticated student can view and edit first name, last name, nickname and pick an avatar.
+Full rationale and trade-offs: [ADR-017](../docs/adr/adr-017-student-profile.md).
+
+- **Domain**: `packages/domain/src/profile/` (`StudentProfile`, `createProfileName` 1–100,
+  `createNickname` 2–30, `createAvatarId`, three domain errors) and `media/avatar-catalog.ts` (6
+  static avatars, `avatar-01`…`avatar-06`).
+- **Application**: `ProfileRepository` port; `GetCurrentStudentProfileUseCase` (read, no side
+  effects) and `UpdateCurrentStudentProfileUseCase` (validates every field, then one upsert).
+- **Contracts**: strict `updateProfileRequestSchema`, allowlisting `profileResponseSchema`,
+  `avatarIdSchema` + re-exported `AVATAR_CATALOG` (how the web app gets the catalog),
+  `profileValidationErrorResponseSchema` (per-field messages).
+- **Data**: `student_profiles` (`user_id` PK + cascading FK to `users`; nullable name/nickname/
+  avatar; `CHECK`s mirroring the domain rules). Own schema/client/migration folder under
+  `packages/data/src/profile/`, own tracking table, `db:generate:profile` / `db:migrate:profile`
+  (run Identity's `db:migrate` first). `DrizzleProfileRepository` = one atomic
+  `INSERT … ON CONFLICT DO UPDATE`.
+- **API**: `GET /profile`, `PATCH /profile` — session user only, no `:id`, `.strict()` body (any
+  extra key is a `400`), 4 KB body cap, `Origin` check, generic `500`. See
+  [docs/api/README.md](../docs/api/README.md). Under `NODE_ENV=test` auth and profile share one
+  PGlite instance (`apps/api/src/composition/test-dependencies.ts`).
+- **Frontend**: `/profile` page (replaces the placeholder; behind `ProtectedRoute`), `ProfileForm`
+  (React Hook Form + the shared schema), `AvatarPicker` (native radios, check-mark selected state)
+  and `Avatar` in `packages/ui`, `useCurrentProfile`/`useUpdateProfile` (TanStack Query), nav link.
+  Blank input ⇒ `null` ⇒ field cleared; an empty string is never stored. Vite proxies `/profile`
+  fetches to the API but serves the SPA for browser navigations (page and API share the path).
+- **Fixes to M3 found along the way**: logout/login now clear every cached query except `["auth"]`
+  (M3 leaked the previous user's cached data to the next login on the same tab); the header now
+  wraps on narrow screens (it overflowed a 375px viewport by ~200px).
 
 ## What actually exists (M3, on top of M1/M2)
 
-- **Identity & Authentication**, full vertical slice (domain → application → contracts → data →
-  API → frontend → E2E), all layers real, not placeholder:
-  - **Domain** (`packages/domain/src/identity/`): `Email`/`Password` value objects, `Role`
-    (`STUDENT`/`TEACHER`, reserved: `ADMIN`/`CONTENT_EDITOR`/`SUPPORT`/`MODERATOR`), `User`,
-    `Session`, `SecurityToken` (shared by email-verification and password-reset tokens),
-    `requireRole` authorization primitive. Zero external dependencies.
-  - **Application** (`packages/application/src/identity/`): 7 ports (`UserRepository`,
-    `SessionRepository`, `PasswordHasher`, `TokenGenerator`, `EmailVerificationTokenRepository`,
-    `PasswordResetTokenRepository`, `EmailService`) and 8 use cases (register, login, logout,
-    resolve-session, verify-email, resend-verification, request-password-reset,
-    confirm-password-reset).
-  - **Contracts** (`packages/contracts/src/auth/`): Zod schemas for every request/response,
-    shared by `apps/api` (validation) and `apps/web` (typed client + React Hook Form resolvers).
-  - **Data** (`packages/data/src/identity/`): Drizzle/Postgres schema + migration
-    (`users`/`sessions`/`email_verification_tokens`/`password_reset_tokens`, uniqueness enforced
-    at the DB level), 4 repository adapters, `Argon2PasswordHasher`, `CryptoTokenGenerator`,
-    `InMemoryEmailService`. Repository tests run against PGlite (real, WASM-compiled Postgres, no
-    Docker) rather than a driver fake.
-  - **API** (`apps/api/src/`): 8 auth routes under `/auth/*` (see
-    [docs/api/README.md](../docs/api/README.md) for the table) — session cookie (signed,
-    HttpOnly, SameSite=Strict), per-route rate limiting, `Origin`-header CSRF check on
-    state-changing routes, `authenticate`/`requireRole` preHandler hooks, safe/generic error
-    mapping. `NODE_ENV=test` boots against an in-process PGlite instance instead of a live
-    Postgres connection (`apps/api/src/composition/auth-dependencies.ts`), enabling real E2E runs
-    with no Docker/network database.
-  - **Frontend** (`apps/web/src/`): register/login/verify-email/forgot-password/reset-password
-    pages (React Hook Form + the same Zod contracts schemas), TanStack Query hooks
-    (`useCurrentUser`, `useLogin`, `useLogout`, etc.), `ProtectedRoute` (frontend UX gate only —
-    backend remains authoritative), a new `TextField` primitive in `packages/ui`. Vite's dev
-    server proxies `/auth/*` to `apps/api` so the browser sees one origin (no CORS).
-- **ADRs resolved** (were PENDING): [ADR-005](../docs/adr/adr-005-database.md) — Neon (docs-only;
-  account provisioning is a deployment-time action, M17, out of M3 scope), Drizzle ORM;
-  [ADR-006](../docs/adr/adr-006-authentication.md) — server-side sessions (not JWT), Argon2id;
-  [ADR-014](../docs/adr/adr-014-email.md) — Resend documented as target provider,
-  `InMemoryEmailService` the only adapter actually wired (no real account exists).
-- **Testing**: 258 Vitest tests (up from 34 at end of M1) across 52 files/13 projects; 12
-  Playwright E2E tests (up from 2), including every M3 auth golden path, run against the real
-  server (not mocked) via a `NODE_ENV=test` PGlite-backed `apps/api`. Coverage: see the M3 final
-  report for exact numbers — comfortably above the 80/80/80/75 baseline.
-- `pnpm check` (lint/format/typecheck/test/build) and `pnpm test:e2e` both pass locally as of this
-  writing.
+Full Identity & Authentication slice (register, verify email, login, logout, password reset;
+server-side sessions, Argon2id; `authenticate`/`requireRole` hooks; per-route rate limits; `Origin`
+CSRF check; `InMemoryEmailService` only — no real email provider). Repository tests run on PGlite
+(real WASM Postgres, no Docker). ADRs 005/006/014 resolved. Detail: ADR-006,
+[docs/security/security-baseline.md](../docs/security/security-baseline.md).
+
+## Verification (M4, run locally on 2026-09-20)
+
+- `pnpm install --frozen-lockfile`, `lint`, `typecheck`, `build`: pass. `format:check`: passes for
+  everything committed (a separate, uncommitted `README.md` edit unrelated to M4 is not formatted).
+- **637 Vitest tests / 75 files** pass (258 at end of M3, +379 in M4). Coverage: 94.02% statements /
+  86.54% branches / 95.03% functions / 93.85% lines (thresholds 80/75/80/80).
+- **25 Playwright E2E tests** pass against the real server (12 from M3, +13 in
+  `tests/e2e/profile.spec.ts`). Ports 3000 and 5173 must be free (`reuseExistingServer`).
+- **Jenkins pipeline and SonarQube analysis / Quality Gate were NOT run for M4.** A local Jenkins
+  (Multibranch job on GitHub, `infrastructure/jenkins` in WSL Ubuntu) and SonarQube exist as stopped
+  Docker containers, but Jenkins builds from GitHub and this branch is not pushed.
 
 ## What does NOT exist yet (do not assume otherwise)
 
-- No student/teacher profile, lessons, vocabulary, exercises, scoring, gamification, teacher
-  dashboard — M3 is authentication only, per its own scope control.
-- No real email provider account — `InMemoryEmailService` is the only adapter; a `ResendEmailService`
-  is a documented follow-up (ADR-014), not implemented.
-- No real remote Postgres connection exercised — Neon is the documented provider, but no account
-  was provisioned in this session (out of M3 scope, deployment is M17); local dev uses
-  `infrastructure/docker/docker-compose.yml`, tests use PGlite.
-- No CSRF double-submit token — `SameSite=Strict` + `Origin` check only, documented trade-off
-  (ADR-006).
-- No CI pipeline actually **executed** against a real Jenkins/SonarQube instance — still neither
-  provisioned (unchanged from M2, hosting PENDING, ADR-010). M3 was verified by running its own
-  checks locally, the same way M2 verified itself.
-- No dependency-audit CI step — unchanged from M2 (`pnpm audit` was run manually during M3
-  dependency additions, not wired into the `Jenkinsfile`).
-- No Hyperframes/Gemini integration, no real lesson/vocabulary content — unchanged from M1/M2.
+- Lessons, vocabulary, phonetics, exercises, scoring/progress, gamification, teacher dashboard,
+  subscriptions, newsletter, account deletion/data export, email/privacy preferences, AI services.
+- Email change (a separate, security-sensitive workflow), avatar upload/custom avatars, real avatar
+  artwork (emoji glyphs stand in).
+- A real email provider (`InMemoryEmailService` only, ADR-014); a real Neon connection was never
+  exercised (Docker Postgres in dev, PGlite in tests).
+- Automated accessibility checks (no axe-style tool in the repo) — a11y is covered by RTL
+  role/label/keyboard tests and manual review only.
+- CSRF double-submit token (`SameSite=Strict` + `Origin` check only, ADR-006); a dependency-audit
+  CI step.
 
 ## Pending decisions blocking further implementation
 
-None block M3. Hosting/deploy target ([ADR-015](../docs/adr/adr-015-deployment.md)) remains
-PENDING — relevant to a future deployment milestone (M17), not to M4+ feature work.
+None block M5. Hosting/deploy target ([ADR-015](../docs/adr/adr-015-deployment.md)) remains
+PENDING — relevant to a deployment milestone (M17), not to feature work.
 
-## Known risks / rough edges from M3
+## Known risks / rough edges
 
-- **Real Neon connectivity is unverified.** The Drizzle schema/migrations/repositories are tested
-  against PGlite (real Postgres semantics, WASM-compiled) and, optionally, local Docker Postgres
-  — never against the actual documented production provider. A first real deployment may surface
-  a Neon-specific difference (connection pooling behavior, TLS requirements) that local testing
-  couldn't catch.
-- **No real transactional email has ever been sent.** `InMemoryEmailService` proves the
-  integration points (token generation, URL construction, port/adapter boundary) but not actual
-  deliverability, template rendering in a real inbox, or provider-specific rate limits.
-- **`E2E_RELAXED_RATE_LIMITS`** (set only by `tests/e2e/playwright.config.ts`) raises — not
-  disables — auth rate-limit ceilings for E2E runs; the real limits are proven by a separate
-  fixed-config unit test. Documented in `apps/api/src/routes/auth.route.ts` and
-  `tests/e2e/README.md`, called out here so it isn't mistaken for a production weakening.
-- **Jenkins lint stage may need a longer timeout.** Type-aware ESLint across this now-larger
-  monorepo took several minutes locally in this session's sandbox (machine-dependent — not
-  necessarily representative of the actual Jenkins agent) — worth watching on the first real CI
-  run.
-- No double-submit CSRF token (see ADR-006) — accepted trade-off, not an oversight.
-- Session/token secrets fall back to an ephemeral per-process value in development/test when
-  `AUTH_SESSION_SECRET` is unset (required in staging/production) — by design, but means dev
-  sessions don't survive an `apps/api` restart.
-
-## Known risks / rough edges from M1/M2 (still open)
-
-- pnpm 12 compatibility, no dependency-boundary graph tool, `node:24-bookworm-slim`/Playwright
-  image tag pinning — see the M1/M2 sections of git history for `current-state.md` if needed;
-  unchanged by M3.
+- **`/profile` is both the page and the API path.** Only the Vite dev proxy separates them
+  (`Sec-Fetch-Dest`/`Accept`); a production reverse proxy must do the same (ADR-017, ADR-015).
+- **Profile routes have no rate limit** (authenticated, own row only). No unsaved-changes
+  navigation guard. An avatar can be replaced but not cleared.
+- **Names are stored as typed, including markup-looking text** — safe only while every consumer
+  escapes on output; a future HTML email/PDF must escape them.
+- **Two `pg` pools** per API process (identity, profile) over one `DATABASE_URL`. Real Neon
+  connectivity is still unverified.
+- **One-off flake seen**: an M1 health-use-case test hit Vitest's default 5s timeout on a cold
+  worker once while WSL/Docker was starting; it passed on the next 3 full runs.
+- **`E2E_RELAXED_RATE_LIMITS`** raises (not removes) auth rate limits for E2E only (M3).
+- Jenkins lint stage may need a long timeout on this larger monorepo (M3 note).
+- Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is
+  unset (required in staging/production).
 
 ## Next milestone
 
-`M4 — Student Profile` (not started).
+`M5 — Content & Languages` (not started).

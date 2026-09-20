@@ -1,6 +1,8 @@
 # Domain Model — Bounded Contexts
 
-Status: PROPOSED (M0 analysis; entities not yet implemented) | Related: [ADR-001](../adr/adr-001-architecture-style.md)
+Status: PROPOSED (M0 analysis). Implemented so far: Identity & Authentication (M3), Student Profile
+and the Media avatar catalog (M4) — every other context below is still unimplemented. | Related:
+[ADR-001](../adr/adr-001-architecture-style.md)
 
 This is a conceptual analysis of module boundaries, not a schema. No entities are implemented in
 M0. Goal: avoid a "God Domain" by identifying responsibilities and relationships up front.
@@ -23,6 +25,10 @@ profiles reference a User; Users does not know Student/Teacher-specific fields.
 
 Name, surname, nickname, avatar selection, email/privacy preferences. Depends on Users
 (identity) and Media (avatar options), not on Progress/Scoring.
+
+_Implemented in M4_ (first name, last name, nickname, avatar): `student_profiles`, one row per user,
+keyed by and foreign-keyed to `users.id`, with no copy of email or role — see
+[ADR-017](../adr/adr-017-student-profile.md). Email/privacy preferences are not part of M4.
 
 ### Teachers / Students (relationship context)
 
@@ -81,6 +87,10 @@ Phonemes, IPA, minimal pairs, pronunciation exercises. Independent module so it 
 Avatar catalog, video/audio asset references (not the generation pipeline itself — see
 [ai-integration-strategy.md](ai-integration-strategy.md)). Owns metadata/URLs, not binary storage
 logic.
+
+_Implemented in M4_ for the avatar catalog only: a small static list of ids and labels in
+`packages/domain/src/media/`, re-exported through `packages/contracts`. Video/audio references are
+not implemented.
 
 ### Email
 

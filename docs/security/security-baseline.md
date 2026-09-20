@@ -16,6 +16,35 @@ Principles to be applied from the first line of implementation code, not retrofi
   tokens and reset/verification tokens are stored only as SHA-256 hashes, never in recoverable
   form, and are never logged — see ADR-006 for the full threat model.
 
+## Student profile (M4 — implemented)
+
+Personal data (name, nickname) is exposed only to its owner. See
+[ADR-017](../adr/adr-017-student-profile.md).
+
+- **Broken access control / IDOR**: `GET`/`PATCH /profile` derive the user from the session
+  (`request.currentUser`); there is no `:id` route, and a body or query `userId` is either
+  rejected (`400`, `.strict()`) or ignored. Tested per route (unauthenticated `401`, user A cannot
+  read or change user B, no `PATCH /profile/:id`).
+- **Mass assignment**: the request schema is `.strict()` (any key beyond the four editable fields
+  is a `400`); the use case's input type carries no `role`/`email`/auth field; fields are mapped
+  one by one, never spread. `role`, `userId`, `emailVerified` and `email` cannot be changed through
+  the profile. Email changes are a separate, security-sensitive workflow (not implemented).
+- **Avatar validation**: `avatarId` must equal a catalog id (checked in the contract _and_ again in
+  the use case); a URL or unknown id is a `400`. No image upload exists.
+- **Input limits**: body capped at 4 KB (`413`); name 1–100, nickname 2–30 characters; control
+  characters rejected; a database `CHECK` mirrors the length rules.
+- **XSS**: values are rendered as text by React — no `dangerouslySetInnerHTML`. HTML- and
+  SQL-looking input is stored as inert data (not sanitized away); anything that later renders a name
+  outside React (HTML email, PDF) must escape it.
+- **Errors and logs**: profile values are not logged by the routes; unexpected failures return a
+  generic `500` (tested with a driver error naming host, port and credentials). The central error
+  handler logs the underlying error server-side.
+- **Client cache**: user-scoped query data is cleared on logout and login so one person's profile
+  is never shown to the next person on the same browser tab (covered by unit and E2E tests).
+
+These tests demonstrate specific behaviours; they do not prove the profile is free of
+vulnerabilities.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from
