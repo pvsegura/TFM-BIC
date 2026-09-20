@@ -22,7 +22,7 @@ export interface ExampleBlock {
   /** Its meaning, in the item's `instructionLanguage`. */
   translation: string;
   /** Optional plain-text hint (register, pronunciation, usage). */
-  note?: string;
+  note?: string | undefined;
 }
 
 export interface DialogueLine {

@@ -22,6 +22,38 @@ export {
 } from "./auth/password-reset-confirm.schema.js";
 export { messageResponseSchema, type MessageResponse } from "./auth/message-response.schema.js";
 
+// Languages & Content (M5): the on-disk content file format and the public discovery API shapes.
+export { languageIdSchema, levelIdSchema, contentIdSchema } from "./content/identifiers.schema.js";
+export { contentBlockSchema, plainText } from "./content/content-block.schema.js";
+export {
+  CONTENT_SCHEMA_VERSION,
+  languageFileSchema,
+  type LanguageFile,
+} from "./content/language-file.schema.js";
+export { contentFileSchema, type ContentFile } from "./content/content-file.schema.js";
+export {
+  catalogErrorResponseSchema,
+  contentIdParamSchema,
+  contentListQuerySchema,
+  contentListResponseSchema,
+  contentResponseSchema,
+  contentSummaryResponseSchema,
+  languageCodeParamSchema,
+  languageLevelsResponseSchema,
+  languageResponseSchema,
+  languagesResponseSchema,
+  levelResponseSchema,
+  type CatalogErrorResponse,
+  type ContentListQuery,
+  type ContentListResponse,
+  type ContentResponse,
+  type ContentSummaryResponse,
+  type LanguageLevelsResponse,
+  type LanguageResponse,
+  type LanguagesResponse,
+  type LevelResponse,
+} from "./content/catalog-response.schema.js";
+
 // Student Profile (M4).
 export { AVATAR_CATALOG, avatarIdSchema, type AvatarId } from "./profile/avatar-catalog.schema.js";
 export {
