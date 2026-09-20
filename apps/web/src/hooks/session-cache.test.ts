@@ -26,6 +26,16 @@ describe("clearUserScopedCache", () => {
     expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toEqual(USER);
   });
 
+  it("keeps the public catalog: it is not user data, so a logout must not throw it away", () => {
+    const client = seededClient();
+    client.setQueryData(["catalog", "languages"], { languages: [] });
+
+    clearUserScopedCache(client);
+
+    expect(client.getQueryData(["catalog", "languages"])).toEqual({ languages: [] });
+    expect(client.getQueryData(["profile", "me"])).toBeUndefined();
+  });
+
   it("is a no-op on an empty cache", () => {
     expect(() => clearUserScopedCache(new QueryClient())).not.toThrow();
   });

@@ -39,6 +39,13 @@ describe("RootLayout", () => {
     expect(screen.getByRole("link", { name: "Register" })).toHaveAttribute("href", "/register");
   });
 
+  it("links to the public language/level discovery page whether or not anyone is signed in", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    renderRootLayout();
+
+    expect(await screen.findByRole("link", { name: "Learn" })).toHaveAttribute("href", "/learn");
+  });
+
   it("renders the current user's email and a log-out control when authenticated", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
       id: "1",

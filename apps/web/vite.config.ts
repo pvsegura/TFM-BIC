@@ -15,6 +15,10 @@ export default defineConfig({
         target: "http://localhost:3000",
         changeOrigin: true,
       },
+      // Public language/content discovery (M5). Unlike /profile, the pages live under /learn, so
+      // these API paths need no page-vs-API bypass.
+      "/languages": { target: "http://localhost:3000", changeOrigin: true },
+      "/content": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which

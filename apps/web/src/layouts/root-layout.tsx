@@ -6,7 +6,10 @@ import { useCurrentUser } from "../hooks/use-current-user.js";
 import { useLogout } from "../hooks/use-logout.js";
 import { useThemeStore } from "../state/theme-store.js";
 
-const NAV_LINKS = [{ to: "/", label: "Home" }];
+const NAV_LINKS = [
+  { to: "/", label: "Home" },
+  { to: "/learn", label: "Learn" },
+];
 
 export function RootLayout() {
   const theme = useThemeStore((state) => state.theme);

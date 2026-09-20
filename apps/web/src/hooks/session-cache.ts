@@ -1,13 +1,18 @@
 import type { QueryClient } from "@tanstack/react-query";
 
 import { ApiError } from "../services/api-error.js";
+import { CATALOG_QUERY_KEY_ROOT } from "./use-catalog.js";
 import { CURRENT_USER_QUERY_KEY } from "./use-current-user.js";
 
 const AUTH_QUERY_KEY_ROOT = CURRENT_USER_QUERY_KEY[0];
 
+/** Roots that survive a session change: the auth query itself, and the public
+ * language/content catalog, which belongs to no user. */
+const SESSION_INDEPENDENT_ROOTS: readonly unknown[] = [AUTH_QUERY_KEY_ROOT, CATALOG_QUERY_KEY_ROOT];
+
 /**
- * Removes every cached query except the auth query. By convention everything
- * else in the cache (the student profile today, lessons/progress later) is
+ * Removes every cached query except the auth query and the public catalog. By
+ * convention everything else in the cache (the student profile today, lessons/progress later) is
  * scoped to the signed-in user, so none of it may outlive that user's session
  * — otherwise the next person to sign in on the same browser tab would be
  * served (even briefly, as a stale-while-revalidate flash) the previous
@@ -15,7 +20,7 @@ const AUTH_QUERY_KEY_ROOT = CURRENT_USER_QUERY_KEY[0];
  */
 export function clearUserScopedCache(queryClient: QueryClient): void {
   queryClient.removeQueries({
-    predicate: (query) => query.queryKey[0] !== AUTH_QUERY_KEY_ROOT,
+    predicate: (query) => !SESSION_INDEPENDENT_ROOTS.includes(query.queryKey[0]),
   });
 }
 
