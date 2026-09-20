@@ -184,6 +184,56 @@ describe("UpdateCurrentStudentProfileUseCase", () => {
     });
   });
 
+  it("clears a text field when it is explicitly set to null, preserving the rest", async () => {
+    const { useCase } = setup();
+    await useCase.execute({
+      userId: "user-1",
+      firstName: "Ana",
+      lastName: "García",
+      nickname: "anita",
+      avatarId: "avatar-03",
+    });
+
+    const profile = await useCase.execute({
+      userId: "user-1",
+      firstName: null,
+      lastName: null,
+      nickname: null,
+    });
+
+    expect(profile).toMatchObject({
+      firstName: null,
+      lastName: null,
+      nickname: null,
+      avatarId: "avatar-03",
+    });
+  });
+
+  it("clears only the field set to null and leaves omitted fields untouched", async () => {
+    const { useCase } = setup();
+    await useCase.execute({ userId: "user-1", firstName: "Ana", lastName: "García" });
+
+    const profile = await useCase.execute({ userId: "user-1", nickname: null });
+
+    expect(profile).toMatchObject({ firstName: "Ana", lastName: "García", nickname: null });
+  });
+
+  it("treats clearing a never-set field as a harmless no-op", async () => {
+    const { useCase } = setup();
+
+    const profile = await useCase.execute({ userId: "user-1", firstName: null });
+
+    expect(profile.firstName).toBeNull();
+  });
+
+  it("still rejects a whitespace-only string — only an explicit null clears", async () => {
+    const { useCase } = setup();
+
+    await expect(useCase.execute({ userId: "user-1", nickname: "    " })).rejects.toThrow(
+      InvalidNicknameError,
+    );
+  });
+
   it("accepts an empty update as a no-op that still returns the profile", async () => {
     const { useCase } = setup();
     await useCase.execute({ userId: "user-1", firstName: "Ana" });

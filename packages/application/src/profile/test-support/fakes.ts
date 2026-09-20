@@ -24,11 +24,12 @@ export class FakeProfileRepository implements ProfileRepository {
     const index = this.profiles.findIndex((p) => p.userId === userId);
     const existing = this.profiles[index];
 
+    // `undefined` = leave untouched; an explicit `null` clears the field.
     const next: StudentProfile = {
       userId,
-      firstName: patch.firstName ?? existing?.firstName ?? null,
-      lastName: patch.lastName ?? existing?.lastName ?? null,
-      nickname: patch.nickname ?? existing?.nickname ?? null,
+      firstName: patch.firstName === undefined ? (existing?.firstName ?? null) : patch.firstName,
+      lastName: patch.lastName === undefined ? (existing?.lastName ?? null) : patch.lastName,
+      nickname: patch.nickname === undefined ? (existing?.nickname ?? null) : patch.nickname,
       avatarId: patch.avatarId ?? existing?.avatarId ?? null,
       createdAt: existing?.createdAt ?? now,
       updatedAt: now,

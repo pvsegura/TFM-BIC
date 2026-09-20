@@ -10,9 +10,10 @@ import type { ProfilePatch, ProfileRepository } from "../ports/profile-repositor
 export interface UpdateCurrentStudentProfileInput {
   /** Must come from the authenticated session — never from client input. */
   userId: string;
-  firstName?: string;
-  lastName?: string;
-  nickname?: string;
+  /** Omitted = leave unchanged, `null` = clear, string = validate and set. */
+  firstName?: string | null;
+  lastName?: string | null;
+  nickname?: string | null;
   avatarId?: string;
 }
 
@@ -23,6 +24,10 @@ export interface UpdateCurrentStudentProfileInput {
  * prevention, see docs/security/security-baseline.md). Each field is mapped
  * explicitly below; nothing is spread from the input.
  *
+ * Empty-value policy: a text field is either omitted (unchanged), `null`
+ * (cleared) or a valid string. An empty or whitespace-only string is never
+ * stored — it is rejected, not silently turned into `null`.
+ *
  * Every provided field is validated before anything is written, so a single
  * invalid field saves nothing.
  */
@@ -32,13 +37,13 @@ export class UpdateCurrentStudentProfileUseCase {
   async execute(input: UpdateCurrentStudentProfileInput): Promise<StudentProfile> {
     const patch: ProfilePatch = {};
     if (input.firstName !== undefined) {
-      patch.firstName = createProfileName(input.firstName);
+      patch.firstName = input.firstName === null ? null : createProfileName(input.firstName);
     }
     if (input.lastName !== undefined) {
-      patch.lastName = createProfileName(input.lastName);
+      patch.lastName = input.lastName === null ? null : createProfileName(input.lastName);
     }
     if (input.nickname !== undefined) {
-      patch.nickname = createNickname(input.nickname);
+      patch.nickname = input.nickname === null ? null : createNickname(input.nickname);
     }
     if (input.avatarId !== undefined) {
       patch.avatarId = createAvatarId(input.avatarId);
