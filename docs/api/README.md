@@ -1,6 +1,6 @@
 # API Documentation
 
-Status: M3 (Identity & Authentication) and M4 (Student Profile) endpoints exist; no
+Status: M3 (Identity & Authentication), M4 (Student Profile) and M5 (Languages & Content) endpoints exist; no
 OpenAPI/schema-derived spec generation wired up yet — see below.
 
 ## Auth endpoints (M3)
@@ -62,6 +62,33 @@ a safe message that never echoes the input. Unexpected failures are a generic `5
 (`apps/web/vite.config.ts`) serves the SPA for browser navigations and forwards the app's own
 `fetch` (which sends `Accept: application/json`) to this API. A production reverse proxy must make
 the same distinction — see ADR-017.
+
+## Language and content discovery endpoints (M5)
+
+Schemas: `packages/contracts/src/content/`. **Public and read-only** — no session, no user data, no
+state change; rationale in [ADR-018](../adr/adr-018-content-languages.md). One generic route set serves
+every language and level; the codes below are examples, not routes. Each route is rate-limited
+(120 requests/minute per client).
+
+| Method | Path                              | Notes                                                                                                              |
+| ------ | --------------------------------- | ------------------------------------------------------------------------------------------------------------------ |
+| GET    | `/languages`                      | Active languages, ordered by name: `{ languages: [{ code, name, nativeName, locale, direction }] }`.               |
+| GET    | `/languages/:languageCode/levels` | `{ language, levels: [{ id, label, status }] }`, lowest CEFR level first. `status` is `available` or `planned`.    |
+| GET    | `/content?language=&level=`       | `{ items: [{ id, languageId, levelId, type, title, description, order, instructionLanguage }] }` — summaries only. |
+| GET    | `/content/:contentId`             | One published item: the summary fields plus `blocks` (`explanation`, `example`, `dialogue`).                       |
+
+Rules: only `published` content of an `available` level of an active language is returned, in explicit
+`order`; responses never include `status`, `isActive` or file paths (allowlisting schemas).
+
+Errors (all bodies are `{ error }` with a fixed message that never echoes the input): `400 Invalid
+request.` for a malformed language code, level id or content id (also missing/repeated/oversized query
+parameters); `404` for an unknown or inactive language (`Language not found.`), a planned or undeclared
+level (`Level not available.`), and unpublished or missing content (`Content not found.` — the same
+body for both, so unpublished content cannot be probed); `429` when rate-limited; generic `500`
+otherwise. Unrelated query parameters (e.g. tracking parameters) are ignored.
+
+The web app's pages live under `/learn` precisely so they do not share a path with these routes (no
+page-vs-API proxy workaround, unlike `/profile`).
 
 ## Future direction
 

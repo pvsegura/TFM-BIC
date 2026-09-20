@@ -16,6 +16,9 @@ concern, with no real values. Never commit a populated `.env`.
 Variable groups (see `.env.example` for the authoritative current list):
 
 - `NODE_ENV`, `PORT`, `DEFAULT_LANGUAGE` — read since M1.
+- `CONTENT_DIR` (optional, M5) — folder that holds `languages/<code>/…`; unset means the repository's own
+  `content/` folder. The API validates it at startup and refuses to start if it is missing or invalid,
+  so a deployment must ship `content/` with the API or set this (ADR-018, ADR-015 PENDING).
 - Database: `DATABASE_URL` (Postgres connection string; Neon in production, local Docker Postgres
   in dev, in-process PGlite in `test` — see ADR-005) — read since M3.
 - Auth: `AUTH_SESSION_SECRET` (signs the session cookie), `APP_BASE_URL` (verification/reset

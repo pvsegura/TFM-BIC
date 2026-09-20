@@ -87,3 +87,26 @@ repo root (`vitest.config.ts`) with `test.projects` aggregating every package/ap
 Integration tests do **not** run against a containerized Postgres in CI — see "Integration vs
 unit boundary" above. `tests/integration/` stays empty; PGlite fills the role that tier would
 have played.
+
+## Content and languages (M5)
+
+- **Content is tested as data**: `shipped-content.test.ts` loads the real `content/` tree and asserts
+  Polish is registered, A1 is available and A2–C2 planned, ids unique, ordering explicit, required
+  text present, and every published item readable through the real use cases. `pnpm content:validate`
+  runs the same loader in CI.
+- **Loader tests use throw-away temp directories** (`test-support/content-fixtures.ts`) so each rule
+  — malformed JSON, schema violation, location mismatch, duplicate ids, order clashes, dishonest
+  availability, oversized file — is proved with the exact bytes the loader sees.
+- **Extensibility is tested at three layers with fictional languages** (`xx`, `qq`): the unmodified
+  application use cases, the file-system repository (a language that exists only as files), and the
+  HTTP routes. If adding a language ever needs code, one of these fails.
+- **Architecture guard**: `no-language-branching.test.ts` fails on language-specific branching or
+  language names in production source, and proves it is not vacuous.
+- **Security tests** cover public access (no cookie needed, none set), unpublished/inactive exclusion,
+  `400` for malformed codes/levels/ids (injection- and traversal-shaped, oversized, repeated params),
+  generic `404`/`500` bodies, fail-closed serialization of markup/unknown block types, and rate limiting.
+- **Frontend tests** cover the selectors (data-driven, keyboard order, non-colour selected/planned
+  cues), loading/error/not-found/empty states, dark mode, and safe block rendering. Playwright covers
+  the public flow on desktop, dark mode and a 375px viewport (`tests/e2e/content-languages.spec.ts`).
+- **Not covered**: there is no automated accessibility scanner (axe or similar) in the repository, so
+  accessibility rests on role/label/keyboard tests and manual review.

@@ -45,6 +45,38 @@ Personal data (name, nickname) is exposed only to its owner. See
 These tests demonstrate specific behaviours; they do not prove the profile is free of
 vulnerabilities.
 
+## Languages & content (M5 — implemented)
+
+Public, read-only discovery of the language catalog and published content. See
+[ADR-018](../adr/adr-018-content-languages.md).
+
+- **Access decision**: the catalog endpoints require **no authentication** by design — catalog
+  metadata and openly published lessons are not personal data. If content bodies are ever gated
+  (subscriptions), that is a deliberate change to these routes; the frontend never decides access.
+- **Unpublished content**: visibility is enforced in the application use cases, not the repository or
+  the UI. Draft and archived items, inactive languages and planned levels all return the same `404`
+  as a missing item, so they cannot be enumerated. Tested per route.
+- **No internal metadata**: responses are parsed through allowlisting schemas; `status`, `isActive`,
+  schema versions and paths cannot be serialized. Tested.
+- **Injection and traversal**: codes, levels and ids are validated against strict patterns (`400`)
+  before use, and are only ever looked up in an in-memory map — no request value is used to build a
+  file path or query. Injection-, traversal- and script-shaped values are tested.
+- **Mass assignment**: not applicable — there is no write endpoint.
+- **XSS**: content is structured plain text. The file schema rejects markup and control characters;
+  responses re-validate (a markup-looking string that somehow reached the repository is refused with a
+  generic `500`, tested); the UI renders every string through React as text inside fixed components
+  keyed by block type, with no `dangerouslySetInnerHTML`. An unknown block type fails validation and,
+  if it reached the client, renders a neutral notice with none of its data (tested).
+- **Malformed or oversized content**: strict `.strict()` schemas, bounded lengths, at most 50 blocks
+  per item, and a 256 KB file cap checked before a file is read. Invalid content stops the API from
+  starting instead of being served.
+- **No executable content, no dynamic imports**: the UI never imports or evaluates anything named by
+  content data.
+- **Abuse**: unauthenticated routes are rate-limited (120/min per client); everything is served from
+  memory.
+
+These tests demonstrate specific behaviours; they do not prove the catalog is free of vulnerabilities.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from
