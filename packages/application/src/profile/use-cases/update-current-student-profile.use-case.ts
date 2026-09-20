@@ -10,11 +10,11 @@ import type { ProfilePatch, ProfileRepository } from "../ports/profile-repositor
 export interface UpdateCurrentStudentProfileInput {
   /** Must come from the authenticated session — never from client input. */
   userId: string;
-  /** Omitted = leave unchanged, `null` = clear, string = validate and set. */
-  firstName?: string | null;
-  lastName?: string | null;
-  nickname?: string | null;
-  avatarId?: string;
+  /** Omitted/`undefined` = leave unchanged, `null` = clear, string = validate and set. */
+  firstName?: string | null | undefined;
+  lastName?: string | null | undefined;
+  nickname?: string | null | undefined;
+  avatarId?: string | undefined;
 }
 
 /**

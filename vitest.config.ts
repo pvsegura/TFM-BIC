@@ -44,6 +44,8 @@ export default defineConfig({
         // apps/api's own tests (which inject fakes via buildTestDeps, see
         // auth-use-cases.ts, which those tests do exercise for real).
         "apps/api/src/composition/auth-dependencies.ts",
+        "apps/api/src/composition/profile-dependencies.ts",
+        "apps/api/src/composition/test-dependencies.ts",
         // Real `pg.Pool`/Drizzle connection factory — repository tests use
         // the PGlite test-support factory instead (see
         // db/test-support/create-test-db.ts), never this one.

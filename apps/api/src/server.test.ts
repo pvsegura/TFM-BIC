@@ -12,9 +12,14 @@ afterEach(async () => {
   app = undefined;
 });
 
+function build(env: ReturnType<typeof loadEnv>) {
+  const { deps, profileDeps } = buildTestDeps();
+  return buildServer(env, deps, profileDeps);
+}
+
 describe("GET /health", () => {
   it("returns an ok status matching the shared contract shape", async () => {
-    app = buildServer(loadEnv({ NODE_ENV: "test" }), buildTestDeps().deps);
+    app = build(loadEnv({ NODE_ENV: "test" }));
 
     const response = await app.inject({ method: "GET", url: "/health" });
 
@@ -26,7 +31,7 @@ describe("GET /health", () => {
   });
 
   it("reflects a configured DEFAULT_LANGUAGE", async () => {
-    app = buildServer(loadEnv({ NODE_ENV: "test", DEFAULT_LANGUAGE: "en" }), buildTestDeps().deps);
+    app = build(loadEnv({ NODE_ENV: "test", DEFAULT_LANGUAGE: "en" }));
 
     const response = await app.inject({ method: "GET", url: "/health" });
 
@@ -39,10 +44,7 @@ describe("error handling", () => {
     // A misconfigured DEFAULT_LANGUAGE is a realistic way for this to
     // happen today: loadEnv() only checks it's a string, so an invalid
     // code reaches GetHealthStatusUseCase and fails LanguageId validation.
-    app = buildServer(
-      loadEnv({ NODE_ENV: "test", DEFAULT_LANGUAGE: "not-a-valid-code" }),
-      buildTestDeps().deps,
-    );
+    app = build(loadEnv({ NODE_ENV: "test", DEFAULT_LANGUAGE: "not-a-valid-code" }));
 
     const response = await app.inject({ method: "GET", url: "/health" });
 
@@ -53,7 +55,7 @@ describe("error handling", () => {
 
 describe("GET /ready", () => {
   it("returns readiness true", async () => {
-    app = buildServer(loadEnv({ NODE_ENV: "test" }), buildTestDeps().deps);
+    app = build(loadEnv({ NODE_ENV: "test" }));
 
     const response = await app.inject({ method: "GET", url: "/ready" });
 

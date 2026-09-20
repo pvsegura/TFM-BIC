@@ -1,10 +1,11 @@
 import { loadEnv } from "@tfm-bic/config";
 
+import { createAuthDependencies, type AuthDependencies } from "./composition/auth-dependencies.js";
 import {
-  createAuthDependencies,
-  createTestAuthDependencies,
-  type AuthDependencies,
-} from "./composition/auth-dependencies.js";
+  createProfileDependencies,
+  type ProfileDependencies,
+} from "./composition/profile-dependencies.js";
+import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
 const env = loadEnv();
@@ -16,16 +17,18 @@ const env = loadEnv();
 // a real DATABASE_URL and fails fast without one (defensive re-check below
 // — the primary guard is loadEnv() itself).
 let authDeps: AuthDependencies;
+let profileDeps: ProfileDependencies;
 if (env.NODE_ENV === "test") {
-  authDeps = await createTestAuthDependencies();
+  ({ auth: authDeps, profile: profileDeps } = await createTestDependencies());
 } else {
   if (!env.DATABASE_URL) {
     throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
   }
   authDeps = createAuthDependencies(env.DATABASE_URL);
+  profileDeps = createProfileDependencies(env.DATABASE_URL);
 }
 
-const app = buildServer(env, authDeps);
+const app = buildServer(env, authDeps, profileDeps);
 
 async function start(): Promise<void> {
   try {
@@ -39,7 +42,7 @@ async function start(): Promise<void> {
 async function shutdown(signal: string): Promise<void> {
   app.log.info({ signal }, "Shutting down");
   await app.close();
-  await authDeps.close();
+  await Promise.all([authDeps.close(), profileDeps.close()]);
   process.exit(0);
 }
 

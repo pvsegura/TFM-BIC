@@ -6,6 +6,7 @@ import { sql, type SQL } from "drizzle-orm";
 import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
 
+import type { IdentityDb } from "../../../identity/db/client.js";
 import * as identitySchema from "../../../identity/db/schema.js";
 import type { ProfileDb } from "../client.js";
 import * as profileSchema from "../schema.js";
@@ -19,6 +20,10 @@ const PROFILE_MIGRATIONS_TABLE = "__drizzle_migrations_profile";
 
 export interface ProfileTestDbHandle {
   db: ProfileDb;
+  /** The same database instance viewed as Identity's handle — lets a
+   * NODE_ENV=test composition root build auth and profile repositories over
+   * one shared database (the `users` FK requires it). */
+  identityDb: IdentityDb;
   /** Inserts a real `users` row and returns its id — `student_profiles` has
    * a foreign key to `users`, so a profile can only exist for a real user. */
   seedUser: (email?: string) => Promise<string>;
@@ -56,6 +61,7 @@ export async function createProfileTestDb(): Promise<ProfileTestDbHandle> {
     // See identity/db/client.ts: PgliteDatabase matches NodePgDatabase at
     // runtime; only driver-specific result types differ.
     db: pgliteDb as unknown as ProfileDb,
+    identityDb: pgliteDb as unknown as IdentityDb,
     seedUser: async (email) => {
       seededUsers += 1;
       const address = email ?? `student-${seededUsers}@example.com`;

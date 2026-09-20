@@ -18,8 +18,8 @@ import {
   DrizzleUserRepository,
   InMemoryEmailService,
   SystemClock,
+  type IdentityDb,
 } from "@tfm-bic/data";
-import { createTestDb } from "@tfm-bic/data/testing";
 
 /** What the NODE_ENV=test diagnostic route needs — deliberately a narrow
  * structural type, not the concrete `InMemoryEmailService` class, so fakes
@@ -58,13 +58,17 @@ export interface AuthDependencies {
 }
 
 /**
- * The real, production adapters — Drizzle/Postgres repositories, Argon2id
- * hashing, a CSPRNG token generator. `EmailService` is `InMemoryEmailService`
- * even here: no real provider account is provisioned in M3 (ADR-014), so
- * this is the one adapter available in every environment for now.
+ * The real adapters over a given database handle — Drizzle/Postgres
+ * repositories, Argon2id hashing, a CSPRNG token generator. `EmailService` is
+ * `InMemoryEmailService` even here: no real provider account is provisioned
+ * in M3 (ADR-014), so this is the one adapter available in every environment
+ * for now. Shared by the real and the `NODE_ENV=test` (PGlite) compositions
+ * so they cannot drift apart.
  */
-export function createAuthDependencies(databaseUrl: string): AuthDependencies {
-  const { db, close } = createIdentityDb(databaseUrl);
+export function buildAuthDependencies(
+  db: IdentityDb,
+  close: () => Promise<void>,
+): AuthDependencies {
   const emailService = new InMemoryEmailService();
 
   return {
@@ -81,28 +85,8 @@ export function createAuthDependencies(databaseUrl: string): AuthDependencies {
   };
 }
 
-/**
- * Same real adapters as `createAuthDependencies`, except the database is an
- * in-process PGlite instance (a real, WASM-compiled Postgres — not a mock)
- * instead of a live Postgres connection — see docs/adr/adr-005-database.md.
- * Used only when `NODE_ENV=test` (apps/api/src/index.ts) so E2E tests can
- * run against the real server/HTTP stack without Docker or a network
- * database.
- */
-export async function createTestAuthDependencies(): Promise<AuthDependencies> {
-  const { db, close } = await createTestDb();
-  const emailService = new InMemoryEmailService();
-
-  return {
-    userRepository: new DrizzleUserRepository(db),
-    sessionRepository: new DrizzleSessionRepository(db),
-    emailVerificationTokenRepository: new DrizzleEmailVerificationTokenRepository(db),
-    passwordResetTokenRepository: new DrizzlePasswordResetTokenRepository(db),
-    passwordHasher: new Argon2PasswordHasher(),
-    tokenGenerator: new CryptoTokenGenerator(),
-    emailService,
-    emailInbox: emailService,
-    clock: new SystemClock(),
-    close,
-  };
+/** The real, production adapters over a live Postgres `DATABASE_URL`. */
+export function createAuthDependencies(databaseUrl: string): AuthDependencies {
+  const { db, close } = createIdentityDb(databaseUrl);
+  return buildAuthDependencies(db, close);
 }

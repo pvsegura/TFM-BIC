@@ -9,11 +9,18 @@ import Fastify, { type FastifyError, type FastifyInstance } from "fastify";
 
 import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
+import type { ProfileDependencies } from "./composition/profile-dependencies.js";
+import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
+import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 
-export function buildServer(env: AppEnv, authDeps: AuthDependencies): FastifyInstance {
+export function buildServer(
+  env: AppEnv,
+  authDeps: AuthDependencies,
+  profileDeps: ProfileDependencies,
+): FastifyInstance {
   const app = Fastify({
     logger: {
       level: env.NODE_ENV === "test" ? "silent" : "info",
@@ -49,6 +56,14 @@ export function buildServer(env: AppEnv, authDeps: AuthDependencies): FastifyIns
 
     const authUseCases = createAuthUseCases(authDeps, env.APP_BASE_URL);
     registerAuthRoutes(app, { useCases: authUseCases, env });
+
+    // Profile routes reuse auth's session resolution: identity always comes
+    // from the authenticated session, never from the request.
+    registerProfileRoutes(app, {
+      useCases: createProfileUseCases(profileDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
 
     registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });
   });
