@@ -6,8 +6,9 @@ Last updated: 2026-09-20
 
 **M4 — Student Profile** — implemented on `feature/student-profile`, branched from
 `feature/authentication` (M3), which sits on `ci/jenkins-sonarqube` (all of M1+M2; `main` only has
-M0). **Only `main`, `feature/monorepo-foundation` and `ci/jenkins-sonarqube` exist on GitHub** —
-`feature/authentication` and `feature/student-profile` are local only. M0–M3 remain the base
+M0). `feature/student-profile` was pushed to GitHub on 2026-09-20 (nothing merged); because it
+contains M3, that also published M3's commits — the `feature/authentication` branch _ref_ itself is
+still local-only. M0–M3 remain the base
 (architecture/governance, monorepo/tooling, Jenkins/SonarQube CI/CD, authentication — see
 [docs/product/project-constitution.md](../docs/product/project-constitution.md)).
 
@@ -58,9 +59,11 @@ CSRF check; `InMemoryEmailService` only — no real email provider). Repository 
   86.54% branches / 95.03% functions / 93.85% lines (thresholds 80/75/80/80).
 - **25 Playwright E2E tests** pass against the real server (12 from M3, +13 in
   `tests/e2e/profile.spec.ts`). Ports 3000 and 5173 must be free (`reuseExistingServer`).
-- **Jenkins pipeline and SonarQube analysis / Quality Gate were NOT run for M4.** A local Jenkins
-  (Multibranch job on GitHub, `infrastructure/jenkins` in WSL Ubuntu) and SonarQube exist as stopped
-  Docker containers, but Jenkins builds from GitHub and this branch is not pushed.
+- **Jenkins pipeline and SonarQube analysis / Quality Gate: not confirmed.** A local Jenkins
+  (Multibranch job `TFM-BIC` on GitHub, containers in WSL Ubuntu) and SonarQube were started and
+  the branch pushed, but Jenkins needs a login to scan/trigger a build (it re-scans GitHub every 4
+  hours, or use "Scan Repository Now") and no result was read back. Its stages mirror the local
+  checks above. `sonar.coverage.exclusions` was aligned with Vitest's exclusions in M4.
 
 ## What does NOT exist yet (do not assume otherwise)
 
