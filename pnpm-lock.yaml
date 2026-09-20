@@ -372,6 +372,9 @@ importers:
       '@tfm-bic/application':
         specifier: workspace:*
         version: link:../application
+      '@tfm-bic/contracts':
+        specifier: workspace:*
+        version: link:../contracts
       '@tfm-bic/domain':
         specifier: workspace:*
         version: link:../domain
@@ -394,6 +397,9 @@ importers:
       drizzle-kit:
         specifier: 0.31.10
         version: 0.31.10
+      tsx:
+        specifier: ^4.23.13
+        version: 4.23.13
       typescript:
         specifier: ~6.0.3
         version: 6.0.3

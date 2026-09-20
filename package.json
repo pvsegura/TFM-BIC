@@ -26,7 +26,8 @@
     "format:check": "prettier --check .",
     "typecheck": "pnpm -r --if-present run typecheck",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build",
-    "prepare": "husky"
+    "prepare": "husky",
+    "content:validate": "pnpm --filter @tfm-bic/data content:validate"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

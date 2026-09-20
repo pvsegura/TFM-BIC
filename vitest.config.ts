@@ -51,6 +51,9 @@ export default defineConfig({
         // db/test-support/create-test-db.ts), never this one.
         "packages/data/src/identity/db/client.ts",
         "packages/data/src/profile/db/client.ts",
+        // `pnpm content:validate` entry point: argv in, exit code out. The loader and the
+        // report formatter it calls are unit-tested; only the bootstrap is left uncovered.
+        "packages/data/src/content/validate-content.cli.ts",
       ],
       thresholds: {
         lines: 80,

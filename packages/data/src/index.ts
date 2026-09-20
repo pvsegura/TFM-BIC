@@ -10,6 +10,14 @@ export { DrizzleSessionRepository } from "./identity/session.repository.js";
 export { DrizzleEmailVerificationTokenRepository } from "./identity/email-verification-token.repository.js";
 export { DrizzlePasswordResetTokenRepository } from "./identity/password-reset-token.repository.js";
 
+// Languages & Content (M5) — see docs/adr/adr-018-content-languages.md.
+export { DEFAULT_CONTENT_ROOT } from "./content/content-root.js";
+export { CatalogContentRepository } from "./content/catalog-content-repository.js";
+export { FileSystemContentRepository } from "./content/file-system-content-repository.js";
+export { formatContentReport, type ContentReport } from "./content/content-report.js";
+export { ContentValidationError, type ContentIssue } from "./content/content-validation.error.js";
+export { loadContentCatalog, type LoadContentResult } from "./content/load-content-catalog.js";
+
 // Student Profile (M4).
 export { createProfileDb, type ProfileDb, type ProfileDbHandle } from "./profile/db/client.js";
 export { DrizzleProfileRepository } from "./profile/profile.repository.js";
