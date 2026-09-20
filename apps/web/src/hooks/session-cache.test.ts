@@ -32,13 +32,22 @@ describe("clearUserScopedCache", () => {
 });
 
 describe("endSessionIfUnauthorized", () => {
-  it("on a 401, marks the user signed out and drops user-scoped data", () => {
+  it("on a 401, marks the user signed out", () => {
     const client = seededClient();
 
     endSessionIfUnauthorized(client, new ApiError("Unauthenticated", 401));
 
     expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toBeNull();
-    expect(client.getQueryData(["profile", "me"])).toBeUndefined();
+  });
+
+  it("on a 401, does not remove queries — that is left to the next login", () => {
+    // Removing the failing query from inside its own queryFn strands its
+    // observer; useLogin clears user-scoped data before any new session.
+    const client = seededClient();
+
+    endSessionIfUnauthorized(client, new ApiError("Unauthenticated", 401));
+
+    expect(client.getQueryData(["profile", "me"])).toEqual({ firstName: "Ana" });
   });
 
   it.each([400, 403, 500])("leaves the session alone for a %i", (status) => {

@@ -22,13 +22,16 @@ export function clearUserScopedCache(queryClient: QueryClient): void {
 /**
  * An API `401` from a user-scoped request means the session is gone (expired,
  * revoked, or logged out elsewhere): record that, so `ProtectedRoute`
- * redirects to the login page, and drop the user's cached data. Any other
- * error — including a network failure — says nothing about the session and is
- * left to the caller.
+ * redirects to the login page. Any other error — including a network failure
+ * — says nothing about the session and is left to the caller.
+ *
+ * Deliberately does not clear the cache here: this runs inside a failing
+ * query's own `queryFn`, and removing that in-flight query would leave its
+ * observer stuck. It is not needed either — the only way a new session starts
+ * is `useLogin`, which calls `clearUserScopedCache` before setting the user.
  */
 export function endSessionIfUnauthorized(queryClient: QueryClient, error: unknown): void {
   if (error instanceof ApiError && error.status === 401) {
-    clearUserScopedCache(queryClient);
     queryClient.setQueryData(CURRENT_USER_QUERY_KEY, null);
   }
 }
