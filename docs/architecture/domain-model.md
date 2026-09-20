@@ -39,7 +39,9 @@ pagination/filtering/efficient queries from the start (many students per teacher
 ### Languages
 
 Language catalog (`languageId`, metadata, active/inactive). Root of the multi-language strategy —
-every content-bearing context below is scoped by `languageId`.
+every content-bearing context below is scoped by `languageId`. Implemented in M5 as validated JSON
+behind a `ContentRepository` port — see [content-architecture.md](content-architecture.md) and
+[ADR-018](../adr/adr-018-content-languages.md).
 
 ### Courses / Levels
 

@@ -1,7 +1,11 @@
 # ADR-007: Content Architecture
 
-Status: ACCEPTED
+Status: ACCEPTED (refined by [ADR-018](adr-018-content-languages.md) in M5)
 Date: 2026-09-15
+
+> M5 implemented this decision: validated JSON files behind `ContentRepository`, schemas in
+> `packages/contracts`. The concrete model, file layout, validation, public API and the reasons for
+> _not_ using a database yet are in ADR-018.
 
 ## Context
 

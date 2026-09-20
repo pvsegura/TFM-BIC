@@ -1,46 +1,53 @@
 ---
 name: content-authoring
-description: How to structure and author language-learning content under content/languages - schema-validated, languageId-parameterized, never hardcoded into React. Use when adding or editing lesson/vocabulary/phonetics content, or any content schema.
+description: How to structure and author language-learning content under content/languages - schema-validated JSON, languageId-parameterized, never hardcoded into React. Use when adding or editing languages, levels, lesson/explanation content, or any content schema.
 ---
 
 # Content Authoring
 
-Full doc: [docs/architecture/content-architecture.md](../../../docs/architecture/content-architecture.md),
-[ADR-007](../../../docs/adr/adr-007-content-architecture.md).
+Full docs: [docs/architecture/content-architecture.md](../../../docs/architecture/content-architecture.md),
+[ADR-018](../../../docs/adr/adr-018-content-languages.md) (refines [ADR-007](../../../docs/adr/adr-007-content-architecture.md)).
 
 ## Golden rule
 
-Content is data under `content/languages/<languageId>/...`. Never create per-language components
-or hardcode lesson text into `apps/web`. A new language is a new content tree, not new code.
+Content is data under `content/languages/<languageId>/`. Never create per-language components, use
+cases, routes or repositories, and never hard-code language names or lesson text into `apps/`,
+`packages/`. A new language is a new content tree, not new code.
 
-## Layout
+## Layout (implemented in M5)
 
 ```
-content/languages/<languageId>/language.json
-content/languages/<languageId>/levels/<a1..c2>/course.json
-content/languages/<languageId>/levels/<a1..c2>/lessons/
-content/languages/<languageId>/levels/<a1..c2>/vocabulary/
-content/languages/<languageId>/vocabulary/
-content/languages/<languageId>/phonetics/
-content/languages/<languageId>/metadata/
-content/exercises/        (exercise-type definitions, shared across languages)
-content/video-scripts/    (Hyperframes scene scripts)
+content/languages/<code>/language.json                              metadata + levels: [{id, status}]
+content/languages/<code>/levels/<a1..c2>/content/<contentId>.json   one item per file; file name = id
 ```
 
-## Validation
+- `language.json`: `schemaVersion: 1`, `code` (ISO 639-1 lowercase), `name`, `nativeName`, `locale`
+  (BCP 47, primary subtag = code), `direction` (`ltr`|`rtl`), `isActive`, `levels`. A level is
+  `available` (has published content, selectable) or `planned` ("coming soon", never selectable).
+- Content item: `id` (`<code>-<slug>`, permanent), `languageId`, `levelId`, `type` (`lesson` |
+  `explanation`), `status` (`draft`|`published`|`archived`), `order` (unique per language+level),
+  `instructionLanguage`, `title`, `description`, `blocks`.
+- Blocks: `explanation {text}`, `example {text, translation, note?}`, `dialogue {lines[{speaker,text,translation}]}`.
+  Plain text only — no HTML/markup, no line breaks, no control characters.
 
-Content is validated against schemas (planned: Zod, shared from `packages/contracts`) — no schema
-exists yet as of M0. When authoring the first schema, design it so a future CMS/DB-backed
-`ContentRepository` adapter can validate the same shape, not just the filesystem one.
+## Validate
 
-## Educational-level content
+`pnpm content:validate` (same loader as the API start-up; also a Jenkins stage and a Vitest suite over
+the shipped tree). It reports every problem at once.
 
-A1–C2 per language. Don't assert specific official competency requirements per level without
-citing a verified source — see [content-architecture.md](../../../docs/architecture/content-architecture.md)
-for the current UNKNOWN flag on this.
+## Rules of authorship
+
+- Original or properly licensed content only; never scrape or copy textbook passages.
+- Verify linguistic facts against reliable references; say when a sound comparison is approximate.
+- Organise by CEFR level, but do **not** state or imply CEFR certification, and do not add CEFR
+  "can do" descriptors without citing the official Council of Europe source and using concise
+  original wording. Never describe a seed set as a complete course.
+- Do not publish (`status: published`) content in a `planned` level, and do not mark a level
+  `available` without at least one published item — the validator rejects both.
+- New content **types** or **block types** are code changes (domain constant + schema + UI component);
+  new languages, levels and items are not.
 
 ## Access pattern
 
-UI/API code reads content through a `ContentRepository` interface, never by reading
-`content/languages/...` paths directly from a React component or scattering filesystem logic
-across the app.
+UI/API code reads content only through the `ContentRepository` port / the public API, never by reading
+`content/` paths from a component or scattering filesystem logic across the app.
