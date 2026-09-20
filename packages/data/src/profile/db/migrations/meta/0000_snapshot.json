@@ -1,0 +1,99 @@
+{
+  "id": "66483a56-4246-49db-98f2-903b25740a77",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.student_profiles": {
+      "name": "student_profiles",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "first_name": {
+          "name": "first_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "last_name": {
+          "name": "last_name",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "nickname": {
+          "name": "nickname",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "avatar_id": {
+          "name": "avatar_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true,
+          "default": "now()"
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "student_profiles_user_id_users_id_fk": {
+          "name": "student_profiles_user_id_users_id_fk",
+          "tableFrom": "student_profiles",
+          "tableTo": "users",
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "student_profiles_first_name_valid": {
+          "name": "student_profiles_first_name_valid",
+          "value": "\"student_profiles\".\"first_name\" IS NULL OR (char_length(\"student_profiles\".\"first_name\") BETWEEN 1 AND 100 AND \"student_profiles\".\"first_name\" = btrim(\"student_profiles\".\"first_name\"))"
+        },
+        "student_profiles_last_name_valid": {
+          "name": "student_profiles_last_name_valid",
+          "value": "\"student_profiles\".\"last_name\" IS NULL OR (char_length(\"student_profiles\".\"last_name\") BETWEEN 1 AND 100 AND \"student_profiles\".\"last_name\" = btrim(\"student_profiles\".\"last_name\"))"
+        },
+        "student_profiles_nickname_valid": {
+          "name": "student_profiles_nickname_valid",
+          "value": "\"student_profiles\".\"nickname\" IS NULL OR (char_length(\"student_profiles\".\"nickname\") BETWEEN 2 AND 30 AND \"student_profiles\".\"nickname\" = btrim(\"student_profiles\".\"nickname\"))"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

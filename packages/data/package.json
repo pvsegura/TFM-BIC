@@ -14,7 +14,9 @@
     "build": "tsc --emitDeclarationOnly",
     "test": "vitest run",
     "db:generate": "drizzle-kit generate",
-    "db:migrate": "drizzle-kit migrate"
+    "db:migrate": "drizzle-kit migrate",
+    "db:generate:profile": "drizzle-kit generate --config drizzle.profile.config.ts",
+    "db:migrate:profile": "drizzle-kit migrate --config drizzle.profile.config.ts"
   },
   "dependencies": {
     "@tfm-bic/application": "workspace:*",

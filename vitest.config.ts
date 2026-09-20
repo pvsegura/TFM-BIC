@@ -48,6 +48,7 @@ export default defineConfig({
         // the PGlite test-support factory instead (see
         // db/test-support/create-test-db.ts), never this one.
         "packages/data/src/identity/db/client.ts",
+        "packages/data/src/profile/db/client.ts",
       ],
       thresholds: {
         lines: 80,
