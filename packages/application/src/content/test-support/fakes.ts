@@ -108,5 +108,6 @@ export function makeSampleCatalog(): ContentCatalog {
       makeContentItem("pl-later", "pl", "a2", { order: 10, status: "draft" }),
       makeContentItem("xx-only", "xx", "a1", { order: 10 }),
     ],
+    exercises: [],
   };
 }

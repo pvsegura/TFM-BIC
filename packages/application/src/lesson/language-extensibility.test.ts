@@ -37,6 +37,7 @@ describe("lessons for a new language or level are data, not code", () => {
       makeContentItem("zz-a1", "zz", "a1"),
       makeContentItem("zz-b2", "zz", "b2"),
     ],
+    exercises: [],
   };
   const T0 = new Date("2026-01-01T10:00:00.000Z");
 

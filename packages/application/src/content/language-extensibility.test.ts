@@ -37,6 +37,7 @@ describe("adding a language is data, not code", () => {
       makeContentItem("qq-zero", "qq", "a1", { order: 1 }),
       makeContentItem("qq-two", "qq", "a2"),
     ],
+    exercises: [],
   };
   const repository = new FakeContentRepository(catalog);
   const qq = createLanguageId("qq");

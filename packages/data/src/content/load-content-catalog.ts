@@ -8,6 +8,7 @@ import {
   validateContentCatalog,
   type ContentCatalog,
   type ContentItem,
+  type Exercise,
   type Language,
   type LanguageLevel,
 } from "@tfm-bic/domain";
@@ -242,6 +243,7 @@ export async function loadContentCatalog(contentRoot: string): Promise<LoadConte
     languages: [] as Language[],
     languageLevels: [] as LanguageLevel[],
     content: [] as ContentItem[],
+    exercises: [] as Exercise[],
   };
 
   for (const folder of languageFolders) {

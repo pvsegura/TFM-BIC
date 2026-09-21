@@ -33,6 +33,7 @@ describe("ListLanguagesUseCase", () => {
       ],
       languageLevels: [],
       content: [],
+      exercises: [],
     });
 
     const languages = await new ListLanguagesUseCase(repository).execute();
@@ -45,6 +46,7 @@ describe("ListLanguagesUseCase", () => {
       languages: [],
       languageLevels: [],
       content: [],
+      exercises: [],
     });
 
     expect(await new ListLanguagesUseCase(repository).execute()).toEqual([]);

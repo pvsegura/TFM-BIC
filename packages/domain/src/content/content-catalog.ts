@@ -1,3 +1,5 @@
+import { exerciseIdBelongsToLanguage } from "../exercise/exercise-id.js";
+import type { Exercise } from "../exercise/exercise.js";
 import type { Language } from "../language/language.js";
 import type { LanguageLevel } from "../language/language-level.js";
 import type { LanguageId } from "../language/language-id.js";
@@ -11,6 +13,8 @@ export interface ContentCatalog {
   languages: readonly Language[];
   languageLevels: readonly LanguageLevel[];
   content: readonly ContentItem[];
+  /** Exercises, each tied to a lesson in `content`. */
+  exercises: readonly Exercise[];
 }
 
 export interface CatalogIssue {
@@ -104,5 +108,87 @@ export function validateContentCatalog(catalog: ContentCatalog): CatalogIssue[] 
     }
   }
 
+  validateExercises(catalog, { languageIds, levelStatus, contentIds }, issues);
+
   return issues.map((message) => ({ message }));
+}
+
+interface CatalogIndex {
+  languageIds: ReadonlySet<LanguageId>;
+  levelStatus: ReadonlyMap<string, LanguageLevel["status"]>;
+  contentIds: ReadonlySet<string>;
+}
+
+/**
+ * The exercise rules that no single file can see: identity, the lesson each one
+ * belongs to (it must exist, be a lesson, and share the exercise's language and
+ * level), and ordering within that lesson. Exercises are held to the same
+ * availability standard as content: published ones only in `available` levels,
+ * and only on a published lesson, so a student is never offered an exercise
+ * whose lesson they cannot open.
+ */
+function validateExercises(catalog: ContentCatalog, index: CatalogIndex, issues: string[]): void {
+  const contentById = new Map(catalog.content.map((item) => [item.id, item]));
+  const exerciseIds = new Set<string>();
+  const lessonOrders = new Set<string>();
+
+  for (const exercise of catalog.exercises) {
+    const { id, languageId, levelId, lessonId } = exercise;
+
+    if (exerciseIds.has(id)) {
+      issues.push(`Duplicate exercise id "${id}".`);
+    }
+    exerciseIds.add(id);
+    if (index.contentIds.has(id)) {
+      issues.push(`Exercise id "${id}" is also the id of a content item.`);
+    }
+
+    if (!index.languageIds.has(languageId)) {
+      issues.push(`Exercise "${id}" references unknown language "${languageId}".`);
+      continue;
+    }
+    if (!exerciseIdBelongsToLanguage(id, languageId)) {
+      issues.push(`Exercise id "${id}" must start with its language id "${languageId}-".`);
+    }
+
+    const key = levelKey(languageId, levelId);
+    const status = index.levelStatus.get(key);
+    if (status === undefined) {
+      issues.push(
+        `Exercise "${id}" is in level "${levelId}", which language "${languageId}" does not declare.`,
+      );
+      continue;
+    }
+
+    const lesson = contentById.get(lessonId);
+    if (!lesson) {
+      issues.push(`Exercise "${id}" references unknown lesson "${lessonId}".`);
+    } else if (lesson.type !== "lesson") {
+      issues.push(`Exercise "${id}" references "${lessonId}", which is not a lesson.`);
+    } else {
+      if (lesson.languageId !== languageId || lesson.levelId !== levelId) {
+        const lessonKey = levelKey(lesson.languageId, lesson.levelId);
+        issues.push(
+          `Exercise "${id}" is in ${key} but its lesson "${lessonId}" is in ${lessonKey}.`,
+        );
+      }
+      if (isPublished(exercise) && !isPublished(lesson)) {
+        issues.push(
+          `Published exercise "${id}" belongs to lesson "${lessonId}", which is not published.`,
+        );
+      }
+    }
+
+    const orderKey = `${lessonId}#${String(exercise.order)}`;
+    if (lessonOrders.has(orderKey)) {
+      issues.push(
+        `Exercise "${id}" reuses order ${String(exercise.order)} in lesson "${lessonId}".`,
+      );
+    }
+    lessonOrders.add(orderKey);
+
+    if (isPublished(exercise) && status !== "available") {
+      issues.push(`Published exercise "${id}" is in ${key}, which is not available.`);
+    }
+  }
 }
