@@ -137,11 +137,11 @@ across languages, levels and exercise types, rationale in [ADR-020](../adr/adr-0
 lesson); only the caller's attempts are stored. The user always comes from the session — never from the URL, query
 or body. Every response carries `Cache-Control: private, no-store`.
 
-| Method | Path                            | Rate limit | Notes                                                                                                                                                                                                   |
-| ------ | ------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/lessons/:lessonId/exercises`  | 120/min    | `{ exercises: [{ id, lessonId, languageId, levelId, type, order, prompt, instructionLanguage, result }], progress: { total, answered } }` in explicit order. **No options, no answer key.**             |
-| GET    | `/exercises/:exerciseId`        | 120/min    | One exercise as a student may see it **before** answering, plus `result`. Multiple choice adds `options: [{ id, text }]`; text answer and true/false add nothing. Never writes.                         |
-| POST   | `/exercises/:exerciseId/answer` | 60/min     | Body `{ "answer": <string \| boolean> }` and nothing else. Returns `{ correct, feedback, correctAnswer, result }`. Every accepted answer is an appended attempt. `Origin` checked; body capped at 2 KB. |
+| Method | Path                            | Rate limit | Notes                                                                                                                                                                                                                                   |
+| ------ | ------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/lessons/:lessonId/exercises`  | 120/min    | `{ exercises: [{ id, lessonId, languageId, levelId, type, order, prompt, instructionLanguage, result }], progress: { total, answered } }` in explicit order. **No options, no answer key.**                                             |
+| GET    | `/exercises/:exerciseId`        | 120/min    | One exercise as a student may see it **before** answering, plus `result`. Multiple choice adds `options: [{ id, text }]`; text answer and true/false add nothing. Never writes.                                                         |
+| POST   | `/exercises/:exerciseId/answer` | 60/min     | Body `{ "answer": <string \| boolean> }` and nothing else. Returns `{ correct, feedback, correctAnswer, result, rewards }` (`rewards`: M8, below). Every accepted answer is an appended attempt. `Origin` checked; body capped at 2 KB. |
 
 `result` is `{ status: "unanswered" | "correct" | "incorrect", attemptCount, lastAnsweredAt }` — the student's own standing,
 derived from their **latest** attempt (`unanswered` = no attempts). `answer` is an option id (multiple choice), the typed
@@ -169,6 +169,41 @@ The submitted answer is never logged. Database: the `exercise_attempts` table ha
 
 **Path note:** these paths are the API; the web pages are under `/learn/exercises` so they do not share a path with it
 (no page-vs-API proxy workaround, unlike `/profile`).
+
+## Gamification endpoints (M8)
+
+Schemas: `packages/contracts/src/gamification/`. **Authenticated** (session cookie; `401 { error }` otherwise) and
+**read-only**, rationale in [ADR-021](../adr/adr-021-gamification.md) and
+[gamification-architecture.md](../architecture/gamification-architecture.md). The student is always the session's: there
+is **no `:userId` in any path**, and any query key that is not documented (a `userId` above all) is a
+`400 Invalid request.`, never ignored. Every response carries `Cache-Control: private, no-store`. There is **no route that
+creates points, unlocks an achievement or edits a transaction**: rewards are granted only as a consequence of the two
+actions below.
+
+| Method | Path                                              | Rate limit | Notes                                                                                                                                                                                                                         |
+| ------ | ------------------------------------------------- | ---------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/gamification/summary`                           | 120/min    | `{ totalPoints, achievements: { unlockedCount, totalCount }, inProgressAchievements: [achievement], recentTransactions: [transaction] }` — up to 3 in progress (closest first) and the 5 latest rewards. No query parameters. |
+| GET    | `/gamification/achievements`                      | 120/min    | `{ achievements: [achievement], unlockedCount, totalCount }` in catalog order. No query parameters.                                                                                                                           |
+| GET    | `/gamification/point-transactions?limit=&before=` | 120/min    | `{ transactions: [transaction], nextBefore }`, newest first. `limit` 1–50 (default 20); `before` is the last id of the previous page; `nextBefore` is `null` on the last page. Digits only; anything else is a `400`.         |
+
+`achievement` is `{ key, title, description, iconId, rewardPoints, unlocked, unlockedAt | null, progress: { current, target } }`
+(`key` is a stable language-neutral slug; `title`/`description` are the only localised strings — chosen from
+`Accept-Language`, default English; `progress.current` never exceeds `target`). `transaction` is
+`{ id, amount, reason, sourceId, title | null, createdAt }` — `reason` is `exercise-completed`, `lesson-completed` or
+`achievement-unlocked` (`title` is the achievement's title for an unlock). No user id appears in any response.
+
+**Rewards on existing actions.** `POST /exercises/:id/answer` adds
+`rewards: { pointsAwarded, achievementsUnlocked: [{ key, title, description, iconId, rewardPoints }] }`, and
+`POST /lessons/:id/complete` now returns the progress **plus** the same `rewards` (`start` and every read are unchanged).
+`pointsAwarded` is the total of that action, achievements included: the first correct answer to an exercise is +10, the
+first completion of a lesson +25, each achievement unlocked +50; a wrong answer, a repeat or a concurrent duplicate is `0`.
+Both requests keep their strict bodies — `points`, `correct`, `userId` or any other key is still a `400`. If the reward
+could not be stored the request answers with the generic `500` (the attempt or completion is kept and repeating the action
+grants the reward).
+
+Database: `point_transactions` and `user_achievements` have their own migration set
+(`pnpm --filter @tfm-bic/data db:migrate:gamification`, after Identity's `db:migrate`). The pages are `/dashboard` and
+`/achievements` (not API paths, so the dev proxy needs no page-vs-API bypass for `/gamification`).
 
 ## Future direction
 

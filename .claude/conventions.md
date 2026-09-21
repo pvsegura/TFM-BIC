@@ -134,6 +134,30 @@ Rationale: [ADR-020](../docs/adr/adr-020-exercises.md); reference:
   flight; the verdict is shown in words (never colour alone) and focus moves to it.
 - Web: no `dangerouslySetInnerHTML`/`innerHTML`/`eval`/computed dynamic import (`no-raw-html.test.ts`).
 
+## Gamification conventions (since M8)
+
+Rationale: [ADR-021](../docs/adr/adr-021-gamification.md); reference:
+[gamification-architecture.md](../docs/architecture/gamification-architecture.md).
+
+- **Points are created in one place**: `AwardRewardsUseCase`. Never add a route, a use case parameter or a client field that
+  carries an amount, and never write `point_transactions` from anywhere else. The amount of an exercise/lesson reward comes
+  from the domain rules, an achievement's from its rule.
+- **The ledger is the truth.** No `total_points` column or cache; derive from `point_transactions`. If a projection is ever
+  added it must be rebuildable from the ledger and covered by a test that rebuilds it.
+- **A reward has an identity** (`user`, `reason`, `source_id`) enforced by a unique constraint and written with
+  `INSERT … ON CONFLICT DO NOTHING … RETURNING`. Never write "check then insert" for a reward or an unlock.
+- **Reward work runs in `transactionForUser`** (one transaction + a per-student advisory lock). Reward, unlock and the
+  unlock's payout are written together or not at all. The attempt/completion is written _before_ (different store, safe
+  order); a failed reward fails the request and is granted by repeating the action.
+- **A new achievement is a new rule**, plus its texts in every language (start-up refuses a gap). Rules read
+  `GamificationFacts` (derived from the ledger) — not other contexts' tables. Keys are language-neutral slugs; never key
+  anything by a title.
+- **Evaluate on events, never on reads.** Read use cases (`summary`, `achievements`, `point-transactions`) never write.
+  No `:userId` in a gamification route; extra query keys are a `400`.
+- The ledger is immutable (no update/delete in the port; a trigger refuses `UPDATE`). Query key root `["gamification", …]`
+  is user-scoped; invalidate it after an action that earned points.
+- Never log a user id, an answer or a token with a reward; log the reason, source id, points and unlocked keys.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

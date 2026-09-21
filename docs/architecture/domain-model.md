@@ -84,8 +84,13 @@ requiring tests regardless of coverage thresholds (see
 
 ### Gamification
 
-Points totals, achievements, (future: streaks, badges, XP, leaderboards). Reads from
-Scoring/Progress; does not itself calculate exercise correctness.
+**Implemented (M8)**: an append-only points ledger (the single source of truth — a total is derived, never stored),
+reward rules (+10 first correct answer to an exercise, +25 first completion of a lesson, +50 per achievement) and
+achievements as rules (`first-exercise`, `first-lesson`, `ten-correct-exercises`, `hundred-points`) evaluated on domain
+events. It reads nothing from other contexts' tables: it is _told_ about a correct answer or a completed lesson by the use
+cases that judged them and derives everything else from its own ledger. It does not itself calculate exercise
+correctness. See [gamification-architecture.md](gamification-architecture.md) and
+[ADR-021](../adr/adr-021-gamification.md). **Not built**: streaks, badges, XP levels, leaderboards, spending points.
 
 ### Vocabulary
 

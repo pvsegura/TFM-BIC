@@ -63,6 +63,18 @@ answer — is stored (own `packages/data/src/exercises/` context). `ListLessonEx
 `/learn/exercises`. See [ADR-020](../docs/adr/adr-020-exercises.md) and
 [exercise-architecture.md](../docs/architecture/exercise-architecture.md).
 
+## Gamification
+
+Points are a domain concept: an **append-only ledger** (`point_transactions`, unique per `(user, reason, source)`) is the
+single source of truth — a total is derived, never stored. Rewards (+10 first correct answer to an exercise, +25 first
+completion of a lesson, +50 per achievement) are granted only by `AwardRewardsUseCase`, wrapped around the unchanged
+M7/M6 use cases (`SubmitExerciseAnswerWithRewards`, `CompleteLessonWithRewards`), in **one transaction exclusive per
+student** (advisory lock). Achievements are `AchievementRule`s in a validated `AchievementRegistry` (code, not a table),
+evaluated on domain events from the ledger's facts; `user_achievements` stores what a student unlocked. Its own
+`packages/data/src/gamification/` context; three read-only authenticated routes under `/gamification`; pages `/dashboard`
+and `/achievements`. See [ADR-021](../docs/adr/adr-021-gamification.md) and
+[gamification-architecture.md](../docs/architecture/gamification-architecture.md).
+
 ## Monorepo layout
 
 `apps/{web,api}`, `packages/{domain,application,contracts,data,shared,ui,config,testing}`,

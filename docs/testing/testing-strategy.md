@@ -181,3 +181,49 @@ Answer evaluation is business-critical, so it is tested hardest and at every lay
   access; safe not-found; a 375px viewport (no horizontal overflow, tap-size options); dark mode.
 - **Not covered**: axe-style accessibility scanning (still none), true multi-connection concurrency on real Postgres,
   and behaviour on runtimes without full ICU (case-insensitive comparison uses the exercise language's locale).
+
+## Gamification (M8)
+
+Points and idempotency are critical flows, tested hardest and at every layer regardless of coverage.
+
+- **Domain (pure unit tests)**: point amounts (valid range, zero, negative, fractional, `NaN`/infinite, non-numbers),
+  reward reasons and the reward rules (10 / 25 / 50), source-id validation (injection-shaped ids), the transaction
+  (amount comes from the rules, frozen, invalid input), every achievement rule at and around its threshold (9 vs 10,
+  99 vs 100, "ten attempts at one exercise is one exercise"), trigger selection, "never returns an already unlocked
+  achievement", registry validation, and that a **new rule needs no change elsewhere**.
+- **Application (in-memory fake with the database's guarantees)**: `FakeGamificationRepository` has identity-idempotent
+  writes, a per-student queue (like the advisory lock) and rollback on error, plus failure injection. Tests cover: the
+  first reward pays and repeats pay 0, per-student independence, chained unlocks (a lesson unlocking `first-lesson` then
+  `hundred-points`), achievement idempotency, **concurrent** identical completions and the lost-unlock threshold race,
+  **transaction consistency** (a failing payout or unlock leaves nothing behind; a retry then grants everything once),
+  `RewardAwardError` naming the reason/source but not the student, wrong or malformed answers and hidden content
+  never reaching the ledger, the M7/M6 use cases reused unchanged, "a repeat evaluates nothing", the read use cases
+  (three reads whatever the number of achievements, paging, own-data-only, retired achievements) and the localised
+  texts (start-up validation, `Accept-Language` matching, a fictional locale).
+- **Repository (real Postgres via PGlite)**: idempotent inserts, every constraint by name (amount, reason, source id,
+  key, foreign keys), the immutability trigger, cascade, the aggregate, keyset paging with and without a full last page,
+  transaction commit/rollback, and the real use case run over the real database — many concurrent callers, the
+  threshold race, a payout failing midway and being granted on retry — each ending with an invariant query (every
+  unlock has exactly one payout and vice versa).
+- **Real Postgres, multiple connections (opt-in)**: `gamification.repository.postgres.test.ts`, skipped unless
+  `TEST_DATABASE_URL` is set (a throwaway database is created and dropped). With a pool of 12 connections it shows
+  concurrent requests pay once, the threshold race never loses an unlock (15 rounds), and the advisory lock makes a second
+  request for the same student wait but not another student's. Verified by mutation: with the lock removed the race and
+  blocking tests fail while the unique-constraint test still passes.
+- **Contracts / HTTP**: response allowlists, strict queries (`userId` is a `400`), digits-only paging bounds,
+  authentication on every route, IDOR and non-existent routes (including every POST/PUT/PATCH/DELETE), no user id in any
+  body, `no-store`, exact rewards on the answer and completion responses, concurrent duplicates, mass assignment,
+  a generic `500` on failure, and the rate limit.
+- **Frontend**: the client (no user id ever sent, contract validation, cursor only), hooks (user-scoped key dropped on
+  logout, 401, paging, invalidation only when points were earned, rewards never cached with the lesson), each component
+  (locked/unlocked in words, progress bars, plural, empty, dark-mode class, inert markup, decorative icons hidden), both
+  pages (loading, error with retry and a fixed message, empty, one request per card) and the reward notice inside the
+  existing live regions.
+- **Playwright** (`tests/e2e/gamification.spec.ts`): the first correct answer (+60 with `first-exercise`), a repeat
+  (nothing), wrong then right, six simultaneous identical answers (paid once), a lesson (+75 with `first-lesson`) and its
+  repeat/refresh, the dashboard (185 = 10+50+25+50+50) and the achievements page with progress, a new student's empty
+  state, a switch of student without stale data, a 375px viewport and dark mode, keyboard use, logged-out refusals,
+  cross-student isolation, `userId` refusals, no user id and `no-store` on the real responses, and malformed paging.
+- **Not covered**: `ten-correct-exercises` end to end (the shipped content has nine exercises; it is proved in the domain,
+  application and repository layers), axe-style accessibility scanning (still none), and the multi-connection test is not
+  part of CI (no Postgres service in the pipeline).

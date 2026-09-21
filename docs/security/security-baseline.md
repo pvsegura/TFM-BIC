@@ -156,6 +156,45 @@ Authenticated exercise list/detail and answer submission. See [ADR-020](../adr/a
   immutability of attempts rests on the absence of any write path other than insert, not on a database trigger;
   behaviour under truly concurrent connections to a real Postgres/Neon is not verified (PGlite serialises queries).
 
+## Gamification (M8 — implemented)
+
+Points, achievements and rewards. See [ADR-021](../adr/adr-021-gamification.md).
+
+- **The server is the only authority on points.** No route creates points, unlocks an achievement or edits a
+  transaction (tested: POST/PUT/PATCH/DELETE to any `/gamification/*` path, including `award` and `give-me-points`, is a
+  `404` and writes nothing). Rewards are granted only inside the exercise and lesson use cases, after the server judged
+  the answer or persisted the completion; the amount is a domain constant, never a parameter.
+- **Mass assignment**: the answer and completion requests keep their strict schemas; `points`, `correct`,
+  `pointsAwarded` or `userId` in a body is a `400` and earns nothing (API and E2E).
+- **IDOR**: identity comes only from the session. There is no user id in any path; a `userId` (or any undocumented key)
+  in a query is a `400`; `GET /users/:id/gamification` and every guessable variation is a `404`. Two-student tests (API,
+  repository and E2E) show one student's points, history and unlocks are invisible to another, including with the
+  other's paging cursor. No response contains a user id.
+- **Authentication** is server-side on all three reads (the `authenticate` hook): no cookie, a tampered cookie or a
+  logged-out session is `401`.
+- **Idempotency is a security property.** A repeated, retried or concurrent request cannot pay twice: the database's
+  unique `(user_id, reason, source_id)` and `(user_id, achievement_key)` refuse it, and a per-student advisory lock
+  serialises reward work. Tested at the application layer (a fake with the same guarantees), the repository layer
+  (constraints, rollback, many concurrent callers) and E2E (six simultaneous identical answers pay once).
+- **No partial state**: a reward, an unlock and its payout commit together or roll back together; the failure path
+  answers a generic `500` and leaks nothing about the reward.
+- **Historical tampering**: the ledger is append-only — no update/delete in the port and a database trigger refusing
+  `UPDATE`; the only removal is `ON DELETE CASCADE` with the user.
+- **Injection**: every query is parameterised (Drizzle); ids and keys are slugs checked by the domain, the request
+  schemas and database `CHECK`s; the history cursor and limit are digits-only and bounded (`400` otherwise).
+- **XSS**: achievement titles and descriptions come from the server as plain text and are rendered as text by fixed
+  components (tested with markup-looking strings); icons are symbolic ids mapped to fixed glyphs, never paths or markup.
+- **Caching**: `Cache-Control: private, no-store` on every gamification response; the client cache is user-scoped and
+  dropped on logout/login.
+- **Abuse**: reads are rate-limited (120/min); rewards are naturally bounded because each is one-time per
+  exercise/lesson.
+- **Logging**: a rewarded action logs the exercise or lesson id, the points awarded and the achievement keys unlocked; a
+  reward failure is a `RewardAwardError` naming the reason and source id with the underlying error as `cause`. **No user
+  id, answer text, cookie, email or token is logged.**
+- **Known limitations**: an attempt or completion can exist without its reward until the action is repeated (different
+  stores, ADR-021 §4); ledger rows are kept until user deletion (a later GDPR milestone); the advisory lock is proved on
+  PGlite (a single connection) in the default suite and on real Postgres only by the opt-in test.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from

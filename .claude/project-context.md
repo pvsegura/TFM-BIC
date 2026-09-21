@@ -49,6 +49,15 @@ see [current-state.md](current-state.md) for what that means concretely.
   `/learn/exercises/:exerciseId` because `/exercises` is the API path. Polish A1 has nine seed exercises (not a bank).
   See [ADR-020](../docs/adr/adr-020-exercises.md).
 
+- Gamification (M8): points are an **append-only ledger** (`point_transactions`) — the single source of truth, no stored
+  balance; a reward is identified by `(user, reason, source)` and is unique in the database, so repeats and concurrent
+  requests pay once. Rewards: +10 the first correct answer to an exercise, +25 the first completion of a lesson, +50 per
+  achievement (`first-exercise`, `first-lesson`, `ten-correct-exercises`, `hundred-points`, defined as rules in code with
+  language-neutral keys and localisable texts). Only `AwardRewardsUseCase` creates points, inside the exercise/lesson use
+  cases, in one transaction per student. Three **authenticated, read-only** routes (`GET /gamification/summary`,
+  `/achievements`, `/point-transactions`); the answer and lesson-completion responses carry a `rewards` field. Pages are
+  `/dashboard` and `/achievements`. See [ADR-021](../docs/adr/adr-021-gamification.md).
+
 ## Where things live
 
 - Full architecture: [docs/architecture/](../docs/architecture/)
