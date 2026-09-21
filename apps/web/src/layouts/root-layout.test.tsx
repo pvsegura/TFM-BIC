@@ -46,6 +46,27 @@ describe("RootLayout", () => {
     expect(await screen.findByRole("link", { name: "Learn" })).toHaveAttribute("href", "/learn");
   });
 
+  it("links to the student's lessons only when signed in — it is not offered to visitors", async () => {
+    const spy = vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    const { unmount } = renderRootLayout();
+    await screen.findByRole("link", { name: "Log in" });
+    expect(screen.queryByRole("link", { name: "Lessons" })).not.toBeInTheDocument();
+    unmount();
+
+    spy.mockResolvedValue({
+      id: "1",
+      email: "user@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
+    renderRootLayout();
+
+    expect(await screen.findByRole("link", { name: "Lessons" })).toHaveAttribute(
+      "href",
+      "/learn/lessons",
+    );
+  });
+
   it("renders the current user's email and a log-out control when authenticated", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
       id: "1",

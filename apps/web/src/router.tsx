@@ -1,10 +1,12 @@
-import { createBrowserRouter } from "react-router";
+import { createBrowserRouter, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { ForgotPasswordPage } from "./pages/forgot-password-page.js";
 import { ContentPage } from "./pages/content-page.js";
 import { LearnPage } from "./pages/learn-page.js";
+import { LessonPage } from "./pages/lesson-page.js";
+import { LessonsPage } from "./pages/lessons-page.js";
 import { LoginPage } from "./pages/login-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
@@ -29,20 +31,29 @@ const PUBLIC_ROUTES = [
 /** Language, level and content discovery (M5) — public, like the catalog API behind it. One
  * generic page set for every language; the choice lives in the URL. Deliberately not under
  * `/languages` or `/content`: those are the API paths, and a page and an API sharing a path
- * needs a proxy workaround (see ADR-017). Lessons themselves are M6. */
+ * needs a proxy workaround (see ADR-017). */
 const LEARN_ROUTES = [
   { path: "learn/:languageCode?/:levelId?", element: <LearnPage /> },
   { path: "learn/:languageCode/:levelId/:contentId", element: <ContentPage /> },
 ];
 
+/** The student lesson experience (M6) — the lessons list and one lesson. Under `/learn` because
+ * `/lessons` is the API path (see ADR-019). React Router ranks these static paths above the public
+ * `learn/:languageCode?/:levelId?` route, and no language code can be spelled "lessons" (codes are
+ * two or three letters), so the two never compete. They sit behind ProtectedRoute like the rest. */
+const LESSON_ROUTES = [
+  { path: "learn/lessons", element: <LessonsPage /> },
+  { path: "learn/lessons/:lessonId", element: <LessonPage /> },
+];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
- * boundary on every request. Profile is the real M4 page; the rest are
- * still placeholders for their features (M5+), real now only in that they
- * require login. */
+ * boundary on every request. Profile is the real M4 page and lessons the
+ * real M6 pages; the rest are still placeholders for their features (M7+),
+ * real now only in that they require login. */
 const APP_ROUTES = [
   { path: "dashboard", element: placeholder("Dashboard", "Student dashboard placeholder.") },
-  { path: "lessons", element: placeholder("Lessons", "Lesson list placeholder.") },
+  ...LESSON_ROUTES,
   { path: "vocabulary", element: placeholder("Vocabulary", "Vocabulary practice placeholder.") },
   { path: "phonetics", element: placeholder("Phonetics", "Phonetics practice placeholder.") },
   { path: "exercises", element: placeholder("Exercises", "Exercises placeholder.") },
@@ -55,7 +66,7 @@ const APP_ROUTES = [
   { path: "settings", element: placeholder("Settings", "Account settings placeholder.") },
 ];
 
-export const router = createBrowserRouter([
+export const routes: RouteObject[] = [
   {
     path: "/",
     element: <RootLayout />,
@@ -70,4 +81,6 @@ export const router = createBrowserRouter([
       { path: "*", element: placeholder("Not found", "This route does not exist.") },
     ],
   },
-]);
+];
+
+export const router = createBrowserRouter(routes);

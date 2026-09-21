@@ -19,6 +19,9 @@ export default defineConfig({
       // these API paths need no page-vs-API bypass.
       "/languages": { target: "http://localhost:3000", changeOrigin: true },
       "/content": { target: "http://localhost:3000", changeOrigin: true },
+      // Lessons (M6) are an authenticated API. Their pages live under /learn/lessons, so — like the
+      // catalog — this path needs no page-vs-API bypass (ADR-019).
+      "/lessons": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which

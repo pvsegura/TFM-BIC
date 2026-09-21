@@ -6,6 +6,7 @@ import {
   useQueryClient,
   type QueryClient,
 } from "@tanstack/react-query";
+import { useEffect, useRef } from "react";
 
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "../services/lessons-api.js";
 import { endSessionIfUnauthorized } from "./session-cache.js";
@@ -88,7 +89,9 @@ function applyPersistedProgress(
 function useProgressMutation(action: (lessonId: string) => Promise<LessonProgressResponse>) {
   const queryClient = useQueryClient();
   return useMutation({
-    mutationFn: action,
+    // Wrapped so the only thing ever passed on is the lesson id (TanStack Query would also hand the
+    // mutation context to a bare function).
+    mutationFn: (lessonId: string) => action(lessonId),
     onSuccess: (progress, lessonId) => {
       applyPersistedProgress(queryClient, lessonId, progress);
     },
@@ -106,4 +109,25 @@ export function useStartLesson() {
 /** The explicit completion action. Idempotent on the server, so a repeat is harmless. */
 export function useCompleteLesson() {
   return useProgressMutation(completeLesson);
+}
+
+/**
+ * Opening a lesson starts it: when a lesson the student has not started is on
+ * screen, the start is recorded once. A ref remembers which lesson has been
+ * sent, so React running effects twice in development (StrictMode) or the lesson
+ * being refetched cannot send it again. It is best-effort: if recording fails
+ * the lesson stays readable and completable (completing works from
+ * "not started" too), and the failure is not shown — the student did nothing
+ * wrong and can do nothing about it. It never completes anything.
+ */
+export function useStartLessonOnOpen(lesson: LessonResponse | undefined): void {
+  const { mutate: start } = useStartLesson();
+  const requestedFor = useRef<string | null>(null);
+
+  useEffect(() => {
+    if (lesson?.progress.status === "not_started" && requestedFor.current !== lesson.id) {
+      requestedFor.current = lesson.id;
+      start(lesson.id);
+    }
+  }, [lesson?.id, lesson?.progress.status, start]);
 }
