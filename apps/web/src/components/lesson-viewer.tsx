@@ -1,4 +1,5 @@
 import type { LessonResponse } from "@tfm-bic/contracts";
+import type { ReactNode } from "react";
 import { Link } from "react-router";
 
 import { ContentBlocks, type LearningLanguage } from "./content-blocks.js";
@@ -13,6 +14,8 @@ export interface LessonViewerProps {
   completionFailed: boolean;
   onComplete: () => void;
   backHref: string;
+  /** What follows the lesson's blocks and comes before the completion action — the exercises (M7). The viewer knows nothing about it. */
+  practice?: ReactNode;
 }
 
 /**
@@ -34,6 +37,7 @@ export function LessonViewer({
   completionFailed,
   onComplete,
   backHref,
+  practice,
 }: LessonViewerProps) {
   return (
     <article lang={lesson.instructionLanguage} className="mt-4">
@@ -52,6 +56,8 @@ export function LessonViewer({
           instructionLanguage={lesson.instructionLanguage}
         />
       </div>
+
+      {practice}
 
       <LessonCompletion
         status={lesson.progress.status}

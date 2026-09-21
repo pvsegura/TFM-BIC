@@ -53,6 +53,28 @@ function renderViewer(
 }
 
 describe("LessonViewer", () => {
+  it("shows a practice section between the lesson's blocks and the completion action, when given one", () => {
+    renderViewer(lesson(), {
+      practice: <section aria-label="Practice slot">Practice here</section>,
+    });
+
+    const text = screen.getByRole("article").textContent;
+    const positions = [
+      "Use Dzień dobry with people you do not know.",
+      "Practice here",
+      "Finished this lesson?",
+    ].map((part) => text.indexOf(part));
+    expect(positions.every((position) => position >= 0)).toBe(true);
+    expect(positions).toEqual([...positions].sort((a, b) => a - b));
+  });
+
+  it("is unchanged without a practice section", () => {
+    renderViewer(lesson());
+
+    expect(screen.queryByLabelText("Practice slot")).not.toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Complete lesson" })).toBeInTheDocument();
+  });
+
   it("has one level-one heading, the lesson title, followed by its description and status", () => {
     renderViewer(lesson());
 
