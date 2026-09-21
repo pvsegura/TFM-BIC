@@ -3,6 +3,7 @@ import { describe, expect, it } from "vitest";
 import {
   achievementResponseSchema,
   achievementsResponseSchema,
+  gamificationQuerySchema,
   gamificationSummaryResponseSchema,
   pointHistoryQuerySchema,
   pointHistoryResponseSchema,
@@ -193,6 +194,11 @@ describe("point history paging", () => {
     expect(pointHistoryQuerySchema.safeParse(query).success).toBe(false);
   });
 
+  it("refuses any other parameter, such as a user id, instead of ignoring it", () => {
+    expect(pointHistoryQuerySchema.safeParse({ userId: "someone-else" }).success).toBe(false);
+    expect(pointHistoryQuerySchema.safeParse({ limit: "5", role: "teacher" }).success).toBe(false);
+  });
+
   it("returns a page with the cursor for the next one, or none at the end", () => {
     expect(
       pointHistoryResponseSchema.parse({ transactions: [transaction], nextBefore: 7 }).nextBefore,
@@ -201,4 +207,17 @@ describe("point history paging", () => {
       pointHistoryResponseSchema.parse({ transactions: [], nextBefore: null }).nextBefore,
     ).toBeNull();
   });
+});
+
+describe("the parameter-less gamification reads", () => {
+  it("accept no query at all", () => {
+    expect(gamificationQuerySchema.safeParse({}).success).toBe(true);
+  });
+
+  it.each([{ userId: "someone-else" }, { limit: "5" }, { locale: "en" }])(
+    "refuse %j — the student is always the session's",
+    (query) => {
+      expect(gamificationQuerySchema.safeParse(query).success).toBe(false);
+    },
+  );
 });

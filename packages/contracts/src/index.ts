@@ -57,12 +57,14 @@ export {
 // Lessons (M6): student-facing lesson list, lesson and progress shapes.
 export {
   lessonActionRequestSchema,
+  lessonCompletionResponseSchema,
   lessonIdParamSchema,
   lessonListQuerySchema,
   lessonListResponseSchema,
   lessonProgressResponseSchema,
   lessonResponseSchema,
   lessonSummaryResponseSchema,
+  type LessonCompletionResponse,
   type LessonListQuery,
   type LessonListResponse,
   type LessonProgressResponse,
@@ -108,6 +110,7 @@ export {
   achievementProgressResponseSchema,
   achievementResponseSchema,
   achievementsResponseSchema,
+  gamificationQuerySchema,
   gamificationSummaryResponseSchema,
   MAX_HISTORY_PAGE_SIZE,
   pointHistoryQuerySchema,

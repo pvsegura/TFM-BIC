@@ -2,6 +2,7 @@ import { describe, expect, it } from "vitest";
 
 import {
   lessonActionRequestSchema,
+  lessonCompletionResponseSchema,
   lessonIdParamSchema,
   lessonListQuerySchema,
   lessonListResponseSchema,
@@ -185,5 +186,24 @@ describe("lessonActionRequestSchema", () => {
     ["role", { role: "TEACHER" }],
   ])("rejects a body that tries to set %s: the client controls none of it", (_field, body) => {
     expect(lessonActionRequestSchema.safeParse(body).success).toBe(false);
+  });
+});
+
+describe("lessonCompletionResponseSchema", () => {
+  const rewards = { pointsAwarded: 25, achievementsUnlocked: [] };
+
+  it("is the progress the lesson now has, plus what completing it earned", () => {
+    const parsed = lessonCompletionResponseSchema.parse({ ...completed, rewards });
+    expect(parsed.status).toBe("completed");
+    expect(parsed.rewards).toEqual(rewards);
+  });
+
+  it("requires the rewards", () => {
+    expect(lessonCompletionResponseSchema.safeParse(completed).success).toBe(false);
+  });
+
+  it("strips anything beyond that shape, such as the user id (allowlist)", () => {
+    const parsed = lessonCompletionResponseSchema.parse({ ...completed, rewards, userId: "u1" });
+    expect(parsed).not.toHaveProperty("userId");
   });
 });

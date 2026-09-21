@@ -209,7 +209,30 @@ describe("exerciseAnswerResponseSchema", () => {
     feedback: "Dzień dobry is polite.",
     correctAnswer: "a",
     result: RESULT,
+    rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
   };
+
+  it("carries what the answer earned, next to the verdict", () => {
+    const earned = {
+      pointsAwarded: 60,
+      achievementsUnlocked: [
+        {
+          key: "first-exercise",
+          title: "First exercise",
+          description: "Complete your first exercise correctly.",
+          iconId: "spark",
+          rewardPoints: 50,
+        },
+      ],
+    };
+    const parsed = exerciseAnswerResponseSchema.parse({ ...evaluation, rewards: earned });
+    expect(parsed.rewards).toEqual(earned);
+  });
+
+  it("requires the rewards, so a client never has to guess whether points were awarded", () => {
+    const { rewards: _rewards, ...withoutRewards } = evaluation;
+    expect(exerciseAnswerResponseSchema.safeParse(withoutRewards).success).toBe(false);
+  });
 
   it.each([
     evaluation,

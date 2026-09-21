@@ -3,6 +3,7 @@ import { z } from "zod";
 
 import { contentBlockSchema } from "../content/content-block.schema.js";
 import { contentIdSchema, languageIdSchema, levelIdSchema } from "../content/identifiers.schema.js";
+import { rewardsResponseSchema } from "../gamification/gamification-response.schema.js";
 
 /**
  * Student-facing lesson shapes (M6). Like the catalog shapes they are
@@ -22,6 +23,16 @@ export const lessonProgressResponseSchema = z.object({
   completedAt: isoTimestamp.nullable(),
 });
 export type LessonProgressResponse = z.infer<typeof lessonProgressResponseSchema>;
+
+/**
+ * The answer to `POST /lessons/:lessonId/complete` (M8): the progress the lesson now has, plus
+ * what completing it earned. `start` and every read keep returning the bare progress — only a
+ * completion can earn anything.
+ */
+export const lessonCompletionResponseSchema = lessonProgressResponseSchema.extend({
+  rewards: rewardsResponseSchema,
+});
+export type LessonCompletionResponse = z.infer<typeof lessonCompletionResponseSchema>;
 
 /** What a lesson card needs: list metadata and this student's progress, no body. */
 export const lessonSummaryResponseSchema = z.object({

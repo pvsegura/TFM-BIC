@@ -91,6 +91,13 @@ export const gamificationSummaryResponseSchema = z.object({
 });
 export type GamificationSummaryResponse = z.infer<typeof gamificationSummaryResponseSchema>;
 
+/**
+ * `GET /gamification/summary` and `/achievements` take no parameters at all: the student is the
+ * session's. Any query key — `userId` above all — is a `400`, so a client can never believe it
+ * asked for someone else's data.
+ */
+export const gamificationQuerySchema = z.strictObject({});
+
 const DEFAULT_HISTORY_PAGE_SIZE = 20;
 export const MAX_HISTORY_PAGE_SIZE = 50;
 
@@ -100,9 +107,10 @@ const wholeNumberText = z.string().regex(/^[1-9]\d{0,8}$/, { error: "Expected a 
 /**
  * `GET /gamification/point-transactions?limit=&before=` — keyset paging, newest first.
  * `before` is the id of the last transaction of the previous page. Both are optional; a
- * repeated parameter or anything that is not plain digits is rejected.
+ * repeated parameter, anything that is not plain digits and any other parameter — a `userId`,
+ * say — is rejected rather than ignored.
  */
-export const pointHistoryQuerySchema = z.object({
+export const pointHistoryQuerySchema = z.strictObject({
   limit: wholeNumberText
     .transform(Number)
     .pipe(z.number().max(MAX_HISTORY_PAGE_SIZE))

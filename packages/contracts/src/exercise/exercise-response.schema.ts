@@ -1,6 +1,7 @@
 import { EXERCISE_RESULT_STATUSES, EXERCISE_TYPES, MAX_TEXT_ANSWER_LENGTH } from "@tfm-bic/domain";
 import { z } from "zod";
 
+import { rewardsResponseSchema } from "../gamification/gamification-response.schema.js";
 import {
   contentIdSchema,
   exerciseIdSchema,
@@ -98,5 +99,7 @@ export const exerciseAnswerResponseSchema = z.object({
   feedback: z.string().nullable(),
   correctAnswer: z.union([z.string(), z.boolean()]),
   result: exerciseResultResponseSchema,
+  /** What this answer earned (M8): the server's decision, shown — never sent — by the client. */
+  rewards: rewardsResponseSchema,
 });
 export type ExerciseAnswerResponse = z.infer<typeof exerciseAnswerResponseSchema>;
