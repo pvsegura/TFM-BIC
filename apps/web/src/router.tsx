@@ -2,6 +2,7 @@ import { createBrowserRouter, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
+import { ExercisePage } from "./pages/exercise-page.js";
 import { ForgotPasswordPage } from "./pages/forgot-password-page.js";
 import { ContentPage } from "./pages/content-page.js";
 import { LearnPage } from "./pages/learn-page.js";
@@ -46,17 +47,23 @@ const LESSON_ROUTES = [
   { path: "learn/lessons/:lessonId", element: <LessonPage /> },
 ];
 
+/** One exercise (M7). Under `/learn` because `/exercises` is the API path (see ADR-020). Its static
+ * `learn/exercises` segment ranks above the public `learn/:languageCode/:levelId` route, and no language
+ * code can be spelled "exercises" (codes are two or three letters), so the two never compete. Behind
+ * ProtectedRoute like the rest. */
+const EXERCISE_ROUTES = [{ path: "learn/exercises/:exerciseId", element: <ExercisePage /> }];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page and lessons the
- * real M6 pages; the rest are still placeholders for their features (M7+),
+ * real M6 pages and exercises the real M7 page; the rest are still placeholders for their features,
  * real now only in that they require login. */
 const APP_ROUTES = [
   { path: "dashboard", element: placeholder("Dashboard", "Student dashboard placeholder.") },
   ...LESSON_ROUTES,
+  ...EXERCISE_ROUTES,
   { path: "vocabulary", element: placeholder("Vocabulary", "Vocabulary practice placeholder.") },
   { path: "phonetics", element: placeholder("Phonetics", "Phonetics practice placeholder.") },
-  { path: "exercises", element: placeholder("Exercises", "Exercises placeholder.") },
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
   {
     path: "achievements",

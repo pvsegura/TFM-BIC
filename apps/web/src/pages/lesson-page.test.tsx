@@ -1,4 +1,9 @@
-import type { LanguagesResponse, LessonProgressResponse, LessonResponse } from "@tfm-bic/contracts";
+import type {
+  ExerciseListResponse,
+  LanguagesResponse,
+  LessonProgressResponse,
+  LessonResponse,
+} from "@tfm-bic/contracts";
 import { renderWithProviders } from "@tfm-bic/testing";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
@@ -9,6 +14,7 @@ import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
 import { ApiError } from "../services/api-error.js";
 import * as authApi from "../services/auth-api.js";
 import * as catalogApi from "../services/catalog-api.js";
+import * as exercisesApi from "../services/exercises-api.js";
 import * as lessonsApi from "../services/lessons-api.js";
 import { LessonPage } from "./lesson-page.js";
 
@@ -71,8 +77,42 @@ function renderAt(path: string, { strict = false } = {}) {
   return renderWithProviders(strict ? <StrictMode>{ui}</StrictMode> : ui);
 }
 
+const NO_EXERCISES = {
+  exercises: [],
+  progress: { total: 0, answered: 0 },
+} as unknown as ExerciseListResponse;
+
+const TWO_EXERCISES = {
+  exercises: [
+    {
+      id: "pl-greetings-polite-hello",
+      lessonId: "pl-greetings",
+      languageId: "pl",
+      levelId: "a1",
+      type: "multiple-choice",
+      order: 10,
+      prompt: "Which greeting is polite?",
+      instructionLanguage: "en",
+      result: { status: "correct", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+    },
+    {
+      id: "pl-greetings-good-night",
+      lessonId: "pl-greetings",
+      languageId: "pl",
+      levelId: "a1",
+      type: "text-answer",
+      order: 20,
+      prompt: "Type the Polish for: Good night.",
+      instructionLanguage: "en",
+      result: { status: "unanswered", attemptCount: 0, lastAnsweredAt: null },
+    },
+  ],
+  progress: { total: 2, answered: 1 },
+} as unknown as ExerciseListResponse;
+
 function mockApi(initial: LessonProgressResponse = NOT_STARTED) {
   vi.spyOn(catalogApi, "fetchLanguages").mockResolvedValue(LANGUAGES);
+  vi.spyOn(exercisesApi, "fetchLessonExercises").mockResolvedValue(NO_EXERCISES);
   return {
     lesson: vi.spyOn(lessonsApi, "fetchLesson").mockResolvedValue(lesson(initial)),
     start: vi.spyOn(lessonsApi, "startLesson").mockResolvedValue(IN_PROGRESS),
@@ -353,5 +393,67 @@ describe("LessonPage: not found and errors", () => {
       await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" }),
     ).toBeInTheDocument();
     expect(api.lesson).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("LessonPage: practice (M7)", () => {
+  it("lists the lesson's exercises with the student's results, after the lesson and before completion", async () => {
+    mockApi(IN_PROGRESS);
+    vi.mocked(exercisesApi.fetchLessonExercises).mockResolvedValue(TWO_EXERCISES);
+    renderAt("/learn/lessons/pl-greetings");
+
+    expect(await screen.findByRole("heading", { level: 2, name: "Practice" })).toBeInTheDocument();
+    expect(screen.getByText("1 of 2 exercises answered")).toBeInTheDocument();
+    expect(screen.getByRole("link", { name: "Practise again: exercise 1" })).toHaveAttribute(
+      "href",
+      "/learn/exercises/pl-greetings-polite-hello",
+    );
+    expect(screen.getByRole("link", { name: "Start exercise 2" })).toBeInTheDocument();
+  });
+
+  it("asks for the exercises of the lesson being read", async () => {
+    mockApi(IN_PROGRESS);
+    renderAt("/learn/lessons/pl-greetings");
+    await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" });
+
+    await waitFor(() => {
+      expect(exercisesApi.fetchLessonExercises).toHaveBeenCalledWith("pl-greetings");
+    });
+  });
+
+  it("shows no practice section for a lesson without exercises", async () => {
+    mockApi(IN_PROGRESS);
+    renderAt("/learn/lessons/pl-greetings");
+    await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" });
+
+    await waitFor(() => {
+      expect(exercisesApi.fetchLessonExercises).toHaveBeenCalled();
+    });
+    expect(screen.queryByRole("heading", { name: "Practice" })).not.toBeInTheDocument();
+  });
+
+  it("keeps the lesson readable and completable when its exercises cannot be loaded", async () => {
+    mockApi(IN_PROGRESS);
+    vi.mocked(exercisesApi.fetchLessonExercises).mockRejectedValue(
+      new ApiError("Something went wrong. Please try again.", 500),
+    );
+    renderAt("/learn/lessons/pl-greetings");
+
+    expect(await screen.findByRole("alert")).toHaveTextContent("couldn't load the exercises");
+    expect(screen.getByRole("heading", { level: 1, name: "Greetings and goodbyes" })).toBeVisible();
+    expect(screen.getByRole("button", { name: "Complete lesson" })).toBeEnabled();
+  });
+
+  it("does not complete the lesson when exercises are answered or listed: completion stays its own action", async () => {
+    const api = mockApi(IN_PROGRESS);
+    vi.mocked(exercisesApi.fetchLessonExercises).mockResolvedValue({
+      ...TWO_EXERCISES,
+      progress: { total: 2, answered: 2 },
+    });
+    renderAt("/learn/lessons/pl-greetings");
+    await screen.findByText("You have answered every exercise.");
+
+    expect(api.complete).not.toHaveBeenCalled();
+    expect(screen.getByRole("button", { name: "Complete lesson" })).toBeInTheDocument();
   });
 });

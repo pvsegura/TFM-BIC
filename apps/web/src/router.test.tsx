@@ -45,4 +45,19 @@ describe("routes", () => {
   it("does not reserve /lessons for a page: that path belongs to the API (ADR-019)", () => {
     expect(leafPath("/lessons")).toBe("*");
   });
+
+  it("puts one exercise under /learn/exercises/:exerciseId, ahead of the public /learn/:languageCode/:levelId route", () => {
+    expect(leafPath("/learn/exercises/pl-greetings-polite-hello")).toBe(
+      "learn/exercises/:exerciseId",
+    );
+  });
+
+  it("puts every exercise page behind the login route", () => {
+    expect(isBehindLogin("/learn/exercises/pl-greetings-polite-hello")).toBe(true);
+  });
+
+  it("does not reserve /exercises for a page: that path belongs to the API (ADR-020)", () => {
+    expect(leafPath("/exercises")).toBe("*");
+    expect(leafPath("/exercises/pl-greetings-polite-hello")).toBe("*");
+  });
 });

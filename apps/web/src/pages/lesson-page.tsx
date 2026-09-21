@@ -3,6 +3,7 @@ import { useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import type { LearningLanguage } from "../components/content-blocks.js";
+import { LessonExercises } from "../components/lesson-exercises.js";
 import { LessonViewer } from "../components/lesson-viewer.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import { useCompleteLesson, useLesson, useStartLessonOnOpen } from "../hooks/use-lessons.js";
@@ -72,6 +73,7 @@ export function LessonPage() {
           onComplete={() => {
             completeMutation.mutate(lesson.id);
           }}
+          practice={<LessonExercises lessonId={lesson.id} />}
           backHref={`${LESSONS_HREF}?language=${enc(lesson.languageId)}&level=${enc(lesson.levelId)}`}
         />
       </div>
