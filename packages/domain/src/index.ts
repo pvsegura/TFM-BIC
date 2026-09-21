@@ -201,3 +201,30 @@ export { ExerciseNotFoundError } from "./exercise/errors/exercise-not-found.erro
 export { InvalidExerciseAnswerError } from "./exercise/errors/invalid-exercise-answer.error.js";
 export { InvalidExerciseConfigurationError } from "./exercise/errors/invalid-exercise-configuration.error.js";
 export { UnsupportedExerciseTypeError } from "./exercise/errors/unsupported-exercise-type.error.js";
+
+// Gamification (M8) — points are a domain concept: an append-only ledger of rewards, each with a
+// stable identity. See docs/adr/adr-021-gamification.md.
+export {
+  ACHIEVEMENT_UNLOCK_POINTS,
+  createPointAmount,
+  EXERCISE_COMPLETION_POINTS,
+  isValidPointAmount,
+  LESSON_COMPLETION_POINTS,
+  MAX_POINT_AMOUNT,
+} from "./gamification/point-amount.js";
+export {
+  isValidRewardReason,
+  pointsFor,
+  REWARD_REASONS,
+  type RewardReason,
+} from "./gamification/reward-reason.js";
+export { assertRewardSourceId, isValidRewardSourceId } from "./gamification/reward-source.js";
+export {
+  createPointTransaction,
+  type NewPointTransaction,
+  type PointTransaction,
+  type PointTransactionInput,
+} from "./gamification/point-transaction.js";
+export { InvalidPointAmountError } from "./gamification/errors/invalid-point-amount.error.js";
+export { InvalidPointTransactionError } from "./gamification/errors/invalid-point-transaction.error.js";
+export { InvalidRewardSourceError } from "./gamification/errors/invalid-reward-source.error.js";
