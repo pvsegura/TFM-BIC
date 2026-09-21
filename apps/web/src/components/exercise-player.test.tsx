@@ -1,5 +1,5 @@
 import type { ExerciseAnswerResponse, ExerciseResponse } from "@tfm-bic/contracts";
-import { render, screen } from "@testing-library/react";
+import { render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { useState } from "react";
 import { MemoryRouter } from "react-router";
@@ -72,7 +72,11 @@ function renderPlayer(overrides: Overrides = {}) {
 }
 
 /** Holds the verdict the way the exercise page does: set by a submission, cleared by a retry. */
-function Harness({ verdict, ...overrides }: Overrides & { verdict: ExerciseAnswerResponse }) {
+function Harness({
+  verdict,
+  clearsLater = false,
+  ...overrides
+}: Overrides & { verdict: ExerciseAnswerResponse; clearsLater?: boolean }) {
   const [evaluation, setEvaluation] = useState<ExerciseAnswerResponse | undefined>(undefined);
   return (
     <MemoryRouter>
@@ -84,7 +88,14 @@ function Harness({ verdict, ...overrides }: Overrides & { verdict: ExerciseAnswe
           setEvaluation(verdict);
         }}
         onRetry={() => {
-          setEvaluation(undefined);
+          if (clearsLater) {
+            // Like a mutation's reset(): the verdict goes a moment after the click, in its own render.
+            setTimeout(() => {
+              setEvaluation(undefined);
+            }, 0);
+          } else {
+            setEvaluation(undefined);
+          }
         }}
       />
     </MemoryRouter>
@@ -245,6 +256,33 @@ describe("ExercisePlayer", () => {
       expect(screen.getByRole("radio", { name: "Cześć" })).toBeEnabled();
       expect(screen.getByRole("radio", { name: "Dzień dobry" })).toHaveFocus();
       expect(screen.getByRole("status")).toBeEmptyDOMElement();
+    });
+
+    it("still lands focus on the first control when the verdict is cleared a moment after the click", async () => {
+      const user = userEvent.setup();
+      render(<Harness verdict={INCORRECT} exercise={TYPED} clearsLater />);
+      await user.type(screen.getByLabelText("Type the Polish for: Good night."), "wrong");
+      await user.click(screen.getByRole("button", { name: "Check answer" }));
+
+      await user.click(screen.getByRole("button", { name: "Try again" }));
+
+      await waitFor(() => {
+        expect(screen.getByLabelText("Type the Polish for: Good night.")).toHaveFocus();
+      });
+      expect(screen.getByLabelText("Type the Polish for: Good night.")).toBeEnabled();
+    });
+
+    it("does the same for the options of a choice", async () => {
+      const user = userEvent.setup();
+      render(<Harness verdict={INCORRECT} clearsLater />);
+      await user.click(screen.getByRole("radio", { name: "Cześć" }));
+      await user.click(screen.getByRole("button", { name: "Check answer" }));
+
+      await user.click(screen.getByRole("button", { name: "Try again" }));
+
+      await waitFor(() => {
+        expect(screen.getByRole("radio", { name: "Dzień dobry" })).toHaveFocus();
+      });
     });
 
     it("lets the student retry a text exercise with an empty box", async () => {

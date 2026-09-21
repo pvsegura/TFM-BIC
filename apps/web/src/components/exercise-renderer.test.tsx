@@ -45,7 +45,6 @@ function renderExercise(exercise: ExerciseResponse) {
       exercise={exercise}
       language={{ locale: "pl-PL", direction: "ltr" }}
       disabled={false}
-      autoFocus={false}
       onSubmit={onSubmit}
     />,
   );

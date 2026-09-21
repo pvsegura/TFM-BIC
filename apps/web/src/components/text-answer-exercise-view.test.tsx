@@ -26,7 +26,6 @@ function renderView(overrides: Partial<Parameters<typeof TextAnswerExerciseView>
       exercise={EXERCISE}
       language={{ locale: "pl-PL", direction: "ltr" }}
       disabled={false}
-      autoFocus={false}
       onSubmit={onSubmit}
       {...overrides}
     />,
@@ -121,12 +120,6 @@ describe("TextAnswerExerciseView", () => {
     expect(screen.getByRole("button", { name: "Check answer" })).toBeDisabled();
     await user.click(screen.getByRole("button", { name: "Check answer" }));
     expect(onSubmit).not.toHaveBeenCalled();
-  });
-
-  it("focuses the input when asked to", () => {
-    renderView({ autoFocus: true });
-
-    expect(input()).toHaveFocus();
   });
 
   it("writes the prompt in the instruction language", () => {

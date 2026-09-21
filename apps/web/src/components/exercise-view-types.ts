@@ -17,8 +17,6 @@ export interface ExerciseViewProps<TExercise extends ExerciseResponse> {
   language: LearningLanguage | undefined;
   /** True while a submission is in flight or a verdict is showing: the controls are read-only. */
   disabled: boolean;
-  /** Move focus to the first control when the view mounts — used when the student retries. */
-  autoFocus: boolean;
   onSubmit: (answer: SubmittedAnswer) => void;
 }
 

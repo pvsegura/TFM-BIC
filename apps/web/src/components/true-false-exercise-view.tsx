@@ -21,7 +21,6 @@ const CHOICES = [
 export function TrueFalseExerciseView({
   exercise,
   disabled,
-  autoFocus,
   onSubmit,
 }: ExerciseViewProps<TrueFalse>) {
   const [choice, setChoice] = useState<string | null>(null);
@@ -48,7 +47,6 @@ export function TrueFalseExerciseView({
           setError(undefined);
         }}
         disabled={disabled}
-        autoFocus={autoFocus}
         error={error}
       />
       <Button type="submit" className="mt-4" disabled={disabled}>

@@ -23,7 +23,6 @@ export function TextAnswerExerciseView({
   exercise,
   language,
   disabled,
-  autoFocus,
   onSubmit,
 }: ExerciseViewProps<TextAnswer>) {
   const [value, setValue] = useState("");
@@ -50,7 +49,6 @@ export function TextAnswerExerciseView({
           }}
           error={error}
           disabled={disabled}
-          autoFocus={autoFocus}
           lang={language?.locale}
           dir={language?.direction ?? "auto"}
           maxLength={MAX_TEXT_ANSWER_LENGTH}

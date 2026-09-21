@@ -17,7 +17,6 @@ type MultipleChoice = Extract<ExerciseResponse, { type: "multiple-choice" }>;
 export function MultipleChoiceExerciseView({
   exercise,
   disabled,
-  autoFocus,
   onSubmit,
 }: ExerciseViewProps<MultipleChoice>) {
   const [choice, setChoice] = useState<string | null>(null);
@@ -44,7 +43,6 @@ export function MultipleChoiceExerciseView({
           setError(undefined);
         }}
         disabled={disabled}
-        autoFocus={autoFocus}
         error={error}
       />
       <Button type="submit" className="mt-4" disabled={disabled}>

@@ -13,8 +13,6 @@ export interface ExerciseChoiceGroupProps {
   value: string | null;
   onChange: (id: string) => void;
   disabled: boolean;
-  /** Focus the first option on mount. */
-  autoFocus: boolean;
   error: string | undefined;
 }
 
@@ -34,7 +32,6 @@ export function ExerciseChoiceGroup({
   value,
   onChange,
   disabled,
-  autoFocus,
   error,
 }: ExerciseChoiceGroupProps) {
   const name = useId();
@@ -50,7 +47,7 @@ export function ExerciseChoiceGroup({
         {legend}
       </legend>
       <div className="grid gap-2">
-        {options.map((option, index) => {
+        {options.map((option) => {
           const selected = value === option.id;
           return (
             <label
@@ -62,7 +59,6 @@ export function ExerciseChoiceGroup({
                 name={name}
                 value={option.id}
                 checked={selected}
-                autoFocus={autoFocus && index === 0}
                 onChange={() => {
                   onChange(option.id);
                 }}

@@ -26,7 +26,6 @@ function renderView(overrides: Partial<Parameters<typeof TrueFalseExerciseView>[
       exercise={EXERCISE}
       language={{ locale: "pl-PL", direction: "ltr" }}
       disabled={false}
-      autoFocus={false}
       onSubmit={onSubmit}
       {...overrides}
     />,
@@ -108,11 +107,5 @@ describe("TrueFalseExerciseView", () => {
 
     expect(screen.getByRole("radio", { name: "True" })).toBeDisabled();
     expect(screen.getByRole("button", { name: "Check answer" })).toBeDisabled();
-  });
-
-  it("focuses the first choice when asked to", () => {
-    renderView({ autoFocus: true });
-
-    expect(screen.getByRole("radio", { name: "True" })).toHaveFocus();
   });
 });

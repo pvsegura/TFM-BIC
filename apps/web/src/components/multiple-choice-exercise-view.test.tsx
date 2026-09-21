@@ -32,7 +32,6 @@ function renderView(overrides: Partial<Parameters<typeof MultipleChoiceExerciseV
       exercise={EXERCISE}
       language={{ locale: "pl-PL", direction: "ltr" }}
       disabled={false}
-      autoFocus={false}
       onSubmit={onSubmit}
       {...overrides}
     />,
@@ -132,12 +131,6 @@ describe("MultipleChoiceExerciseView", () => {
     expect(onSubmit).not.toHaveBeenCalled();
   });
 
-  it("puts focus on the first option when asked to, so a retry starts where the student can act", () => {
-    renderView({ autoFocus: true });
-
-    expect(screen.getByRole("radio", { name: "Dzień dobry" })).toHaveFocus();
-  });
-
   it("shows option text as text: markup in it is inert and creates no element", () => {
     const hostile = {
       ...EXERCISE,
@@ -151,7 +144,6 @@ describe("MultipleChoiceExerciseView", () => {
         exercise={hostile}
         language={undefined}
         disabled={false}
-        autoFocus={false}
         onSubmit={vi.fn()}
       />,
     );

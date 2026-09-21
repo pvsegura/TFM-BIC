@@ -64,6 +64,8 @@ export function ExercisePlayer({
 }: ExercisePlayerProps) {
   const [attempt, setAttempt] = useState(0);
   const statusRef = useRef<HTMLDivElement>(null);
+  const viewRef = useRef<HTMLDivElement>(null);
+  const focusAfterRetry = useRef(false);
 
   useEffect(() => {
     if (evaluation) {
@@ -71,7 +73,19 @@ export function ExercisePlayer({
     }
   }, [evaluation]);
 
+  // After a retry the student should land on the first control of a fresh exercise. That has to wait
+  // until the verdict has really cleared: the view is enabled only then (a disabled control cannot take
+  // focus), and the parent may clear it a render after the click — a mutation's reset() does. So the
+  // request is remembered and honoured by the first render in which the view is usable.
+  useEffect(() => {
+    if (focusAfterRetry.current && evaluation === undefined) {
+      viewRef.current?.querySelector<HTMLElement>("input:not([disabled])")?.focus();
+      focusAfterRetry.current = false;
+    }
+  }, [evaluation, attempt]);
+
   function handleRetry() {
+    focusAfterRetry.current = true;
     setAttempt((count) => count + 1);
     onRetry();
   }
@@ -99,13 +113,12 @@ export function ExercisePlayer({
         ) : null}
       </header>
 
-      <div className="mt-6">
+      <div ref={viewRef} className="mt-6">
         <ExerciseRenderer
           key={attempt}
           exercise={exercise}
           language={language}
           disabled={isSubmitting || evaluation !== undefined}
-          autoFocus={attempt > 0}
           onSubmit={onSubmit}
         />
       </div>
