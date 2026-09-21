@@ -35,3 +35,7 @@ export {
   type ExercisesDbHandle,
 } from "./exercises/db/client.js";
 export { DrizzleExerciseAttemptRepository } from "./exercises/exercise-attempt.repository.js";
+export {
+  loadContentRepositories,
+  type ContentRepositories,
+} from "./content/load-content-repositories.js";
