@@ -228,3 +228,34 @@ export {
 export { InvalidPointAmountError } from "./gamification/errors/invalid-point-amount.error.js";
 export { InvalidPointTransactionError } from "./gamification/errors/invalid-point-transaction.error.js";
 export { InvalidRewardSourceError } from "./gamification/errors/invalid-reward-source.error.js";
+export {
+  createAchievementKey,
+  isValidAchievementKey,
+  type AchievementKey,
+} from "./gamification/achievement-key.js";
+export {
+  ACHIEVEMENT_ICON_IDS,
+  isAchieved,
+  progressToward,
+  type AchievementDefinition,
+  type AchievementIconId,
+  type AchievementProgress,
+  type AchievementRule,
+} from "./gamification/achievement.js";
+export { completionCountRule, totalPointsRule } from "./gamification/achievement-rules.js";
+export {
+  AchievementRegistry,
+  createDefaultAchievementRegistry,
+} from "./gamification/achievement-registry.js";
+export {
+  GAMIFICATION_EVENT_TYPES,
+  type GamificationEvent,
+  type GamificationEventType,
+} from "./gamification/gamification-event.js";
+export {
+  factsFromTotals,
+  type GamificationFacts,
+  type RewardTotal,
+} from "./gamification/gamification-facts.js";
+export { findAchieved } from "./gamification/evaluate-achievements.js";
+export { InvalidAchievementError } from "./gamification/errors/invalid-achievement.error.js";
