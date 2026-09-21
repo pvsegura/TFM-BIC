@@ -6,6 +6,8 @@ import {
 } from "@tfm-bic/domain";
 import { z } from "zod";
 
+import { wholeNumberText } from "../common/whole-number-text.js";
+
 /**
  * Student-facing gamification shapes (M8). Allowlists like every other response schema — Zod
  * drops any key not named, so a user id can never be serialised — and language-neutral:
@@ -100,9 +102,6 @@ export const gamificationQuerySchema = z.strictObject({});
 
 const DEFAULT_HISTORY_PAGE_SIZE = 20;
 export const MAX_HISTORY_PAGE_SIZE = 50;
-
-/** A digits-only string: `Number("1e2")` and `Number("0x10")` are numbers, so a plain coercion would accept them. */
-const wholeNumberText = z.string().regex(/^[1-9]\d{0,8}$/, { error: "Expected a whole number." });
 
 /**
  * `GET /gamification/point-transactions?limit=&before=` — keyset paging, newest first.

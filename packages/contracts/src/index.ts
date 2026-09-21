@@ -127,3 +127,40 @@ export {
   type RewardsResponse,
   type UnlockedAchievementResponse,
 } from "./gamification/gamification-response.schema.js";
+
+// Vocabulary (M9): the on-disk category file format and the student-facing vocabulary API shapes.
+export {
+  vocabularyCategoryIdSchema,
+  vocabularyItemIdSchema,
+} from "./content/identifiers.schema.js";
+export {
+  MAX_VOCABULARY_ITEMS_PER_FILE,
+  vocabularyFileSchema,
+  type VocabularyFile,
+} from "./vocabulary/vocabulary-file.schema.js";
+export {
+  MAX_VOCABULARY_PAGE_SIZE,
+  MAX_VOCABULARY_SEARCH_LENGTH,
+  userVocabularyQuerySchema,
+  vocabularyActionRequestSchema,
+  vocabularyCategoriesQuerySchema,
+  vocabularyCategoriesResponseSchema,
+  vocabularyCategoryResponseSchema,
+  vocabularyIdParamSchema,
+  vocabularyItemResponseSchema,
+  vocabularyListQuerySchema,
+  vocabularyListResponseSchema,
+  vocabularyProgressResponseSchema,
+  vocabularyStatusRequestSchema,
+  vocabularyUserStateResponseSchema,
+  type UserVocabularyQuery,
+  type VocabularyCategoriesQuery,
+  type VocabularyCategoriesResponse,
+  type VocabularyCategoryResponse,
+  type VocabularyItemResponse,
+  type VocabularyListQuery,
+  type VocabularyListResponse,
+  type VocabularyProgressResponse,
+  type VocabularyStatusRequest,
+  type VocabularyUserStateResponse,
+} from "./vocabulary/vocabulary-response.schema.js";
