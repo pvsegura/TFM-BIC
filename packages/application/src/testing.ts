@@ -10,3 +10,4 @@ export * from "./profile/test-support/fakes.js";
 export * from "./content/test-support/fakes.js";
 export * from "./lesson/test-support/fakes.js";
 export * from "./exercise/test-support/fakes.js";
+export * from "./gamification/test-support/fakes.js";
