@@ -132,3 +132,62 @@ export {
   type SubmitExerciseAnswerInput,
   type SubmitExerciseAnswerResult,
 } from "./exercise/use-cases/submit-exercise-answer.use-case.js";
+
+// Gamification (M8) port — implemented in packages/data — and use cases. Points live in an
+// append-only ledger; achievements are domain rules; rewards are granted only by these use cases.
+export type {
+  GamificationRepository,
+  GamificationStore,
+  NewUserAchievement,
+  PointHistoryRequest,
+  PointTransactionPage,
+  UserAchievement,
+} from "./gamification/ports/gamification-repository.js";
+export {
+  AchievementTexts,
+  DEFAULT_ACHIEVEMENT_TEXT_CATALOG,
+  DEFAULT_INTERFACE_LOCALE,
+  type AchievementText,
+  type AchievementTextCatalog,
+} from "./gamification/achievement-texts.js";
+export { RewardAwardError } from "./gamification/reward-award.error.js";
+export {
+  NO_REWARDS_VIEW,
+  toRewardsView,
+  type AchievementView,
+  type PointTransactionView,
+  type RewardsView,
+  type UnlockedAchievementView,
+} from "./gamification/views.js";
+export {
+  AwardRewardsUseCase,
+  NO_REWARD,
+  type AwardRewardsInput,
+  type RewardOutcome,
+  type RewardTrigger,
+} from "./gamification/use-cases/award-rewards.use-case.js";
+export {
+  GetGamificationSummaryUseCase,
+  type GamificationSummary,
+  type GetGamificationSummaryInput,
+} from "./gamification/use-cases/get-gamification-summary.use-case.js";
+export {
+  ListAchievementsUseCase,
+  type AchievementList,
+  type ListAchievementsInput,
+} from "./gamification/use-cases/list-achievements.use-case.js";
+export {
+  ListPointTransactionsUseCase,
+  type ListPointTransactionsInput,
+  type PointTransactionsPage,
+} from "./gamification/use-cases/list-point-transactions.use-case.js";
+export {
+  SubmitExerciseAnswerWithRewardsUseCase,
+  type SubmitExerciseAnswerWithRewardsInput,
+  type SubmitExerciseAnswerWithRewardsResult,
+} from "./gamification/use-cases/submit-exercise-answer-with-rewards.use-case.js";
+export {
+  CompleteLessonWithRewardsUseCase,
+  type CompleteLessonWithRewardsInput,
+  type CompleteLessonWithRewardsResult,
+} from "./gamification/use-cases/complete-lesson-with-rewards.use-case.js";
