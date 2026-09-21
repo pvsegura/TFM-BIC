@@ -41,6 +41,24 @@ function attempt(userId: string, exerciseId: string, correct: boolean): NewExerc
   };
 }
 
+describe("GetExerciseUseCase: an unexpected failure is not disguised as not-found", () => {
+  it("lets a storage error through instead of reporting the exercise as missing", async () => {
+    const catalog = makeExerciseCatalog();
+    const failing = new FakeContentRepository(catalog);
+    failing.findContent = () => Promise.reject(new Error("content store is down"));
+    const useCase = new GetExerciseUseCase(
+      new GetContentUseCase(failing),
+      new FakeExerciseRepository(catalog.exercises.slice()),
+      new FakeExerciseAttemptRepository(),
+      createDefaultExerciseTypeRegistry(),
+    );
+
+    await expect(useCase.execute({ userId: ANA, exerciseId: id("pl-first-mc") })).rejects.toThrow(
+      "content store is down",
+    );
+  });
+});
+
 describe("GetExerciseUseCase", () => {
   it("returns the exercise as a student may see it before answering", async () => {
     const { useCase } = setup();

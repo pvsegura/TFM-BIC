@@ -64,6 +64,18 @@ describe("the default registry", () => {
   });
 });
 
+describe("a registered type handed an exercise of another type", () => {
+  it("refuses it instead of judging it (the registry routes by type, so this is a defence in depth)", () => {
+    const registered = registerExerciseType({
+      evaluator: multipleChoiceEvaluator,
+      presenter: multipleChoicePresenter,
+    });
+
+    expect(() => registered.evaluate(trueFalse, true)).toThrow(UnsupportedExerciseTypeError);
+    expect(() => registered.present(trueFalse)).toThrow(UnsupportedExerciseTypeError);
+  });
+});
+
 describe("registry safety", () => {
   const onlyMultipleChoice = new ExerciseTypeRegistry([
     registerExerciseType({
