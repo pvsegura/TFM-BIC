@@ -101,3 +101,26 @@ export {
   type ExerciseResultResponse,
   type ExerciseSummaryResponse,
 } from "./exercise/exercise-response.schema.js";
+
+// Gamification (M8): read-only shapes for points, achievements and rewards. No request shape
+// exists that would let a client award points.
+export {
+  achievementProgressResponseSchema,
+  achievementResponseSchema,
+  achievementsResponseSchema,
+  gamificationSummaryResponseSchema,
+  MAX_HISTORY_PAGE_SIZE,
+  pointHistoryQuerySchema,
+  pointHistoryResponseSchema,
+  pointTransactionResponseSchema,
+  rewardsResponseSchema,
+  unlockedAchievementResponseSchema,
+  type AchievementResponse,
+  type AchievementsResponse,
+  type GamificationSummaryResponse,
+  type PointHistoryQuery,
+  type PointHistoryResponse,
+  type PointTransactionResponse,
+  type RewardsResponse,
+  type UnlockedAchievementResponse,
+} from "./gamification/gamification-response.schema.js";
