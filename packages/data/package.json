@@ -21,6 +21,8 @@
     "db:migrate:lessons": "drizzle-kit migrate --config drizzle.lessons.config.ts",
     "db:generate:exercises": "drizzle-kit generate --config drizzle.exercises.config.ts",
     "db:migrate:exercises": "drizzle-kit migrate --config drizzle.exercises.config.ts",
+    "db:generate:gamification": "drizzle-kit generate --config drizzle.gamification.config.ts",
+    "db:migrate:gamification": "drizzle-kit migrate --config drizzle.gamification.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts"
   },
   "dependencies": {

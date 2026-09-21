@@ -19,3 +19,7 @@ export {
   createExercisesTestDb,
   type ExercisesTestDbHandle,
 } from "./exercises/db/test-support/create-test-db.js";
+export {
+  createGamificationTestDb,
+  type GamificationTestDbHandle,
+} from "./gamification/db/test-support/create-test-db.js";
