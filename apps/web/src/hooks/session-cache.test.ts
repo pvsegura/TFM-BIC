@@ -2,7 +2,11 @@ import { QueryClient } from "@tanstack/react-query";
 import { describe, expect, it } from "vitest";
 
 import { ApiError } from "../services/api-error.js";
-import { clearUserScopedCache, endSessionIfUnauthorized } from "./session-cache.js";
+import {
+  clearUserScopedCache,
+  endingSessionOnUnauthorized,
+  endSessionIfUnauthorized,
+} from "./session-cache.js";
 import { CURRENT_USER_QUERY_KEY } from "./use-current-user.js";
 
 const USER = { id: "1", email: "a@example.com", role: "STUDENT", emailVerified: true } as const;
@@ -73,6 +77,38 @@ describe("endSessionIfUnauthorized", () => {
     const client = seededClient();
 
     endSessionIfUnauthorized(client, new TypeError("Failed to fetch"));
+
+    expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toEqual(USER);
+  });
+});
+
+describe("endingSessionOnUnauthorized", () => {
+  it("returns what the request returns and leaves the session alone", async () => {
+    const client = seededClient();
+
+    await expect(endingSessionOnUnauthorized(client, () => Promise.resolve(7))).resolves.toBe(7);
+
+    expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toEqual(USER);
+  });
+
+  it("records a 401 as an ended session and still rethrows it", async () => {
+    const client = seededClient();
+    const failure = new ApiError("Unauthenticated", 401);
+
+    await expect(endingSessionOnUnauthorized(client, () => Promise.reject(failure))).rejects.toBe(
+      failure,
+    );
+
+    expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toBeNull();
+  });
+
+  it("rethrows any other error without touching the session", async () => {
+    const client = seededClient();
+    const failure = new ApiError("Something went wrong.", 500);
+
+    await expect(endingSessionOnUnauthorized(client, () => Promise.reject(failure))).rejects.toBe(
+      failure,
+    );
 
     expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toEqual(USER);
   });

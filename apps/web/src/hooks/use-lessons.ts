@@ -9,7 +9,8 @@ import {
 import { useCallback, useEffect, useRef } from "react";
 
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "../services/lessons-api.js";
-import { endSessionIfUnauthorized } from "./session-cache.js";
+import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { invalidateGamification } from "./use-gamification.js";
 
 /**
  * Query-key root for lessons. Everything under it is the signed-in student's own
@@ -20,20 +21,6 @@ import { endSessionIfUnauthorized } from "./session-cache.js";
 export const LESSONS_QUERY_KEY_ROOT = "lessons";
 
 const detailKey = (lessonId: string) => [LESSONS_QUERY_KEY_ROOT, "detail", lessonId] as const;
-
-/** Runs a request and, if the API says the session is gone (`401`), records it so
- * `ProtectedRoute` redirects to log in. Any other error is left to the caller. */
-async function endingSessionOnUnauthorized<T>(
-  queryClient: QueryClient,
-  request: () => Promise<T>,
-): Promise<T> {
-  try {
-    return await request();
-  } catch (error) {
-    endSessionIfUnauthorized(queryClient, error);
-    throw error;
-  }
-}
 
 /**
  * The lessons of one language and level with the student's progress — server
@@ -86,14 +73,24 @@ function applyPersistedProgress(
   void queryClient.invalidateQueries({ queryKey: [LESSONS_QUERY_KEY_ROOT, "list"] });
 }
 
-function useProgressMutation(action: (lessonId: string) => Promise<LessonProgressResponse>) {
+function useProgressMutation<T extends LessonProgressResponse>(
+  action: (lessonId: string) => Promise<T>,
+  onPersisted?: (result: T) => void,
+) {
   const queryClient = useQueryClient();
   return useMutation({
     // Wrapped so the only thing ever passed on is the lesson id (TanStack Query would also hand the
     // mutation context to a bare function).
     mutationFn: (lessonId: string) => action(lessonId),
-    onSuccess: (progress, lessonId) => {
-      applyPersistedProgress(queryClient, lessonId, progress);
+    onSuccess: (result, lessonId) => {
+      // Only the progress goes into the cache: a completion's rewards are shown once, never stored
+      // as part of the lesson.
+      applyPersistedProgress(queryClient, lessonId, {
+        status: result.status,
+        startedAt: result.startedAt,
+        completedAt: result.completedAt,
+      });
+      onPersisted?.(result);
     },
     onError: (error) => {
       endSessionIfUnauthorized(queryClient, error);
@@ -116,7 +113,13 @@ export function useStartLesson() {
  * retried.
  */
 export function useCompleteLesson() {
-  const mutation = useProgressMutation(completeLesson);
+  const queryClient = useQueryClient();
+  const mutation = useProgressMutation(completeLesson, ({ rewards }) => {
+    // The first completion earned points (and maybe an achievement); a repeat earned none.
+    if (rewards.pointsAwarded > 0) {
+      void invalidateGamification(queryClient);
+    }
+  });
   const inFlight = useRef(false);
   const { mutate } = mutation;
 

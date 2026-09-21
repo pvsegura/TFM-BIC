@@ -1,15 +1,10 @@
 import type { ExerciseAnswerRequest, ExerciseResponse } from "@tfm-bic/contracts";
-import {
-  skipToken,
-  useMutation,
-  useQuery,
-  useQueryClient,
-  type QueryClient,
-} from "@tanstack/react-query";
+import { skipToken, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCallback, useRef } from "react";
 
 import { fetchExercise, fetchLessonExercises, submitAnswer } from "../services/exercises-api.js";
-import { endSessionIfUnauthorized } from "./session-cache.js";
+import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { invalidateGamification } from "./use-gamification.js";
 
 /**
  * Query-key root for exercises. Everything under it carries the signed-in
@@ -22,20 +17,6 @@ export const EXERCISES_QUERY_KEY_ROOT = "exercises";
 
 const detailKey = (exerciseId: string) => [EXERCISES_QUERY_KEY_ROOT, "detail", exerciseId] as const;
 const LIST_KEY = [EXERCISES_QUERY_KEY_ROOT, "list"] as const;
-
-/** Runs a request and, if the API says the session is gone (`401`), records it so
- * `ProtectedRoute` redirects to log in. Any other error is left to the caller. */
-async function endingSessionOnUnauthorized<T>(
-  queryClient: QueryClient,
-  request: () => Promise<T>,
-): Promise<T> {
-  try {
-    return await request();
-  } catch (error) {
-    endSessionIfUnauthorized(queryClient, error);
-    throw error;
-  }
-}
 
 /**
  * The exercises of one lesson, in the server's order, with the student's own
@@ -101,6 +82,11 @@ export function useSubmitAnswer() {
         exercise ? { ...exercise, result: evaluation.result } : exercise,
       );
       void queryClient.invalidateQueries({ queryKey: LIST_KEY });
+      // A correct first answer earned points (and maybe an achievement): the dashboard's total,
+      // the achievements and the history are stale until refetched from what the server stored.
+      if (evaluation.rewards.pointsAwarded > 0) {
+        void invalidateGamification(queryClient);
+      }
     },
     onError: (error) => {
       endSessionIfUnauthorized(queryClient, error);

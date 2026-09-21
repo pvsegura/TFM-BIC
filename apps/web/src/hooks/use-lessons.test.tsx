@@ -178,9 +178,10 @@ describe("useLesson", () => {
 });
 
 describe.each([
-  ["useStartLesson", useStartLesson, "startLesson", IN_PROGRESS],
-  ["useCompleteLesson", useCompleteLesson, "completeLesson", COMPLETED],
-] as const)("%s", (_name, useMutationHook, apiFn, persisted) => {
+  ["useStartLesson", useStartLesson, "startLesson", IN_PROGRESS, IN_PROGRESS],
+  // Completing answers with the progress *and* rewards; only the progress may be cached.
+  ["useCompleteLesson", useCompleteLesson, "completeLesson", COMPLETION, COMPLETED],
+] as const)("%s", (_name, useMutationHook, apiFn, persisted, progress) => {
   it("puts the progress the server persisted into the cached lesson, without another request", async () => {
     vi.spyOn(lessonsApi, apiFn).mockResolvedValue(persisted);
     const detail = vi.spyOn(lessonsApi, "fetchLesson").mockResolvedValue(LESSON);
@@ -198,7 +199,7 @@ describe.each([
     });
 
     await waitFor(() => {
-      expect(lesson.result.current.data?.progress).toEqual(persisted);
+      expect(lesson.result.current.data?.progress).toEqual(progress);
     });
     expect(detail).toHaveBeenCalledTimes(1);
   });
@@ -312,5 +313,62 @@ describe("useCompleteLesson: one request at a time", () => {
       expect(result.current.isSuccess).toBe(true);
     });
     expect(spy).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("useCompleteLesson and gamification data", () => {
+  async function completeWith(pointsAwarded: number) {
+    vi.spyOn(lessonsApi, "completeLesson").mockResolvedValue({
+      ...COMPLETED,
+      rewards: { pointsAwarded, achievementsUnlocked: [] },
+    });
+    const { client, wrapper } = setup();
+    client.setQueryData(["gamification", "summary"], { totalPoints: 0 });
+    const { result } = renderHook(() => useCompleteLesson(), { wrapper });
+    act(() => {
+      result.current.mutate("pl-greetings");
+    });
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+    return { client, result };
+  }
+
+  it("marks the student's gamification data stale when completing earned points", async () => {
+    const { client } = await completeWith(75);
+
+    expect(client.getQueryState(["gamification", "summary"])?.isInvalidated).toBe(true);
+  });
+
+  it("leaves it alone when completing again earned nothing", async () => {
+    const { client } = await completeWith(0);
+
+    expect(client.getQueryState(["gamification", "summary"])?.isInvalidated).toBe(false);
+  });
+
+  it("caches only the progress the lesson now has, never the rewards", async () => {
+    const { client } = await completeWith(75);
+    client.setQueryData(["lessons", "detail", "pl-greetings"], { progress: NOT_STARTED });
+
+    // A later completion writes progress into the cached lesson without the rewards attached.
+    vi.spyOn(lessonsApi, "completeLesson").mockResolvedValue({
+      ...COMPLETED,
+      rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
+    });
+    const { result } = renderHook(() => useCompleteLesson(), {
+      wrapper: ({ children }: { children: ReactNode }) => (
+        <QueryClientProvider client={client}>{children}</QueryClientProvider>
+      ),
+    });
+    act(() => {
+      result.current.mutate("pl-greetings");
+    });
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+
+    expect(client.getQueryData(["lessons", "detail", "pl-greetings"])).toEqual({
+      progress: COMPLETED,
+    });
   });
 });

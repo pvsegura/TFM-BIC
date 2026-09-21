@@ -166,6 +166,39 @@ describe("useExercise", () => {
   });
 });
 
+describe("useSubmitAnswer and gamification data", () => {
+  const EARNED = {
+    ...EVALUATION,
+    rewards: { pointsAwarded: 10, achievementsUnlocked: [] },
+  };
+
+  async function submitWith(response: typeof EVALUATION) {
+    vi.spyOn(exercisesApi, "submitAnswer").mockResolvedValue(response);
+    const { client, wrapper } = setup();
+    client.setQueryData(["gamification", "summary"], { totalPoints: 0 });
+    const { result } = renderHook(() => useSubmitAnswer(), { wrapper });
+    act(() => {
+      result.current.mutate({ exerciseId: "pl-greetings-hello", answer: true });
+    });
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+    return client;
+  }
+
+  it("marks the student's gamification data stale when the answer earned points, so the total is refreshed", async () => {
+    const client = await submitWith(EARNED);
+
+    expect(client.getQueryState(["gamification", "summary"])?.isInvalidated).toBe(true);
+  });
+
+  it("leaves it alone when the answer earned nothing (a repeat or a wrong answer)", async () => {
+    const client = await submitWith(EVALUATION);
+
+    expect(client.getQueryState(["gamification", "summary"])?.isInvalidated).toBe(false);
+  });
+});
+
 describe("useSubmitAnswer", () => {
   it("sends only the exercise id and the answer, and exposes the server's verdict", async () => {
     const spy = vi.spyOn(exercisesApi, "submitAnswer").mockResolvedValue(EVALUATION);

@@ -25,6 +25,22 @@ export function clearUserScopedCache(queryClient: QueryClient): void {
 }
 
 /**
+ * Runs a user-scoped request and, if the API says the session is gone (`401`), records it (see
+ * `endSessionIfUnauthorized`). Any other error is left to the caller, and every error is rethrown.
+ */
+export async function endingSessionOnUnauthorized<T>(
+  queryClient: QueryClient,
+  request: () => Promise<T>,
+): Promise<T> {
+  try {
+    return await request();
+  } catch (error) {
+    endSessionIfUnauthorized(queryClient, error);
+    throw error;
+  }
+}
+
+/**
  * An API `401` from a user-scoped request means the session is gone (expired,
  * revoked, or logged out elsewhere): record that, so `ProtectedRoute`
  * redirects to the login page. Any other error — including a network failure
