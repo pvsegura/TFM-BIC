@@ -12,6 +12,8 @@ import { createAuthUseCases } from "./composition/auth-use-cases.js";
 import type { ContentDependencies } from "./composition/content-dependencies.js";
 import type { ExerciseDependencies } from "./composition/exercise-dependencies.js";
 import { createExerciseUseCases } from "./composition/exercise-use-cases.js";
+import type { GamificationDependencies } from "./composition/gamification-dependencies.js";
+import { createGamificationUseCases } from "./composition/gamification-use-cases.js";
 import { createContentUseCases } from "./composition/content-use-cases.js";
 import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
@@ -20,6 +22,7 @@ import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
 import { registerExerciseRoutes } from "./routes/exercises.route.js";
+import { registerGamificationRoutes } from "./routes/gamification.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
 import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
@@ -33,6 +36,7 @@ export function buildServer(
   contentDeps: ContentDependencies,
   lessonDeps: LessonDependencies,
   exerciseDeps: ExerciseDependencies,
+  gamificationDeps: GamificationDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -83,19 +87,38 @@ export function buildServer(
     registerLanguageRoutes(app, { useCases: contentUseCases, env });
     registerContentRoutes(app, { useCases: contentUseCases, env });
 
+    // Gamification (M8): points and achievements. Rewards are granted only inside the exercise and
+    // lesson use cases below (through `awardRewards`), never by a route that asks for them.
+    const gamificationUseCases = createGamificationUseCases(gamificationDeps);
+    const { achievementTexts } = gamificationUseCases;
+
     // Lessons (M6) are authenticated-only: they build on the content use cases and add only the
     // student's own progress. The user always comes from the session, never from the request.
     registerLessonRoutes(app, {
-      useCases: createLessonUseCases(contentUseCases, lessonDeps),
+      useCases: createLessonUseCases(contentUseCases, lessonDeps, gamificationUseCases),
       resolveSession: authUseCases.resolveSession,
       env,
+      achievementTexts,
     });
 
     // Exercises (M7) are authenticated-only too: they build on the content and lesson rules, and
     // add only the student's own attempts. The server evaluates every answer; the user always
     // comes from the session, never from the request.
     registerExerciseRoutes(app, {
-      useCases: createExerciseUseCases(contentUseCases, contentDeps, exerciseDeps),
+      useCases: createExerciseUseCases(
+        contentUseCases,
+        contentDeps,
+        exerciseDeps,
+        gamificationUseCases,
+      ),
+      resolveSession: authUseCases.resolveSession,
+      env,
+      achievementTexts,
+    });
+
+    // The student's own points and achievements: read-only, session-derived, no `:userId`.
+    registerGamificationRoutes(app, {
+      useCases: gamificationUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });

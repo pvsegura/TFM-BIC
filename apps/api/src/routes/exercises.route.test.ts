@@ -42,6 +42,7 @@ function build(overrides: Partial<Parameters<typeof loadEnv>[0]> = {}) {
     testDeps.contentDeps,
     testDeps.lessonDeps,
     testDeps.exerciseDeps,
+    testDeps.gamificationDeps,
   );
   return { app, ...testDeps };
 }
@@ -419,6 +420,19 @@ describe("POST /exercises/:exerciseId/answer", () => {
       feedback: "Dzień dobry is polite.",
       correctAnswer: "opt-a",
       result: { status: "correct", attemptCount: 1, lastAnsweredAt: NOW.toISOString() },
+      // M8: the first correct answer is rewarded (10 + the first-exercise achievement's 50).
+      rewards: {
+        pointsAwarded: 60,
+        achievementsUnlocked: [
+          {
+            key: "first-exercise",
+            title: "First exercise",
+            description: "Answer an exercise correctly for the first time.",
+            iconId: "spark",
+            rewardPoints: 50,
+          },
+        ],
+      },
     });
     expect(built.exerciseAttemptRepository.attempts).toEqual([
       {
@@ -499,7 +513,7 @@ describe("POST /exercises/:exerciseId/answer", () => {
     ).toBe("private, no-store");
   });
 
-  it("returns only the verdict, the feedback, the correct answer and the result", async () => {
+  it("returns only the verdict, the feedback, the correct answer, the result and the rewards", async () => {
     const built = build();
     const { cookie } = await signIn(built, "ana@example.com");
 
@@ -510,6 +524,7 @@ describe("POST /exercises/:exerciseId/answer", () => {
       "correctAnswer",
       "feedback",
       "result",
+      "rewards",
     ]);
     // The other accepted answer is not revealed.
     expect(response.body).not.toContain("Dobranoc.");

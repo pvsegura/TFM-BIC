@@ -1,4 +1,6 @@
 import type {
+  AchievementTexts,
+  CompleteLessonWithRewardsResult,
   LessonDetail,
   LessonProgressView,
   LessonSummary,
@@ -7,6 +9,7 @@ import type {
 import type { AppEnv } from "@tfm-bic/config";
 import {
   lessonActionRequestSchema,
+  lessonCompletionResponseSchema,
   lessonIdParamSchema,
   lessonListQuerySchema,
   lessonListResponseSchema,
@@ -19,6 +22,7 @@ import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import type { LessonUseCases } from "../composition/lesson-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { requestLocale } from "./interface-locale.js";
 import { mapLessonError } from "./lesson-error.mapper.js";
 import { lessonRateLimit } from "./lesson-rate-limit.js";
 
@@ -50,6 +54,10 @@ function toProgressResponse(progress: LessonProgressView): LessonProgressRespons
     startedAt: progress.startedAt?.toISOString() ?? null,
     completedAt: progress.completedAt?.toISOString() ?? null,
   });
+}
+
+function toCompletionResponse({ progress, rewards }: CompleteLessonWithRewardsResult) {
+  return lessonCompletionResponseSchema.parse({ ...toProgressResponse(progress), rewards });
 }
 
 function toSummaryResponse(lesson: LessonSummary) {
@@ -89,16 +97,23 @@ function toLessonResponse({ lesson, progress }: LessonDetail) {
  * - `GET /lessons?language=&level=` — lesson cards with the caller's progress.
  * - `GET /lessons/:lessonId` — one lesson with its blocks and the caller's progress.
  * - `POST /lessons/:lessonId/start` — the caller opened the lesson (idempotent).
- * - `POST /lessons/:lessonId/complete` — the caller finished it (idempotent).
+ * - `POST /lessons/:lessonId/complete` — the caller finished it (idempotent). The response also
+ *   says what it earned (M8): the first completion of a lesson is rewarded once, a repeat earns
+ *   nothing.
  *
  * The user is always the session's, never a URL/query/body value. There is no
  * route that creates, edits or publishes a lesson.
  */
 export function registerLessonRoutes(
   app: FastifyInstance,
-  deps: { useCases: LessonUseCases; resolveSession: ResolveSessionUseCase; env: AppEnv },
+  deps: {
+    useCases: LessonUseCases;
+    resolveSession: ResolveSessionUseCase;
+    env: AppEnv;
+    achievementTexts: AchievementTexts;
+  },
 ): void {
-  const { useCases, resolveSession, env } = deps;
+  const { useCases, resolveSession, env, achievementTexts } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
   const config = { rateLimit: lessonRateLimit(env) };
@@ -142,41 +157,67 @@ export function registerLessonRoutes(
     }
   });
 
-  for (const action of ["start", "complete"] as const) {
-    const useCase = action === "start" ? useCases.startLesson : useCases.completeLesson;
+  const actionRoute = {
+    config,
+    bodyLimit: ACTION_BODY_LIMIT_BYTES,
+    preHandler: [verifyOrigin, authenticate],
+  };
 
-    app.post(
-      `/lessons/:lessonId/${action}`,
-      {
-        config,
-        bodyLimit: ACTION_BODY_LIMIT_BYTES,
-        preHandler: [verifyOrigin, authenticate],
-      },
-      async (request, reply) => {
-        const params = lessonIdParamSchema.safeParse(request.params);
-        // The client controls nothing but which lesson: a body naming a user,
-        // a time or a status is refused, not silently ignored.
-        const body = lessonActionRequestSchema.safeParse(request.body);
-        if (!params.success || !body.success) {
-          return reply.code(400).send(INVALID_REQUEST);
-        }
-
-        try {
-          const progress = await useCase.execute({
-            userId: sessionUserId(request),
-            lessonId: params.data.lessonId,
-          });
-          request.log.info(
-            { lessonId: params.data.lessonId, status: progress.status },
-            `Lesson ${action}`,
-          );
-          noStore(reply);
-          return toProgressResponse(progress);
-        } catch (error) {
-          const mapped = mapLessonError(error);
-          return reply.code(mapped.statusCode).send(mapped.body);
-        }
-      },
-    );
+  /** The client controls nothing but which lesson: a body naming a user, a time or a status is
+   * refused, not silently ignored. */
+  function parseAction(request: FastifyRequest) {
+    const params = lessonIdParamSchema.safeParse(request.params);
+    const body = lessonActionRequestSchema.safeParse(request.body);
+    return params.success && body.success ? params.data.lessonId : null;
   }
+
+  app.post("/lessons/:lessonId/start", actionRoute, async (request, reply) => {
+    const lessonId = parseAction(request);
+    if (lessonId === null) {
+      return reply.code(400).send(INVALID_REQUEST);
+    }
+
+    try {
+      const progress = await useCases.startLesson.execute({
+        userId: sessionUserId(request),
+        lessonId,
+      });
+      request.log.info({ lessonId, status: progress.status }, "Lesson start");
+      noStore(reply);
+      return toProgressResponse(progress);
+    } catch (error) {
+      const mapped = mapLessonError(error);
+      return reply.code(mapped.statusCode).send(mapped.body);
+    }
+  });
+
+  app.post("/lessons/:lessonId/complete", actionRoute, async (request, reply) => {
+    const lessonId = parseAction(request);
+    if (lessonId === null) {
+      return reply.code(400).send(INVALID_REQUEST);
+    }
+
+    try {
+      const outcome = await useCases.completeLesson.execute({
+        userId: sessionUserId(request),
+        lessonId,
+        locale: requestLocale(request, achievementTexts),
+      });
+      // Never the student's id.
+      request.log.info(
+        {
+          lessonId,
+          status: outcome.progress.status,
+          pointsAwarded: outcome.rewards.pointsAwarded,
+          achievementsUnlocked: outcome.rewards.achievementsUnlocked.map((a) => a.key),
+        },
+        "Lesson complete",
+      );
+      noStore(reply);
+      return toCompletionResponse(outcome);
+    } catch (error) {
+      const mapped = mapLessonError(error);
+      return reply.code(mapped.statusCode).send(mapped.body);
+    }
+  });
 }

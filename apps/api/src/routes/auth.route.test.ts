@@ -23,6 +23,7 @@ function build(testDeps = buildTestDeps()) {
     testDeps.contentDeps,
     testDeps.lessonDeps,
     testDeps.exerciseDeps,
+    testDeps.gamificationDeps,
   );
   return { app, ...testDeps };
 }

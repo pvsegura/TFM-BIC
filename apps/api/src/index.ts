@@ -17,6 +17,10 @@ import {
   createExerciseDependencies,
   type ExerciseDependencies,
 } from "./composition/exercise-dependencies.js";
+import {
+  createGamificationDependencies,
+  type GamificationDependencies,
+} from "./composition/gamification-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
@@ -33,6 +37,7 @@ let profileDeps: ProfileDependencies;
 let contentDeps: ContentDependencies;
 let lessonDeps: LessonDependencies;
 let exerciseDeps: ExerciseDependencies;
+let gamificationDeps: GamificationDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -40,6 +45,7 @@ if (env.NODE_ENV === "test") {
     content: contentDeps,
     lessons: lessonDeps,
     exercises: exerciseDeps,
+    gamification: gamificationDeps,
   } = await createTestDependencies(env.CONTENT_DIR));
 } else {
   if (!env.DATABASE_URL) {
@@ -50,9 +56,18 @@ if (env.NODE_ENV === "test") {
   contentDeps = await createContentDependencies(env.CONTENT_DIR);
   lessonDeps = createLessonDependencies(env.DATABASE_URL);
   exerciseDeps = createExerciseDependencies(env.DATABASE_URL);
+  gamificationDeps = createGamificationDependencies(env.DATABASE_URL);
 }
 
-const app = buildServer(env, authDeps, profileDeps, contentDeps, lessonDeps, exerciseDeps);
+const app = buildServer(
+  env,
+  authDeps,
+  profileDeps,
+  contentDeps,
+  lessonDeps,
+  exerciseDeps,
+  gamificationDeps,
+);
 
 async function start(): Promise<void> {
   try {
@@ -71,6 +86,7 @@ async function shutdown(signal: string): Promise<void> {
     profileDeps.close(),
     lessonDeps.close(),
     exerciseDeps.close(),
+    gamificationDeps.close(),
   ]);
   process.exit(0);
 }

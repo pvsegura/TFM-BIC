@@ -1,6 +1,7 @@
 import { loadEnv } from "@tfm-bic/config";
 import type {
   LessonListResponse,
+  LessonCompletionResponse,
   LessonProgressResponse,
   LessonResponse,
 } from "@tfm-bic/contracts";
@@ -40,6 +41,7 @@ function build(overrides: Partial<Parameters<typeof loadEnv>[0]> = {}) {
     testDeps.contentDeps,
     testDeps.lessonDeps,
     testDeps.exerciseDeps,
+    testDeps.gamificationDeps,
   );
   return { app, ...testDeps };
 }
@@ -496,6 +498,19 @@ describe("POST /lessons/:lessonId/complete", () => {
       status: "completed",
       startedAt: NOW.toISOString(),
       completedAt: NOW.toISOString(),
+      // M8: the first completion is rewarded (25 + the first-lesson achievement's 50).
+      rewards: {
+        pointsAwarded: 75,
+        achievementsUnlocked: [
+          {
+            key: "first-lesson",
+            title: "First lesson",
+            description: "Complete your first lesson.",
+            iconId: "book",
+            rewardPoints: 50,
+          },
+        ],
+      },
     });
   });
 
@@ -512,11 +527,15 @@ describe("POST /lessons/:lessonId/complete", () => {
     const built = build();
     const { cookie } = await signIn(built, "ana@example.com");
 
-    const first = (await act(built, "complete", cookie, "pl-first")).json<LessonProgressResponse>();
+    const progressOf = async (response: ReturnType<typeof act>) => {
+      const { rewards: _rewards, ...progress } = (await response).json<LessonCompletionResponse>();
+      return progress;
+    };
+    const first = await progressOf(act(built, "complete", cookie, "pl-first"));
     built.clock.advance(60_000);
     await act(built, "complete", cookie, "pl-first");
     built.clock.advance(60_000);
-    const third = (await act(built, "complete", cookie, "pl-first")).json<LessonProgressResponse>();
+    const third = await progressOf(act(built, "complete", cookie, "pl-first"));
 
     expect(third).toEqual(first);
     expect(built.lessonProgressRepository.records).toHaveLength(1);

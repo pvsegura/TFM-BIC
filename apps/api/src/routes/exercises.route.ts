@@ -1,10 +1,11 @@
 import type {
+  AchievementTexts,
   ExerciseDetail,
   ExerciseResultView,
   ExerciseSummary,
   LessonExercises,
   ResolveSessionUseCase,
-  SubmitExerciseAnswerResult,
+  SubmitExerciseAnswerWithRewardsResult,
 } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import {
@@ -24,6 +25,7 @@ import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import { mapExerciseError } from "./exercise-error.mapper.js";
 import { exerciseAnswerRateLimit, exerciseReadRateLimit } from "./exercise-rate-limit.js";
+import { requestLocale } from "./interface-locale.js";
 
 const INVALID_REQUEST = { error: "Invalid request." } as const;
 
@@ -82,12 +84,13 @@ function toExerciseResponse({ exercise, result }: ExerciseDetail) {
   return exerciseResponseSchema.parse({ ...exercise, result: toResultResponse(result) });
 }
 
-function toAnswerResponse({ evaluation, result }: SubmitExerciseAnswerResult) {
+function toAnswerResponse({ evaluation, result, rewards }: SubmitExerciseAnswerWithRewardsResult) {
   return exerciseAnswerResponseSchema.parse({
     correct: evaluation.correct,
     feedback: evaluation.feedback,
     correctAnswer: evaluation.correctAnswer,
     result: toResultResponse(result),
+    rewards,
   });
 }
 
@@ -102,7 +105,8 @@ function toAnswerResponse({ evaluation, result }: SubmitExerciseAnswerResult) {
  *   answering (its type's presentation), plus the caller's result.
  * - `POST /exercises/:exerciseId/answer` — the caller's answer. The server picks the
  *   evaluator from the exercise's own type, judges the answer, appends an attempt and
- *   returns the verdict.
+ *   returns the verdict — plus, for a correct answer, what it earned (M8: the first correct
+ *   answer to an exercise is rewarded once; a repeat earns nothing).
  *
  * The user is always the session's, never a URL/query/body value; the client sends an
  * answer and nothing else. There is no route that creates, edits or publishes an
@@ -110,9 +114,14 @@ function toAnswerResponse({ evaluation, result }: SubmitExerciseAnswerResult) {
  */
 export function registerExerciseRoutes(
   app: FastifyInstance,
-  deps: { useCases: ExerciseUseCases; resolveSession: ResolveSessionUseCase; env: AppEnv },
+  deps: {
+    useCases: ExerciseUseCases;
+    resolveSession: ResolveSessionUseCase;
+    env: AppEnv;
+    achievementTexts: AchievementTexts;
+  },
 ): void {
-  const { useCases, resolveSession, env } = deps;
+  const { useCases, resolveSession, env, achievementTexts } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
   const readConfig = { rateLimit: exerciseReadRateLimit(env) };
@@ -185,10 +194,16 @@ export function registerExerciseRoutes(
           userId: sessionUserId(request),
           exerciseId: params.data.exerciseId,
           answer: body.data.answer,
+          locale: requestLocale(request, achievementTexts),
         });
-        // Never the submitted answer: it is the student's own text.
+        // Never the submitted answer (the student's own text) or their id.
         request.log.info(
-          { exerciseId: params.data.exerciseId, correct: outcome.evaluation.correct },
+          {
+            exerciseId: params.data.exerciseId,
+            correct: outcome.evaluation.correct,
+            pointsAwarded: outcome.rewards.pointsAwarded,
+            achievementsUnlocked: outcome.rewards.achievementsUnlocked.map((a) => a.key),
+          },
           "Exercise answered",
         );
         noStore(reply);

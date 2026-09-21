@@ -1,10 +1,19 @@
-import { createDefaultExerciseTypeRegistry } from "@tfm-bic/domain";
+import {
+  createDefaultAchievementRegistry,
+  createDefaultExerciseTypeRegistry,
+} from "@tfm-bic/domain";
+import {
+  AchievementTexts,
+  DEFAULT_ACHIEVEMENT_TEXT_CATALOG,
+  DEFAULT_INTERFACE_LOCALE,
+} from "@tfm-bic/application";
 import {
   FakeContentRepository,
   FakeEmailService,
   FakeEmailVerificationTokenRepository,
   FakeExerciseAttemptRepository,
   FakeExerciseRepository,
+  FakeGamificationRepository,
   FakeLessonProgressRepository,
   FakePasswordHasher,
   FakePasswordResetTokenRepository,
@@ -19,6 +28,7 @@ import {
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
+import type { GamificationDependencies } from "../composition/gamification-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 
@@ -73,12 +83,28 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const gamificationRepository = new FakeGamificationRepository();
+  const achievementRegistry = createDefaultAchievementRegistry();
+  const gamificationDeps: GamificationDependencies = {
+    gamificationRepository,
+    achievementRegistry,
+    achievementTexts: new AchievementTexts(
+      achievementRegistry,
+      DEFAULT_ACHIEVEMENT_TEXT_CATALOG,
+      DEFAULT_INTERFACE_LOCALE,
+    ),
+    clock,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
     contentDeps,
     lessonDeps,
     exerciseDeps,
+    gamificationDeps,
+    gamificationRepository,
     lessonProgressRepository,
     exerciseAttemptRepository,
     exerciseRepository,
