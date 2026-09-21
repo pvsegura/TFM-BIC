@@ -56,10 +56,17 @@ are resolved per request (`Accept-Language`, default English).
   unlocks = one indexed read. The dashboard is three reads whatever the number of achievements.
 - Migrations: `0000` creates the tables, `0001` adds the immutability trigger. Run after Identity's (`users` must exist).
   They apply from an empty database and again as a no-op on a migrated one (verified with the real `drizzle-kit` CLI on
-  PostgreSQL 17). `drizzle-kit` has no down migrations, so a rollback is manual: `DROP TRIGGER point_transactions_immutable ON
-point_transactions; DROP FUNCTION point_transactions_reject_update(); DROP TABLE user_achievements; DROP TABLE
-point_transactions;` and delete the rows of `drizzle.__drizzle_migrations_gamification` (this destroys every student's points
-  — never on production data without a backup).
+  PostgreSQL 17). `drizzle-kit` has no down migrations, so a rollback is manual (below).
+
+Manual rollback (this destroys every student's points — never on production data without a backup):
+
+```sql
+DROP TRIGGER point_transactions_immutable ON point_transactions;
+DROP FUNCTION point_transactions_reject_update();
+DROP TABLE user_achievements;
+DROP TABLE point_transactions;
+DELETE FROM drizzle.__drizzle_migrations_gamification;
+```
 
 ## The reward flow
 
