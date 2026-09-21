@@ -6,7 +6,7 @@ import {
   useQueryClient,
   type QueryClient,
 } from "@tanstack/react-query";
-import { useEffect, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "../services/lessons-api.js";
 import { endSessionIfUnauthorized } from "./session-cache.js";
@@ -106,9 +106,36 @@ export function useStartLesson() {
   return useProgressMutation(startLesson);
 }
 
-/** The explicit completion action. Idempotent on the server, so a repeat is harmless. */
+/**
+ * The explicit completion action. It is idempotent on the server, so a repeat
+ * could do no harm — but the student should not send one at all. `isPending`
+ * only turns true a moment after a click (the mutation state is published
+ * asynchronously), and a double-click delivers its second click inside that
+ * gap, so a disabled button alone lets two requests through. This keeps at most
+ * one in flight and frees the lock when it settles, so a failed attempt can be
+ * retried.
+ */
 export function useCompleteLesson() {
-  return useProgressMutation(completeLesson);
+  const mutation = useProgressMutation(completeLesson);
+  const inFlight = useRef(false);
+  const { mutate } = mutation;
+
+  const mutateOnce = useCallback(
+    (lessonId: string) => {
+      if (inFlight.current) {
+        return;
+      }
+      inFlight.current = true;
+      mutate(lessonId, {
+        onSettled: () => {
+          inFlight.current = false;
+        },
+      });
+    },
+    [mutate],
+  );
+
+  return { ...mutation, mutate: mutateOnce };
 }
 
 /**

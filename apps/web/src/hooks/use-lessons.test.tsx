@@ -258,3 +258,54 @@ describe.each([
     expect(client.getQueryData(CURRENT_USER_QUERY_KEY)).toEqual({ id: "user-1" });
   });
 });
+
+describe("useCompleteLesson: one request at a time", () => {
+  it("ignores a second click that arrives before the first has finished — a double-click sends one request", async () => {
+    let finish!: (progress: LessonProgressResponse) => void;
+    const spy = vi.spyOn(lessonsApi, "completeLesson").mockReturnValue(
+      new Promise((resolve) => {
+        finish = resolve;
+      }),
+    );
+    const { wrapper } = setup();
+    const { result } = renderHook(() => useCompleteLesson(), { wrapper });
+
+    act(() => {
+      result.current.mutate("pl-greetings");
+      result.current.mutate("pl-greetings");
+    });
+    await act(async () => {
+      finish(COMPLETED);
+      await Promise.resolve();
+    });
+
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+    expect(spy).toHaveBeenCalledTimes(1);
+  });
+
+  it("allows another attempt once a failed one has settled, so the student can retry", async () => {
+    const spy = vi
+      .spyOn(lessonsApi, "completeLesson")
+      .mockRejectedValueOnce(new ApiError("Something went wrong. Please try again.", 500))
+      .mockResolvedValue(COMPLETED);
+    const { wrapper } = setup();
+    const { result } = renderHook(() => useCompleteLesson(), { wrapper });
+
+    act(() => {
+      result.current.mutate("pl-greetings");
+    });
+    await waitFor(() => {
+      expect(result.current.isError).toBe(true);
+    });
+    act(() => {
+      result.current.mutate("pl-greetings");
+    });
+
+    await waitFor(() => {
+      expect(result.current.isSuccess).toBe(true);
+    });
+    expect(spy).toHaveBeenCalledTimes(2);
+  });
+});
