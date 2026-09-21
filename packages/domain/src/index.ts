@@ -259,3 +259,55 @@ export {
 } from "./gamification/gamification-facts.js";
 export { findAchieved } from "./gamification/evaluate-achievements.js";
 export { InvalidAchievementError } from "./gamification/errors/invalid-achievement.error.js";
+
+// Vocabulary (M9) — an entry is content (a validated file, grouped in a category of its language);
+// what a student does with it is per-student state. See docs/adr/adr-022-vocabulary.md.
+export {
+  createVocabularyItemId,
+  isValidVocabularyItemId,
+  vocabularyItemIdBelongsToLanguage,
+  type VocabularyItemId,
+} from "./vocabulary/vocabulary-item-id.js";
+export {
+  createVocabularyCategoryId,
+  isValidVocabularyCategoryId,
+  type VocabularyCategoryId,
+} from "./vocabulary/vocabulary-category-id.js";
+export {
+  isValidPartOfSpeech,
+  PARTS_OF_SPEECH,
+  type PartOfSpeech,
+} from "./vocabulary/part-of-speech.js";
+export {
+  GRAMMATICAL_GENDERS,
+  isValidGrammaticalGender,
+  type GrammaticalGender,
+} from "./vocabulary/grammatical-gender.js";
+export type { VocabularyCategory } from "./vocabulary/vocabulary-category.js";
+export type { VocabularyExample, VocabularyItem } from "./vocabulary/vocabulary-item.js";
+export { foldForSearch, matchesVocabularySearch } from "./vocabulary/vocabulary-search.js";
+export {
+  ALLOWED_STATUS_CHANGES,
+  changeVocabularyStatus,
+  evaluateStatusChange,
+  saveVocabularyItem,
+  statusOf,
+  STORED_VOCABULARY_STATUSES,
+  VOCABULARY_VIEW_STATUSES,
+  type StatusChange,
+  type StatusChangeResult,
+  type StoredVocabularyStatus,
+  type UserVocabularyEntry,
+  type VocabularyStatus,
+} from "./vocabulary/user-vocabulary.js";
+export {
+  VOCABULARY_EVENT_TYPES,
+  type VocabularyEvent,
+  type VocabularyEventType,
+  type VocabularyItemLearnedEvent,
+} from "./vocabulary/vocabulary-event.js";
+export { InvalidVocabularyItemIdError } from "./vocabulary/errors/invalid-vocabulary-item-id.error.js";
+export { InvalidVocabularyCategoryIdError } from "./vocabulary/errors/invalid-vocabulary-category-id.error.js";
+export { InvalidVocabularyTransitionError } from "./vocabulary/errors/invalid-vocabulary-transition.error.js";
+export { VocabularyItemNotFoundError } from "./vocabulary/errors/vocabulary-item-not-found.error.js";
+export { VocabularyCategoryNotFoundError } from "./vocabulary/errors/vocabulary-category-not-found.error.js";
