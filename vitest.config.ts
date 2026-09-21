@@ -53,6 +53,7 @@ export default defineConfig({
         "packages/data/src/identity/db/client.ts",
         "packages/data/src/profile/db/client.ts",
         "packages/data/src/lessons/db/client.ts",
+        "packages/data/src/exercises/db/client.ts",
         // `pnpm content:validate` entry point: argv in, exit code out. The loader and the
         // report formatter it calls are unit-tested; only the bootstrap is left uncovered.
         "packages/data/src/content/validate-content.cli.ts",

@@ -15,3 +15,7 @@ export {
   createLessonsTestDb,
   type LessonsTestDbHandle,
 } from "./lessons/db/test-support/create-test-db.js";
+export {
+  createExercisesTestDb,
+  type ExercisesTestDbHandle,
+} from "./exercises/db/test-support/create-test-db.js";
