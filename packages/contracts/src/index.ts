@@ -86,6 +86,7 @@ export {
 export { exerciseIdSchema } from "./content/identifiers.schema.js";
 export { exerciseFileSchema, type ExerciseFile } from "./exercise/exercise-file.schema.js";
 export {
+  MAX_TEXT_ANSWER_LENGTH,
   exerciseAnswerRequestSchema,
   exerciseAnswerResponseSchema,
   exerciseIdParamSchema,

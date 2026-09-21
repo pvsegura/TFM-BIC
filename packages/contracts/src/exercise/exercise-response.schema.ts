@@ -19,6 +19,10 @@ import { trueFalsePresentedSchema } from "./types/true-false.schema.js";
  * **evaluation** (returned only after an answer is submitted).
  */
 
+/** The longest text answer the API accepts, for the text field's own limit. Re-exported so the
+ * web app does not need the domain package for one number. */
+export { MAX_TEXT_ANSWER_LENGTH };
+
 /** Times cross the wire as ISO 8601 strings, produced by the server's clock. */
 const isoTimestamp = z.iso.datetime();
 
