@@ -109,3 +109,26 @@ export {
   UpdateCurrentStudentProfileUseCase,
   type UpdateCurrentStudentProfileInput,
 } from "./profile/use-cases/update-current-student-profile.use-case.js";
+
+// Exercises (M7) ports — implemented in packages/data — and use cases. Exercises are content (like
+// lessons); only the student's attempts have persistence of their own.
+export type { ExerciseRepository } from "./exercise/ports/exercise-repository.js";
+export type { ExerciseAttemptRepository } from "./exercise/ports/exercise-attempt-repository.js";
+export { toResultView, type ExerciseResultView } from "./exercise/result-view.js";
+export { findVisibleExercise } from "./exercise/find-visible-exercise.js";
+export {
+  ListLessonExercisesUseCase,
+  type ExerciseSummary,
+  type LessonExercises,
+  type ListLessonExercisesInput,
+} from "./exercise/use-cases/list-lesson-exercises.use-case.js";
+export {
+  GetExerciseUseCase,
+  type ExerciseDetail,
+  type GetExerciseInput,
+} from "./exercise/use-cases/get-exercise.use-case.js";
+export {
+  SubmitExerciseAnswerUseCase,
+  type SubmitExerciseAnswerInput,
+  type SubmitExerciseAnswerResult,
+} from "./exercise/use-cases/submit-exercise-answer.use-case.js";
