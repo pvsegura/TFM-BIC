@@ -77,6 +77,39 @@ Public, read-only discovery of the language catalog and published content. See
 
 These tests demonstrate specific behaviours; they do not prove the catalog is free of vulnerabilities.
 
+## Lessons (M6 — implemented)
+
+Authenticated lesson list/detail and per-student progress. See [ADR-019](../adr/adr-019-lessons.md).
+
+- **Authentication is server-side** on all four routes (the `authenticate` hook): no cookie, a tampered cookie
+  or a logged-out session is `401`, and nothing is written. The frontend route guard only hides UI.
+- **Identity comes from the session only.** No route takes a user id from the URL, query or body, and no
+  route reads or writes another student's progress — tested with two students.
+- **Mass assignment**: `start` and `complete` take no body; the request schema is a strict empty object, so
+  `userId`, `completedAt`, `status`, `lessonId`, `role`, `points` … are a `400` and write nothing (tested per
+  field). Times and statuses are decided by the application and its `Clock`, never the client.
+- **Unpublished content**: one `Lesson not found.` `404` for missing, draft, archived, non-lesson and
+  hidden-level lessons, so they cannot be enumerated; completion of any of them is refused and writes nothing.
+- **Injection and traversal**: ids/languages/levels are matched against strict patterns (`400`), used only as
+  bound parameters (Drizzle) and in-memory lookups; injection-, traversal- and script-shaped values are
+  tested at the schema, route and E2E layers. The table also has a `CHECK` on the id shape.
+- **Integrity**: primary key `(user_id, lesson_id)` (no duplicate progress), `ON DELETE CASCADE` foreign key to
+  `users`, `CHECK`s on the stored statuses and on `completed_at` matching the status. Start/complete are one
+  atomic upsert each.
+- **CSRF**: writes pass the `Origin` check (`403` cross-origin) on top of `SameSite=Strict`.
+- **XSS**: the detail response re-validates blocks (markup-looking text or an unknown block type is never
+  served — generic `500`, tested); the client re-validates the same contract; the UI renders all text through
+  React inside fixed components, with no `dangerouslySetInnerHTML` and no dynamic imports.
+- **Caching**: `Cache-Control: private, no-store` on lesson responses; the client cache is user-scoped and is
+  dropped on logout/login.
+- **Abuse**: rate-limited per client (120/min); request bodies capped at 1 KB.
+- **Logging**: on start/complete the request log records the lesson id and resulting status (plus the
+  request id) only — no user id, email, cookie or lesson text.
+- **Known limitation**: lesson _bodies_ remain readable without an account through the public M5
+  `GET /content/:id` (ADR-018 §5). M6 does not gate them; that is a later, deliberate decision.
+- **Not verified**: behaviour under truly concurrent connections to a real Postgres/Neon (the tests run on
+  PGlite, which serialises queries); the atomicity rests on single-statement upserts.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from

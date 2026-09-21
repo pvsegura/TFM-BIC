@@ -181,8 +181,33 @@ levels and languages, and AI-generated content each arrive as new content types/
 behind the same port. Moving content into PostgreSQL or a CMS means a new adapter for
 `ContentRepository` and a one-way import from these files (ADR-018 lists the triggers).
 
-## The boundary with M6
+## Lessons (M6)
 
-M5 = the catalog and a **read-only** view of content. M6 = the lesson experience: a player, exercises,
-completion, progress, and persisting which language/level a student is learning (an enrolment keyed to
-the user). Nothing in M5 stores per-student state.
+Rationale: [ADR-019](../adr/adr-019-lessons.md). M5 = the catalog and a read-only view of content; M6 = the
+first student experience on top of it. **Content and progress are different things and are stored apart.**
+
+- **A lesson is a content item with `type: "lesson"`.** Same file, same schema, same id
+  (`pl-greetings`), same `status`/`order`/blocks. There is no lessons table, no lesson id or slug, and no
+  copy of any lesson field. Lesson pages and routes are generic; nothing names a language.
+- **What each side owns.** The JSON files own the lesson (text, blocks, title, description, order, language,
+  level, publication). PostgreSQL owns one thing: `lesson_progress`, a student's `in_progress` /
+  `completed` state and its times, keyed `(user_id, lesson_id)`. `lesson_id` is the content id held as
+  text — not a foreign key, because the referenced rows are files.
+- **How the application resolves a lesson.** `GET /lessons/:id` runs `GetContentUseCase` (published, active
+  language, `available` level — M5's rules, reused) and then checks `type === "lesson"`; the student's
+  progress is then read separately and joined only in the response. `explanation` items are reference
+  notes, not lessons, and are not listed or openable as lessons.
+- **Publication and validation** are unchanged: `status: published` in the file, `pnpm content:validate`,
+  fail-fast loading at start-up. Progress is only ever written for a lesson that exists and is visible;
+  a database `CHECK` and the repository re-validate the id shape.
+- **Ordering** is M5's explicit `order`, then `id`. The lesson list numbers lessons 1, 2, 3 by position,
+  not by the `order` value.
+- **Completion** is explicit (a "Complete lesson" action), idempotent, and awards nothing. Opening a lesson
+  records it as in progress. **Resume position within a lesson is not part of M6; lesson status is persisted.**
+- **Unknown block types** are refused by the schema (the API returns a generic `500` rather than serve
+  them); if one ever reached the browser the viewer shows a neutral notice and none of its data.
+- **Adding a lesson** is a new file with `type: "lesson"` and `status: published`; nothing else changes.
+  A student's existing progress is unaffected by editing a lesson's text or order.
+
+Enrolment — persisting which language/level a student is learning — is still not stored (the URL holds it);
+see ADR-019 §8.

@@ -55,6 +55,12 @@ Ordered lesson content within a level/course: references to video, audio, vocabu
 Lesson _metadata/progress_ is domain data; lesson _content_ (script, media) is `content/` data —
 see Content Architecture for the split.
 
+**As built in M6** ([ADR-019](../adr/adr-019-lessons.md)): a lesson is an M5 content item of `type: "lesson"`
+identified by its `ContentId` (`LessonId`); the lesson experience adds only `LessonProgress` (per student:
+`in_progress` | `completed`, with `startedAt`/`completedAt`; "not started" is derived) and the pure
+transitions `startLesson` / `completeLesson`, which only move forward and are idempotent. Exercises, scoring
+and points (below) remain later milestones and will attach to lesson progress without touching content.
+
 ### Exercises
 
 Polymorphic exercise types (multiple choice, fill-in-the-blank, matching, listening,

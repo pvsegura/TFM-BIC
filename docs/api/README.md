@@ -90,6 +90,45 @@ otherwise. Unrelated query parameters (e.g. tracking parameters) are ignored.
 The web app's pages live under `/learn` precisely so they do not share a path with these routes (no
 page-vs-API proxy workaround, unlike `/profile`).
 
+## Lesson endpoints (M6)
+
+Schemas: `packages/contracts/src/lesson/`. **Authenticated** (session cookie; `401 { error }` otherwise),
+generic across languages and levels, rationale in [ADR-019](../adr/adr-019-lessons.md). A lesson is an M5
+content item of `type: "lesson"`; only the caller's progress is stored. The user always comes from the
+session — never from the URL, query or body. Every response carries `Cache-Control: private, no-store`. Each
+route is rate-limited (120 requests/minute per client).
+
+| Method | Path                          | Notes                                                                                                                                                                                                        |
+| ------ | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| GET    | `/lessons?language=&level=`   | `{ lessons: [{ id, languageId, levelId, title, description, order, instructionLanguage, progress }] }` — metadata and the caller's progress, **no blocks**, in explicit order. Both parameters are required. |
+| GET    | `/lessons/:lessonId`          | One visible lesson: the summary fields plus `blocks` (`explanation`, `example`, `dialogue`). Never writes.                                                                                                   |
+| POST   | `/lessons/:lessonId/start`    | Records that the caller opened the lesson. Idempotent and forward-only: never changes an in-progress or completed record. Returns the progress.                                                              |
+| POST   | `/lessons/:lessonId/complete` | The explicit completion. Idempotent: repeating it returns the same record with the first `completedAt`. A lesson never started is started and completed at once.                                             |
+
+`progress` is `{ status: "not_started" | "in_progress" | "completed", startedAt, completedAt }` with ISO 8601
+times or `null`. `not_started` is derived from having no record. Times are the server's clock.
+
+The two `POST` routes take **no body**: any key in one (`userId`, `completedAt`, `status`, `role`, …) is a
+`400`, so a client can never set them; bodies over 1 KB are a `413`. They also pass the `Origin` check
+(`403` for a cross-origin request). There is no route to create, edit, publish or delete a lesson, and none
+acts on another student's progress.
+
+Errors (bodies are `{ error }` with a fixed message that never echoes the input): `400 Invalid request.` for
+a malformed lesson id, language, level or a bad/repeated/missing parameter; `401 Unauthenticated`; `403
+Forbidden` (cross-origin write); `404` — `Lesson not found.` (the **same** body for a missing, draft,
+archived, non-lesson or hidden-level lesson, so unpublished content cannot be probed), `Language not
+found.`, `Level not available.`; `429` when rate-limited; a generic `500` otherwise (including if stored
+content fails validation — it is never served).
+
+**No pagination**: a level holds a handful of lessons and the list carries metadata only. The response is an
+object, so `limit`/`cursor` can be added later without breaking clients.
+
+**Path note:** these paths are the API; the web pages are under `/learn/lessons` so they do not share a path
+with it (no page-vs-API proxy workaround, unlike `/profile`).
+
+Database: the `lesson_progress` table has its own migration set (`pnpm --filter @tfm-bic/data
+db:migrate:lessons`, after Identity's `db:migrate`).
+
 ## Future direction
 
 Once more endpoints exist (M4+), the planned approach is an OpenAPI/schema-derived spec generated

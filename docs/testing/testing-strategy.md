@@ -110,3 +110,34 @@ have played.
   the public flow on desktop, dark mode and a 375px viewport (`tests/e2e/content-languages.spec.ts`).
 - **Not covered**: there is no automated accessibility scanner (axe or similar) in the repository, so
   accessibility rests on role/label/keyboard tests and manual review.
+
+## Lessons (M6)
+
+Lesson completion is a critical flow (listed above), so it is tested at every layer regardless of coverage.
+
+- **Domain/application**: the pure transitions (`startLesson`, `completeLesson`: forward-only, idempotent,
+  first completion time kept) and the four use cases over in-memory fakes with a fixed clock — published-only
+  visibility (draft, archived, non-lesson, hidden level → one `LessonNotFoundError`), one batched progress
+  lookup per list (no N+1), reads never write, per-student isolation, and `language-extensibility.test.ts`
+  running the same use cases over fictional languages.
+- **Repository (real Postgres via PGlite)**: start/complete semantics, idempotent `complete, complete,
+complete`, many completions and a start/complete race ending completed, the primary key, the foreign key and
+  `ON DELETE CASCADE`, every `CHECK`, a lesson id that is not a foreign key, and the migration's columns and
+  (lack of extra) indexes. PGlite serialises queries, so true multi-connection concurrency is not exercised.
+- **HTTP**: authentication on every route (none/tampered/logged-out), the response shape (no blocks in the
+  list, no status/type leaks), `no-store`, filters, per-student progress, mass-assignment refusal per field,
+  malformed/injection/traversal ids, identical `404`s, `Origin` check, method routing (no way to edit a lesson),
+  fail-closed serialization of markup and unknown block types, and rate limiting.
+- **Frontend**: the API client (contract validation, encoding, no body, no user id), the query hooks (user-scoped
+  keys, server progress written into the cache, one completion in flight, 401 ends the session), the
+  presentational components (status in words, one link per card, disabled-while-saving, live region present
+  before completion, blocks in order, unknown block notice, markup inert), the pages (loading is never shown as
+  empty, error with retry, not-found without echoing the id, start once even under StrictMode, completion
+  confirmed, failure retried) and the route table (`learn/lessons` outranks the public route and sits behind
+  login).
+- **Playwright** (`tests/e2e/lessons.spec.ts`): discovery, opening in order, in-progress and completed state
+  surviving a refresh, keyboard completion, idempotent and double-click completion (the latter found a real
+  duplicate-request bug), logged-out and cross-student access, mass-assignment refusal, not-found and
+  injection-like ids, planned levels, a 375px viewport with no horizontal overflow, and dark mode.
+- **Not covered**: axe-style accessibility scanning (still none), and contrast is checked by calculation
+  (recorded in ADR-019), not by an automated tool.
