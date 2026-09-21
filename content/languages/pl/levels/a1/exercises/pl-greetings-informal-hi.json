@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-greetings-informal-hi",
+  "lessonId": "pl-greetings",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Cześć is informal. It can be used to say hello and also to say goodbye.",
+  "explanation": "Cześć is used with friends and family, both to say hello and to say goodbye.",
+  "configuration": { "correctAnswer": true }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-introducing-yourself-nice-to-meet-you",
+  "lessonId": "pl-introducing-yourself",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the informal Polish for: Nice to meet you.",
+  "explanation": "Miło mi cię poznać is the informal way to say nice to meet you. A polite version uses pana (to a man) or panią (to a woman) instead of cię.",
+  "configuration": {
+    "acceptedAnswers": ["Miło mi cię poznać.", "Miło mi cię poznać"],
+    "caseSensitive": false
+  }
+}

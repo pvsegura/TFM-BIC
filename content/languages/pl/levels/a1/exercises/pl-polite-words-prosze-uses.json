@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-polite-words-prosze-uses",
+  "lessonId": "pl-polite-words",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Proszę can mean please, here you are and you are welcome.",
+  "explanation": "Proszę is one word with three uses. The situation tells you which one is meant.",
+  "configuration": { "correctAnswer": true }
+}

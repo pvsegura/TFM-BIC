@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-greetings-polite-hello",
+  "lessonId": "pl-greetings",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which greeting is polite and suits someone you do not know well?",
+  "explanation": "Dzień dobry is polite and works with people you do not know well. Cześć is informal, Na razie is an informal goodbye, and Dobranoc is said at night.",
+  "configuration": {
+    "options": [
+      { "id": "a", "text": "Dzień dobry" },
+      { "id": "b", "text": "Cześć" },
+      { "id": "c", "text": "Na razie" },
+      { "id": "d", "text": "Dobranoc" }
+    ],
+    "correctOptionId": "a"
+  }
+}

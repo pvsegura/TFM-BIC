@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-polite-words-thank-you",
+  "lessonId": "pl-polite-words",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish word for: thank you.",
+  "explanation": "Dziękuję means thank you, and Dziękuję bardzo means thank you very much.",
+  "configuration": {
+    "acceptedAnswers": ["Dziękuję", "Dziękuję."],
+    "caseSensitive": false
+  }
+}

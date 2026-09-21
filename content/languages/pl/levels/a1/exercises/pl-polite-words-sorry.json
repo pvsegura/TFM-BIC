@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-polite-words-sorry",
+  "lessonId": "pl-polite-words",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Which Polish word means \"sorry\" or \"excuse me\"?",
+  "explanation": "Przepraszam means sorry and excuse me. Dziękuję means thank you, Proszę means please, and Tak means yes.",
+  "configuration": {
+    "options": [
+      { "id": "a", "text": "Przepraszam" },
+      { "id": "b", "text": "Dziękuję" },
+      { "id": "c", "text": "Proszę" },
+      { "id": "d", "text": "Tak" }
+    ],
+    "correctOptionId": "a"
+  }
+}

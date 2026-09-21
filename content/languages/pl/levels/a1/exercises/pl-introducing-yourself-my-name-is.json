@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-introducing-yourself-my-name-is",
+  "lessonId": "pl-introducing-yourself",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which Polish sentence means \"My name is Anna\"?",
+  "explanation": "Mam na imię followed by your first name says what your name is. Jestem z Polski means I am from Poland, and Jak masz na imię? asks someone their name.",
+  "configuration": {
+    "options": [
+      { "id": "a", "text": "Mam na imię Anna." },
+      { "id": "b", "text": "Jestem z Polski." },
+      { "id": "c", "text": "Jak masz na imię?" },
+      { "id": "d", "text": "Miło mi cię poznać." }
+    ],
+    "correctOptionId": "a"
+  }
+}

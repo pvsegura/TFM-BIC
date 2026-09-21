@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-greetings-good-night",
+  "lessonId": "pl-greetings",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: Good night.",
+  "explanation": "Dobranoc is said when saying goodnight, not as a general goodbye.",
+  "configuration": {
+    "acceptedAnswers": ["Dobranoc", "Dobranoc."],
+    "caseSensitive": false
+  }
+}

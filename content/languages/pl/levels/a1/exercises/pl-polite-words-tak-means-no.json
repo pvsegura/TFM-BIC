@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-polite-words-tak-means-no",
+  "lessonId": "pl-polite-words",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "prompt": "Tak means no.",
+  "explanation": "Tak means yes. Nie means no.",
+  "configuration": { "correctAnswer": false }
+}
