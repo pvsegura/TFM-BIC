@@ -1,7 +1,9 @@
 import {
   createContentId,
+  createExerciseId,
   createLanguageId,
   isValidContentId,
+  isValidExerciseId,
   isValidLanguageId,
   LEVEL_IDS,
 } from "@tfm-bic/domain";
@@ -23,3 +25,9 @@ export const contentIdSchema = z
   .string()
   .refine(isValidContentId, { error: "Expected a lowercase slug such as pl-greetings." })
   .transform(createContentId);
+
+/** An exercise's permanent id — the same strict slug rules as a content id, as its own branded type. */
+export const exerciseIdSchema = z
+  .string()
+  .refine(isValidExerciseId, { error: "Expected a lowercase slug such as pl-greetings-hello." })
+  .transform(createExerciseId);
