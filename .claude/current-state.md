@@ -6,7 +6,7 @@ Last updated: 2026-09-21
 
 **M6 — Lessons** — implemented on `feature/lessons`, branched from `feature/content-languages` (M5), which sits
 on `feature/student-profile` (M4) → `feature/authentication` (M3) → `ci/jenkins-sonarqube` (M1+M2); `main` only
-has M0. **Nothing from M5 or M6 has been pushed or merged.** M0–M5 remain the base (architecture/governance,
+has M0. **`feature/lessons` was pushed to GitHub on 2026-09-21 (which also published the M5 commits); nothing is merged, and Jenkins/SonarQube are deliberately not connected to it yet.** M0–M5 remain the base (architecture/governance,
 monorepo/tooling, CI/CD, authentication, student profile, languages & content — see
 [docs/product/project-constitution.md](../docs/product/project-constitution.md)).
 
@@ -52,9 +52,8 @@ reference: [content-architecture.md](../docs/architecture/content-architecture.m
   data 147, config 12, api 234, web 323, ui 30, shared 1. Coverage: 96.11% statements / 90.23% branches / 96.81%
   functions / 95.98% lines (thresholds 80/75/80/80).
 - **69 Playwright E2E tests** pass (46 earlier + 23 in `tests/e2e/lessons.spec.ts`). Ports 3000 and 5173 must be free.
-- **Jenkins pipeline and SonarQube analysis / Quality Gate: NOT RUN for M6.** The branch is not on GitHub and there
-  are no Jenkins/SonarQube credentials in this environment (see the M4 note below; pushing needs the user's
-  approval). The two new coverage exclusions (`lesson-dependencies.ts`, `lessons/db/client.ts`) are mirrored
+- **Jenkins pipeline and SonarQube analysis / Quality Gate: NOT RUN for M6.** The branch is on GitHub, but the user
+  chose not to connect Jenkins/SonarQube yet, and there are no credentials in this environment (see the M4 note below). The two new coverage exclusions (`lesson-dependencies.ts`, `lessons/db/client.ts`) are mirrored
   in `vitest.config.ts` and `sonar-project.properties` but untested against a real instance.
 - Accessibility rests on role/label/keyboard tests and manual review; there is no axe-style scanner. Contrast was
   calculated, not measured with a tool.
