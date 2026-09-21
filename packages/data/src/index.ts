@@ -25,3 +25,7 @@ export { DrizzleProfileRepository } from "./profile/profile.repository.js";
 // Lessons (M6) — lesson progress only; lesson content is the M5 files.
 export { createLessonsDb, type LessonsDb, type LessonsDbHandle } from "./lessons/db/client.js";
 export { DrizzleLessonProgressRepository } from "./lessons/lesson-progress.repository.js";
+
+// Exercises (M7) — exercises are content, so they are read from the same validated tree; only the
+// student's attempts are stored in PostgreSQL (added with the exercise attempts context).
+export { CatalogExerciseRepository } from "./content/catalog-exercise-repository.js";
