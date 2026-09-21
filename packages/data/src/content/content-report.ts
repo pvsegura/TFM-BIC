@@ -14,11 +14,12 @@ function plural(count: number, noun: string): string {
 /** Human-readable outcome of validating the content tree, for `pnpm content:validate`. */
 export function formatContentReport(result: LoadContentResult): ContentReport {
   if (result.ok) {
-    const { languages, content } = result.catalog;
+    const { languages, content, exercises } = result.catalog;
     const published = content.filter(isPublished).length;
+    const publishedExercises = exercises.filter(isPublished).length;
     return {
       exitCode: 0,
-      text: `Content is valid: ${plural(languages.length, "language")}, ${plural(content.length, "content item")} (${String(published)} published).`,
+      text: `Content is valid: ${plural(languages.length, "language")}, ${plural(content.length, "content item")} (${String(published)} published), ${plural(exercises.length, "exercise")} (${String(publishedExercises)} published).`,
     };
   }
 

@@ -64,6 +64,30 @@ export function contentFile(
   };
 }
 
+/** An exercise file for a lesson. Defaults to a valid true/false exercise. */
+export function exerciseFile(
+  id: string,
+  languageId: string,
+  levelId: string,
+  lessonId: string,
+  overrides: Record<string, unknown> = {},
+) {
+  return {
+    schemaVersion: 1,
+    id,
+    languageId,
+    levelId,
+    lessonId,
+    type: "true-false",
+    status: "published",
+    order: 10,
+    instructionLanguage: "en",
+    prompt: `Prompt ${id}`,
+    configuration: { correctAnswer: true },
+    ...overrides,
+  };
+}
+
 /** A complete, valid one-language tree for `code` (a fictional code in tests). */
 export function validTree(code = "xx"): FixtureFiles {
   return {

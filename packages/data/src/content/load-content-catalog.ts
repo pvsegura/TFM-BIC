@@ -1,7 +1,7 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
-import { contentFileSchema, languageFileSchema } from "@tfm-bic/contracts";
+import { contentFileSchema, exerciseFileSchema, languageFileSchema } from "@tfm-bic/contracts";
 import {
   isValidLanguageId,
   isValidLevelId,
@@ -68,26 +68,20 @@ async function readJson(
   }
 }
 
-async function loadContentFile(
-  absolute: string,
+interface ExpectedLocation {
+  languageId: string;
+  levelId: string;
+  fileName: string;
+}
+
+/** A file must sit where it says it belongs: its folder names its language and
+ * level, and its file name is its id. Records every mismatch; true when there is none. */
+function isWhereItSaysItIs(
+  file: { id: string; languageId: string; levelId: string },
+  expected: ExpectedLocation,
   location: string,
-  expected: { languageId: string; levelId: string; fileName: string },
   issues: ContentIssue[],
-): Promise<ContentItem | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = contentFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
-    return undefined;
-  }
-
-  const file = parsed.data;
+): boolean {
   let consistent = true;
   if (file.languageId !== expected.languageId) {
     issues.push({
@@ -107,7 +101,30 @@ async function loadContentFile(
     issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
     consistent = false;
   }
-  if (!consistent) {
+  return consistent;
+}
+
+async function loadContentFile(
+  absolute: string,
+  location: string,
+  expected: ExpectedLocation,
+  issues: ContentIssue[],
+): Promise<ContentItem | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  const parsed = contentFileSchema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+
+  const file = parsed.data;
+  if (!isWhereItSaysItIs(file, expected, location, issues)) {
     return undefined;
   }
 
@@ -125,11 +142,68 @@ async function loadContentFile(
   };
 }
 
-async function loadLevelContent(
+async function loadExerciseFile(
+  absolute: string,
+  location: string,
+  expected: ExpectedLocation,
+  issues: ContentIssue[],
+): Promise<Exercise | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  const parsed = exerciseFileSchema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+
+  // The format's own `schemaVersion` is not part of the exercise; everything else is, and the
+  // assignment to `Exercise` is checked by the compiler, so the file format and the domain
+  // model cannot drift apart unnoticed.
+  const { schemaVersion: _formatVersion, ...exercise } = parsed.data;
+  return isWhereItSaysItIs(exercise, expected, location, issues) ? exercise : undefined;
+}
+
+/** Reads every `.json` file in one folder with `load`, in name order, keeping what is valid. */
+async function loadFolder<T>(
+  directory: string,
+  location: string,
+  scope: { languageId: string; levelId: string },
+  load: (
+    absolute: string,
+    location: string,
+    expected: ExpectedLocation,
+    issues: ContentIssue[],
+  ) => Promise<T | undefined>,
+  into: T[],
+  issues: ContentIssue[],
+): Promise<void> {
+  const files = (await readDirectory(directory)) ?? [];
+  for (const file of files) {
+    if (!file.isFile() || !file.name.endsWith(".json")) {
+      continue;
+    }
+    const loaded = await load(
+      path.join(directory, file.name),
+      `${location}/${file.name}`,
+      { ...scope, fileName: file.name },
+      issues,
+    );
+    if (loaded) {
+      into.push(loaded);
+    }
+  }
+}
+
+async function loadLevel(
   languageDir: string,
   languageId: string,
   levelName: string,
-  content: ContentItem[],
+  catalog: { content: ContentItem[]; exercises: Exercise[] },
   issues: ContentIssue[],
 ): Promise<void> {
   const levelLocation = `languages/${languageId}/levels/${levelName}`;
@@ -141,28 +215,35 @@ async function loadLevelContent(
     return;
   }
 
-  const contentDir = path.join(languageDir, "levels", levelName, "content");
-  const files = (await readDirectory(contentDir)) ?? [];
-  for (const file of files) {
-    if (!file.isFile() || !file.name.endsWith(".json")) {
-      continue;
-    }
-    const item = await loadContentFile(
-      path.join(contentDir, file.name),
-      `${levelLocation}/content/${file.name}`,
-      { languageId, levelId: levelName, fileName: file.name },
-      issues,
-    );
-    if (item) {
-      content.push(item);
-    }
-  }
+  const levelDir = path.join(languageDir, "levels", levelName);
+  const scope = { languageId, levelId: levelName };
+  await loadFolder(
+    path.join(levelDir, "content"),
+    `${levelLocation}/content`,
+    scope,
+    loadContentFile,
+    catalog.content,
+    issues,
+  );
+  await loadFolder(
+    path.join(levelDir, "exercises"),
+    `${levelLocation}/exercises`,
+    scope,
+    loadExerciseFile,
+    catalog.exercises,
+    issues,
+  );
 }
 
 async function loadLanguage(
   languagesDir: string,
   languageId: string,
-  catalog: { languages: Language[]; languageLevels: LanguageLevel[]; content: ContentItem[] },
+  catalog: {
+    languages: Language[];
+    languageLevels: LanguageLevel[];
+    content: ContentItem[];
+    exercises: Exercise[];
+  },
   issues: ContentIssue[],
 ): Promise<void> {
   const languageLocation = `languages/${languageId}`;
@@ -216,7 +297,7 @@ async function loadLanguage(
   const levelFolders = (await readDirectory(path.join(languageDir, "levels"))) ?? [];
   for (const folder of levelFolders) {
     if (folder.isDirectory()) {
-      await loadLevelContent(languageDir, languageId, folder.name, catalog.content, issues);
+      await loadLevel(languageDir, languageId, folder.name, catalog, issues);
     }
   }
 }
@@ -230,6 +311,7 @@ async function loadLanguage(
  *
  *   content/languages/<languageId>/language.json
  *   content/languages/<languageId>/levels/<levelId>/content/<contentId>.json
+ *   content/languages/<languageId>/levels/<levelId>/exercises/<exerciseId>.json
  */
 export async function loadContentCatalog(contentRoot: string): Promise<LoadContentResult> {
   const languagesDir = path.join(contentRoot, "languages");
