@@ -125,3 +125,79 @@ export { createAvatarId } from "./profile/avatar-selection.js";
 export { InvalidProfileNameError } from "./profile/errors/invalid-profile-name.error.js";
 export { InvalidNicknameError } from "./profile/errors/invalid-nickname.error.js";
 export { InvalidAvatarIdError } from "./profile/errors/invalid-avatar-id.error.js";
+
+// Exercises (M7) — an exercise is content tied to a lesson; evaluation is a per-type strategy;
+// attempts are per-student history. See docs/adr/adr-020-exercises.md.
+export {
+  EXERCISE_TYPES,
+  isValidExerciseType,
+  type ExerciseType,
+} from "./exercise/exercise-type.js";
+export {
+  createExerciseId,
+  exerciseIdBelongsToLanguage,
+  isValidExerciseId,
+  type ExerciseId,
+} from "./exercise/exercise-id.js";
+export type { ExerciseAnswerValue } from "./exercise/exercise-answer.js";
+export type { EvaluationResult } from "./exercise/evaluation-result.js";
+export type {
+  ExerciseBase,
+  ExerciseOfType,
+  PresentedExerciseBase,
+} from "./exercise/exercise-base.js";
+export type { Exercise, PresentedExercise } from "./exercise/exercise.js";
+export type { ExerciseEvaluator, ExercisePresenter } from "./exercise/exercise-evaluator.js";
+export {
+  createDefaultExerciseTypeRegistry,
+  ExerciseTypeRegistry,
+  registerExerciseType,
+  type EvaluatedAnswer,
+  type RegisteredExerciseType,
+} from "./exercise/exercise-registry.js";
+export {
+  isValidOptionId,
+  MAX_OPTION_ID_LENGTH,
+  MAX_OPTIONS,
+  MIN_OPTIONS,
+  multipleChoiceEvaluator,
+  multipleChoicePresenter,
+  type MultipleChoiceAnswer,
+  type MultipleChoiceConfiguration,
+  type MultipleChoiceExercise,
+  type MultipleChoiceOption,
+  type PresentedMultipleChoice,
+} from "./exercise/types/multiple-choice.js";
+export {
+  MAX_TEXT_ANSWER_LENGTH,
+  normalizeTextAnswer,
+  textAnswerEvaluator,
+  textAnswerPresenter,
+  type PresentedTextAnswer,
+  type TextAnswer,
+  type TextAnswerConfiguration,
+  type TextAnswerExercise,
+  type TextNormalization,
+} from "./exercise/types/text-answer.js";
+export {
+  trueFalseEvaluator,
+  trueFalsePresenter,
+  type PresentedTrueFalse,
+  type TrueFalseAnswer,
+  type TrueFalseConfiguration,
+  type TrueFalseExercise,
+} from "./exercise/types/true-false.js";
+export {
+  EXERCISE_RESULT_STATUSES,
+  resultStatusOf,
+  summarizeAttempts,
+  type ExerciseAttempt,
+  type ExerciseAttemptSummary,
+  type ExerciseResultStatus,
+  type NewExerciseAttempt,
+} from "./exercise/exercise-attempt.js";
+export { InvalidExerciseIdError } from "./exercise/errors/invalid-exercise-id.error.js";
+export { ExerciseNotFoundError } from "./exercise/errors/exercise-not-found.error.js";
+export { InvalidExerciseAnswerError } from "./exercise/errors/invalid-exercise-answer.error.js";
+export { InvalidExerciseConfigurationError } from "./exercise/errors/invalid-exercise-configuration.error.js";
+export { UnsupportedExerciseTypeError } from "./exercise/errors/unsupported-exercise-type.error.js";
