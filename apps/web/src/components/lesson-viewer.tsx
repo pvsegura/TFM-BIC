@@ -1,4 +1,4 @@
-import type { LessonResponse } from "@tfm-bic/contracts";
+import type { LessonResponse, RewardsResponse } from "@tfm-bic/contracts";
 import type { ReactNode } from "react";
 import { Link } from "react-router";
 
@@ -13,6 +13,8 @@ export interface LessonViewerProps {
   isCompleting: boolean;
   completionFailed: boolean;
   onComplete: () => void;
+  /** What completing the lesson just earned (M8), passed on to the completion section. */
+  rewards?: RewardsResponse;
   backHref: string;
   /** What follows the lesson's blocks and comes before the completion action — the exercises (M7). The viewer knows nothing about it. */
   practice?: ReactNode;
@@ -35,6 +37,7 @@ export function LessonViewer({
   language,
   isCompleting,
   completionFailed,
+  rewards,
   onComplete,
   backHref,
   practice,
@@ -64,6 +67,7 @@ export function LessonViewer({
         isSubmitting={isCompleting}
         hasError={completionFailed}
         onComplete={onComplete}
+        {...(rewards ? { rewards } : {})}
       />
 
       <p className="mt-6">

@@ -2,6 +2,7 @@ import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
 import type { Ref } from "react";
 
 import type { LearningLanguage } from "./content-blocks.js";
+import { RewardNotice } from "./reward-notice.js";
 
 export interface ExerciseResultProps {
   /** The server's verdict on the submitted answer, once there is one. */
@@ -29,7 +30,8 @@ export interface ExerciseResultProps {
  * focusable by script only (`tabIndex=-1`): the submit button is disabled once a
  * verdict shows, and without somewhere to put focus a keyboard user would be left
  * on nothing. Every string — including the exercise's own feedback — is rendered
- * as text.
+ * as text. What the answer earned (M8) is the server's report and is shown inside the same
+ * region, so it is announced with the verdict.
  */
 export function ExerciseResult({
   evaluation,
@@ -84,6 +86,7 @@ export function ExerciseResult({
             <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">
               Attempt {evaluation.result.attemptCount}
             </p>
+            <RewardNotice rewards={evaluation.rewards} />
           </div>
         ) : null}
       </div>

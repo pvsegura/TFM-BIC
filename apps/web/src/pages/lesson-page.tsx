@@ -73,6 +73,7 @@ export function LessonPage() {
           onComplete={() => {
             completeMutation.mutate(lesson.id);
           }}
+          {...(completeMutation.data ? { rewards: completeMutation.data.rewards } : {})}
           practice={<LessonExercises lessonId={lesson.id} />}
           backHref={`${LESSONS_HREF}?language=${enc(lesson.languageId)}&level=${enc(lesson.levelId)}`}
         />

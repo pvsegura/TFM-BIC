@@ -1,3 +1,4 @@
+import type { RewardsResponse } from "@tfm-bic/contracts";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";
@@ -114,5 +115,47 @@ describe("LessonCompletion", () => {
     setup({ status: "completed", hasError: true });
 
     expect(screen.queryByRole("alert")).not.toBeInTheDocument();
+  });
+});
+
+describe("LessonCompletion — rewards", () => {
+  const EARNED: RewardsResponse = {
+    pointsAwarded: 75,
+    achievementsUnlocked: [
+      {
+        key: "first-lesson",
+        title: "First lesson",
+        description: "Complete your first lesson.",
+        iconId: "book",
+        rewardPoints: 50,
+      },
+    ],
+  };
+
+  it("shows what completing the lesson earned, inside the status region that announces the completion", () => {
+    setup({ status: "completed", rewards: EARNED });
+
+    const status = screen.getByRole("status");
+    expect(status).toHaveTextContent("Lesson completed");
+    expect(status).toHaveTextContent("+75 points");
+    expect(status).toHaveTextContent("First lesson");
+  });
+
+  it("shows nothing extra when completing again earned nothing", () => {
+    setup({ status: "completed", rewards: { pointsAwarded: 0, achievementsUnlocked: [] } });
+
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
+  });
+
+  it("shows no reward before the lesson is completed, whatever it is given", () => {
+    setup({ status: "in_progress", rewards: EARNED });
+
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
+  });
+
+  it("shows no reward when none was reported, as on a page reload", () => {
+    setup({ status: "completed" });
+
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
   });
 });

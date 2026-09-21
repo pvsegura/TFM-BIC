@@ -219,6 +219,47 @@ describe("ExercisePage: answering", () => {
     expect(screen.getByRole("status")).toHaveTextContent("Dzień dobry is polite.");
   });
 
+  it("shows what the answer earned, as the server reported it, with the verdict", async () => {
+    const api = mockApi();
+    api.submit.mockResolvedValue({
+      ...CORRECT,
+      rewards: {
+        pointsAwarded: 60,
+        achievementsUnlocked: [
+          {
+            key: "first-exercise",
+            title: "First exercise",
+            description: "Answer an exercise correctly for the first time.",
+            iconId: "spark",
+            rewardPoints: 50,
+          },
+        ],
+      },
+    });
+    renderAt("/learn/exercises/pl-greetings-polite-hello");
+    const user = userEvent.setup();
+
+    await user.click(await screen.findByRole("radio", { name: "Dzień dobry" }));
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+
+    await waitFor(() => {
+      expect(screen.getByRole("status")).toHaveTextContent("+60 points");
+    });
+    expect(screen.getByRole("status")).toHaveTextContent("Achievement unlocked: First exercise");
+  });
+
+  it("shows no reward for an answer that earned nothing", async () => {
+    mockApi();
+    renderAt("/learn/exercises/pl-greetings-polite-hello");
+    const user = userEvent.setup();
+
+    await user.click(await screen.findByRole("radio", { name: "Dzień dobry" }));
+    await user.click(screen.getByRole("button", { name: "Check answer" }));
+
+    await screen.findByText("Correct answer:", { exact: false });
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
+  });
+
   it("shows an incorrect verdict as the server gave it", async () => {
     const api = mockApi();
     api.submit.mockResolvedValue(INCORRECT);

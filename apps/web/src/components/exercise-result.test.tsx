@@ -1,5 +1,5 @@
 import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
-import { render, screen } from "@testing-library/react";
+import { render, screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 
 import { ExerciseResult } from "./exercise-result.js";
@@ -118,5 +118,41 @@ describe("ExerciseResult", () => {
     renderResult();
 
     expect(status()).toHaveAttribute("tabindex", "-1");
+  });
+});
+
+describe("ExerciseResult — rewards", () => {
+  const EARNED: ExerciseAnswerResponse = {
+    ...CORRECT,
+    rewards: {
+      pointsAwarded: 60,
+      achievementsUnlocked: [
+        {
+          key: "first-exercise",
+          title: "First exercise",
+          description: "Answer an exercise correctly for the first time.",
+          iconId: "spark",
+          rewardPoints: 50,
+        },
+      ],
+    },
+  };
+
+  it("shows what the server rewarded inside the verdict's live region, so it is announced with it", () => {
+    renderResult({ evaluation: EARNED });
+
+    const status = screen.getByRole("status");
+    expect(within(status).getByText("+60 points")).toBeVisible();
+    expect(within(status).getByText("First exercise")).toBeVisible();
+  });
+
+  it("shows no reward for a repeat or a wrong answer", () => {
+    renderResult({ evaluation: CORRECT });
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
+  });
+
+  it("shows no reward while a verdict is still being checked", () => {
+    renderResult({ evaluation: undefined, isChecking: true });
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
   });
 });

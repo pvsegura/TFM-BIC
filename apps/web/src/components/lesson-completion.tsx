@@ -1,11 +1,15 @@
-import type { LessonProgressResponse } from "@tfm-bic/contracts";
+import type { LessonProgressResponse, RewardsResponse } from "@tfm-bic/contracts";
 import { Button } from "@tfm-bic/ui";
+
+import { RewardNotice } from "./reward-notice.js";
 
 export interface LessonCompletionProps {
   status: LessonProgressResponse["status"];
   isSubmitting: boolean;
   hasError: boolean;
   onComplete: () => void;
+  /** What completing just earned, as the server reported it. Absent when nothing was reported (a page reload). */
+  rewards?: RewardsResponse;
 }
 
 /**
@@ -24,6 +28,7 @@ export function LessonCompletion({
   isSubmitting,
   hasError,
   onComplete,
+  rewards,
 }: LessonCompletionProps) {
   const completed = status === "completed";
 
@@ -48,6 +53,7 @@ export function LessonCompletion({
             Lesson completed. You can read it again any time.
           </p>
         ) : null}
+        {completed && rewards ? <RewardNotice rewards={rewards} /> : null}
       </div>
       {completed ? null : (
         <>

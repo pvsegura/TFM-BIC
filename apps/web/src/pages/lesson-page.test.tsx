@@ -278,6 +278,44 @@ describe("LessonPage: completing", () => {
     expect(screen.getAllByText("Completed").length).toBeGreaterThan(0);
   });
 
+  it("shows what completing earned, as the server reported it, in the completion message", async () => {
+    const user = userEvent.setup();
+    const api = mockApi(IN_PROGRESS);
+    api.complete.mockResolvedValue({
+      ...COMPLETED,
+      rewards: {
+        pointsAwarded: 75,
+        achievementsUnlocked: [
+          {
+            key: "first-lesson",
+            title: "First lesson",
+            description: "Complete your first lesson.",
+            iconId: "book",
+            rewardPoints: 50,
+          },
+        ],
+      },
+    });
+    renderAt("/learn/lessons/pl-greetings");
+    await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" });
+
+    await user.click(screen.getByRole("button", { name: "Complete lesson" }));
+
+    await waitFor(() => {
+      expect(screen.getByRole("status")).toHaveTextContent("Lesson completed");
+    });
+    expect(screen.getByRole("status")).toHaveTextContent("+75 points");
+    expect(screen.getByRole("status")).toHaveTextContent("Achievement unlocked: First lesson");
+  });
+
+  it("shows no reward for a lesson that was already completed", async () => {
+    mockApi(COMPLETED);
+    renderAt("/learn/lessons/pl-greetings");
+    await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" });
+
+    expect(screen.queryByTestId("reward-notice")).not.toBeInTheDocument();
+  });
+
   it("disables the button while saving so the request cannot be sent twice", async () => {
     const user = userEvent.setup();
     const api = mockApi(IN_PROGRESS);
