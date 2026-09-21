@@ -81,3 +81,22 @@ export {
   profileValidationErrorResponseSchema,
   type ProfileValidationErrorResponse,
 } from "./profile/profile-validation-error.schema.js";
+
+// Exercises (M7): the on-disk exercise file format and the student-facing exercise API shapes.
+export { exerciseIdSchema } from "./content/identifiers.schema.js";
+export { exerciseFileSchema, type ExerciseFile } from "./exercise/exercise-file.schema.js";
+export {
+  exerciseAnswerRequestSchema,
+  exerciseAnswerResponseSchema,
+  exerciseIdParamSchema,
+  exerciseListResponseSchema,
+  exerciseResponseSchema,
+  exerciseResultResponseSchema,
+  exerciseSummaryResponseSchema,
+  type ExerciseAnswerRequest,
+  type ExerciseAnswerResponse,
+  type ExerciseListResponse,
+  type ExerciseResponse,
+  type ExerciseResultResponse,
+  type ExerciseSummaryResponse,
+} from "./exercise/exercise-response.schema.js";
