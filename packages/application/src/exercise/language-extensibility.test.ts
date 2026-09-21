@@ -68,6 +68,8 @@ const catalog: ContentCatalog = {
       order: 1,
     }),
   ],
+  vocabularyCategories: [],
+  vocabulary: [],
 };
 
 function setup() {

@@ -88,6 +88,37 @@ export function exerciseFile(
   };
 }
 
+/** One vocabulary entry as it appears inside a category file (it inherits language, category and instruction language). */
+export function vocabularyEntry(id: string, overrides: Record<string, unknown> = {}) {
+  return {
+    id,
+    status: "published",
+    order: 10,
+    lemma: `lemma ${id}`,
+    translation: `meaning ${id}`,
+    ...overrides,
+  };
+}
+
+/** A vocabulary category file for a language, holding `items` (one valid entry by default). */
+export function vocabularyFile(
+  categoryId: string,
+  languageId: string,
+  overrides: Record<string, unknown> = {},
+) {
+  return {
+    schemaVersion: 1,
+    id: categoryId,
+    languageId,
+    status: "published",
+    order: 10,
+    instructionLanguage: "en",
+    title: `Category ${categoryId}`,
+    items: [vocabularyEntry(`${languageId}-${categoryId}-one`)],
+    ...overrides,
+  };
+}
+
 /** A complete, valid one-language tree for `code` (a fictional code in tests). */
 export function validTree(code = "xx"): FixtureFiles {
   return {

@@ -1,7 +1,12 @@
 import { readdir, readFile, stat } from "node:fs/promises";
 import path from "node:path";
 
-import { contentFileSchema, exerciseFileSchema, languageFileSchema } from "@tfm-bic/contracts";
+import {
+  contentFileSchema,
+  exerciseFileSchema,
+  languageFileSchema,
+  vocabularyFileSchema,
+} from "@tfm-bic/contracts";
 import {
   isValidLanguageId,
   isValidLevelId,
@@ -11,6 +16,8 @@ import {
   type Exercise,
   type Language,
   type LanguageLevel,
+  type VocabularyCategory,
+  type VocabularyItem,
 } from "@tfm-bic/domain";
 
 import type { ContentIssue } from "./content-validation.error.js";
@@ -168,6 +175,97 @@ async function loadExerciseFile(
   return isWhereItSaysItIs(exercise, expected, location, issues) ? exercise : undefined;
 }
 
+interface LoadedVocabulary {
+  category: VocabularyCategory;
+  items: VocabularyItem[];
+}
+
+/**
+ * One category file: its category and every entry in it. The file must sit in its language's
+ * `vocabulary/` folder and be named after its category id; its entries take the language, the
+ * category and the instruction language from the file, so an entry can never disagree with them.
+ */
+async function loadVocabularyFile(
+  absolute: string,
+  location: string,
+  expected: { languageId: string; fileName: string },
+  issues: ContentIssue[],
+): Promise<LoadedVocabulary | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  const parsed = vocabularyFileSchema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+
+  const file = parsed.data;
+  let consistent = true;
+  if (file.languageId !== expected.languageId) {
+    issues.push({
+      location,
+      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
+    });
+    consistent = false;
+  }
+  if (expected.fileName !== `${file.id}.json`) {
+    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
+    consistent = false;
+  }
+  if (!consistent) {
+    return undefined;
+  }
+
+  const { languageId, instructionLanguage } = file;
+  return {
+    category: {
+      id: file.id,
+      languageId,
+      status: file.status,
+      order: file.order,
+      instructionLanguage,
+      title: file.title,
+      description: file.description,
+    },
+    items: file.items.map((item) => ({
+      ...item,
+      languageId,
+      categoryId: file.id,
+      instructionLanguage,
+    })),
+  };
+}
+
+async function loadVocabulary(
+  languageDir: string,
+  languageId: string,
+  catalog: { vocabularyCategories: VocabularyCategory[]; vocabulary: VocabularyItem[] },
+  issues: ContentIssue[],
+): Promise<void> {
+  const location = `languages/${languageId}/vocabulary`;
+  const files = (await readDirectory(path.join(languageDir, "vocabulary"))) ?? [];
+  for (const file of files) {
+    if (!file.isFile() || !file.name.endsWith(".json")) {
+      continue;
+    }
+    const loaded = await loadVocabularyFile(
+      path.join(languageDir, "vocabulary", file.name),
+      `${location}/${file.name}`,
+      { languageId, fileName: file.name },
+      issues,
+    );
+    if (loaded) {
+      catalog.vocabularyCategories.push(loaded.category);
+      catalog.vocabulary.push(...loaded.items);
+    }
+  }
+}
+
 /** Reads every `.json` file in one folder with `load`, in name order, keeping what is valid. */
 async function loadFolder<T>(
   directory: string,
@@ -243,6 +341,8 @@ async function loadLanguage(
     languageLevels: LanguageLevel[];
     content: ContentItem[];
     exercises: Exercise[];
+    vocabularyCategories: VocabularyCategory[];
+    vocabulary: VocabularyItem[];
   },
   issues: ContentIssue[],
 ): Promise<void> {
@@ -300,6 +400,8 @@ async function loadLanguage(
       await loadLevel(languageDir, languageId, folder.name, catalog, issues);
     }
   }
+
+  await loadVocabulary(languageDir, languageId, catalog, issues);
 }
 
 /**
@@ -312,6 +414,7 @@ async function loadLanguage(
  *   content/languages/<languageId>/language.json
  *   content/languages/<languageId>/levels/<levelId>/content/<contentId>.json
  *   content/languages/<languageId>/levels/<levelId>/exercises/<exerciseId>.json
+ *   content/languages/<languageId>/vocabulary/<categoryId>.json
  */
 export async function loadContentCatalog(contentRoot: string): Promise<LoadContentResult> {
   const languagesDir = path.join(contentRoot, "languages");
@@ -326,6 +429,8 @@ export async function loadContentCatalog(contentRoot: string): Promise<LoadConte
     languageLevels: [] as LanguageLevel[],
     content: [] as ContentItem[],
     exercises: [] as Exercise[],
+    vocabularyCategories: [] as VocabularyCategory[],
+    vocabulary: [] as VocabularyItem[],
   };
 
   for (const folder of languageFolders) {

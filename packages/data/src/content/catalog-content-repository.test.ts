@@ -53,6 +53,8 @@ const catalog: ContentCatalog = {
     item("xx-a", XX, "a1", "published"),
   ],
   exercises: [],
+  vocabularyCategories: [],
+  vocabulary: [],
 };
 
 const repository = new CatalogContentRepository(catalog);

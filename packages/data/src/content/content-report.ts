@@ -7,19 +7,20 @@ export interface ContentReport {
   exitCode: 0 | 1;
 }
 
-function plural(count: number, noun: string): string {
-  return `${String(count)} ${noun}${count === 1 ? "" : "s"}`;
+function plural(count: number, noun: string, pluralNoun = `${noun}s`): string {
+  return `${String(count)} ${count === 1 ? noun : pluralNoun}`;
 }
 
 /** Human-readable outcome of validating the content tree, for `pnpm content:validate`. */
 export function formatContentReport(result: LoadContentResult): ContentReport {
   if (result.ok) {
-    const { languages, content, exercises } = result.catalog;
+    const { languages, content, exercises, vocabulary, vocabularyCategories } = result.catalog;
     const published = content.filter(isPublished).length;
     const publishedExercises = exercises.filter(isPublished).length;
+    const publishedVocabulary = vocabulary.filter(isPublished).length;
     return {
       exitCode: 0,
-      text: `Content is valid: ${plural(languages.length, "language")}, ${plural(content.length, "content item")} (${String(published)} published), ${plural(exercises.length, "exercise")} (${String(publishedExercises)} published).`,
+      text: `Content is valid: ${plural(languages.length, "language")}, ${plural(content.length, "content item")} (${String(published)} published), ${plural(exercises.length, "exercise")} (${String(publishedExercises)} published), ${plural(vocabulary.length, "vocabulary entry", "vocabulary entries")} (${String(publishedVocabulary)} published) in ${plural(vocabularyCategories.length, "category", "categories")}.`,
     };
   }
 

@@ -38,6 +38,8 @@ describe("adding a language is data, not code", () => {
       makeContentItem("qq-two", "qq", "a2"),
     ],
     exercises: [],
+    vocabularyCategories: [],
+    vocabulary: [],
   };
   const repository = new FakeContentRepository(catalog);
   const qq = createLanguageId("qq");

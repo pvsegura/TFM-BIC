@@ -2,7 +2,13 @@ import { describe, expect, it } from "vitest";
 
 import { formatContentReport } from "./content-report.js";
 import { loadContentCatalog } from "./load-content-catalog.js";
-import { exerciseFile, makeContentRoot, validTree } from "./test-support/content-fixtures.js";
+import {
+  exerciseFile,
+  makeContentRoot,
+  validTree,
+  vocabularyEntry,
+  vocabularyFile,
+} from "./test-support/content-fixtures.js";
 
 describe("formatContentReport", () => {
   it("reports a valid catalog with counts and exit code 0", async () => {
@@ -44,6 +50,38 @@ describe("formatContentReport", () => {
 
       expect(report.exitCode).toBe(0);
       expect(report.text).toContain("2 exercises (1 published)");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("counts the vocabulary entries, how many are published and how many categories hold them", async () => {
+    const handle = await makeContentRoot({
+      ...validTree("xx"),
+      "languages/xx/vocabulary/food.json": vocabularyFile("food", "xx", {
+        items: [
+          vocabularyEntry("xx-bread"),
+          vocabularyEntry("xx-water", { order: 20 }),
+          vocabularyEntry("xx-milk", { order: 30, status: "draft" }),
+        ],
+      }),
+    });
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.exitCode).toBe(0);
+      expect(report.text).toContain("3 vocabulary entries (2 published) in 1 category");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("reports zero vocabulary plainly when there is none", async () => {
+    const handle = await makeContentRoot(validTree("xx"));
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.text).toContain("0 vocabulary entries (0 published) in 0 categories");
     } finally {
       await handle.cleanup();
     }

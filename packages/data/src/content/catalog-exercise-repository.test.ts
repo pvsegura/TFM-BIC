@@ -23,7 +23,14 @@ const exercises: Exercise[] = [
   makeTextAnswerExercise({ id: createExerciseId("pl-b-text"), lessonId: createContentId("pl-b") }),
 ];
 
-const catalog: ContentCatalog = { languages: [], languageLevels: [], content: [], exercises };
+const catalog: ContentCatalog = {
+  languages: [],
+  languageLevels: [],
+  content: [],
+  exercises,
+  vocabularyCategories: [],
+  vocabulary: [],
+};
 const repository = new CatalogExerciseRepository(catalog);
 
 describe("CatalogExerciseRepository", () => {
