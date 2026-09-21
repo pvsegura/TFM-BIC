@@ -6,7 +6,9 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 const VARIANT_CLASSES: Record<NonNullable<ButtonProps["variant"]>, string> = {
-  primary: "bg-accent text-white hover:opacity-90 focus-visible:outline-accent",
+  // Navy on the orange accent is about 5.5:1; white on it is about 2.8:1, below the 4.5:1 WCAG AA
+  // needs for text this size.
+  primary: "bg-accent text-primary hover:opacity-90 focus-visible:outline-accent",
   secondary:
     "bg-transparent text-primary border border-primary hover:bg-primary/5 focus-visible:outline-primary dark:text-surface dark:border-surface dark:hover:bg-surface/10",
 };

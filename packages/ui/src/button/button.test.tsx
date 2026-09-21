@@ -27,3 +27,14 @@ describe("Button", () => {
     expect(screen.getByRole("button", { name: "Disabled" })).toBeDisabled();
   });
 });
+
+describe("Button contrast", () => {
+  it("puts navy text on the orange accent fill, not white: white on this orange is about 2.8:1, navy is about 5.5:1 (WCAG AA needs 4.5:1)", () => {
+    render(<Button>Save</Button>);
+
+    const classes = screen.getByRole("button", { name: "Save" }).className;
+    expect(classes).toContain("bg-accent");
+    expect(classes).toContain("text-primary");
+    expect(classes).not.toContain("text-white");
+  });
+});
