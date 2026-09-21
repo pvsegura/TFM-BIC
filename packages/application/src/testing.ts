@@ -8,3 +8,4 @@
 export * from "./identity/test-support/fakes.js";
 export * from "./profile/test-support/fakes.js";
 export * from "./content/test-support/fakes.js";
+export * from "./lesson/test-support/fakes.js";

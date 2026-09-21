@@ -74,6 +74,29 @@ export {
   type GetContentInput,
 } from "./content/use-cases/get-content.use-case.js";
 
+// Lessons (M6) port — implemented in packages/data — and use cases. Lesson content comes
+// from the content port above; only the student's progress has its own port.
+export type { LessonProgressRepository } from "./lesson/ports/lesson-progress-repository.js";
+export { toProgressView, type LessonProgressView } from "./lesson/progress-view.js";
+export {
+  ListLessonsUseCase,
+  type LessonSummary,
+  type ListLessonsInput,
+} from "./lesson/use-cases/list-lessons.use-case.js";
+export {
+  GetLessonUseCase,
+  type GetLessonInput,
+  type LessonDetail,
+} from "./lesson/use-cases/get-lesson.use-case.js";
+export {
+  StartLessonUseCase,
+  type StartLessonInput,
+} from "./lesson/use-cases/start-lesson.use-case.js";
+export {
+  CompleteLessonUseCase,
+  type CompleteLessonInput,
+} from "./lesson/use-cases/complete-lesson.use-case.js";
+
 // Student Profile (M4) port — implemented in packages/data.
 export type { ProfilePatch, ProfileRepository } from "./profile/ports/profile-repository.js";
 
