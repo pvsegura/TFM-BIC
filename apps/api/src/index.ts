@@ -9,6 +9,10 @@ import {
   createContentDependencies,
   type ContentDependencies,
 } from "./composition/content-dependencies.js";
+import {
+  createLessonDependencies,
+  type LessonDependencies,
+} from "./composition/lesson-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
@@ -23,11 +27,13 @@ const env = loadEnv();
 let authDeps: AuthDependencies;
 let profileDeps: ProfileDependencies;
 let contentDeps: ContentDependencies;
+let lessonDeps: LessonDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
     profile: profileDeps,
     content: contentDeps,
+    lessons: lessonDeps,
   } = await createTestDependencies(env.CONTENT_DIR));
 } else {
   if (!env.DATABASE_URL) {
@@ -36,9 +42,10 @@ if (env.NODE_ENV === "test") {
   authDeps = createAuthDependencies(env.DATABASE_URL);
   profileDeps = createProfileDependencies(env.DATABASE_URL);
   contentDeps = await createContentDependencies(env.CONTENT_DIR);
+  lessonDeps = createLessonDependencies(env.DATABASE_URL);
 }
 
-const app = buildServer(env, authDeps, profileDeps, contentDeps);
+const app = buildServer(env, authDeps, profileDeps, contentDeps, lessonDeps);
 
 async function start(): Promise<void> {
   try {
@@ -52,7 +59,7 @@ async function start(): Promise<void> {
 async function shutdown(signal: string): Promise<void> {
   app.log.info({ signal }, "Shutting down");
   await app.close();
-  await Promise.all([authDeps.close(), profileDeps.close()]);
+  await Promise.all([authDeps.close(), profileDeps.close(), lessonDeps.close()]);
   process.exit(0);
 }
 

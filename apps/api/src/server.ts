@@ -11,12 +11,15 @@ import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
 import type { ContentDependencies } from "./composition/content-dependencies.js";
 import { createContentUseCases } from "./composition/content-use-cases.js";
+import type { LessonDependencies } from "./composition/lesson-dependencies.js";
+import { createLessonUseCases } from "./composition/lesson-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
 import { registerLanguageRoutes } from "./routes/languages.route.js";
+import { registerLessonRoutes } from "./routes/lessons.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 
@@ -25,6 +28,7 @@ export function buildServer(
   authDeps: AuthDependencies,
   profileDeps: ProfileDependencies,
   contentDeps: ContentDependencies,
+  lessonDeps: LessonDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -74,6 +78,14 @@ export function buildServer(
     const contentUseCases = createContentUseCases(contentDeps);
     registerLanguageRoutes(app, { useCases: contentUseCases, env });
     registerContentRoutes(app, { useCases: contentUseCases, env });
+
+    // Lessons (M6) are authenticated-only: they build on the content use cases and add only the
+    // student's own progress. The user always comes from the session, never from the request.
+    registerLessonRoutes(app, {
+      useCases: createLessonUseCases(contentUseCases, lessonDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
 
     registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });
   });

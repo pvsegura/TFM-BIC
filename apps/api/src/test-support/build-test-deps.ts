@@ -2,6 +2,7 @@ import {
   FakeContentRepository,
   FakeEmailService,
   FakeEmailVerificationTokenRepository,
+  FakeLessonProgressRepository,
   FakePasswordHasher,
   FakePasswordResetTokenRepository,
   FakeProfileRepository,
@@ -14,6 +15,7 @@ import {
 
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
+import type { LessonDependencies } from "../composition/lesson-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 
 /** Fast, in-memory dependencies for apps/api's own HTTP-layer tests —
@@ -51,10 +53,19 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
 
   const contentDeps: ContentDependencies = { contentRepository };
 
+  const lessonProgressRepository = new FakeLessonProgressRepository();
+  const lessonDeps: LessonDependencies = {
+    lessonProgressRepository,
+    clock,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
     contentDeps,
+    lessonDeps,
+    lessonProgressRepository,
     clock,
     userRepository,
     sessionRepository,

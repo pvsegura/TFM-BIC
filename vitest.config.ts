@@ -45,12 +45,14 @@ export default defineConfig({
         // auth-use-cases.ts, which those tests do exercise for real).
         "apps/api/src/composition/auth-dependencies.ts",
         "apps/api/src/composition/profile-dependencies.ts",
+        "apps/api/src/composition/lesson-dependencies.ts",
         "apps/api/src/composition/test-dependencies.ts",
         // Real `pg.Pool`/Drizzle connection factory — repository tests use
         // the PGlite test-support factory instead (see
         // db/test-support/create-test-db.ts), never this one.
         "packages/data/src/identity/db/client.ts",
         "packages/data/src/profile/db/client.ts",
+        "packages/data/src/lessons/db/client.ts",
         // `pnpm content:validate` entry point: argv in, exit code out. The loader and the
         // report formatter it calls are unit-tested; only the bootstrap is left uncovered.
         "packages/data/src/content/validate-content.cli.ts",
