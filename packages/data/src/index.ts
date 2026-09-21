@@ -21,3 +21,7 @@ export { loadContentCatalog, type LoadContentResult } from "./content/load-conte
 // Student Profile (M4).
 export { createProfileDb, type ProfileDb, type ProfileDbHandle } from "./profile/db/client.js";
 export { DrizzleProfileRepository } from "./profile/profile.repository.js";
+
+// Lessons (M6) — lesson progress only; lesson content is the M5 files.
+export { createLessonsDb, type LessonsDb, type LessonsDbHandle } from "./lessons/db/client.js";
+export { DrizzleLessonProgressRepository } from "./lessons/lesson-progress.repository.js";

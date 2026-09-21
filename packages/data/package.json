@@ -17,6 +17,8 @@
     "db:migrate": "drizzle-kit migrate",
     "db:generate:profile": "drizzle-kit generate --config drizzle.profile.config.ts",
     "db:migrate:profile": "drizzle-kit migrate --config drizzle.profile.config.ts",
+    "db:generate:lessons": "drizzle-kit generate --config drizzle.lessons.config.ts",
+    "db:migrate:lessons": "drizzle-kit migrate --config drizzle.lessons.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts"
   },
   "dependencies": {

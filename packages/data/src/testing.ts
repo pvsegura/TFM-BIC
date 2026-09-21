@@ -11,3 +11,7 @@ export {
   createProfileTestDb,
   type ProfileTestDbHandle,
 } from "./profile/db/test-support/create-test-db.js";
+export {
+  createLessonsTestDb,
+  type LessonsTestDbHandle,
+} from "./lessons/db/test-support/create-test-db.js";
