@@ -2,6 +2,8 @@ import { createBrowserRouter, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
+import { AchievementsPage } from "./pages/achievements-page.js";
+import { DashboardPage } from "./pages/dashboard-page.js";
 import { ExercisePage } from "./pages/exercise-page.js";
 import { ForgotPasswordPage } from "./pages/forgot-password-page.js";
 import { ContentPage } from "./pages/content-page.js";
@@ -55,20 +57,18 @@ const EXERCISE_ROUTES = [{ path: "learn/exercises/:exerciseId", element: <Exerci
 
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
- * boundary on every request. Profile is the real M4 page and lessons the
- * real M6 pages and exercises the real M7 page; the rest are still placeholders for their features,
+ * boundary on every request. Profile is the real M4 page, lessons the
+ * real M6 pages, exercises the real M7 page and the dashboard and achievements the real M8 pages
+ * (their API is under `/gamification`, so no page-vs-API path clash); the rest are still placeholders for their features,
  * real now only in that they require login. */
 const APP_ROUTES = [
-  { path: "dashboard", element: placeholder("Dashboard", "Student dashboard placeholder.") },
+  { path: "dashboard", element: <DashboardPage /> },
   ...LESSON_ROUTES,
   ...EXERCISE_ROUTES,
   { path: "vocabulary", element: placeholder("Vocabulary", "Vocabulary practice placeholder.") },
   { path: "phonetics", element: placeholder("Phonetics", "Phonetics practice placeholder.") },
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
-  {
-    path: "achievements",
-    element: placeholder("Achievements", "Gamification/achievements placeholder."),
-  },
+  { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },
   { path: "settings", element: placeholder("Settings", "Account settings placeholder.") },
 ];

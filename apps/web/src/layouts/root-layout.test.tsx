@@ -67,6 +67,28 @@ describe("RootLayout", () => {
     );
   });
 
+  it("links to the dashboard and the achievements only when signed in", async () => {
+    const spy = vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    const { unmount } = renderRootLayout();
+    await screen.findByRole("link", { name: "Log in" });
+    expect(screen.queryByRole("link", { name: "Achievements" })).not.toBeInTheDocument();
+    unmount();
+
+    spy.mockResolvedValue({
+      id: "1",
+      email: "user@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
+    renderRootLayout();
+
+    expect(await screen.findByRole("link", { name: "Achievements" })).toHaveAttribute(
+      "href",
+      "/achievements",
+    );
+    expect(screen.getByRole("link", { name: "Dashboard" })).toHaveAttribute("href", "/dashboard");
+  });
+
   it("renders the current user's email and a log-out control when authenticated", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
       id: "1",

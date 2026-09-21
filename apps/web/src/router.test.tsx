@@ -20,6 +20,18 @@ function isBehindLogin(path: string) {
 }
 
 describe("routes", () => {
+  it("serves the real dashboard and achievements pages, behind the login route", () => {
+    expect(leafPath("/dashboard")).toBe("dashboard");
+    expect(leafPath("/achievements")).toBe("achievements");
+    expect(isBehindLogin("/dashboard")).toBe(true);
+    expect(isBehindLogin("/achievements")).toBe(true);
+  });
+
+  it("does not use an API path for the gamification pages, so no proxy bypass is needed", () => {
+    // The API lives under /gamification; the pages are /dashboard and /achievements.
+    expect(leafPath("/gamification/summary")).toBe("*");
+  });
+
   it("puts the lessons list under /learn/lessons, ahead of the public /learn/:languageCode route", () => {
     expect(leafPath("/learn/lessons")).toBe("learn/lessons");
   });
