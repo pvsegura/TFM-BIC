@@ -78,12 +78,14 @@ const CORRECT: ExerciseAnswerResponse = {
   feedback: "Dzień dobry is polite.",
   correctAnswer: "a",
   result: { status: "correct", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 const INCORRECT: ExerciseAnswerResponse = {
   correct: false,
   feedback: "Dzień dobry is polite.",
   correctAnswer: "a",
   result: { status: "incorrect", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 function renderAt(path: string) {

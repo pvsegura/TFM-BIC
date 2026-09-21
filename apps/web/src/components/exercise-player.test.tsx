@@ -38,12 +38,14 @@ const CORRECT: ExerciseAnswerResponse = {
   feedback: "Dzień dobry is polite.",
   correctAnswer: "a",
   result: { status: "correct", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 const INCORRECT: ExerciseAnswerResponse = {
   correct: false,
   feedback: "Dzień dobry is polite.",
   correctAnswer: "a",
   result: { status: "incorrect", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 type Overrides = Partial<ExercisePlayerProps>;
@@ -182,6 +184,7 @@ describe("ExercisePlayer", () => {
       exercise: {
         ...CHOICE,
         result: { status: "correct", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+        rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
       } as unknown as ExerciseResponse,
       evaluation: INCORRECT,
     });

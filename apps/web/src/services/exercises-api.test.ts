@@ -38,6 +38,7 @@ const EVALUATION = {
   feedback: "Dzień dobry is polite.",
   correctAnswer: "a",
   result: { status: "correct", attemptCount: 1, lastAnsweredAt: "2026-01-01T10:00:00.000Z" },
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 function stub(status: number, body: unknown) {

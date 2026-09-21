@@ -1,14 +1,15 @@
 import {
-  catalogErrorResponseSchema,
+  lessonCompletionResponseSchema,
   lessonListResponseSchema,
   lessonProgressResponseSchema,
   lessonResponseSchema,
+  type LessonCompletionResponse,
   type LessonListResponse,
   type LessonProgressResponse,
   type LessonResponse,
 } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { requestJson } from "./api-request.js";
 
 /**
  * Lessons are per-student, so — unlike the public catalog client — every
@@ -18,32 +19,6 @@ import { ApiError } from "./api-error.js";
  * contract, so a lesson with a block type this version does not know, or text
  * that looks like markup, is refused before it can reach a component.
  */
-const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
-
-async function toApiError(response: Response): Promise<ApiError> {
-  try {
-    const parsed = catalogErrorResponseSchema.safeParse(await response.json());
-    return new ApiError(
-      parsed.success ? parsed.data.error : GENERIC_ERROR_MESSAGE,
-      response.status,
-    );
-  } catch {
-    return new ApiError(GENERIC_ERROR_MESSAGE, response.status);
-  }
-}
-
-async function requestJson(url: string, init: RequestInit): Promise<unknown> {
-  const response = await fetch(url, {
-    ...init,
-    credentials: "include",
-    headers: { Accept: "application/json" },
-  });
-  if (!response.ok) {
-    throw await toApiError(response);
-  }
-  return response.json();
-}
-
 /** Every value that becomes part of a URL is percent-encoded, so a route
  * parameter can never add path segments or query parameters to a request. */
 const enc = encodeURIComponent;
@@ -53,12 +28,12 @@ export async function fetchLessons(
   levelId: string,
 ): Promise<LessonListResponse> {
   return lessonListResponseSchema.parse(
-    await requestJson(`/lessons?language=${enc(languageCode)}&level=${enc(levelId)}`, {}),
+    await requestJson(`/lessons?language=${enc(languageCode)}&level=${enc(levelId)}`),
   );
 }
 
 export async function fetchLesson(lessonId: string): Promise<LessonResponse> {
-  return lessonResponseSchema.parse(await requestJson(`/lessons/${enc(lessonId)}`, {}));
+  return lessonResponseSchema.parse(await requestJson(`/lessons/${enc(lessonId)}`));
 }
 
 /** Both actions send no body: the server knows the user (session), the lesson
@@ -69,8 +44,10 @@ export async function startLesson(lessonId: string): Promise<LessonProgressRespo
   );
 }
 
-export async function completeLesson(lessonId: string): Promise<LessonProgressResponse> {
-  return lessonProgressResponseSchema.parse(
+/** Completing answers with the persisted progress *and* what the server rewarded for it (the first
+ * completion earns points, a repeat earns none) — shown, never sent. */
+export async function completeLesson(lessonId: string): Promise<LessonCompletionResponse> {
+  return lessonCompletionResponseSchema.parse(
     await requestJson(`/lessons/${enc(lessonId)}/complete`, { method: "POST" }),
   );
 }

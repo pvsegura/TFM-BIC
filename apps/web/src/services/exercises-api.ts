@@ -1,5 +1,4 @@
 import {
-  catalogErrorResponseSchema,
   exerciseAnswerResponseSchema,
   exerciseListResponseSchema,
   exerciseResponseSchema,
@@ -9,7 +8,7 @@ import {
   type ExerciseResponse,
 } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { requestJson } from "./api-request.js";
 
 /**
  * Exercises are per-student, so — like lessons — every request carries the
@@ -20,46 +19,16 @@ import { ApiError } from "./api-error.js";
  * contract, which is an allowlist: a field the contract does not name — an
  * answer key that leaked, say — is dropped before it can reach a component.
  */
-const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
-
-async function toApiError(response: Response): Promise<ApiError> {
-  try {
-    const parsed = catalogErrorResponseSchema.safeParse(await response.json());
-    return new ApiError(
-      parsed.success ? parsed.data.error : GENERIC_ERROR_MESSAGE,
-      response.status,
-    );
-  } catch {
-    return new ApiError(GENERIC_ERROR_MESSAGE, response.status);
-  }
-}
-
-async function requestJson(url: string, init: RequestInit): Promise<unknown> {
-  const response = await fetch(url, { ...init, credentials: "include" });
-  if (!response.ok) {
-    throw await toApiError(response);
-  }
-  return response.json();
-}
-
 /** Every value that becomes part of a URL is percent-encoded, so a route
  * parameter can never add path segments or query parameters to a request. */
 const enc = encodeURIComponent;
 
 export async function fetchLessonExercises(lessonId: string): Promise<ExerciseListResponse> {
-  return exerciseListResponseSchema.parse(
-    await requestJson(`/lessons/${enc(lessonId)}/exercises`, {
-      headers: { Accept: "application/json" },
-    }),
-  );
+  return exerciseListResponseSchema.parse(await requestJson(`/lessons/${enc(lessonId)}/exercises`));
 }
 
 export async function fetchExercise(exerciseId: string): Promise<ExerciseResponse> {
-  return exerciseResponseSchema.parse(
-    await requestJson(`/exercises/${enc(exerciseId)}`, {
-      headers: { Accept: "application/json" },
-    }),
-  );
+  return exerciseResponseSchema.parse(await requestJson(`/exercises/${enc(exerciseId)}`));
 }
 
 /** Sends the student's answer — one key, nothing else — and resolves with the
@@ -72,7 +41,7 @@ export async function submitAnswer(
   return exerciseAnswerResponseSchema.parse(
     await requestJson(`/exercises/${enc(exerciseId)}/answer`, {
       method: "POST",
-      headers: { "Content-Type": "application/json", Accept: "application/json" },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     }),
   );

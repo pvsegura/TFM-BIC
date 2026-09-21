@@ -4,6 +4,7 @@ import { ApiError } from "./api-error.js";
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "./lessons-api.js";
 
 const PROGRESS = { status: "not_started", startedAt: null, completedAt: null };
+const NO_REWARDS = { pointsAwarded: 0, achievementsUnlocked: [] };
 
 const SUMMARY = {
   id: "pl-greetings",
@@ -169,11 +170,14 @@ describe.each([
       startedAt: "2026-01-01T10:00:00.000Z",
       completedAt: "2026-01-01T10:05:00.000Z",
     };
-    stub(200, persisted);
+    stub(200, { ...persisted, rewards: NO_REWARDS });
 
     const result = await call("pl-greetings");
 
-    expect(result).toEqual(persisted);
+    // Only completing reports what it earned; starting is the bare progress.
+    expect(result).toEqual(
+      action === "complete" ? { ...persisted, rewards: NO_REWARDS } : persisted,
+    );
     const { url, init } = lastCall();
     expect(url).toBe(`/lessons/pl-greetings/${action}`);
     expect(init.method).toBe("POST");
@@ -184,7 +188,7 @@ describe.each([
   });
 
   it("never sends a user id, a time or a status", async () => {
-    stub(200, PROGRESS);
+    stub(200, { ...PROGRESS, rewards: NO_REWARDS });
 
     await call("pl-greetings");
 
@@ -203,5 +207,38 @@ describe.each([
     stub(200, { status: "done" });
 
     await expect(call("pl-greetings")).rejects.toThrow();
+  });
+});
+
+describe("completeLesson — what the server rewarded", () => {
+  it("passes on the points and unlocked achievements the server reported, and ignores extra keys", async () => {
+    const reported = {
+      pointsAwarded: 75,
+      achievementsUnlocked: [
+        {
+          key: "first-lesson",
+          title: "First lesson",
+          description: "Complete your first lesson.",
+          iconId: "book",
+          rewardPoints: 50,
+        },
+      ],
+    };
+    stub(200, {
+      status: "completed",
+      startedAt: "2026-01-01T10:00:00.000Z",
+      completedAt: "2026-01-01T10:05:00.000Z",
+      rewards: { ...reported, userId: "someone" },
+    });
+
+    const result = await completeLesson("pl-greetings");
+
+    expect(result.rewards).toEqual(reported);
+  });
+
+  it("refuses a completion response that does not say what was rewarded", async () => {
+    stub(200, { status: "completed", startedAt: null, completedAt: "2026-01-01T10:05:00.000Z" });
+
+    await expect(completeLesson("pl-greetings")).rejects.toThrow();
   });
 });

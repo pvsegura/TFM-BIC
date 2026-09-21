@@ -59,6 +59,7 @@ const EVALUATION: ExerciseAnswerResponse = {
   feedback: "Yes.",
   correctAnswer: true,
   result: CORRECT,
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 afterEach(() => {

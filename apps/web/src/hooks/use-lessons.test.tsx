@@ -1,5 +1,6 @@
 import type {
   LessonListResponse,
+  LessonCompletionResponse,
   LessonProgressResponse,
   LessonResponse,
 } from "@tfm-bic/contracts";
@@ -42,6 +43,10 @@ const COMPLETED: LessonProgressResponse = {
   status: "completed",
   startedAt: "2026-01-01T10:00:00.000Z",
   completedAt: "2026-01-01T10:05:00.000Z",
+};
+const COMPLETION: LessonCompletionResponse = {
+  ...COMPLETED,
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 const SUMMARY = {
@@ -261,7 +266,7 @@ describe.each([
 
 describe("useCompleteLesson: one request at a time", () => {
   it("ignores a second click that arrives before the first has finished — a double-click sends one request", async () => {
-    let finish!: (progress: LessonProgressResponse) => void;
+    let finish!: (progress: LessonCompletionResponse) => void;
     const spy = vi.spyOn(lessonsApi, "completeLesson").mockReturnValue(
       new Promise((resolve) => {
         finish = resolve;
@@ -275,7 +280,7 @@ describe("useCompleteLesson: one request at a time", () => {
       result.current.mutate("pl-greetings");
     });
     await act(async () => {
-      finish(COMPLETED);
+      finish(COMPLETION);
       await Promise.resolve();
     });
 
@@ -289,7 +294,7 @@ describe("useCompleteLesson: one request at a time", () => {
     const spy = vi
       .spyOn(lessonsApi, "completeLesson")
       .mockRejectedValueOnce(new ApiError("Something went wrong. Please try again.", 500))
-      .mockResolvedValue(COMPLETED);
+      .mockResolvedValue(COMPLETION);
     const { wrapper } = setup();
     const { result } = renderHook(() => useCompleteLesson(), { wrapper });
 

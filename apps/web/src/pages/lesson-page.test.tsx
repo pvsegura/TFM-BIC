@@ -1,6 +1,7 @@
 import type {
   ExerciseListResponse,
   LanguagesResponse,
+  LessonCompletionResponse,
   LessonProgressResponse,
   LessonResponse,
 } from "@tfm-bic/contracts";
@@ -32,6 +33,10 @@ const COMPLETED: LessonProgressResponse = {
   status: "completed",
   startedAt: "2026-01-01T10:00:00.000Z",
   completedAt: "2026-01-01T10:05:00.000Z",
+};
+const COMPLETION: LessonCompletionResponse = {
+  ...COMPLETED,
+  rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
 function lesson(progress: LessonProgressResponse = NOT_STARTED) {
@@ -116,7 +121,7 @@ function mockApi(initial: LessonProgressResponse = NOT_STARTED) {
   return {
     lesson: vi.spyOn(lessonsApi, "fetchLesson").mockResolvedValue(lesson(initial)),
     start: vi.spyOn(lessonsApi, "startLesson").mockResolvedValue(IN_PROGRESS),
-    complete: vi.spyOn(lessonsApi, "completeLesson").mockResolvedValue(COMPLETED),
+    complete: vi.spyOn(lessonsApi, "completeLesson").mockResolvedValue(COMPLETION),
   };
 }
 
@@ -276,7 +281,7 @@ describe("LessonPage: completing", () => {
   it("disables the button while saving so the request cannot be sent twice", async () => {
     const user = userEvent.setup();
     const api = mockApi(IN_PROGRESS);
-    const pending = deferred<LessonProgressResponse>();
+    const pending = deferred<LessonCompletionResponse>();
     api.complete.mockReturnValue(pending.promise);
     renderAt("/learn/lessons/pl-greetings");
     await screen.findByRole("heading", { level: 1, name: "Greetings and goodbyes" });
@@ -288,7 +293,7 @@ describe("LessonPage: completing", () => {
 
     expect(saving).toBeDisabled();
     expect(api.complete).toHaveBeenCalledTimes(1);
-    pending.resolve(COMPLETED);
+    pending.resolve(COMPLETION);
     await waitFor(() => {
       expect(screen.getByRole("status")).toHaveTextContent("Lesson completed");
     });
