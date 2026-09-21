@@ -64,6 +64,7 @@ export { isLesson, type LessonId } from "./lesson/lesson.js";
 export {
   completeLesson,
   LESSON_PROGRESS_STATUSES,
+  LESSON_PROGRESS_VIEW_STATUSES,
   progressStatusOf,
   startLesson,
   type LessonProgress,

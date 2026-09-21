@@ -9,7 +9,8 @@ export const LESSON_PROGRESS_STATUSES = ["in_progress", "completed"] as const;
 export type StoredLessonProgressStatus = (typeof LESSON_PROGRESS_STATUSES)[number];
 
 /** What a student sees for a lesson: the stored statuses plus the derived `not_started`. */
-export type LessonProgressStatus = "not_started" | StoredLessonProgressStatus;
+export const LESSON_PROGRESS_VIEW_STATUSES = ["not_started", ...LESSON_PROGRESS_STATUSES] as const;
+export type LessonProgressStatus = (typeof LESSON_PROGRESS_VIEW_STATUSES)[number];
 
 /**
  * One student's state in one lesson. It belongs to the student; the lesson

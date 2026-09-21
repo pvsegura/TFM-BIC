@@ -54,6 +54,22 @@ export {
   type LevelResponse,
 } from "./content/catalog-response.schema.js";
 
+// Lessons (M6): student-facing lesson list, lesson and progress shapes.
+export {
+  lessonActionRequestSchema,
+  lessonIdParamSchema,
+  lessonListQuerySchema,
+  lessonListResponseSchema,
+  lessonProgressResponseSchema,
+  lessonResponseSchema,
+  lessonSummaryResponseSchema,
+  type LessonListQuery,
+  type LessonListResponse,
+  type LessonProgressResponse,
+  type LessonResponse,
+  type LessonSummaryResponse,
+} from "./lesson/lesson-response.schema.js";
+
 // Student Profile (M4).
 export { AVATAR_CATALOG, avatarIdSchema, type AvatarId } from "./profile/avatar-catalog.schema.js";
 export {

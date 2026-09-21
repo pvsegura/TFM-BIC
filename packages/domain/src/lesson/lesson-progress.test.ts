@@ -4,6 +4,7 @@ import { createContentId } from "../content/content-id.js";
 import {
   completeLesson,
   LESSON_PROGRESS_STATUSES,
+  LESSON_PROGRESS_VIEW_STATUSES,
   progressStatusOf,
   startLesson,
   type LessonProgress,
@@ -40,6 +41,12 @@ describe("progressStatusOf", () => {
   it("reports the stored status otherwise", () => {
     expect(progressStatusOf(inProgress)).toBe("in_progress");
     expect(progressStatusOf(completed)).toBe("completed");
+  });
+});
+
+describe("LESSON_PROGRESS_VIEW_STATUSES", () => {
+  it("is the stored statuses plus the derived not_started, in progression order", () => {
+    expect(LESSON_PROGRESS_VIEW_STATUSES).toEqual(["not_started", "in_progress", "completed"]);
   });
 });
 
