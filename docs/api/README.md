@@ -1,6 +1,6 @@
 # API Documentation
 
-Status: M3 (Identity & Authentication), M4 (Student Profile) and M5 (Languages & Content) endpoints exist; no
+Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons) and M7 (Exercises) endpoints exist; no
 OpenAPI/schema-derived spec generation wired up yet — see below.
 
 ## Auth endpoints (M3)
@@ -128,6 +128,47 @@ with it (no page-vs-API proxy workaround, unlike `/profile`).
 
 Database: the `lesson_progress` table has its own migration set (`pnpm --filter @tfm-bic/data
 db:migrate:lessons`, after Identity's `db:migrate`).
+
+## Exercise endpoints (M7)
+
+Schemas: `packages/contracts/src/exercise/`. **Authenticated** (session cookie; `401 { error }` otherwise), generic
+across languages, levels and exercise types, rationale in [ADR-020](../adr/adr-020-exercises.md) and
+[exercise-architecture.md](../architecture/exercise-architecture.md). An exercise is content (a validated file tied to a
+lesson); only the caller's attempts are stored. The user always comes from the session — never from the URL, query
+or body. Every response carries `Cache-Control: private, no-store`.
+
+| Method | Path                            | Rate limit | Notes                                                                                                                                                                                                   |
+| ------ | ------------------------------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/lessons/:lessonId/exercises`  | 120/min    | `{ exercises: [{ id, lessonId, languageId, levelId, type, order, prompt, instructionLanguage, result }], progress: { total, answered } }` in explicit order. **No options, no answer key.**             |
+| GET    | `/exercises/:exerciseId`        | 120/min    | One exercise as a student may see it **before** answering, plus `result`. Multiple choice adds `options: [{ id, text }]`; text answer and true/false add nothing. Never writes.                         |
+| POST   | `/exercises/:exerciseId/answer` | 60/min     | Body `{ "answer": <string \| boolean> }` and nothing else. Returns `{ correct, feedback, correctAnswer, result }`. Every accepted answer is an appended attempt. `Origin` checked; body capped at 2 KB. |
+
+`result` is `{ status: "unanswered" | "correct" | "incorrect", attemptCount, lastAnsweredAt }` — the student's own standing,
+derived from their **latest** attempt (`unanswered` = no attempts). `answer` is an option id (multiple choice), the typed
+text (text answer) or a boolean (true/false); the exercise's own type decides how it is judged — the client cannot
+name an evaluator. `correctAnswer` is in the same shape as an answer (an option id, text or boolean). `feedback` is the
+exercise's static explanation or `null`.
+
+The request is **strict**: any other key — `correct`, `userId`, `score`, `answeredAt`, `type`, `exerciseId` — is a
+`400 Invalid request.`, never ignored. There is no route to create, edit, publish or delete an exercise, and none that
+reads or changes another student's attempts (there is no attempt-history endpoint: the latest result and the count are
+part of the responses above).
+
+Errors (bodies are `{ error }` with a fixed message that never echoes the input or reveals the answer key):
+`400 Invalid request.` for a malformed exercise/lesson id or a body that is not exactly `{ answer }` (an `answer` of the
+wrong primitive type, too long, or extra keys); `400 Invalid answer.` for a well-shaped request whose answer is not a
+valid answer _to this exercise_ (an option it does not have, an empty text, a string for true/false) — refused, not
+judged, and **not** recorded; `401 Unauthenticated`; `403 Forbidden` (cross-origin write); `404` — `Exercise not found.`
+(the **same** body for a missing, draft, archived exercise, or one whose lesson is hidden, not a lesson or in a level
+that is not available) and `Lesson not found.` for the list; `413` for an oversized body; `415` for a non-JSON body;
+`429` when rate-limited; `501 This kind of exercise is not supported.` for a type with no registered evaluator; a
+generic `500` otherwise (including an exercise whose stored configuration is broken — nothing is recorded).
+
+The submitted answer is never logged. Database: the `exercise_attempts` table has its own migration set (`pnpm
+--filter @tfm-bic/data db:migrate:exercises`, after Identity's `db:migrate`).
+
+**Path note:** these paths are the API; the web pages are under `/learn/exercises` so they do not share a path with it
+(no page-vs-API proxy workaround, unlike `/profile`).
 
 ## Future direction
 

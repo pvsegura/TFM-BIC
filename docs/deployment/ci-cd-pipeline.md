@@ -23,7 +23,7 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
   (`package.json#packageManager`, `.nvmrc`) rather than whatever the agent happens to have.
 - **Install Dependencies**: `pnpm install --frozen-lockfile` — fails instead of silently rewriting
   `pnpm-lock.yaml` if the lockfile and manifests disagree (see [§ Dependency installation](#dependency-installation)).
-- **Content Validation** (M5): `pnpm content:validate` — loads every file under `content/` with the
+- **Content Validation** (M5; covers M7 exercise files too — the same loader validates every `exercises/*.json` and the exercise-to-lesson relationships): `pnpm content:validate` — loads every file under `content/` with the
   same loader the API runs at startup and prints every schema, location and catalog-consistency
   problem at once. It sits before lint/tests so malformed content fails fast with a readable list.
 - **Lint / Format Check / Typecheck**: `pnpm lint`, `pnpm format:check`, `pnpm typecheck` — cheap,

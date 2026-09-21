@@ -67,6 +67,14 @@ Polymorphic exercise types (multiple choice, fill-in-the-blank, matching, listen
 pronunciation, translation, ordering, etc.). Owns exercise definitions and validation rules per
 type; does not own attempts/scores (see Scoring).
 
+**As built in M7** ([ADR-020](../adr/adr-020-exercises.md), [exercise-architecture.md](exercise-architecture.md)): an
+exercise is content (a validated file tied to a lesson by `lessonId`), a discriminated union on `type` with three types
+— `multiple-choice`, `text-answer`, `true-false` — each owning its configuration, its answer, a pure deterministic
+evaluator (`parseAnswer`, `evaluate`) and a presenter (what a student may see before answering). An
+`ExerciseTypeRegistry` dispatches by type; there is no `if (type === …)` chain. The context also owns the append-only
+`ExerciseAttempt` (every submitted answer is one immutable row) and the derived `ExerciseAttemptSummary` (latest
+result + count). It computes no points, scores or streaks: those, and the adaptive features, will _consume_ attempts.
+
 ### Scoring / Progress
 
 Exercise attempts, correctness, points awarded, lesson-completion state, per-skill progress

@@ -110,6 +110,30 @@ Rationale: [ADR-019](../docs/adr/adr-019-lessons.md).
   in flight (a disabled button alone is not enough).
 - Status is always stated in words, never by colour alone; primary buttons use navy text on the accent (AA).
 
+## Exercise conventions (since M7)
+
+Rationale: [ADR-020](../docs/adr/adr-020-exercises.md); reference:
+[exercise-architecture.md](../docs/architecture/exercise-architecture.md).
+
+- **An exercise is content, not a record**: a validated file under `levels/<level>/exercises/`, tied to a lesson. Never add
+  an exercises table, a per-language exercise class, controller or page. Only `exercise_attempts` is stored.
+- **Content, evaluation and presentation are separate.** Configuration is data; evaluators are pure code
+  (`parseAnswer` + `evaluate`, no HTTP/React/DB/clock, no mutation); presenters build what a student may see field by
+  field. **No `if (type === …)` chain** — dispatch goes through `ExerciseTypeRegistry`; a new type is a module per
+  layer plus one registry line each, and no other type's code changes.
+- **The server is authoritative.** The client sends `{ answer }` and nothing else (strict schema); it never names an
+  evaluator, a user, a verdict, a score or a time. Never put an answer key in a response before an answer, and add a
+  test on the raw body when you touch a response.
+- **Malformed answers are refused, not judged** (`400`, no attempt). **Every well-formed submission is an attempt**;
+  attempts are append-only (no update/delete path), retries never touch earlier ones, the latest result is derived
+  (`summarizeAttempts`), and nothing is computed for points/streaks/adaptive features yet.
+- **Text answers**: NFC + trim + language-aware lower-casing only when not case-sensitive; never strip diacritics or
+  punctuation; variants are listed explicitly; no fuzzy matching.
+- **Never log a submitted answer.** Pages that would share an API path get another path (`/learn/exercises`); query
+  keys use the user-scoped root `["exercises", …]`; a submission the student can double-click keeps one request in
+  flight; the verdict is shown in words (never colour alone) and focus moves to it.
+- Web: no `dangerouslySetInnerHTML`/`innerHTML`/`eval`/computed dynamic import (`no-raw-html.test.ts`).
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

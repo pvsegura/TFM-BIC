@@ -53,6 +53,16 @@ per student (`lesson_progress`, its own `packages/data/src/lessons/` context). `
 [ADR-019](../docs/adr/adr-019-lessons.md) and the Lessons section of
 [content-architecture.md](../docs/architecture/content-architecture.md).
 
+## Exercises
+
+An exercise is content (a validated file tied to a lesson; `ExerciseId` is permanent), evaluated by a per-type
+strategy: each type owns its configuration, a pure `parseAnswer`/`evaluate` pair and a presenter, dispatched by an
+`ExerciseTypeRegistry` (no `if (type === …)` chain). Only `exercise_attempts` — append-only, one row per submitted
+answer — is stored (own `packages/data/src/exercises/` context). `ListLessonExercises`/`GetExercise`/
+`SubmitExerciseAnswer` sit on the lesson/content visibility use cases; three authenticated routes; pages under
+`/learn/exercises`. See [ADR-020](../docs/adr/adr-020-exercises.md) and
+[exercise-architecture.md](../docs/architecture/exercise-architecture.md).
+
 ## Monorepo layout
 
 `apps/{web,api}`, `packages/{domain,application,contracts,data,shared,ui,config,testing}`,

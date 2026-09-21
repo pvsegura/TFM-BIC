@@ -1,9 +1,9 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–6 complete**
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–7 complete**
 (architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
-Content & Languages, Lessons) —
+Content & Languages, Lessons, Exercises) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -39,6 +39,15 @@ see [current-state.md](current-state.md) for what that means concretely.
   session's and the POSTs take no body. Completion is explicit and idempotent; resume position within a
   lesson is not stored. Pages live at `/learn/lessons[/:lessonId]` because `/lessons` is the API path. See
   [ADR-019](../docs/adr/adr-019-lessons.md).
+
+- Exercises (M7): an exercise is content — a validated file under `levels/<level>/exercises/` tied to a lesson —
+  with three types (`multiple-choice`, `text-answer`, `true-false`), each with its own configuration schema, pure
+  evaluator and presenter behind an `ExerciseTypeRegistry`. The **server judges every answer**; the client sends only
+  `{ answer }`; answer keys never appear before an answer. Only `exercise_attempts` is stored — **append-only, every
+  well-formed submission is an attempt**, retries included; the current result is derived. Three **authenticated**
+  routes (`GET /lessons/:id/exercises`, `GET /exercises/:id`, `POST /exercises/:id/answer`); pages at
+  `/learn/exercises/:exerciseId` because `/exercises` is the API path. Polish A1 has nine seed exercises (not a bank).
+  See [ADR-020](../docs/adr/adr-020-exercises.md).
 
 ## Where things live
 

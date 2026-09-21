@@ -66,8 +66,11 @@ content/
             pl-greetings.json            # file name == content id
             pl-introducing-yourself.json
             ...
+          exercises/
+            pl-greetings-polite-hello.json   # file name == exercise id (M7)
+            ...
         a2/ … c2/                        # planned: no content/ folder yet
-  exercises/  video-scripts/             # reserved for later milestones (README only)
+  exercises/  video-scripts/             # `exercises/` is only a pointer (README); video-scripts is reserved
 ```
 
 A language is the folder `content/languages/<code>/`; its `language.json` is the only per-language
@@ -211,3 +214,31 @@ first student experience on top of it. **Content and progress are different thin
 
 Enrolment — persisting which language/level a student is learning — is still not stored (the URL holds it);
 see ADR-019 §8.
+
+## Exercises (M7)
+
+Rationale: [ADR-020](../adr/adr-020-exercises.md); reference: [exercise-architecture.md](exercise-architecture.md). Exercises
+follow the same rule as lessons: **content is files, the student's activity is the only thing in PostgreSQL.**
+
+- **An exercise is a file** under `levels/<level>/exercises/<exercise-id>.json` — `id`, `lessonId`, `languageId`, `levelId`,
+  `type`, `status`, `order`, `instructionLanguage`, `prompt`, optional `explanation`, and a `configuration` whose shape
+  depends on `type` (`multiple-choice`, `text-answer`, `true-false`). It has its own id space (language-prefixed,
+  never equal to a content id) and is tied to a **lesson** of the same language and level.
+- **What each side owns.** The files own the exercise (prompt, options, answer key, order, publication). The
+  application owns how an answer is judged (per-type evaluators) and what a student may see (per-type presenters).
+  PostgreSQL owns only `exercise_attempts`.
+- **Validation** is the same loader as all content (`pnpm content:validate`, the Jenkins stage, API start-up). Per file: a
+  strict schema per type. Catalog-wide: unique ids that never overlap content ids, the lesson must exist, be a
+  lesson and share the exercise's language and level, unique `order` within a lesson, and published exercises only on
+  published lessons in `available` levels. Invalid exercises stop the API from starting.
+- **Ordering** is `order` within the lesson, ties by id. **Status** is the content status model; only `published`
+  exercises of a visible lesson are ever returned, all other cases being one `404`.
+- **Answer keys** live only in the files and the server. The presentation an API returns before an answer is built
+  field by field and never includes them.
+- **Adding an exercise** is a file; adding an exercise _type_ is code (schema, evaluator, presenter, view).
+
+### Polish A1 seed exercises (M7)
+
+Nine original exercises across the three types, attached to the three existing lessons (greetings, introducing
+yourself, please/thank you/sorry). Every fact restates something already stated in the lesson. It exists to prove
+the engine; it is **not** a complete A1 exercise bank and does not claim to be.

@@ -110,6 +110,52 @@ Authenticated lesson list/detail and per-student progress. See [ADR-019](../adr/
 - **Not verified**: behaviour under truly concurrent connections to a real Postgres/Neon (the tests run on
   PGlite, which serialises queries); the atomicity rests on single-statement upserts.
 
+## Exercises (M7 — implemented)
+
+Authenticated exercise list/detail and answer submission. See [ADR-020](../adr/adr-020-exercises.md).
+
+- **Authentication is server-side** on all three routes (the `authenticate` hook): no cookie, a tampered cookie or a
+  logged-out session is `401` and nothing is written.
+- **The server is authoritative.** The client submits an answer and nothing else; the request schema is strict, so a
+  verdict (`correct`), `userId`, `score`, `answeredAt`, an exercise id or a type in the body is a `400` and records
+  nothing (tested per field). The evaluator is chosen by the exercise's own type, never by the client.
+- **Answer-key leakage** (critical): the presentation is built field by field by the type's presenter (the correct
+  option, the accepted answers, the settings and the explanation are left out by construction), passed through an
+  allowlisting response schema, and validated again by the client contract. Tests inspect the raw HTTP bodies of
+  list and detail for every type — including a stored exercise carrying extra fields — and Playwright records every
+  exercise response on the real pages. The verdict returns only `correct`, `feedback`, `correctAnswer` (the one shown
+  answer, not the list of accepted variants) and the result. **By design the correct answer is shown after every
+  submission** (this is practice, retry is allowed); that is a product choice, not a leak.
+- **IDOR / user isolation**: identity comes from the session only; there is no user id in any URL, query or body and
+  no attempt-history endpoint; two-student tests (API and E2E) show one student's attempts are invisible to and
+  untouchable by another.
+- **Unpublished content**: one `Exercise not found.` `404` for missing, draft, archived exercises and for exercises
+  whose lesson is hidden, not a lesson or in an unavailable level; answering any of them records nothing.
+- **Historical tampering**: attempts are append-only — the repository port has no update or delete, the API has no
+  route that changes an attempt, and `correct` is set by the evaluator at insert time.
+- **Invalid answers** are refused (`400 Invalid answer.`), not judged, and never stored, so junk cannot fill the table.
+- **Injection and traversal**: ids match a strict pattern (`400`), are bound parameters (Drizzle) and in-memory
+  lookups; injection-, traversal-, null-byte- and script-shaped ids and answers are tested at schema, route,
+  repository (an answer such as `'; DROP TABLE exercise_attempts;--` is stored as data) and E2E layers. The table
+  `CHECK`s the id shape and bounds the answer size.
+- **Malicious or malformed exercise content**: content is strict, plain-text-only structured data validated at load
+  (a bad exercise stops the API from starting); it cannot define functions, cannot name an evaluator and cannot make
+  the application load anything. Only evaluators registered by the application can run; an unregistered type is a
+  `501`; a broken stored configuration is a generic `500` that leaks nothing and records nothing.
+- **XSS**: exercise text (prompt, options, feedback, correct answer) is rendered as text by React inside fixed
+  components; markup-looking text is inert (tested for every view); `packages/ui` and `apps/web` are scanned by a
+  test that fails on `dangerouslySetInnerHTML`, `innerHTML`, `eval`, `new Function` or a dynamic import of a computed path.
+- **CSRF**: the answer route passes the `Origin` check (`403` cross-origin) on top of `SameSite=Strict`.
+- **Caching**: `Cache-Control: private, no-store` on every exercise response; the client cache is user-scoped and
+  dropped on logout/login.
+- **Abuse**: reads 120/min, **answers 60/min** per client (each is a stored row); bodies capped at 2 KB (`413`);
+  the answer text is bounded (500 characters, also by a database `CHECK`).
+- **Logging**: the request log records the exercise id, whether it was correct and the request id — **never the
+  submitted answer**, which is the student's own text — and no cookie, email or token.
+- **Known limitations**: attempts are retained indefinitely until user deletion (a later GDPR milestone); the
+  immutability of attempts rests on the absence of any write path other than insert, not on a database trigger;
+  behaviour under truly concurrent connections to a real Postgres/Neon is not verified (PGlite serialises queries).
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from

@@ -141,3 +141,43 @@ complete`, many completions and a start/complete race ending completed, the prim
   injection-like ids, planned levels, a 375px viewport with no horizontal overflow, and dark mode.
 - **Not covered**: axe-style accessibility scanning (still none), and contrast is checked by calculation
   (recorded in ADR-019), not by an automated tool.
+
+## Exercises (M7)
+
+Answer evaluation is business-critical, so it is tested hardest and at every layer regardless of coverage.
+
+- **Evaluators (pure unit tests)**: each type's `parseAnswer` and `evaluate` — correct, incorrect, every malformed
+  input (wrong type, empty, unknown option, control characters, over-long), malformed configuration, determinism
+  (same input → equal result), **no mutation** of the exercise, and the presenter's output contains nothing of the
+  key. Text answers additionally cover exact match, case rules, surrounding whitespace, **diacritics preserved**
+  (`żółty` ≠ `zolty`), decomposed (combining-mark) input, explicitly listed variants, unlisted punctuation, and
+  language-specific lower-casing. The registry is tested for completeness (every declared type is supported),
+  isolation (only the exercise's own evaluator runs), unsupported types, inherited names (`__proto__`) and duplicates.
+- **Schemas (contracts)**: the file format per type (every content rule above, including "several correct options
+  cannot be written"), the allowlisting response shapes stripping key fields, and the strict answer request.
+- **Content**: the catalog rules (lesson existence/type/language/level, ordering, publication), the loader over temp
+  trees, the report, and `shipped-exercises.test.ts`, which runs every shipped exercise's own answer key through the
+  real evaluators (correct and wrong), checks diacritics and that nothing is presented with its key.
+- **Application**: the three use cases over in-memory fakes with a fixed clock — visibility (one not-found for
+  draft/archived/hidden/non-lesson), ordering, batched lookup (no N+1), reads never write, refusal before persistence,
+  retry appends, per-user isolation, an ignored forged input, and `language-extensibility.test.ts` for fictional
+  languages (RTL, non-Latin).
+- **Repository (real Postgres via PGlite)**: append semantics, the `jsonb` type round-trip, unicode/SQL-looking
+  answers, the foreign key and cascade, both `CHECK`s, the single index, and the "latest attempt" SQL held to the domain
+  definition on a mixed history.
+- **HTTP**: authentication on every route, exact response shapes and **answer-key leakage on the raw bodies**,
+  mass-assignment refusal per field, IDOR with two students, identical `404`s, `400`/`413`/`415`/`403`/`501`/`500`,
+  injection/traversal ids, and both rate limits.
+- **Frontend**: the API client (encoding, the body has one key, contract validation dropping a leaked key), the
+  hooks (user-scoped keys, result written into the cache, **one submission in flight**, 401), each view (roles,
+  labels, keyboard, disabled, validation, inert markup, lang/dir), the registry, the result (live region present from
+  the start, words not colour), the player (focus to result, retry, next/back, **focus after a retry when the verdict
+  clears a render later** — a bug found only by Playwright), the list, the lesson's practice section and the pages.
+  `no-raw-html.test.ts` scans production source for HTML injection and code execution.
+- **Playwright** (`tests/e2e/exercises.spec.ts`): discovery from a lesson; multiple choice right and wrong; text
+  answer with retry and a second attempt; diacritics; true/false (including a false statement); persistence across a
+  refresh; double-click = one attempt; moving through a lesson; **answer-key protection on the real network
+  responses**; the server-authoritative and invalid-answer cases; logged-out, cross-student and injection-shaped
+  access; safe not-found; a 375px viewport (no horizontal overflow, tap-size options); dark mode.
+- **Not covered**: axe-style accessibility scanning (still none), true multi-connection concurrency on real Postgres,
+  and behaviour on runtimes without full ICU (case-insensitive comparison uses the exercise language's locale).
