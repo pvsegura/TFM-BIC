@@ -252,10 +252,27 @@ test.describe("completing a lesson", () => {
     const third = await page.request.post(`${API}/lessons/pl-greetings/complete`);
 
     expect([first.status(), second.status(), third.status()]).toEqual([200, 200, 200]);
-    const firstBody = (await first.json()) as { status: string; completedAt: string };
+    interface Completion {
+      status: string;
+      startedAt: string;
+      completedAt: string;
+      rewards: { pointsAwarded: number };
+    }
+    // The progress is what "idempotent" is about; the rewards (M8) are deliberately different: the
+    // first completion earns points, a repeat earns none.
+    const progressOf = ({ status, startedAt, completedAt }: Completion) => ({
+      status,
+      startedAt,
+      completedAt,
+    });
+    const firstBody = (await first.json()) as Completion;
     expect(firstBody.status).toBe("completed");
-    expect(await second.json()).toEqual(firstBody);
-    expect(await third.json()).toEqual(firstBody);
+    expect(firstBody.rewards.pointsAwarded).toBe(75);
+    const secondBody = (await second.json()) as Completion;
+    const thirdBody = (await third.json()) as Completion;
+    expect(progressOf(secondBody)).toEqual(progressOf(firstBody));
+    expect(progressOf(thirdBody)).toEqual(progressOf(firstBody));
+    expect([secondBody.rewards.pointsAwarded, thirdBody.rewards.pointsAwarded]).toEqual([0, 0]);
     const list = await page.request.get(`${API}/lessons?language=pl&level=a1`);
     const lessons = ((await list.json()) as { lessons: { progress: { status: string } }[] })
       .lessons;

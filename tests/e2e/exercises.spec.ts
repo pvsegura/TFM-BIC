@@ -517,7 +517,18 @@ test.describe("the answer key stays on the server", () => {
 
     expect(verdict.status()).toBe(200);
     const body = await jsonOf<VerdictBody & { correctAnswer: unknown; feedback: unknown }>(verdict);
-    expect(Object.keys(body).sort()).toEqual(["correct", "correctAnswer", "feedback", "result"]);
+    // M8 adds `rewards` (what the answer earned — nothing, for a wrong answer); still no answer key.
+    expect(Object.keys(body).sort()).toEqual([
+      "correct",
+      "correctAnswer",
+      "feedback",
+      "result",
+      "rewards",
+    ]);
+    expect((body as { rewards: unknown }).rewards).toEqual({
+      pointsAwarded: 0,
+      achievementsUnlocked: [],
+    });
     expect(body.correct).toBe(false);
     expect(JSON.stringify(body)).not.toContain("Dobranoc.");
   });
