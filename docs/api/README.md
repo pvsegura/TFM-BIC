@@ -1,6 +1,6 @@
 # API Documentation
 
-Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons) and M7 (Exercises) endpoints exist; no
+Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons), M7 (Exercises) and M8 (Gamification) endpoints exist; no
 OpenAPI/schema-derived spec generation wired up yet — see below.
 
 ## Auth endpoints (M3)
