@@ -2,9 +2,13 @@ import {
   createContentId,
   createExerciseId,
   createLanguageId,
+  createVocabularyCategoryId,
+  createVocabularyItemId,
   isValidContentId,
   isValidExerciseId,
   isValidLanguageId,
+  isValidVocabularyCategoryId,
+  isValidVocabularyItemId,
   LEVEL_IDS,
 } from "@tfm-bic/domain";
 import { z } from "zod";
@@ -31,3 +35,15 @@ export const exerciseIdSchema = z
   .string()
   .refine(isValidExerciseId, { error: "Expected a lowercase slug such as pl-greetings-hello." })
   .transform(createExerciseId);
+
+/** A vocabulary entry's permanent id — a language-prefixed slug such as `pl-dom`, as its own branded type. */
+export const vocabularyItemIdSchema = z
+  .string()
+  .refine(isValidVocabularyItemId, { error: "Expected a lowercase slug such as pl-dom." })
+  .transform(createVocabularyItemId);
+
+/** A vocabulary category (topic) id — a plain lowercase slug such as `food`. */
+export const vocabularyCategoryIdSchema = z
+  .string()
+  .refine(isValidVocabularyCategoryId, { error: "Expected a lowercase slug such as food." })
+  .transform(createVocabularyCategoryId);
