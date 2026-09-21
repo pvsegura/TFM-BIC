@@ -39,3 +39,12 @@ export {
   loadContentRepositories,
   type ContentRepositories,
 } from "./content/load-content-repositories.js";
+
+// Gamification (M8) — the points ledger and unlocked achievements. Achievements themselves are
+// domain rules (code), so only what a student earned is stored. See docs/adr/adr-021-gamification.md.
+export {
+  createGamificationDb,
+  type GamificationDb,
+  type GamificationDbHandle,
+} from "./gamification/db/client.js";
+export { DrizzleGamificationRepository } from "./gamification/gamification.repository.js";
