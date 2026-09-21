@@ -59,6 +59,19 @@ export {
 export { InvalidContentIdError } from "./content/errors/invalid-content-id.error.js";
 export { ContentNotFoundError } from "./content/errors/content-not-found.error.js";
 
+// Lessons (M6) — a lesson is a content item of type `lesson`; progress is per student.
+export { isLesson, type LessonId } from "./lesson/lesson.js";
+export {
+  completeLesson,
+  LESSON_PROGRESS_STATUSES,
+  progressStatusOf,
+  startLesson,
+  type LessonProgress,
+  type LessonProgressStatus,
+  type StoredLessonProgressStatus,
+} from "./lesson/lesson-progress.js";
+export { LessonNotFoundError } from "./lesson/errors/lesson-not-found.error.js";
+
 // Identity & Authentication (M3) — see docs/architecture/domain-model.md.
 export { createEmail, isValidEmail, normalizeEmail } from "./identity/email.js";
 export {
