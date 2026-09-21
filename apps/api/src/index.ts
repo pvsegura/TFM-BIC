@@ -13,6 +13,10 @@ import {
   createLessonDependencies,
   type LessonDependencies,
 } from "./composition/lesson-dependencies.js";
+import {
+  createExerciseDependencies,
+  type ExerciseDependencies,
+} from "./composition/exercise-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
@@ -28,12 +32,14 @@ let authDeps: AuthDependencies;
 let profileDeps: ProfileDependencies;
 let contentDeps: ContentDependencies;
 let lessonDeps: LessonDependencies;
+let exerciseDeps: ExerciseDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
     profile: profileDeps,
     content: contentDeps,
     lessons: lessonDeps,
+    exercises: exerciseDeps,
   } = await createTestDependencies(env.CONTENT_DIR));
 } else {
   if (!env.DATABASE_URL) {
@@ -43,9 +49,10 @@ if (env.NODE_ENV === "test") {
   profileDeps = createProfileDependencies(env.DATABASE_URL);
   contentDeps = await createContentDependencies(env.CONTENT_DIR);
   lessonDeps = createLessonDependencies(env.DATABASE_URL);
+  exerciseDeps = createExerciseDependencies(env.DATABASE_URL);
 }
 
-const app = buildServer(env, authDeps, profileDeps, contentDeps, lessonDeps);
+const app = buildServer(env, authDeps, profileDeps, contentDeps, lessonDeps, exerciseDeps);
 
 async function start(): Promise<void> {
   try {
@@ -59,7 +66,12 @@ async function start(): Promise<void> {
 async function shutdown(signal: string): Promise<void> {
   app.log.info({ signal }, "Shutting down");
   await app.close();
-  await Promise.all([authDeps.close(), profileDeps.close(), lessonDeps.close()]);
+  await Promise.all([
+    authDeps.close(),
+    profileDeps.close(),
+    lessonDeps.close(),
+    exerciseDeps.close(),
+  ]);
   process.exit(0);
 }
 

@@ -10,6 +10,8 @@ import Fastify, { type FastifyError, type FastifyInstance } from "fastify";
 import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
 import type { ContentDependencies } from "./composition/content-dependencies.js";
+import type { ExerciseDependencies } from "./composition/exercise-dependencies.js";
+import { createExerciseUseCases } from "./composition/exercise-use-cases.js";
 import { createContentUseCases } from "./composition/content-use-cases.js";
 import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
@@ -17,6 +19,7 @@ import type { ProfileDependencies } from "./composition/profile-dependencies.js"
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
+import { registerExerciseRoutes } from "./routes/exercises.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
 import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
@@ -29,6 +32,7 @@ export function buildServer(
   profileDeps: ProfileDependencies,
   contentDeps: ContentDependencies,
   lessonDeps: LessonDependencies,
+  exerciseDeps: ExerciseDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -83,6 +87,15 @@ export function buildServer(
     // student's own progress. The user always comes from the session, never from the request.
     registerLessonRoutes(app, {
       useCases: createLessonUseCases(contentUseCases, lessonDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // Exercises (M7) are authenticated-only too: they build on the content and lesson rules, and
+    // add only the student's own attempts. The server evaluates every answer; the user always
+    // comes from the session, never from the request.
+    registerExerciseRoutes(app, {
+      useCases: createExerciseUseCases(contentUseCases, contentDeps, exerciseDeps),
       resolveSession: authUseCases.resolveSession,
       env,
     });

@@ -1,7 +1,8 @@
-import { createLessonsTestDb } from "@tfm-bic/data/testing";
+import { createExercisesTestDb } from "@tfm-bic/data/testing";
 
 import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
 import { createContentDependencies, type ContentDependencies } from "./content-dependencies.js";
+import { buildExerciseDependencies, type ExerciseDependencies } from "./exercise-dependencies.js";
 import { buildLessonDependencies, type LessonDependencies } from "./lesson-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 
@@ -11,12 +12,12 @@ import { buildProfileDependencies, type ProfileDependencies } from "./profile-de
  * mock) instead of a live Postgres connection — see
  * docs/adr/adr-005-database.md. Used only when `NODE_ENV=test`
  * (apps/api/src/index.ts) so E2E tests run against the real server/HTTP
- * stack with no Docker or network database.
+ * stack with no Docker/network database.
  *
- * Auth, profile and lessons deliberately share that single instance: in
- * production they are one database, and both `student_profiles` and
- * `lesson_progress` have a foreign key to `users`, so they can only exist
- * alongside the user they belong to. The instance is closed once, via
+ * Auth, profile, lessons and exercises deliberately share that single instance:
+ * in production they are one database, and `student_profiles`, `lesson_progress`
+ * and `exercise_attempts` all have a foreign key to `users`, so they can only
+ * exist alongside the user they belong to. The instance is closed once, via
  * `auth.close`; the other `close`s are no-ops so shutting everything down
  * never closes it twice.
  */
@@ -25,14 +26,16 @@ export async function createTestDependencies(contentDir?: string): Promise<{
   profile: ProfileDependencies;
   content: ContentDependencies;
   lessons: LessonDependencies;
+  exercises: ExerciseDependencies;
 }> {
-  const { db, identityDb, profileDb, close } = await createLessonsTestDb();
+  const { db, identityDb, profileDb, lessonsDb, close } = await createExercisesTestDb();
 
   return {
     auth: buildAuthDependencies(identityDb, close),
     profile: buildProfileDependencies(profileDb, () => Promise.resolve()),
     // The real content tree, so E2E exercises the shipped Polish A1 content end to end.
     content: await createContentDependencies(contentDir),
-    lessons: buildLessonDependencies(db, () => Promise.resolve()),
+    lessons: buildLessonDependencies(lessonsDb, () => Promise.resolve()),
+    exercises: buildExerciseDependencies(db, () => Promise.resolve()),
   };
 }

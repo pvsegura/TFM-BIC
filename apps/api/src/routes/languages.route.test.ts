@@ -21,6 +21,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.profileDeps,
     testDeps.contentDeps,
     testDeps.lessonDeps,
+    testDeps.exerciseDeps,
   );
   return { app, ...testDeps };
 }

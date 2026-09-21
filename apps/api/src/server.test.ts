@@ -13,8 +13,8 @@ afterEach(async () => {
 });
 
 function build(env: ReturnType<typeof loadEnv>) {
-  const { deps, profileDeps, contentDeps, lessonDeps } = buildTestDeps();
-  return buildServer(env, deps, profileDeps, contentDeps, lessonDeps);
+  const { deps, profileDeps, contentDeps, lessonDeps, exerciseDeps } = buildTestDeps();
+  return buildServer(env, deps, profileDeps, contentDeps, lessonDeps, exerciseDeps);
 }
 
 describe("GET /health", () => {

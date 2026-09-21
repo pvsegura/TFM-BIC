@@ -39,6 +39,7 @@ function build(overrides: Partial<Parameters<typeof loadEnv>[0]> = {}) {
     testDeps.profileDeps,
     testDeps.contentDeps,
     testDeps.lessonDeps,
+    testDeps.exerciseDeps,
   );
   return { app, ...testDeps };
 }

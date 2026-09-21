@@ -1,7 +1,10 @@
+import { createDefaultExerciseTypeRegistry } from "@tfm-bic/domain";
 import {
   FakeContentRepository,
   FakeEmailService,
   FakeEmailVerificationTokenRepository,
+  FakeExerciseAttemptRepository,
+  FakeExerciseRepository,
   FakeLessonProgressRepository,
   FakePasswordHasher,
   FakePasswordResetTokenRepository,
@@ -15,6 +18,7 @@ import {
 
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
+import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 
@@ -51,7 +55,8 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
-  const contentDeps: ContentDependencies = { contentRepository };
+  const exerciseRepository = new FakeExerciseRepository();
+  const contentDeps: ContentDependencies = { contentRepository, exerciseRepository };
 
   const lessonProgressRepository = new FakeLessonProgressRepository();
   const lessonDeps: LessonDependencies = {
@@ -60,12 +65,23 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const exerciseAttemptRepository = new FakeExerciseAttemptRepository();
+  const exerciseDeps: ExerciseDependencies = {
+    exerciseAttemptRepository,
+    clock,
+    typeRegistry: createDefaultExerciseTypeRegistry(),
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
     contentDeps,
     lessonDeps,
+    exerciseDeps,
     lessonProgressRepository,
+    exerciseAttemptRepository,
+    exerciseRepository,
     clock,
     userRepository,
     sessionRepository,

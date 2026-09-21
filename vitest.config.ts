@@ -46,6 +46,7 @@ export default defineConfig({
         "apps/api/src/composition/auth-dependencies.ts",
         "apps/api/src/composition/profile-dependencies.ts",
         "apps/api/src/composition/lesson-dependencies.ts",
+        "apps/api/src/composition/exercise-dependencies.ts",
         "apps/api/src/composition/test-dependencies.ts",
         // Real `pg.Pool`/Drizzle connection factory — repository tests use
         // the PGlite test-support factory instead (see

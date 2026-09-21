@@ -22,6 +22,7 @@ function build(testDeps = buildTestDeps()) {
     testDeps.profileDeps,
     testDeps.contentDeps,
     testDeps.lessonDeps,
+    testDeps.exerciseDeps,
   );
   return { app, ...testDeps };
 }
