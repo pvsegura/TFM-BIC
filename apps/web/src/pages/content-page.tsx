@@ -13,7 +13,7 @@ const NOT_FOUND = (
 /**
  * A read-only view of one content item: its title, description and structured
  * blocks, each shown by a known safe component. It is the foundation the
- * lesson experience (a later milestone) builds on — it has no exercises,
+ * lesson experience (`/learn/lessons`, M6) builds on — it has no exercises,
  * progress or completion. Public, like the API behind it.
  *
  * The URL names the language and level, but the API is the authority on where

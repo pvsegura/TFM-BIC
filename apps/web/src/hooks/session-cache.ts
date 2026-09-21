@@ -12,7 +12,7 @@ const SESSION_INDEPENDENT_ROOTS: readonly unknown[] = [AUTH_QUERY_KEY_ROOT, CATA
 
 /**
  * Removes every cached query except the auth query and the public catalog. By
- * convention everything else in the cache (the student profile today, lessons/progress later) is
+ * convention everything else in the cache (the student profile and the lessons with their progress) is
  * scoped to the signed-in user, so none of it may outlive that user's session
  * — otherwise the next person to sign in on the same browser tab would be
  * served (even briefly, as a stale-while-revalidate flash) the previous

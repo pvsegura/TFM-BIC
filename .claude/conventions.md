@@ -92,6 +92,24 @@ Rationale: [ADR-018](../docs/adr/adr-018-content-languages.md); reference:
   so `clearUserScopedCache` keeps it (with `["auth", …]`).
 - `pnpm content:validate` runs in Jenkins right after install and before lint.
 
+## Lesson conventions (since M6)
+
+Rationale: [ADR-019](../docs/adr/adr-019-lessons.md).
+
+- **A lesson is content, not a new record.** It is a content item with `type: "lesson"`, identified by its
+  `ContentId`. Never add a lessons table, a slug, a second id or a per-language lesson class. **Content and
+  progress stay apart**: the files own the lesson; PostgreSQL owns only `lesson_progress`.
+- **Reuse visibility, don't restate it.** Lesson use cases are built on `GetContentUseCase` /
+  `ListContentUseCase`; every "cannot see it" reason is one `LessonNotFoundError` / `404`.
+- **Progress transitions live in the domain** (`startLesson`, `completeLesson`: forward-only, idempotent) and are
+  applied by _atomic_ repository operations (one upsert each), never read-then-write. Times come from the `Clock`.
+- **Action routes take no body** (strict empty schema): a client can never set the user, a time or a status.
+  Lesson responses are `private, no-store`. "Not started" is derived, never stored.
+- **Pages that would share an API path get another path** — lesson pages are under `/learn/lessons`. Query keys
+  for lessons use the user-scoped root `["lessons", …]`. A mutation the student can double-click keeps one request
+  in flight (a disabled button alone is not enough).
+- Status is always stated in words, never by colour alone; primary buttons use navy text on the accent (AA).
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

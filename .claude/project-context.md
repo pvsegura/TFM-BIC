@@ -1,9 +1,9 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–5 complete**
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–6 complete**
 (architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
-Content & Languages) —
+Content & Languages, Lessons) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -31,6 +31,14 @@ see [current-state.md](current-state.md) for what that means concretely.
   `/languages/:c/levels`, `/content`, `/content/:id`). Adding a language or level is data only —
   `pnpm content:validate`. Polish A1 has a small seed set (not a course). UI pages live under
   `/learn`. See [ADR-018](../docs/adr/adr-018-content-languages.md).
+
+- Lessons (M6): a lesson is an M5 content item of `type: "lesson"` (identity = its `ContentId`; no lessons
+  table, no copy). Only a student's **progress** is stored (`lesson_progress`, PK `(user_id, lesson_id)`,
+  `in_progress` | `completed`; "not started" is derived). Four **authenticated** routes (`GET /lessons`,
+  `GET /lessons/:id`, `POST /lessons/:id/start`, `POST /lessons/:id/complete`); the user is always the
+  session's and the POSTs take no body. Completion is explicit and idempotent; resume position within a
+  lesson is not stored. Pages live at `/learn/lessons[/:lessonId]` because `/lessons` is the API path. See
+  [ADR-019](../docs/adr/adr-019-lessons.md).
 
 ## Where things live
 

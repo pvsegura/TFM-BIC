@@ -44,6 +44,15 @@ the application use cases. Public read-only API; UI under `/learn`. See
 [docs/architecture/content-architecture.md](../docs/architecture/content-architecture.md) and
 [ADR-018](../docs/adr/adr-018-content-languages.md).
 
+## Lessons
+
+A lesson is an M5 content item of `type: "lesson"` (`LessonId` = `ContentId`); progress is the only thing stored
+per student (`lesson_progress`, its own `packages/data/src/lessons/` context). `ListLessons`/`GetLesson`/
+`StartLesson`/`CompleteLesson` sit on the content use cases and a `LessonProgressRepository` port with atomic
+`start`/`complete`. Four authenticated routes under `/lessons`; pages under `/learn/lessons`. See
+[ADR-019](../docs/adr/adr-019-lessons.md) and the Lessons section of
+[content-architecture.md](../docs/architecture/content-architecture.md).
+
 ## Monorepo layout
 
 `apps/{web,api}`, `packages/{domain,application,contracts,data,shared,ui,config,testing}`,

@@ -20,6 +20,13 @@ Playwright end-to-end tests (~20% of the suite by design). See
   while `fetch('/profile')` reaches the API); unauthenticated and forged API access is rejected;
   a second user on the same browser never sees the first user's profile; dark mode; a 375px mobile
   viewport with no horizontal scroll.
+- `lessons.spec.ts` (M6) — the lesson flows: discover Polish → A1 → the ordered lessons; open a lesson
+  and read its blocks in order; opening marks it in progress but never completed; the explicit
+  Complete lesson action (mouse and keyboard) is confirmed and survives a refresh; repeated and
+  double-click completion is idempotent; logged-out visits reach login and the API refuses every
+  lesson route; another student's progress is invisible and cannot be set (mass-assignment body
+  refused); unknown, malformed, injection-like and non-lesson ids show a safe not-found; a planned
+  level lists nothing; a 375px viewport with no horizontal scroll; dark mode.
 - `helpers/register-and-verify.ts` — arranges a verified user via direct API calls (not the UI)
   so specs other than `registration.spec.ts` stay focused on their own flow.
 - `helpers/ui.ts` (M4) — `signInViaUi` / `openProfileViaNav`: drive the real login form and nav.

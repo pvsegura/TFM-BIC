@@ -104,7 +104,7 @@ user data). No second cache, no Redis.
 The boundary: **catalog** (which languages/levels/content exist) → **availability** (which are
 selectable) → **the student's learning selection** → **progress**. M5 implements the first two. The
 current choice is expressed by the URL only; persisting an enrolment ("I am learning Polish A1") needs
-a table keyed to the user and is coupled to progress, so it belongs to M6. No profile field was added.
+a table keyed to the user and is coupled to progress, so it was expected in M6. (M6 did not need it: the choice is in the URL — see [ADR-019](adr-019-lessons.md) §8; it is still unassigned.) No profile field was added.
 
 ### 8. Versioning and lifecycle
 

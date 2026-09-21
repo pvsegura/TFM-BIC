@@ -1,7 +1,7 @@
 /**
  * What kind of learning unit a content item is. Only the minimum M5 needs:
  * - `lesson`: a unit of teaching made of content blocks. M5 only stores and
- *   shows its structure; the lesson experience (player, exercises, completion)
+ *   shows its structure; the lesson experience (M6: list, viewer, completion; exercises are later)
  *   is M6.
  * - `explanation`: a standalone reference note (for example how a spelling
  *   rule works) that is not part of a lesson sequence.
