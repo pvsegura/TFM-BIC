@@ -45,6 +45,8 @@ function catalog(overrides: Partial<ContentCatalog> = {}): ContentCatalog {
     languageLevels: [a1Available, a2Planned],
     content: [item()],
     exercises: [],
+    vocabularyCategories: [],
+    vocabulary: [],
     ...overrides,
   };
 }

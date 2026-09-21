@@ -4,6 +4,9 @@ import type { Language } from "../language/language.js";
 import type { LanguageLevel } from "../language/language-level.js";
 import type { LanguageId } from "../language/language-id.js";
 import type { LevelId } from "../language/level-id.js";
+import { validateVocabulary } from "../vocabulary/vocabulary-catalog.js";
+import type { VocabularyCategory } from "../vocabulary/vocabulary-category.js";
+import type { VocabularyItem } from "../vocabulary/vocabulary-item.js";
 import { contentIdBelongsToLanguage } from "./content-id.js";
 import type { ContentItem } from "./content-item.js";
 import { isPublished } from "./content-status.js";
@@ -15,6 +18,10 @@ export interface ContentCatalog {
   content: readonly ContentItem[];
   /** Exercises, each tied to a lesson in `content`. */
   exercises: readonly Exercise[];
+  /** Vocabulary topics (M9): each belongs to one language and groups its entries. */
+  vocabularyCategories: readonly VocabularyCategory[];
+  /** Vocabulary entries (M9): each belongs to one category of its own language. */
+  vocabulary: readonly VocabularyItem[];
 }
 
 export interface CatalogIssue {
@@ -109,6 +116,15 @@ export function validateContentCatalog(catalog: ContentCatalog): CatalogIssue[] 
   }
 
   validateExercises(catalog, { languageIds, levelStatus, contentIds }, issues);
+  validateVocabulary(
+    catalog.vocabularyCategories,
+    catalog.vocabulary,
+    {
+      languageIds,
+      levelStatusOf: (languageId, levelId) => levelStatus.get(levelKey(languageId, levelId)),
+    },
+    issues,
+  );
 
   return issues.map((message) => ({ message }));
 }

@@ -54,6 +54,8 @@ function catalog(exercises: Exercise[], content: ContentItem[] = [lesson("pl-gre
     languageLevels: levels,
     content,
     exercises,
+    vocabularyCategories: [],
+    vocabulary: [],
   };
   return result;
 }
