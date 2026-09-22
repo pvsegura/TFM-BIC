@@ -191,3 +191,55 @@ export {
   type CompleteLessonWithRewardsInput,
   type CompleteLessonWithRewardsResult,
 } from "./gamification/use-cases/complete-lesson-with-rewards.use-case.js";
+
+// Vocabulary (M9) — an entry is content (a file, grouped in a category of its language); what a
+// student does with it is per-student state. See docs/adr/adr-022-vocabulary.md.
+export type { VocabularyRepository } from "./vocabulary/ports/vocabulary-repository.js";
+export type { UserVocabularyRepository } from "./vocabulary/ports/user-vocabulary-repository.js";
+export type { VocabularyEventPublisher } from "./vocabulary/ports/vocabulary-event-publisher.js";
+export { findVisibleVocabularyItem } from "./vocabulary/find-visible-vocabulary-item.js";
+export {
+  queryVisibleVocabulary,
+  type VocabularyQueryEntry,
+  type VocabularyQueryFilters,
+  type VocabularyQueryResult,
+} from "./vocabulary/query-vocabulary.js";
+export { toUserStateView, type VocabularyUserStateView } from "./vocabulary/vocabulary-view.js";
+export {
+  GetVocabularyItemUseCase,
+  type GetVocabularyItemInput,
+  type VocabularyItemDetail,
+} from "./vocabulary/use-cases/get-vocabulary-item.use-case.js";
+export {
+  ListVocabularyUseCase,
+  type ListVocabularyInput,
+  type VocabularyListEntry,
+  type VocabularyListResult,
+} from "./vocabulary/use-cases/list-vocabulary.use-case.js";
+export {
+  ListUserVocabularyUseCase,
+  type ListUserVocabularyInput,
+} from "./vocabulary/use-cases/list-user-vocabulary.use-case.js";
+export {
+  ListVocabularyCategoriesUseCase,
+  type ListVocabularyCategoriesInput,
+  type VocabularyCategoriesResult,
+  type VocabularyCategoryView,
+  type VocabularyProgressView,
+} from "./vocabulary/use-cases/list-vocabulary-categories.use-case.js";
+export {
+  SaveVocabularyItemUseCase,
+  type SaveVocabularyItemInput,
+} from "./vocabulary/use-cases/save-vocabulary-item.use-case.js";
+export {
+  UnsaveVocabularyItemUseCase,
+  type UnsaveVocabularyItemInput,
+} from "./vocabulary/use-cases/unsave-vocabulary-item.use-case.js";
+export {
+  UpdateVocabularyStatusUseCase,
+  type UpdateVocabularyStatusInput,
+} from "./vocabulary/use-cases/update-vocabulary-status.use-case.js";
+export {
+  MarkVocabularyItemLearnedUseCase,
+  type MarkVocabularyItemLearnedInput,
+} from "./vocabulary/use-cases/mark-vocabulary-item-learned.use-case.js";
