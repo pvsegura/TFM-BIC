@@ -23,6 +23,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.lessonDeps,
     testDeps.exerciseDeps,
     testDeps.gamificationDeps,
+    testDeps.vocabularyDeps,
   );
   return { app, ...testDeps };
 }

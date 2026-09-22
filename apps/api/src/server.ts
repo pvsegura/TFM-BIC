@@ -19,6 +19,8 @@ import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
+import type { VocabularyDependencies } from "./composition/vocabulary-dependencies.js";
+import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
 import { registerExerciseRoutes } from "./routes/exercises.route.js";
@@ -28,6 +30,7 @@ import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
+import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 
 export function buildServer(
   env: AppEnv,
@@ -37,6 +40,7 @@ export function buildServer(
   lessonDeps: LessonDependencies,
   exerciseDeps: ExerciseDependencies,
   gamificationDeps: GamificationDependencies,
+  vocabularyDeps: VocabularyDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -119,6 +123,14 @@ export function buildServer(
     // The student's own points and achievements: read-only, session-derived, no `:userId`.
     registerGamificationRoutes(app, {
       useCases: gamificationUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // Vocabulary (M9): entries are content, reused from contentDeps; only the student's own
+    // relationship to a word is stored. The user always comes from the session.
+    registerVocabularyRoutes(app, {
+      useCases: createVocabularyUseCases(contentDeps, vocabularyDeps),
       resolveSession: authUseCases.resolveSession,
       env,
     });

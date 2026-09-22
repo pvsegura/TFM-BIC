@@ -27,6 +27,7 @@ function build() {
     testDeps.lessonDeps,
     testDeps.exerciseDeps,
     testDeps.gamificationDeps,
+    testDeps.vocabularyDeps,
   );
   return { app, ...testDeps };
 }

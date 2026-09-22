@@ -21,6 +21,10 @@ import {
   createGamificationDependencies,
   type GamificationDependencies,
 } from "./composition/gamification-dependencies.js";
+import {
+  createVocabularyDependencies,
+  type VocabularyDependencies,
+} from "./composition/vocabulary-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import { buildServer } from "./server.js";
 
@@ -38,6 +42,7 @@ let contentDeps: ContentDependencies;
 let lessonDeps: LessonDependencies;
 let exerciseDeps: ExerciseDependencies;
 let gamificationDeps: GamificationDependencies;
+let vocabularyDeps: VocabularyDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -46,6 +51,7 @@ if (env.NODE_ENV === "test") {
     lessons: lessonDeps,
     exercises: exerciseDeps,
     gamification: gamificationDeps,
+    vocabulary: vocabularyDeps,
   } = await createTestDependencies(env.CONTENT_DIR));
 } else {
   if (!env.DATABASE_URL) {
@@ -57,6 +63,7 @@ if (env.NODE_ENV === "test") {
   lessonDeps = createLessonDependencies(env.DATABASE_URL);
   exerciseDeps = createExerciseDependencies(env.DATABASE_URL);
   gamificationDeps = createGamificationDependencies(env.DATABASE_URL);
+  vocabularyDeps = createVocabularyDependencies(env.DATABASE_URL);
 }
 
 const app = buildServer(
@@ -67,6 +74,7 @@ const app = buildServer(
   lessonDeps,
   exerciseDeps,
   gamificationDeps,
+  vocabularyDeps,
 );
 
 async function start(): Promise<void> {
@@ -87,6 +95,7 @@ async function shutdown(signal: string): Promise<void> {
     lessonDeps.close(),
     exerciseDeps.close(),
     gamificationDeps.close(),
+    vocabularyDeps.close(),
   ]);
   process.exit(0);
 }

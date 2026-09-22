@@ -19,18 +19,19 @@ describe("UnsaveVocabularyItemUseCase", () => {
     });
     const useCase = new UnsaveVocabularyItemUseCase(userVocabulary);
 
-    await useCase.execute({ userId: USER, vocabularyItemId: "pl-dom" as never });
+    const result = await useCase.execute({ userId: USER, vocabularyItemId: "pl-dom" as never });
 
     expect(await userVocabulary.findByUserAndItem(USER, "pl-dom" as never)).toBeNull();
+    expect(result).toEqual({ status: "new", createdAt: null, updatedAt: null, learnedAt: null });
   });
 
-  it("does nothing, without error, for a word the student never saved", async () => {
+  it("does nothing, without error, for a word the student never saved, and still answers with new", async () => {
     const userVocabulary = new FakeUserVocabularyRepository();
     const useCase = new UnsaveVocabularyItemUseCase(userVocabulary);
 
-    await expect(
-      useCase.execute({ userId: USER, vocabularyItemId: "pl-dom" as never }),
-    ).resolves.toBeUndefined();
+    const result = await useCase.execute({ userId: USER, vocabularyItemId: "pl-dom" as never });
+
+    expect(result.status).toBe("new");
   });
 
   it("never removes another student's record", async () => {

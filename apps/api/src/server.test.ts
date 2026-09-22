@@ -13,8 +13,15 @@ afterEach(async () => {
 });
 
 function build(env: ReturnType<typeof loadEnv>) {
-  const { deps, profileDeps, contentDeps, lessonDeps, exerciseDeps, gamificationDeps } =
-    buildTestDeps();
+  const {
+    deps,
+    profileDeps,
+    contentDeps,
+    lessonDeps,
+    exerciseDeps,
+    gamificationDeps,
+    vocabularyDeps,
+  } = buildTestDeps();
   return buildServer(
     env,
     deps,
@@ -23,6 +30,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     lessonDeps,
     exerciseDeps,
     gamificationDeps,
+    vocabularyDeps,
   );
 }
 

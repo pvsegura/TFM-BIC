@@ -21,6 +21,9 @@ import {
   FakeSessionRepository,
   FakeTokenGenerator,
   FakeUserRepository,
+  FakeUserVocabularyRepository,
+  FakeVocabularyEventPublisher,
+  FakeVocabularyRepository,
   FixedClock,
   makeSampleCatalog,
 } from "@tfm-bic/application/testing";
@@ -31,6 +34,7 @@ import type { ExerciseDependencies } from "../composition/exercise-dependencies.
 import type { GamificationDependencies } from "../composition/gamification-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
+import type { VocabularyDependencies } from "../composition/vocabulary-dependencies.js";
 
 /** Fast, in-memory dependencies for apps/api's own HTTP-layer tests —
  * repository/constraint correctness is already covered by packages/data's
@@ -66,7 +70,12 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   };
 
   const exerciseRepository = new FakeExerciseRepository();
-  const contentDeps: ContentDependencies = { contentRepository, exerciseRepository };
+  const vocabularyRepository = new FakeVocabularyRepository();
+  const contentDeps: ContentDependencies = {
+    contentRepository,
+    exerciseRepository,
+    vocabularyRepository,
+  };
 
   const lessonProgressRepository = new FakeLessonProgressRepository();
   const lessonDeps: LessonDependencies = {
@@ -97,6 +106,15 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const userVocabularyRepository = new FakeUserVocabularyRepository();
+  const vocabularyEvents = new FakeVocabularyEventPublisher();
+  const vocabularyDeps: VocabularyDependencies = {
+    userVocabularyRepository,
+    clock,
+    events: vocabularyEvents,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
@@ -104,10 +122,14 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     lessonDeps,
     exerciseDeps,
     gamificationDeps,
+    vocabularyDeps,
     gamificationRepository,
     lessonProgressRepository,
     exerciseAttemptRepository,
     exerciseRepository,
+    vocabularyRepository,
+    userVocabularyRepository,
+    vocabularyEvents,
     clock,
     userRepository,
     sessionRepository,
