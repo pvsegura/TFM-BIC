@@ -4,7 +4,7 @@ Playwright end-to-end tests (~20% of the suite by design). See
 [docs/testing/testing-strategy.md](../../docs/testing/testing-strategy.md) and
 [.claude/skills/playwright](../../.claude/skills/playwright/SKILL.md).
 
-## What's here (M3, M4)
+## What's here
 
 - `smoke.spec.ts` (M1) — the app boots and is reachable, dark-mode toggle works.
 - `registration.spec.ts`, `login.spec.ts`, `logout.spec.ts`, `password-reset.spec.ts`,
@@ -27,6 +27,15 @@ Playwright end-to-end tests (~20% of the suite by design). See
   lesson route; another student's progress is invisible and cannot be set (mass-assignment body
   refused); unknown, malformed, injection-like and non-lesson ids show a safe not-found; a planned
   level lists nothing; a 375px viewport with no horizontal scroll; dark mode.
+- `content-languages.spec.ts` (M5), `exercises.spec.ts` (M7), `gamification.spec.ts` (M8) — the public
+  catalog browser; the exercise flows (open, answer, retry, verdict shown every time, cross-student
+  isolation); the reward/achievement flows (points, unlocking, the dashboard and achievements page,
+  concurrent duplicate answers paid once).
+- `vocabulary.spec.ts` (M9) — the vocabulary flows: discover Polish vocabulary by category; search
+  narrows the list; open a word, save it, see it in My Vocabulary, mark it learned, and the status
+  survives a refresh; removing a saved word takes it off My Vocabulary; a second student cannot see
+  the first student's saved word and cannot forge a status change through the API (a `userId` in the
+  body is refused).
 - `helpers/register-and-verify.ts` — arranges a verified user via direct API calls (not the UI)
   so specs other than `registration.spec.ts` stay focused on their own flow.
 - `helpers/ui.ts` (M4) — `signInViaUi` / `openProfileViaNav`: drive the real login form and nav.
