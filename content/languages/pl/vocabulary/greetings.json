@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "greetings",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Greetings",
+  "description": "Common words and short phrases for saying hello and goodbye.",
+  "items": [
+    {
+      "id": "pl-czesc",
+      "status": "published",
+      "order": 10,
+      "lemma": "cześć",
+      "translation": "hi; bye",
+      "levelId": "a1",
+      "partOfSpeech": "interjection",
+      "note": "Informal. Used with friends and family, both to say hello and to say goodbye."
+    },
+    {
+      "id": "pl-dzien-dobry",
+      "status": "published",
+      "order": 20,
+      "lemma": "dzień dobry",
+      "translation": "good morning; good day; hello",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "note": "Polite. Used with people you do not know well, during the day."
+    },
+    {
+      "id": "pl-dobry-wieczor",
+      "status": "published",
+      "order": 30,
+      "lemma": "dobry wieczór",
+      "translation": "good evening",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "note": "Polite. Used in the evening."
+    },
+    {
+      "id": "pl-do-widzenia",
+      "status": "published",
+      "order": 40,
+      "lemma": "do widzenia",
+      "translation": "goodbye",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "note": "Polite."
+    },
+    {
+      "id": "pl-dobranoc",
+      "status": "published",
+      "order": 50,
+      "lemma": "dobranoc",
+      "translation": "good night",
+      "levelId": "a1",
+      "partOfSpeech": "interjection",
+      "note": "Said when parting for the night, not as a general goodbye."
+    }
+  ]
+}

@@ -23,6 +23,8 @@
     "db:migrate:exercises": "drizzle-kit migrate --config drizzle.exercises.config.ts",
     "db:generate:gamification": "drizzle-kit generate --config drizzle.gamification.config.ts",
     "db:migrate:gamification": "drizzle-kit migrate --config drizzle.gamification.config.ts",
+    "db:generate:vocabulary": "drizzle-kit generate --config drizzle.vocabulary.config.ts",
+    "db:migrate:vocabulary": "drizzle-kit migrate --config drizzle.vocabulary.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts"
   },
   "dependencies": {

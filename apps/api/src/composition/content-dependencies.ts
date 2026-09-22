@@ -1,15 +1,21 @@
-import type { ContentRepository, ExerciseRepository } from "@tfm-bic/application";
+import type {
+  ContentRepository,
+  ExerciseRepository,
+  VocabularyRepository,
+} from "@tfm-bic/application";
 import { loadContentRepositories } from "@tfm-bic/data";
 
 /**
- * Everything the language/content/exercise-content routes need. Unlike auth and
- * profile there is no connection to close: the validated content — lessons,
- * explanations and exercises alike — is held in memory.
+ * Everything the language/content/exercise-content/vocabulary-content routes need. Unlike auth
+ * and profile there is no connection to close: the validated content — lessons, explanations,
+ * exercises and vocabulary alike — is held in memory.
  */
 export interface ContentDependencies {
   contentRepository: ContentRepository;
   /** Exercises are content too (ADR-020): read-only, from the same validated catalog. */
   exerciseRepository: ExerciseRepository;
+  /** Vocabulary is content too (ADR-022): read-only, from the same validated catalog. */
+  vocabularyRepository: VocabularyRepository;
 }
 
 /**

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "family",
+  "languageId": "pl",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "Family",
+  "description": "Words for close family members.",
+  "items": [
+    {
+      "id": "pl-rodzina",
+      "status": "published",
+      "order": 10,
+      "lemma": "rodzina",
+      "translation": "family",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-mama",
+      "status": "published",
+      "order": 20,
+      "lemma": "mama",
+      "translation": "mom; mum",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "The everyday word for mother; matka is the more formal/neutral term."
+    },
+    {
+      "id": "pl-tata",
+      "status": "published",
+      "order": 30,
+      "lemma": "tata",
+      "translation": "dad",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Ends in -a like a feminine noun, but is grammatically masculine: nouns naming a male person keep masculine gender regardless of their ending."
+    },
+    {
+      "id": "pl-brat",
+      "status": "published",
+      "order": 40,
+      "lemma": "brat",
+      "translation": "brother",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-siostra",
+      "status": "published",
+      "order": 50,
+      "lemma": "siostra",
+      "translation": "sister",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

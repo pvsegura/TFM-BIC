@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "food",
+  "languageId": "pl",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Food",
+  "description": "A handful of everyday food and drink words.",
+  "items": [
+    {
+      "id": "pl-chleb",
+      "status": "published",
+      "order": 10,
+      "lemma": "chleb",
+      "translation": "bread",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-woda",
+      "status": "published",
+      "order": 20,
+      "lemma": "woda",
+      "translation": "water",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-mleko",
+      "status": "published",
+      "order": 30,
+      "lemma": "mleko",
+      "translation": "milk",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-jablko",
+      "status": "published",
+      "order": 40,
+      "lemma": "jabłko",
+      "translation": "apple",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-ser",
+      "status": "published",
+      "order": 50,
+      "lemma": "ser",
+      "translation": "cheese",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    }
+  ]
+}

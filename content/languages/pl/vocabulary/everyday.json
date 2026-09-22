@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "everyday",
+  "languageId": "pl",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "Everyday life",
+  "description": "Common nouns for things and animals around the house.",
+  "items": [
+    {
+      "id": "pl-dom",
+      "status": "published",
+      "order": 10,
+      "lemma": "dom",
+      "translation": "house; home",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "domy",
+      "example": { "text": "Mój dom jest mały.", "translation": "My house is small." }
+    },
+    {
+      "id": "pl-kot",
+      "status": "published",
+      "order": 20,
+      "lemma": "kot",
+      "translation": "cat",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "koty"
+    },
+    {
+      "id": "pl-pies",
+      "status": "published",
+      "order": 30,
+      "lemma": "pies",
+      "translation": "dog",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "psy",
+      "note": "The stem changes in the plural (pies -> psy)."
+    },
+    {
+      "id": "pl-ksiazka",
+      "status": "published",
+      "order": 40,
+      "lemma": "książka",
+      "translation": "book",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-praca",
+      "status": "published",
+      "order": 50,
+      "lemma": "praca",
+      "translation": "work; job",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

@@ -16,6 +16,8 @@ import * as profileSchema from "../../../profile/db/schema.js";
 import type { ProfileDb } from "../../../profile/db/client.js";
 import type { GamificationDb } from "../client.js";
 import * as gamificationSchema from "../schema.js";
+import type { VocabularyDb } from "../../../vocabulary/db/client.js";
+import * as vocabularySchema from "../../../vocabulary/db/schema.js";
 
 const here = path.dirname(fileURLToPath(import.meta.url));
 const dataSrc = path.join(here, "..", "..", "..");
@@ -27,17 +29,20 @@ const CONTEXTS = [
   { folder: migrationsOf("lessons"), table: "__drizzle_migrations_lessons" },
   { folder: migrationsOf("exercises"), table: "__drizzle_migrations_exercises" },
   { folder: migrationsOf("gamification"), table: "__drizzle_migrations_gamification" },
+  { folder: migrationsOf("vocabulary"), table: "__drizzle_migrations_vocabulary" },
 ] as const;
 
 export interface GamificationTestDbHandle {
   db: GamificationDb;
   /** The same database instance viewed as the other contexts' handles — lets a NODE_ENV=test
    * composition root build every repository over one shared database (profiles, lesson
-   * progress, exercise attempts, points and achievements all have a foreign key to `users`). */
+   * progress, exercise attempts, points, achievements and vocabulary all have a foreign key to
+   * `users`). */
   identityDb: IdentityDb;
   profileDb: ProfileDb;
   lessonsDb: LessonsDb;
   exercisesDb: ExercisesDb;
+  vocabularyDb: VocabularyDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
   seedUser: (email?: string) => Promise<string>;
   /** Clears every table — cheaper between tests than booting a fresh WASM Postgres each time. */
@@ -52,9 +57,10 @@ export interface GamificationTestDbHandle {
 /**
  * A real (WASM-compiled) Postgres with every bounded context's migrations applied in dependency
  * order — Identity first (the FK target `users` must exist), then Student Profile, Lessons,
- * Exercises and Gamification, each set tracked in its own table exactly as `drizzle-kit migrate`
- * does. It is the whole application's schema, which is what the E2E composition needs; the
- * gamification repository tests use it too. Same approach as the other contexts' test-support —
+ * Exercises, Gamification and Vocabulary, each set tracked in its own table exactly as
+ * `drizzle-kit migrate` does. It is the whole application's schema, which is what the E2E
+ * composition needs; the gamification repository tests use it too. Same approach as the other
+ * contexts' test-support —
  * see docs/adr/adr-005-database.md. Test-only.
  */
 export async function createGamificationTestDb(): Promise<GamificationTestDbHandle> {
@@ -66,6 +72,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...lessonsSchema,
       ...exercisesSchema,
       ...gamificationSchema,
+      ...vocabularySchema,
     },
   });
 
@@ -84,6 +91,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     profileDb: pgliteDb as unknown as ProfileDb,
     lessonsDb: pgliteDb as unknown as LessonsDb,
     exercisesDb: pgliteDb as unknown as ExercisesDb,
+    vocabularyDb: pgliteDb as unknown as VocabularyDb,
     seedUser: async (email) => {
       seededUsers += 1;
       const address = email ?? `student-${String(seededUsers)}@example.com`;
@@ -102,7 +110,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     },
     reset: async () => {
       await pgliteDb.execute(
-        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
+        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
       );
     },
     rawExecute: (query: SQL) => pgliteDb.execute(query),

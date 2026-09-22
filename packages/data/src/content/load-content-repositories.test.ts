@@ -1,4 +1,9 @@
-import { createContentId, createExerciseId } from "@tfm-bic/domain";
+import {
+  createContentId,
+  createExerciseId,
+  createLanguageId,
+  createVocabularyItemId,
+} from "@tfm-bic/domain";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { ContentValidationError } from "./content-validation.error.js";
@@ -7,6 +12,7 @@ import {
   exerciseFile,
   makeContentRoot,
   validTree,
+  vocabularyFile,
   type ContentRootHandle,
 } from "./test-support/content-fixtures.js";
 
@@ -18,7 +24,7 @@ afterEach(async () => {
 });
 
 describe("loadContentRepositories", () => {
-  it("reads the tree once and serves content and exercises from the same validated catalog", async () => {
+  it("reads the tree once and serves content, exercises and vocabulary from the same validated catalog", async () => {
     handle = await makeContentRoot({
       ...validTree("xx"),
       "languages/xx/levels/a1/exercises/xx-one-a.json": exerciseFile(
@@ -27,15 +33,20 @@ describe("loadContentRepositories", () => {
         "a1",
         "xx-one",
       ),
+      "languages/xx/vocabulary/greetings.json": vocabularyFile("greetings", "xx"),
     });
 
-    const { contentRepository, exerciseRepository } = await loadContentRepositories(handle.root);
+    const { contentRepository, exerciseRepository, vocabularyRepository } =
+      await loadContentRepositories(handle.root);
 
     expect(await contentRepository.findContent(createContentId("xx-one"))).not.toBeNull();
     expect(
       (await exerciseRepository.listByLesson(createContentId("xx-one"))).map((e) => e.id),
     ).toEqual(["xx-one-a"]);
     expect(await exerciseRepository.findById(createExerciseId("xx-one-a"))).not.toBeNull();
+    expect(
+      await vocabularyRepository.findItem(createVocabularyItemId("xx-greetings-one")),
+    ).not.toBeNull();
   });
 
   it("fails fast, listing every problem, when an exercise is invalid", async () => {
@@ -60,5 +71,12 @@ describe("loadContentRepositories", () => {
 
     const exercises = await exerciseRepository.listByLesson(createContentId("pl-greetings"));
     expect(exercises.length).toBeGreaterThan(0);
+  });
+
+  it("loads the shipped content tree's vocabulary too", async () => {
+    const { vocabularyRepository } = await loadContentRepositories();
+
+    const categories = await vocabularyRepository.listCategories(createLanguageId("pl"));
+    expect(categories.length).toBeGreaterThan(0);
   });
 });

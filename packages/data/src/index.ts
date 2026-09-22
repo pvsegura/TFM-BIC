@@ -48,3 +48,14 @@ export {
   type GamificationDbHandle,
 } from "./gamification/db/client.js";
 export { DrizzleGamificationRepository } from "./gamification/gamification.repository.js";
+
+// Vocabulary (M9) — a student's relationship to a vocabulary entry. Entry content is read from
+// the same validated tree as lessons and exercises. See docs/adr/adr-022-vocabulary.md.
+export { CatalogVocabularyRepository } from "./content/catalog-vocabulary-repository.js";
+export {
+  createVocabularyDb,
+  type VocabularyDb,
+  type VocabularyDbHandle,
+} from "./vocabulary/db/client.js";
+export { DrizzleUserVocabularyRepository } from "./vocabulary/user-vocabulary.repository.js";
+export { NoopVocabularyEventPublisher } from "./vocabulary/no-op-vocabulary-event-publisher.js";

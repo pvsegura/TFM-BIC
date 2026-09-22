@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "travel",
+  "languageId": "pl",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Travel",
+  "description": "Basic words for getting around.",
+  "items": [
+    {
+      "id": "pl-pociag",
+      "status": "published",
+      "order": 10,
+      "lemma": "pociąg",
+      "translation": "train",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-bilet",
+      "status": "published",
+      "order": 20,
+      "lemma": "bilet",
+      "translation": "ticket",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-lotnisko",
+      "status": "published",
+      "order": 30,
+      "lemma": "lotnisko",
+      "translation": "airport",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-walizka",
+      "status": "published",
+      "order": 40,
+      "lemma": "walizka",
+      "translation": "suitcase",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

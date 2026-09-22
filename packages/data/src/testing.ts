@@ -23,3 +23,7 @@ export {
   createGamificationTestDb,
   type GamificationTestDbHandle,
 } from "./gamification/db/test-support/create-test-db.js";
+export {
+  createVocabularyTestDb,
+  type VocabularyTestDbHandle,
+} from "./vocabulary/db/test-support/create-test-db.js";

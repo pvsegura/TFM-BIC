@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Numbers",
+  "description": "The cardinal numbers one to five.",
+  "items": [
+    {
+      "id": "pl-jeden",
+      "status": "published",
+      "order": 10,
+      "lemma": "jeden",
+      "translation": "one",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-dwa",
+      "status": "published",
+      "order": 20,
+      "lemma": "dwa",
+      "translation": "two",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-trzy",
+      "status": "published",
+      "order": 30,
+      "lemma": "trzy",
+      "translation": "three",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-cztery",
+      "status": "published",
+      "order": 40,
+      "lemma": "cztery",
+      "translation": "four",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-piec",
+      "status": "published",
+      "order": 50,
+      "lemma": "pięć",
+      "translation": "five",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    }
+  ]
+}
