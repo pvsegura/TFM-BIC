@@ -94,9 +94,16 @@ correctness. See [gamification-architecture.md](gamification-architecture.md) an
 
 ### Vocabulary
 
-Word/meaning/example/pronunciation entries scoped by language, level, lesson, category. Mostly
-`content/`-backed (see Content Architecture) with possible per-student interaction state
-(e.g., "seen", "saved") living in the domain.
+**Implemented (M9)**: a vocabulary entry (lemma, meaning, optional grammar/level/note/example) is content, grouped in
+a category of its own language, read from the same validated file tree as lessons and exercises
+(`content/languages/<code>/vocabulary/<categoryId>.json`). A student's relationship to a word — `saved` / `learning`
+/ `learned`, with times, `new` derived from having no record — is the only thing PostgreSQL stores (`user_vocabulary`).
+Save/unsave/mark-learned/set-status are atomic, race-free repository operations; a status step the domain refuses is
+reported, not silently ignored. Search folds Unicode (case, diacritics) and matches as a plain substring. A
+`VocabularyItemLearnedEvent` is published (no-op listener in M9) so a future reward can be added without coupling
+vocabulary to gamification. See [content-architecture.md](content-architecture.md#vocabulary-m9) and
+[ADR-022](../adr/adr-022-vocabulary.md). **Not built**: word-form/morphology beyond a lemma's plural, spaced
+repetition, audio/pronunciation, cross-language search (learning-language vs. display-language).
 
 ### Phonetics
 

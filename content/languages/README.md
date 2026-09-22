@@ -5,8 +5,10 @@ language code (`pl/` today). Content here is **data, not code**: adding a langua
 files, never changing application code.
 
 ```
-languages/<code>/language.json                             metadata + which CEFR levels exist and their status
-languages/<code>/levels/<levelId>/content/<contentId>.json one content item per file (file name = id)
+languages/<code>/language.json                                metadata + which CEFR levels exist and their status
+languages/<code>/levels/<levelId>/content/<contentId>.json    one content item per file (file name = id)
+languages/<code>/levels/<levelId>/exercises/<exerciseId>.json one exercise per file, tied to a lesson
+languages/<code>/vocabulary/<categoryId>.json                  one vocabulary category and its entries per file
 ```
 
 Check your work with `pnpm content:validate` (the same loader the API runs at startup). Full rules,

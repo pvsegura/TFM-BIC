@@ -195,6 +195,39 @@ Points, achievements and rewards. See [ADR-021](../adr/adr-021-gamification.md).
   stores, ADR-021 §4); ledger rows are kept until user deletion (a later GDPR milestone); the advisory lock is proved on
   PGlite (a single connection) in the default suite and on real Postgres only by the opt-in test.
 
+## Vocabulary (M9 — implemented)
+
+A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabulary.md).
+
+- **The server is the only authority on a student's vocabulary state.** Identity comes only from the session: no
+  `:userId` in any path, and `userId` (or any undocumented key) in a query, an action body or the status body is a
+  `400`, never ignored. Two-student tests (application, repository and E2E) show one student's saved words, My
+  Vocabulary list and detail state are invisible to another, and a forged status-change body targeting the wrong
+  field set is refused, not partially applied.
+- **Mass assignment**: `save`/`unsave`/`learned` take a strict, empty body (any key is a `400`); the status-update
+  body accepts exactly `{ status }`, restricted to the three stored values — `new` cannot be requested (it is only
+  reached by removing the word), and a time or a user id in the body is refused.
+- **IDOR**: no route addresses another student's record, and there is no route (or admin path) that lists or edits
+  vocabulary by user id.
+- **No silent-no-op mass regression**: a status change `evaluateStatusChange` refuses is answered `409`, with the
+  record left exactly as it was (proved with a concurrent-writer test against real Postgres) — never a `200` that
+  quietly did nothing or partially applied a change.
+- **Idempotency**: `save` and `changeStatus` are each one atomic `INSERT … ON CONFLICT DO UPDATE`; two concurrent
+  identical requests for the same word leave exactly one row in a legal state (proved on real Postgres).
+- **Injection**: every query is parameterised (Drizzle); the vocabulary item id, category id, language and level are
+  slugs/enums checked by the domain, the request schemas and a database `CHECK`; the search term is compared as
+  plain text (never built into a regex or SQL pattern from user input) and rejects control characters.
+- **XSS**: lemma, translation, note and example text come from validated content files (plain text, no markup — same
+  content schema rules as lessons/exercises) and are rendered as text by fixed components.
+- **Caching**: `Cache-Control: private, no-store` on every vocabulary response; the client cache (`["vocabulary", …]`)
+  is user-scoped and dropped on logout/login.
+- **Abuse**: reads are rate-limited (120/min), writes more tightly (60/min).
+- **Logging**: never logs a submitted search term as a security-sensitive value beyond what the request logger
+  already captures; no user id, token or another student's data is logged.
+- **Known limitations**: a `VocabularyItemLearnedEvent` is published but has no real listener yet (M9 does not grant
+  points for vocabulary, per the brief); `user_vocabulary` rows are kept until user deletion (a later GDPR
+  milestone).
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from

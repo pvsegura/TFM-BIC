@@ -104,9 +104,12 @@ POST /exercises/:id/answer                       POST /lessons/:id/complete
   `createDefaultAchievementRegistry`, add its icon id to `ACHIEVEMENT_ICON_IDS` if it needs a new one (and a glyph in
   `achievement-icon.tsx`), and add its text to every language in the text catalog. Start-up refuses a rule without texts.
   No other function changes.
-- **A new way to earn points** (a vocabulary word): add a `RewardReason`, its amount, a `RewardTrigger` kind and the
-  event; call `AwardRewardsUseCase` from the use case that judges it; add a label in `reward-labels.ts`; extend the
-  `CHECK` on `reason` with a migration. Rules that need new facts extend `GamificationFacts` (still derived from the ledger).
+- **A new way to earn points** (a learned vocabulary word — M9 ships the seam but not the reward, ADR-022 §12): add a
+  `RewardReason`, its amount, a `RewardTrigger` kind and the event; call `AwardRewardsUseCase` from a real
+  `VocabularyEventPublisher` listener reacting to `VocabularyItemLearnedEvent` (replacing
+  `NoopVocabularyEventPublisher` in composition — never a direct call from vocabulary's own use cases); add a label
+  in `reward-labels.ts`; extend the `CHECK` on `reason` with a migration. Rules that need new facts extend
+  `GamificationFacts` (still derived from the ledger).
 - **A new language for the texts**: one entry in `DEFAULT_ACHIEVEMENT_TEXT_CATALOG`; no logic changes.
 - **Later, without a rewrite**: streaks (a fact from the ledger's dates), leaderboards (an aggregate over the ledger), a
   balance projection (rebuildable from the ledger), a broker (the events already have a shape).

@@ -1,9 +1,9 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–7 complete**
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–9 complete**
 (architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
-Content & Languages, Lessons, Exercises) —
+Content & Languages, Lessons, Exercises, Gamification, Vocabulary) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -57,6 +57,17 @@ see [current-state.md](current-state.md) for what that means concretely.
   cases, in one transaction per student. Three **authenticated, read-only** routes (`GET /gamification/summary`,
   `/achievements`, `/point-transactions`); the answer and lesson-completion responses carry a `rewards` field. Pages are
   `/dashboard` and `/achievements`. See [ADR-021](../docs/adr/adr-021-gamification.md).
+
+- Vocabulary (M9): an entry is content — a validated file under `content/languages/<code>/vocabulary/<categoryId>.json`,
+  grouped by category, with optional grammar (`partOfSpeech`, `gender`, `plural`) and an optional CEFR-style `levelId`.
+  Only a student's **relationship to a word** is stored (`user_vocabulary`, PK `(user_id, vocabulary_item_id)`,
+  `saved` | `learning` | `learned`; "new" is derived). Save/unsave/mark-learned/set-status are atomic; a status step
+  the domain refuses is a `409`, not a silent no-op. Eight **authenticated** routes (`GET /vocabulary`,
+  `/vocabulary/categories`, `/vocabulary/:id`, `/user-vocabulary`, `POST /vocabulary/:id/save|unsave|learned`,
+  `PUT /vocabulary/:id/status`); pages at `/learn/vocabulary[/mine][/:vocabularyId]` because `/vocabulary` and
+  `/user-vocabulary` are API paths. A `VocabularyItemLearnedEvent` is published (no-op listener) so a future reward
+  can be added without coupling vocabulary to gamification. Polish has a six-category, ~30-entry seed set (not a
+  course). See [ADR-022](../docs/adr/adr-022-vocabulary.md).
 
 ## Where things live
 

@@ -1,7 +1,8 @@
 # API Documentation
 
-Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons), M7 (Exercises) and M8 (Gamification) endpoints exist; no
-OpenAPI/schema-derived spec generation wired up yet — see below.
+Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons), M7 (Exercises),
+M8 (Gamification) and M9 (Vocabulary) endpoints exist; no OpenAPI/schema-derived spec generation wired up yet — see
+below.
 
 ## Auth endpoints (M3)
 
@@ -204,6 +205,50 @@ grants the reward).
 Database: `point_transactions` and `user_achievements` have their own migration set
 (`pnpm --filter @tfm-bic/data db:migrate:gamification`, after Identity's `db:migrate`). The pages are `/dashboard` and
 `/achievements` (not API paths, so the dev proxy needs no page-vs-API bypass for `/gamification`).
+
+## Vocabulary endpoints (M9)
+
+Schemas: `packages/contracts/src/vocabulary/`. **Authenticated** (session cookie; `401 { error }` otherwise), generic
+across languages, rationale in [ADR-022](../adr/adr-022-vocabulary.md). A vocabulary entry is content (a validated
+file grouped in a category of its own language); only the caller's own relationship to a word is stored. The user
+always comes from the session — never from the URL, query or body. Every response carries
+`Cache-Control: private, no-store`.
+
+| Method | Path                                                                   | Rate limit | Notes                                                                                                                                                                              |
+| ------ | ---------------------------------------------------------------------- | ---------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/vocabulary?language=&level=&category=&status=&q=&limit=&after=`      | 120/min    | `{ items: [entry], total, nextAfter }` — published entries of one language, filtered and searched, keyset paged. Only `language` is required.                                      |
+| GET    | `/vocabulary/categories?language=`                                     | 120/min    | `{ categories: [category], progress }` — the language's topics with progress per topic and overall.                                                                                |
+| GET    | `/vocabulary/:vocabularyId`                                            | 120/min    | One entry with its category title and the caller's state. Never writes.                                                                                                            |
+| GET    | `/user-vocabulary?language=&level=&category=&status=&q=&limit=&after=` | 120/min    | "My Vocabulary" — the same shape as `/vocabulary`, restricted to words the caller has a record for; `status` accepts only `saved`/`learning`/`learned` (`new` is nothing to list). |
+| POST   | `/vocabulary/:vocabularyId/save`                                       | 60/min     | Puts the word on the list. Idempotent: an already-saved (or learning/learned) word is returned unchanged.                                                                          |
+| POST   | `/vocabulary/:vocabularyId/unsave`                                     | 60/min     | Takes the word off the list — the only way back to `new`. Idempotent.                                                                                                              |
+| POST   | `/vocabulary/:vocabularyId/learned`                                    | 60/min     | Marks the word known. Idempotent; every status may move to `learned`, so this never refuses.                                                                                       |
+| PUT    | `/vocabulary/:vocabularyId/status`                                     | 60/min     | Body `{ "status": "saved" \| "learning" \| "learned" }` and nothing else. A step `evaluateStatusChange` refuses is a `409`, and the record is left exactly as it was.              |
+
+`entry` is `{ id, languageId, category: { id, title }, lemma, translation, instructionLanguage, levelId?, partOfSpeech?,
+gender?, plural?, note?, example?, userState }` — an optional field is present only when the entry has it. `userState` is
+`{ status: "new" | "saved" | "learning" | "learned", createdAt, updatedAt, learnedAt }` with ISO 8601 times or `null`;
+`new` means no record at all, so all three times are `null`. `category` is `{ id, title, languageId, description?,
+instructionLanguage, progress }`; `progress` is `{ itemCount, saved, learning, learned }` (a count for each stored
+status; the rest are implicitly `new`).
+
+The four action routes (`save`/`unsave`/`learned`/`status`) all pass the `Origin` check (`403` for a cross-origin
+request); `save`/`unsave`/`learned` take **no body** (any key is a `400`); `status`'s body accepts only `status`, and
+only one of the three stored values — `new` is unreachable through this route (it is reached only by `unsave`).
+There is no route to create, edit or publish an entry, and none that reads or changes another student's state: there
+is no `:userId` anywhere, and an undocumented query key (`userId` above all) is a `400 Invalid request.`, never
+ignored.
+
+Errors (bodies are `{ error }` with a fixed message that never echoes the input or the caller's current status):
+`400 Invalid request.` for a malformed vocabulary id, language, level, category or a bad/repeated/missing/extra
+parameter or body key; `401 Unauthenticated`; `403 Forbidden` (cross-origin write); `404` — `Vocabulary item not
+found.` (the same body for a missing, draft, archived entry, or one whose category or level is hidden), `Language not
+found.`, `Level not available.`; `409 Invalid vocabulary status change.` for a status step the domain refuses; `429`
+when rate-limited; a generic `500` otherwise.
+
+Database: `user_vocabulary` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:vocabulary`, after
+Identity's `db:migrate`). The pages are under `/learn/vocabulary` (not `/vocabulary`/`/user-vocabulary`, which are
+these API paths), so the dev proxy needs no page-vs-API bypass.
 
 ## Future direction
 

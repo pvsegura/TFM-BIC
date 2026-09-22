@@ -227,3 +227,48 @@ Points and idempotency are critical flows, tested hardest and at every layer reg
 - **Not covered**: `ten-correct-exercises` end to end (the shipped content has nine exercises; it is proved in the domain,
   application and repository layers), axe-style accessibility scanning (still none), and the multi-connection test is not
   part of CI (no Postgres service in the pipeline).
+
+## Vocabulary (M9)
+
+- **Domain (pure unit tests)**: vocabulary/category id validity and language-namespacing, part-of-speech and grammatical
+  gender enums, `VocabularyItem`/`VocabularyCategory` shapes, `evaluateStatusChange`/`changeVocabularyStatus`/
+  `saveVocabularyItem` (every forward step, the one allowed step back, every refused step, the no-op-on-same-status
+  case, the `learnedAt` invariant), `foldForSearch`/`matchesVocabularySearch` (case, diacritics, undecomposable
+  letters, canonical-equivalence, whitespace collapsing, pattern-injection-shaped terms treated as literal text), and
+  `validateVocabulary` over the whole catalog (duplicate ids, an entry's category existing in its own language,
+  ordering, availability, a published category with no published entry).
+- **Application (in-memory fakes)**: `findVisibleVocabularyItem` (published entry + active language + available
+  level + published category, every refusal the same not-found error); the shared `queryVisibleVocabulary` engine
+  through both `ListVocabularyUseCase` and `ListUserVocabularyUseCase` (visibility, language/level/category/search/
+  status filters, deterministic order, a cursor page boundary, one batched user-state lookup per page, cross-student
+  isolation); `ListVocabularyCategoriesUseCase` (per-category and per-language progress tallies, cross-student
+  isolation); save (idempotent, never regresses a learned word, refused for a hidden entry with no write);
+  unsave (idempotent, always answers `new`, never touches another student's record); mark-as-learned (never refused,
+  publishes `VocabularyItemLearnedEvent` exactly once per word, no event on a repeat); update-status (a refused
+  transition throws and writes nothing extra, ownership).
+- **Repository (real Postgres via PGlite)**: `CatalogVocabularyRepository` (in-memory catalog adapter) and the
+  loader (`load-vocabulary.test.ts`: inherited fields, optional-field pass-through, file-vs-location checks, name
+  ordering, oversized/malformed files, cross-file catalog rules). `DrizzleUserVocabularyRepository`: every CHECK by
+  name (status, the learned/`learned_at` consistency, the id shape), the FK and cascade delete, save/changeStatus/
+  remove behaviour including the same-status no-op and the refused-transition no-op, and **two concurrent writers**
+  (a double save, and two competing status changes) each leaving exactly one row in a legal state.
+- **Contracts / HTTP**: response allowlists (a leaked internal status or file path is dropped), strict list/status/
+  action query and body schemas (`userId` and any undocumented key is a `400`), authentication on every route,
+  cross-origin refusal on every write, a refused status step answering `409` with the record unchanged, mass
+  assignment on save/unsave/learned, cross-student isolation (My Vocabulary, detail state), not-found parity between
+  a draft entry and one hidden behind a draft category.
+- **Frontend**: the API client (session cookie, query building, response-shape stripping, error mapping) and the
+  detail page (loading/not-found/retryable-error states, every grammar fact shown only when present, save/unsave/
+  mark-learned reflected in the UI without a reload, a failed save surfaced as an alert) are unit-tested; router
+  ranking (`/learn/vocabulary/mine` above the dynamic `:vocabularyId` route, no API-path collision).
+- **Playwright** (`tests/e2e/vocabulary.spec.ts`): login → open Vocabulary → browse Polish words with categories;
+  search narrows the list; open a word → save it → see it in My Vocabulary → mark it learned → the status survives a
+  refresh; removing a saved word takes it off My Vocabulary; a second student cannot see the first student's saved
+  word and cannot forge a status change through the API (a `userId` in the body is refused).
+- **Not covered**: the browse and My Vocabulary _pages_ (filters, category selection, pagination UI, empty/loading/
+  error states) have no dedicated component test — only the detail page and the E2E flows exercise them; the
+  individual presentation components (`VocabularyActions`, `VocabularyStatusBadge`, `VocabularyFilters`,
+  `VocabularyList`/`VocabularyItemCard`, `VocabularyCategoryList`) have no isolated unit test of their own, only
+  through the pages/E2E above; axe-style accessibility scanning (still none, project-wide); a real multi-connection
+  concurrency proof beyond the two-writer PGlite tests (no opt-in real-Postgres test was added for vocabulary, unlike
+  gamification's).

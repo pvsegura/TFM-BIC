@@ -75,6 +75,20 @@ evaluated on domain events from the ledger's facts; `user_achievements` stores w
 and `/achievements`. See [ADR-021](../docs/adr/adr-021-gamification.md) and
 [gamification-architecture.md](../docs/architecture/gamification-architecture.md).
 
+## Vocabulary
+
+An entry is content — a validated file grouped in a category of its own language
+(`content/languages/<code>/vocabulary/<categoryId>.json`), read through a `VocabularyRepository` port, the same
+loaded-once-at-startup approach as lessons and exercises. Only a student's **relationship to a word**
+(`saved`/`learning`/`learned`, `new` derived) is stored, in `user_vocabulary` — its own
+`packages/data/src/vocabulary/` context. Save/status-change are atomic (`INSERT … ON CONFLICT DO UPDATE`, the
+allowed-transition SQL generated from the domain's own rule list); a refused step is reported (`409`), not a silent
+no-op. A shared query engine (`queryVisibleVocabulary`) backs both browsing and "My Vocabulary" so the two can never
+disagree about visibility, filters or order. Eight authenticated routes under `/vocabulary`/`/user-vocabulary`;
+pages under `/learn/vocabulary`. A `VocabularyItemLearnedEvent` is published through a `VocabularyEventPublisher`
+port (no-op in M9) so gamification can react later without a direct dependency. See
+[ADR-022](../docs/adr/adr-022-vocabulary.md).
+
 ## Monorepo layout
 
 `apps/{web,api}`, `packages/{domain,application,contracts,data,shared,ui,config,testing}`,

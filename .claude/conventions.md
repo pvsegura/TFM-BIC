@@ -158,6 +158,31 @@ Rationale: [ADR-021](../docs/adr/adr-021-gamification.md); reference:
   is user-scoped; invalidate it after an action that earned points.
 - Never log a user id, an answer or a token with a reward; log the reason, source id, points and unlocked keys.
 
+## Vocabulary conventions (since M9)
+
+Rationale: [ADR-022](../docs/adr/adr-022-vocabulary.md); reference:
+[content-architecture.md](../docs/architecture/content-architecture.md#vocabulary-m9).
+
+- **An entry is content, not a record**: a validated file under `content/languages/<code>/vocabulary/<categoryId>.json`,
+  grouped by category. Never add a `vocabulary`/`vocabulary_categories` table, a per-language vocabulary class,
+  controller or page. Only `user_vocabulary` is stored, and only a student's own status for a word.
+- **An entry's category, language and instruction language are inherited from its file**, never repeated per entry;
+  the id is a permanent slug picked by the author, never derived from the lemma's spelling.
+- **Status changes are refused, not silently applied.** `evaluateStatusChange`/`ALLOWED_STATUS_CHANGES` (domain) is
+  the one place the transition rule lives; the Postgres adapter's `CASE` is generated directly from that same array.
+  A step it refuses is reported (`409`), never a quiet no-op. `unsave` is the only way back to `new`.
+- **`save` and `changeStatus` are each one atomic upsert** (`INSERT … ON CONFLICT DO UPDATE`), never "check then
+  write" — two racing requests for the same word must land on exactly one row.
+- **Browsing and "My Vocabulary" share one query engine** (`queryVisibleVocabulary`); a new filter or sort rule is
+  added there once, never duplicated between the two use cases.
+- **No reward is granted for vocabulary in M9.** `MarkVocabularyItemLearnedUseCase` publishes a
+  `VocabularyItemLearnedEvent` through `VocabularyEventPublisher` (no-op listener); never call
+  `AwardRewardsUseCase` directly from a vocabulary use case — a future reward is a new listener, not a new coupling.
+- **Search folds Unicode** (`foldForSearch`: case, diacritics, a small undecomposable-letter table) and matches as a
+  plain substring; never build a regex or SQL pattern from the search term.
+- No `:userId` in a vocabulary route; an undocumented query key or an extra body field is a `400`. Query key root
+  `["vocabulary", …]` is user-scoped; invalidate it after an action.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

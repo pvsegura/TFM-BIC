@@ -179,10 +179,12 @@ retrieval, rendering, validation). It is **not** a complete A1 course and does n
 
 ## Future extension points (not implemented)
 
-Vocabulary sets, phonetics drills, exercises, audio and video (Gemini/Hyperframes), grammar notes, more
-levels and languages, and AI-generated content each arrive as new content types/block types plus data,
-behind the same port. Moving content into PostgreSQL or a CMS means a new adapter for
-`ContentRepository` and a one-way import from these files (ADR-018 lists the triggers).
+Phonetics drills, audio and video (Gemini/Hyperframes), grammar notes, more levels and languages, and
+AI-generated content each arrive as new content types/block types plus data, behind the same port (or,
+for vocabulary and exercises, the sibling `VocabularyRepository`/`ExerciseRepository` ports — see below
+and [exercise-architecture.md](exercise-architecture.md)). Moving content into PostgreSQL or a CMS means
+a new adapter for the repository port and a one-way import from these files (ADR-018 lists the
+triggers).
 
 ## Lessons (M6)
 
@@ -242,3 +244,43 @@ follow the same rule as lessons: **content is files, the student's activity is t
 Nine original exercises across the three types, attached to the three existing lessons (greetings, introducing
 yourself, please/thank you/sorry). Every fact restates something already stated in the lesson. It exists to prove
 the engine; it is **not** a complete A1 exercise bank and does not claim to be.
+
+## Vocabulary (M9)
+
+Rationale: [ADR-022](../adr/adr-022-vocabulary.md). Vocabulary follows the same rule as lessons and exercises:
+**content is files, the student's own relationship to a word is the only thing in PostgreSQL.**
+
+- **A category is a file, an entry is one item in it.** `content/languages/<languageId>/vocabulary/<categoryId>.json`
+  holds a `VocabularyCategory` (id, status, order, title, description?, instructionLanguage) and its `items`
+  (`VocabularyItem`s). An entry inherits `languageId`, `categoryId` and `instructionLanguage` from its file — they
+  are never repeated per entry, so an entry can never disagree with its own category about them.
+- **What every entry has, and what is optional.** Required: `id`, `lemma`, `translation`, `status`, `order`.
+  Optional: `levelId` (pedagogical placement, not certification — same rule as lesson/exercise levels),
+  `partOfSpeech`, `gender`, `plural`, `note`, `example` (`{ text, translation }`). Nothing is padded for a language
+  that does not have the concept (no gender field for English, no plural for a numeral).
+- **Lemma, not word form.** An entry is one lexical unit; `VocabularyItemId` identifies the lemma and is a stable
+  slug picked by the author, never derived from the lemma's spelling (a lemma may carry diacritics or be a phrase).
+  M9 does not model inflected forms beyond `plural`; see ADR-022 §3 for why the shape does not block adding them later.
+- **What each side owns.** The files own the entry (lemma, meaning, grammar, category, order, publication).
+  PostgreSQL owns only `user_vocabulary`: a student's `saved`/`learning`/`learned` status and its times, keyed
+  `(user_id, vocabulary_item_id)`. `vocabulary_item_id` is the content id held as text — not a foreign key, same
+  reasoning as `lesson_id`/`source_id` elsewhere.
+- **Validation** is the same loader as all content: per file, a strict schema; catalog-wide, unique category ids per
+  language, unique entry ids across the catalog, an entry's category existing in its own language, unique `order`
+  within a category, and published entries only in published categories in `available` levels (when a level is
+  declared at all). Invalid vocabulary stops the API from starting, like every other content type.
+- **Status is per-student state, not content**, with the same forward-mostly transition rule lessons and exercises
+  use elsewhere in spirit: forward is always allowed, one step back (`learned → learning`) is allowed, every other
+  step back is refused (`409`), and the only way to reach `new` again is to remove the word.
+- **Search** folds Unicode (case, diacritics, a handful of Latin letters normalisation does not decompose) and
+  matches as a plain substring — never a database full-text index or an external search engine (ADR-022 §9).
+- **Adding vocabulary** is files: a new category, or new entries in an existing one; nothing else changes.
+
+### Polish seed vocabulary (M9)
+
+Six original categories (`greetings`, `numbers`, `family`, `food`, `everyday`, `travel`), about thirty entries in
+total. It exists to prove the system; it is **not** a complete A1 vocabulary and does not claim CEFR coverage.
+Grammatical gender follows the general Polish ending rule, with the one exception included (`tata`) checked against
+a live source rather than assumed; a plural is given only where it was checked. See
+[content/languages/pl/vocabulary/README.md](../../content/languages/pl/vocabulary/README.md) and ADR-022's Sources
+verified section.
