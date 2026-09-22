@@ -72,4 +72,25 @@ describe("routes", () => {
     expect(leafPath("/exercises")).toBe("*");
     expect(leafPath("/exercises/pl-greetings-polite-hello")).toBe("*");
   });
+
+  it("puts vocabulary browsing and one entry under /learn/vocabulary, ahead of the public /learn/:languageCode/:levelId route", () => {
+    expect(leafPath("/learn/vocabulary")).toBe("learn/vocabulary");
+    expect(leafPath("/learn/vocabulary/pl-dom")).toBe("learn/vocabulary/:vocabularyId");
+  });
+
+  it("ranks the static /learn/vocabulary/mine above the dynamic :vocabularyId route", () => {
+    expect(leafPath("/learn/vocabulary/mine")).toBe("learn/vocabulary/mine");
+  });
+
+  it("puts every vocabulary page behind the login route", () => {
+    expect(isBehindLogin("/learn/vocabulary")).toBe(true);
+    expect(isBehindLogin("/learn/vocabulary/mine")).toBe(true);
+    expect(isBehindLogin("/learn/vocabulary/pl-dom")).toBe(true);
+  });
+
+  it("does not reserve /vocabulary or /user-vocabulary for a page: those paths belong to the API (ADR-022)", () => {
+    expect(leafPath("/vocabulary")).toBe("*");
+    expect(leafPath("/vocabulary/pl-dom")).toBe("*");
+    expect(leafPath("/user-vocabulary")).toBe("*");
+  });
 });

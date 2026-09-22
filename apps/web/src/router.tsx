@@ -11,11 +11,14 @@ import { LearnPage } from "./pages/learn-page.js";
 import { LessonPage } from "./pages/lesson-page.js";
 import { LessonsPage } from "./pages/lessons-page.js";
 import { LoginPage } from "./pages/login-page.js";
+import { MyVocabularyPage } from "./pages/my-vocabulary-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
 import { RoutePlaceholder } from "./pages/route-placeholder.js";
 import { VerifyEmailPage } from "./pages/verify-email-page.js";
+import { VocabularyDetailPage } from "./pages/vocabulary-detail-page.js";
+import { VocabularyPage } from "./pages/vocabulary-page.js";
 
 function placeholder(title: string, description: string) {
   return <RoutePlaceholder title={title} description={description} />;
@@ -55,17 +58,28 @@ const LESSON_ROUTES = [
  * ProtectedRoute like the rest. */
 const EXERCISE_ROUTES = [{ path: "learn/exercises/:exerciseId", element: <ExercisePage /> }];
 
+/** Vocabulary (M9) — browse, "My Vocabulary" and one entry. Under `/learn` because `/vocabulary`
+ * and `/user-vocabulary` are the API paths (see ADR-022). `learn/vocabulary/mine` is a static
+ * segment, so React Router ranks it above `learn/vocabulary/:vocabularyId` regardless of
+ * registration order — the same technique `learn/lessons` and `learn/exercises` already use. */
+const VOCABULARY_ROUTES = [
+  { path: "learn/vocabulary", element: <VocabularyPage /> },
+  { path: "learn/vocabulary/mine", element: <MyVocabularyPage /> },
+  { path: "learn/vocabulary/:vocabularyId", element: <VocabularyDetailPage /> },
+];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page, lessons the
- * real M6 pages, exercises the real M7 page and the dashboard and achievements the real M8 pages
- * (their API is under `/gamification`, so no page-vs-API path clash); the rest are still placeholders for their features,
- * real now only in that they require login. */
+ * real M6 pages, exercises the real M7 page, vocabulary the real M9 pages and the dashboard and
+ * achievements the real M8 pages (their API is under `/gamification`, so no page-vs-API path
+ * clash); the rest are still placeholders for their features, real now only in that they require
+ * login. */
 const APP_ROUTES = [
   { path: "dashboard", element: <DashboardPage /> },
   ...LESSON_ROUTES,
   ...EXERCISE_ROUTES,
-  { path: "vocabulary", element: placeholder("Vocabulary", "Vocabulary practice placeholder.") },
+  ...VOCABULARY_ROUTES,
   { path: "phonetics", element: placeholder("Phonetics", "Phonetics practice placeholder.") },
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
   { path: "achievements", element: <AchievementsPage /> },

@@ -30,6 +30,11 @@ export default defineConfig({
       // `/point-transactions`. The pages live at /achievements and /dashboard, which are not API
       // paths, so — like lessons and exercises — this needs no page-vs-API bypass (ADR-021).
       "/gamification": { target: "http://localhost:3000", changeOrigin: true },
+      // Vocabulary (M9): `/vocabulary`, `/vocabulary/:id/...` and `/user-vocabulary`. The pages
+      // live under /learn/vocabulary, so — like lessons and exercises — this needs no
+      // page-vs-API bypass (ADR-022).
+      "/vocabulary": { target: "http://localhost:3000", changeOrigin: true },
+      "/user-vocabulary": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which
