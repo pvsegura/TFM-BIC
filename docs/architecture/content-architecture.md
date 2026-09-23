@@ -179,12 +179,12 @@ retrieval, rendering, validation). It is **not** a complete A1 course and does n
 
 ## Future extension points (not implemented)
 
-Phonetics drills, audio and video (Gemini/Hyperframes), grammar notes, more levels and languages, and
-AI-generated content each arrive as new content types/block types plus data, behind the same port (or,
-for vocabulary and exercises, the sibling `VocabularyRepository`/`ExerciseRepository` ports — see below
-and [exercise-architecture.md](exercise-architecture.md)). Moving content into PostgreSQL or a CMS means
-a new adapter for the repository port and a one-way import from these files (ADR-018 lists the
-triggers).
+Audio and video (Gemini/Hyperframes), pronunciation evaluation, grammar notes, more levels and languages,
+and AI-generated content each arrive as new content types/block types plus data, behind the same port (or,
+for vocabulary, exercises and phonetics, the sibling `VocabularyRepository`/`ExerciseRepository`/
+`PhoneticContentRepository` ports — see below and [exercise-architecture.md](exercise-architecture.md)).
+Moving content into PostgreSQL or a CMS means a new adapter for the repository port and a one-way import
+from these files (ADR-018 lists the triggers).
 
 ## Lessons (M6)
 
@@ -283,4 +283,61 @@ total. It exists to prove the system; it is **not** a complete A1 vocabulary and
 Grammatical gender follows the general Polish ending rule, with the one exception included (`tata`) checked against
 a live source rather than assumed; a plural is given only where it was checked. See
 [content/languages/pl/vocabulary/README.md](../../content/languages/pl/vocabulary/README.md) and ADR-022's Sources
+verified section.
+
+## Phonetics (M10)
+
+Rationale: [ADR-023](../adr/adr-023-phonetics.md). Phonetics follows the same rule as vocabulary, lessons and
+exercises: **content is files, a student's own progress on a representation is the only thing in PostgreSQL.**
+Independent of Vocabulary — no shared identifier, no data reference between the two contexts.
+
+- **A topic is a file, a representation is one item in it.** `content/languages/<languageId>/phonetics/<topicId>.json`
+  holds a `PhoneticTopic` (id, status, order, title, description?, instructionLanguage) and its `items`
+  (`PhoneticRepresentation`s). A representation inherits `languageId`, `topicId` and `instructionLanguage` from its
+  file — never repeated per representation.
+- **What every representation has, and what is optional.** Required: `id`, `ipa`, `description`, `status`, `order`.
+  Optional: `topicId` (unlike vocabulary's always-required category — not every sound needs a grouping), `levelId`
+  (pedagogical placement, not certification — same rule as lesson/exercise/vocabulary levels), `note`,
+  `exampleWords` (`{ word, translation }[]`, free text — never a `VocabularyItemId` reference).
+- **IPA is Unicode text**, validated the same bounded-plain-text way every other content string is — no per-symbol
+  allowlist, no image, no hard-coded symbol table.
+- **Validation** is the same loader as all content: per file, a strict schema; catalog-wide, unique representation
+  ids across the catalog, unique topic ids per language, a representation's topic existing in its own language when
+  it names one, unique `order` within a topic, and published representations only in published topics (when named)
+  in `available` levels (when declared).
+- **Progress is per-student state, not content**, and unlike vocabulary's status it only ever moves forward:
+  `viewed → practiced → completed`, with no backward step at all (a sound has no honest "I forgot it" correction the
+  way a word's memorised meaning does). Recording a view happens automatically when a representation's detail page
+  opens (the same "opening starts it" idea lessons use), on every fresh open — not just the first.
+- **View, practice and complete are three atomic Postgres primitives** (`INSERT … ON CONFLICT DO UPDATE`), each with
+  its own refresh rule: a view always refreshes the last-viewed time without touching status; practice advances from
+  `viewed` and always refreshes when it was last practiced, even after completion; complete is the only one that is
+  fully idempotent once reached.
+- **Browsing and the topics-with-progress view share one query engine** (`queryVisiblePhonetics`), the same pattern
+  vocabulary's browse/My Vocabulary share: visibility, language/level/topic filters, deterministic order (topic,
+  then representation, ties by id — an untopicked representation sorts last), a cursor page, one batched progress
+  lookup per page.
+- **API** (authenticated, `private, no-store`): `GET /phonetics` (list, filtered/paged, 120/min), `GET
+/phonetics/topics` (topics + progress, 120/min), `GET /phonetics/:id` (detail, 120/min), `POST
+/phonetics/:id/view|practice|complete` (60/min, no body). No `:userId` anywhere; an undocumented query key or body
+  field is a `400`. No `409` exists — every repeat action either advances or no-ops, never refuses a step.
+- **Frontend**: nav link "Phonetics"; `/learn/phonetics` (browse: language picker, topic cards with progress,
+  topic/status filters, a card per sound with its IPA, description and practice/complete actions);
+  `/learn/phonetics/:phoneticId` (detail: IPA, description, topic, level, note, example words, progress). The IPA
+  symbol always carries an explicit `aria-label` for screen readers. The vocabulary detail page links to
+  `/learn/phonetics?language=<word's language>` ("View pronunciation guide") — UI-only, no shared data.
+- **Content**: a small, original Polish seed set — two topics (`consonants`, `vowels`), eight representations. IPA
+  and articulatory descriptions checked against standard academic Polish phonology references (see
+  [content/languages/pl/phonetics/README.md](../../content/languages/pl/phonetics/README.md)), not invented. Not a
+  claim of phonemic coverage.
+- **Not built, on purpose**: audio, speech recognition, pronunciation scoring, search over IPA/description, a reward
+  for completing phonetics content, a backward progress correction.
+
+### Polish seed phonetics (M10)
+
+Two topics (`consonants`: six consonant sounds that do not exist, or are easy to mispronounce, in English; `vowels`:
+the two nasal vowels), eight representations in total. It exists to prove the system; it is **not** a complete
+phonemic inventory of Polish and does not claim CEFR coverage. IPA transcriptions and descriptions were checked
+against standard academic references for Polish phonology rather than invented. See
+[content/languages/pl/phonetics/README.md](../../content/languages/pl/phonetics/README.md) and ADR-023's Sources
 verified section.
