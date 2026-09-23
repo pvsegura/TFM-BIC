@@ -189,4 +189,13 @@ describe("VocabularyDetailPage", () => {
       "Something went wrong. Please try again.",
     );
   });
+
+  it("links to the phonetics guide for the word's own language, without naming the word", async () => {
+    vi.spyOn(vocabularyApi, "fetchVocabularyItem").mockResolvedValue(item());
+    renderAt("/learn/vocabulary/pl-dom");
+    await screen.findByRole("heading", { level: 1, name: "dom" });
+
+    const link = screen.getByRole("link", { name: "View pronunciation guide" });
+    expect(link).toHaveAttribute("href", "/learn/phonetics?language=pl");
+  });
 });

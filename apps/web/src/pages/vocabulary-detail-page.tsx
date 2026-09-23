@@ -1,5 +1,5 @@
 import type { ReactNode } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { VocabularyActions } from "../components/vocabulary-actions.js";
@@ -8,6 +8,7 @@ import { useVocabularyItem } from "../hooks/use-vocabulary.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const VOCABULARY_HREF = "/learn/vocabulary";
+const enc = encodeURIComponent;
 
 /** One labelled fact, shown only when the entry actually has it — a lesson never sees an empty "Plural:". */
 function Fact({ label, children }: { label: string; children: ReactNode }) {
@@ -95,6 +96,15 @@ export function VocabularyDetailPage() {
         <div className="mt-6">
           <VocabularyActions vocabularyId={item.id} status={item.userState.status} />
         </div>
+
+        <p className="mt-4">
+          <Link
+            to={`/learn/phonetics?language=${enc(item.languageId)}`}
+            className="text-sm underline underline-offset-2"
+          >
+            View pronunciation guide
+          </Link>
+        </p>
       </div>
     );
   }
