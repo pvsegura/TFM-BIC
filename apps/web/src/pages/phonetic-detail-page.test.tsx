@@ -161,6 +161,35 @@ describe("PhoneticDetailPage", () => {
     });
   });
 
+  it("does not let a slow, automatic view response overwrite a faster practice/complete result", async () => {
+    // Reproduces a real race: the view recorded on open can still be in flight when the student
+    // acts. Its response must never regress the status a later action already applied.
+    vi.spyOn(phoneticsApi, "fetchPhonetic").mockResolvedValue(representation(NOT_STARTED));
+    let resolveView: (value: PhoneticUserProgressResponse) => void = () => {
+      throw new Error("resolveView called before it was assigned");
+    };
+    vi.spyOn(phoneticsApi, "recordPhoneticView").mockReturnValue(
+      new Promise((resolve) => {
+        resolveView = resolve;
+      }),
+    );
+    vi.spyOn(phoneticsApi, "recordPhoneticPractice").mockResolvedValue(PRACTICED);
+    renderAt("/learn/phonetics/pl-ipa-ts");
+    await screen.findByText("t͡ʂ");
+
+    // The view request is still pending when the student practices — and its slow response
+    // arrives only after practice has already resolved and rendered.
+    await userEvent.click(screen.getByRole("button", { name: "Practice" }));
+    await waitFor(() => {
+      expect(screen.getByText("Practiced")).toBeInTheDocument();
+    });
+    resolveView(VIEWED);
+
+    await new Promise((resolve) => setTimeout(resolve, 0));
+    expect(screen.getByText("Practiced")).toBeInTheDocument();
+    expect(screen.queryByText("Viewed")).not.toBeInTheDocument();
+  });
+
   it("completes a practiced sound", async () => {
     vi.spyOn(phoneticsApi, "fetchPhonetic").mockResolvedValue(representation(PRACTICED));
     vi.spyOn(phoneticsApi, "recordPhoneticView").mockResolvedValue(VIEWED);
