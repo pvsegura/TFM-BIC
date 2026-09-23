@@ -1,6 +1,12 @@
 import { describe, expect, it } from "vitest";
 
-import { contentIdSchema, languageIdSchema, levelIdSchema } from "./identifiers.schema.js";
+import {
+  contentIdSchema,
+  languageIdSchema,
+  levelIdSchema,
+  phoneticRepresentationIdSchema,
+  phoneticTopicIdSchema,
+} from "./identifiers.schema.js";
 
 describe("languageIdSchema", () => {
   it.each(["pl", "en", "es", "de", "fr", "it", "pt"])("accepts %s", (code) => {
@@ -45,4 +51,30 @@ describe("contentIdSchema", () => {
   ])("rejects %j", (value) => {
     expect(contentIdSchema.safeParse(value).success).toBe(false);
   });
+});
+
+describe("phoneticRepresentationIdSchema", () => {
+  it("accepts a namespaced slug", () => {
+    expect(phoneticRepresentationIdSchema.parse("pl-ipa-ts")).toBe("pl-ipa-ts");
+  });
+
+  it.each(["", "PL-x", "pl_x", "pl/x", "../../etc/passwd", "pl-<script>", 5])(
+    "rejects %j",
+    (value) => {
+      expect(phoneticRepresentationIdSchema.safeParse(value).success).toBe(false);
+    },
+  );
+});
+
+describe("phoneticTopicIdSchema", () => {
+  it.each(["consonants", "vowels", "stress-rules"])("accepts %s", (id) => {
+    expect(phoneticTopicIdSchema.parse(id)).toBe(id);
+  });
+
+  it.each(["", "Consonants", "conso_nants", "conso/nants", "../etc/passwd", 5])(
+    "rejects %j",
+    (value) => {
+      expect(phoneticTopicIdSchema.safeParse(value).success).toBe(false);
+    },
+  );
 });

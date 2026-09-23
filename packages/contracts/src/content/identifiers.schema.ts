@@ -2,11 +2,15 @@ import {
   createContentId,
   createExerciseId,
   createLanguageId,
+  createPhoneticRepresentationId,
+  createPhoneticTopicId,
   createVocabularyCategoryId,
   createVocabularyItemId,
   isValidContentId,
   isValidExerciseId,
   isValidLanguageId,
+  isValidPhoneticRepresentationId,
+  isValidPhoneticTopicId,
   isValidVocabularyCategoryId,
   isValidVocabularyItemId,
   LEVEL_IDS,
@@ -47,3 +51,17 @@ export const vocabularyCategoryIdSchema = z
   .string()
   .refine(isValidVocabularyCategoryId, { error: "Expected a lowercase slug such as food." })
   .transform(createVocabularyCategoryId);
+
+/** A phonetic representation's permanent id — a language-prefixed slug such as `pl-ipa-ts`. */
+export const phoneticRepresentationIdSchema = z
+  .string()
+  .refine(isValidPhoneticRepresentationId, {
+    error: "Expected a lowercase slug such as pl-ipa-ts.",
+  })
+  .transform(createPhoneticRepresentationId);
+
+/** A phonetic topic id — a plain lowercase slug such as `consonants`. */
+export const phoneticTopicIdSchema = z
+  .string()
+  .refine(isValidPhoneticTopicId, { error: "Expected a lowercase slug such as consonants." })
+  .transform(createPhoneticTopicId);
