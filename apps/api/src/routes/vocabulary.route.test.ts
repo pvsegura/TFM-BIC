@@ -44,6 +44,7 @@ function build(overrides: Partial<Parameters<typeof loadEnv>[0]> = {}) {
     testDeps.exerciseDeps,
     testDeps.gamificationDeps,
     testDeps.vocabularyDeps,
+    testDeps.phoneticsDeps,
   );
   return { app, ...testDeps };
 }

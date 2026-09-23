@@ -59,3 +59,13 @@ export {
 } from "./vocabulary/db/client.js";
 export { DrizzleUserVocabularyRepository } from "./vocabulary/user-vocabulary.repository.js";
 export { NoopVocabularyEventPublisher } from "./vocabulary/no-op-vocabulary-event-publisher.js";
+
+// Phonetics (M10) — a student's progress on a phonetic representation. Representation content is
+// read from the same validated tree as lessons, exercises and vocabulary.
+export { CatalogPhoneticRepository } from "./content/catalog-phonetic-repository.js";
+export {
+  createPhoneticsDb,
+  type PhoneticsDb,
+  type PhoneticsDbHandle,
+} from "./phonetics/db/client.js";
+export { DrizzleUserPhoneticProgressRepository } from "./phonetics/user-phonetic-progress.repository.js";

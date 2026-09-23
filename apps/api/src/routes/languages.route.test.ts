@@ -24,6 +24,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.exerciseDeps,
     testDeps.gamificationDeps,
     testDeps.vocabularyDeps,
+    testDeps.phoneticsDeps,
   );
   return { app, ...testDeps };
 }

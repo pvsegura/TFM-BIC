@@ -21,6 +21,8 @@ import {
   FakeSessionRepository,
   FakeTokenGenerator,
   FakeUserRepository,
+  FakePhoneticContentRepository,
+  FakeUserPhoneticProgressRepository,
   FakeUserVocabularyRepository,
   FakeVocabularyEventPublisher,
   FakeVocabularyRepository,
@@ -33,6 +35,7 @@ import type { ContentDependencies } from "../composition/content-dependencies.js
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
 import type { GamificationDependencies } from "../composition/gamification-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
+import type { PhoneticsDependencies } from "../composition/phonetics-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 import type { VocabularyDependencies } from "../composition/vocabulary-dependencies.js";
 
@@ -71,10 +74,12 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
 
   const exerciseRepository = new FakeExerciseRepository();
   const vocabularyRepository = new FakeVocabularyRepository();
+  const phoneticRepository = new FakePhoneticContentRepository();
   const contentDeps: ContentDependencies = {
     contentRepository,
     exerciseRepository,
     vocabularyRepository,
+    phoneticRepository,
   };
 
   const lessonProgressRepository = new FakeLessonProgressRepository();
@@ -115,6 +120,13 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const userPhoneticProgressRepository = new FakeUserPhoneticProgressRepository();
+  const phoneticsDeps: PhoneticsDependencies = {
+    userPhoneticProgressRepository,
+    clock,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
@@ -123,13 +135,16 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     exerciseDeps,
     gamificationDeps,
     vocabularyDeps,
+    phoneticsDeps,
     gamificationRepository,
     lessonProgressRepository,
     exerciseAttemptRepository,
     exerciseRepository,
     vocabularyRepository,
+    phoneticRepository,
     userVocabularyRepository,
     vocabularyEvents,
+    userPhoneticProgressRepository,
     clock,
     userRepository,
     sessionRepository,

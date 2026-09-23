@@ -17,6 +17,8 @@ import { createGamificationUseCases } from "./composition/gamification-use-cases
 import { createContentUseCases } from "./composition/content-use-cases.js";
 import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
+import type { PhoneticsDependencies } from "./composition/phonetics-dependencies.js";
+import { createPhoneticsUseCases } from "./composition/phonetics-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import type { VocabularyDependencies } from "./composition/vocabulary-dependencies.js";
@@ -28,6 +30,7 @@ import { registerGamificationRoutes } from "./routes/gamification.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
 import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
+import { registerPhoneticsRoutes } from "./routes/phonetics.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
@@ -41,6 +44,7 @@ export function buildServer(
   exerciseDeps: ExerciseDependencies,
   gamificationDeps: GamificationDependencies,
   vocabularyDeps: VocabularyDependencies,
+  phoneticsDeps: PhoneticsDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -131,6 +135,14 @@ export function buildServer(
     // relationship to a word is stored. The user always comes from the session.
     registerVocabularyRoutes(app, {
       useCases: createVocabularyUseCases(contentDeps, vocabularyDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // Phonetics (M10): representations are content, reused from contentDeps; only the student's
+    // own progress is stored. Independent of Vocabulary. The user always comes from the session.
+    registerPhoneticsRoutes(app, {
+      useCases: createPhoneticsUseCases(contentDeps, phoneticsDeps),
       resolveSession: authUseCases.resolveSession,
       env,
     });

@@ -2,6 +2,7 @@ import {
   createContentId,
   createExerciseId,
   createLanguageId,
+  createPhoneticRepresentationId,
   createVocabularyItemId,
 } from "@tfm-bic/domain";
 import { afterEach, describe, expect, it } from "vitest";
@@ -11,6 +12,7 @@ import { loadContentRepositories } from "./load-content-repositories.js";
 import {
   exerciseFile,
   makeContentRoot,
+  phoneticFile,
   validTree,
   vocabularyFile,
   type ContentRootHandle,
@@ -34,9 +36,10 @@ describe("loadContentRepositories", () => {
         "xx-one",
       ),
       "languages/xx/vocabulary/greetings.json": vocabularyFile("greetings", "xx"),
+      "languages/xx/phonetics/consonants.json": phoneticFile("consonants", "xx"),
     });
 
-    const { contentRepository, exerciseRepository, vocabularyRepository } =
+    const { contentRepository, exerciseRepository, vocabularyRepository, phoneticRepository } =
       await loadContentRepositories(handle.root);
 
     expect(await contentRepository.findContent(createContentId("xx-one"))).not.toBeNull();
@@ -46,6 +49,11 @@ describe("loadContentRepositories", () => {
     expect(await exerciseRepository.findById(createExerciseId("xx-one-a"))).not.toBeNull();
     expect(
       await vocabularyRepository.findItem(createVocabularyItemId("xx-greetings-one")),
+    ).not.toBeNull();
+    expect(
+      await phoneticRepository.findRepresentation(
+        createPhoneticRepresentationId("xx-ipa-consonants-one"),
+      ),
     ).not.toBeNull();
   });
 
@@ -78,5 +86,12 @@ describe("loadContentRepositories", () => {
 
     const categories = await vocabularyRepository.listCategories(createLanguageId("pl"));
     expect(categories.length).toBeGreaterThan(0);
+  });
+
+  it("loads the shipped content tree's phonetics too", async () => {
+    const { phoneticRepository } = await loadContentRepositories();
+
+    const topics = await phoneticRepository.listTopics(createLanguageId("pl"));
+    expect(topics.length).toBeGreaterThan(0);
   });
 });

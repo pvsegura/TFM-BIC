@@ -8,6 +8,10 @@ import {
   type GamificationDependencies,
 } from "./gamification-dependencies.js";
 import { buildLessonDependencies, type LessonDependencies } from "./lesson-dependencies.js";
+import {
+  buildPhoneticsDependencies,
+  type PhoneticsDependencies,
+} from "./phonetics-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 import {
   buildVocabularyDependencies,
@@ -22,12 +26,12 @@ import {
  * (apps/api/src/index.ts) so E2E tests run against the real server/HTTP
  * stack with no Docker/network database.
  *
- * Auth, profile, lessons, exercises, gamification and vocabulary deliberately share that single
- * instance: in production they are one database, and `student_profiles`, `lesson_progress`,
- * `exercise_attempts`, `point_transactions`, `user_achievements` and `user_vocabulary` all have a
- * foreign key to `users`, so they can only exist alongside the user they belong to. The instance
- * is closed once, via `auth.close`; the other `close`s are no-ops so shutting everything down
- * never closes it twice.
+ * Auth, profile, lessons, exercises, gamification, vocabulary and phonetics deliberately share
+ * that single instance: in production they are one database, and `student_profiles`,
+ * `lesson_progress`, `exercise_attempts`, `point_transactions`, `user_achievements`,
+ * `user_vocabulary` and `user_phonetic_progress` all have a foreign key to `users`, so they can
+ * only exist alongside the user they belong to. The instance is closed once, via `auth.close`;
+ * the other `close`s are no-ops so shutting everything down never closes it twice.
  */
 export async function createTestDependencies(contentDir?: string): Promise<{
   auth: AuthDependencies;
@@ -37,8 +41,9 @@ export async function createTestDependencies(contentDir?: string): Promise<{
   exercises: ExerciseDependencies;
   gamification: GamificationDependencies;
   vocabulary: VocabularyDependencies;
+  phonetics: PhoneticsDependencies;
 }> {
-  const { db, identityDb, profileDb, lessonsDb, exercisesDb, vocabularyDb, close } =
+  const { db, identityDb, profileDb, lessonsDb, exercisesDb, vocabularyDb, phoneticsDb, close } =
     await createGamificationTestDb();
 
   return {
@@ -50,5 +55,6 @@ export async function createTestDependencies(contentDir?: string): Promise<{
     exercises: buildExerciseDependencies(exercisesDb, () => Promise.resolve()),
     gamification: buildGamificationDependencies(db, () => Promise.resolve()),
     vocabulary: buildVocabularyDependencies(vocabularyDb, () => Promise.resolve()),
+    phonetics: buildPhoneticsDependencies(phoneticsDb, () => Promise.resolve()),
   };
 }

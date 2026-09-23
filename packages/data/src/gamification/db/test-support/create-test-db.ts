@@ -12,6 +12,8 @@ import * as identitySchema from "../../../identity/db/schema.js";
 import type { IdentityDb } from "../../../identity/db/client.js";
 import * as lessonsSchema from "../../../lessons/db/schema.js";
 import type { LessonsDb } from "../../../lessons/db/client.js";
+import type { PhoneticsDb } from "../../../phonetics/db/client.js";
+import * as phoneticsSchema from "../../../phonetics/db/schema.js";
 import * as profileSchema from "../../../profile/db/schema.js";
 import type { ProfileDb } from "../../../profile/db/client.js";
 import type { GamificationDb } from "../client.js";
@@ -30,6 +32,7 @@ const CONTEXTS = [
   { folder: migrationsOf("exercises"), table: "__drizzle_migrations_exercises" },
   { folder: migrationsOf("gamification"), table: "__drizzle_migrations_gamification" },
   { folder: migrationsOf("vocabulary"), table: "__drizzle_migrations_vocabulary" },
+  { folder: migrationsOf("phonetics"), table: "__drizzle_migrations_phonetics" },
 ] as const;
 
 export interface GamificationTestDbHandle {
@@ -43,6 +46,7 @@ export interface GamificationTestDbHandle {
   lessonsDb: LessonsDb;
   exercisesDb: ExercisesDb;
   vocabularyDb: VocabularyDb;
+  phoneticsDb: PhoneticsDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
   seedUser: (email?: string) => Promise<string>;
   /** Clears every table — cheaper between tests than booting a fresh WASM Postgres each time. */
@@ -57,7 +61,7 @@ export interface GamificationTestDbHandle {
 /**
  * A real (WASM-compiled) Postgres with every bounded context's migrations applied in dependency
  * order — Identity first (the FK target `users` must exist), then Student Profile, Lessons,
- * Exercises, Gamification and Vocabulary, each set tracked in its own table exactly as
+ * Exercises, Gamification, Vocabulary and Phonetics, each set tracked in its own table exactly as
  * `drizzle-kit migrate` does. It is the whole application's schema, which is what the E2E
  * composition needs; the gamification repository tests use it too. Same approach as the other
  * contexts' test-support —
@@ -73,6 +77,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...exercisesSchema,
       ...gamificationSchema,
       ...vocabularySchema,
+      ...phoneticsSchema,
     },
   });
 
@@ -92,6 +97,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     lessonsDb: pgliteDb as unknown as LessonsDb,
     exercisesDb: pgliteDb as unknown as ExercisesDb,
     vocabularyDb: pgliteDb as unknown as VocabularyDb,
+    phoneticsDb: pgliteDb as unknown as PhoneticsDb,
     seedUser: async (email) => {
       seededUsers += 1;
       const address = email ?? `student-${String(seededUsers)}@example.com`;
@@ -110,7 +116,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     },
     reset: async () => {
       await pgliteDb.execute(
-        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
+        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
       );
     },
     rawExecute: (query: SQL) => pgliteDb.execute(query),

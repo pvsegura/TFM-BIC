@@ -21,6 +21,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     exerciseDeps,
     gamificationDeps,
     vocabularyDeps,
+    phoneticsDeps,
   } = buildTestDeps();
   return buildServer(
     env,
@@ -31,6 +32,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     exerciseDeps,
     gamificationDeps,
     vocabularyDeps,
+    phoneticsDeps,
   );
 }
 
