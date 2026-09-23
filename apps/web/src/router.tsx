@@ -12,6 +12,8 @@ import { LessonPage } from "./pages/lesson-page.js";
 import { LessonsPage } from "./pages/lessons-page.js";
 import { LoginPage } from "./pages/login-page.js";
 import { MyVocabularyPage } from "./pages/my-vocabulary-page.js";
+import { PhoneticDetailPage } from "./pages/phonetic-detail-page.js";
+import { PhoneticsPage } from "./pages/phonetics-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
@@ -68,11 +70,20 @@ const VOCABULARY_ROUTES = [
   { path: "learn/vocabulary/:vocabularyId", element: <VocabularyDetailPage /> },
 ];
 
+/** Phonetics (M10) — browse and one representation. Under `/learn` because `/phonetics` is the
+ * API path, the same reasoning as Vocabulary (ADR-022) and Lessons (ADR-019). Independent of
+ * Vocabulary: no shared route, no shared identifier. */
+const PHONETICS_ROUTES = [
+  { path: "learn/phonetics", element: <PhoneticsPage /> },
+  { path: "learn/phonetics/:phoneticId", element: <PhoneticDetailPage /> },
+];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page, lessons the
- * real M6 pages, exercises the real M7 page, vocabulary the real M9 pages and the dashboard and
- * achievements the real M8 pages (their API is under `/gamification`, so no page-vs-API path
+ * real M6 pages, exercises the real M7 page, vocabulary the real M9 pages, phonetics the real
+ * M10 pages, and the dashboard and achievements the real M8 pages (their API is under
+ * `/gamification`, so no page-vs-API path
  * clash); the rest are still placeholders for their features, real now only in that they require
  * login. */
 const APP_ROUTES = [
@@ -80,7 +91,7 @@ const APP_ROUTES = [
   ...LESSON_ROUTES,
   ...EXERCISE_ROUTES,
   ...VOCABULARY_ROUTES,
-  { path: "phonetics", element: placeholder("Phonetics", "Phonetics practice placeholder.") },
+  ...PHONETICS_ROUTES,
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
   { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },
