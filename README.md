@@ -14,8 +14,14 @@
 
 # DevOps
 
-- Jenkins
-- SonarQube
+- Jenkins puerto 8080
+
+# Desde una terminal Ubuntu
+
+cd ~/infrastructure/jenkins && docker compose up -d
+cd ~/infrastructure/sonarqube && docker compose up -d
+
+- SonarQube admin puerto9000
 - Docker
 
 # Comandos Docker
