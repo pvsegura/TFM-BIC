@@ -1,8 +1,8 @@
 # API Documentation
 
 Status: M3 (Identity & Authentication), M4 (Student Profile), M5 (Languages & Content), M6 (Lessons), M7 (Exercises),
-M8 (Gamification) and M9 (Vocabulary) endpoints exist; no OpenAPI/schema-derived spec generation wired up yet — see
-below.
+M8 (Gamification), M9 (Vocabulary) and M10 (Phonetics) endpoints exist; no OpenAPI/schema-derived spec generation
+wired up yet — see below.
 
 ## Auth endpoints (M3)
 
@@ -249,6 +249,48 @@ when rate-limited; a generic `500` otherwise.
 Database: `user_vocabulary` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:vocabulary`, after
 Identity's `db:migrate`). The pages are under `/learn/vocabulary` (not `/vocabulary`/`/user-vocabulary`, which are
 these API paths), so the dev proxy needs no page-vs-API bypass.
+
+## Phonetics endpoints (M10)
+
+Schemas: `packages/contracts/src/phonetics/`. **Authenticated** (session cookie; `401 { error }` otherwise), generic
+across languages, rationale in [ADR-023](../adr/adr-023-phonetics.md). A phonetic representation is content (a
+validated file, optionally grouped in a topic of its own language); only the caller's own progress on it is stored.
+Independent of Vocabulary — no shared identifier, no data reference between the two. The user always comes from the
+session — never from the URL, query or body. Every response carries `Cache-Control: private, no-store`.
+
+| Method | Path                                                       | Rate limit | Notes                                                                                                                                                           |
+| ------ | ---------------------------------------------------------- | ---------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/phonetics?language=&level=&topic=&status=&limit=&after=` | 120/min    | `{ items: [representation], total, nextAfter }` — published representations of one language, filtered, keyset paged. Only `language` is required.               |
+| GET    | `/phonetics/topics?language=`                              | 120/min    | `{ topics: [topic] }` — the language's topics, each with progress per topic; no language-wide total in the body (unlike Vocabulary's `/vocabulary/categories`). |
+| GET    | `/phonetics/:phoneticId`                                   | 120/min    | One representation with its topic title (when it has one) and the caller's progress. Never writes.                                                              |
+| POST   | `/phonetics/:phoneticId/view`                              | 60/min     | Records a view. Idempotent; never regresses a `practiced`/`completed` representation, only refreshes the last-viewed time.                                      |
+| POST   | `/phonetics/:phoneticId/practice`                          | 60/min     | Records practice. Idempotent; advances a `viewed` representation, never regresses `completed`, always refreshes its own timestamp.                              |
+| POST   | `/phonetics/:phoneticId/complete`                          | 60/min     | Marks the representation completed. Idempotent; every status may move to `completed`, so this never refuses.                                                    |
+
+`representation` is `{ id, languageId, topic?: { id, title }, ipa, description, instructionLanguage, levelId?, note?,
+exampleWords?: [{ word, translation }], userProgress }` — an optional field is present only when the representation
+has it. `userProgress` is `{ status: "not_started" | "viewed" | "practiced" | "completed", firstViewedAt,
+lastViewedAt, practicedAt, completedAt }` with ISO 8601 times or `null`; `not_started` means no record at all, so all
+four times are `null`. `topic` in `/phonetics/topics` is `{ id, languageId, title, description?, instructionLanguage,
+progress }`; `progress` is `{ representationCount, viewed, practiced, completed }` (a count for each stored status;
+the rest are implicitly `not_started`).
+
+The three action routes (`view`/`practice`/`complete`) all pass the `Origin` check (`403` for a cross-origin
+request) and take **no body** (any key is a `400`). Unlike Vocabulary there is no route that lets the caller choose
+an arbitrary target status directly, so there is no `409` — every action either advances the stored status or
+leaves it exactly as it was. There is no route to create, edit or publish a representation, and none that reads or
+changes another student's progress: there is no `:userId` anywhere, and an undocumented query key (`userId` above
+all) is a `400 Invalid request.`, never ignored.
+
+Errors (bodies are `{ error }` with a fixed message that never echoes the input or the caller's current progress):
+`400 Invalid request.` for a malformed phonetic id, language, level, topic or a bad/repeated/missing/extra parameter
+or body key; `401 Unauthenticated`; `403 Forbidden` (cross-origin write); `404` — `Phonetic representation not
+found.` (the same body for a missing, draft representation, or one whose topic or level is hidden), `Language not
+found.`, `Level not available.`; `429` when rate-limited; a generic `500` otherwise.
+
+Database: `user_phonetic_progress` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:phonetics`,
+after Identity's `db:migrate`). The pages are under `/learn/phonetics` (not `/phonetics`, which is this API path),
+so the dev proxy needs no page-vs-API bypass.
 
 ## Future direction
 

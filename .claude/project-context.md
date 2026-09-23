@@ -1,9 +1,9 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–9 complete**
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–10 complete**
 (architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
-Content & Languages, Lessons, Exercises, Gamification, Vocabulary) —
+Content & Languages, Lessons, Exercises, Gamification, Vocabulary, Phonetics) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -68,6 +68,19 @@ see [current-state.md](current-state.md) for what that means concretely.
   `/user-vocabulary` are API paths. A `VocabularyItemLearnedEvent` is published (no-op listener) so a future reward
   can be added without coupling vocabulary to gamification. Polish has a six-category, ~30-entry seed set (not a
   course). See [ADR-022](../docs/adr/adr-022-vocabulary.md).
+
+- Phonetics (M10): a representation is content — a validated file under
+  `content/languages/<code>/phonetics/<topicId>.json`, optionally grouped by topic (unlike vocabulary's
+  always-required category), with required `ipa` (Unicode text) and `description`, and optional `levelId`, `note`,
+  `exampleWords` (free text, never a `VocabularyItemId` — Phonetics shares no data with Vocabulary). Only a
+  student's **progress** is stored (`user_phonetic_progress`, PK `(user_id, phonetic_representation_id)`,
+  `viewed` | `practiced` | `completed`; forward-only, no backward step at all, unlike vocabulary). Opening a
+  representation's detail page records a view automatically, every time. Six **authenticated** routes
+  (`GET /phonetics`, `/phonetics/topics`, `/phonetics/:id`, `POST /phonetics/:id/view|practice|complete`); pages at
+  `/learn/phonetics[/:phoneticId]` because `/phonetics` is the API path. A vocabulary entry links to its language's
+  phonetics hub ("View pronunciation guide") — UI only, no shared id. Polish has a two-topic, eight-representation
+  seed set with IPA sourced from standard phonology references (not a full inventory). See
+  [ADR-023](../docs/adr/adr-023-phonetics.md).
 
 ## Where things live
 
