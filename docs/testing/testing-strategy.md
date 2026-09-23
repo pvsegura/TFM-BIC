@@ -272,3 +272,50 @@ Points and idempotency are critical flows, tested hardest and at every layer reg
   through the pages/E2E above; axe-style accessibility scanning (still none, project-wide); a real multi-connection
   concurrency proof beyond the two-writer PGlite tests (no opt-in real-Postgres test was added for vocabulary, unlike
   gamification's).
+
+## Phonetics (M10)
+
+- **Domain (pure unit tests)**: representation/topic id validity and language-namespacing (a representation id is
+  language-prefixed, a topic id is not — mirroring vocabulary), `recordPhoneticView`/`recordPhoneticPractice`/
+  `completePhonetic` (every forward step, the refresh-without-advancing case for a view/practice on an
+  already-further-along representation, idempotence once completed, the `completedAt` invariant — no backward-step
+  cases exist, unlike vocabulary's `learned → learning`, because none are modelled), and `validatePhonetics` over the
+  whole catalog (duplicate ids, a representation's topic existing in its own language _when it names one_, a
+  representation naming no topic at all as a valid case, ordering, availability, a published topic with no published
+  representation).
+- **Application (in-memory fakes)**: `findVisiblePhoneticRepresentation` (published representation + active language
+  - available level + published topic _when named_, every refusal the same not-found error, an untopicked
+    representation skipping the topic check entirely); the shared `queryVisiblePhonetics` engine through
+    `ListPhoneticsUseCase` (visibility, language/level/topic/status filters, deterministic order — topic then
+    representation, an untopicked representation sorting last — a cursor page boundary, one batched progress lookup per
+    page, cross-student isolation); `ListPhoneticTopicsUseCase` (per-topic and per-language progress tallies including
+    untopicked representations in the language-wide total only, cross-student isolation); view/practice/complete (each
+    refused for a hidden representation with no write, ownership).
+- **Repository (real Postgres via PGlite)**: `CatalogPhoneticRepository` (in-memory catalog adapter) and the loader
+  (`load-phonetics.test.ts`: inherited fields, optional-field pass-through, file-vs-location checks, name ordering,
+  oversized/malformed files, cross-file catalog rules). `DrizzleUserPhoneticProgressRepository`: every CHECK by name
+  (status, the completed/`completed_at` consistency, the id shape), the FK and cascade delete, recordView/
+  recordPractice/complete behaviour including the never-regress and always-refresh-timestamp cases, and **two
+  concurrent writers** (competing views, competing completions) each leaving exactly one row in a legal state.
+- **Contracts / HTTP**: response allowlists (a leaked internal status or file path is dropped), strict list/topics/
+  action query and body schemas (`userId` and any undocumented key is a `400`), authentication on every route,
+  cross-origin refusal on every write, mass assignment on view/practice/complete, cross-student isolation (progress
+  never visible to another student, a forged `userId` in the body refused), not-found parity between a draft
+  representation and one hidden behind a draft topic.
+- **Frontend**: the API client (session cookie, query building, response-shape stripping, error mapping) and the
+  detail page (loading/not-found/retryable-error states, every optional fact shown only when present, view-on-open,
+  practice/complete reflected in the UI without a reload, a failed practice surfaced as an alert, a dedicated
+  regression test proving a slow automatic view response cannot overwrite a faster practice/complete result already
+  applied to the cache) are unit-tested; the vocabulary-to-phonetics link on the vocabulary detail page.
+- **Playwright** (`tests/e2e/phonetics.spec.ts`): login → open Phonetics → browse Polish sounds with topics; filter
+  by topic; open a sound → see its IPA and explanation → practice it → the status survives a refresh; mark a
+  practiced sound completed; open the phonetics guide from a vocabulary word's detail page; a second student cannot
+  see the first student's practiced sound and cannot forge progress through the API (a `userId` in the body is
+  refused).
+- **Not covered**: the browse _page_ (topic filter, pagination UI, empty/loading/error states) has no dedicated
+  component test — the same gap M9 documented for its own browse pages — only the detail page and the E2E flows
+  exercise it; the individual presentation components (`PhoneticActions`, `PhoneticProgressBadge`,
+  `PhoneticTopicList`, `PhoneticList`/`PhoneticItemCard`) have no isolated unit test of their own, only through the
+  pages/E2E above; axe-style accessibility scanning (still none, project-wide); a real multi-connection concurrency
+  proof beyond the two-writer PGlite tests (no opt-in real-Postgres test was added for phonetics, unlike
+  gamification's).
