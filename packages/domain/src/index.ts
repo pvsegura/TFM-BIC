@@ -346,3 +346,4 @@ export { InvalidPhoneticRepresentationIdError } from "./phonetics/errors/invalid
 export { InvalidPhoneticTopicIdError } from "./phonetics/errors/invalid-phonetic-topic-id.error.js";
 export { PhoneticRepresentationNotFoundError } from "./phonetics/errors/phonetic-representation-not-found.error.js";
 export { PhoneticTopicNotFoundError } from "./phonetics/errors/phonetic-topic-not-found.error.js";
+export { validatePhonetics, type PhoneticsCatalogContext } from "./phonetics/phonetics-catalog.js";

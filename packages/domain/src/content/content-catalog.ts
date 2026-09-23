@@ -4,6 +4,9 @@ import type { Language } from "../language/language.js";
 import type { LanguageLevel } from "../language/language-level.js";
 import type { LanguageId } from "../language/language-id.js";
 import type { LevelId } from "../language/level-id.js";
+import { validatePhonetics } from "../phonetics/phonetics-catalog.js";
+import type { PhoneticRepresentation } from "../phonetics/phonetic-representation.js";
+import type { PhoneticTopic } from "../phonetics/phonetic-topic.js";
 import { validateVocabulary } from "../vocabulary/vocabulary-catalog.js";
 import type { VocabularyCategory } from "../vocabulary/vocabulary-category.js";
 import type { VocabularyItem } from "../vocabulary/vocabulary-item.js";
@@ -22,6 +25,10 @@ export interface ContentCatalog {
   vocabularyCategories: readonly VocabularyCategory[];
   /** Vocabulary entries (M9): each belongs to one category of its own language. */
   vocabulary: readonly VocabularyItem[];
+  /** Phonetics topics (M10): each belongs to one language and groups its representations. */
+  phoneticTopics: readonly PhoneticTopic[];
+  /** Phonetics representations (M10): each belongs to one language, optionally to one of its topics. */
+  phonetics: readonly PhoneticRepresentation[];
 }
 
 export interface CatalogIssue {
@@ -119,6 +126,15 @@ export function validateContentCatalog(catalog: ContentCatalog): CatalogIssue[] 
   validateVocabulary(
     catalog.vocabularyCategories,
     catalog.vocabulary,
+    {
+      languageIds,
+      levelStatusOf: (languageId, levelId) => levelStatus.get(levelKey(languageId, levelId)),
+    },
+    issues,
+  );
+  validatePhonetics(
+    catalog.phoneticTopics,
+    catalog.phonetics,
     {
       languageIds,
       levelStatusOf: (languageId, levelId) => levelStatus.get(levelKey(languageId, levelId)),

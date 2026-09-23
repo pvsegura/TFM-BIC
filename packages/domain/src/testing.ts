@@ -4,4 +4,5 @@
  * accident. Never import this from production code.
  */
 export * from "./exercise/test-support/exercise-fixtures.js";
+export * from "./phonetics/test-support/phonetics-fixtures.js";
 export * from "./vocabulary/test-support/vocabulary-fixtures.js";

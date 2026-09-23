@@ -61,6 +61,8 @@ function catalog(
     exercises: [],
     vocabularyCategories,
     vocabulary,
+    phoneticTopics: [],
+    phonetics: [],
   };
 }
 

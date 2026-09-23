@@ -1,5 +1,6 @@
 import type { ContentStatus } from "../content/content-status.js";
 import type { LanguageId } from "../language/language-id.js";
+import type { LevelId } from "../language/level-id.js";
 import type { PhoneticRepresentationId } from "./phonetic-representation-id.js";
 import type { PhoneticTopicId } from "./phonetic-topic-id.js";
 
@@ -37,6 +38,8 @@ export interface PhoneticRepresentation {
   /** The language `description`, `exampleWords[].translation` and `note` are written in. */
   instructionLanguage: LanguageId;
   topicId?: PhoneticTopicId | undefined;
+  /** The content author's pedagogical placement — never a claim of CEFR certification (ADR-018/022). */
+  levelId?: LevelId | undefined;
   /** A short usage or contrast remark, in `instructionLanguage`. */
   note?: string | undefined;
   exampleWords?: PhoneticExampleWord[] | undefined;
