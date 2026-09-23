@@ -248,3 +248,44 @@ export {
 // language); a student's progress on it is per-student state. Independent of Vocabulary.
 export type { PhoneticContentRepository } from "./phonetics/ports/phonetic-content-repository.js";
 export type { UserPhoneticProgressRepository } from "./phonetics/ports/user-phonetic-progress-repository.js";
+export { findVisiblePhoneticRepresentation } from "./phonetics/find-visible-phonetic-representation.js";
+export {
+  queryVisiblePhonetics,
+  type PhoneticQueryEntry,
+  type PhoneticQueryFilters,
+  type PhoneticQueryResult,
+} from "./phonetics/query-phonetics.js";
+export {
+  toPhoneticProgressView,
+  type PhoneticUserProgressView,
+} from "./phonetics/phonetic-progress-view.js";
+export {
+  GetPhoneticRepresentationUseCase,
+  type GetPhoneticRepresentationInput,
+  type PhoneticRepresentationDetail,
+} from "./phonetics/use-cases/get-phonetic-representation.use-case.js";
+export {
+  ListPhoneticsUseCase,
+  type ListPhoneticsInput,
+  type PhoneticListEntry,
+  type PhoneticListResult,
+} from "./phonetics/use-cases/list-phonetics.use-case.js";
+export {
+  ListPhoneticTopicsUseCase,
+  type ListPhoneticTopicsInput,
+  type PhoneticTopicProgressView,
+  type PhoneticTopicView,
+  type PhoneticTopicsResult,
+} from "./phonetics/use-cases/list-phonetic-topics.use-case.js";
+export {
+  RecordPhoneticViewUseCase,
+  type RecordPhoneticViewInput,
+} from "./phonetics/use-cases/record-phonetic-view.use-case.js";
+export {
+  RecordPhoneticPracticeUseCase,
+  type RecordPhoneticPracticeInput,
+} from "./phonetics/use-cases/record-phonetic-practice.use-case.js";
+export {
+  CompletePhoneticUseCase,
+  type CompletePhoneticInput,
+} from "./phonetics/use-cases/complete-phonetic.use-case.js";
