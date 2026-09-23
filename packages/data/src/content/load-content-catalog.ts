@@ -5,6 +5,7 @@ import {
   contentFileSchema,
   exerciseFileSchema,
   languageFileSchema,
+  phoneticFileSchema,
   vocabularyFileSchema,
 } from "@tfm-bic/contracts";
 import {
@@ -16,6 +17,8 @@ import {
   type Exercise,
   type Language,
   type LanguageLevel,
+  type PhoneticRepresentation,
+  type PhoneticTopic,
   type VocabularyCategory,
   type VocabularyItem,
 } from "@tfm-bic/domain";
@@ -266,6 +269,98 @@ async function loadVocabulary(
   }
 }
 
+interface LoadedPhonetics {
+  topic: PhoneticTopic;
+  items: PhoneticRepresentation[];
+}
+
+/**
+ * One topic file: its topic and every representation in it. The file must sit in its language's
+ * `phonetics/` folder and be named after its topic id; its representations take the language, the
+ * topic and the instruction language from the file, so a representation can never disagree with
+ * them.
+ */
+async function loadPhoneticFile(
+  absolute: string,
+  location: string,
+  expected: { languageId: string; fileName: string },
+  issues: ContentIssue[],
+): Promise<LoadedPhonetics | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  const parsed = phoneticFileSchema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+
+  const file = parsed.data;
+  let consistent = true;
+  if (file.languageId !== expected.languageId) {
+    issues.push({
+      location,
+      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
+    });
+    consistent = false;
+  }
+  if (expected.fileName !== `${file.id}.json`) {
+    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
+    consistent = false;
+  }
+  if (!consistent) {
+    return undefined;
+  }
+
+  const { languageId, instructionLanguage } = file;
+  return {
+    topic: {
+      id: file.id,
+      languageId,
+      status: file.status,
+      order: file.order,
+      instructionLanguage,
+      title: file.title,
+      description: file.description,
+    },
+    items: file.items.map((item) => ({
+      ...item,
+      languageId,
+      topicId: file.id,
+      instructionLanguage,
+    })),
+  };
+}
+
+async function loadPhonetics(
+  languageDir: string,
+  languageId: string,
+  catalog: { phoneticTopics: PhoneticTopic[]; phonetics: PhoneticRepresentation[] },
+  issues: ContentIssue[],
+): Promise<void> {
+  const location = `languages/${languageId}/phonetics`;
+  const files = (await readDirectory(path.join(languageDir, "phonetics"))) ?? [];
+  for (const file of files) {
+    if (!file.isFile() || !file.name.endsWith(".json")) {
+      continue;
+    }
+    const loaded = await loadPhoneticFile(
+      path.join(languageDir, "phonetics", file.name),
+      `${location}/${file.name}`,
+      { languageId, fileName: file.name },
+      issues,
+    );
+    if (loaded) {
+      catalog.phoneticTopics.push(loaded.topic);
+      catalog.phonetics.push(...loaded.items);
+    }
+  }
+}
+
 /** Reads every `.json` file in one folder with `load`, in name order, keeping what is valid. */
 async function loadFolder<T>(
   directory: string,
@@ -343,6 +438,8 @@ async function loadLanguage(
     exercises: Exercise[];
     vocabularyCategories: VocabularyCategory[];
     vocabulary: VocabularyItem[];
+    phoneticTopics: PhoneticTopic[];
+    phonetics: PhoneticRepresentation[];
   },
   issues: ContentIssue[],
 ): Promise<void> {
@@ -402,6 +499,7 @@ async function loadLanguage(
   }
 
   await loadVocabulary(languageDir, languageId, catalog, issues);
+  await loadPhonetics(languageDir, languageId, catalog, issues);
 }
 
 /**
@@ -415,6 +513,7 @@ async function loadLanguage(
  *   content/languages/<languageId>/levels/<levelId>/content/<contentId>.json
  *   content/languages/<languageId>/levels/<levelId>/exercises/<exerciseId>.json
  *   content/languages/<languageId>/vocabulary/<categoryId>.json
+ *   content/languages/<languageId>/phonetics/<topicId>.json
  */
 export async function loadContentCatalog(contentRoot: string): Promise<LoadContentResult> {
   const languagesDir = path.join(contentRoot, "languages");
@@ -431,6 +530,8 @@ export async function loadContentCatalog(contentRoot: string): Promise<LoadConte
     exercises: [] as Exercise[],
     vocabularyCategories: [] as VocabularyCategory[],
     vocabulary: [] as VocabularyItem[],
+    phoneticTopics: [] as PhoneticTopic[],
+    phonetics: [] as PhoneticRepresentation[],
   };
 
   for (const folder of languageFolders) {

@@ -40,6 +40,8 @@ describe("lessons for a new language or level are data, not code", () => {
     exercises: [],
     vocabularyCategories: [],
     vocabulary: [],
+    phoneticTopics: [],
+    phonetics: [],
   };
   const T0 = new Date("2026-01-01T10:00:00.000Z");
 

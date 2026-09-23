@@ -36,6 +36,8 @@ const catalog: ContentCatalog = {
   exercises: [],
   vocabularyCategories: categories,
   vocabulary: items,
+  phoneticTopics: [],
+  phonetics: [],
 };
 const repository = new CatalogVocabularyRepository(catalog);
 

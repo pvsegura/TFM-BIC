@@ -40,6 +40,8 @@ describe("adding a language is data, not code", () => {
     exercises: [],
     vocabularyCategories: [],
     vocabulary: [],
+    phoneticTopics: [],
+    phonetics: [],
   };
   const repository = new FakeContentRepository(catalog);
   const qq = createLanguageId("qq");

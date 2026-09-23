@@ -70,6 +70,8 @@ const catalog: ContentCatalog = {
   ],
   vocabularyCategories: [],
   vocabulary: [],
+  phoneticTopics: [],
+  phonetics: [],
 };
 
 function setup() {

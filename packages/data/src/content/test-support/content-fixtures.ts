@@ -119,6 +119,37 @@ export function vocabularyFile(
   };
 }
 
+/** One phonetic representation as it appears inside a topic file (it inherits language, topic and instruction language). */
+export function phoneticEntry(id: string, overrides: Record<string, unknown> = {}) {
+  return {
+    id,
+    status: "published",
+    order: 10,
+    ipa: "a",
+    description: `Description ${id}`,
+    ...overrides,
+  };
+}
+
+/** A phonetic topic file for a language, holding `items` (one valid representation by default). */
+export function phoneticFile(
+  topicId: string,
+  languageId: string,
+  overrides: Record<string, unknown> = {},
+) {
+  return {
+    schemaVersion: 1,
+    id: topicId,
+    languageId,
+    status: "published",
+    order: 10,
+    instructionLanguage: "en",
+    title: `Topic ${topicId}`,
+    items: [phoneticEntry(`${languageId}-ipa-${topicId}-one`)],
+    ...overrides,
+  };
+}
+
 /** A complete, valid one-language tree for `code` (a fictional code in tests). */
 export function validTree(code = "xx"): FixtureFiles {
   return {

@@ -111,5 +111,7 @@ export function makeSampleCatalog(): ContentCatalog {
     exercises: [],
     vocabularyCategories: [],
     vocabulary: [],
+    phoneticTopics: [],
+    phonetics: [],
   };
 }
