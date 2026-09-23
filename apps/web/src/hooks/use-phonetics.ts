@@ -9,7 +9,7 @@ import {
   useQueryClient,
   type QueryClient,
 } from "@tanstack/react-query";
-import { useCallback, useRef } from "react";
+import { useCallback, useEffect, useRef } from "react";
 
 import {
   completePhonetic,
@@ -134,15 +134,37 @@ function usePhoneticAction(action: (phoneticId: string) => Promise<PhoneticUserP
 
 /** Records a view. Idempotent on the server; never regresses a further-along representation. */
 export function useRecordPhoneticView() {
-  return usePhoneticAction(recordPhoneticView);
+  return usePhoneticAction((phoneticId: string) => recordPhoneticView(phoneticId));
+}
+
+/**
+ * Records a view as soon as a representation is loaded — the way opening a lesson starts it
+ * (`useStartLessonOnOpen`). Unlike a lesson's one-time start, a view is recorded on every fresh
+ * open of a representation's id (never regressing a `practiced`/`completed` one on the server,
+ * see `recordPhoneticView`'s domain rule), but only once per mount for that id — a re-render never
+ * fires it again.
+ */
+export function useRecordPhoneticViewOnOpen(
+  representation: PhoneticRepresentationResponse | undefined,
+): void {
+  const { mutate: recordView } = useRecordPhoneticView();
+  const requestedFor = useRef<string | null>(null);
+
+  useEffect(() => {
+    const id = representation?.id;
+    if (id !== undefined && requestedFor.current !== id) {
+      requestedFor.current = id;
+      recordView(id);
+    }
+  }, [representation?.id, recordView]);
 }
 
 /** Records practice. Idempotent on the server; never regresses a completed representation. */
 export function useRecordPhoneticPractice() {
-  return usePhoneticAction(recordPhoneticPractice);
+  return usePhoneticAction((phoneticId: string) => recordPhoneticPractice(phoneticId));
 }
 
 /** Marks a representation completed. Idempotent; never refused. */
 export function useCompletePhonetic() {
-  return usePhoneticAction(completePhonetic);
+  return usePhoneticAction((phoneticId: string) => completePhonetic(phoneticId));
 }
