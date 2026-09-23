@@ -243,3 +243,7 @@ export {
   MarkVocabularyItemLearnedUseCase,
   type MarkVocabularyItemLearnedInput,
 } from "./vocabulary/use-cases/mark-vocabulary-item-learned.use-case.js";
+
+// Phonetics (M10) — a representation is content (a validated file, grouped in a topic of its
+// language); a student's progress on it is per-student state. Independent of Vocabulary.
+export type { UserPhoneticProgressRepository } from "./phonetics/ports/user-phonetic-progress-repository.js";

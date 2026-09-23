@@ -1,0 +1,102 @@
+{
+  "id": "88daad20-4e9e-4a00-a62a-4d665bc0e096",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.user_phonetic_progress": {
+      "name": "user_phonetic_progress",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "phonetic_representation_id": {
+          "name": "phonetic_representation_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "first_viewed_at": {
+          "name": "first_viewed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "last_viewed_at": {
+          "name": "last_viewed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "practiced_at": {
+          "name": "practiced_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "completed_at": {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "user_phonetic_progress_user_id_users_id_fk": {
+          "name": "user_phonetic_progress_user_id_users_id_fk",
+          "tableFrom": "user_phonetic_progress",
+          "tableTo": "users",
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {
+        "user_phonetic_progress_pk": {
+          "name": "user_phonetic_progress_pk",
+          "columns": ["user_id", "phonetic_representation_id"]
+        }
+      },
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "user_phonetic_progress_status_valid": {
+          "name": "user_phonetic_progress_status_valid",
+          "value": "\"user_phonetic_progress\".\"status\" IN ('viewed', 'practiced', 'completed')"
+        },
+        "user_phonetic_progress_completed_consistent": {
+          "name": "user_phonetic_progress_completed_consistent",
+          "value": "(\"user_phonetic_progress\".\"status\" = 'completed') = (\"user_phonetic_progress\".\"completed_at\" IS NOT NULL)"
+        },
+        "user_phonetic_progress_representation_id_valid": {
+          "name": "user_phonetic_progress_representation_id_valid",
+          "value": "char_length(\"user_phonetic_progress\".\"phonetic_representation_id\") <= 64 AND \"user_phonetic_progress\".\"phonetic_representation_id\" ~ '^[a-z][a-z0-9]*(-[a-z0-9]+)*$'"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}
