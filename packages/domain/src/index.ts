@@ -311,3 +311,38 @@ export { InvalidVocabularyCategoryIdError } from "./vocabulary/errors/invalid-vo
 export { InvalidVocabularyTransitionError } from "./vocabulary/errors/invalid-vocabulary-transition.error.js";
 export { VocabularyItemNotFoundError } from "./vocabulary/errors/vocabulary-item-not-found.error.js";
 export { VocabularyCategoryNotFoundError } from "./vocabulary/errors/vocabulary-category-not-found.error.js";
+
+// Phonetics (M10) — a representation is content (a validated file, grouped in a topic of its
+// language); a student's progress on it is per-student state. Independent of Vocabulary: an
+// example word is free text, never a VocabularyItemId reference.
+export {
+  createPhoneticRepresentationId,
+  isValidPhoneticRepresentationId,
+  phoneticRepresentationIdBelongsToLanguage,
+  type PhoneticRepresentationId,
+} from "./phonetics/phonetic-representation-id.js";
+export {
+  createPhoneticTopicId,
+  isValidPhoneticTopicId,
+  type PhoneticTopicId,
+} from "./phonetics/phonetic-topic-id.js";
+export type {
+  PhoneticExampleWord,
+  PhoneticRepresentation,
+} from "./phonetics/phonetic-representation.js";
+export type { PhoneticTopic } from "./phonetics/phonetic-topic.js";
+export {
+  completePhonetic,
+  PHONETIC_PROGRESS_STATUSES,
+  PHONETIC_PROGRESS_VIEW_STATUSES,
+  phoneticProgressStatusOf,
+  recordPhoneticPractice,
+  recordPhoneticView,
+  type PhoneticProgressStatus,
+  type StoredPhoneticProgressStatus,
+  type UserPhoneticProgress,
+} from "./phonetics/user-phonetic-progress.js";
+export { InvalidPhoneticRepresentationIdError } from "./phonetics/errors/invalid-phonetic-representation-id.error.js";
+export { InvalidPhoneticTopicIdError } from "./phonetics/errors/invalid-phonetic-topic-id.error.js";
+export { PhoneticRepresentationNotFoundError } from "./phonetics/errors/phonetic-representation-not-found.error.js";
+export { PhoneticTopicNotFoundError } from "./phonetics/errors/phonetic-topic-not-found.error.js";
