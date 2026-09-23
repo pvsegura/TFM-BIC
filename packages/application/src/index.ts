@@ -246,4 +246,5 @@ export {
 
 // Phonetics (M10) — a representation is content (a validated file, grouped in a topic of its
 // language); a student's progress on it is per-student state. Independent of Vocabulary.
+export type { PhoneticContentRepository } from "./phonetics/ports/phonetic-content-repository.js";
 export type { UserPhoneticProgressRepository } from "./phonetics/ports/user-phonetic-progress-repository.js";
