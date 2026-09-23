@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "id": "consonants",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Consonants",
+  "description": "Polish consonant sounds that do not exist, or are easy to mispronounce, in English.",
+  "items": [
+    {
+      "id": "pl-ipa-sz",
+      "status": "published",
+      "order": 10,
+      "ipa": "ʂ",
+      "description": "Voiceless retroflex fricative, spelled sz. Similar to the English \"sh\", but the tongue tip curls further back.",
+      "levelId": "a1",
+      "exampleWords": [
+        { "word": "szkoła", "translation": "school" },
+        { "word": "kasza", "translation": "groats; porridge" }
+      ]
+    },
+    {
+      "id": "pl-ipa-cz",
+      "status": "published",
+      "order": 20,
+      "ipa": "t͡ʂ",
+      "description": "Voiceless retroflex affricate, spelled cz: a short \"t\" released into the sz sound above.",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "czas", "translation": "time" }]
+    },
+    {
+      "id": "pl-ipa-ci",
+      "status": "published",
+      "order": 30,
+      "ipa": "t͡ɕ",
+      "description": "Voiceless alveolo-palatal affricate, spelled ć (or ci before a vowel). Softer and further forward than cz; the two are a common source of confusion for learners.",
+      "note": "Contrasts with cz /t͡ʂ/: czy (\"whether\") vs. ci (\"you\", informal dative).",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "ćma", "translation": "moth" }]
+    },
+    {
+      "id": "pl-ipa-si",
+      "status": "published",
+      "order": 40,
+      "ipa": "ɕ",
+      "description": "Voiceless alveolo-palatal fricative, spelled ś (or si before a vowel). Softer than sz, produced with the tongue body raised toward the hard palate.",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "środa", "translation": "Wednesday" }]
+    },
+    {
+      "id": "pl-ipa-lslash",
+      "status": "published",
+      "order": 50,
+      "ipa": "w",
+      "description": "Voiced labio-velar approximant, spelled ł. Pronounced like the English \"w\" in \"water\" — not like an English \"l\" at all, which trips up most beginners.",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "łatwo", "translation": "easily" }]
+    },
+    {
+      "id": "pl-ipa-ni",
+      "status": "published",
+      "order": 60,
+      "ipa": "ɲ",
+      "description": "Palatal nasal, spelled ń (or ni before a vowel). Close to the Spanish ñ in \"señor\".",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "koń", "translation": "horse" }]
+    }
+  ]
+}

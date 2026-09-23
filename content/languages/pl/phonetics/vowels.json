@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "vowels",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Nasal vowels",
+  "description": "Polish's two nasal vowels, ą and ę — a feature English has no equivalent to.",
+  "items": [
+    {
+      "id": "pl-ipa-onasal",
+      "status": "published",
+      "order": 10,
+      "ipa": "ɔ̃",
+      "description": "Nasalized mid back rounded vowel, spelled ą. Before a stop consonant it is usually pronounced as a plain vowel plus \"m\" or \"n\" (dąb sounds close to \"domb\").",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "dąb", "translation": "oak tree" }]
+    },
+    {
+      "id": "pl-ipa-enasal",
+      "status": "published",
+      "order": 20,
+      "ipa": "ɛ̃",
+      "description": "Nasalized mid front unrounded vowel, spelled ę. At the end of a word it is frequently denasalized to a plain \"e\" in everyday speech.",
+      "levelId": "a1",
+      "exampleWords": [{ "word": "ręka", "translation": "hand" }]
+    }
+  ]
+}

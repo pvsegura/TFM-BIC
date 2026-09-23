@@ -5,6 +5,8 @@ import { loadContentCatalog } from "./load-content-catalog.js";
 import {
   exerciseFile,
   makeContentRoot,
+  phoneticEntry,
+  phoneticFile,
   validTree,
   vocabularyEntry,
   vocabularyFile,
@@ -93,6 +95,38 @@ describe("formatContentReport", () => {
       const report = formatContentReport(await loadContentCatalog(handle.root));
 
       expect(report.text).toContain("0 exercises (0 published)");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("counts the phonetic representations, how many are published and how many topics hold them", async () => {
+    const handle = await makeContentRoot({
+      ...validTree("xx"),
+      "languages/xx/phonetics/consonants.json": phoneticFile("consonants", "xx", {
+        items: [
+          phoneticEntry("xx-ipa-ts"),
+          phoneticEntry("xx-ipa-a", { order: 20 }),
+          phoneticEntry("xx-ipa-b", { order: 30, status: "draft" }),
+        ],
+      }),
+    });
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.exitCode).toBe(0);
+      expect(report.text).toContain("3 phonetic representations (2 published) in 1 topic");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("reports zero phonetics plainly when there is none", async () => {
+    const handle = await makeContentRoot(validTree("xx"));
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.text).toContain("0 phonetic representations (0 published) in 0 topics");
     } finally {
       await handle.cleanup();
     }
