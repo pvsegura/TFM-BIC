@@ -164,3 +164,36 @@ export {
   type VocabularyStatusRequest,
   type VocabularyUserStateResponse,
 } from "./vocabulary/vocabulary-response.schema.js";
+
+// Phonetics (M10): the on-disk topic file format and the student-facing phonetics API shapes.
+// Independent of Vocabulary — no shared identifiers, no data reference between the two.
+export {
+  phoneticRepresentationIdSchema,
+  phoneticTopicIdSchema,
+} from "./content/identifiers.schema.js";
+export {
+  MAX_PHONETIC_REPRESENTATIONS_PER_FILE,
+  phoneticFileSchema,
+  type PhoneticFile,
+} from "./phonetics/phonetic-file.schema.js";
+export {
+  MAX_PHONETIC_PAGE_SIZE,
+  phoneticActionRequestSchema,
+  phoneticIdParamSchema,
+  phoneticListQuerySchema,
+  phoneticListResponseSchema,
+  phoneticRepresentationResponseSchema,
+  phoneticTopicProgressResponseSchema,
+  phoneticTopicResponseSchema,
+  phoneticTopicsQuerySchema,
+  phoneticTopicsResponseSchema,
+  phoneticUserProgressResponseSchema,
+  type PhoneticListQuery,
+  type PhoneticListResponse,
+  type PhoneticRepresentationResponse,
+  type PhoneticTopicProgressResponse,
+  type PhoneticTopicResponse,
+  type PhoneticTopicsQuery,
+  type PhoneticTopicsResponse,
+  type PhoneticUserProgressResponse,
+} from "./phonetics/phonetic-response.schema.js";
