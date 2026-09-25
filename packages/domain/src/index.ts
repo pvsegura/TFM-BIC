@@ -392,3 +392,35 @@ export {
   InvalidSpeechTextError,
   type InvalidSpeechTextReason,
 } from "./audio/errors/invalid-speech-text.error.js";
+
+// Teaching (M13) — the minimal teacher–student relationship and the definitions behind every
+// teacher-dashboard metric. A read capability: nothing here changes lessons, attempts or points.
+// See ADR-024 and docs/architecture/teacher-dashboard.md.
+export {
+  assertCanLink,
+  canAccessTeacherDashboard,
+  type TeacherStudentLink,
+} from "./teaching/teacher-student-link.js";
+export {
+  ACTIVE_WINDOW_DAYS,
+  accuracyPercent,
+  activeSince,
+  isActiveStudent,
+  recentWeekStarts,
+  weekStartUtc,
+} from "./teaching/teacher-dashboard-metrics.js";
+export {
+  DEFAULT_ROSTER_PAGE_SIZE,
+  defaultDirectionFor,
+  MAX_ROSTER_PAGE,
+  MAX_ROSTER_PAGE_SIZE,
+  MAX_ROSTER_SEARCH_LENGTH,
+  ROSTER_ACTIVITY_FILTERS,
+  ROSTER_SORT_DIRECTIONS,
+  ROSTER_SORT_FIELDS,
+  type RosterActivityFilter,
+  type RosterSortDirection,
+  type RosterSortField,
+} from "./teaching/student-roster-query.js";
+export { InvalidTeacherStudentLinkError } from "./teaching/errors/invalid-teacher-student-link.error.js";
+export { TeachingStudentNotFoundError } from "./teaching/errors/teaching-student-not-found.error.js";
