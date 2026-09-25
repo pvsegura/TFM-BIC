@@ -30,6 +30,10 @@ import {
   type PhoneticsDependencies,
 } from "./composition/phonetics-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
+import {
+  createVideoDependencies,
+  type VideoDependencies,
+} from "./composition/video-dependencies.js";
 import { buildServer } from "./server.js";
 
 const env = loadEnv();
@@ -48,6 +52,7 @@ let exerciseDeps: ExerciseDependencies;
 let gamificationDeps: GamificationDependencies;
 let vocabularyDeps: VocabularyDependencies;
 let phoneticsDeps: PhoneticsDependencies;
+let videoDeps: VideoDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -58,7 +63,8 @@ if (env.NODE_ENV === "test") {
     gamification: gamificationDeps,
     vocabulary: vocabularyDeps,
     phonetics: phoneticsDeps,
-  } = await createTestDependencies(env.CONTENT_DIR));
+    video: videoDeps,
+  } = await createTestDependencies(env));
 } else {
   if (!env.DATABASE_URL) {
     throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
@@ -71,6 +77,7 @@ if (env.NODE_ENV === "test") {
   gamificationDeps = createGamificationDependencies(env.DATABASE_URL);
   vocabularyDeps = createVocabularyDependencies(env.DATABASE_URL);
   phoneticsDeps = createPhoneticsDependencies(env.DATABASE_URL);
+  videoDeps = createVideoDependencies(env.DATABASE_URL, env);
 }
 
 const app = buildServer(
@@ -83,6 +90,7 @@ const app = buildServer(
   gamificationDeps,
   vocabularyDeps,
   phoneticsDeps,
+  videoDeps,
 );
 
 async function start(): Promise<void> {
@@ -105,6 +113,7 @@ async function shutdown(signal: string): Promise<void> {
     gamificationDeps.close(),
     vocabularyDeps.close(),
     phoneticsDeps.close(),
+    videoDeps.close(),
   ]);
   process.exit(0);
 }

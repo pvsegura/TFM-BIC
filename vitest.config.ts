@@ -49,6 +49,7 @@ export default defineConfig({
         "apps/api/src/composition/exercise-dependencies.ts",
         "apps/api/src/composition/gamification-dependencies.ts",
         "apps/api/src/composition/vocabulary-dependencies.ts",
+        "apps/api/src/composition/video-dependencies.ts",
         "apps/api/src/composition/test-dependencies.ts",
         // Real `pg.Pool`/Drizzle connection factory — repository tests use
         // the PGlite test-support factory instead (see
@@ -59,6 +60,7 @@ export default defineConfig({
         "packages/data/src/exercises/db/client.ts",
         "packages/data/src/gamification/db/client.ts",
         "packages/data/src/vocabulary/db/client.ts",
+        "packages/data/src/video/db/client.ts",
         // `pnpm content:validate` entry point: argv in, exit code out. The loader and the
         // report formatter it calls are unit-tested; only the bootstrap is left uncovered.
         "packages/data/src/content/validate-content.cli.ts",

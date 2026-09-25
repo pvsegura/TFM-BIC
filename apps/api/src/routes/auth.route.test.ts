@@ -26,6 +26,7 @@ function build(testDeps = buildTestDeps()) {
     testDeps.gamificationDeps,
     testDeps.vocabularyDeps,
     testDeps.phoneticsDeps,
+    testDeps.videoDeps,
   );
   return { app, ...testDeps };
 }

@@ -1,3 +1,4 @@
+import type { AppEnv } from "@tfm-bic/config";
 import { createGamificationTestDb } from "@tfm-bic/data/testing";
 
 import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
@@ -13,6 +14,11 @@ import {
   type PhoneticsDependencies,
 } from "./phonetics-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
+import {
+  buildVideoDependencies,
+  selectVideoGenerationProvider,
+  type VideoDependencies,
+} from "./video-dependencies.js";
 import {
   buildVocabularyDependencies,
   type VocabularyDependencies,
@@ -33,7 +39,7 @@ import {
  * only exist alongside the user they belong to. The instance is closed once, via `auth.close`;
  * the other `close`s are no-ops so shutting everything down never closes it twice.
  */
-export async function createTestDependencies(contentDir?: string): Promise<{
+export async function createTestDependencies(env: AppEnv): Promise<{
   auth: AuthDependencies;
   profile: ProfileDependencies;
   content: ContentDependencies;
@@ -42,19 +48,34 @@ export async function createTestDependencies(contentDir?: string): Promise<{
   gamification: GamificationDependencies;
   vocabulary: VocabularyDependencies;
   phonetics: PhoneticsDependencies;
+  video: VideoDependencies;
 }> {
-  const { db, identityDb, profileDb, lessonsDb, exercisesDb, vocabularyDb, phoneticsDb, close } =
-    await createGamificationTestDb();
+  const {
+    db,
+    identityDb,
+    profileDb,
+    lessonsDb,
+    exercisesDb,
+    vocabularyDb,
+    phoneticsDb,
+    videoDb,
+    close,
+  } = await createGamificationTestDb();
 
   return {
     auth: buildAuthDependencies(identityDb, close),
     profile: buildProfileDependencies(profileDb, () => Promise.resolve()),
     // The real content tree, so E2E exercises the shipped Polish A1 content end to end.
-    content: await createContentDependencies(contentDir),
+    content: await createContentDependencies(env.CONTENT_DIR),
     lessons: buildLessonDependencies(lessonsDb, () => Promise.resolve()),
     exercises: buildExerciseDependencies(exercisesDb, () => Promise.resolve()),
     gamification: buildGamificationDependencies(db, () => Promise.resolve()),
     vocabulary: buildVocabularyDependencies(vocabularyDb, () => Promise.resolve()),
     phonetics: buildPhoneticsDependencies(phoneticsDb, () => Promise.resolve()),
+    // Same provider selection as production (env.VIDEO_GENERATION_PROVIDER) — "fake" by default,
+    // so E2E never depends on Hyperframes/FFmpeg/headless Chrome being available.
+    video: buildVideoDependencies(videoDb, selectVideoGenerationProvider(env), () =>
+      Promise.resolve(),
+    ),
   };
 }

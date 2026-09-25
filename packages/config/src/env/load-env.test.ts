@@ -12,6 +12,7 @@ describe("loadEnv", () => {
       DEFAULT_LANGUAGE: "pl",
       APP_BASE_URL: "http://localhost:5173",
       E2E_RELAXED_RATE_LIMITS: false,
+      VIDEO_GENERATION_PROVIDER: "fake",
     });
   });
 
@@ -35,6 +36,20 @@ describe("loadEnv", () => {
 
     expect(env.PORT).toBe(4000);
     expect(env.DEFAULT_LANGUAGE).toBe("en");
+  });
+
+  it("defaults VIDEO_GENERATION_PROVIDER to fake, and accepts hyperframes explicitly", () => {
+    expect(loadEnv({ NODE_ENV: "test" }).VIDEO_GENERATION_PROVIDER).toBe("fake");
+    expect(
+      loadEnv({ NODE_ENV: "test", VIDEO_GENERATION_PROVIDER: "hyperframes" })
+        .VIDEO_GENERATION_PROVIDER,
+    ).toBe("hyperframes");
+  });
+
+  it("rejects an unknown VIDEO_GENERATION_PROVIDER value", () => {
+    expect(() => loadEnv({ NODE_ENV: "test", VIDEO_GENERATION_PROVIDER: "gemini" })).toThrow(
+      /VIDEO_GENERATION_PROVIDER/,
+    );
   });
 
   it("throws a readable error for an invalid NODE_ENV", () => {

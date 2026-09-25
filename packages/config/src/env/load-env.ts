@@ -32,6 +32,11 @@ const envSchema = z
       .enum(["true", "false"])
       .default("false")
       .transform((value) => value === "true"),
+    // Video generation (M11, ADR-011/012). "fake" (the default) is a real, committed adapter —
+    // never Hyperframes — used everywhere except a manually configured real-provider run;
+    // automated tests and CI never set this to "hyperframes". Local self-hosted Hyperframes
+    // rendering needs no credential, so there is no accompanying API-key variable.
+    VIDEO_GENERATION_PROVIDER: z.enum(["fake", "hyperframes"]).default("fake"),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET } = ctx.value;

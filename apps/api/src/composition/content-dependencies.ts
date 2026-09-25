@@ -2,14 +2,16 @@ import type {
   ContentRepository,
   ExerciseRepository,
   PhoneticContentRepository,
+  VideoDefinitionRepository,
   VocabularyRepository,
 } from "@tfm-bic/application";
 import { loadContentRepositories } from "@tfm-bic/data";
 
 /**
- * Everything the language/content/exercise-content/vocabulary-content/phonetics-content routes
- * need. Unlike auth and profile there is no connection to close: the validated content — lessons,
- * explanations, exercises, vocabulary and phonetics alike — is held in memory.
+ * Everything the language/content/exercise-content/vocabulary-content/phonetics-content/
+ * video-content routes need. Unlike auth and profile there is no connection to close: the
+ * validated content — lessons, explanations, exercises, vocabulary, phonetics and video
+ * definitions alike — is held in memory.
  */
 export interface ContentDependencies {
   contentRepository: ContentRepository;
@@ -19,6 +21,8 @@ export interface ContentDependencies {
   vocabularyRepository: VocabularyRepository;
   /** Phonetics is content too (M10): read-only, from the same validated catalog. */
   phoneticRepository: PhoneticContentRepository;
+  /** Video definitions are content too (M11): read-only, from the same validated catalog. */
+  videoDefinitionRepository: VideoDefinitionRepository;
 }
 
 /**
