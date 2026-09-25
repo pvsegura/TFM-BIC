@@ -26,7 +26,14 @@ Variable groups (see `.env.example` for the authoritative current list):
 - Email provider: `EMAIL_PROVIDER_API_KEY`, `EMAIL_FROM` — provider account PENDING (ADR-014);
   not read by M3 code (dev/test use the in-memory email adapter).
 - Gemini: API key — not yet read (M12, out of scope until then).
-- Hyperframes: config, if any auth is required (UNKNOWN — see ADR-012) — not yet read.
+- Video generation (M11): `VIDEO_GENERATION_PROVIDER` (`fake` default, or `hyperframes`) — read by
+  `packages/config`. `fake` selects a real, committed adapter (never Hyperframes); it is what every
+  automated test and CI run uses. `hyperframes` selects `HyperframesCliProvider`, which shells out
+  to `npx hyperframes render` — implemented against Hyperframes' verified, no-auth-required local
+  CLI, but not executed end-to-end in the implementation environment (see
+  `content/video-scripts/README.md` and ADR-012). No API key: local self-hosted Hyperframes
+  rendering needs no credential. Real use requires Node 22+, FFmpeg and headless Chrome on the
+  host — none confirmed available until ADR-015 (hosting) is resolved.
 - App: `API_BASE_URL`, `WEB_BASE_URL` — reserved, not yet read. In M3 dev, `apps/web`'s Vite dev
   server proxies `/auth/*` to `apps/api` (see `apps/web/vite.config.ts`) so the browser sees a
   single origin and no CORS policy is needed — this also keeps `SameSite=Strict` on the session

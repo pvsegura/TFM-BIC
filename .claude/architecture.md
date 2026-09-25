@@ -28,8 +28,10 @@ auth.route.ts` for the full, real Identity & Authentication chain (M3), or
 
 Never called directly from domain/application logic. Always: interface (owned by
 application/contracts) → adapter (in `packages/data`) → real provider.
-`VideoGenerationService` → `HyperframesProvider` → Hyperframes.
-`AudioGenerationService` → `GeminiAudioProvider` → Gemini API.
+`VideoGenerationService` → `FakeVideoGenerationService` (default everywhere — dev, test, CI) or
+`HyperframesCliProvider` (real, `VIDEO_GENERATION_PROVIDER=hyperframes` only, implemented but
+**unverified end-to-end** — see ADR-012 and `content/video-scripts/README.md`) → Hyperframes (M11).
+`AudioGenerationService` → `GeminiAudioProvider` → Gemini API (not yet implemented — M12+).
 `EmailService` → `InMemoryEmailService` (the only adapter wired — no real provider account
 exists; Resend is the documented target, ADR-014).
 

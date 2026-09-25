@@ -1,111 +1,143 @@
 # Current State
 
-Last updated: 2026-09-23
+Last updated: 2026-09-25
 
 ## Milestone
 
-**M10 — Phonetics** — implemented on `feature/phonetics`, branched from `feature/vocabulary` (M9) →
-`feature/gamification` (M8) → `feature/exercises` (M7) → `feature/lessons` (M6) → `feature/content-languages` (M5) →
-`feature/student-profile` (M4) → `feature/authentication` (M3) → `ci/jenkins-sonarqube` (M1+M2); `main` only has M0.
-**`feature/exercises`, `feature/gamification`, `feature/vocabulary` and `feature/phonetics` are not pushed and
-nothing is merged**; Jenkins/SonarQube are deliberately not connected (M6 was pushed on 2026-09-21; nothing since).
-M0–M9 remain the base — see [docs/product/project-constitution.md](../docs/product/project-constitution.md).
+**M11 — Hyperframes video generation** — implemented on `feature/hyperframes-video-generation`,
+branched from `feature/phonetics` (M10) → `feature/vocabulary` (M9) → `feature/gamification` (M8) →
+`feature/exercises` (M7) → `feature/lessons` (M6) → `feature/content-languages` (M5) →
+`feature/student-profile` (M4) → `feature/authentication` (M3) → `ci/jenkins-sonarqube` (M1+M2);
+`main` only has M0. **None of these branches are pushed and nothing is merged**; Jenkins/SonarQube
+are deliberately not connected (per standing instruction — not checked this session either).
+M0–M10 remain the base — see [docs/product/project-constitution.md](../docs/product/project-constitution.md).
 
-## What actually exists (M10)
+## What actually exists (M11)
 
-A phonetics system that works the same way for every language: representations (sounds/IPA) as content, optionally
-grouped by topic, a student's viewed/practiced/completed progress as the only per-student state — independent of
-Vocabulary (M9), which it does not share data with. Rationale and trade-offs:
-[ADR-023](../docs/adr/adr-023-phonetics.md); reference:
-[content-architecture.md](../docs/architecture/content-architecture.md#phonetics-m10), [docs/api/README.md](../docs/api/README.md).
+A provider-independent video-generation foundation: a `VideoDefinition` (content, what should be
+generated) drives a `VideoGenerationJob` (per-student, tracks rendering through a small lifecycle),
+rendered by whichever `VideoGenerationService` is configured — a real, committed fake adapter by
+default everywhere, a real (but unverified end-to-end) Hyperframes CLI adapter behind a flag.
+Rationale and trade-offs: [ADR-012](../docs/adr/adr-012-video-generation.md) (revised this
+milestone),
+[ai-integration-strategy.md](../docs/architecture/ai-integration-strategy.md#video-hyperframes--re-verified-facts-re-verified-2026-09-24-m11);
+reference: [hyperframes skill](../.claude/skills/hyperframes/SKILL.md).
 
-- **A phonetic representation is content, optionally grouped in a topic of its own language** — a file, like a
-  lesson, exercise or vocabulary entry, at `content/languages/<code>/phonetics/<topicId>.json`. One file holds one
-  topic (`id`, `status`, `order`, `title`, `description?`, `instructionLanguage`) and its representations; a
-  representation inherits `languageId`/`topicId`/`instructionLanguage` from the file, never repeats them. Required
-  per representation: `id`, `ipa`, `description`, `status`, `order`. Optional: `topicId` (**unlike vocabulary's
-  always-required category** — not every sound needs a grouping), `levelId`, `note`, `exampleWords`
-  (`{word, translation}[]`, free text, never a `VocabularyItemId`). No `phonetic_representations`/`phonetic_topics`
-  table — same content-is-files decision as M5–M9.
-- **IPA is Unicode text** validated the same bounded-plain-text way every content string is — no per-symbol
-  allowlist, no image, no hard-coded symbol table. The IPA symbol always carries an explicit `aria-label` for
-  screen readers.
-- **`validatePhonetics`** (domain) checks the whole catalog: unique representation ids across the catalog, unique
-  topic ids per language, a representation's topic existing in its own language when it names one, unique order
-  within a topic, and the same availability standard as vocabulary (published only in an available level and a
-  published topic when named; a published topic always has ≥1 published representation).
-- **Progress only ever moves forward — `viewed → practiced → completed`, with no backward step at all** (unlike
-  vocabulary's `learned → learning` correction: a sound has no honest "I forgot it"). `user_phonetic_progress` (PK
-  `user_id, phonetic_representation_id`, FK cascade, `completed_at` set iff `completed`). Recording a view happens
-  automatically when a representation's detail page opens, on **every** fresh open (not just the first, unlike a
-  lesson's one-time start) — `recordView` never changes status, only refreshes `last_viewed_at`; `recordPractice`
-  advances from `viewed` and always refreshes its own timestamp even past completion; `complete` is the only one
-  fully idempotent once reached. Each is one atomic Postgres `INSERT … ON CONFLICT DO UPDATE`, proved with two
-  concurrent writers landing on exactly one row in a legal state, on real Postgres.
-- **A real race surfaced only through Playwright**: the automatic view-on-open request can still be in flight when
-  a student acts, and if its response lands after the action's, a naive cache write would overwrite the
-  further-along status. Guarded in the query-cache layer and covered by a dedicated component regression test; see
-  ADR-023 §7.
-- **Browsing and the topics-with-progress view share one query engine** (`queryVisiblePhonetics`), the same pattern
-  vocabulary's browse/My Vocabulary share: visibility, language/level/topic filters, deterministic order (topic,
-  then representation, ties by id — an untopicked representation sorts last), a cursor page, one batched progress
-  lookup per page. No free-text search in M10 (IPA is not something a beginner can usefully type).
-- **API** (authenticated, `private, no-store`): `GET /phonetics` (list, filtered/paged, 120/min), `GET
-/phonetics/topics` (topics + progress, 120/min), `GET /phonetics/:id` (detail, 120/min), `POST
-/phonetics/:id/view|practice|complete` (60/min, no body). No `:userId` anywhere; an undocumented query key or body
-  field is a `400`. No `409` exists — unlike vocabulary's status route, every phonetics action either advances or
-  no-ops, never refuses a step, so there is nothing to refuse.
-- **Frontend**: nav link "Phonetics"; `/learn/phonetics` (browse: language picker, topic cards with progress,
-  topic/status filters, a card per sound with its IPA, description and practice/complete actions);
-  `/learn/phonetics/:phoneticId` (detail: IPA, description, topic, level, note, example words, progress, actions).
-  The vocabulary detail page links to `/learn/phonetics?language=<word's language>` ("View pronunciation guide") —
-  UI-only, no shared data, no deep link to one exact sound.
-- **Content**: a small, original Polish seed set — two topics (`consonants`, `vowels`), eight representations. IPA
-  and articulatory descriptions checked against standard academic Polish phonology references (documented in
-  [content/languages/pl/phonetics/README.md](../content/languages/pl/phonetics/README.md)), not invented. Not a
-  claim of phonemic coverage.
-- **Not built, on purpose**: audio, speech recognition, pronunciation scoring/evaluation, search over IPA/
-  description, a reward for phonetics progress (no event is even published, unlike vocabulary's discarded one), a
-  backward progress correction, phonetic rules/topics beyond individual sounds, syllables/stress fields (considered
-  and deliberately deferred — see ADR-023 for why they were not added speculatively).
+- **Hyperframes' live docs were re-verified before writing any adapter code** (2026-09-24): free,
+  self-hostable, Apache 2.0, no authentication for local rendering, invoked via `npx hyperframes
+render --output <file>`. Needs Node 22+, FFmpeg and headless Chrome on the host — none confirmed
+  available in the M11 implementation environment. It is designed for an AI coding agent to author
+  the HTML/timeline project interactively; this platform automates _rendering_ an already-authored
+  project, not _authoring_ one from a runtime prompt — a materially different usage model than
+  Gemini TTS's per-request API shape.
+- **A video definition is content**, at `content/languages/<languageId>/videos/<id>.json` — one
+  file per video (no topic grouping, unlike vocabulary/phonetics: there is exactly one video in
+  this milestone). Required: `id`, `languageId`, `levelId` (**mandatory, unlike phonetics'
+  optional level** — a video is closer to a lesson), `title`, `description`, `scriptPath`.
+  Optional: `relatedContentId` (a free-text pointer reusing an existing lesson/vocabulary/phonetic
+  id — not cross-validated against those catalogs in this milestone, a documented limitation). The
+  render project itself (Hyperframes-specific HTML/CSS/JS) lives separately, under
+  `content/video-scripts/<scriptPath>/`, read only by the provider adapter — never by
+  domain/application code, so a future provider swap never touches `VideoDefinition`.
+- **`validateVideoDefinitions`** (domain) checks the whole catalog: unique ids, language-prefixed
+  ids, unique order per language/level, and the same availability standard as every other content
+  kind (published only in an available level).
+- **A generation job's lifecycle is new to this codebase**: `queued -> processing ->
+completed|failed` — the first genuinely mutable-status table (every other context's per-student
+  state is either append-only or a status that only ever advances). `video_generation_jobs` (PK
+  `id` uuid, `user_id` FK cascade, CHECK mirroring the domain's id pattern, CHECK `(status IN
+('completed','failed')) = (completed_at IS NOT NULL)`). `RequestVideoGenerationUseCase` records
+  the job `queued`, moves it to `processing`, and calls the provider **without awaiting it from the
+  HTTP handler** — the route replies `201` immediately, and the client polls `GET
+/video-generations/:id`. This is deliberately an in-process, non-durable background task (no
+  queue, no retry, no cross-restart durability, single server instance only) — an explicit MVP
+  limitation per ADR-012, not an oversight.
+- **The provider boundary is `VideoGenerationService`** (one method, `generate`): `
+FakeVideoGenerationService` (packages/data) is the only adapter selected by default and in every
+  automated test/CI run — deterministic named scenarios (success, provider-rejected,
+  provider-unavailable, timeout), no network, no credential. `HyperframesCliProvider`
+  (packages/data) shells out to `npx hyperframes render --output <file>` with a timeout and typed
+  error translation; selected only via `VIDEO_GENERATION_PROVIDER=hyperframes`; **implemented but
+  never executed against a real render** in this environment — its own tests inject a fake process
+  runner, and only the generic child-process wiring (timeout/spawn-failure/exit-code handling) is
+  exercised for real, against `node`, never against `npx hyperframes`. See
+  `content/video-scripts/README.md` for the exact BLOCKED/PENDING statement.
+- **API** (authenticated, `private, no-store`): `POST /video-generations` (10/hour — generation is
+  expensive — body: `{videoDefinitionId}`, strict), `GET /video-generations/:jobId` (30/min). A job
+  is addressed by its own server-generated UUID, never a content id; a job that does not exist and
+  a job that belongs to another student are the same `404`, never a `403` — the same IDOR-safe
+  pattern every other user-owned resource in this codebase uses. Provider failures are never an
+  HTTP error: `RequestVideoGenerationUseCase` catches them and records the job `failed` with a safe
+  category (`timeout`/`provider_unavailable`/`provider_rejected`/`unknown`) — a caller only learns
+  about a failure by polling, as a `200`.
+- **Frontend**: nav link "Videos"; `/learn/videos` — a single demo page (no browsing/listing route
+  exists; the brief's own suggested API is only the two routes above, so the page requests
+  generation of the one authored definition directly, hardcoding its display title/description
+  rather than adding a read endpoint just to avoid that duplication). Shows queued/processing,
+  completed and failed states; a completed job shows "preview is not available yet" rather than a
+  `<video>` element, since neither adapter returns a real, servable media URL in this milestone
+  (media storage is explicitly PENDING, no AWS/S3 introduced).
+- **Content**: one hand-authored vertical-slice video, `pl-a1-nasal-vowels-demo` — reuses the
+  existing `pl-ipa-onasal`/`pl-ipa-enasal` phonetic representations (M10) via `relatedContentId`
+  and its render project's own scene text, rather than duplicating that data. The Hyperframes HTML
+  project itself was authored against the verified `data-start`/`data-duration`/`data-track-index`
+  convention but never run through the real renderer.
+- **Not built, on purpose**: audio/narration (Gemini TTS, still M0-era PROPOSED, untouched by
+  M11), a video-definitions browsing/list endpoint, real media storage/serving, a queue or
+  background-worker infrastructure, cancellation, retries, a script-authoring DSL beyond the
+  Hyperframes HTML format itself, cross-referencing `relatedContentId` against other catalogs.
 
-## Verification (M10, run locally on 2026-09-23)
+## Verification (M11, run locally on 2026-09-25)
 
 - `pnpm install --frozen-lockfile`, `pnpm content:validate` (1 language, 5 content items, 9 exercises, 29 vocabulary
-  entries in 6 categories, **8 phonetic representations in 2 topics**), `lint`, `format:check` (passes for
-  everything committed), `typecheck`, `build`: **PASS**.
-- **3210 Vitest tests / 227 files: 3210 pass, 5 skipped** (the opt-in real-Postgres gamification file, unrelated to
-  M10), 0 fail. Coverage **92.92% statements / 85.81% branches / 91.99% functions / 93.04% lines** (thresholds
-  80/75/80/80) — comfortably above every threshold. No dedicated component tests for the phonetics browse page and
-  its list sub-components (topic list, filters, item card/list), the same gap M9 documented for its own
-  browse/My Vocabulary pages — covered by the detail-page tests and the E2E spec instead.
-- **132 Playwright E2E tests**: **130 pass, 2 failed in the one full-suite run** (`vocabulary.spec.ts`'s "login,
-  open Vocabulary" and "searching filters the list" specs, both pre-existing M9 specs untouched by M10) — both
-  **passed when re-run in isolation** (2/2), confirming load-related flakiness under the full 132-test run on this
-  machine, the same class of flake M8/M9 already documented, not a regression. `tests/e2e/phonetics.spec.ts` (6
-  tests) passed on every run, isolated and full-suite. `--workers=2`; ports 3000/5173 must be free.
+  entries in 6 categories, 8 phonetic representations in 2 topics, **1 video definition, 1 published**), `lint`,
+  `format:check` (passes for everything committed), `typecheck` (every package), `build` (every package + `apps/web`
+  `vite build`, `apps/api` `tsc`): **PASS**.
+- **3339 Vitest tests / 243 files: 3339 pass, 5 skipped** (the opt-in real-Postgres gamification file, unrelated to
+  M11), 0 fail. Coverage **93.04% statements / 85.97% branches / 92.32% functions / 93.14% lines** (thresholds
+  80/75/80/80) — comfortably above every threshold. Weaker spots, all deliberate: the demo page's own component
+  tests don't hit every branch (~76% stmts on that one file — the states that matter, success/failure/disabled, are
+  covered; a couple of minor render branches aren't), and `RequestVideoGenerationUseCase`'s provider-error
+  categorization is now covered for all four categories (rejected/unavailable/timeout/unknown) after a follow-up
+  pass — the first attempt only covered "rejected".
+- **134 Playwright E2E tests** (2 new: `video-generation.spec.ts`): **133 pass, 1 failed in one full-suite run**
+  (`exercises.spec.ts`'s "opening an exercise from the lesson's list" spec, a pre-existing M7 spec untouched by
+  M11) — **passed when re-run in isolation** (34/34), confirming load-related flakiness under the full 134-test run
+  on this machine, the same class of flake M8–M10 already documented, not a regression. `video-generation.spec.ts`
+  (2 tests) passed on every run, isolated, in a 3-file subset, and in the full suite. `--workers=2`; ports
+  3000/5173 must be free.
 - **Two real bugs found and fixed during E2E verification** (invisible to mocked-fetch unit tests):
-  1. The Vite dev proxy had every other authenticated API path but `/phonetics` — every phonetics request from the
-     browser 404'd against Vite itself instead of reaching the API. Fixed in `apps/web/vite.config.ts`.
-  2. The initial E2E assertion for the "completed" badge used exact text matching, which cannot match Playwright's
-     `getByText(..., {exact: true})` because the badge combines a checkmark and the word "Completed" in one
-     element (the same shape Vocabulary's "Learned" badge has, which M9's own E2E never asserted with `exact: true`
-     for that reason). Fixed by selecting the badge via its `data-status` attribute instead.
-- **Real PostgreSQL 17** (throwaway container from the project's dev image, port 55433, removed afterwards): all
-  six migration sets (identity, profile, lessons, exercises, gamification, vocabulary) plus phonetics's own applied
-  in dependency order with the real `drizzle-kit` CLI on an empty database; the phonetics migration re-applied as a
-  no-op; the schema matched the Drizzle definition exactly (`\d user_phonetic_progress`); manual spot checks
-  confirmed the primary key refuses a duplicate `(user_id, phonetic_representation_id)`, the
-  `completed`/`completed_at` CHECK refuses an inconsistent row, and deleting the user cascades to
-  `user_phonetic_progress`. `packages/data`'s own PGlite-backed repository tests (20 tests) prove the same
-  constraints plus two-concurrent-writer races more exhaustively.
-- **Content seed**: not a database seed script — phonetics content is files, loaded and validated at API start-up
-  and by `pnpm content:validate`, the same as every other content type since M5.
-- **Jenkins pipeline and SonarQube analysis / Quality Gate: NOT RUN for M10** (the user explicitly said not to check
+  1. The Vite dev proxy had every other authenticated API path but `/video-generations` — every request from the
+     browser hit Vite's own SPA fallback instead of reaching the API, so the mutation's response body failed to
+     parse as JSON and the UI silently sat on "Starting generation…" forever. Fixed in `apps/web/vite.config.ts` —
+     the exact class of bug M10 already found and fixed for `/phonetics`, still not generalized into a guard test.
+  2. An E2E helper used the bare Playwright `request` fixture (a separate, unauthenticated context) to make an
+     authenticated follow-up call after signing in via `page` — wrong context, so the session cookie was never
+     sent and the call 401'd. Fixed by using `page.context().request` instead, the same pattern the existing
+     phonetics/vocabulary security specs already use correctly.
+  3. (Not a bug, but caught only by the repo's own architecture guard test.) The demo page's hardcoded description
+     originally named "Polish" directly — `no-language-branching.test.ts` (ADR-018's guard against per-language
+     code) correctly flagged this as forbidden in production source; reworded to describe the sounds without
+     naming the language.
+- **No real-Postgres manual check was done for M11** (unlike M8–M10's own verification sections): the generated
+  migration (`packages/data/src/video/db/migrations/0000_previous_infant_terrible.sql`) was generated with the
+  real `drizzle-kit generate` CLI and inspected, and `packages/data`'s own PGlite-backed repository tests (10
+  tests) prove the CHECK constraints, the `user_id` foreign key/cascade, and insert-then-update transitions — but
+  it was never applied against a real, network Postgres instance this session. Worth doing before relying on it in
+  a real deployment.
+- **Content seed**: not a database seed script — the one video definition is a file, loaded and validated at API
+  start-up and by `pnpm content:validate`, the same as every other content type since M5. The Hyperframes render
+  project it points to (`content/video-scripts/pl-a1-nasal-vowels-demo/`) is plain HTML, not validated by any
+  schema — only its existence as a folder matters to the fake/real provider, and only the real provider ever reads
+  its contents (which never happened this session — see "What actually exists" above).
+- **Jenkins pipeline and SonarQube analysis / Quality Gate: NOT RUN for M11** (standing instruction not to check
   them this session; the branch is not pushed).
 
 ## Earlier milestones (short)
 
+- **M10 (phonetics)**: a representation is content, optionally grouped by topic, independent of vocabulary;
+  `user_phonetic_progress` (per student, forward-only viewed/practiced/completed, no backward step);
+  `queryVisiblePhonetics` shared query engine; pages at `/learn/phonetics` — [ADR-023](../docs/adr/adr-023-phonetics.md).
 - **M9 (vocabulary)**: an entry is content grouped in a category of its own language; `user_vocabulary` (per
   student, saved/learning/learned, one backward step); one shared query engine for browse and "My Vocabulary";
   diacritic-folded search; pages at `/learn/vocabulary` — [ADR-022](../docs/adr/adr-022-vocabulary.md).
@@ -123,24 +155,35 @@ Vocabulary (M9), which it does not share data with. Rationale and trade-offs:
 
 ## What does NOT exist yet (do not assume otherwise)
 
-- Audio (Gemini TTS, M12), speech recognition, pronunciation scoring/evaluation, an `audioAssetId` or similar field
-  (deliberately not added speculatively — see ADR-023), search over phonetics content, a reward for phonetics
-  progress, a backward progress correction, phonetic rules/patterns as their own content type (only individual
-  sound representations exist), syllables/stress as modelled fields.
+- **A real, executed Hyperframes render.** `HyperframesCliProvider` is implemented against verified CLI docs but
+  was never run against `npx hyperframes render` for real — no FFmpeg/headless Chrome/`hyperframes` install
+  confirmed in this environment. Do not report the real adapter as "working," only as implemented-and-unverified
+  (see ADR-012, `content/video-scripts/README.md`).
+- Audio (Gemini TTS, M12 or later — untouched by M11, still exactly where M0 left it), speech recognition,
+  pronunciation scoring/evaluation, subtitle generation/translation, an AI tutor.
+- Real media storage for generated videos (`MEDIA_STORAGE_PROVIDER = PENDING`, no AWS/S3), a video player, a
+  video-definitions browsing/list API or page, cancellation of an in-flight generation, retries, a queue/background
+  worker, cross-referencing a video's `relatedContentId` against the catalog it points into.
+- A `Media`-domain unification of video/audio/image references (each AI-generation milestone has introduced its own
+  narrow shape so far); more than one authored video.
+- An `audioAssetId` or similar field on any content type (deliberately not added speculatively — see ADR-023),
+  search over phonetics content, a reward for phonetics progress, a backward phonetics progress correction,
+  phonetic rules/patterns as their own content type (only individual sound representations exist), syllables/stress
+  as modelled fields.
 - Spaced repetition (SM-2, FSRS), word-form/morphology beyond a vocabulary entry's plural, cross-language
   (display-vs-learning-language) search or content, a reward for learned vocabulary.
 - Streaks, XP levels, leaderboards/rankings, daily goals, challenges, spending or transferring points, notifications, a reward
   marketplace, scoring/progress rollups beyond the ledger, adaptive learning, recommendations, teacher dashboard,
-  subscriptions, newsletter, account deletion/data export, AI services, audio/video generation.
+  subscriptions, newsletter, account deletion/data export.
 - More exercise types (matching, ordering, fill-in-the-blank, listening, …), an exercise editor/CMS, an attempt-history endpoint,
   pagination of exercise lists, attempt retention/deletion workflows.
 - Block-level resume in a lesson; more than one real language or any level beyond Polish A1; CEFR descriptors; **interface
   localisation** (only the achievement texts have a locale seam); persistence of a student's chosen language/level (enrolment);
   content hot-reload.
 - A real email provider (ADR-014); a real Neon connection was never exercised (Docker Postgres in dev, PGlite in tests, and
-  one-off real-Postgres checks for M8, M9 and M10).
+  one-off real-Postgres checks for M8, M9 and M10 — **not repeated for M11**, see Verification above).
 - Automated accessibility checks (axe); CSRF double-submit token; a dependency-audit CI step; a Postgres service in CI (the
-  gamification multi-connection test is opt-in; vocabulary and phonetics have no equivalent opt-in test).
+  gamification multi-connection test is opt-in; vocabulary, phonetics and video have no equivalent opt-in test).
 - Component-level unit tests for the vocabulary browse/My Vocabulary pages and the phonetics browse page and their
   presentation sub-components — covered by the detail-page tests and E2E only, for both M9 and M10.
 - A precise link from a vocabulary entry to the exact phonetic representation for its own pronunciation (the
@@ -148,13 +191,32 @@ Vocabulary (M9), which it does not share data with. Rationale and trade-offs:
 
 ## Pending decisions
 
-None block M11. Hosting/deploy ([ADR-015](../docs/adr/adr-015-deployment.md)) is PENDING; a deployment must ship
+Hosting/deploy ([ADR-015](../docs/adr/adr-015-deployment.md)) is PENDING; a deployment must ship
 `content/` with the API (or set `CONTENT_DIR`) and run the Identity, Profile, Lessons, Exercises, Gamification,
-Vocabulary and **Phonetics** migrations in that order (Profile, Lessons, Exercises, Gamification, Vocabulary and
-Phonetics are independent of each other; all reference `users`).
+Vocabulary, Phonetics and **Video** migrations in that order (Profile, Lessons, Exercises, Gamification, Vocabulary,
+Phonetics and Video are independent of each other; all reference `users`). ADR-015 also directly blocks confirming
+whether the real `HyperframesCliProvider` can actually run in production (FFmpeg/headless Chrome availability is a
+function of the hosting choice) — this is the one thing M11 leaves genuinely undecided that a future milestone
+must resolve before the real adapter can be trusted.
 
 ## Known risks / rough edges
 
+- **The real Hyperframes adapter is unverified.** `HyperframesCliProvider` has never rendered a real video; its
+  actual behavior against a real `npx hyperframes render` invocation — exact stdout/stderr shape, real timing,
+  whether the output file ends up exactly where expected — is unconfirmed. Treat it as a prototype until someone
+  runs it for real on a host with Node 22+/FFmpeg/headless Chrome.
+- **Generation is a single-instance, in-process background task**, not a queue: a server restart mid-render loses
+  the job (it stays `processing` forever — there is no reconciliation sweep), and nothing retries a failed
+  generation automatically. A deliberate M11 scope decision (ADR-012), not an oversight — revisit if load or
+  reliability requirements change.
+- **No media storage exists.** A completed job's `mediaReference` is an opaque string (a fake reference, or a real
+  adapter's local filesystem path) — never a URL a browser could load. The frontend shows a static "preview
+  pending" note instead of attempting playback.
+- **`relatedContentId` is not cross-validated.** A video definition naming a phonetic/vocabulary/lesson id that
+  does not exist (a typo, or content later removed) would not be caught by `pnpm content:validate` — only the
+  video's own fields are checked.
+- **No real-Postgres check was performed for `video_generation_jobs`** this session (see Verification) — only
+  PGlite-backed repository tests and an inspected `drizzle-kit generate` output.
 - **Progress can never be corrected backward.** A student who marks a sound `completed` by mistake has no "undo" —
   a deliberate M10 scope decision (ADR-023 §5), not an oversight.
 - **No search exists over phonetics content.** A misspelled or IPA-unfamiliar query has no way to find a sound
@@ -194,16 +256,19 @@ Phonetics are independent of each other; all reference `users`).
 - Merely opening a lesson marks it in progress (by design); a failed `start` is silent.
 - The skip-to-content link in the root layout still uses white on the orange accent (~2.8:1).
 - Profile routes have no rate limit; no unsaved-changes guard; names stored as typed (escape on output).
-- **Seven `pg` pools per API process** (identity, profile, lessons, exercises, gamification, vocabulary, phonetics);
-  real Neon connectivity unverified.
-- The web bundle is ~565 kB; Vite warns above 500 kB.
-- `E2E_RELAXED_RATE_LIMITS` raises (not removes) rate limits for E2E only, now for phonetics reads/writes too.
+- **Eight `pg` pools per API process** (identity, profile, lessons, exercises, gamification, vocabulary, phonetics,
+  video); real Neon connectivity unverified.
+- The web bundle is ~582 kB; Vite warns above 500 kB.
+- `E2E_RELAXED_RATE_LIMITS` raises (not removes) rate limits for E2E only, now for video generation too.
 - Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is unset.
 - Full Playwright runs are memory-hungry (Vite + API with in-process Postgres + Chromium workers); use `--workers=2` on small
-  machines; a load-related flake in the full 132-test run (two pre-existing M9 specs) passed in isolation — see Verification.
-- Fastify's default `404` body echoes the requested path for every unknown route, including guessed phonetics paths; it
-  carries no data, and it predates M10.
+  machines; a load-related flake in the full 134-test run (one pre-existing M7 spec) passed in isolation — see Verification.
+- Fastify's default `404` body echoes the requested path for every unknown route, including guessed video-generation
+  paths; it carries no data, and it predates M11.
 
 ## Next milestone
 
-`M11 — Hyperframes / Educational Video Generation` (not started).
+`M12` (not yet named/started). Candidates per the product brief: Gemini audio/narration generation
+(ADR-013, still PROPOSED — a natural pairing with M11's video, since a finished video eventually
+needs narration), or resolving ADR-015 (hosting) so `HyperframesCliProvider` can finally be
+verified for real.

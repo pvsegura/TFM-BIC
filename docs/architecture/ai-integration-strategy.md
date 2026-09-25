@@ -16,7 +16,7 @@ GenerateLessonVideoUseCase -> VideoGenerationService (interface) -> HyperframesP
 This means: swapping Gemini for another TTS provider, or Hyperframes for another renderer, only
 requires a new adapter — no change to use cases or domain.
 
-## Video: Hyperframes — verified facts (2026-09-15)
+## Video: Hyperframes — verified facts (re-verified 2026-09-24, M11)
 
 - Hyperframes is an **open-source (Apache 2.0), self-hostable** framework: it renders HTML/CSS/
   JS timelines (driven by `data-start`/`data-duration`/`data-track-index` attributes, with
@@ -25,16 +25,36 @@ requires a new adapter — no change to use cases or domain.
   Source: [hyperframes.heygen.com/introduction](https://hyperframes.heygen.com/introduction),
   [GitHub: heygen-com/hyperframes](https://github.com/heygen-com/hyperframes).
 - It is free to self-host, no per-render fees, no commercial-use threshold under Apache 2.0.
-  Source: search aggregation citing the HyperFrames docs/license (see ADR-012 for full citation
-  list).
 - Local/self-hosted rendering does not depend on AWS; AWS Lambda is one _optional_ deployment
   target mentioned in the docs among others — not a requirement. This satisfies the "no AWS"
   constraint.
-- **UNKNOWN**: exact CLI/API surface, authentication (if any is needed for local rendering),
-  webhook support, output storage conventions, and any HeyGen-hosted-service quota/pricing (as
-  opposed to self-hosted use) — full API reference exists at `hyperframes.heygen.com` but was not
-  exhaustively read in M0. Must be re-verified against the live docs immediately before
-  implementing `HyperframesProvider`.
+- **CLI surface, verified**: `npx hyperframes init`, `preview`, `render --output <file>`, `lint`,
+  `check`, `snapshot`, `publish`, `doctor` for local use; `npx hyperframes cloud render` for
+  HeyGen-hosted rendering; `npx hyperframes lambda ...` for AWS Lambda distributed rendering
+  (unused here). Source: `hyperframes.heygen.com/quickstart`,
+  `github.com/heygen-com/hyperframes` README.
+- **Authentication, verified**: **no authentication or credential is required for local/
+  self-hosted rendering**, and it uses no HeyGen credits. Only the HeyGen-hosted `cloud render`
+  path requires signing in — not used by this project.
+- **Requirements, verified**: Node 22+, FFmpeg, and headless Chrome on the rendering host.
+- **Programmatic API**: `@hyperframes/producer` ("Render a HyperFrames project from Node.js")
+  exists as an npm package, but its exact function signature/return shape is **UNKNOWN** — not
+  read in this re-verification pass. M11's `HyperframesCliProvider` uses the CLI surface instead,
+  which is fully verified.
+- **UNKNOWN still**: webhook support (if any) for the self-hosted path, exact output
+  resolution/fps/duration CLI flags beyond `--output`, and `@hyperframes/producer`'s API. None of
+  these blocked M11's minimal adapter, which only needs `--output`.
+- **Usage model, newly understood in M11**: Hyperframes is designed to be used interactively by an
+  AI coding agent at content-authoring time (its own `/hyperframes` skill command generates the
+  HTML/timeline project); the platform automates _rendering_ an already-authored project, not
+  _authoring_ one from a runtime prompt. `content/video-scripts/<id>/` holds one hand-authored
+  example project for M11's vertical slice.
+- **Implementation status (M11)**: `VideoGenerationService` (port), `FakeVideoGenerationService`
+  (the default dev/test/CI adapter, packages/data) and `HyperframesCliProvider` (real, shells out
+  to `npx hyperframes render --output <file>`, packages/data) are implemented. The real adapter is
+  **not executed end-to-end** in the M11 implementation environment (FFmpeg/headless Chrome
+  availability unconfirmed; ADR-015 hosting still PENDING) — see ADR-012 and
+  `content/video-scripts/README.md`.
 
 ## Audio: Gemini API TTS — verified facts (2026-09-15)
 
@@ -62,3 +82,12 @@ Audio: narration/pronunciation clips referenced from `content/languages/<id>/...
 No SDK installed, no API key configured, no adapter code written, no prompt/script format
 finalized. This document exists so ADR-012/013 can be written honestly (PROPOSED, not ACCEPTED)
 and so implementation work in a later milestone starts from verified facts instead of assumptions.
+
+## Update — M11 (video, 2026-09-24)
+
+Video generation moved from PROPOSED to implemented (see ADR-012): `VideoGenerationService`,
+`FakeVideoGenerationService` and `HyperframesCliProvider` exist in code. Audio generation (Gemini,
+ADR-013) remains exactly as M0 left it — untouched by M11, still PROPOSED, no SDK installed, no
+API key configured, no adapter code written. The two are independent milestones; nothing about
+M11 implies M-audio is ready to start from different assumptions than this document already
+states.
