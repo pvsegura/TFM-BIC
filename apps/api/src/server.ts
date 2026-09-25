@@ -7,6 +7,8 @@ import fastifyCookie from "@fastify/cookie";
 import fastifyRateLimit from "@fastify/rate-limit";
 import Fastify, { type FastifyError, type FastifyInstance } from "fastify";
 
+import type { AudioDependencies } from "./composition/audio-dependencies.js";
+import { createAudioUseCases } from "./composition/audio-use-cases.js";
 import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
 import type { ContentDependencies } from "./composition/content-dependencies.js";
@@ -25,6 +27,7 @@ import type { VideoDependencies } from "./composition/video-dependencies.js";
 import { createVideoUseCases } from "./composition/video-use-cases.js";
 import type { VocabularyDependencies } from "./composition/vocabulary-dependencies.js";
 import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js";
+import { registerAudioGenerationRoutes } from "./routes/audio-generations.route.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
 import { registerExerciseRoutes } from "./routes/exercises.route.js";
@@ -49,6 +52,7 @@ export function buildServer(
   vocabularyDeps: VocabularyDependencies,
   phoneticsDeps: PhoneticsDependencies,
   videoDeps: VideoDependencies,
+  audioDeps: AudioDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -157,6 +161,15 @@ export function buildServer(
     // default and in every automated test/CI run.
     registerVideoGenerationRoutes(app, {
       useCases: createVideoUseCases(contentDeps, videoDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // Audio generation (M12): the text comes from content (contentDeps), never the client; nothing
+    // is persisted. The provider is selected by env.AUDIO_GENERATION_PROVIDER (ADR-013) — "fake" by
+    // default and in every automated test/CI run.
+    registerAudioGenerationRoutes(app, {
+      useCases: createAudioUseCases(contentDeps, audioDeps),
       resolveSession: authUseCases.resolveSession,
       env,
     });

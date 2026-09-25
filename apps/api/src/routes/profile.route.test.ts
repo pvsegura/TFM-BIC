@@ -30,6 +30,7 @@ function build() {
     testDeps.vocabularyDeps,
     testDeps.phoneticsDeps,
     testDeps.videoDeps,
+    testDeps.audioDeps,
   );
   return { app, ...testDeps };
 }

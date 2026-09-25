@@ -31,8 +31,13 @@ import {
   FixedClock,
   makeSampleCatalog,
 } from "@tfm-bic/application/testing";
-import { FakeVideoGenerationService } from "@tfm-bic/data";
+import {
+  FakeAudioGenerationService,
+  FakeVideoGenerationService,
+  InMemoryAudioCache,
+} from "@tfm-bic/data";
 
+import type { AudioDependencies } from "../composition/audio-dependencies.js";
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
@@ -142,6 +147,12 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  const audioDeps: AudioDependencies = {
+    provider: new FakeAudioGenerationService(),
+    cache: new InMemoryAudioCache({ maxEntries: 50, maxBytes: 4 * 1024 * 1024 }),
+    options: { maxTextLength: 300, maxConcurrent: 4 },
+  };
+
   return {
     deps,
     profileDeps,
@@ -152,6 +163,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     vocabularyDeps,
     phoneticsDeps,
     videoDeps,
+    audioDeps,
     gamificationRepository,
     lessonProgressRepository,
     exerciseAttemptRepository,

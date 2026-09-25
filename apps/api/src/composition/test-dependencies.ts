@@ -1,6 +1,7 @@
 import type { AppEnv } from "@tfm-bic/config";
 import { createGamificationTestDb } from "@tfm-bic/data/testing";
 
+import { createAudioDependencies, type AudioDependencies } from "./audio-dependencies.js";
 import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
 import { createContentDependencies, type ContentDependencies } from "./content-dependencies.js";
 import { buildExerciseDependencies, type ExerciseDependencies } from "./exercise-dependencies.js";
@@ -49,6 +50,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
   vocabulary: VocabularyDependencies;
   phonetics: PhoneticsDependencies;
   video: VideoDependencies;
+  audio: AudioDependencies;
 }> {
   const {
     db,
@@ -77,5 +79,8 @@ export async function createTestDependencies(env: AppEnv): Promise<{
     video: buildVideoDependencies(videoDb, selectVideoGenerationProvider(env), () =>
       Promise.resolve(),
     ),
+    // Same provider selection as production — and loadEnv refuses AUDIO_GENERATION_PROVIDER=gemini
+    // under NODE_ENV=test, so E2E always gets the fake adapter and never needs a Gemini key.
+    audio: createAudioDependencies(env),
   };
 }

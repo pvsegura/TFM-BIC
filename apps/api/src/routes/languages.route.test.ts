@@ -26,6 +26,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.vocabularyDeps,
     testDeps.phoneticsDeps,
     testDeps.videoDeps,
+    testDeps.audioDeps,
   );
   return { app, ...testDeps };
 }
