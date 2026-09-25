@@ -218,3 +218,19 @@ export {
   VOCABULARY_AUDIO_PART_VALUES,
   type AudioGenerationRequestBody,
 } from "./audio/audio-generation.schema.js";
+
+// Teacher dashboard (M13): strict queries with no identity fields, allowlisted responses.
+export {
+  rosterStudentResponseSchema,
+  teacherDashboardEmptyQuerySchema,
+  teacherOverviewResponseSchema,
+  teacherStudentDetailResponseSchema,
+  teacherStudentIdParamSchema,
+  teacherStudentListQuerySchema,
+  teacherStudentsResponseSchema,
+  type RosterStudentResponse,
+  type TeacherOverviewResponse,
+  type TeacherStudentDetailResponse,
+  type TeacherStudentListQuery,
+  type TeacherStudentsResponse,
+} from "./teaching/teacher-dashboard.schema.js";
