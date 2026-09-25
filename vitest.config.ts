@@ -61,9 +61,12 @@ export default defineConfig({
         "packages/data/src/gamification/db/client.ts",
         "packages/data/src/vocabulary/db/client.ts",
         "packages/data/src/video/db/client.ts",
+        "packages/data/src/teaching/db/client.ts",
         // `pnpm content:validate` entry point: argv in, exit code out. The loader and the
         // report formatter it calls are unit-tested; only the bootstrap is left uncovered.
         "packages/data/src/content/validate-content.cli.ts",
+        // `pnpm teacher:admin` entry point (M13): same reasoning — runTeacherAdminCommand is tested.
+        "packages/data/src/teaching/teacher-admin.cli.ts",
       ],
       thresholds: {
         lines: 80,
