@@ -19,6 +19,7 @@ import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
 import { RoutePlaceholder } from "./pages/route-placeholder.js";
 import { VerifyEmailPage } from "./pages/verify-email-page.js";
+import { VideoGenerationDemoPage } from "./pages/video-generation-demo-page.js";
 import { VocabularyDetailPage } from "./pages/vocabulary-detail-page.js";
 import { VocabularyPage } from "./pages/vocabulary-page.js";
 
@@ -78,12 +79,17 @@ const PHONETICS_ROUTES = [
   { path: "learn/phonetics/:phoneticId", element: <PhoneticDetailPage /> },
 ];
 
+/** Video generation (M11) — one demo page requesting generation of the milestone's one authored
+ * definition (see VideoGenerationDemoPage's doc comment for why there is no browse/list route).
+ * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
+const VIDEO_ROUTES = [{ path: "learn/videos", element: <VideoGenerationDemoPage /> }];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page, lessons the
  * real M6 pages, exercises the real M7 page, vocabulary the real M9 pages, phonetics the real
- * M10 pages, and the dashboard and achievements the real M8 pages (their API is under
- * `/gamification`, so no page-vs-API path
+ * M10 pages, video generation the real M11 demo page, and the dashboard and achievements the real
+ * M8 pages (their API is under `/gamification`, so no page-vs-API path
  * clash); the rest are still placeholders for their features, real now only in that they require
  * login. */
 const APP_ROUTES = [
@@ -92,6 +98,7 @@ const APP_ROUTES = [
   ...EXERCISE_ROUTES,
   ...VOCABULARY_ROUTES,
   ...PHONETICS_ROUTES,
+  ...VIDEO_ROUTES,
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
   { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },

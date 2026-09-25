@@ -68,6 +68,11 @@ export function RootLayout() {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/learn/videos" className="text-sm hover:underline">
+                      Videos
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/achievements" className="text-sm hover:underline">
                       Achievements
                     </Link>
