@@ -114,3 +114,10 @@ export {
   type InMemoryAudioCacheOptions,
 } from "./audio/in-memory-audio-cache.js";
 export { encodeWavPcm16, isWav } from "./audio/wav.js";
+
+// Teaching (M13): teacher–student links and the teacher dashboard's read model — grouped SQL
+// over the authoritative Profile/Lessons/Exercises/Gamification tables, always scoped through
+// the teacher's links (ADR-024). Operator commands: `pnpm --filter @tfm-bic/data teacher:admin`.
+export { createTeachingDb, type TeachingDb, type TeachingDbHandle } from "./teaching/db/client.js";
+export { DrizzleTeacherStudentLinkRepository } from "./teaching/teacher-student-link.repository.js";
+export { DrizzleTeacherDashboardReadModel } from "./teaching/teacher-dashboard.read-model.js";
