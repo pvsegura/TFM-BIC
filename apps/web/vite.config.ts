@@ -44,6 +44,9 @@ export default defineConfig({
       // Audio generation (M12): `POST /audio-generations`. No page lives at this path (the
       // "Listen" action is on the vocabulary detail page), so it needs no page-vs-API bypass.
       "/audio-generations": { target: "http://localhost:3000", changeOrigin: true },
+      // Teacher dashboard (M13): `/teacher-dashboard/...`. The pages live at /teacher, so — like
+      // gamification — this needs no page-vs-API bypass (ADR-024).
+      "/teacher-dashboard": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which
