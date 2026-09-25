@@ -210,3 +210,11 @@ export {
   type RequestVideoGenerationRequest,
   type VideoGenerationJobResponse,
 } from "./video/video-generation.schema.js";
+
+// Audio generation (M12, ADR-013): the client names content to hear, never the text itself.
+export {
+  AUDIO_RESPONSE_CONTENT_TYPES,
+  audioGenerationRequestSchema,
+  VOCABULARY_AUDIO_PART_VALUES,
+  type AudioGenerationRequestBody,
+} from "./audio/audio-generation.schema.js";
