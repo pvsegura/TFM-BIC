@@ -312,3 +312,37 @@ export {
   GetVideoGenerationStatusUseCase,
   type GetVideoGenerationStatusInput,
 } from "./video/use-cases/get-video-generation-status.use-case.js";
+
+// Audio generation (M12) — the provider boundary (implemented in packages/data by
+// FakeAudioGenerationService and GeminiAudioProvider), the reusable text-to-speech use case, and
+// its first consumer (listening to a vocabulary entry). See ADR-013.
+export type {
+  AudioGenerationRequest,
+  AudioGenerationService,
+  GeneratedAudio,
+} from "./audio/ports/audio-generation-service.js";
+export type { AudioCache } from "./audio/ports/audio-cache.js";
+export {
+  AudioGenerationBusyError,
+  AudioGenerationTimeoutError,
+  AudioLanguageUnavailableError,
+  AudioProviderConfigurationError,
+  AudioProviderRateLimitedError,
+  AudioProviderRejectedError,
+  AudioProviderUnavailableError,
+  AudioSourceTextMissingError,
+  categorizeAudioGenerationError,
+  type AudioGenerationFailureCategory,
+} from "./audio/errors/audio-generation-errors.js";
+export {
+  GenerateAudioUseCase,
+  type GenerateAudioInput,
+  type GenerateAudioOptions,
+  type GenerateAudioResult,
+} from "./audio/use-cases/generate-audio.use-case.js";
+export {
+  GenerateVocabularyAudioUseCase,
+  VOCABULARY_AUDIO_PARTS,
+  type GenerateVocabularyAudioInput,
+  type VocabularyAudioPart,
+} from "./audio/use-cases/generate-vocabulary-audio.use-case.js";
