@@ -58,6 +58,7 @@ function catalog(exercises: Exercise[], content: ContentItem[] = [lesson("pl-gre
     vocabulary: [],
     phoneticTopics: [],
     phonetics: [],
+    videoDefinitions: [],
   };
   return result;
 }

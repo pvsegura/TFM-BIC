@@ -347,3 +347,30 @@ export { InvalidPhoneticTopicIdError } from "./phonetics/errors/invalid-phonetic
 export { PhoneticRepresentationNotFoundError } from "./phonetics/errors/phonetic-representation-not-found.error.js";
 export { PhoneticTopicNotFoundError } from "./phonetics/errors/phonetic-topic-not-found.error.js";
 export { validatePhonetics, type PhoneticsCatalogContext } from "./phonetics/phonetics-catalog.js";
+
+// Video (M11) — a definition is content (what should be generated, provider-independent); a
+// generation job is the per-student request to render it, tracked through a small lifecycle
+// (queued -> processing -> completed|failed). No provider (Hyperframes or otherwise) type ever
+// appears here — see ADR-011/012 and the `hyperframes` skill.
+export {
+  createVideoDefinitionId,
+  isValidVideoDefinitionId,
+  videoDefinitionIdBelongsToLanguage,
+  type VideoDefinitionId,
+} from "./video/video-definition-id.js";
+export type { VideoDefinition } from "./video/video-definition.js";
+export {
+  completeGeneration,
+  failGeneration,
+  requestVideoGeneration,
+  startProcessing,
+  VIDEO_GENERATION_STATUSES,
+  type NewVideoGenerationJob,
+  type VideoGenerationJob,
+  type VideoGenerationStatus,
+} from "./video/video-generation-job.js";
+export { InvalidVideoDefinitionIdError } from "./video/errors/invalid-video-definition-id.error.js";
+export { VideoDefinitionNotFoundError } from "./video/errors/video-definition-not-found.error.js";
+export { VideoGenerationJobNotFoundError } from "./video/errors/video-generation-job-not-found.error.js";
+export { InvalidVideoGenerationTransitionError } from "./video/errors/invalid-video-generation-transition.error.js";
+export { validateVideoDefinitions, type VideoCatalogContext } from "./video/video-catalog.js";

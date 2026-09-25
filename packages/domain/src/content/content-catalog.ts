@@ -7,6 +7,8 @@ import type { LevelId } from "../language/level-id.js";
 import { validatePhonetics } from "../phonetics/phonetics-catalog.js";
 import type { PhoneticRepresentation } from "../phonetics/phonetic-representation.js";
 import type { PhoneticTopic } from "../phonetics/phonetic-topic.js";
+import { validateVideoDefinitions } from "../video/video-catalog.js";
+import type { VideoDefinition } from "../video/video-definition.js";
 import { validateVocabulary } from "../vocabulary/vocabulary-catalog.js";
 import type { VocabularyCategory } from "../vocabulary/vocabulary-category.js";
 import type { VocabularyItem } from "../vocabulary/vocabulary-item.js";
@@ -29,6 +31,8 @@ export interface ContentCatalog {
   phoneticTopics: readonly PhoneticTopic[];
   /** Phonetics representations (M10): each belongs to one language, optionally to one of its topics. */
   phonetics: readonly PhoneticRepresentation[];
+  /** Video definitions (M11): what should be generated, one per language and level. */
+  videoDefinitions: readonly VideoDefinition[];
 }
 
 export interface CatalogIssue {
@@ -135,6 +139,14 @@ export function validateContentCatalog(catalog: ContentCatalog): CatalogIssue[] 
   validatePhonetics(
     catalog.phoneticTopics,
     catalog.phonetics,
+    {
+      languageIds,
+      levelStatusOf: (languageId, levelId) => levelStatus.get(levelKey(languageId, levelId)),
+    },
+    issues,
+  );
+  validateVideoDefinitions(
+    catalog.videoDefinitions,
     {
       languageIds,
       levelStatusOf: (languageId, levelId) => levelStatus.get(levelKey(languageId, levelId)),
