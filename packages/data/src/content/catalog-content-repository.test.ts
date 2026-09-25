@@ -57,6 +57,7 @@ const catalog: ContentCatalog = {
   vocabulary: [],
   phoneticTopics: [],
   phonetics: [],
+  videoDefinitions: [],
 };
 
 const repository = new CatalogContentRepository(catalog);

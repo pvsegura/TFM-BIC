@@ -18,6 +18,8 @@ import * as profileSchema from "../../../profile/db/schema.js";
 import type { ProfileDb } from "../../../profile/db/client.js";
 import type { GamificationDb } from "../client.js";
 import * as gamificationSchema from "../schema.js";
+import type { VideoDb } from "../../../video/db/client.js";
+import * as videoSchema from "../../../video/db/schema.js";
 import type { VocabularyDb } from "../../../vocabulary/db/client.js";
 import * as vocabularySchema from "../../../vocabulary/db/schema.js";
 
@@ -33,6 +35,7 @@ const CONTEXTS = [
   { folder: migrationsOf("gamification"), table: "__drizzle_migrations_gamification" },
   { folder: migrationsOf("vocabulary"), table: "__drizzle_migrations_vocabulary" },
   { folder: migrationsOf("phonetics"), table: "__drizzle_migrations_phonetics" },
+  { folder: migrationsOf("video"), table: "__drizzle_migrations_video" },
 ] as const;
 
 export interface GamificationTestDbHandle {
@@ -47,6 +50,7 @@ export interface GamificationTestDbHandle {
   exercisesDb: ExercisesDb;
   vocabularyDb: VocabularyDb;
   phoneticsDb: PhoneticsDb;
+  videoDb: VideoDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
   seedUser: (email?: string) => Promise<string>;
   /** Clears every table — cheaper between tests than booting a fresh WASM Postgres each time. */
@@ -61,8 +65,8 @@ export interface GamificationTestDbHandle {
 /**
  * A real (WASM-compiled) Postgres with every bounded context's migrations applied in dependency
  * order — Identity first (the FK target `users` must exist), then Student Profile, Lessons,
- * Exercises, Gamification, Vocabulary and Phonetics, each set tracked in its own table exactly as
- * `drizzle-kit migrate` does. It is the whole application's schema, which is what the E2E
+ * Exercises, Gamification, Vocabulary, Phonetics and Video, each set tracked in its own table
+ * exactly as `drizzle-kit migrate` does. It is the whole application's schema, which is what the E2E
  * composition needs; the gamification repository tests use it too. Same approach as the other
  * contexts' test-support —
  * see docs/adr/adr-005-database.md. Test-only.
@@ -78,6 +82,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...gamificationSchema,
       ...vocabularySchema,
       ...phoneticsSchema,
+      ...videoSchema,
     },
   });
 
@@ -98,6 +103,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     exercisesDb: pgliteDb as unknown as ExercisesDb,
     vocabularyDb: pgliteDb as unknown as VocabularyDb,
     phoneticsDb: pgliteDb as unknown as PhoneticsDb,
+    videoDb: pgliteDb as unknown as VideoDb,
     seedUser: async (email) => {
       seededUsers += 1;
       const address = email ?? `student-${String(seededUsers)}@example.com`;
@@ -116,7 +122,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     },
     reset: async () => {
       await pgliteDb.execute(
-        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
+        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "video_generation_jobs", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
       );
     },
     rawExecute: (query: SQL) => pgliteDb.execute(query),

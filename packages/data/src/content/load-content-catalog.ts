@@ -6,6 +6,7 @@ import {
   exerciseFileSchema,
   languageFileSchema,
   phoneticFileSchema,
+  videoFileSchema,
   vocabularyFileSchema,
 } from "@tfm-bic/contracts";
 import {
@@ -19,6 +20,7 @@ import {
   type LanguageLevel,
   type PhoneticRepresentation,
   type PhoneticTopic,
+  type VideoDefinition,
   type VocabularyCategory,
   type VocabularyItem,
 } from "@tfm-bic/domain";
@@ -361,6 +363,87 @@ async function loadPhonetics(
   }
 }
 
+/**
+ * One video definition file: `content/languages/<languageId>/videos/<videoId>.json` — a single
+ * item per file, like a lesson content item, not a topic-with-items file like phonetics or
+ * vocabulary (a video has no grouping concept in this milestone). The render project it points to
+ * (`scriptPath`, under `content/video-scripts/`) is never read here — only the provider adapter
+ * reads it.
+ */
+async function loadVideoFile(
+  absolute: string,
+  location: string,
+  expected: { languageId: string; fileName: string },
+  issues: ContentIssue[],
+): Promise<VideoDefinition | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+
+  const parsed = videoFileSchema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+
+  const file = parsed.data;
+  let consistent = true;
+  if (file.languageId !== expected.languageId) {
+    issues.push({
+      location,
+      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
+    });
+    consistent = false;
+  }
+  if (expected.fileName !== `${file.id}.json`) {
+    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
+    consistent = false;
+  }
+  if (!consistent) {
+    return undefined;
+  }
+
+  return {
+    id: file.id,
+    languageId: file.languageId,
+    levelId: file.levelId,
+    status: file.status,
+    order: file.order,
+    instructionLanguage: file.instructionLanguage,
+    title: file.title,
+    description: file.description,
+    relatedContentId: file.relatedContentId,
+    scriptPath: file.scriptPath,
+  };
+}
+
+async function loadVideos(
+  languageDir: string,
+  languageId: string,
+  catalog: { videoDefinitions: VideoDefinition[] },
+  issues: ContentIssue[],
+): Promise<void> {
+  const location = `languages/${languageId}/videos`;
+  const files = (await readDirectory(path.join(languageDir, "videos"))) ?? [];
+  for (const file of files) {
+    if (!file.isFile() || !file.name.endsWith(".json")) {
+      continue;
+    }
+    const loaded = await loadVideoFile(
+      path.join(languageDir, "videos", file.name),
+      `${location}/${file.name}`,
+      { languageId, fileName: file.name },
+      issues,
+    );
+    if (loaded) {
+      catalog.videoDefinitions.push(loaded);
+    }
+  }
+}
+
 /** Reads every `.json` file in one folder with `load`, in name order, keeping what is valid. */
 async function loadFolder<T>(
   directory: string,
@@ -440,6 +523,7 @@ async function loadLanguage(
     vocabulary: VocabularyItem[];
     phoneticTopics: PhoneticTopic[];
     phonetics: PhoneticRepresentation[];
+    videoDefinitions: VideoDefinition[];
   },
   issues: ContentIssue[],
 ): Promise<void> {
@@ -500,6 +584,7 @@ async function loadLanguage(
 
   await loadVocabulary(languageDir, languageId, catalog, issues);
   await loadPhonetics(languageDir, languageId, catalog, issues);
+  await loadVideos(languageDir, languageId, catalog, issues);
 }
 
 /**
@@ -514,6 +599,7 @@ async function loadLanguage(
  *   content/languages/<languageId>/levels/<levelId>/exercises/<exerciseId>.json
  *   content/languages/<languageId>/vocabulary/<categoryId>.json
  *   content/languages/<languageId>/phonetics/<topicId>.json
+ *   content/languages/<languageId>/videos/<videoId>.json
  */
 export async function loadContentCatalog(contentRoot: string): Promise<LoadContentResult> {
   const languagesDir = path.join(contentRoot, "languages");
@@ -532,6 +618,7 @@ export async function loadContentCatalog(contentRoot: string): Promise<LoadConte
     vocabulary: [] as VocabularyItem[],
     phoneticTopics: [] as PhoneticTopic[],
     phonetics: [] as PhoneticRepresentation[],
+    videoDefinitions: [] as VideoDefinition[],
   };
 
   for (const folder of languageFolders) {

@@ -8,6 +8,7 @@ import {
   phoneticEntry,
   phoneticFile,
   validTree,
+  videoFile,
   vocabularyEntry,
   vocabularyFile,
 } from "./test-support/content-fixtures.js";
@@ -127,6 +128,36 @@ describe("formatContentReport", () => {
       const report = formatContentReport(await loadContentCatalog(handle.root));
 
       expect(report.text).toContain("0 phonetic representations (0 published) in 0 topics");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("counts the video definitions and how many are published", async () => {
+    const handle = await makeContentRoot({
+      ...validTree("xx"),
+      "languages/xx/videos/xx-a1-one.json": videoFile("xx-a1-one", "xx", "a1"),
+      "languages/xx/videos/xx-a1-two.json": videoFile("xx-a1-two", "xx", "a1", {
+        order: 20,
+        status: "draft",
+      }),
+    });
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.exitCode).toBe(0);
+      expect(report.text).toContain("2 video definitions (1 published)");
+    } finally {
+      await handle.cleanup();
+    }
+  });
+
+  it("reports zero video definitions plainly when there is none", async () => {
+    const handle = await makeContentRoot(validTree("xx"));
+    try {
+      const report = formatContentReport(await loadContentCatalog(handle.root));
+
+      expect(report.text).toContain("0 video definitions (0 published)");
     } finally {
       await handle.cleanup();
     }

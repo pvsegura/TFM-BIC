@@ -1,0 +1,116 @@
+{
+  "id": "f371a4f2-8549-45fc-87d7-7f5cb2f0ab9e",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.video_generation_jobs": {
+      "name": "video_generation_jobs",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true,
+          "default": "gen_random_uuid()"
+        },
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "video_definition_id": {
+          "name": "video_definition_id",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "provider_job_reference": {
+          "name": "provider_job_reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "media_reference": {
+          "name": "media_reference",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "error_category": {
+          "name": "error_category",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "created_at": {
+          "name": "created_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "completed_at": {
+          "name": "completed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {
+        "video_generation_jobs_user_id_users_id_fk": {
+          "name": "video_generation_jobs_user_id_users_id_fk",
+          "tableFrom": "video_generation_jobs",
+          "tableTo": "users",
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "video_generation_jobs_status_valid": {
+          "name": "video_generation_jobs_status_valid",
+          "value": "\"video_generation_jobs\".\"status\" IN ('queued', 'processing', 'completed', 'failed')"
+        },
+        "video_generation_jobs_completed_consistent": {
+          "name": "video_generation_jobs_completed_consistent",
+          "value": "(\"video_generation_jobs\".\"status\" IN ('completed', 'failed')) = (\"video_generation_jobs\".\"completed_at\" IS NOT NULL)"
+        },
+        "video_generation_jobs_definition_id_valid": {
+          "name": "video_generation_jobs_definition_id_valid",
+          "value": "char_length(\"video_generation_jobs\".\"video_definition_id\") <= 64 AND \"video_generation_jobs\".\"video_definition_id\" ~ '^[a-z][a-z0-9]*(-[a-z0-9]+)*$'"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

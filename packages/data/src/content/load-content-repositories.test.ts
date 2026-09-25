@@ -3,6 +3,7 @@ import {
   createExerciseId,
   createLanguageId,
   createPhoneticRepresentationId,
+  createVideoDefinitionId,
   createVocabularyItemId,
 } from "@tfm-bic/domain";
 import { afterEach, describe, expect, it } from "vitest";
@@ -14,6 +15,7 @@ import {
   makeContentRoot,
   phoneticFile,
   validTree,
+  videoFile,
   vocabularyFile,
   type ContentRootHandle,
 } from "./test-support/content-fixtures.js";
@@ -37,10 +39,16 @@ describe("loadContentRepositories", () => {
       ),
       "languages/xx/vocabulary/greetings.json": vocabularyFile("greetings", "xx"),
       "languages/xx/phonetics/consonants.json": phoneticFile("consonants", "xx"),
+      "languages/xx/videos/xx-a1-demo.json": videoFile("xx-a1-demo", "xx", "a1"),
     });
 
-    const { contentRepository, exerciseRepository, vocabularyRepository, phoneticRepository } =
-      await loadContentRepositories(handle.root);
+    const {
+      contentRepository,
+      exerciseRepository,
+      vocabularyRepository,
+      phoneticRepository,
+      videoDefinitionRepository,
+    } = await loadContentRepositories(handle.root);
 
     expect(await contentRepository.findContent(createContentId("xx-one"))).not.toBeNull();
     expect(
@@ -54,6 +62,9 @@ describe("loadContentRepositories", () => {
       await phoneticRepository.findRepresentation(
         createPhoneticRepresentationId("xx-ipa-consonants-one"),
       ),
+    ).not.toBeNull();
+    expect(
+      await videoDefinitionRepository.findById(createVideoDefinitionId("xx-a1-demo")),
     ).not.toBeNull();
   });
 
@@ -93,5 +104,14 @@ describe("loadContentRepositories", () => {
 
     const topics = await phoneticRepository.listTopics(createLanguageId("pl"));
     expect(topics.length).toBeGreaterThan(0);
+  });
+
+  it("loads the shipped content tree's video definitions too", async () => {
+    const { videoDefinitionRepository } = await loadContentRepositories();
+
+    const definition = await videoDefinitionRepository.findById(
+      createVideoDefinitionId("pl-a1-nasal-vowels-demo"),
+    );
+    expect(definition).not.toBeNull();
   });
 });

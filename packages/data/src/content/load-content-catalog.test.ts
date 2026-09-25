@@ -6,6 +6,7 @@ import {
   languageFile,
   makeContentRoot,
   validTree,
+  videoFile,
   type ContentRootHandle,
   type FixtureFiles,
 } from "./test-support/content-fixtures.js";
@@ -89,6 +90,18 @@ describe("loadContentCatalog", () => {
     });
 
     expect(result.ok).toBe(true);
+  });
+
+  it("loads a video definition, unrelated to any level folder", async () => {
+    const result = await load({
+      ...validTree("xx"),
+      "languages/xx/videos/xx-a1-demo.json": videoFile("xx-a1-demo", "xx", "a1"),
+    });
+
+    expect(result.ok).toBe(true);
+    if (!result.ok) return;
+    expect(result.catalog.videoDefinitions.map((v) => v.id)).toEqual(["xx-a1-demo"]);
+    expect(result.catalog.videoDefinitions[0]).not.toHaveProperty("schemaVersion");
   });
 
   describe("rejects", () => {
@@ -181,6 +194,25 @@ describe("loadContentCatalog", () => {
       });
 
       expect(messagesOf(issues)).toContain('must be named "xx-two.json"');
+    });
+
+    it("a video file that names a different language than its folder", async () => {
+      const issues = await issuesOf({
+        ...validTree("xx"),
+        ...validTree("yy"),
+        "languages/xx/videos/xx-a1-demo.json": videoFile("xx-a1-demo", "yy", "a1"),
+      });
+
+      expect(messagesOf(issues)).toContain('languageId "yy" does not match its folder "xx"');
+    });
+
+    it("a video file whose name is not its id", async () => {
+      const issues = await issuesOf({
+        ...validTree("xx"),
+        "languages/xx/videos/whatever.json": videoFile("xx-a1-demo", "xx", "a1"),
+      });
+
+      expect(messagesOf(issues)).toContain('must be named "xx-a1-demo.json"');
     });
 
     it("duplicate content ids", async () => {

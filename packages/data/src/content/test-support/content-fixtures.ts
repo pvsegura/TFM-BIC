@@ -150,6 +150,28 @@ export function phoneticFile(
   };
 }
 
+/** A video definition file — a single item per file, like a lesson content item. */
+export function videoFile(
+  id: string,
+  languageId: string,
+  levelId: string,
+  overrides: Record<string, unknown> = {},
+) {
+  return {
+    schemaVersion: 1,
+    id,
+    languageId,
+    levelId,
+    status: "published",
+    order: 10,
+    instructionLanguage: "en",
+    title: `Title ${id}`,
+    description: `Description ${id}`,
+    scriptPath: id,
+    ...overrides,
+  };
+}
+
 /** A complete, valid one-language tree for `code` (a fictional code in tests). */
 export function validTree(code = "xx"): FixtureFiles {
   return {

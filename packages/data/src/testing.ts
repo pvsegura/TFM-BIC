@@ -27,3 +27,7 @@ export {
   createVocabularyTestDb,
   type VocabularyTestDbHandle,
 } from "./vocabulary/db/test-support/create-test-db.js";
+export {
+  createVideoTestDb,
+  type VideoTestDbHandle,
+} from "./video/db/test-support/create-test-db.js";

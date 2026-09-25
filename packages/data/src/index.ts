@@ -69,3 +69,26 @@ export {
   type PhoneticsDbHandle,
 } from "./phonetics/db/client.js";
 export { DrizzleUserPhoneticProgressRepository } from "./phonetics/user-phonetic-progress.repository.js";
+
+// Video (M11) — a generation job's lifecycle. Video definition content is read from the same
+// validated tree as lessons, exercises, vocabulary and phonetics. The provider boundary
+// (ADR-011/012): `FakeVideoGenerationService` is the only adapter selected by default and in
+// tests/CI; `HyperframesCliProvider` is real but implemented-and-unverified (BLOCKED/PENDING — see
+// content/video-scripts/README.md), selected only via VIDEO_GENERATION_PROVIDER=hyperframes.
+export { CatalogVideoDefinitionRepository } from "./content/catalog-video-definition-repository.js";
+export { createVideoDb, type VideoDb, type VideoDbHandle } from "./video/db/client.js";
+export { DrizzleVideoGenerationJobRepository } from "./video/video-generation-job.repository.js";
+export {
+  FAKE_VIDEO_GENERATION_SCENARIOS,
+  FakeVideoGenerationService,
+  type FakeVideoGenerationScenario,
+} from "./video/fake-video-generation.service.js";
+export {
+  HyperframesCliProvider,
+  type HyperframesCliProviderOptions,
+} from "./video/hyperframes-cli.provider.js";
+export {
+  realCliRunner,
+  type CliRunner,
+  type CliRunResult,
+} from "./video/hyperframes-cli-runner.js";
