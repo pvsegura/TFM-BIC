@@ -37,9 +37,39 @@ const envSchema = z
     // automated tests and CI never set this to "hyperframes". Local self-hosted Hyperframes
     // rendering needs no credential, so there is no accompanying API-key variable.
     VIDEO_GENERATION_PROVIDER: z.enum(["fake", "hyperframes"]).default("fake"),
+    // Audio generation (M12, ADR-013). "fake" (the default) is a real, committed adapter that
+    // returns a short tone — never Gemini — and is what development, tests and CI use. "gemini"
+    // needs GEMINI_API_KEY and is refused under NODE_ENV=test, so no automated run can ever call a
+    // paid provider. GEMINI_TTS_MODEL is read only by the Gemini adapter's composition; the default
+    // is the GA TTS model verified on 2026-09-25.
+    AUDIO_GENERATION_PROVIDER: z.enum(["fake", "gemini"]).default("fake"),
+    GEMINI_API_KEY: z.string().min(1).optional(),
+    GEMINI_TTS_MODEL: z.string().min(1).default("gemini-3.8-flash-tts"),
+    // Characters per clip. Capped at the domain's SPEECH_TEXT_MAX_LENGTH (500), which this package
+    // cannot import (it depends on nothing internal) — keep the two in step.
+    AUDIO_GENERATION_MAX_TEXT_LENGTH: z.coerce.number().int().min(1).max(500).default(300),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET } = ctx.value;
+
+    if (ctx.value.AUDIO_GENERATION_PROVIDER === "gemini") {
+      if (NODE_ENV === "test") {
+        ctx.issues.push({
+          code: "custom",
+          input: ctx.value,
+          path: ["AUDIO_GENERATION_PROVIDER"],
+          message: `AUDIO_GENERATION_PROVIDER=gemini is not allowed when NODE_ENV is "test" (see docs/adr/adr-013-audio-generation.md).`,
+        });
+      }
+      if (!ctx.value.GEMINI_API_KEY) {
+        ctx.issues.push({
+          code: "custom",
+          input: ctx.value,
+          path: ["GEMINI_API_KEY"],
+          message: `GEMINI_API_KEY is required when AUDIO_GENERATION_PROVIDER is "gemini" (see docs/adr/adr-013-audio-generation.md).`,
+        });
+      }
+    }
 
     if (NODE_ENV !== "test" && !DATABASE_URL) {
       ctx.issues.push({

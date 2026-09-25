@@ -13,6 +13,9 @@ describe("loadEnv", () => {
       APP_BASE_URL: "http://localhost:5173",
       E2E_RELAXED_RATE_LIMITS: false,
       VIDEO_GENERATION_PROVIDER: "fake",
+      AUDIO_GENERATION_PROVIDER: "fake",
+      GEMINI_TTS_MODEL: "gemini-3.8-flash-tts",
+      AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
     });
   });
 
@@ -107,5 +110,62 @@ describe("loadEnv", () => {
 
     expect(env.AUTH_SESSION_SECRET).toBe("a-production-secret");
     expect(env.APP_BASE_URL).toBe("https://app.example.com");
+  });
+
+  describe("audio generation (M12, ADR-013)", () => {
+    const dev = { NODE_ENV: "development", DATABASE_URL: "postgres://u:p@localhost:5432/db" };
+
+    it("defaults to the fake provider — no Gemini key needed anywhere by default", () => {
+      const env = loadEnv(dev);
+      expect(env.AUDIO_GENERATION_PROVIDER).toBe("fake");
+      expect(env.GEMINI_API_KEY).toBeUndefined();
+    });
+
+    it("accepts gemini with an API key, and a model override", () => {
+      const env = loadEnv({
+        ...dev,
+        AUDIO_GENERATION_PROVIDER: "gemini",
+        GEMINI_API_KEY: "k",
+        GEMINI_TTS_MODEL: "gemini-3.8-flash-lite-tts",
+      });
+      expect(env.AUDIO_GENERATION_PROVIDER).toBe("gemini");
+      expect(env.GEMINI_TTS_MODEL).toBe("gemini-3.8-flash-lite-tts");
+    });
+
+    it("refuses gemini without an API key, naming the variable", () => {
+      expect(() => loadEnv({ ...dev, AUDIO_GENERATION_PROVIDER: "gemini" })).toThrow(
+        /GEMINI_API_KEY/,
+      );
+    });
+
+    it("never echoes the API key's value in a configuration error", () => {
+      let message = "";
+      try {
+        loadEnv({ ...dev, GEMINI_API_KEY: "super-secret-value", PORT: "not-a-port" });
+      } catch (error) {
+        message = (error as Error).message;
+      }
+      expect(message).toContain("PORT");
+      expect(message).not.toContain("super-secret-value");
+    });
+
+    it("refuses gemini under NODE_ENV=test — automated tests never call a paid provider", () => {
+      expect(() =>
+        loadEnv({ NODE_ENV: "test", AUDIO_GENERATION_PROVIDER: "gemini", GEMINI_API_KEY: "k" }),
+      ).toThrow(/AUDIO_GENERATION_PROVIDER/);
+    });
+
+    it("rejects an unknown provider", () => {
+      expect(() => loadEnv({ ...dev, AUDIO_GENERATION_PROVIDER: "hyperframes" })).toThrow(
+        /AUDIO_GENERATION_PROVIDER/,
+      );
+    });
+
+    it("bounds the configurable text limit between 1 and the domain ceiling of 500", () => {
+      const env = loadEnv({ ...dev, AUDIO_GENERATION_MAX_TEXT_LENGTH: "120" });
+      expect(env.AUDIO_GENERATION_MAX_TEXT_LENGTH).toBe(120);
+      expect(() => loadEnv({ ...dev, AUDIO_GENERATION_MAX_TEXT_LENGTH: "0" })).toThrow();
+      expect(() => loadEnv({ ...dev, AUDIO_GENERATION_MAX_TEXT_LENGTH: "501" })).toThrow();
+    });
   });
 });
