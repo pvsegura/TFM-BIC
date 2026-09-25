@@ -374,3 +374,21 @@ export { VideoDefinitionNotFoundError } from "./video/errors/video-definition-no
 export { VideoGenerationJobNotFoundError } from "./video/errors/video-generation-job-not-found.error.js";
 export { InvalidVideoGenerationTransitionError } from "./video/errors/invalid-video-generation-transition.error.js";
 export { validateVideoDefinitions, type VideoCatalogContext } from "./video/video-catalog.js";
+
+// Audio (M12) — a request for speech in the platform's own terms: validated text, one of the
+// platform's languages, and a provider-independent voice profile. No provider (Gemini or
+// otherwise) type, model or voice name ever appears here — see ADR-013.
+export {
+  createSpeechRequest,
+  createSpeechText,
+  SPEECH_TEXT_MAX_LENGTH,
+  speechRequestKey,
+  type SpeechRequest,
+  type SpeechText,
+} from "./audio/speech-request.js";
+export { isVoiceProfile, VOICE_PROFILES, type VoiceProfile } from "./audio/voice-profile.js";
+export { AUDIO_FORMATS, type AudioFormat } from "./audio/audio-format.js";
+export {
+  InvalidSpeechTextError,
+  type InvalidSpeechTextReason,
+} from "./audio/errors/invalid-speech-text.error.js";
