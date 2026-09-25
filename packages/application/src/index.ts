@@ -346,3 +346,54 @@ export {
   type GenerateVocabularyAudioInput,
   type VocabularyAudioPart,
 } from "./audio/use-cases/generate-vocabulary-audio.use-case.js";
+
+// Teaching (M13) — the teacher dashboard: a read/aggregation capability over the authoritative
+// lesson (M6), exercise (M7) and gamification (M8) records, scoped by teacher–student links.
+// See ADR-024 and docs/architecture/teacher-dashboard.md.
+export type {
+  RosterPage,
+  RosterQuery,
+  RosterStudentRecord,
+  StudentActivityQuery,
+  StudentActivityRecord,
+  StudentAttemptRecord,
+  StudentLessonRecord,
+  TeacherDashboardReadModel,
+  TeacherOverviewTotals,
+  WeeklyActivityRecord,
+} from "./teaching/ports/teacher-dashboard-read-model.js";
+export type { TeacherStudentLinkRepository } from "./teaching/ports/teacher-student-link-repository.js";
+export {
+  displayNameOf,
+  toRosterStudentView,
+  type RosterStudentView,
+  type TeachingViewer,
+} from "./teaching/views.js";
+export { TeachingUserNotFoundError } from "./teaching/teaching-user-not-found.error.js";
+export {
+  GetTeacherOverviewUseCase,
+  type GetTeacherOverviewInput,
+  type TeacherOverview,
+} from "./teaching/use-cases/get-teacher-overview.use-case.js";
+export {
+  ListTeacherStudentsUseCase,
+  type ListTeacherStudentsInput,
+  type TeacherStudentsPage,
+} from "./teaching/use-cases/list-teacher-students.use-case.js";
+export {
+  DETAIL_WEEKS,
+  GetTeacherStudentDetailUseCase,
+  type GetTeacherStudentDetailDependencies,
+  type GetTeacherStudentDetailInput,
+  type LevelProgressView,
+  type RecentAttemptView,
+  type RecentLessonView,
+  type TeacherStudentDetail,
+  type UnlockedAchievementSummary,
+  type WeeklyProgressView,
+} from "./teaching/use-cases/get-teacher-student-detail.use-case.js";
+export {
+  LinkStudentToTeacherUseCase,
+  PromoteUserToTeacherUseCase,
+  UnlinkStudentFromTeacherUseCase,
+} from "./teaching/use-cases/teacher-roster-admin.use-cases.js";
