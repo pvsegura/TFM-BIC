@@ -6,7 +6,7 @@ const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
 
 /** Turns a non-2xx response into an `ApiError` carrying only the API's own fixed message — or a
  * generic one when the body is not the documented error shape — never a raw body or a stack. */
-async function toApiError(response: Response): Promise<ApiError> {
+export async function toApiError(response: Response): Promise<ApiError> {
   try {
     const parsed = catalogErrorResponseSchema.safeParse(await response.json());
     return new ApiError(

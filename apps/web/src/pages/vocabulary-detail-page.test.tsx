@@ -198,4 +198,26 @@ describe("VocabularyDetailPage", () => {
     const link = screen.getByRole("link", { name: "View pronunciation guide" });
     expect(link).toHaveAttribute("href", "/learn/phonetics?language=pl");
   });
+
+  it("offers to listen to the word and its example (M12)", async () => {
+    vi.spyOn(vocabularyApi, "fetchVocabularyItem").mockResolvedValue(item());
+    renderAt("/learn/vocabulary/pl-dom");
+    await screen.findByRole("heading", { level: 1, name: "dom" });
+
+    expect(screen.getByRole("group", { name: "Listen" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Listen to the word" })).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Listen to the example" })).toBeInTheDocument();
+  });
+
+  it("offers only the word when the entry has no example", async () => {
+    vi.spyOn(vocabularyApi, "fetchVocabularyItem").mockResolvedValue({
+      ...item(),
+      example: undefined,
+    });
+    renderAt("/learn/vocabulary/pl-dom");
+    await screen.findByRole("heading", { level: 1, name: "dom" });
+
+    expect(screen.getByRole("button", { name: "Listen to the word" })).toBeInTheDocument();
+    expect(screen.queryByRole("button", { name: "Listen to the example" })).toBeNull();
+  });
 });

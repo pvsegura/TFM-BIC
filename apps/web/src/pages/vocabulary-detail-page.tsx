@@ -3,6 +3,7 @@ import { Link, useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { VocabularyActions } from "../components/vocabulary-actions.js";
+import { VocabularyAudioPlayer } from "../components/vocabulary-audio-player.js";
 import { VocabularyStatusBadge } from "../components/vocabulary-status-badge.js";
 import { useVocabularyItem } from "../hooks/use-vocabulary.js";
 import { isNotFoundError } from "../services/api-error.js";
@@ -92,6 +93,10 @@ export function VocabularyDetailPage() {
             <p className="text-primary/70 dark:text-surface/70">{item.example.translation}</p>
           </blockquote>
         ) : null}
+
+        <div className="mt-6">
+          <VocabularyAudioPlayer vocabularyId={item.id} hasExample={item.example !== undefined} />
+        </div>
 
         <div className="mt-6">
           <VocabularyActions vocabularyId={item.id} status={item.userState.status} />
