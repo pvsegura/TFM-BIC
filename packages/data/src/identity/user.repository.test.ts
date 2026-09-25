@@ -115,4 +115,17 @@ describe("DrizzleUserRepository", () => {
 
     expect((await repository.findById(created.id))?.emailVerified).toBe(true);
   });
+
+  it("changes the role (operator commands only, ADR-024)", async () => {
+    const created = await repository.create({
+      email: "teacher@example.com",
+      normalizedEmail: "teacher@example.com",
+      passwordHash: "hashed-value",
+      role: "STUDENT",
+    });
+
+    await repository.updateRole(created.id, "TEACHER");
+
+    expect((await repository.findById(created.id))?.role).toBe("TEACHER");
+  });
 });

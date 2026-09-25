@@ -1,5 +1,5 @@
 import type { CreateUserInput, UserRepository } from "@tfm-bic/application";
-import { DuplicateEmailError, type User } from "@tfm-bic/domain";
+import { DuplicateEmailError, type Role, type User } from "@tfm-bic/domain";
 import { eq } from "drizzle-orm";
 
 import type { IdentityDb } from "./db/client.js";
@@ -90,5 +90,9 @@ export class DrizzleUserRepository implements UserRepository {
       .update(users)
       .set({ emailVerified: true, updatedAt: new Date() })
       .where(eq(users.id, userId));
+  }
+
+  async updateRole(userId: string, role: Role): Promise<void> {
+    await this.db.update(users).set({ role, updatedAt: new Date() }).where(eq(users.id, userId));
   }
 }

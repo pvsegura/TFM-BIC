@@ -92,6 +92,15 @@ export class FakeUserRepository implements UserRepository {
     return Promise.resolve();
   }
 
+  updateRole(userId: string, role: Role): Promise<void> {
+    const index = this.users.findIndex((u) => u.id === userId);
+    const user = this.users[index];
+    if (user) {
+      this.users[index] = { ...user, role, updatedAt: this.clock.now() };
+    }
+    return Promise.resolve();
+  }
+
   seed(role: Role, overrides: Partial<User> = {}): User {
     const now = this.clock.now();
     const user: User = {

@@ -20,4 +20,6 @@ export interface UserRepository {
   findByNormalizedEmail(normalizedEmail: string): Promise<User | null>;
   updatePasswordHash(userId: string, passwordHash: string): Promise<void>;
   markEmailVerified(userId: string): Promise<void>;
+  /** Changes a user's role. Only operator commands call this (ADR-024) — never a request handler. */
+  updateRole(userId: string, role: Role): Promise<void>;
 }
