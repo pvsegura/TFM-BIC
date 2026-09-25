@@ -27,7 +27,10 @@
     "db:migrate:vocabulary": "drizzle-kit migrate --config drizzle.vocabulary.config.ts",
     "db:generate:video": "drizzle-kit generate --config drizzle.video.config.ts",
     "db:migrate:video": "drizzle-kit migrate --config drizzle.video.config.ts",
-    "content:validate": "tsx src/content/validate-content.cli.ts"
+    "db:generate:teaching": "drizzle-kit generate --config drizzle.teaching.config.ts",
+    "db:migrate:teaching": "drizzle-kit migrate --config drizzle.teaching.config.ts",
+    "content:validate": "tsx src/content/validate-content.cli.ts",
+    "teacher:admin": "tsx src/teaching/teacher-admin.cli.ts"
   },
   "dependencies": {
     "@tfm-bic/application": "workspace:*",

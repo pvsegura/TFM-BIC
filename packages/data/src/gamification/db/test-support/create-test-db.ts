@@ -14,6 +14,8 @@ import * as lessonsSchema from "../../../lessons/db/schema.js";
 import type { LessonsDb } from "../../../lessons/db/client.js";
 import type { PhoneticsDb } from "../../../phonetics/db/client.js";
 import * as phoneticsSchema from "../../../phonetics/db/schema.js";
+import type { TeachingDb } from "../../../teaching/db/client.js";
+import * as teachingSchema from "../../../teaching/db/schema.js";
 import * as profileSchema from "../../../profile/db/schema.js";
 import type { ProfileDb } from "../../../profile/db/client.js";
 import type { GamificationDb } from "../client.js";
@@ -36,6 +38,7 @@ const CONTEXTS = [
   { folder: migrationsOf("vocabulary"), table: "__drizzle_migrations_vocabulary" },
   { folder: migrationsOf("phonetics"), table: "__drizzle_migrations_phonetics" },
   { folder: migrationsOf("video"), table: "__drizzle_migrations_video" },
+  { folder: migrationsOf("teaching"), table: "__drizzle_migrations_teaching" },
 ] as const;
 
 export interface GamificationTestDbHandle {
@@ -51,8 +54,9 @@ export interface GamificationTestDbHandle {
   vocabularyDb: VocabularyDb;
   phoneticsDb: PhoneticsDb;
   videoDb: VideoDb;
+  teachingDb: TeachingDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
-  seedUser: (email?: string) => Promise<string>;
+  seedUser: (email?: string, role?: "STUDENT" | "TEACHER") => Promise<string>;
   /** Clears every table — cheaper between tests than booting a fresh WASM Postgres each time. */
   reset: () => Promise<void>;
   /** Raw SQL escape hatch for setup outside the query-builder surface (deleting a user to
@@ -83,6 +87,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...vocabularySchema,
       ...phoneticsSchema,
       ...videoSchema,
+      ...teachingSchema,
     },
   });
 
@@ -104,7 +109,8 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     vocabularyDb: pgliteDb as unknown as VocabularyDb,
     phoneticsDb: pgliteDb as unknown as PhoneticsDb,
     videoDb: pgliteDb as unknown as VideoDb,
-    seedUser: async (email) => {
+    teachingDb: pgliteDb as unknown as TeachingDb,
+    seedUser: async (email, role = "STUDENT") => {
       seededUsers += 1;
       const address = email ?? `student-${String(seededUsers)}@example.com`;
       const [row] = await pgliteDb
@@ -113,6 +119,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
           email: address,
           normalizedEmail: address.toLowerCase(),
           passwordHash: "test-only-not-a-real-hash",
+          role,
         })
         .returning({ id: identitySchema.users.id });
       if (!row) {
@@ -122,7 +129,7 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     },
     reset: async () => {
       await pgliteDb.execute(
-        sql`TRUNCATE TABLE "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "video_generation_jobs", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
+        sql`TRUNCATE TABLE "teacher_students", "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "video_generation_jobs", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
       );
     },
     rawExecute: (query: SQL) => pgliteDb.execute(query),
