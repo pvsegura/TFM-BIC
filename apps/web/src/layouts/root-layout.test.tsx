@@ -118,6 +118,31 @@ describe("RootLayout", () => {
     );
   });
 
+  it("offers the teacher dashboard link to a teacher only (the API is still the real boundary)", async () => {
+    const spy = vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
+      id: "1",
+      email: "teacher@example.com",
+      role: "TEACHER",
+      emailVerified: true,
+    });
+    const { unmount } = renderRootLayout();
+    expect(await screen.findByRole("link", { name: "Teaching" })).toHaveAttribute(
+      "href",
+      "/teacher",
+    );
+    unmount();
+
+    spy.mockResolvedValue({
+      id: "2",
+      email: "s@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
+    renderRootLayout();
+    await screen.findByRole("link", { name: "Profile" });
+    expect(screen.queryByRole("link", { name: "Teaching" })).not.toBeInTheDocument();
+  });
+
   it("does not offer the profile link to an anonymous visitor", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
     renderRootLayout();

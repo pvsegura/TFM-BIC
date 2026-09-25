@@ -1,6 +1,7 @@
 import { createBrowserRouter, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
+import { TeacherRoute } from "./components/teacher-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { AchievementsPage } from "./pages/achievements-page.js";
 import { DashboardPage } from "./pages/dashboard-page.js";
@@ -18,6 +19,8 @@ import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
 import { RoutePlaceholder } from "./pages/route-placeholder.js";
+import { TeacherDashboardPage } from "./pages/teacher-dashboard-page.js";
+import { TeacherStudentPage } from "./pages/teacher-student-page.js";
 import { VerifyEmailPage } from "./pages/verify-email-page.js";
 import { VideoGenerationDemoPage } from "./pages/video-generation-demo-page.js";
 import { VocabularyDetailPage } from "./pages/vocabulary-detail-page.js";
@@ -84,6 +87,20 @@ const PHONETICS_ROUTES = [
  * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
 const VIDEO_ROUTES = [{ path: "learn/videos", element: <VideoGenerationDemoPage /> }];
 
+/** The teacher dashboard (M13) — the overview/roster and one student. Behind login *and* the
+ * TeacherRoute guard, which only spares a student a page of refused requests: the API authorises
+ * every request by role and teacher–student link (ADR-024). Not under `/teacher-dashboard`, which
+ * is the API path, so no proxy bypass is needed. */
+const TEACHER_ROUTES = [
+  {
+    element: <TeacherRoute />,
+    children: [
+      { path: "teacher", element: <TeacherDashboardPage /> },
+      { path: "teacher/students/:studentId", element: <TeacherStudentPage /> },
+    ],
+  },
+];
+
 /** Routes requiring an authenticated session — gated by ProtectedRoute,
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page, lessons the
@@ -99,6 +116,7 @@ const APP_ROUTES = [
   ...VOCABULARY_ROUTES,
   ...PHONETICS_ROUTES,
   ...VIDEO_ROUTES,
+  ...TEACHER_ROUTES,
   { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
   { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },

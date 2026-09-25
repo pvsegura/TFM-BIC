@@ -3,6 +3,7 @@ import { matchRoutes } from "react-router";
 import { describe, expect, it } from "vitest";
 
 import { ProtectedRoute } from "./components/protected-route.js";
+import { TeacherRoute } from "./components/teacher-route.js";
 import { routes } from "./router.js";
 
 function match(path: string) {
@@ -19,7 +20,27 @@ function isBehindLogin(path: string) {
   );
 }
 
+function isTeacherOnly(path: string) {
+  return match(path).some(
+    ({ route }) => isValidElement(route.element) && route.element.type === TeacherRoute,
+  );
+}
+
 describe("routes", () => {
+  it("serves the teacher dashboard pages behind both the login and the teacher guard", () => {
+    expect(leafPath("/teacher")).toBe("teacher");
+    expect(leafPath("/teacher/students/abc")).toBe("teacher/students/:studentId");
+    for (const path of ["/teacher", "/teacher/students/abc"]) {
+      expect(isBehindLogin(path)).toBe(true);
+      expect(isTeacherOnly(path)).toBe(true);
+    }
+    expect(isTeacherOnly("/dashboard")).toBe(false);
+  });
+
+  it("does not use the teacher dashboard API path for a page (no proxy bypass needed)", () => {
+    expect(leafPath("/teacher-dashboard/overview")).toBe("*");
+  });
+
   it("serves the real dashboard and achievements pages, behind the login route", () => {
     expect(leafPath("/dashboard")).toBe("dashboard");
     expect(leafPath("/achievements")).toBe("achievements");

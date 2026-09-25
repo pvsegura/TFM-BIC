@@ -77,6 +77,13 @@ export function RootLayout() {
                       Achievements
                     </Link>
                   </li>
+                  {currentUser.role === "TEACHER" ? (
+                    <li>
+                      <Link to="/teacher" className="text-sm hover:underline">
+                        Teaching
+                      </Link>
+                    </li>
+                  ) : null}
                   <li>
                     <Link to="/profile" className="text-sm hover:underline">
                       Profile
