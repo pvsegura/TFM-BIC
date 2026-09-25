@@ -92,3 +92,25 @@ export {
   type CliRunner,
   type CliRunResult,
 } from "./video/hyperframes-cli-runner.js";
+
+// Audio generation (M12, ADR-013): `FakeAudioGenerationService` is the adapter selected by default
+// and in every automated test/CI run; `GeminiAudioProvider` is selected only via
+// AUDIO_GENERATION_PROVIDER=gemini. `InMemoryAudioCache` is a bounded, non-durable cache — not storage.
+export {
+  FAKE_AUDIO_GENERATION_SCENARIOS,
+  FakeAudioGenerationService,
+  type FakeAudioGenerationScenario,
+} from "./audio/fake-audio-generation.service.js";
+export {
+  buildGeminiSpeechRequestBody,
+  DEFAULT_GEMINI_VOICE,
+  GEMINI_INTERACTIONS_URL,
+  GeminiAudioProvider,
+  speechStyleFor,
+  type GeminiAudioProviderOptions,
+} from "./audio/gemini-audio.provider.js";
+export {
+  InMemoryAudioCache,
+  type InMemoryAudioCacheOptions,
+} from "./audio/in-memory-audio-cache.js";
+export { encodeWavPcm16, isWav } from "./audio/wav.js";
