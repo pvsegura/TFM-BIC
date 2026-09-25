@@ -197,3 +197,16 @@ export {
   type PhoneticTopicsResponse,
   type PhoneticUserProgressResponse,
 } from "./phonetics/phonetic-response.schema.js";
+
+// Video (M11): the on-disk video definition file format and the video-generation API shapes.
+// The render project a definition points to (`scriptPath`) is never parsed by any contract here —
+// only the provider adapter (packages/data) reads it. See ADR-011/012.
+export { videoDefinitionIdSchema } from "./content/identifiers.schema.js";
+export { videoFileSchema, type VideoFile } from "./video/video-file.schema.js";
+export {
+  requestVideoGenerationRequestSchema,
+  videoGenerationJobIdParamSchema,
+  videoGenerationJobResponseSchema,
+  type RequestVideoGenerationRequest,
+  type VideoGenerationJobResponse,
+} from "./video/video-generation.schema.js";
