@@ -13,3 +13,4 @@ export * from "./exercise/test-support/fakes.js";
 export * from "./gamification/test-support/fakes.js";
 export * from "./vocabulary/test-support/fakes.js";
 export * from "./phonetics/test-support/fakes.js";
+export * from "./video/test-support/fakes.js";

@@ -289,3 +289,26 @@ export {
   CompletePhoneticUseCase,
   type CompletePhoneticInput,
 } from "./phonetics/use-cases/complete-phonetic.use-case.js";
+
+// Video (M11) — a definition is content (what should be generated); a generation job is the
+// per-student request to render it. The provider boundary (ADR-011/012) is
+// `VideoGenerationService`: no Hyperframes (or any provider) type appears above it.
+export type { VideoDefinitionRepository } from "./video/ports/video-definition-repository.js";
+export type { VideoGenerationJobRepository } from "./video/ports/video-generation-job-repository.js";
+export type {
+  VideoGenerationRequest,
+  VideoGenerationResult,
+  VideoGenerationService,
+} from "./video/ports/video-generation-service.js";
+export { VideoProviderUnavailableError } from "./video/errors/video-provider-unavailable.error.js";
+export { VideoProviderRejectedError } from "./video/errors/video-provider-rejected.error.js";
+export { VideoGenerationTimeoutError } from "./video/errors/video-generation-timeout.error.js";
+export { findVisibleVideoDefinition } from "./video/find-visible-video-definition.js";
+export {
+  RequestVideoGenerationUseCase,
+  type RequestVideoGenerationInput,
+} from "./video/use-cases/request-video-generation.use-case.js";
+export {
+  GetVideoGenerationStatusUseCase,
+  type GetVideoGenerationStatusInput,
+} from "./video/use-cases/get-video-generation-status.use-case.js";
