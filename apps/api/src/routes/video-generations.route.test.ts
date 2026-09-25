@@ -47,6 +47,7 @@ function build(
     testDeps.phoneticsDeps,
     testDeps.videoDeps,
     testDeps.audioDeps,
+    testDeps.teachingDeps,
   );
   return { app, ...testDeps };
 }

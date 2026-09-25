@@ -15,6 +15,7 @@ import {
   type PhoneticsDependencies,
 } from "./phonetics-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
+import { buildTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
 import {
   buildVideoDependencies,
   selectVideoGenerationProvider,
@@ -51,6 +52,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
   phonetics: PhoneticsDependencies;
   video: VideoDependencies;
   audio: AudioDependencies;
+  teaching: TeachingDependencies;
 }> {
   const {
     db,
@@ -61,6 +63,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
     vocabularyDb,
     phoneticsDb,
     videoDb,
+    teachingDb,
     close,
   } = await createGamificationTestDb();
 
@@ -82,5 +85,11 @@ export async function createTestDependencies(env: AppEnv): Promise<{
     // Same provider selection as production — and loadEnv refuses AUDIO_GENERATION_PROVIDER=gemini
     // under NODE_ENV=test, so E2E always gets the fake adapter and never needs a Gemini key.
     audio: createAudioDependencies(env),
+    // The E2E-only route that creates teachers and links (the operator command cannot reach this
+    // in-process database) is enabled here and nowhere else; it also requires NODE_ENV=test.
+    teaching: {
+      ...buildTeachingDependencies(teachingDb, () => Promise.resolve()),
+      enableTestSupportRoutes: true,
+    },
   };
 }

@@ -19,6 +19,8 @@ import {
   FakePasswordResetTokenRepository,
   FakeProfileRepository,
   FakeSessionRepository,
+  FakeTeacherDashboardReadModel,
+  FakeTeacherStudentLinkRepository,
   FakeTokenGenerator,
   FakeUserRepository,
   FakePhoneticContentRepository,
@@ -43,6 +45,7 @@ import type { ContentDependencies } from "../composition/content-dependencies.js
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
 import type { GamificationDependencies } from "../composition/gamification-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
+import type { TeachingDependencies } from "../composition/teaching-dependencies.js";
 import type { PhoneticsDependencies } from "../composition/phonetics-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 import type { VideoDependencies } from "../composition/video-dependencies.js";
@@ -153,6 +156,15 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     options: { maxTextLength: 300, maxConcurrent: 4 },
   };
 
+  const teacherLinks = new FakeTeacherStudentLinkRepository();
+  const teacherReadModel = new FakeTeacherDashboardReadModel(teacherLinks);
+  const teachingDeps: TeachingDependencies = {
+    readModel: teacherReadModel,
+    linkRepository: teacherLinks,
+    clock,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     profileDeps,
@@ -164,6 +176,9 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     phoneticsDeps,
     videoDeps,
     audioDeps,
+    teachingDeps,
+    teacherLinks,
+    teacherReadModel,
     gamificationRepository,
     lessonProgressRepository,
     exerciseAttemptRepository,

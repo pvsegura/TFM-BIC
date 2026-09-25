@@ -23,6 +23,8 @@ import type { PhoneticsDependencies } from "./composition/phonetics-dependencies
 import { createPhoneticsUseCases } from "./composition/phonetics-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
+import type { TeachingDependencies } from "./composition/teaching-dependencies.js";
+import { createTeachingUseCases } from "./composition/teaching-use-cases.js";
 import type { VideoDependencies } from "./composition/video-dependencies.js";
 import { createVideoUseCases } from "./composition/video-use-cases.js";
 import type { VocabularyDependencies } from "./composition/vocabulary-dependencies.js";
@@ -37,6 +39,8 @@ import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
 import { registerPhoneticsRoutes } from "./routes/phonetics.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
+import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route.js";
+import { registerTeacherDashboardTestSupportRoutes } from "./routes/teacher-dashboard-test-support.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
@@ -53,6 +57,7 @@ export function buildServer(
   phoneticsDeps: PhoneticsDependencies,
   videoDeps: VideoDependencies,
   audioDeps: AudioDependencies,
+  teachingDeps: TeachingDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
@@ -172,6 +177,26 @@ export function buildServer(
       useCases: createAudioUseCases(contentDeps, audioDeps),
       resolveSession: authUseCases.resolveSession,
       env,
+    });
+
+    // Teacher dashboard (M13): TEACHER-only and read-only. It aggregates the authoritative lesson,
+    // exercise and gamification records through a teacher-scoped read model (ADR-024); the teacher
+    // always comes from the session and a student is only reachable through the teacher's links.
+    const teachingUseCases = createTeachingUseCases(teachingDeps, {
+      contentUseCases,
+      contentDeps,
+      gamificationDeps,
+      userRepository: authDeps.userRepository,
+    });
+    registerTeacherDashboardRoutes(app, {
+      useCases: teachingUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+    registerTeacherDashboardTestSupportRoutes(app, {
+      env,
+      enabled: teachingDeps.enableTestSupportRoutes === true,
+      useCases: teachingUseCases,
     });
 
     registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });

@@ -50,6 +50,7 @@ export default defineConfig({
         "apps/api/src/composition/gamification-dependencies.ts",
         "apps/api/src/composition/vocabulary-dependencies.ts",
         "apps/api/src/composition/video-dependencies.ts",
+        "apps/api/src/composition/teaching-dependencies.ts",
         "apps/api/src/composition/test-dependencies.ts",
         // Real `pg.Pool`/Drizzle connection factory — repository tests use
         // the PGlite test-support factory instead (see

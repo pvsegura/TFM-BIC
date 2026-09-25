@@ -38,6 +38,10 @@ import {
   createVideoDependencies,
   type VideoDependencies,
 } from "./composition/video-dependencies.js";
+import {
+  createTeachingDependencies,
+  type TeachingDependencies,
+} from "./composition/teaching-dependencies.js";
 import { buildServer } from "./server.js";
 
 const env = loadEnv();
@@ -58,6 +62,7 @@ let vocabularyDeps: VocabularyDependencies;
 let phoneticsDeps: PhoneticsDependencies;
 let videoDeps: VideoDependencies;
 let audioDeps: AudioDependencies;
+let teachingDeps: TeachingDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -70,6 +75,7 @@ if (env.NODE_ENV === "test") {
     phonetics: phoneticsDeps,
     video: videoDeps,
     audio: audioDeps,
+    teaching: teachingDeps,
   } = await createTestDependencies(env));
 } else {
   if (!env.DATABASE_URL) {
@@ -85,6 +91,7 @@ if (env.NODE_ENV === "test") {
   phoneticsDeps = createPhoneticsDependencies(env.DATABASE_URL);
   videoDeps = createVideoDependencies(env.DATABASE_URL, env);
   audioDeps = createAudioDependencies(env);
+  teachingDeps = createTeachingDependencies(env.DATABASE_URL);
 }
 
 const app = buildServer(
@@ -99,6 +106,7 @@ const app = buildServer(
   phoneticsDeps,
   videoDeps,
   audioDeps,
+  teachingDeps,
 );
 
 async function start(): Promise<void> {
@@ -122,6 +130,7 @@ async function shutdown(signal: string): Promise<void> {
     vocabularyDeps.close(),
     phoneticsDeps.close(),
     videoDeps.close(),
+    teachingDeps.close(),
   ]);
   process.exit(0);
 }
