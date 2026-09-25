@@ -1,0 +1,71 @@
+<!doctype html>
+<!--
+  M11 vertical-slice Hyperframes project for video definition "pl-a1-nasal-vowels-demo".
+
+  Status: hand-authored against Hyperframes' verified public documentation (HTML/CSS timeline,
+  driven by data-start/data-duration/data-track-index attributes — see
+  hyperframes.heygen.com/introduction and .claude/skills/hyperframes/SKILL.md) but NOT executed
+  against the real `npx hyperframes render` CLI in this environment (no verified FFmpeg/headless
+  Chrome availability here, and ADR-015 hosting is still PENDING). Treat this file's exact
+  rendering behavior as UNVERIFIED until someone runs it through the real renderer — see
+  content/video-scripts/README.md and ADR-012.
+
+  Three scenes on one track, 12 seconds total: a title card, then one card per nasal vowel with
+  its IPA symbol and one example word (content sourced from
+  content/languages/pl/phonetics/vowels.json, entry "pl-ipa-onasal" and its sibling "pl-ipa-enasal"
+  — reused, not duplicated as a separate fact).
+-->
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Polish nasal vowels: ą and ę</title>
+    <style>
+      body {
+        margin: 0;
+        width: 1280px;
+        height: 720px;
+        background: #0f1420;
+        color: #f5f5f5;
+        font-family: "Segoe UI", sans-serif;
+      }
+      .scene {
+        position: absolute;
+        inset: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 24px;
+      }
+      .ipa {
+        font-size: 120px;
+        font-weight: 600;
+      }
+      .word {
+        font-size: 48px;
+      }
+      .translation {
+        font-size: 28px;
+        color: #a9b4c9;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="scene" data-start="0" data-duration="4" data-track-index="0">
+      <h1 class="word">Polish nasal vowels</h1>
+      <p class="translation">ą and ę — a feature English has no equivalent to</p>
+    </section>
+
+    <section class="scene" data-start="4" data-duration="4" data-track-index="0">
+      <div class="ipa">ɔ̃</div>
+      <div class="word">dąb</div>
+      <div class="translation">oak tree — spelled with ą</div>
+    </section>
+
+    <section class="scene" data-start="8" data-duration="4" data-track-index="0">
+      <div class="ipa">ɛ̃</div>
+      <div class="word">ręka</div>
+      <div class="translation">hand — spelled with ę</div>
+    </section>
+  </body>
+</html>

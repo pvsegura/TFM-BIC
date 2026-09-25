@@ -1,0 +1,13 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-a1-nasal-vowels-demo",
+  "languageId": "pl",
+  "levelId": "a1",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Nasal vowels: ą and ę",
+  "description": "A short demo video introducing Polish's two nasal vowels, ą and ę, and one example word for each.",
+  "relatedContentId": "pl-ipa-onasal",
+  "scriptPath": "pl-a1-nasal-vowels-demo"
+}
