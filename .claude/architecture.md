@@ -31,7 +31,11 @@ application/contracts) → adapter (in `packages/data`) → real provider.
 `VideoGenerationService` → `FakeVideoGenerationService` (default everywhere — dev, test, CI) or
 `HyperframesCliProvider` (real, `VIDEO_GENERATION_PROVIDER=hyperframes` only, implemented but
 **unverified end-to-end** — see ADR-012 and `content/video-scripts/README.md`) → Hyperframes (M11).
-`AudioGenerationService` → `GeminiAudioProvider` → Gemini API (not yet implemented — M12+).
+`AudioGenerationService` → `FakeAudioGenerationService` (default everywhere — dev, test, CI; a
+deterministic WAV tone) or `GeminiAudioProvider` (`AUDIO_GENERATION_PROVIDER=gemini` only — plain
+`fetch` to the GA Interactions API, implemented against verified docs but **never run against the
+real API**; refused under `NODE_ENV=test`) → Gemini TTS (M12, ADR-013). Synchronous, nothing
+persisted; the client names content, never the text.
 `EmailService` → `InMemoryEmailService` (the only adapter wired — no real provider account
 exists; Resend is the documented target, ADR-014).
 

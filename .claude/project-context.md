@@ -14,8 +14,10 @@ see [current-state.md](current-state.md) for what that means concretely.
   ACCEPTED, account provisioning deferred) accessed via Drizzle ORM, Jenkins + SonarQube for
   CI/CD/quality.
 - No AWS, anywhere, ever.
-- External AI services: Hyperframes (video, self-hosted OSS) and Gemini API (audio TTS, Preview
-  status) — both isolated behind service interfaces, neither implemented yet (later milestone).
+- External AI services: Hyperframes (video, self-hosted OSS, M11) and Gemini API (audio TTS, GA
+  `gemini-3.8-flash-tts`, M12) — both isolated behind service interfaces with a fake adapter as the
+  default; neither real provider has been run end to end. Gemini real use is PENDING a
+  provider-terms decision (under-18 restriction, paid tier in the EEA — ADR-013).
 - TDD is mandatory (RED/GREEN/REFACTOR) for all feature work.
 - Authentication (M3): server-managed sessions via a signed HttpOnly/SameSite=Strict cookie,
   Argon2id password hashing, email verification + password reset with single-use expiring

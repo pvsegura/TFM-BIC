@@ -1,6 +1,6 @@
 # AI / External Media Service Integration Strategy
 
-Status: PROPOSED (M0 — no integration implemented) | Related: [ADR-011](../adr/adr-011-ai-architecture.md), [ADR-012](../adr/adr-012-video-generation.md), [ADR-013](../adr/adr-013-audio-generation.md)
+Status: IMPLEMENTED (video M11, audio M12 — real providers unverified end-to-end) | Related: [ADR-011](../adr/adr-011-ai-architecture.md), [ADR-012](../adr/adr-012-video-generation.md), [ADR-013](../adr/adr-013-audio-generation.md)
 
 ## Principle
 
@@ -56,7 +56,32 @@ requires a new adapter — no change to use cases or domain.
   availability unconfirmed; ADR-015 hosting still PENDING) — see ADR-012 and
   `content/video-scripts/README.md`.
 
-## Audio: Gemini API TTS — verified facts (2026-09-15)
+## Audio: Gemini API TTS — re-verified facts (2026-09-25, M12)
+
+**The 2026-09-15 facts below are superseded.** Re-verified against the official docs before any
+adapter code was written — full list, sources and what remains unverified in
+[ADR-013](../adr/adr-013-audio-generation.md):
+
+- TTS is now **GA**: `gemini-3.8-flash-tts` (selected, >130 languages incl. Polish) and
+  `gemini-3.8-flash-lite-tts`; preview models still listed.
+- Called through the GA Interactions API (`POST /v1beta/interactions`, `x-goog-api-key`); the
+  unary response carries the whole clip inline as base64 `audio/wav` (24 kHz mono 16-bit PCM).
+- Input language is auto-detected; delivery is steered by a natural-language `style` annotation;
+  30 prebuilt voices.
+- Terms: no services likely to be used by under-18s; EEA/UK/CH deployments must use the paid
+  tier — both **PENDING** product/legal decisions (ADR-013).
+
+Implemented in M12 as:
+
+```
+GenerateVocabularyAudioUseCase -> GenerateAudioUseCase -> AudioGenerationService (interface)
+    -> FakeAudioGenerationService (default: dev/test/CI) | GeminiAudioProvider (AUDIO_GENERATION_PROVIDER=gemini)
+```
+
+`GeminiAudioProvider` is unit-tested against the documented shapes but has **not** been run
+against the real API. Nothing is stored: the clip goes straight back in the HTTP response.
+
+### Superseded (M0, 2026-09-15)
 
 - Gemini text-to-speech is provided via the Gemini API, **Preview status**, requiring a
   Gemini 2.5 model variant with TTS capability. Text-only input, audio-only output, single- or
@@ -91,3 +116,11 @@ ADR-013) remains exactly as M0 left it — untouched by M11, still PROPOSED, no 
 API key configured, no adapter code written. The two are independent milestones; nothing about
 M11 implies M-audio is ready to start from different assumptions than this document already
 states.
+
+## Update — M12 (audio, 2026-09-25)
+
+Audio generation moved from PROPOSED to implemented (see ADR-013 and the re-verified section
+above). The two capabilities stay independent: nothing in video code knows about audio, and vice
+versa. The intended future flow — content → audio clip → video narration — needs durable media
+storage (PENDING), because a video render needs a stable file, whereas M12 returns each clip
+directly in the HTTP response and keeps nothing.

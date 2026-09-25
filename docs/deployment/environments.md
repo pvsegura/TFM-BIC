@@ -25,7 +25,13 @@ Variable groups (see `.env.example` for the authoritative current list):
   links + Origin validation) — see ADR-006 — read since M3.
 - Email provider: `EMAIL_PROVIDER_API_KEY`, `EMAIL_FROM` — provider account PENDING (ADR-014);
   not read by M3 code (dev/test use the in-memory email adapter).
-- Gemini: API key — not yet read (M12, out of scope until then).
+- Audio generation (M12, ADR-013): `AUDIO_GENERATION_PROVIDER` (`fake` default, or `gemini`),
+  `GEMINI_API_KEY` (required only when the provider is `gemini`), `GEMINI_TTS_MODEL` (default
+  `gemini-3.8-flash-tts`, GA), `AUDIO_GENERATION_MAX_TEXT_LENGTH` (default 300, 1–500) — read by
+  `packages/config`. development/test/CI/Playwright: `fake` (a deterministic WAV tone, no key, no
+  network); `loadEnv` refuses `gemini` when `NODE_ENV=test`. staging/production: `fake` until the
+  provider-terms decision in ADR-013 is made (Gemini forbids services likely to be used by under-18s;
+  EEA deployments need a paid project); then `gemini` with a key from the host's secret store.
 - Video generation (M11): `VIDEO_GENERATION_PROVIDER` (`fake` default, or `hyperframes`) — read by
   `packages/config`. `fake` selects a real, committed adapter (never Hyperframes); it is what every
   automated test and CI run uses. `hyperframes` selects `HyperframesCliProvider`, which shells out

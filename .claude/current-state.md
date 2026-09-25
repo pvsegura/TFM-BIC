@@ -4,6 +4,67 @@ Last updated: 2026-09-25
 
 ## Milestone
 
+**M12 — Gemini audio generation** — implemented on `feature/gemini-audio`, branched from
+`feature/hyperframes-video-generation` (M11). Not pushed, not merged; Jenkins/SonarQube not run (per
+standing instruction). Rationale: [ADR-013](../docs/adr/adr-013-audio-generation.md) (rewritten this
+milestone).
+
+## What actually exists (M12)
+
+- **Gemini re-verified first** (2026-09-25, official docs): TTS is now **GA**
+  (`gemini-3.8-flash-tts`, selected; >130 languages incl. Polish), via the GA Interactions API
+  (`POST /v1beta/interactions`, `x-goog-api-key`); the unary response returns the whole clip inline
+  as base64 `audio/wav` (24 kHz mono 16-bit PCM); language is auto-detected; style is a
+  natural-language annotation. M0's "Preview" finding is obsolete.
+- **Domain** (`packages/domain/src/audio/`): `SpeechRequest` (validated `SpeechText`: trimmed,
+  whitespace-collapsed, no control characters, ≤ configured limit, hard ceiling 500 code points),
+  `VoiceProfile` (`standard` | `slow` — never a provider voice), `AudioFormat` (`audio/wav`),
+  `speechRequestKey`. No job/status model: generation is synchronous.
+- **Application** (`packages/application/src/audio/`): port `AudioGenerationService.generate`,
+  port `AudioCache`, provider-independent errors + `categorizeAudioGenerationError`;
+  `GenerateAudioUseCase` (the reusable capability: language must be active, cache reuse,
+  in-flight de-duplication, max concurrent → `AudioGenerationBusyError`, failures never cached);
+  `GenerateVocabularyAudioUseCase` (first consumer — text comes from the visible vocabulary entry,
+  `lemma` or `example`).
+- **Infrastructure** (`packages/data/src/audio/`): `FakeAudioGenerationService` (default; a
+  deterministic 0.25 s WAV tone; named failure scenarios), `GeminiAudioProvider` (plain `fetch`, no
+  SDK; separate text/style fields; `store: false`; 20 s timeout never retried; ≤ 2 retries with
+  backoff for 429/500/503/504/network; raw provider text never propagated; WAV verified on the
+  bytes), `InMemoryAudioCache` (LRU, 200 entries / 32 MB), `wav.ts`.
+  **`GeminiAudioProvider` has never been run against the real API** — no key exists, and real use
+  is PENDING the provider-terms decision in ADR-013 (Gemini forbids services likely to be used by
+  under-18s; EEA needs the paid tier).
+- **Config**: `AUDIO_GENERATION_PROVIDER` (`fake` default | `gemini`), `GEMINI_API_KEY` (required
+  for `gemini`), `GEMINI_TTS_MODEL`, `AUDIO_GENERATION_MAX_TEXT_LENGTH` (default 300). `loadEnv`
+  refuses `gemini` under `NODE_ENV=test`.
+- **API**: `POST /audio-generations` (authenticated, Origin-checked, 30/hour, 1 KB body limit, strict
+  schema). Body `{source: {type: "vocabulary-item", vocabularyItemId, part}, voice}` — the client
+  never sends text. `200 audio/wav` (`private, no-store`, `nosniff`); 404 unseen content / no
+  example; 422 text over the limit; 502 provider rejected; 503 (+`Retry-After`) unavailable /
+  rate-limited / misconfigured / busy; 504 timeout. Structured log per generation (id, content id,
+  voice, provider, model, cached, bytes, duration, failure category) — never the text or audio.
+- **Frontend**: `VocabularyAudioPlayer` on the vocabulary detail page — speed radios, "Listen to
+  the word"/"Listen to the example", loading/error live regions, native `<audio controls>` from a
+  Blob URL (revoked on replace/unmount). No separate `/audio` page. Vite proxy `/audio-generations`.
+- **Not built, on purpose**: storage of clips (PENDING — needed only once video narration wants a
+  stable URL), phonetics/lesson/video integration (the `source` union is the extension point),
+  speech recognition/scoring, voice management, a job model.
+
+## Verification (M12, run locally on 2026-09-25)
+
+- Baseline before any change: 3339 pass / 5 skipped (unchanged from M11).
+- `pnpm content:validate`, `lint`, `typecheck`, `build`: **PASS**. `format:check`: PASS for every
+  tracked file (the only warning is the untracked nested clone `TFM-BIC/README.md`, not part of
+  the repo — same as M11).
+- **Vitest: 3499 pass, 5 skipped, 0 fail** (160 new tests). Coverage **93.47% statements / 86.78%
+  branches / 92.55% functions / 93.6% lines** (thresholds 80/75/80/80).
+- **Playwright: 136/136 pass** in one full run (`--workers=2`), including the 2 new tests in
+  `tests/e2e/audio-generation.spec.ts` (fake provider only; asserts the browser actually decodes the
+  returned WAV, and that anonymous requests / client-supplied text are refused).
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
+
+## Previous milestone
+
 **M11 — Hyperframes video generation** — implemented on `feature/hyperframes-video-generation`,
 branched from `feature/phonetics` (M10) → `feature/vocabulary` (M9) → `feature/gamification` (M8) →
 `feature/exercises` (M7) → `feature/lessons` (M6) → `feature/content-languages` (M5) →

@@ -292,6 +292,33 @@ Database: `user_phonetic_progress` has its own migration set (`pnpm --filter @tf
 after Identity's `db:migrate`). The pages are under `/learn/phonetics` (not `/phonetics`, which is this API path),
 so the dev proxy needs no page-vs-API bypass.
 
+## Audio generation endpoint (M12)
+
+`POST /audio-generations` — authenticated (session cookie), Origin-checked, 30 requests/hour, 1 KB
+body limit. Rationale: [ADR-013](../adr/adr-013-audio-generation.md).
+
+```json
+{
+  "source": { "type": "vocabulary-item", "vocabularyItemId": "pl-dom", "part": "lemma" },
+  "voice": "standard"
+}
+```
+
+`part` is `lemma` or `example`; `voice` is `standard` (default) or `slow`. The body is strict: a
+`text`, `userId`, provider, model or any other key is a `400`. The text is read from the catalog —
+never from the client.
+
+Success: `200` with the clip itself as the body, `Content-Type: audio/wav`, `Cache-Control: private,
+no-store`, `X-Content-Type-Options: nosniff`. Nothing is stored; an identical request may be served
+from the server's in-memory cache.
+
+Errors (`{ error }`, fixed messages): `400 Invalid request.`; `401`; `403` (cross-origin);
+`404 Audio source not found.` (missing/hidden entry, no example, inactive language); `413` (body
+too large); `422` (text over `AUDIO_GENERATION_MAX_TEXT_LENGTH`); `429` (rate limit);
+`502 Audio could not be generated for this text.`; `503 Audio generation is temporarily
+unavailable.` with `Retry-After` (provider down, provider rate limit, misconfiguration, or too many
+concurrent generations); `504` (provider timeout).
+
 ## Future direction
 
 Once more endpoints exist (M4+), the planned approach is an OpenAPI/schema-derived spec generated
