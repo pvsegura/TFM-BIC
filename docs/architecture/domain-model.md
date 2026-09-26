@@ -135,6 +135,11 @@ Marketing-consent subscription, preferences, unsubscribe. Deliberately separate 
 Email/Identity to keep marketing consent isolated from transactional flows (GDPR: different legal
 basis) — see [privacy-gdpr.md](../security/privacy-gdpr.md).
 
+_Implemented in M14_ (with Email): `newsletter_subscriptions`, one row per subscribing user, double opt-in
+(`pending → subscribed → unsubscribed`), signed unsubscribe links; marketing email is addressable only to a confirmed
+subscription. Preferences UI is on `/profile`. See [ADR-025](../adr/adr-025-email-newsletter.md) and
+[email-newsletter.md](email-newsletter.md).
+
 ### Subscriptions
 
 Student subscription/plan state (if the product has paid tiers). Boundary kept distinct from

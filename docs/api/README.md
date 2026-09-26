@@ -25,8 +25,8 @@ State-changing routes (all except `GET /auth/me`) also validate the `Origin` hea
 (`apps/api/src/hooks/verify-origin.ts`) as CSRF defense in depth — see
 [ADR-006](../adr/adr-006-authentication.md).
 
-`GET /auth/_test/emails?to=<email>` exists only when `NODE_ENV=test` — a diagnostic route for
-Playwright E2E tests to retrieve a verification/reset link from the in-memory email adapter, see
+`GET /auth/_test/emails?to=<email>` exists only when `NODE_ENV=test` (and, since M14, only in the E2E composition) — a diagnostic route for
+Playwright E2E tests to retrieve a verification/reset link from the fake email provider, see
 `apps/api/src/routes/test-email.route.ts`. Never reachable in development/staging/production.
 
 ## Profile endpoints (M4)
@@ -347,6 +347,31 @@ read is logged as `teacher.student_viewed` (teacher and student ids only).
 
 Database: `teacher_students` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:teaching`, after
 Identity's `db:migrate`). The pages are `/teacher` and `/teacher/students/:studentId` (not API paths).
+
+## Email preferences and newsletter endpoints (M14)
+
+Schemas: `packages/contracts/src/email-preferences/`. Rationale: [ADR-025](../adr/adr-025-email-newsletter.md);
+reference: [email-newsletter.md](../architecture/email-newsletter.md). No request carries a user id or an email
+address: the user and the address come from the session, or — for the public token routes — from the token alone.
+Every response carries `Cache-Control: private, no-store`.
+
+| Method | Path                                         | Auth                    | Rate limit | Notes                                                                                                                                                                                                          |
+| ------ | -------------------------------------------- | ----------------------- | ---------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/email-preferences`                         | session                 | 60/min     | `{ essential: { enabled: true, required: true }, newsletter: { status: not_subscribed\|pending\|subscribed, since \| null } }`.                                                                                |
+| POST   | `/email-preferences/newsletter/subscription` | session + Origin        | 5/hour     | Body `{ consent: true, consentVersion }` (strict). `202` pending (+ confirmation email), `200` already subscribed; `{ newsletter, confirmationEmailSent }`. `409` outdated consent text, `503` email not sent. |
+| DELETE | `/email-preferences/newsletter/subscription` | session + Origin        | 20/15min   | Unsubscribe or cancel a pending request. Idempotent. `{ newsletter }`.                                                                                                                                         |
+| POST   | `/email-preferences/newsletter/confirm`      | token + Origin          | 20/15min   | Body `{ token }`. `200 { newsletter }`; `400` unknown/used token; `410` expired.                                                                                                                               |
+| POST   | `/email-preferences/newsletter/unsubscribe`  | signed token (no login) | 30/15min   | Token in `?token=` (RFC 8058 one-click: form body `List-Unsubscribe=One-Click`, no `Origin` needed) or JSON `{ token }`. `200 { status: "not_subscribed" }`, idempotent; `400` forged/malformed.               |
+
+The identity routes above send their emails through the same boundary since M14; a provider failure never changes
+their (generic) responses. Test-only (`NODE_ENV=test` **and** the E2E composition): `GET /auth/_test/emails?to=&template=`
+now returns `{ kind, template, category, subject, url, links, listUnsubscribeUrl }`, and
+`POST /email-preferences/_test/newsletter-issues` `{ subject, title, paragraphs }` sends an issue to every confirmed
+subscription through the marketing path.
+
+Database: `newsletter_subscriptions` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:newsletter`,
+after Identity's `db:migrate`). The pages are `/profile` (settings section), `/newsletter/confirm` and
+`/newsletter/unsubscribe` (not API paths).
 
 ## Future direction
 

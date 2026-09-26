@@ -3,7 +3,7 @@
 Status: ACCEPTED (architecture and M3 dev/test strategy) / PENDING (real production provider
 account provisioning — deployment-time, out of M3 scope)
 Date: 2026-09-15
-Updated: 2026-09-17 (M3 — documented target provider and dev/test adapter)
+Updated: 2026-09-17 (M3 — documented target provider and dev/test adapter); 2026-09-26 (M14 — see below)
 
 ## Context
 
@@ -48,6 +48,22 @@ contained, without sending anything over the network. This is the adapter wired 
 and `test`. A real `ResendEmailService` adapter is a documented follow-up: same `EmailService`
 interface, swapped in once `EMAIL_PROVIDER_API_KEY` is actually issued — no application/domain
 code changes required when that happens, which is the point of the port/adapter split.
+
+## M14 update (2026-09-26)
+
+The architecture above is now implemented in full — see [ADR-025](adr-025-email-newsletter.md) and
+[email-newsletter.md](../architecture/email-newsletter.md):
+
+- `InMemoryEmailService` was replaced by an `EmailProvider` port (application) with one adapter,
+  `FakeEmailProvider` (packages/data), selected by `EMAIL_PROVIDER=fake` — the only accepted value. The
+  transactional and marketing senders sit above the port; M3's `EmailService` is implemented on the
+  transactional one.
+- **Provider: still PENDING.** The user decided in M14 not to add a Resend (or any real) adapter yet. Resend stays
+  the documented target; its current documentation was deliberately not re-verified, because no adapter was
+  written. Before adding one: re-verify its API, auth, sender-domain requirements, limits, `List-Unsubscribe`
+  header support and webhooks against the official docs, add the value to `EMAIL_PROVIDER`, and read its API key
+  from the host's secret store.
+- `EMAIL_PROVIDER_API_KEY` was removed from `.env.example` (nothing reads it); `EMAIL_FROM` is now read.
 
 ## Options considered
 

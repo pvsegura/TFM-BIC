@@ -36,8 +36,11 @@ deterministic WAV tone) or `GeminiAudioProvider` (`AUDIO_GENERATION_PROVIDER=gem
 `fetch` to the GA Interactions API, implemented against verified docs but **never run against the
 real API**; refused under `NODE_ENV=test`) → Gemini TTS (M12, ADR-013). Synchronous, nothing
 persisted; the client names content, never the text.
-`EmailService` → `InMemoryEmailService` (the only adapter wired — no real provider account
-exists; Resend is the documented target, ADR-014).
+`EmailProvider` → `FakeEmailProvider` only (`EMAIL_PROVIDER=fake`, the only accepted value — captures in
+memory, sends nothing, every environment; real provider PENDING, ADR-014). Above it, two senders that cannot be
+confused: `TransactionalEmailSender` (transactional templates only; backs M3's `EmailService`) and
+`MarketingEmailSender` (only a consent-checked `MarketingRecipient`; always adds the unsubscribe link). Newsletter
+consent is its own record with double opt-in (M14, ADR-025, docs/architecture/email-newsletter.md).
 
 ## Content
 

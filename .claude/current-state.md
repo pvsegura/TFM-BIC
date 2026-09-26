@@ -4,10 +4,41 @@ Last updated: 2026-09-26
 
 ## Milestone
 
-**M13 — Teacher Dashboard** — implemented on `feature/teacher-dashboard`, branched from
-`feature/gemini-audio` (M12). Not pushed, not merged; Jenkins/SonarQube not run (standing
-instruction). Rationale: [ADR-024](../docs/adr/adr-024-teacher-dashboard.md); reference:
-[teacher-dashboard.md](../docs/architecture/teacher-dashboard.md).
+**M14 — Email + Newsletter** — implemented on `feature/email-newsletter`, branched from
+`feature/teacher-dashboard` (M13). Not pushed, not merged; Jenkins/SonarQube not run (standing
+instruction). Rationale: [ADR-025](../docs/adr/adr-025-email-newsletter.md) (+ ADR-014 update); reference:
+[email-newsletter.md](../docs/architecture/email-newsletter.md).
+
+## What actually exists (M14)
+
+- **Found before coding**: M3's `EmailService` port with `InMemoryEmailService` wired in every environment
+  (production too), no templates; no preferences/consent/newsletter/unsubscribe/account-deletion workflow; email
+  change not implemented; UI copy English. Two defects: provider failure → 500 after registration stored the user,
+  and → a different response for existing accounts on reset/resend (enumeration). Decided with the user: **fake
+  provider only** (ADR-014 provider stays PENDING, no Resend code), **double opt-in**, no anonymous signup.
+- **Domain**: `email/` (categories fixed by template), `newsletter/` (`pending → subscribed → unsubscribed`,
+  48 h single-use confirmation, 60 s resend cooldown, consent-text version, branded `MarketingRecipient`).
+- **Application**: `EmailProvider` port; `ProviderTransactionalEmailSender` / `ProviderMarketingEmailSender`;
+  templates (escaped, links pinned to `APP_BASE_URL` origin, English messages table); `TransactionalIdentityEmailService`
+  implements M3's port; identity use cases absorb `EmailDeliveryError` only; newsletter use cases (preferences,
+  subscribe, confirm, unsubscribe by session/token, send issue).
+- **Data**: `FakeEmailProvider` (bounded in-memory capture, failure simulation), `HmacUnsubscribeTokenCodec`,
+  `newsletter_subscriptions` (own migration set `db:migrate:newsletter`, CHECKs, cascade), repository.
+  `InMemoryEmailService` removed.
+- **Config**: `EMAIL_PROVIDER` (only `fake`), `EMAIL_FROM`, `EMAIL_REPLY_TO`, `EMAIL_LINK_SECRET` (required in
+  staging/production).
+- **API**: `GET /email-preferences`, `POST|DELETE /email-preferences/newsletter/subscription`,
+  `POST /email-preferences/newsletter/confirm`, `POST /email-preferences/newsletter/unsubscribe` (JSON or RFC 8058
+  one-click). Delivery log events; request logs drop query strings; startup warning while the fake is active.
+  Test-only inbox route extended (template/category/links) and `POST /email-preferences/_test/newsletter-issues`.
+- **Web**: Email preferences section on `/profile` (essential = always on, no control; newsletter = unticked
+  explained consent, pending/subscribed states); public `/newsletter/confirm` and `/newsletter/unsubscribe` pages
+  that act only on click. Vite proxy `/email-preferences`.
+- **Not built, on purpose**: a real provider adapter, webhooks/bounces/suppression, outbox/retries, campaign
+  tooling (only the send-issue use case + E2E route), anonymous signup, email change, account deletion workflow,
+  more locales.
+
+## Previous milestone (M13)
 
 ## What actually exists (M13)
 
@@ -284,7 +315,7 @@ FakeVideoGenerationService` (packages/data) is the only adapter selected by defa
   (display-vs-learning-language) search or content, a reward for learned vocabulary.
 - Streaks, XP levels, leaderboards/rankings, daily goals, challenges, spending or transferring points, notifications, a reward
   marketplace, scoring/progress rollups beyond the ledger, adaptive learning, recommendations,
-  subscriptions, newsletter, account deletion/data export.
+  subscriptions, account deletion/data export.
 - More exercise types (matching, ordering, fill-in-the-blank, listening, …), an exercise editor/CMS, an attempt-history endpoint,
   pagination of exercise lists, attempt retention/deletion workflows.
 - Block-level resume in a lesson; more than one real language or any level beyond Polish A1; CEFR descriptors; **interface
@@ -389,6 +420,6 @@ must resolve before the real adapter can be trusted.
 
 ## Next milestone
 
-`M14` (not yet named/started). Natural candidates: a self-service teacher–student invitation flow (replacing
-operator linking, with a student notice/consent decision — see privacy-gdpr.md), or the privacy context (account
-deletion/data export), which now also has to cover teacher access.
+`M15` (not yet started). Natural candidate: the privacy context — account deletion and data export — which must
+cover newsletter consent (already cascades), teacher access and the legal review of the M14 consent model. Selecting
+and wiring a real email provider (ADR-014) is the other blocker before any public launch.

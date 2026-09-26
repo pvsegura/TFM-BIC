@@ -23,8 +23,11 @@ Variable groups (see `.env.example` for the authoritative current list):
   in dev, in-process PGlite in `test` — see ADR-005) — read since M3.
 - Auth: `AUTH_SESSION_SECRET` (signs the session cookie), `APP_BASE_URL` (verification/reset
   links + Origin validation) — see ADR-006 — read since M3.
-- Email provider: `EMAIL_PROVIDER_API_KEY`, `EMAIL_FROM` — provider account PENDING (ADR-014);
-  not read by M3 code (dev/test use the in-memory email adapter).
+- Email (M14, ADR-014/ADR-025): `EMAIL_PROVIDER` (only `fake`, the default — captures in memory, sends nothing,
+  in every environment), `EMAIL_FROM` (default `TFM-BIC <no-reply@example.invalid>`), `EMAIL_REPLY_TO` (optional;
+  both refuse line breaks), `EMAIL_LINK_SECRET` (≥ 32 chars, signs newsletter unsubscribe links; required in
+  staging/production, ephemeral in dev/test; rotating it breaks links in sent newsletters). No provider API key is
+  read until a real provider is selected (ADR-014 PENDING).
 - Audio generation (M12, ADR-013): `AUDIO_GENERATION_PROVIDER` (`fake` default, or `gemini`),
   `GEMINI_API_KEY` (required only when the provider is `gemini`), `GEMINI_TTS_MODEL` (default
   `gemini-3.8-flash-tts`, GA), `AUDIO_GENERATION_MAX_TEXT_LENGTH` (default 300, 1–500) — read by

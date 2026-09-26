@@ -228,6 +228,25 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
   points for vocabulary, per the brief); `user_vocabulary` rows are kept until user deletion (a later GDPR
   milestone).
 
+## Email and newsletter (M14 — implemented)
+
+- **Tokens**: newsletter confirmation — 256-bit CSPRNG (M3's `TokenGenerator`), SHA-256 at rest, 48 h, single use,
+  invalidated by a newer request or a cancellation. Unsubscribe — `key.HMAC-SHA256(EMAIL_LINK_SECRET, purpose+key)`,
+  random key per subscription (never the user id), constant-time comparison, no expiry by design (it can only
+  withdraw consent). Verification/reset tokens are unchanged (M3).
+- **No token in logs**: the request log serializer drops query strings (one-click unsubscribe must carry its token
+  in the URL); delivery logs carry only category/template/adapter/outcome; the fake provider never logs content.
+- **Enumeration**: a provider failure no longer changes the responses of register, resend-verification or
+  forgot-password (previously a 500 only for existing accounts).
+- **Templates**: every variable HTML-escaped; no HTML accepted; every link must be on the configured `APP_BASE_URL`
+  origin (never a request `Host`); `EMAIL_FROM`/`EMAIL_REPLY_TO` and newsletter subjects refuse line breaks.
+- **Authorization**: preferences and subscription changes act on the session user only (no id/address in any
+  body); confirm/unsubscribe links are authorized by their token alone; Origin checked on every state-changing
+  route except one-click unsubscribe (mail clients send none; the signed token is the authorization).
+- **Abuse**: rate limits on every email-triggering route (see API docs); a repeated subscribe within 60 s sends no
+  second email; confirm/unsubscribe pages act only on an explicit click (link scanners).
+- **No real email in dev/CI**: `EMAIL_PROVIDER` accepts only `fake`.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from
