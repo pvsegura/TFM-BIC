@@ -7,10 +7,11 @@ dist/
 build/
 *.tsbuildinfo
 
-# Env
+# Env — every .env file except the committed, value-free example (M16: .env.production etc. were
+# not ignored before).
 .env
-.env.local
-.env.*.local
+.env.*
+!.env.example
 
 # Testing
 coverage/

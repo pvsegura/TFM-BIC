@@ -14,7 +14,8 @@ cd infrastructure/docker && docker compose up -d
 ```
 
 Default local connection string: `postgres://tfm_bic:tfm_bic_dev_only@localhost:5432/tfm_bic`
-(dev-only credentials, not used anywhere else — set your own `DATABASE_URL` in `.env`).
+(dev-only credentials, not used anywhere else — set your own `DATABASE_URL` in `.env`). The port is
+published on `127.0.0.1` only (M16), so the committed dev password is not reachable from the local network.
 
 Containers for `apps/web`/`apps/api` themselves are not created yet — depends on the hosting
 target (ADR-015) being resolved first.

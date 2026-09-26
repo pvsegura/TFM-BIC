@@ -12,8 +12,10 @@ services:
       POSTGRES_USER: tfm_bic
       POSTGRES_PASSWORD: tfm_bic_dev_only
       POSTGRES_DB: tfm_bic
+    # Loopback only (M16): the dev password is committed, so the port must not be reachable from
+    # the local network.
     ports:
-      - "5432:5432"
+      - "127.0.0.1:5432:5432"
     volumes:
       - tfm-bic-postgres-data:/var/lib/postgresql/data
     healthcheck:
