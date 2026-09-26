@@ -5,9 +5,11 @@ import { createRoutesStub } from "react-router";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { ApiError } from "../services/api-error.js";
+import * as authApi from "../services/auth-api.js";
 import * as download from "../services/browser-download.js";
 import * as dataApi from "../services/data-management-api.js";
 import { DataManagementSection } from "./data-management-section.js";
+import { ProtectedRoute } from "./protected-route.js";
 
 function renderSection() {
   const Stub = createRoutesStub([
@@ -146,6 +148,34 @@ describe("DataManagementSection — account deletion", () => {
 
     expect(await screen.findByText("Account deleted page")).toBeInTheDocument();
     expect(remove).toHaveBeenCalledWith("right-password");
+  });
+
+  it("lands on the confirmation page, not the login page, when the section sits behind the login guard", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
+      id: "user-1",
+      email: "ada@example.com",
+      role: "STUDENT",
+      emailVerified: true,
+    });
+    vi.spyOn(dataApi, "deleteAccount").mockResolvedValue();
+    const Stub = createRoutesStub([
+      {
+        Component: ProtectedRoute,
+        children: [{ path: "/profile", Component: DataManagementSection }],
+      },
+      { path: "/login", Component: () => <p>Login page</p> },
+      { path: "/account-deleted", Component: () => <p>Account deleted page</p> },
+    ]);
+    const user = userEvent.setup();
+    renderWithProviders(<Stub initialEntries={["/profile"]} />);
+    await user.click(await screen.findByRole("button", { name: "Delete my account…" }));
+
+    await user.type(screen.getByLabelText("Current password"), "right-password");
+    await user.click(screen.getByRole("checkbox", { name: /permanently deleted/i }));
+    await user.click(screen.getByRole("button", { name: "Delete my account permanently" }));
+
+    expect(await screen.findByText("Account deleted page")).toBeInTheDocument();
+    expect(screen.queryByText("Login page")).not.toBeInTheDocument();
   });
 
   it("cancel closes the dialog, forgets the password and returns focus", async () => {

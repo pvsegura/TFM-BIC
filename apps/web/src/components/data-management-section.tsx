@@ -1,6 +1,5 @@
 import { Button, TextField } from "@tfm-bic/ui";
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
-import { useNavigate } from "react-router";
 
 import { useDeleteAccount, useExportPersonalData } from "../hooks/use-data-management.js";
 import { ApiError } from "../services/api-error.js";
@@ -111,7 +110,6 @@ function DeleteAccount() {
 
 function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
   const deletion = useDeleteAccount();
-  const navigate = useNavigate();
   const headingRef = useRef<HTMLHeadingElement>(null);
   const [password, setPassword] = useState("");
   const [acknowledged, setAcknowledged] = useState(false);
@@ -135,11 +133,7 @@ function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
     if (found.password !== undefined || found.acknowledgement !== undefined) {
       return;
     }
-    deletion.mutate(password, {
-      onSuccess: () => {
-        void navigate("/account-deleted", { replace: true });
-      },
-    });
+    deletion.mutate(password);
   }
 
   return (

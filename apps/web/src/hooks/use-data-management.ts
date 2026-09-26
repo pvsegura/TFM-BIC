@@ -1,4 +1,5 @@
 import { useMutation, useQueryClient } from "@tanstack/react-query";
+import { useNavigate } from "react-router";
 
 import { saveTextFile } from "../services/browser-download.js";
 import { deleteAccount, fetchPersonalDataExport } from "../services/data-management-api.js";
@@ -21,15 +22,19 @@ export function useExportPersonalData() {
 }
 
 /**
- * Deletes the account. On success the session is gone server-side, so every user-scoped query is
- * dropped and the current user is recorded as signed out — exactly what logging out does.
+ * Deletes the account. On success the session is gone server-side: the user is taken to the
+ * public confirmation page, every user-scoped query is dropped and the current user is recorded as
+ * signed out — what logging out does. Navigating first matters: marking the user signed out while
+ * still on a protected page would send them to the login page instead.
  */
 export function useDeleteAccount() {
   const queryClient = useQueryClient();
+  const navigate = useNavigate();
   return useMutation({
     mutationFn: (password: string) =>
       endingSessionOnUnauthorized(queryClient, () => deleteAccount(password)),
-    onSuccess: () => {
+    onSuccess: async () => {
+      await navigate("/account-deleted", { replace: true });
       clearUserScopedCache(queryClient);
       queryClient.setQueryData(CURRENT_USER_QUERY_KEY, null);
     },
