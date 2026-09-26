@@ -4,7 +4,9 @@ export { SystemClock } from "./clock/system-clock.js";
 export { createIdentityDb, type IdentityDb, type IdentityDbHandle } from "./identity/db/client.js";
 export { Argon2PasswordHasher } from "./identity/argon2-password-hasher.js";
 export { CryptoTokenGenerator } from "./identity/crypto-token-generator.js";
-export { InMemoryEmailService, type SentEmail } from "./identity/in-memory-email.service.js";
+// Email (M14, ADR-014/025): the fake provider is the only adapter until a real provider is selected.
+export { FakeEmailProvider, type CapturedEmail } from "./email/fake-email.provider.js";
+export { HmacUnsubscribeTokenCodec } from "./email/hmac-unsubscribe-token.codec.js";
 export { DrizzleUserRepository } from "./identity/user.repository.js";
 export { DrizzleSessionRepository } from "./identity/session.repository.js";
 export { DrizzleEmailVerificationTokenRepository } from "./identity/email-verification-token.repository.js";
@@ -121,3 +123,11 @@ export { encodeWavPcm16, isWav } from "./audio/wav.js";
 export { createTeachingDb, type TeachingDb, type TeachingDbHandle } from "./teaching/db/client.js";
 export { DrizzleTeacherStudentLinkRepository } from "./teaching/teacher-student-link.repository.js";
 export { DrizzleTeacherDashboardReadModel } from "./teaching/teacher-dashboard.read-model.js";
+
+// Newsletter (M14, ADR-025): consent records, one per user, cascading with the account.
+export {
+  createNewsletterDb,
+  type NewsletterDb,
+  type NewsletterDbHandle,
+} from "./newsletter/db/client.js";
+export { DrizzleNewsletterSubscriptionRepository } from "./newsletter/newsletter-subscription.repository.js";

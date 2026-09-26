@@ -1,0 +1,186 @@
+{
+  "id": "4bd718e8-75ee-475d-877c-b280c53f2b37",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "version": "7",
+  "dialect": "postgresql",
+  "tables": {
+    "public.newsletter_subscriptions": {
+      "name": "newsletter_subscriptions",
+      "schema": "",
+      "columns": {
+        "user_id": {
+          "name": "user_id",
+          "type": "uuid",
+          "primaryKey": true,
+          "notNull": true
+        },
+        "status": {
+          "name": "status",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "unsubscribe_key": {
+          "name": "unsubscribe_key",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "consent_version": {
+          "name": "consent_version",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "consent_source": {
+          "name": "consent_source",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "requested_at": {
+          "name": "requested_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        },
+        "confirmed_at": {
+          "name": "confirmed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "unsubscribed_at": {
+          "name": "unsubscribed_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confirmation_token_hash": {
+          "name": "confirmation_token_hash",
+          "type": "text",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confirmation_expires_at": {
+          "name": "confirmation_expires_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "confirmation_sent_at": {
+          "name": "confirmation_sent_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": false
+        },
+        "updated_at": {
+          "name": "updated_at",
+          "type": "timestamp with time zone",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {
+        "newsletter_subscriptions_unsubscribe_key_key": {
+          "name": "newsletter_subscriptions_unsubscribe_key_key",
+          "columns": [
+            {
+              "expression": "unsubscribe_key",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "newsletter_subscriptions_confirmation_token_hash_key": {
+          "name": "newsletter_subscriptions_confirmation_token_hash_key",
+          "columns": [
+            {
+              "expression": "confirmation_token_hash",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": true,
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        },
+        "newsletter_subscriptions_subscribed_idx": {
+          "name": "newsletter_subscriptions_subscribed_idx",
+          "columns": [
+            {
+              "expression": "user_id",
+              "isExpression": false,
+              "asc": true,
+              "nulls": "last"
+            }
+          ],
+          "isUnique": false,
+          "where": "\"newsletter_subscriptions\".\"status\" = 'subscribed'",
+          "concurrently": false,
+          "method": "btree",
+          "with": {}
+        }
+      },
+      "foreignKeys": {
+        "newsletter_subscriptions_user_id_users_id_fk": {
+          "name": "newsletter_subscriptions_user_id_users_id_fk",
+          "tableFrom": "newsletter_subscriptions",
+          "tableTo": "users",
+          "columnsFrom": ["user_id"],
+          "columnsTo": ["id"],
+          "onDelete": "cascade",
+          "onUpdate": "no action"
+        }
+      },
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {},
+      "policies": {},
+      "checkConstraints": {
+        "newsletter_subscriptions_status": {
+          "name": "newsletter_subscriptions_status",
+          "value": "\"newsletter_subscriptions\".\"status\" IN ('pending', 'subscribed', 'unsubscribed')"
+        },
+        "newsletter_subscriptions_consent_source": {
+          "name": "newsletter_subscriptions_consent_source",
+          "value": "\"newsletter_subscriptions\".\"consent_source\" IN ('settings')"
+        },
+        "newsletter_subscriptions_subscribed_confirmed": {
+          "name": "newsletter_subscriptions_subscribed_confirmed",
+          "value": "\"newsletter_subscriptions\".\"status\" <> 'subscribed' OR \"newsletter_subscriptions\".\"confirmed_at\" IS NOT NULL"
+        },
+        "newsletter_subscriptions_unsubscribed_dated": {
+          "name": "newsletter_subscriptions_unsubscribed_dated",
+          "value": "\"newsletter_subscriptions\".\"status\" <> 'unsubscribed' OR \"newsletter_subscriptions\".\"unsubscribed_at\" IS NOT NULL"
+        },
+        "newsletter_subscriptions_token_has_expiry": {
+          "name": "newsletter_subscriptions_token_has_expiry",
+          "value": "(\"newsletter_subscriptions\".\"confirmation_token_hash\" IS NULL) = (\"newsletter_subscriptions\".\"confirmation_expires_at\" IS NULL)"
+        },
+        "newsletter_subscriptions_token_only_pending": {
+          "name": "newsletter_subscriptions_token_only_pending",
+          "value": "\"newsletter_subscriptions\".\"confirmation_token_hash\" IS NULL OR \"newsletter_subscriptions\".\"status\" = 'pending'"
+        }
+      },
+      "isRLSEnabled": false
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "sequences": {},
+  "roles": {},
+  "policies": {},
+  "views": {},
+  "_meta": {
+    "columns": {},
+    "schemas": {},
+    "tables": {}
+  }
+}

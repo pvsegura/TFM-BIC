@@ -29,6 +29,8 @@
     "db:migrate:video": "drizzle-kit migrate --config drizzle.video.config.ts",
     "db:generate:teaching": "drizzle-kit generate --config drizzle.teaching.config.ts",
     "db:migrate:teaching": "drizzle-kit migrate --config drizzle.teaching.config.ts",
+    "db:generate:newsletter": "drizzle-kit generate --config drizzle.newsletter.config.ts",
+    "db:migrate:newsletter": "drizzle-kit migrate --config drizzle.newsletter.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts",
     "teacher:admin": "tsx src/teaching/teacher-admin.cli.ts"
   },
