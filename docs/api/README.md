@@ -379,10 +379,32 @@ Rationale: [ADR-026](../adr/adr-026-privacy-data-management.md); format:
 [DATA-EXPORT-FORMAT.md](../privacy/DATA-EXPORT-FORMAT.md). Session user only — no user id in any path, query or body.
 Not under `/privacy`, which is the public notice page.
 
-| Method | Path                                | Auth    | Rate limit | Notes                                                                                                                                                                                                                                                   |
-| ------ | ----------------------------------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/data-management/export`           | session | 5/hour     | The caller's personal-data export (JSON, `exportVersion: "1"`) as an attachment named `tfm-bic-personal-data-YYYY-MM-DD.json`. Any query parameter is a `400`; `404` if the account vanished. `private, no-store`, `nosniff`.                           |
-| POST   | `/data-management/account-deletion` | session | 5/hour     | Body `{ "password": string, "confirm": true }` and nothing else. `204` + cleared session cookie on success; `403 { "error": "The password is incorrect." }`; `400` for any other body. Origin checked; body capped at 1 KB. Immediate and irreversible. |
+| Method | Path                                | Auth    | Rate limit                     | Notes                                                                                                                                                                                                                                                   |
+| ------ | ----------------------------------- | ------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/data-management/export`           | session | 5/hour (+5/hour per user, M16) | The caller's personal-data export (JSON, `exportVersion: "1"`) as an attachment named `tfm-bic-personal-data-YYYY-MM-DD.json`. Any query parameter is a `400`; `404` if the account vanished. `private, no-store`, `nosniff`.                           |
+| POST   | `/data-management/account-deletion` | session | 5/hour (+5/hour per user, M16) | Body `{ "password": string, "confirm": true }` and nothing else. `204` + cleared session cookie on success; `403 { "error": "The password is incorrect." }`; `400` for any other body. Origin checked; body capped at 1 KB. Immediate and irreversible. |
+
+## Cross-cutting behaviour (M16)
+
+Rationale: [ADR-027](../adr/adr-027-security-hardening.md). Applies to every endpoint above.
+
+- **Headers on every response**: `X-Content-Type-Options: nosniff`, `X-Frame-Options: DENY`,
+  `Content-Security-Policy: default-src 'none'; frame-ancestors 'none'`, `Referrer-Policy: no-referrer`,
+  `Cross-Origin-Resource-Policy: same-origin`, `Strict-Transport-Security` (staging/production only), and
+  `Cache-Control: no-store` unless the endpoint sets its own.
+- **`X-Request-Id`**: a random UUID per request, also on every log line of that request — quote it when reporting a
+  problem. A client-sent `X-Request-Id` is ignored.
+- **Error bodies**: a body that is not JSON → `400 { "error": "Invalid request." }`; over the limit →
+  `413 { "error": "Request body too large." }` (16 KiB unless an endpoint sets less); wrong content type →
+  `415 { "error": "Unsupported media type." }`; rate limited → `429 { "error": "Too many requests." }` with
+  `Retry-After`; unknown path → `404 { "error": "Not found." }` (the path is not echoed); unexpected failure →
+  `500 { "error": "Internal Server Error" }`. Endpoint-specific errors are unchanged.
+- **Rate limits** are per client address (`TRUST_PROXY` decides which address). `POST /auth/login` is also
+  limited to **10 per 15 minutes per account** (normalised email, whether or not it exists). Account deletion and
+  export (5/hour), `POST /audio-generations` (30/hour) and `POST /video-generations` (10/hour) are also limited
+  **per signed-in user**. `GET /profile` 120/min and `PATCH /profile` 30/min per client.
+- **Origin**: every state-changing endpoint except one-click unsubscribe refuses a foreign `Origin` (`403`). If
+  `Origin` is absent, it also refuses a browser `Sec-Fetch-Site` of `cross-site`/`same-site`.
 
 ## Future direction
 

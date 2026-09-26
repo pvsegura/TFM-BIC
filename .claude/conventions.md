@@ -224,6 +224,26 @@ Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md); inventory:
   rewrite an old id. Update docs/privacy when an external provider or data flow changes.
 - Do not add a cookie banner, analytics, date of birth or kids-mode data without a documented decision.
 
+## Security conventions (since M16)
+
+Rationale: [ADR-027](../docs/adr/adr-027-security-hardening.md); audit and tests: [docs/security/](../docs/security/M16-SECURITY-AUDIT.md).
+
+- **A new route must be classified** in `apps/api/src/security/route-inventory.security.test.ts`. Default is
+  authenticated (401 without a session); a state-changing route runs `verifyOrigin` first. Adding to the public or
+  Origin-exception list is a security decision — document it in M16-AUTHORIZATION-MATRIX.md.
+- **Rate limits**: per-address limits via `routeRateLimit(env, max, window)` (never re-implement the E2E multiplier);
+  add `perUserRateLimit` (after `authenticate`) to anything that checks a password or costs money/compute.
+- **Single-use tokens** are consumed with one conditional `UPDATE … RETURNING` before anything changes — never
+  find-then-mark.
+- **Headers/errors/limits** live in `apps/api/src/security/http-security.ts`; do not set security headers or
+  body limits ad hoc. A route that serves something cacheable sets its own `Cache-Control` (default `no-store`).
+- **The SPA CSP** is `apps/web/src/security/security-headers.ts`. Anything new the browser loads (a font, an image
+  host, a script, a worker) changes that policy on purpose, and the `production-build` E2E project must stay green.
+  Never add `unsafe-inline`/`unsafe-eval`.
+- **Config**: new secrets are validated in `packages/config` (length/shape in staging/production), never given a
+  fallback there, and never logged. Nothing secret goes in a `VITE_*` variable.
+- **Dependencies**: `pnpm audit` gates CI; accept an advisory only with a reason in M16-RISK-REGISTER.md.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

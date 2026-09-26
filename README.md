@@ -45,6 +45,8 @@ Este repositorio sigue una gobernanza de arquitectura documentada en `docs/` y `
 - [Project Constitution](docs/product/project-constitution.md) — principios no negociables.
 - [Architecture Decision Records](docs/adr/README.md) — decisiones técnicas (`ACCEPTED` / `PENDING`).
 - [Risk Register](docs/risk-register.md)
+- [Seguridad (M16)](docs/security/M16-SECURITY-AUDIT.md) — auditoría, modelo de amenazas, matriz de autorización y
+  pruebas de seguridad; lista de comprobación para desplegar en [environments.md](docs/deployment/environments.md).
 - [.claude/current-state.md](.claude/current-state.md) — qué existe realmente hoy en el repo.
 
 # Desarrollo (Milestone 1)

@@ -4,9 +4,8 @@ import type { FastifyReply, FastifyRequest } from "fastify";
 /**
  * Server-side role gate — must run after `authenticate` (needs
  * `request.currentUser`). Demonstrates the reusable `authenticate()` +
- * `authorize(requiredRole)` pattern from the M3 brief; no M3 route uses it
- * for real yet (role-gated features are a later milestone), but it is
- * enforced entirely server-side and ready for one.
+ * `authorize(requiredRole)` pattern from the M3 brief. Used by the teacher
+ * dashboard (M13); enforced entirely server-side, never from request data.
  */
 export function createRequireRoleHook(allowed: readonly Role[]) {
   return async function requireRoleHook(

@@ -22,7 +22,13 @@ Variable groups (see `.env.example` for the authoritative current list):
 - Database: `DATABASE_URL` (Postgres connection string; Neon in production, local Docker Postgres
   in dev, in-process PGlite in `test` — see ADR-005) — read since M3.
 - Auth: `AUTH_SESSION_SECRET` (signs the session cookie), `APP_BASE_URL` (verification/reset
-  links + Origin validation) — see ADR-006 — read since M3.
+  links + Origin validation) — see ADR-006 — read since M3. Since M16, staging/production refuse a secret shorter
+  than 32 characters and require `APP_BASE_URL` to be set explicitly to an `https:` URL (it defaults to
+  `http://localhost:5173` only in development/test); `APP_BASE_URL` must be an http(s) URL everywhere.
+- Proxies (M16, ADR-027): `TRUST_PROXY` — comma-separated IP addresses/CIDR ranges of the reverse proxies allowed
+  to set `X-Forwarded-For`. Empty (default) = trust none: `request.ip` is the socket peer. `true`, hop counts and
+  host names are refused (they let any client spoof its address and escape per-IP rate limits).
+- `E2E_RELAXED_RATE_LIMITS` — test-only (Playwright); since M16 refused unless `NODE_ENV=test`.
 - Email (M14, ADR-014/ADR-025): `EMAIL_PROVIDER` (only `fake`, the default — captures in memory, sends nothing,
   in every environment), `EMAIL_FROM` (default `TFM-BIC <no-reply@example.invalid>`), `EMAIL_REPLY_TO` (optional;
   both refuse line breaks), `EMAIL_LINK_SECRET` (≥ 32 chars, signs newsletter unsubscribe links; required in
@@ -48,6 +54,24 @@ Variable groups (see `.env.example` for the authoritative current list):
   single origin and no CORS policy is needed — this also keeps `SameSite=Strict` on the session
   cookie workable. Production same-origin serving (reverse proxy or single origin) is a
   deployment concern tracked under ADR-015, not solved in M3.
+
+## Security checklist for a deployment (M16, ADR-027)
+
+Hosting is PENDING (ADR-015). Whatever host is chosen must, before real users:
+
+1. Serve the SPA (`apps/web/dist`) with **exactly** the headers in `apps/web/src/security/security-headers.ts`
+   (CSP, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, COOP) and
+   HSTS once HTTPS is guaranteed. `vite preview` shows the expected result; the `production-build` E2E project
+   checks the build runs under them.
+2. Serve the SPA and the API from **one origin** over HTTPS (the session cookie is `SameSite=Strict`, and the
+   Origin check compares with `APP_BASE_URL`); keep the page-vs-API split for `/profile` (see vite.config.ts).
+3. Set `TRUST_PROXY` to the proxy's address range if the API sits behind one — otherwise every client shares
+   one per-address rate-limit bucket. Never trust all proxies.
+4. Set `NODE_ENV=production`, a ≥ 32-character `AUTH_SESSION_SECRET` and `EMAIL_LINK_SECRET`, and an
+   `https:` `APP_BASE_URL` from the host's secret store (the API refuses to start otherwise).
+5. Connect to Postgres over TLS with an application role that is not a superuser and does not own the schema
+   (migrations run with a separate role); decide backups/restore and log retention (risk SR-21).
+6. Run a single API instance, or add a shared rate-limit store first (limits are in memory).
 
 ## Startup validation
 

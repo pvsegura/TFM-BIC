@@ -4,10 +4,60 @@ Last updated: 2026-09-26
 
 ## Milestone
 
+**M16 — Security hardening** — implemented on `feature/security-hardening`, branched from `feature/privacy-gdpr`
+(M15). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction). Rationale:
+[ADR-027](../docs/adr/adr-027-security-hardening.md); audit, threat model, risk register, authorization matrix,
+sources and tests: [docs/security/M16-SECURITY-AUDIT.md](../docs/security/M16-SECURITY-AUDIT.md) and siblings.
+**Risk reduction, not a certification — no claim that the application is secure or compliant.**
+
+## What actually exists (M16)
+
+- **Audit found** (no CRITICAL): per-IP-only rate limits with no proxy trust (HIGH once deployed behind a proxy),
+  no per-account/per-user limits, check-then-mark reset/verification tokens, no HTTP security headers or CSP at all
+  (the baseline claimed an nginx config that never existed), "Internal Server Error" bodies for 400/413/415/429,
+  weak production config accepted, `.env.production` etc. not git-ignored, no CI dependency audit.
+- **API** (`apps/api/src/security/`): `http-security.ts` (headers + `no-store` default + UUID `X-Request-Id`,
+  HSTS in staging/production, safe 4xx bodies logged at info, generic 404, 16 KiB default body, 30 s request
+  timeout, `trustProxy` from `TRUST_PROXY`); `rate-limits.ts` (`routeRateLimit` shared by every route;
+  `perAccountLoginRateLimit` 10/15 min; `perUserRateLimit` on deletion/export 5/h, audio 30/h, video 10/h; built on
+  `createRateLimit()` because `app.rateLimit()` skips after a route limit). Profile routes rate limited.
+  `verify-origin` adds a `Sec-Fetch-Site` fallback.
+- **Identity**: `consume(tokenHash, now)` (one conditional `UPDATE … RETURNING`) replaces `markUsed` on both token
+  repositories; reset/verify consume first. No migration.
+- **Config**: staging/production require a ≥ 32-char `AUTH_SESSION_SECRET` and an explicit https `APP_BASE_URL`;
+  `E2E_RELAXED_RATE_LIMITS` only under test; `TRUST_PROXY` (IP/CIDR list, default none).
+- **Web**: `apps/web/src/security/security-headers.ts` (CSP: self-only scripts/styles/connect, `blob:` media, no
+  inline/eval/third party, `frame-ancestors 'none'`; no-referrer, Permissions-Policy, COOP) served by `vite preview`;
+  Zod runs `jitless` (its `new Function` probe was the one CSP violation found).
+- **Tests**: route-inventory default-deny guard; HTTP hardening; layered rate limits; Origin hook; atomic tokens
+  (repository + use-case races); config; Playwright project `production-build` (build + preview on :4173, zero CSP
+  violations, not frameable). Catalogue: docs/security/M16-SECURITY-TESTS.md.
+- **Ops**: `.gitignore` covers every `.env.*` but the example; dev Postgres bound to 127.0.0.1; Jenkins
+  `Dependency Audit` stage.
+- **Not built, on purpose**: CSRF tokens, Redis, account lockout, MFA, idle session timeout, nonce CSP, WAF, secret
+  scanning (PENDING — Docker unavailable to verify gitleaks), off-request email (with ADR-014), DB roles/TLS/backups
+  (with ADR-015). No upload/webhook/SSRF surface exists, so none was built.
+
+## Verification (M16, run locally on 2026-09-26)
+
+- Baseline before any change: 3970 pass / 5 skipped (= M15's record).
+- `content:validate`, `lint`, `typecheck`, `build`: **PASS**. `format:check`: PASS for every tracked file (the only
+  warning is the untracked nested clone `TFM-BIC/README.md`, as in M11–M15).
+- **Vitest (full, with coverage): 4062 pass / 5 skipped / 0 fail** (+92, one more added afterwards); coverage
+  **94.46% statements / 88.03% branches / 93.41% functions / 94.58% lines**.
+- **Playwright: 154/154 pass** in one full run (`--workers=2`): 150 `chromium` (the M15 suite, unchanged) + 4
+  `production-build` (the built app under its CSP and headers).
+- Mutation checks: removing `authenticate`/`verifyOrigin` from lesson routes fails the route inventory; removing the
+  frame protection fails the clickjacking E2E test (an earlier version of that test passed regardless — Chrome's
+  Local Network Access and the parent page's own CSP masked it; fixed and documented).
+- `pnpm audit --prod`: no known vulnerabilities; `pnpm audit --audit-level=high`: none; full audit: the same
+  moderate dev-only esbuild advisory as M15 (accepted, SR-20).
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
+
+## Previous milestone (M15)
+
 **M15 — Privacy + GDPR foundation** — implemented on `feature/privacy-gdpr`, branched from
-`feature/email-newsletter` (M14). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction).
-Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md); documentation:
-[docs/privacy/](../docs/privacy/README.md). **Technical capabilities only — no claim of legal compliance.**
+`feature/email-newsletter` (M14). Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md).
 
 ## What actually exists (M15)
 
@@ -392,7 +442,7 @@ FakeVideoGenerationService` (packages/data) is the only adapter selected by defa
   content hot-reload.
 - A real email provider (ADR-014); a real Neon connection was never exercised (Docker Postgres in dev, PGlite in tests, and
   one-off real-Postgres checks for M8, M9 and M10 — **not repeated for M11**, see Verification above).
-- Automated accessibility checks (axe); CSRF double-submit token; a dependency-audit CI step; a Postgres service in CI (the
+- Automated accessibility checks (axe); CSRF double-submit token (not needed — ADR-027); CI secret scanning; a Postgres service in CI (the
   gamification multi-connection test is opt-in; vocabulary, phonetics and video have no equivalent opt-in test).
 - Component-level unit tests for the vocabulary browse/My Vocabulary pages and the phonetics browse page and their
   presentation sub-components — covered by the detail-page tests and E2E only, for both M9 and M10.
@@ -476,19 +526,19 @@ must resolve before the real adapter can be trusted.
 - **`/profile` is both page and API path** (only the Vite dev proxy separates them; ADR-017). M5–M10 avoided repeating this.
 - Merely opening a lesson marks it in progress (by design); a failed `start` is silent.
 - The skip-to-content link in the root layout still uses white on the orange accent (~2.8:1).
-- Profile routes have no rate limit; no unsaved-changes guard; names stored as typed (escape on output).
+- No unsaved-changes guard on the profile; names stored as typed (escape on output). (Profile rate limits: M16.)
 - **Eight `pg` pools per API process** (identity, profile, lessons, exercises, gamification, vocabulary, phonetics,
   video); real Neon connectivity unverified.
 - The web bundle is ~582 kB; Vite warns above 500 kB.
 - `E2E_RELAXED_RATE_LIMITS` raises (not removes) rate limits for E2E only, now for video generation too.
-- Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is unset.
+- Session/token secrets fall back to an ephemeral value in dev/test when `AUTH_SESSION_SECRET` is unset (staging/production
+  refuse to start without a ≥ 32-char secret since M16).
 - Full Playwright runs are memory-hungry (Vite + API with in-process Postgres + Chromium workers); use `--workers=2` on small
   machines; a load-related flake in the full 134-test run (one pre-existing M7 spec) passed in isolation — see Verification.
-- Fastify's default `404` body echoes the requested path for every unknown route, including guessed video-generation
-  paths; it carries no data, and it predates M11.
+- Rate limits are in memory per process (single instance by design); a scaled-out API needs a shared store (M16).
 
 ## Next milestone
 
-`M16` (not started). Blockers before any public launch remain legal/product, not engineering: controller identity and
+`M17` (not started). Before any deployment: the M16 security checklist in docs/deployment/environments.md. Blockers before any public launch remain legal/product, not engineering: controller identity and
 contact, lawful bases, retention periods, DPAs/transfers, final notice wording (docs/privacy/PROCESSING-REGISTER.md),
 plus a real email provider (ADR-014) and hosting (ADR-015).

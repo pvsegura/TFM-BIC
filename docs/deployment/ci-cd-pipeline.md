@@ -9,7 +9,8 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
 ## Pipeline stages (implemented)
 
 ```
-(implicit) Checkout -> Environment/Tool Validation -> Install Dependencies -> Content Validation
+(implicit) Checkout -> Environment/Tool Validation -> Install Dependencies -> Dependency Audit
+  -> Content Validation
   -> Lint
   -> Format Check -> Typecheck -> Unit/Component Tests -> Coverage Report -> Build -> E2E
   -> SonarQube Analysis -> Quality Gate
@@ -23,6 +24,11 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
   (`package.json#packageManager`, `.nvmrc`) rather than whatever the agent happens to have.
 - **Install Dependencies**: `pnpm install --frozen-lockfile` — fails instead of silently rewriting
   `pnpm-lock.yaml` if the lockfile and manifests disagree (see [§ Dependency installation](#dependency-installation)).
+- **Dependency Audit** (M16, ADR-027): `pnpm audit --prod` (any advisory in a production dependency fails)
+  then `pnpm audit --audit-level=high` (high/critical in any dependency, dev tools included, fails). Accepted
+  lower-severity dev-only advisories are listed in `docs/security/M16-RISK-REGISTER.md`. Never suppress an
+  advisory to get a green build — upgrade, or record the reasoned acceptance there. Secret scanning is not a
+  stage yet (PENDING: a gitleaks stage could not be verified without Docker in the M16 environment).
 - **Content Validation** (M5; covers M7 exercise files too — the same loader validates every `exercises/*.json` and the exercise-to-lesson relationships): `pnpm content:validate` — loads every file under `content/` with the
   same loader the API runs at startup and prints every schema, location and catalog-consistency
   problem at once. It sits before lint/tests so malformed content fails fast with a readable list.
@@ -35,7 +41,9 @@ the decisions behind it. M2 stops after the Quality Gate — there is no deploy 
 - **Build**: `pnpm build` (production build of `apps/web` and a compile-check build of `apps/api` —
   see [ADR-002](../adr/adr-002-monorepo.md) on why `apps/api` has no standalone `dist/` yet).
 - **E2E**: Playwright, `tests/e2e/`, run inside `mcr.microsoft.com/playwright:v1.63.0-noble` (see
-  [§ Playwright in CI](#playwright-in-ci)).
+  [§ Playwright in CI](#playwright-in-ci)). Two projects since M16: `chromium` (against the Vite dev server) and
+  `production-build` (builds `apps/web` and serves it with `vite preview` and its security headers, then checks
+  there is no CSP violation and no framing — ADR-027).
 - **SonarQube Analysis**: `sonar-scanner`, config in `sonar-project.properties` — see
   [§ SonarQube integration](#sonarqube-integration).
 - **Quality Gate**: `waitForQualityGate abortPipeline: true` — a failing gate aborts the build, same
