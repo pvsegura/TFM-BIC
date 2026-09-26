@@ -234,3 +234,18 @@ export {
   type TeacherStudentListQuery,
   type TeacherStudentsResponse,
 } from "./teaching/teacher-dashboard.schema.js";
+
+// Email preferences and newsletter (M14): strict bodies with no identity or address fields.
+export {
+  emailPreferencesResponseSchema,
+  NEWSLETTER_PREFERENCE_STATUS_VALUES,
+  newsletterPreferenceResponseSchema,
+  newsletterSubscriptionRequestSchema,
+  newsletterSubscriptionResponseSchema,
+  newsletterTokenRequestSchema,
+  type EmailPreferencesResponse,
+  type NewsletterPreferenceResponse,
+  type NewsletterSubscriptionRequest,
+  type NewsletterSubscriptionResponse,
+  type NewsletterTokenRequest,
+} from "./email-preferences/email-preferences.schema.js";
