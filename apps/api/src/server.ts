@@ -47,7 +47,7 @@ import { registerTeacherDashboardTestSupportRoutes } from "./routes/teacher-dash
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
-import { serializeRequest } from "./logging/request-serializer.js";
+import { createLoggerOptions } from "./logging/logger-options.js";
 
 export function buildServer(
   env: AppEnv,
@@ -64,15 +64,8 @@ export function buildServer(
   teachingDeps: TeachingDependencies,
   emailDeps: EmailDependencies,
 ): FastifyInstance {
-  const app = Fastify({
-    logger: {
-      level: env.NODE_ENV === "test" ? "silent" : "info",
-      // Never log secrets/PII — see docs/security/security-baseline.md.
-      redact: ["req.headers.authorization", "req.headers.cookie", "res.headers['set-cookie']"],
-      // No query strings in request logs: one-click unsubscribe links carry their token there.
-      serializers: { req: serializeRequest },
-    },
-  });
+  // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
+  const app = Fastify({ logger: createLoggerOptions(env.NODE_ENV) });
 
   // Session cookie signing secret (ADR-006). Required in production/
   // staging by packages/config's loadEnv(); falls back to an ephemeral
