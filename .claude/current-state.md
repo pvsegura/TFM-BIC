@@ -4,10 +4,61 @@ Last updated: 2026-09-26
 
 ## Milestone
 
+**M15 — Privacy + GDPR foundation** — implemented on `feature/privacy-gdpr`, branched from
+`feature/email-newsletter` (M14). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction).
+Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md); documentation:
+[docs/privacy/](../docs/privacy/README.md). **Technical capabilities only — no claim of legal compliance.**
+
+## What actually exists (M15)
+
+- **Found before coding**: no deletion workflow, export, notice, policy version, inventory or audit trail; every
+  user-owned table cascades from `users`; newsletter consent already separate (M14). **Log leak**: the global error
+  handler logged Drizzle errors verbatim — bound SQL parameters (emails, password/token hashes) and Postgres
+  `detail`. Browser storage: session cookie + theme only; no analytics/third-party scripts.
+- **Decided with the user (2026-09-26)**: immediate hard delete; password re-entry for deletion; structured logs only
+  (no audit table); visible PENDING placeholder for controller identity/contact.
+- **Domain** (`privacy/`): `DATA_CLASSIFICATIONS`, `UserDataRegisterEntry` + `validateUserDataRegister`
+  (retain/anonymise need a reason), `PERSONAL_DATA_EXPORT_VERSION` = "1", date-only file name,
+  `AccountDeletionRefusedError`.
+- **Application**: ports `PersonalDataReadModel`, `AccountErasureStore`; `ExportPersonalDataUseCase`,
+  `DeleteAccountUseCase` (reuses Identity's repository + hasher). Fakes in `@tfm-bic/application/testing`.
+- **Data**: `USER_DATA_REGISTER` (14 tables, class + disposition; guard test against `information_schema` /
+  `pg_constraint`); `DrizzleAccountErasureStore` (one transaction: `FOR UPDATE`, explicit deletes, `users` last);
+  `SqlPersonalDataReadModel` (explicit columns, `REPEATABLE READ, READ ONLY`); pool `max: 2`. **No migration.**
+- **API**: `GET /data-management/export` and `POST /data-management/account-deletion` (5/hour each, no user id,
+  strict schemas, no-store); `buildServer` takes a 14th arg `privacyDeps`. Logger: allowlist `err` serializer +
+  `logMethod` scrubbing (`apps/api/src/logging/logger-options.ts`). Events `privacy.data_export_generated`,
+  `privacy.account_deletion_refused`, `privacy.account_deleted`.
+- **Web**: "Your data" section on `/profile` (download; deletion explained → acknowledgement + password); public
+  `/privacy` (content in `apps/web/src/legal/privacy-notice.ts`, `privacy-policy-v1`, draft pending legal review,
+  footer + registration links) and `/account-deleted`. After deletion the browser does a **full page load** of
+  `/account-deleted` (an in-app navigation lost a race with the login guard under E2E load). Vite proxy
+  `/data-management`. No new dependency.
+- **Not built, on purpose**: notice-acknowledgement records, audit table, retention jobs, restriction/objection
+  workflows, email change, Terms/Contact pages, cookie banner, kids-mode data, provider-side deletion (no provider).
+
+## Verification (M15, run locally on 2026-09-26)
+
+- Baseline before any change: 3851 pass / 5 skipped (= M14's record).
+- `lint`, `typecheck`, `build`, `content:validate`: **PASS**. `format:check`: PASS for every tracked file (the only
+  warning is the untracked nested clone `TFM-BIC/README.md`, as in M11–M14).
+- **Vitest (full, with coverage): 3970 pass / 5 skipped / 0 fail** (+119); coverage **94.40% statements / 87.97%
+  branches / 93.33% functions / 94.53% lines**. `packages/data/src/privacy`: 100% lines / 88.9% branches.
+  `no-raw-html.test.ts` did not time out this time.
+- **Playwright: 150/150 pass** (full run, `--workers=2`), including 5 in `privacy-data-management.spec.ts`; that spec
+  also passed 25/25 with `--repeat-each=5`. One earlier full run failed the deletion test (landed on `/login`) —
+  a real race, fixed (see Web above); mutation checks confirmed both the E2E and the register guard catch regressions.
+- `pnpm audit --prod`: no known vulnerabilities. Full audit: 1 moderate, **pre-existing**, dev-only (esbuild ≤0.24.2 via
+  `drizzle-kit`).
+- Not verified: against a real Postgres (PGlite only); real providers (none connected). EUR-Lex (bot challenge) and
+  EDPB (5xx) could not be fetched — see docs/privacy/M15-GDPR-SOURCES.md.
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
+
+## Previous milestone (M14)
+
 **M14 — Email + Newsletter** — implemented on `feature/email-newsletter`, branched from
-`feature/teacher-dashboard` (M13). Not pushed, not merged; Jenkins/SonarQube not run (standing
-instruction). Rationale: [ADR-025](../docs/adr/adr-025-email-newsletter.md) (+ ADR-014 update); reference:
-[email-newsletter.md](../docs/architecture/email-newsletter.md).
+`feature/teacher-dashboard` (M13). Rationale: [ADR-025](../docs/adr/adr-025-email-newsletter.md) (+ ADR-014 update);
+reference: [email-newsletter.md](../docs/architecture/email-newsletter.md).
 
 ## What actually exists (M14)
 
@@ -333,7 +384,7 @@ FakeVideoGenerationService` (packages/data) is the only adapter selected by defa
   (display-vs-learning-language) search or content, a reward for learned vocabulary.
 - Streaks, XP levels, leaderboards/rankings, daily goals, challenges, spending or transferring points, notifications, a reward
   marketplace, scoring/progress rollups beyond the ledger, adaptive learning, recommendations,
-  subscriptions, account deletion/data export.
+  subscriptions (account deletion and data export exist since M15).
 - More exercise types (matching, ordering, fill-in-the-blank, listening, …), an exercise editor/CMS, an attempt-history endpoint,
   pagination of exercise lists, attempt retention/deletion workflows.
 - Block-level resume in a lesson; more than one real language or any level beyond Polish A1; CEFR descriptors; **interface
@@ -438,6 +489,6 @@ must resolve before the real adapter can be trusted.
 
 ## Next milestone
 
-`M15` (not yet started). Natural candidate: the privacy context — account deletion and data export — which must
-cover newsletter consent (already cascades), teacher access and the legal review of the M14 consent model. Selecting
-and wiring a real email provider (ADR-014) is the other blocker before any public launch.
+`M16` (not started). Blockers before any public launch remain legal/product, not engineering: controller identity and
+contact, lawful bases, retention periods, DPAs/transfers, final notice wording (docs/privacy/PROCESSING-REGISTER.md),
+plus a real email provider (ADR-014) and hosting (ADR-015).
