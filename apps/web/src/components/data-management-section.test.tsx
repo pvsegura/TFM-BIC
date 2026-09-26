@@ -7,6 +7,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { ApiError } from "../services/api-error.js";
 import * as authApi from "../services/auth-api.js";
 import * as download from "../services/browser-download.js";
+import * as navigation from "../services/browser-navigation.js";
 import * as dataApi from "../services/data-management-api.js";
 import { DataManagementSection } from "./data-management-section.js";
 import { ProtectedRoute } from "./protected-route.js";
@@ -136,8 +137,9 @@ describe("DataManagementSection — account deletion", () => {
     expect(screen.getByRole("heading", { name: "Delete your account?" })).toBeInTheDocument();
   });
 
-  it("deletes with the password and goes to the confirmation page", async () => {
+  it("deletes with the password and loads the confirmation page afresh", async () => {
     const remove = vi.spyOn(dataApi, "deleteAccount").mockResolvedValue();
+    const leave = vi.spyOn(navigation, "replacePage").mockImplementation(() => undefined);
     const user = userEvent.setup();
     renderSection();
     await openDeletion(user);
@@ -146,11 +148,13 @@ describe("DataManagementSection — account deletion", () => {
     await user.click(screen.getByRole("checkbox", { name: /permanently deleted/i }));
     await user.click(screen.getByRole("button", { name: "Delete my account permanently" }));
 
-    expect(await screen.findByText("Account deleted page")).toBeInTheDocument();
+    await waitFor(() => {
+      expect(leave).toHaveBeenCalledWith("/account-deleted");
+    });
     expect(remove).toHaveBeenCalledWith("right-password");
   });
 
-  it("lands on the confirmation page, not the login page, when the section sits behind the login guard", async () => {
+  it("still loads the confirmation page when the login guard unmounts the section first", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
       id: "user-1",
       email: "ada@example.com",
@@ -158,6 +162,7 @@ describe("DataManagementSection — account deletion", () => {
       emailVerified: true,
     });
     vi.spyOn(dataApi, "deleteAccount").mockResolvedValue();
+    const leave = vi.spyOn(navigation, "replacePage").mockImplementation(() => undefined);
     const Stub = createRoutesStub([
       {
         Component: ProtectedRoute,
@@ -174,8 +179,9 @@ describe("DataManagementSection — account deletion", () => {
     await user.click(screen.getByRole("checkbox", { name: /permanently deleted/i }));
     await user.click(screen.getByRole("button", { name: "Delete my account permanently" }));
 
-    expect(await screen.findByText("Account deleted page")).toBeInTheDocument();
-    expect(screen.queryByText("Login page")).not.toBeInTheDocument();
+    await waitFor(() => {
+      expect(leave).toHaveBeenCalledWith("/account-deleted");
+    });
   });
 
   it("cancel closes the dialog, forgets the password and returns focus", async () => {
