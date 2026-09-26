@@ -26,8 +26,9 @@ beforeEach(async () => {
 const at = (iso: string) => new Date(iso);
 
 describe("SqlPersonalDataReadModel", () => {
-  it("returns null for an account that does not exist", async () => {
+  it("returns null for an account that does not exist, or a malformed id", async () => {
     expect(await readModel.load("99999999-9999-4999-8999-999999999999")).toBeNull();
+    expect(await readModel.load("not-a-uuid")).toBeNull();
   });
 
   it("reads the user's own rows from every context", async () => {

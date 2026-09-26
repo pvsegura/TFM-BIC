@@ -112,4 +112,29 @@ describe("DrizzleAccountErasureStore", () => {
       await handle.rawExecute(sql`DROP FUNCTION refuse_user_delete()`);
     }
   });
+
+  it("never touches the database for a malformed id", async () => {
+    await expect(store.eraseAccount("not-a-uuid")).resolves.toBe(false);
+  });
+
+  it("refuses to start with a register that retains or anonymises anything (not implemented until decided)", () => {
+    expect(
+      () =>
+        new DrizzleAccountErasureStore(handle.identityDb, [
+          ...USER_DATA_REGISTER.filter((entry) => entry.store !== "exercise_attempts"),
+          {
+            store: "exercise_attempts",
+            context: "exercises",
+            userReferences: ["user_id"],
+            classification: "PERSONAL",
+            erasure: "retain",
+            reason: "hypothetical legal hold",
+          },
+        ]),
+    ).toThrow(/exercise_attempts/);
+  });
+
+  it("refuses to start with an invalid register", () => {
+    expect(() => new DrizzleAccountErasureStore(handle.identityDb, [])).toThrow(/empty/);
+  });
 });
