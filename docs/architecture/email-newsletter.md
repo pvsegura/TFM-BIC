@@ -43,6 +43,9 @@ SendNewsletterIssue ─► toMarketingRecipient ─────► MarketingEmai
 
 Settings shows `pending` as "waiting for your confirmation"; `unsubscribed` and no row both as "Not subscribed".
 
+No email is sent after an unsubscribe: the settings page or the unsubscribe page confirms it on screen, so nobody
+receives mail right after withdrawing consent. Re-subscribing always needs a new confirmation.
+
 ## Links
 
 All built from `APP_BASE_URL`, never a request header:
