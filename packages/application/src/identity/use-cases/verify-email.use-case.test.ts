@@ -69,4 +69,23 @@ describe("VerifyEmailUseCase", () => {
 
     await expect(useCase.execute({ token: rawToken })).rejects.toThrow(TokenAlreadyUsedError);
   });
+
+  it("lets only one of two simultaneous verifications with the same token succeed (M16, S-05)", async () => {
+    const { useCase, userRepository, tokenRepository, tokenGenerator } = build();
+    const user = userRepository.seed("STUDENT");
+    await tokenRepository.create({
+      userId: user.id,
+      tokenHash: tokenGenerator.hash("raw-verification-token"),
+      expiresAt: new Date("2026-01-02T00:00:00.000Z"),
+    });
+
+    const results = await Promise.allSettled([
+      useCase.execute({ token: "raw-verification-token" }),
+      useCase.execute({ token: "raw-verification-token" }),
+    ]);
+
+    expect(results.filter((r) => r.status === "fulfilled")).toHaveLength(1);
+    const rejected = results.find((r) => r.status === "rejected");
+    expect(rejected?.reason).toBeInstanceOf(TokenAlreadyUsedError);
+  });
 });

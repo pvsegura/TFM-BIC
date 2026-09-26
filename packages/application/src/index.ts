@@ -18,6 +18,7 @@ export type {
   CreatePasswordResetTokenInput,
   PasswordResetTokenRepository,
 } from "./identity/ports/password-reset-token-repository.js";
+export type { TokenConsumption } from "./identity/ports/token-consumption.js";
 export type { EmailService } from "./identity/ports/email-service.js";
 
 // Identity & Authentication (M3) use cases.

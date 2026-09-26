@@ -1,9 +1,4 @@
-import {
-  createPassword,
-  InvalidTokenError,
-  TokenAlreadyUsedError,
-  TokenExpiredError,
-} from "@tfm-bic/domain";
+import { createPassword } from "@tfm-bic/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { PasswordHasher } from "../ports/password-hasher.js";
@@ -11,6 +6,7 @@ import type { PasswordResetTokenRepository } from "../ports/password-reset-token
 import type { SessionRepository } from "../ports/session-repository.js";
 import type { TokenGenerator } from "../ports/token-generator.js";
 import type { UserRepository } from "../ports/user-repository.js";
+import { requireConsumedToken } from "../require-consumed-token.js";
 
 export interface ConfirmPasswordResetInput {
   token: string;
@@ -22,6 +18,11 @@ export interface ConfirmPasswordResetInput {
  * existing session for the user (M3 brief: "invalidate appropriate existing
  * sessions" after a reset) — the attacker's old session, if any, stops
  * working immediately.
+ *
+ * Order (M16, S-05): the new password is checked against the policy first (a weak one leaves the
+ * token usable), then the token is consumed atomically — so two simultaneous requests cannot both
+ * use it, and a failure after this point cannot be replayed with the same link (the user asks for
+ * a new one) — and only then is anything changed.
  */
 export class ConfirmPasswordResetUseCase {
   constructor(
@@ -34,24 +35,14 @@ export class ConfirmPasswordResetUseCase {
   ) {}
 
   async execute(input: ConfirmPasswordResetInput): Promise<void> {
-    const tokenHash = this.tokenGenerator.hash(input.token);
-    const token = await this.tokenRepository.findByTokenHash(tokenHash);
-
-    if (!token) {
-      throw new InvalidTokenError();
-    }
-    if (token.usedAt !== null) {
-      throw new TokenAlreadyUsedError();
-    }
-    if (this.clock.now().getTime() >= token.expiresAt.getTime()) {
-      throw new TokenExpiredError();
-    }
-
     const password = createPassword(input.newPassword);
-    const passwordHash = await this.passwordHasher.hash(password);
+    const tokenHash = this.tokenGenerator.hash(input.token);
+    const token = requireConsumedToken(
+      await this.tokenRepository.consume(tokenHash, this.clock.now()),
+    );
 
+    const passwordHash = await this.passwordHasher.hash(password);
     await this.userRepository.updatePasswordHash(token.userId, passwordHash);
-    await this.tokenRepository.markUsed(token.id);
     await this.sessionRepository.revokeAllForUser(token.userId);
   }
 }

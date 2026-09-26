@@ -20,6 +20,7 @@ import type {
   PasswordResetTokenRepository,
 } from "../ports/password-reset-token-repository.js";
 import type { CreateSessionInput, SessionRepository } from "../ports/session-repository.js";
+import type { TokenConsumption } from "../ports/token-consumption.js";
 import type { TokenGenerator } from "../ports/token-generator.js";
 import type { CreateUserInput, UserRepository } from "../ports/user-repository.js";
 
@@ -217,13 +218,22 @@ export class FakeEmailVerificationTokenRepository implements EmailVerificationTo
     return Promise.resolve(this.tokens.find((t) => t.tokenHash === tokenHash) ?? null);
   }
 
-  markUsed(id: string): Promise<void> {
-    const token = this.tokens.find((t) => t.id === id);
-    if (token) {
-      const index = this.tokens.indexOf(token);
-      this.tokens[index] = { ...token, usedAt: new Date() };
+  /** Check and mark in one synchronous step — as atomic as the real conditional UPDATE. */
+  consume(tokenHash: string, now: Date): Promise<TokenConsumption<EmailVerificationToken>> {
+    const index = this.tokens.findIndex((t) => t.tokenHash === tokenHash);
+    const token = this.tokens[index];
+    if (!token) {
+      return Promise.resolve({ outcome: "not_found" });
     }
-    return Promise.resolve();
+    if (token.usedAt !== null) {
+      return Promise.resolve({ outcome: "already_used" });
+    }
+    if (now.getTime() >= token.expiresAt.getTime()) {
+      return Promise.resolve({ outcome: "expired" });
+    }
+    const consumed = { ...token, usedAt: now };
+    this.tokens[index] = consumed;
+    return Promise.resolve({ outcome: "consumed", token: consumed });
   }
 
   invalidateAllForUser(userId: string): Promise<void> {
@@ -257,13 +267,22 @@ export class FakePasswordResetTokenRepository implements PasswordResetTokenRepos
     return Promise.resolve(this.tokens.find((t) => t.tokenHash === tokenHash) ?? null);
   }
 
-  markUsed(id: string): Promise<void> {
-    const token = this.tokens.find((t) => t.id === id);
-    if (token) {
-      const index = this.tokens.indexOf(token);
-      this.tokens[index] = { ...token, usedAt: new Date() };
+  /** Check and mark in one synchronous step — as atomic as the real conditional UPDATE. */
+  consume(tokenHash: string, now: Date): Promise<TokenConsumption<PasswordResetToken>> {
+    const index = this.tokens.findIndex((t) => t.tokenHash === tokenHash);
+    const token = this.tokens[index];
+    if (!token) {
+      return Promise.resolve({ outcome: "not_found" });
     }
-    return Promise.resolve();
+    if (token.usedAt !== null) {
+      return Promise.resolve({ outcome: "already_used" });
+    }
+    if (now.getTime() >= token.expiresAt.getTime()) {
+      return Promise.resolve({ outcome: "expired" });
+    }
+    const consumed = { ...token, usedAt: now };
+    this.tokens[index] = consumed;
+    return Promise.resolve({ outcome: "consumed", token: consumed });
   }
 
   invalidateAllForUser(userId: string): Promise<void> {

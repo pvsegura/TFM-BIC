@@ -60,19 +60,6 @@ describe("DrizzlePasswordResetTokenRepository", () => {
     expect(await tokenRepository.findByTokenHash("unknown")).toBeNull();
   });
 
-  it("marks a token used", async () => {
-    const user = await seedUser();
-    const token = await tokenRepository.create({
-      userId: user.id,
-      tokenHash: "c".repeat(64),
-      expiresAt: new Date("2099-01-01"),
-    });
-
-    await tokenRepository.markUsed(token.id);
-
-    expect((await tokenRepository.findByTokenHash("c".repeat(64)))?.usedAt).not.toBeNull();
-  });
-
   it("invalidates every outstanding token for a user", async () => {
     const user = await seedUser();
     await tokenRepository.create({
@@ -84,5 +71,60 @@ describe("DrizzlePasswordResetTokenRepository", () => {
     await tokenRepository.invalidateAllForUser(user.id);
 
     expect((await tokenRepository.findByTokenHash("d".repeat(64)))?.usedAt).not.toBeNull();
+  });
+  describe("consume — atomic single use (M16, S-05)", () => {
+    const NOW = new Date("2030-01-01T12:00:00Z");
+
+    async function issue(hash: string, expiresAt = new Date("2099-01-01")) {
+      const user = await seedUser();
+      return tokenRepository.create({ userId: user.id, tokenHash: hash, expiresAt });
+    }
+
+    it("consumes an unused, unexpired token once and returns it", async () => {
+      const token = await issue("e".repeat(64));
+
+      const result = await tokenRepository.consume("e".repeat(64), NOW);
+
+      expect(result.outcome).toBe("consumed");
+      expect(result.outcome === "consumed" ? result.token.id : null).toBe(token.id);
+      expect((await tokenRepository.findByTokenHash("e".repeat(64)))?.usedAt).toEqual(NOW);
+    });
+
+    it("refuses a second use", async () => {
+      await issue("f".repeat(64));
+      await tokenRepository.consume("f".repeat(64), NOW);
+
+      expect(await tokenRepository.consume("f".repeat(64), NOW)).toEqual({
+        outcome: "already_used",
+      });
+    });
+
+    it("refuses an expired token and leaves it unused", async () => {
+      await issue("0".repeat(64), new Date("2030-01-01T11:59:59Z"));
+
+      expect(await tokenRepository.consume("0".repeat(64), NOW)).toEqual({ outcome: "expired" });
+      expect((await tokenRepository.findByTokenHash("0".repeat(64)))?.usedAt).toBeNull();
+    });
+
+    it("treats a token expiring exactly now as expired", async () => {
+      await issue("1".repeat(64), NOW);
+
+      expect(await tokenRepository.consume("1".repeat(64), NOW)).toEqual({ outcome: "expired" });
+    });
+
+    it("reports an unknown token as not found", async () => {
+      expect(await tokenRepository.consume("unknown", NOW)).toEqual({ outcome: "not_found" });
+    });
+
+    it("lets exactly one of many simultaneous uses succeed", async () => {
+      await issue("2".repeat(64));
+
+      const results = await Promise.all(
+        Array.from({ length: 5 }, () => tokenRepository.consume("2".repeat(64), NOW)),
+      );
+
+      expect(results.filter((r) => r.outcome === "consumed")).toHaveLength(1);
+      expect(results.filter((r) => r.outcome === "already_used")).toHaveLength(4);
+    });
   });
 });

@@ -1,9 +1,8 @@
-import { InvalidTokenError, TokenAlreadyUsedError, TokenExpiredError } from "@tfm-bic/domain";
-
 import type { Clock } from "../../ports/clock.js";
 import type { EmailVerificationTokenRepository } from "../ports/email-verification-token-repository.js";
 import type { TokenGenerator } from "../ports/token-generator.js";
 import type { UserRepository } from "../ports/user-repository.js";
+import { requireConsumedToken } from "../require-consumed-token.js";
 
 export interface VerifyEmailInput {
   token: string;
@@ -17,21 +16,13 @@ export class VerifyEmailUseCase {
     private readonly clock: Clock,
   ) {}
 
+  /** The token is consumed atomically first (M16): of two simultaneous uses, one wins. */
   async execute(input: VerifyEmailInput): Promise<void> {
     const tokenHash = this.tokenGenerator.hash(input.token);
-    const token = await this.tokenRepository.findByTokenHash(tokenHash);
-
-    if (!token) {
-      throw new InvalidTokenError();
-    }
-    if (token.usedAt !== null) {
-      throw new TokenAlreadyUsedError();
-    }
-    if (this.clock.now().getTime() >= token.expiresAt.getTime()) {
-      throw new TokenExpiredError();
-    }
+    const token = requireConsumedToken(
+      await this.tokenRepository.consume(tokenHash, this.clock.now()),
+    );
 
     await this.userRepository.markEmailVerified(token.userId);
-    await this.tokenRepository.markUsed(token.id);
   }
 }
