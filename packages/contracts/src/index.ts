@@ -250,3 +250,11 @@ export {
   type NewsletterSubscriptionResponse,
   type NewsletterTokenRequest,
 } from "./email-preferences/email-preferences.schema.js";
+
+// Privacy & Data Management (M15, ADR-026): the export document and the deletion body.
+export {
+  deleteAccountRequestSchema,
+  personalDataExportSchema,
+  type DeleteAccountRequest,
+  type PersonalDataExportResponse,
+} from "./privacy/privacy.schema.js";
