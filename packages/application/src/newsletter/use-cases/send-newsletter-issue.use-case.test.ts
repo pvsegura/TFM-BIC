@@ -112,4 +112,14 @@ describe("SendNewsletterIssueUseCase", () => {
       failed: 0,
     });
   });
+
+  it("stops on an unexpected (non-delivery) error instead of counting it", async () => {
+    const repository = new InMemoryNewsletterSubscriptionRepository();
+    seed(repository, "a", "subscribed");
+    const useCase = new SendNewsletterIssueUseCase(repository, {
+      send: () => Promise.reject(new Error("bug")),
+    });
+
+    await expect(useCase.execute(ISSUE)).rejects.toThrow("bug");
+  });
 });
