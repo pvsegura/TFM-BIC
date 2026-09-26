@@ -114,4 +114,11 @@ describe("routes", () => {
     expect(leafPath("/vocabulary/pl-dom")).toBe("*");
     expect(leafPath("/user-vocabulary")).toBe("*");
   });
+
+  it("serves the newsletter links from emails as public pages (M14)", () => {
+    expect(leafPath("/newsletter/confirm")).toBe("newsletter/confirm");
+    expect(leafPath("/newsletter/unsubscribe")).toBe("newsletter/unsubscribe");
+    expect(isBehindLogin("/newsletter/confirm")).toBe(false);
+    expect(isBehindLogin("/newsletter/unsubscribe")).toBe(false);
+  });
 });

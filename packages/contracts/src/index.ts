@@ -238,6 +238,7 @@ export {
 // Email preferences and newsletter (M14): strict bodies with no identity or address fields.
 export {
   emailPreferencesResponseSchema,
+  NEWSLETTER_CONSENT_VERSION,
   NEWSLETTER_PREFERENCE_STATUS_VALUES,
   newsletterPreferenceResponseSchema,
   newsletterSubscriptionRequestSchema,

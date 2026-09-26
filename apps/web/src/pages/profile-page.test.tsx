@@ -8,6 +8,7 @@ import { afterEach, describe, expect, it, vi } from "vitest";
 import { ProtectedRoute } from "../components/protected-route.js";
 import { ApiError } from "../services/api-error.js";
 import * as authApi from "../services/auth-api.js";
+import * as emailApi from "../services/email-preferences-api.js";
 import * as profileApi from "../services/profile-api.js";
 import { ProfilePage } from "./profile-page.js";
 
@@ -37,6 +38,10 @@ function renderPage() {
     },
     { path: "/login", Component: () => <p>Login page</p> },
   ]);
+  vi.spyOn(emailApi, "fetchEmailPreferences").mockResolvedValue({
+    essential: { enabled: true, required: true },
+    newsletter: { status: "not_subscribed", since: null },
+  });
   vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue({
     id: "user-1",
     email: "ana@example.com",
@@ -511,5 +516,14 @@ describe("ProfilePage — accessibility", () => {
     await vi.waitFor(() => {
       expect(saveSpy).toHaveBeenCalledTimes(1);
     });
+  });
+});
+
+describe("ProfilePage — email preferences (M14)", () => {
+  it("includes the email preferences section below the profile form", async () => {
+    await renderLoaded();
+
+    expect(await screen.findByRole("heading", { name: "Email preferences" })).toBeInTheDocument();
+    expect(screen.getByRole("checkbox", { name: /receive the newsletter/i })).not.toBeChecked();
   });
 });

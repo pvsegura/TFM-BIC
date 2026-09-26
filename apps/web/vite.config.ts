@@ -47,6 +47,9 @@ export default defineConfig({
       // Teacher dashboard (M13): `/teacher-dashboard/...`. The pages live at /teacher, so — like
       // gamification — this needs no page-vs-API bypass (ADR-024).
       "/teacher-dashboard": { target: "http://localhost:3000", changeOrigin: true },
+      // Email preferences and newsletter (M14): `/email-preferences/...`. The pages live at /profile
+      // and /newsletter/*, so this needs no page-vs-API bypass (ADR-025).
+      "/email-preferences": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which

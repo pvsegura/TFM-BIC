@@ -13,6 +13,8 @@ import { LessonPage } from "./pages/lesson-page.js";
 import { LessonsPage } from "./pages/lessons-page.js";
 import { LoginPage } from "./pages/login-page.js";
 import { MyVocabularyPage } from "./pages/my-vocabulary-page.js";
+import { NewsletterConfirmPage } from "./pages/newsletter-confirm-page.js";
+import { NewsletterUnsubscribePage } from "./pages/newsletter-unsubscribe-page.js";
 import { PhoneticDetailPage } from "./pages/phonetic-detail-page.js";
 import { PhoneticsPage } from "./pages/phonetics-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
@@ -38,6 +40,9 @@ const PUBLIC_ROUTES = [
   { path: "verify-email", element: <VerifyEmailPage /> },
   { path: "forgot-password", element: <ForgotPasswordPage /> },
   { path: "reset-password", element: <ResetPasswordPage /> },
+  // Newsletter links from emails (M14): public, the token is the credential; each asks for a click.
+  { path: "newsletter/confirm", element: <NewsletterConfirmPage /> },
+  { path: "newsletter/unsubscribe", element: <NewsletterUnsubscribePage /> },
 ];
 
 /** Language, level and content discovery (M5) — public, like the catalog API behind it. One

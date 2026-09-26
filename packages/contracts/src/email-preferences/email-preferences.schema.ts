@@ -53,3 +53,6 @@ export const newsletterSubscriptionResponseSchema = z.object({
 });
 
 export type NewsletterSubscriptionResponse = z.infer<typeof newsletterSubscriptionResponseSchema>;
+
+/** The consent text version the web app shows and sends back (defined by the domain). */
+export { NEWSLETTER_CONSENT_VERSION } from "@tfm-bic/domain";
