@@ -18,3 +18,4 @@ export * from "./audio/test-support/fakes.js";
 export * from "./teaching/test-support/fakes.js";
 export * from "./email/test-support/fakes.js";
 export * from "./newsletter/test-support/fakes.js";
+export * from "./privacy/test-support/fakes.js";

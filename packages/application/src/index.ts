@@ -453,3 +453,21 @@ export {
   SendNewsletterIssueUseCase,
   type SendNewsletterIssueResult,
 } from "./newsletter/use-cases/send-newsletter-issue.use-case.js";
+
+// Privacy & Data Management (M15) — see ADR-026 and docs/privacy/.
+export type {
+  PersonalDataReadModel,
+  PersonalDataRecords,
+} from "./privacy/ports/personal-data-read-model.js";
+export type { AccountErasureStore } from "./privacy/ports/account-erasure-store.js";
+export {
+  ExportPersonalDataUseCase,
+  NOT_INCLUDED_IN_EXPORT,
+  type ExportPersonalDataInput,
+  type PersonalDataExport,
+} from "./privacy/use-cases/export-personal-data.use-case.js";
+export {
+  DeleteAccountUseCase,
+  type DeleteAccountInput,
+  type DeleteAccountResult,
+} from "./privacy/use-cases/delete-account.use-case.js";
