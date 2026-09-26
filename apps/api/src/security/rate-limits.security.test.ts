@@ -109,6 +109,22 @@ describe("login: per-account limit (S-02)", () => {
     expect((await login(built, "does-not-exist@example.com")).statusCode).toBe(429);
   });
 
+  it("leaves a body without an email to the route (400): malformed requests never share one account counter", async () => {
+    const built = build();
+    const malformed = () =>
+      built.app.inject({
+        method: "POST",
+        url: "/auth/login",
+        headers: { "x-forwarded-for": freshAddress() },
+        payload: { password: "wrong-password" },
+      });
+
+    for (let i = 0; i < 12; i += 1) {
+      expect((await malformed()).statusCode).toBe(400);
+    }
+    expect((await login(built, "someone@example.com")).statusCode).toBe(401);
+  });
+
   it("still lets the owner of a throttled account request a password reset (lockout-DoS escape)", async () => {
     const built = build();
     await exhaust(10, () => login(built, "victim@example.com"));
