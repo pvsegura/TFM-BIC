@@ -39,6 +39,18 @@ describe("RootLayout", () => {
     expect(screen.getByRole("link", { name: "Register" })).toHaveAttribute("href", "/register");
   });
 
+  it("links to the privacy notice from every page, signed in or not (M15)", async () => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+    renderRootLayout();
+
+    const footer = await screen.findByRole("contentinfo");
+    expect(footer).toContainElement(screen.getByRole("link", { name: "Privacy notice" }));
+    expect(screen.getByRole("link", { name: "Privacy notice" })).toHaveAttribute(
+      "href",
+      "/privacy",
+    );
+  });
+
   it("links to the public language/level discovery page whether or not anyone is signed in", async () => {
     vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
     renderRootLayout();

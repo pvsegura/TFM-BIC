@@ -121,4 +121,15 @@ describe("routes", () => {
     expect(isBehindLogin("/newsletter/confirm")).toBe(false);
     expect(isBehindLogin("/newsletter/unsubscribe")).toBe(false);
   });
+
+  it("serves the privacy notice and the account-deleted page publicly (M15)", () => {
+    expect(leafPath("/privacy")).toBe("privacy");
+    expect(leafPath("/account-deleted")).toBe("account-deleted");
+    expect(isBehindLogin("/privacy")).toBe(false);
+    expect(isBehindLogin("/account-deleted")).toBe(false);
+  });
+
+  it("does not reserve /data-management for a page: that path belongs to the API (ADR-026)", () => {
+    expect(leafPath("/data-management")).toBe("*");
+  });
 });

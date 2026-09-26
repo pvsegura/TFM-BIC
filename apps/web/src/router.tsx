@@ -3,6 +3,7 @@ import { createBrowserRouter, type RouteObject } from "react-router";
 import { ProtectedRoute } from "./components/protected-route.js";
 import { TeacherRoute } from "./components/teacher-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
+import { AccountDeletedPage } from "./pages/account-deleted-page.js";
 import { AchievementsPage } from "./pages/achievements-page.js";
 import { DashboardPage } from "./pages/dashboard-page.js";
 import { ExercisePage } from "./pages/exercise-page.js";
@@ -17,6 +18,7 @@ import { NewsletterConfirmPage } from "./pages/newsletter-confirm-page.js";
 import { NewsletterUnsubscribePage } from "./pages/newsletter-unsubscribe-page.js";
 import { PhoneticDetailPage } from "./pages/phonetic-detail-page.js";
 import { PhoneticsPage } from "./pages/phonetics-page.js";
+import { PrivacyPage } from "./pages/privacy-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
 import { ResetPasswordPage } from "./pages/reset-password-page.js";
@@ -43,6 +45,10 @@ const PUBLIC_ROUTES = [
   // Newsletter links from emails (M14): public, the token is the credential; each asks for a click.
   { path: "newsletter/confirm", element: <NewsletterConfirmPage /> },
   { path: "newsletter/unsubscribe", element: <NewsletterUnsubscribePage /> },
+  // Privacy (M15): the notice is public; the deletion confirmation is shown once the session is
+  // gone. Not under `/data-management`, which is the API path.
+  { path: "privacy", element: <PrivacyPage /> },
+  { path: "account-deleted", element: <AccountDeletedPage /> },
 ];
 
 /** Language, level and content discovery (M5) — public, like the catalog API behind it. One

@@ -71,6 +71,14 @@ export function RegisterPage() {
       </form>
 
       <p className="mt-4 text-sm">
+        To learn what the application stores about you and why, read the{" "}
+        <Link to="/privacy" className="text-accent hover:underline">
+          privacy notice
+        </Link>
+        .
+      </p>
+
+      <p className="mt-4 text-sm">
         Already have an account?{" "}
         <Link to="/login" className="text-accent hover:underline">
           Log in

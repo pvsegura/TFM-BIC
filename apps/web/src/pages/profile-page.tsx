@@ -1,6 +1,7 @@
 import { Button } from "@tfm-bic/ui";
 import type { ReactNode } from "react";
 
+import { DataManagementSection } from "../components/data-management-section.js";
 import { EmailPreferencesSection } from "../components/email-preferences-section.js";
 import { ProfileForm } from "../components/profile-form.js";
 import { useCurrentProfile } from "../hooks/use-current-profile.js";
@@ -42,6 +43,7 @@ export function ProfilePage() {
       </h1>
       {body}
       <EmailPreferencesSection />
+      <DataManagementSection />
     </section>
   );
 }

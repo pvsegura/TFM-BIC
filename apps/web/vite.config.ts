@@ -50,6 +50,9 @@ export default defineConfig({
       // Email preferences and newsletter (M14): `/email-preferences/...`. The pages live at /profile
       // and /newsletter/*, so this needs no page-vs-API bypass (ADR-025).
       "/email-preferences": { target: "http://localhost:3000", changeOrigin: true },
+      // Privacy & Data Management (M15): `/data-management/export` and `/account-deletion`. The
+      // controls live on /profile and the notice at /privacy, so this needs no page-vs-API bypass.
+      "/data-management": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which

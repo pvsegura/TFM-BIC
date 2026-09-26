@@ -21,6 +21,16 @@ afterEach(() => {
 });
 
 describe("RegisterPage", () => {
+  it("points to the privacy notice as information, without a consent box (M15)", () => {
+    renderPage();
+
+    expect(screen.getByRole("link", { name: "privacy notice" })).toHaveAttribute(
+      "href",
+      "/privacy",
+    );
+    expect(screen.queryByRole("checkbox")).not.toBeInTheDocument();
+  });
+
   it("shows a validation error for an invalid email without calling the API", async () => {
     const registerSpy = vi.spyOn(authApi, "register");
     const user = userEvent.setup();
