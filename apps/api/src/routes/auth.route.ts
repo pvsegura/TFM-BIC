@@ -19,18 +19,10 @@ import {
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import type { AuthUseCases } from "../composition/auth-use-cases.js";
-import { perAccountLoginRateLimit } from "../security/rate-limits.js";
+import { perAccountLoginRateLimit, routeRateLimit } from "../security/rate-limits.js";
 import { mapAuthError } from "./auth-error.mapper.js";
 
 const INVALID_BODY_RESPONSE = { error: "Invalid request body." } as const;
-
-/** Multiplies a route's configured `max` by a large factor when
- * `E2E_RELAXED_RATE_LIMITS` is set (only ever set by
- * tests/e2e/playwright.config.ts) — a full E2E run legitimately registers
- * and logs in many times against one shared server. The tight production
- * limits are still exercised, unaffected by this flag, by
- * auth.route.test.ts's own fixed-config test server (see ADR-006). */
-const E2E_RATE_LIMIT_MULTIPLIER = 100;
 
 export function registerAuthRoutes(
   app: FastifyInstance,
@@ -46,11 +38,9 @@ export function registerAuthRoutes(
     timeWindow: "15 minutes",
   });
 
+  // Per client address; relaxed only for E2E runs (security/rate-limits.ts).
   function rateLimit(max: number, timeWindow: string) {
-    return {
-      max: env.E2E_RELAXED_RATE_LIMITS ? max * E2E_RATE_LIMIT_MULTIPLIER : max,
-      timeWindow,
-    };
+    return routeRateLimit(env, max, timeWindow);
   }
 
   app.post(

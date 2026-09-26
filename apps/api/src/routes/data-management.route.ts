@@ -12,16 +12,13 @@ import type { PrivacyUseCases } from "../composition/privacy-use-cases.js";
 import { SESSION_COOKIE_NAME } from "../constants/session-cookie.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
-import { perUserRateLimit } from "../security/rate-limits.js";
+import { perUserRateLimit, routeRateLimit } from "../security/rate-limits.js";
 
 const INVALID_BODY = { error: "Invalid request body." } as const;
 const INVALID_QUERY = { error: "Invalid query." } as const;
 const ACCOUNT_NOT_FOUND = { error: "Account not found." } as const;
 /** The deletion body is a password and a boolean. */
 const BODY_LIMIT_BYTES = 1024;
-/** Same multiplier and meaning as the auth routes (see auth.route.ts). */
-const E2E_RATE_LIMIT_MULTIPLIER = 100;
-
 /**
  * Privacy & Data Management (M15, ADR-026) — self-service access/portability and erasure for the
  * session user only. There is no `:userId` anywhere: the account is always `request.currentUser`.
@@ -55,11 +52,9 @@ export function registerDataManagementRoutes(
     timeWindow: "1 hour",
   });
 
+  // Per client address; relaxed only for E2E runs (security/rate-limits.ts).
   function rateLimit(max: number, timeWindow: string) {
-    return {
-      max: env.E2E_RELAXED_RATE_LIMITS ? max * E2E_RATE_LIMIT_MULTIPLIER : max,
-      timeWindow,
-    };
+    return routeRateLimit(env, max, timeWindow);
   }
 
   app.get(

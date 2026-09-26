@@ -1,5 +1,7 @@
 import type { AppEnv } from "@tfm-bic/config";
 
+import { routeRateLimit } from "../security/rate-limits.js";
+
 /** Reads (list, open) cost a couple of calls per exercise; this leaves ample headroom for a student working through a lesson. */
 const READS_PER_MINUTE = 120;
 
@@ -8,16 +10,9 @@ const READS_PER_MINUTE = 120;
  * insert attempts without limit. */
 const ANSWERS_PER_MINUTE = 60;
 
-/** Same E2E-only relaxation as the auth, catalog and lesson routes (see auth.route.ts and
- * packages/config): a full Playwright run shares one server and one client address. The
- * strict limits are still exercised by the route tests. */
-const E2E_RATE_LIMIT_MULTIPLIER = 100;
-
+/** Per client address; relaxed only for E2E runs (security/rate-limits.ts). */
 function limit(env: AppEnv, perMinute: number) {
-  return {
-    max: env.E2E_RELAXED_RATE_LIMITS ? perMinute * E2E_RATE_LIMIT_MULTIPLIER : perMinute,
-    timeWindow: "1 minute",
-  };
+  return routeRateLimit(env, perMinute, "1 minute");
 }
 
 export const exerciseReadRateLimit = (env: AppEnv) => limit(env, READS_PER_MINUTE);

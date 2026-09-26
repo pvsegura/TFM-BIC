@@ -21,6 +21,7 @@ import type { FastifyInstance, FastifyReply } from "fastify";
 import type { EmailUseCases } from "../composition/email-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { routeRateLimit } from "../security/rate-limits.js";
 
 const INVALID_BODY = { error: "Invalid request body." } as const;
 const INVALID_LINK = { error: "This link is invalid or has already been used." } as const;
@@ -32,9 +33,6 @@ const NOT_SENT = {
 } as const;
 /** Every body here is tiny (a boolean and a version, or one token). */
 const BODY_LIMIT_BYTES = 1024;
-/** Same multiplier and meaning as the auth routes (see auth.route.ts). */
-const E2E_RATE_LIMIT_MULTIPLIER = 100;
-
 function toPreferenceBody(preference: NewsletterPreference) {
   return newsletterPreferenceResponseSchema.parse({
     status: preference.status,
@@ -80,11 +78,9 @@ export function registerEmailPreferencesRoutes(
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(deps.resolveSession);
 
+  // Per client address; relaxed only for E2E runs (security/rate-limits.ts).
   function rateLimit(max: number, timeWindow: string) {
-    return {
-      max: env.E2E_RELAXED_RATE_LIMITS ? max * E2E_RATE_LIMIT_MULTIPLIER : max,
-      timeWindow,
-    };
+    return routeRateLimit(env, max, timeWindow);
   }
 
   app.get(
