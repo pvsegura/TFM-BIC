@@ -455,7 +455,13 @@ test.describe("the answer key stays on the server", () => {
       // Only the exercise endpoints (`/exercises/:id`, `/lessons/:id/exercises`): the lesson body's
       // own block type is also called "explanation" and is not an answer key.
       if (/\/exercises(\/|$)/.test(new URL(response.url()).pathname)) {
-        void response.text().then((text) => bodies.push(`${response.url()} ${text}`));
+        // A body the browser discarded because the page navigated on is unreadable (the promise
+        // rejects); skip it rather than fail the run. The poll below still requires at least two
+        // exercise bodies to have been read and checked.
+        response.text().then(
+          (text) => bodies.push(`${response.url()} ${text}`),
+          () => undefined,
+        );
       }
     });
 
