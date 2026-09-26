@@ -17,6 +17,8 @@ import { createExerciseUseCases } from "./composition/exercise-use-cases.js";
 import type { GamificationDependencies } from "./composition/gamification-dependencies.js";
 import { createGamificationUseCases } from "./composition/gamification-use-cases.js";
 import { createContentUseCases } from "./composition/content-use-cases.js";
+import type { EmailDependencies } from "./composition/email-dependencies.js";
+import { createEmailUseCases } from "./composition/email-use-cases.js";
 import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
 import type { PhoneticsDependencies } from "./composition/phonetics-dependencies.js";
@@ -32,6 +34,7 @@ import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js"
 import { registerAudioGenerationRoutes } from "./routes/audio-generations.route.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
+import { registerEmailPreferencesRoutes } from "./routes/email-preferences.route.js";
 import { registerExerciseRoutes } from "./routes/exercises.route.js";
 import { registerGamificationRoutes } from "./routes/gamification.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
@@ -44,6 +47,7 @@ import { registerTeacherDashboardTestSupportRoutes } from "./routes/teacher-dash
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
+import { serializeRequest } from "./logging/request-serializer.js";
 
 export function buildServer(
   env: AppEnv,
@@ -58,12 +62,15 @@ export function buildServer(
   videoDeps: VideoDependencies,
   audioDeps: AudioDependencies,
   teachingDeps: TeachingDependencies,
+  emailDeps: EmailDependencies,
 ): FastifyInstance {
   const app = Fastify({
     logger: {
       level: env.NODE_ENV === "test" ? "silent" : "info",
       // Never log secrets/PII — see docs/security/security-baseline.md.
       redact: ["req.headers.authorization", "req.headers.cookie", "res.headers['set-cookie']"],
+      // No query strings in request logs: one-click unsubscribe links carry their token there.
+      serializers: { req: serializeRequest },
     },
   });
 
@@ -92,8 +99,38 @@ export function buildServer(
     const healthUseCase = new GetHealthStatusUseCase(new SystemClock());
     registerHealthRoutes(app, { useCase: healthUseCase, env });
 
-    const authUseCases = createAuthUseCases(authDeps, env.APP_BASE_URL);
+    // Email (M14, ADR-014/025): transactional and marketing senders over one provider — "fake"
+    // (sends nothing) unless another is configured. Each delivery attempt is logged with its
+    // category, template, adapter and outcome only — never the recipient, subject or a link.
+    const emailUseCases = createEmailUseCases(emailDeps, env, {
+      record: (event) => {
+        if (event.outcome === "failed") {
+          app.log.warn(event, "email.delivery_failed");
+        } else {
+          app.log.info(event, "email.delivery_accepted");
+        }
+      },
+    });
+    if (emailDeps.provider.name === "fake" && env.NODE_ENV !== "test") {
+      app.log.warn(
+        "EMAIL_PROVIDER=fake — no email leaves this process (no real provider is selected, ADR-014).",
+      );
+    }
+
+    const authUseCases = createAuthUseCases(
+      authDeps,
+      env.APP_BASE_URL,
+      emailUseCases.identityEmailService,
+    );
     registerAuthRoutes(app, { useCases: authUseCases, env });
+
+    // Email preferences and newsletter (M14): the session user's own preferences, plus the
+    // token-authorized confirmation and unsubscribe links (ADR-025).
+    registerEmailPreferencesRoutes(app, {
+      useCases: emailUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
 
     // Profile routes reuse auth's session resolution: identity always comes
     // from the authenticated session, never from the request.
@@ -199,7 +236,12 @@ export function buildServer(
       useCases: teachingUseCases,
     });
 
-    registerTestEmailRoutes(app, { env, emailInbox: authDeps.emailInbox });
+    registerTestEmailRoutes(app, {
+      env,
+      emailInbox: emailDeps.inbox,
+      enableIssueRoute: emailDeps.enableTestSupportRoutes,
+      useCases: emailUseCases,
+    });
   });
 
   app.setErrorHandler((error: FastifyError, request, reply) => {

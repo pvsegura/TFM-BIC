@@ -28,6 +28,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.videoDeps,
     testDeps.audioDeps,
     testDeps.teachingDeps,
+    testDeps.emailDeps,
   );
   return { app, ...testDeps };
 }

@@ -9,7 +9,6 @@ import {
 } from "@tfm-bic/application";
 import {
   FakeContentRepository,
-  FakeEmailService,
   FakeEmailVerificationTokenRepository,
   FakeExerciseAttemptRepository,
   FakeExerciseRepository,
@@ -22,6 +21,7 @@ import {
   FakeTeacherDashboardReadModel,
   FakeTeacherStudentLinkRepository,
   FakeTokenGenerator,
+  InMemoryNewsletterSubscriptionRepository,
   FakeUserRepository,
   FakePhoneticContentRepository,
   FakeUserPhoneticProgressRepository,
@@ -35,6 +35,8 @@ import {
 } from "@tfm-bic/application/testing";
 import {
   FakeAudioGenerationService,
+  FakeEmailProvider,
+  HmacUnsubscribeTokenCodec,
   FakeVideoGenerationService,
   InMemoryAudioCache,
 } from "@tfm-bic/data";
@@ -42,6 +44,7 @@ import {
 import type { AudioDependencies } from "../composition/audio-dependencies.js";
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
+import type { EmailDependencies } from "../composition/email-dependencies.js";
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
 import type { GamificationDependencies } from "../composition/gamification-dependencies.js";
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
@@ -63,7 +66,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   const passwordResetTokenRepository = new FakePasswordResetTokenRepository();
   const passwordHasher = new FakePasswordHasher();
   const tokenGenerator = new FakeTokenGenerator();
-  const emailService = new FakeEmailService();
+
   const profileRepository = new FakeProfileRepository(clock);
   const contentRepository = new FakeContentRepository(makeSampleCatalog());
 
@@ -74,7 +77,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     passwordResetTokenRepository,
     passwordHasher,
     tokenGenerator,
-    emailService,
+
     clock,
     close: () => Promise.resolve(),
   };
@@ -165,8 +168,26 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  // Email and newsletter (M14): the real fake provider (captures, sends nothing) and the real
+  // HMAC codec with a throwaway secret; the consent records live in memory.
+  const emailProvider = new FakeEmailProvider();
+  const newsletterRepository = new InMemoryNewsletterSubscriptionRepository();
+  const unsubscribeTokens = new HmacUnsubscribeTokenCodec("test-only-email-link-secret-000000000");
+  const emailDeps: EmailDependencies = {
+    provider: emailProvider,
+    unsubscribeTokens,
+    subscriptionRepository: newsletterRepository,
+    tokenGenerator,
+    clock,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
+    emailDeps,
+    emailProvider,
+    newsletterRepository,
+    unsubscribeTokens,
     profileDeps,
     contentDeps,
     lessonDeps,
@@ -198,7 +219,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     passwordResetTokenRepository,
     passwordHasher,
     tokenGenerator,
-    emailService,
+
     profileRepository,
     contentRepository,
   };

@@ -29,6 +29,7 @@ function build(testDeps = buildTestDeps()) {
     testDeps.videoDeps,
     testDeps.audioDeps,
     testDeps.teachingDeps,
+    testDeps.emailDeps,
   );
   return { app, ...testDeps };
 }

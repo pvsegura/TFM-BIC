@@ -7,6 +7,7 @@ import {
   ResendVerificationUseCase,
   ResolveSessionUseCase,
   VerifyEmailUseCase,
+  type EmailService,
 } from "@tfm-bic/application";
 
 import type { AuthDependencies } from "./auth-dependencies.js";
@@ -23,14 +24,18 @@ export interface AuthUseCases {
 }
 
 /** Composition-root wiring only — see auth-dependencies.ts. */
-export function createAuthUseCases(deps: AuthDependencies, appBaseUrl: string): AuthUseCases {
+export function createAuthUseCases(
+  deps: AuthDependencies,
+  appBaseUrl: string,
+  emailService: EmailService,
+): AuthUseCases {
   return {
     register: new RegisterUserUseCase(
       deps.userRepository,
       deps.passwordHasher,
       deps.tokenGenerator,
       deps.emailVerificationTokenRepository,
-      deps.emailService,
+      emailService,
       deps.clock,
       appBaseUrl,
     ),
@@ -58,7 +63,7 @@ export function createAuthUseCases(deps: AuthDependencies, appBaseUrl: string): 
       deps.userRepository,
       deps.emailVerificationTokenRepository,
       deps.tokenGenerator,
-      deps.emailService,
+      emailService,
       deps.clock,
       appBaseUrl,
     ),
@@ -66,7 +71,7 @@ export function createAuthUseCases(deps: AuthDependencies, appBaseUrl: string): 
       deps.userRepository,
       deps.passwordResetTokenRepository,
       deps.tokenGenerator,
-      deps.emailService,
+      emailService,
       deps.clock,
       appBaseUrl,
     ),

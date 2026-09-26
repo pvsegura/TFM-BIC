@@ -1,5 +1,4 @@
 import type {
-  EmailService,
   EmailVerificationTokenRepository,
   PasswordHasher,
   PasswordResetTokenRepository,
@@ -16,18 +15,9 @@ import {
   DrizzlePasswordResetTokenRepository,
   DrizzleSessionRepository,
   DrizzleUserRepository,
-  InMemoryEmailService,
   SystemClock,
   type IdentityDb,
 } from "@tfm-bic/data";
-
-/** What the NODE_ENV=test diagnostic route needs — deliberately a narrow
- * structural type, not the concrete `InMemoryEmailService` class, so fakes
- * (e.g. apps/api/src/test-support/build-test-deps.ts) can satisfy it too
- * without importing packages/data. */
-export interface EmailInbox {
-  findLastSentTo(to: string): { kind: string; to: string; url: string } | undefined;
-}
 
 /**
  * Everything the auth routes need, gathered behind one bag so `server.ts`
@@ -36,6 +26,9 @@ export interface EmailInbox {
  * real database. Composition-root wiring only — no branching logic of its
  * own, so it is excluded from coverage like apps/api/src/index.ts (see
  * vitest.config.ts).
+ *
+ * Email is not here since M14: the identity `EmailService` is built from the email composition
+ * (email-dependencies.ts / email-use-cases.ts) and handed to `createAuthUseCases`.
  */
 export interface AuthDependencies {
   userRepository: UserRepository;
@@ -44,14 +37,6 @@ export interface AuthDependencies {
   passwordResetTokenRepository: PasswordResetTokenRepository;
   passwordHasher: PasswordHasher;
   tokenGenerator: TokenGenerator;
-  emailService: EmailService;
-  /** Same object as `emailService` — used only by the NODE_ENV=test
-   * diagnostic route (routes/test-email.route.ts) so E2E tests can
-   * retrieve a verification/reset link without a real inbox. Never used by
-   * application code, which only ever sees the `EmailService` port.
-   * Optional: fakes used by apps/api's own HTTP-layer tests don't need to
-   * provide one, since those tests never hit the diagnostic route. */
-  emailInbox?: EmailInbox;
   clock: Clock;
   /** Release any held resources (e.g. the Postgres connection pool). */
   close: () => Promise<void>;
@@ -59,18 +44,14 @@ export interface AuthDependencies {
 
 /**
  * The real adapters over a given database handle — Drizzle/Postgres
- * repositories, Argon2id hashing, a CSPRNG token generator. `EmailService` is
- * `InMemoryEmailService` even here: no real provider account is provisioned
- * in M3 (ADR-014), so this is the one adapter available in every environment
- * for now. Shared by the real and the `NODE_ENV=test` (PGlite) compositions
- * so they cannot drift apart.
+ * repositories, Argon2id hashing, a CSPRNG token generator. Shared by the
+ * real and the `NODE_ENV=test` (PGlite) compositions so they cannot drift
+ * apart.
  */
 export function buildAuthDependencies(
   db: IdentityDb,
   close: () => Promise<void>,
 ): AuthDependencies {
-  const emailService = new InMemoryEmailService();
-
   return {
     userRepository: new DrizzleUserRepository(db),
     sessionRepository: new DrizzleSessionRepository(db),
@@ -78,8 +59,6 @@ export function buildAuthDependencies(
     passwordResetTokenRepository: new DrizzlePasswordResetTokenRepository(db),
     passwordHasher: new Argon2PasswordHasher(),
     tokenGenerator: new CryptoTokenGenerator(),
-    emailService,
-    emailInbox: emailService,
     clock: new SystemClock(),
     close,
   };

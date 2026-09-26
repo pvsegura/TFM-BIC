@@ -48,6 +48,7 @@ function build(
     testDeps.videoDeps,
     testDeps.audioDeps,
     testDeps.teachingDeps,
+    testDeps.emailDeps,
   );
   return { app, provider, ...testDeps };
 }

@@ -4,6 +4,7 @@ import { createGamificationTestDb } from "@tfm-bic/data/testing";
 import { createAudioDependencies, type AudioDependencies } from "./audio-dependencies.js";
 import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
 import { createContentDependencies, type ContentDependencies } from "./content-dependencies.js";
+import { buildEmailDependencies, type EmailDependencies } from "./email-dependencies.js";
 import { buildExerciseDependencies, type ExerciseDependencies } from "./exercise-dependencies.js";
 import {
   buildGamificationDependencies,
@@ -53,6 +54,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
   video: VideoDependencies;
   audio: AudioDependencies;
   teaching: TeachingDependencies;
+  email: EmailDependencies;
 }> {
   const {
     db,
@@ -64,6 +66,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
     phoneticsDb,
     videoDb,
     teachingDb,
+    newsletterDb,
     close,
   } = await createGamificationTestDb();
 
@@ -91,5 +94,11 @@ export async function createTestDependencies(env: AppEnv): Promise<{
       ...buildTeachingDependencies(teachingDb, () => Promise.resolve()),
       enableTestSupportRoutes: true,
     },
+    // Email (M14): the same provider selection as production — loadEnv only admits "fake" — plus,
+    // here and nowhere else, the captured inbox and the newsletter-issue route E2E reads/uses.
+    email: buildEmailDependencies(newsletterDb, env, () => Promise.resolve(), {
+      exposeInbox: true,
+      enableTestSupportRoutes: true,
+    }),
   };
 }
