@@ -465,3 +465,22 @@ export {
 export { InvalidNewsletterTokenError } from "./newsletter/errors/invalid-newsletter-token.error.js";
 export { MarketingConsentRequiredError } from "./newsletter/errors/marketing-consent-required.error.js";
 export { NewsletterTokenExpiredError } from "./newsletter/errors/newsletter-token-expired.error.js";
+
+// Privacy & Data Management (M15) — see ADR-026 and docs/privacy/.
+export {
+  DATA_CLASSIFICATIONS,
+  isExportableClassification,
+  type DataClassification,
+} from "./privacy/data-classification.js";
+export {
+  ERASURE_DISPOSITIONS,
+  validateUserDataRegister,
+  type ErasureDisposition,
+  type UserDataRegisterEntry,
+} from "./privacy/user-data-register.js";
+export {
+  PERSONAL_DATA_EXPORT_VERSION,
+  personalDataExportFileName,
+} from "./privacy/personal-data-export.js";
+export { AccountDeletionRefusedError } from "./privacy/errors/account-deletion-refused.error.js";
+export { InvalidUserDataRegisterError } from "./privacy/errors/invalid-user-data-register.error.js";
