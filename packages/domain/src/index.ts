@@ -424,3 +424,44 @@ export {
 } from "./teaching/student-roster-query.js";
 export { InvalidTeacherStudentLinkError } from "./teaching/errors/invalid-teacher-student-link.error.js";
 export { TeachingStudentNotFoundError } from "./teaching/errors/teaching-student-not-found.error.js";
+
+// Email (M14, ADR-014/ADR-025): transactional vs marketing categories, fixed by template.
+export {
+  categoryOfTemplate,
+  EMAIL_CATEGORIES,
+  EMAIL_TEMPLATE_IDS,
+  isMarketingTemplate,
+  isTransactionalTemplate,
+  MARKETING_TEMPLATE_IDS,
+  TRANSACTIONAL_TEMPLATE_IDS,
+  type EmailCategory,
+  type EmailTemplateId,
+  type MarketingTemplateId,
+  type TransactionalTemplateId,
+} from "./email/email-category.js";
+
+// Newsletter (M14, ADR-025): double opt-in consent, separate from the account.
+export {
+  canReceiveMarketing,
+  CONFIRMATION_RESEND_COOLDOWN_MS,
+  CONFIRMATION_TOKEN_TTL_MS,
+  confirmSubscription,
+  decideSubscriptionRequest,
+  markConfirmationUnsent,
+  NEWSLETTER_CONSENT_VERSION,
+  newsletterPreferenceOf,
+  startPendingSubscription,
+  toMarketingRecipient,
+  unsubscribe,
+  type MarketingRecipient,
+  type NewsletterConsentSource,
+  type NewsletterPreference,
+  type NewsletterPreferenceStatus,
+  type NewsletterStatus,
+  type NewsletterSubscription,
+  type StartPendingSubscriptionInput,
+  type SubscriptionRequestDecision,
+} from "./newsletter/newsletter-subscription.js";
+export { InvalidNewsletterTokenError } from "./newsletter/errors/invalid-newsletter-token.error.js";
+export { MarketingConsentRequiredError } from "./newsletter/errors/marketing-consent-required.error.js";
+export { NewsletterTokenExpiredError } from "./newsletter/errors/newsletter-token-expired.error.js";
