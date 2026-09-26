@@ -35,6 +35,16 @@ GDPR-shaped requirements without asserting they've been fully implemented or leg
 - **Cookies/consent banner** — needed if any non-essential cookie/tracking is used; PENDING
   product decision on analytics/tracking tools, which would trigger this requirement.
 
+## Teacher access to student data (M13)
+
+A teacher sees only students linked to them (operator-created links), and only learning data: names, nickname,
+avatar, lesson/exercise/points metrics, recent lesson titles and exercise verdicts, unlocked achievements. Never an
+email, account/security data, submitted answers, vocabulary/phonetics progress or media jobs. Each student view is
+logged (`teacher.student_viewed`). Full list:
+[teacher-dashboard.md](../architecture/teacher-dashboard.md#privacy--what-a-teacher-can-and-cannot-see).
+OPEN: whether students must be told which teacher can see their data (a notice or consent step) is a product/legal
+decision for the invitation flow that will replace operator linking.
+
 ## Architectural hooks (exist now, so the above isn't bolted on later)
 
 - Privacy & Data Management is its own bounded context (not folded into Users), so

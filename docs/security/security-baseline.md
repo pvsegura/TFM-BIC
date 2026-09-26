@@ -283,6 +283,10 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
   cookies (the logger's `redact` config additionally strips the `Cookie` and `Authorization`
   headers and `Set-Cookie` response header from every log line, see `apps/api/src/server.ts`).
 
+- M13: `GET /teacher-dashboard/students/:studentId` logs `teacher.student_viewed` with the teacher and student
+  user ids only. Role changes and teacher–student links are made only by the `teacher:admin` operator command,
+  which prints no account identifiers (a persistent audit trail for them belongs to the Privacy context, later).
+
 ## Least privilege
 
 - Database credentials used by the API scoped to only what the API needs; no shared "admin"

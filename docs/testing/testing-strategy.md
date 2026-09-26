@@ -273,6 +273,31 @@ Points and idempotency are critical flows, tested hardest and at every layer reg
   concurrency proof beyond the two-writer PGlite tests (no opt-in real-Postgres test was added for vocabulary, unlike
   gamification's).
 
+## Teacher dashboard (M13)
+
+- **Domain**: link rules (`assertCanLink`: teacher/student roles, self-link), metric definitions (active window
+  boundary, accuracy rounding, `null` for no attempts, impossible inputs refused, UTC Monday weeks), roster
+  allowlists and bounds.
+- **Application (fakes that scope through links)**: role refused before any read, overview/list/detail aggregation,
+  IDOR (another teacher's student = missing student), paging bounds refused even without the contract, default sort
+  directions, M8 ledger reuse for points/achievements, lessons grouped by level against M5's published lessons,
+  retired lessons/exercises, 8-week series with gaps filled; operator use cases (promote/link/unlink, idempotence,
+  rule violations, unknown accounts).
+- **Repository (real Postgres via PGlite)**: link repository (idempotent insert, self-link CHECK, cascade), read model
+  (teacher scoping, non-student dropped, paging past the end, activity filter, literal `%`/`_` and an injection
+  string in search, every sort field with NULLS LAST and id tie-break, points equal to M8 `loadFacts`, M7 "latest"
+  semantics, UTC week buckets, no answers returned) and a **300-student fixture** asserting 1 statement per
+  overview/list and ≤ 5 per detail. Query plans were inspected manually (see teacher-dashboard.md).
+- **Contracts / HTTP**: strict queries (bounds, allowlists, `teacherId`), UUID param, allowlisted responses; routes:
+  401/403 on every route (403 before any read), 400s before any read, IDOR 404 identical to missing, malformed ids,
+  no email/answers in bodies, generic 500, rate limit, and the test-support route's double guard. A manual mutation
+  (removing the role hook) was confirmed to fail the 403 test.
+- **Web**: service/hooks (URL-derived params, user-scoped cache, 401 handling), pages (overview, roster, filters in the
+  URL, paging, empty/no-match/loading/error/forbidden/not-found states, responsive markup, chart + data table,
+  heading hierarchy), router and nav guard.
+- **E2E** (`teacher-dashboard.spec.ts`): teacher sees only their student and the detail; teacher A refused
+  teacher B's student (page and API); student refused (page and API); 375 px without horizontal scroll.
+
 ## Phonetics (M10)
 
 - **Domain (pure unit tests)**: representation/topic id validity and language-namespacing (a representation id is

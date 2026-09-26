@@ -1,8 +1,57 @@
 # Current State
 
-Last updated: 2026-09-25
+Last updated: 2026-09-26
 
 ## Milestone
+
+**M13 — Teacher Dashboard** — implemented on `feature/teacher-dashboard`, branched from
+`feature/gemini-audio` (M12). Not pushed, not merged; Jenkins/SonarQube not run (standing
+instruction). Rationale: [ADR-024](../docs/adr/adr-024-teacher-dashboard.md); reference:
+[teacher-dashboard.md](../docs/architecture/teacher-dashboard.md).
+
+## What actually exists (M13)
+
+- **Found before coding**: the TEACHER role existed (ADR-006) but was unreachable (registration always creates a
+  STUDENT) and no teacher–student relationship existed. Decided with the user: links (and TEACHER promotion) are
+  **operator-only**; "active student" = learning activity within the last 7 days (UTC).
+- **Domain** (`packages/domain/src/teaching/`): `assertCanLink`, metric definitions (`activeSince`,
+  `isActiveStudent`, `accuracyPercent` — `null` when no attempts —, UTC Monday weeks), roster sort/filter
+  allowlists and bounds (page ≤ 1000, pageSize ≤ 50, search ≤ 50).
+- **Application** (`packages/application/src/teaching/`): ports `TeacherDashboardReadModel` and
+  `TeacherStudentLinkRepository`; `GetTeacherOverview`, `ListTeacherStudents`, `GetTeacherStudentDetail` (each checks
+  the TEACHER role itself; detail reuses M8's repository/`toAchievementViews`, M5's `ListContentUseCase`, M7's exercise
+  repository); operator use cases `PromoteUserToTeacher`/`LinkStudentToTeacher`/`UnlinkStudentFromTeacher`.
+  `UserRepository.updateRole` added (operator use only).
+- **Data** (`packages/data/src/teaching/`): `teacher_students` (PK `(teacher_id, student_id)`, index on
+  `student_id`, self-link CHECK, cascades) with its own migration set (`db:migrate:teaching`); link repository; SQL
+  read model — every statement starts from a roster CTE scoped to the session's teacher and role STUDENT; overview 1
+  statement, roster page 1, detail 5, regardless of roster size; `pnpm --filter @tfm-bic/data teacher:admin
+promote|link|unlink` CLI.
+- **API**: `GET /teacher-dashboard/overview`, `/students` (q, activity, sort, direction, page, pageSize),
+  `/students/:studentId`; `authenticate` → `requireRole(TEACHER)` → strict schema; `no-store`; 120/min; IDOR-safe
+  identical 404; `teacher.student_viewed` audit log. E2E-only `POST /teacher-dashboard/_test/links` (NODE_ENV=test +
+  E2E composition flag).
+- **Web**: `/teacher` (overview, URL-driven search/filter/sort/paging, responsive table) and
+  `/teacher/students/:studentId` (lessons per level with `<progress>`, exercises, points/achievements, 8-week CSS
+  chart + data table); `TeacherRoute` guard and a "Teaching" nav link for teachers (UX only). No new dependency.
+
+## Verification (M13, run locally on 2026-09-26)
+
+- Baseline before any change (on M11, before rebasing onto M12): 3339 pass / 5 skipped. M12's own record: 3499 pass.
+- `content:validate`, `lint` (whole repo), `typecheck`, `build`: **PASS**. `format:check`: PASS for tracked files
+  after formatting the new docs (the untracked nested clone `TFM-BIC/` is excluded locally, as before).
+- **Vitest (full, with coverage)**: 3644 pass / 5 skipped / 0 fail in one run; coverage **93.66% statements / 86.89%
+  branches / 92.79% functions / 93.77% lines**. In **two other full runs** the pre-existing
+  `apps/web/src/no-raw-html.test.ts` ("never uses dangerouslySetInnerHTML") **timed out at 30 s** under full-suite
+  load (first test to walk the source tree); it passes alone (10/10) and M13 adds no raw HTML. Not changed (outside
+  M13) — see risks.
+- M13 code only: **95.27% lines / 95.42% statements / 95.14% functions / 87.18% branches** (141 M13 tests).
+- **Playwright: 140/140 pass** in one full run, including 4 new tests in `tests/e2e/teacher-dashboard.spec.ts`.
+- **Performance**: 300-student fixture asserts statement counts; EXPLAIN ANALYZE (PGlite) — detail queries use the
+  `user_id` indexes at 10 000 users (~1 ms each); roster query ~50 ms at 2 000 users (seq scans + hash semi-joins).
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
+
+## Previous milestone (M12)
 
 **M12 — Gemini audio generation** — implemented on `feature/gemini-audio`, branched from
 `feature/hyperframes-video-generation` (M11). Not pushed, not merged; Jenkins/SonarQube not run (per
@@ -63,7 +112,7 @@ milestone).
   returned WAV, and that anonymous requests / client-supplied text are refused).
 - **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
 
-## Previous milestone
+## Earlier milestone (M11)
 
 **M11 — Hyperframes video generation** — implemented on `feature/hyperframes-video-generation`,
 branched from `feature/phonetics` (M10) → `feature/vocabulary` (M9) → `feature/gamification` (M8) →
@@ -234,7 +283,7 @@ FakeVideoGenerationService` (packages/data) is the only adapter selected by defa
 - Spaced repetition (SM-2, FSRS), word-form/morphology beyond a vocabulary entry's plural, cross-language
   (display-vs-learning-language) search or content, a reward for learned vocabulary.
 - Streaks, XP levels, leaderboards/rankings, daily goals, challenges, spending or transferring points, notifications, a reward
-  marketplace, scoring/progress rollups beyond the ledger, adaptive learning, recommendations, teacher dashboard,
+  marketplace, scoring/progress rollups beyond the ledger, adaptive learning, recommendations,
   subscriptions, newsletter, account deletion/data export.
 - More exercise types (matching, ordering, fill-in-the-blank, listening, …), an exercise editor/CMS, an attempt-history endpoint,
   pagination of exercise lists, attempt retention/deletion workflows.
@@ -250,6 +299,10 @@ FakeVideoGenerationService` (packages/data) is the only adapter selected by defa
 - A precise link from a vocabulary entry to the exact phonetic representation for its own pronunciation (the
   current link goes to the language's phonetics hub, not one sound — see ADR-023 §12).
 
+- Teacher dashboard extras: invitations/self-service linking (with student consent), classes/groups, assignments,
+  grading, messaging, teacher profiles, a persistent audit trail for role/link changes, language/CEFR filters (no
+  student-level language attribute exists), a roster summary projection (only if large rosters need it).
+
 ## Pending decisions
 
 Hosting/deploy ([ADR-015](../docs/adr/adr-015-deployment.md)) is PENDING; a deployment must ship
@@ -261,6 +314,13 @@ function of the hosting choice) — this is the one thing M11 leaves genuinely u
 must resolve before the real adapter can be trusted.
 
 ## Known risks / rough edges
+
+- **Flaky under load (pre-existing, seen in M13 verification):** `apps/web/src/no-raw-html.test.ts` times out at
+  30 s in some full `pnpm test:coverage` runs on this laptop; it passes alone. Jenkins could hit the same — the fix
+  (e.g. reading the file list once in a `beforeAll` or a longer timeout for that file) was left for a separate change.
+- **Teacher roster query aggregates the whole roster per page** (needed to sort by aggregates). Fine at the tested
+  sizes; plans were not measured on real Postgres with rosters of thousands (ADR-024).
+- **Operators need DB access to link students** until an invitation flow exists.
 
 - **The real Hyperframes adapter is unverified.** `HyperframesCliProvider` has never rendered a real video; its
   actual behavior against a real `npx hyperframes render` invocation — exact stdout/stderr shape, real timing,
@@ -329,7 +389,6 @@ must resolve before the real adapter can be trusted.
 
 ## Next milestone
 
-`M12` (not yet named/started). Candidates per the product brief: Gemini audio/narration generation
-(ADR-013, still PROPOSED — a natural pairing with M11's video, since a finished video eventually
-needs narration), or resolving ADR-015 (hosting) so `HyperframesCliProvider` can finally be
-verified for real.
+`M14` (not yet named/started). Natural candidates: a self-service teacher–student invitation flow (replacing
+operator linking, with a student notice/consent decision — see privacy-gdpr.md), or the privacy context (account
+deletion/data export), which now also has to cover teacher access.

@@ -1,9 +1,10 @@
 # Project Context
 
 Language-learning platform (first language: Polish, architected for many more). Modular
-monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–10 complete**
+monolith, TypeScript monorepo, Clean/Hexagonal layering. **Milestones 0–13 implemented**
 (architecture/governance, monorepo/tooling, CI/CD, Identity & Authentication, Student Profile,
-Content & Languages, Lessons, Exercises, Gamification, Vocabulary, Phonetics) —
+Content & Languages, Lessons, Exercises, Gamification, Vocabulary, Phonetics, video and audio
+generation foundations, Teacher Dashboard) —
 see [current-state.md](current-state.md) for what that means concretely.
 
 ## Quick facts
@@ -26,6 +27,12 @@ see [current-state.md](current-state.md) for what that means concretely.
   `student_profiles` table keyed to `users`; identity (email, role) stays on `users`. The two
   routes `GET /profile` and `PATCH /profile` act only on the session's user — see
   [ADR-017](../docs/adr/adr-017-student-profile.md).
+
+- Teacher Dashboard (M13): TEACHER-only, read-only `/teacher-dashboard/{overview,students,students/:id}`
+  over the teacher's linked students (`teacher_students`, created only by the `teacher:admin` operator CLI).
+  A teacher-scoped SQL read model aggregates M6/M7/M8 records in a fixed number of statements; another
+  teacher's student is the same `404` as a missing one. Pages at `/teacher`. See
+  [ADR-024](../docs/adr/adr-024-teacher-dashboard.md).
 
 - Languages & Content (M5): languages, CEFR level availability and educational content are validated
   JSON under `content/languages/<code>/` (the single source of truth, no DB copy), read through a

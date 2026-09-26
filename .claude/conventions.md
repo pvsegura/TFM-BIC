@@ -183,6 +183,28 @@ Rationale: [ADR-022](../docs/adr/adr-022-vocabulary.md); reference:
 - No `:userId` in a vocabulary route; an undocumented query key or an extra body field is a `400`. Query key root
   `["vocabulary", …]` is user-scoped; invalidate it after an action.
 
+## Teacher dashboard conventions (since M13)
+
+Rationale: [ADR-024](../docs/adr/adr-024-teacher-dashboard.md); reference:
+[teacher-dashboard.md](../docs/architecture/teacher-dashboard.md).
+
+- **Read-only aggregation.** The dashboard reads M6/M7/M8 records; it never writes them and never re-implements their
+  rules. A new metric is a read-model column plus a written definition in teacher-dashboard.md — never a React
+  calculation. No composite "progress score".
+- **Every teacher query starts from the roster CTE** (`teacher_students` for the _session's_ teacher, role STUDENT).
+  Never add a teacher query that takes a student id without joining through the link, and never add a per-student
+  query loop — a screen costs a fixed number of statements (tests count them).
+- **Authorisation order on every route:** `authenticate` → `requireRole(["TEACHER"])` hook → strict query schema;
+  use cases check the role again. No teacher id in a path, query or body.
+- **One not-found:** another teacher's student, a missing id, a non-student and a malformed id are the same `404`.
+- **Least privilege:** responses are allowlists without email, role or answers; the read model never selects them.
+- **Links and roles change only through operator use cases** (`teacher:admin` CLI; the NODE_ENV=test-only
+  `_test/links` route for E2E). Never add a production route that creates a link or changes a role.
+- **Sorting/filtering:** fields are an allowlist mapped to fixed SQL; search is `strpos` on bound parameters
+  (no LIKE/regex); page size ≤ 50, page ≤ 1000, checked by contract and use case.
+- Web: pages under `/teacher` (API under `/teacher-dashboard`); query key root `["teacher", …]` is user-scoped;
+  `TeacherRoute` is UX only. `null` metrics are said in words ("No attempts yet"), never shown as 0%.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

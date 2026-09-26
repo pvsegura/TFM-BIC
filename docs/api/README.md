@@ -319,6 +319,35 @@ too large); `422` (text over `AUDIO_GENERATION_MAX_TEXT_LENGTH`); `429` (rate li
 unavailable.` with `Retry-After` (provider down, provider rate limit, misconfiguration, or too many
 concurrent generations); `504` (provider timeout).
 
+## Teacher dashboard endpoints (M13)
+
+Schemas: `packages/contracts/src/teaching/`. **Authenticated** (`401`), **TEACHER-only** (`403 { "error": "Forbidden" }`
+before anything is read) and **read-only**; rationale in [ADR-024](../adr/adr-024-teacher-dashboard.md), metric
+definitions and privacy boundaries in [teacher-dashboard.md](../architecture/teacher-dashboard.md). The teacher is always
+the session's: there is **no teacher id in any path or query**, and any undocumented query key is a
+`400 Invalid request.`. Every response carries `Cache-Control: private, no-store`. Rate limit: 120/min per route.
+
+| Method | Path                                     | Notes                                                                                                                                                                                                                                                                                         |
+| ------ | ---------------------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/teacher-dashboard/overview`            | `{ totalStudents, activeStudents, inactiveStudents, activeWindowDays, lessonsCompleted, exerciseAttempts, accuracyPercent \| null, points }` over the teacher's linked students. No query parameters.                                                                                         |
+| GET    | `/teacher-dashboard/students`            | Query: `q` (1–50 chars), `activity=active\|inactive`, `sort=name\|lastActivity\|points\|lessonsCompleted\|accuracy`, `direction=asc\|desc`, `page` (1–1000), `pageSize` (1–50, default 20). Returns `{ students: [student], page, pageSize, total, totalPages, sort: { field, direction } }`. |
+| GET    | `/teacher-dashboard/students/:studentId` | `{ student, lessons: { byLevel, unmatched, recent }, exercises: { attempts, correctAttempts, incorrectAttempts, accuracyPercent, exercisesAttempted, exercisesLatestCorrect, recent }, gamification: { totalPoints, achievements, unlocked }, weekly: [8 weeks] }`. No query parameters.      |
+
+`student` is `{ studentId, displayName | null, nickname | null, avatarId | null, lessonsCompleted, lessonsInProgress,
+exerciseAttempts, accuracyPercent | null, points, lastActivityAt | null, active }`. No email, role or submitted answer
+appears in any response.
+
+**IDOR.** `:studentId` must be a UUID; a malformed id, an id that does not exist, a user who is not a student and
+**another teacher's student** all return the identical `404 { "error": "Student not found." }`. A successful detail
+read is logged as `teacher.student_viewed` (teacher and student ids only).
+
+**No write routes.** Teachers and links are created by operators (`pnpm --filter @tfm-bic/data teacher:admin`). Under
+`NODE_ENV=test` only, and only in the E2E composition, `POST /teacher-dashboard/_test/links`
+`{ teacherEmail, studentEmail }` → `204` runs the same operator use cases for Playwright setup.
+
+Database: `teacher_students` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:teaching`, after
+Identity's `db:migrate`). The pages are `/teacher` and `/teacher/students/:studentId` (not API paths).
+
 ## Future direction
 
 Once more endpoints exist (M4+), the planned approach is an OpenAPI/schema-derived spec generated

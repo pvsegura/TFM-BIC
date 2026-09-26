@@ -36,6 +36,10 @@ Teacher-to-many-students association, invitations to link accounts. Must be desi
 pagination/filtering/efficient queries from the start (many students per teacher) — see
 [architecture-overview.md](architecture-overview.md#non-functional-requirements).
 
+_Implemented in M13_ (minimum): `teacher_students (teacher_id, student_id, linked_at)`, created only by operator
+commands — no invitations yet — and read by the teacher dashboard's teacher-scoped read model. See
+[ADR-024](../adr/adr-024-teacher-dashboard.md) and [teacher-dashboard.md](teacher-dashboard.md).
+
 ### Languages
 
 Language catalog (`languageId`, metadata, active/inactive). Root of the multi-language strategy —
