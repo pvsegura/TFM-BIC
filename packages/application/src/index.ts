@@ -397,3 +397,59 @@ export {
   PromoteUserToTeacherUseCase,
   UnlinkStudentFromTeacherUseCase,
 } from "./teaching/use-cases/teacher-roster-admin.use-cases.js";
+
+// Email (M14, ADR-014/ADR-025): a provider port, and two senders — transactional and marketing —
+// that cannot be confused (different request/recipient types).
+export { EmailDeliveryError } from "./email/email-delivery.error.js";
+export {
+  NEWSLETTER_CONFIRM_PAGE_PATH,
+  ONE_CLICK_UNSUBSCRIBE_PATH,
+  ProviderMarketingEmailSender,
+  ProviderTransactionalEmailSender,
+  UNSUBSCRIBE_PAGE_PATH,
+  type EmailSenderConfig,
+  type MarketingEmailSender,
+  type TransactionalEmailRequest,
+  type TransactionalEmailSender,
+} from "./email/email-senders.js";
+export type {
+  EmailDeliveryEvent,
+  EmailDeliveryObserver,
+} from "./email/ports/email-delivery-observer.js";
+export type { EmailProvider, OutgoingEmail } from "./email/ports/email-provider.js";
+export type { UnsubscribeTokenCodec } from "./email/ports/unsubscribe-token-codec.js";
+export { EmailTemplateError } from "./email/templates/email-template.error.js";
+export {
+  DEFAULT_EMAIL_LOCALE,
+  EMAIL_LOCALES,
+  type EmailLocale,
+} from "./email/templates/messages.js";
+export {
+  renderEmail,
+  type EmailRenderContext,
+  type EmailTemplateRequest,
+  type NewsletterIssueContent,
+  type RenderedEmail,
+} from "./email/templates/render-email.js";
+export { TransactionalIdentityEmailService } from "./email/transactional-identity-email.service.js";
+
+// Newsletter (M14, ADR-025): double opt-in, unsubscribe, and the issue-sending boundary.
+export type {
+  NewsletterSubscriptionRepository,
+  SubscribedRecipient,
+} from "./newsletter/ports/newsletter-subscription-repository.js";
+export { NewsletterConsentVersionMismatchError } from "./newsletter/newsletter-consent-version-mismatch.error.js";
+export {
+  ConfirmNewsletterSubscriptionUseCase,
+  GetEmailPreferencesUseCase,
+  RequestNewsletterSubscriptionUseCase,
+  UnsubscribeFromNewsletterUseCase,
+  UnsubscribeWithTokenUseCase,
+  type EmailPreferences,
+  type RequestNewsletterSubscriptionInput,
+  type RequestNewsletterSubscriptionResult,
+} from "./newsletter/use-cases/newsletter-preferences.use-cases.js";
+export {
+  SendNewsletterIssueUseCase,
+  type SendNewsletterIssueResult,
+} from "./newsletter/use-cases/send-newsletter-issue.use-case.js";

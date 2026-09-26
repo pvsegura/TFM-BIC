@@ -1,5 +1,6 @@
 import { createEmail, createPassword, DuplicateEmailError } from "@tfm-bic/domain";
 
+import { ignoreEmailDeliveryFailure } from "../ignore-email-delivery-failure.js";
 import type { Clock } from "../../ports/clock.js";
 import type { EmailVerificationTokenRepository } from "../ports/email-verification-token-repository.js";
 import type { EmailService } from "../ports/email-service.js";
@@ -59,10 +60,12 @@ export class RegisterUserUseCase {
       const expiresAt = new Date(this.clock.now().getTime() + EMAIL_VERIFICATION_TOKEN_TTL_MS);
       await this.verificationTokenRepository.create({ userId: user.id, tokenHash, expiresAt });
 
-      await this.emailService.sendVerificationEmail({
-        to: user.email,
-        verificationUrl: `${this.appBaseUrl}/verify-email?token=${rawToken}`,
-      });
+      await ignoreEmailDeliveryFailure(() =>
+        this.emailService.sendVerificationEmail({
+          to: user.email,
+          verificationUrl: `${this.appBaseUrl}/verify-email?token=${rawToken}`,
+        }),
+      );
     } catch (error) {
       if (!(error instanceof DuplicateEmailError)) {
         throw error;

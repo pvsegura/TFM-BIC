@@ -7,6 +7,7 @@ import {
   type User,
 } from "@tfm-bic/domain";
 
+import { EmailDeliveryError } from "../../email/email-delivery.error.js";
 import type { Clock } from "../../ports/clock.js";
 import type {
   CreateEmailVerificationTokenInput,
@@ -284,14 +285,26 @@ export interface SentEmail {
 
 export class FakeEmailService implements EmailService {
   readonly sent: SentEmail[] = [];
+  private failing = false;
+
+  /** Every later send rejects with `EmailDeliveryError`, as an unavailable provider would. */
+  failDeliveries(): void {
+    this.failing = true;
+  }
 
   sendVerificationEmail(input: { to: string; verificationUrl: string }): Promise<void> {
-    this.sent.push({ kind: "verification", to: input.to, url: input.verificationUrl });
-    return Promise.resolve();
+    return this.record({ kind: "verification", to: input.to, url: input.verificationUrl });
   }
 
   sendPasswordResetEmail(input: { to: string; resetUrl: string }): Promise<void> {
-    this.sent.push({ kind: "password-reset", to: input.to, url: input.resetUrl });
+    return this.record({ kind: "password-reset", to: input.to, url: input.resetUrl });
+  }
+
+  private record(email: SentEmail): Promise<void> {
+    if (this.failing) {
+      return Promise.reject(new EmailDeliveryError());
+    }
+    this.sent.push(email);
     return Promise.resolve();
   }
 }

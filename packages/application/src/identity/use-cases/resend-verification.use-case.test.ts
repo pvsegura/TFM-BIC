@@ -73,3 +73,20 @@ describe("ResendVerificationUseCase", () => {
     expect(result.message).toBeTruthy();
   });
 });
+
+describe("ResendVerificationUseCase — email provider failure (M14)", () => {
+  it("answers exactly as for an unknown address when the provider fails", async () => {
+    const { useCase, userRepository, emailService } = build();
+    userRepository.seed("STUDENT", {
+      normalizedEmail: "pending@example.com",
+      email: "pending@example.com",
+      emailVerified: false,
+    });
+    const unknown = await useCase.execute({ email: "nobody@example.com" });
+    emailService.failDeliveries();
+
+    const known = await useCase.execute({ email: "pending@example.com" });
+
+    expect(known).toEqual(unknown);
+  });
+});

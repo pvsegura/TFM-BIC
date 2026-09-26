@@ -1,5 +1,6 @@
 import { normalizeEmail } from "@tfm-bic/domain";
 
+import { ignoreEmailDeliveryFailure } from "../ignore-email-delivery-failure.js";
 import type { Clock } from "../../ports/clock.js";
 import type { EmailService } from "../ports/email-service.js";
 import type { PasswordResetTokenRepository } from "../ports/password-reset-token-repository.js";
@@ -45,10 +46,12 @@ export class RequestPasswordResetUseCase {
       const expiresAt = new Date(this.clock.now().getTime() + PASSWORD_RESET_TOKEN_TTL_MS);
       await this.tokenRepository.create({ userId: user.id, tokenHash, expiresAt });
 
-      await this.emailService.sendPasswordResetEmail({
-        to: user.email,
-        resetUrl: `${this.appBaseUrl}/reset-password?token=${rawToken}`,
-      });
+      await ignoreEmailDeliveryFailure(() =>
+        this.emailService.sendPasswordResetEmail({
+          to: user.email,
+          resetUrl: `${this.appBaseUrl}/reset-password?token=${rawToken}`,
+        }),
+      );
     }
 
     return { message: GENERIC_RESET_REQUEST_MESSAGE };

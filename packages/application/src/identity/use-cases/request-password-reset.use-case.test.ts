@@ -81,3 +81,19 @@ describe("RequestPasswordResetUseCase", () => {
     expect(result.message).toBeTruthy();
   });
 });
+
+describe("RequestPasswordResetUseCase — email provider failure (M14)", () => {
+  it("answers exactly as for an unknown address, so a failing provider cannot reveal an account", async () => {
+    const { useCase, userRepository, emailService } = build();
+    userRepository.seed("STUDENT", {
+      normalizedEmail: "user@example.com",
+      email: "user@example.com",
+    });
+    const unknown = await useCase.execute({ email: "nobody@example.com" });
+    emailService.failDeliveries();
+
+    const known = await useCase.execute({ email: "user@example.com" });
+
+    expect(known).toEqual(unknown);
+  });
+});

@@ -1,8 +1,9 @@
 /**
- * Transactional email — kept distinct from the (not-yet-implemented)
- * Newsletter context, see ADR-014. `packages/data`'s `InMemoryEmailService`
- * is the only adapter wired in M3 (dev/test); a real provider adapter is a
- * documented follow-up.
+ * The identity flows' view of transactional email (M3). Since M14 it is implemented by
+ * `TransactionalIdentityEmailService` (packages/application/src/email), which renders the named
+ * templates and hands them to the configured `EmailProvider` — see ADR-014 and ADR-025. It is
+ * transactional only: kept apart from the Newsletter context's marketing sender and consent.
+ * Implementations reject with `EmailDeliveryError` when the provider does not accept a message.
  */
 export interface EmailService {
   sendVerificationEmail(input: { to: string; verificationUrl: string }): Promise<void>;

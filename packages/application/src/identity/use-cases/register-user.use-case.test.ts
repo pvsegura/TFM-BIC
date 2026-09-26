@@ -132,3 +132,29 @@ describe("RegisterUserUseCase", () => {
     expect(userRepository.users).toHaveLength(0);
   });
 });
+
+describe("RegisterUserUseCase — email provider failure (M14)", () => {
+  it("still returns the generic message and keeps the account and its token, so the user can ask for a new link", async () => {
+    const { useCase, userRepository, verificationTokenRepository, emailService } = buildUseCase();
+    emailService.failDeliveries();
+
+    const result = await useCase.execute({
+      email: "new@example.com",
+      password: "a-good-password-123",
+    });
+
+    expect(result.message).toMatch(/verification link/i);
+    expect(userRepository.users).toHaveLength(1);
+    expect(userRepository.users[0]!.emailVerified).toBe(false);
+    expect(verificationTokenRepository.tokens).toHaveLength(1);
+  });
+
+  it("still propagates unexpected (non-delivery) errors", async () => {
+    const { useCase, userRepository } = buildUseCase();
+    userRepository.create = () => Promise.reject(new Error("database down"));
+
+    await expect(
+      useCase.execute({ email: "new@example.com", password: "a-good-password-123" }),
+    ).rejects.toThrow("database down");
+  });
+});
