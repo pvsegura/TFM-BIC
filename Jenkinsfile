@@ -62,6 +62,21 @@ pipeline {
             }
         }
 
+        // M16 (docs/security/M16-SECURITY-AUDIT.md, S-16): known-vulnerability check against the
+        // lockfile just installed. Any advisory in a production dependency fails the build; in dev
+        // dependencies (which also run here, in CI) high/critical ones do. Accepted lower-severity
+        // dev-only advisories are listed in docs/security/M16-RISK-REGISTER.md. Needs registry
+        // access; no credential is involved.
+        stage('Dependency Audit') {
+            steps {
+                sh '''
+                    set -eu
+                    pnpm audit --prod
+                    pnpm audit --audit-level=high
+                '''
+            }
+        }
+
         // M5: validates every content file (schemas, ids, ordering, availability) with the same
         // loader the API runs at startup, so malformed content fails here, before lint/tests, with
         // a readable list of problems instead of failing later in a test or at server start.
