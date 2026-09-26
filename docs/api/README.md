@@ -373,6 +373,17 @@ Database: `newsletter_subscriptions` has its own migration set (`pnpm --filter @
 after Identity's `db:migrate`). The pages are `/profile` (settings section), `/newsletter/confirm` and
 `/newsletter/unsubscribe` (not API paths).
 
+## Privacy and data management endpoints (M15)
+
+Rationale: [ADR-026](../adr/adr-026-privacy-data-management.md); format:
+[DATA-EXPORT-FORMAT.md](../privacy/DATA-EXPORT-FORMAT.md). Session user only — no user id in any path, query or body.
+Not under `/privacy`, which is the public notice page.
+
+| Method | Path                                | Auth    | Rate limit | Notes                                                                                                                                                                                                                                                   |
+| ------ | ----------------------------------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/data-management/export`           | session | 5/hour     | The caller's personal-data export (JSON, `exportVersion: "1"`) as an attachment named `tfm-bic-personal-data-YYYY-MM-DD.json`. Any query parameter is a `400`; `404` if the account vanished. `private, no-store`, `nosniff`.                           |
+| POST   | `/data-management/account-deletion` | session | 5/hour     | Body `{ "password": string, "confirm": true }` and nothing else. `204` + cleared session cookie on success; `403 { "error": "The password is incorrect." }`; `400` for any other body. Origin checked; body capped at 1 KB. Immediate and irreversible. |
+
 ## Future direction
 
 Once more endpoints exist (M4+), the planned approach is an OpenAPI/schema-derived spec generated

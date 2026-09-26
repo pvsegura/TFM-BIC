@@ -205,6 +205,25 @@ Rationale: [ADR-024](../docs/adr/adr-024-teacher-dashboard.md); reference:
 - Web: pages under `/teacher` (API under `/teacher-dashboard`); query key root `["teacher", …]` is user-scoped;
   `TeacherRoute` is UX only. `null` metrics are said in words ("No attempts yet"), never shown as 0%.
 
+## Privacy conventions (since M15)
+
+Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md); inventory: [docs/privacy/](../docs/privacy/README.md).
+
+- **Never claim legal compliance.** Legal bases, retention periods, roles, transfers, notice wording: PENDING unless
+  the product owner/legal review decided. Engineering assumptions are labelled as such.
+- **A new table or column with user data** needs: purpose, class, access, deletion behaviour, external recipients —
+  and an entry in `USER_DATA_REGISTER` (the guard test enforces tables/foreign keys) and in the export if
+  `PERSONAL`. `retain`/`anonymise` need a documented reason and an implementation; nothing is kept "just in case".
+- **Export and deletion act on the session user only**; any query parameter/extra body field is a `400`. The export
+  selects explicit columns, maps field by field and is parsed by the contract; bump `PERSONAL_DATA_EXPORT_VERSION`
+  for any shape change.
+- **Unsubscribe ≠ deletion ≠ logout**; notice acknowledgement ≠ newsletter consent. Keep them separate.
+- **Logs**: user id at most for privacy/security events; never contents, answers, tokens, SQL parameters. Log
+  errors with `{ err }` — the serializer scrubs them.
+- **Privacy notice** changes = a new `privacy-policy-vN` entry in `apps/web/src/legal/privacy-notice.ts`; never
+  rewrite an old id. Update docs/privacy when an external provider or data flow changes.
+- Do not add a cookie banner, analytics, date of birth or kids-mode data without a documented decision.
+
 ## Dependencies
 
 Never install "latest" blindly — check stable version, Node/TS compatibility, peer deps, breaking

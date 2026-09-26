@@ -247,6 +247,20 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
   second email; confirm/unsubscribe pages act only on an explicit click (link scanners).
 - **No real email in dev/CI**: `EMAIL_PROVIDER` accepts only `fake`.
 
+## Privacy and data management (M15 — implemented)
+
+- **Export** (`GET /data-management/export`): session only, no parameters (any query key is a `400`), explicit SQL
+  column lists → field-by-field mapping → contract allowlist; `private, no-store`, `nosniff`, `attachment`,
+  date-only file name; 5/hour; contents never logged. Tests prove user A cannot export user B and that no hash,
+  token, key, cookie or password appears.
+- **Account deletion** (`POST /data-management/account-deletion`): session + Origin check + current password +
+  `confirm: true`; strict body (no user id/email); 5/hour (password guessing); one transaction that locks the user
+  row, deletes every registered store (credentials first) and the account; clears the cookie; every session dies.
+- **Logs never carry SQL parameters**: an allowlist `err` serializer and a `logMethod` hook redact the
+  `params:` line of Drizzle errors and drop driver `detail` (which quotes row values) — before M15 an unhandled
+  database error could log an email address or a password/token hash.
+- Detail: [docs/privacy/](../privacy/README.md), [ADR-026](../adr/adr-026-privacy-data-management.md).
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from
@@ -293,9 +307,10 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
 
 ## Audit logging
 
-- Privacy-relevant and destructive actions (account deletion, data export, role changes) are
-  audit-logged — detail owned by the Privacy & Data Management context (see
-  [domain-model.md](../architecture/domain-model.md)), a later milestone.
+- Privacy-relevant and destructive actions are audit-logged as structured events (M15, ADR-026):
+  `privacy.data_export_generated`, `privacy.account_deletion_refused`, `privacy.account_deleted` — user id only,
+  never contents, passwords or cookies. No persistent audit table (decided 2026-09-26); log retention is
+  hosting-dependent and PENDING. Role changes remain operator-only (`teacher:admin`).
 - M3: auth routes log structured events (login success/failure, logout, email verified,
   password-reset requested/completed) via Fastify's request logger
   (`apps/api/src/routes/auth.route.ts`) — user id where known, never email/password/tokens/

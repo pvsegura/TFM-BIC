@@ -1,6 +1,7 @@
 # Privacy & Data Protection Considerations
 
-Status: PROPOSED — NOT LEGAL ADVICE
+Status: LIVE — NOT LEGAL ADVICE. Since M15 the detailed, implementation-verified documentation is in
+[docs/privacy/](../privacy/README.md); this page is the overview.
 Related: [domain-model.md](../architecture/domain-model.md) (Privacy & Data Management context)
 
 ## Disclaimer
@@ -21,19 +22,23 @@ GDPR-shaped requirements without asserting they've been fully implemented or leg
   control implemented in M4_: a student can edit or clear their first name, last name and nickname
   and replace their avatar ([ADR-017](../adr/adr-017-student-profile.md)). This is a capability,
   not a claim of GDPR compliance.
-- **Erasure** — account deletion is supported (Student Features §14 of the brief: "solicitar
-  eliminación de cuenta"), including a defined retention/anonymization policy for data that can't
-  be immediately hard-deleted (e.g., financial records if subscriptions exist) — policy content
-  itself is PENDING legal input.
-- **Export** — data portability is a planned capability; format/scope PENDING.
+- **Erasure** — _technical control implemented in M15_: self-service, immediate, password-confirmed account
+  deletion of every stored row in one transaction ([deletion matrix](../privacy/DATA-DELETION-MATRIX.md)). No
+  category is retained because none has a documented retention requirement today (no financial data); a future
+  one (e.g. subscriptions) must be added to the register with its reason — PENDING legal input.
+- **Export** — _technical control implemented in M15_: self-service JSON export, version 1
+  ([format](../privacy/DATA-EXPORT-FORMAT.md)).
 - **Consent** — Newsletter subscription consent is recorded separately from transactional-email
   necessity (see [domain-model.md](../architecture/domain-model.md): Email vs Newsletter split) —
   transactional email does not require marketing consent, but this split itself should be
   confirmed against the applicable legal basis at implementation time.
 - **Withdrawal** — unsubscribe/consent-withdrawal must be at least as easy as subscribing.
-- **Retention** — data retention periods are PENDING — not defined in M0.
-- **Cookies/consent banner** — needed if any non-essential cookie/tracking is used; PENDING
-  product decision on analytics/tracking tools, which would trigger this requirement.
+- **Retention** — no retention period is defined; current behaviour and open decisions are in the
+  [retention register](../privacy/PROCESSING-REGISTER.md#retention-register) — PENDING.
+- **Cookies/browser storage** — verified in M15: only the session cookie (sign-in) and a light/dark theme
+  preference in localStorage; no analytics, tracking or third-party scripts. No banner was added. Whether the theme
+  preference needs any notice or consent treatment is a PENDING legal classification question; adding analytics or
+  tracking would require revisiting this.
 
 ## Teacher access to student data (M13)
 
@@ -61,8 +66,8 @@ opt-in and the recorded metadata are sufficient remain **PENDING legal review**.
 - **Withdrawal is at least as easy as subscribing**: one click in settings, or one click from the link in any
   newsletter without logging in, or a mail client's one-click unsubscribe.
 - **Sent to a provider** (none is connected yet): address, sender, subject and body (with link tokens).
-- **Account deletion** removes the consent record (`ON DELETE CASCADE`), so marketing cannot continue after an
-  account is deleted; the deletion workflow itself is still to be built.
+- **Account deletion** (M15) deletes the consent record in the same transaction as the account, so marketing
+  cannot continue; any unsubscribe link then becomes a harmless no-op.
 - **Email change** is not implemented; when it is, newsletter consent must not silently move to the new address.
 
 Details: [email-newsletter.md](../architecture/email-newsletter.md#privacy), [ADR-025](../adr/adr-025-email-newsletter.md).
@@ -74,12 +79,12 @@ Details: [email-newsletter.md](../architecture/email-newsletter.md#privacy), [AD
 - Account deletion is a domain-level use case, not an ad-hoc DB delete — allows enforcing
   retention/anonymization rules consistently.
 - Newsletter consent state is a first-class record, separate from "has an account."
-- The M4 `student_profiles` row has a cascading foreign key to `users`, so deleting a user cannot
-  leave orphaned profile data. The account-deletion _workflow_ itself (use case, retention rules,
-  confirmation) is not implemented yet.
+- Every user-owned table has a cascading foreign key to `users` (safety net); since M15 the deletion workflow
+  deletes each registered table explicitly, and a guard test fails when a table or foreign key is added that the
+  register does not cover (ADR-026).
 
 ## Explicitly deferred to a dedicated milestone
 
-Legal pages (Terms and Conditions, Privacy Policy, Data Management, Contact) are UI/content work,
-listed in the brief's MVP scope — not written in M0, and when written, their legal content must
-come from verified sources/legal review, not generated as boilerplate presented as compliant.
+M15 added the **privacy notice** (`/privacy`, `privacy-policy-v1`) as a draft that describes the implementation
+and says which legal information is pending. **Terms and Conditions and a Contact page do not exist** — they need
+content (and a contact channel) that only the product owner/legal review can provide.

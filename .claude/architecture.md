@@ -98,6 +98,18 @@ pages under `/learn/vocabulary`. A `VocabularyItemLearnedEvent` is published thr
 port (no-op in M9) so gamification can react later without a direct dependency. See
 [ADR-022](../docs/adr/adr-022-vocabulary.md).
 
+## Privacy & Data Management (M15)
+
+Self-service **export** (`GET /data-management/export`, JSON v1) and **account deletion**
+(`POST /data-management/account-deletion`, password + `confirm: true`, immediate hard delete). Ports
+`PersonalDataReadModel` (explicit column lists, one read-only snapshot transaction) and `AccountErasureStore` (one
+transaction: lock user row, delete every store in `USER_DATA_REGISTER`, delete `users`). The register
+(`packages/data/src/privacy/user-data-register.ts`) classifies every table (`PUBLIC`/`INTERNAL`/`PERSONAL`/
+`SECURITY_SENSITIVE`) and is checked against the live schema by a test. No new tables. Controls on `/profile`
+("Your data"); public `/privacy` notice (versioned content, draft pending legal review) and `/account-deleted`.
+Logs: allowlist error serializer + message scrubbing (no SQL parameters). See
+[ADR-026](../docs/adr/adr-026-privacy-data-management.md) and [docs/privacy/](../docs/privacy/README.md).
+
 ## Monorepo layout
 
 `apps/{web,api}`, `packages/{domain,application,contracts,data,shared,ui,config,testing}`,
