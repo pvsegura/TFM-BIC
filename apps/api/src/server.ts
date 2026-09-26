@@ -5,7 +5,7 @@ import type { AppEnv } from "@tfm-bic/config";
 import { SystemClock } from "@tfm-bic/data";
 import fastifyCookie from "@fastify/cookie";
 import fastifyRateLimit from "@fastify/rate-limit";
-import Fastify, { type FastifyError, type FastifyInstance } from "fastify";
+import Fastify, { type FastifyInstance } from "fastify";
 
 import type { AudioDependencies } from "./composition/audio-dependencies.js";
 import { createAudioUseCases } from "./composition/audio-use-cases.js";
@@ -51,6 +51,7 @@ import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
+import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 
 export function buildServer(
   env: AppEnv,
@@ -69,7 +70,13 @@ export function buildServer(
   privacyDeps: PrivacyDependencies,
 ): FastifyInstance {
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
-  const app = Fastify({ logger: createLoggerOptions(env.NODE_ENV) });
+  // Body limit, request timeout, random request ids and TRUST_PROXY: security/http-security.ts (M16).
+  const app = Fastify({
+    logger: createLoggerOptions(env.NODE_ENV),
+    ...httpSecurityServerOptions(env),
+  });
+  // Security headers, no-store default, X-Request-Id, safe error and 404 bodies (M16, ADR-027).
+  registerHttpSecurity(app, env);
 
   // Session cookie signing secret (ADR-006). Required in production/
   // staging by packages/config's loadEnv(); falls back to an ephemeral
@@ -247,17 +254,6 @@ export function buildServer(
       enableIssueRoute: emailDeps.enableTestSupportRoutes,
       useCases: emailUseCases,
     });
-  });
-
-  app.setErrorHandler((error: FastifyError, request, reply) => {
-    request.log.error({ err: error }, "Unhandled request error");
-    /* v8 ignore next -- @preserve: defensive fallback for Fastify's own
-       internal errors (e.g. malformed request bodies), which set
-       error.statusCode; auth routes map their own known errors before
-       reaching here (see routes/auth-error.mapper.ts), so only the `?? 500`
-       side is reachable from today's routes. */
-    const statusCode = error.statusCode ?? 500;
-    reply.status(statusCode).send({ error: "Internal Server Error" });
   });
 
   return app;
