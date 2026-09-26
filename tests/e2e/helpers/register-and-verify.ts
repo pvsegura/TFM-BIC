@@ -53,3 +53,32 @@ export async function registerAndVerifyUser(
     throw new Error(`Verification failed: ${verifyResponse.status()}`);
   }
 }
+
+export interface CapturedEmail {
+  template: string;
+  category: "transactional" | "marketing";
+  subject: string;
+  links: string[];
+  listUnsubscribeUrl: string | null;
+}
+
+/** The latest captured email of one template to `email` (fake provider, NODE_ENV=test only). */
+export async function getCapturedEmail(
+  request: APIRequestContext,
+  email: string,
+  template: string,
+): Promise<CapturedEmail> {
+  const response = await request.get(
+    `${API_BASE}/auth/_test/emails?to=${encodeURIComponent(email)}&template=${template}`,
+  );
+  if (!response.ok()) {
+    throw new Error(`No ${template} email captured for ${email}`);
+  }
+  return (await response.json()) as CapturedEmail;
+}
+
+/** The app path (path + query) of an emailed link, to open it on the E2E origin. */
+export function appPathOf(link: string): string {
+  const url = new URL(link);
+  return `${url.pathname}${url.search}`;
+}

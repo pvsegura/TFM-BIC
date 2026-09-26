@@ -38,7 +38,7 @@ test.describe("viewing the profile", () => {
   test("does not let the email be edited here", async ({ page, request }) => {
     await arrangeSignedInOnProfile(page, request);
 
-    await expect(page.getByLabel("Email")).toHaveCount(0);
+    await expect(page.getByRole("textbox", { name: /email/i })).toHaveCount(0);
     await expect(page.getByText(/can.t be changed here/i)).toBeVisible();
   });
 });
