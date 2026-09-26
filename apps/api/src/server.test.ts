@@ -26,6 +26,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     audioDeps,
     teachingDeps,
     emailDeps,
+    privacyDeps,
   } = buildTestDeps();
   return buildServer(
     env,
@@ -41,6 +42,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     audioDeps,
     teachingDeps,
     emailDeps,
+    privacyDeps,
   );
 }
 

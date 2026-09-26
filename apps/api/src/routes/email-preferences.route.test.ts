@@ -39,6 +39,7 @@ function build(envOverrides: Record<string, string> = {}) {
     testDeps.audioDeps,
     testDeps.teachingDeps,
     testDeps.emailDeps,
+    testDeps.privacyDeps,
   );
   return { app, ...testDeps };
 }

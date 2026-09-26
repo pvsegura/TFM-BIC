@@ -16,7 +16,7 @@ export const personalDataExportSchema = z.object({
   exportVersion: z.literal(PERSONAL_DATA_EXPORT_VERSION),
   generatedAt: iso,
   account: z.object({
-    userId: z.uuid(),
+    userId: z.string(),
     email: z.string(),
     role: z.enum(ROLES),
     emailVerified: z.boolean(),
@@ -121,6 +121,9 @@ export const personalDataExportSchema = z.object({
 });
 
 export type PersonalDataExportResponse = z.infer<typeof personalDataExportSchema>;
+
+/** The export takes no query parameters at all — in particular never a user id. */
+export const personalDataExportQuerySchema = z.strictObject({});
 
 /**
  * Account deletion: the current password, re-entered, and an explicit `confirm: true`. Strict —

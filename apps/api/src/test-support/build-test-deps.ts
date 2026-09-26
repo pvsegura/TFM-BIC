@@ -8,6 +8,7 @@ import {
   DEFAULT_INTERFACE_LOCALE,
 } from "@tfm-bic/application";
 import {
+  FakeAccountErasureStore,
   FakeContentRepository,
   FakeEmailVerificationTokenRepository,
   FakeExerciseAttemptRepository,
@@ -15,6 +16,7 @@ import {
   FakeGamificationRepository,
   FakeLessonProgressRepository,
   FakePasswordHasher,
+  FakePersonalDataReadModel,
   FakePasswordResetTokenRepository,
   FakeProfileRepository,
   FakeSessionRepository,
@@ -50,6 +52,7 @@ import type { GamificationDependencies } from "../composition/gamification-depen
 import type { LessonDependencies } from "../composition/lesson-dependencies.js";
 import type { TeachingDependencies } from "../composition/teaching-dependencies.js";
 import type { PhoneticsDependencies } from "../composition/phonetics-dependencies.js";
+import type { PrivacyDependencies } from "../composition/privacy-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 import type { VideoDependencies } from "../composition/video-dependencies.js";
 import type { VocabularyDependencies } from "../composition/vocabulary-dependencies.js";
@@ -182,9 +185,26 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  // Privacy (M15): an in-memory export read model and an erasure store that removes the user,
+  // their sessions and their newsletter record from the fakes above.
+  const personalDataReadModel = new FakePersonalDataReadModel();
+  const erasureStore = new FakeAccountErasureStore(userRepository, sessionRepository);
+  erasureStore.alsoErase.push((userId) => {
+    newsletterRepository.records.delete(userId);
+    personalDataReadModel.records.delete(userId);
+  });
+  const privacyDeps: PrivacyDependencies = {
+    readModel: personalDataReadModel,
+    erasureStore,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     emailDeps,
+    privacyDeps,
+    personalDataReadModel,
+    erasureStore,
     emailProvider,
     newsletterRepository,
     unsubscribeTokens,

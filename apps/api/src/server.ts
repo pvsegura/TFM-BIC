@@ -23,6 +23,8 @@ import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
 import type { PhoneticsDependencies } from "./composition/phonetics-dependencies.js";
 import { createPhoneticsUseCases } from "./composition/phonetics-use-cases.js";
+import type { PrivacyDependencies } from "./composition/privacy-dependencies.js";
+import { createPrivacyUseCases } from "./composition/privacy-use-cases.js";
 import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import type { TeachingDependencies } from "./composition/teaching-dependencies.js";
@@ -34,6 +36,7 @@ import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js"
 import { registerAudioGenerationRoutes } from "./routes/audio-generations.route.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
 import { registerContentRoutes } from "./routes/content.route.js";
+import { registerDataManagementRoutes } from "./routes/data-management.route.js";
 import { registerEmailPreferencesRoutes } from "./routes/email-preferences.route.js";
 import { registerExerciseRoutes } from "./routes/exercises.route.js";
 import { registerGamificationRoutes } from "./routes/gamification.route.js";
@@ -63,6 +66,7 @@ export function buildServer(
   audioDeps: AudioDependencies,
   teachingDeps: TeachingDependencies,
   emailDeps: EmailDependencies,
+  privacyDeps: PrivacyDependencies,
 ): FastifyInstance {
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
   const app = Fastify({ logger: createLoggerOptions(env.NODE_ENV) });
@@ -227,6 +231,14 @@ export function buildServer(
       env,
       enabled: teachingDeps.enableTestSupportRoutes === true,
       useCases: teachingUseCases,
+    });
+
+    // Privacy & Data Management (M15, ADR-026): the session user's own export and account
+    // deletion. Deletion re-checks the password through Identity's own repository and hasher.
+    registerDataManagementRoutes(app, {
+      useCases: createPrivacyUseCases(privacyDeps, authDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
     });
 
     registerTestEmailRoutes(app, {

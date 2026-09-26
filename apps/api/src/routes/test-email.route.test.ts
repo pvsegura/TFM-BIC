@@ -40,6 +40,7 @@ function build(options: { nodeEnv?: "test" | "development"; inbox?: boolean; iss
     testDeps.audioDeps,
     testDeps.teachingDeps,
     emailDeps,
+    testDeps.privacyDeps,
   );
   return { app, ...testDeps };
 }

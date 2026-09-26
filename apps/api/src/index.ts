@@ -37,6 +37,10 @@ import {
   createEmailDependencies,
   type EmailDependencies,
 } from "./composition/email-dependencies.js";
+import {
+  createPrivacyDependencies,
+  type PrivacyDependencies,
+} from "./composition/privacy-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import {
   createVideoDependencies,
@@ -68,6 +72,7 @@ let videoDeps: VideoDependencies;
 let audioDeps: AudioDependencies;
 let teachingDeps: TeachingDependencies;
 let emailDeps: EmailDependencies;
+let privacyDeps: PrivacyDependencies;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -82,6 +87,7 @@ if (env.NODE_ENV === "test") {
     audio: audioDeps,
     teaching: teachingDeps,
     email: emailDeps,
+    privacy: privacyDeps,
   } = await createTestDependencies(env));
 } else {
   if (!env.DATABASE_URL) {
@@ -99,6 +105,7 @@ if (env.NODE_ENV === "test") {
   audioDeps = createAudioDependencies(env);
   teachingDeps = createTeachingDependencies(env.DATABASE_URL);
   emailDeps = createEmailDependencies(env.DATABASE_URL, env);
+  privacyDeps = createPrivacyDependencies(env.DATABASE_URL);
 }
 
 const app = buildServer(
@@ -115,6 +122,7 @@ const app = buildServer(
   audioDeps,
   teachingDeps,
   emailDeps,
+  privacyDeps,
 );
 
 async function start(): Promise<void> {
@@ -140,6 +148,7 @@ async function shutdown(signal: string): Promise<void> {
     videoDeps.close(),
     teachingDeps.close(),
     emailDeps.close(),
+    privacyDeps.close(),
   ]);
   process.exit(0);
 }

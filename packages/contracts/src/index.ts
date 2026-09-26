@@ -254,6 +254,7 @@ export {
 // Privacy & Data Management (M15, ADR-026): the export document and the deletion body.
 export {
   deleteAccountRequestSchema,
+  personalDataExportQuerySchema,
   personalDataExportSchema,
   type DeleteAccountRequest,
   type PersonalDataExportResponse,

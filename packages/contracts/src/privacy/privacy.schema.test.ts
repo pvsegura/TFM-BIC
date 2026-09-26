@@ -1,6 +1,10 @@
 import { describe, expect, it } from "vitest";
 
-import { deleteAccountRequestSchema, personalDataExportSchema } from "./privacy.schema.js";
+import {
+  deleteAccountRequestSchema,
+  personalDataExportQuerySchema,
+  personalDataExportSchema,
+} from "./privacy.schema.js";
 
 const EXPORT = {
   exportVersion: "1",
@@ -95,5 +99,12 @@ describe("deleteAccountRequestSchema", () => {
     ["an email", { password: "secret", confirm: true, email: "x@example.com" }],
   ])("rejects %s", (_label, body) => {
     expect(deleteAccountRequestSchema.safeParse(body).success).toBe(false);
+  });
+});
+
+describe("personalDataExportQuerySchema", () => {
+  it("accepts no parameters and refuses any, a user id included", () => {
+    expect(personalDataExportQuerySchema.safeParse({}).success).toBe(true);
+    expect(personalDataExportQuerySchema.safeParse({ userId: "x" }).success).toBe(false);
   });
 });

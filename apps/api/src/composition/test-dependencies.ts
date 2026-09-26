@@ -15,6 +15,7 @@ import {
   buildPhoneticsDependencies,
   type PhoneticsDependencies,
 } from "./phonetics-dependencies.js";
+import { buildPrivacyDependencies, type PrivacyDependencies } from "./privacy-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 import { buildTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
 import {
@@ -55,6 +56,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
   audio: AudioDependencies;
   teaching: TeachingDependencies;
   email: EmailDependencies;
+  privacy: PrivacyDependencies;
 }> {
   const {
     db,
@@ -100,5 +102,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
       exposeInbox: true,
       enableTestSupportRoutes: true,
     }),
+    // Privacy (M15): the real export read model and erasure store over the same database.
+    privacy: buildPrivacyDependencies(identityDb, () => Promise.resolve()),
   };
 }
