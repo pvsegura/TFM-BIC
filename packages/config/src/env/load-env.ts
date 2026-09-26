@@ -1,4 +1,62 @@
+import { isIP } from "node:net";
+
 import { z } from "zod";
+
+/** Where the SPA runs in development/test when APP_BASE_URL is unset. Never used in staging or
+ * production, which must name their own https origin (M16). */
+const DEVELOPMENT_APP_BASE_URL = "http://localhost:5173";
+
+/** HMAC keys shorter than this are refused in staging/production (M16) — 32 characters is the
+ * same floor EMAIL_LINK_SECRET has had since M14. */
+const MIN_PRODUCTION_SECRET_LENGTH = 32;
+
+function isHttpUrl(value: string, protocols: readonly string[]): boolean {
+  try {
+    return protocols.includes(new URL(value).protocol);
+  } catch {
+    return false;
+  }
+}
+
+/** One IPv4/IPv6 address, optionally with a CIDR prefix of a valid length for its family. */
+function isAddressOrCidr(entry: string): boolean {
+  const [address = "", prefix, ...rest] = entry.split("/");
+  const family = isIP(address);
+  if (family === 0 || rest.length > 0) {
+    return false;
+  }
+  if (prefix === undefined) {
+    return true;
+  }
+  const bits = Number(prefix);
+  return /^\d{1,3}$/.test(prefix) && bits <= (family === 4 ? 32 : 128);
+}
+
+/**
+ * TRUST_PROXY (M16): the proxies whose X-Forwarded-For Fastify may believe, as a comma-separated
+ * list of IP addresses/CIDR ranges. Empty = trust none (request.ip is the socket peer). "true",
+ * hop counts and host names are refused: they would let any client spoof its address and bypass
+ * every per-IP rate limit (Fastify 5.12 itself disables hop-count trust for that reason).
+ */
+const trustProxySchema = z
+  .string()
+  .optional()
+  .transform((value, ctx) => {
+    if (value === undefined || value.trim() === "") {
+      return [];
+    }
+    const entries = value.split(",").map((entry) => entry.trim());
+    if (!entries.every(isAddressOrCidr)) {
+      ctx.issues.push({
+        code: "custom",
+        input: value,
+        message:
+          "must be a comma-separated list of proxy IP addresses or CIDR ranges (never true, a hop count or a host name)",
+      });
+      return z.NEVER;
+    }
+    return entries;
+  });
 
 /** A non-empty value on one line — for values that end up in email headers. */
 function singleLine(maxLength: number) {
@@ -29,7 +87,16 @@ const envSchema = z
     // (apps/api's composition root), since dev/test sessions don't need to
     // survive a restart.
     AUTH_SESSION_SECRET: z.string().min(1).optional(),
-    APP_BASE_URL: z.string().min(1).default("http://localhost:5173"),
+    // Origin of the SPA: email links and the Origin check are built from it. Defaults to the Vite dev
+    // server outside staging/production; staging/production must set an https URL (M16).
+    APP_BASE_URL: z
+      .string()
+      .refine((value) => isHttpUrl(value, ["http:", "https:"]), {
+        message: "must be an http(s) URL",
+      })
+      .optional(),
+    // Reverse proxies allowed to set X-Forwarded-For (M16) — see trustProxySchema above.
+    TRUST_PROXY: trustProxySchema,
     // Set only by tests/e2e/playwright.config.ts, never by a developer or
     // CI env file — raises auth rate-limit ceilings so a full E2E run
     // (many registrations/logins against one shared server) doesn't trip
@@ -71,7 +138,40 @@ const envSchema = z
     EMAIL_LINK_SECRET: z.string().min(32).optional(),
   })
   .check((ctx) => {
-    const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET } = ctx.value;
+    const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET, APP_BASE_URL } =
+      ctx.value;
+    const isDeployed = NODE_ENV === "production" || NODE_ENV === "staging";
+
+    if (
+      isDeployed &&
+      AUTH_SESSION_SECRET &&
+      AUTH_SESSION_SECRET.length < MIN_PRODUCTION_SECRET_LENGTH
+    ) {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["AUTH_SESSION_SECRET"],
+        message: `AUTH_SESSION_SECRET must be at least ${String(MIN_PRODUCTION_SECRET_LENGTH)} characters when NODE_ENV is "production" or "staging" (see docs/security/M16-SECURITY-AUDIT.md, S-09).`,
+      });
+    }
+
+    if (isDeployed && (APP_BASE_URL === undefined || !isHttpUrl(APP_BASE_URL, ["https:"]))) {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["APP_BASE_URL"],
+        message: `APP_BASE_URL must be set to an https URL when NODE_ENV is "production" or "staging" (email links and the Origin check use it).`,
+      });
+    }
+
+    if (ctx.value.E2E_RELAXED_RATE_LIMITS && NODE_ENV !== "test") {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["E2E_RELAXED_RATE_LIMITS"],
+        message: `E2E_RELAXED_RATE_LIMITS=true is only allowed when NODE_ENV is "test" (it multiplies every rate limit by 100).`,
+      });
+    }
 
     if ((NODE_ENV === "production" || NODE_ENV === "staging") && !EMAIL_LINK_SECRET) {
       ctx.issues.push({
@@ -118,7 +218,8 @@ const envSchema = z
         message: `AUTH_SESSION_SECRET is required when NODE_ENV is "production" or "staging" (see docs/adr/adr-006-authentication.md).`,
       });
     }
-  });
+  })
+  .transform((env) => ({ ...env, APP_BASE_URL: env.APP_BASE_URL ?? DEVELOPMENT_APP_BASE_URL }));
 
 export type AppEnv = z.infer<typeof envSchema>;
 

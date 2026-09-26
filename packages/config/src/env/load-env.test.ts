@@ -18,6 +18,7 @@ describe("loadEnv", () => {
       AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
       EMAIL_PROVIDER: "fake",
       EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
+      TRUST_PROXY: [],
     });
   });
 
@@ -106,12 +107,12 @@ describe("loadEnv", () => {
     const env = loadEnv({
       NODE_ENV: "production",
       DATABASE_URL: "postgres://user:pass@localhost:5432/db",
-      AUTH_SESSION_SECRET: "a-production-secret",
+      AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
       EMAIL_LINK_SECRET: "a-production-email-link-secret-of-32+-chars",
       APP_BASE_URL: "https://app.example.com",
     });
 
-    expect(env.AUTH_SESSION_SECRET).toBe("a-production-secret");
+    expect(env.AUTH_SESSION_SECRET).toBe("a-production-session-secret-of-32+-chars");
     expect(env.APP_BASE_URL).toBe("https://app.example.com");
   });
 
@@ -177,7 +178,8 @@ describe("loadEnv", () => {
     const production = {
       NODE_ENV: "production",
       DATABASE_URL: "postgres://localhost/db",
-      AUTH_SESSION_SECRET: "a-production-secret",
+      AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
+      APP_BASE_URL: "https://app.example.com",
     };
 
     it("defaults to the fake provider everywhere — no real email is ever sent by default", () => {
@@ -232,5 +234,90 @@ describe("loadEnv", () => {
         expect(String(error)).not.toContain(secret);
       }
     });
+  });
+
+  describe("security hardening (M16)", () => {
+    const production = {
+      NODE_ENV: "production",
+      DATABASE_URL: "postgres://user:pass@localhost:5432/db",
+      AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
+      EMAIL_LINK_SECRET: "a-production-email-link-secret-of-32+-chars",
+      APP_BASE_URL: "https://app.example.com",
+    };
+
+    it.each(["production", "staging"])(
+      "refuses an AUTH_SESSION_SECRET shorter than 32 characters in %s, without echoing it",
+      (nodeEnv) => {
+        const weak = "secret-value-too-short";
+        let message = "";
+        try {
+          loadEnv({ ...production, NODE_ENV: nodeEnv, AUTH_SESSION_SECRET: weak });
+        } catch (error) {
+          message = String(error);
+        }
+        expect(message).toMatch(/AUTH_SESSION_SECRET/);
+        expect(message).not.toContain(weak);
+      },
+    );
+
+    it("still accepts a short AUTH_SESSION_SECRET in development (local convenience)", () => {
+      expect(() =>
+        loadEnv({
+          NODE_ENV: "development",
+          DATABASE_URL: "postgres://x",
+          AUTH_SESSION_SECRET: "dev",
+        }),
+      ).not.toThrow();
+    });
+
+    it.each(["production", "staging"])(
+      "requires APP_BASE_URL to be set explicitly in %s (no localhost default)",
+      (nodeEnv) => {
+        const { APP_BASE_URL: _omitted, ...withoutBaseUrl } = production;
+        expect(() => loadEnv({ ...withoutBaseUrl, NODE_ENV: nodeEnv })).toThrow(/APP_BASE_URL/);
+      },
+    );
+
+    it.each(["production", "staging"])("requires an https APP_BASE_URL in %s", (nodeEnv) => {
+      expect(() =>
+        loadEnv({ ...production, NODE_ENV: nodeEnv, APP_BASE_URL: "http://app.example.com" }),
+      ).toThrow(/APP_BASE_URL/);
+    });
+
+    it("refuses an APP_BASE_URL that is not an http(s) URL in any environment", () => {
+      expect(() => loadEnv({ NODE_ENV: "test", APP_BASE_URL: "not a url" })).toThrow(
+        /APP_BASE_URL/,
+      );
+      expect(() => loadEnv({ NODE_ENV: "test", APP_BASE_URL: "javascript:alert(1)" })).toThrow(
+        /APP_BASE_URL/,
+      );
+    });
+
+    it.each(["development", "staging", "production"])(
+      "refuses E2E_RELAXED_RATE_LIMITS=true when NODE_ENV is %s",
+      (nodeEnv) => {
+        expect(() =>
+          loadEnv({ ...production, NODE_ENV: nodeEnv, E2E_RELAXED_RATE_LIMITS: "true" }),
+        ).toThrow(/E2E_RELAXED_RATE_LIMITS/);
+      },
+    );
+
+    it("trusts no proxy by default", () => {
+      expect(loadEnv({ NODE_ENV: "test" }).TRUST_PROXY).toEqual([]);
+      expect(loadEnv(production).TRUST_PROXY).toEqual([]);
+    });
+
+    it("accepts an explicit list of proxy addresses and CIDR ranges", () => {
+      expect(
+        loadEnv({ ...production, TRUST_PROXY: " 10.0.0.0/8, 127.0.0.1 ,::1,fd00::/8" }).TRUST_PROXY,
+      ).toEqual(["10.0.0.0/8", "127.0.0.1", "::1", "fd00::/8"]);
+    });
+
+    it.each(["true", "1", "2", "*", "all", "10.0.0.0/33", "localhost", "10.0.0.1,", "::1/129"])(
+      "refuses TRUST_PROXY=%s (trust must name concrete proxies: hop counts and all let clients spoof X-Forwarded-For)",
+      (value) => {
+        expect(() => loadEnv({ ...production, TRUST_PROXY: value })).toThrow(/TRUST_PROXY/);
+      },
+    );
   });
 });
