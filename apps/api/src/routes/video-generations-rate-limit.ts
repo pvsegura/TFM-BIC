@@ -19,6 +19,9 @@ function limit(env: AppEnv, max: number, timeWindow: string) {
   };
 }
 
+/** The same creation budget again per signed-in user (M16), whatever address they use. */
+export const VIDEO_GENERATIONS_PER_USER = { max: CREATE_PER_HOUR, timeWindow: "1 hour" };
+
 export const videoGenerationCreateRateLimit = (env: AppEnv) =>
   limit(env, CREATE_PER_HOUR, "1 hour");
 

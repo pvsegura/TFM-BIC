@@ -8,9 +8,13 @@ import type { FastifyInstance } from "fastify";
 import type { AudioUseCases } from "../composition/audio-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { perUserRateLimit } from "../security/rate-limits.js";
 import { audioGenerationFailureLog, audioGenerationSuccessLog } from "./audio-generation-log.js";
 import { mapAudioGenerationError } from "./audio-generations-error.mapper.js";
-import { audioGenerationRateLimit } from "./audio-generations-rate-limit.js";
+import {
+  AUDIO_GENERATIONS_PER_USER,
+  audioGenerationRateLimit,
+} from "./audio-generations-rate-limit.js";
 
 const INVALID_REQUEST = { error: "Invalid request." } as const;
 
@@ -37,13 +41,16 @@ export function registerAudioGenerationRoutes(
   const { useCases, resolveSession, env } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
+  // Per user too (M16, S-04): a class behind one address shares the per-address budget, and one
+  // account must not escape its own by rotating addresses.
+  const userLimit = perUserRateLimit(app, env, "audio-generation", AUDIO_GENERATIONS_PER_USER);
 
   app.post(
     "/audio-generations",
     {
       config: { rateLimit: audioGenerationRateLimit(env) },
       bodyLimit: BODY_LIMIT_BYTES,
-      preHandler: [verifyOrigin, authenticate],
+      preHandler: [verifyOrigin, authenticate, userLimit],
     },
     async (request, reply) => {
       const body = audioGenerationRequestSchema.safeParse(request.body);

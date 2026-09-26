@@ -10,6 +10,9 @@ const GENERATIONS_PER_HOUR = 30;
  * the route tests. */
 const E2E_RATE_LIMIT_MULTIPLIER = 100;
 
+/** The same budget again per signed-in user (M16), whatever address they use. */
+export const AUDIO_GENERATIONS_PER_USER = { max: GENERATIONS_PER_HOUR, timeWindow: "1 hour" };
+
 export const audioGenerationRateLimit = (env: AppEnv) => ({
   max: env.E2E_RELAXED_RATE_LIMITS
     ? GENERATIONS_PER_HOUR * E2E_RATE_LIMIT_MULTIPLIER

@@ -12,6 +12,7 @@ import type { PrivacyUseCases } from "../composition/privacy-use-cases.js";
 import { SESSION_COOKIE_NAME } from "../constants/session-cookie.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { perUserRateLimit } from "../security/rate-limits.js";
 
 const INVALID_BODY = { error: "Invalid request body." } as const;
 const INVALID_QUERY = { error: "Invalid query." } as const;
@@ -43,6 +44,16 @@ export function registerDataManagementRoutes(
   const { useCases, env } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(deps.resolveSession);
+  // Per user as well as per address (M16, S-03): a stolen session cannot spread password guesses
+  // (deletion) or exports over many addresses.
+  const exportUserLimit = perUserRateLimit(app, env, "data-export", {
+    max: 5,
+    timeWindow: "1 hour",
+  });
+  const deletionUserLimit = perUserRateLimit(app, env, "account-deletion", {
+    max: 5,
+    timeWindow: "1 hour",
+  });
 
   function rateLimit(max: number, timeWindow: string) {
     return {
@@ -53,7 +64,7 @@ export function registerDataManagementRoutes(
 
   app.get(
     "/data-management/export",
-    { preHandler: [authenticate], config: { rateLimit: rateLimit(5, "1 hour") } },
+    { preHandler: [authenticate, exportUserLimit], config: { rateLimit: rateLimit(5, "1 hour") } },
     async (request, reply) => {
       reply.header("cache-control", "private, no-store");
       if (!personalDataExportQuerySchema.safeParse(request.query).success) {
@@ -80,7 +91,7 @@ export function registerDataManagementRoutes(
   app.post(
     "/data-management/account-deletion",
     {
-      preHandler: [verifyOrigin, authenticate],
+      preHandler: [verifyOrigin, authenticate, deletionUserLimit],
       bodyLimit: BODY_LIMIT_BYTES,
       config: { rateLimit: rateLimit(5, "1 hour") },
     },

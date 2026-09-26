@@ -12,6 +12,7 @@ import type { FastifyInstance } from "fastify";
 import type { ProfileUseCases } from "../composition/profile-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { routeRateLimit } from "../security/rate-limits.js";
 import { mapProfileError } from "./profile-error.mapper.js";
 
 const INVALID_BODY_MESSAGE = "Invalid request body.";
@@ -70,25 +71,37 @@ export function registerProfileRoutes(
   const { useCases, resolveSession, env } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
+  // Per client (M16, S-14) — the same read budget as the other authenticated reads; editing a
+  // profile is a handful of requests, so writes get less.
+  const readConfig = { rateLimit: routeRateLimit(env, 120, "1 minute") };
+  const writeConfig = { rateLimit: routeRateLimit(env, 30, "1 minute") };
 
   // There is deliberately no `:id` anywhere: both routes act only on the
   // authenticated user, whose id comes from the session (`request.currentUser`)
   // — never from the URL, query string or body.
 
-  app.get("/profile", { preHandler: [authenticate] }, async (request, reply) => {
-    const user = request.currentUser;
-    if (!user) {
-      // Unreachable: `authenticate` already replied 401 — this satisfies the
-      // type checker without duplicating that response.
-      return reply.code(401).send({ error: "Unauthenticated" });
-    }
-    const profile = await useCases.getCurrentProfile.execute({ userId: user.id });
-    return toProfileResponse(user, profile);
-  });
+  app.get(
+    "/profile",
+    { config: readConfig, preHandler: [authenticate] },
+    async (request, reply) => {
+      const user = request.currentUser;
+      if (!user) {
+        // Unreachable: `authenticate` already replied 401 — this satisfies the
+        // type checker without duplicating that response.
+        return reply.code(401).send({ error: "Unauthenticated" });
+      }
+      const profile = await useCases.getCurrentProfile.execute({ userId: user.id });
+      return toProfileResponse(user, profile);
+    },
+  );
 
   app.patch(
     "/profile",
-    { bodyLimit: PATCH_BODY_LIMIT_BYTES, preHandler: [verifyOrigin, authenticate] },
+    {
+      config: writeConfig,
+      bodyLimit: PATCH_BODY_LIMIT_BYTES,
+      preHandler: [verifyOrigin, authenticate],
+    },
     async (request, reply) => {
       const user = request.currentUser;
       if (!user) {

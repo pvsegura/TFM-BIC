@@ -12,8 +12,10 @@ import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 import type { VideoUseCases } from "../composition/video-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
+import { perUserRateLimit } from "../security/rate-limits.js";
 import { mapVideoGenerationError } from "./video-generations-error.mapper.js";
 import {
+  VIDEO_GENERATIONS_PER_USER,
   videoGenerationCreateRateLimit,
   videoGenerationStatusRateLimit,
 } from "./video-generations-rate-limit.js";
@@ -74,13 +76,20 @@ export function registerVideoGenerationRoutes(
   const { useCases, resolveSession, env } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
+  // Per user too (M16, S-04) — generation is the most expensive thing a student can start.
+  const createUserLimit = perUserRateLimit(
+    app,
+    env,
+    "video-generation",
+    VIDEO_GENERATIONS_PER_USER,
+  );
 
   app.post(
     "/video-generations",
     {
       config: { rateLimit: videoGenerationCreateRateLimit(env) },
       bodyLimit: CREATE_BODY_LIMIT_BYTES,
-      preHandler: [verifyOrigin, authenticate],
+      preHandler: [verifyOrigin, authenticate, createUserLimit],
     },
     async (request, reply) => {
       const body = requestVideoGenerationRequestSchema.safeParse(request.body);

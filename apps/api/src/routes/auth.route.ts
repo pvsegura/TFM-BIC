@@ -19,6 +19,7 @@ import {
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import type { AuthUseCases } from "../composition/auth-use-cases.js";
+import { perAccountLoginRateLimit } from "../security/rate-limits.js";
 import { mapAuthError } from "./auth-error.mapper.js";
 
 const INVALID_BODY_RESPONSE = { error: "Invalid request body." } as const;
@@ -39,6 +40,11 @@ export function registerAuthRoutes(
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(useCases.resolveSession);
   const isSecureCookie = env.NODE_ENV === "production" || env.NODE_ENV === "staging";
+  // Per account, on top of the per-address limit below: 10 attempts per 15 minutes (M16, S-02).
+  const loginAccountLimit = perAccountLoginRateLimit(app, env, {
+    max: 10,
+    timeWindow: "15 minutes",
+  });
 
   function rateLimit(max: number, timeWindow: string) {
     return {
@@ -67,7 +73,10 @@ export function registerAuthRoutes(
 
   app.post(
     "/auth/login",
-    { preHandler: [verifyOrigin], config: { rateLimit: rateLimit(10, "15 minutes") } },
+    {
+      preHandler: [verifyOrigin, loginAccountLimit],
+      config: { rateLimit: rateLimit(10, "15 minutes") },
+    },
     async (request, reply) => {
       const parsed = loginRequestSchema.safeParse(request.body);
       if (!parsed.success) {
