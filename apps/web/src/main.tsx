@@ -1,3 +1,6 @@
+// First: configures Zod for the Content-Security-Policy before any schema parses (M16).
+import "./security/zod-without-eval.js";
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 

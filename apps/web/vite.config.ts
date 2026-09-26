@@ -2,8 +2,16 @@ import tailwindcss from "@tailwindcss/vite";
 import react from "@vitejs/plugin-react";
 import { defineConfig } from "vite";
 
+import { WEB_SECURITY_HEADERS } from "./src/security/security-headers.js";
+
 export default defineConfig({
   plugins: [react(), tailwindcss()],
+  // The production build is served with its security headers (M16, ADR-027) — the same values a
+  // production host must send. Not applied to the dev server: its hot-reload client needs inline
+  // scripts. `preview.proxy` defaults to `server.proxy` below.
+  preview: {
+    headers: { ...WEB_SECURITY_HEADERS },
+  },
   server: {
     port: 5173,
     // Proxies auth requests to apps/api so the browser sees a single

@@ -5,6 +5,9 @@ import { defineConfig, devices } from "@playwright/test";
 
 const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const baseURL = "http://localhost:5173";
+/** The production build (`vite build` + `vite preview`), served with its security headers (M16). */
+const productionBuildURL = "http://localhost:4173";
+const PRODUCTION_BUILD_SPEC = /production-build-security\.spec\.ts/;
 
 const API_PORT = 3000;
 
@@ -38,6 +41,21 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
+      testIgnore: PRODUCTION_BUILD_SPEC,
+    },
+    {
+      // M16 (ADR-027): the built app under its Content-Security-Policy — the dev server cannot be
+      // checked under that policy (its hot-reload client needs inline scripts).
+      name: "production-build",
+      use: {
+        ...devices["Desktop Chrome"],
+        baseURL: productionBuildURL,
+        // Chrome's Local Network Access check stops a Playwright-served page from framing
+        // localhost at all, which would make the clickjacking test pass whatever the app's own
+        // headers say. Off for this test browser only.
+        launchOptions: { args: ["--disable-features=LocalNetworkAccessChecks"] },
+      },
+      testMatch: PRODUCTION_BUILD_SPEC,
     },
   ],
   webServer: [
@@ -73,6 +91,16 @@ export default defineConfig({
       url: baseURL,
       reuseExistingServer: !process.env.CI,
       timeout: 60_000,
+    },
+    {
+      // Builds apps/web and serves dist/ with the security headers of
+      // apps/web/src/security/security-headers.ts; API paths are proxied like the dev server.
+      command:
+        "pnpm --filter @tfm-bic/web build && pnpm --filter @tfm-bic/web preview --port 4173 --strictPort",
+      cwd: repoRoot,
+      url: productionBuildURL,
+      reuseExistingServer: !process.env.CI,
+      timeout: 180_000,
     },
   ],
 });
