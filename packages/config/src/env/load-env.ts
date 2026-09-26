@@ -1,5 +1,14 @@
 import { z } from "zod";
 
+/** A non-empty value on one line — for values that end up in email headers. */
+function singleLine(maxLength: number) {
+  return z
+    .string()
+    .min(1)
+    .max(maxLength)
+    .refine((value) => !/[\r\n]/.test(value), { message: "must not contain line breaks" });
+}
+
 /**
  * Environment variables read across apps/api. See .env.example and
  * docs/deployment/environments.md for the authoritative list/grouping.
@@ -48,9 +57,30 @@ const envSchema = z
     // Characters per clip. Capped at the domain's SPEECH_TEXT_MAX_LENGTH (500), which this package
     // cannot import (it depends on nothing internal) — keep the two in step.
     AUDIO_GENERATION_MAX_TEXT_LENGTH: z.coerce.number().int().min(1).max(500).default(300),
+    // Email (M14, ADR-014/ADR-025). "fake" is the only provider: it keeps messages in memory and
+    // sends nothing, in every environment, until a real provider is selected (ADR-014 PENDING) —
+    // so neither local development nor CI can email a real person. A real adapter must be added
+    // to this enum deliberately.
+    EMAIL_PROVIDER: z.enum(["fake"]).default("fake"),
+    // Sender and optional reply-to shown on every email. No line breaks (header injection).
+    EMAIL_FROM: singleLine(320).default("TFM-BIC <no-reply@example.invalid>"),
+    EMAIL_REPLY_TO: singleLine(320).optional(),
+    // Signs newsletter unsubscribe links (HMAC). Required in production/staging; development and
+    // test fall back to an ephemeral per-process secret, like AUTH_SESSION_SECRET. Rotating it
+    // invalidates the unsubscribe links in already-sent newsletters — rotate only deliberately.
+    EMAIL_LINK_SECRET: z.string().min(32).optional(),
   })
   .check((ctx) => {
-    const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET } = ctx.value;
+    const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET } = ctx.value;
+
+    if ((NODE_ENV === "production" || NODE_ENV === "staging") && !EMAIL_LINK_SECRET) {
+      ctx.issues.push({
+        code: "custom",
+        input: ctx.value,
+        path: ["EMAIL_LINK_SECRET"],
+        message: `EMAIL_LINK_SECRET (at least 32 characters) is required when NODE_ENV is "production" or "staging" (see docs/adr/adr-025-email-newsletter.md).`,
+      });
+    }
 
     if (ctx.value.AUDIO_GENERATION_PROVIDER === "gemini") {
       if (NODE_ENV === "test") {

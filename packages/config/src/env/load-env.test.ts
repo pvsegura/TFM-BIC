@@ -16,6 +16,8 @@ describe("loadEnv", () => {
       AUDIO_GENERATION_PROVIDER: "fake",
       GEMINI_TTS_MODEL: "gemini-3.8-flash-tts",
       AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
+      EMAIL_PROVIDER: "fake",
+      EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
     });
   });
 
@@ -105,6 +107,7 @@ describe("loadEnv", () => {
       NODE_ENV: "production",
       DATABASE_URL: "postgres://user:pass@localhost:5432/db",
       AUTH_SESSION_SECRET: "a-production-secret",
+      EMAIL_LINK_SECRET: "a-production-email-link-secret-of-32+-chars",
       APP_BASE_URL: "https://app.example.com",
     });
 
@@ -166,6 +169,68 @@ describe("loadEnv", () => {
       expect(env.AUDIO_GENERATION_MAX_TEXT_LENGTH).toBe(120);
       expect(() => loadEnv({ ...dev, AUDIO_GENERATION_MAX_TEXT_LENGTH: "0" })).toThrow();
       expect(() => loadEnv({ ...dev, AUDIO_GENERATION_MAX_TEXT_LENGTH: "501" })).toThrow();
+    });
+  });
+
+  describe("email (M14, ADR-014/ADR-025)", () => {
+    const dev = { NODE_ENV: "development", DATABASE_URL: "postgres://localhost/db" };
+    const production = {
+      NODE_ENV: "production",
+      DATABASE_URL: "postgres://localhost/db",
+      AUTH_SESSION_SECRET: "a-production-secret",
+    };
+
+    it("defaults to the fake provider everywhere — no real email is ever sent by default", () => {
+      expect(loadEnv(dev).EMAIL_PROVIDER).toBe("fake");
+      expect(loadEnv({ NODE_ENV: "test" }).EMAIL_PROVIDER).toBe("fake");
+    });
+
+    it("rejects any provider other than fake (no real provider is selected yet)", () => {
+      expect(() => loadEnv({ ...dev, EMAIL_PROVIDER: "resend" })).toThrow(/EMAIL_PROVIDER/);
+    });
+
+    it("accepts a sender and a reply-to address", () => {
+      const env = loadEnv({
+        ...dev,
+        EMAIL_FROM: "Language School <hello@school.example>",
+        EMAIL_REPLY_TO: "support@school.example",
+      });
+      expect(env.EMAIL_FROM).toBe("Language School <hello@school.example>");
+      expect(env.EMAIL_REPLY_TO).toBe("support@school.example");
+    });
+
+    it.each(["EMAIL_FROM", "EMAIL_REPLY_TO"])(
+      "refuses a line break in %s (header injection)",
+      (name) => {
+        expect(() => loadEnv({ ...dev, [name]: "a@example.com\r\nBcc: x@example.com" })).toThrow(
+          new RegExp(name),
+        );
+      },
+    );
+
+    it("requires EMAIL_LINK_SECRET (≥ 32 characters) in production and staging", () => {
+      expect(() => loadEnv(production)).toThrow(/EMAIL_LINK_SECRET/);
+      expect(() => loadEnv({ ...production, NODE_ENV: "staging" })).toThrow(/EMAIL_LINK_SECRET/);
+      expect(() => loadEnv({ ...production, EMAIL_LINK_SECRET: "too-short" })).toThrow(
+        /EMAIL_LINK_SECRET/,
+      );
+      expect(
+        loadEnv({ ...production, EMAIL_LINK_SECRET: "x".repeat(32) }).EMAIL_LINK_SECRET,
+      ).toHaveLength(32);
+    });
+
+    it("does not require EMAIL_LINK_SECRET in development or test", () => {
+      expect(loadEnv(dev).EMAIL_LINK_SECRET).toBeUndefined();
+    });
+
+    it("never echoes the secret's value in a configuration error", () => {
+      const secret = "short-secret-value";
+      try {
+        loadEnv({ ...production, EMAIL_LINK_SECRET: secret });
+        expect.unreachable();
+      } catch (error) {
+        expect(String(error)).not.toContain(secret);
+      }
     });
   });
 });
