@@ -38,6 +38,24 @@ instruction). Rationale: [ADR-025](../docs/adr/adr-025-email-newsletter.md) (+ A
   tooling (only the send-issue use case + E2E route), anonymous signup, email change, account deletion workflow,
   more locales.
 
+## Verification (M14, run locally on 2026-09-26)
+
+- Baseline before any change: 3644 pass / 5 skipped (same as M13's record).
+- `lint`, `typecheck`, `build`, `content:validate`: **PASS**. `format:check`: PASS for every tracked file (the only
+  warning is the untracked nested clone `TFM-BIC/README.md`, as in M11–M13).
+- **Vitest (full, with coverage): 3851 pass / 5 skipped / 0 fail**; coverage **94.25% statements / 87.59% branches /
+  93.24% functions / 94.37% lines**. M14 code alone (35 files, measured before the last 3 tests were added):
+  98.91% lines / 98.50% functions / 91.71% branches.
+- **Playwright: 145/145 pass** (full run, `--workers=2`), including the 5 new tests in
+  `tests/e2e/email-newsletter.spec.ts` — fake provider only.
+- `exercises.spec.ts` "neither the exercise page's responses nor its screen reveal the answer": failed 2 of 7 runs on
+  this branch under 2-worker load (0 of 4 on M13; passes alone). Cause: an unawaited `response.text()` that rejects
+  when the browser discards a body on navigation — a test race that M14's timing exposed. Fixed in its own commit
+  (unreadable bodies are skipped; ≥ 2 bodies must still be read); 3/3 + the final full run pass since.
+- Not verified: the migration against a real Postgres (PGlite-backed repository tests only); any real email
+  delivery (no provider exists).
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction).
+
 ## Previous milestone (M13)
 
 ## What actually exists (M13)
