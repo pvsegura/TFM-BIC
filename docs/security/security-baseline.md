@@ -261,6 +261,28 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
   database error could log an email address or a password/token hash.
 - Detail: [docs/privacy/](../privacy/README.md), [ADR-026](../adr/adr-026-privacy-data-management.md).
 
+## Security hardening (M16 — implemented)
+
+Audit, threat model, risk register, authorization matrix and tests: [M16-SECURITY-AUDIT.md](M16-SECURITY-AUDIT.md) and
+the other `M16-*.md` files here; decisions: [ADR-027](../adr/adr-027-security-hardening.md). No finding was critical.
+
+- **Default deny is tested**: a route-inventory test fails when a route is added without being classified; every
+  non-public route must answer 401 without a session and every state-changing route 403 to a foreign Origin.
+- **Rate limits in two layers**: per client address (with an explicit `TRUST_PROXY` allowlist — never "trust all"),
+  plus per account for login and per user for deletion, export and AI generation.
+- **Single-use tokens are atomic**: reset/verification tokens are consumed by one conditional `UPDATE` before
+  anything changes.
+- **HTTP headers**: every API response carries nosniff, frame denial, a deny-all CSP, no-referrer, CORP, a
+  `no-store` default and an `X-Request-Id`; HSTS in staging/production. The SPA's CSP is defined in
+  `apps/web/src/security/security-headers.ts` (no inline script, no eval, no third party) and the production build
+  is tested under it. The host must serve those headers (deployment checklist in
+  [environments.md](../deployment/environments.md)).
+- **Errors**: status-specific safe 4xx bodies (no more "Internal Server Error" for a 429), 4xx logged at info, a
+  generic 404 that does not echo the path.
+- **Configuration**: staging/production refuse a short session secret, a missing or non-https `APP_BASE_URL` and
+  the E2E rate-limit relaxation; every `.env.*` file except the example is git-ignored.
+- **CI**: a `Dependency Audit` stage (`pnpm audit`). Secret scanning is PENDING.
+
 ## Input/output validation
 
 - All external input (HTTP bodies, query params, route params) validated with Zod schemas from
@@ -275,16 +297,16 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
 - **SQL injection**: repository implementations use Drizzle's parameterized query builder
   (`packages/data/src/identity/*.repository.ts`), never string-concatenated SQL.
 - **CSRF** (M3 — implemented): primary defense is `SameSite=Strict` on the session cookie;
-  defense in depth is an `Origin`-header check on every state-changing `/auth/*` route
-  (`apps/api/src/hooks/verify-origin.ts`) — see ADR-006 for the full rationale and accepted
+  defense in depth is an `Origin`-header check on every state-changing route (not only `/auth/*`; since
+  M16 with a `Sec-Fetch-Site` fallback when `Origin` is absent — `apps/api/src/hooks/verify-origin.ts`) — see ADR-006 for the full rationale and accepted
   trade-offs (no double-submit CSRF token in M3).
 - **Rate limiting** (M3 — implemented): `@fastify/rate-limit`, per-route, on every auth endpoint
   — register/resend/reset-request: 5/hour; login: 10/15min; reset-confirm: 10/hour; verify-email:
   20/15min (`apps/api/src/routes/auth.route.ts`). Enforcement is covered by an automated test
   (`auth.route.test.ts`), not just configured and assumed to work.
-- **Secure headers**: standard security headers (CSP, HSTS, X-Content-Type-Options, etc.) set at
-  the API/reverse-proxy layer (`infrastructure/nginx/`) — exact CSP policy deferred until frontend
-  asset/CDN strategy (tied to ADR-015) is known.
+- **Secure headers** (M16): set by the API itself (`apps/api/src/security/http-security.ts`) and, for the SPA, by
+  whatever serves `apps/web/dist` using `apps/web/src/security/security-headers.ts` (`vite preview` does; the
+  production host must — ADR-015 PENDING). Before M16 this line claimed a reverse-proxy config that never existed.
 
 ## Secrets
 
@@ -300,10 +322,8 @@ A student's saved/learning/learned words. See [ADR-022](../adr/adr-022-vocabular
 
 - Dependency updates follow [dependency-management.md](../development/dependency-management.md),
   including a security-advisory check before upgrading.
-- Automated dependency audit as a CI step — **not yet added** to the M2 `Jenkinsfile` (its stage
-  list is lint/format/typecheck/test/coverage/build/E2E/SonarQube/Quality Gate only); mechanism
-  (`pnpm audit` as an explicit stage vs. relying on SonarQube's dependency-vulnerability checks)
-  still open.
+- Automated dependency audit as a CI step — **added in M16** (`Dependency Audit` stage: `pnpm audit --prod`, then
+  `--audit-level=high`). Accepted advisories and their reasoning: [M16-RISK-REGISTER.md](M16-RISK-REGISTER.md).
 
 ## Audit logging
 
