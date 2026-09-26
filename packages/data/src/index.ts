@@ -131,3 +131,9 @@ export {
   type NewsletterDbHandle,
 } from "./newsletter/db/client.js";
 export { DrizzleNewsletterSubscriptionRepository } from "./newsletter/newsletter-subscription.repository.js";
+
+// Privacy & Data Management (M15) — see ADR-026 and docs/privacy/.
+export { createPrivacyDb, type PrivacyDb, type PrivacyDbHandle } from "./privacy/db/client.js";
+export { DrizzleAccountErasureStore } from "./privacy/account-erasure.store.js";
+export { SqlPersonalDataReadModel } from "./privacy/personal-data.read-model.js";
+export { NON_USER_STORES, USER_DATA_REGISTER } from "./privacy/user-data-register.js";
