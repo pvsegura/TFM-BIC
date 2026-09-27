@@ -259,3 +259,6 @@ export {
   type DeleteAccountRequest,
   type PersonalDataExportResponse,
 } from "./privacy/privacy.schema.js";
+
+// Web app delivery (M16/M17): the headers every server of the built SPA must send.
+export { CONTENT_SECURITY_POLICY, WEB_SECURITY_HEADERS } from "./web/web-security-headers.js";

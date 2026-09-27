@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { CONTENT_SECURITY_POLICY, WEB_SECURITY_HEADERS } from "./security-headers.js";
+import { CONTENT_SECURITY_POLICY, WEB_SECURITY_HEADERS } from "./web-security-headers.js";
 
 function directives(policy: string): Map<string, string[]> {
   return new Map(
