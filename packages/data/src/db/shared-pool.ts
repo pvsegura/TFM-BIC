@@ -23,6 +23,7 @@ export const POSTGRES_POOL_OPTIONS = {
 export interface PoolLike {
   query: (text: string) => Promise<unknown>;
   end: () => Promise<void>;
+  on: (event: "error", listener: (error: Error) => void) => unknown;
 }
 
 export interface SharedPoolLease<P extends PoolLike> {
@@ -41,6 +42,7 @@ export interface SharedPoolRegistry<P extends PoolLike> {
  */
 export function createSharedPoolRegistry<P extends PoolLike>(
   createPool: (config: PoolConfig) => P,
+  onIdleError: (details: { code: string | undefined }) => void = logIdleClientError,
 ): SharedPoolRegistry<P> {
   const entries = new Map<string, { pool: P; holders: number }>();
 
@@ -48,10 +50,14 @@ export function createSharedPoolRegistry<P extends PoolLike>(
     acquire(databaseUrl) {
       let entry = entries.get(databaseUrl);
       if (!entry) {
-        entry = {
-          pool: createPool({ connectionString: databaseUrl, ...POSTGRES_POOL_OPTIONS }),
-          holders: 0,
-        };
+        const pool = createPool({ connectionString: databaseUrl, ...POSTGRES_POOL_OPTIONS });
+        // An idle connection the server drops (restart, failover, admin termination — 57P01) is
+        // emitted as an "error" event; unhandled, it would crash the process. pg discards that
+        // client itself; the next query opens a new connection (found by the M17 outage test).
+        pool.on("error", (error) => {
+          onIdleError({ code: (error as Error & { code?: string }).code });
+        });
+        entry = { pool, holders: 0 };
         entries.set(databaseUrl, entry);
       }
       entry.holders += 1;
@@ -74,6 +80,14 @@ export function createSharedPoolRegistry<P extends PoolLike>(
       };
     },
   };
+}
+
+/** One structured line on stderr — only the SQLSTATE code, never the message or connection details. */
+function logIdleClientError(details: { code: string | undefined }): void {
+  process.stderr.write(
+    `${JSON.stringify({ level: 40, time: Date.now(), msg: "database.idle_connection_lost", ...details })}
+`,
+  );
 }
 
 /** The process-wide registry of real `pg` pools. */

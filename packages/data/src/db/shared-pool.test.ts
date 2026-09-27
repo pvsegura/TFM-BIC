@@ -11,6 +11,7 @@ function fakePool(overrides: Partial<PoolLike> = {}): PoolLike & { end: ReturnTy
   return {
     query: vi.fn().mockResolvedValue({ rows: [{ "?column?": 1 }] }),
     end: vi.fn().mockResolvedValue(undefined),
+    on: vi.fn(),
     ...overrides,
   } as PoolLike & { end: ReturnType<typeof vi.fn> };
 }
@@ -62,6 +63,23 @@ describe("createSharedPoolRegistry (M17)", () => {
     registry.acquire("postgres://db/app");
 
     expect(factory).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("idle connection errors (M17: found by the container DB-outage test)", () => {
+  it("listens for the pool's error event, so a dropped idle connection cannot crash the process", () => {
+    const pool = fakePool();
+    const onIdleError = vi.fn();
+    createSharedPoolRegistry(() => pool, onIdleError).acquire("postgres://db/app");
+
+    expect(pool.on).toHaveBeenCalledWith("error", expect.any(Function));
+    const listener = vi.mocked(pool.on).mock.calls[0]?.[1] as (error: Error) => void;
+    const error = Object.assign(new Error("terminating connection due to administrator command"), {
+      code: "57P01",
+    });
+
+    expect(() => listener(error)).not.toThrow();
+    expect(onIdleError).toHaveBeenCalledWith({ code: "57P01" });
   });
 });
 

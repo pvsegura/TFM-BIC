@@ -89,7 +89,7 @@ export async function runMigrations(
       } catch (error) {
         throw new Error(`Migration set "${migrationSet.context}" failed.`, { cause: error });
       }
-      log.info({ set: migrationSet.context }, "migrations.set_applied");
+      log.info({ set: migrationSet.context }, "migrations.set_up_to_date");
     }
   } finally {
     await session.unlock();
