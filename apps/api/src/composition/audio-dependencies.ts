@@ -4,7 +4,12 @@ import type {
   GenerateAudioOptions,
 } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
-import { FakeAudioGenerationService, GeminiAudioProvider, InMemoryAudioCache } from "@tfm-bic/data";
+import {
+  DisabledAudioGenerationService,
+  FakeAudioGenerationService,
+  GeminiAudioProvider,
+  InMemoryAudioCache,
+} from "@tfm-bic/data";
 
 /**
  * Everything the audio-generation routes need beyond the content dependencies (the text comes from
@@ -34,13 +39,18 @@ const CACHE_MAX_BYTES = 32 * 1024 * 1024;
 export function selectAudioGenerationProvider(
   env: Pick<AppEnv, "AUDIO_GENERATION_PROVIDER" | "GEMINI_API_KEY" | "GEMINI_TTS_MODEL">,
 ): AudioGenerationService {
-  if (env.AUDIO_GENERATION_PROVIDER === "gemini") {
-    return new GeminiAudioProvider({
-      apiKey: env.GEMINI_API_KEY ?? "",
-      model: env.GEMINI_TTS_MODEL,
-    });
+  switch (env.AUDIO_GENERATION_PROVIDER) {
+    case "gemini":
+      return new GeminiAudioProvider({
+        apiKey: env.GEMINI_API_KEY ?? "",
+        model: env.GEMINI_TTS_MODEL,
+      });
+    // M17: switched off — never the fake adapter (loadEnv refuses "fake" in production).
+    case "disabled":
+      return new DisabledAudioGenerationService();
+    case "fake":
+      return new FakeAudioGenerationService();
   }
-  return new FakeAudioGenerationService();
 }
 
 export function createAudioDependencies(env: AppEnv): AudioDependencies {

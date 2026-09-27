@@ -1,5 +1,9 @@
 import { loadEnv } from "@tfm-bic/config";
-import { FakeAudioGenerationService, GeminiAudioProvider } from "@tfm-bic/data";
+import {
+  DisabledAudioGenerationService,
+  FakeAudioGenerationService,
+  GeminiAudioProvider,
+} from "@tfm-bic/data";
 import { describe, expect, it } from "vitest";
 
 import { createAudioDependencies, selectAudioGenerationProvider } from "./audio-dependencies.js";
@@ -30,5 +34,16 @@ describe("createAudioDependencies", () => {
     expect(deps.options.maxTextLength).toBe(120);
     expect(deps.options.maxConcurrent).toBeGreaterThan(0);
     expect(deps.cache.get("anything")).toBeUndefined();
+  });
+});
+
+describe("selectAudioGenerationProvider — disabled (M17)", () => {
+  it("selects the disabled adapter, never the fake one", () => {
+    const provider = selectAudioGenerationProvider(
+      loadEnv({ ...dev, AUDIO_GENERATION_PROVIDER: "disabled" }),
+    );
+
+    expect(provider).toBeInstanceOf(DisabledAudioGenerationService);
+    expect(provider).not.toBeInstanceOf(FakeAudioGenerationService);
   });
 });

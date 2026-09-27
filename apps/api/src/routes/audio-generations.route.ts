@@ -18,6 +18,9 @@ import {
 
 const INVALID_REQUEST = { error: "Invalid request." } as const;
 
+/** The feature is switched off in this deployment (M17). No Retry-After: waiting will not help. */
+const AUDIO_DISABLED = { error: "Audio generation is not available." } as const;
+
 /** The body only names content, a part and a profile; anything larger is rejected (413) unparsed. */
 const BODY_LIMIT_BYTES = 1024;
 
@@ -53,6 +56,10 @@ export function registerAudioGenerationRoutes(
       preHandler: [verifyOrigin, authenticate, userLimit],
     },
     async (request, reply) => {
+      // M17: switched off in this deployment (ADR-028) — after authentication, before anything else.
+      if (env.AUDIO_GENERATION_PROVIDER === "disabled") {
+        return reply.code(503).send(AUDIO_DISABLED);
+      }
       const body = audioGenerationRequestSchema.safeParse(request.body);
       if (!body.success) {
         return reply.code(400).send(INVALID_REQUEST);

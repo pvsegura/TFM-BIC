@@ -137,3 +137,10 @@ export { createPrivacyDb, type PrivacyDb, type PrivacyDbHandle } from "./privacy
 export { DrizzleAccountErasureStore } from "./privacy/account-erasure.store.js";
 export { SqlPersonalDataReadModel } from "./privacy/personal-data.read-model.js";
 export { NON_USER_STORES, USER_DATA_REGISTER } from "./privacy/user-data-register.js";
+
+// Production readiness (M17, ADR-028): what AUDIO/VIDEO_GENERATION_PROVIDER=disabled select, so a
+// switched-off feature never falls back to a fake adapter.
+export {
+  DisabledAudioGenerationService,
+  DisabledVideoGenerationService,
+} from "./providers/disabled-generation-services.js";

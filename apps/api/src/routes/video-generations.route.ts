@@ -22,6 +22,9 @@ import {
 
 const INVALID_REQUEST = { error: "Invalid request." } as const;
 
+/** The feature is switched off in this deployment (M17). No Retry-After: waiting will not help. */
+const VIDEO_DISABLED = { error: "Video generation is not available." } as const;
+
 /** The request body names only which definition to render; anything bigger than a handful of bytes is rejected (413) before it is parsed. */
 const CREATE_BODY_LIMIT_BYTES = 1024;
 
@@ -92,6 +95,10 @@ export function registerVideoGenerationRoutes(
       preHandler: [verifyOrigin, authenticate, createUserLimit],
     },
     async (request, reply) => {
+      // M17: switched off in this deployment (ADR-028) — after authentication, before anything else.
+      if (env.VIDEO_GENERATION_PROVIDER === "disabled") {
+        return reply.code(503).send(VIDEO_DISABLED);
+      }
       const body = requestVideoGenerationRequestSchema.safeParse(request.body);
       if (!body.success) {
         return reply.code(400).send(INVALID_REQUEST);

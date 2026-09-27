@@ -2,7 +2,7 @@ import { loadEnv } from "@tfm-bic/config";
 import { FakeAudioGenerationService, isWav, type FakeAudioGenerationScenario } from "@tfm-bic/data";
 import { makeVocabularyCatalog } from "@tfm-bic/application/testing";
 import type { FastifyInstance } from "fastify";
-import { afterEach, describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { SESSION_COOKIE_NAME } from "../constants/session-cookie.js";
 import { buildServer } from "../server.js";
@@ -289,5 +289,28 @@ describe("POST /audio-generations — rate limiting", () => {
     }
 
     expect(last).toBe(200);
+  });
+});
+
+describe("AUDIO_GENERATION_PROVIDER=disabled (M17)", () => {
+  it("answers 503 to an authenticated request and never calls the provider", async () => {
+    const built = build({ AUDIO_GENERATION_PROVIDER: "disabled" });
+    const generateSpeech = vi.spyOn(built.provider, "generate");
+    const cookie = await signIn(built);
+
+    const response = await generate(built, cookie);
+
+    expect(response.statusCode).toBe(503);
+    expect(response.json()).toEqual({ error: "Audio generation is not available." });
+    expect(response.headers["retry-after"]).toBeUndefined();
+    expect(generateSpeech).not.toHaveBeenCalled();
+  });
+
+  it("still authenticates first: 401 without a session", async () => {
+    const built = build({ AUDIO_GENERATION_PROVIDER: "disabled" });
+
+    const response = await generate(built, undefined);
+
+    expect(response.statusCode).toBe(401);
   });
 });

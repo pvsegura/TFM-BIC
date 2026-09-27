@@ -10,6 +10,7 @@ import {
   createVideoDb,
   DEFAULT_CONTENT_ROOT,
   DrizzleVideoGenerationJobRepository,
+  DisabledVideoGenerationService,
   FakeVideoGenerationService,
   HyperframesCliProvider,
   SystemClock,
@@ -40,11 +41,19 @@ export interface VideoDependencies {
 export function selectVideoGenerationProvider(
   env: Pick<AppEnv, "VIDEO_GENERATION_PROVIDER" | "CONTENT_DIR">,
 ): VideoGenerationService {
-  if (env.VIDEO_GENERATION_PROVIDER === "hyperframes") {
-    const contentDir = env.CONTENT_DIR ?? DEFAULT_CONTENT_ROOT;
-    return new HyperframesCliProvider({ videoScriptsRoot: path.join(contentDir, "video-scripts") });
+  switch (env.VIDEO_GENERATION_PROVIDER) {
+    case "hyperframes": {
+      const contentDir = env.CONTENT_DIR ?? DEFAULT_CONTENT_ROOT;
+      return new HyperframesCliProvider({
+        videoScriptsRoot: path.join(contentDir, "video-scripts"),
+      });
+    }
+    // M17: switched off — never the fake adapter (loadEnv refuses "fake" in production).
+    case "disabled":
+      return new DisabledVideoGenerationService();
+    case "fake":
+      return new FakeVideoGenerationService();
   }
-  return new FakeVideoGenerationService();
 }
 
 export function buildVideoDependencies(

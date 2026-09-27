@@ -297,3 +297,28 @@ describe("GET /video-generations/:jobId", () => {
     expect(body.mediaReference).toBeNull();
   });
 });
+
+describe("VIDEO_GENERATION_PROVIDER=disabled (M17)", () => {
+  it("answers 503 to an authenticated request, records no job and never calls the provider", async () => {
+    const built = build({ VIDEO_GENERATION_PROVIDER: "disabled" });
+    const generate = vi.spyOn(built.videoDeps.provider, "generate");
+    const create = vi.spyOn(built.videoDeps.videoGenerationJobRepository, "create");
+    const { cookie } = await signIn(built, "ana@example.com");
+
+    const response = await requestGeneration(built, cookie);
+
+    expect(response.statusCode).toBe(503);
+    expect(response.json()).toEqual({ error: "Video generation is not available." });
+    expect(response.headers["retry-after"]).toBeUndefined();
+    expect(generate).not.toHaveBeenCalled();
+    expect(create).not.toHaveBeenCalled();
+  });
+
+  it("still authenticates first: 401 without a session", async () => {
+    const built = build({ VIDEO_GENERATION_PROVIDER: "disabled" });
+
+    const response = await requestGeneration(built, undefined);
+
+    expect(response.statusCode).toBe(401);
+  });
+});
