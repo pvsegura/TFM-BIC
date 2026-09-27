@@ -67,7 +67,9 @@ export default defineConfig({
       // HTTP, real (WASM) Postgres, no Docker/network database needed for
       // E2E. AUTH_SESSION_SECRET is a throwaway value, fine to commit —
       // it only signs ephemeral E2E session cookies, never a real secret.
-      command: "pnpm --filter @tfm-bic/api start",
+      // NODE_ENV=test runs the TypeScript sources through tsx (in-process PGlite database); the
+      // compiled `start` bundle deliberately excludes that test composition (M17).
+      command: "pnpm --filter @tfm-bic/api start:test",
       cwd: repoRoot,
       url: `http://localhost:${API_PORT}/health`,
       reuseExistingServer: !process.env.CI,

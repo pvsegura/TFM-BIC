@@ -56,7 +56,7 @@ import { buildServer } from "./server.js";
 
 /** Below Docker's default 10 s stop grace period, so we exit on our own terms (M17). */
 const SHUTDOWN_TIMEOUT_MS = 8_000;
-/** Start-up checks: ≈ 1+2+4+8+8 s of waiting, enough for a suspended serverless database. */
+/** Start-up checks: 1+2+4+8+10 s ≈ 25 s of waiting, enough for a suspended serverless database. */
 const STARTUP_DATABASE_ATTEMPTS = 6;
 const STARTUP_DATABASE_INITIAL_DELAY_MS = 1_000;
 

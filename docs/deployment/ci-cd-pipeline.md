@@ -152,7 +152,7 @@ nothing in the dependency tree touches native addons — worth re-verifying on t
 Jenkins run rather than assuming.
 
 The Playwright config's `webServer` step now starts **two** servers inside the same container the
-tests run in: `pnpm --filter @tfm-bic/web dev` (`apps/web`) and `pnpm --filter @tfm-bic/api start`
+tests run in: `pnpm --filter @tfm-bic/web dev` (`apps/web`) and `pnpm --filter @tfm-bic/api start:test`
 with `NODE_ENV=test` (`apps/api`, booting against an in-process PGlite instance — no
 Docker/network database needed even in CI, see [ADR-005](../adr/adr-005-database.md) and
 `tests/e2e/playwright.config.ts`). No separate "deploy to a preview environment" step exists yet
