@@ -144,3 +144,11 @@ export {
   DisabledAudioGenerationService,
   DisabledVideoGenerationService,
 } from "./providers/disabled-generation-services.js";
+
+// The process's one bounded Postgres pool, and the readiness check over it (M17).
+export {
+  createDatabaseReadinessCheck,
+  pingDatabase,
+  POSTGRES_POOL_OPTIONS,
+  type DatabaseReadinessCheck,
+} from "./db/shared-pool.js";

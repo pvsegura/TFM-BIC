@@ -1,5 +1,6 @@
 import { drizzle } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+
+import { sharedPostgresPools } from "../../db/shared-pool.js";
 
 import type { IdentityDb } from "../../identity/db/client.js";
 import * as identitySchema from "../../identity/db/schema.js";
@@ -17,11 +18,12 @@ export interface PrivacyDbHandle {
 }
 
 /**
- * A deliberately small pool: exports and deletions are rare, rate-limited, user-initiated
- * operations — they do not need the pool size of a request-path context.
+ * Exports and deletions are rare, rate-limited, user-initiated operations; since M17 they share
+ * the process's one bounded pool instead of opening a small one of their own.
  */
 export function createPrivacyDb(databaseUrl: string): PrivacyDbHandle {
-  const pool = new Pool({ connectionString: databaseUrl, max: 2 });
+  // One bounded, shared pool for the whole process (M17) — see db/shared-pool.ts.
+  const { pool, release } = sharedPostgresPools.acquire(databaseUrl);
   const db = drizzle(pool, { schema: identitySchema });
-  return { db, close: () => pool.end() };
+  return { db, close: release };
 }

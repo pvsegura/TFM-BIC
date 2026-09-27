@@ -1,5 +1,6 @@
 import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+
+import { sharedPostgresPools } from "../../db/shared-pool.js";
 
 import * as identitySchema from "../../identity/db/schema.js";
 import * as schema from "./schema.js";
@@ -18,7 +19,8 @@ export interface NewsletterDbHandle {
 
 /** Same `DATABASE_URL` and database as every other context; a small pool of its own. */
 export function createNewsletterDb(databaseUrl: string): NewsletterDbHandle {
-  const pool = new Pool({ connectionString: databaseUrl });
+  // One bounded, shared pool for the whole process (M17) — see db/shared-pool.ts.
+  const { pool, release } = sharedPostgresPools.acquire(databaseUrl);
   const db = drizzle(pool, { schema: { ...schema, ...identitySchema } });
-  return { db, close: () => pool.end() };
+  return { db, close: release };
 }

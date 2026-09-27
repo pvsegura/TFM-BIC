@@ -1,5 +1,6 @@
 import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
-import { Pool } from "pg";
+
+import { sharedPostgresPools } from "../../db/shared-pool.js";
 
 import * as schema from "./schema.js";
 
@@ -21,7 +22,8 @@ export interface PhoneticsDbHandle {
  * not a second database.
  */
 export function createPhoneticsDb(databaseUrl: string): PhoneticsDbHandle {
-  const pool = new Pool({ connectionString: databaseUrl });
+  // One bounded, shared pool for the whole process (M17) — see db/shared-pool.ts.
+  const { pool, release } = sharedPostgresPools.acquire(databaseUrl);
   const db = drizzle(pool, { schema });
-  return { db, close: () => pool.end() };
+  return { db, close: release };
 }
