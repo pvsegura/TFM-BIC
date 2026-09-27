@@ -1,8 +1,54 @@
 # Current State
 
-Last updated: 2026-09-26
+Last updated: 2026-09-27
 
 ## Milestone
+
+**M17 — Production readiness & deployment** — implemented on `feature/production-readiness`, branched from
+`feature/security-hardening` (M16). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction).
+Rationale: [ADR-028](../docs/adr/adr-028-production-runtime-and-deployment.md); audit, blockers and evidence:
+[docs/production/M17-PRODUCTION-AUDIT.md](../docs/production/M17-PRODUCTION-AUDIT.md) and siblings.
+**Deployable image validated; NOT production ready** — hosting (user wants a free stack; candidates in
+M17-HOSTING-OPTIONS.md), domain, registry, real email provider and a provisioned database are PENDING. Nothing deployed.
+
+## What actually exists (M17)
+
+- **Config guards** (`packages/config`): production refuses `EMAIL_PROVIDER=fake` (the only email adapter — so
+  production cannot start yet, deliberately), fake audio, any video provider but `disabled`, loopback
+  `APP_BASE_URL`/`DATABASE_URL`, a `DATABASE_URL` without `sslmode=require|verify-*`; staging/production require
+  `WEB_DIST_DIR`. New `APP_VERSION` (shown by `/health`). Errors list every problem, never values.
+- **`disabled` mode** for audio/video: 503 after authentication, no job, no provider call; explicit disabled adapters.
+- **DB**: one reference-counted shared `pg` pool (max 10, 5 s connect, 30 s idle, 15 s statement timeout) with an
+  `error` listener — without it a dropped idle connection crashed the process (found by the container outage test).
+- **`/ready`** = `SELECT 1` within 2 s (503 otherwise); `/health` liveness only. Start-up waits for the DB (6 attempts,
+  ≈ 25 s) and exits 1; shutdown idempotent, 8 s hard limit (`apps/api/src/lifecycle/`).
+- **Migrations**: `pnpm db:migrate` / `node dist/migrate.js` — all 10 sets in `MIGRATION_SETS` order under an advisory
+  lock with `lock_timeout`; guard test keeps the list in step with folders and drizzle configs.
+- **SPA served by the API** (`WEB_DIST_DIR`, `apps/api/src/web/web-app.ts`): in memory, explicit routes, SPA headers
+  (now in `@tfm-bic/contracts/web-security-headers`), brotli/gzip, immutable hashed assets, shell for navigations,
+  `/profile` page-vs-API split.
+- **Build**: `apps/api` `build` = `tsc --noEmit && node build.mjs` (esbuild bundle; PGlite test composition stubbed,
+  metafile leak check). `start` runs the bundle; E2E uses `start:test` (tsx).
+- **Image** `infrastructure/docker/app.Dockerfile`; `validate-image.sh`, `infrastructure/deployment/smoke-test.mjs`,
+  `restore-drill.sh`. **Jenkins**: Secret Scan (gitleaks v8.30.1), Build Image, Validate Image, Record Release
+  Candidate, opt-in Push Image; no deploy stages (hosting PENDING).
+
+## Verification (M17, run locally on 2026-09-27)
+
+- `lint`, `typecheck`, `build`: **PASS**. `format:check`: PASS for tracked files (only the untracked nested clone warns).
+- **Vitest (full, with coverage): 4149 pass / 5 skipped / 0 fail** (M16: 4062); coverage **94.5% statements /
+  88.44% branches / 93.27% functions / 94.61% lines**.
+- **Playwright**: first full run 149/154 — 5 timeouts (phonetics, vocabulary, privacy) that pass 16/16 when their
+  files are re-run alone (load on the laptop, not an assertion failure); **second full run: 154/154 pass** (150
+  `chromium` + 4 `production-build`).
+- Image `tfm-bic:0e2802cfd133` (241.5 MB): `validate-image.sh` **IMAGE VALID** (clean + repeated migrations, production
+  refusal, staging start as least-privilege role, smoke 18/18, DB outage + recovery, non-root/read-only, no secrets,
+  SIGTERM stop 0.68 s exit 0). Concurrent migrations: one waits, no duplicates. Restore drill **PASSED**. Rollback drill
+  (broken N+1 → N) **PASSED**. gitleaks: 259 commits, no leaks.
+- `pnpm audit --prod`: none; full audit: the same moderate dev-only esbuild advisory (drizzle-kit, SR-20).
+- **Jenkins / SonarQube / Quality Gate: NOT RUN** (standing instruction). No deployment anywhere.
+
+## Previous milestone (M16)
 
 **M16 — Security hardening** — implemented on `feature/security-hardening`, branched from `feature/privacy-gdpr`
 (M15). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction). Rationale:
