@@ -53,6 +53,13 @@ import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 
+/** Process-level wiring that is not a bounded context's dependency (M17). */
+export interface ServerRuntimeOptions {
+  /** Backs GET /ready. index.ts wires the real database check; the in-process NODE_ENV=test
+   * database is always available, so tests may leave it out. */
+  isReady?: () => Promise<boolean>;
+}
+
 export function buildServer(
   env: AppEnv,
   authDeps: AuthDependencies,
@@ -68,6 +75,7 @@ export function buildServer(
   teachingDeps: TeachingDependencies,
   emailDeps: EmailDependencies,
   privacyDeps: PrivacyDependencies,
+  runtime: ServerRuntimeOptions = {},
 ): FastifyInstance {
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
   // Body limit, request timeout, random request ids and TRUST_PROXY: security/http-security.ts (M16).
@@ -101,7 +109,11 @@ export function buildServer(
   // `app`, like these, aren't queued the same way `.register()` calls are).
   app.after(() => {
     const healthUseCase = new GetHealthStatusUseCase(new SystemClock());
-    registerHealthRoutes(app, { useCase: healthUseCase, env });
+    registerHealthRoutes(app, {
+      useCase: healthUseCase,
+      env,
+      isReady: runtime.isReady ?? (() => Promise.resolve(true)),
+    });
 
     // Email (M14, ADR-014/025): transactional and marketing senders over one provider — "fake"
     // (sends nothing) unless another is configured. Each delivery attempt is logged with its

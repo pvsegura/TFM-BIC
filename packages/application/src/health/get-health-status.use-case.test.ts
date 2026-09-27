@@ -15,18 +15,19 @@ describe("GetHealthStatusUseCase", () => {
     const clock = new FixedClock(new Date("2026-01-01T00:00:00.000Z"));
     const useCase = new GetHealthStatusUseCase(clock);
 
-    const result = useCase.execute({ defaultLanguage: "pl" });
+    const result = useCase.execute({ defaultLanguage: "pl", version: "0.1.0+abc1234" });
 
     expect(result).toEqual({
       status: "ok",
       timestamp: "2026-01-01T00:00:00.000Z",
       defaultLanguage: "pl",
+      version: "0.1.0+abc1234",
     });
   });
 
   it("propagates domain validation for an invalid default language", () => {
     const useCase = new GetHealthStatusUseCase(new FixedClock(new Date()));
 
-    expect(() => useCase.execute({ defaultLanguage: "not-a-code" })).toThrow();
+    expect(() => useCase.execute({ defaultLanguage: "not-a-code", version: "x" })).toThrow();
   });
 });

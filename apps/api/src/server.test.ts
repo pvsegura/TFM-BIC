@@ -12,7 +12,7 @@ afterEach(async () => {
   app = undefined;
 });
 
-function build(env: ReturnType<typeof loadEnv>) {
+function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof buildServer>[14] = {}) {
   const {
     deps,
     profileDeps,
@@ -43,6 +43,7 @@ function build(env: ReturnType<typeof loadEnv>) {
     teachingDeps,
     emailDeps,
     privacyDeps,
+    runtime,
   );
 }
 
@@ -82,13 +83,62 @@ describe("error handling", () => {
   });
 });
 
-describe("GET /ready", () => {
-  it("returns readiness true", async () => {
-    app = build(loadEnv({ NODE_ENV: "test" }));
+describe("GET /ready (M17: reflects the database)", () => {
+  it("is 200 when the readiness check passes", async () => {
+    app = build(loadEnv({ NODE_ENV: "test" }), { isReady: () => Promise.resolve(true) });
 
     const response = await app.inject({ method: "GET", url: "/ready" });
 
     expect(response.statusCode).toBe(200);
     expect(response.json()).toEqual({ ready: true });
+    expect(response.headers["cache-control"]).toBe("no-store");
+  });
+
+  it("is 503 when the database is unreachable — and says nothing about why", async () => {
+    app = build(loadEnv({ NODE_ENV: "test" }), { isReady: () => Promise.resolve(false) });
+
+    const response = await app.inject({ method: "GET", url: "/ready" });
+
+    expect(response.statusCode).toBe(503);
+    expect(response.json()).toEqual({ ready: false });
+  });
+
+  it("is 503 (not 500) when the check itself throws", async () => {
+    app = build(loadEnv({ NODE_ENV: "test" }), {
+      isReady: () => Promise.reject(new Error("connect ECONNREFUSED 10.0.0.5:5432")),
+    });
+
+    const response = await app.inject({ method: "GET", url: "/ready" });
+
+    expect(response.statusCode).toBe(503);
+    expect(response.body).not.toContain("ECONNREFUSED");
+  });
+
+  it("defaults to ready when no check is wired (the in-process NODE_ENV=test database)", async () => {
+    app = build(loadEnv({ NODE_ENV: "test" }));
+
+    const response = await app.inject({ method: "GET", url: "/ready" });
+
+    expect(response.statusCode).toBe(200);
+  });
+});
+
+describe("GET /health (M17: liveness only)", () => {
+  it("reports the build version and nothing else from the environment", async () => {
+    app = build(loadEnv({ NODE_ENV: "test", APP_VERSION: "0.1.0+abc1234" }), {
+      isReady: () => Promise.resolve(false),
+    });
+
+    const response = await app.inject({ method: "GET", url: "/health" });
+
+    // Liveness never depends on the database: a slow DB must not get the container restarted.
+    expect(response.statusCode).toBe(200);
+    expect(Object.keys(response.json()).sort()).toEqual([
+      "defaultLanguage",
+      "status",
+      "timestamp",
+      "version",
+    ]);
+    expect(response.json()).toMatchObject({ version: "0.1.0+abc1234" });
   });
 });

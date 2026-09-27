@@ -8,6 +8,7 @@ describe("healthResponseSchema", () => {
       status: "ok",
       timestamp: "2026-01-01T00:00:00.000Z",
       defaultLanguage: "pl",
+      version: "0.1.0+abc1234",
     });
 
     expect(result.success).toBe(true);
@@ -17,6 +18,7 @@ describe("healthResponseSchema", () => {
     { status: "down", timestamp: "2026-01-01T00:00:00.000Z", defaultLanguage: "pl" },
     { status: "ok", timestamp: "not-a-date", defaultLanguage: "pl" },
     { status: "ok", timestamp: "2026-01-01T00:00:00.000Z" },
+    { status: "ok", timestamp: "2026-01-01T00:00:00.000Z", defaultLanguage: "pl" },
   ])("rejects a malformed payload %j", (payload) => {
     expect(healthResponseSchema.safeParse(payload).success).toBe(false);
   });

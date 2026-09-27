@@ -1,4 +1,5 @@
 import { loadEnv } from "@tfm-bic/config";
+import { createDatabaseReadinessCheck, type DatabaseReadinessCheck } from "@tfm-bic/data";
 
 import { createAuthDependencies, type AuthDependencies } from "./composition/auth-dependencies.js";
 import {
@@ -50,7 +51,16 @@ import {
   createTeachingDependencies,
   type TeachingDependencies,
 } from "./composition/teaching-dependencies.js";
+import { createShutdownHandler, waitForDatabase } from "./lifecycle/process-lifecycle.js";
 import { buildServer } from "./server.js";
+
+/** Below Docker's default 10 s stop grace period, so we exit on our own terms (M17). */
+const SHUTDOWN_TIMEOUT_MS = 8_000;
+/** Start-up checks: ≈ 1+2+4+8+8 s of waiting, enough for a suspended serverless database. */
+const STARTUP_DATABASE_ATTEMPTS = 6;
+const STARTUP_DATABASE_INITIAL_DELAY_MS = 1_000;
+
+const startedAt = performance.now();
 
 const env = loadEnv();
 
@@ -73,6 +83,7 @@ let audioDeps: AudioDependencies;
 let teachingDeps: TeachingDependencies;
 let emailDeps: EmailDependencies;
 let privacyDeps: PrivacyDependencies;
+let readiness: DatabaseReadinessCheck | undefined;
 if (env.NODE_ENV === "test") {
   ({
     auth: authDeps,
@@ -106,6 +117,7 @@ if (env.NODE_ENV === "test") {
   teachingDeps = createTeachingDependencies(env.DATABASE_URL);
   emailDeps = createEmailDependencies(env.DATABASE_URL, env);
   privacyDeps = createPrivacyDependencies(env.DATABASE_URL);
+  readiness = createDatabaseReadinessCheck(env.DATABASE_URL);
 }
 
 const app = buildServer(
@@ -123,37 +135,63 @@ const app = buildServer(
   teachingDeps,
   emailDeps,
   privacyDeps,
+  { ...(readiness ? { isReady: readiness.isReady } : {}) },
 );
 
+// SIGTERM (orchestrator stop) / SIGINT (Ctrl+C): stop accepting requests (Fastify answers 503
+// while closing), let in-flight ones finish, release the shared pool, exit — within a hard limit.
+const shutdown = createShutdownHandler({
+  closeServer: () => app.close(),
+  closers: [
+    authDeps.close,
+    profileDeps.close,
+    lessonDeps.close,
+    exerciseDeps.close,
+    gamificationDeps.close,
+    vocabularyDeps.close,
+    phoneticsDeps.close,
+    videoDeps.close,
+    teachingDeps.close,
+    emailDeps.close,
+    privacyDeps.close,
+    ...(readiness ? [readiness.close] : []),
+  ],
+  timeoutMs: SHUTDOWN_TIMEOUT_MS,
+  exit: (code) => process.exit(code),
+  log: app.log,
+});
+process.on("SIGINT", () => void shutdown("SIGINT"));
+process.on("SIGTERM", () => void shutdown("SIGTERM"));
+
 async function start(): Promise<void> {
+  // Configuration was validated by loadEnv() above; now the database must answer before the port
+  // opens — a process that cannot reach it exits instead of serving errors (M17).
+  if (readiness) {
+    const reachable = await waitForDatabase(readiness.isReady, {
+      attempts: STARTUP_DATABASE_ATTEMPTS,
+      initialDelayMs: STARTUP_DATABASE_INITIAL_DELAY_MS,
+      log: app.log,
+    });
+    if (!reachable) {
+      app.log.error({ attempts: STARTUP_DATABASE_ATTEMPTS }, "database.unreachable_giving_up");
+      await shutdown("startup-failure", { failed: true });
+      return;
+    }
+  }
   try {
     await app.listen({ port: env.PORT, host: "0.0.0.0" });
+    app.log.info(
+      {
+        nodeEnv: env.NODE_ENV,
+        version: env.APP_VERSION,
+        startupMs: Math.round(performance.now() - startedAt),
+      },
+      "server.started",
+    );
   } catch (error) {
     app.log.error(error);
     process.exit(1);
   }
 }
-
-async function shutdown(signal: string): Promise<void> {
-  app.log.info({ signal }, "Shutting down");
-  await app.close();
-  await Promise.all([
-    authDeps.close(),
-    profileDeps.close(),
-    lessonDeps.close(),
-    exerciseDeps.close(),
-    gamificationDeps.close(),
-    vocabularyDeps.close(),
-    phoneticsDeps.close(),
-    videoDeps.close(),
-    teachingDeps.close(),
-    emailDeps.close(),
-    privacyDeps.close(),
-  ]);
-  process.exit(0);
-}
-
-process.on("SIGINT", () => void shutdown("SIGINT"));
-process.on("SIGTERM", () => void shutdown("SIGTERM"));
 
 void start();

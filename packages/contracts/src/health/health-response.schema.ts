@@ -10,6 +10,8 @@ export const healthResponseSchema = z.object({
   status: z.literal("ok"),
   timestamp: z.iso.datetime(),
   defaultLanguage: z.string(),
+  // The immutable build identifier (M17) — correlates a running process with its image and commit.
+  version: z.string(),
 });
 
 export type HealthResponse = z.infer<typeof healthResponseSchema>;

@@ -4,12 +4,15 @@ import type { Clock } from "../ports/clock.js";
 
 export interface GetHealthStatusInput {
   defaultLanguage: string;
+  /** The running build (APP_VERSION) — public, never anything secret. */
+  version: string;
 }
 
 export interface GetHealthStatusResult {
   status: "ok";
   timestamp: string;
   defaultLanguage: LanguageId;
+  version: string;
 }
 
 /**
@@ -26,6 +29,7 @@ export class GetHealthStatusUseCase {
       status: "ok",
       timestamp: this.clock.now().toISOString(),
       defaultLanguage: createLanguageId(input.defaultLanguage),
+      version: input.version,
     };
   }
 }
