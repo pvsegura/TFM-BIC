@@ -1,4 +1,5 @@
-// Declarative Jenkins pipeline for TFM-BIC (M2 scope: quality validation only, no deploy).
+// Declarative Jenkins pipeline for TFM-BIC: quality validation (M2), then (M17) secret scanning, the
+// production image build and validation, and a release-candidate record. No deploy stage yet.
 //
 // Prerequisites on the Jenkins controller (see infrastructure/jenkins/README.md /
 // infrastructure/jenkins/Dockerfile): Node 24 + pnpm and the Docker CLI (talking to the host's
@@ -36,11 +37,27 @@ pipeline {
     options {
         timestamps()
         disableConcurrentBuilds()
-        timeout(time: 45, unit: 'MINUTES')
+        // M17: + image build (≈ 2–6 min) and image validation (≈ 1–2 min).
+        timeout(time: 60, unit: 'MINUTES')
+    }
+
+    // M17: pushing needs an image registry, which is PENDING (docs/production/M17-HOSTING-OPTIONS.md).
+    // Deploy stages are not defined yet: the hosting provider is PENDING USER DECISION, and this
+    // pipeline must never deploy anywhere nobody approved. See docs/deployment/ci-cd-pipeline.md.
+    parameters {
+        booleanParam(
+            name: 'PUSH_IMAGE',
+            defaultValue: false,
+            description: 'Push the validated image to IMAGE_REGISTRY (main only; needs the tfm-bic-registry credential).'
+        )
     }
 
     environment {
         CI = 'true'
+        // Immutable image identity (M17): the full commit's first 12 hex digits, never `latest`.
+        IMAGE_NAME = 'tfm-bic'
+        // Pinned; bump deliberately (docs/production/M17-PRODUCTION-RUNBOOK.md).
+        GITLEAKS_IMAGE = 'ghcr.io/gitleaks/gitleaks:v8.30.1'
     }
 
     stages {
@@ -206,7 +223,116 @@ pipeline {
             }
         }
 
-        // No deploy stage: M2 scope stops after the Quality Gate. Deployment is a later
-        // milestone (see docs/adr/adr-015-deployment.md, PENDING).
+        // ---- M17: build once, validate, record — the artifact every later environment receives ----
+
+        // M16 S-16 follow-up: secret scanning over the checkout's whole Git history. Any finding fails
+        // the build; --redact keeps a leaked value out of the Jenkins log itself. The .git directory
+        // is streamed through stdin rather than bind-mounted: this controller talks to the host's
+        // Docker daemon, which would resolve a -v path on the host, not in the controller.
+        stage('Secret Scan') {
+            steps {
+                sh '''
+                    set -eu
+                    tar -C "$WORKSPACE" -cf - .git | docker run --rm -i --entrypoint sh "$GITLEAKS_IMAGE" -c '
+                        mkdir -p /tmp/repo && tar -xf - -C /tmp/repo &&
+                        git config --global --add safe.directory /tmp/repo &&
+                        gitleaks git /tmp/repo --redact --no-banner --exit-code 1'
+                '''
+            }
+        }
+
+        stage('Build Image') {
+            steps {
+                script {
+                    env.GIT_SHA = sh(script: 'git rev-parse HEAD', returnStdout: true).trim()
+                    env.IMAGE_TAG = env.GIT_SHA.take(12)
+                    def version = sh(script: "node -p \"require('./package.json').version\"", returnStdout: true).trim()
+                    env.APP_VERSION = "${version}+${env.IMAGE_TAG}"
+                }
+                // No --build-arg carries a secret: only the public version and commit.
+                sh '''
+                    set -eu
+                    docker build \
+                        -f infrastructure/docker/app.Dockerfile \
+                        --build-arg APP_VERSION="$APP_VERSION" \
+                        --build-arg GIT_COMMIT="$GIT_SHA" \
+                        -t "$IMAGE_NAME:$IMAGE_TAG" .
+                '''
+            }
+        }
+
+        // Migrations on a clean database, staging start-up as a least-privilege role, the smoke test,
+        // a database outage, non-root/read-only checks, no embedded secrets, graceful stop. Uses
+        // generated one-time secrets — no Jenkins credential is involved. disableConcurrentBuilds()
+        // (above) means no two validations or migration runs from this job overlap.
+        stage('Validate Image') {
+            steps {
+                sh 'infrastructure/docker/validate-image.sh "$IMAGE_NAME:$IMAGE_TAG" "$APP_VERSION"'
+            }
+        }
+
+        // Traceability: which commit, version, image and migrations this build validated.
+        stage('Record Release Candidate') {
+            steps {
+                sh '''
+                    set -eu
+                    IMAGE_ID="$(docker image inspect --format '{{.Id}}' "$IMAGE_NAME:$IMAGE_TAG")"
+                    MIGRATIONS="$(ls packages/data/src/*/db/migrations/*.sql | sed 's|packages/data/src/||' | paste -sd, -)"
+                    cat > release-candidate.json <<EOF
+{
+  "gitCommit": "$GIT_SHA",
+  "appVersion": "$APP_VERSION",
+  "image": "$IMAGE_NAME:$IMAGE_TAG",
+  "imageId": "$IMAGE_ID",
+  "migrations": "$MIGRATIONS",
+  "buildUrl": "$BUILD_URL"
+}
+EOF
+                    cat release-candidate.json
+                '''
+                archiveArtifacts artifacts: 'release-candidate.json', fingerprint: true
+            }
+        }
+
+        // Registry: PENDING decision. Runs only when asked for, on main, with IMAGE_REGISTRY set on
+        // the job and a `tfm-bic-registry` username/password credential (a deploy token, never a
+        // person's account). The password goes through stdin, never the command line or the log.
+        stage('Push Image') {
+            when {
+                allOf {
+                    branch 'main'
+                    expression { return params.PUSH_IMAGE && env.IMAGE_REGISTRY?.trim() }
+                }
+            }
+            steps {
+                withCredentials([usernamePassword(
+                    credentialsId: 'tfm-bic-registry',
+                    usernameVariable: 'REGISTRY_USER',
+                    passwordVariable: 'REGISTRY_TOKEN'
+                )]) {
+                    sh '''
+                        set -eu
+                        printf '%s' "$REGISTRY_TOKEN" | docker login "${IMAGE_REGISTRY%%/*}" -u "$REGISTRY_USER" --password-stdin
+                        docker tag "$IMAGE_NAME:$IMAGE_TAG" "$IMAGE_REGISTRY/$IMAGE_NAME:$IMAGE_TAG"
+                        docker push "$IMAGE_REGISTRY/$IMAGE_NAME:$IMAGE_TAG"
+                        docker logout "${IMAGE_REGISTRY%%/*}"
+                    '''
+                }
+            }
+        }
+
+        // Deploy to staging → staging smoke test → input('Deploy to production?') → production
+        // deploy → production smoke test: not defined until the hosting provider and registry are
+        // chosen (PENDING USER DECISION). The design they must follow is in
+        // docs/production/M17-DEPLOYMENT-ARCHITECTURE.md; the smoke test they call already exists
+        // (infrastructure/deployment/smoke-test.mjs).
+    }
+
+    post {
+        always {
+            // Validation containers are removed by the script's own trap; this drops the local tag
+            // so the controller's disk does not fill up with one image per build.
+            sh 'if [ -n "${IMAGE_TAG:-}" ]; then docker image rm "$IMAGE_NAME:$IMAGE_TAG" >/dev/null 2>&1 || true; fi'
+        }
     }
 }
