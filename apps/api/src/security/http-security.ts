@@ -103,10 +103,26 @@ function handleError(error: FastifyError, request: FastifyRequest, reply: Fastif
   return reply.status(500).send({ error: "Internal Server Error" });
 }
 
-/** Registers the headers, the error handler and the not-found handler on the root instance. */
-export function registerHttpSecurity(app: FastifyInstance, env: AppEnv): void {
+/** Answers a request no route matched, or returns undefined to fall through to the JSON 404. */
+export type NotFoundFallback = (
+  request: FastifyRequest,
+  reply: FastifyReply,
+) => FastifyReply | undefined;
+
+/**
+ * Registers the headers, the error handler and the not-found handler on the root instance.
+ * `notFoundFallback` (M17): serves the SPA shell to page navigations when the API serves the SPA.
+ */
+export function registerHttpSecurity(
+  app: FastifyInstance,
+  env: AppEnv,
+  notFoundFallback?: NotFoundFallback,
+): void {
   app.addHook("onSend", addSecurityHeaders(env.NODE_ENV));
   app.setErrorHandler(handleError);
   // Fastify's default 404 echoes the method and path back.
-  app.setNotFoundHandler((_request, reply) => reply.code(404).send({ error: "Not found." }));
+  app.setNotFoundHandler(
+    (request, reply) =>
+      notFoundFallback?.(request, reply) ?? reply.code(404).send({ error: "Not found." }),
+  );
 }

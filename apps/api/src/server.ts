@@ -52,6 +52,7 @@ import { registerVideoGenerationRoutes } from "./routes/video-generations.route.
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
+import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
 
 /** Process-level wiring that is not a bounded context's dependency (M17). */
 export interface ServerRuntimeOptions {
@@ -83,8 +84,11 @@ export function buildServer(
     logger: createLoggerOptions(env.NODE_ENV),
     ...httpSecurityServerOptions(env),
   });
+  // The built SPA, served from this origin in staging/production (M17, ADR-028). Loaded before
+  // anything else so a missing or unreadable build stops the server immediately.
+  const webApp = env.WEB_DIST_DIR ? loadWebApp(env.WEB_DIST_DIR) : undefined;
   // Security headers, no-store default, X-Request-Id, safe error and 404 bodies (M16, ADR-027).
-  registerHttpSecurity(app, env);
+  registerHttpSecurity(app, env, webApp ? spaShellFallback(webApp) : undefined);
 
   // Session cookie signing secret (ADR-006). Required in production/
   // staging by packages/config's loadEnv(); falls back to an ephemeral
@@ -108,6 +112,10 @@ export function buildServer(
   // retroactively to routes added before it (routes declared directly on
   // `app`, like these, aren't queued the same way `.register()` calls are).
   app.after(() => {
+    if (webApp) {
+      registerWebApp(app, webApp);
+    }
+
     const healthUseCase = new GetHealthStatusUseCase(new SystemClock());
     registerHealthRoutes(app, {
       useCase: healthUseCase,
