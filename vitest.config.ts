@@ -70,6 +70,8 @@ export default defineConfig({
         "packages/data/src/content/validate-content.cli.ts",
         // `pnpm teacher:admin` entry point (M13): same reasoning — runTeacherAdminCommand is tested.
         "packages/data/src/teaching/teacher-admin.cli.ts",
+        // M17: bootstrap of the production migration runner (logic: run-migrations.ts, tested).
+        "packages/data/src/migrations/migrate.cli.ts",
       ],
       thresholds: {
         lines: 80,

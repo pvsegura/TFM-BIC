@@ -32,7 +32,8 @@
     "db:generate:newsletter": "drizzle-kit generate --config drizzle.newsletter.config.ts",
     "db:migrate:newsletter": "drizzle-kit migrate --config drizzle.newsletter.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts",
-    "teacher:admin": "tsx src/teaching/teacher-admin.cli.ts"
+    "teacher:admin": "tsx src/teaching/teacher-admin.cli.ts",
+    "db:migrate:all": "tsx src/migrations/migrate.cli.ts"
   },
   "dependencies": {
     "@tfm-bic/application": "workspace:*",

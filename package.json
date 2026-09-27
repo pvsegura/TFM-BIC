@@ -27,7 +27,8 @@
     "typecheck": "pnpm -r --if-present run typecheck",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build",
     "prepare": "husky",
-    "content:validate": "pnpm --filter @tfm-bic/data content:validate"
+    "content:validate": "pnpm --filter @tfm-bic/data content:validate",
+    "db:migrate": "pnpm --filter @tfm-bic/data db:migrate:all"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
