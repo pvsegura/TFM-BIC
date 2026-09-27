@@ -33,3 +33,12 @@ placeholder decision record so the open question is tracked, not to pre-select o
 
 - [ci-cd-pipeline.md](../deployment/ci-cd-pipeline.md)
 - [risk-register.md](../risk-register.md)
+
+## M17 update (2026-09-27)
+
+Still **PENDING USER DECISION**. The runtime and artifact are now defined independently of the host
+([ADR-028](adr-028-production-runtime-and-deployment.md)): one Docker image that any Docker-capable host can run.
+Options were researched against current official pricing/limits in
+[M17-HOSTING-OPTIONS.md](../production/M17-HOSTING-OPTIONS.md). The user's requirement (2026-09-27) is a **free**
+stack; candidates listed there (Koyeb Free or Render Free + Neon Free + the host's subdomain) with their
+limitations. GitHub Pages is not viable (static only). No account was created and nothing was deployed.

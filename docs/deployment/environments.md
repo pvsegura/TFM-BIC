@@ -1,6 +1,6 @@
 # Environments
 
-Status: PROPOSED | Related: [ADR-015](../adr/adr-015-deployment.md)
+Status: ACCEPTED (M17) | Related: [ADR-015](../adr/adr-015-deployment.md) (hosting PENDING), [ADR-028](../adr/adr-028-production-runtime-and-deployment.md), [M17 deployment architecture](../production/M17-DEPLOYMENT-ARCHITECTURE.md)
 
 ## Environments
 
@@ -49,15 +49,18 @@ Variable groups (see `.env.example` for the authoritative current list):
   `content/video-scripts/README.md` and ADR-012). No API key: local self-hosted Hyperframes
   rendering needs no credential. Real use requires Node 22+, FFmpeg and headless Chrome on the
   host — none confirmed available until ADR-015 (hosting) is resolved.
-- App: `API_BASE_URL`, `WEB_BASE_URL` — reserved, not yet read. In M3 dev, `apps/web`'s Vite dev
-  server proxies `/auth/*` to `apps/api` (see `apps/web/vite.config.ts`) so the browser sees a
-  single origin and no CORS policy is needed — this also keeps `SameSite=Strict` on the session
-  cookie workable. Production same-origin serving (reverse proxy or single origin) is a
-  deployment concern tracked under ADR-015, not solved in M3.
+- Production readiness (M17, ADR-028): `WEB_DIST_DIR` — the built SPA the API serves from its own origin
+  (required in staging/production; unset in development/test, where Vite serves it and proxies the API paths, see
+  `apps/web/vite.config.ts`); `APP_VERSION` — build identifier shown by `/health` (default `development`, set by the
+  image). Production additionally refuses `EMAIL_PROVIDER=fake`, `AUDIO_GENERATION_PROVIDER=fake`, any
+  `VIDEO_GENERATION_PROVIDER` but `disabled`, a loopback `APP_BASE_URL`/`DATABASE_URL` host, and a `DATABASE_URL`
+  without `sslmode=require|verify-ca|verify-full`. Audio and video accept `disabled` everywhere (503, no provider call).
+  The former reserved `API_BASE_URL`/`WEB_BASE_URL` were removed: nothing read them, and the SPA calls its own origin.
 
 ## Security checklist for a deployment (M16, ADR-027)
 
-Hosting is PENDING (ADR-015). Whatever host is chosen must, before real users:
+Hosting is PENDING (ADR-015). Whatever host is chosen must, before real users (M17 implemented items 1, 2 and the
+start-up checks of 4; see [the M17 deployment architecture](../production/M17-DEPLOYMENT-ARCHITECTURE.md)):
 
 1. Serve the SPA (`apps/web/dist`) with **exactly** the headers in `apps/web/src/security/security-headers.ts`
    (CSP, `X-Content-Type-Options`, `X-Frame-Options`, `Referrer-Policy`, `Permissions-Policy`, COOP) and
@@ -81,5 +84,6 @@ variable is first used.
 
 ## Promotion path
 
-`development` (local) → `test` (CI) → `staging` (pre-production, mirrors production config) →
-`production`. Deploy targets for staging/production are PENDING (ADR-015).
+`development` (local) → `test` (CI) → `staging` (pre-production, the production image with `NODE_ENV=staging`) →
+`production`. One image per commit is built once and promoted unchanged (M17). Deploy targets for staging/production
+are PENDING (ADR-015); until then `infrastructure/docker/validate-image.sh` runs a throwaway staging.

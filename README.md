@@ -47,6 +47,8 @@ Este repositorio sigue una gobernanza de arquitectura documentada en `docs/` y `
 - [Risk Register](docs/risk-register.md)
 - [Seguridad (M16)](docs/security/M16-SECURITY-AUDIT.md) — auditoría, modelo de amenazas, matriz de autorización y
   pruebas de seguridad; lista de comprobación para desplegar en [environments.md](docs/deployment/environments.md).
+- [Producción (M17)](docs/production/M17-PRODUCTION-AUDIT.md) — auditoría de producción, bloqueos, opciones de hosting
+  (PENDIENTE de decisión), arquitectura de despliegue, secretos, copias de seguridad, recuperación, runbook e incidentes.
 - [.claude/current-state.md](.claude/current-state.md) — qué existe realmente hoy en el repo.
 
 # Desarrollo (Milestone 1)
@@ -134,3 +136,22 @@ Requisitos de una instancia Jenkins real (agente con Docker, plugins necesarios,
 configuración esperados): [infrastructure/jenkins/README.md](infrastructure/jenkins/README.md).
 Reglas de protección de rama recomendadas para GitHub (a aplicar manualmente, no automatizado desde
 este repo): [git-branching-strategy.md](docs/development/git-branching-strategy.md#branch-protection-github-repository-settings).
+
+# Producción (Milestone 17)
+
+La aplicación se empaqueta en **una sola imagen Docker**: la API (Fastify) sirve también el SPA compilado desde el
+mismo origen. Hosting, dominio, registro de imágenes y proveedor de email real siguen **PENDIENTES** — ver
+[docs/production/M17-PRODUCTION-AUDIT.md](docs/production/M17-PRODUCTION-AUDIT.md). Con `NODE_ENV=production` la
+aplicación se niega a arrancar con proveedores falsos (por eso hoy solo puede ejecutarse como `staging`).
+
+```bash
+pnpm build                                   # SPA + bundle de la API (apps/api/dist)
+pnpm db:migrate                              # todas las migraciones, en orden, con bloqueo (DATABASE_URL)
+SHA=$(git rev-parse --short=12 HEAD)
+docker build -f infrastructure/docker/app.Dockerfile --build-arg APP_VERSION="0.1.0+$SHA" -t tfm-bic:$SHA .
+infrastructure/docker/validate-image.sh tfm-bic:$SHA "0.1.0+$SHA"     # staging efímero + smoke test
+infrastructure/deployment/restore-drill.sh tfm-bic:$SHA               # prueba de backup/restauración
+```
+
+En Windows (Git Bash) anteponer `MSYS_NO_PATHCONV=1` a los scripts de Docker. Procedimientos completos:
+[runbook](docs/production/M17-PRODUCTION-RUNBOOK.md).

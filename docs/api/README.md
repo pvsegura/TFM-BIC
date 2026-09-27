@@ -413,3 +413,18 @@ from the same Zod schemas (so documentation can't drift from the actual validate
 than a hand-maintained document. Exact generation tooling is deferred (see
 [dependency-management.md](../development/dependency-management.md) before adding any such
 dependency).
+
+## Health and readiness (M17)
+
+| Method | Path      | Auth | Response                                                                                                                                           |
+| ------ | --------- | ---- | -------------------------------------------------------------------------------------------------------------------------------------------------- |
+| GET    | `/health` | none | Liveness only — never touches the database or a provider. `200 { status: "ok", timestamp, defaultLanguage, version }` (`version` = `APP_VERSION`). |
+| GET    | `/ready`  | none | Readiness: `200 { ready: true }` when the database answers `SELECT 1` within 2 s, otherwise `503 { ready: false }` (reason never disclosed).       |
+
+When `AUDIO_GENERATION_PROVIDER`/`VIDEO_GENERATION_PROVIDER` is `disabled`, `POST /audio-generations` and
+`POST /video-generations` answer `503 { error: "Audio|Video generation is not available." }` after authentication, with no
+`Retry-After`, and record nothing.
+
+In staging/production (`WEB_DIST_DIR` set) the API also serves the built SPA: `GET /`, every file of the build, and the
+SPA shell for page navigations (`Sec-Fetch-Dest: document` or `Accept: text/html`) to unmatched paths and to
+`/profile`; every other unmatched request keeps the JSON `404`.

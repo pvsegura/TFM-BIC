@@ -143,3 +143,9 @@ Remaining before any real deployment: the checklist in
 [environments.md](../deployment/environments.md#security-checklist-for-a-deployment-m16-adr-027) (trusted proxy,
 SPA headers on the host, DB TLS and least-privilege role, backups, log retention), plus the product/legal blockers
 already recorded in M15.
+
+## M17 follow-up (2026-09-27)
+
+- **S-16 (secret scanning): fixed.** gitleaks v8.30.1 scanned all 259 commits (all branches) — no leaks — and the
+  `Jenkinsfile` now has a Secret Scan stage. Deployment checklist items "serve the SPA with its headers" and
+  "one origin" are implemented by the API itself (ADR-028).
