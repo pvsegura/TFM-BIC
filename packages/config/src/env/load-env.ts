@@ -18,6 +18,41 @@ function isHttpUrl(value: string, protocols: readonly string[]): boolean {
   }
 }
 
+/** Host names that only ever mean "this machine" — never a valid public or database host in a
+ * deployed environment (M17). URL.hostname keeps the brackets of an IPv6 literal. */
+function isLoopbackOrUnspecifiedHost(hostname: string): boolean {
+  const host = hostname.toLowerCase();
+  return (
+    host === "localhost" ||
+    host.endsWith(".localhost") ||
+    host.startsWith("127.") ||
+    host === "0.0.0.0" ||
+    host === "[::1]" ||
+    host === "[::]"
+  );
+}
+
+function hostnameOf(value: string): string | undefined {
+  try {
+    return new URL(value).hostname;
+  } catch {
+    return undefined;
+  }
+}
+
+/** libpq/`pg` modes that encrypt the connection (M17: required for the production database). */
+const TLS_SSL_MODES = ["require", "verify-ca", "verify-full"];
+
+/** The parsed DATABASE_URL, when it is a Postgres URL at all. */
+function parsePostgresUrl(value: string): URL | undefined {
+  try {
+    const url = new URL(value);
+    return url.protocol === "postgres:" || url.protocol === "postgresql:" ? url : undefined;
+  } catch {
+    return undefined;
+  }
+}
+
 /** One IPv4/IPv6 address, optionally with a CIDR prefix of a valid length for its family. */
 function isAddressOrCidr(entry: string): boolean {
   const [address = "", prefix, ...rest] = entry.split("/");
@@ -112,13 +147,16 @@ const envSchema = z
     // never Hyperframes — used everywhere except a manually configured real-provider run;
     // automated tests and CI never set this to "hyperframes". Local self-hosted Hyperframes
     // rendering needs no credential, so there is no accompanying API-key variable.
-    VIDEO_GENERATION_PROVIDER: z.enum(["fake", "hyperframes"]).default("fake"),
+    // "disabled" (M17): the feature is switched off — requests are refused with 503 and no
+    // provider is called. The only setting production accepts until Hyperframes is verified.
+    VIDEO_GENERATION_PROVIDER: z.enum(["fake", "hyperframes", "disabled"]).default("fake"),
     // Audio generation (M12, ADR-013). "fake" (the default) is a real, committed adapter that
     // returns a short tone — never Gemini — and is what development, tests and CI use. "gemini"
     // needs GEMINI_API_KEY and is refused under NODE_ENV=test, so no automated run can ever call a
     // paid provider. GEMINI_TTS_MODEL is read only by the Gemini adapter's composition; the default
     // is the GA TTS model verified on 2026-09-25.
-    AUDIO_GENERATION_PROVIDER: z.enum(["fake", "gemini"]).default("fake"),
+    // "disabled" (M17): as for video — requests get 503, Gemini is never called.
+    AUDIO_GENERATION_PROVIDER: z.enum(["fake", "gemini", "disabled"]).default("fake"),
     GEMINI_API_KEY: z.string().min(1).optional(),
     GEMINI_TTS_MODEL: z.string().min(1).default("gemini-3.8-flash-tts"),
     // Characters per clip. Capped at the domain's SPEECH_TEXT_MAX_LENGTH (500), which this package
@@ -136,11 +174,86 @@ const envSchema = z
     // test fall back to an ephemeral per-process secret, like AUTH_SESSION_SECRET. Rotating it
     // invalidates the unsubscribe links in already-sent newsletters — rotate only deliberately.
     EMAIL_LINK_SECRET: z.string().min(32).optional(),
+    // Production readiness (M17). The built SPA (apps/web/dist) the API serves from its own
+    // origin; required in staging/production, unset in development/test where Vite serves it.
+    WEB_DIST_DIR: z.string().min(1).optional(),
+    // Immutable build identifier shown by GET /health (the image sets it from the Git SHA).
+    // Restricted to a plain token: it is public, and must never carry anything but a version.
+    APP_VERSION: z
+      .string()
+      .regex(/^[A-Za-z0-9][A-Za-z0-9._+-]{0,63}$/, {
+        message: "must be 1–64 letters, digits, '.', '_', '+' or '-'",
+      })
+      .default("development"),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET, APP_BASE_URL } =
       ctx.value;
     const isDeployed = NODE_ENV === "production" || NODE_ENV === "staging";
+    const issue = (path: string, message: string) =>
+      ctx.issues.push({ code: "custom", input: ctx.value, path: [path], message });
+
+    // M17: nothing in a deployed environment may point at "this machine".
+    if (isDeployed && APP_BASE_URL !== undefined) {
+      const host = hostnameOf(APP_BASE_URL);
+      if (host !== undefined && isLoopbackOrUnspecifiedHost(host)) {
+        issue(
+          "APP_BASE_URL",
+          `APP_BASE_URL must be the public origin, not a loopback/unspecified address, when NODE_ENV is "production" or "staging".`,
+        );
+      }
+    }
+
+    if (DATABASE_URL !== undefined && NODE_ENV !== "test") {
+      const url = parsePostgresUrl(DATABASE_URL);
+      // Messages never contain the URL: it carries the database password.
+      if (!url) {
+        issue("DATABASE_URL", "DATABASE_URL must be a postgres:// or postgresql:// URL.");
+      } else if (NODE_ENV === "production") {
+        if (isLoopbackOrUnspecifiedHost(url.hostname)) {
+          issue(
+            "DATABASE_URL",
+            `DATABASE_URL must not point at a loopback/unspecified host when NODE_ENV is "production".`,
+          );
+        }
+        if (!TLS_SSL_MODES.includes(url.searchParams.get("sslmode") ?? "")) {
+          issue(
+            "DATABASE_URL",
+            `DATABASE_URL must set sslmode=require, verify-ca or verify-full when NODE_ENV is "production" (see docs/production/M17-DEPLOYMENT-ARCHITECTURE.md).`,
+          );
+        }
+      }
+    }
+
+    if (isDeployed && !ctx.value.WEB_DIST_DIR) {
+      issue(
+        "WEB_DIST_DIR",
+        `WEB_DIST_DIR is required when NODE_ENV is "production" or "staging": the API serves the SPA from the same origin (ADR-028).`,
+      );
+    }
+
+    // M17: production never runs a fake provider. Email has no alternative yet (ADR-014 PENDING),
+    // so production cannot start until a real email adapter exists — deliberately.
+    if (NODE_ENV === "production") {
+      if (ctx.value.EMAIL_PROVIDER === "fake") {
+        issue(
+          "EMAIL_PROVIDER",
+          `EMAIL_PROVIDER=fake is not allowed when NODE_ENV is "production" — it sends nothing (a real provider is PENDING, ADR-014).`,
+        );
+      }
+      if (ctx.value.AUDIO_GENERATION_PROVIDER === "fake") {
+        issue(
+          "AUDIO_GENERATION_PROVIDER",
+          `AUDIO_GENERATION_PROVIDER must be "gemini" or "disabled" when NODE_ENV is "production" (never "fake").`,
+        );
+      }
+      if (ctx.value.VIDEO_GENERATION_PROVIDER !== "disabled") {
+        issue(
+          "VIDEO_GENERATION_PROVIDER",
+          `VIDEO_GENERATION_PROVIDER must be "disabled" when NODE_ENV is "production": "fake" is not real and "hyperframes" is unverified with no persistent media storage (ADR-012, ADR-028).`,
+        );
+      }
+    }
 
     if (
       isDeployed &&

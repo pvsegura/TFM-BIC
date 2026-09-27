@@ -19,6 +19,7 @@ describe("loadEnv", () => {
       EMAIL_PROVIDER: "fake",
       EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
       TRUST_PROXY: [],
+      APP_VERSION: "development",
     });
   });
 
@@ -103,17 +104,18 @@ describe("loadEnv", () => {
     ).not.toThrow();
   });
 
-  it("accepts a fully configured production environment", () => {
+  it("accepts a fully configured staging environment", () => {
     const env = loadEnv({
-      NODE_ENV: "production",
-      DATABASE_URL: "postgres://user:pass@localhost:5432/db",
-      AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
-      EMAIL_LINK_SECRET: "a-production-email-link-secret-of-32+-chars",
-      APP_BASE_URL: "https://app.example.com",
+      NODE_ENV: "staging",
+      DATABASE_URL: "postgres://user:pass@db.internal:5432/db",
+      AUTH_SESSION_SECRET: "a-staging-session-secret-of-32+-chars!!",
+      EMAIL_LINK_SECRET: "a-staging-email-link-secret-of-32+-chars",
+      APP_BASE_URL: "https://staging.example.com",
+      WEB_DIST_DIR: "/app/web",
     });
 
-    expect(env.AUTH_SESSION_SECRET).toBe("a-production-session-secret-of-32+-chars");
-    expect(env.APP_BASE_URL).toBe("https://app.example.com");
+    expect(env.AUTH_SESSION_SECRET).toBe("a-staging-session-secret-of-32+-chars!!");
+    expect(env.APP_BASE_URL).toBe("https://staging.example.com");
   });
 
   describe("audio generation (M12, ADR-013)", () => {
@@ -176,10 +178,11 @@ describe("loadEnv", () => {
   describe("email (M14, ADR-014/ADR-025)", () => {
     const dev = { NODE_ENV: "development", DATABASE_URL: "postgres://localhost/db" };
     const production = {
-      NODE_ENV: "production",
-      DATABASE_URL: "postgres://localhost/db",
+      NODE_ENV: "staging",
+      DATABASE_URL: "postgres://db.internal/db",
       AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
       APP_BASE_URL: "https://app.example.com",
+      WEB_DIST_DIR: "/app/web",
     };
 
     it("defaults to the fake provider everywhere — no real email is ever sent by default", () => {
@@ -212,7 +215,7 @@ describe("loadEnv", () => {
 
     it("requires EMAIL_LINK_SECRET (≥ 32 characters) in production and staging", () => {
       expect(() => loadEnv(production)).toThrow(/EMAIL_LINK_SECRET/);
-      expect(() => loadEnv({ ...production, NODE_ENV: "staging" })).toThrow(/EMAIL_LINK_SECRET/);
+      expect(() => loadEnv({ ...production, NODE_ENV: "production" })).toThrow(/EMAIL_LINK_SECRET/);
       expect(() => loadEnv({ ...production, EMAIL_LINK_SECRET: "too-short" })).toThrow(
         /EMAIL_LINK_SECRET/,
       );
@@ -237,9 +240,12 @@ describe("loadEnv", () => {
   });
 
   describe("security hardening (M16)", () => {
+    // Staging: the deployed environment that can currently be satisfied (production also refuses
+    // the fake providers — see the M17 block below).
     const production = {
-      NODE_ENV: "production",
-      DATABASE_URL: "postgres://user:pass@localhost:5432/db",
+      NODE_ENV: "staging",
+      DATABASE_URL: "postgres://user:pass@db.internal:5432/db",
+      WEB_DIST_DIR: "/app/web",
       AUTH_SESSION_SECRET: "a-production-session-secret-of-32+-chars",
       EMAIL_LINK_SECRET: "a-production-email-link-secret-of-32+-chars",
       APP_BASE_URL: "https://app.example.com",
@@ -319,5 +325,170 @@ describe("loadEnv", () => {
         expect(() => loadEnv({ ...production, TRUST_PROXY: value })).toThrow(/TRUST_PROXY/);
       },
     );
+  });
+
+  describe("production readiness (M17)", () => {
+    const staging = {
+      NODE_ENV: "staging",
+      DATABASE_URL: "postgres://app:pass@db.internal:5432/tfm_bic",
+      AUTH_SESSION_SECRET: "s".repeat(32),
+      EMAIL_LINK_SECRET: "e".repeat(32),
+      APP_BASE_URL: "https://staging.example.com",
+      WEB_DIST_DIR: "/app/web",
+    };
+    const production: Record<string, string> = {
+      ...staging,
+      NODE_ENV: "production",
+      DATABASE_URL: "postgres://app:pass@db.example.com:5432/tfm_bic?sslmode=require",
+      APP_BASE_URL: "https://app.example.com",
+      AUDIO_GENERATION_PROVIDER: "disabled",
+      VIDEO_GENERATION_PROVIDER: "disabled",
+    };
+
+    function configurationError(source: Record<string, string>): string {
+      try {
+        loadEnv(source);
+      } catch (error) {
+        return (error as Error).message;
+      }
+      return "";
+    }
+
+    it("accepts staging with the fake providers (safe, production-like)", () => {
+      const env = loadEnv(staging);
+      expect(env.EMAIL_PROVIDER).toBe("fake");
+      expect(env.AUDIO_GENERATION_PROVIDER).toBe("fake");
+      expect(env.VIDEO_GENERATION_PROVIDER).toBe("fake");
+    });
+
+    it("refuses the fake email provider in production — the only one that exists yet", () => {
+      expect(configurationError(production)).toMatch(/EMAIL_PROVIDER/);
+    });
+
+    it.each(["AUDIO_GENERATION_PROVIDER", "VIDEO_GENERATION_PROVIDER"])(
+      "refuses %s=fake in production, and when it is left at its default",
+      (name) => {
+        expect(configurationError({ ...production, [name]: "fake" })).toMatch(new RegExp(name));
+        const withoutProvider = { ...production };
+        delete withoutProvider[name];
+        expect(configurationError(withoutProvider)).toMatch(new RegExp(name));
+      },
+    );
+
+    it("accepts disabled for audio and video in every environment", () => {
+      const env = loadEnv({
+        NODE_ENV: "test",
+        AUDIO_GENERATION_PROVIDER: "disabled",
+        VIDEO_GENERATION_PROVIDER: "disabled",
+      });
+      expect(env.AUDIO_GENERATION_PROVIDER).toBe("disabled");
+      expect(env.VIDEO_GENERATION_PROVIDER).toBe("disabled");
+      expect(configurationError(production)).not.toMatch(/GENERATION_PROVIDER/);
+    });
+
+    it("refuses hyperframes in production (unverified adapter, no persistent media storage)", () => {
+      expect(
+        configurationError({ ...production, VIDEO_GENERATION_PROVIDER: "hyperframes" }),
+      ).toMatch(/VIDEO_GENERATION_PROVIDER/);
+    });
+
+    it.each([
+      "https://localhost",
+      "https://localhost:5173",
+      "https://127.0.0.1",
+      "https://0.0.0.0",
+      "https://[::1]",
+    ])("refuses APP_BASE_URL=%s in staging and production", (url) => {
+      expect(configurationError({ ...staging, APP_BASE_URL: url })).toMatch(/APP_BASE_URL/);
+      expect(configurationError({ ...production, APP_BASE_URL: url })).toMatch(/APP_BASE_URL/);
+    });
+
+    it.each(["localhost", "127.0.0.1", "[::1]", "0.0.0.0"])(
+      "refuses a DATABASE_URL on %s in production, without echoing the URL",
+      (host) => {
+        const url = `postgres://app:hunter2-db-pass@${host}:5432/tfm_bic?sslmode=require`;
+        const message = configurationError({ ...production, DATABASE_URL: url });
+        expect(message).toMatch(/DATABASE_URL/);
+        expect(message).not.toContain("hunter2-db-pass");
+      },
+    );
+
+    it("requires TLS (sslmode require, verify-ca or verify-full) on the production DATABASE_URL", () => {
+      const withoutTls = "postgres://app:pass@db.example.com:5432/tfm_bic";
+      expect(configurationError({ ...production, DATABASE_URL: withoutTls })).toMatch(
+        /DATABASE_URL/,
+      );
+      expect(
+        configurationError({ ...production, DATABASE_URL: `${withoutTls}?sslmode=disable` }),
+      ).toMatch(/DATABASE_URL/);
+      for (const mode of ["require", "verify-ca", "verify-full"]) {
+        expect(
+          configurationError({ ...production, DATABASE_URL: `${withoutTls}?sslmode=${mode}` }),
+        ).not.toMatch(/DATABASE_URL/);
+      }
+    });
+
+    it("refuses a DATABASE_URL that is not a postgres URL, outside of test", () => {
+      expect(configurationError({ ...staging, DATABASE_URL: "mysql://db.internal/x" })).toMatch(
+        /DATABASE_URL/,
+      );
+      expect(configurationError({ ...staging, DATABASE_URL: "not a url" })).toMatch(/DATABASE_URL/);
+    });
+
+    it.each(["staging", "production"])(
+      "requires WEB_DIST_DIR in %s — the API serves the SPA from the same origin",
+      (nodeEnv) => {
+        const withoutDist = { ...(nodeEnv === "staging" ? staging : production) };
+        delete (withoutDist as Record<string, string>).WEB_DIST_DIR;
+        expect(configurationError({ ...withoutDist, NODE_ENV: nodeEnv })).toMatch(/WEB_DIST_DIR/);
+      },
+    );
+
+    it("leaves WEB_DIST_DIR optional in development and test (Vite serves the SPA there)", () => {
+      expect(loadEnv({ NODE_ENV: "test" }).WEB_DIST_DIR).toBeUndefined();
+      expect(loadEnv({ NODE_ENV: "test", WEB_DIST_DIR: "/x" }).WEB_DIST_DIR).toBe("/x");
+    });
+
+    it("defaults APP_VERSION to development and accepts a build identifier", () => {
+      expect(loadEnv({ NODE_ENV: "test" }).APP_VERSION).toBe("development");
+      expect(loadEnv({ NODE_ENV: "test", APP_VERSION: "0.1.0+3ee4d5c" }).APP_VERSION).toBe(
+        "0.1.0+3ee4d5c",
+      );
+    });
+
+    it.each(["has space", "a\nb", "<script>", "x".repeat(65)])(
+      "refuses APP_VERSION=%j (it is shown by /health)",
+      (value) => {
+        expect(configurationError({ NODE_ENV: "test", APP_VERSION: value })).toMatch(/APP_VERSION/);
+      },
+    );
+
+    it("lists every production problem at once, and never prints a secret value", () => {
+      const secrets = {
+        AUTH_SESSION_SECRET: "short-auth-secret",
+        EMAIL_LINK_SECRET: "an-email-link-secret-that-is-long-enough-0",
+        GEMINI_API_KEY: "gemini-key-value-123",
+      };
+      const message = configurationError({
+        NODE_ENV: "production",
+        DATABASE_URL: "postgres://app:db-password-456@localhost/x",
+        APP_BASE_URL: "http://localhost:5173",
+        ...secrets,
+      });
+      for (const name of [
+        "AUTH_SESSION_SECRET",
+        "APP_BASE_URL",
+        "DATABASE_URL",
+        "WEB_DIST_DIR",
+        "EMAIL_PROVIDER",
+        "AUDIO_GENERATION_PROVIDER",
+        "VIDEO_GENERATION_PROVIDER",
+      ]) {
+        expect(message).toContain(name);
+      }
+      for (const value of [...Object.values(secrets), "db-password-456"]) {
+        expect(message).not.toContain(value);
+      }
+    });
   });
 });
