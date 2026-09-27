@@ -1,0 +1,42 @@
+# Build context for infrastructure/docker/app.Dockerfile (M17). Keep secrets, local state and
+# build output out of the image build entirely.
+
+# Secrets and local configuration — never sent to the Docker daemon.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# VCS, editors, agent tooling, the nested clone of the repository
+.git
+.gitignore
+.husky
+.vscode
+.idea
+.claude
+TFM-BIC
+*.code-workspace
+
+# Dependencies and build output: rebuilt inside the image from the lockfile
+node_modules
+**/node_modules
+**/dist
+**/*.tsbuildinfo
+.pnpm-store
+
+# Test output, reports, logs
+coverage
+**/coverage
+playwright-report
+test-results
+blob-report
+.scannerwork
+*.log
+
+# Not needed to build the image
+docs
+tests
+infrastructure
+Jenkinsfile
+sonar-project.properties
