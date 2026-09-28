@@ -11,6 +11,9 @@ Rationale: [ADR-028](../docs/adr/adr-028-production-runtime-and-deployment.md); 
 **Deployable image validated; NOT production ready** — hosting (user wants a free stack; candidates in
 M17-HOSTING-OPTIONS.md), domain, registry, real email provider and a provisioned database are PENDING. Nothing deployed.
 
+**Deployed demo (2026-09-28):** `https://tfm-bic.onrender.com` — Render Free + Neon Free, `NODE_ENV=staging`, fake email,
+audio/video `disabled`; deployed smoke test **18/18**. Production still blocked (real email needs a paid domain).
+
 ## What actually exists (M17)
 
 - **Config guards** (`packages/config`): production refuses `EMAIL_PROVIDER=fake` (the only email adapter — so

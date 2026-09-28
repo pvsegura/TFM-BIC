@@ -135,3 +135,6 @@ Verified: migrations applied with `pnpm db:migrate` as `tfm_migrator` (tables ow
 (here `28P01`); and `APP_BASE_URL` must equal the public origin exactly, otherwise every write is refused with 403.
 Email verification and password reset do not deliver (no domain → no real email provider; the user chose not to buy
 one). Accepted for the TFM demonstration.
+
+**Closing check (2026-09-28):** after setting `APP_BASE_URL=https://tfm-bic.onrender.com` on Render, the full smoke test
+(disposable account, with writes) passed **18/18** against the deployed demo.
