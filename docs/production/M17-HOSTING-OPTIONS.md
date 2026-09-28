@@ -117,3 +117,21 @@ period and health-check configuration (none verified in M17).
 - **Not viable:** GitHub Pages (static only; terms exclude this use).
 
 **Decision owner:** the user. Until then: no deploy, no account creation, ADR-015 stays PENDING.
+
+## Deployed demo (2026-09-28)
+
+With the user's zero-cost requirement, the application runs as a **public staging demo** — not production:
+
+| Piece    | Choice                                                                                                                                   |
+| -------- | ---------------------------------------------------------------------------------------------------------------------------------------- |
+| App      | Render Free web service, Docker build of `infrastructure/docker/app.Dockerfile` from `main`, auto-deploy on push, health check `/health` |
+| URL      | `https://tfm-bic.onrender.com` (Render subdomain, Render-managed HTTPS; no custom domain)                                                |
+| Database | Neon Free, eu-central-1, roles `tfm_migrator` (migrations, run from the operator machine) and `tfm_app` (runtime)                        |
+| Mode     | `NODE_ENV=staging`, fake email (nothing is sent), audio and video `disabled`                                                             |
+
+Verified: migrations applied with `pnpm db:migrate` as `tfm_migrator` (tables owned by it, `tfm_app` has DML only);
+`/health`, `/ready` and the public smoke checks pass against the Render URL. Found during the deployment: a
+`DATABASE_URL` with the wrong password showed only "unreachable" — the start-up log now carries the SQLSTATE/error code
+(here `28P01`); and `APP_BASE_URL` must equal the public origin exactly, otherwise every write is refused with 403.
+Email verification and password reset do not deliver (no domain → no real email provider; the user chose not to buy
+one). Accepted for the TFM demonstration.

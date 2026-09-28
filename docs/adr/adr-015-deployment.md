@@ -42,3 +42,9 @@ Options were researched against current official pricing/limits in
 [M17-HOSTING-OPTIONS.md](../production/M17-HOSTING-OPTIONS.md). The user's requirement (2026-09-27) is a **free**
 stack; candidates listed there (Koyeb Free or Render Free + Neon Free + the host's subdomain) with their
 limitations. GitHub Pages is not viable (static only). No account was created and nothing was deployed.
+
+## Update 2026-09-28 — demo environment
+
+A **staging demo** runs on Render Free + Neon Free at `https://tfm-bic.onrender.com` (zero cost, user decision).
+Production hosting stays **PENDING**: production needs a real email provider, which needs a paid domain the user
+chose not to buy. See [M17-HOSTING-OPTIONS.md](../production/M17-HOSTING-OPTIONS.md#deployed-demo-2026-09-28).

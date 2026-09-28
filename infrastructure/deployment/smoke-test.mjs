@@ -70,6 +70,13 @@ async function check(name, fn) {
   }
 }
 
+/** 403 on a write almost always means the server's APP_BASE_URL is not this origin. */
+function statusMessage(res) {
+  return res.status === 403
+    ? `status 403 — the server refused Origin ${origin}: set APP_BASE_URL on the server to exactly that origin`
+    : `status ${res.status}`;
+}
+
 function expect(condition, message) {
   if (!condition) throw new Error(message);
 }
@@ -150,14 +157,14 @@ if (process.env.SMOKE_REGISTER === "true" && !email) {
   password = `smoke-${crypto.randomUUID()}`;
   await check("register a disposable smoke account (staging)", async () => {
     const res = await request("/auth/register", { method: "POST", body: { email, password } });
-    expect(res.status === 200, `status ${res.status}`);
+    expect(res.status === 200, statusMessage(res));
   });
 }
 
 if (email && password) {
   await check("login", async () => {
     const res = await request("/auth/login", { method: "POST", body: { email, password } });
-    expect(res.status === 200, `status ${res.status}`);
+    expect(res.status === 200, statusMessage(res));
     const setCookie = res.headers.get("set-cookie") ?? "";
     expect(
       /HttpOnly/i.test(setCookie) && /Secure/i.test(setCookie),
@@ -187,6 +194,7 @@ if (email && password) {
 
   let exercise;
   await check("GET /lessons/:id/exercises", async () => {
+    expect(lessonId, "skipped: no lesson id (an earlier check failed)");
     const res = await request(`/lessons/${lessonId}/exercises`);
     expect(res.status === 200 && Array.isArray(res.json?.exercises), `status ${res.status}`);
     exercise = res.json.exercises.find((e) => e.type === "true-false") ?? res.json.exercises[0];
@@ -200,11 +208,13 @@ if (email && password) {
 
   if (allowWrites) {
     await check("POST /lessons/:id/start (write)", async () => {
+      expect(lessonId, "skipped: no lesson id (an earlier check failed)");
       const res = await request(`/lessons/${lessonId}/start`, { method: "POST", body: {} });
       expect(res.status === 200, `status ${res.status}`);
     });
 
     await check("POST /exercises/:id/answer (write, evaluated by the server)", async () => {
+      expect(exercise, "skipped: no exercise (an earlier check failed)");
       const answer = exercise.type === "true-false" ? true : "smoke";
       const res = await request(`/exercises/${exercise.id}/answer`, {
         method: "POST",
