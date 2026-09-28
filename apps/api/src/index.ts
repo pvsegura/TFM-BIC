@@ -171,9 +171,13 @@ async function start(): Promise<void> {
       attempts: STARTUP_DATABASE_ATTEMPTS,
       initialDelayMs: STARTUP_DATABASE_INITIAL_DELAY_MS,
       log: app.log,
+      failureReason: readiness.lastFailureReason,
     });
     if (!reachable) {
-      app.log.error({ attempts: STARTUP_DATABASE_ATTEMPTS }, "database.unreachable_giving_up");
+      app.log.error(
+        { attempts: STARTUP_DATABASE_ATTEMPTS, reason: readiness.lastFailureReason() },
+        "database.unreachable_giving_up",
+      );
       await shutdown("startup-failure", { failed: true });
       return;
     }

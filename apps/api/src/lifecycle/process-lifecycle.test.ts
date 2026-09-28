@@ -46,6 +46,23 @@ describe("waitForDatabase (M17: start-up with bounded retries)", () => {
     expect(sleep).toHaveBeenCalledTimes(3);
   });
 
+  it("logs why each attempt failed when a reason is available (a safe code, e.g. 28P01)", async () => {
+    const warn = vi.fn();
+
+    await waitForDatabase(() => Promise.resolve(false), {
+      attempts: 2,
+      initialDelayMs: 1,
+      sleep: () => Promise.resolve(),
+      log: { ...log, warn },
+      failureReason: () => "28P01",
+    });
+
+    expect(warn).toHaveBeenCalledWith(
+      expect.objectContaining({ attempt: 1, reason: "28P01" }),
+      "database.unreachable_at_startup",
+    );
+  });
+
   it("treats a throwing check as not ready", async () => {
     await expect(
       waitForDatabase(() => Promise.reject(new Error("boom")), {

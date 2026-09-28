@@ -17,6 +17,8 @@ export interface WaitForDatabaseOptions {
   maxDelayMs?: number;
   sleep?: (ms: number) => Promise<void>;
   log: LifecycleLog;
+  /** Why the last check failed — a safe code only (e.g. `28P01`, `ENOTFOUND`, `timeout`). */
+  failureReason?: () => string | undefined;
 }
 
 const defaultSleep = (ms: number) =>
@@ -43,7 +45,10 @@ export async function waitForDatabase(
     if (attempt === attempts) {
       break;
     }
-    log.warn({ attempt, attempts, retryInMs: delay }, "database.unreachable_at_startup");
+    log.warn(
+      { attempt, attempts, retryInMs: delay, reason: options.failureReason?.() },
+      "database.unreachable_at_startup",
+    );
     await sleep(delay);
     delay = Math.min(delay * 2, maxDelayMs);
   }

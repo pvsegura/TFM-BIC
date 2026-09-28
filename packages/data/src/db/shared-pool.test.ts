@@ -4,6 +4,7 @@ import {
   POSTGRES_POOL_OPTIONS,
   createSharedPoolRegistry,
   pingDatabase,
+  probeDatabase,
   type PoolLike,
 } from "./shared-pool.js";
 
@@ -80,6 +81,46 @@ describe("idle connection errors (M17: found by the container DB-outage test)", 
 
     expect(() => listener(error)).not.toThrow();
     expect(onIdleError).toHaveBeenCalledWith({ code: "57P01" });
+  });
+});
+
+describe("probeDatabase (M17: why the database is unreachable, without secrets)", () => {
+  it("is undefined when SELECT 1 succeeds", async () => {
+    await expect(probeDatabase(fakePool(), 1000)).resolves.toBeUndefined();
+  });
+
+  it.each([
+    ["28P01", 'password authentication failed for user "tfm_app"'],
+    ["ENOTFOUND", "getaddrinfo ENOTFOUND ep-x.neon.tech"],
+    ["SELF_SIGNED_CERT_IN_CHAIN", "self-signed certificate in certificate chain"],
+  ])("reports only the error code %s — never the message", async (code, message) => {
+    const pool = fakePool({
+      query: vi.fn().mockRejectedValue(Object.assign(new Error(message), { code })),
+    });
+
+    await expect(probeDatabase(pool, 1000)).resolves.toBe(code);
+  });
+
+  it("reports 'unknown' for an error without a plain code, so nothing free-form is ever logged", async () => {
+    const pool = fakePool({
+      query: vi
+        .fn()
+        .mockRejectedValue(Object.assign(new Error("x"), { code: "postgres://u:secret@h" })),
+    });
+
+    await expect(probeDatabase(pool, 1000)).resolves.toBe("unknown");
+  });
+
+  it("reports 'timeout' when the database does not answer in time", async () => {
+    vi.useFakeTimers();
+    try {
+      const pool = fakePool({ query: vi.fn(() => new Promise<never>(() => undefined)) });
+      const result = probeDatabase(pool, 500);
+      await vi.advanceTimersByTimeAsync(500);
+      await expect(result).resolves.toBe("timeout");
+    } finally {
+      vi.useRealTimers();
+    }
   });
 });
 

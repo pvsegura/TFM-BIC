@@ -93,18 +93,29 @@ function logIdleClientError(details: { code: string | undefined }): void {
 /** The process-wide registry of real `pg` pools. */
 export const sharedPostgresPools = createSharedPoolRegistry((config) => new Pool(config));
 
+/** A SQLSTATE (`28P01`) or Node/OpenSSL error code (`ENOTFOUND`, `SELF_SIGNED_CERT_IN_CHAIN`). */
+const SAFE_ERROR_CODE = /^[A-Z0-9_]{2,48}$/;
+
 /**
- * True when the database answers `SELECT 1` within `timeoutMs`. Never throws and never logs: the
- * caller (readiness, start-up) decides what an unreachable database means.
+ * Runs `SELECT 1` within `timeoutMs`. Resolves `undefined` when the database answered, otherwise a
+ * reason safe to log: the error's code, `"timeout"` or `"unknown"` — never the error message, the
+ * host or the connection string (M17: a deployment could not reach Neon and the logs said nothing).
+ * Never throws.
  */
-export async function pingDatabase(pool: PoolLike, timeoutMs: number): Promise<boolean> {
+export async function probeDatabase(
+  pool: PoolLike,
+  timeoutMs: number,
+): Promise<string | undefined> {
   let timer: ReturnType<typeof setTimeout> | undefined;
-  const timeout = new Promise<false>((resolve) => {
-    timer = setTimeout(() => resolve(false), timeoutMs);
+  const timeout = new Promise<string>((resolve) => {
+    timer = setTimeout(() => resolve("timeout"), timeoutMs);
   });
   const query = pool.query("SELECT 1").then(
-    () => true,
-    () => false,
+    () => undefined,
+    (error: unknown) => {
+      const code = (error as { code?: unknown } | undefined)?.code;
+      return typeof code === "string" && SAFE_ERROR_CODE.test(code) ? code : "unknown";
+    },
   );
   try {
     return await Promise.race([query, timeout]);
@@ -113,9 +124,19 @@ export async function pingDatabase(pool: PoolLike, timeoutMs: number): Promise<b
   }
 }
 
+/**
+ * True when the database answers `SELECT 1` within `timeoutMs`. Never throws and never logs: the
+ * caller (readiness, start-up) decides what an unreachable database means.
+ */
+export async function pingDatabase(pool: PoolLike, timeoutMs: number): Promise<boolean> {
+  return (await probeDatabase(pool, timeoutMs)) === undefined;
+}
+
 export interface DatabaseReadinessCheck {
   /** True when the database can serve queries right now. */
   isReady: () => Promise<boolean>;
+  /** Why the last failed check failed (a safe code, see `probeDatabase`); undefined after a success. */
+  lastFailureReason: () => string | undefined;
   close: () => Promise<void>;
 }
 
@@ -125,5 +146,13 @@ export function createDatabaseReadinessCheck(
   timeoutMs = 2_000,
 ): DatabaseReadinessCheck {
   const { pool, release } = sharedPostgresPools.acquire(databaseUrl);
-  return { isReady: () => pingDatabase(pool, timeoutMs), close: release };
+  let lastFailure: string | undefined;
+  return {
+    isReady: async () => {
+      lastFailure = await probeDatabase(pool, timeoutMs);
+      return lastFailure === undefined;
+    },
+    lastFailureReason: () => lastFailure,
+    close: release,
+  };
 }
