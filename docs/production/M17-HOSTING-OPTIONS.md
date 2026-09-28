@@ -91,6 +91,21 @@ point-in-time window plus manual `pg_dump` backups, and single-instance in-memor
 Verify before deploying: Koyeb's proxy range for `TRUST_PROXY`, forwarded-IP header, SIGTERM grace
 period and health-check configuration (none verified in M17).
 
+## Update 2026-09-28 (user feedback)
+
+- **Koyeb:** when the user tried it, it asked for payment and did not work for them. Its site now shows the banner
+  "Koyeb is joining Mistral! Stay tuned for a revamped Agentic experience." (reported by the user; terms of the
+  transition not verified). Treated as **not usable** for this project.
+- **AWS** (Lightsail container service Nano $7/month, verified 2026-09-27): **rejected by the user** — not free (and the
+  project brief excludes AWS). DynamoDB is not an option either: the data layer is relational PostgreSQL.
+- **Remaining free candidate:** Render Free web service (750 free instance hours/month, spins down after 15 min idle,
+  ~1 min spin-up; Render says not for production — verified 2026-09-27) + Neon Free + the `onrender.com` subdomain.
+  Whether Render Free needs a payment card was **not verified**. Zero-cost fallback: run the image on the developer
+  machine behind a temporary Cloudflare quick tunnel (not verified; online only while the machine runs).
+- Consequence of a zero-cost requirement: a **public demo/staging** (`NODE_ENV=staging`, fake email) is achievable;
+  production is not, because a real email provider in practice needs a verified own domain (not free) and production
+  refuses the fake provider.
+
 ## Technical assessment (not a selection)
 
 - **Best technical fit for the current code:** an always-on single small container behind a platform
