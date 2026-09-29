@@ -1,0 +1,154 @@
+{
+  "meta": {
+    "title": "TFM-BIC — Learn a language one word at a time",
+    "description": "Lessons, sounds, vocabulary and practice that take a word from unfamiliar to usable. Polish A1 is open now."
+  },
+  "chapters": {
+    "hero": "Discover",
+    "understand": "Understand",
+    "listen": "Listen",
+    "watch": "Watch",
+    "practise": "Practise",
+    "remember": "Remember",
+    "progress": "Progress",
+    "journey": "Journey",
+    "languages": "Languages",
+    "begin": "Begin"
+  },
+  "cta": {
+    "guest": {
+      "primary": { "label": "Create an account", "to": "/register" },
+      "secondary": { "label": "Explore the lessons", "to": "/learn" }
+    },
+    "member": {
+      "primary": { "label": "Go to your dashboard", "to": "/dashboard" },
+      "secondary": { "label": "Continue your lessons", "to": "/learn/lessons" }
+    }
+  },
+  "hero": {
+    "eyebrow": "A language-learning platform",
+    "title": "From a word you can’t read to a word you can use.",
+    "lead": "Lessons, sounds, vocabulary and practice follow one path: notice a word, hear it, understand it, use it.",
+    "scrollCue": "Scroll to follow one word"
+  },
+  "word": {
+    "headword": "szkoła",
+    "syllables": ["szko", "ła"],
+    "ipa": "/ˈʂkɔ.wa/",
+    "gloss": "school",
+    "partOfSpeech": "noun",
+    "source": "Example from Polish A1 — “A first look at Polish spelling and sounds”"
+  },
+  "understand": {
+    "title": "A word is more than its spelling.",
+    "lead": "Every word you meet comes with the pieces that make it usable.",
+    "facets": [
+      { "term": "Spelling", "detail": "szko·ła — two syllables, stress on the first" },
+      {
+        "term": "Sound",
+        "detail": "sz sounds like English sh, and ł like English w. Roughly: SHKO-wa."
+      },
+      { "term": "Meaning", "detail": "school (noun)" },
+      { "term": "In use", "detail": "It appears in the A1 page on spelling and sounds." }
+    ]
+  },
+  "listen": {
+    "title": "Hear it before you say it.",
+    "lead": "Vocabulary entries have a Listen control: play a word at normal speed, then slowly, as often as you need.",
+    "speeds": ["Normal speed", "Slow"],
+    "figureLabel": "A sound wave with one rise for each syllable of szkoła"
+  },
+  "watch": {
+    "title": "Then see how it works.",
+    "lead": "Short explainer videos are generated from the same lesson content.",
+    "videoTitle": "Nasal vowels: ą and ę",
+    "keyframes": [
+      { "glyph": "ą", "caption": "dąb — oak tree" },
+      { "glyph": "ę", "caption": "ręka — hand" }
+    ],
+    "status": "The first video is in preview: its storyboard is written, and playback is not available yet."
+  },
+  "practise": {
+    "title": "Now it’s your turn.",
+    "lead": "Exercises ask you to choose an answer, decide true or false, or type it. You see straight away why an answer is right.",
+    "note": "Try it — this example is not saved anywhere.",
+    "prompt": "Which Polish word means “sorry” or “excuse me”?",
+    "options": [
+      { "id": "a", "text": "Przepraszam", "meaning": "sorry, excuse me" },
+      { "id": "b", "text": "Dziękuję", "meaning": "thank you" },
+      { "id": "c", "text": "Proszę", "meaning": "please" },
+      { "id": "d", "text": "Tak", "meaning": "yes" }
+    ],
+    "correctOptionId": "a",
+    "check": "Check answer",
+    "correct": "Correct.",
+    "incorrect": "Not quite — {text} means {meaning}.",
+    "explanation": "Przepraszam means sorry and excuse me. Dziękuję means thank you, Proszę means please, and Tak means yes."
+  },
+  "remember": {
+    "title": "Words come back until they stay.",
+    "lead": "Save words to My Vocabulary and move them from saved to learning to learned. Each one keeps its meaning and its sound close by.",
+    "listLabel": "Example vocabulary with a learning status",
+    "words": [
+      { "word": "przepraszam", "gloss": "sorry", "status": "learning" },
+      { "word": "dziękuję", "gloss": "thank you", "status": "learned" },
+      { "word": "proszę", "gloss": "please", "status": "learning" },
+      { "word": "cześć", "gloss": "hi; bye", "status": "saved" },
+      { "word": "dzień dobry", "gloss": "hello", "status": "learned" },
+      { "word": "dobranoc", "gloss": "good night", "status": "saved" },
+      { "word": "do widzenia", "gloss": "goodbye", "status": "new" }
+    ],
+    "statusesNote": "The statuses shown here are an example."
+  },
+  "progress": {
+    "title": "Small steps add up.",
+    "lead": "Lessons move from not started to in progress to completed. Correct exercises and finished lessons earn points, and milestones unlock achievements.",
+    "illustrationLabel": "Illustration — not a real student’s data",
+    "lessonsHeading": "Lessons",
+    "lessons": [
+      { "title": "Greetings and goodbyes", "status": "Completed", "fraction": 1 },
+      { "title": "Introducing yourself", "status": "In progress", "fraction": 0.5 },
+      { "title": "Please, thank you and sorry", "status": "Not started", "fraction": 0 }
+    ],
+    "pointsHeading": "How points are earned",
+    "points": [
+      { "reason": "Exercise completed", "amount": "+10" },
+      { "reason": "Lesson completed", "amount": "+25" },
+      { "reason": "Achievement unlocked", "amount": "+50" }
+    ],
+    "achievementsHeading": "Achievements",
+    "achievements": ["First exercise", "First lesson", "Ten exercises", "One hundred points"]
+  },
+  "journey": {
+    "title": "One level at a time.",
+    "lead": "Courses follow the CEFR scale, from A1 to C2.",
+    "disclaimer": "The path shows how a course is organised — not a promise of how fast anyone moves along it.",
+    "available": "Open now",
+    "planned": "Planned",
+    "loading": "Loading levels…",
+    "unavailable": "Level availability could not be loaded right now.",
+    "cefrLevels": ["A1", "A2", "B1", "B2", "C1", "C2"]
+  },
+  "languages": {
+    "title": "Built for more than one language.",
+    "lead": "A new language is added as content — lessons, sounds and words — on the same platform.",
+    "availableHeading": "Available",
+    "availableStatus": "Available now",
+    "roadmapHeading": "On the roadmap",
+    "roadmapStatus": "Not available yet",
+    "roadmap": [
+      { "code": "en", "nativeName": "English" },
+      { "code": "es", "nativeName": "Español" },
+      { "code": "de", "nativeName": "Deutsch" },
+      { "code": "fr", "nativeName": "Français" },
+      { "code": "it", "nativeName": "Italiano" },
+      { "code": "pt", "nativeName": "Português" }
+    ],
+    "loading": "Loading languages…",
+    "unavailable": "The list of available languages could not be loaded right now."
+  },
+  "begin": {
+    "title": "Your first word is waiting.",
+    "lead": "Start with Polish A1: lessons, exercises, vocabulary and sounds."
+  }
+}
