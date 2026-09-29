@@ -1,5 +1,5 @@
 import { renderWithProviders } from "@tfm-bic/testing";
-import { screen } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
@@ -182,5 +182,93 @@ describe("RootLayout", () => {
 
     await user.click(screen.getByRole("button", { name: "Toggle dark mode" }));
     expect(document.documentElement).not.toHaveClass("dark");
+  });
+});
+
+describe("RootLayout — M20A public homepage support", () => {
+  beforeEach(() => {
+    vi.spyOn(authApi, "fetchCurrentUser").mockResolvedValue(null);
+  });
+
+  afterEach(() => {
+    vi.restoreAllMocks();
+  });
+
+  function renderAt(path: string, handle?: { fullBleed: boolean }) {
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: RootLayout,
+        children: [
+          { index: true, Component: () => <p>Home content</p>, handle },
+          { path: "elsewhere", Component: () => <p>Elsewhere</p> },
+        ],
+      },
+    ]);
+    return renderWithProviders(<Stub initialEntries={[path]} />);
+  }
+
+  it("keeps the usual centred column unless the route asks for a full-bleed page", async () => {
+    const { unmount } = renderAt("/");
+    await screen.findByText("Home content");
+    expect(screen.getByRole("main")).not.toHaveAttribute("data-layout", "full-bleed");
+    unmount();
+
+    renderAt("/", { fullBleed: true });
+    await screen.findByText("Home content");
+    expect(screen.getByRole("main")).toHaveAttribute("data-layout", "full-bleed");
+  });
+
+  it("has a menu button that discloses the primary links on small screens", async () => {
+    const user = userEvent.setup();
+    renderAt("/");
+    const menuButton = await screen.findByRole("button", { name: "Menu" });
+
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+    const controlled = document.getElementById(menuButton.getAttribute("aria-controls") ?? "");
+    expect(controlled).toContainElement(screen.getByRole("link", { name: "Log in" }));
+
+    await user.click(menuButton);
+    expect(menuButton).toHaveAttribute("aria-expanded", "true");
+
+    await user.keyboard("{Escape}");
+    expect(menuButton).toHaveAttribute("aria-expanded", "false");
+    expect(menuButton).toHaveFocus();
+  });
+
+  it("closes the menu after following one of its links", async () => {
+    const user = userEvent.setup();
+    const Stub = createRoutesStub([
+      {
+        path: "/",
+        Component: RootLayout,
+        children: [
+          { index: true, Component: () => <p>Home content</p> },
+          { path: "login", Component: () => <p>Login page</p> },
+        ],
+      },
+    ]);
+    renderWithProviders(<Stub initialEntries={["/"]} />);
+
+    await user.click(await screen.findByRole("button", { name: "Menu" }));
+    await user.click(screen.getByRole("link", { name: "Log in" }));
+
+    expect(await screen.findByText("Login page")).toBeInTheDocument();
+    expect(screen.getByRole("button", { name: "Menu" })).toHaveAttribute("aria-expanded", "false");
+  });
+
+  it("has a footer navigation with the public pages that exist, and the copyright holder", async () => {
+    renderAt("/");
+    const footerNav = await screen.findByRole("navigation", { name: "Footer" });
+
+    expect(within(footerNav).getByRole("link", { name: "Languages and levels" })).toHaveAttribute(
+      "href",
+      "/learn",
+    );
+    expect(within(footerNav).getByRole("link", { name: "Privacy notice" })).toHaveAttribute(
+      "href",
+      "/privacy",
+    );
+    expect(screen.getByRole("contentinfo")).toHaveTextContent("© 2026 pvsegura");
   });
 });

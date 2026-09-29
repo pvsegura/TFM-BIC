@@ -1,4 +1,8 @@
 @import "tailwindcss";
+/* Self-hosted display face (M20A): Bricolage Grotesque, OFL-1.1, via Fontsource — weight axis only
+   (latin ≈ 41 kB, latin-ext ≈ 19 kB, each fetched only when a glyph needs it). Served from the
+   app's own origin, as the CSP's font-src 'self' requires. */
+@import "@fontsource-variable/bricolage-grotesque/wght.css";
 
 /* Manual dark mode, toggled by adding/removing `.dark` on <html> — driven by
    the Zustand theme store (src/state/theme-store.ts), not just OS
@@ -12,6 +16,29 @@
   --color-accent: rgb(255 107 53);
   --color-surface: rgb(248 249 250);
   --color-surface-dark: rgb(15 20 30);
+
+  /* M20A: the scale around the brand colours. Orange at full strength fails AA as text on the
+     off-white surface (~2.7:1), so text in the accent hue uses accent-ink (~5.3:1); on the dark
+     surface the accent itself passes (~6.6:1). */
+  --color-accent-ink: rgb(184 64 16);
+  --color-primary-soft: rgb(38 56 88);
+  --color-paper-shade: rgb(238 240 243);
+  --color-night-paper: rgb(22 32 50);
+  --color-success: rgb(21 115 71);
+  --color-success-dark: rgb(110 212 160);
+  --color-danger: rgb(178 34 34);
+  --color-danger-dark: rgb(255 145 135);
+
+  --font-display: "Bricolage Grotesque Variable", ui-sans-serif, system-ui, "Segoe UI", sans-serif;
+
+  --ease-thread: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+:root {
+  /* Motion tokens (M20A, docs/m20a-motion-system.md). */
+  --duration-quick: 160ms;
+  --duration-base: 320ms;
+  --duration-slow: 700ms;
 }
 
 @layer base {
