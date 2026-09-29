@@ -349,6 +349,18 @@
     grid-column: 2;
     grid-row: 1 / span 2;
   }
+
+  /* Not pinned (reduced motion): the word stands beside the hero instead of spanning both rows. */
+  .scene--opening:not([data-mode="pinned"]) .opening__figure {
+    grid-row: 1;
+    align-self: center;
+  }
+}
+
+/* Small screens scroll the opening normally: the word starts whole and has split by the time it
+   reaches the middle of the screen. */
+.scene--opening[data-mode="pass-through"] {
+  --q: clamp(0, (var(--p) - 0.28) / 0.24, 1);
 }
 
 .opening__sticky {
@@ -404,7 +416,7 @@
   width: 0;
   color: var(--thread);
   opacity: var(--split);
-  transform: translateX(calc(var(--split) * 0.225em - 0.14em)) scale(calc(0.4 + 0.6 * var(--split)));
+  transform: translateX(calc(var(--split) * 0.225em - 0.07em)) scale(calc(0.4 + 0.6 * var(--split)));
 }
 
 .specimen__syllable--second {
@@ -419,8 +431,8 @@
 
 .specimen__underline {
   display: block;
-  width: 100%;
-  max-width: 7em;
+  width: calc(var(--step-word) * 3.3);
+  max-width: 100%;
   height: 0.35rem;
   margin-top: 0.9rem;
   background: var(--thread);
@@ -561,6 +573,11 @@
   --flat: var(--exit);
 }
 
+/* The flattening hand-off to Watch belongs to the pinned version only. */
+.scene[data-mode="pass-through"] .listen-figure {
+  --flat: 0;
+}
+
 .wave {
   position: relative;
   display: flex;
@@ -666,7 +683,7 @@
   background: var(--panel);
   text-align: center;
   --near: clamp(0, 1 - max(var(--k) - var(--play), var(--play) - var(--k)) * 2.5, 1);
-  opacity: calc(0.55 + 0.45 * var(--near));
+  box-shadow: 0 0 0 calc(var(--near) * 3px) var(--thread);
   transform: translateY(calc(var(--near) * -0.5rem));
 }
 
@@ -993,8 +1010,7 @@
   .constellation__link {
     fill: none;
     stroke: var(--thread);
-    stroke-width: 2;
-    vector-effect: non-scaling-stroke;
+    stroke-width: 0.35;
     stroke-dasharray: 1;
     --draw: clamp(0, (var(--q) - 0.3 - var(--i) * 0.3) / 0.15, 1);
     stroke-dashoffset: calc(1 - var(--draw));
@@ -1262,12 +1278,12 @@
   .station {
     position: absolute;
     left: var(--x);
-    bottom: var(--y);
+    top: calc(100% - var(--y));
     display: grid;
     justify-items: center;
     gap: 0.1rem;
     padding: 0;
-    transform: translate(-50%, 0.45rem);
+    transform: translate(-50%, -0.4375rem);
     --reveal: clamp(0, (var(--draw) * 1.1 - var(--i)) * 6, 1);
     opacity: calc(0.3 + 0.7 * var(--reveal));
   }
@@ -1378,8 +1394,7 @@
   font-weight: 760;
   line-height: 1;
   letter-spacing: -0.045em;
-  color: transparent;
-  -webkit-text-stroke: 1.5px var(--ink-faint);
+  color: var(--ink-faint);
 }
 
 .begin__gloss {
@@ -1387,7 +1402,6 @@
   font-weight: 650;
   letter-spacing: 0;
   color: var(--thread-ink);
-  -webkit-text-stroke: 0;
 }
 
 .begin .scene-intro {

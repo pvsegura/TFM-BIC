@@ -141,6 +141,11 @@ export const routes: RouteObject[] = [
     element: <RootLayout />,
     // M18: any route that throws while rendering shows a safe fallback and is reported.
     errorElement: <RouteErrorFallback />,
+    // M20A: shown only while a lazy route (the homepage) loads on the very first navigation — a blank
+    // page in the page colour, so nothing flashes or shifts.
+    hydrateFallbackElement: (
+      <div aria-busy="true" className="min-h-screen bg-surface dark:bg-surface-dark" />
+    ),
     children: [
       // The public homepage (M20A): its own chunk (scenes, stylesheet), so no other page carries it;
       // full-bleed, so the root layout drops its centred column for it.

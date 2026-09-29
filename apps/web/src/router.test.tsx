@@ -161,3 +161,10 @@ describe("public homepage (M20A)", () => {
     expect(loaded?.Component?.name).toBe("HomePage");
   });
 });
+
+describe("initial load of a lazy route (M20A)", () => {
+  it("has a quiet placeholder while the homepage chunk loads on a first visit", () => {
+    const [root] = routes;
+    expect(isValidElement(root?.hydrateFallbackElement)).toBe(true);
+  });
+});
