@@ -56,6 +56,10 @@ Variable groups (see `.env.example` for the authoritative current list):
   `VIDEO_GENERATION_PROVIDER` but `disabled`, a loopback `APP_BASE_URL`/`DATABASE_URL` host, and a `DATABASE_URL`
   without `sslmode=require|verify-ca|verify-full`. Audio and video accept `disabled` everywhere (503, no provider call).
   The former reserved `API_BASE_URL`/`WEB_BASE_URL` were removed: nothing read them, and the SPA calls its own origin.
+- Observability (M18, ADR-029): `LOG_LEVEL` — `error|warn|info|debug`, default `info`; production refuses `debug`
+  (NODE_ENV=test is always silent). `METRICS_TOKEN` — optional secret (≥ 32 chars); when set, `GET /internal/metrics`
+  exists and answers only `Authorization: Bearer <METRICS_TOKEN>`. Unset = no metrics endpoint. Host secret store only.
+  See [docs/observability-data-policy.md](../observability-data-policy.md).
 
 ## Security checklist for a deployment (M16, ADR-027)
 

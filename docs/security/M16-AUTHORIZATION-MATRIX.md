@@ -26,6 +26,13 @@ answer `401` without a session, or if a state-changing route skips the Origin ch
 | `POST /auth/password-reset/confirm`              | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token (atomic, M16); kills all sessions                                      |
 | `POST /email-preferences/newsletter/confirm`     | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token                                                                        |
 | `POST /email-preferences/newsletter/unsubscribe` | ✅        | ✅      | ✅      | Token      | HMAC token; **no Origin check by design** (RFC 8058 mail clients send none); can only withdraw consent |
+| `POST /client-errors` (M18)                      | ✅        | ✅      | ✅      | —          | Origin; 10/min per address; closed body (kind, class name, path); writes one log line, stores nothing  |
+
+## Operator (M18, not a user route)
+
+| Route                   | Access                                                                                                                                                            |
+| ----------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `GET /internal/metrics` | **Absent unless `METRICS_TOKEN` is set.** Then `Authorization: Bearer <METRICS_TOKEN>` only (constant-time compare), else generic `401`; 60/min; aggregates only. |
 
 ## Authenticated — any role (own data only)
 
