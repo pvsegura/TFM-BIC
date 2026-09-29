@@ -24,19 +24,45 @@ function redactLogArguments(this: unknown, args: LogArgs, method: LogMethod): vo
   );
 }
 
+/** Field names that must never reach a log line, at the top level or one object down (M18). */
+const SECRET_FIELDS = [
+  "password",
+  "currentPassword",
+  "newPassword",
+  "token",
+  "apiKey",
+  "secret",
+  "authorization",
+  "cookie",
+];
+
+const REDACT_PATHS = [
+  "req.headers.authorization",
+  "req.headers.cookie",
+  "res.headers['set-cookie']",
+  ...SECRET_FIELDS.flatMap((field) => [field, `*.${field}`]),
+];
+
+export const LOG_SERVICE_NAME = "tfm-bic-api";
+
 /**
  * The API's logger configuration. Never log secrets or unnecessary personal data — see
- * docs/security/security-baseline.md and docs/privacy/DATA-CLASSIFICATION.md.
+ * docs/observability-data-policy.md, docs/security/security-baseline.md and
+ * docs/privacy/DATA-CLASSIFICATION.md.
  *
- * - Cookies, the authorization header and `set-cookie` are redacted.
+ * - Every line carries `service`, `env` and `version` (M18), an ISO `time` and a level label.
+ * - Cookies, the authorization header, `set-cookie` and secret-named fields are redacted.
  * - Request logs carry no query string (M14: one-click unsubscribe links carry a token there).
  * - Errors are serialized from an allowlist, and log messages are scrubbed, so bound SQL
  *   parameters and driver `detail` never reach a log line (M15).
  */
-export function createLoggerOptions(nodeEnv: AppEnv["NODE_ENV"]) {
+export function createLoggerOptions(env: Pick<AppEnv, "NODE_ENV" | "LOG_LEVEL" | "APP_VERSION">) {
   return {
-    level: nodeEnv === "test" ? "silent" : "info",
-    redact: ["req.headers.authorization", "req.headers.cookie", "res.headers['set-cookie']"],
+    level: env.NODE_ENV === "test" ? "silent" : env.LOG_LEVEL,
+    base: { service: LOG_SERVICE_NAME, env: env.NODE_ENV, version: env.APP_VERSION },
+    timestamp: () => `,"time":"${new Date().toISOString()}"`,
+    formatters: { level: (label: string) => ({ level: label }) },
+    redact: { paths: REDACT_PATHS, censor: "[redacted]" },
     serializers: { req: serializeRequest, err: serializeError },
     hooks: { logMethod: redactLogArguments },
   };

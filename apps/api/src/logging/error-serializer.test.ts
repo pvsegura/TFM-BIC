@@ -19,6 +19,7 @@ class FakeDrizzleQueryError extends Error {
 }
 
 const SECRET_EMAIL = "ada@example.com";
+const PRODUCTION_LOG_ENV = { NODE_ENV: "production", LOG_LEVEL: "info", APP_VERSION: "t" } as const;
 const SECRET_HASH = "$argon2id$v=19$m=65536$c2FsdA$aGFzaA";
 
 function pgError() {
@@ -107,14 +108,14 @@ describe("createLoggerOptions", () => {
     return { lines, stream };
   }
 
-  it("is silent under NODE_ENV=test and info elsewhere", () => {
-    expect(createLoggerOptions("test").level).toBe("silent");
-    expect(createLoggerOptions("production").level).toBe("info");
+  it("is silent under NODE_ENV=test and LOG_LEVEL elsewhere", () => {
+    expect(createLoggerOptions({ ...PRODUCTION_LOG_ENV, NODE_ENV: "test" }).level).toBe("silent");
+    expect(createLoggerOptions(PRODUCTION_LOG_ENV).level).toBe("info");
   });
 
   it("wires the error serializer, so a logged failed query carries no parameters", async () => {
     const { lines, stream } = captureLogs();
-    const app = Fastify({ logger: { ...createLoggerOptions("production"), stream } });
+    const app = Fastify({ logger: { ...createLoggerOptions(PRODUCTION_LOG_ENV), stream } });
     app.get("/boom", () => {
       throw new FakeDrizzleQueryError("select $1", [SECRET_EMAIL]);
     });
@@ -130,7 +131,7 @@ describe("createLoggerOptions", () => {
 
   it("redacts the message when an error is logged directly, as index.ts does on start-up failure", async () => {
     const { lines, stream } = captureLogs();
-    const app = Fastify({ logger: { ...createLoggerOptions("production"), stream } });
+    const app = Fastify({ logger: { ...createLoggerOptions(PRODUCTION_LOG_ENV), stream } });
 
     app.log.error(new FakeDrizzleQueryError("select $1", [SECRET_EMAIL]));
     app.log.warn(`Failed query: select $1\nparams: ${SECRET_EMAIL}`);
@@ -143,7 +144,7 @@ describe("createLoggerOptions", () => {
 
   it("leaves ordinary structured log calls unchanged", async () => {
     const { lines, stream } = captureLogs();
-    const app = Fastify({ logger: { ...createLoggerOptions("production"), stream } });
+    const app = Fastify({ logger: { ...createLoggerOptions(PRODUCTION_LOG_ENV), stream } });
 
     app.log.info({ lessonId: "pl-greetings", status: "completed" }, "Lesson complete");
     await app.close();
@@ -157,7 +158,7 @@ describe("createLoggerOptions", () => {
 
   it("redacts cookies and the authorization header", async () => {
     const { lines, stream } = captureLogs();
-    const app = Fastify({ logger: { ...createLoggerOptions("production"), stream } });
+    const app = Fastify({ logger: { ...createLoggerOptions(PRODUCTION_LOG_ENV), stream } });
     app.get("/", (request) => {
       request.log.info({ req: request }, "probe");
       return "ok";

@@ -51,6 +51,8 @@ import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
+import { registerHttpObservability } from "./observability/http-observability.js";
+import { MetricsRegistry } from "./observability/metrics.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
 
@@ -59,6 +61,8 @@ export interface ServerRuntimeOptions {
   /** Backs GET /ready. index.ts wires the real database check; the in-process NODE_ENV=test
    * database is always available, so tests may leave it out. */
   isReady?: () => Promise<boolean>;
+  /** The process's metrics (M18). A fresh registry per server when left out. */
+  metrics?: MetricsRegistry;
 }
 
 export function buildServer(
@@ -81,9 +85,13 @@ export function buildServer(
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
   // Body limit, request timeout, random request ids and TRUST_PROXY: security/http-security.ts (M16).
   const app = Fastify({
-    logger: createLoggerOptions(env.NODE_ENV),
+    logger: createLoggerOptions(env),
+    // One `request.completed` line per request instead (observability/http-observability.ts, M18).
+    disableRequestLogging: true,
     ...httpSecurityServerOptions(env),
   });
+  const metrics = runtime.metrics ?? new MetricsRegistry();
+  registerHttpObservability(app, metrics);
   // The built SPA, served from this origin in staging/production (M17, ADR-028). Loaded before
   // anything else so a missing or unreadable build stops the server immediately.
   const webApp = env.WEB_DIST_DIR ? loadWebApp(env.WEB_DIST_DIR) : undefined;
