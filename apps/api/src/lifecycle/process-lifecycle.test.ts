@@ -1,6 +1,12 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { createShutdownHandler, waitForDatabase } from "./process-lifecycle.js";
+import { EventEmitter } from "node:events";
+
+import {
+  createShutdownHandler,
+  registerFatalErrorHandlers,
+  waitForDatabase,
+} from "./process-lifecycle.js";
 
 const log = { info: vi.fn(), warn: vi.fn(), error: vi.fn() };
 
@@ -149,5 +155,23 @@ describe("createShutdownHandler (M17: graceful, bounded)", () => {
     } finally {
       vi.useRealTimers();
     }
+  });
+});
+
+describe("registerFatalErrorHandlers (M18: fatal errors go through the redacting logger)", () => {
+  it.each([
+    ["uncaughtException", "process.uncaught_exception"],
+    ["unhandledRejection", "process.unhandled_rejection"],
+  ])("on %s: logs one fatal line with the error, then shuts down as failed", (event, message) => {
+    const target = new EventEmitter();
+    const fatalLog = { fatal: vi.fn() };
+    const shutdown = vi.fn(() => Promise.resolve());
+    registerFatalErrorHandlers(target, { log: fatalLog, shutdown });
+    const error = new Error("boom");
+
+    target.emit(event, error);
+
+    expect(fatalLog.fatal).toHaveBeenCalledWith({ err: error }, message);
+    expect(shutdown).toHaveBeenCalledWith(event, { failed: true });
   });
 });

@@ -51,7 +51,11 @@ import {
   createTeachingDependencies,
   type TeachingDependencies,
 } from "./composition/teaching-dependencies.js";
-import { createShutdownHandler, waitForDatabase } from "./lifecycle/process-lifecycle.js";
+import {
+  createShutdownHandler,
+  registerFatalErrorHandlers,
+  waitForDatabase,
+} from "./lifecycle/process-lifecycle.js";
 import { buildServer } from "./server.js";
 
 /** Below Docker's default 10 s stop grace period, so we exit on our own terms (M17). */
@@ -164,6 +168,7 @@ const shutdown = createShutdownHandler({
 });
 process.on("SIGINT", () => void shutdown("SIGINT"));
 process.on("SIGTERM", () => void shutdown("SIGTERM"));
+registerFatalErrorHandlers(process, { log: app.log, shutdown });
 
 async function start(): Promise<void> {
   // Configuration was validated by loadEnv() above; now the database must answer before the port

@@ -111,3 +111,24 @@ export function createShutdownHandler(
     return running;
   };
 }
+
+/**
+ * M18: without these, Node prints an unhandled error's raw stack to stderr — unstructured, and
+ * past the log redaction (a failed query's message carries its bound parameters) — then exits.
+ * Now: one `fatal` line through the configured logger, then the usual bounded shutdown, exit 1.
+ * The process still stops: its state is unknown after such an error.
+ */
+export function registerFatalErrorHandlers(
+  target: { on(event: string, listener: (error: unknown) => void): unknown },
+  options: {
+    log: { fatal: (obj: object, msg: string) => void };
+    shutdown: (signal: string, context: { failed: boolean }) => Promise<void>;
+  },
+): void {
+  const handle = (event: string, message: string) => (error: unknown) => {
+    options.log.fatal({ err: error }, message);
+    void options.shutdown(event, { failed: true });
+  };
+  target.on("uncaughtException", handle("uncaughtException", "process.uncaught_exception"));
+  target.on("unhandledRejection", handle("unhandledRejection", "process.unhandled_rejection"));
+}
