@@ -61,6 +61,8 @@ export default defineConfig({
       // Privacy & Data Management (M15): `/data-management/export` and `/account-deletion`. The
       // controls live on /profile and the notice at /privacy, so this needs no page-vs-API bypass.
       "/data-management": { target: "http://localhost:3000", changeOrigin: true },
+      // Observability (M18): the SPA's error report. No page lives at this path.
+      "/client-errors": { target: "http://localhost:3000", changeOrigin: true },
       // The profile page (SPA route) and the profile API (`GET`/`PATCH
       // /profile`) share one path. A browser navigation — a typed URL, a
       // reload, a link — must get the SPA, while the app's own `fetch` (which

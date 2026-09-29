@@ -59,6 +59,7 @@ import {
 } from "./observability/instrumented-providers.js";
 import { MetricsRegistry } from "./observability/metrics.js";
 import { createReadinessMonitor } from "./observability/readiness-monitor.js";
+import { registerClientErrorRoutes } from "./routes/client-errors.route.js";
 import { registerMetricsRoute } from "./routes/metrics.route.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
@@ -154,6 +155,8 @@ export function buildServer(
       ...(readiness ? { readiness: readiness.state } : {}),
       databaseStats: () => sharedPostgresPools.stats(),
     });
+    // The SPA's unhandled errors, into the same log stream (M18).
+    registerClientErrorRoutes(app, { env, metrics });
 
     // Email (M14, ADR-014/025): transactional and marketing senders over one provider — "fake"
     // (sends nothing) unless another is configured. Each delivery attempt is logged with its

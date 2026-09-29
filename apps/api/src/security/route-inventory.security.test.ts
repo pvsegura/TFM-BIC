@@ -28,6 +28,8 @@ const PUBLIC_ROUTES = new Set([
   "POST /auth/password-reset/confirm",
   "POST /email-preferences/newsletter/confirm",
   "POST /email-preferences/newsletter/unsubscribe",
+  // M18: the SPA's error report — errors happen before login too. Same-origin, rate limited.
+  "POST /client-errors",
 ]);
 
 /** Authorized by an HMAC token in the link; RFC 8058 mail clients send no Origin (ADR-025). */

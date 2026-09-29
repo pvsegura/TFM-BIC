@@ -262,3 +262,9 @@ export {
 
 // Web app delivery (M16/M17): the headers every server of the built SPA must send.
 export { CONTENT_SECURITY_POLICY, WEB_SECURITY_HEADERS } from "./web/web-security-headers.js";
+
+// Observability (M18): the SPA's error report.
+export {
+  clientErrorReportSchema,
+  type ClientErrorReport,
+} from "./observability/client-error-report.schema.js";
