@@ -97,7 +97,9 @@ docker logs --since 15m <container>             # PROVIDER-SPECIFIC on a managed
 
 Useful log messages: `server.started`, `database.unreachable_at_startup`,
 `database.unreachable_giving_up`, `database.idle_connection_lost`, `shutdown.started|completed|timed_out`,
-`request.rejected`, `Unhandled request error`, `email.delivery_failed`. Correlate a user report with
+`request.rejected`, `Unhandled request error`, `email.delivery_failed`; since M18 also `request.completed`,
+`readiness.lost|restored`, `video.render_*`, `client.error`, `process.uncaught_exception|unhandled_rejection` — see
+[docs/runbooks/](../runbooks/README.md). Correlate a user report with
 the `X-Request-Id` response header (`reqId` in logs).
 
 ## Restart

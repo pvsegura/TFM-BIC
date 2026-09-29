@@ -1,6 +1,10 @@
 import { describe, expect, it, vi } from "vitest";
 
-import { createClientErrorReporter, installGlobalErrorHandlers } from "./client-error-reporter.js";
+import {
+  createClientErrorReporter,
+  installGlobalErrorHandlers,
+  reportClientError,
+} from "./client-error-reporter.js";
 
 function setup(options: { limit?: number; fetchImpl?: typeof fetch; path?: string } = {}) {
   const fetchImpl =
@@ -98,5 +102,25 @@ describe("installGlobalErrorHandlers (M18)", () => {
     uninstall();
     target.dispatchEvent(Object.assign(new Event("error"), { error }));
     expect(report).toHaveBeenCalledTimes(2);
+  });
+});
+
+describe("reportClientError (the page's reporter)", () => {
+  it("uses the page's fetch and current pathname", () => {
+    const fetchSpy = vi
+      .spyOn(window, "fetch")
+      .mockResolvedValue(new Response(null, { status: 204 }));
+    window.history.pushState({}, "", "/learn/vocabulary?token=not-sent");
+
+    reportClientError("uncaught", new EvalError("x"));
+
+    expect(fetchSpy).toHaveBeenCalledTimes(1);
+    const body = fetchSpy.mock.calls[0]?.[1]?.body as string;
+    expect(JSON.parse(body)).toEqual({
+      kind: "uncaught",
+      name: "EvalError",
+      path: "/learn/vocabulary",
+    });
+    fetchSpy.mockRestore();
   });
 });
