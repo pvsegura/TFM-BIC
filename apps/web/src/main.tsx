@@ -5,7 +5,14 @@ import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 
 import { App } from "./app.js";
+import {
+  installGlobalErrorHandlers,
+  reportClientError,
+} from "./observability/client-error-reporter.js";
 import "./styles/index.css";
+
+// M18: errors outside React rendering (event handlers, promises) are reported too.
+installGlobalErrorHandlers(window, reportClientError);
 
 const rootElement = document.getElementById("root");
 if (!rootElement) {

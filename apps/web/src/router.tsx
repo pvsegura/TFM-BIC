@@ -1,6 +1,7 @@
 import { createBrowserRouter, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
+import { RouteErrorFallback } from "./components/route-error-fallback.js";
 import { TeacherRoute } from "./components/teacher-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { AccountDeletedPage } from "./pages/account-deleted-page.js";
@@ -138,6 +139,8 @@ export const routes: RouteObject[] = [
   {
     path: "/",
     element: <RootLayout />,
+    // M18: any route that throws while rendering shows a safe fallback and is reported.
+    errorElement: <RouteErrorFallback />,
     children: [
       { index: true, element: placeholder("TFM-BIC", "Language-learning platform — home.") },
       ...PUBLIC_ROUTES,

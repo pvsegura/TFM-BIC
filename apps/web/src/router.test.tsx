@@ -3,6 +3,7 @@ import { matchRoutes } from "react-router";
 import { describe, expect, it } from "vitest";
 
 import { ProtectedRoute } from "./components/protected-route.js";
+import { RouteErrorFallback } from "./components/route-error-fallback.js";
 import { TeacherRoute } from "./components/teacher-route.js";
 import { routes } from "./router.js";
 
@@ -131,5 +132,12 @@ describe("routes", () => {
 
   it("does not reserve /data-management for a page: that path belongs to the API (ADR-026)", () => {
     expect(leafPath("/data-management")).toBe("*");
+  });
+});
+
+describe("error boundary (M18)", () => {
+  it("renders the safe error fallback for any route that throws", () => {
+    const [root] = routes;
+    expect(isValidElement(root?.errorElement) && root.errorElement.type).toBe(RouteErrorFallback);
   });
 });
