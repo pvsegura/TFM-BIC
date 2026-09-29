@@ -1,8 +1,35 @@
 # Current State
 
-Last updated: 2026-09-27
+Last updated: 2026-09-29
 
 ## Milestone
+
+**M20A — Public homepage** — implemented on `feature/public-homepage`, branched from `feature/observability`
+(M18; no M19 branch exists). Not pushed, not merged, not deployed; Jenkins/SonarQube not run (standing
+instruction). Rationale: [ADR-030](../docs/adr/adr-030-public-homepage.md); audit:
+[docs/m20a-homepage-audit.md](../docs/m20a-homepage-audit.md); motion grammar and mechanics:
+[docs/m20a-motion-system.md](../docs/m20a-motion-system.md).
+
+### What actually exists (M20A)
+
+- **`/`** is a lazily loaded, full-bleed homepage (`apps/web/src/pages/home-page.tsx` + `src/homepage/`): ten
+  scenes (Discover, Understand, Listen, Watch, Practise, Remember, Progress, Journey, Languages, Begin) that follow
+  the A1 word _szkoła_, joined by one orange "margin line" thread. Copy in `homepage/content/homepage.en.json`
+  (locale-keyed, typed); levels/languages from the public catalog; examples are verbatim A1 content, labelled.
+- **Motion**: `homepage/motion/` — pure `sceneProgress`, one shared rAF scroll driver writing `--p`, `ScrollScene`,
+  `HomepageMotionContext` (pin only with motion at ≥ 960px), `useMediaQuery`/`usePrefersReducedMotion`. All
+  scroll-linked styling in `homepage/homepage.css`. No animation library.
+- **Root layout**: Menu disclosure on small screens (Escape/navigation close it), `handle.fullBleed`, footer nav
+  (Languages and levels, Privacy notice) + "© 2026 pvsegura · TFM-BIC", skip link now navy on orange (AA).
+- **Tokens** (`styles/index.css`): accent-ink, success/danger pairs, night paper, `--font-display` (self-hosted
+  Bricolage Grotesque, OFL), `--ease-thread`, duration tokens.
+- **SEO/static**: meta description + Open Graph in `index.html` (page-specific title/description set by the
+  homepage), `public/favicon.svg` (original), `public/robots.txt`.
+- **Tests**: unit/component (progress maths, driver, hooks, content + no-claims guard, page, layout, router);
+  E2E `homepage.spec.ts` (journey, scroll without hijack, keyboard, landmarks, reduced motion, phone menu,
+  widths 375–1920), CSP check in `production-build-security.spec.ts`; opt-in visual project `homepage-visual`
+  (`PW_VISUAL=1`, win32 baselines).
+- **Pending decisions**: indexing of the staging demo, canonical/`og:url` origin, `og:image`, Terms/Contact pages.
 
 **M18 — Observability** — implemented on `feature/observability`, branched from `feature/production-readiness`
 (M17). Not pushed, not merged, not deployed; Jenkins/SonarQube not run (standing instruction). Rationale:

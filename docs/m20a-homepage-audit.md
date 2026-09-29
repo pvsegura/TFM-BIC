@@ -109,3 +109,15 @@ narrative continuity the brief asks for.
 - `homepage/scenes/` — one component per scene (10) plus `thread.tsx` (the orange thread primitive).
 - `homepage/homepage.css` — the homepage's scene styles, driven by the `--p` custom property.
 - Header `MobileMenu` behaviour inside `RootLayout`; `SiteFooter` content.
+
+## 8. Open items found by the audit (not implemented in M20A)
+
+- **Missing pages**: Terms of use and Contact do not exist (the privacy notice itself marks the controller contact
+  PENDING); data export/deletion is only reachable signed in, on `/profile`. The footer links only to pages that
+  exist. PENDING USER/LEGAL DECISION.
+- **Visitor navigation**: Lessons, Vocabulary and Phonetics are protected routes, so the public header keeps
+  showing only Home, Learn, Log in and Register to visitors (linking them would bounce to the login page).
+- **SEO**: no canonical/`og:url` (no fixed public origin is configured at build time), no `og:image` (no asset),
+  no structured data (no real organisation facts to state). Whether the staging demo should be indexed is PENDING.
+- **Anonymous session check**: every page logs a browser-level `401` for `/auth/me` for visitors (ADR-006 design);
+  pre-existing, not a homepage error.

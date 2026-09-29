@@ -224,6 +224,22 @@ Rationale: [ADR-026](../docs/adr/adr-026-privacy-data-management.md); inventory:
   rewrite an old id. Update docs/privacy when an external provider or data flow changes.
 - Do not add a cookie banner, analytics, date of birth or kids-mode data without a documented decision.
 
+## Public homepage conventions (since M20A)
+
+Rationale: [ADR-030](../docs/adr/adr-030-public-homepage.md); motion: [docs/m20a-motion-system.md](../docs/m20a-motion-system.md).
+
+- **Homepage words live in `homepage/content/homepage.<locale>.json`**, never in scene components. Examples must be
+  verbatim shipped content and labelled as examples; live facts (languages, levels) come from the catalog API. The
+  content test refuses statistics, ratings, hyperbole and price claims — do not weaken it to fit a sentence.
+- **Motion is a CSS function of `--p`.** New scroll-linked motion goes in `homepage.css`, reads `--q`/phase variables,
+  and changes only `transform`, `opacity`, `stroke-dashoffset` or `clip-path`. No new scroll listeners, no animation
+  library, no `style=""` markup (CSP) — custom properties are set through React's `style` prop (CSSOM).
+- **Scene copy is never faded out or hidden by motion**; every scene must read correctly under
+  `prefers-reduced-motion` (its `--rest` state) and on a 375px screen without pinning.
+- A route that needs the full width asks for it with `handle: { fullBleed: true }`; there is one layout.
+- Visual baselines are regenerated only for an intended change: `set "PW_VISUAL=1"` then
+  `pnpm test:e2e --project=homepage-visual --update-snapshots`.
+
 ## Security conventions (since M16)
 
 Rationale: [ADR-027](../docs/adr/adr-027-security-hardening.md); audit and tests: [docs/security/](../docs/security/M16-SECURITY-AUDIT.md).
