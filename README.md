@@ -155,3 +155,11 @@ infrastructure/deployment/restore-drill.sh tfm-bic:$SHA               # prueba d
 
 En Windows (Git Bash) anteponer `MSYS_NO_PATHCONV=1` a los scripts de Docker. Procedimientos completos:
 [runbook](docs/production/M17-PRODUCTION-RUNBOOK.md).
+
+# Observabilidad (Milestone 18)
+
+Logs JSON estructurados (servicio, entorno, versión, `reqId`, ruta, estado, duración) con redacción centralizada,
+métricas en memoria (`GET /internal/metrics`, solo con `METRICS_TOKEN`), transiciones de readiness, errores del SPA
+reportados al propio API (`POST /client-errors`) y runbooks por alerta. Sin proveedor externo. Decisión:
+[ADR-029](docs/adr/adr-029-observability.md) · política de datos: [docs/observability-data-policy.md](docs/observability-data-policy.md)
+· runbooks: [docs/runbooks/](docs/runbooks/README.md).

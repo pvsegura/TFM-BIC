@@ -4,6 +4,34 @@ Last updated: 2026-09-27
 
 ## Milestone
 
+**M18 — Observability** — implemented on `feature/observability`, branched from `feature/production-readiness`
+(M17). Not pushed, not merged, not deployed; Jenkins/SonarQube not run (standing instruction). Rationale:
+[ADR-029](../docs/adr/adr-029-observability.md); audit: [docs/m18-observability-audit.md](../docs/m18-observability-audit.md);
+data rules: [docs/observability-data-policy.md](../docs/observability-data-policy.md); alerts + runbooks:
+[docs/runbooks/](../docs/runbooks/README.md). **No observability vendor**; alert delivery beyond the host's own
+notifications is PENDING USER DECISION.
+
+### What actually exists (M18)
+
+- **Logs** (`apps/api/src/logging/logger-options.ts`): every line has `service`, `env`, `version`, ISO `time`, level
+  label; `LOG_LEVEL` (production refuses `debug`); secret-named fields redacted centrally. One `request.completed`
+  line per request (route template, status, `durationMs`, `reqId`, IP as before) replaces Fastify's two; healthy
+  probes at `debug`.
+- **Metrics** (`apps/api/src/observability/`): in-memory `MetricsRegistry` (counters, fixed-bucket histograms, ≤ 200
+  label sets per metric) — HTTP by method/route/status, provider calls (Gemini/Hyperframes/email decorators in the
+  composition layer), readiness checks, client errors; DB pool stats from `sharedPostgresPools.stats()`.
+  `GET /internal/metrics` exists only with `METRICS_TOKEN` (bearer, constant-time, 60/min).
+- **Readiness** transitions logged (`readiness.lost` with reason code / `readiness.restored`); video renders logged
+  (`video.render_started|completed|failed`); `uncaughtException`/`unhandledRejection` → `fatal` line + bounded shutdown.
+- **Web**: root route `errorElement` (`RouteErrorFallback`) replaces React Router's developer screen; render/uncaught/
+  unhandled-rejection errors reported to `POST /client-errors` (kind, class name, pathname only; Origin, 10/min).
+- **Verification (2026-09-29, local)**: lint, typecheck, build PASS; format:check PASS except the untracked nested
+  clone; **Vitest 4216 pass / 5 skipped / 0 fail**, coverage **94.57 / 88.73 / 93.29 / 94.68** (stmts/branches/
+  functions/lines, before the last added test); **Playwright 156/156**; `pnpm audit --prod` clean. gitleaks and image
+  validation **not run** (Docker daemon stopped); Jenkins/SonarQube **not run**.
+
+## Previous milestone (M17)
+
 **M17 — Production readiness & deployment** — implemented on `feature/production-readiness`, branched from
 `feature/security-hardening` (M16). Not pushed, not merged; Jenkins/SonarQube not run (standing instruction).
 Rationale: [ADR-028](../docs/adr/adr-028-production-runtime-and-deployment.md); audit, blockers and evidence:

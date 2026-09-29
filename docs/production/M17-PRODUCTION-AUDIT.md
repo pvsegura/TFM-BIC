@@ -82,7 +82,7 @@ Not blockers (production runs with the feature switched off — `disabled`, answ
 | Sessions are in Postgres (not memory) → sessions survive restarts and do not block scaling.                           | —                                                                   |
 | Recreate deployment: a short outage on every release (no zero-downtime claim).                                        | Documented; rolling/blue-green depends on the chosen host.          |
 | Serverless Postgres cold start (Neon scale-to-zero, 5 min on Free) adds latency to the first request and to start-up. | Start-up waits up to ~25 s; readiness reflects it.                  |
-| No error tracking or metrics (M18).                                                                                   | Structured logs + health/readiness only.                            |
+| No error tracking or metrics — **addressed by M18** (ADR-029): in-process metrics, SPA error reports, runbooks.       | See docs/m18-observability-audit.md.                                |
 | Base image pinned by tag, not digest.                                                                                 | Digest pinning documented in the runbook as a follow-up.            |
 | Jenkins pipeline changes were **not executed** (standing instruction: do not run Jenkins/SonarQube).                  | Each shell step was run locally; first real run must be watched.    |
 
