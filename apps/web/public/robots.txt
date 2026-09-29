@@ -1,0 +1,20 @@
+# M20A. Public pages may be crawled; signed-in areas and pages reached through e-mailed tokens
+# are not useful to a search engine. Whether the staging demo should be indexed at all is a
+# pending decision (docs/m20a-homepage-audit.md).
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /profile
+Disallow: /settings
+Disallow: /progress
+Disallow: /achievements
+Disallow: /teacher
+Disallow: /learn/lessons
+Disallow: /learn/exercises
+Disallow: /learn/vocabulary
+Disallow: /learn/phonetics
+Disallow: /learn/videos
+Disallow: /verify-email
+Disallow: /reset-password
+Disallow: /newsletter/
+Disallow: /account-deleted
