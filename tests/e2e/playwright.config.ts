@@ -8,6 +8,18 @@ const baseURL = "http://localhost:5173";
 /** The production build (`vite build` + `vite preview`), served with its security headers (M16). */
 const productionBuildURL = "http://localhost:4173";
 const PRODUCTION_BUILD_SPEC = /production-build-security\.spec\.ts/;
+/** M20A: screenshot baselines depend on the OS and its font rendering (the committed ones are
+ * Windows), so visual regression is opt-in — `PW_VISUAL=1` — and never part of the default run. */
+const VISUAL_SPEC = /homepage-visual\.spec\.ts/;
+const visualProjects = process.env.PW_VISUAL
+  ? [
+      {
+        name: "homepage-visual",
+        use: { ...devices["Desktop Chrome"], reducedMotion: "reduce" as const },
+        testMatch: VISUAL_SPEC,
+      },
+    ]
+  : [];
 
 const API_PORT = 3000;
 
@@ -41,7 +53,7 @@ export default defineConfig({
     {
       name: "chromium",
       use: { ...devices["Desktop Chrome"] },
-      testIgnore: PRODUCTION_BUILD_SPEC,
+      testIgnore: [PRODUCTION_BUILD_SPEC, VISUAL_SPEC],
     },
     {
       // M16 (ADR-027): the built app under its Content-Security-Policy — the dev server cannot be
@@ -57,6 +69,7 @@ export default defineConfig({
       },
       testMatch: PRODUCTION_BUILD_SPEC,
     },
+    ...visualProjects,
   ],
   webServer: [
     {
