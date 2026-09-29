@@ -48,6 +48,8 @@ export interface ExerciseOption {
 }
 
 export interface HomepageContent {
+  /** BCP 47 tag of the example words (for their `lang` attribute, so they are pronounced right). */
+  exampleLanguage: string;
   meta: { title: string; description: string };
   chapters: Readonly<Record<SceneKey, string>>;
   /** Visitors are invited to register; signed-in students are sent back to their work. */
@@ -59,11 +61,14 @@ export interface HomepageContent {
     ipa: string;
     gloss: string;
     partOfSpeech: string;
+    /** The content note's own respelling ("Roughly: SHKO-wa"). */
+    rough: string;
     source: string;
   };
   understand: {
     title: string;
     lead: string;
+    ipaTerm: string;
     facets: readonly { term: string; detail: string }[];
   };
   listen: { title: string; lead: string; speeds: readonly string[]; figureLabel: string };
@@ -82,6 +87,7 @@ export interface HomepageContent {
     options: readonly ExerciseOption[];
     correctOptionId: string;
     check: string;
+    feedbackLabel: string;
     correct: string;
     /** `{text}` and `{meaning}` are replaced with the chosen option's. */
     incorrect: string;

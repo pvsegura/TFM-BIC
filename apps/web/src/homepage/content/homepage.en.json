@@ -1,4 +1,5 @@
 {
+  "exampleLanguage": "pl",
   "meta": {
     "title": "TFM-BIC — Learn a language one word at a time",
     "description": "Lessons, sounds, vocabulary and practice that take a word from unfamiliar to usable. Polish A1 is open now."
@@ -37,11 +38,13 @@
     "ipa": "/ˈʂkɔ.wa/",
     "gloss": "school",
     "partOfSpeech": "noun",
+    "rough": "SHKO-wa",
     "source": "Example from Polish A1 — “A first look at Polish spelling and sounds”"
   },
   "understand": {
     "title": "A word is more than its spelling.",
     "lead": "Every word you meet comes with the pieces that make it usable.",
+    "ipaTerm": "IPA",
     "facets": [
       { "term": "Spelling", "detail": "szko·ła — two syllables, stress on the first" },
       {
@@ -81,6 +84,7 @@
     ],
     "correctOptionId": "a",
     "check": "Check answer",
+    "feedbackLabel": "Answer feedback",
     "correct": "Correct.",
     "incorrect": "Not quite — {text} means {meaning}.",
     "explanation": "Przepraszam means sorry and excuse me. Dziękuję means thank you, Proszę means please, and Tak means yes."

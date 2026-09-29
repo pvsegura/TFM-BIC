@@ -141,3 +141,23 @@ describe("error boundary (M18)", () => {
     expect(isValidElement(root?.errorElement) && root.errorElement.type).toBe(RouteErrorFallback);
   });
 });
+
+describe("public homepage (M20A)", () => {
+  const home = () => match("/").at(-1)?.route;
+
+  it("serves the homepage at / as a public page, outside the login guard", () => {
+    expect(home()?.index).toBe(true);
+    expect(isBehindLogin("/")).toBe(false);
+  });
+
+  it("asks the root layout for a full-bleed page", () => {
+    expect(home()?.handle).toEqual({ fullBleed: true });
+  });
+
+  it("loads the homepage in its own chunk, so the rest of the app does not carry it", async () => {
+    const lazy = home()?.lazy;
+    expect(typeof lazy).toBe("function");
+    const loaded = typeof lazy === "function" ? await lazy() : undefined;
+    expect(loaded?.Component?.name).toBe("HomePage");
+  });
+});

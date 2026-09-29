@@ -1,0 +1,1430 @@
+/*
+ * Public homepage (M20A) — "annotated language": an exercise book whose orange margin line is the
+ * thread of the story. Motion grammar and mechanics: docs/m20a-motion-system.md.
+ *
+ * Every scroll-linked value derives from one number per scene, --p (0 → 1), written by the scroll
+ * driver. Only transform, opacity, stroke-dashoffset and clip-path change with it.
+ *
+ * Sections: 1 tokens · 2 page · 3 scene progress & phases · 4 shared parts · 5–13 scenes ·
+ * 14 small screens · 15 reduced motion.
+ */
+
+/* 1 ── Tokens ─────────────────────────────────────────────────────────────────────────────── */
+
+.homepage {
+  --paper: var(--color-surface);
+  --ink: var(--color-primary);
+  --ink-muted: rgb(20 35 60 / 0.74);
+  --ink-faint: rgb(20 35 60 / 0.32);
+  --rule: rgb(20 35 60 / 0.06);
+  --thread: var(--color-accent);
+  --thread-ink: var(--color-accent-ink);
+  --panel: rgb(255 255 255);
+  --panel-edge: rgb(20 35 60 / 0.14);
+  --success: var(--color-success);
+  --danger: var(--color-danger);
+
+  --frame: 78rem;
+  --rail-inset: 0.625rem;
+  --gutter-left: calc(var(--rail-inset) + 1.375rem);
+  --gutter-right: 1rem;
+  --line: 2rem; /* the ruling of the exercise-book paper */
+
+  --step-word: clamp(3.5rem, 8.6vw, 8.5rem);
+  --step-h1: clamp(2.35rem, 4.6vw + 0.6rem, 4.6rem);
+  --step-h2: clamp(1.95rem, 3vw + 0.7rem, 3.4rem);
+  --step-lead: clamp(1.0625rem, 0.45vw + 0.95rem, 1.3rem);
+}
+
+:where(.dark) .homepage {
+  --paper: var(--color-surface-dark);
+  --ink: var(--color-surface);
+  --ink-muted: rgb(248 249 250 / 0.76);
+  --ink-faint: rgb(248 249 250 / 0.3);
+  --rule: rgb(248 249 250 / 0.045);
+  --thread-ink: var(--color-accent);
+  --panel: var(--color-night-paper);
+  --panel-edge: rgb(248 249 250 / 0.14);
+  --success: var(--color-success-dark);
+  --danger: var(--color-danger-dark);
+}
+
+@media (min-width: 768px) {
+  .homepage {
+    --rail-inset: 1.75rem;
+    --gutter-left: calc(var(--rail-inset) + 2.5rem);
+    --gutter-right: 2rem;
+  }
+}
+
+@media (min-width: 1280px) {
+  .homepage {
+    --rail-inset: 2.5rem;
+    --gutter-left: calc(var(--rail-inset) + 3.5rem);
+  }
+}
+
+/* 2 ── Page: ruled paper and the margin line ──────────────────────────────────────────────── */
+
+.homepage {
+  position: relative;
+  /* clip, not hidden: it does not create a scroll container, so sticky stages keep working. */
+  overflow-x: clip;
+  font-family: var(--font-display);
+  color: var(--ink);
+  background-color: var(--paper);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(var(--line) - 1px),
+    var(--rule) calc(var(--line) - 1px) var(--line)
+  );
+}
+
+.homepage__rail {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: calc(max(0px, (100% - var(--frame)) / 2) + var(--rail-inset));
+  width: 2px;
+  background: var(--thread);
+  pointer-events: none;
+}
+
+/* 3 ── Scene progress and the motion grammar ─────────────────────────────────────────────── */
+
+.scene {
+  position: relative;
+  /* Settled unless the driver says otherwise. */
+  --p: 1;
+  /* --q: the progress the figures use. Pinned scenes use --p as is; pass-through scenes finish
+     their figure by the time it is centred in the viewport, then hold. */
+  --q: var(--p);
+  --enter: clamp(0, var(--q) / 0.2, 1);
+  --focus: clamp(0, (var(--q) - 0.2) / 0.35, 1);
+  --transform: clamp(0, (var(--q) - 0.55) / 0.3, 1);
+  --exit: clamp(0, (var(--q) - 0.85) / 0.15, 1);
+  --focus-e: calc(var(--focus) * var(--focus) * (3 - 2 * var(--focus)));
+  --transform-e: calc(var(--transform) * var(--transform) * (3 - 2 * var(--transform)));
+}
+
+.scene[data-mode="pass-through"] {
+  --q: clamp(0, (var(--p) - 0.08) / 0.42, 1);
+}
+
+[data-motion="full"] .scene {
+  --p: 0;
+}
+
+.scene__frame {
+  max-width: var(--frame);
+  margin-inline: auto;
+  padding: clamp(4.5rem, 12vh, 8rem) var(--gutter-right) clamp(4.5rem, 12vh, 8rem)
+    var(--gutter-left);
+}
+
+.scene__frame--split {
+  display: grid;
+  gap: clamp(2.5rem, 5vw, 5rem);
+  align-items: center;
+}
+
+@media (min-width: 960px) {
+  .scene__frame--split {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  }
+}
+
+/* A pinned scene is a tall track; its stage sticks for (track − viewport) of scrolling. */
+.scene[data-mode="pinned"] {
+  height: var(--track, 200svh);
+}
+
+.scene__stage {
+  position: sticky;
+  top: 0;
+  display: flex;
+  align-items: center;
+  min-height: 100svh;
+}
+
+.scene__stage > .scene__frame {
+  width: 100%;
+}
+
+/* 4 ── Shared parts: type, chapter marks, calls to action ────────────────────────────────── */
+
+.scene-intro {
+  max-width: 34rem;
+}
+
+.chapter {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--thread-ink);
+}
+
+/* The bead: where this chapter sits on the margin line. */
+.chapter::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: calc(var(--rail-inset) - var(--gutter-left) + 1px);
+  width: 0.75rem;
+  height: 0.75rem;
+  border: 2px solid var(--thread);
+  border-radius: 50%;
+  background: var(--paper);
+  transform: translate(-50%, -50%);
+}
+
+.chapter__number {
+  font-variant-numeric: tabular-nums;
+}
+
+.chapter__name {
+  color: var(--ink-muted);
+}
+
+.kicker {
+  margin-bottom: 0.75rem;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--ink-muted);
+}
+
+.type-h1 {
+  font-size: var(--step-h1);
+  font-weight: 720;
+  line-height: 1.02;
+  letter-spacing: -0.035em;
+  text-wrap: balance;
+}
+
+.type-h2 {
+  font-size: var(--step-h2);
+  font-weight: 680;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+.type-lead {
+  margin-top: 1.25rem;
+  font-size: var(--step-lead);
+  line-height: 1.55;
+  color: var(--ink-muted);
+  text-wrap: pretty;
+}
+
+.example-note {
+  margin-top: 1.25rem;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+.cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 1.75rem;
+  margin-top: 2.25rem;
+}
+
+.cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  min-height: 3rem;
+  font-size: 1.0625rem;
+  font-weight: 650;
+}
+
+/* Navy on orange (~5.5:1) in both themes; a printed, offset edge instead of a soft shadow. */
+.cta--primary {
+  padding: 0.8rem 1.35rem;
+  border: 2px solid var(--color-primary);
+  border-radius: 0.25rem;
+  background: var(--thread);
+  color: var(--color-primary);
+  box-shadow: 4px 4px 0 var(--ink);
+  transition:
+    transform var(--duration-quick) var(--ease-thread),
+    box-shadow var(--duration-quick) var(--ease-thread);
+}
+
+.cta--primary:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0 var(--ink);
+}
+
+.cta--primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0 var(--ink);
+}
+
+.cta--primary:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+  transform: none;
+  box-shadow: 4px 4px 0 var(--ink);
+}
+
+.cta__arrow {
+  transition: transform var(--duration-quick) var(--ease-thread);
+}
+
+.cta--primary:hover .cta__arrow {
+  transform: translateX(3px);
+}
+
+.cta--secondary {
+  padding: 0.8rem 0.1rem;
+  text-decoration: underline;
+  text-decoration-color: var(--thread);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.45em;
+}
+
+.cta--secondary:hover {
+  text-decoration-thickness: 4px;
+}
+
+/* 5 ── 01 + 02 Opening: the word that stays ─────────────────────────────────────────────── */
+
+.scene--opening {
+  display: grid;
+  max-width: var(--frame);
+  margin-inline: auto;
+  padding: 0 var(--gutter-right) 0 var(--gutter-left);
+  --rest: 0.8;
+}
+
+.opening__hero {
+  grid-row: 1;
+  padding-block: clamp(3rem, 9vh, 6rem) 2rem;
+}
+
+.opening__figure {
+  grid-row: 2;
+}
+
+.opening__understand {
+  grid-row: 3;
+  padding-block: 3rem clamp(4.5rem, 12vh, 8rem);
+}
+
+@media (min-width: 960px) {
+  .scene--opening {
+    grid-template-columns: minmax(0, 5fr) minmax(0, 6fr);
+    column-gap: clamp(2rem, 4vw, 4.5rem);
+  }
+
+  .opening__hero {
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: calc(100svh - 4.5rem);
+  }
+
+  .opening__understand {
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 100svh;
+  }
+
+  .opening__figure {
+    grid-column: 2;
+    grid-row: 1 / span 2;
+  }
+}
+
+.opening__sticky {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-block: 1rem;
+}
+
+.scene--opening[data-mode="pinned"] .opening__sticky {
+  position: sticky;
+  top: 0;
+  height: 100svh;
+}
+
+.scroll-cue {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-top: 3rem;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+  opacity: calc(1 - var(--enter));
+}
+
+.scroll-cue__line {
+  width: 2.5rem;
+  height: 2px;
+  background: var(--thread);
+}
+
+.specimen {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  width: 100%;
+  --split: clamp(0, (var(--q) - 0.12) / 0.28, 1);
+}
+
+.specimen__word {
+  display: flex;
+  align-items: baseline;
+  font-size: var(--step-word);
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: -0.045em;
+}
+
+/* The split is transform-only: the second syllable slides right, the dot (zero-width, so it
+   never reflows the line) fades in, centred in the gap. */
+.specimen__dot {
+  display: inline-block;
+  width: 0;
+  color: var(--thread);
+  opacity: var(--split);
+  transform: translateX(calc(var(--split) * 0.225em - 0.14em)) scale(calc(0.4 + 0.6 * var(--split)));
+}
+
+.specimen__syllable--second {
+  display: inline-block;
+  transform: translateX(calc(var(--split) * 0.45em));
+}
+
+.specimen__word {
+  /* keep the pair optically centred while it opens */
+  transform: translateX(calc(var(--split) * -0.225em));
+}
+
+.specimen__underline {
+  display: block;
+  width: 100%;
+  max-width: 7em;
+  height: 0.35rem;
+  margin-top: 0.9rem;
+  background: var(--thread);
+  transform-origin: left;
+  transform: scaleX(calc(1 - 0.55 * var(--transform-e)));
+}
+
+[data-motion="full"] .specimen__underline {
+  animation: thread-draw var(--duration-slow) var(--ease-thread) 150ms both;
+}
+
+.specimen__row {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 100%;
+  max-width: 34rem;
+}
+
+.specimen__row--above {
+  margin-bottom: 1.25rem;
+}
+
+.specimen__row--below {
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.specimen__ticks {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 34rem;
+  height: 1.75rem;
+  padding-inline: 12%;
+}
+
+.tick {
+  width: 2px;
+  height: 100%;
+  background: var(--thread);
+  transform-origin: top;
+  transform: scaleY(var(--reveal));
+}
+
+.note,
+.tick {
+  --reveal: clamp(0, (var(--q) - var(--start)) / 0.14, 1);
+}
+
+.note {
+  font-size: clamp(0.95rem, 0.5vw + 0.85rem, 1.2rem);
+  line-height: 1.3;
+  opacity: var(--reveal);
+  transform: translateY(calc((1 - var(--reveal)) * 0.75rem));
+}
+
+.note--ipa {
+  --start: 0.3;
+  font-family: var(--font-display), "Segoe UI", "Noto Sans", "DejaVu Sans", sans-serif;
+  color: var(--thread-ink);
+  font-weight: 600;
+}
+
+.note--pos {
+  --start: 0.36;
+  font-style: italic;
+  color: var(--ink-muted);
+}
+
+.tick--1 {
+  --start: 0.42;
+}
+
+.tick--2 {
+  --start: 0.46;
+}
+
+.tick--3 {
+  --start: 0.5;
+}
+
+.note--syllables {
+  --start: 0.44;
+  font-weight: 650;
+}
+
+.note--gloss {
+  --start: 0.52;
+  font-weight: 650;
+  color: var(--thread-ink);
+}
+
+.note--rough {
+  --start: 0.6;
+  color: var(--ink-muted);
+  letter-spacing: 0.06em;
+}
+
+.facets {
+  display: grid;
+  gap: 0;
+  margin-top: 2rem;
+  max-width: 34rem;
+  border-top: 1px solid var(--panel-edge);
+}
+
+.facet {
+  display: grid;
+  grid-template-columns: 6.5rem 1fr;
+  gap: 1rem;
+  padding-block: 0.8rem;
+  border-bottom: 1px solid var(--panel-edge);
+}
+
+.facet__term {
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--thread-ink);
+  padding-top: 0.15rem;
+}
+
+.facet__detail {
+  line-height: 1.5;
+}
+
+/* 6 ── 03 Listen: the underline becomes a sound wave ──────────────────────────────────────── */
+
+.scene--listen {
+  --track: 210svh;
+  --rest: 0.7;
+}
+
+.listen-figure {
+  --sweep: clamp(0, (var(--q) - 0.08) / 0.55, 1);
+  --flat: var(--exit);
+}
+
+.wave {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  height: clamp(9rem, 26vh, 15rem);
+}
+
+.wave__bar {
+  flex: 1;
+  height: 100%;
+  border-radius: 2px;
+  background: var(--thread);
+  --bar: clamp(0, (var(--sweep) * 1.25 - var(--i)) * 5, 1);
+  transform: scaleY(calc(0.04 + (var(--h) - 0.04) * var(--bar) * (1 - var(--flat))));
+}
+
+.wave__playhead {
+  position: absolute;
+  inset: -0.75rem 0;
+  border-left: 2px solid var(--ink);
+  transform: translateX(calc(var(--sweep) * 100%));
+  opacity: calc(var(--enter) * (1 - var(--flat)));
+}
+
+.wave__syllables {
+  position: relative;
+  height: 4.5rem;
+  margin-top: 1.25rem;
+}
+
+.wave__syllable {
+  position: absolute;
+  top: 0;
+  display: grid;
+  justify-items: center;
+  transform: translateX(-50%);
+  --reveal: clamp(0, (var(--sweep) - var(--at)) * 5, 1);
+  opacity: var(--reveal);
+}
+
+.wave__syllable--1 {
+  left: 30%;
+  --at: 0.18;
+}
+
+.wave__syllable--2 {
+  left: 72%;
+  --at: 0.62;
+}
+
+.wave__letters {
+  font-size: clamp(1.5rem, 2vw + 0.8rem, 2.25rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.wave__ipa {
+  font-family: var(--font-display), "Segoe UI", "Noto Sans", "DejaVu Sans", sans-serif;
+  color: var(--thread-ink);
+}
+
+.speeds {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.5rem;
+}
+
+.speed {
+  padding: 0.35rem 0.8rem;
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 999px;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.speed--on {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+/* 7 ── 04 Watch: the flat line becomes a timeline ─────────────────────────────────────────── */
+
+.storyboard {
+  --play: clamp(0, (var(--q) - 0.05) / 0.8, 1);
+}
+
+.storyboard__frames {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: clamp(0.5rem, 1.5vw, 1rem);
+}
+
+.frame {
+  display: grid;
+  place-content: center;
+  justify-items: center;
+  gap: 0.35rem;
+  aspect-ratio: 4 / 3;
+  padding: 0.75rem;
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 0.25rem;
+  background: var(--panel);
+  text-align: center;
+  --near: clamp(0, 1 - max(var(--k) - var(--play), var(--play) - var(--k)) * 2.5, 1);
+  opacity: calc(0.55 + 0.45 * var(--near));
+  transform: translateY(calc(var(--near) * -0.5rem));
+}
+
+.frame--title {
+  background: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-surface);
+}
+
+.frame__title {
+  font-size: clamp(0.85rem, 1vw + 0.5rem, 1.2rem);
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.frame__glyph {
+  font-size: clamp(2.5rem, 5vw, 4.5rem);
+  font-weight: 700;
+  line-height: 1;
+  color: var(--thread-ink);
+}
+
+.frame__caption {
+  font-size: clamp(0.75rem, 0.6vw + 0.55rem, 0.95rem);
+  color: var(--ink-muted);
+}
+
+.timeline {
+  position: relative;
+  height: 1.25rem;
+  margin-top: 1.25rem;
+}
+
+.timeline__track,
+.timeline__progress {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  margin-top: -1.5px;
+}
+
+.timeline__track {
+  background: var(--ink-faint);
+}
+
+.timeline__progress {
+  background: var(--thread);
+  transform-origin: left;
+  transform: scaleX(var(--play));
+}
+
+.timeline__playhead {
+  position: absolute;
+  inset: 0;
+  transform: translateX(calc(var(--play) * 100%));
+}
+
+.timeline__playhead::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  background: var(--thread);
+  box-shadow: 0 0 0 3px var(--paper);
+  transform: translate(-50%, -50%);
+}
+
+.storyboard__status {
+  margin-top: 1.25rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+/* 8 ── 05 Practise: the playhead becomes the answer marker ────────────────────────────────── */
+
+.exercise {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 0.25rem;
+  background: var(--panel);
+  box-shadow: 8px 8px 0 var(--rule);
+}
+
+.exercise__note {
+  margin-bottom: 1rem;
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.exercise__prompt {
+  margin-bottom: 1rem;
+  font-size: clamp(1.2rem, 1vw + 0.9rem, 1.5rem);
+  font-weight: 650;
+  line-height: 1.3;
+}
+
+.exercise__options {
+  display: grid;
+  gap: 0.6rem;
+}
+
+@media (min-width: 560px) {
+  .exercise__options {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.option {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 3.25rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 0.25rem;
+  cursor: pointer;
+  transition:
+    border-color var(--duration-quick) var(--ease-thread),
+    background-color var(--duration-quick) var(--ease-thread);
+}
+
+.option:hover {
+  border-color: var(--ink);
+}
+
+/* The native radio stays in the page for keyboards and screen readers; the letter is its face. */
+.option__input {
+  position: absolute;
+  opacity: 0;
+  inset: 0;
+  margin: 0;
+  cursor: pointer;
+}
+
+.option:has(.option__input:focus-visible) {
+  outline: 2px solid var(--thread);
+  outline-offset: 2px;
+}
+
+.option__letter {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1.5px solid var(--ink-faint);
+  border-radius: 50%;
+  font-size: 0.875rem;
+  font-weight: 650;
+  transition:
+    background-color var(--duration-quick) var(--ease-thread),
+    border-color var(--duration-quick) var(--ease-thread);
+}
+
+.option:has(.option__input:checked) {
+  border-color: var(--ink);
+}
+
+.option:has(.option__input:checked) .option__letter {
+  border-color: var(--thread);
+  background: var(--thread);
+  color: var(--color-primary);
+}
+
+.option__text {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+.option[data-verdict="correct"] {
+  border-color: var(--success);
+}
+
+.option[data-verdict="incorrect"] {
+  border-color: var(--danger);
+}
+
+.exercise__check {
+  margin-top: 1.25rem;
+}
+
+.exercise__feedback {
+  min-height: 1.5rem;
+  margin-top: 1.25rem;
+}
+
+.exercise__verdict {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+[data-verdict="correct"] .exercise__verdict {
+  color: var(--success);
+}
+
+[data-verdict="incorrect"] .exercise__verdict {
+  color: var(--danger);
+}
+
+.exercise__explanation {
+  margin-top: 0.4rem;
+  line-height: 1.5;
+  color: var(--ink-muted);
+}
+
+[data-motion="full"] .exercise__verdict,
+[data-motion="full"] .exercise__explanation {
+  animation: rise-in var(--duration-base) var(--ease-thread) both;
+}
+
+/* 9 ── 06 Remember: the answer joins a constellation of words ─────────────────────────────── */
+
+.scene--remember {
+  --track: 210svh;
+  --rest: 0.8;
+}
+
+.constellation {
+  position: relative;
+}
+
+.constellation__links {
+  display: none;
+}
+
+.constellation__words {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.word-node {
+  display: grid;
+  gap: 0.1rem;
+  padding: 0.6rem 0.9rem;
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 0.25rem;
+  background: var(--panel);
+  --reveal: clamp(0, (var(--q) - 0.08 - var(--i) * 0.35) / 0.12, 1);
+  opacity: calc(0.25 + 0.75 * var(--reveal));
+}
+
+.word-node--centre {
+  border: 2px solid var(--thread);
+}
+
+.word-node__word {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.word-node--centre .word-node__word {
+  font-size: 1.6rem;
+}
+
+.word-node__gloss {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.word-node__status {
+  justify-self: start;
+  margin-top: 0.25rem;
+  font-size: 0.75rem;
+  font-weight: 650;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+}
+
+.word-node__status[data-status="learned"] {
+  color: var(--thread-ink);
+}
+
+.word-node__status::before {
+  content: "";
+  display: inline-block;
+  width: 0.5rem;
+  height: 0.5rem;
+  margin-right: 0.4rem;
+  border: 1.5px solid currentColor;
+  border-radius: 50%;
+}
+
+.word-node__status[data-status="learning"]::before {
+  background: linear-gradient(90deg, currentColor 50%, transparent 50%);
+}
+
+.word-node__status[data-status="learned"]::before {
+  background: currentColor;
+}
+
+.constellation__note {
+  margin-top: 1rem;
+}
+
+@media (min-width: 700px) {
+  .constellation {
+    aspect-ratio: 5 / 4;
+    max-height: 70svh;
+    width: 100%;
+  }
+
+  .constellation__links {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+  }
+
+  .constellation__link {
+    fill: none;
+    stroke: var(--thread);
+    stroke-width: 2;
+    vector-effect: non-scaling-stroke;
+    stroke-dasharray: 1;
+    --draw: clamp(0, (var(--q) - 0.3 - var(--i) * 0.3) / 0.15, 1);
+    stroke-dashoffset: calc(1 - var(--draw));
+    opacity: calc(1 - 0.7 * var(--exit));
+  }
+
+  .constellation__words {
+    position: absolute;
+    inset: 0;
+    display: block;
+  }
+
+  .word-node {
+    position: absolute;
+    left: var(--x);
+    top: var(--y);
+    transform: translate(-50%, -50%) scale(calc(0.85 + 0.15 * var(--reveal)));
+    white-space: nowrap;
+  }
+
+  .constellation__note {
+    position: absolute;
+    bottom: -2.5rem;
+    left: 0;
+  }
+}
+
+/* 10 ── 07 Progress: the threads become rails ─────────────────────────────────────────────── */
+
+.report {
+  padding: clamp(1.25rem, 3vw, 2.25rem);
+  border: 1.5px solid var(--panel-edge);
+  border-radius: 0.25rem;
+  background: var(--panel);
+  --fill: clamp(0, (var(--q) - 0.05) / 0.6, 1);
+}
+
+.report__label {
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  padding: 0.2rem 0.6rem;
+  border: 1.5px dashed var(--ink-faint);
+  border-radius: 0.25rem;
+  font-size: 0.8125rem;
+  color: var(--ink-muted);
+}
+
+.report__heading {
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--thread-ink);
+}
+
+.report__lessons {
+  display: grid;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.rail-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.4rem 1rem;
+}
+
+.rail-row__title {
+  font-weight: 600;
+}
+
+.rail-row__status {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.rail-row__rail {
+  grid-column: 1 / -1;
+  height: 0.5rem;
+  background: var(--rule);
+  border: 1px solid var(--panel-edge);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.rail-row__fill {
+  display: block;
+  height: 100%;
+  background: var(--thread);
+  transform-origin: left;
+  transform: scaleX(calc(var(--fraction) * var(--fill)));
+}
+
+.report__columns {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 640px) {
+  .report__columns {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.ledger__row {
+  display: flex;
+  align-items: baseline;
+  gap: 0.5rem;
+  padding-block: 0.3rem;
+}
+
+.ledger__row::after {
+  content: "";
+  order: 1;
+  flex: 1;
+  border-bottom: 1.5px dotted var(--ink-faint);
+}
+
+.ledger__amount {
+  order: 2;
+  font-weight: 700;
+  font-variant-numeric: tabular-nums;
+  color: var(--thread-ink);
+}
+
+.stamps {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+/* Achievements as a teacher's stamps. */
+.stamp {
+  display: grid;
+  place-items: center;
+  width: 5.25rem;
+  height: 5.25rem;
+  padding: 0.5rem;
+  border: 2px dashed var(--thread-ink);
+  border-radius: 50%;
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.15;
+  text-align: center;
+  color: var(--thread-ink);
+  --stamp: clamp(0, (var(--fill) - var(--i) * 0.5) * 3, 1);
+  opacity: calc(0.35 + 0.65 * var(--stamp));
+  transform: rotate(-8deg) scale(calc(1.15 - 0.15 * var(--stamp)));
+}
+
+/* 11 ── 08 Journey: the rail climbs the CEFR path ─────────────────────────────────────────── */
+
+.scene--journey {
+  --track: 190svh;
+  --rest: 1;
+}
+
+.path {
+  --draw: clamp(0, (var(--q) - 0.05) / 0.6, 1);
+}
+
+.path__language {
+  margin-bottom: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--thread-ink);
+}
+
+.path__lines {
+  display: none;
+}
+
+.path__stations {
+  display: grid;
+  gap: 0;
+  border-left: 2px dashed var(--ink-faint);
+  margin-left: 0.4rem;
+}
+
+.station {
+  position: relative;
+  display: flex;
+  align-items: baseline;
+  gap: 0.75rem;
+  padding: 0.55rem 0 0.55rem 1.4rem;
+}
+
+.station::before {
+  content: "";
+  position: absolute;
+  left: -0.5rem;
+  top: 50%;
+  width: 0.875rem;
+  height: 0.875rem;
+  border: 2px solid var(--ink);
+  border-radius: 50%;
+  background: var(--paper);
+  transform: translateY(-50%);
+}
+
+.station[data-status="available"]::before {
+  border-color: var(--thread);
+  background: var(--thread);
+}
+
+.station__label {
+  font-size: 1.5rem;
+  font-weight: 750;
+  letter-spacing: -0.02em;
+}
+
+.station__status {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.station[data-status="available"] .station__status {
+  color: var(--thread-ink);
+  font-weight: 650;
+}
+
+@media (min-width: 700px) {
+  .path__canvas {
+    position: relative;
+    height: clamp(17rem, 44svh, 24rem);
+  }
+
+  .path__lines {
+    display: block;
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+    clip-path: inset(-10% calc((1 - var(--draw)) * 100%) -10% -2%);
+  }
+
+  .path__line {
+    fill: none;
+    stroke-width: 3;
+    vector-effect: non-scaling-stroke;
+    stroke-linejoin: round;
+  }
+
+  .path__line--planned {
+    stroke: var(--ink-faint);
+    stroke-dasharray: 6 7;
+  }
+
+  .path__line--open {
+    stroke: var(--thread);
+  }
+
+  .path__stations {
+    position: absolute;
+    inset: 0;
+    display: block;
+    margin: 0;
+    border: 0;
+  }
+
+  .station {
+    position: absolute;
+    left: var(--x);
+    bottom: var(--y);
+    display: grid;
+    justify-items: center;
+    gap: 0.1rem;
+    padding: 0;
+    transform: translate(-50%, 0.45rem);
+    --reveal: clamp(0, (var(--draw) * 1.1 - var(--i)) * 6, 1);
+    opacity: calc(0.3 + 0.7 * var(--reveal));
+  }
+
+  .station::before {
+    position: static;
+    order: -1;
+    margin-bottom: 0.4rem;
+    transform: none;
+  }
+
+  .station__label {
+    font-size: clamp(1.1rem, 1.2vw + 0.6rem, 1.6rem);
+  }
+
+  .station__status {
+    font-size: 0.8125rem;
+    white-space: nowrap;
+  }
+}
+
+/* 12 ── 09 Languages: the path branches ───────────────────────────────────────────────────── */
+
+.branches__heading {
+  margin: 1.5rem 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 650;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--thread-ink);
+}
+
+.branches__heading:first-child {
+  margin-top: 0;
+}
+
+.branches__list {
+  display: grid;
+  margin-left: 0.4rem;
+  border-left: 2px solid var(--thread);
+}
+
+.branches__list:last-child {
+  border-left: 2px dashed var(--ink-faint);
+}
+
+.branch {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.25rem 1rem;
+  padding: 0.45rem 0 0.45rem 2.75rem;
+  --reveal: clamp(0, (var(--q) - 0.05 - var(--i) * 0.45) / 0.15, 1);
+}
+
+.branch::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  width: 2.1rem;
+  border-top: 2px solid var(--thread);
+  transform-origin: left;
+  transform: scaleX(var(--reveal));
+}
+
+.branch--planned::before {
+  border-top: 2px dashed var(--ink-faint);
+}
+
+.branch__name {
+  font-size: clamp(1.35rem, 1.4vw + 0.8rem, 2rem);
+  font-weight: 720;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+
+.branch--planned .branch__name {
+  color: var(--ink-muted);
+  font-weight: 560;
+}
+
+.branch__status {
+  font-size: 0.875rem;
+  color: var(--ink-muted);
+}
+
+.branch--open .branch__status {
+  color: var(--thread-ink);
+  font-weight: 650;
+}
+
+/* 13 ── 10 Begin: the thread ends under the call to action ────────────────────────────────── */
+
+.begin {
+  position: relative;
+  padding-bottom: clamp(5rem, 16vh, 10rem);
+}
+
+.begin__echo {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 0.5rem 1.25rem;
+  margin-bottom: 2.5rem;
+  font-size: clamp(3rem, 9vw, 7.5rem);
+  font-weight: 760;
+  line-height: 1;
+  letter-spacing: -0.045em;
+  color: transparent;
+  -webkit-text-stroke: 1.5px var(--ink-faint);
+}
+
+.begin__gloss {
+  font-size: clamp(1.1rem, 1vw + 0.8rem, 1.5rem);
+  font-weight: 650;
+  letter-spacing: 0;
+  color: var(--thread-ink);
+  -webkit-text-stroke: 0;
+}
+
+.begin .scene-intro {
+  max-width: 40rem;
+}
+
+.begin__thread {
+  display: block;
+  width: min(100%, 30rem);
+  height: 0.35rem;
+  margin-top: 2rem;
+  background: var(--thread);
+  transform-origin: left;
+  transform: scaleX(var(--focus-e));
+}
+
+/* 14 ── Keyframes (time-based motion is limited to these two) ─────────────────────────────── */
+
+@keyframes thread-draw {
+  from {
+    transform: scaleX(0);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(0.4rem);
+  }
+}
+
+/* 15 ── Reduced motion: every scene at its settled, most informative state ─────────────────── */
+
+/* The driver is not running, so --p keeps its stylesheet value; --q is pinned to the state that
+   shows the most (e.g. the full wave, not the flattened hand-off). Nothing is sticky (the scenes
+   are never pinned in this mode), and the two keyframe animations above only run under
+   data-motion="full". */
+[data-motion="reduced"] .scene {
+  --q: var(--rest, 1);
+}

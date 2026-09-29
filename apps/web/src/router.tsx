@@ -142,7 +142,14 @@ export const routes: RouteObject[] = [
     // M18: any route that throws while rendering shows a safe fallback and is reported.
     errorElement: <RouteErrorFallback />,
     children: [
-      { index: true, element: placeholder("TFM-BIC", "Language-learning platform — home.") },
+      // The public homepage (M20A): its own chunk (scenes, stylesheet), so no other page carries it;
+      // full-bleed, so the root layout drops its centred column for it.
+      {
+        index: true,
+        handle: { fullBleed: true },
+        lazy: () =>
+          import("./pages/home-page.js").then(({ HomePage }) => ({ Component: HomePage })),
+      },
       ...PUBLIC_ROUTES,
       ...LEARN_ROUTES,
       {

@@ -3,7 +3,7 @@ import { useRef } from "react";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import * as driverModule from "./scroll-driver.js";
-import { usePrefersReducedMotion } from "./use-prefers-reduced-motion.js";
+import { usePrefersReducedMotion } from "./use-media-query.js";
 import { useSceneProgress } from "./use-scene-progress.js";
 
 type ChangeListener = (event: MediaQueryListEvent) => void;
