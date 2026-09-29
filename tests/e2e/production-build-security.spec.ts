@@ -64,6 +64,39 @@ test.describe("production build under its Content-Security-Policy", () => {
     expect(await violations()).toEqual([]);
   });
 
+  test("the homepage's scroll-driven styles, font and icons work under the CSP (M20A)", async ({
+    page,
+    request,
+  }) => {
+    const violations = await collectViolations(page);
+    await page.goto("/");
+    await expect(page.getByRole("heading", { level: 1 })).toBeVisible();
+
+    // Progress is written through the CSSOM, which style-src 'self' allows.
+    const listen = page.getByRole("region", { name: "Hear it before you say it." });
+    await listen.evaluate((element) =>
+      window.scrollTo(0, element.getBoundingClientRect().top + window.scrollY + 300),
+    );
+    await expect
+      .poll(() => listen.evaluate((element) => element.style.getPropertyValue("--p")))
+      .not.toBe("");
+
+    // The self-hosted display face actually loaded (font-src 'self').
+    await expect
+      .poll(() =>
+        page.evaluate(async () => {
+          await document.fonts.ready;
+          return document.fonts.check('700 32px "Bricolage Grotesque Variable"', "szkoła");
+        }),
+      )
+      .toBe(true);
+
+    for (const path of ["/favicon.svg", "/robots.txt"]) {
+      expect((await request.get(path)).status(), path).toBe(200);
+    }
+    expect(await violations()).toEqual([]);
+  });
+
   test("a signed-in student's pages render with no CSP violation", async ({ page }) => {
     const email = uniqueEmail("csp");
     await registerAndVerifyUser(page.context().request, email, PASSWORD);
