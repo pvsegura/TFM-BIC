@@ -2,7 +2,7 @@ import { randomBytes } from "node:crypto";
 
 import { GetHealthStatusUseCase } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
-import { SystemClock } from "@tfm-bic/data";
+import { sharedPostgresPools, SystemClock } from "@tfm-bic/data";
 import fastifyCookie from "@fastify/cookie";
 import fastifyRateLimit from "@fastify/rate-limit";
 import Fastify, { type FastifyInstance } from "fastify";
@@ -58,6 +58,8 @@ import {
   instrumentVideoProvider,
 } from "./observability/instrumented-providers.js";
 import { MetricsRegistry } from "./observability/metrics.js";
+import { createReadinessMonitor } from "./observability/readiness-monitor.js";
+import { registerMetricsRoute } from "./routes/metrics.route.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
 
@@ -66,6 +68,8 @@ export interface ServerRuntimeOptions {
   /** Backs GET /ready. index.ts wires the real database check; the in-process NODE_ENV=test
    * database is always available, so tests may leave it out. */
   isReady?: () => Promise<boolean>;
+  /** Why the last readiness check failed — a safe code, logged on a transition (M18). */
+  readinessFailureReason?: () => string | undefined;
   /** The process's metrics (M18). A fresh registry per server when left out. */
   metrics?: MetricsRegistry;
 }
@@ -130,10 +134,25 @@ export function buildServer(
     }
 
     const healthUseCase = new GetHealthStatusUseCase(new SystemClock());
+    // M18: readiness transitions are logged and counted; the check itself is unchanged.
+    const readiness = runtime.isReady
+      ? createReadinessMonitor({
+          check: runtime.isReady,
+          failureReason: runtime.readinessFailureReason ?? (() => undefined),
+          log: app.log,
+          metrics,
+        })
+      : undefined;
     registerHealthRoutes(app, {
       useCase: healthUseCase,
       env,
-      isReady: runtime.isReady ?? (() => Promise.resolve(true)),
+      isReady: readiness?.isReady ?? (() => Promise.resolve(true)),
+    });
+    registerMetricsRoute(app, {
+      env,
+      metrics,
+      ...(readiness ? { readiness: readiness.state } : {}),
+      databaseStats: () => sharedPostgresPools.stats(),
     });
 
     // Email (M14, ADR-014/025): transactional and marketing senders over one provider — "fake"

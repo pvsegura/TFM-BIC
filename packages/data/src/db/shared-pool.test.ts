@@ -84,6 +84,39 @@ describe("idle connection errors (M17: found by the container DB-outage test)", 
   });
 });
 
+describe("pool statistics (M18)", () => {
+  it("sums connection usage over live pools and counts idle-connection errors", async () => {
+    const first = Object.assign(fakePool(), { totalCount: 4, idleCount: 1, waitingCount: 2 });
+    const second = Object.assign(fakePool(), { totalCount: 1, idleCount: 1, waitingCount: 0 });
+    const pools = [first, second];
+    const registry = createSharedPoolRegistry(() => pools.shift()!, vi.fn());
+    const lease = registry.acquire("postgres://db/a");
+    registry.acquire("postgres://db/b");
+    const listener = vi.mocked(first.on).mock.calls[0]?.[1] as (error: Error) => void;
+    listener(Object.assign(new Error("x"), { code: "57P01" }));
+
+    expect(registry.stats()).toEqual({
+      pools: 2,
+      maxConnectionsPerPool: POSTGRES_POOL_OPTIONS.max,
+      totalConnections: 5,
+      idleConnections: 2,
+      waitingRequests: 2,
+      idleConnectionErrors: 1,
+    });
+
+    await lease.release();
+    expect(registry.stats()).toMatchObject({ pools: 1, totalConnections: 1 });
+  });
+
+  it("reports zeros when no pool exists (NODE_ENV=test uses PGlite)", () => {
+    expect(createSharedPoolRegistry(() => fakePool()).stats()).toMatchObject({
+      pools: 0,
+      totalConnections: 0,
+      waitingRequests: 0,
+    });
+  });
+});
+
 describe("probeDatabase (M17: why the database is unreachable, without secrets)", () => {
   it("is undefined when SELECT 1 succeeds", async () => {
     await expect(probeDatabase(fakePool(), 1000)).resolves.toBeUndefined();

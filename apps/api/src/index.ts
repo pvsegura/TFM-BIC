@@ -135,7 +135,9 @@ const app = buildServer(
   teachingDeps,
   emailDeps,
   privacyDeps,
-  { ...(readiness ? { isReady: readiness.isReady } : {}) },
+  readiness
+    ? { isReady: readiness.isReady, readinessFailureReason: readiness.lastFailureReason }
+    : {},
 );
 
 // SIGTERM (orchestrator stop) / SIGINT (Ctrl+C): stop accepting requests (Fastify answers 503

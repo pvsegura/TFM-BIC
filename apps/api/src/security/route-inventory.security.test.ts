@@ -72,7 +72,8 @@ function send(route: Route, headers: Record<string, string>, cookie?: string) {
 }
 
 beforeAll(async () => {
-  const built = buildTestServer();
+  // METRICS_TOKEN registers GET /internal/metrics (M18), so the inventory covers it too.
+  const built = buildTestServer({ METRICS_TOKEN: "inventory-metrics-token-0123456789abcdef" });
   app = built.app;
   const collected: Route[] = [];
   app.addHook("onRoute", (options) => {

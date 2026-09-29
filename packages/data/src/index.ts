@@ -150,5 +150,7 @@ export {
   createDatabaseReadinessCheck,
   pingDatabase,
   POSTGRES_POOL_OPTIONS,
+  sharedPostgresPools,
   type DatabaseReadinessCheck,
+  type SharedPoolStats,
 } from "./db/shared-pool.js";

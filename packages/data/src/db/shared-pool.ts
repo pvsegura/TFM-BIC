@@ -24,6 +24,22 @@ export interface PoolLike {
   query: (text: string) => Promise<unknown>;
   end: () => Promise<void>;
   on: (event: "error", listener: (error: Error) => void) => unknown;
+  /** `pg.Pool`'s live counters (M18). */
+  readonly totalCount?: number;
+  readonly idleCount?: number;
+  readonly waitingCount?: number;
+}
+
+/** Connection usage for GET /internal/metrics (M18) — counts only, never a connection string. */
+export interface SharedPoolStats {
+  pools: number;
+  maxConnectionsPerPool: number;
+  totalConnections: number;
+  idleConnections: number;
+  /** Queries waiting for a free connection: sustained > 0 means the pool is exhausted. */
+  waitingRequests: number;
+  /** Idle connections the server dropped since start-up (restart, failover, network). */
+  idleConnectionErrors: number;
 }
 
 export interface SharedPoolLease<P extends PoolLike> {
@@ -34,6 +50,7 @@ export interface SharedPoolLease<P extends PoolLike> {
 
 export interface SharedPoolRegistry<P extends PoolLike> {
   acquire(databaseUrl: string): SharedPoolLease<P>;
+  stats(): SharedPoolStats;
 }
 
 /**
@@ -45,8 +62,22 @@ export function createSharedPoolRegistry<P extends PoolLike>(
   onIdleError: (details: { code: string | undefined }) => void = logIdleClientError,
 ): SharedPoolRegistry<P> {
   const entries = new Map<string, { pool: P; holders: number }>();
+  let idleConnectionErrors = 0;
 
   return {
+    stats() {
+      const pools = [...entries.values()].map((entry) => entry.pool);
+      const sum = (read: (pool: P) => number | undefined) =>
+        pools.reduce((total, pool) => total + (read(pool) ?? 0), 0);
+      return {
+        pools: pools.length,
+        maxConnectionsPerPool: POSTGRES_POOL_OPTIONS.max,
+        totalConnections: sum((pool) => pool.totalCount),
+        idleConnections: sum((pool) => pool.idleCount),
+        waitingRequests: sum((pool) => pool.waitingCount),
+        idleConnectionErrors,
+      };
+    },
     acquire(databaseUrl) {
       let entry = entries.get(databaseUrl);
       if (!entry) {
@@ -55,6 +86,7 @@ export function createSharedPoolRegistry<P extends PoolLike>(
         // emitted as an "error" event; unhandled, it would crash the process. pg discards that
         // client itself; the next query opens a new connection (found by the M17 outage test).
         pool.on("error", (error) => {
+          idleConnectionErrors += 1;
           onIdleError({ code: (error as Error & { code?: string }).code });
         });
         entry = { pool, holders: 0 };
@@ -85,7 +117,7 @@ export function createSharedPoolRegistry<P extends PoolLike>(
 /** One structured line on stderr — only the SQLSTATE code, never the message or connection details. */
 function logIdleClientError(details: { code: string | undefined }): void {
   process.stderr.write(
-    `${JSON.stringify({ level: 40, time: Date.now(), msg: "database.idle_connection_lost", ...details })}
+    `${JSON.stringify({ level: "warn", time: new Date().toISOString(), msg: "database.idle_connection_lost", ...details })}
 `,
   );
 }
