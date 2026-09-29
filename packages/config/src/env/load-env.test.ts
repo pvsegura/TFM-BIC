@@ -20,6 +20,7 @@ describe("loadEnv", () => {
       EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
       TRUST_PROXY: [],
       APP_VERSION: "development",
+      LOG_LEVEL: "info",
     });
   });
 
@@ -454,6 +455,28 @@ describe("loadEnv", () => {
       expect(loadEnv({ NODE_ENV: "test", APP_VERSION: "0.1.0+3ee4d5c" }).APP_VERSION).toBe(
         "0.1.0+3ee4d5c",
       );
+    });
+
+    it("defaults LOG_LEVEL to info and accepts the documented levels (M18)", () => {
+      expect(loadEnv({ NODE_ENV: "test" }).LOG_LEVEL).toBe("info");
+      for (const level of ["error", "warn", "info", "debug"]) {
+        expect(loadEnv({ NODE_ENV: "test", LOG_LEVEL: level }).LOG_LEVEL).toBe(level);
+      }
+      expect(configurationError({ NODE_ENV: "test", LOG_LEVEL: "trace" })).toMatch(/LOG_LEVEL/);
+    });
+
+    it("refuses LOG_LEVEL=debug in production, allows it in staging (M18)", () => {
+      expect(configurationError({ ...production, LOG_LEVEL: "debug" })).toMatch(/LOG_LEVEL/);
+      expect(configurationError({ ...staging, LOG_LEVEL: "debug" })).not.toMatch(/LOG_LEVEL/);
+    });
+
+    it("leaves METRICS_TOKEN unset by default and requires at least 32 characters (M18)", () => {
+      expect(loadEnv({ NODE_ENV: "test" }).METRICS_TOKEN).toBeUndefined();
+      const token = "m".repeat(32);
+      expect(loadEnv({ NODE_ENV: "test", METRICS_TOKEN: token }).METRICS_TOKEN).toBe(token);
+      const message = configurationError({ NODE_ENV: "test", METRICS_TOKEN: "short-token-value" });
+      expect(message).toMatch(/METRICS_TOKEN/);
+      expect(message).not.toContain("short-token-value");
     });
 
     it.each(["has space", "a\nb", "<script>", "x".repeat(65)])(

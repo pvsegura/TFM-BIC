@@ -185,6 +185,11 @@ const envSchema = z
         message: "must be 1–64 letters, digits, '.', '_', '+' or '-'",
       })
       .default("development"),
+    // Observability (M18, ADR-029). Minimum level written to the log; NODE_ENV=test is always
+    // silent. Production refuses `debug` (volume, and more request detail than operations needs).
+    LOG_LEVEL: z.enum(["error", "warn", "info", "debug"]).default("info"),
+    // Bearer token for GET /internal/metrics. Unset = the endpoint does not exist. Secret.
+    METRICS_TOKEN: z.string().min(32).optional(),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET, APP_BASE_URL } =
@@ -251,6 +256,12 @@ const envSchema = z
         issue(
           "VIDEO_GENERATION_PROVIDER",
           `VIDEO_GENERATION_PROVIDER must be "disabled" when NODE_ENV is "production": "fake" is not real and "hyperframes" is unverified with no persistent media storage (ADR-012, ADR-028).`,
+        );
+      }
+      if (ctx.value.LOG_LEVEL === "debug") {
+        issue(
+          "LOG_LEVEL",
+          `LOG_LEVEL=debug is not allowed when NODE_ENV is "production" (use staging to debug, ADR-029).`,
         );
       }
     }
