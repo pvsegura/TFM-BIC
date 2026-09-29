@@ -52,6 +52,11 @@ import { registerVideoGenerationRoutes } from "./routes/video-generations.route.
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
+import {
+  instrumentAudioProvider,
+  instrumentEmailProvider,
+  instrumentVideoProvider,
+} from "./observability/instrumented-providers.js";
 import { MetricsRegistry } from "./observability/metrics.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
@@ -134,15 +139,20 @@ export function buildServer(
     // Email (M14, ADR-014/025): transactional and marketing senders over one provider — "fake"
     // (sends nothing) unless another is configured. Each delivery attempt is logged with its
     // category, template, adapter and outcome only — never the recipient, subject or a link.
-    const emailUseCases = createEmailUseCases(emailDeps, env, {
-      record: (event) => {
-        if (event.outcome === "failed") {
-          app.log.warn(event, "email.delivery_failed");
-        } else {
-          app.log.info(event, "email.delivery_accepted");
-        }
+    // M18: the provider is wrapped for metrics (attempts, outcome, latency) — nothing about the message.
+    const emailUseCases = createEmailUseCases(
+      { ...emailDeps, provider: instrumentEmailProvider(emailDeps.provider, metrics) },
+      env,
+      {
+        record: (event) => {
+          if (event.outcome === "failed") {
+            app.log.warn(event, "email.delivery_failed");
+          } else {
+            app.log.info(event, "email.delivery_accepted");
+          }
+        },
       },
-    });
+    );
     if (emailDeps.provider.name === "fake" && env.NODE_ENV !== "test") {
       app.log.warn(
         "EMAIL_PROVIDER=fake — no email leaves this process (no real provider is selected, ADR-014).",
@@ -234,7 +244,16 @@ export function buildServer(
     // provider behind this is selected by env.VIDEO_GENERATION_PROVIDER (ADR-011/012) — "fake" by
     // default and in every automated test/CI run.
     registerVideoGenerationRoutes(app, {
-      useCases: createVideoUseCases(contentDeps, videoDeps),
+      // M18: the render is logged (start/end) and measured by the provider decorator.
+      useCases: createVideoUseCases(contentDeps, {
+        ...videoDeps,
+        provider: instrumentVideoProvider(
+          videoDeps.provider,
+          env.VIDEO_GENERATION_PROVIDER,
+          metrics,
+          app.log,
+        ),
+      }),
       resolveSession: authUseCases.resolveSession,
       env,
     });
@@ -243,7 +262,14 @@ export function buildServer(
     // is persisted. The provider is selected by env.AUDIO_GENERATION_PROVIDER (ADR-013) — "fake" by
     // default and in every automated test/CI run.
     registerAudioGenerationRoutes(app, {
-      useCases: createAudioUseCases(contentDeps, audioDeps),
+      useCases: createAudioUseCases(contentDeps, {
+        ...audioDeps,
+        provider: instrumentAudioProvider(
+          audioDeps.provider,
+          env.AUDIO_GENERATION_PROVIDER,
+          metrics,
+        ),
+      }),
       resolveSession: authUseCases.resolveSession,
       env,
     });
