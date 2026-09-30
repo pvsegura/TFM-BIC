@@ -33,7 +33,8 @@
     "db:migrate:newsletter": "drizzle-kit migrate --config drizzle.newsletter.config.ts",
     "content:validate": "tsx src/content/validate-content.cli.ts",
     "teacher:admin": "tsx src/teaching/teacher-admin.cli.ts",
-    "db:migrate:all": "tsx src/migrations/migrate.cli.ts"
+    "db:migrate:all": "tsx src/migrations/migrate.cli.ts",
+    "media": "tsx src/media/media-pipeline.cli.ts"
   },
   "dependencies": {
     "@tfm-bic/application": "workspace:*",
@@ -45,8 +46,11 @@
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",
+    "@fontsource-variable/bricolage-grotesque": "^5.3.0",
     "@types/pg": "8.15.5",
     "drizzle-kit": "0.31.10",
+    "gsap": "3.14.2",
+    "hyperframes": "0.8.92",
     "tsx": "^4.23.13",
     "typescript": "~6.0.3",
     "vitest": "^5.0.0"
