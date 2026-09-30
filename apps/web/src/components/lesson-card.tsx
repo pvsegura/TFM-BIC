@@ -2,6 +2,7 @@ import type { LessonSummaryResponse } from "@tfm-bic/contracts";
 import { Link } from "react-router";
 
 import { LessonStatusBadge } from "./lesson-status-badge.js";
+import { MediaBadge } from "./media-badge.js";
 
 export interface LessonCardProps {
   lesson: LessonSummaryResponse;
@@ -33,7 +34,10 @@ export function LessonCard({ lesson, position, href }: LessonCardProps) {
         <p className="text-xs font-medium uppercase tracking-wide text-primary/70 dark:text-surface/70">
           Lesson {position}
         </p>
-        <LessonStatusBadge status={lesson.progress.status} />
+        <span className="flex flex-wrap items-center gap-2">
+          <MediaBadge contentType="lesson" contentId={lesson.id} />
+          <LessonStatusBadge status={lesson.progress.status} />
+        </span>
       </div>
       <h3 className="mt-1 text-lg font-semibold" lang={lesson.instructionLanguage}>
         {lesson.title}

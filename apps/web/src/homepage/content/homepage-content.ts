@@ -78,6 +78,11 @@ export interface HomepageContent {
     videoTitle: string;
     keyframes: readonly { glyph: string; caption: string }[];
     status: string;
+    /** M21: the lesson whose published video the scene plays, when there is one. */
+    showcaseLessonId: string;
+    showcaseTitle: string;
+    /** Shown with the real video; `{duration}` is replaced with its length. */
+    readyStatus: string;
   };
   practise: {
     title: string;

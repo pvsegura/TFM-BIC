@@ -69,7 +69,10 @@
       { "glyph": "ą", "caption": "dąb — oak tree" },
       { "glyph": "ę", "caption": "ręka — hand" }
     ],
-    "status": "The first video is in preview: its storyboard is written, and playback is not available yet."
+    "status": "The first video is in preview: its storyboard is written, and playback is not available yet.",
+    "showcaseLessonId": "pl-spelling-and-sounds",
+    "showcaseTitle": "A first look at Polish spelling and sounds",
+    "readyStatus": "A real explainer from the A1 course, {duration} long, narrated with a synthesized voice. It plays only when you press play."
   },
   "practise": {
     "title": "Now it’s your turn.",

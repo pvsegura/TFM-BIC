@@ -1,4 +1,4 @@
-import { createBrowserRouter, type RouteObject } from "react-router";
+import { createBrowserRouter, Navigate, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
 import { RouteErrorFallback } from "./components/route-error-fallback.js";
@@ -28,6 +28,7 @@ import { TeacherDashboardPage } from "./pages/teacher-dashboard-page.js";
 import { TeacherStudentPage } from "./pages/teacher-student-page.js";
 import { VerifyEmailPage } from "./pages/verify-email-page.js";
 import { VideoGenerationDemoPage } from "./pages/video-generation-demo-page.js";
+import { VideosPage } from "./pages/videos-page.js";
 import { VocabularyDetailPage } from "./pages/vocabulary-detail-page.js";
 import { VocabularyPage } from "./pages/vocabulary-page.js";
 
@@ -97,7 +98,13 @@ const PHONETICS_ROUTES = [
 /** Video generation (M11) — one demo page requesting generation of the milestone's one authored
  * definition (see VideoGenerationDemoPage's doc comment for why there is no browse/list route).
  * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
-const VIDEO_ROUTES = [{ path: "learn/videos", element: <VideoGenerationDemoPage /> }];
+const VIDEO_ROUTES = [
+  // M21 (ADR-031): the video library — published explainer videos of lessons and words.
+  { path: "learn/videos", element: <VideosPage /> },
+  // M11's on-demand render demo, kept for its API but no longer linked: learners watch published
+  // videos; generation is an offline operator step.
+  { path: "learn/videos/render-demo", element: <VideoGenerationDemoPage /> },
+];
 
 /** The teacher dashboard (M13) — the overview/roster and one student. Behind login *and* the
  * TeacherRoute guard, which only spares a student a page of refused requests: the API authorises
@@ -129,10 +136,12 @@ const APP_ROUTES = [
   ...PHONETICS_ROUTES,
   ...VIDEO_ROUTES,
   ...TEACHER_ROUTES,
-  { path: "progress", element: placeholder("Progress", "Progress tracking placeholder.") },
+  // M21: former Milestone-1 placeholders now lead somewhere real — progress lives on the dashboard,
+  // account settings on the profile. Still behind login.
+  { path: "progress", element: <Navigate to="/dashboard" replace /> },
   { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },
-  { path: "settings", element: placeholder("Settings", "Account settings placeholder.") },
+  { path: "settings", element: <Navigate to="/profile" replace /> },
 ];
 
 export const routes: RouteObject[] = [

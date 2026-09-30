@@ -18,6 +18,10 @@ export interface LessonViewerProps {
   backHref: string;
   /** What follows the lesson's blocks and comes before the completion action — the exercises (M7). The viewer knows nothing about it. */
   practice?: ReactNode;
+  /** The lesson's explainer video (M21), shown first, right under the title. */
+  hero?: ReactNode;
+  /** Where to go after this lesson (M21): next lesson, vocabulary. */
+  nextSteps?: ReactNode;
 }
 
 /**
@@ -41,6 +45,8 @@ export function LessonViewer({
   onComplete,
   backHref,
   practice,
+  hero,
+  nextSteps,
 }: LessonViewerProps) {
   return (
     <article lang={lesson.instructionLanguage} className="mt-4">
@@ -52,7 +58,10 @@ export function LessonViewer({
         </div>
       </header>
 
-      <div className="mt-6">
+      {hero ? <div className="mt-6">{hero}</div> : null}
+
+      <div id="lesson-content" className="mt-8 scroll-mt-4">
+        <h2 className="sr-only">Explanation and examples</h2>
         <ContentBlocks
           blocks={lesson.blocks}
           language={language}
@@ -60,7 +69,11 @@ export function LessonViewer({
         />
       </div>
 
-      {practice}
+      {practice ? (
+        <div id="practice" className="scroll-mt-4">
+          {practice}
+        </div>
+      ) : null}
 
       <LessonCompletion
         status={lesson.progress.status}
@@ -69,6 +82,8 @@ export function LessonViewer({
         onComplete={onComplete}
         {...(rewards ? { rewards } : {})}
       />
+
+      {nextSteps}
 
       <p className="mt-6">
         <Link to={backHref} className="text-sm underline underline-offset-2">

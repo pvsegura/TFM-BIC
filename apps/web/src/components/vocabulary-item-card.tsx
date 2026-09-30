@@ -1,6 +1,7 @@
 import type { VocabularyItemResponse } from "@tfm-bic/contracts";
 import { Link } from "react-router";
 
+import { MediaBadge } from "./media-badge.js";
 import { VocabularyActions } from "./vocabulary-actions.js";
 import { VocabularyStatusBadge } from "./vocabulary-status-badge.js";
 
@@ -31,6 +32,7 @@ export function VocabularyItemCard({ item, href }: VocabularyItemCardProps) {
         <span>{item.category.title}</span>
         {item.levelId ? <span>{item.levelId.toUpperCase()}</span> : null}
         {item.partOfSpeech ? <span>{item.partOfSpeech}</span> : null}
+        <MediaBadge contentType="vocabulary-item" contentId={item.id} />
       </p>
 
       <div className="mt-3">

@@ -3,6 +3,8 @@ import { Link, useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { ContentBlocks, type LearningLanguage } from "../components/content-blocks.js";
+import { EducationalVideo } from "../components/educational-video.js";
+import { useLessonMedia } from "../hooks/use-media.js";
 import { useContentItem, useLanguages } from "../hooks/use-catalog.js";
 import { isNotFoundError } from "../services/api-error.js";
 
@@ -22,6 +24,7 @@ const NOT_FOUND = (
 export function ContentPage() {
   const { languageCode, levelId, contentId } = useParams();
   const contentQuery = useContentItem(contentId);
+  const mediaQuery = useLessonMedia(contentId);
   const languagesQuery = useLanguages();
 
   let body: ReactNode;
@@ -62,6 +65,16 @@ export function ContentPage() {
           This is a reading view: it shows the content only.
         </p>
         <div className="mt-6">
+          <EducationalVideo
+            video={mediaQuery.isSuccess ? mediaQuery.data.video : undefined}
+            isLoading={mediaQuery.isPending}
+            loadFailed={mediaQuery.isError}
+            onRetryLoad={() => void mediaQuery.refetch()}
+            title={item.title}
+            subject="this topic"
+          />
+        </div>
+        <div className="mt-8">
           <ContentBlocks
             blocks={item.blocks}
             language={language}

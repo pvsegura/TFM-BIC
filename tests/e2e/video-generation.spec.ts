@@ -23,11 +23,9 @@ test.describe("requesting a demo video", () => {
     await registerAndVerifyUser(request, email, PASSWORD);
     await signInViaUi(page, email, PASSWORD);
 
-    await page
-      .getByRole("navigation", { name: "Primary" })
-      .getByRole("link", { name: "Videos" })
-      .click();
-    await expect(page).toHaveURL(/\/learn\/videos$/);
+    // M21: /learn/videos is now the video library; M11's render demo moved to its own, unlinked
+    // path (ADR-031 — published videos are generated offline, never by a learner's click).
+    await page.goto("/learn/videos/render-demo");
     await expect(page.getByRole("heading", { name: "Nasal vowels: ą and ę" })).toBeVisible();
 
     await page.getByRole("button", { name: "Generate video" }).click();
@@ -49,7 +47,7 @@ test.describe("security — one student cannot see or act on another student's g
     const email = uniqueEmail("video-owner");
     await registerAndVerifyUser(request, email, PASSWORD);
     await signInViaUi(page, email, PASSWORD);
-    await page.goto("/learn/videos");
+    await page.goto("/learn/videos/render-demo");
     await page.getByRole("button", { name: "Generate video" }).click();
     await expect(page.getByText("Your video is ready.")).toBeVisible();
 

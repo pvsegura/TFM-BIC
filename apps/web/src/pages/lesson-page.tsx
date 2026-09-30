@@ -1,12 +1,19 @@
 import type { ReactNode } from "react";
-import { useParams } from "react-router";
+import { Link, useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import type { LearningLanguage } from "../components/content-blocks.js";
+import { EducationalVideo } from "../components/educational-video.js";
 import { LessonExercises } from "../components/lesson-exercises.js";
 import { LessonViewer } from "../components/lesson-viewer.js";
 import { useLanguages } from "../hooks/use-catalog.js";
-import { useCompleteLesson, useLesson, useStartLessonOnOpen } from "../hooks/use-lessons.js";
+import {
+  useCompleteLesson,
+  useLesson,
+  useLessons,
+  useStartLessonOnOpen,
+} from "../hooks/use-lessons.js";
+import { useLessonMedia } from "../hooks/use-media.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const enc = encodeURIComponent;
@@ -28,6 +35,9 @@ export function LessonPage() {
   const lessonQuery = useLesson(lessonId);
   const languagesQuery = useLanguages();
   const completeMutation = useCompleteLesson();
+  const mediaQuery = useLessonMedia(lessonId);
+  // The lesson's siblings, for "Next lesson" — the flow goes on without a trip back to the list.
+  const siblingsQuery = useLessons(lessonQuery.data?.languageId, lessonQuery.data?.levelId);
 
   useStartLessonOnOpen(lessonQuery.data);
 
@@ -63,9 +73,59 @@ export function LessonPage() {
       ? { locale: catalogLanguage.locale, direction: catalogLanguage.direction }
       : { locale: lesson.languageId };
 
+    const siblings = [...(siblingsQuery.data?.lessons ?? [])].sort((a, b) => a.order - b.order);
+    const next = siblings[siblings.findIndex((l) => l.id === lesson.id) + 1];
+    const vocabularyHref = `/learn/vocabulary?language=${enc(lesson.languageId)}`;
+
     return (
       <div className="mx-auto max-w-3xl py-8">
         <LessonViewer
+          hero={
+            <EducationalVideo
+              video={mediaQuery.isSuccess ? mediaQuery.data.video : undefined}
+              isLoading={mediaQuery.isPending}
+              loadFailed={mediaQuery.isError}
+              onRetryLoad={() => void mediaQuery.refetch()}
+              title={lesson.title}
+              subject="this lesson"
+              afterVideo={
+                <p className="flex flex-wrap gap-x-5 gap-y-1">
+                  <span className="font-medium">Next:</span>
+                  <a href="#lesson-content" className="underline underline-offset-2">
+                    Read the examples
+                  </a>
+                  <a href="#practice" className="underline underline-offset-2">
+                    Practise with the exercises
+                  </a>
+                </p>
+              }
+            />
+          }
+          nextSteps={
+            <nav
+              aria-label="What's next"
+              className="mt-8 rounded-lg border border-primary/15 p-4 dark:border-surface/15"
+            >
+              <h2 className="text-lg font-semibold">What's next</h2>
+              <ul className="mt-2 space-y-1.5 text-sm">
+                {next ? (
+                  <li>
+                    <Link
+                      to={`${LESSONS_HREF}/${enc(next.id)}`}
+                      className="font-medium underline underline-offset-2"
+                    >
+                      Next lesson: {next.title} →
+                    </Link>
+                  </li>
+                ) : null}
+                <li>
+                  <Link to={vocabularyHref} className="underline underline-offset-2">
+                    Learn the words with their videos
+                  </Link>
+                </li>
+              </ul>
+            </nav>
+          }
           lesson={lesson}
           language={language}
           isCompleting={completeMutation.isPending}

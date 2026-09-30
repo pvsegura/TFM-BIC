@@ -2,10 +2,13 @@ import type { ReactNode } from "react";
 import { Link, useParams } from "react-router";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
+import { EducationalVideo } from "../components/educational-video.js";
+import { PronunciationPlayer } from "../components/pronunciation-player.js";
 import { VocabularyActions } from "../components/vocabulary-actions.js";
 import { VocabularyAudioPlayer } from "../components/vocabulary-audio-player.js";
 import { VocabularyStatusBadge } from "../components/vocabulary-status-badge.js";
-import { useVocabularyItem } from "../hooks/use-vocabulary.js";
+import { useVocabularyMedia } from "../hooks/use-media.js";
+import { useVocabulary, useVocabularyItem } from "../hooks/use-vocabulary.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const VOCABULARY_HREF = "/learn/vocabulary";
@@ -35,6 +38,13 @@ function Fact({ label, children }: { label: string; children: ReactNode }) {
 export function VocabularyDetailPage() {
   const { vocabularyId } = useParams();
   const itemQuery = useVocabularyItem(vocabularyId);
+  const mediaQuery = useVocabularyMedia(vocabularyId);
+  const item0 = itemQuery.data;
+  // The rest of the word's category, for "Next word" — the learning flow continues in context.
+  const siblingsQuery = useVocabulary(item0?.languageId, {
+    ...(item0 ? { category: item0.category.id } : {}),
+    limit: 50,
+  });
 
   let body: ReactNode;
   if (itemQuery.isPending) {
@@ -59,16 +69,62 @@ export function VocabularyDetailPage() {
     );
   } else {
     const item = itemQuery.data;
+    const media = mediaQuery.data;
+    const storedClips = media?.audio ?? [];
+    const siblings = siblingsQuery.data?.items ?? [];
+    const position = siblings.findIndex((s) => s.id === item.id);
+    const next = position >= 0 ? siblings[position + 1] : undefined;
+    const nextStep = next ? (
+      <Link
+        to={`${VOCABULARY_HREF}/${enc(next.id)}`}
+        className="font-medium underline underline-offset-2"
+      >
+        Next word: <span lang={next.languageId}>{next.lemma}</span> →
+      </Link>
+    ) : (
+      <Link to={`${VOCABULARY_HREF}/mine`} className="font-medium underline underline-offset-2">
+        Review your saved words →
+      </Link>
+    );
     return (
-      <div className="mx-auto max-w-2xl py-8">
-        <div className="flex flex-wrap items-start justify-between gap-3">
+      <div className="mx-auto max-w-3xl py-8">
+        <p className="text-sm">
+          <Link
+            to={`${VOCABULARY_HREF}?language=${enc(item.languageId)}&category=${enc(item.category.id)}`}
+            className="underline underline-offset-2"
+          >
+            ← {item.category.title}
+          </Link>
+        </p>
+        <div className="mt-3 flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h1 className="text-3xl font-semibold" lang={item.languageId}>
+            <h1 className="font-display text-4xl font-bold tracking-tight" lang={item.languageId}>
               {item.lemma}
             </h1>
             <p className="mt-1 text-lg text-primary/70 dark:text-surface/70">{item.translation}</p>
           </div>
           <VocabularyStatusBadge status={item.userState.status} />
+        </div>
+
+        {/* M21: the word's explainer video leads the page (ADR-031). */}
+        <section aria-label="Video" className="mt-6">
+          <EducationalVideo
+            video={mediaQuery.isSuccess ? (media?.video ?? null) : undefined}
+            isLoading={mediaQuery.isPending}
+            loadFailed={mediaQuery.isError}
+            onRetryLoad={() => void mediaQuery.refetch()}
+            title={item.lemma}
+            subject="this word"
+            afterVideo={nextStep}
+          />
+        </section>
+
+        <div className="mt-6">
+          {storedClips.length > 0 ? (
+            <PronunciationPlayer clips={storedClips} />
+          ) : (
+            <VocabularyAudioPlayer vocabularyId={item.id} hasExample={item.example !== undefined} />
+          )}
         </div>
 
         <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
@@ -88,28 +144,28 @@ export function VocabularyDetailPage() {
         ) : null}
 
         {item.example ? (
-          <blockquote className="mt-6 border-l-4 border-primary/20 pl-4 dark:border-surface/20">
+          <blockquote className="mt-6 border-l-4 border-accent pl-4">
             <p lang={item.languageId}>{item.example.text}</p>
             <p className="text-primary/70 dark:text-surface/70">{item.example.translation}</p>
           </blockquote>
         ) : null}
 
         <div className="mt-6">
-          <VocabularyAudioPlayer vocabularyId={item.id} hasExample={item.example !== undefined} />
-        </div>
-
-        <div className="mt-6">
           <VocabularyActions vocabularyId={item.id} status={item.userState.status} />
         </div>
 
-        <p className="mt-4">
+        <nav
+          aria-label="Keep going"
+          className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-primary/10 pt-4 text-sm dark:border-surface/10"
+        >
+          {nextStep}
           <Link
             to={`/learn/phonetics?language=${enc(item.languageId)}`}
-            className="text-sm underline underline-offset-2"
+            className="underline underline-offset-2"
           >
             View pronunciation guide
           </Link>
-        </p>
+        </nav>
       </div>
     );
   }
