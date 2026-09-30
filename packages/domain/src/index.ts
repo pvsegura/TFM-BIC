@@ -484,3 +484,27 @@ export {
 } from "./privacy/personal-data-export.js";
 export { AccountDeletionRefusedError } from "./privacy/errors/account-deletion-refused.error.js";
 export { InvalidUserDataRegisterError } from "./privacy/errors/invalid-user-data-register.error.js";
+
+// Educational media (M21) — see ADR-031 and docs/m21-video-architecture.md.
+export {
+  MEDIA_CONTENT_TYPES,
+  isMediaContentType,
+  mediaContentKey,
+  type AudioAsset,
+  type AudioPurpose,
+  type ContentMedia,
+  type MediaContentRef,
+  type MediaContentType,
+  type TranscriptLine,
+  type VideoAsset,
+  type VideoPurpose,
+} from "./media/media-asset.js";
+export {
+  narrationOf,
+  type NarrationLine,
+  type PhraseCard,
+  type VideoScene,
+  type VideoSceneKind,
+  type VideoScript,
+} from "./media/video-script.js";
+export { NARRATOR_ID_PATTERN, isNarratorId, type Narrator } from "./media/narrator.js";

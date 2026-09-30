@@ -268,3 +268,19 @@ export {
   clientErrorReportSchema,
   type ClientErrorReport,
 } from "./observability/client-error-report.schema.js";
+
+// Educational media (M21): the pipeline's content-side files and the published-media API.
+export {
+  audioAssetResponseSchema,
+  contentMediaResponseSchema,
+  mediaIndexResponseSchema,
+  mediaPlanFileSchema,
+  narratorsFileSchema,
+  videoAssetResponseSchema,
+  type AudioAssetResponse,
+  type ContentMediaResponse,
+  type MediaIndexResponse,
+  type MediaPlanFile,
+  type NarratorsFile,
+  type VideoAssetResponse,
+} from "./media/media.schema.js";

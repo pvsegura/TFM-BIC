@@ -472,3 +472,50 @@ export {
   type DeleteAccountInput,
   type DeleteAccountResult,
 } from "./privacy/use-cases/delete-account.use-case.js";
+
+// Educational media (M21) — the offline generation pipeline and the published-media read side.
+// See ADR-031 and docs/m21-video-architecture.md.
+export {
+  LESSON_SCRIPT_VERSION,
+  buildLessonVideoScript,
+  speakableTranslation,
+  splitSentences,
+  type LessonScriptInput,
+} from "./media/build-lesson-video-script.js";
+export {
+  VOCABULARY_SCRIPT_VERSION,
+  buildVocabularyVideoScript,
+  findVocabularyExample,
+  type VocabularyExampleSource,
+  type VocabularyScriptInput,
+} from "./media/build-vocabulary-video-script.js";
+export {
+  LINE_GAP,
+  SCENE_LEAD_IN,
+  SCENE_TAIL,
+  captionCues,
+  planVideoTimeline,
+  type TimedLine,
+  type TimedScene,
+  type VideoTimeline,
+} from "./media/plan-video-timeline.js";
+export {
+  GenerateContentMediaUseCase,
+  transcriptOf,
+  type GenerateContentMediaDependencies,
+  type GenerateContentMediaInput,
+  type MediaTarget,
+  type PronunciationRequest,
+  type TargetOutcome,
+} from "./media/generate-content-media.use-case.js";
+export type {
+  ContentMediaCatalog,
+  EducationalVideoRenderer,
+  MediaManifestEntry,
+  MediaManifestRepository,
+  MediaRunStatus,
+  NarrationClip,
+  NarrationRequest,
+  NarrationSynthesizer,
+  RenderedVideo,
+} from "./media/ports/media-generation-ports.js";
