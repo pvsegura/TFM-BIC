@@ -154,3 +154,11 @@ export {
   type DatabaseReadinessCheck,
   type SharedPoolStats,
 } from "./db/shared-pool.js";
+
+// Educational media (M21) — the offline pipeline's adapters and the API's published-media catalog.
+// See ADR-031. The pipeline's CLI (src/media/media-pipeline.cli.ts) is an entry point, not exported.
+export {
+  FileContentMediaCatalog,
+  MEDIA_FILES_URL_PREFIX,
+  type ServableMediaFile,
+} from "./media/file-content-media-catalog.js";

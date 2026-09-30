@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "languageId": "pl",
+  "narrators": [
+    {
+      "id": "anna",
+      "displayName": "Anna",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Erinome",
+        "style": "Speak as a calm, encouraging language teacher: warm, unhurried and precise."
+      }
+    },
+    {
+      "id": "marek",
+      "displayName": "Marek",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Iapetus",
+        "style": "Speak as a friendly, patient language teacher: relaxed, clear and precise."
+      }
+    }
+  ]
+}
