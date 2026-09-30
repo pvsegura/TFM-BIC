@@ -55,6 +55,9 @@ export default defineConfig({
       // Teacher dashboard (M13): `/teacher-dashboard/...`. The pages live at /teacher, so — like
       // gamification — this needs no page-vs-API bypass (ADR-024).
       "/teacher-dashboard": { target: "http://localhost:3000", changeOrigin: true },
+      // Educational media (M21): `/media`, `/media/lessons/:id`, `/media/vocabulary/:id` and the
+      // files under `/media/files/`. No page lives at /media, so it needs no page-vs-API bypass.
+      "/media": { target: "http://localhost:3000", changeOrigin: true },
       // Email preferences and newsletter (M14): `/email-preferences/...`. The pages live at /profile
       // and /newsletter/*, so this needs no page-vs-API bypass (ADR-025).
       "/email-preferences": { target: "http://localhost:3000", changeOrigin: true },

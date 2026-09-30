@@ -43,6 +43,7 @@ import { registerGamificationRoutes } from "./routes/gamification.route.js";
 import { registerHealthRoutes } from "./routes/health.route.js";
 import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
+import { registerMediaRoutes } from "./routes/media.route.js";
 import { registerPhoneticsRoutes } from "./routes/phonetics.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route.js";
@@ -208,6 +209,9 @@ export function buildServer(
     const contentUseCases = createContentUseCases(contentDeps);
     registerLanguageRoutes(app, { useCases: contentUseCases, env });
     registerContentRoutes(app, { useCases: contentUseCases, env });
+    // Published educational media (M21, ADR-031): public, read-only, generated offline — no request
+    // here can reach a video or audio provider.
+    registerMediaRoutes(app, { content: contentDeps, env });
 
     // Gamification (M8): points and achievements. Rewards are granted only inside the exercise and
     // lesson use cases below (through `awardRewards`), never by a route that asks for them.

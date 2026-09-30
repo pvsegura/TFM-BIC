@@ -5,7 +5,13 @@ import type {
   VideoDefinitionRepository,
   VocabularyRepository,
 } from "@tfm-bic/application";
-import { loadContentRepositories } from "@tfm-bic/data";
+import path from "node:path";
+
+import {
+  DEFAULT_CONTENT_ROOT,
+  FileContentMediaCatalog,
+  loadContentRepositories,
+} from "@tfm-bic/data";
 
 /**
  * Everything the language/content/exercise-content/vocabulary-content/phonetics-content/
@@ -23,6 +29,11 @@ export interface ContentDependencies {
   phoneticRepository: PhoneticContentRepository;
   /** Video definitions are content too (M11): read-only, from the same validated catalog. */
   videoDefinitionRepository: VideoDefinitionRepository;
+  /**
+   * Published educational media (M21, ADR-031): read once from <content>/media/manifest.json.
+   * Optional so hand-built test fixtures need not provide it; absent means "no media yet".
+   */
+  mediaCatalog?: FileContentMediaCatalog;
 }
 
 /**
@@ -33,5 +44,9 @@ export interface ContentDependencies {
  * student's request.
  */
 export async function createContentDependencies(contentDir?: string): Promise<ContentDependencies> {
-  return loadContentRepositories(contentDir);
+  const repositories = await loadContentRepositories(contentDir);
+  const mediaCatalog = new FileContentMediaCatalog(
+    path.join(contentDir ?? DEFAULT_CONTENT_ROOT, "media"),
+  );
+  return { ...repositories, mediaCatalog };
 }

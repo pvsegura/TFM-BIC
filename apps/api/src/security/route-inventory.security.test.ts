@@ -30,6 +30,12 @@ const PUBLIC_ROUTES = new Set([
   "POST /email-preferences/newsletter/unsubscribe",
   // M18: the SPA's error report — errors happen before login too. Same-origin, rate limited.
   "POST /client-errors",
+  // M21 (ADR-031): published educational media of published content — read-only, generated
+  // offline, files served only from the manifest's allowlist. Public like the catalog.
+  "GET /media",
+  "GET /media/lessons/:lessonId",
+  "GET /media/vocabulary/:vocabularyId",
+  "GET /media/files/*",
 ]);
 
 /** Authorized by an HMAC token in the link; RFC 8058 mail clients send no Origin (ADR-025). */
