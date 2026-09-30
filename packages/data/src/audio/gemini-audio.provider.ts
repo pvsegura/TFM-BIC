@@ -43,6 +43,11 @@ export interface GeminiAudioProviderOptions {
   apiKey: string;
   model: string;
   voiceName?: string;
+  /**
+   * A narrator's fixed delivery instruction (M21), appended to every request's style so all clips
+   * of one lesson share voice, model *and* style. Operator configuration, never content or input.
+   */
+  narratorStyle?: string;
   timeoutMs?: number;
   maxRetries?: number;
   /** Injected in tests only. */
@@ -85,8 +90,11 @@ function languageNameOf(locale: string): string | null {
  */
 export function buildGeminiSpeechRequestBody(
   request: AudioGenerationRequest,
-  config: { model: string; voiceName: string },
+  config: { model: string; voiceName: string; narratorStyle?: string | undefined },
 ) {
+  const style = config.narratorStyle
+    ? `${speechStyleFor(request)} ${config.narratorStyle}`
+    : speechStyleFor(request);
   return {
     model: config.model,
     input: [
@@ -96,7 +104,7 @@ export function buildGeminiSpeechRequestBody(
           {
             type: "text",
             text: request.text,
-            annotations: [{ type: "speech_metadata", style: speechStyleFor(request) }],
+            annotations: [{ type: "speech_metadata", style }],
           },
         ],
       },
@@ -180,6 +188,7 @@ export class GeminiAudioProvider implements AudioGenerationService {
   private readonly apiKey: string;
   private readonly model: string;
   private readonly voiceName: string;
+  private readonly narratorStyle: string | undefined;
   private readonly timeoutMs: number;
   private readonly maxRetries: number;
   private readonly fetchFn: typeof fetch;
@@ -195,6 +204,7 @@ export class GeminiAudioProvider implements AudioGenerationService {
     this.apiKey = options.apiKey;
     this.model = options.model;
     this.voiceName = options.voiceName ?? DEFAULT_GEMINI_VOICE;
+    this.narratorStyle = options.narratorStyle;
     this.timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
     this.maxRetries = options.maxRetries ?? DEFAULT_MAX_RETRIES;
     this.fetchFn = options.fetch ?? fetch;
@@ -210,7 +220,11 @@ export class GeminiAudioProvider implements AudioGenerationService {
    */
   async generate(request: AudioGenerationRequest): Promise<GeneratedAudio> {
     const body = JSON.stringify(
-      buildGeminiSpeechRequestBody(request, { model: this.model, voiceName: this.voiceName }),
+      buildGeminiSpeechRequestBody(request, {
+        model: this.model,
+        voiceName: this.voiceName,
+        narratorStyle: this.narratorStyle,
+      }),
     );
 
     for (let attempt = 0; ; attempt += 1) {

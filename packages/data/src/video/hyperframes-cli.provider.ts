@@ -21,6 +21,15 @@ export interface HyperframesCliProviderOptions {
   videoScriptsRoot: string;
   timeoutMs?: number;
   runner?: CliRunner;
+  /**
+   * How to start the Hyperframes CLI (M21). Defaults to `npx hyperframes`, as in M11. `execFile`
+   * cannot start `npx` on Windows (it is a `.cmd` shim, and Node refuses to spawn `.cmd` files
+   * without a shell), so the M21 media pipeline passes `process.execPath` and the pinned package's
+   * `bin/hyperframes.mjs` instead — no shell either way.
+   */
+  command?: { file: string; args: readonly string[] };
+  /** Extra `render` flags, e.g. `["--fps", "30", "--quality", "standard"]` (verified CLI flags). */
+  renderArgs?: readonly string[];
 }
 
 /** Bounds an unpredictable provider message before it can reach a log or an error message. */
@@ -53,21 +62,26 @@ export class HyperframesCliProvider implements VideoGenerationService {
   private readonly videoScriptsRoot: string;
   private readonly timeoutMs: number;
   private readonly runner: CliRunner;
+  private readonly command: { file: string; args: readonly string[] };
+  private readonly renderArgs: readonly string[];
 
   constructor(options: HyperframesCliProviderOptions) {
     this.videoScriptsRoot = options.videoScriptsRoot;
     this.timeoutMs = options.timeoutMs ?? DEFAULT_TIMEOUT_MS;
     this.runner = options.runner ?? realCliRunner;
+    this.command = options.command ?? { file: "npx", args: ["hyperframes"] };
+    this.renderArgs = options.renderArgs ?? [];
   }
 
   async generate(request: VideoGenerationRequest): Promise<VideoGenerationResult> {
     const projectDir = path.join(this.videoScriptsRoot, request.scriptPath);
     const outputPath = path.join(projectDir, OUTPUT_FILE_NAME);
 
-    const result = await this.runner("npx", ["hyperframes", "render", "--output", outputPath], {
-      cwd: projectDir,
-      timeoutMs: this.timeoutMs,
-    });
+    const result = await this.runner(
+      this.command.file,
+      [...this.command.args, "render", ...this.renderArgs, "--output", outputPath],
+      { cwd: projectDir, timeoutMs: this.timeoutMs },
+    );
 
     if (result.spawnError) {
       throw new VideoProviderUnavailableError(summarize(result.spawnError));
