@@ -49,7 +49,8 @@ function OverviewSection() {
         <StatCard label="Exercise attempts" value={formatNumber(o.exerciseAttempts)} />
         <StatCard
           label="Accuracy"
-          value={o.accuracyPercent === null ? "No attempts yet" : `${String(o.accuracyPercent)}%`}
+          value={o.accuracyPercent === null ? "—" : `${String(o.accuracyPercent)}%`}
+          {...(o.accuracyPercent === null ? { hint: "No attempts yet" } : {})}
         />
         <StatCard label="Points earned" value={formatNumber(o.points)} />
       </dl>

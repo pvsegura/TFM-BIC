@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 
 import { LoadError } from "../components/catalog-notices.js";
+import { ContinueLearning } from "../components/continue-learning.js";
 import { PointsSummary } from "../components/points-summary.js";
 import { useGamificationSummary } from "../hooks/use-gamification.js";
 
@@ -19,6 +20,11 @@ export function DashboardPage() {
         Dashboard
       </h1>
 
+      {/* M21: the dashboard leads into the learning flow first; points follow. */}
+      <div className="mt-6">
+        <ContinueLearning />
+      </div>
+
       <div className="mt-6">
         {summaryQuery.isPending ? (
           <p role="status">Loading your progress…</p>
@@ -32,9 +38,15 @@ export function DashboardPage() {
         )}
       </div>
 
-      <p className="mt-6">
+      <p className="mt-6 flex flex-wrap gap-x-5 gap-y-1">
         <Link to="/learn/lessons" className="underline underline-offset-2">
           Go to lessons
+        </Link>
+        <Link to="/learn/videos" className="underline underline-offset-2">
+          Browse the videos
+        </Link>
+        <Link to="/learn/vocabulary" className="underline underline-offset-2">
+          Vocabulary
         </Link>
       </p>
     </section>

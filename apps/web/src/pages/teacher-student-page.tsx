@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router";
 
 import { AchievementIcon } from "../components/achievement-icon.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
+import { MediaBadge } from "../components/media-badge.js";
 import { formatDate, formatNumber } from "../components/reward-labels.js";
 import { StatCard } from "../components/stat-card.js";
 import {
@@ -98,7 +99,8 @@ function LessonsSection({ lessons }: { lessons: Detail["lessons"] }) {
                 key={lesson.lessonId}
                 className="flex flex-wrap justify-between gap-x-4 py-2 text-sm"
               >
-                <span>{lesson.title ?? "Lesson no longer available"}</span>
+                <span>{lesson.title ?? "Lesson no longer available"}</span>{" "}
+                <MediaBadge contentType="lesson" contentId={lesson.lessonId} />
                 <span className="text-primary/80 dark:text-surface/80">
                   <span>{lesson.status === "completed" ? "Completed" : "In progress"}</span> ·{" "}
                   <time dateTime={lesson.updatedAt}>{formatDate(lesson.updatedAt)}</time>

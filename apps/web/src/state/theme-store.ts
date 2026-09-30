@@ -3,6 +3,18 @@ import { createJSONStorage, persist } from "zustand/middleware";
 
 export type Theme = "light" | "dark";
 
+/** The OS preference, used only until the learner picks a theme (M21); a saved choice wins. */
+function systemTheme(): Theme {
+  try {
+    return typeof window !== "undefined" &&
+      window.matchMedia?.("(prefers-color-scheme: dark)").matches
+      ? "dark"
+      : "light";
+  } catch {
+    return "light";
+  }
+}
+
 interface ThemeState {
   theme: Theme;
   toggleTheme: () => void;
@@ -19,7 +31,7 @@ interface ThemeState {
 export const useThemeStore = create<ThemeState>()(
   persist(
     (set, get) => ({
-      theme: "light",
+      theme: systemTheme(),
       toggleTheme: () => {
         set({ theme: get().theme === "light" ? "dark" : "light" });
       },

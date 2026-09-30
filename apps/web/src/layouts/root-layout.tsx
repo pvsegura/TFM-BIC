@@ -28,6 +28,8 @@ export function RootLayout() {
   const { pathname } = useLocation();
   const fullBleed = useMatches().some((match) => isFullBleedHandle(match.handle));
   const frameWidth = fullBleed ? "max-w-7xl" : "max-w-5xl";
+  // M21: the signed-in navigation needs the wider frame to stay on one row; content keeps its column.
+  const headerWidth = "max-w-7xl";
 
   // The small-screen menu is open *for the page it was opened on*, so following any link (a new
   // pathname) closes it without an effect.
@@ -60,7 +62,7 @@ export function RootLayout() {
         onKeyDown={closeMenuOnEscape}
       >
         <div
-          className={`mx-auto flex ${frameWidth} flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4`}
+          className={`mx-auto flex ${headerWidth} flex-wrap items-center justify-between gap-x-4 gap-y-2 px-4 py-4`}
         >
           <Link
             to="/"
@@ -71,12 +73,12 @@ export function RootLayout() {
 
           <nav
             aria-label="Primary"
-            className="flex grow flex-wrap items-center justify-end gap-x-4 gap-y-2 md:grow-0"
+            className="flex grow flex-wrap items-center justify-end gap-x-4 gap-y-2 xl:grow-0"
           >
             <button
               ref={menuButtonRef}
               type="button"
-              className="rounded-md border border-primary px-3 py-2 text-sm font-medium md:hidden dark:border-surface"
+              className="rounded-md border border-primary px-3 py-2 text-sm font-medium xl:hidden dark:border-surface"
               aria-expanded={menuOpen}
               aria-controls={NAV_LIST_ID}
               onClick={() => setMenuOpenedOn(menuOpen ? null : pathname)}
@@ -88,9 +90,9 @@ export function RootLayout() {
               id={NAV_LIST_ID}
               className={`${
                 menuOpen ? "order-last flex basis-full flex-col items-start py-2" : "hidden"
-              } gap-x-4 gap-y-3 md:order-none md:flex md:basis-auto md:flex-row md:flex-wrap md:items-center md:py-0`}
+              } gap-x-4 gap-y-3 xl:order-none xl:flex xl:basis-auto xl:flex-row xl:flex-nowrap xl:items-center xl:py-0`}
             >
-              {NAV_LINKS.map((link) => (
+              {NAV_LINKS.filter((link) => !(currentUser && link.to === "/")).map((link) => (
                 <li key={link.to}>
                   <Link to={link.to} className="text-sm hover:underline">
                     {link.label}
@@ -110,6 +112,11 @@ export function RootLayout() {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/learn/videos" className="text-sm hover:underline">
+                      Videos
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/learn/vocabulary" className="text-sm hover:underline">
                       Vocabulary
                     </Link>
@@ -117,11 +124,6 @@ export function RootLayout() {
                   <li>
                     <Link to="/learn/phonetics" className="text-sm hover:underline">
                       Phonetics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/videos" className="text-sm hover:underline">
-                      Videos
                     </Link>
                   </li>
                   <li>
@@ -141,7 +143,10 @@ export function RootLayout() {
                       Profile
                     </Link>
                   </li>
-                  <li className="break-all text-sm text-primary/70 dark:text-surface/70">
+                  <li
+                    className="max-w-[16rem] truncate text-sm text-primary/70 xl:max-w-[11rem] dark:text-surface/70"
+                    title={currentUser.email}
+                  >
                     {currentUser.email}
                   </li>
                   <li>
