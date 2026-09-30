@@ -13,8 +13,13 @@ export async function signInViaUi(page: Page, email: string, password: string): 
 }
 
 /** Opens the profile page the way a user does — through the nav link — and
- * waits until the form has loaded. */
+ * waits until the form has loaded. On a small screen the links sit behind the
+ * header's Menu button (M20A), so it is opened first, as a user would. */
 export async function openProfileViaNav(page: Page): Promise<void> {
+  const menu = page.getByRole("button", { name: "Menu" });
+  if (await menu.isVisible()) {
+    await menu.click();
+  }
   await page.getByRole("link", { name: "Profile" }).click();
   await expect(page).toHaveURL(/\/profile$/);
   await expect(page.getByRole("heading", { level: 1, name: "Your profile" })).toBeVisible();
