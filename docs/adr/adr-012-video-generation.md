@@ -91,3 +91,14 @@ re-verification), that would require a new ADR, not a silent substitution.
 - [GitHub: heygen-com/hyperframes](https://github.com/heygen-com/hyperframes)
 - [content/video-scripts/README.md](../../content/video-scripts/README.md)
 - [hyperframes skill](../../.claude/skills/hyperframes/SKILL.md)
+
+## M21 addendum (2026-09-30) — see ADR-031
+
+- `HyperframesCliProvider` has now **run real renders** (Hyperframes 0.8.92, Windows, FFmpeg 9.0.2). It could
+  not start on Windows as written (`execFile` cannot spawn the `npx` shim); it now accepts the command to start
+  and extra render flags, with the M11 default unchanged.
+- Published educational videos are generated **offline** by the media pipeline and stored as committed,
+  content-hashed files served from the same origin — resolving this ADR's "media storage PENDING" for
+  educational content. The runtime job API stays for its own use; its learner-facing demo page moved, unlinked,
+  to `/learn/videos/render-demo`.
+- Hyperframes sends anonymous telemetry by default; the pipeline disables it (`HYPERFRAMES_NO_TELEMETRY=1`).

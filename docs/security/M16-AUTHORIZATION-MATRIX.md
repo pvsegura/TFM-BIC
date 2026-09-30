@@ -12,21 +12,23 @@ answer `401` without a session, or if a state-changing route skips the Origin ch
 
 ## Public (no session)
 
-| Route                                            | Anonymous | Student | Teacher | Owner only | Special                                                                                                |
-| ------------------------------------------------ | --------- | ------- | ------- | ---------- | ------------------------------------------------------------------------------------------------------ |
-| `GET /health`, `GET /ready`                      | ✅        | ✅      | ✅      | —          | Minimal body, no rate limit (infrastructure probes)                                                    |
-| `GET /languages`, `/languages/:code/levels`      | ✅        | ✅      | ✅      | —          | Published/active only; 120/min                                                                         |
-| `GET /content`, `/content/:contentId`            | ✅        | ✅      | ✅      | —          | Published only; hidden = same `404`; 120/min                                                           |
-| `POST /auth/register`                            | ✅        | ✅      | ✅      | —          | Origin; always creates STUDENT; generic response                                                       |
-| `POST /auth/login`                               | ✅        | ✅      | ✅      | —          | Origin; per-IP **and per-account** limit (M16)                                                         |
-| `POST /auth/logout`                              | ✅        | ✅      | ✅      | Own        | Origin; deletes the presented session only                                                             |
-| `POST /auth/email-verification/confirm`          | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token (atomic, M16)                                                          |
-| `POST /auth/email-verification/resend`           | ✅        | ✅      | ✅      | —          | Origin; generic response                                                                               |
-| `POST /auth/password-reset/request`              | ✅        | ✅      | ✅      | —          | Origin; generic response                                                                               |
-| `POST /auth/password-reset/confirm`              | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token (atomic, M16); kills all sessions                                      |
-| `POST /email-preferences/newsletter/confirm`     | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token                                                                        |
-| `POST /email-preferences/newsletter/unsubscribe` | ✅        | ✅      | ✅      | Token      | HMAC token; **no Origin check by design** (RFC 8058 mail clients send none); can only withdraw consent |
-| `POST /client-errors` (M18)                      | ✅        | ✅      | ✅      | —          | Origin; 10/min per address; closed body (kind, class name, path); writes one log line, stores nothing  |
+| Route                                                             | Anonymous | Student | Teacher | Owner only | Special                                                                                                  |
+| ----------------------------------------------------------------- | --------- | ------- | ------- | ---------- | -------------------------------------------------------------------------------------------------------- |
+| `GET /health`, `GET /ready`                                       | ✅        | ✅      | ✅      | —          | Minimal body, no rate limit (infrastructure probes)                                                      |
+| `GET /languages`, `/languages/:code/levels`                       | ✅        | ✅      | ✅      | —          | Published/active only; 120/min                                                                           |
+| `GET /content`, `/content/:contentId`                             | ✅        | ✅      | ✅      | —          | Published only; hidden = same `404`; 120/min                                                             |
+| `POST /auth/register`                                             | ✅        | ✅      | ✅      | —          | Origin; always creates STUDENT; generic response                                                         |
+| `POST /auth/login`                                                | ✅        | ✅      | ✅      | —          | Origin; per-IP **and per-account** limit (M16)                                                           |
+| `POST /auth/logout`                                               | ✅        | ✅      | ✅      | Own        | Origin; deletes the presented session only                                                               |
+| `POST /auth/email-verification/confirm`                           | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token (atomic, M16)                                                            |
+| `POST /auth/email-verification/resend`                            | ✅        | ✅      | ✅      | —          | Origin; generic response                                                                                 |
+| `POST /auth/password-reset/request`                               | ✅        | ✅      | ✅      | —          | Origin; generic response                                                                                 |
+| `POST /auth/password-reset/confirm`                               | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token (atomic, M16); kills all sessions                                        |
+| `POST /email-preferences/newsletter/confirm`                      | ✅        | ✅      | ✅      | Token      | Origin; single-use hashed token                                                                          |
+| `POST /email-preferences/newsletter/unsubscribe`                  | ✅        | ✅      | ✅      | Token      | HMAC token; **no Origin check by design** (RFC 8058 mail clients send none); can only withdraw consent   |
+| `POST /client-errors` (M18)                                       | ✅        | ✅      | ✅      | —          | Origin; 10/min per address; closed body (kind, class name, path); writes one log line, stores nothing    |
+| `GET /media`, `/media/lessons/:id`, `/media/vocabulary/:id` (M21) | ✅        | ✅      | ✅      | —          | Read-only published media of published content; 120/min; allowlisting response schemas; no provider call |
+| `GET /media/files/*` (M21)                                        | ✅        | ✅      | ✅      | —          | Manifest allowlist lookup only (no path from the URL); single byte range; 600/min                        |
 
 ## Operator (M18, not a user route)
 

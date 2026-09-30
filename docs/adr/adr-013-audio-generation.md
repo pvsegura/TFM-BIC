@@ -138,3 +138,13 @@ Until both are resolved, `AUDIO_GENERATION_PROVIDER` stays `fake` in every envir
 - [ai-integration-strategy.md](../architecture/ai-integration-strategy.md)
 - [ADR-011](adr-011-ai-architecture.md), [ADR-012](adr-012-video-generation.md),
   [ADR-015](adr-015-deployment.md)
+
+## M21 addendum (2026-09-30) — see ADR-031
+
+- The user chose to proceed with a **paid** Gemini project (addresses the EEA paid-services clause). The
+  under-18 clause remains **PENDING legal review**.
+- Lesson and word audio is now generated **offline** and stored (AAC clips, reused by hash), so learners
+  never trigger a provider call; runtime `POST /audio-generations` remains as a fallback where no clip exists.
+- `GeminiAudioProvider` accepts a fixed narrator style; narrators (voice + style) are content configuration
+  (`content/languages/<lang>/media/narrators.json`). Re-verified 2026-09-30: model names, endpoint, 30 prebuilt
+  voices, WAV output and pricing unchanged from M12's findings.

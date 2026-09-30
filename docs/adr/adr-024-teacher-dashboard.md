@@ -82,3 +82,10 @@ expression; direction is `ASC`/`DESC` from a map; `NULLS LAST` and a `student_id
 - **Invitation codes / add-by-email** — larger product scope; add-by-email also enables account enumeration and
   lacks student consent. Deferred.
 - **Redis or a materialised view** — not needed at current sizes; would hide rather than fix query cost.
+
+## M21 addendum (2026-09-30)
+
+Audit: the dashboard, routes and authorization work; what blocked access was that no `TEACHER` account can
+exist without the operator CLI, and none was created on the demo. The procedure is documented in
+docs/m21-content-generation.md; the model (operator-managed links) is unchanged. The student detail now shows
+whether each recent lesson has its explainer video.
