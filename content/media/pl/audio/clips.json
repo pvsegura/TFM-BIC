@@ -1,4 +1,13 @@
 {
+  "0498ac74fc2a86b3": {
+    "path": "pl/audio/marek/0498ac74fc2a86b3.m4a",
+    "durationSeconds": 3.16,
+    "text": "It means: The cat is sleeping.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:48.590Z"
+  },
   "08b661ef8c7c2ac2": {
     "path": "pl/audio/marek/08b661ef8c7c2ac2.m4a",
     "durationSeconds": 2.72,
@@ -7,6 +16,105 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:24.320Z"
+  },
+  "0c42efcd5adb9053": {
+    "path": "pl/audio/anna/0c42efcd5adb9053.m4a",
+    "durationSeconds": 4.28,
+    "text": "Said when saying goodnight, not as a general goodbye.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:58.712Z"
+  },
+  "0d4113a101a96ca4": {
+    "path": "pl/audio/anna/0d4113a101a96ca4.m4a",
+    "durationSeconds": 1.12,
+    "text": "Cześć!",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:02.644Z"
+  },
+  "10a900de09242355": {
+    "path": "pl/audio/anna/10a900de09242355.m4a",
+    "durationSeconds": 5.36,
+    "text": "Proszę and dziękuję are among the most useful Polish words.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:00.324Z"
+  },
+  "11a411c47477f155": {
+    "path": "pl/audio/anna/11a411c47477f155.m4a",
+    "durationSeconds": 1.84,
+    "text": "It means: time",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:46:00.339Z"
+  },
+  "11f56c6aaa2f7c02": {
+    "path": "pl/audio/anna/11f56c6aaa2f7c02.m4a",
+    "durationSeconds": 1.36,
+    "text": "Dobry wieczór.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:56.310Z"
+  },
+  "13c352010a42ee48": {
+    "path": "pl/audio/anna/13c352010a42ee48.m4a",
+    "durationSeconds": 1.88,
+    "text": "It means: Thank you.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:31.132Z"
+  },
+  "1534f638662a11e7": {
+    "path": "pl/audio/anna/1534f638662a11e7.m4a",
+    "durationSeconds": 2.28,
+    "text": "It means: Good night.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:51.826Z"
+  },
+  "19b3601a02ca7ac3": {
+    "path": "pl/audio/anna/19b3601a02ca7ac3.m4a",
+    "durationSeconds": 1.52,
+    "text": "Dobranoc.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:45.105Z"
+  },
+  "19cef55ee5f33011": {
+    "path": "pl/audio/anna/19cef55ee5f33011.m4a",
+    "durationSeconds": 1.4,
+    "text": "Informal.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:38.311Z"
+  },
+  "1de1bdb3198c474e": {
+    "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
+    "durationSeconds": 1.12,
+    "text": "córka",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:46:11.954Z"
+  },
+  "1e2bd6b66c4c3582": {
+    "path": "pl/audio/anna/1e2bd6b66c4c3582.m4a",
+    "durationSeconds": 2.32,
+    "text": "It means: daughter",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:46:36.120Z"
   },
   "224ec5322cb0a8f6": {
     "path": "pl/audio/marek/224ec5322cb0a8f6.m4a",
@@ -17,6 +125,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:14.486Z"
   },
+  "22ab39876eac7446": {
+    "path": "pl/audio/anna/22ab39876eac7446.m4a",
+    "durationSeconds": 2.8,
+    "text": "Polite. Used during the day.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:54.490Z"
+  },
   "22e31d7b2252f37a": {
     "path": "pl/audio/marek/22e31d7b2252f37a.m4a",
     "durationSeconds": 2.24,
@@ -26,6 +143,51 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:36.532Z"
   },
+  "25b5b6aeccca3813": {
+    "path": "pl/audio/anna/25b5b6aeccca3813.m4a",
+    "durationSeconds": 2.84,
+    "text": "It means: Hi! Bye!",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:06.111Z"
+  },
+  "29ee5f9e7de733c4": {
+    "path": "pl/audio/anna/29ee5f9e7de733c4.m4a",
+    "durationSeconds": 6.64,
+    "text": "The pair cz sounds like ch in church. Roughly: chahss.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:46:07.440Z"
+  },
+  "2fe7c50c17986be6": {
+    "path": "pl/audio/anna/2fe7c50c17986be6.m4a",
+    "durationSeconds": 2.84,
+    "text": "Dziękuję means thank you.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:18.566Z"
+  },
+  "346d85d7e3b314eb": {
+    "path": "pl/audio/anna/346d85d7e3b314eb.m4a",
+    "durationSeconds": 1.04,
+    "text": "Proszę.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:50.410Z"
+  },
+  "37886057cf6281fb": {
+    "path": "pl/audio/anna/37886057cf6281fb.m4a",
+    "durationSeconds": 8.08,
+    "text": "Cześć is informal: it is used with friends and family, both to say hello and to say goodbye.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:46.808Z"
+  },
   "3df17e5018f07010": {
     "path": "pl/audio/marek/3df17e5018f07010.m4a",
     "durationSeconds": 5.92,
@@ -34,6 +196,132 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:21.440Z"
+  },
+  "3ea904c064841b84": {
+    "path": "pl/audio/anna/3ea904c064841b84.m4a",
+    "durationSeconds": 1.2,
+    "text": "czas",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:52.821Z"
+  },
+  "3ed53c8fbc430e87": {
+    "path": "pl/audio/anna/3ed53c8fbc430e87.m4a",
+    "durationSeconds": 8.12,
+    "text": "Please, thank you and sorry. A few short words that make everyday conversations polite.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:50.320Z"
+  },
+  "3eea825a4e71717f": {
+    "path": "pl/audio/marek/3eea825a4e71717f.m4a",
+    "durationSeconds": 10.6,
+    "text": "There is no word for a. The ending of kota changes because it is the object of the verb; that is a later topic.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:38.197Z"
+  },
+  "3ffdbd752009d945": {
+    "path": "pl/audio/anna/3ffdbd752009d945.m4a",
+    "durationSeconds": 1.64,
+    "text": "Let's recap.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:32:04.702Z"
+  },
+  "41be406e0f9fa309": {
+    "path": "pl/audio/marek/41be406e0f9fa309.m4a",
+    "durationSeconds": 6.88,
+    "text": "Polish has no articles: there are no separate words for a, an or the.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:04.214Z"
+  },
+  "438a53845bb83cee": {
+    "path": "pl/audio/anna/438a53845bb83cee.m4a",
+    "durationSeconds": 4.6,
+    "text": "Dzień dobry is polite and works with people you do not know well.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:42.924Z"
+  },
+  "441624cb6a2113f9": {
+    "path": "pl/audio/marek/441624cb6a2113f9.m4a",
+    "durationSeconds": 1.64,
+    "text": "Mam kota.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:22.286Z"
+  },
+  "45903d72382933ff": {
+    "path": "pl/audio/marek/45903d72382933ff.m4a",
+    "durationSeconds": 4.08,
+    "text": "Read the examples below the video at your own pace.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:42:14.999Z"
+  },
+  "4a4898095c0b7e62": {
+    "path": "pl/audio/anna/4a4898095c0b7e62.m4a",
+    "durationSeconds": 4.08,
+    "text": "Proszę means please when you ask for something.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:05.988Z"
+  },
+  "4b8cb619f423bf29": {
+    "path": "pl/audio/anna/4b8cb619f423bf29.m4a",
+    "durationSeconds": 3.08,
+    "text": "It means: Sorry. Excuse me.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:16.927Z"
+  },
+  "4ed2e2c97725bb2c": {
+    "path": "pl/audio/marek/4ed2e2c97725bb2c.m4a",
+    "durationSeconds": 2.64,
+    "text": "It means: I have a dog.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:42:08.002Z"
+  },
+  "5057e0e5bbd9ae21": {
+    "path": "pl/audio/anna/5057e0e5bbd9ae21.m4a",
+    "durationSeconds": 1.04,
+    "text": "Nie.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:35.870Z"
+  },
+  "51fae10a2768ea3d": {
+    "path": "pl/audio/anna/51fae10a2768ea3d.m4a",
+    "durationSeconds": 7.92,
+    "text": "It also means here you are when you hand something over, and you are welcome when someone thanks you.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:13.281Z"
+  },
+  "562ad923a554b378": {
+    "path": "pl/audio/anna/562ad923a554b378.m4a",
+    "durationSeconds": 2.24,
+    "text": "It means: No.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:42.711Z"
   },
   "578b2b8a0aa979d2": {
     "path": "pl/audio/marek/578b2b8a0aa979d2.m4a",
@@ -62,6 +350,33 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:40.701Z"
   },
+  "625ff14839b22103": {
+    "path": "pl/audio/marek/625ff14839b22103.m4a",
+    "durationSeconds": 2.04,
+    "text": "Kot śpi.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:42.288Z"
+  },
+  "67348162cbe21db0": {
+    "path": "pl/audio/anna/67348162cbe21db0.m4a",
+    "durationSeconds": 1.4,
+    "text": "Przepraszam.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:10.165Z"
+  },
+  "68858c8ba8765998": {
+    "path": "pl/audio/anna/68858c8ba8765998.m4a",
+    "durationSeconds": 2.04,
+    "text": "It means: Goodbye.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:12.422Z"
+  },
   "6cc560223ef7c25c": {
     "path": "pl/audio/marek/6cc560223ef7c25c.m4a",
     "durationSeconds": 2.48,
@@ -79,6 +394,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:03.342Z"
+  },
+  "73d169f74e7feb7d": {
+    "path": "pl/audio/anna/73d169f74e7feb7d.m4a",
+    "durationSeconds": 1.96,
+    "text": "It means: Yes.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:29.943Z"
   },
   "796a76bbcefe9f0b": {
     "path": "pl/audio/marek/796a76bbcefe9f0b.m4a",
@@ -98,6 +422,33 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:18.373Z"
   },
+  "7f39a81ef4c61a52": {
+    "path": "pl/audio/marek/7f39a81ef4c61a52.m4a",
+    "durationSeconds": 7.12,
+    "text": "When you translate into English, choose a, an or the from the context.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:17.157Z"
+  },
+  "7f7c4ef11496ea73": {
+    "path": "pl/audio/anna/7f7c4ef11496ea73.m4a",
+    "durationSeconds": 5.32,
+    "text": "One word, three uses. The situation tells you which.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:04.526Z"
+  },
+  "8405fcb319f0de81": {
+    "path": "pl/audio/anna/8405fcb319f0de81.m4a",
+    "durationSeconds": 1.16,
+    "text": "Na razie!",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:25.420Z"
+  },
   "874731577e5452b1": {
     "path": "pl/audio/marek/874731577e5452b1.m4a",
     "durationSeconds": 1.24,
@@ -106,6 +457,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:10.303Z"
+  },
+  "8912c50dd2af3852": {
+    "path": "pl/audio/marek/8912c50dd2af3852.m4a",
+    "durationSeconds": 3,
+    "text": "It means: I have a cat.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:28.981Z"
+  },
+  "89218d047e9e1b93": {
+    "path": "pl/audio/anna/89218d047e9e1b93.m4a",
+    "durationSeconds": 1.52,
+    "text": "Dziękuję bardzo.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:37.731Z"
   },
   "8bd95b578cbbb51d": {
     "path": "pl/audio/marek/8bd95b578cbbb51d.m4a",
@@ -134,6 +503,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:08.307Z"
   },
+  "912b5c515c092859": {
+    "path": "pl/audio/anna/912b5c515c092859.m4a",
+    "durationSeconds": 2.24,
+    "text": "It means: Good evening.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:58.492Z"
+  },
   "91c392801fc8751d": {
     "path": "pl/audio/marek/91c392801fc8751d.m4a",
     "durationSeconds": 2.52,
@@ -142,6 +520,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:26.286Z"
+  },
+  "9448c04d08e8799b": {
+    "path": "pl/audio/anna/9448c04d08e8799b.m4a",
+    "durationSeconds": 3.16,
+    "text": "Informal. For friends and family.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:09.028Z"
   },
   "95b0a98456efb826": {
     "path": "pl/audio/marek/95b0a98456efb826.m4a",
@@ -152,6 +539,42 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:36.594Z"
   },
+  "982368fea4452cda": {
+    "path": "pl/audio/anna/982368fea4452cda.m4a",
+    "durationSeconds": 9.4,
+    "text": "The pair sz sounds like English sh, and ł sounds like English w. Roughly: SHKO-wa.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:40.380Z"
+  },
+  "98a3d66987069b84": {
+    "path": "pl/audio/anna/98a3d66987069b84.m4a",
+    "durationSeconds": 3.28,
+    "text": "It means: Good day, or hello.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:52.137Z"
+  },
+  "9d6fa85995c040d5": {
+    "path": "pl/audio/anna/9d6fa85995c040d5.m4a",
+    "durationSeconds": 1.24,
+    "text": "Dzień dobry.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:48.952Z"
+  },
+  "a2b8542a826f4299": {
+    "path": "pl/audio/anna/a2b8542a826f4299.m4a",
+    "durationSeconds": 6.84,
+    "text": "Greetings and goodbyes. Polite and informal ways to say hello and goodbye in Polish.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:36.860Z"
+  },
   "a519c04d65539d82": {
     "path": "pl/audio/marek/a519c04d65539d82.m4a",
     "durationSeconds": 2.92,
@@ -160,6 +583,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:10.231Z"
+  },
+  "a928dd9471ef15e6": {
+    "path": "pl/audio/anna/a928dd9471ef15e6.m4a",
+    "durationSeconds": 1,
+    "text": "Tak.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:37:22.984Z"
+  },
+  "a9cd7153eec67310": {
+    "path": "pl/audio/anna/a9cd7153eec67310.m4a",
+    "durationSeconds": 2.16,
+    "text": "It means: school",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:32.450Z"
   },
   "aa82b04764e152de": {
     "path": "pl/audio/marek/aa82b04764e152de.m4a",
@@ -170,6 +611,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:24.243Z"
   },
+  "acea2e25bd25e99b": {
+    "path": "pl/audio/marek/acea2e25bd25e99b.m4a",
+    "durationSeconds": 5.2,
+    "text": "It could also mean A cat is sleeping, depending on the situation.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:55.807Z"
+  },
+  "ad2e7a06cb965d06": {
+    "path": "pl/audio/anna/ad2e7a06cb965d06.m4a",
+    "durationSeconds": 1.24,
+    "text": "Dziękuję.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:24.633Z"
+  },
   "b108e0970e945039": {
     "path": "pl/audio/marek/b108e0970e945039.m4a",
     "durationSeconds": 5.04,
@@ -179,6 +638,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:06.166Z"
   },
+  "b15f5e056337d0c6": {
+    "path": "pl/audio/anna/b15f5e056337d0c6.m4a",
+    "durationSeconds": 8.04,
+    "text": "A first look at Polish spelling and sounds. A few letters and letter pairs that are new to English speakers.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:01.424Z"
+  },
   "b2e95f8f70612a2d": {
     "path": "pl/audio/marek/b2e95f8f70612a2d.m4a",
     "durationSeconds": 2.52,
@@ -187,6 +655,60 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:17.979Z"
+  },
+  "b52f8590d1899da4": {
+    "path": "pl/audio/marek/b52f8590d1899da4.m4a",
+    "durationSeconds": 7.76,
+    "text": "A bare noun can therefore mean a cat or the cat, and the meaning comes from the situation.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:41:11.050Z"
+  },
+  "b5f769ad3599e219": {
+    "path": "pl/audio/anna/b5f769ad3599e219.m4a",
+    "durationSeconds": 5.04,
+    "text": "Some Polish letters and letter pairs are new for English speakers.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:07.035Z"
+  },
+  "b6272d28059fce17": {
+    "path": "pl/audio/anna/b6272d28059fce17.m4a",
+    "durationSeconds": 3.76,
+    "text": "Listen to native speakers to fine-tune the sounds.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:19.345Z"
+  },
+  "bad8401577993e09": {
+    "path": "pl/audio/anna/bad8401577993e09.m4a",
+    "durationSeconds": 1.08,
+    "text": "szkoła",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:24.828Z"
+  },
+  "c0b9b44c86dab8dd": {
+    "path": "pl/audio/anna/c0b9b44c86dab8dd.m4a",
+    "durationSeconds": 4.84,
+    "text": "Now it's your turn. Practise with the exercises below the video.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:32:11.400Z"
+  },
+  "c79c09d02afc917e": {
+    "path": "pl/audio/marek/c79c09d02afc917e.m4a",
+    "durationSeconds": 8.92,
+    "text": "Polish has no articles. Why there is no word for a, an or the, and what to do about it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:40:58.502Z"
   },
   "d20636535a3e067a": {
     "path": "pl/audio/marek/d20636535a3e067a.m4a",
@@ -224,6 +746,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:18.135Z"
   },
+  "e7069d72f97a94e2": {
+    "path": "pl/audio/anna/e7069d72f97a94e2.m4a",
+    "durationSeconds": 2.76,
+    "text": "Polite. Used in the evening.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:00.653Z"
+  },
+  "ea99362b85e6d36a": {
+    "path": "pl/audio/anna/ea99362b85e6d36a.m4a",
+    "durationSeconds": 6.04,
+    "text": "The English comparisons below are only approximate, to help you make a start.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:45:13.575Z"
+  },
   "ecd0c4d19c5db1f6": {
     "path": "pl/audio/marek/ecd0c4d19c5db1f6.m4a",
     "durationSeconds": 2.4,
@@ -251,6 +791,42 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:20.821Z"
   },
+  "f09bad24f8b2675b": {
+    "path": "pl/audio/anna/f09bad24f8b2675b.m4a",
+    "durationSeconds": 3,
+    "text": "It means: Thank you very much.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:44.752Z"
+  },
+  "f2732b0b84a45f5b": {
+    "path": "pl/audio/anna/f2732b0b84a45f5b.m4a",
+    "durationSeconds": 1.24,
+    "text": "Do widzenia.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:29:19.300Z"
+  },
+  "f3b9a5bc86908dc1": {
+    "path": "pl/audio/anna/f3b9a5bc86908dc1.m4a",
+    "durationSeconds": 4.6,
+    "text": "It means: Please. Here you are. You are welcome.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:36:58.261Z"
+  },
+  "f429d69efda89ff6": {
+    "path": "pl/audio/anna/f429d69efda89ff6.m4a",
+    "durationSeconds": 6.68,
+    "text": "Polish has more than one way to greet people, and the choice depends on how formal the situation is.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:28:40.329Z"
+  },
   "f75bf392e402c47d": {
     "path": "pl/audio/marek/f75bf392e402c47d.m4a",
     "durationSeconds": 1.84,
@@ -260,6 +836,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:08.144Z"
   },
+  "f92f651677cf8ec6": {
+    "path": "pl/audio/marek/f92f651677cf8ec6.m4a",
+    "durationSeconds": 1.36,
+    "text": "Mam psa.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-01T07:42:00.888Z"
+  },
+  "f991029ab75bcd2e": {
+    "path": "pl/audio/anna/f991029ab75bcd2e.m4a",
+    "durationSeconds": 2.6,
+    "text": "It means: See you! Bye!",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:31.897Z"
+  },
   "fa8563affa380690": {
     "path": "pl/audio/marek/fa8563affa380690.m4a",
     "durationSeconds": 6.56,
@@ -268,5 +862,14 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:25.203Z"
+  },
+  "fb36f1bafb9ea9b6": {
+    "path": "pl/audio/anna/fb36f1bafb9ea9b6.m4a",
+    "durationSeconds": 1.08,
+    "text": "Polite.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-01T07:31:18.737Z"
   }
 }

@@ -2,6 +2,117 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "key": "lesson:pl-greetings",
+      "content": {
+        "type": "lesson",
+        "id": "pl-greetings",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-greetings/video-bced083ca069.mp4",
+          "posterUrl": "pl/lesson/pl-greetings/poster-bced083ca069.jpg",
+          "captionsUrl": "pl/lesson/pl-greetings/captions-bced083ca069.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 119.86,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Greetings and goodbyes. Polite and informal ways to say hello and goodbye in Polish.",
+              "language": "en"
+            },
+            {
+              "text": "Polish has more than one way to greet people, and the choice depends on how formal the situation is.",
+              "language": "en"
+            },
+            {
+              "text": "Dzień dobry is polite and works with people you do not know well.",
+              "language": "en"
+            },
+            {
+              "text": "Cześć is informal: it is used with friends and family, both to say hello and to say goodbye.",
+              "language": "en"
+            },
+            {
+              "text": "Dzień dobry.",
+              "language": "pl",
+              "translation": "Good day; hello."
+            },
+            {
+              "text": "Polite. Used during the day.",
+              "language": "en"
+            },
+            {
+              "text": "Dobry wieczór.",
+              "language": "pl",
+              "translation": "Good evening."
+            },
+            {
+              "text": "Polite. Used in the evening.",
+              "language": "en"
+            },
+            {
+              "text": "Cześć!",
+              "language": "pl",
+              "translation": "Hi! Bye!"
+            },
+            {
+              "text": "Informal. For friends and family.",
+              "language": "en"
+            },
+            {
+              "text": "Do widzenia.",
+              "language": "pl",
+              "translation": "Goodbye."
+            },
+            {
+              "text": "Polite.",
+              "language": "en"
+            },
+            {
+              "text": "Na razie!",
+              "language": "pl",
+              "translation": "See you! Bye!"
+            },
+            {
+              "text": "Informal.",
+              "language": "en"
+            },
+            {
+              "text": "Dobranoc.",
+              "language": "pl",
+              "translation": "Good night."
+            },
+            {
+              "text": "Said when saying goodnight, not as a general goodbye.",
+              "language": "en"
+            },
+            {
+              "text": "Now it's your turn. Practise with the exercises below the video.",
+              "language": "en"
+            }
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "1fc3e0eb8e4bf731e3e3137c4607effc474854815aaf482d6aa512d6a033edb4",
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-01T07:35:56.476Z",
+        "providerCalls": 10
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:29:37.868Z",
+      "updatedAt": "2026-10-01T07:35:56.476Z"
+    },
+    {
       "key": "lesson:pl-introducing-yourself",
       "content": {
         "type": "lesson",
@@ -112,6 +223,273 @@
       "updatedAt": "2026-10-01T07:25:05.800Z"
     },
     {
+      "key": "lesson:pl-no-articles",
+      "content": {
+        "type": "lesson",
+        "id": "pl-no-articles",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-no-articles/video-ee1694087cdb.mp4",
+          "posterUrl": "pl/lesson/pl-no-articles/poster-ee1694087cdb.jpg",
+          "captionsUrl": "pl/lesson/pl-no-articles/captions-ee1694087cdb.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 96.01,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Polish has no articles. Why there is no word for a, an or the, and what to do about it.",
+              "language": "en"
+            },
+            {
+              "text": "Polish has no articles: there are no separate words for a, an or the.",
+              "language": "en"
+            },
+            {
+              "text": "A bare noun can therefore mean a cat or the cat, and the meaning comes from the situation.",
+              "language": "en"
+            },
+            {
+              "text": "When you translate into English, choose a, an or the from the context.",
+              "language": "en"
+            },
+            {
+              "text": "Mam kota.",
+              "language": "pl",
+              "translation": "I have a cat."
+            },
+            {
+              "text": "There is no word for a. The ending of kota changes because it is the object of the verb; that is a later topic.",
+              "language": "en"
+            },
+            {
+              "text": "Kot śpi.",
+              "language": "pl",
+              "translation": "The cat is sleeping."
+            },
+            {
+              "text": "It could also mean A cat is sleeping, depending on the situation.",
+              "language": "en"
+            },
+            {
+              "text": "Mam psa.",
+              "language": "pl",
+              "translation": "I have a dog."
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en"
+            }
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "78d283e193f4dea74c1cf7c7c0f16c05a7f9a932a5a94caeaf2a8aefd89b3d7a",
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-01T07:44:57.008Z",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:44:57.008Z",
+      "updatedAt": "2026-10-01T07:44:57.008Z"
+    },
+    {
+      "key": "lesson:pl-polite-words",
+      "content": {
+        "type": "lesson",
+        "id": "pl-polite-words",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-polite-words/video-8aeb4d6159a0.mp4",
+          "posterUrl": "pl/lesson/pl-polite-words/poster-8aeb4d6159a0.jpg",
+          "captionsUrl": "pl/lesson/pl-polite-words/captions-8aeb4d6159a0.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 112.1,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Please, thank you and sorry. A few short words that make everyday conversations polite.",
+              "language": "en"
+            },
+            {
+              "text": "Proszę and dziękuję are among the most useful Polish words.",
+              "language": "en"
+            },
+            {
+              "text": "Proszę means please when you ask for something.",
+              "language": "en"
+            },
+            {
+              "text": "It also means here you are when you hand something over, and you are welcome when someone thanks you.",
+              "language": "en"
+            },
+            {
+              "text": "Dziękuję means thank you.",
+              "language": "en"
+            },
+            {
+              "text": "Dziękuję.",
+              "language": "pl",
+              "translation": "Thank you."
+            },
+            {
+              "text": "Dziękuję bardzo.",
+              "language": "pl",
+              "translation": "Thank you very much."
+            },
+            {
+              "text": "Proszę.",
+              "language": "pl",
+              "translation": "Please. Here you are. You are welcome."
+            },
+            {
+              "text": "One word, three uses. The situation tells you which.",
+              "language": "en"
+            },
+            {
+              "text": "Przepraszam.",
+              "language": "pl",
+              "translation": "Sorry. Excuse me."
+            },
+            {
+              "text": "Tak.",
+              "language": "pl",
+              "translation": "Yes."
+            },
+            {
+              "text": "Nie.",
+              "language": "pl",
+              "translation": "No."
+            },
+            {
+              "text": "Now it's your turn. Practise with the exercises below the video.",
+              "language": "en"
+            }
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "605d2ac791eee0d075a6d09f3cb88d2b605b872770a4cfb06dc542bd0c540a2b",
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-01T07:40:54.018Z",
+        "providerCalls": 17
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:40:54.018Z",
+      "updatedAt": "2026-10-01T07:40:54.018Z"
+    },
+    {
+      "key": "lesson:pl-spelling-and-sounds",
+      "content": {
+        "type": "lesson",
+        "id": "pl-spelling-and-sounds",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-01T07:46:57.408Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:46:57.408Z",
+      "updatedAt": "2026-10-01T07:46:57.408Z"
+    },
+    {
+      "key": "vocabulary-item:pl-czesc",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-czesc",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-01T07:47:20.769Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:47:20.769Z",
+      "updatedAt": "2026-10-01T07:47:20.769Z"
+    },
+    {
+      "key": "vocabulary-item:pl-do-widzenia",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-do-widzenia",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-01T07:48:30.727Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:48:30.727Z",
+      "updatedAt": "2026-10-01T07:48:30.727Z"
+    },
+    {
+      "key": "vocabulary-item:pl-dobry-wieczor",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dobry-wieczor",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-01T07:48:07.504Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:48:07.504Z",
+      "updatedAt": "2026-10-01T07:48:07.504Z"
+    },
+    {
       "key": "vocabulary-item:pl-dom",
       "content": {
         "type": "vocabulary-item",
@@ -194,6 +572,29 @@
       },
       "createdAt": "2026-10-01T07:26:31.116Z",
       "updatedAt": "2026-10-01T07:26:31.116Z"
+    },
+    {
+      "key": "vocabulary-item:pl-dzien-dobry",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dzien-dobry",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-01T07:47:44.247Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:47:44.247Z",
+      "updatedAt": "2026-10-01T07:47:44.247Z"
     }
   ]
 }
