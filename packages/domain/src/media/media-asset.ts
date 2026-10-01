@@ -56,6 +56,8 @@ export interface TranscriptLine {
   language: LanguageId;
   /** A translation shown alongside, when the line is in the language being learned. */
   translation?: string | undefined;
+  /** Who says it: a character's name, or the narrator (M22). */
+  speaker?: string | undefined;
 }
 
 export interface AudioAsset {

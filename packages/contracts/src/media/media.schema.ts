@@ -31,17 +31,195 @@ export const narratorsFileSchema = z.strictObject({
     .min(1),
 });
 
-export const mediaPlanFileSchema = z.strictObject({
-  schemaVersion: z.literal(1),
-  languageId: slug,
-  lessons: z.array(
-    z.strictObject({ contentId: slug, narratorId, priority: z.number().int().min(1).max(3) }),
+const environment = z.enum([
+  "street",
+  "suburb",
+  "cafe",
+  "home",
+  "kitchen",
+  "bedroom",
+  "shop",
+  "station",
+  "office",
+  "school",
+  "park",
+  "airport",
+]);
+const id = z.string().regex(/^[a-z][a-z0-9-]{0,39}$/);
+const x = z.number().min(-200).max(1480);
+
+export const stageSchema = z.strictObject({
+  environment,
+  time: z.enum(["day", "evening", "night"]).optional(),
+  actors: z.array(
+    z.strictObject({
+      id,
+      x,
+      facing: z.enum(["left", "right"]),
+      offstage: z.boolean().optional(),
+      seated: z.boolean().optional(),
+    }),
   ),
-  vocabularyCategories: z.array(
-    z.strictObject({ categoryId: slug, narratorId, priority: z.number().int().min(1).max(3) }),
+  props: z.array(
+    z.strictObject({
+      id,
+      type: z.string().regex(/^[a-z0-9-]+$/),
+      x,
+      y: z.number().min(0).max(720),
+      scale: z.number().min(0.2).max(3).optional(),
+      hidden: z.boolean().optional(),
+      count: z.number().int().min(1).max(9).optional(),
+    }),
   ),
-  vocabularyPictograms: z.record(slug, z.string().regex(/^[a-z0-9-]+$/)),
+  sign: z.string().min(1).max(30).optional(),
 });
+
+export const stageActionSchema = z.discriminatedUnion("do", [
+  z.strictObject({ do: z.literal("enter"), actor: id, to: x }),
+  z.strictObject({ do: z.literal("exit"), actor: id, side: z.enum(["left", "right"]) }),
+  z.strictObject({ do: z.literal("walk"), actor: id, to: x }),
+  z.strictObject({ do: z.literal("turn"), actor: id, facing: z.enum(["left", "right"]) }),
+  z.strictObject({ do: z.literal("point"), actor: id, at: id }),
+  z.strictObject({ do: z.literal("raise-hand"), actor: id }),
+  z.strictObject({ do: z.literal("wave"), actor: id }),
+  z.strictObject({ do: z.literal("nod"), actor: id }),
+  z.strictObject({ do: z.literal("shake-head"), actor: id }),
+  z.strictObject({ do: z.literal("handshake"), actor: id, with: id }),
+  z.strictObject({ do: z.literal("give"), actor: id, prop: id, to: id }),
+  z.strictObject({ do: z.literal("pick-up"), actor: id, prop: id }),
+  z.strictObject({ do: z.literal("show"), prop: id }),
+  z.strictObject({ do: z.literal("hide"), prop: id }),
+  z.strictObject({ do: z.literal("highlight"), target: id }),
+  z.strictObject({ do: z.literal("sleep"), actor: id }),
+]);
+
+const when = z.enum(["lead", "with", "after"]);
+const timedAction = z.intersection(stageActionSchema, z.object({ when: when.optional() }));
+
+const planLine = z.strictObject({
+  by: z.string().optional(),
+  target: z.string().min(1).max(200).optional(),
+  say: z.string().min(1).max(300).optional(),
+  leadIn: z.number().min(0).max(8).optional(),
+  pauseAfter: z.number().min(0).max(8).optional(),
+});
+const segment = z.enum([
+  "situation",
+  "target",
+  "form",
+  "pronunciation",
+  "conversation",
+  "notice",
+  "retrieval",
+  "reuse",
+  "recap",
+]);
+const castMember = z.strictObject({
+  id,
+  name: z.string().min(1).max(30),
+  look: z.string().regex(/^[a-z0-9-]+$/),
+  voice: z.string().regex(/^[a-z][a-z0-9-]{1,31}$/),
+});
+
+export const lessonVideoPlanSchema = z.strictObject({
+  schemaVersion: z.literal(2),
+  contentId: z.string().regex(/^[a-z0-9]+(?:-[a-z0-9]+)*$/),
+  objective: z.string().min(10).max(300),
+  narrator: z.string(),
+  cast: z.array(castMember).min(1),
+  targetVocabularyIds: z.array(z.string()),
+  scenes: z
+    .array(
+      z.discriminatedUnion("kind", [
+        z.strictObject({
+          kind: z.literal("situation"),
+          segment,
+          overlayTitle: z.boolean().optional(),
+          stage: stageSchema,
+          beats: z
+            .array(
+              z.strictObject({
+                line: planLine,
+                actions: z.array(timedAction).optional(),
+                card: z
+                  .union([z.boolean(), z.strictObject({ meaning: z.string().min(1) })])
+                  .optional(),
+              }),
+            )
+            .min(1),
+        }),
+        z.strictObject({
+          kind: z.literal("focus"),
+          segment,
+          heading: z.string(),
+          phrase: z.string(),
+          highlight: z.string().optional(),
+          respelling: z.boolean().optional(),
+          panels: z
+            .array(z.strictObject({ caption: z.string(), text: z.string() }))
+            .max(3)
+            .optional(),
+          lines: z.array(planLine).min(1),
+        }),
+        z.strictObject({
+          kind: z.literal("contrast"),
+          segment,
+          heading: z.string(),
+          items: z
+            .array(z.strictObject({ phoneticId: z.string(), word: z.string() }))
+            .min(2)
+            .max(2),
+          lines: z.array(planLine).min(2),
+          itemLines: z.array(z.number().int().min(0)),
+        }),
+        z.strictObject({
+          kind: z.literal("retrieval"),
+          segment,
+          stage: stageSchema,
+          setup: z.array(stageActionSchema),
+          prompt: z.string().min(3).max(200),
+          answer: z.string(),
+          answerBy: z.string().optional(),
+        }),
+        z.strictObject({
+          kind: z.literal("next-step"),
+          segment,
+          heading: z.string(),
+          body: z.string(),
+          say: z.string(),
+        }),
+      ]),
+    )
+    .min(3),
+});
+
+export const vocabularyVisualSchema = z.strictObject({
+  stage: stageSchema,
+  actor: id,
+  action: stageActionSchema,
+  stage2: stageSchema.optional(),
+  actor2: id.optional(),
+  action2: stageActionSchema.optional(),
+  prompt: z.string().min(3).max(200).optional(),
+});
+
+export const mediaPlanFileSchema = z.strictObject({
+  schemaVersion: z.literal(2),
+  languageId: slug,
+  lessons: z.array(z.strictObject({ contentId: slug, priority: z.number().int().min(1).max(3) })),
+  vocabularyCategories: z.array(
+    z.strictObject({
+      categoryId: slug,
+      priority: z.number().int().min(1).max(3),
+      narrator: narratorId,
+      cast: z.array(castMember).min(1),
+    }),
+  ),
+  vocabulary: z.record(slug, vocabularyVisualSchema),
+});
+
+export type LessonVideoPlanFile = z.infer<typeof lessonVideoPlanSchema>;
+export type VocabularyVisualFile = z.infer<typeof vocabularyVisualSchema>;
 
 export type NarratorsFile = z.infer<typeof narratorsFileSchema>;
 export type MediaPlanFile = z.infer<typeof mediaPlanFileSchema>;
@@ -50,6 +228,7 @@ const transcriptLineSchema = z.object({
   text: z.string(),
   language: z.string(),
   translation: z.string().optional(),
+  speaker: z.string().optional(),
 });
 
 export const videoAssetResponseSchema = z.object({

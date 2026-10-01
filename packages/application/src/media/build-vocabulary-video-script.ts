@@ -1,20 +1,26 @@
-import type {
-  ContentItem,
-  NarrationLine,
-  VideoScene,
-  VideoScript,
-  VocabularyCategory,
-  VocabularyItem,
+import {
+  pedagogyFor,
+  type ContentItem,
+  type NarrationLine,
+  type StageAction,
+  type VideoScene,
+  type VideoScript,
+  type VocabularyCategory,
+  type VocabularyItem,
 } from "@tfm-bic/domain";
 
-import { speakableTranslation } from "./build-lesson-video-script.js";
+import {
+  FRAMING,
+  InvalidVideoPlanError,
+  speakableTranslation,
+  type ContentLanguage,
+} from "./build-lesson-video-script.js";
+import type { VocabularyCategoryVideoPlan, VocabularyVisual } from "./video-plan.js";
 
 /** Bump when the wording rules below change: every vocabulary video is then out of date. */
-export const VOCABULARY_SCRIPT_VERSION = 1;
+export const VOCABULARY_SCRIPT_VERSION = 2;
 
-const REPEAT_PAUSE_SECONDS = 1.2;
-
-/** An example sentence the video may show, and where it comes from. */
+/** An example sentence the video may use, and where it comes from. */
 export interface VocabularyExampleSource {
   text: string;
   translation: string;
@@ -29,12 +35,9 @@ function words(text: string, locale: string): string[] {
 }
 
 /**
- * The example a word's video uses: the item's own example when it has one, otherwise the first
- * example or dialogue line in a published lesson of the same language that contains the lemma
- * *verbatim as whole words* — a quotation, labelled with its lesson, never a sentence written for
- * the video. Returns `undefined` when the content has none: no example is ever invented (M21 §44).
- * Inflected forms (Polish "kota" for "kot") deliberately do not match — deciding that two forms
- * are the same word is linguistic analysis the content does not provide.
+ * The example a word's video uses: the item's own example, otherwise the first lesson example or
+ * dialogue line containing the lemma verbatim as whole words (labelled with its lesson). Never
+ * invented; inflected forms deliberately do not match.
  */
 export function findVocabularyExample(
   item: VocabularyItem,
@@ -42,19 +45,16 @@ export function findVocabularyExample(
   locale: string,
 ): VocabularyExampleSource | undefined {
   if (item.example) return { text: item.example.text, translation: item.example.translation };
-
   const lemma = words(item.lemma, locale);
   if (lemma.length === 0) return undefined;
   const containsLemma = (text: string) => {
     const w = words(text, locale);
-    // A sentence that *is* the lemma adds nothing over the word scene itself.
     if (w.length <= lemma.length) return false;
     for (let i = 0; i + lemma.length <= w.length; i += 1) {
       if (lemma.every((part, j) => w[i + j] === part)) return true;
     }
     return false;
   };
-
   const sorted = [...lessons]
     .filter((l) => l.languageId === item.languageId && l.status === "published")
     .sort((a, b) => a.order - b.order);
@@ -76,115 +76,187 @@ export function findVocabularyExample(
 export interface VocabularyScriptInput {
   item: VocabularyItem;
   category: VocabularyCategory;
-  narratorId: string;
-  /** Locale of the language being learned (from the catalog), for case-insensitive matching. */
-  locale: string;
+  plan: VocabularyCategoryVideoPlan;
+  visual: VocabularyVisual;
+  language: ContentLanguage;
   example?: VocabularyExampleSource | undefined;
-  /** A language-independent pictogram key from the content's visuals map, when there is one. */
-  pictogram?: string | undefined;
 }
 
-const PART_OF_SPEECH_LABELS: Record<string, string> = {
-  noun: "Noun",
-  verb: "Verb",
-  adjective: "Adjective",
-  adverb: "Adverb",
-  pronoun: "Pronoun",
-  preposition: "Preposition",
-  conjunction: "Conjunction",
-  interjection: "Interjection",
-  numeral: "Numeral",
-  particle: "Particle",
-  phrase: "Phrase",
-};
-
-function label(value: string): string {
-  return PART_OF_SPEECH_LABELS[value] ?? value.charAt(0).toUpperCase() + value.slice(1);
+function languageName(language: string): string {
+  try {
+    return new Intl.DisplayNames(["en"], { type: "language" }).of(language) ?? language;
+  } catch {
+    return language;
+  }
 }
 
 /**
- * The storyboard of one word's explanation video (M21): the word appears and is pronounced twice,
- * its meaning (with a pictogram when the content maps one), what the content says about its
- * grammar, an example in context when the content has one, and a short recap. Word, meaning,
- * grammar facts, note and example are verbatim content; framing sentences are fixed.
+ * The storyboard of one word's video (M22): a place where the meaning is visible, a character who
+ * meets the object (or the situation) and says the word, its meaning, what the content says about its
+ * form, its example in context when the content has one, a second context in another voice (talker
+ * variability), a retrieval moment with the object as the cue, and a hand-off. Word, meaning, plural,
+ * note and example are content; the rest is fixed framing.
  */
 export function buildVocabularyVideoScript(input: VocabularyScriptInput): VideoScript {
-  const { item, category } = input;
+  const { item, category, plan, visual, language } = input;
   const en = item.instructionLanguage;
   const target = item.languageId;
-  const scenes: VideoScene[] = [];
-
-  const facts: { label: string; value: string; spokenValue?: boolean }[] = [];
-  if (item.partOfSpeech) facts.push({ label: "Part of speech", value: label(item.partOfSpeech) });
-  if (item.gender) facts.push({ label: "Gender", value: label(item.gender) });
-  if (item.plural) facts.push({ label: "Plural", value: item.plural, spokenValue: true });
-
-  const wordNarration: NarrationLine[] = [
-    { text: item.lemma, language: target, pauseAfter: REPEAT_PAUSE_SECONDS },
-    { text: item.lemma, language: target, pauseAfter: 0.4 },
-    { text: `It means: ${speakableTranslation(item.translation)}.`, language: en },
-  ];
-  if (item.plural) {
-    wordNarration.push(
-      { text: "The plural is:", language: en },
-      { text: item.plural, language: target, pauseAfter: 0.4 },
-    );
+  const pedagogy = pedagogyFor(item.levelId);
+  const problems: string[] = [];
+  const castIds = new Set(plan.cast.map((c) => c.id));
+  for (const id of [visual.actor, visual.actor2]) {
+    if (id !== undefined && !castIds.has(id)) {
+      problems.push(`actor "${id}" is not in the ${category.id} cast.`);
+    }
   }
-  if (item.note) wordNarration.push({ text: item.note, language: en });
-
-  scenes.push({
-    kind: "title",
-    eyebrow: `${category.title} · New word`,
-    title: item.lemma,
-    narration: [{ text: `A new word from ${category.title.toLowerCase()}.`, language: en }],
+  const t = (text: string, extra: Partial<NarrationLine> = {}): NarrationLine => ({
+    text,
+    language: target,
+    ...extra,
   });
+  const say = (text: string, extra: Partial<NarrationLine> = {}): NarrationLine => ({
+    text,
+    language: en,
+    ...extra,
+  });
+  const meaning = speakableTranslation(item.translation);
+  const scenes: VideoScene[] = [];
+  /** The first stage again, with everyone already in place (for the example and the retrieval cue). */
+  const settled: typeof visual.stage = {
+    ...visual.stage,
+    actors: visual.stage.actors.map(({ offstage: _offstage, ...actor }) => actor),
+  };
+
+  // 1. Situation: the meaning is visible first, then the word is heard from someone in the scene.
+  const entering = visual.stage.actors.find((a) => a.id === visual.actor);
+  const entrance: StageAction[] = entering?.offstage
+    ? [{ do: "enter", actor: visual.actor, to: entering.x }]
+    : [];
   scenes.push({
-    kind: "word",
-    word: item.lemma,
+    kind: "situation",
+    segment: "situation",
+    overlayTitle: category.title,
+    stage: visual.stage,
+    narration: [
+      t(item.lemma, {
+        speaker: visual.actor,
+        leadIn: entrance.length ? 4.4 : 1.6,
+        pauseAfter: 0.9,
+      }),
+      say(`It means: ${meaning}.`),
+    ],
+    beats: [
+      {
+        line: 0,
+        actions: [...entrance, visual.action].map((action) => ({ when: "lead" as const, action })),
+        card: { text: item.lemma, meaning: item.translation },
+      },
+      { line: 1 },
+    ],
+  });
+
+  // 2. Form: the narrator's voice (a second talker), plural and note from the content.
+  const form: NarrationLine[] = [t(item.lemma, { pauseAfter: 1.1 })];
+  if (item.plural) form.push(say("The plural is:"), t(item.plural, { pauseAfter: 0.8 }));
+  if (item.note) form.push(say(item.note));
+  scenes.push({
+    kind: "focus",
+    segment: "target",
+    heading: [item.partOfSpeech, item.gender].filter(Boolean).join(" · ") || "New word",
+    phrase: item.lemma,
     meaning: item.translation,
-    ...(input.pictogram ? { pictogram: input.pictogram } : {}),
-    facts,
-    narration: wordNarration,
+    ...(item.plural ? { panels: [{ caption: "Plural", text: item.plural }] } : {}),
+    narration: form,
   });
 
+  // 3. Example in context, when the content has one.
   if (input.example) {
     scenes.push({
-      kind: "phrase",
-      heading: "In a sentence",
-      phrase: { text: input.example.text, translation: input.example.translation },
-      ...(input.example.fromLesson
-        ? { source: `From the lesson “${input.example.fromLesson}”` }
-        : {}),
-      highlight: item.lemma,
+      kind: "situation",
+      segment: "conversation",
+      stage: settled,
       narration: [
-        { text: input.example.text, language: target, pauseAfter: REPEAT_PAUSE_SECONDS },
-        { text: `It means: ${speakableTranslation(input.example.translation)}`, language: en },
+        t(input.example.text, { speaker: visual.actor, leadIn: 0.6, pauseAfter: 0.8 }),
+        say(`It means: ${speakableTranslation(input.example.translation)}`),
+      ],
+      beats: [
+        { line: 0, card: { text: input.example.text, meaning: input.example.translation } },
+        { line: 1 },
       ],
     });
   }
 
+  // 4. A second context, another voice.
+  if (visual.stage2 && visual.actor2) {
+    scenes.push({
+      kind: "situation",
+      segment: "reuse",
+      stage: visual.stage2,
+      narration: [
+        t(item.lemma, { speaker: visual.actor2, leadIn: 3.8, pauseAfter: 0.8 }),
+        say(FRAMING.sameWordsNewPlace),
+      ],
+      beats: [
+        {
+          line: 0,
+          actions: visual.action2 ? [{ when: "lead", action: visual.action2 }] : [],
+          card: { text: item.lemma },
+        },
+        { line: 1 },
+      ],
+    });
+  }
+
+  // 5. Retrieval: the first context returns as the cue.
+  const highlightTarget =
+    visual.action.do === "point"
+      ? visual.action.at
+      : visual.action.do === "pick-up"
+        ? visual.action.prop
+        : visual.actor;
+  const highlight: StageAction[] = [visual.action, { do: "highlight", target: highlightTarget }];
   scenes.push({
-    kind: "recap",
-    heading: "Remember",
-    items: [{ text: item.lemma, translation: item.translation }],
-    narration: [{ text: item.lemma, language: target, pauseAfter: 0.8 }],
+    kind: "retrieval",
+    segment: "retrieval",
+    stage: settled,
+    setup: highlight,
+    answerBy: visual.actor,
+    answer: { text: item.lemma, meaning: item.translation },
+    narration: [
+      say(visual.prompt ?? `What is this in ${languageName(target)}?`, {
+        pauseAfter: pedagogy.retrievalPauseSeconds,
+      }),
+      t(item.lemma, { speaker: visual.actor, pauseAfter: 0.8 }),
+      say(FRAMING.selfCheck, { pauseAfter: 1.8 }),
+      t(item.lemma, { speaker: visual.actor, pauseAfter: 0.6 }),
+    ],
   });
+
   scenes.push({
     kind: "next-step",
+    segment: "recap",
     heading: "Keep it",
     body: "Save the word to review it later, or mark it as learned.",
-    narration: [{ text: "Save it to review later, or mark it as learned.", language: en }],
+    narration: [say("Save it to review later, or mark it as learned.")],
   });
+
+  if (!language.has(item.lemma)) problems.push(`"${item.lemma}" is not in the course content.`);
+  if (problems.length > 0) throw new InvalidVideoPlanError(item.id, problems);
 
   return {
     scriptVersion: VOCABULARY_SCRIPT_VERSION,
     content: { type: "vocabulary-item", id: item.id, languageId: item.languageId },
     purpose: "vocabulary-explanation",
+    objective: `Recognise, understand and recall "${item.lemma}" (${item.translation}).`,
     instructionLanguage: en,
     targetLanguage: target,
     level: item.levelId,
     title: item.lemma,
-    narratorId: input.narratorId,
+    narratorId: plan.narrator,
+    cast: plan.cast,
+    targetVocabularyIds: [item.id],
+    targetPhrases: [item.lemma, ...(input.example ? [input.example.text] : [])],
+    pedagogy,
     scenes,
   };
 }

@@ -476,12 +476,22 @@ export {
 // Educational media (M21) — the offline generation pipeline and the published-media read side.
 // See ADR-031 and docs/m21-video-architecture.md.
 export {
+  ContentLanguage,
+  FRAMING,
+  InvalidVideoPlanError,
   LESSON_SCRIPT_VERSION,
   buildLessonVideoScript,
   speakableTranslation,
-  splitSentences,
   type LessonScriptInput,
 } from "./media/build-lesson-video-script.js";
+export type {
+  LessonVideoPlan,
+  PlanBeat,
+  PlanLine,
+  PlanScene,
+  VocabularyCategoryVideoPlan,
+  VocabularyVisual,
+} from "./media/video-plan.js";
 export {
   VOCABULARY_SCRIPT_VERSION,
   buildVocabularyVideoScript,

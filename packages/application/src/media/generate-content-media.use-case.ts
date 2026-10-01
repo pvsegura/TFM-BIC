@@ -1,6 +1,7 @@
 import {
   mediaContentKey,
   narrationOf,
+  voiceOf,
   type AudioAsset,
   type AudioPurpose,
   type LanguageId,
@@ -25,6 +26,8 @@ export interface PronunciationRequest {
   purpose: AudioPurpose;
   text: string;
   language: LanguageId;
+  /** The cast member whose voice says it (default: the narrator) — the same clip the video uses. */
+  speaker?: string | undefined;
 }
 
 export interface MediaTarget {
@@ -83,7 +86,10 @@ export class GenerateContentMediaUseCase {
     return this.deps.hash(
       JSON.stringify({
         script,
-        narrator: this.deps.narration.fingerprint(script.narratorId),
+        // Every voice the video uses: changing any character's voice makes the video stale.
+        voices: [...new Set(narrationOf(script).map((line) => voiceOf(script, line)))]
+          .sort()
+          .map((voice) => this.deps.narration.fingerprint(voice)),
         renderer: this.deps.renderer.version,
       }),
     );
@@ -140,7 +146,9 @@ export class GenerateContentMediaUseCase {
       for (const line of narrationOf(script)) {
         clips.push(
           await this.deps.narration.synthesize({
-            narratorId: script.narratorId,
+            // Each line in its speaker's voice profile: the same profile for a character (or the
+            // narrator) everywhere in this video — configuration consistency, see ADR-031/032.
+            narratorId: voiceOf(script, line),
             text: line.text,
             language: line.language,
           }),
@@ -149,7 +157,11 @@ export class GenerateContentMediaUseCase {
       const pronunciationClips: { request: PronunciationRequest; clip: NarrationClip }[] = [];
       for (const request of target.pronunciations) {
         const clip = await this.deps.narration.synthesize({
-          narratorId: script.narratorId,
+          narratorId: voiceOf(script, {
+            text: request.text,
+            language: request.language,
+            speaker: request.speaker,
+          }),
           text: request.text,
           language: request.language,
         });
@@ -175,7 +187,7 @@ export class GenerateContentMediaUseCase {
         width: rendered.width,
         height: rendered.height,
         narrator,
-        transcript: transcriptOf(script),
+        transcript: transcriptOf(script, (voice) => this.deps.narration.displayName(voice)),
       };
       const audio: AudioAsset[] = pronunciationClips.map(({ request, clip }) => ({
         purpose: request.purpose,
@@ -183,7 +195,7 @@ export class GenerateContentMediaUseCase {
         durationSeconds: clip.durationSeconds,
         text: clip.text,
         language: clip.language,
-        narrator,
+        narrator: this.deps.narration.displayName(clip.narratorId),
       }));
 
       const providerCalls = this.deps.narration.providerCalls - callsBefore;
@@ -193,6 +205,28 @@ export class GenerateContentMediaUseCase {
         published: { video, audio },
         sourceHash,
         narratorId: script.narratorId,
+        version: (existing?.version ?? (existing?.published ? 1 : 0)) + 1,
+        scriptVersion: script.scriptVersion,
+        pedagogy: {
+          objective: script.objective,
+          level: script.level,
+          targetVocabularyIds: script.targetVocabularyIds,
+          targetPhrases: script.targetPhrases,
+          segments: [...new Set(script.scenes.map((scene) => scene.segment))],
+          retrievalMoments: script.scenes.filter((scene) => scene.kind === "retrieval").length,
+          voices: script.cast.map((member) => ({ character: member.name, voice: member.voice })),
+        },
+        previous: existing?.published
+          ? [
+              {
+                version: existing.version ?? 1,
+                sourceHash: existing.sourceHash,
+                scriptVersion: existing.scriptVersion ?? 1,
+                generatedAt: existing.updatedAt,
+              },
+              ...(existing.previous ?? []),
+            ].slice(0, 5)
+          : existing?.previous,
         lastRun: { status: "ready", at: now(), providerCalls },
         generator: this.deps.generatorNames,
         createdAt: existing?.createdAt ?? now(),
@@ -213,6 +247,10 @@ export class GenerateContentMediaUseCase {
         published: existing?.published ?? null,
         sourceHash: existing?.sourceHash ?? null,
         narratorId: script.narratorId,
+        version: existing?.version,
+        scriptVersion: existing?.scriptVersion,
+        pedagogy: existing?.pedagogy,
+        previous: existing?.previous,
         lastRun: { status: "failed", at: now(), error: message, providerCalls },
         generator: this.deps.generatorNames,
         createdAt: existing?.createdAt ?? now(),
@@ -224,43 +262,41 @@ export class GenerateContentMediaUseCase {
   }
 }
 
-/** What the video says and shows, as text, for the transcript next to the player. */
-export function transcriptOf(script: VideoScript): TranscriptLine[] {
+/**
+ * What the video says, in order, for the transcript next to the player: each line with its speaker
+ * and, for target-language lines, the meaning shown on screen. A retrieval moment's prompt is followed
+ * by "(pause)" so the transcript reflects the moment to recall; its repeated answer appears once.
+ */
+export function transcriptOf(
+  script: VideoScript,
+  displayName: (voiceProfileId: string) => string,
+): TranscriptLine[] {
   const lines: TranscriptLine[] = [];
+  const nameOf = (speaker: string | undefined) =>
+    speaker && speaker !== "narrator"
+      ? (script.cast.find((c) => c.id === speaker)?.name ?? speaker)
+      : `Narrator (${displayName(script.narratorId)})`;
   for (const scene of script.scenes) {
-    if (scene.kind === "phrase") {
+    const meaningFor = (text: string): string | undefined => {
+      if (scene.kind === "situation") {
+        return scene.beats.find((b) => b.card?.text === text)?.card?.meaning;
+      }
+      if (scene.kind === "focus" && scene.phrase === text) return scene.meaning;
+      if (scene.kind === "retrieval" && scene.answer.text === text) return scene.answer.meaning;
+      if (scene.kind === "contrast") return scene.items.find((i) => i.word === text)?.meaning;
+      return undefined;
+    };
+    scene.narration.forEach((line, index) => {
+      if (scene.kind === "retrieval" && index === 3) return;
+      const translation =
+        line.language === script.targetLanguage ? meaningFor(line.text) : undefined;
       lines.push({
-        text: scene.phrase.text,
-        language: script.targetLanguage,
-        translation: scene.phrase.translation,
+        text: scene.kind === "retrieval" && index === 0 ? `${line.text} (pause)` : line.text,
+        language: line.language,
+        speaker: nameOf(line.speaker),
+        ...(translation ? { translation } : {}),
       });
-      if (scene.phrase.note)
-        lines.push({ text: scene.phrase.note, language: script.instructionLanguage });
-      continue;
-    }
-    if (scene.kind === "dialogue") {
-      for (const line of scene.lines) {
-        lines.push({
-          text: `${line.speaker}: ${line.text}`,
-          language: script.targetLanguage,
-          translation: line.translation,
-        });
-      }
-      continue;
-    }
-    if (scene.kind === "word") {
-      lines.push({ text: scene.word, language: script.targetLanguage, translation: scene.meaning });
-      for (const fact of scene.facts) {
-        lines.push({ text: `${fact.label}: ${fact.value}`, language: script.instructionLanguage });
-      }
-      continue;
-    }
-    if (scene.kind === "recap") {
-      continue;
-    }
-    for (const line of scene.narration) {
-      lines.push({ text: line.text, language: line.language });
-    }
+    });
   }
   return lines;
 }

@@ -284,3 +284,11 @@ export {
   type NarratorsFile,
   type VideoAssetResponse,
 } from "./media/media.schema.js";
+export {
+  lessonVideoPlanSchema,
+  stageActionSchema,
+  stageSchema,
+  vocabularyVisualSchema,
+  type LessonVideoPlanFile,
+  type VocabularyVisualFile,
+} from "./media/media.schema.js";

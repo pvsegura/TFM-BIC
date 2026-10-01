@@ -78,6 +78,25 @@ export interface MediaManifestEntry {
   /** Hash of everything the published video was made from (script, narrator, renderer). */
   sourceHash: string | null;
   narratorId: string;
+  /** Increments with every successful generation of this content's video (M22). */
+  version?: number | undefined;
+  scriptVersion?: number | undefined;
+  /** What the published video teaches and how (M22) — for operators, future review, teachers. */
+  pedagogy?:
+    | {
+        objective: string;
+        level?: string | undefined;
+        targetVocabularyIds: string[];
+        targetPhrases: string[];
+        segments: string[];
+        retrievalMoments: number;
+        voices: { character: string; voice: string }[];
+      }
+    | undefined;
+  /** Earlier published versions (newest first, at most five). */
+  previous?:
+    | { version: number; sourceHash: string | null; scriptVersion: number; generatedAt: string }[]
+    | undefined;
   lastRun: {
     status: Exclude<MediaRunStatus, "requested" | "generating-audio" | "rendering" | "skipped">;
     at: string;

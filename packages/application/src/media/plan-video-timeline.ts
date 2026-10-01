@@ -16,6 +16,10 @@ export interface TimedLine {
   text: string;
   language: LanguageId;
   clipPath: string;
+  /** Who speaks (a cast id), absent for the narrator — drives the right character's mouth. */
+  speaker?: string | undefined;
+  /** When the line's lead-in silence starts (actions timed "lead" begin here). */
+  leadStart: number;
 }
 
 export interface TimedScene {
@@ -53,7 +57,11 @@ export function planVideoTimeline(
       const clip = clips[clipIndex];
       clipIndex += 1;
       if (!clip) throw new Error("Fewer narration clips than narration lines.");
+      const leadStart = t;
+      t += line.leadIn ?? 0;
       lines.push({
+        leadStart: round(leadStart),
+        ...(line.speaker ? { speaker: line.speaker } : {}),
         sceneIndex,
         lineIndex,
         start: round(t),
