@@ -19,6 +19,33 @@
         "voice": "Iapetus",
         "style": "Speak as a friendly, patient language teacher: relaxed, clear and precise."
       }
+    },
+    {
+      "id": "ola",
+      "displayName": "Ola",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Aoede",
+        "style": "Speak naturally and clearly, as a friendly young woman in an everyday conversation."
+      }
+    },
+    {
+      "id": "piotr",
+      "displayName": "Piotr",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Puck",
+        "style": "Speak naturally and clearly, as a cheerful young man in an everyday conversation."
+      }
+    },
+    {
+      "id": "tomek",
+      "displayName": "Tomek",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Charon",
+        "style": "Speak naturally and clearly, as a calm, friendly man in an everyday conversation."
+      }
     }
   ]
 }

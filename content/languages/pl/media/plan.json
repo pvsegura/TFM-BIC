@@ -1,46 +1,212 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "languageId": "pl",
   "lessons": [
-    { "contentId": "pl-greetings", "narratorId": "anna", "priority": 1 },
-    { "contentId": "pl-introducing-yourself", "narratorId": "marek", "priority": 1 },
-    { "contentId": "pl-polite-words", "narratorId": "anna", "priority": 1 },
-    { "contentId": "pl-no-articles", "narratorId": "marek", "priority": 1 },
-    { "contentId": "pl-spelling-and-sounds", "narratorId": "anna", "priority": 1 }
+    {
+      "contentId": "pl-greetings",
+      "priority": 1
+    },
+    {
+      "contentId": "pl-introducing-yourself",
+      "priority": 1
+    },
+    {
+      "contentId": "pl-polite-words",
+      "priority": 1
+    },
+    {
+      "contentId": "pl-no-articles",
+      "priority": 1
+    },
+    {
+      "contentId": "pl-spelling-and-sounds",
+      "priority": 1
+    }
   ],
   "vocabularyCategories": [
-    { "categoryId": "greetings", "narratorId": "anna", "priority": 1 },
-    { "categoryId": "everyday", "narratorId": "marek", "priority": 1 },
-    { "categoryId": "family", "narratorId": "anna", "priority": 2 },
-    { "categoryId": "food", "narratorId": "marek", "priority": 2 },
-    { "categoryId": "numbers", "narratorId": "anna", "priority": 2 },
-    { "categoryId": "travel", "narratorId": "marek", "priority": 2 }
+    {
+      "categoryId": "greetings",
+      "priority": 1,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-c",
+          "voice": "ola"
+        },
+        {
+          "id": "piotr",
+          "name": "Piotr",
+          "look": "man-a",
+          "voice": "piotr"
+        }
+      ]
+    },
+    {
+      "categoryId": "everyday",
+      "priority": 1,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-c",
+          "voice": "ola"
+        },
+        {
+          "id": "tomek",
+          "name": "Tomek",
+          "look": "man-b",
+          "voice": "marek"
+        }
+      ]
+    },
+    {
+      "categoryId": "family",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ewa",
+          "name": "Ewa",
+          "look": "woman-d",
+          "voice": "ola"
+        },
+        {
+          "id": "piotr",
+          "name": "Piotr",
+          "look": "man-a",
+          "voice": "piotr"
+        },
+        {
+          "id": "zosia",
+          "name": "Zosia",
+          "look": "girl-a",
+          "voice": "ola"
+        },
+        {
+          "id": "kuba",
+          "name": "Kuba",
+          "look": "boy-a",
+          "voice": "piotr"
+        }
+      ]
+    },
+    {
+      "categoryId": "food",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-b",
+          "voice": "ola"
+        },
+        {
+          "id": "tomek",
+          "name": "Tomek",
+          "look": "shopkeeper",
+          "voice": "anna"
+        }
+      ]
+    },
+    {
+      "categoryId": "numbers",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "piotr",
+          "name": "Piotr",
+          "look": "man-c",
+          "voice": "piotr"
+        },
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "travel",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-d",
+          "voice": "ola"
+        },
+        {
+          "id": "piotr",
+          "name": "Piotr",
+          "look": "man-a",
+          "voice": "piotr"
+        }
+      ]
+    }
   ],
-  "vocabularyPictograms": {
-    "pl-dom": "house",
-    "pl-kot": "cat",
-    "pl-pies": "dog",
-    "pl-ksiazka": "book",
-    "pl-praca": "briefcase",
-    "pl-rodzina": "family",
-    "pl-chleb": "bread",
-    "pl-woda": "water",
-    "pl-mleko": "milk",
-    "pl-jablko": "apple",
-    "pl-ser": "cheese",
-    "pl-czesc": "wave",
-    "pl-dzien-dobry": "sun",
-    "pl-dobry-wieczor": "evening",
-    "pl-do-widzenia": "wave",
-    "pl-dobranoc": "moon",
-    "pl-jeden": "count-1",
-    "pl-dwa": "count-2",
-    "pl-trzy": "count-3",
-    "pl-cztery": "count-4",
-    "pl-piec": "count-5",
-    "pl-pociag": "train",
-    "pl-bilet": "ticket",
-    "pl-lotnisko": "plane",
-    "pl-walizka": "suitcase"
+  "vocabulary": {
+    "pl-dom": {
+      "stage": {
+        "environment": "suburb",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": [
+          {
+            "id": "house",
+            "type": "house",
+            "x": 820,
+            "y": 610,
+            "scale": 1.35
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "house"
+      },
+      "stage2": {
+        "environment": "suburb",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 300,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "house",
+            "type": "house",
+            "x": 900,
+            "y": 610,
+            "scale": 1.1
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "walk",
+        "actor": "tomek",
+        "to": 760
+      },
+      "prompt": "What is this in Polish?"
+    }
   }
 }

@@ -6,17 +6,18 @@ import { parseArgs } from "node:util";
 
 import {
   GenerateContentMediaUseCase,
+  planVideoTimeline,
   type AudioGenerationService,
   type MediaRunStatus,
 } from "@tfm-bic/application";
-import { narrationOf, type LanguageId } from "@tfm-bic/domain";
+import { narrationOf, voiceOf, type LanguageId } from "@tfm-bic/domain";
 
 import { SystemClock } from "../clock/system-clock.js";
 import { GeminiAudioProvider } from "../audio/gemini-audio.provider.js";
 import { DEFAULT_CONTENT_ROOT } from "../content/content-root.js";
 import { loadContentRepositories } from "../content/load-content-repositories.js";
 import { FileMediaManifestRepository } from "./file-media-manifest.repository.js";
-import type { FfmpegTools } from "./ffmpeg.js";
+import { medianPitchHz, type FfmpegTools } from "./ffmpeg.js";
 import { HYPERFRAMES_VERSION, HyperframesVideoRenderer } from "./hyperframes-video-renderer.js";
 import { loadMediaPlan } from "./media-plan.js";
 import { planMediaTargets } from "./media-targets.js";
@@ -217,7 +218,7 @@ async function main() {
       return;
     }
     case "plan": {
-      const targets = await planMediaTargets(repos, plan, filter);
+      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
       const synth = synthesizer(undefined);
       const clipIndex = path.join(mediaRoot, languageId, "audio", "clips.json");
       const clips = existsSync(clipIndex)
@@ -242,7 +243,7 @@ async function main() {
           const k = createHash("sha256")
             .update(
               JSON.stringify([
-                synth.fingerprint(t.script.narratorId),
+                synth.fingerprint(voiceOf(t.script, line)),
                 line.language,
                 line.text.replace(/\s+/g, " ").trim(),
               ]),
@@ -259,9 +260,10 @@ async function main() {
           `${t.key.padEnd(34)} p${String(t.priority)}  ${(upToDate ? "up to date" : entry?.published?.video ? "outdated" : entry?.lastRun.status === "failed" ? "failed" : "missing").padEnd(10)}  ${String(fresh).padStart(3)} new clips  ${t.label}`,
         );
       }
+      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED     ${b.label} — ${b.reason}`);
       out();
       out(
-        `${String(targets.length)} targets; generating the missing/outdated ones needs about ${String(newLines)} provider calls.`,
+        `${String(targets.length)} targets, ${String(blocked.length)} blocked; generating the missing/outdated ones needs about ${String(newLines)} provider calls.`,
       );
       return;
     }
@@ -269,7 +271,9 @@ async function main() {
       const key = loadKey();
       const synth = synthesizer(key, path.join(BUILD_ROOT, "audition"));
       const sample = await firstExamplePhrase(repos, languageId);
+      const only = values.only?.split(",").map((v) => v.trim());
       for (const narratorId of plan.narrators.keys()) {
+        if (only && !only.includes(narratorId)) continue;
         for (const line of [
           { text: "Hello. In this lesson you will learn how to greet people.", language: "en" },
           { text: sample, language: languageId },
@@ -279,10 +283,47 @@ async function main() {
             text: line.text,
             language: line.language as LanguageId,
           });
+          const f0 = await medianPitchHz(tools, path.join(BUILD_ROOT, "audition", clip.path));
           out(
-            `${narratorId.padEnd(8)} ${line.language}  ${clip.durationSeconds.toFixed(2)} s  .media-build/audition/${clip.path}`,
+            `${narratorId.padEnd(8)} ${line.language}  ${clip.durationSeconds.toFixed(2)} s  median pitch ${f0 ? `${String(f0)} Hz` : "n/a"}  .media-build/audition/${clip.path}`,
           );
         }
+      }
+      out(`Provider calls: ${String(synth.providerCalls)}`);
+      return;
+    }
+    case "compose": {
+      // Review aid: build scripts, synthesize (draft silence unless real audio already exists),
+      // and write the Hyperframes projects without rendering — frames can then be inspected fast.
+      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
+      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
+      const synth = synthesizer(draft ? undefined : loadKey());
+      const renderer = new HyperframesVideoRenderer({
+        mediaRoot,
+        buildRoot: path.join(BUILD_ROOT, "projects"),
+        ffmpeg: tools,
+        localeOf,
+      });
+      for (const t of targets) {
+        const clips = [];
+        for (const line of narrationOf(t.script)) {
+          clips.push(
+            await synth.synthesize({
+              narratorId: voiceOf(t.script, line),
+              text: line.text,
+              language: line.language,
+            }),
+          );
+        }
+        const timeline = planVideoTimeline(t.script, clips);
+        const dir = await renderer.writeProject(t.script, timeline);
+        out(
+          `${t.key.padEnd(34)} ${timeline.durationSeconds.toFixed(1)} s  ${path.relative(REPO_ROOT, dir)}`,
+        );
+        for (const scene of timeline.scenes)
+          out(
+            `    scene ${String(scene.index)} ${t.script.scenes[scene.index]?.kind ?? ""} ${scene.start.toFixed(1)}–${(scene.start + scene.duration).toFixed(1)}`,
+          );
       }
       out(`Provider calls: ${String(synth.providerCalls)}`);
       return;
@@ -296,7 +337,8 @@ async function main() {
       }
       const limit = intFlag("limit", values.limit, MAX_LIMIT);
       const maxCalls = intFlag("max-calls", values["max-calls"], MAX_CALLS_CEILING);
-      const targets = await planMediaTargets(repos, plan, filter);
+      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
+      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
       if (targets.length > limit && !values.yes) {
         out(
           `${String(targets.length)} targets match; at most ${String(limit)} will be generated this run (--limit).`,

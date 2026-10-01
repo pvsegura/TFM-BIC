@@ -19,7 +19,7 @@ import {
   WIDTH,
   buildComposition,
   buildWebVtt,
-} from "./hyperframes-composition.js";
+} from "./scene/composition.js";
 
 const require = createRequire(import.meta.url);
 
@@ -72,12 +72,8 @@ export class HyperframesVideoRenderer implements EducationalVideoRenderer {
     });
   }
 
-  async render(input: {
-    script: VideoScript;
-    timeline: VideoTimeline;
-    outputDir: string;
-  }): Promise<RenderedVideo> {
-    const { script, timeline } = input;
+  /** Writes the render project (composition, font, GSAP, clips) and returns its folder — no render. */
+  async writeProject(script: VideoScript, timeline: VideoTimeline): Promise<string> {
     const slug = `${script.content.type}-${script.content.id}`;
     const project = path.join(this.options.buildRoot, slug);
     await rm(project, { recursive: true, force: true });
@@ -106,10 +102,20 @@ export class HyperframesVideoRenderer implements EducationalVideoRenderer {
     }
 
     const html = buildComposition(script, timeline, {
-      locale: this.options.localeOf(script.targetLanguage),
       clipSrc: (clipPath) => clipFiles.get(clipPath) ?? clipPath,
     });
     await writeFile(path.join(project, "index.html"), html, "utf8");
+    return project;
+  }
+
+  async render(input: {
+    script: VideoScript;
+    timeline: VideoTimeline;
+    outputDir: string;
+  }): Promise<RenderedVideo> {
+    const { script, timeline } = input;
+    const slug = `${script.content.type}-${script.content.id}`;
+    await this.writeProject(script, timeline);
 
     const result = await this.provider.generate({
       videoDefinitionId: slug,

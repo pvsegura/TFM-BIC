@@ -1,7 +1,9 @@
-import { readFile } from "node:fs/promises";
+import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
+import type { LessonVideoPlan } from "@tfm-bic/application";
 import {
+  lessonVideoPlanSchema,
   mediaPlanFileSchema,
   narratorsFileSchema,
   type MediaPlanFile,
@@ -26,6 +28,8 @@ export interface MediaPlan {
   languageId: string;
   narrators: Map<string, NarratorConfig>;
   plan: MediaPlanFile;
+  /** Authored lesson video plans by content id (content/languages/<lang>/media/lessons/*.json). */
+  lessonPlans: Map<string, LessonVideoPlan>;
 }
 
 async function readJson(file: string): Promise<unknown> {
@@ -43,11 +47,35 @@ export async function loadMediaPlan(contentRoot: string, languageId: string): Pr
   if (plan.languageId !== languageId) problems.push("plan.json: wrong languageId");
   const byId = new Map(narrators.narrators.map((n) => [n.id, n]));
   if (byId.size !== narrators.narrators.length) problems.push("narrators.json: duplicate ids");
-  for (const entry of [...plan.lessons, ...plan.vocabularyCategories]) {
-    if (!byId.has(entry.narratorId))
-      problems.push(`plan.json: unknown narrator ${entry.narratorId}`);
+  const voiceOk = (voice: string, where: string) => {
+    if (!byId.has(voice)) problems.push(`${where}: unknown voice profile "${voice}"`);
+  };
+  for (const category of plan.vocabularyCategories) {
+    voiceOk(category.narrator, `plan.json ${category.categoryId}`);
+    for (const member of category.cast) voiceOk(member.voice, `plan.json ${category.categoryId}`);
+  }
+
+  // One file per lesson that has a plan; a lesson listed in plan.json without one is "blocked".
+  const lessonPlans = new Map<string, LessonVideoPlan>();
+  const lessonsDir = path.join(dir, "lessons");
+  const files = await readdir(lessonsDir).catch(() => [] as string[]);
+  for (const file of files.filter((f) => f.endsWith(".json"))) {
+    const parsed = lessonVideoPlanSchema.safeParse(await readJson(path.join(lessonsDir, file)));
+    if (!parsed.success) {
+      problems.push(
+        `lessons/${file}: ${parsed.error.issues.map((i) => `${i.path.join(".")} ${i.message}`).join("; ")}`,
+      );
+      continue;
+    }
+    const lessonPlan = parsed.data;
+    if (`${lessonPlan.contentId}.json` !== file) {
+      problems.push(`lessons/${file}: contentId does not match the file name`);
+    }
+    voiceOk(lessonPlan.narrator, `lessons/${file}`);
+    for (const member of lessonPlan.cast) voiceOk(member.voice, `lessons/${file}`);
+    lessonPlans.set(lessonPlan.contentId, lessonPlan);
   }
   if (problems.length > 0) throw new Error(`Invalid media plan:\n${problems.join("\n")}`);
 
-  return { languageId, narrators: byId, plan };
+  return { languageId, narrators: byId, plan, lessonPlans };
 }
