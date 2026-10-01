@@ -5,6 +5,7 @@ import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import type { LearningLanguage } from "../components/content-blocks.js";
 import { EducationalVideo } from "../components/educational-video.js";
 import { LessonExercises } from "../components/lesson-exercises.js";
+import { LessonWords } from "../components/lesson-words.js";
 import { LessonViewer } from "../components/lesson-viewer.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import {
@@ -80,6 +81,12 @@ export function LessonPage() {
     return (
       <div className="mx-auto max-w-3xl py-8">
         <LessonViewer
+          words={
+            <LessonWords
+              languageId={lesson.languageId}
+              ids={mediaQuery.data?.video?.targetVocabularyIds ?? []}
+            />
+          }
           hero={
             <EducationalVideo
               video={mediaQuery.isSuccess ? mediaQuery.data.video : undefined}

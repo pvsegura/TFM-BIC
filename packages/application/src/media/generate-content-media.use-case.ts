@@ -188,6 +188,8 @@ export class GenerateContentMediaUseCase {
         height: rendered.height,
         narrator,
         transcript: transcriptOf(script, (voice) => this.deps.narration.displayName(voice)),
+        objective: script.objective,
+        targetVocabularyIds: script.targetVocabularyIds,
       };
       const audio: AudioAsset[] = pronunciationClips.map(({ request, clip }) => ({
         purpose: request.purpose,

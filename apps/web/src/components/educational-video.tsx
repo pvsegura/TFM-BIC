@@ -1,6 +1,6 @@
 import type { VideoAssetResponse } from "@tfm-bic/contracts";
 import { Button } from "@tfm-bic/ui";
-import { useId, useState, type ReactNode } from "react";
+import { useId, useRef, useState, type ReactNode } from "react";
 
 import { formatDuration } from "./format-duration.js";
 
@@ -44,6 +44,7 @@ export function EducationalVideo({
   const [playbackFailed, setPlaybackFailed] = useState(false);
   const [ended, setEnded] = useState(false);
   const transcriptId = useId();
+  const videoRef = useRef<HTMLVideoElement>(null);
 
   if (isLoading) {
     return (
@@ -87,6 +88,12 @@ export function EducationalVideo({
 
   return (
     <figure className="m-0">
+      {video.objective ? (
+        <p className="mb-2 text-sm">
+          <span className="font-semibold text-accent-ink dark:text-accent">In this video: </span>
+          {video.objective}
+        </p>
+      ) : null}
       <div
         className={FRAME}
         style={{ aspectRatio: `${String(video.width)} / ${String(video.height)}` }}
@@ -109,6 +116,7 @@ export function EducationalVideo({
           </div>
         ) : (
           <video
+            ref={videoRef}
             key={attempt}
             className="absolute inset-0 h-full w-full"
             controls
@@ -139,9 +147,23 @@ export function EducationalVideo({
         <span>Captions and transcript</span>
       </figcaption>
 
-      {ended && afterVideo ? (
-        <div role="status" className="mt-3 rounded-lg bg-accent/10 px-4 py-3">
-          {afterVideo}
+      {ended ? (
+        <div
+          role="status"
+          className="mt-3 flex flex-wrap items-center justify-between gap-3 rounded-lg bg-accent/10 px-4 py-3"
+        >
+          <div>{afterVideo}</div>
+          <Button
+            variant="secondary"
+            onClick={() => {
+              const element = videoRef.current;
+              if (!element) return;
+              element.currentTime = 0;
+              void element.play().catch(() => undefined);
+            }}
+          >
+            Watch again
+          </Button>
         </div>
       ) : null}
 
@@ -150,6 +172,9 @@ export function EducationalVideo({
         <ol id={transcriptId} aria-label="Transcript" className="mt-2 space-y-1.5 pb-2 text-sm">
           {video.transcript.map((line, i) => (
             <li key={i}>
+              {line.speaker ? (
+                <span className="text-primary/60 dark:text-surface/60">{line.speaker}: </span>
+              ) : null}
               <span lang={line.language} className={line.translation ? "font-semibold" : undefined}>
                 {line.text}
               </span>

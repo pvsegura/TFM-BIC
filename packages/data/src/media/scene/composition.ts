@@ -535,23 +535,33 @@ function focusScene(
   </div>`;
 }
 
-/** Simplified side view (facing left): lips, teeth, palate and a tongue shape per articulation. */
+/**
+ * Simplified side view of the mouth (facing left), drawn from the phonetics content's own
+ * descriptions: for sz "the tongue tip curls further back"; for ś "the tongue body raised toward the
+ * hard palate". A listening guide, not an articulatory measurement.
+ */
 function mouthDiagram(articulation: "retroflex" | "alveolo-palatal" | "plain"): string {
   const tongue =
     articulation === "retroflex"
-      ? "M70 150 Q90 120 118 104 Q132 96 128 84 Q122 78 112 86 Q100 100 96 118 Q120 140 190 150 Q230 170 240 210 L70 210 Z"
+      ? "M70 178 C70 150 84 136 104 118 C114 108 116 96 108 92 C98 90 96 104 100 116 C108 132 150 132 196 138 C228 142 246 160 250 196 L70 196 Z"
       : articulation === "alveolo-palatal"
-        ? "M70 150 Q78 132 96 126 Q120 96 160 92 Q200 92 220 118 Q240 150 240 210 L70 210 Z"
-        : "M70 150 Q90 136 130 132 Q190 128 220 150 Q240 170 240 210 L70 210 Z";
-  return `<svg viewBox="0 0 260 220" class="mouth">
-    <path d="M20 40 Q60 30 110 64 Q160 50 250 70 L250 0 L20 0 Z" fill="#f1c7a5"/>
-    <path d="M40 66 Q120 50 150 64 Q200 60 250 86" stroke="#c98e6b" stroke-width="8" fill="none" stroke-linecap="round"/>
-    <path d="M54 66 v14 M62 66 v12" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-    <path d="M54 186 v-16 M62 186 v-14" stroke="#ffffff" stroke-width="8" stroke-linecap="round"/>
-    <path d="M10 92 Q30 84 44 90 M10 166 Q30 174 44 168" stroke="#c0563b" stroke-width="10" fill="none" stroke-linecap="round"/>
+        ? "M64 168 C64 150 76 142 92 134 C112 104 148 86 182 90 C220 96 244 126 250 196 L64 196 Z"
+        : "M64 170 C80 150 120 142 170 142 C214 142 244 160 250 196 L64 196 Z";
+  const label =
+    articulation === "retroflex"
+      ? `<path d="M150 40 C134 52 118 70 108 88" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M104 80 l4 12 l10 -7" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="154" y="38" font-size="18" font-weight="700" fill="#b84010">tip curls back</text>`
+      : articulation === "alveolo-palatal"
+        ? `<path d="M168 24 C164 44 160 62 158 80" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M151 72 l7 12 l8 -10" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="174" y="24" font-size="18" font-weight="700" fill="#b84010">body rises</text>`
+        : "";
+  return `<svg viewBox="0 0 270 210" class="mouth" role="img" aria-label="Simplified side view of the mouth">
+    <path d="M24 30 C30 60 26 90 14 104 C22 112 30 118 26 132 C30 160 34 196 60 204 L270 204 L270 30 Z" fill="#f6dccb"/>
+    <path d="M58 64 C80 52 100 50 116 58 C150 40 200 40 248 62 L248 74 C200 58 150 60 118 72 C100 64 82 66 62 76 Z" fill="#e8b8a0"/>
+    <path d="M40 70 Q56 64 66 72 L62 92 Q50 88 40 92 Z" fill="#ffffff" stroke="#c9b7a7" stroke-width="2"/>
+    <path d="M42 176 Q56 182 66 174 L62 156 Q50 160 42 158 Z" fill="#ffffff" stroke="#c9b7a7" stroke-width="2"/>
+    <path d="M18 96 Q34 88 46 94 M18 140 Q34 148 46 142" stroke="#c0563b" stroke-width="10" fill="none" stroke-linecap="round"/>
     <path d="${tongue}" fill="#e57a7a" stroke="#b5515a" stroke-width="3"/>
-    ${articulation === "alveolo-palatal" ? `<path d="M150 70 q10 18 18 22" stroke="#ff6b35" stroke-width="3" fill="none"/>` : ""}
-    ${articulation === "retroflex" ? `<path d="M140 70 q-10 6 -14 18" stroke="#ff6b35" stroke-width="3" fill="none"/>` : ""}
+    <text x="196" y="58" font-size="15" fill="#8a6a5a">palate</text>
+    ${label}
   </svg>`;
 }
 
@@ -605,7 +615,7 @@ body{margin:0;background:#f8f9fa}
 .overlay-title{position:absolute;left:100px;top:26px;font-size:24px;font-weight:700;background:rgba(255,250,242,0.92);border-radius:10px;padding:5px 14px;opacity:0}
 .phrase-card{position:absolute;transform:translateX(-50%);min-width:180px;max-width:440px;background:#fffaf2;border:3px solid #1d2a3f;border-radius:18px;padding:12px 22px;text-align:center;opacity:0;box-shadow:0 8px 0 rgba(29,42,63,0.12)}
 .phrase-card::after{content:"";position:absolute;left:50%;bottom:-14px;margin-left:-12px;border:12px solid transparent;border-top-color:#1d2a3f;border-bottom:0}
-.phrase-card .said{display:block;font-size:40px;font-weight:800;line-height:1.1}
+.phrase-card{width:max-content}.phrase-card .said{display:block;font-size:40px;font-weight:800;line-height:1.1;white-space:nowrap}
 .phrase-card .gloss{display:block;margin-top:4px;font-size:22px;color:rgba(29,42,63,0.72);opacity:0}
 .phrase-card.answer{border-color:#1f7a4d}
 .phrase-card .ok{position:absolute;left:-18px;top:-18px;width:36px;height:36px;border-radius:50%;background:#1f7a4d;color:#fff;font-size:22px;line-height:36px;text-align:center}
@@ -626,7 +636,7 @@ body{margin:0;background:#f8f9fa}
 .panel .cap{display:block;font-size:18px;color:rgba(29,42,63,0.65)}.panel .said{font-size:34px;font-weight:800}
 .contrast{display:flex;gap:40px}
 .col{flex:1;border:3px solid rgba(29,42,63,0.15);border-radius:20px;padding:16px 24px;background:#fffaf2;text-align:center}
-.col .spell{font-size:72px;font-weight:800;line-height:1}.col .mouth{width:220px;height:186px}
+.col .spell{font-size:72px;font-weight:800;line-height:1}.col .mouth{width:270px;height:210px}
 .col .word{font-size:40px;font-weight:800}.col .gloss{font-size:22px;color:rgba(29,42,63,0.72)}
 .note-small{font-size:18px;color:rgba(29,42,63,0.6)}
 .body{font-size:40px;line-height:1.3;max-width:900px}

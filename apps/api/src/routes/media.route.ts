@@ -121,6 +121,7 @@ export function registerMediaRoutes(
         durationSeconds: media.video?.durationSeconds ?? null,
         posterUrl: media.video?.posterUrl ?? null,
         narrator: media.video?.narrator ?? null,
+        targetVocabularyIds: media.video?.targetVocabularyIds ?? [],
       })),
     });
   });

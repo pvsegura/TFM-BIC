@@ -4,6 +4,7 @@ import { Link, useParams } from "react-router";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { EducationalVideo } from "../components/educational-video.js";
 import { PronunciationPlayer } from "../components/pronunciation-player.js";
+import { RelatedLesson } from "../components/related-lesson.js";
 import { VocabularyActions } from "../components/vocabulary-actions.js";
 import { VocabularyAudioPlayer } from "../components/vocabulary-audio-player.js";
 import { VocabularyStatusBadge } from "../components/vocabulary-status-badge.js";
@@ -159,6 +160,7 @@ export function VocabularyDetailPage() {
           className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-primary/10 pt-4 text-sm dark:border-surface/10"
         >
           {nextStep}
+          <RelatedLesson vocabularyId={item.id} />
           <Link
             to={`/learn/phonetics?language=${enc(item.languageId)}`}
             className="underline underline-offset-2"

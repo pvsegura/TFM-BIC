@@ -22,6 +22,8 @@ export interface LessonViewerProps {
   hero?: ReactNode;
   /** Where to go after this lesson (M21): next lesson, vocabulary. */
   nextSteps?: ReactNode;
+  /** The words the lesson teaches (M22), between the explanation and the practice. */
+  words?: ReactNode;
 }
 
 /**
@@ -47,6 +49,7 @@ export function LessonViewer({
   practice,
   hero,
   nextSteps,
+  words,
 }: LessonViewerProps) {
   return (
     <article lang={lesson.instructionLanguage} className="mt-4">
@@ -68,6 +71,8 @@ export function LessonViewer({
           instructionLanguage={lesson.instructionLanguage}
         />
       </div>
+
+      {words}
 
       {practice ? (
         <div id="practice" className="scroll-mt-4">

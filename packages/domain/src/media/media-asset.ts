@@ -48,6 +48,10 @@ export interface VideoAsset {
   narrator: string;
   /** Plain-text transcript, in playback order. */
   transcript: TranscriptLine[];
+  /** What the video teaches, said up front (M22). */
+  objective?: string | undefined;
+  /** Vocabulary items the video teaches (M22): links to their own pages and videos. */
+  targetVocabularyIds?: string[] | undefined;
 }
 
 export interface TranscriptLine {

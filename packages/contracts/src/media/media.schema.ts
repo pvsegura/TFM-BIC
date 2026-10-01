@@ -242,6 +242,8 @@ export const videoAssetResponseSchema = z.object({
   height: z.number().int(),
   narrator: z.string(),
   transcript: z.array(transcriptLineSchema),
+  objective: z.string().optional(),
+  targetVocabularyIds: z.array(z.string()).optional(),
 });
 
 export const audioAssetResponseSchema = z.object({
@@ -273,6 +275,7 @@ export const mediaIndexResponseSchema = z.object({
       durationSeconds: z.number().nullable(),
       posterUrl: z.string().nullable(),
       narrator: z.string().nullable(),
+      targetVocabularyIds: z.array(z.string()),
     }),
   ),
 });
