@@ -118,6 +118,17 @@ async function main() {
   const manifest = new FileMediaManifestRepository(mediaRoot);
 
   const providers = new Map<string, AudioGenerationService>();
+  /** Reports non-200 provider answers by status only — never the key, the request or the body. */
+  const loggingFetch: typeof fetch = async (input, init) => {
+    const response = await fetch(input, init);
+    if (response.status !== 200) {
+      const retryAfter = response.headers.get("retry-after");
+      out(
+        `  provider answered HTTP ${String(response.status)}${retryAfter ? ` (retry-after ${retryAfter}s)` : ""}`,
+      );
+    }
+    return response;
+  };
   const modeFor = (key: string | undefined): NarrationMode =>
     draft
       ? { kind: "draft" }
@@ -139,6 +150,11 @@ async function main() {
                 voiceName: narrator.tts.voice,
                 narratorStyle: narrator.tts.style,
                 timeoutMs: 45_000,
+                // The adapter's default backoff timer is unref'd (right inside the API server). In
+                // this standalone command nothing else keeps Node alive, so a retry wait would end
+                // the process silently with exit code 0 — wait on a normal timer instead.
+                sleep: (ms) => new Promise((resolve) => setTimeout(resolve, ms)),
+                fetch: loggingFetch,
               });
               providers.set(narratorId, provider);
             }
