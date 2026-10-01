@@ -92,3 +92,9 @@ tokens per second of audio (until 2026-12-31).
 [ADR-013](adr-013-audio-generation.md), [ADR-028](adr-028-production-runtime-and-deployment.md),
 [docs/m21-video-architecture.md](../m21-video-architecture.md),
 [docs/m21-content-generation.md](../m21-content-generation.md).
+
+## M22 note (2026-10-01)
+
+The script model and render template of this ADR were replaced by [ADR-032](adr-032-pedagogical-video-system.md)
+(pedagogical scenes, characters, retrieval, a voice per character). Storage, same-origin delivery, offline
+generation, idempotency and cost controls stand as decided here.
