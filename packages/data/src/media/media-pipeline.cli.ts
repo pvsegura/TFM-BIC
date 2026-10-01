@@ -118,16 +118,45 @@ async function main() {
   const manifest = new FileMediaManifestRepository(mediaRoot);
 
   const providers = new Map<string, AudioGenerationService>();
-  /** Reports non-200 provider answers by status only — never the key, the request or the body. */
+  /**
+   * Paces provider calls for a batch (M21): the project's Gemini quota answered 429 after ~13 calls
+   * in 30 s (limits are per account tier and only shown in AI Studio), and the adapter's own
+   * retries cap their wait at 8 s. So: at most one request per MEDIA_TTS_MIN_INTERVAL_MS (default
+   * 6.5 s ≈ 9/min); on a 429 wait the full Retry-After and try again, at most 4 times; a wait over
+   * 2 minutes (e.g. a daily quota) is not waited out — the 429 goes back to the adapter, which
+   * fails the target. Logs status codes only — never the key, the request or the body.
+   */
+  const minIntervalMs = Number(process.env.MEDIA_TTS_MIN_INTERVAL_MS ?? 6500);
+  const MAX_RATE_LIMIT_WAITS = 4;
+  const MAX_RETRY_AFTER_S = 120;
+  const ATTEMPT_TIMEOUT_MS = 45_000;
+  let nextSlot = 0;
+  const wait = (ms: number) => new Promise((resolve) => setTimeout(resolve, ms));
   const loggingFetch: typeof fetch = async (input, init) => {
-    const response = await fetch(input, init);
-    if (response.status !== 200) {
-      const retryAfter = response.headers.get("retry-after");
+    for (let attempt = 0; ; attempt += 1) {
+      const now = Date.now();
+      if (nextSlot > now) await wait(nextSlot - now);
+      nextSlot = Date.now() + minIntervalMs;
+      // Each network attempt gets its own timeout; the adapter's overall one covers the waits.
+      const signal = init?.signal
+        ? AbortSignal.any([init.signal, AbortSignal.timeout(ATTEMPT_TIMEOUT_MS)])
+        : AbortSignal.timeout(ATTEMPT_TIMEOUT_MS);
+      const response = await fetch(input, { ...init, signal });
+      if (response.status === 200) return response;
+      const retryAfter = Number(response.headers.get("retry-after") ?? "");
       out(
-        `  provider answered HTTP ${String(response.status)}${retryAfter ? ` (retry-after ${retryAfter}s)` : ""}`,
+        `  provider answered HTTP ${String(response.status)}${Number.isFinite(retryAfter) && retryAfter > 0 ? ` (retry-after ${String(retryAfter)}s)` : ""}`,
       );
+      const waitable =
+        response.status === 429 &&
+        Number.isFinite(retryAfter) &&
+        retryAfter > 0 &&
+        retryAfter <= MAX_RETRY_AFTER_S;
+      if (!waitable || attempt >= MAX_RATE_LIMIT_WAITS) return response;
+      await response.body?.cancel();
+      out(`  waiting ${String(retryAfter)} s as the provider asked`);
+      nextSlot = Date.now() + (retryAfter + 1) * 1000;
     }
-    return response;
   };
   const modeFor = (key: string | undefined): NarrationMode =>
     draft
@@ -149,7 +178,8 @@ async function main() {
                 model,
                 voiceName: narrator.tts.voice,
                 narratorStyle: narrator.tts.style,
-                timeoutMs: 45_000,
+                // Bounds one clip including the paced, Retry-After waits above (4 × ≤ 2 min).
+                timeoutMs: 12 * 60_000,
                 // The adapter's default backoff timer is unref'd (right inside the API server). In
                 // this standalone command nothing else keeps Node alive, so a retry wait would end
                 // the process silently with exit code 0 — wait on a normal timer instead.
