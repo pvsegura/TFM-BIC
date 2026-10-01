@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "entries": [
+    {
+      "key": "lesson:pl-introducing-yourself",
+      "content": {
+        "type": "lesson",
+        "id": "pl-introducing-yourself",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-introducing-yourself/video-2afcbd6dcb78.mp4",
+          "posterUrl": "pl/lesson/pl-introducing-yourself/poster-2afcbd6dcb78.jpg",
+          "captionsUrl": "pl/lesson/pl-introducing-yourself/captions-2afcbd6dcb78.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 133.34,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Introducing yourself. Say your name, ask someone theirs, and say where you are from.",
+              "language": "en"
+            },
+            {
+              "text": "To say your name, use Mam na imię followed by your first name.",
+              "language": "en"
+            },
+            {
+              "text": "To say where you are from, use Jestem z followed by the name of the country.",
+              "language": "en"
+            },
+            {
+              "text": "The country name changes its ending after z, so for now it is best to learn these sentences as whole phrases.",
+              "language": "en"
+            },
+            {
+              "text": "Mam na imię Anna.",
+              "language": "pl",
+              "translation": "My name is Anna."
+            },
+            {
+              "text": "Jak masz na imię?",
+              "language": "pl",
+              "translation": "What is your name?"
+            },
+            {
+              "text": "Informal. Speaking to one person you know well, or a child.",
+              "language": "en"
+            },
+            {
+              "text": "Jestem z Polski.",
+              "language": "pl",
+              "translation": "I am from Poland."
+            },
+            {
+              "text": "Jestem z Hiszpanii.",
+              "language": "pl",
+              "translation": "I am from Spain."
+            },
+            {
+              "text": "Miło mi cię poznać.",
+              "language": "pl",
+              "translation": "Nice to meet you."
+            },
+            {
+              "text": "Informal. A polite version uses pana (to a man) or panią (to a woman) instead of cię.",
+              "language": "en"
+            },
+            {
+              "text": "Anna: Cześć! Mam na imię Anna.",
+              "language": "pl",
+              "translation": "Hi! My name is Anna."
+            },
+            {
+              "text": "Piotr: Cześć! Jestem Piotr.",
+              "language": "pl",
+              "translation": "Hi! I am Piotr."
+            },
+            {
+              "text": "Anna: Miło mi cię poznać.",
+              "language": "pl",
+              "translation": "Nice to meet you."
+            },
+            {
+              "text": "Piotr: Mnie też.",
+              "language": "pl",
+              "translation": "Me too."
+            },
+            {
+              "text": "Now it's your turn. Practise with the exercises below the video.",
+              "language": "en"
+            }
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "30b3d0756e7af50852d3e419506783e41a33533557864025b3a849d22ee61686",
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-01T07:25:05.800Z",
+        "providerCalls": 4
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:25:05.800Z",
+      "updatedAt": "2026-10-01T07:25:05.800Z"
+    },
+    {
+      "key": "vocabulary-item:pl-dom",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dom",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "vocabulary-explanation",
+          "url": "pl/vocabulary/pl-dom/video-46bc6568dc3d.mp4",
+          "posterUrl": "pl/vocabulary/pl-dom/poster-46bc6568dc3d.jpg",
+          "captionsUrl": "pl/vocabulary/pl-dom/captions-46bc6568dc3d.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 35.91,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A new word from everyday life.",
+              "language": "en"
+            },
+            {
+              "text": "dom",
+              "language": "pl",
+              "translation": "house; home"
+            },
+            {
+              "text": "Part of speech: Noun",
+              "language": "en"
+            },
+            {
+              "text": "Gender: Masculine",
+              "language": "en"
+            },
+            {
+              "text": "Plural: domy",
+              "language": "en"
+            },
+            {
+              "text": "Mój dom jest mały.",
+              "language": "pl",
+              "translation": "My house is small."
+            },
+            {
+              "text": "Save it to review later, or mark it as learned.",
+              "language": "en"
+            }
+          ]
+        },
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/874731577e5452b1.m4a",
+            "durationSeconds": 1.24,
+            "text": "dom",
+            "language": "pl",
+            "narrator": "Marek"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/marek/79bbf6c9dd7b341c.m4a",
+            "durationSeconds": 3.12,
+            "text": "Mój dom jest mały.",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "91da8d8fb1836348d8f55cedf5a782829469df0b89bae1b0336d572dd5627482",
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-01T07:26:31.116Z",
+        "providerCalls": 8
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-1"
+      },
+      "createdAt": "2026-10-01T07:26:31.116Z",
+      "updatedAt": "2026-10-01T07:26:31.116Z"
+    }
+  ]
+}
