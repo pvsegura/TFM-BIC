@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-introducing-yourself",
+  "objective": "Say your name and where you are from, and react when you meet someone.",
+  "narrator": "marek",
+  "cast": [
+    { "id": "anna", "name": "Anna", "look": "woman-a", "voice": "ola" },
+    { "id": "piotr", "name": "Piotr", "look": "man-a", "voice": "piotr" },
+    { "id": "kuba", "name": "Kuba", "look": "boy-a", "voice": "piotr" }
+  ],
+  "targetVocabularyIds": ["pl-czesc"],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "piotr", "x": 720, "facing": "left" },
+          { "id": "anna", "x": 500, "facing": "right", "offstage": true }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": { "say": "Two people meet in a park for the first time.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "anna", "to": 520 }]
+        },
+        {
+          "line": { "by": "anna", "target": "Cześć! Mam na imię Anna.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "anna" }],
+          "card": true
+        },
+        {
+          "line": { "by": "piotr", "target": "Cześć! Jestem Piotr.", "leadIn": 0.2 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "piotr" }],
+          "card": true
+        },
+        {
+          "line": { "by": "anna", "target": "Miło mi cię poznać.", "leadIn": 0.5 },
+          "actions": [{ "when": "lead", "do": "handshake", "actor": "anna", "with": "piotr" }],
+          "card": true
+        },
+        {
+          "line": { "by": "piotr", "target": "Mnie też.", "leadIn": 0.2 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "piotr" }],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "piotr", "x": 720, "facing": "left" }
+        ],
+        "props": [
+          { "id": "flag-pl", "type": "flag-pl", "x": 900, "y": 610 },
+          { "id": "flag-es", "type": "flag-es", "x": 300, "y": 610 }
+        ]
+      },
+      "beats": [
+        { "line": { "say": "Then they say where they are from.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "piotr", "target": "Jestem z Polski.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "piotr", "at": "flag-pl" }],
+          "card": true
+        },
+        {
+          "line": { "by": "anna", "target": "Jestem z Hiszpanii.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "anna", "at": "flag-es" }],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "anna", "x": 560, "facing": "right" },
+          { "id": "kuba", "x": 740, "facing": "left" }
+        ],
+        "props": []
+      },
+      "beats": [
+        { "line": { "say": "To ask a friend, or a child, their name:", "leadIn": 0.3 } },
+        {
+          "line": { "by": "anna", "target": "Jak masz na imię?", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "point", "actor": "anna", "at": "kuba" }],
+          "card": true
+        },
+        {
+          "line": { "say": "This question is informal: for one person you know well, or a child." }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "form",
+      "heading": "Say your name",
+      "phrase": "Mam na imię Anna.",
+      "highlight": "Mam na imię",
+      "lines": [
+        { "by": "narrator", "target": "Mam na imię Anna.", "pauseAfter": 0.8 },
+        { "say": "These three words, then your first name." }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "form",
+      "heading": "Say where you are from",
+      "phrase": "Jestem z Polski.",
+      "highlight": "Jestem z",
+      "lines": [
+        { "by": "narrator", "target": "Jestem z Polski.", "pauseAfter": 0.8 },
+        { "say": "These two words, then the country." },
+        { "say": "The country name changes its ending, so for now, learn these as whole phrases." }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "piotr", "x": 720, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "wave", "actor": "anna" },
+        { "do": "highlight", "target": "anna" }
+      ],
+      "prompt": "Anna says hi and gives her name. What does she say?",
+      "answer": "Cześć! Mam na imię Anna.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "piotr", "x": 720, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "handshake", "actor": "anna", "with": "piotr" },
+        { "do": "highlight", "target": "anna" }
+      ],
+      "prompt": "They shake hands. What does Anna say?",
+      "answer": "Miło mi cię poznać.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "piotr", "x": 720, "facing": "left" }
+        ],
+        "props": [{ "id": "flag-pl", "type": "flag-pl", "x": 900, "y": 610 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "piotr", "at": "flag-pl" },
+        { "do": "highlight", "target": "flag-pl" }
+      ],
+      "prompt": "Piotr is from Poland. What does he say?",
+      "answer": "Jestem z Polski.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Introduce yourself in the exercises below the video.",
+      "say": "Now introduce yourself in the exercises below the video."
+    }
+  ]
+}

@@ -40,6 +40,12 @@
           "name": "Piotr",
           "look": "man-a",
           "voice": "piotr"
+        },
+        {
+          "id": "tomek",
+          "name": "Tomek",
+          "look": "barista",
+          "voice": "tomek"
         }
       ]
     },
@@ -207,6 +213,1346 @@
         "to": 760
       },
       "prompt": "What is this in Polish?"
+    },
+    "pl-czesc": {
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "ola",
+      "action": {
+        "do": "wave",
+        "actor": "ola"
+      },
+      "stage2": {
+        "environment": "park",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 600,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 800,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor2": "piotr",
+      "action2": {
+        "do": "wave",
+        "actor": "piotr"
+      },
+      "prompt": "Ola meets a friend. What does she say?"
+    },
+    "pl-dzien-dobry": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 700,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1060,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "nod",
+        "actor": "piotr"
+      },
+      "stage2": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "nod",
+        "actor": "ola"
+      },
+      "prompt": "Morning, in a shop. What does he say?"
+    },
+    "pl-dobry-wieczor": {
+      "stage": {
+        "environment": "street",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 540,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 735,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "nod",
+        "actor": "piotr"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "nod",
+        "actor": "ola"
+      },
+      "prompt": "It is evening. What does he say?"
+    },
+    "pl-do-widzenia": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 700,
+            "facing": "left"
+          },
+          {
+            "id": "tomek",
+            "x": 1060,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "wave",
+        "actor": "piotr"
+      },
+      "stage2": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          },
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "wave",
+        "actor": "ola"
+      },
+      "prompt": "He leaves the shop. What does he say?"
+    },
+    "pl-dobranoc": {
+      "stage": {
+        "environment": "bedroom",
+        "time": "night",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 330,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 470,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "ola",
+      "action": {
+        "do": "wave",
+        "actor": "ola"
+      },
+      "prompt": "Late at night, someone goes to bed. What do you say?"
+    },
+    "pl-kot": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 860,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cat",
+            "type": "cat",
+            "x": 560,
+            "y": 470,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cat"
+      },
+      "stage2": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "cat",
+            "type": "cat",
+            "x": 720,
+            "y": 610,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "cat"
+      }
+    },
+    "pl-pies": {
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "dog",
+            "type": "dog",
+            "x": 720,
+            "y": 610,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "tomek",
+      "action": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "dog"
+      },
+      "stage2": {
+        "environment": "suburb",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "dog",
+            "type": "dog",
+            "x": 760,
+            "y": 610,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "dog"
+      }
+    },
+    "pl-ksiazka": {
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 540,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "book",
+            "type": "book",
+            "x": 700,
+            "y": 460,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "pick-up",
+        "actor": "ola",
+        "prop": "book"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 460,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "book",
+            "type": "book",
+            "x": 300,
+            "y": 490,
+            "scale": 1.1
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "book"
+      }
+    },
+    "pl-praca": {
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "briefcase",
+            "type": "briefcase",
+            "x": 690,
+            "y": 460,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor": "tomek",
+      "action": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "briefcase"
+      },
+      "stage2": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 480,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": [
+          {
+            "id": "briefcase",
+            "type": "briefcase",
+            "x": 560,
+            "y": 610,
+            "scale": 1.1
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "enter",
+        "actor": "ola",
+        "to": 480
+      }
+    },
+    "pl-rodzina": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 380,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 500,
+            "facing": "right"
+          },
+          {
+            "id": "zosia",
+            "x": 620,
+            "facing": "left"
+          },
+          {
+            "id": "ewa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "wave",
+        "actor": "piotr"
+      },
+      "stage2": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 420,
+            "facing": "right"
+          },
+          {
+            "id": "zosia",
+            "x": 540,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 660,
+            "facing": "left"
+          },
+          {
+            "id": "piotr",
+            "x": 800,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor2": "ewa",
+      "action2": {
+        "do": "wave",
+        "actor": "ewa"
+      },
+      "prompt": "All four of them together. Which word is it?"
+    },
+    "pl-mama": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          },
+          {
+            "id": "zosia",
+            "x": 560,
+            "facing": "right"
+          },
+          {
+            "id": "ewa",
+            "x": 720,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "ewa"
+      },
+      "prompt": "Who is she for Zosia?"
+    },
+    "pl-tata": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 420,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 560,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 720,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "ewa",
+      "action": {
+        "do": "point",
+        "actor": "ewa",
+        "at": "piotr"
+      },
+      "prompt": "Who is he for Kuba?"
+    },
+    "pl-brat": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 380,
+            "facing": "right"
+          },
+          {
+            "id": "zosia",
+            "x": 560,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 700,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "ewa",
+      "action": {
+        "do": "point",
+        "actor": "ewa",
+        "at": "kuba"
+      },
+      "prompt": "Kuba is the brother of Zosia. Which word is it?"
+    },
+    "pl-siostra": {
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 380,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 560,
+            "facing": "right"
+          },
+          {
+            "id": "zosia",
+            "x": 700,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "actor": "ewa",
+      "action": {
+        "do": "point",
+        "actor": "ewa",
+        "at": "zosia"
+      },
+      "prompt": "Zosia is the sister of Kuba. Which word is it?"
+    },
+    "pl-chleb": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 720,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1080,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "bread",
+            "type": "bread",
+            "x": 960,
+            "y": 448,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "bread"
+      },
+      "stage2": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "bread",
+            "type": "bread",
+            "x": 640,
+            "y": 490,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "bread"
+      }
+    },
+    "pl-woda": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 720,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1080,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "water",
+            "type": "water",
+            "x": 960,
+            "y": 448,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "water"
+      },
+      "stage2": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "water",
+            "type": "water",
+            "x": 640,
+            "y": 490,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "water"
+      }
+    },
+    "pl-mleko": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 720,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1080,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "milk",
+            "type": "milk",
+            "x": 960,
+            "y": 448,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "milk"
+      },
+      "stage2": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "milk",
+            "type": "milk",
+            "x": 640,
+            "y": 490,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "milk"
+      }
+    },
+    "pl-jablko": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 720,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1080,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "apple",
+            "type": "apple",
+            "x": 960,
+            "y": 448,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "apple"
+      },
+      "stage2": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apple",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "apple"
+      }
+    },
+    "pl-ser": {
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 720,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1080,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cheese",
+            "type": "cheese",
+            "x": 960,
+            "y": 448,
+            "scale": 1.3
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cheese"
+      },
+      "stage2": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 480,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "cheese",
+            "type": "cheese",
+            "x": 640,
+            "y": 490,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "tomek",
+      "action2": {
+        "do": "point",
+        "actor": "tomek",
+        "at": "cheese"
+      }
+    },
+    "pl-jeden": {
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apples",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "count": 1
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "apples"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cups",
+            "type": "cup",
+            "x": 300,
+            "y": 490,
+            "count": 1,
+            "scale": 0.9
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cups"
+      },
+      "prompt": "How many? Say it in Polish."
+    },
+    "pl-dwa": {
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apples",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "count": 2
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "apples"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cups",
+            "type": "cup",
+            "x": 300,
+            "y": 490,
+            "count": 2,
+            "scale": 0.9
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cups"
+      },
+      "prompt": "How many? Say it in Polish."
+    },
+    "pl-trzy": {
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apples",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "count": 3
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "apples"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cups",
+            "type": "cup",
+            "x": 300,
+            "y": 490,
+            "count": 3,
+            "scale": 0.9
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cups"
+      },
+      "prompt": "How many? Say it in Polish."
+    },
+    "pl-cztery": {
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apples",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "count": 4
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "apples"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cups",
+            "type": "cup",
+            "x": 300,
+            "y": 490,
+            "count": 4,
+            "scale": 0.9
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cups"
+      },
+      "prompt": "How many? Say it in Polish."
+    },
+    "pl-piec": {
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 420,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "apples",
+            "type": "apple",
+            "x": 640,
+            "y": 490,
+            "count": 5
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "apples"
+      },
+      "stage2": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "left"
+          }
+        ],
+        "props": [
+          {
+            "id": "cups",
+            "type": "cup",
+            "x": 300,
+            "y": 490,
+            "count": 5,
+            "scale": 0.9
+          }
+        ]
+      },
+      "actor2": "ola",
+      "action2": {
+        "do": "point",
+        "actor": "ola",
+        "at": "cups"
+      },
+      "prompt": "How many? Say it in Polish."
+    },
+    "pl-pociag": {
+      "stage": {
+        "environment": "station",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 240,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "train",
+            "type": "train",
+            "x": 760,
+            "y": 590
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "train"
+      }
+    },
+    "pl-bilet": {
+      "stage": {
+        "environment": "station",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 940,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "ticket",
+            "type": "ticket",
+            "x": 1105,
+            "y": 470
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "pick-up",
+        "actor": "ola",
+        "prop": "ticket"
+      }
+    },
+    "pl-lotnisko": {
+      "stage": {
+        "environment": "airport",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 700,
+            "facing": "left",
+            "offstage": true
+          }
+        ],
+        "props": [
+          {
+            "id": "suitcase",
+            "type": "suitcase",
+            "x": 820,
+            "y": 610
+          }
+        ]
+      },
+      "actor": "piotr",
+      "action": {
+        "do": "turn",
+        "actor": "piotr",
+        "facing": "right"
+      },
+      "prompt": "Where is Piotr? Say it in Polish."
+    },
+    "pl-walizka": {
+      "stage": {
+        "environment": "airport",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 600,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "suitcase",
+            "type": "suitcase",
+            "x": 760,
+            "y": 610,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor": "ola",
+      "action": {
+        "do": "point",
+        "actor": "ola",
+        "at": "suitcase"
+      },
+      "stage2": {
+        "environment": "station",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 520,
+            "facing": "right"
+          }
+        ],
+        "props": [
+          {
+            "id": "suitcase",
+            "type": "suitcase",
+            "x": 680,
+            "y": 610,
+            "scale": 1.2
+          }
+        ]
+      },
+      "actor2": "piotr",
+      "action2": {
+        "do": "point",
+        "actor": "piotr",
+        "at": "suitcase"
+      }
     }
   }
 }

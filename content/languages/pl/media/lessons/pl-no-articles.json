@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-no-articles",
+  "objective": "Understand that Polish has no articles, and choose a or the in English from the situation.",
+  "narrator": "anna",
+  "cast": [{ "id": "ola", "name": "Ola", "look": "woman-b", "voice": "ola" }],
+  "targetVocabularyIds": ["pl-kot", "pl-pies"],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [{ "id": "ola", "x": 820, "facing": "left" }],
+        "props": [
+          { "id": "cat", "type": "cat", "x": 560, "y": 470, "scale": 1.2 },
+          { "id": "dog", "type": "dog", "x": 1080, "y": 610, "scale": 1.3, "hidden": true }
+        ]
+      },
+      "beats": [
+        { "line": { "say": "Ola is at home with her cat.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "ola", "target": "Mam kota.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "ola", "at": "cat" }],
+          "card": true
+        },
+        { "line": { "say": "There is no word for a. Just: cat." } },
+        {
+          "line": { "by": "ola", "target": "Kot śpi.", "leadIn": 1.2 },
+          "actions": [{ "when": "lead", "do": "sleep", "actor": "cat" }],
+          "card": true
+        },
+        { "line": { "say": "And no word for the. She means her cat, so in English: the cat." } },
+        {
+          "line": { "by": "ola", "target": "Mam psa.", "leadIn": 1.4 },
+          "actions": [
+            { "when": "lead", "do": "show", "prop": "dog" },
+            { "when": "lead", "do": "point", "actor": "ola", "at": "dog" }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [{ "id": "ola", "x": 520, "facing": "right" }],
+        "props": [{ "id": "cat", "type": "cat", "x": 760, "y": 610, "scale": 1.2 }]
+      },
+      "beats": [
+        {
+          "line": { "say": "In the park, Ola sees a cat she does not know.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "sleep", "actor": "cat" }]
+        },
+        {
+          "line": { "by": "ola", "target": "Kot śpi.", "leadIn": 0.5 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "ola", "at": "cat" }],
+          "card": true
+        },
+        { "line": { "say": "The same words. Here, in English: a cat is sleeping." } }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "No a, no the",
+      "phrase": "Kot śpi.",
+      "panels": [
+        { "caption": "Her cat", "text": "Kot śpi." },
+        { "caption": "Any cat", "text": "Kot śpi." }
+      ],
+      "lines": [
+        { "say": "Polish has no articles: no separate words for a, an or the.", "pauseAfter": 0.4 },
+        { "say": "At home, she means her cat: the cat is sleeping." },
+        { "say": "In the park, any cat: a cat is sleeping." },
+        {
+          "say": "When you translate into English, choose a, an or the from the context.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [{ "id": "ola", "x": 820, "facing": "right" }],
+        "props": [{ "id": "dog", "type": "dog", "x": 1080, "y": 610, "scale": 1.3 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "ola", "at": "dog" },
+        { "do": "highlight", "target": "dog" }
+      ],
+      "prompt": "Ola talks about her pet. I have a dog. What does she say?",
+      "answer": "Mam psa.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [{ "id": "ola", "x": 820, "facing": "left" }],
+        "props": [{ "id": "cat", "type": "cat", "x": 560, "y": 470, "scale": 1.2 }]
+      },
+      "setup": [
+        { "do": "sleep", "actor": "cat" },
+        { "do": "highlight", "target": "cat" }
+      ],
+      "prompt": "What is the cat doing? Say it in Polish.",
+      "answer": "Kot śpi.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video, then try a lesson with exercises.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

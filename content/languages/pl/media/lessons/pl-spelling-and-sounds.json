@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-spelling-and-sounds",
+  "objective": "Hear and say sz, ł, cz, c and ó in three everyday words, and tell sz from the softer ś.",
+  "narrator": "marek",
+  "cast": [
+    { "id": "ola", "name": "Ola", "look": "woman-d", "voice": "ola" },
+    { "id": "ewa", "name": "Ewa", "look": "woman-a", "voice": "anna" },
+    { "id": "zosia", "name": "Zosia", "look": "girl-a", "voice": "ola" }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "school",
+        "time": "day",
+        "sign": "szkoła",
+        "actors": [{ "id": "ola", "x": 430, "facing": "right", "offstage": true }],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Ola walks to a school. Listen to the word on the sign.",
+            "leadIn": 0.3
+          },
+          "actions": [{ "when": "with", "do": "enter", "actor": "ola", "to": 470 }]
+        },
+        {
+          "line": { "by": "ola", "target": "szkoła", "leadIn": 0.4, "pauseAfter": 1.2 },
+          "actions": [{ "when": "lead", "do": "raise-hand", "actor": "ola" }],
+          "card": true
+        },
+        { "line": { "by": "ola", "target": "szkoła", "pauseAfter": 0.6 }, "card": true }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "pronunciation",
+      "heading": "New letters",
+      "phrase": "szkoła",
+      "highlight": "sz",
+      "respelling": true,
+      "lines": [
+        { "by": "narrator", "target": "szkoła", "pauseAfter": 1 },
+        { "say": "The pair sz sounds like English sh, and ł sounds like English w." },
+        { "by": "narrator", "target": "szkoła", "pauseAfter": 1.2 }
+      ]
+    },
+    {
+      "kind": "contrast",
+      "segment": "pronunciation",
+      "heading": "Listen: sz or ś?",
+      "items": [
+        { "phoneticId": "pl-ipa-sz", "word": "szkoła" },
+        { "phoneticId": "pl-ipa-si", "word": "środa" }
+      ],
+      "lines": [
+        { "by": "narrator", "target": "szkoła", "pauseAfter": 0.6 },
+        { "say": "For sz, the tongue tip curls further back." },
+        { "by": "narrator", "target": "środa", "pauseAfter": 0.6 },
+        { "say": "For ś, the sound is softer: the tongue body rises toward the hard palate." },
+        { "by": "narrator", "target": "szkoła", "pauseAfter": 0.5 },
+        { "by": "narrator", "target": "środa", "pauseAfter": 0.8 },
+        { "say": "Now say both, out loud.", "pauseAfter": 3 }
+      ],
+      "itemLines": [0, 2]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [{ "id": "ola", "x": 520, "facing": "right" }],
+        "props": [{ "id": "clock", "type": "clock", "x": 700, "y": 200, "scale": 1.4 }]
+      },
+      "beats": [
+        {
+          "line": { "by": "ola", "target": "czas", "leadIn": 0.8, "pauseAfter": 1 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "ola", "at": "clock" }],
+          "card": true
+        },
+        { "line": { "say": "Time. The pair cz sounds like ch in church." } },
+        { "line": { "by": "narrator", "target": "czas", "pauseAfter": 1.2 } }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          { "id": "ewa", "x": 760, "facing": "left" },
+          { "id": "zosia", "x": 600, "facing": "right" }
+        ],
+        "props": []
+      },
+      "beats": [
+        { "line": { "say": "Ewa and her daughter Zosia.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "ewa", "target": "córka", "leadIn": 0.6, "pauseAfter": 1 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "ewa", "at": "zosia" }],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Daughter. The letter c sounds like ts in cats, and ó sounds the same as u."
+          }
+        },
+        { "line": { "by": "narrator", "target": "córka", "pauseAfter": 1.2 } }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "school",
+        "actors": [{ "id": "ola", "x": 470, "facing": "right" }],
+        "props": []
+      },
+      "setup": [{ "do": "raise-hand", "actor": "ola" }],
+      "prompt": "What is this building in Polish?",
+      "answer": "szkoła",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          { "id": "ewa", "x": 760, "facing": "left" },
+          { "id": "zosia", "x": 600, "facing": "right" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "point", "actor": "ewa", "at": "zosia" },
+        { "do": "highlight", "target": "zosia" }
+      ],
+      "prompt": "Zosia is Ewa's daughter. Which word is it?",
+      "answer": "córka",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [{ "id": "ola", "x": 520, "facing": "right" }],
+        "props": [{ "id": "clock", "type": "clock", "x": 700, "y": 200, "scale": 1.4 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "ola", "at": "clock" },
+        { "do": "highlight", "target": "clock" }
+      ],
+      "prompt": "Which word means time?",
+      "answer": "czas",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep listening",
+      "body": "These comparisons are only approximate. Listen to native speakers to fine-tune the sounds.",
+      "say": "These comparisons are only approximate. Listen to native speakers to fine-tune the sounds."
+    }
+  ]
+}
