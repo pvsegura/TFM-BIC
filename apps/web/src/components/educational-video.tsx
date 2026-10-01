@@ -48,7 +48,7 @@ export function EducationalVideo({
   if (isLoading) {
     return (
       <div className={`${FRAME} aspect-video`} aria-busy="true">
-        <p role="status" className="absolute inset-0 grid place-items-center text-sm opacity-70">
+        <p className="absolute inset-0 grid place-items-center text-sm opacity-70">
           Loading video…
         </p>
       </div>
