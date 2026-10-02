@@ -4,8 +4,18 @@
   "objective": "Use proszę, dziękuję and przepraszam in a café, and tell from the situation which meaning of proszę is meant.",
   "narrator": "anna",
   "cast": [
-    { "id": "ola", "name": "Ola", "look": "woman-c", "voice": "ola" },
-    { "id": "tomek", "name": "Tomek", "look": "barista", "voice": "marek" }
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "tomek",
+      "name": "Tomek",
+      "look": "barista",
+      "voice": "marek"
+    }
   ],
   "targetVocabularyIds": [],
   "scenes": [
@@ -17,67 +27,214 @@
         "environment": "cafe",
         "time": "day",
         "actors": [
-          { "id": "ola", "x": 640, "facing": "right", "offstage": true },
-          { "id": "tomek", "x": 1010, "facing": "right" }
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "right"
+          }
         ],
         "props": [
-          { "id": "display-cup", "type": "cup", "x": 870, "y": 398 },
-          { "id": "cup", "type": "cup", "x": 1145, "y": 398, "hidden": true },
-          { "id": "milk", "type": "milk-jug", "x": 935, "y": 398 }
+          {
+            "id": "display-cup",
+            "type": "cup",
+            "x": 870,
+            "y": 398
+          },
+          {
+            "id": "cup",
+            "type": "cup",
+            "x": 1145,
+            "y": 398,
+            "hidden": true
+          },
+          {
+            "id": "milk",
+            "type": "milk-jug",
+            "x": 935,
+            "y": 398
+          }
         ]
       },
       "beats": [
         {
-          "line": { "say": "A small café in the morning. Ola would like a coffee.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "enter", "actor": "ola", "to": 640 }]
-        },
-        {
-          "line": { "by": "ola", "target": "Przepraszam.", "leadIn": 0.6 },
+          "line": {
+            "say": "A small café in the morning. Ola would like a coffee.",
+            "leadIn": 0.4
+          },
           "actions": [
-            { "when": "lead", "do": "raise-hand", "actor": "ola" },
-            { "when": "after", "do": "turn", "actor": "tomek", "facing": "left" }
-          ],
-          "card": { "meaning": "Excuse me." }
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 640
+            }
+          ]
         },
-        { "line": { "say": "Excuse me. She wants his attention.", "leadIn": 0.4 } },
         {
-          "line": { "by": "ola", "target": "Proszę.", "leadIn": 0.5 },
-          "actions": [{ "when": "lead", "do": "point", "actor": "ola", "at": "display-cup" }],
-          "card": { "meaning": "Please." }
-        },
-        { "line": { "say": "Proszę means please when you ask for something." } },
-        {
-          "line": { "by": "tomek", "target": "Proszę.", "leadIn": 2.4 },
+          "line": {
+            "by": "ola",
+            "target": "Przepraszam.",
+            "leadIn": 0.6
+          },
           "actions": [
-            { "when": "lead", "do": "show", "prop": "cup" },
-            { "when": "lead", "do": "give", "actor": "tomek", "prop": "cup", "to": "ola" }
+            {
+              "when": "lead",
+              "do": "raise-hand",
+              "actor": "ola"
+            },
+            {
+              "when": "after",
+              "do": "turn",
+              "actor": "tomek",
+              "facing": "left"
+            }
           ],
-          "card": { "meaning": "Here you are." }
+          "card": {
+            "meaning": "Excuse me."
+          }
         },
-        { "line": { "say": "It also means here you are when you hand something over." } },
         {
-          "line": { "by": "ola", "target": "Dziękuję.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "ola" }],
+          "line": {
+            "say": "Excuse me. She wants his attention.",
+            "leadIn": 0.4
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Proszę.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "lead",
+              "do": "point",
+              "actor": "ola",
+              "at": "display-cup"
+            }
+          ],
+          "card": {
+            "meaning": "Please."
+          }
+        },
+        {
+          "line": {
+            "say": "It means please, when you ask for something."
+          }
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Proszę.",
+            "leadIn": 2.4
+          },
+          "actions": [
+            {
+              "when": "lead",
+              "do": "show",
+              "prop": "cup"
+            },
+            {
+              "when": "lead",
+              "do": "give",
+              "actor": "tomek",
+              "prop": "cup",
+              "to": "ola"
+            }
+          ],
+          "card": {
+            "meaning": "Here you are."
+          }
+        },
+        {
+          "line": {
+            "say": "It also means here you are when you hand something over."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Dziękuję.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
           "card": true
         },
         {
-          "line": { "by": "tomek", "target": "Proszę.", "leadIn": 0.3 },
-          "card": { "meaning": "You are welcome." }
+          "line": {
+            "by": "tomek",
+            "target": "Proszę.",
+            "leadIn": 0.3
+          },
+          "card": {
+            "meaning": "You are welcome."
+          }
         },
-        { "line": { "say": "And you are welcome when someone thanks you." } },
         {
-          "line": { "say": "He offers her milk.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "point", "actor": "tomek", "at": "milk" }]
+          "line": {
+            "say": "And you are welcome when someone thanks you."
+          }
         },
         {
-          "line": { "by": "ola", "target": "Tak.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "ola" }],
+          "line": {
+            "say": "He offers her milk.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "point",
+              "actor": "tomek",
+              "at": "milk"
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Tak.",
+            "leadIn": 0.4
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
           "card": true
         },
-        { "line": { "say": "And sugar?", "leadIn": 0.3 } },
         {
-          "line": { "by": "ola", "target": "Nie.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "shake-head", "actor": "ola" }],
+          "line": {
+            "say": "And sugar?",
+            "leadIn": 0.3
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Nie.",
+            "leadIn": 0.4
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "shake-head",
+              "actor": "ola"
+            }
+          ],
           "card": true
         }
       ]
@@ -88,16 +245,38 @@
       "heading": "One word, three uses",
       "phrase": "Proszę.",
       "panels": [
-        { "caption": "Asking", "text": "Proszę." },
-        { "caption": "Handing over", "text": "Proszę." },
-        { "caption": "After thanks", "text": "Proszę." }
+        {
+          "caption": "Asking",
+          "text": "Proszę."
+        },
+        {
+          "caption": "Handing over",
+          "text": "Proszę."
+        },
+        {
+          "caption": "After thanks",
+          "text": "Proszę."
+        }
       ],
       "lines": [
-        { "by": "narrator", "target": "Proszę.", "pauseAfter": 0.8 },
-        { "say": "Please, when you ask for something." },
-        { "say": "Here you are, when you hand something over." },
-        { "say": "You are welcome, when someone thanks you." },
-        { "say": "One word, three uses. The situation tells you which.", "pauseAfter": 0.8 }
+        {
+          "by": "narrator",
+          "target": "Proszę.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Please, when you ask for something."
+        },
+        {
+          "say": "Here you are, when you hand something over."
+        },
+        {
+          "say": "You are welcome, when someone thanks you."
+        },
+        {
+          "say": "One word, three uses. The situation tells you which.",
+          "pauseAfter": 0.8
+        }
       ]
     },
     {
@@ -106,21 +285,48 @@
       "stage": {
         "environment": "cafe",
         "actors": [
-          { "id": "ola", "x": 640, "facing": "right" },
-          { "id": "tomek", "x": 1010, "facing": "left" }
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "left"
+          }
         ],
         "props": [
-          { "id": "display-cup", "type": "cup", "x": 870, "y": 398 },
-          { "id": "cup", "type": "cup", "x": 1145, "y": 398 }
+          {
+            "id": "display-cup",
+            "type": "cup",
+            "x": 870,
+            "y": 398
+          },
+          {
+            "id": "cup",
+            "type": "cup",
+            "x": 1145,
+            "y": 398
+          }
         ]
       },
       "setup": [
-        { "do": "give", "actor": "tomek", "prop": "cup", "to": "ola" },
-        { "do": "highlight", "target": "cup" }
+        {
+          "do": "give",
+          "actor": "tomek",
+          "prop": "cup",
+          "to": "ola"
+        },
+        {
+          "do": "highlight",
+          "target": "cup"
+        }
       ],
       "prompt": "Tomek hands Ola her coffee. What does he say?",
       "answer": "Proszę.",
-      "answerBy": "tomek"
+      "answerBy": "tomek",
+      "answerMeaning": "Here you are."
     },
     {
       "kind": "retrieval",
@@ -128,14 +334,37 @@
       "stage": {
         "environment": "cafe",
         "actors": [
-          { "id": "ola", "x": 640, "facing": "right" },
-          { "id": "tomek", "x": 1010, "facing": "left" }
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "left"
+          }
         ],
-        "props": [{ "id": "cup", "type": "cup", "x": 1145, "y": 398 }]
+        "props": [
+          {
+            "id": "cup",
+            "type": "cup",
+            "x": 1145,
+            "y": 398
+          }
+        ]
       },
       "setup": [
-        { "do": "give", "actor": "tomek", "prop": "cup", "to": "ola" },
-        { "do": "highlight", "target": "ola" }
+        {
+          "do": "give",
+          "actor": "tomek",
+          "prop": "cup",
+          "to": "ola"
+        },
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
       ],
       "prompt": "Ola takes the cup. What does she say?",
       "answer": "Dziękuję.",
@@ -148,34 +377,88 @@
         "environment": "street",
         "time": "day",
         "actors": [
-          { "id": "tomek", "x": 735, "facing": "left" },
-          { "id": "ola", "x": 260, "facing": "right", "offstage": true }
+          {
+            "id": "tomek",
+            "x": 735,
+            "facing": "left"
+          },
+          {
+            "id": "ola",
+            "x": 260,
+            "facing": "right",
+            "offstage": true
+          }
         ],
         "props": []
       },
       "beats": [
         {
-          "line": { "say": "Later, in the street. Tomek holds the door open.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "enter", "actor": "ola", "to": 560 }]
+          "line": {
+            "say": "Later, in the street. Tomek holds the door open.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 560
+            }
+          ]
         },
         {
-          "line": { "by": "ola", "target": "Dziękuję bardzo.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "ola" }],
+          "line": {
+            "by": "ola",
+            "target": "Dziękuję bardzo.",
+            "leadIn": 0.4
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
           "card": true
         },
         {
-          "line": { "by": "tomek", "target": "Proszę.", "leadIn": 0.3 },
-          "card": { "meaning": "You are welcome." }
+          "line": {
+            "by": "tomek",
+            "target": "Proszę.",
+            "leadIn": 0.3
+          },
+          "card": {
+            "meaning": "You are welcome."
+          }
         },
         {
-          "line": { "by": "ola", "target": "Przepraszam.", "leadIn": 1.4 },
+          "line": {
+            "by": "ola",
+            "target": "Przepraszam.",
+            "leadIn": 1.4
+          },
           "actions": [
-            { "when": "lead", "do": "walk", "actor": "ola", "to": 690 },
-            { "when": "with", "do": "raise-hand", "actor": "ola" }
+            {
+              "when": "lead",
+              "do": "walk",
+              "actor": "ola",
+              "to": 690
+            },
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
           ],
-          "card": { "meaning": "Sorry." }
+          "card": {
+            "meaning": "Sorry."
+          }
         },
-        { "line": { "say": "Same words, a different place. And it can also mean: sorry." } }
+        {
+          "line": {
+            "say": "Same words, a different place. And it can also mean: sorry."
+          }
+        }
       ]
     },
     {
@@ -184,18 +467,40 @@
       "stage": {
         "environment": "cafe",
         "actors": [
-          { "id": "ola", "x": 640, "facing": "right" },
-          { "id": "tomek", "x": 1010, "facing": "right" }
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "right"
+          }
         ],
-        "props": [{ "id": "display-cup", "type": "cup", "x": 870, "y": 398 }]
+        "props": [
+          {
+            "id": "display-cup",
+            "type": "cup",
+            "x": 870,
+            "y": 398
+          }
+        ]
       },
       "setup": [
-        { "do": "raise-hand", "actor": "ola" },
-        { "do": "highlight", "target": "ola" }
+        {
+          "do": "raise-hand",
+          "actor": "ola"
+        },
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
       ],
       "prompt": "Tomek has his back to her. How does Ola get his attention?",
       "answer": "Przepraszam.",
-      "answerBy": "ola"
+      "answerBy": "ola",
+      "answerMeaning": "Excuse me."
     },
     {
       "kind": "retrieval",
@@ -203,14 +508,36 @@
       "stage": {
         "environment": "cafe",
         "actors": [
-          { "id": "ola", "x": 640, "facing": "right" },
-          { "id": "tomek", "x": 1010, "facing": "left" }
+          {
+            "id": "ola",
+            "x": 640,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1010,
+            "facing": "left"
+          }
         ],
-        "props": [{ "id": "milk", "type": "milk-jug", "x": 935, "y": 398 }]
+        "props": [
+          {
+            "id": "milk",
+            "type": "milk-jug",
+            "x": 935,
+            "y": 398
+          }
+        ]
       },
       "setup": [
-        { "do": "point", "actor": "tomek", "at": "milk" },
-        { "do": "highlight", "target": "milk" }
+        {
+          "do": "point",
+          "actor": "tomek",
+          "at": "milk"
+        },
+        {
+          "do": "highlight",
+          "target": "milk"
+        }
       ],
       "prompt": "He offers milk, and she wants some. What does she say?",
       "answer": "Tak.",

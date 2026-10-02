@@ -4,9 +4,24 @@
   "objective": "Choose a polite or an informal greeting, and the right one for the time of day.",
   "narrator": "anna",
   "cast": [
-    { "id": "piotr", "name": "Piotr", "look": "man-a", "voice": "piotr" },
-    { "id": "tomek", "name": "Tomek", "look": "barista", "voice": "tomek" },
-    { "id": "ola", "name": "Ola", "look": "woman-c", "voice": "ola" }
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    },
+    {
+      "id": "tomek",
+      "name": "Tomek",
+      "look": "barista",
+      "voice": "tomek"
+    },
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
   ],
   "targetVocabularyIds": [
     "pl-dzien-dobry",
@@ -24,10 +39,26 @@
         "environment": "shop",
         "time": "day",
         "actors": [
-          { "id": "piotr", "x": 640, "facing": "right", "offstage": true },
-          { "id": "tomek", "x": 1060, "facing": "left" }
+          {
+            "id": "piotr",
+            "x": 640,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "tomek",
+            "x": 1060,
+            "facing": "left"
+          }
         ],
-        "props": [{ "id": "bread", "type": "bread", "x": 960, "y": 448 }]
+        "props": [
+          {
+            "id": "bread",
+            "type": "bread",
+            "x": 960,
+            "y": 448
+          }
+        ]
       },
       "beats": [
         {
@@ -35,35 +66,96 @@
             "say": "Morning, in a small shop. Piotr does not know the shopkeeper well.",
             "leadIn": 0.3
           },
-          "actions": [{ "when": "with", "do": "enter", "actor": "piotr", "to": 700 }]
-        },
-        {
-          "line": { "by": "piotr", "target": "Dzień dobry.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "piotr" }],
-          "card": { "meaning": "Good day" }
-        },
-        {
-          "line": { "by": "tomek", "target": "Dzień dobry.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "tomek" }],
-          "card": { "meaning": "Good day" }
-        },
-        {
-          "line": { "say": "This greeting is polite. It works with people you do not know well." }
-        },
-        {
-          "line": { "by": "piotr", "target": "Do widzenia.", "leadIn": 2.2 },
           "actions": [
-            { "when": "lead", "do": "give", "actor": "tomek", "prop": "bread", "to": "piotr" },
-            { "when": "with", "do": "wave", "actor": "piotr" }
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "piotr",
+              "to": 700
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Dzień dobry.",
+            "leadIn": 0.4
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
+          "card": {
+            "meaning": "Good day"
+          }
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Dzień dobry.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "tomek"
+            }
+          ],
+          "card": {
+            "meaning": "Good day"
+          }
+        },
+        {
+          "line": {
+            "say": "This greeting is polite. It works with people you do not know well."
+          }
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Do widzenia.",
+            "leadIn": 2.2
+          },
+          "actions": [
+            {
+              "when": "lead",
+              "do": "give",
+              "actor": "tomek",
+              "prop": "bread",
+              "to": "piotr"
+            },
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
           ],
           "card": true
         },
         {
-          "line": { "by": "tomek", "target": "Do widzenia.", "leadIn": 0.2 },
-          "actions": [{ "when": "with", "do": "wave", "actor": "tomek" }],
+          "line": {
+            "by": "tomek",
+            "target": "Do widzenia.",
+            "leadIn": 0.2
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "tomek"
+            }
+          ],
           "card": true
         },
-        { "line": { "say": "Goodbye. Polite, too." } }
+        {
+          "line": {
+            "say": "Goodbye. Polite, too."
+          }
+        }
       ]
     },
     {
@@ -73,41 +165,117 @@
         "environment": "park",
         "time": "day",
         "actors": [
-          { "id": "piotr", "x": 520, "facing": "right" },
-          { "id": "ola", "x": 760, "facing": "left", "offstage": true }
+          {
+            "id": "piotr",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left",
+            "offstage": true
+          }
         ],
         "props": []
       },
       "beats": [
         {
-          "line": { "say": "In the park, Piotr meets his friend Ola.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "enter", "actor": "ola", "to": 760 }]
+          "line": {
+            "say": "In the park, Piotr meets his friend Ola.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 760
+            }
+          ]
         },
         {
-          "line": { "by": "ola", "target": "Cześć!", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "wave", "actor": "ola" }],
-          "card": { "meaning": "Hi!" }
+          "line": {
+            "by": "ola",
+            "target": "Cześć!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": {
+            "meaning": "Hi!"
+          }
         },
         {
-          "line": { "by": "piotr", "target": "Cześć!", "leadIn": 0.2 },
-          "actions": [{ "when": "with", "do": "wave", "actor": "piotr" }],
-          "card": { "meaning": "Hi!" }
+          "line": {
+            "by": "piotr",
+            "target": "Cześć!",
+            "leadIn": 0.2
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": {
+            "meaning": "Hi!"
+          }
         },
-        { "line": { "say": "With friends and family, the greeting is informal." } },
         {
-          "line": { "by": "ola", "target": "Na razie!", "leadIn": 1.2 },
-          "actions": [{ "when": "with", "do": "wave", "actor": "ola" }],
+          "line": {
+            "say": "With friends and family, the greeting is informal."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Na razie!",
+            "leadIn": 1.2
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
           "card": true
         },
         {
-          "line": { "by": "piotr", "target": "Cześć!", "leadIn": 0.2 },
+          "line": {
+            "by": "piotr",
+            "target": "Cześć!",
+            "leadIn": 0.2
+          },
           "actions": [
-            { "when": "with", "do": "wave", "actor": "piotr" },
-            { "when": "after", "do": "exit", "actor": "ola", "side": "right" }
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            },
+            {
+              "when": "after",
+              "do": "exit",
+              "actor": "ola",
+              "side": "right"
+            }
           ],
-          "card": { "meaning": "Bye!" }
+          "card": {
+            "meaning": "Bye!"
+          }
         },
-        { "line": { "say": "The same informal word says hello and goodbye." } }
+        {
+          "line": {
+            "say": "The same informal word says hello and goodbye."
+          }
+        }
       ]
     },
     {
@@ -117,27 +285,70 @@
         "environment": "street",
         "time": "evening",
         "actors": [
-          { "id": "tomek", "x": 735, "facing": "left" },
-          { "id": "piotr", "x": 500, "facing": "right", "offstage": true }
+          {
+            "id": "tomek",
+            "x": 735,
+            "facing": "left"
+          },
+          {
+            "id": "piotr",
+            "x": 500,
+            "facing": "right",
+            "offstage": true
+          }
         ],
         "props": []
       },
       "beats": [
         {
-          "line": { "say": "Evening. The shopkeeper is closing up.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "enter", "actor": "piotr", "to": 540 }]
+          "line": {
+            "say": "Evening. The shopkeeper is closing up.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "piotr",
+              "to": 540
+            }
+          ]
         },
         {
-          "line": { "by": "piotr", "target": "Dobry wieczór.", "leadIn": 0.4 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "piotr" }],
+          "line": {
+            "by": "piotr",
+            "target": "Dobry wieczór.",
+            "leadIn": 0.4
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
           "card": true
         },
         {
-          "line": { "by": "tomek", "target": "Dobry wieczór.", "leadIn": 0.2 },
-          "actions": [{ "when": "with", "do": "nod", "actor": "tomek" }],
+          "line": {
+            "by": "tomek",
+            "target": "Dobry wieczór.",
+            "leadIn": 0.2
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "tomek"
+            }
+          ],
           "card": true
         },
-        { "line": { "say": "In the evening, the polite greeting changes." } }
+        {
+          "line": {
+            "say": "In the evening, the polite greeting changes."
+          }
+        }
       ]
     },
     {
@@ -147,24 +358,62 @@
         "environment": "bedroom",
         "time": "night",
         "actors": [
-          { "id": "ola", "x": 330, "facing": "right" },
-          { "id": "piotr", "x": 470, "facing": "left" }
+          {
+            "id": "ola",
+            "x": 330,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 470,
+            "facing": "left"
+          }
         ],
         "props": []
       },
       "beats": [
-        { "line": { "say": "Late at night, at home. Time to sleep.", "leadIn": 0.3 } },
         {
-          "line": { "by": "ola", "target": "Dobranoc.", "leadIn": 0.3 },
-          "actions": [{ "when": "with", "do": "wave", "actor": "ola" }],
+          "line": {
+            "say": "Late at night, at home. Time to sleep.",
+            "leadIn": 0.3
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Dobranoc.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
           "card": true
         },
         {
-          "line": { "by": "piotr", "target": "Dobranoc.", "leadIn": 0.2 },
-          "actions": [{ "when": "after", "do": "walk", "actor": "piotr", "to": 820 }],
+          "line": {
+            "by": "piotr",
+            "target": "Dobranoc.",
+            "leadIn": 0.2
+          },
+          "actions": [
+            {
+              "when": "after",
+              "do": "walk",
+              "actor": "piotr",
+              "to": 820
+            }
+          ],
           "card": true
         },
-        { "line": { "say": "Good night is for going to sleep, not for every goodbye." } }
+        {
+          "line": {
+            "say": "Good night is for going to sleep, not for every goodbye."
+          }
+        }
       ]
     },
     {
@@ -173,15 +422,34 @@
       "heading": "Polite or informal?",
       "phrase": "Dzień dobry.",
       "panels": [
-        { "caption": "Polite", "text": "Dzień dobry." },
-        { "caption": "Polite, evening", "text": "Dobry wieczór." },
-        { "caption": "Informal", "text": "Cześć!" }
+        {
+          "caption": "Polite",
+          "text": "Dzień dobry."
+        },
+        {
+          "caption": "Polite, evening",
+          "text": "Dobry wieczór."
+        },
+        {
+          "caption": "Informal",
+          "text": "Cześć!"
+        }
       ],
       "lines": [
-        { "say": "The choice depends on how formal the situation is.", "pauseAfter": 0.4 },
-        { "say": "Polite, during the day." },
-        { "say": "Polite, in the evening." },
-        { "say": "Informal, with friends and family.", "pauseAfter": 0.8 }
+        {
+          "say": "The choice depends on how formal the situation is.",
+          "pauseAfter": 0.4
+        },
+        {
+          "say": "Polite, during the day."
+        },
+        {
+          "say": "Polite, in the evening."
+        },
+        {
+          "say": "Informal, with friends and family.",
+          "pauseAfter": 0.8
+        }
       ]
     },
     {
@@ -190,15 +458,29 @@
       "stage": {
         "environment": "shop",
         "actors": [
-          { "id": "piotr", "x": 700, "facing": "right" },
-          { "id": "tomek", "x": 1060, "facing": "left" }
+          {
+            "id": "piotr",
+            "x": 700,
+            "facing": "right"
+          },
+          {
+            "id": "tomek",
+            "x": 1060,
+            "facing": "left"
+          }
         ],
         "props": []
       },
-      "setup": [{ "do": "highlight", "target": "piotr" }],
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
       "prompt": "Morning. Piotr walks into a shop. What does he say?",
       "answer": "Dzień dobry.",
-      "answerBy": "piotr"
+      "answerBy": "piotr",
+      "answerMeaning": "Good day"
     },
     {
       "kind": "retrieval",
@@ -206,18 +488,33 @@
       "stage": {
         "environment": "park",
         "actors": [
-          { "id": "piotr", "x": 520, "facing": "right" },
-          { "id": "ola", "x": 760, "facing": "left" }
+          {
+            "id": "piotr",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          }
         ],
         "props": []
       },
       "setup": [
-        { "do": "wave", "actor": "ola" },
-        { "do": "highlight", "target": "piotr" }
+        {
+          "do": "wave",
+          "actor": "ola"
+        },
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
       ],
       "prompt": "His friend Ola waves. What does Piotr say?",
       "answer": "Cześć!",
-      "answerBy": "piotr"
+      "answerBy": "piotr",
+      "answerMeaning": "Hi!"
     },
     {
       "kind": "retrieval",
@@ -226,12 +523,25 @@
         "environment": "street",
         "time": "evening",
         "actors": [
-          { "id": "tomek", "x": 735, "facing": "left" },
-          { "id": "piotr", "x": 540, "facing": "right" }
+          {
+            "id": "tomek",
+            "x": 735,
+            "facing": "left"
+          },
+          {
+            "id": "piotr",
+            "x": 540,
+            "facing": "right"
+          }
         ],
         "props": []
       },
-      "setup": [{ "do": "highlight", "target": "piotr" }],
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
       "prompt": "It is evening. He greets the shopkeeper. What does he say?",
       "answer": "Dobry wieczór.",
       "answerBy": "piotr"
@@ -242,14 +552,28 @@
       "stage": {
         "environment": "shop",
         "actors": [
-          { "id": "piotr", "x": 700, "facing": "left" },
-          { "id": "tomek", "x": 1060, "facing": "left" }
+          {
+            "id": "piotr",
+            "x": 700,
+            "facing": "left"
+          },
+          {
+            "id": "tomek",
+            "x": 1060,
+            "facing": "left"
+          }
         ],
         "props": []
       },
       "setup": [
-        { "do": "wave", "actor": "piotr" },
-        { "do": "highlight", "target": "piotr" }
+        {
+          "do": "wave",
+          "actor": "piotr"
+        },
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
       ],
       "prompt": "He leaves the shop. What does he say?",
       "answer": "Do widzenia.",
