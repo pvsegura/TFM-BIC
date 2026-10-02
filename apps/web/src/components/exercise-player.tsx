@@ -1,7 +1,7 @@
 import type { ExerciseAnswerResponse, ExerciseResponse } from "@tfm-bic/contracts";
 import { Button } from "@tfm-bic/ui";
 import { useEffect, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import type { LearningLanguage } from "./content-blocks.js";
 import { ExerciseRenderer } from "./exercise-renderer.js";

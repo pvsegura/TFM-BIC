@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import type { LearningLanguage } from "../components/content-blocks.js";

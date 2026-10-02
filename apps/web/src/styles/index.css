@@ -69,3 +69,73 @@
     }
   }
 }
+
+/* M22 ── Every page on the exercise-book paper of the homepage (ADR-030): faint ruling and the orange
+   margin line beside the content column. Lighter than the homepage so long text stays easy to read. */
+.app-paper {
+  background-color: var(--color-surface);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(2rem - 1px),
+    rgb(20 35 60 / 0.045) calc(2rem - 1px) 2rem
+  );
+}
+:where(.dark) .app-paper {
+  background-color: var(--color-surface-dark);
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0 calc(2rem - 1px),
+    rgb(248 249 250 / 0.035) calc(2rem - 1px) 2rem
+  );
+}
+.app-column {
+  position: relative;
+}
+.app-column::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0.25rem;
+  width: 2px;
+  background: var(--color-accent);
+  opacity: 0.55;
+  pointer-events: none;
+}
+@media (min-width: 72rem) {
+  .app-column::before {
+    left: -1.5rem;
+  }
+}
+
+/* M22 ── Page transitions: the old page fades out, the new one fades in (View Transitions API, enabled
+   on every app link). Browsers without it get a fade-in only (.page-enter, set by the root layout). */
+@keyframes page-fade-out {
+  to {
+    opacity: 0;
+  }
+}
+@keyframes page-fade-in {
+  from {
+    opacity: 0;
+  }
+}
+::view-transition-old(root) {
+  animation: 180ms ease-in both page-fade-out;
+}
+::view-transition-new(root) {
+  animation: 240ms ease-out both page-fade-in;
+}
+.page-enter {
+  animation: 240ms ease-out both page-fade-in;
+}
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-group(*),
+  ::view-transition-old(*),
+  ::view-transition-new(*) {
+    animation: none !important;
+  }
+  .page-enter {
+    animation: none;
+  }
+}

@@ -1,6 +1,7 @@
 import { Button } from "@tfm-bic/ui";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
-import { Link, Outlet, useLocation, useMatches } from "react-router";
+import { Outlet, useLocation, useMatches } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { useCurrentUser } from "../hooks/use-current-user.js";
 import { useLogout } from "../hooks/use-logout.js";
@@ -12,6 +13,9 @@ const NAV_LINKS = [
 ];
 
 const NAV_LIST_ID = "primary-nav-links";
+
+const supportsViewTransitions =
+  typeof document !== "undefined" && "startViewTransition" in document;
 
 /** A route opts out of the centred column (the public homepage, M20A) with `handle: { fullBleed: true }`. */
 function isFullBleedHandle(handle: unknown): boolean {
@@ -49,7 +53,7 @@ export function RootLayout() {
   }
 
   return (
-    <div className="min-h-screen bg-surface text-primary dark:bg-surface-dark dark:text-surface">
+    <div className="app-paper min-h-screen text-primary dark:text-surface">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-primary"
@@ -189,10 +193,13 @@ export function RootLayout() {
 
       <main
         id="main-content"
-        className={fullBleed ? undefined : "mx-auto max-w-5xl px-4"}
+        className={fullBleed ? undefined : "app-column mx-auto max-w-5xl px-4"}
         data-layout={fullBleed ? "full-bleed" : undefined}
       >
-        <Outlet />
+        {/* Without the View Transitions API, each new page still fades in (keyed by path). */}
+        <div key={pathname} className={supportsViewTransitions ? undefined : "page-enter"}>
+          <Outlet />
+        </div>
       </main>
 
       <footer

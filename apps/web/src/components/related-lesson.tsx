@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { useContentItem } from "../hooks/use-catalog.js";
 import { useMediaIndex } from "../hooks/use-media.js";

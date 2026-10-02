@@ -1,5 +1,5 @@
 import type { LessonSummaryResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { LessonStatusBadge } from "./lesson-status-badge.js";
 import { MediaBadge } from "./media-badge.js";

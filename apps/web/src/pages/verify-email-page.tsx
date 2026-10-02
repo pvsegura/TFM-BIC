@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react";
-import { Link, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { useVerifyEmail } from "../hooks/use-verify-email.js";
 import { ApiError } from "../services/api-error.js";

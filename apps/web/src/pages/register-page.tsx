@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { registerRequestSchema, type RegisterRequest } from "@tfm-bic/contracts";
 import { Button, TextField } from "@tfm-bic/ui";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { useRegister } from "../hooks/use-register.js";
 import { ApiError } from "../services/api-error.js";

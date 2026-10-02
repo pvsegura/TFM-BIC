@@ -1,5 +1,5 @@
 import type { LevelResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 export interface LevelSelectorProps {
   /** The levels one language declares, with their availability, from the API. */

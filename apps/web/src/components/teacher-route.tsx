@@ -1,4 +1,5 @@
-import { Link, Outlet } from "react-router";
+import { Outlet } from "react-router";
+import { Link } from "./app-link.js";
 
 import { useCurrentUser } from "../hooks/use-current-user.js";
 

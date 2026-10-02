@@ -1,6 +1,6 @@
 import type { LessonResponse, RewardsResponse } from "@tfm-bic/contracts";
 import type { ReactNode } from "react";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { ContentBlocks, type LearningLanguage } from "./content-blocks.js";
 import { LessonCompletion } from "./lesson-completion.js";

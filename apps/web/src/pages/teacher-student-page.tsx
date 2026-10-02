@@ -1,6 +1,7 @@
 import type { TeacherStudentDetailResponse } from "@tfm-bic/contracts";
 import { Avatar } from "@tfm-bic/ui";
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { AchievementIcon } from "../components/achievement-icon.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";

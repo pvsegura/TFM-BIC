@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { useLanguageLevels, useLanguages } from "../hooks/use-catalog.js";
 import { useLessons } from "../hooks/use-lessons.js";

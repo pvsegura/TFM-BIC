@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { LoadError } from "../components/catalog-notices.js";
 import { ContinueLearning } from "../components/continue-learning.js";

@@ -1,6 +1,6 @@
 import type { RosterStudentResponse } from "@tfm-bic/contracts";
 import { Avatar } from "@tfm-bic/ui";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { formatNumber } from "./reward-labels.js";
 import { formatLastActivity, formatPercent, plural, studentName } from "./teacher-labels.js";

@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { PRIVACY_NOTICE, type PrivacyNoticeSection } from "../legal/privacy-notice.js";
 

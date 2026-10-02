@@ -1,5 +1,6 @@
 import type { ReactNode } from "react";
-import { Link, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { LoadError } from "../components/catalog-notices.js";
 import { LanguageSelector } from "../components/language-selector.js";

@@ -1,5 +1,5 @@
 import type { GamificationSummaryResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { AchievementProgress } from "./achievement-list.js";
 import { AchievementIcon } from "./achievement-icon.js";

@@ -2,7 +2,7 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { passwordResetRequestSchema, type PasswordResetRequest } from "@tfm-bic/contracts";
 import { Button, TextField } from "@tfm-bic/ui";
 import { useForm } from "react-hook-form";
-import { Link } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { useRequestPasswordReset } from "../hooks/use-request-password-reset.js";
 import { ApiError } from "../services/api-error.js";

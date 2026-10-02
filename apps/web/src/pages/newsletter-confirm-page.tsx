@@ -1,5 +1,6 @@
 import { Button } from "@tfm-bic/ui";
-import { Link, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { useConfirmNewsletterSubscription } from "../hooks/use-email-preferences.js";
 import { ApiError } from "../services/api-error.js";

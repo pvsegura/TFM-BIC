@@ -2,7 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { passwordResetConfirmSchema } from "@tfm-bic/contracts";
 import { Button, TextField } from "@tfm-bic/ui";
 import { useForm } from "react-hook-form";
-import { Link, useSearchParams } from "react-router";
+import { useSearchParams } from "react-router";
+import { Link } from "../components/app-link.js";
 import { z } from "zod";
 
 import { useConfirmPasswordReset } from "../hooks/use-confirm-password-reset.js";

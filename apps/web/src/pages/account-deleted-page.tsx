@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "../components/app-link.js";
 
 /** Shown after a successful account deletion (M15). Public: the session no longer exists. */
 export function AccountDeletedPage() {

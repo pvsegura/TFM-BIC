@@ -1,5 +1,5 @@
 import type { PhoneticRepresentationResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { PhoneticActions } from "./phonetic-actions.js";
 import { PhoneticProgressBadge } from "./phonetic-progress-badge.js";

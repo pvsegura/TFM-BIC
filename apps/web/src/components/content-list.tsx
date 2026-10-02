@@ -1,5 +1,5 @@
 import type { ContentSummaryResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 export interface ContentListProps {
   /** Already in display order — the API sorts by explicit `order`. */

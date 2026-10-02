@@ -1,5 +1,5 @@
 import { Button } from "@tfm-bic/ui";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 export interface NotFoundNoticeProps {
   title: string;

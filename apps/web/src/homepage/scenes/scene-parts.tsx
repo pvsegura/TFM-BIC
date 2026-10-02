@@ -1,4 +1,4 @@
-import { Link } from "react-router";
+import { Link } from "../../components/app-link.js";
 
 import { useCurrentUser } from "../../hooks/use-current-user.js";
 import type { CallToActionPair, HomepageContent } from "../content/homepage-content.js";

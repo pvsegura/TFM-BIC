@@ -1,5 +1,5 @@
 import type { ExerciseSummaryResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { exerciseTypeLabel } from "./exercise-view-registry.js";
 import { ExerciseStatusBadge } from "./exercise-status-badge.js";

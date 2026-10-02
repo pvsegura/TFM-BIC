@@ -1,5 +1,5 @@
 import type { LanguageResponse } from "@tfm-bic/contracts";
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 export interface LanguageSelectorProps {
   /** The catalog, exactly as the API returned it — this component defines no language of its own. */
