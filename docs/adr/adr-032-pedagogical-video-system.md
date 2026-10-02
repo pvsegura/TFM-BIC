@@ -86,3 +86,14 @@ inventing language or provider capabilities. Evidence and its strength: [m22-ped
 [m22-pedagogical-framework.md](../m22-pedagogical-framework.md), [m22-video-audit.md](../m22-video-audit.md),
 [m22-video-system.md](../m22-video-system.md), [ADR-031](adr-031-video-first-educational-media.md),
 [ADR-012](adr-012-video-generation.md), [ADR-013](adr-013-audio-generation.md).
+
+## Addendum 2026-10-02 — product decisions
+
+- **Words: audio, not video.** The product owner decided that vocabulary items do not need explainer videos;
+  each word card (vocabulary list, lesson word list, word page) has a play button for the word's recorded
+  pronunciation, plus the example when the content has one. The pipeline publishes _audio-only_ targets for
+  words (own source hash, same idempotency and reuse); the word visual contexts in `plan.json` stay as authored
+  material (they choose the character voice) and could drive word videos again later. Decision 5 above now
+  applies inside lesson videos only.
+- **Visual continuity:** every page uses the homepage's exercise-book paper and margin line; page changes fade
+  out/in via the View Transitions API (fade-in fallback; off with reduced motion).

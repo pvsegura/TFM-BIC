@@ -26,7 +26,7 @@ export const COMPOSITION_ID = "main";
 export const WIDTH = 1280;
 export const HEIGHT = 720;
 /** Bump when the template changes: part of every video's source hash. */
-export const TEMPLATE_VERSION = 2;
+export const TEMPLATE_VERSION = 3;
 
 const ESCAPES: Record<string, string> = {
   "&": "&amp;",
@@ -290,8 +290,9 @@ function emitAction(
       tl.to(`${root} .eye`, `{attr:{ry:0.7},duration:${n(d(0.5))}}`, at);
       tl.to(`#${tl.prefix}-z-${action.actor}`, `{opacity:1,duration:${n(d(0.4))}}`, at);
       if (!instant)
+        // The inner group floats; the outer one keeps its position transform.
         tl.to(
-          `#${tl.prefix}-z-${action.actor}`,
+          `#${tl.prefix}-z-${action.actor} .zz`,
           `{y:-24,duration:1.6,yoyo:true,repeat:3,ease:"sine.inOut"}`,
           at,
         );
@@ -316,7 +317,7 @@ function stageMarkup(
         const big = BIG.has(p.type);
         return `<g id="${prefix}-p-${p.id}-wrap">
         <g id="${prefix}-p-${p.id}" transform="translate(${n(p.x)} ${n(p.y)}) scale(${n(scale)})" opacity="${p.hidden ? "0" : "1"}"><ellipse id="${prefix}-p-${p.id}-hl" cx="0" cy="${big ? "-110" : "-30"}" rx="${n((big ? 150 : 52) + (p.count ? p.count * 32 : 0))}" ry="${big ? "140" : "48"}" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="${n(5 / scale)}" opacity="0"/>${inner}</g>
-        <g id="${prefix}-z-${p.id}" opacity="0" transform="translate(${n(p.x + 40 * scale)} ${n(p.y - 90 * scale)})">${propSvg("sleep-z")}</g></g>`;
+        <g id="${prefix}-z-${p.id}" opacity="0" transform="translate(${n(p.x + 40 * scale)} ${n(p.y - 90 * scale)})"><g class="zz">${propSvg("sleep-z")}</g></g></g>`;
       })
       .join("");
   const actors = stage.actors
@@ -331,7 +332,7 @@ function stageMarkup(
       states.set(a.id, st);
       return `<ellipse id="${prefix}-a-${a.id}-hl" cx="${n(a.x)}" cy="${n(FLOOR_Y - m.headTop / 2)}" rx="${n(80 * m.scale)}" ry="${n(m.headTop / 2 + 20)}" fill="#ff6b35" fill-opacity="0.12" stroke="#ff6b35" stroke-width="5" opacity="0"/>
         <g id="${prefix}-a-${a.id}" transform="${actorTransform(st)}"><g id="${prefix}-a-${a.id}-flip" transform="scale(${String(dir)} 1)">${characterSvg(`${prefix}-a-${a.id}`, member.look)}</g></g>
-        <g id="${prefix}-z-${a.id}" opacity="0" transform="translate(${n(a.x + 40)} ${n(FLOOR_Y - m.headTop - 10)})">${propSvg("sleep-z")}</g>`;
+        <g id="${prefix}-z-${a.id}" opacity="0" transform="translate(${n(a.x + 40)} ${n(FLOOR_Y - m.headTop - 10)})"><g class="zz">${propSvg("sleep-z")}</g></g>`;
     })
     .join("");
   const env = environmentSvg(
