@@ -70,6 +70,8 @@ export type PlanScene =
       setup: StageAction[];
       prompt: string;
       answer: string;
+      /** The part of the content's meaning this situation shows (validated), e.g. "Here you are." */
+      answerMeaning?: string | undefined;
       answerBy?: string | undefined;
     }
   | { kind: "next-step"; segment: LearningSegment; heading: string; body: string; say: string };

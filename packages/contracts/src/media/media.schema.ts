@@ -179,6 +179,7 @@ export const lessonVideoPlanSchema = z.strictObject({
           setup: z.array(stageActionSchema),
           prompt: z.string().min(3).max(200),
           answer: z.string(),
+          answerMeaning: z.string().min(1).optional(),
           answerBy: z.string().optional(),
         }),
         z.strictObject({
@@ -276,6 +277,8 @@ export const mediaIndexResponseSchema = z.object({
       posterUrl: z.string().nullable(),
       narrator: z.string().nullable(),
       targetVocabularyIds: z.array(z.string()),
+      /** A word's recorded pronunciation (words are audio only, M22). */
+      pronunciationUrl: z.string().nullable(),
     }),
   ),
 });

@@ -1,13 +1,14 @@
 import type { ReactNode } from "react";
-import { Link, useParams } from "react-router";
+import { useParams } from "react-router";
+import { Link } from "../components/app-link.js";
 
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
-import { EducationalVideo } from "../components/educational-video.js";
 import { PronunciationPlayer } from "../components/pronunciation-player.js";
 import { RelatedLesson } from "../components/related-lesson.js";
 import { VocabularyActions } from "../components/vocabulary-actions.js";
 import { VocabularyAudioPlayer } from "../components/vocabulary-audio-player.js";
 import { VocabularyStatusBadge } from "../components/vocabulary-status-badge.js";
+import { WordAudioButton } from "../components/word-audio-button.js";
 import { useVocabularyMedia } from "../hooks/use-media.js";
 import { useVocabulary, useVocabularyItem } from "../hooks/use-vocabulary.js";
 import { isNotFoundError } from "../services/api-error.js";
@@ -99,26 +100,21 @@ export function VocabularyDetailPage() {
         </p>
         <div className="mt-3 flex flex-wrap items-start justify-between gap-3">
           <div>
-            <h1 className="font-display text-4xl font-bold tracking-tight" lang={item.languageId}>
-              {item.lemma}
-            </h1>
+            <div className="flex items-center gap-3">
+              <h1 className="font-display text-4xl font-bold tracking-tight" lang={item.languageId}>
+                {item.lemma}
+              </h1>
+              {/* M22: words are taught with their recorded pronunciation, not a video. */}
+              <WordAudioButton
+                url={storedClips.find((clip) => clip.purpose === "pronunciation")?.url}
+                word={item.lemma}
+                lang={item.languageId}
+              />
+            </div>
             <p className="mt-1 text-lg text-primary/70 dark:text-surface/70">{item.translation}</p>
           </div>
           <VocabularyStatusBadge status={item.userState.status} />
         </div>
-
-        {/* M21: the word's explainer video leads the page (ADR-031). */}
-        <section aria-label="Video" className="mt-6">
-          <EducationalVideo
-            video={mediaQuery.isSuccess ? (media?.video ?? null) : undefined}
-            isLoading={mediaQuery.isPending}
-            loadFailed={mediaQuery.isError}
-            onRetryLoad={() => void mediaQuery.refetch()}
-            title={item.lemma}
-            subject="this word"
-            afterVideo={nextStep}
-          />
-        </section>
 
         <div className="mt-6">
           {storedClips.length > 0 ? (

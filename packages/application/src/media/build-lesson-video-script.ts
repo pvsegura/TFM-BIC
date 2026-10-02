@@ -265,7 +265,13 @@ export function buildLessonVideoScript(input: LessonScriptInput): VideoScript {
         checkStage(scene.stage, where);
         const by = scene.answerBy && scene.answerBy !== "narrator" ? scene.answerBy : undefined;
         const answer = toLine({ target: scene.answer, ...(by ? { by } : {}) }, `${where} answer`);
-        const meaning = language.meaningOf(scene.answer);
+        const fullMeaning = language.meaningOf(scene.answer);
+        if (scene.answerMeaning && !fullMeaning?.includes(scene.answerMeaning)) {
+          problems.push(
+            `${where}: "${scene.answerMeaning}" is not part of the content's meaning of "${scene.answer}".`,
+          );
+        }
+        const meaning = scene.answerMeaning ?? fullMeaning;
         return {
           kind: "retrieval",
           segment: scene.segment,
@@ -296,6 +302,26 @@ export function buildLessonVideoScript(input: LessonScriptInput): VideoScript {
     problems.push(`plan is for "${plan.contentId}", not "${lesson.id}".`);
   if (!scenes.some((s) => s.kind === "retrieval"))
     problems.push("a lesson video needs at least one retrieval moment.");
+  // One language per spoken line: an instruction-language line must not contain a word of the
+  // lesson's target phrases (the TTS would read it with the wrong language's sounds).
+  const targetWords = new Set(
+    [...targetPhrases]
+      .flatMap((phrase) => phrase.toLocaleLowerCase(language.locale).split(/[^\p{L}]+/u))
+      .filter((word) => word.length >= 4),
+  );
+  // Character names (Anna, Piotr) are fine in either language.
+  for (const member of plan.cast)
+    targetWords.delete(member.name.toLocaleLowerCase(language.locale));
+  for (const scene of scenes) {
+    for (const line of scene.narration) {
+      if (line.language === target) continue;
+      const words = line.text.toLocaleLowerCase(language.locale).split(/[^\p{L}]+/u);
+      const mixed = words.filter((word) => targetWords.has(word));
+      if (mixed.length > 0) {
+        problems.push(`"${line.text}" mixes in target-language words (${mixed.join(", ")}).`);
+      }
+    }
+  }
   if (problems.length > 0) throw new InvalidVideoPlanError(lesson.id, problems);
 
   return {

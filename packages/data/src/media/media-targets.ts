@@ -2,8 +2,8 @@ import {
   ContentLanguage,
   InvalidVideoPlanError,
   buildLessonVideoScript,
-  buildVocabularyVideoScript,
   findVocabularyExample,
+  type AudioTarget,
   type MediaTarget,
   type VocabularyVisual,
 } from "@tfm-bic/application";
@@ -21,11 +21,19 @@ export interface TargetFilter {
   category?: string | undefined;
 }
 
-export interface PlannedTarget extends MediaTarget {
+export interface PlannedVideoTarget extends MediaTarget {
   key: string;
   priority: number;
   label: string;
 }
+
+export interface PlannedAudioTarget extends AudioTarget {
+  key: string;
+  priority: number;
+  label: string;
+}
+
+export type PlannedTarget = PlannedVideoTarget | PlannedAudioTarget;
 
 /** Content the plan wants a video for, but which cannot get a good one yet — never filled in. */
 export interface BlockedTarget {
@@ -69,7 +77,12 @@ export async function planMediaTargets(
   const blocked: BlockedTarget[] = [];
   const wanted = (key: string, priority: number) =>
     filter.only ? filter.only.includes(key) : priority <= filter.maxPriority;
-  const attempt = (key: string, label: string, priority: number, build: () => PlannedTarget) => {
+  const attempt = (
+    key: string,
+    label: string,
+    priority: number,
+    build: () => PlannedVideoTarget,
+  ) => {
     try {
       targets.push(build());
     } catch (error) {
@@ -112,6 +125,8 @@ export async function planMediaTargets(
   }
 
   if (filter.kinds.vocabulary || filter.only) {
+    // Words are audio only (user decision 2026-10-02): the word and its example, when the content
+    // has one, in the voice of the character who says it in that category (else the narrator).
     const categories = await repos.vocabularyRepository.listCategories(languageId);
     for (const category of [...categories].sort((a, b) => a.order - b.order)) {
       const entry = plan.plan.vocabularyCategories.find((c) => c.categoryId === category.id);
@@ -122,46 +137,30 @@ export async function planMediaTargets(
         .sort((a, b) => a.order - b.order)) {
         const key = `vocabulary-item:${item.id}`;
         if (!wanted(key, entry.priority)) continue;
-        const label = `${item.lemma} (${category.title})`;
         const visual = plan.plan.vocabulary[item.id] as VocabularyVisual | undefined;
-        if (!visual) {
-          blocked.push({ key, label, reason: "no visual context in plan.json (vocabulary)" });
-          continue;
-        }
+        const voice =
+          entry.cast.find((member) => member.id === visual?.actor)?.voice ?? entry.narrator;
         const example = findVocabularyExample(item, lessons, language.locale);
-        attempt(key, label, entry.priority, () => ({
+        targets.push({
+          audioOnly: true,
           key,
           priority: entry.priority,
-          label,
-          outputDir: `${languageId}/vocabulary/${item.id}`,
-          script: buildVocabularyVideoScript({
-            item,
-            category,
-            plan: { categoryId: category.id, narrator: entry.narrator, cast: entry.cast },
-            visual,
-            language: contentLanguage,
-            example,
-          }),
-          // The word as its character says it in the video — the same clip, reused on the page.
-          pronunciations: [
-            {
-              purpose: "pronunciation",
-              text: item.lemma,
-              language: item.languageId,
-              speaker: visual.actor,
-            },
+          label: `${item.lemma} (${category.title})`,
+          content: { type: "vocabulary-item", id: item.id, languageId: item.languageId },
+          voice,
+          clips: [
+            { purpose: "pronunciation", text: item.lemma, language: item.languageId },
             ...(example
               ? [
                   {
                     purpose: "example-pronunciation" as const,
                     text: example.text,
                     language: item.languageId,
-                    speaker: visual.actor,
                   },
                 ]
               : []),
           ],
-        }));
+        });
       }
     }
   }

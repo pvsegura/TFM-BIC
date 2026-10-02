@@ -5,6 +5,7 @@ import {
   type AudioAsset,
   type AudioPurpose,
   type LanguageId,
+  type MediaContentRef,
   type TranscriptLine,
   type VideoAsset,
   type VideoScript,
@@ -37,8 +38,26 @@ export interface MediaTarget {
   outputDir: string;
 }
 
+/**
+ * Audio only (M22, user decision 2026-10-02): a word gets its pronunciation clips — the word and,
+ * when the content has one, its example — in one character's voice profile, and no video.
+ */
+export interface AudioTarget {
+  audioOnly: true;
+  content: MediaContentRef;
+  /** The voice profile every clip of this item is spoken with. */
+  voice: string;
+  clips: PronunciationRequest[];
+}
+
+export type AnyMediaTarget = MediaTarget | AudioTarget;
+
+export function isAudioTarget(target: AnyMediaTarget): target is AudioTarget {
+  return "audioOnly" in target;
+}
+
 export interface GenerateContentMediaInput {
-  targets: MediaTarget[];
+  targets: AnyMediaTarget[];
   /** Regenerate even when an up-to-date asset exists. Never the default. */
   force: boolean;
   /** At most this many targets are *generated* in one run (skips do not count). */
@@ -95,16 +114,98 @@ export class GenerateContentMediaUseCase {
     );
   }
 
+  audioSourceHashOf(target: AudioTarget): string {
+    return this.deps.hash(
+      JSON.stringify({
+        clips: target.clips.map((c) => [c.purpose, c.language, c.text]),
+        voice: this.deps.narration.fingerprint(target.voice),
+      }),
+    );
+  }
+
+  private async generateAudio(
+    target: AudioTarget,
+    existing: MediaManifestEntry | undefined,
+    sourceHash: string,
+  ): Promise<TargetOutcome> {
+    const key = mediaContentKey(target.content);
+    const callsBefore = this.deps.narration.providerCalls;
+    const now = () => this.deps.clock.now().toISOString();
+    this.deps.onProgress?.(key, "generating-audio");
+    try {
+      const audio: AudioAsset[] = [];
+      for (const request of target.clips) {
+        const clip = await this.deps.narration.synthesize({
+          narratorId: target.voice,
+          text: request.text,
+          language: request.language,
+        });
+        audio.push({
+          purpose: request.purpose,
+          url: clip.path,
+          durationSeconds: clip.durationSeconds,
+          text: clip.text,
+          language: clip.language,
+          narrator: this.deps.narration.displayName(target.voice),
+        });
+      }
+      const providerCalls = this.deps.narration.providerCalls - callsBefore;
+      await this.deps.manifest.put({
+        key,
+        content: target.content,
+        published: { audio },
+        sourceHash,
+        narratorId: target.voice,
+        version: (existing?.version ?? (existing?.published ? 1 : 0)) + 1,
+        scriptVersion: 0,
+        previous: existing?.published
+          ? [
+              {
+                version: existing.version ?? 1,
+                sourceHash: existing.sourceHash,
+                scriptVersion: existing.scriptVersion ?? 1,
+                generatedAt: existing.updatedAt,
+              },
+              ...(existing.previous ?? []),
+            ].slice(0, 5)
+          : existing?.previous,
+        lastRun: { status: "ready", at: now(), providerCalls },
+        generator: { ...this.deps.generatorNames, video: "none (audio only)" },
+        createdAt: existing?.createdAt ?? now(),
+        updatedAt: now(),
+      });
+      this.deps.onProgress?.(key, "ready");
+      return { key, status: "ready", providerCalls };
+    } catch (error) {
+      const message = (error instanceof Error ? error.message : String(error)).slice(
+        0,
+        MAX_ERROR_LENGTH,
+      );
+      this.deps.onProgress?.(key, "failed", message);
+      return {
+        key,
+        status: "failed",
+        reason: message,
+        providerCalls: this.deps.narration.providerCalls - callsBefore,
+      };
+    }
+  }
+
   async execute(input: GenerateContentMediaInput): Promise<TargetOutcome[]> {
     const outcomes: TargetOutcome[] = [];
     let generated = 0;
 
     for (const target of input.targets) {
-      const key = mediaContentKey(target.script.content);
+      const key = mediaContentKey(isAudioTarget(target) ? target.content : target.script.content);
       const existing = await this.deps.manifest.get(key);
-      const sourceHash = this.sourceHashOf(target.script);
+      const sourceHash = isAudioTarget(target)
+        ? this.audioSourceHashOf(target)
+        : this.sourceHashOf(target.script);
+      const published = isAudioTarget(target)
+        ? Boolean(existing?.published?.audio.length) && !existing?.published?.video
+        : Boolean(existing?.published?.video);
 
-      if (!input.force && existing?.published?.video && existing.sourceHash === sourceHash) {
+      if (!input.force && published && existing?.sourceHash === sourceHash) {
         this.deps.onProgress?.(key, "skipped", "up to date");
         outcomes.push({ key, status: "skipped", reason: "up to date", providerCalls: 0 });
         continue;
@@ -124,7 +225,11 @@ export class GenerateContentMediaUseCase {
       }
 
       generated += 1;
-      outcomes.push(await this.generateOne(target, existing, sourceHash));
+      outcomes.push(
+        isAudioTarget(target)
+          ? await this.generateAudio(target, existing, sourceHash)
+          : await this.generateOne(target, existing, sourceHash),
+      );
     }
     return outcomes;
   }

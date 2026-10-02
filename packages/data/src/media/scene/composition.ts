@@ -469,6 +469,8 @@ function retrievalScene(
       `tl.fromTo("#${prefix}-answer",{opacity:0,scale:0.8},{opacity:1,scale:1,duration:0.3,ease:"back.out(2)"},${n(answer.start - 0.05)});`,
     );
     tl.to(`#${prefix}-dim`, `{opacity:0,duration:0.4}`, answer.start);
+    // The question has done its job once the answer appears; it would cover the answer card.
+    tl.to(`#${prefix}-prompt`, `{opacity:0,duration:0.25}`, answer.start - 0.1);
   }
   if (check) tl.to(`#${prefix}-check`, `{opacity:1,duration:0.3}`, check.start - 0.05);
   liveliness(tl, states, lines, start, end);

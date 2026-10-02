@@ -511,7 +511,10 @@ export {
 } from "./media/plan-video-timeline.js";
 export {
   GenerateContentMediaUseCase,
+  isAudioTarget,
   transcriptOf,
+  type AnyMediaTarget,
+  type AudioTarget,
   type GenerateContentMediaDependencies,
   type GenerateContentMediaInput,
   type MediaTarget,

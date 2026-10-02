@@ -6,6 +6,7 @@ import { parseArgs } from "node:util";
 
 import {
   GenerateContentMediaUseCase,
+  isAudioTarget,
   planVideoTimeline,
   type AudioGenerationService,
   type MediaRunStatus,
@@ -236,14 +237,26 @@ async function main() {
       let newLines = 0;
       for (const t of targets) {
         const entry = await manifest.get(t.key);
-        const upToDate =
-          entry?.published?.video && entry.sourceHash === useCase.sourceHashOf(t.script);
+        const audioOnly = isAudioTarget(t);
+        const upToDate = audioOnly
+          ? Boolean(entry?.published?.audio.length) &&
+            !entry?.published?.video &&
+            entry?.sourceHash === useCase.audioSourceHashOf(t)
+          : Boolean(entry?.published?.video) &&
+            entry?.sourceHash === useCase.sourceHashOf(t.script);
         let fresh = 0;
-        for (const line of narrationOf(t.script)) {
+        const spoken = audioOnly
+          ? t.clips.map((c) => ({ voice: t.voice, language: c.language, text: c.text }))
+          : narrationOf(t.script).map((line) => ({
+              voice: voiceOf(t.script, line),
+              language: line.language,
+              text: line.text,
+            }));
+        for (const line of spoken) {
           const k = createHash("sha256")
             .update(
               JSON.stringify([
-                synth.fingerprint(voiceOf(t.script, line)),
+                synth.fingerprint(line.voice),
                 line.language,
                 line.text.replace(/\s+/g, " ").trim(),
               ]),
@@ -257,7 +270,7 @@ async function main() {
         }
         if (!upToDate) newLines += fresh;
         out(
-          `${t.key.padEnd(34)} p${String(t.priority)}  ${(upToDate ? "up to date" : entry?.published?.video ? "outdated" : entry?.lastRun.status === "failed" ? "failed" : "missing").padEnd(10)}  ${String(fresh).padStart(3)} new clips  ${t.label}`,
+          `${t.key.padEnd(34)} p${String(t.priority)}  ${(upToDate ? "up to date" : entry?.published ? "outdated" : entry?.lastRun.status === "failed" ? "failed" : "missing").padEnd(10)}  ${String(fresh).padStart(3)} new clips  ${audioOnly ? "audio · " : "video · "}${t.label}`,
         );
       }
       for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED     ${b.label} — ${b.reason}`);
@@ -305,6 +318,7 @@ async function main() {
         localeOf,
       });
       for (const t of targets) {
+        if (isAudioTarget(t)) continue;
         const clips = [];
         for (const line of narrationOf(t.script)) {
           clips.push(

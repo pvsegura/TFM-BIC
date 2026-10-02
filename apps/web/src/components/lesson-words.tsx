@@ -1,7 +1,8 @@
-import { Link } from "react-router";
+import { Link } from "./app-link.js";
 
 import { useVocabulary } from "../hooks/use-vocabulary.js";
-import { MediaBadge } from "./media-badge.js";
+import { useMediaIndex } from "../hooks/use-media.js";
+import { WordAudioButton } from "./word-audio-button.js";
 
 const enc = encodeURIComponent;
 
@@ -13,6 +14,7 @@ const enc = encodeURIComponent;
 export function LessonWords({ languageId, ids }: { languageId: string; ids: string[] }) {
   const query = useVocabulary(ids.length > 0 ? languageId : undefined, { limit: 50 });
   const words = (query.data?.items ?? []).filter((item) => ids.includes(item.id));
+  const media = useMediaIndex();
   if (words.length === 0) return null;
   return (
     <section aria-labelledby="lesson-words" className="mt-8">
@@ -34,7 +36,11 @@ export function LessonWords({ languageId, ids }: { languageId: string; ids: stri
                   {word.translation}
                 </span>
               </span>
-              <MediaBadge contentType="vocabulary-item" contentId={word.id} />
+              <WordAudioButton
+                url={media.data?.get(`vocabulary-item:${word.id}`)?.pronunciationUrl}
+                word={word.lemma}
+                lang={word.languageId}
+              />
             </Link>
           </li>
         ))}

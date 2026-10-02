@@ -122,6 +122,7 @@ export function registerMediaRoutes(
         posterUrl: media.video?.posterUrl ?? null,
         narrator: media.video?.narrator ?? null,
         targetVocabularyIds: media.video?.targetVocabularyIds ?? [],
+        pronunciationUrl: media.audio.find((clip) => clip.purpose === "pronunciation")?.url ?? null,
       })),
     });
   });
