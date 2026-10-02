@@ -1,4 +1,40 @@
 {
+  "002d622ea7976b2c": {
+    "path": "pl/audio/ola/002d622ea7976b2c.m4a",
+    "durationSeconds": 1.12,
+    "text": "Nie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:49:42.133Z"
+  },
+  "004651bd342a81f4": {
+    "path": "pl/audio/ola/004651bd342a81f4.m4a",
+    "durationSeconds": 2.4,
+    "text": "Cześć! Mam na imię Anna.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:58:07.219Z"
+  },
+  "034e260161d99e33": {
+    "path": "pl/audio/ola/034e260161d99e33.m4a",
+    "durationSeconds": 1.92,
+    "text": "Mój dom jest mały.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:36.499Z"
+  },
+  "03c60bc252fcce44": {
+    "path": "pl/audio/marek/03c60bc252fcce44.m4a",
+    "durationSeconds": 4.56,
+    "text": "Anna says hi and gives her name. What does she say?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:03:03.053Z"
+  },
   "0498ac74fc2a86b3": {
     "path": "pl/audio/marek/0498ac74fc2a86b3.m4a",
     "durationSeconds": 3.16,
@@ -7,6 +43,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:48.590Z"
+  },
+  "06cb50496d496829": {
+    "path": "pl/audio/ola/06cb50496d496829.m4a",
+    "durationSeconds": 1.2,
+    "text": "walizka",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:01:33.743Z"
   },
   "08b661ef8c7c2ac2": {
     "path": "pl/audio/marek/08b661ef8c7c2ac2.m4a",
@@ -44,6 +89,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:00.324Z"
   },
+  "1114c56182ef1422": {
+    "path": "pl/audio/ola/1114c56182ef1422.m4a",
+    "durationSeconds": 1.12,
+    "text": "Dziękuję.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:48:50.015Z"
+  },
   "11a411c47477f155": {
     "path": "pl/audio/anna/11a411c47477f155.m4a",
     "durationSeconds": 1.84,
@@ -62,6 +116,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:56.310Z"
   },
+  "128386afa71ef4c7": {
+    "path": "pl/audio/marek/128386afa71ef4c7.m4a",
+    "durationSeconds": 3.24,
+    "text": "To ask a friend, or a child, their name:",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:23.486Z"
+  },
   "13c352010a42ee48": {
     "path": "pl/audio/anna/13c352010a42ee48.m4a",
     "durationSeconds": 1.88,
@@ -71,6 +134,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:31.132Z"
   },
+  "13c9ab8aa343dad8": {
+    "path": "pl/audio/anna/13c9ab8aa343dad8.m4a",
+    "durationSeconds": 7.16,
+    "text": "When you translate into English, choose a, an or the from the context.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:25.286Z"
+  },
   "1534f638662a11e7": {
     "path": "pl/audio/anna/1534f638662a11e7.m4a",
     "durationSeconds": 2.28,
@@ -79,6 +151,42 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:51.826Z"
+  },
+  "179165dc82d6d863": {
+    "path": "pl/audio/anna/179165dc82d6d863.m4a",
+    "durationSeconds": 5.4,
+    "text": "Morning, in a small shop. Piotr does not know the shopkeeper well.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:24:22.395Z"
+  },
+  "17c8749992b4fd32": {
+    "path": "pl/audio/ola/17c8749992b4fd32.m4a",
+    "durationSeconds": 1.24,
+    "text": "siostra",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:38.021Z"
+  },
+  "18a0c9aaa11960b2": {
+    "path": "pl/audio/ola/18a0c9aaa11960b2.m4a",
+    "durationSeconds": 0.88,
+    "text": "dom",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:29.798Z"
+  },
+  "19685144b2ab9c6e": {
+    "path": "pl/audio/piotr/19685144b2ab9c6e.m4a",
+    "durationSeconds": 1.04,
+    "text": "Dzień dobry.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:24:27.550Z"
   },
   "19b3601a02ca7ac3": {
     "path": "pl/audio/anna/19b3601a02ca7ac3.m4a",
@@ -143,6 +251,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:36.532Z"
   },
+  "24a65c0fdb7f7ce7": {
+    "path": "pl/audio/piotr/24a65c0fdb7f7ce7.m4a",
+    "durationSeconds": 1.08,
+    "text": "rodzina",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:59:12.449Z"
+  },
   "25b5b6aeccca3813": {
     "path": "pl/audio/anna/25b5b6aeccca3813.m4a",
     "durationSeconds": 2.84,
@@ -151,6 +268,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:06.111Z"
+  },
+  "25b75be2453b9746": {
+    "path": "pl/audio/anna/25b75be2453b9746.m4a",
+    "durationSeconds": 1.88,
+    "text": "He offers her milk.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:49:04.012Z"
+  },
+  "29840eac5919968a": {
+    "path": "pl/audio/ola/29840eac5919968a.m4a",
+    "durationSeconds": 1,
+    "text": "bilet",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:01:21.029Z"
   },
   "29ee5f9e7de733c4": {
     "path": "pl/audio/anna/29ee5f9e7de733c4.m4a",
@@ -161,6 +296,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:46:07.440Z"
   },
+  "2a0cf7852e064b33": {
+    "path": "pl/audio/ola/2a0cf7852e064b33.m4a",
+    "durationSeconds": 1.24,
+    "text": "Kot śpi.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:49.078Z"
+  },
+  "2c68f280649bdbeb": {
+    "path": "pl/audio/piotr/2c68f280649bdbeb.m4a",
+    "durationSeconds": 1.04,
+    "text": "cztery",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:59:00.042Z"
+  },
   "2fe7c50c17986be6": {
     "path": "pl/audio/anna/2fe7c50c17986be6.m4a",
     "durationSeconds": 2.84,
@@ -169,6 +322,42 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:18.566Z"
+  },
+  "309cdf7453470126": {
+    "path": "pl/audio/marek/309cdf7453470126.m4a",
+    "durationSeconds": 4.48,
+    "text": "Piotr is from Poland. What does he say?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:03:22.747Z"
+  },
+  "30d62a2a832c73cc": {
+    "path": "pl/audio/anna/30d62a2a832c73cc.m4a",
+    "durationSeconds": 4.6,
+    "text": "Later, in the street. Tomek holds the door open.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:29.424Z"
+  },
+  "3169ac0d23d03097": {
+    "path": "pl/audio/piotr/3169ac0d23d03097.m4a",
+    "durationSeconds": 1,
+    "text": "jeden",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:39.746Z"
+  },
+  "338df027bc3c70c3": {
+    "path": "pl/audio/ola/338df027bc3c70c3.m4a",
+    "durationSeconds": 1.16,
+    "text": "jabłko",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:17.126Z"
   },
   "346d85d7e3b314eb": {
     "path": "pl/audio/anna/346d85d7e3b314eb.m4a",
@@ -179,6 +368,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:50.410Z"
   },
+  "35f95487d3141f71": {
+    "path": "pl/audio/anna/35f95487d3141f71.m4a",
+    "durationSeconds": 2.88,
+    "text": "Please, when you ask for something.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:49:49.103Z"
+  },
   "37886057cf6281fb": {
     "path": "pl/audio/anna/37886057cf6281fb.m4a",
     "durationSeconds": 8.08,
@@ -188,6 +386,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:46.808Z"
   },
+  "39528b92f0e93b50": {
+    "path": "pl/audio/ola/39528b92f0e93b50.m4a",
+    "durationSeconds": 1.56,
+    "text": "Jestem z Hiszpanii.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:02:17.519Z"
+  },
+  "3bd3587f8d35a99e": {
+    "path": "pl/audio/anna/3bd3587f8d35a99e.m4a",
+    "durationSeconds": 4.32,
+    "text": "Now practise these words with the exercises below the video.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:51:01.136Z"
+  },
+  "3bf682686decf720": {
+    "path": "pl/audio/anna/3bf682686decf720.m4a",
+    "durationSeconds": 3.44,
+    "text": "It means please, when you ask for something.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:16:08.384Z"
+  },
   "3df17e5018f07010": {
     "path": "pl/audio/marek/3df17e5018f07010.m4a",
     "durationSeconds": 5.92,
@@ -196,6 +421,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:21.440Z"
+  },
+  "3e952ced32cf7fe8": {
+    "path": "pl/audio/piotr/3e952ced32cf7fe8.m4a",
+    "durationSeconds": 0.88,
+    "text": "trzy",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:54.320Z"
   },
   "3ea904c064841b84": {
     "path": "pl/audio/anna/3ea904c064841b84.m4a",
@@ -223,6 +457,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:38.197Z"
+  },
+  "3f8c7cc01f382576": {
+    "path": "pl/audio/marek/3f8c7cc01f382576.m4a",
+    "durationSeconds": 3.48,
+    "text": "Two people meet in a park for the first time.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:01:38.697Z"
   },
   "3ffdbd752009d945": {
     "path": "pl/audio/anna/3ffdbd752009d945.m4a",
@@ -260,6 +503,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:22.286Z"
   },
+  "450962bc8195b839": {
+    "path": "pl/audio/ola/450962bc8195b839.m4a",
+    "durationSeconds": 1.24,
+    "text": "Przepraszam.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:48:17.882Z"
+  },
   "45903d72382933ff": {
     "path": "pl/audio/marek/45903d72382933ff.m4a",
     "durationSeconds": 4.08,
@@ -268,6 +520,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:42:14.999Z"
+  },
+  "459d4ad8c48d4311": {
+    "path": "pl/audio/anna/459d4ad8c48d4311.m4a",
+    "durationSeconds": 4.36,
+    "text": "At home, she means her cat: the cat is sleeping.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:11.205Z"
   },
   "4a4898095c0b7e62": {
     "path": "pl/audio/anna/4a4898095c0b7e62.m4a",
@@ -278,6 +539,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:05.988Z"
   },
+  "4ab3afb05ef51dd3": {
+    "path": "pl/audio/anna/4ab3afb05ef51dd3.m4a",
+    "durationSeconds": 5.72,
+    "text": "Same words, a different place. And it can also mean: sorry.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:42.115Z"
+  },
+  "4b1848d5e940a3de": {
+    "path": "pl/audio/ola/4b1848d5e940a3de.m4a",
+    "durationSeconds": 1,
+    "text": "brat",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:32.726Z"
+  },
+  "4b54e6fd1f2c0369": {
+    "path": "pl/audio/piotr/4b54e6fd1f2c0369.m4a",
+    "durationSeconds": 0.92,
+    "text": "pięć",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:59:05.502Z"
+  },
   "4b8cb619f423bf29": {
     "path": "pl/audio/anna/4b8cb619f423bf29.m4a",
     "durationSeconds": 3.08,
@@ -286,6 +574,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:16.927Z"
+  },
+  "4e5742385edbad3b": {
+    "path": "pl/audio/ola/4e5742385edbad3b.m4a",
+    "durationSeconds": 1.4,
+    "text": "Jak masz na imię?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:02:29.935Z"
   },
   "4ed2e2c97725bb2c": {
     "path": "pl/audio/marek/4ed2e2c97725bb2c.m4a",
@@ -305,6 +602,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:35.870Z"
   },
+  "5166386f273a420a": {
+    "path": "pl/audio/anna/5166386f273a420a.m4a",
+    "durationSeconds": 3.8,
+    "text": "And you are welcome when someone thanks you.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:48:57.254Z"
+  },
   "51fae10a2768ea3d": {
     "path": "pl/audio/anna/51fae10a2768ea3d.m4a",
     "durationSeconds": 7.92,
@@ -313,6 +619,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:13.281Z"
+  },
+  "52097cc8f1b5cdf0": {
+    "path": "pl/audio/piotr/52097cc8f1b5cdf0.m4a",
+    "durationSeconds": 1.36,
+    "text": "lotnisko",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:01:27.446Z"
   },
   "562ad923a554b378": {
     "path": "pl/audio/anna/562ad923a554b378.m4a",
@@ -332,6 +647,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:16.203Z"
   },
+  "5c3edbb0d432d623": {
+    "path": "pl/audio/marek/5c3edbb0d432d623.m4a",
+    "durationSeconds": 5.92,
+    "text": "This question is informal: for one person you know well, or a child.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:37.741Z"
+  },
   "5d35269f03182dac": {
     "path": "pl/audio/marek/5d35269f03182dac.m4a",
     "durationSeconds": 2.16,
@@ -350,6 +674,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:40.701Z"
   },
+  "60a47bbc323ddf04": {
+    "path": "pl/audio/anna/60a47bbc323ddf04.m4a",
+    "durationSeconds": 5.64,
+    "text": "Ola talks about her pet. I have a dog. What does she say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:31.229Z"
+  },
+  "61757bfc1e128d65": {
+    "path": "pl/audio/ola/61757bfc1e128d65.m4a",
+    "durationSeconds": 1,
+    "text": "woda",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:51.425Z"
+  },
   "625ff14839b22103": {
     "path": "pl/audio/marek/625ff14839b22103.m4a",
     "durationSeconds": 2.04,
@@ -358,6 +700,33 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:42.288Z"
+  },
+  "632d0cad69ddeae5": {
+    "path": "pl/audio/piotr/632d0cad69ddeae5.m4a",
+    "durationSeconds": 1.08,
+    "text": "mama",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:59:18.641Z"
+  },
+  "64668014d1df0cbe": {
+    "path": "pl/audio/anna/64668014d1df0cbe.m4a",
+    "durationSeconds": 2.92,
+    "text": "Here you are, when you hand something over.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:49:55.631Z"
+  },
+  "672e5776480fef1a": {
+    "path": "pl/audio/ola/672e5776480fef1a.m4a",
+    "durationSeconds": 1.04,
+    "text": "mleko",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:57.890Z"
   },
   "67348162cbe21db0": {
     "path": "pl/audio/anna/67348162cbe21db0.m4a",
@@ -386,6 +755,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:14.107Z"
   },
+  "6de669405e41c6ba": {
+    "path": "pl/audio/ola/6de669405e41c6ba.m4a",
+    "durationSeconds": 0.84,
+    "text": "Tak.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:49:09.442Z"
+  },
+  "6f5b0475693611c3": {
+    "path": "pl/audio/ola/6f5b0475693611c3.m4a",
+    "durationSeconds": 0.92,
+    "text": "tata",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:25.149Z"
+  },
   "70d99ddc63347108": {
     "path": "pl/audio/marek/70d99ddc63347108.m4a",
     "durationSeconds": 2.64,
@@ -403,6 +790,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:29.943Z"
+  },
+  "746559323a660f68": {
+    "path": "pl/audio/anna/746559323a660f68.m4a",
+    "durationSeconds": 4.52,
+    "text": "It also means here you are when you hand something over.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:48:45.420Z"
+  },
+  "759e70b45e97168b": {
+    "path": "pl/audio/ola/759e70b45e97168b.m4a",
+    "durationSeconds": 0.88,
+    "text": "Proszę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:48:30.893Z"
   },
   "796a76bbcefe9f0b": {
     "path": "pl/audio/marek/796a76bbcefe9f0b.m4a",
@@ -422,6 +827,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:18.373Z"
   },
+  "7e87471c8b11a818": {
+    "path": "pl/audio/anna/7e87471c8b11a818.m4a",
+    "durationSeconds": 4.4,
+    "text": "In the park, any cat: a cat is sleeping.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:17.653Z"
+  },
+  "7eae15b357fbd4d0": {
+    "path": "pl/audio/anna/7eae15b357fbd4d0.m4a",
+    "durationSeconds": 1.4,
+    "text": "And sugar?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:49:40.515Z"
+  },
   "7f39a81ef4c61a52": {
     "path": "pl/audio/marek/7f39a81ef4c61a52.m4a",
     "durationSeconds": 7.12,
@@ -440,6 +863,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:04.526Z"
   },
+  "8356c04c71d8875a": {
+    "path": "pl/audio/anna/8356c04c71d8875a.m4a",
+    "durationSeconds": 3,
+    "text": "Ola is at home with her cat.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:07:18.786Z"
+  },
   "8405fcb319f0de81": {
     "path": "pl/audio/anna/8405fcb319f0de81.m4a",
     "durationSeconds": 1.16,
@@ -448,6 +880,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:25.420Z"
+  },
+  "8453f79279703871": {
+    "path": "pl/audio/anna/8453f79279703871.m4a",
+    "durationSeconds": 4.64,
+    "text": "Tomek has his back to her. How does Ola get his attention?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:48.277Z"
   },
   "874731577e5452b1": {
     "path": "pl/audio/marek/874731577e5452b1.m4a",
@@ -476,6 +917,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:37.731Z"
   },
+  "896d94e6ac026e0b": {
+    "path": "pl/audio/anna/896d94e6ac026e0b.m4a",
+    "durationSeconds": 6,
+    "text": "The same words. Here, in English: a cat is sleeping.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:07:58.601Z"
+  },
+  "8aacc5be91b0caa1": {
+    "path": "pl/audio/anna/8aacc5be91b0caa1.m4a",
+    "durationSeconds": 4.6,
+    "text": "In the park, Ola sees a cat she does not know.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:07:51.999Z"
+  },
   "8bd95b578cbbb51d": {
     "path": "pl/audio/marek/8bd95b578cbbb51d.m4a",
     "durationSeconds": 8.44,
@@ -494,6 +953,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:12.643Z"
   },
+  "8d7f052683d2e46d": {
+    "path": "pl/audio/marek/8d7f052683d2e46d.m4a",
+    "durationSeconds": 6.16,
+    "text": "The country name changes its ending, so for now, learn these as whole phrases.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:57.183Z"
+  },
+  "8dac6048221f3586": {
+    "path": "pl/audio/anna/8dac6048221f3586.m4a",
+    "durationSeconds": 4.4,
+    "text": "There is no word for a. Just: cat.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:07:32.564Z"
+  },
   "8e7e8c049293887d": {
     "path": "pl/audio/marek/8e7e8c049293887d.m4a",
     "durationSeconds": 2.8,
@@ -502,6 +979,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:08.307Z"
+  },
+  "9008c25f555d709a": {
+    "path": "pl/audio/anna/9008c25f555d709a.m4a",
+    "durationSeconds": 4.88,
+    "text": "A small café in the morning. Ola would like a coffee.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:48:13.358Z"
   },
   "912b5c515c092859": {
     "path": "pl/audio/anna/912b5c515c092859.m4a",
@@ -566,6 +1052,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:48.952Z"
   },
+  "9def28e5df989647": {
+    "path": "pl/audio/piotr/9def28e5df989647.m4a",
+    "durationSeconds": 1.28,
+    "text": "dobry wieczór",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:19.969Z"
+  },
+  "a07053a6adba9f10": {
+    "path": "pl/audio/marek/a07053a6adba9f10.m4a",
+    "durationSeconds": 1.24,
+    "text": "praca",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:01:08.161Z"
+  },
+  "a0fb3addd21c61f2": {
+    "path": "pl/audio/marek/a0fb3addd21c61f2.m4a",
+    "durationSeconds": 2.88,
+    "text": "These two words, then the country.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:49.783Z"
+  },
   "a2b8542a826f4299": {
     "path": "pl/audio/anna/a2b8542a826f4299.m4a",
     "durationSeconds": 6.84,
@@ -574,6 +1087,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:36.860Z"
+  },
+  "a4bc04e9a8c47339": {
+    "path": "pl/audio/anna/a4bc04e9a8c47339.m4a",
+    "durationSeconds": 3.56,
+    "text": "Did you say it? Say it once more, out loud.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:16.488Z"
   },
   "a519c04d65539d82": {
     "path": "pl/audio/marek/a519c04d65539d82.m4a",
@@ -602,6 +1124,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:32.450Z"
   },
+  "aa3555a5be0688bd": {
+    "path": "pl/audio/ola/aa3555a5be0688bd.m4a",
+    "durationSeconds": 0.96,
+    "text": "kot",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:42.185Z"
+  },
   "aa82b04764e152de": {
     "path": "pl/audio/marek/aa82b04764e152de.m4a",
     "durationSeconds": 4.44,
@@ -628,6 +1159,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:24.633Z"
+  },
+  "af8398c5c013478a": {
+    "path": "pl/audio/ola/af8398c5c013478a.m4a",
+    "durationSeconds": 1.16,
+    "text": "dobranoc",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:58:33.067Z"
   },
   "b108e0970e945039": {
     "path": "pl/audio/marek/b108e0970e945039.m4a",
@@ -656,6 +1196,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:17.979Z"
   },
+  "b45e622f182c6f85": {
+    "path": "pl/audio/anna/b45e622f182c6f85.m4a",
+    "durationSeconds": 4,
+    "text": "What is the cat doing? Say it in Polish.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:36.968Z"
+  },
   "b52f8590d1899da4": {
     "path": "pl/audio/marek/b52f8590d1899da4.m4a",
     "durationSeconds": 7.76,
@@ -664,6 +1213,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:11.050Z"
+  },
+  "b542f2a1e2c8aa13": {
+    "path": "pl/audio/tomek/b542f2a1e2c8aa13.m4a",
+    "durationSeconds": 1.28,
+    "text": "Dzień dobry.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-02T09:24:35.366Z"
   },
   "b5f769ad3599e219": {
     "path": "pl/audio/anna/b5f769ad3599e219.m4a",
@@ -683,6 +1241,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:19.345Z"
   },
+  "b6b7f7a3c986e765": {
+    "path": "pl/audio/anna/b6b7f7a3c986e765.m4a",
+    "durationSeconds": 3.32,
+    "text": "Excuse me. She wants his attention.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:48:24.667Z"
+  },
+  "b8e380bf5944f63e": {
+    "path": "pl/audio/ola/b8e380bf5944f63e.m4a",
+    "durationSeconds": 1.56,
+    "text": "Miło mi cię poznać.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:01:50.673Z"
+  },
+  "b90e2cf32480053d": {
+    "path": "pl/audio/piotr/b90e2cf32480053d.m4a",
+    "durationSeconds": 0.8,
+    "text": "dwa",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:46.699Z"
+  },
   "bad8401577993e09": {
     "path": "pl/audio/anna/bad8401577993e09.m4a",
     "durationSeconds": 1.08,
@@ -691,6 +1276,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:24.828Z"
+  },
+  "be774793d58c5e8a": {
+    "path": "pl/audio/anna/be774793d58c5e8a.m4a",
+    "durationSeconds": 6.88,
+    "text": "And no word for the. She means her cat, so in English: the cat.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:07:39.422Z"
+  },
+  "bf29f303942f12bd": {
+    "path": "pl/audio/piotr/bf29f303942f12bd.m4a",
+    "durationSeconds": 1.08,
+    "text": "pociąg",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:01:14.943Z"
   },
   "c0b9b44c86dab8dd": {
     "path": "pl/audio/anna/c0b9b44c86dab8dd.m4a",
@@ -701,6 +1304,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:32:11.400Z"
   },
+  "c4c9c6a4d2c07ee5": {
+    "path": "pl/audio/marek/c4c9c6a4d2c07ee5.m4a",
+    "durationSeconds": 1.2,
+    "text": "pies",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:00:54.707Z"
+  },
+  "c5110bf5fe737500": {
+    "path": "pl/audio/marek/c5110bf5fe737500.m4a",
+    "durationSeconds": 2.76,
+    "text": "Then they say where they are from.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:04.868Z"
+  },
   "c79c09d02afc917e": {
     "path": "pl/audio/marek/c79c09d02afc917e.m4a",
     "durationSeconds": 8.92,
@@ -710,6 +1331,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:40:58.502Z"
   },
+  "ce54a6fceeb01525": {
+    "path": "pl/audio/anna/ce54a6fceeb01525.m4a",
+    "durationSeconds": 4.08,
+    "text": "Read the examples below the video at your own pace.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:43.850Z"
+  },
+  "cf550d025de2fe93": {
+    "path": "pl/audio/piotr/cf550d025de2fe93.m4a",
+    "durationSeconds": 1.32,
+    "text": "dzień dobry",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:13.536Z"
+  },
   "d20636535a3e067a": {
     "path": "pl/audio/marek/d20636535a3e067a.m4a",
     "durationSeconds": 2.08,
@@ -718,6 +1357,96 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:16.031Z"
+  },
+  "d2c25516dceb77ea": {
+    "path": "pl/audio/anna/d2c25516dceb77ea.m4a",
+    "durationSeconds": 7.04,
+    "text": "Polish has no articles: no separate words for a, an or the.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T09:08:05.625Z"
+  },
+  "d36d3d3507e5f8f2": {
+    "path": "pl/audio/ola/d36d3d3507e5f8f2.m4a",
+    "durationSeconds": 1.2,
+    "text": "Mam kota.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:07:24.759Z"
+  },
+  "d67205280fb239e3": {
+    "path": "pl/audio/marek/d67205280fb239e3.m4a",
+    "durationSeconds": 4.32,
+    "text": "Now introduce yourself in the exercises below the video.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:03:29.021Z"
+  },
+  "d69c791c16623523": {
+    "path": "pl/audio/ola/d69c791c16623523.m4a",
+    "durationSeconds": 1,
+    "text": "chleb",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:59:44.488Z"
+  },
+  "d7165bd25b6e33c4": {
+    "path": "pl/audio/anna/d7165bd25b6e33c4.m4a",
+    "durationSeconds": 4.44,
+    "text": "Tomek hands Ola her coffee. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:09.704Z"
+  },
+  "d7d10d9ef4abd2c2": {
+    "path": "pl/audio/ola/d7d10d9ef4abd2c2.m4a",
+    "durationSeconds": 1.16,
+    "text": "Mam psa.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:07:44.801Z"
+  },
+  "d85158e36b96817a": {
+    "path": "pl/audio/piotr/d85158e36b96817a.m4a",
+    "durationSeconds": 1.44,
+    "text": "Jestem z Polski.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:02:10.569Z"
+  },
+  "d908ac9b2e5dd8b9": {
+    "path": "pl/audio/ola/d908ac9b2e5dd8b9.m4a",
+    "durationSeconds": 1.04,
+    "text": "cześć",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:58:00.965Z"
+  },
+  "da7ad330305e1fe1": {
+    "path": "pl/audio/anna/da7ad330305e1fe1.m4a",
+    "durationSeconds": 4.24,
+    "text": "He offers milk, and she wants some. What does she say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:55.240Z"
+  },
+  "da83d2b9b28ad32d": {
+    "path": "pl/audio/ola/da83d2b9b28ad32d.m4a",
+    "durationSeconds": 1.52,
+    "text": "Dziękuję bardzo.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T08:50:34.511Z"
   },
   "daf2a29336130c15": {
     "path": "pl/audio/marek/daf2a29336130c15.m4a",
@@ -746,6 +1475,33 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:18.135Z"
   },
+  "e4452371e0ffda0d": {
+    "path": "pl/audio/piotr/e4452371e0ffda0d.m4a",
+    "durationSeconds": 1.28,
+    "text": "do widzenia",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T08:58:26.421Z"
+  },
+  "e4ef7a5a4e43d92b": {
+    "path": "pl/audio/marek/e4ef7a5a4e43d92b.m4a",
+    "durationSeconds": 3.88,
+    "text": "These three words, then your first name.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:02:43.245Z"
+  },
+  "e5fc11811c500047": {
+    "path": "pl/audio/ola/e5fc11811c500047.m4a",
+    "durationSeconds": 1.32,
+    "text": "książka",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:01:01.769Z"
+  },
   "e7069d72f97a94e2": {
     "path": "pl/audio/anna/e7069d72f97a94e2.m4a",
     "durationSeconds": 2.76,
@@ -754,6 +1510,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:00.653Z"
+  },
+  "ea6e8df04994880a": {
+    "path": "pl/audio/marek/ea6e8df04994880a.m4a",
+    "durationSeconds": 0.92,
+    "text": "Proszę.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T08:48:37.650Z"
   },
   "ea99362b85e6d36a": {
     "path": "pl/audio/anna/ea99362b85e6d36a.m4a",
@@ -782,6 +1547,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:34.660Z"
   },
+  "f01e64a785c4984a": {
+    "path": "pl/audio/marek/f01e64a785c4984a.m4a",
+    "durationSeconds": 3.12,
+    "text": "They shake hands. What does Anna say?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:03:15.504Z"
+  },
   "f0418657bbd7ef62": {
     "path": "pl/audio/marek/f0418657bbd7ef62.m4a",
     "durationSeconds": 3.28,
@@ -799,6 +1573,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:44.752Z"
+  },
+  "f0d48da74737f5e1": {
+    "path": "pl/audio/anna/f0d48da74737f5e1.m4a",
+    "durationSeconds": 3.48,
+    "text": "You are welcome, when someone thanks you.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:02.652Z"
+  },
+  "f1cce5ee15843a15": {
+    "path": "pl/audio/piotr/f1cce5ee15843a15.m4a",
+    "durationSeconds": 1.8,
+    "text": "Cześć! Jestem Piotr.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:01:44.400Z"
   },
   "f2732b0b84a45f5b": {
     "path": "pl/audio/anna/f2732b0b84a45f5b.m4a",
@@ -827,6 +1619,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:40.329Z"
   },
+  "f540697fae8f3538": {
+    "path": "pl/audio/anna/f540697fae8f3538.m4a",
+    "durationSeconds": 3.32,
+    "text": "Ola takes the cup. What does she say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-02T08:50:22.139Z"
+  },
   "f75bf392e402c47d": {
     "path": "pl/audio/marek/f75bf392e402c47d.m4a",
     "durationSeconds": 1.84,
@@ -835,6 +1636,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:08.144Z"
+  },
+  "f760b84b3b0a837a": {
+    "path": "pl/audio/piotr/f760b84b3b0a837a.m4a",
+    "durationSeconds": 1.32,
+    "text": "Mnie też.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-02T09:01:57.226Z"
+  },
+  "f8f7bf21be817824": {
+    "path": "pl/audio/marek/f8f7bf21be817824.m4a",
+    "durationSeconds": 3.76,
+    "text": "Did you say it? Say it once more, out loud.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-02T09:03:09.255Z"
   },
   "f92f651677cf8ec6": {
     "path": "pl/audio/marek/f92f651677cf8ec6.m4a",
@@ -871,5 +1690,14 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:18.737Z"
+  },
+  "fe4c86e6df7025a5": {
+    "path": "pl/audio/ola/fe4c86e6df7025a5.m4a",
+    "durationSeconds": 0.92,
+    "text": "ser",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-02T09:00:22.533Z"
   }
 }

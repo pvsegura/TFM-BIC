@@ -8,109 +8,29 @@
         "id": "pl-greetings",
         "languageId": "pl"
       },
-      "published": {
-        "video": {
-          "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-greetings/video-bced083ca069.mp4",
-          "posterUrl": "pl/lesson/pl-greetings/poster-bced083ca069.jpg",
-          "captionsUrl": "pl/lesson/pl-greetings/captions-bced083ca069.vtt",
-          "captionsLanguage": "en",
-          "durationSeconds": 119.86,
-          "width": 1280,
-          "height": 720,
-          "narrator": "Anna",
-          "transcript": [
-            {
-              "text": "Greetings and goodbyes. Polite and informal ways to say hello and goodbye in Polish.",
-              "language": "en"
-            },
-            {
-              "text": "Polish has more than one way to greet people, and the choice depends on how formal the situation is.",
-              "language": "en"
-            },
-            {
-              "text": "Dzień dobry is polite and works with people you do not know well.",
-              "language": "en"
-            },
-            {
-              "text": "Cześć is informal: it is used with friends and family, both to say hello and to say goodbye.",
-              "language": "en"
-            },
-            {
-              "text": "Dzień dobry.",
-              "language": "pl",
-              "translation": "Good day; hello."
-            },
-            {
-              "text": "Polite. Used during the day.",
-              "language": "en"
-            },
-            {
-              "text": "Dobry wieczór.",
-              "language": "pl",
-              "translation": "Good evening."
-            },
-            {
-              "text": "Polite. Used in the evening.",
-              "language": "en"
-            },
-            {
-              "text": "Cześć!",
-              "language": "pl",
-              "translation": "Hi! Bye!"
-            },
-            {
-              "text": "Informal. For friends and family.",
-              "language": "en"
-            },
-            {
-              "text": "Do widzenia.",
-              "language": "pl",
-              "translation": "Goodbye."
-            },
-            {
-              "text": "Polite.",
-              "language": "en"
-            },
-            {
-              "text": "Na razie!",
-              "language": "pl",
-              "translation": "See you! Bye!"
-            },
-            {
-              "text": "Informal.",
-              "language": "en"
-            },
-            {
-              "text": "Dobranoc.",
-              "language": "pl",
-              "translation": "Good night."
-            },
-            {
-              "text": "Said when saying goodnight, not as a general goodbye.",
-              "language": "en"
-            },
-            {
-              "text": "Now it's your turn. Practise with the exercises below the video.",
-              "language": "en"
-            }
-          ]
-        },
-        "audio": []
-      },
-      "sourceHash": "1fc3e0eb8e4bf731e3e3137c4607effc474854815aaf482d6aa512d6a033edb4",
+      "published": null,
+      "sourceHash": null,
       "narratorId": "anna",
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-01T07:35:56.476Z",
-        "providerCalls": 10
+        "status": "failed",
+        "at": "2026-10-02T09:24:55.633Z",
+        "error": "Version 1 prototype unpublished in M22; version 2 pending the Gemini daily quota.",
+        "providerCalls": 4
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:29:37.868Z",
-      "updatedAt": "2026-10-01T07:35:56.476Z"
+      "updatedAt": "2026-10-02T09:25:38.500Z",
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "1fc3e0eb8e4bf731e3e3137c4607effc474854815aaf482d6aa512d6a033edb4",
+          "scriptVersion": 1,
+          "generatedAt": "2026-10-02T09:24:55.633Z"
+        }
+      ]
     },
     {
       "key": "lesson:pl-introducing-yourself",
@@ -122,105 +42,223 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-introducing-yourself/video-2afcbd6dcb78.mp4",
-          "posterUrl": "pl/lesson/pl-introducing-yourself/poster-2afcbd6dcb78.jpg",
-          "captionsUrl": "pl/lesson/pl-introducing-yourself/captions-2afcbd6dcb78.vtt",
+          "url": "pl/lesson/pl-introducing-yourself/video-2386ad27879f.mp4",
+          "posterUrl": "pl/lesson/pl-introducing-yourself/poster-2386ad27879f.jpg",
+          "captionsUrl": "pl/lesson/pl-introducing-yourself/captions-2386ad27879f.vtt",
           "captionsLanguage": "en",
-          "durationSeconds": 133.34,
+          "durationSeconds": 125.85,
           "width": 1280,
           "height": 720,
           "narrator": "Marek",
           "transcript": [
             {
-              "text": "Introducing yourself. Say your name, ask someone theirs, and say where you are from.",
-              "language": "en"
+              "text": "Two people meet in a park for the first time.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             },
             {
-              "text": "To say your name, use Mam na imię followed by your first name.",
-              "language": "en"
-            },
-            {
-              "text": "To say where you are from, use Jestem z followed by the name of the country.",
-              "language": "en"
-            },
-            {
-              "text": "The country name changes its ending after z, so for now it is best to learn these sentences as whole phrases.",
-              "language": "en"
-            },
-            {
-              "text": "Mam na imię Anna.",
+              "text": "Cześć! Mam na imię Anna.",
               "language": "pl",
-              "translation": "My name is Anna."
+              "speaker": "Anna",
+              "translation": "Hi! My name is Anna."
             },
             {
-              "text": "Jak masz na imię?",
+              "text": "Cześć! Jestem Piotr.",
               "language": "pl",
-              "translation": "What is your name?"
+              "speaker": "Piotr",
+              "translation": "Hi! I am Piotr."
             },
             {
-              "text": "Informal. Speaking to one person you know well, or a child.",
-              "language": "en"
+              "text": "Miło mi cię poznać.",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "Nice to meet you."
+            },
+            {
+              "text": "Mnie też.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Me too."
+            },
+            {
+              "text": "Then they say where they are from.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             },
             {
               "text": "Jestem z Polski.",
               "language": "pl",
+              "speaker": "Piotr",
               "translation": "I am from Poland."
             },
             {
               "text": "Jestem z Hiszpanii.",
               "language": "pl",
+              "speaker": "Anna",
               "translation": "I am from Spain."
+            },
+            {
+              "text": "To ask a friend, or a child, their name:",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jak masz na imię?",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "What is your name?"
+            },
+            {
+              "text": "This question is informal: for one person you know well, or a child.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Mam na imię Anna.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "My name is Anna."
+            },
+            {
+              "text": "These three words, then your first name.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jestem z Polski.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I am from Poland."
+            },
+            {
+              "text": "These two words, then the country.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The country name changes its ending, so for now, learn these as whole phrases.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Anna says hi and gives her name. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Cześć! Mam na imię Anna.",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "Hi! My name is Anna."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "They shake hands. What does Anna say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             },
             {
               "text": "Miło mi cię poznać.",
               "language": "pl",
+              "speaker": "Anna",
               "translation": "Nice to meet you."
             },
             {
-              "text": "Informal. A polite version uses pana (to a man) or panią (to a woman) instead of cię.",
-              "language": "en"
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             },
             {
-              "text": "Anna: Cześć! Mam na imię Anna.",
+              "text": "Piotr is from Poland. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jestem z Polski.",
               "language": "pl",
-              "translation": "Hi! My name is Anna."
+              "speaker": "Piotr",
+              "translation": "I am from Poland."
             },
             {
-              "text": "Piotr: Cześć! Jestem Piotr.",
-              "language": "pl",
-              "translation": "Hi! I am Piotr."
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             },
             {
-              "text": "Anna: Miło mi cię poznać.",
-              "language": "pl",
-              "translation": "Nice to meet you."
-            },
-            {
-              "text": "Piotr: Mnie też.",
-              "language": "pl",
-              "translation": "Me too."
-            },
-            {
-              "text": "Now it's your turn. Practise with the exercises below the video.",
-              "language": "en"
+              "text": "Now introduce yourself in the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
             }
-          ]
+          ],
+          "objective": "Say your name and where you are from, and react when you meet someone.",
+          "targetVocabularyIds": ["pl-czesc"]
         },
         "audio": []
       },
-      "sourceHash": "30b3d0756e7af50852d3e419506783e41a33533557864025b3a849d22ee61686",
+      "sourceHash": "f25891d0d4f2d1f765eeb5fe9ff549645a723173b18b746bb63b7f2c7e048b40",
       "narratorId": "marek",
+      "version": 3,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say your name and where you are from, and react when you meet someone.",
+        "level": "a1",
+        "targetVocabularyIds": ["pl-czesc"],
+        "targetPhrases": [
+          "Cześć! Mam na imię Anna.",
+          "Cześć! Jestem Piotr.",
+          "Miło mi cię poznać.",
+          "Mnie też.",
+          "Jestem z Polski.",
+          "Jestem z Hiszpanii.",
+          "Jak masz na imię?",
+          "Mam na imię Anna."
+        ],
+        "segments": ["conversation", "target", "reuse", "form", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Anna",
+            "voice": "ola"
+          },
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          },
+          {
+            "character": "Kuba",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "previous": [
+        {
+          "version": 2,
+          "sourceHash": "152b6cc7612550843840ccf39ce26ee7d26d8630ac6e28981b6760c8d6a27c28",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-02T09:07:16.657Z"
+        },
+        {
+          "version": 1,
+          "sourceHash": "30b3d0756e7af50852d3e419506783e41a33533557864025b3a849d22ee61686",
+          "scriptVersion": 1,
+          "generatedAt": "2026-10-01T07:25:05.800Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-01T07:25:05.800Z",
-        "providerCalls": 4
+        "at": "2026-10-02T09:16:05.991Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:25:05.800Z",
-      "updatedAt": "2026-10-01T07:25:05.800Z"
+      "updatedAt": "2026-10-02T09:16:05.991Z"
     },
     {
       "key": "lesson:pl-no-articles",
@@ -232,75 +270,182 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-no-articles/video-ee1694087cdb.mp4",
-          "posterUrl": "pl/lesson/pl-no-articles/poster-ee1694087cdb.jpg",
-          "captionsUrl": "pl/lesson/pl-no-articles/captions-ee1694087cdb.vtt",
+          "url": "pl/lesson/pl-no-articles/video-224bc30b0652.mp4",
+          "posterUrl": "pl/lesson/pl-no-articles/poster-224bc30b0652.jpg",
+          "captionsUrl": "pl/lesson/pl-no-articles/captions-224bc30b0652.vtt",
           "captionsLanguage": "en",
-          "durationSeconds": 96.01,
+          "durationSeconds": 109.82,
           "width": 1280,
           "height": 720,
-          "narrator": "Marek",
+          "narrator": "Anna",
           "transcript": [
             {
-              "text": "Polish has no articles. Why there is no word for a, an or the, and what to do about it.",
-              "language": "en"
-            },
-            {
-              "text": "Polish has no articles: there are no separate words for a, an or the.",
-              "language": "en"
-            },
-            {
-              "text": "A bare noun can therefore mean a cat or the cat, and the meaning comes from the situation.",
-              "language": "en"
-            },
-            {
-              "text": "When you translate into English, choose a, an or the from the context.",
-              "language": "en"
+              "text": "Ola is at home with her cat.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Mam kota.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "I have a cat."
             },
             {
-              "text": "There is no word for a. The ending of kota changes because it is the object of the verb; that is a later topic.",
-              "language": "en"
+              "text": "There is no word for a. Just: cat.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Kot śpi.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "The cat is sleeping."
             },
             {
-              "text": "It could also mean A cat is sleeping, depending on the situation.",
-              "language": "en"
+              "text": "And no word for the. She means her cat, so in English: the cat.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Mam psa.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "I have a dog."
             },
             {
+              "text": "In the park, Ola sees a cat she does not know.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kot śpi.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "The cat is sleeping."
+            },
+            {
+              "text": "The same words. Here, in English: a cat is sleeping.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Polish has no articles: no separate words for a, an or the.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "At home, she means her cat: the cat is sleeping.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "In the park, any cat: a cat is sleeping.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "When you translate into English, choose a, an or the from the context.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ola talks about her pet. I have a dog. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam psa.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I have a dog."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "What is the cat doing? Say it in Polish. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kot śpi.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "The cat is sleeping."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
               "text": "Read the examples below the video at your own pace.",
-              "language": "en"
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             }
-          ]
+          ],
+          "objective": "Understand that Polish has no articles, and choose a or the in English from the situation.",
+          "targetVocabularyIds": ["pl-kot", "pl-pies"]
         },
         "audio": []
       },
-      "sourceHash": "78d283e193f4dea74c1cf7c7c0f16c05a7f9a932a5a94caeaf2a8aefd89b3d7a",
-      "narratorId": "marek",
+      "sourceHash": "069c7151542870608728d294a1a6ab6e778e1173ac8bc1476aff67ec900b8f68",
+      "narratorId": "anna",
+      "version": 5,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Understand that Polish has no articles, and choose a or the in English from the situation.",
+        "level": "a1",
+        "targetVocabularyIds": ["pl-kot", "pl-pies"],
+        "targetPhrases": ["Mam kota.", "Kot śpi.", "Mam psa."],
+        "segments": ["situation", "reuse", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
+      "previous": [
+        {
+          "version": 4,
+          "sourceHash": "069c7151542870608728d294a1a6ab6e778e1173ac8bc1476aff67ec900b8f68",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-02T09:29:45.378Z"
+        },
+        {
+          "version": 3,
+          "sourceHash": "069c7151542870608728d294a1a6ab6e778e1173ac8bc1476aff67ec900b8f68",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-02T09:24:08.622Z"
+        },
+        {
+          "version": 2,
+          "sourceHash": "de309d6cc86f5255008e30188e0b0213f32935818639ac65dd745284d95a0c35",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-02T09:11:54.431Z"
+        },
+        {
+          "version": 1,
+          "sourceHash": "78d283e193f4dea74c1cf7c7c0f16c05a7f9a932a5a94caeaf2a8aefd89b3d7a",
+          "scriptVersion": 1,
+          "generatedAt": "2026-10-01T07:44:57.008Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-01T07:44:57.008Z",
-        "providerCalls": 13
+        "at": "2026-10-02T09:34:16.527Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:44:57.008Z",
-      "updatedAt": "2026-10-01T07:44:57.008Z"
+      "updatedAt": "2026-10-02T09:34:16.527Z"
     },
     {
       "key": "lesson:pl-polite-words",
@@ -312,90 +457,275 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-polite-words/video-8aeb4d6159a0.mp4",
-          "posterUrl": "pl/lesson/pl-polite-words/poster-8aeb4d6159a0.jpg",
-          "captionsUrl": "pl/lesson/pl-polite-words/captions-8aeb4d6159a0.vtt",
+          "url": "pl/lesson/pl-polite-words/video-ff8a7ee48aef.mp4",
+          "posterUrl": "pl/lesson/pl-polite-words/poster-ff8a7ee48aef.jpg",
+          "captionsUrl": "pl/lesson/pl-polite-words/captions-ff8a7ee48aef.vtt",
           "captionsLanguage": "en",
-          "durationSeconds": 112.1,
+          "durationSeconds": 159.71,
           "width": 1280,
           "height": 720,
           "narrator": "Anna",
           "transcript": [
             {
-              "text": "Please, thank you and sorry. A few short words that make everyday conversations polite.",
-              "language": "en"
+              "text": "A small café in the morning. Ola would like a coffee.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
-              "text": "Proszę and dziękuję are among the most useful Polish words.",
-              "language": "en"
+              "text": "Przepraszam.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Excuse me."
             },
             {
-              "text": "Proszę means please when you ask for something.",
-              "language": "en"
+              "text": "Excuse me. She wants his attention.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
-              "text": "It also means here you are when you hand something over, and you are welcome when someone thanks you.",
-              "language": "en"
+              "text": "Proszę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Please."
             },
             {
-              "text": "Dziękuję means thank you.",
-              "language": "en"
+              "text": "It means please, when you ask for something.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Proszę.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Please."
+            },
+            {
+              "text": "It also means here you are when you hand something over.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Dziękuję.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "Thank you."
+            },
+            {
+              "text": "Proszę.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Please."
+            },
+            {
+              "text": "And you are welcome when someone thanks you.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He offers her milk.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tak.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Yes."
+            },
+            {
+              "text": "And sugar?",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Nie.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "No."
+            },
+            {
+              "text": "Proszę.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Please. Here you are. You are welcome."
+            },
+            {
+              "text": "Please, when you ask for something.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Here you are, when you hand something over.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You are welcome, when someone thanks you.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "One word, three uses. The situation tells you which.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tomek hands Ola her coffee. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Proszę.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Here you are."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ola takes the cup. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dziękuję.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Thank you."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Later, in the street. Tomek holds the door open.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Dziękuję bardzo.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "Thank you very much."
             },
             {
               "text": "Proszę.",
               "language": "pl",
-              "translation": "Please. Here you are. You are welcome."
-            },
-            {
-              "text": "One word, three uses. The situation tells you which.",
-              "language": "en"
+              "speaker": "Tomek",
+              "translation": "You are welcome."
             },
             {
               "text": "Przepraszam.",
               "language": "pl",
-              "translation": "Sorry. Excuse me."
+              "speaker": "Ola",
+              "translation": "Sorry."
+            },
+            {
+              "text": "Same words, a different place. And it can also mean: sorry.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tomek has his back to her. How does Ola get his attention? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przepraszam.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Excuse me."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He offers milk, and she wants some. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
               "text": "Tak.",
               "language": "pl",
+              "speaker": "Ola",
               "translation": "Yes."
             },
             {
-              "text": "Nie.",
-              "language": "pl",
-              "translation": "No."
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             },
             {
-              "text": "Now it's your turn. Practise with the exercises below the video.",
-              "language": "en"
+              "text": "Now practise these words with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
             }
-          ]
+          ],
+          "objective": "Use proszę, dziękuję and przepraszam in a café, and tell from the situation which meaning of proszę is meant.",
+          "targetVocabularyIds": []
         },
         "audio": []
       },
-      "sourceHash": "605d2ac791eee0d075a6d09f3cb88d2b605b872770a4cfb06dc542bd0c540a2b",
+      "sourceHash": "ead1dcab4d4e177a8451218c520a305c97574aec7ad3a7085320e86764be1284",
       "narratorId": "anna",
+      "version": 3,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Use proszę, dziękuję and przepraszam in a café, and tell from the situation which meaning of proszę is meant.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Przepraszam.",
+          "Proszę.",
+          "Dziękuję.",
+          "Tak.",
+          "Nie.",
+          "Dziękuję bardzo."
+        ],
+        "segments": ["situation", "notice", "retrieval", "reuse", "recap"],
+        "retrievalMoments": 4,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Tomek",
+            "voice": "marek"
+          }
+        ]
+      },
+      "previous": [
+        {
+          "version": 2,
+          "sourceHash": "76aa242913c391673cc7d2ca1e811c0ae85d41b689c873b32b1666f4d383ea13",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-02T08:57:38.941Z"
+        },
+        {
+          "version": 1,
+          "sourceHash": "605d2ac791eee0d075a6d09f3cb88d2b605b872770a4cfb06dc542bd0c540a2b",
+          "scriptVersion": 1,
+          "generatedAt": "2026-10-01T07:40:54.018Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-01T07:40:54.018Z",
-        "providerCalls": 17
+        "at": "2026-10-02T09:20:57.005Z",
+        "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:40:54.018Z",
-      "updatedAt": "2026-10-01T07:40:54.018Z"
+      "updatedAt": "2026-10-02T09:20:57.006Z"
     },
     {
       "key": "lesson:pl-spelling-and-sounds",
@@ -406,19 +736,124 @@
       },
       "published": null,
       "sourceHash": null,
-      "narratorId": "anna",
+      "narratorId": "marek",
       "lastRun": {
         "status": "failed",
-        "at": "2026-10-01T07:46:57.408Z",
+        "at": "2026-10-02T09:25:18.732Z",
         "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 13
+        "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:46:57.408Z",
-      "updatedAt": "2026-10-01T07:46:57.408Z"
+      "updatedAt": "2026-10-02T09:25:18.732Z"
+    },
+    {
+      "key": "vocabulary-item:pl-bilet",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-bilet",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/29840eac5919968a.m4a",
+            "durationSeconds": 1,
+            "text": "bilet",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "7d4af22f14f1055359af87c716781a84095be37d31b38939505c9a85cbe1ac15",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:21.032Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:21.032Z",
+      "updatedAt": "2026-10-02T09:01:21.032Z"
+    },
+    {
+      "key": "vocabulary-item:pl-brat",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-brat",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/4b1848d5e940a3de.m4a",
+            "durationSeconds": 1,
+            "text": "brat",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "7e912ef2f60d2a331d8170f172d0c81139089101386e900b172e6e346332ea00",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:32.729Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:32.729Z",
+      "updatedAt": "2026-10-02T08:59:32.729Z"
+    },
+    {
+      "key": "vocabulary-item:pl-chleb",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-chleb",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/d69c791c16623523.m4a",
+            "durationSeconds": 1,
+            "text": "chleb",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "3f6889a9e25d3ba906d862268f89398df0693315e717689d1131dd64547a78b0",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:44.492Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:44.492Z",
+      "updatedAt": "2026-10-02T08:59:44.492Z"
     },
     {
       "key": "vocabulary-item:pl-czesc",
@@ -427,21 +862,76 @@
         "id": "pl-czesc",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
-      "narratorId": "anna",
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/d908ac9b2e5dd8b9.m4a",
+            "durationSeconds": 1.04,
+            "text": "cześć",
+            "language": "pl",
+            "narrator": "Ola"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/ola/004651bd342a81f4.m4a",
+            "durationSeconds": 2.4,
+            "text": "Cześć! Mam na imię Anna.",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "54846b50a64675e354cabdaccbef627cebf1d7aa7840fbac01bb8bcb9cd6f788",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-01T07:47:20.769Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
+        "status": "ready",
+        "at": "2026-10-02T08:58:07.224Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-01T07:47:20.769Z",
+      "updatedAt": "2026-10-02T08:58:07.224Z"
+    },
+    {
+      "key": "vocabulary-item:pl-cztery",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-cztery",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/2c68f280649bdbeb.m4a",
+            "durationSeconds": 1.04,
+            "text": "cztery",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "3937f1857b12545c262813c8ace79119be4f871d79b35f5e79ce2fb8c82694d9",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:00.045Z",
         "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "none (audio only)"
       },
-      "createdAt": "2026-10-01T07:47:20.769Z",
-      "updatedAt": "2026-10-01T07:47:20.769Z"
+      "createdAt": "2026-10-02T08:59:00.045Z",
+      "updatedAt": "2026-10-02T08:59:00.045Z"
     },
     {
       "key": "vocabulary-item:pl-do-widzenia",
@@ -450,21 +940,68 @@
         "id": "pl-do-widzenia",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
-      "narratorId": "anna",
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/e4452371e0ffda0d.m4a",
+            "durationSeconds": 1.28,
+            "text": "do widzenia",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "fb4363341e3587ed6395c04f05a9895c6712975796a6f80a77618c1330a59df3",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-01T07:48:30.727Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
+        "status": "ready",
+        "at": "2026-10-02T08:58:26.424Z",
         "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "none (audio only)"
       },
       "createdAt": "2026-10-01T07:48:30.727Z",
-      "updatedAt": "2026-10-01T07:48:30.727Z"
+      "updatedAt": "2026-10-02T08:58:26.424Z"
+    },
+    {
+      "key": "vocabulary-item:pl-dobranoc",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dobranoc",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/af8398c5c013478a.m4a",
+            "durationSeconds": 1.16,
+            "text": "dobranoc",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "642b2b65533725c973fe6a7839365a69ce691a8bdf37aaa79b5f97a7f8759480",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:58:33.070Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:58:33.071Z",
+      "updatedAt": "2026-10-02T08:58:33.071Z"
     },
     {
       "key": "vocabulary-item:pl-dobry-wieczor",
@@ -473,21 +1010,33 @@
         "id": "pl-dobry-wieczor",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
-      "narratorId": "anna",
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/9def28e5df989647.m4a",
+            "durationSeconds": 1.28,
+            "text": "dobry wieczór",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "aebfc78b986df525cce7c28654ea2a196f97bedca20f2833d7175c1aff6acfca",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-01T07:48:07.504Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
+        "status": "ready",
+        "at": "2026-10-02T08:58:19.972Z",
         "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "none (audio only)"
       },
       "createdAt": "2026-10-01T07:48:07.504Z",
-      "updatedAt": "2026-10-01T07:48:07.504Z"
+      "updatedAt": "2026-10-02T08:58:19.972Z"
     },
     {
       "key": "vocabulary-item:pl-dom",
@@ -497,81 +1046,83 @@
         "languageId": "pl"
       },
       "published": {
-        "video": {
-          "purpose": "vocabulary-explanation",
-          "url": "pl/vocabulary/pl-dom/video-46bc6568dc3d.mp4",
-          "posterUrl": "pl/vocabulary/pl-dom/poster-46bc6568dc3d.jpg",
-          "captionsUrl": "pl/vocabulary/pl-dom/captions-46bc6568dc3d.vtt",
-          "captionsLanguage": "en",
-          "durationSeconds": 35.91,
-          "width": 1280,
-          "height": 720,
-          "narrator": "Marek",
-          "transcript": [
-            {
-              "text": "A new word from everyday life.",
-              "language": "en"
-            },
-            {
-              "text": "dom",
-              "language": "pl",
-              "translation": "house; home"
-            },
-            {
-              "text": "Part of speech: Noun",
-              "language": "en"
-            },
-            {
-              "text": "Gender: Masculine",
-              "language": "en"
-            },
-            {
-              "text": "Plural: domy",
-              "language": "en"
-            },
-            {
-              "text": "Mój dom jest mały.",
-              "language": "pl",
-              "translation": "My house is small."
-            },
-            {
-              "text": "Save it to review later, or mark it as learned.",
-              "language": "en"
-            }
-          ]
-        },
         "audio": [
           {
             "purpose": "pronunciation",
-            "url": "pl/audio/marek/874731577e5452b1.m4a",
-            "durationSeconds": 1.24,
+            "url": "pl/audio/ola/18a0c9aaa11960b2.m4a",
+            "durationSeconds": 0.88,
             "text": "dom",
             "language": "pl",
-            "narrator": "Marek"
+            "narrator": "Ola"
           },
           {
             "purpose": "example-pronunciation",
-            "url": "pl/audio/marek/79bbf6c9dd7b341c.m4a",
-            "durationSeconds": 3.12,
+            "url": "pl/audio/ola/034e260161d99e33.m4a",
+            "durationSeconds": 1.92,
             "text": "Mój dom jest mały.",
             "language": "pl",
-            "narrator": "Marek"
+            "narrator": "Ola"
           }
         ]
       },
-      "sourceHash": "91da8d8fb1836348d8f55cedf5a782829469df0b89bae1b0336d572dd5627482",
-      "narratorId": "marek",
+      "sourceHash": "faf75bdf30a25b5e0e43fdb229fef0a3bfa4c7c5db60bbf1ed4439e3b293ff3d",
+      "narratorId": "ola",
+      "version": 2,
+      "scriptVersion": 0,
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "91da8d8fb1836348d8f55cedf5a782829469df0b89bae1b0336d572dd5627482",
+          "scriptVersion": 1,
+          "generatedAt": "2026-10-01T07:26:31.116Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-01T07:26:31.116Z",
-        "providerCalls": 8
+        "at": "2026-10-02T09:00:36.502Z",
+        "providerCalls": 2
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "none (audio only)"
       },
       "createdAt": "2026-10-01T07:26:31.116Z",
-      "updatedAt": "2026-10-01T07:26:31.116Z"
+      "updatedAt": "2026-10-02T09:00:36.502Z"
+    },
+    {
+      "key": "vocabulary-item:pl-dwa",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dwa",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/b90e2cf32480053d.m4a",
+            "durationSeconds": 0.8,
+            "text": "dwa",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "61d1fa2e90d13f11560671dc33dd19fe0fac0950391486d046dd4011115908e8",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:58:46.702Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:58:46.702Z",
+      "updatedAt": "2026-10-02T08:58:46.702Z"
     },
     {
       "key": "vocabulary-item:pl-dzien-dobry",
@@ -580,21 +1131,671 @@
         "id": "pl-dzien-dobry",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
-      "narratorId": "anna",
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/cf550d025de2fe93.m4a",
+            "durationSeconds": 1.32,
+            "text": "dzień dobry",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "fc68c80a7c787aec94ea2615a094b93698ec18562e1698f60a6092e73c13dc29",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-01T07:47:44.247Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
+        "status": "ready",
+        "at": "2026-10-02T08:58:13.542Z",
         "providerCalls": 1
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-1"
+        "video": "none (audio only)"
       },
       "createdAt": "2026-10-01T07:47:44.247Z",
-      "updatedAt": "2026-10-01T07:47:44.247Z"
+      "updatedAt": "2026-10-02T08:58:13.542Z"
+    },
+    {
+      "key": "vocabulary-item:pl-jablko",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-jablko",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/338df027bc3c70c3.m4a",
+            "durationSeconds": 1.16,
+            "text": "jabłko",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "911d53584cc87b38ea765ff4ce05a09bee47c221fc42e9bf8600c59cdf41d32e",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:00:17.129Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:00:17.129Z",
+      "updatedAt": "2026-10-02T09:00:17.129Z"
+    },
+    {
+      "key": "vocabulary-item:pl-jeden",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-jeden",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/3169ac0d23d03097.m4a",
+            "durationSeconds": 1,
+            "text": "jeden",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "652b7196b5ed857fb8496ad3280edcda0fb0bfff392b39e2fa12513a16f86865",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:58:39.749Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:58:39.749Z",
+      "updatedAt": "2026-10-02T08:58:39.749Z"
+    },
+    {
+      "key": "vocabulary-item:pl-kot",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-kot",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/aa3555a5be0688bd.m4a",
+            "durationSeconds": 0.96,
+            "text": "kot",
+            "language": "pl",
+            "narrator": "Ola"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/ola/2a0cf7852e064b33.m4a",
+            "durationSeconds": 1.24,
+            "text": "Kot śpi.",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "efc4faebfc98ee6545ec2bb31be8eaca12fbcf6cb9ba0579408cb4853be9804c",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:00:49.083Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:00:49.083Z",
+      "updatedAt": "2026-10-02T09:00:49.083Z"
+    },
+    {
+      "key": "vocabulary-item:pl-ksiazka",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-ksiazka",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/e5fc11811c500047.m4a",
+            "durationSeconds": 1.32,
+            "text": "książka",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "f5f1fe317c7b88f5e00887ba1a28f71cd3a3d76346a3ef4828b42eda9f8532af",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:01.774Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:01.774Z",
+      "updatedAt": "2026-10-02T09:01:01.774Z"
+    },
+    {
+      "key": "vocabulary-item:pl-lotnisko",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-lotnisko",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/52097cc8f1b5cdf0.m4a",
+            "durationSeconds": 1.36,
+            "text": "lotnisko",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "8f292085f1872d52d1332ad9601c5994f6bec9daa3a7b2b4f4dd40caabf9431f",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:27.449Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:27.449Z",
+      "updatedAt": "2026-10-02T09:01:27.449Z"
+    },
+    {
+      "key": "vocabulary-item:pl-mama",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-mama",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/632d0cad69ddeae5.m4a",
+            "durationSeconds": 1.08,
+            "text": "mama",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "b73c014c41af07d9d18df2638bc3aab5c5024e09cb8369e8067cf1003595b79d",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:18.644Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:18.644Z",
+      "updatedAt": "2026-10-02T08:59:18.644Z"
+    },
+    {
+      "key": "vocabulary-item:pl-mleko",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-mleko",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/672e5776480fef1a.m4a",
+            "durationSeconds": 1.04,
+            "text": "mleko",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "095ff3c9720df379f864f9b82a911e79edf68c09d3846690c14f47c40b0855f3",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:57.893Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:57.893Z",
+      "updatedAt": "2026-10-02T08:59:57.893Z"
+    },
+    {
+      "key": "vocabulary-item:pl-piec",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-piec",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/4b54e6fd1f2c0369.m4a",
+            "durationSeconds": 0.92,
+            "text": "pięć",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "f4f0be26f4c73197b2dc4b9041c71559dced208d53f99cdd03a68f0a8f8f5a3a",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:05.505Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:05.505Z",
+      "updatedAt": "2026-10-02T08:59:05.505Z"
+    },
+    {
+      "key": "vocabulary-item:pl-pies",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-pies",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/c4c9c6a4d2c07ee5.m4a",
+            "durationSeconds": 1.2,
+            "text": "pies",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "29ef93a8e27fbea2b6ac6ea832463cfb08b03610755ba6e47cab524ea17a700a",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:00:54.711Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:00:54.711Z",
+      "updatedAt": "2026-10-02T09:00:54.711Z"
+    },
+    {
+      "key": "vocabulary-item:pl-pociag",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-pociag",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/bf29f303942f12bd.m4a",
+            "durationSeconds": 1.08,
+            "text": "pociąg",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "02e4a33caca42542c58904dc46ad21b35112165bb363e784e10e3b71d4666601",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:14.946Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:14.946Z",
+      "updatedAt": "2026-10-02T09:01:14.946Z"
+    },
+    {
+      "key": "vocabulary-item:pl-praca",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-praca",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/a07053a6adba9f10.m4a",
+            "durationSeconds": 1.24,
+            "text": "praca",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "4d7f5670e0f484ecddc313604848739dac1119e125c8aa6331c2630adb32a023",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:08.165Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:08.165Z",
+      "updatedAt": "2026-10-02T09:01:08.165Z"
+    },
+    {
+      "key": "vocabulary-item:pl-rodzina",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-rodzina",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/24a65c0fdb7f7ce7.m4a",
+            "durationSeconds": 1.08,
+            "text": "rodzina",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "a6fecd2b80fe73e6ed1f7522aafc6cc5e8a05dde2aeea78c62452c44241025c9",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:12.452Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:12.452Z",
+      "updatedAt": "2026-10-02T08:59:12.452Z"
+    },
+    {
+      "key": "vocabulary-item:pl-ser",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-ser",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/fe4c86e6df7025a5.m4a",
+            "durationSeconds": 0.92,
+            "text": "ser",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "922c6dd9cba96182a77c573cef0308646a8e71839a6df3b1c5d121353c6a53e8",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:00:22.538Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:00:22.538Z",
+      "updatedAt": "2026-10-02T09:00:22.538Z"
+    },
+    {
+      "key": "vocabulary-item:pl-siostra",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-siostra",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/17c8749992b4fd32.m4a",
+            "durationSeconds": 1.24,
+            "text": "siostra",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "a3e4d23926012bc242acb2e9c57541f29dde5ab30b4b3c94ac00cca256d662c9",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:38.024Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:38.024Z",
+      "updatedAt": "2026-10-02T08:59:38.024Z"
+    },
+    {
+      "key": "vocabulary-item:pl-tata",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-tata",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/6f5b0475693611c3.m4a",
+            "durationSeconds": 0.92,
+            "text": "tata",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "12e8b1d727a77874f49b06132b8bb732b67d1e3bdb7f2cde2e01a0e2c418725c",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:25.152Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:25.152Z",
+      "updatedAt": "2026-10-02T08:59:25.152Z"
+    },
+    {
+      "key": "vocabulary-item:pl-trzy",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-trzy",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/piotr/3e952ced32cf7fe8.m4a",
+            "durationSeconds": 0.88,
+            "text": "trzy",
+            "language": "pl",
+            "narrator": "Piotr"
+          }
+        ]
+      },
+      "sourceHash": "dcd67148dec51c786214af7bd7abc4809c3be76e776390ae0bb8817db70ebad8",
+      "narratorId": "piotr",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:58:54.323Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:58:54.323Z",
+      "updatedAt": "2026-10-02T08:58:54.323Z"
+    },
+    {
+      "key": "vocabulary-item:pl-walizka",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-walizka",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/06cb50496d496829.m4a",
+            "durationSeconds": 1.2,
+            "text": "walizka",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "5f78505b79b23ae5ae8ff75de80ff5003c86df6855afade2d1d06c51b3b884c5",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T09:01:33.747Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T09:01:33.747Z",
+      "updatedAt": "2026-10-02T09:01:33.747Z"
+    },
+    {
+      "key": "vocabulary-item:pl-woda",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-woda",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/ola/61757bfc1e128d65.m4a",
+            "durationSeconds": 1,
+            "text": "woda",
+            "language": "pl",
+            "narrator": "Ola"
+          }
+        ]
+      },
+      "sourceHash": "caaca334362242de9e0783b4faa3135eb867a3c2985678b0b86f3ede92c04846",
+      "narratorId": "ola",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-02T08:59:51.429Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-02T08:59:51.429Z",
+      "updatedAt": "2026-10-02T08:59:51.429Z"
     }
   ]
 }
