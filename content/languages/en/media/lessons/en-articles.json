@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 2,
+  "contentId": "en-articles",
+  "objective": "Elegir a, an o the según la situación: algo cualquiera, una palabra que empieza por vocal o algo concreto.",
+  "narrator": "lucia",
+  "cast": [{ "id": "emma", "name": "Emma", "look": "woman-b", "voice": "emma" }],
+  "targetVocabularyIds": ["en-cat", "en-dog", "en-apple"],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [{ "id": "emma", "x": 820, "facing": "left" }],
+        "props": [
+          { "id": "cat", "type": "cat", "x": 560, "y": 470, "scale": 1.2 },
+          { "id": "dog", "type": "dog", "x": 1080, "y": 610, "scale": 1.3, "hidden": true }
+        ]
+      },
+      "beats": [
+        { "line": { "say": "Emma está en casa con su gato.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "emma", "target": "I have a cat.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "emma", "at": "cat" }],
+          "card": true
+        },
+        { "line": { "say": "Primera vez que lo nombra: a, como un o una." } },
+        {
+          "line": { "by": "emma", "target": "The cat is sleeping.", "leadIn": 1.2 },
+          "actions": [{ "when": "lead", "do": "sleep", "actor": "cat" }],
+          "card": true
+        },
+        { "line": { "say": "Ahora ya sabemos de qué gato habla: the, como el o la." } },
+        {
+          "line": { "by": "emma", "target": "I have a dog.", "leadIn": 1.4 },
+          "actions": [
+            { "when": "lead", "do": "show", "prop": "dog" },
+            { "when": "lead", "do": "point", "actor": "emma", "at": "dog" }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [{ "id": "emma", "x": 520, "facing": "right" }],
+        "props": [{ "id": "apple", "type": "apple", "x": 650, "y": 490, "scale": 1.3 }]
+      },
+      "beats": [
+        { "line": { "say": "En la cocina.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "emma", "target": "I have an apple.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "emma", "at": "apple" }],
+          "card": true
+        },
+        { "line": { "say": "Esta palabra empieza por sonido de vocal, así que no es a, sino an." } }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "¿A, an o the?",
+      "phrase": "The cat is sleeping.",
+      "panels": [
+        { "caption": "Algo cualquiera", "text": "I have a cat." },
+        { "caption": "Antes de vocal", "text": "I have an apple." },
+        { "caption": "Algo concreto", "text": "The cat is sleeping." }
+      ],
+      "lines": [
+        { "say": "A y an son como un o una: algo cualquiera.", "pauseAfter": 0.4 },
+        { "say": "An, cuando la palabra siguiente empieza por sonido de vocal." },
+        { "say": "The es como el, la, los y las: algo concreto que ya conocemos." },
+        { "say": "Y no cambian con el género.", "pauseAfter": 0.8 }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [{ "id": "emma", "x": 820, "facing": "right" }],
+        "props": [{ "id": "dog", "type": "dog", "x": 1080, "y": 610, "scale": 1.3 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "emma", "at": "dog" },
+        { "do": "highlight", "target": "dog" }
+      ],
+      "prompt": "Emma habla de su mascota: tengo un perro. ¿Qué dice?",
+      "answer": "I have a dog.",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [{ "id": "emma", "x": 520, "facing": "right" }],
+        "props": [{ "id": "apple", "type": "apple", "x": 650, "y": 490, "scale": 1.3 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "emma", "at": "apple" },
+        { "do": "highlight", "target": "apple" }
+      ],
+      "prompt": "Tengo una manzana. ¿A o an? ¿Qué dice Emma?",
+      "answer": "I have an apple.",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [{ "id": "emma", "x": 820, "facing": "left" }],
+        "props": [{ "id": "cat", "type": "cat", "x": 560, "y": 470, "scale": 1.2 }]
+      },
+      "setup": [
+        { "do": "sleep", "actor": "cat" },
+        { "do": "highlight", "target": "cat" }
+      ],
+      "prompt": "¿Qué hace su gato? Dilo en inglés.",
+      "answer": "The cat is sleeping.",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Sigue",
+      "body": "Lee los ejemplos de debajo del vídeo y después prueba una lección con ejercicios.",
+      "say": "Lee los ejemplos de debajo del vídeo, a tu ritmo."
+    }
+  ]
+}

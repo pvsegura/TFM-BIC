@@ -482,6 +482,7 @@ export {
   LESSON_SCRIPT_VERSION,
   buildLessonVideoScript,
   speakableTranslation,
+  type LessonFraming,
   type LessonScriptInput,
 } from "./media/build-lesson-video-script.js";
 export type {

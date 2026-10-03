@@ -65,6 +65,24 @@ export function VideosPage() {
   return (
     <div className="mx-auto max-w-5xl py-8">
       <h1 className="font-display text-3xl font-bold tracking-tight">Videos</h1>
+      {languages.length > 1 ? (
+        <nav aria-label="Language" className="mt-3 flex flex-wrap gap-2">
+          {languages.map((l) => (
+            <Link
+              key={l.code}
+              to={`/learn/videos?language=${enc(l.code)}`}
+              aria-current={l.code === languageCode ? "page" : undefined}
+              className={`rounded-full border px-3 py-1 text-sm ${
+                l.code === languageCode
+                  ? "border-accent bg-accent/15 font-semibold"
+                  : "border-primary/25 hover:border-accent dark:border-surface/25"
+              }`}
+            >
+              <span lang={l.code}>{l.name}</span>
+            </Link>
+          ))}
+        </nav>
+      ) : null}
       <p className="mt-2 max-w-2xl text-primary/75 dark:text-surface/75">
         Short explainer lessons made from the course itself{language ? ` — ${language.name}` : ""}.
         Watch one, then practise what it explains.

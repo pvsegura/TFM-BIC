@@ -26,6 +26,8 @@ import { loadContentCatalog } from "./load-content-catalog.js";
  */
 const PL = createLanguageId("pl");
 const A1 = createLevelId("a1");
+/** The language each course explains itself in: Polish for English speakers, English for Spanish speakers. */
+const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es" };
 
 let catalog: ContentCatalog;
 
@@ -75,8 +77,8 @@ describe("the shipped content catalog", () => {
     const ids = catalog.content.map((c) => c.id);
 
     expect(new Set(ids).size).toBe(ids.length);
-    for (const id of ids) {
-      expect(id.startsWith("pl-")).toBe(true);
+    for (const item of catalog.content) {
+      expect(item.id.startsWith(`${item.languageId}-`), item.id).toBe(true);
     }
   });
 
@@ -110,7 +112,7 @@ describe("the shipped content catalog", () => {
       expect(item.title.length).toBeGreaterThan(0);
       expect(item.description.length).toBeGreaterThan(0);
       expect(item.blocks.length).toBeGreaterThan(0);
-      expect(item.instructionLanguage).toBe("en");
+      expect(item.instructionLanguage, item.id).toBe(INSTRUCTION_LANGUAGE[item.languageId]);
     }
   });
 

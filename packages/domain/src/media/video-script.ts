@@ -156,7 +156,8 @@ export type VideoScene =
         ipa: string;
         word: string;
         meaning: string;
-        articulation: "retroflex" | "alveolo-palatal" | "plain";
+        articulation:
+          "retroflex" | "alveolo-palatal" | "close-front" | "near-close-front" | "plain";
       }[];
       /** Narration line index at which each item is shown/heard, and the line that asks the question. */
       itemLines: number[];
@@ -214,7 +215,16 @@ export interface VideoScript {
   /** Target-language phrases this video teaches. */
   targetPhrases: string[];
   pedagogy: PedagogyParameters;
+  /** On-screen framing texts in the instruction language (absent = the renderer's English defaults). */
+  labels?: VideoLabels | undefined;
   scenes: VideoScene[];
+}
+
+export interface VideoLabels {
+  yourTurn: string;
+  diagramNote: string;
+  roughly: string;
+  palate: string;
 }
 
 /** Every spoken line in playback order — what the audio step must synthesize. */

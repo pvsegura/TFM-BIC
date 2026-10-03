@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 2,
+  "contentId": "en-first-sounds",
+  "objective": "Oír y decir la th, la h y la diferencia entre la i larga y la i corta en cuatro palabras.",
+  "narrator": "javier",
+  "cast": [
+    { "id": "ben", "name": "Ben", "look": "man-c", "voice": "ben" },
+    { "id": "emma", "name": "Emma", "look": "woman-d", "voice": "emma" }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [{ "id": "ben", "x": 470, "facing": "right", "offstage": true }],
+        "props": [{ "id": "apples", "type": "apple", "x": 650, "y": 490, "count": 3 }]
+      },
+      "beats": [
+        {
+          "line": { "say": "Ben cuenta las manzanas. Escucha el número.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "ben", "to": 500 }]
+        },
+        {
+          "line": { "by": "ben", "target": "three", "leadIn": 0.4, "pauseAfter": 1.2 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "ben", "at": "apples" }],
+          "card": true
+        },
+        { "line": { "by": "ben", "target": "three", "pauseAfter": 0.6 }, "card": true }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "pronunciation",
+      "heading": "Un sonido nuevo",
+      "phrase": "three",
+      "highlight": "th",
+      "lines": [
+        { "by": "narrator", "target": "three", "pauseAfter": 1 },
+        {
+          "say": "La punta de la lengua va entre los dientes, parecido a la zeta del español de España."
+        },
+        { "by": "narrator", "target": "three", "pauseAfter": 1.2 }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "suburb",
+        "time": "day",
+        "actors": [{ "id": "emma", "x": 420, "facing": "right" }],
+        "props": [{ "id": "house", "type": "house", "x": 820, "y": 610 }]
+      },
+      "beats": [
+        {
+          "line": { "by": "emma", "target": "house", "leadIn": 0.8, "pauseAfter": 1 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "emma", "at": "house" }],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Casa. La hache sí se pronuncia: un soplo suave, más suave que la jota."
+          }
+        },
+        { "line": { "by": "narrator", "target": "house", "pauseAfter": 1.2 } }
+      ]
+    },
+    {
+      "kind": "contrast",
+      "segment": "pronunciation",
+      "heading": "Escucha: ¿i larga o i corta?",
+      "items": [
+        { "phoneticId": "en-ipa-long-i", "word": "sheep" },
+        { "phoneticId": "en-ipa-short-i", "word": "ship" }
+      ],
+      "lines": [
+        { "by": "narrator", "target": "sheep", "pauseAfter": 0.6 },
+        { "say": "Oveja. Una i larga y tensa, más larga que la española." },
+        { "by": "narrator", "target": "ship", "pauseAfter": 0.6 },
+        { "say": "Barco. Una i corta y más abierta, entre una i y una e." },
+        { "by": "narrator", "target": "sheep", "pauseAfter": 0.5 },
+        { "by": "narrator", "target": "ship", "pauseAfter": 0.8 },
+        { "say": "Ahora di las dos, en voz alta.", "pauseAfter": 3 }
+      ],
+      "itemLines": [0, 2]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [{ "id": "emma", "x": 420, "facing": "right" }],
+        "props": [{ "id": "sheep", "type": "sheep", "x": 760, "y": 610, "scale": 1.3 }]
+      },
+      "beats": [
+        {
+          "line": { "by": "emma", "target": "sheep", "leadIn": 0.8, "pauseAfter": 1 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "emma", "at": "sheep" }],
+          "card": true
+        },
+        { "line": { "say": "Solo cambia la vocal, y cambia el significado." } }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [{ "id": "ben", "x": 500, "facing": "right" }],
+        "props": [{ "id": "apples", "type": "apple", "x": 650, "y": 490, "count": 3 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "ben", "at": "apples" },
+        { "do": "highlight", "target": "apples" }
+      ],
+      "prompt": "¿Cuántas manzanas hay? Dilo en inglés.",
+      "answer": "three",
+      "answerBy": "ben"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "suburb",
+        "actors": [{ "id": "emma", "x": 420, "facing": "right" }],
+        "props": [{ "id": "house", "type": "house", "x": 820, "y": 610 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "emma", "at": "house" },
+        { "do": "highlight", "target": "house" }
+      ],
+      "prompt": "¿Cómo se dice casa? No olvides la hache.",
+      "answer": "house",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [{ "id": "emma", "x": 420, "facing": "right" }],
+        "props": [{ "id": "ship", "type": "ship", "x": 1000, "y": 610, "scale": 1.4 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "emma", "at": "ship" },
+        { "do": "highlight", "target": "ship" }
+      ],
+      "prompt": "Un barco: i corta. ¿Qué dice Emma?",
+      "answer": "ship",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Sigue escuchando",
+      "body": "Estas comparaciones son solo aproximadas. Escucha a hablantes nativos para afinar los sonidos.",
+      "say": "Estas comparaciones son solo aproximadas. Escucha a hablantes nativos para afinar los sonidos."
+    }
+  ]
+}

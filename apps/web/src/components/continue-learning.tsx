@@ -16,7 +16,27 @@ const enc = encodeURIComponent;
  */
 export function ContinueLearning() {
   const languages = useLanguages();
-  const languageCode = languages.data?.languages[0]?.code;
+  // One card per language the catalog offers (M22: more than one language).
+  return (
+    <div className="grid gap-4">
+      {(languages.data?.languages ?? []).map((language) => (
+        <ContinueLanguage
+          key={language.code}
+          languageCode={language.code}
+          languageName={language.name}
+        />
+      ))}
+    </div>
+  );
+}
+
+function ContinueLanguage({
+  languageCode,
+  languageName,
+}: {
+  languageCode: string;
+  languageName: string;
+}) {
   const levels = useLanguageLevels(languageCode);
   const levelId = levels.data?.levels.find((l) => l.status === "available")?.id;
   const lessonsQuery = useLessons(languageCode, levelId);
@@ -63,7 +83,7 @@ export function ContinueLearning() {
       </div>
       <div className="p-5">
         <p className="text-xs font-medium uppercase tracking-wide text-accent-ink dark:text-accent">
-          {verb} learning · {done} of {lessons.length} lessons done
+          {languageName} · {verb} learning · {done} of {lessons.length} lessons done
         </p>
         <h2 className="mt-1 text-xl font-semibold">{next.title}</h2>
         <p className="mt-1 text-sm text-primary/75 dark:text-surface/75">{next.description}</p>

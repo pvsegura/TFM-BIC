@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "en-greetings-good-night",
+  "lessonId": "en-greetings",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "prompt": "Good night se usa para saludar a alguien cuando llegas por la noche.",
+  "explanation": "No: Good night solo se dice al despedirse por la noche o antes de dormir. Para saludar por la noche se dice Good evening.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -114,6 +114,7 @@ export async function planMediaTargets(
         label: lesson.title,
         outputDir: `${languageId}/lesson/${lesson.id}`,
         script: buildLessonVideoScript({
+          framing: plan.plan.framing,
           lesson,
           plan: lessonPlan,
           language: contentLanguage,

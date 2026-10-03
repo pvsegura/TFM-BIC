@@ -1,0 +1,62 @@
+{
+  "schemaVersion": 1,
+  "id": "food",
+  "languageId": "en",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "es",
+  "title": "Comida",
+  "description": "Alimentos y bebidas de todos los días.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-bread",
+      "lemma": "bread",
+      "translation": "pan",
+      "partOfSpeech": "noun"
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-water",
+      "lemma": "water",
+      "translation": "agua",
+      "partOfSpeech": "noun",
+      "example": {
+        "text": "A glass of water, please.",
+        "translation": "Un vaso de agua, por favor."
+      }
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-milk",
+      "lemma": "milk",
+      "translation": "leche",
+      "partOfSpeech": "noun"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-apple",
+      "lemma": "apple",
+      "translation": "manzana",
+      "partOfSpeech": "noun",
+      "plural": "apples"
+    },
+    {
+      "status": "published",
+      "order": 50,
+      "levelId": "a1",
+      "id": "en-cheese",
+      "lemma": "cheese",
+      "translation": "queso",
+      "partOfSpeech": "noun"
+    }
+  ]
+}

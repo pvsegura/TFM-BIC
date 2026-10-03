@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "en-introducing-yourself-my-name-is",
+  "lessonId": "en-introducing-yourself",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "prompt": "¿Qué frase significa \"Me llamo Anna\"?",
+  "explanation": "My name is Anna significa me llamo Anna. I'm from Spain es soy de España, y What's your name? pregunta el nombre.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "My name is Anna."
+      },
+      {
+        "id": "b",
+        "text": "I'm from Spain."
+      },
+      {
+        "id": "c",
+        "text": "What's your name?"
+      },
+      {
+        "id": "d",
+        "text": "Nice to meet you."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

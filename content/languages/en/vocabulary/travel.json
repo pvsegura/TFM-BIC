@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "travel",
+  "languageId": "en",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "es",
+  "title": "Viajes",
+  "description": "Palabras útiles para viajar.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-train",
+      "lemma": "train",
+      "translation": "tren",
+      "partOfSpeech": "noun",
+      "plural": "trains"
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-ticket",
+      "lemma": "ticket",
+      "translation": "billete",
+      "partOfSpeech": "noun",
+      "plural": "tickets"
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-airport",
+      "lemma": "airport",
+      "translation": "aeropuerto",
+      "partOfSpeech": "noun",
+      "plural": "airports"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-suitcase",
+      "lemma": "suitcase",
+      "translation": "maleta",
+      "partOfSpeech": "noun",
+      "plural": "suitcases"
+    }
+  ]
+}

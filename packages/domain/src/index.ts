@@ -516,6 +516,7 @@ export {
   type Stage,
   type StageAction,
   type TimeOfDay,
+  type VideoLabels,
   type VideoScene,
   type VideoSceneKind,
   type VideoScript,

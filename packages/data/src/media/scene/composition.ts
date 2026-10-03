@@ -477,7 +477,7 @@ function retrievalScene(
   liveliness(tl, states, lines, start, end);
   return `${svg}
     <div class="dim" id="${prefix}-dim"></div>
-    <div class="prompt" id="${prefix}-prompt"><span class="tag">Your turn</span>${escapeHtml(prompt ? (scene.narration[0]?.text ?? "") : "")}</div>
+    <div class="prompt" id="${prefix}-prompt"><span class="tag">${escapeHtml(script.labels?.yourTurn ?? "Your turn")}</span>${escapeHtml(prompt ? (scene.narration[0]?.text ?? "") : "")}</div>
     <svg class="timer" id="${prefix}-timer" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" stroke="#e8dccb" stroke-width="6" fill="#fffaf2"/><circle id="${prefix}-ring" cx="30" cy="30" r="26" stroke="#ff6b35" stroke-width="6" fill="none" stroke-dasharray="163" transform="rotate(-90 30 30)"/></svg>
     <div class="phrase-card answer" id="${prefix}-answer" style="left:${String(pos.left)}px;top:${String(pos.top)}px"><span class="ok">✓</span><span class="said" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(scene.answer.text)}</span>${scene.answer.meaning ? `<span class="gloss" style="opacity:1">${escapeHtml(scene.answer.meaning)}</span>` : ""}</div>
     <div class="check" id="${prefix}-check">${escapeHtml(scene.narration[2]?.text ?? "")}</div>`;
@@ -527,7 +527,7 @@ function focusScene(
     );
   });
   const respell = scene.respelling
-    ? `<div class="respell">Roughly: ${escapeHtml(scene.respelling).replace(/([A-ZĄĆĘŁŃÓŚŹŻ]{2,})/g, "<b>$1</b>")}</div>`
+    ? `<div class="respell">${escapeHtml(script.labels?.roughly ?? "Roughly:")} ${escapeHtml(scene.respelling).replace(/([A-ZĄĆĘŁŃÓŚŹŻ]{2,})/g, "<b>$1</b>")}</div>`
     : "";
   return `<div class="board">
     <p class="heading">${escapeHtml(scene.heading)}</p>
@@ -543,13 +543,22 @@ function focusScene(
  * descriptions: for sz "the tongue tip curls further back"; for ś "the tongue body raised toward the
  * hard palate". A listening guide, not an articulatory measurement.
  */
-function mouthDiagram(articulation: "retroflex" | "alveolo-palatal" | "plain"): string {
+function mouthDiagram(
+  articulation: "retroflex" | "alveolo-palatal" | "close-front" | "near-close-front" | "plain",
+  palate: string,
+): string {
+  // Vowels: the tongue body is high and front for /iː/ (close to the palate, tense) and a little
+  // lower and more relaxed for /ɪ/ — the difference the content describes.
   const tongue =
     articulation === "retroflex"
       ? "M70 178 C70 150 84 136 104 118 C114 108 116 96 108 92 C98 90 96 104 100 116 C108 132 150 132 196 138 C228 142 246 160 250 196 L70 196 Z"
       : articulation === "alveolo-palatal"
         ? "M64 168 C64 150 76 142 92 134 C112 104 148 86 182 90 C220 96 244 126 250 196 L64 196 Z"
-        : "M64 170 C80 150 120 142 170 142 C214 142 244 160 250 196 L64 196 Z";
+        : articulation === "close-front"
+          ? "M64 166 C70 140 88 100 124 86 C160 78 214 92 240 130 C248 150 250 170 250 196 L64 196 Z"
+          : articulation === "near-close-front"
+            ? "M64 170 C72 150 92 120 126 110 C162 102 212 114 238 144 C248 160 250 176 250 196 L64 196 Z"
+            : "M64 170 C80 150 120 142 170 142 C214 142 244 160 250 196 L64 196 Z";
   const label =
     articulation === "retroflex"
       ? `<path d="M150 40 C134 52 118 70 108 88" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round"/><path d="M104 80 l4 12 l10 -7" stroke="#ff6b35" stroke-width="4" fill="none" stroke-linecap="round" stroke-linejoin="round"/><text x="154" y="38" font-size="18" font-weight="700" fill="#b84010">tip curls back</text>`
@@ -563,7 +572,7 @@ function mouthDiagram(articulation: "retroflex" | "alveolo-palatal" | "plain"): 
     <path d="M42 176 Q56 182 66 174 L62 156 Q50 160 42 158 Z" fill="#ffffff" stroke="#c9b7a7" stroke-width="2"/>
     <path d="M18 96 Q34 88 46 94 M18 140 Q34 148 46 142" stroke="#c0563b" stroke-width="10" fill="none" stroke-linecap="round"/>
     <path d="${tongue}" fill="#e57a7a" stroke="#b5515a" stroke-width="3"/>
-    <text x="196" y="58" font-size="15" fill="#8a6a5a">palate</text>
+    <text x="196" y="58" font-size="15" fill="#8a6a5a">${escapeHtml(palate)}</text>
     ${label}
   </svg>`;
 }
@@ -596,13 +605,13 @@ function contrastScene(
     .map(
       (item, i) => `<div class="col" id="${prefix}-col-${String(i)}" style="opacity:0.25">
         <p class="spell" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(item.spelling)}</p>
-        ${mouthDiagram(item.articulation)}
+        ${mouthDiagram(item.articulation, script.labels?.palate ?? "palate")}
         <p class="word" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(item.word)}</p>
         <p class="gloss">${escapeHtml(item.meaning)} · /${escapeHtml(item.ipa)}/</p></div>`,
     )
     .join(
       "",
-    )}</div><p class="note-small">Simplified side view of the mouth — a guide for listening, not a measurement.</p></div>`;
+    )}</div><p class="note-small">${escapeHtml(script.labels?.diagramNote ?? "Simplified side view of the mouth — a guide for listening, not a measurement.")}</p></div>`;
 }
 
 const STYLE = `

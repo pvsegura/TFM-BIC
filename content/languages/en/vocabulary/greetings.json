@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "greetings",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "title": "Saludos",
+  "description": "Palabras y frases cortas para saludar y despedirse.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-hello",
+      "lemma": "hello",
+      "translation": "hola",
+      "partOfSpeech": "interjection",
+      "note": "Neutro: sirve en casi cualquier situación."
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-goodbye",
+      "lemma": "goodbye",
+      "translation": "adiós",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-good-morning",
+      "lemma": "good morning",
+      "translation": "buenos días",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-good-evening",
+      "lemma": "good evening",
+      "translation": "buenas tardes; buenas noches",
+      "partOfSpeech": "phrase",
+      "note": "Para saludar al final de la tarde o por la noche."
+    },
+    {
+      "status": "published",
+      "order": 50,
+      "levelId": "a1",
+      "id": "en-good-night",
+      "lemma": "good night",
+      "translation": "buenas noches",
+      "partOfSpeech": "phrase",
+      "note": "Solo al despedirse por la noche o antes de dormir."
+    }
+  ]
+}

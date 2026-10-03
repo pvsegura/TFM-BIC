@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "en-greetings",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "title": "Saludos y despedidas",
+  "description": "Cómo saludar y despedirse en inglés, de forma neutra, informal y según la hora del día.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Hello sirve casi siempre, con cualquier persona. Hi es más informal y se usa con amigos y conocidos. Good morning, Good afternoon y Good evening saludan según la hora del día y suenan algo más formales. Good night no es un saludo: se dice al despedirse por la noche o antes de dormir."
+    },
+    {
+      "type": "example",
+      "text": "Hello!",
+      "translation": "¡Hola!",
+      "note": "Neutro. Sirve en casi cualquier situación."
+    },
+    {
+      "type": "example",
+      "text": "Hi!",
+      "translation": "¡Hola!",
+      "note": "Informal. Con amigos y conocidos."
+    },
+    {
+      "type": "example",
+      "text": "Good morning.",
+      "translation": "Buenos días.",
+      "note": "Por la mañana."
+    },
+    {
+      "type": "example",
+      "text": "Good evening.",
+      "translation": "Buenas tardes; buenas noches.",
+      "note": "Al llegar o saludar al final de la tarde y por la noche."
+    },
+    {
+      "type": "example",
+      "text": "Goodbye.",
+      "translation": "Adiós.",
+      "note": "Neutro, algo formal."
+    },
+    {
+      "type": "example",
+      "text": "Bye!",
+      "translation": "¡Adiós!",
+      "note": "Informal."
+    },
+    {
+      "type": "example",
+      "text": "See you later!",
+      "translation": "¡Hasta luego!",
+      "note": "Informal."
+    },
+    {
+      "type": "example",
+      "text": "Good night.",
+      "translation": "Buenas noches.",
+      "note": "Solo para despedirse por la noche o antes de dormir, no para saludar."
+    }
+  ]
+}

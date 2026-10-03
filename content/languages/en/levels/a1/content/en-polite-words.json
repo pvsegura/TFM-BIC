@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "en-polite-words",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "es",
+  "title": "Por favor, gracias y perdón",
+  "description": "Palabras cortas que hacen amable cualquier conversación.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "En inglés, please (por favor) y thank you (gracias) se usan muchísimo, también en tiendas y cafeterías. Al dar algo a alguien se dice Here you are, y para responder a un gracias se dice You're welcome. Excuse me sirve para llamar la atención de alguien; sorry, para pedir perdón."
+    },
+    {
+      "type": "example",
+      "text": "Please.",
+      "translation": "Por favor."
+    },
+    {
+      "type": "example",
+      "text": "A coffee, please.",
+      "translation": "Un café, por favor.",
+      "note": "Please va al final de la frase, o al principio."
+    },
+    {
+      "type": "example",
+      "text": "Thank you.",
+      "translation": "Gracias."
+    },
+    {
+      "type": "example",
+      "text": "Thank you very much.",
+      "translation": "Muchas gracias."
+    },
+    {
+      "type": "example",
+      "text": "Here you are.",
+      "translation": "Aquí tienes.",
+      "note": "Al dar algo a alguien."
+    },
+    {
+      "type": "example",
+      "text": "You're welcome.",
+      "translation": "De nada.",
+      "note": "You're es la forma corta de You are."
+    },
+    {
+      "type": "example",
+      "text": "Excuse me.",
+      "translation": "Disculpe; perdone.",
+      "note": "Para llamar la atención de alguien o pedir paso."
+    },
+    {
+      "type": "example",
+      "text": "Sorry.",
+      "translation": "Perdón; lo siento.",
+      "note": "Para pedir perdón."
+    },
+    {
+      "type": "example",
+      "text": "Yes, please.",
+      "translation": "Sí, por favor."
+    },
+    {
+      "type": "example",
+      "text": "No, thank you.",
+      "translation": "No, gracias."
+    }
+  ]
+}

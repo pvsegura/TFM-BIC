@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "en-greetings-informal-bye",
+  "lessonId": "en-greetings",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "es",
+  "prompt": "¿Cuál es una despedida informal?",
+  "explanation": "Bye es informal. Goodbye es neutra, Good morning y Hello son saludos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Bye!"
+      },
+      {
+        "id": "b",
+        "text": "Good morning."
+      },
+      {
+        "id": "c",
+        "text": "Hello!"
+      },
+      {
+        "id": "d",
+        "text": "Goodbye."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

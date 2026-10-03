@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "languageId": "en",
+  "narrators": [
+    {
+      "id": "lucia",
+      "displayName": "Lucía",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Erinome",
+        "style": "Speak as a calm, encouraging language teacher, in natural Spanish from Spain: warm, unhurried and precise."
+      }
+    },
+    {
+      "id": "javier",
+      "displayName": "Javier",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Iapetus",
+        "style": "Speak as a friendly, patient language teacher, in natural Spanish from Spain: relaxed, clear and precise."
+      }
+    },
+    {
+      "id": "emma",
+      "displayName": "Emma",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Aoede",
+        "style": "Speak naturally and clearly with a standard British English accent, as a friendly young woman in an everyday conversation."
+      }
+    },
+    {
+      "id": "tom",
+      "displayName": "Tom",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Charon",
+        "style": "Speak naturally and clearly with a standard British English accent, as a calm, friendly man in an everyday conversation."
+      }
+    },
+    {
+      "id": "ben",
+      "displayName": "Ben",
+      "tts": {
+        "provider": "gemini",
+        "voice": "Puck",
+        "style": "Speak naturally and clearly with a standard British English accent, as a cheerful young man in an everyday conversation."
+      }
+    }
+  ]
+}

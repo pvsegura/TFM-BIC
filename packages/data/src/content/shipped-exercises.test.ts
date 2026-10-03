@@ -32,6 +32,8 @@ import { loadContentCatalog } from "./load-content-catalog.js";
  */
 const PL = createLanguageId("pl");
 const A1 = createLevelId("a1");
+/** The language each course explains itself in: Polish for English speakers, English for Spanish speakers. */
+const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es" };
 const registry = createDefaultExerciseTypeRegistry();
 
 let catalog: ContentCatalog;
@@ -82,7 +84,7 @@ describe("the shipped exercises", () => {
 
     expect(a1.length).toBeGreaterThanOrEqual(6);
     expect(a1.length).toBeLessThanOrEqual(20);
-    expect(catalog.exercises.every((e) => e.languageId === PL && e.levelId === A1)).toBe(true);
+    expect(catalog.exercises.every((e) => e.levelId === A1)).toBe(true);
   });
 
   it("show every exercise type the engine supports", () => {
@@ -110,9 +112,9 @@ describe("the shipped exercises", () => {
     const contentIds = new Set<string>(catalog.content.map((c) => c.id));
 
     expect(new Set(ids).size).toBe(ids.length);
-    for (const id of ids) {
-      expect(id.startsWith("pl-")).toBe(true);
-      expect(contentIds.has(id)).toBe(false);
+    for (const exercise of catalog.exercises) {
+      expect(exercise.id.startsWith(`${exercise.languageId}-`), exercise.id).toBe(true);
+      expect(contentIds.has(exercise.id)).toBe(false);
     }
   });
 
@@ -126,11 +128,13 @@ describe("the shipped exercises", () => {
     }
   });
 
-  it("give every exercise a prompt and an explanation in English (the instruction language)", () => {
+  it("give every exercise a prompt and an explanation in its course's instruction language", () => {
     for (const exercise of catalog.exercises) {
       expect(exercise.prompt.length, exercise.id).toBeGreaterThan(0);
       expect(exercise.explanation?.length ?? 0, exercise.id).toBeGreaterThan(0);
-      expect(exercise.instructionLanguage).toBe("en");
+      expect(exercise.instructionLanguage, exercise.id).toBe(
+        INSTRUCTION_LANGUAGE[exercise.languageId],
+      );
     }
   });
 

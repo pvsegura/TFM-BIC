@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "en-polite-words-excuse-me",
+  "lessonId": "en-polite-words",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "es",
+  "prompt": "Escribe en inglés lo que dices para llamar la atención de un camarero.",
+  "explanation": "Excuse me sirve para llamar la atención de alguien. Sorry es para pedir perdón.",
+  "configuration": {
+    "acceptedAnswers": ["Excuse me.", "Excuse me", "Excuse me!"],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "en-polite-words-thank-you",
+  "lessonId": "en-polite-words",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "prompt": "¿Cómo se dice \"gracias\" en inglés?",
+  "explanation": "Thank you significa gracias. Please es por favor, Sorry es perdón y Excuse me sirve para llamar la atención.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Thank you."
+      },
+      {
+        "id": "b",
+        "text": "Please."
+      },
+      {
+        "id": "c",
+        "text": "Sorry."
+      },
+      {
+        "id": "d",
+        "text": "Excuse me."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

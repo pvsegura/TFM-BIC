@@ -217,6 +217,16 @@ export const mediaPlanFileSchema = z.strictObject({
     }),
   ),
   vocabulary: z.record(slug, vocabularyVisualSchema),
+  /** Fixed framing texts in the course's instruction language (default: English). */
+  framing: z
+    .strictObject({
+      selfCheck: z.string().min(3).max(200),
+      yourTurn: z.string().min(1).max(40),
+      diagramNote: z.string().min(3).max(200),
+      roughly: z.string().min(1).max(40),
+      palate: z.string().min(1).max(30),
+    })
+    .optional(),
 });
 
 export type LessonVideoPlanFile = z.infer<typeof lessonVideoPlanSchema>;

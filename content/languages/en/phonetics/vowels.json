@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "vowels",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "title": "Vocales",
+  "description": "Vocales del inglés que cambian el significado de las palabras.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-ipa-long-i",
+      "ipa": "iː",
+      "description": "Vocal cerrada anterior larga, escrita a menudo ee o ea. Es una i más larga y tensa que la española.",
+      "exampleWords": [
+        {
+          "word": "sheep",
+          "translation": "oveja"
+        },
+        {
+          "word": "tea",
+          "translation": "té"
+        }
+      ]
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-ipa-short-i",
+      "ipa": "ɪ",
+      "description": "Vocal casi cerrada anterior corta, escrita a menudo i. Es más corta y abierta que la i española, entre una i y una e.",
+      "note": "Contrasta con /iː/: ship (barco) frente a sheep (oveja).",
+      "exampleWords": [
+        {
+          "word": "ship",
+          "translation": "barco"
+        },
+        {
+          "word": "sit",
+          "translation": "sentarse"
+        }
+      ]
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-ipa-ash",
+      "ipa": "æ",
+      "description": "Vocal casi abierta anterior, escrita a. Se pronuncia con la boca bastante abierta, entre una a y una e españolas.",
+      "exampleWords": [
+        {
+          "word": "cat",
+          "translation": "gato"
+        },
+        {
+          "word": "apple",
+          "translation": "manzana"
+        }
+      ]
+    }
+  ]
+}

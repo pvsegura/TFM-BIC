@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "en-polite-words-youre-welcome",
+  "lessonId": "en-polite-words",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "prompt": "Alguien te dice Thank you. ¿Qué respondes?",
+  "explanation": "You're welcome significa de nada. Here you are se dice al dar algo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "You're welcome."
+      },
+      {
+        "id": "b",
+        "text": "Here you are."
+      },
+      {
+        "id": "c",
+        "text": "Sorry."
+      },
+      {
+        "id": "d",
+        "text": "Please."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

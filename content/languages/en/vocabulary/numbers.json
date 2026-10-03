@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "numbers",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "title": "Números",
+  "description": "Los números del uno al cinco.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-one",
+      "lemma": "one",
+      "translation": "uno",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-two",
+      "lemma": "two",
+      "translation": "dos",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-three",
+      "lemma": "three",
+      "translation": "tres",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-four",
+      "lemma": "four",
+      "translation": "cuatro",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "status": "published",
+      "order": 50,
+      "levelId": "a1",
+      "id": "en-five",
+      "lemma": "five",
+      "translation": "cinco",
+      "partOfSpeech": "numeral"
+    }
+  ]
+}

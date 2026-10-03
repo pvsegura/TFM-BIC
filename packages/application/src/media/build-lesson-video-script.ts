@@ -90,16 +90,30 @@ export class InvalidVideoPlanError extends Error {
   }
 }
 
+export interface LessonFraming {
+  selfCheck: string;
+  yourTurn: string;
+  diagramNote: string;
+  roughly: string;
+  palate: string;
+}
+
 export interface LessonScriptInput {
+  /** Framing texts in the instruction language; absent = the English defaults (and no labels). */
+  framing?: LessonFraming | undefined;
   lesson: ContentItem;
   plan: LessonVideoPlan;
   language: ContentLanguage;
   phonetics: readonly PhoneticRepresentation[];
 }
 
-function articulationOf(ipa: string): "retroflex" | "alveolo-palatal" | "plain" {
+function articulationOf(
+  ipa: string,
+): "retroflex" | "alveolo-palatal" | "close-front" | "near-close-front" | "plain" {
   if (ipa.includes("ʂ")) return "retroflex";
   if (ipa.includes("ɕ")) return "alveolo-palatal";
+  if (ipa === "iː") return "close-front";
+  if (ipa === "ɪ") return "near-close-front";
   return "plain";
 }
 
@@ -241,7 +255,8 @@ export function buildLessonVideoScript(input: LessonScriptInput): VideoScript {
               articulation: "plain" as const,
             };
           }
-          const spelling = /spelled ([^\s,.(]+)/.exec(rep.description)?.[1] ?? rep.ipa;
+          const spelling =
+            /(?:spelled|escrita(?: a menudo)?) ([^\s,.(]+)/.exec(rep.description)?.[1] ?? rep.ipa;
           return {
             spelling,
             ipa: rep.ipa,
@@ -282,7 +297,7 @@ export function buildLessonVideoScript(input: LessonScriptInput): VideoScript {
           narration: [
             { text: scene.prompt, language: en, pauseAfter: pedagogy.retrievalPauseSeconds },
             { ...answer, pauseAfter: 0.8 },
-            { text: FRAMING.selfCheck, language: en, pauseAfter: 1.8 },
+            { text: input.framing?.selfCheck ?? FRAMING.selfCheck, language: en, pauseAfter: 1.8 },
             { ...answer, pauseAfter: 0.6 },
           ],
         };
@@ -338,6 +353,16 @@ export function buildLessonVideoScript(input: LessonScriptInput): VideoScript {
     targetVocabularyIds: plan.targetVocabularyIds,
     targetPhrases: [...targetPhrases],
     pedagogy,
+    ...(input.framing
+      ? {
+          labels: {
+            yourTurn: input.framing.yourTurn,
+            diagramNote: input.framing.diagramNote,
+            roughly: input.framing.roughly,
+            palate: input.framing.palate,
+          },
+        }
+      : {}),
     scenes,
   };
 }

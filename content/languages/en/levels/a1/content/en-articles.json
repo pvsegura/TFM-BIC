@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "en-articles",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "explanation",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "es",
+  "title": "A, an y the",
+  "description": "Los artículos del inglés: uno para algo cualquiera y otro para algo concreto.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "A y an equivalen a un o una: hablan de algo cualquiera. Se usa an cuando la palabra siguiente empieza por sonido de vocal, y a en los demás casos. The equivale a el, la, los y las: habla de algo concreto que ya sabemos cuál es. Los artículos en inglés no cambian con el género."
+    },
+    {
+      "type": "example",
+      "text": "I have a cat.",
+      "translation": "Tengo un gato."
+    },
+    {
+      "type": "example",
+      "text": "The cat is sleeping.",
+      "translation": "El gato está durmiendo.",
+      "note": "Hablamos de un gato concreto: el que ya conocemos."
+    },
+    {
+      "type": "example",
+      "text": "I have an apple.",
+      "translation": "Tengo una manzana.",
+      "note": "Apple empieza por sonido de vocal, por eso an."
+    },
+    {
+      "type": "example",
+      "text": "I have a dog.",
+      "translation": "Tengo un perro."
+    }
+  ]
+}

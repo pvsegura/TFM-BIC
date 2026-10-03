@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 2,
+  "contentId": "en-polite-words",
+  "objective": "Pedir, dar las gracias y responder con amabilidad en una cafetería, y llamar la atención o pedir perdón.",
+  "narrator": "lucia",
+  "cast": [
+    { "id": "emma", "name": "Emma", "look": "woman-c", "voice": "emma" },
+    { "id": "tom", "name": "Tom", "look": "barista", "voice": "tom" }
+  ],
+  "targetVocabularyIds": ["en-milk"],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          { "id": "emma", "x": 640, "facing": "right", "offstage": true },
+          { "id": "tom", "x": 1010, "facing": "right" }
+        ],
+        "props": [
+          { "id": "display-cup", "type": "cup", "x": 870, "y": 398 },
+          { "id": "cup", "type": "cup", "x": 1145, "y": 398, "hidden": true },
+          { "id": "milk", "type": "milk-jug", "x": 935, "y": 398 }
+        ]
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Una pequeña cafetería por la mañana. Emma quiere un café.",
+            "leadIn": 0.4
+          },
+          "actions": [{ "when": "with", "do": "enter", "actor": "emma", "to": 640 }]
+        },
+        {
+          "line": { "by": "emma", "target": "Excuse me.", "leadIn": 0.6 },
+          "actions": [
+            { "when": "lead", "do": "raise-hand", "actor": "emma" },
+            { "when": "after", "do": "turn", "actor": "tom", "facing": "left" }
+          ],
+          "card": { "meaning": "Disculpe" }
+        },
+        { "line": { "say": "Así se llama la atención de alguien.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "emma", "target": "A coffee, please.", "leadIn": 0.5 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "emma", "at": "display-cup" }],
+          "card": true
+        },
+        { "line": { "say": "Para pedir algo, por favor va al final de la frase." } },
+        {
+          "line": { "by": "tom", "target": "Here you are.", "leadIn": 2.4 },
+          "actions": [
+            { "when": "lead", "do": "show", "prop": "cup" },
+            { "when": "lead", "do": "give", "actor": "tom", "prop": "cup", "to": "emma" }
+          ],
+          "card": true
+        },
+        { "line": { "say": "Al dar algo a alguien: aquí tienes." } },
+        {
+          "line": { "by": "emma", "target": "Thank you.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "emma" }],
+          "card": true
+        },
+        {
+          "line": { "by": "tom", "target": "You're welcome.", "leadIn": 0.3 },
+          "card": true
+        },
+        { "line": { "say": "Y para responder a un gracias: de nada." } },
+        {
+          "line": { "say": "Le ofrece leche.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "point", "actor": "tom", "at": "milk" }]
+        },
+        {
+          "line": { "by": "emma", "target": "Yes, please.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "emma" }],
+          "card": true
+        },
+        { "line": { "say": "¿Y azúcar?", "leadIn": 0.3 } },
+        {
+          "line": { "by": "emma", "target": "No, thank you.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "shake-head", "actor": "emma" }],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Pedir, agradecer, responder",
+      "phrase": "Thank you.",
+      "panels": [
+        { "caption": "Pedir", "text": "Please." },
+        { "caption": "Agradecer", "text": "Thank you." },
+        { "caption": "Responder", "text": "You're welcome." }
+      ],
+      "lines": [
+        { "by": "narrator", "target": "Thank you.", "pauseAfter": 0.8 },
+        { "say": "Para pedir algo: por favor." },
+        { "say": "Para dar las gracias: gracias." },
+        { "say": "Y para responder: de nada.", "pauseAfter": 0.8 }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          { "id": "emma", "x": 640, "facing": "right" },
+          { "id": "tom", "x": 1010, "facing": "left" }
+        ],
+        "props": [{ "id": "cup", "type": "cup", "x": 1145, "y": 398 }]
+      },
+      "setup": [
+        { "do": "give", "actor": "tom", "prop": "cup", "to": "emma" },
+        { "do": "highlight", "target": "cup" }
+      ],
+      "prompt": "Tom le da el café a Emma. ¿Qué dice él?",
+      "answer": "Here you are.",
+      "answerBy": "tom"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          { "id": "emma", "x": 640, "facing": "right" },
+          { "id": "tom", "x": 1010, "facing": "left" }
+        ],
+        "props": [{ "id": "cup", "type": "cup", "x": 1145, "y": 398 }]
+      },
+      "setup": [
+        { "do": "give", "actor": "tom", "prop": "cup", "to": "emma" },
+        { "do": "highlight", "target": "emma" }
+      ],
+      "prompt": "Emma coge la taza. ¿Qué dice ella?",
+      "answer": "Thank you.",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          { "id": "tom", "x": 735, "facing": "left" },
+          { "id": "emma", "x": 260, "facing": "right", "offstage": true }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": { "say": "Más tarde, en la calle. Tom le sujeta la puerta.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "emma", "to": 560 }]
+        },
+        {
+          "line": { "by": "emma", "target": "Thank you very much.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "emma" }],
+          "card": true
+        },
+        { "line": { "by": "tom", "target": "You're welcome.", "leadIn": 0.3 }, "card": true },
+        {
+          "line": { "by": "emma", "target": "Sorry.", "leadIn": 1.4 },
+          "actions": [
+            { "when": "lead", "do": "walk", "actor": "emma", "to": 690 },
+            { "when": "with", "do": "raise-hand", "actor": "emma" }
+          ],
+          "card": { "meaning": "Perdón" }
+        },
+        { "line": { "say": "Las mismas palabras, en otro lugar. Y para pedir perdón: lo siento." } }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          { "id": "emma", "x": 640, "facing": "right" },
+          { "id": "tom", "x": 1010, "facing": "right" }
+        ],
+        "props": [{ "id": "display-cup", "type": "cup", "x": 870, "y": 398 }]
+      },
+      "setup": [
+        { "do": "raise-hand", "actor": "emma" },
+        { "do": "highlight", "target": "emma" }
+      ],
+      "prompt": "Tom está de espaldas. ¿Cómo llama Emma su atención?",
+      "answer": "Excuse me.",
+      "answerMeaning": "Disculpe",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          { "id": "emma", "x": 640, "facing": "right" },
+          { "id": "tom", "x": 1010, "facing": "left" }
+        ],
+        "props": [{ "id": "milk", "type": "milk-jug", "x": 935, "y": 398 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "tom", "at": "milk" },
+        { "do": "highlight", "target": "milk" }
+      ],
+      "prompt": "Le ofrece leche y ella quiere. ¿Qué dice?",
+      "answer": "Yes, please.",
+      "answerBy": "emma"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Tu turno",
+      "body": "Practica estas palabras con los ejercicios de debajo del vídeo.",
+      "say": "Ahora practica estas palabras con los ejercicios de debajo del vídeo."
+    }
+  ]
+}

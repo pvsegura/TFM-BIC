@@ -1,0 +1,254 @@
+{
+  "schemaVersion": 2,
+  "contentId": "en-greetings",
+  "objective": "Elegir un saludo neutro o informal, y el adecuado para cada momento del día.",
+  "narrator": "javier",
+  "cast": [
+    { "id": "ben", "name": "Ben", "look": "man-a", "voice": "ben" },
+    { "id": "tom", "name": "Tom", "look": "barista", "voice": "tom" },
+    { "id": "emma", "name": "Emma", "look": "woman-c", "voice": "emma" }
+  ],
+  "targetVocabularyIds": [
+    "en-hello",
+    "en-goodbye",
+    "en-good-morning",
+    "en-good-evening",
+    "en-good-night"
+  ],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          { "id": "ben", "x": 700, "facing": "right", "offstage": true },
+          { "id": "tom", "x": 1060, "facing": "left" }
+        ],
+        "props": [{ "id": "bread", "type": "bread", "x": 960, "y": 448 }]
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Por la mañana, en una tienda pequeña. Ben no conoce al dependiente.",
+            "leadIn": 0.3
+          },
+          "actions": [{ "when": "with", "do": "enter", "actor": "ben", "to": 700 }]
+        },
+        {
+          "line": { "by": "ben", "target": "Hello!", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "ben" }],
+          "card": true
+        },
+        {
+          "line": { "by": "tom", "target": "Good morning.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "tom" }],
+          "card": true
+        },
+        { "line": { "say": "Un saludo neutro, y otro según la hora: por la mañana." } },
+        {
+          "line": { "by": "ben", "target": "Goodbye.", "leadIn": 2.2 },
+          "actions": [
+            { "when": "lead", "do": "give", "actor": "tom", "prop": "bread", "to": "ben" },
+            { "when": "with", "do": "wave", "actor": "ben" }
+          ],
+          "card": true
+        },
+        { "line": { "say": "Adiós: neutro, algo formal." } }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "ben", "x": 520, "facing": "right" },
+          { "id": "emma", "x": 760, "facing": "left", "offstage": true }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": { "say": "En el parque, Ben se encuentra con su amiga Emma.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "emma", "to": 760 }]
+        },
+        {
+          "line": { "by": "emma", "target": "Hi!", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "emma" }],
+          "card": true
+        },
+        {
+          "line": { "by": "ben", "target": "Hi!", "leadIn": 0.2 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "ben" }],
+          "card": true
+        },
+        { "line": { "say": "Con amigos, el saludo es informal." } },
+        {
+          "line": { "by": "emma", "target": "See you later!", "leadIn": 1.2 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "emma" }],
+          "card": true
+        },
+        {
+          "line": { "by": "ben", "target": "Bye!", "leadIn": 0.2 },
+          "actions": [
+            { "when": "with", "do": "wave", "actor": "ben" },
+            { "when": "after", "do": "exit", "actor": "emma", "side": "right" }
+          ],
+          "card": true
+        },
+        { "line": { "say": "Y la despedida, también informal." } }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "street",
+        "time": "evening",
+        "actors": [
+          { "id": "tom", "x": 735, "facing": "left" },
+          { "id": "ben", "x": 500, "facing": "right", "offstage": true }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": { "say": "Por la noche. El dependiente cierra la tienda.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "ben", "to": 540 }]
+        },
+        {
+          "line": { "by": "ben", "target": "Good evening.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "ben" }],
+          "card": true
+        },
+        { "line": { "say": "Al saludar al final del día, el saludo cambia." } }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "bedroom",
+        "time": "night",
+        "actors": [
+          { "id": "emma", "x": 330, "facing": "right" },
+          { "id": "ben", "x": 470, "facing": "left" }
+        ],
+        "props": []
+      },
+      "beats": [
+        { "line": { "say": "Muy tarde, en casa. Es hora de dormir.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "emma", "target": "Good night.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "emma" }],
+          "card": true
+        },
+        {
+          "line": { "by": "ben", "target": "Good night.", "leadIn": 0.2 },
+          "actions": [{ "when": "after", "do": "walk", "actor": "ben", "to": 820 }],
+          "card": true
+        },
+        { "line": { "say": "Esta frase es para despedirse antes de dormir, no para saludar." } }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "¿Neutro o informal?",
+      "phrase": "Hello!",
+      "panels": [
+        { "caption": "Neutro", "text": "Hello!" },
+        { "caption": "Informal", "text": "Hi!" },
+        { "caption": "Al final del día", "text": "Good evening." }
+      ],
+      "lines": [
+        { "say": "Depende de la situación.", "pauseAfter": 0.4 },
+        { "say": "Neutro: con cualquier persona." },
+        { "say": "Informal: con amigos." },
+        { "say": "Y al final del día, este saludo.", "pauseAfter": 0.8 }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          { "id": "ben", "x": 700, "facing": "right" },
+          { "id": "tom", "x": 1060, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [{ "do": "highlight", "target": "tom" }],
+      "prompt": "Por la mañana, el dependiente saluda. ¿Qué dice?",
+      "answer": "Good morning.",
+      "answerBy": "tom"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "ben", "x": 520, "facing": "right" },
+          { "id": "emma", "x": 760, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "wave", "actor": "emma" },
+        { "do": "highlight", "target": "ben" }
+      ],
+      "prompt": "Su amiga Emma le saluda. ¿Qué dice Ben?",
+      "answer": "Hi!",
+      "answerBy": "ben"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "time": "evening",
+        "actors": [
+          { "id": "tom", "x": 735, "facing": "left" },
+          { "id": "ben", "x": 540, "facing": "right" }
+        ],
+        "props": []
+      },
+      "setup": [{ "do": "highlight", "target": "ben" }],
+      "prompt": "Es de noche y saluda al dependiente. ¿Qué dice Ben?",
+      "answer": "Good evening.",
+      "answerBy": "ben"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          { "id": "ben", "x": 700, "facing": "left" },
+          { "id": "tom", "x": 1060, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "wave", "actor": "ben" },
+        { "do": "highlight", "target": "ben" }
+      ],
+      "prompt": "Sale de la tienda. ¿Qué dice Ben?",
+      "answer": "Goodbye.",
+      "answerBy": "ben"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Tu turno",
+      "body": "Practica los saludos con los ejercicios de debajo del vídeo.",
+      "say": "Ahora practica los saludos con los ejercicios de debajo del vídeo."
+    }
+  ]
+}

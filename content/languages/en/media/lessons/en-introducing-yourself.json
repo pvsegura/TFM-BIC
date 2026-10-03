@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 2,
+  "contentId": "en-introducing-yourself",
+  "objective": "Decir tu nombre y de dónde eres, y responder al conocer a alguien.",
+  "narrator": "javier",
+  "cast": [
+    { "id": "anna", "name": "Anna", "look": "woman-a", "voice": "emma" },
+    { "id": "tom", "name": "Tom", "look": "man-a", "voice": "tom" }
+  ],
+  "targetVocabularyIds": ["en-hi"],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "tom", "x": 720, "facing": "left" },
+          { "id": "anna", "x": 500, "facing": "right", "offstage": true }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": { "say": "Dos personas se conocen en un parque por primera vez.", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "enter", "actor": "anna", "to": 520 }]
+        },
+        {
+          "line": { "by": "anna", "target": "Hi! My name is Anna.", "leadIn": 0.4 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "anna" }],
+          "card": true
+        },
+        {
+          "line": { "by": "tom", "target": "Hi! I'm Tom.", "leadIn": 0.2 },
+          "actions": [{ "when": "with", "do": "wave", "actor": "tom" }],
+          "card": true
+        },
+        {
+          "line": { "by": "anna", "target": "Nice to meet you.", "leadIn": 0.5 },
+          "actions": [{ "when": "lead", "do": "handshake", "actor": "anna", "with": "tom" }],
+          "card": true
+        },
+        {
+          "line": { "by": "tom", "target": "Nice to meet you, too.", "leadIn": 0.2 },
+          "actions": [{ "when": "with", "do": "nod", "actor": "tom" }],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "target",
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "tom", "x": 720, "facing": "left" }
+        ],
+        "props": [
+          { "id": "flag-en", "type": "flag-en", "x": 900, "y": 610 },
+          { "id": "flag-es", "type": "flag-es", "x": 300, "y": 610 }
+        ]
+      },
+      "beats": [
+        { "line": { "say": "Después dicen de dónde son.", "leadIn": 0.3 } },
+        {
+          "line": { "by": "tom", "target": "I'm from England.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "tom", "at": "flag-en" }],
+          "card": true
+        },
+        {
+          "line": { "by": "anna", "target": "I'm from Spain.", "leadIn": 0.6 },
+          "actions": [{ "when": "lead", "do": "point", "actor": "anna", "at": "flag-es" }],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "situation",
+      "segment": "reuse",
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          { "id": "anna", "x": 640, "facing": "right" },
+          { "id": "tom", "x": 1010, "facing": "left" }
+        ],
+        "props": []
+      },
+      "beats": [
+        { "line": { "say": "Para preguntar el nombre a otra persona:", "leadIn": 0.3 } },
+        {
+          "line": { "by": "tom", "target": "What's your name?", "leadIn": 0.3 },
+          "actions": [{ "when": "with", "do": "point", "actor": "tom", "at": "anna" }],
+          "card": true
+        },
+        {
+          "line": { "by": "anna", "target": "My name is Anna.", "leadIn": 0.3 },
+          "card": true
+        },
+        { "line": { "say": "La misma pregunta sirve con cualquier persona: en inglés no cambia." } }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "form",
+      "heading": "Di tu nombre",
+      "phrase": "My name is Anna.",
+      "highlight": "My name is",
+      "lines": [
+        { "by": "narrator", "target": "My name is Anna.", "pauseAfter": 0.8 },
+        { "say": "Estas tres palabras, y después tu nombre." }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "form",
+      "heading": "Di de dónde eres",
+      "phrase": "I'm from Spain.",
+      "highlight": "I'm from",
+      "lines": [
+        { "by": "narrator", "target": "I'm from Spain.", "pauseAfter": 0.8 },
+        { "say": "Estas dos palabras, y después el país." },
+        { "say": "En inglés, los países se escriben siempre con mayúscula." }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "tom", "x": 720, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "wave", "actor": "anna" },
+        { "do": "highlight", "target": "anna" }
+      ],
+      "prompt": "Anna saluda y dice su nombre. ¿Qué dice?",
+      "answer": "Hi! My name is Anna.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "tom", "x": 720, "facing": "left" }
+        ],
+        "props": []
+      },
+      "setup": [
+        { "do": "handshake", "actor": "anna", "with": "tom" },
+        { "do": "highlight", "target": "anna" }
+      ],
+      "prompt": "Se dan la mano. ¿Qué dice Anna?",
+      "answer": "Nice to meet you.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          { "id": "anna", "x": 520, "facing": "right" },
+          { "id": "tom", "x": 720, "facing": "left" }
+        ],
+        "props": [{ "id": "flag-es", "type": "flag-es", "x": 300, "y": 610 }]
+      },
+      "setup": [
+        { "do": "point", "actor": "anna", "at": "flag-es" },
+        { "do": "highlight", "target": "flag-es" }
+      ],
+      "prompt": "Anna es de España. ¿Qué dice?",
+      "answer": "I'm from Spain.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Tu turno",
+      "body": "Preséntate en los ejercicios de debajo del vídeo.",
+      "say": "Ahora preséntate en los ejercicios de debajo del vídeo."
+    }
+  ]
+}

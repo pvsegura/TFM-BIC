@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "en-greetings-neutral-hello",
+  "lessonId": "en-greetings",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "prompt": "¿Qué saludo sirve en casi cualquier situación, también con personas que no conoces?",
+  "explanation": "Hello es neutro y sirve casi siempre. Hi es informal, See you later es una despedida y Good night se dice al despedirse por la noche.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Hello"
+      },
+      {
+        "id": "b",
+        "text": "Hi"
+      },
+      {
+        "id": "c",
+        "text": "See you later"
+      },
+      {
+        "id": "d",
+        "text": "Good night"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

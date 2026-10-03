@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "family",
+  "languageId": "en",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "es",
+  "title": "Familia",
+  "description": "Palabras para hablar de la familia.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-family",
+      "lemma": "family",
+      "translation": "familia",
+      "partOfSpeech": "noun",
+      "plural": "families"
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-mum",
+      "lemma": "mum",
+      "translation": "mamá",
+      "partOfSpeech": "noun",
+      "note": "En inglés americano se escribe mom."
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-dad",
+      "lemma": "dad",
+      "translation": "papá",
+      "partOfSpeech": "noun"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-brother",
+      "lemma": "brother",
+      "translation": "hermano",
+      "partOfSpeech": "noun",
+      "plural": "brothers"
+    },
+    {
+      "status": "published",
+      "order": 50,
+      "levelId": "a1",
+      "id": "en-sister",
+      "lemma": "sister",
+      "translation": "hermana",
+      "partOfSpeech": "noun",
+      "plural": "sisters"
+    }
+  ]
+}

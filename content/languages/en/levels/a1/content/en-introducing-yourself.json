@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "en-introducing-yourself",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "title": "Presentarte",
+  "description": "Decir tu nombre, preguntar el de otra persona y decir de dónde eres.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Para decir tu nombre, usa My name is o I'm seguido de tu nombre. Para decir de dónde eres, usa I'm from seguido del país. En inglés, los nombres de países se escriben siempre con mayúscula."
+    },
+    {
+      "type": "example",
+      "text": "My name is Anna.",
+      "translation": "Me llamo Anna."
+    },
+    {
+      "type": "example",
+      "text": "What's your name?",
+      "translation": "¿Cómo te llamas?",
+      "note": "What's es la forma corta de What is."
+    },
+    {
+      "type": "example",
+      "text": "I'm from Spain.",
+      "translation": "Soy de España.",
+      "note": "I'm es la forma corta de I am."
+    },
+    {
+      "type": "example",
+      "text": "I'm from England.",
+      "translation": "Soy de Inglaterra."
+    },
+    {
+      "type": "example",
+      "text": "Nice to meet you.",
+      "translation": "Encantado de conocerte; encantada de conocerte."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "text": "Hi! My name is Anna.",
+          "translation": "¡Hola! Me llamo Anna."
+        },
+        { "speaker": "Tom", "text": "Hi! I'm Tom.", "translation": "¡Hola! Soy Tom." },
+        {
+          "speaker": "Anna",
+          "text": "Nice to meet you.",
+          "translation": "Encantada de conocerte."
+        },
+        {
+          "speaker": "Tom",
+          "text": "Nice to meet you, too.",
+          "translation": "Encantado de conocerte también."
+        }
+      ]
+    }
+  ]
+}

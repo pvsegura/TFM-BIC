@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "en-introducing-yourself-from-spain",
+  "lessonId": "en-introducing-yourself",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "es",
+  "prompt": "Escribe en inglés: Soy de España.",
+  "explanation": "I'm from Spain significa soy de España. También es correcto I am from Spain.",
+  "configuration": {
+    "acceptedAnswers": [
+      "I'm from Spain.",
+      "I'm from Spain",
+      "I am from Spain.",
+      "I am from Spain",
+      "Im from Spain"
+    ],
+    "caseSensitive": false
+  }
+}

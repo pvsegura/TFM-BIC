@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "en-first-sounds",
+  "languageId": "en",
+  "levelId": "a1",
+  "type": "explanation",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "es",
+  "title": "Primeros sonidos del inglés",
+  "description": "Tres sonidos que no existen en español o se escriben de otra forma.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Algunos sonidos del inglés no existen en español o se escriben de otra manera. Las comparaciones con el español son solo aproximadas y sirven para empezar. Escucha a hablantes nativos para afinar los sonidos."
+    },
+    {
+      "type": "example",
+      "text": "three",
+      "translation": "tres",
+      "note": "La th de three se pronuncia con la punta de la lengua entre los dientes, parecida a la z del español de España."
+    },
+    {
+      "type": "example",
+      "text": "house",
+      "translation": "casa",
+      "note": "La h sí se pronuncia: es un soplo suave, más suave que la j española."
+    },
+    {
+      "type": "example",
+      "text": "sheep",
+      "translation": "oveja",
+      "note": "La ee es una i larga, más larga que la i española."
+    },
+    {
+      "type": "example",
+      "text": "ship",
+      "translation": "barco",
+      "note": "La i de ship es corta y más abierta. Sheep y ship solo se distinguen por esa vocal."
+    }
+  ]
+}

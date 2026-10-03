@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "consonants",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "es",
+  "title": "Consonantes",
+  "description": "Consonantes del inglés que no existen en español o se escriben de otra forma.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-ipa-theta",
+      "ipa": "θ",
+      "description": "Fricativa dental sorda, escrita th. La punta de la lengua toca ligeramente los dientes de arriba y el aire sale sin voz. Se parece a la z del español de España.",
+      "exampleWords": [
+        {
+          "word": "three",
+          "translation": "tres"
+        },
+        {
+          "word": "think",
+          "translation": "pensar"
+        }
+      ]
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-ipa-eth",
+      "ipa": "ð",
+      "description": "Fricativa dental sonora, también escrita th. La lengua está en la misma posición que en think, pero con voz: las cuerdas vocales vibran. Se parece a la d suave de cada.",
+      "exampleWords": [
+        {
+          "word": "this",
+          "translation": "esto; este"
+        },
+        {
+          "word": "mother",
+          "translation": "madre"
+        }
+      ]
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-ipa-h",
+      "ipa": "h",
+      "description": "Fricativa glotal sorda, escrita h. A diferencia del español, la h inglesa casi siempre se pronuncia: es un soplo suave, más suave que la j española.",
+      "exampleWords": [
+        {
+          "word": "house",
+          "translation": "casa"
+        },
+        {
+          "word": "hello",
+          "translation": "hola"
+        }
+      ]
+    }
+  ]
+}

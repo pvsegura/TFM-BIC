@@ -97,3 +97,21 @@ inventing language or provider capabilities. Evidence and its strength: [m22-ped
   applies inside lesson videos only.
 - **Visual continuity:** every page uses the homepage's exercise-book paper and margin line; page changes fade
   out/in via the View Transitions API (fade-in fallback; off with reduced motion).
+
+## Addendum 2026-10-03 — English as the second course
+
+- **English for Spanish speakers.** The product owner chose an English A1 course whose instruction language is
+  Spanish: explanations, translations, exercise feedback and narration are in Spanish; the characters speak
+  English (British voices). The site UI stays in English. Content lives in `content/languages/en/` with the
+  same schemas and rules as Polish (ids prefixed `en-`, nothing claims a complete A1 course).
+- **Localized framing.** A language's `media/plan.json` may declare `framing` (self-check line, "your turn",
+  diagram note, "roughly:", palate label). The lesson script then carries `labels` and the renderer uses them;
+  without `framing` the English defaults apply and the script (and its source hash) is unchanged, so the
+  Polish media did not need regenerating.
+- **Same content rule in the other direction.** The mixed-language guard now checks Spanish narration for
+  English target words; card meanings must be substrings of the Spanish translations.
+- **Vowel contrast diagrams.** `/iː/` vs `/ɪ/` (sheep/ship) get their own simplified tongue heights; the
+  spelling shown above each diagram is read from the content description (`spelled …` or `escrita a menudo …`).
+- **Web.** "Continue learning" shows one card per catalog language; the videos page has a language switcher.
+- **Generation** follows the same offline, quota-bounded daily batches; English word audio first, then the
+  five lesson videos.

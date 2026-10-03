@@ -15,6 +15,8 @@ import { loadContentCatalog } from "./load-content-catalog.js";
  * it can reach a student.
  */
 const PL = createLanguageId("pl");
+/** The language each course explains itself in: Polish for English speakers, English for Spanish speakers. */
+const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es" };
 
 let catalog: ContentCatalog;
 
@@ -36,7 +38,6 @@ describe("the shipped phonetics", () => {
 
     expect(pl.length).toBeGreaterThanOrEqual(4);
     expect(pl.length).toBeLessThanOrEqual(30);
-    expect(catalog.phonetics.every((p) => p.languageId === PL)).toBe(true);
   });
 
   it("group into at least two topics", () => {
@@ -62,16 +63,20 @@ describe("the shipped phonetics", () => {
     const ids = catalog.phonetics.map((p) => p.id);
 
     expect(new Set(ids).size).toBe(ids.length);
-    for (const id of ids) {
-      expect(id.startsWith("pl-")).toBe(true);
+    for (const representation of catalog.phonetics) {
+      expect(representation.id.startsWith(`${representation.languageId}-`), representation.id).toBe(
+        true,
+      );
     }
   });
 
-  it("give every representation a non-empty IPA transcription and description in English", () => {
+  it("give every representation a non-empty IPA transcription and description in its course's instruction language", () => {
     for (const representation of catalog.phonetics) {
       expect(representation.ipa.length, representation.id).toBeGreaterThan(0);
       expect(representation.description.length, representation.id).toBeGreaterThan(0);
-      expect(representation.instructionLanguage).toBe("en");
+      expect(representation.instructionLanguage, representation.id).toBe(
+        INSTRUCTION_LANGUAGE[representation.languageId],
+      );
     }
   });
 

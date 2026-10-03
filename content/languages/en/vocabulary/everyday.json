@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "everyday",
+  "languageId": "en",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "es",
+  "title": "Vida cotidiana",
+  "description": "Cosas y animales que hay en casa y a nuestro alrededor.",
+  "items": [
+    {
+      "status": "published",
+      "order": 10,
+      "levelId": "a1",
+      "id": "en-house",
+      "lemma": "house",
+      "translation": "casa",
+      "partOfSpeech": "noun",
+      "plural": "houses",
+      "example": {
+        "text": "My house is small.",
+        "translation": "Mi casa es pequeña."
+      }
+    },
+    {
+      "status": "published",
+      "order": 20,
+      "levelId": "a1",
+      "id": "en-cat",
+      "lemma": "cat",
+      "translation": "gato",
+      "partOfSpeech": "noun",
+      "plural": "cats"
+    },
+    {
+      "status": "published",
+      "order": 30,
+      "levelId": "a1",
+      "id": "en-dog",
+      "lemma": "dog",
+      "translation": "perro",
+      "partOfSpeech": "noun",
+      "plural": "dogs"
+    },
+    {
+      "status": "published",
+      "order": 40,
+      "levelId": "a1",
+      "id": "en-book",
+      "lemma": "book",
+      "translation": "libro",
+      "partOfSpeech": "noun",
+      "plural": "books"
+    },
+    {
+      "status": "published",
+      "order": 50,
+      "levelId": "a1",
+      "id": "en-work",
+      "lemma": "work",
+      "translation": "trabajo",
+      "partOfSpeech": "noun"
+    }
+  ]
+}
