@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-idioms-piece-of-cake",
+  "lessonId": "pl-idioms",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "What does To bułka z masłem mean?",
+  "explanation": "Bułka z masłem means something very easy, like a piece of cake.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "It is very easy."
+      },
+      {
+        "id": "b",
+        "text": "It is delicious."
+      },
+      {
+        "id": "c",
+        "text": "It is expensive."
+      },
+      {
+        "id": "d",
+        "text": "It is too late."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

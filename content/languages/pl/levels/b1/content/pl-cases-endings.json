@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-cases-endings",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "explanation",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "The genitive and the locative",
+  "description": "The two cases you meet most often after prepositions, with their common endings.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "The genitive answers kogo? czego? (of whom? of what?). It follows do, od, z (from), bez (without) and u (at someone's place), negated verbs (nie mam czasu) and quantities (dużo pracy, pięć złotych). Common singular endings: feminine -y or -i (kawy, pracy), masculine -a or -u (brata, domu), neuter -a (mleka). The locative answers o kim? o czym? and follows w, na, o and przy: w domu, na poczcie, o filmie. Its endings vary more, often with a change of consonant: Kraków becomes w Krakowie, poczta becomes na poczcie."
+    },
+    {
+      "type": "example",
+      "text": "Nie mam czasu.",
+      "translation": "I do not have time.",
+      "note": "Genitive after a negated verb."
+    },
+    {
+      "type": "example",
+      "text": "Idę do brata.",
+      "translation": "I am going to my brother's.",
+      "note": "Genitive after do."
+    },
+    {
+      "type": "example",
+      "text": "Kawa bez cukru, proszę.",
+      "translation": "Coffee without sugar, please.",
+      "note": "Genitive after bez."
+    },
+    {
+      "type": "example",
+      "text": "Jestem na poczcie.",
+      "translation": "I am at the post office.",
+      "note": "Locative after na: poczta becomes poczcie."
+    },
+    {
+      "type": "example",
+      "text": "Rozmawiamy o filmie.",
+      "translation": "We are talking about the film.",
+      "note": "Locative after o."
+    }
+  ]
+}

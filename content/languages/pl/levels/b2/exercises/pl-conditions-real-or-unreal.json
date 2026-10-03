@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-conditions-real-or-unreal",
+  "lessonId": "pl-conditions",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which word introduces an imagined, unreal condition?",
+  "explanation": "Gdyby introduces an unreal condition. Jeśli and jeżeli are for real possibilities, and kiedy means when.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gdyby"
+      },
+      {
+        "id": "b",
+        "text": "jeśli"
+      },
+      {
+        "id": "c",
+        "text": "jeżeli"
+      },
+      {
+        "id": "d",
+        "text": "kiedy"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

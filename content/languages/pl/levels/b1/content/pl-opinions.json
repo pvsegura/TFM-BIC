@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-opinions",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "Giving your opinion",
+  "description": "Say what you think, agree and disagree politely.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To give an opinion, start with moim zdaniem (in my opinion), myślę, że (I think that) or uważam, że (I believe that). Że introduces the clause and always has a comma before it. To agree, say zgadzam się; to disagree politely, nie do końca się zgadzam (I do not completely agree) is softer than nie zgadzam się."
+    },
+    {
+      "type": "example",
+      "text": "Moim zdaniem to dobry pomysł.",
+      "translation": "In my opinion it is a good idea."
+    },
+    {
+      "type": "example",
+      "text": "Myślę, że masz rację.",
+      "translation": "I think you are right."
+    },
+    {
+      "type": "example",
+      "text": "Zgadzam się z tobą.",
+      "translation": "I agree with you."
+    },
+    {
+      "type": "example",
+      "text": "Nie do końca się zgadzam.",
+      "translation": "I do not completely agree."
+    },
+    {
+      "type": "example",
+      "text": "Wydaje mi się, że to za drogie.",
+      "translation": "It seems to me that it is too expensive."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ewa",
+          "text": "Co sądzisz o nowym parku?",
+          "translation": "What do you think of the new park?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Moim zdaniem jest piękny, ale za mały.",
+          "translation": "In my opinion it is beautiful, but too small."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Zgadzam się. Brakuje ławek.",
+          "translation": "I agree. There are not enough benches."
+        }
+      ]
+    }
+  ]
+}

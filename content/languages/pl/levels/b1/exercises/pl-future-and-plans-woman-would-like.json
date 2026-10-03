@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-future-and-plans-woman-would-like",
+  "lessonId": "pl-future-and-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "A woman says: I would like a ticket. Which form does she use?",
+  "explanation": "A woman uses chciałabym. Chciałbym is the man's form.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Chciałabym bilet."
+      },
+      {
+        "id": "b",
+        "text": "Chciałbym bilet."
+      },
+      {
+        "id": "c",
+        "text": "Chcę bilety."
+      },
+      {
+        "id": "d",
+        "text": "Chciała bilet."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

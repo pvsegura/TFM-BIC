@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-literary-language-vocative",
+  "lessonId": "pl-literary-language",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "In Litwo! Ojczyzno moja!, the nouns are in the vocative case.",
+  "explanation": "The vocative is used to address someone or something directly: Litwa becomes Litwo, ojczyzna becomes ojczyzno.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-job-interview-od-present",
+  "lessonId": "pl-job-interview",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Od trzech lat pracuję means I worked for three years, but no longer do.",
+  "explanation": "Od with the present tense describes something that started in the past and still continues: I have been working for three years.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

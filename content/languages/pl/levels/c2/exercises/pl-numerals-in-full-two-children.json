@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numerals-in-full-two-children",
+  "lessonId": "pl-numerals-in-full",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Mam ___ dzieci. (I have two children.)",
+  "explanation": "Dzieci takes the collective numeral: dwoje dzieci.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "dwoje"
+      },
+      {
+        "id": "b",
+        "text": "dwa"
+      },
+      {
+        "id": "c",
+        "text": "dwie"
+      },
+      {
+        "id": "d",
+        "text": "dwaj"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

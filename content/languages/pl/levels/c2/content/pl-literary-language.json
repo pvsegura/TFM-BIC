@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-literary-language",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Reading literature: literary and archaic forms",
+  "description": "Recognise the vocative, archaic connectors and elevated forms in classic Polish texts.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Classic Polish literature uses forms that are rare in everyday speech. The vocative case addresses someone or something directly: Litwo! (O Lithuania!), Panie (Sir, Lord). Older connectors replace their modern equivalents: albowiem for bo (because), lecz for ale (but), acz for chociaż (although). The demonstrative ów (that, the one mentioned) points back to something already named. Recognising these forms is enough for reading; you rarely need to use them yourself."
+    },
+    {
+      "type": "example",
+      "text": "Litwo! Ojczyzno moja! ty jesteś jak zdrowie.",
+      "translation": "Lithuania, my homeland! You are like health.",
+      "note": "Adam Mickiewicz, Pan Tadeusz (1834). Litwo and Ojczyzno are vocatives."
+    },
+    {
+      "type": "example",
+      "text": "Nie przyszedł, albowiem był chory.",
+      "translation": "He did not come, for he was ill.",
+      "note": "Albowiem: elevated for bo."
+    },
+    {
+      "type": "example",
+      "text": "Chciał pomóc, lecz nie mógł.",
+      "translation": "He wanted to help, but he could not.",
+      "note": "Lecz: literary for ale."
+    },
+    {
+      "type": "example",
+      "text": "Ów człowiek zniknął bez śladu.",
+      "translation": "That man vanished without a trace.",
+      "note": "Ów refers back to someone already mentioned."
+    },
+    {
+      "type": "example",
+      "text": "Panie, zmiłuj się nad nami.",
+      "translation": "Lord, have mercy on us.",
+      "note": "Panie is the vocative of pan."
+    }
+  ]
+}

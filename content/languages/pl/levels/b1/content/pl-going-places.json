@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-going-places",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "Going on foot or by vehicle",
+  "description": "Iść or jechać, chodzić or jeździć: Polish verbs of motion.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish distinguishes going on foot from going by vehicle. Iść means to go on foot, now or in one direction; chodzić means to go on foot regularly or there and back. Jechać means to go by car, bus, train or bike, now or in one direction; jeździć means to travel that way regularly. The vehicle is in the instrumental case: pociągiem (by train), autobusem (by bus), rowerem (by bike)."
+    },
+    {
+      "type": "example",
+      "text": "Idę do szkoły.",
+      "translation": "I am walking to school.",
+      "note": "On foot, right now."
+    },
+    {
+      "type": "example",
+      "text": "Chodzę na basen w środy.",
+      "translation": "I go to the swimming pool on Wednesdays.",
+      "note": "Regularly, on foot."
+    },
+    {
+      "type": "example",
+      "text": "Jadę do Gdańska pociągiem.",
+      "translation": "I am going to Gdańsk by train."
+    },
+    {
+      "type": "example",
+      "text": "Często jeżdżę rowerem.",
+      "translation": "I often ride my bike.",
+      "note": "Regularly, by vehicle."
+    },
+    {
+      "type": "example",
+      "text": "Jedziemy na wakacje samochodem.",
+      "translation": "We are going on holiday by car."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Zosia",
+          "text": "Jak jeździsz do pracy?",
+          "translation": "How do you get to work?"
+        },
+        {
+          "speaker": "Michał",
+          "text": "Zwykle jeżdżę tramwajem, ale dzisiaj idę pieszo.",
+          "translation": "I usually go by tram, but today I am walking."
+        },
+        {
+          "speaker": "Zosia",
+          "text": "Daleko?",
+          "translation": "Is it far?"
+        },
+        {
+          "speaker": "Michał",
+          "text": "Nie, dwadzieścia minut.",
+          "translation": "No, twenty minutes."
+        }
+      ]
+    }
+  ]
+}

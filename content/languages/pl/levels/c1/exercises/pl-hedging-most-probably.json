@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-hedging-most-probably",
+  "lessonId": "pl-hedging",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which word expresses the highest probability without full certainty?",
+  "explanation": "Najprawdopodobniej means most probably. Raczej is rather, być może perhaps, and chyba nie probably not.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "najprawdopodobniej"
+      },
+      {
+        "id": "b",
+        "text": "raczej"
+      },
+      {
+        "id": "c",
+        "text": "być może"
+      },
+      {
+        "id": "d",
+        "text": "chyba nie"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

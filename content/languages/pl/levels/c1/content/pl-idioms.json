@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-idioms",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "Everyday idioms",
+  "description": "Common Polish idioms, what they mean and when they sound natural.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Idioms make speech sound natural, but their meaning cannot be guessed word by word. These are frequent in everyday conversation and are understood by all generations. Use them in informal or neutral situations; in formal writing they sound out of place."
+    },
+    {
+      "type": "example",
+      "text": "Trzymam za ciebie kciuki.",
+      "translation": "I am keeping my fingers crossed for you.",
+      "note": "Literally: I am holding my thumbs for you."
+    },
+    {
+      "type": "example",
+      "text": "To bułka z masłem.",
+      "translation": "It is a piece of cake.",
+      "note": "Literally: a bread roll with butter."
+    },
+    {
+      "type": "example",
+      "text": "Nie owijaj w bawełnę.",
+      "translation": "Do not beat around the bush.",
+      "note": "Literally: do not wrap it in cotton."
+    },
+    {
+      "type": "example",
+      "text": "Szef ma dziś muchy w nosie.",
+      "translation": "The boss is in a bad mood today.",
+      "note": "Literally: has flies in his nose."
+    },
+    {
+      "type": "example",
+      "text": "Nie mój cyrk, nie moje małpy.",
+      "translation": "Not my problem.",
+      "note": "Literally: not my circus, not my monkeys."
+    },
+    {
+      "type": "example",
+      "text": "Mówić do niego to jak rzucać grochem o ścianę.",
+      "translation": "Talking to him is like talking to a brick wall.",
+      "note": "Literally: like throwing peas at a wall."
+    }
+  ]
+}

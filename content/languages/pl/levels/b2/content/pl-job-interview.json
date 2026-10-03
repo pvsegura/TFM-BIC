@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-job-interview",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "A job interview",
+  "description": "Use the formal pan and pani forms to talk about experience, strengths and availability.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "In formal situations Polish uses pan (to a man) and pani (to a woman) with the third-person verb instead of ty: Jakie ma pani doświadczenie? (What experience do you have?). To soften a question or an offer, use the conditional: Kiedy mógłby pan zacząć? (When could you start?). To describe how long you have been doing something, use od with the present tense: od trzech lat pracuję (I have been working for three years)."
+    },
+    {
+      "type": "example",
+      "text": "Proszę opowiedzieć coś o sobie.",
+      "translation": "Please tell us something about yourself."
+    },
+    {
+      "type": "example",
+      "text": "Jakie ma pani doświadczenie?",
+      "translation": "What experience do you have?",
+      "note": "Formal, to a woman."
+    },
+    {
+      "type": "example",
+      "text": "Od trzech lat pracuję jako księgowa.",
+      "translation": "I have been working as an accountant for three years.",
+      "note": "Present tense with od for an action that continues."
+    },
+    {
+      "type": "example",
+      "text": "Moją mocną stroną jest dobra organizacja.",
+      "translation": "My strength is good organisation."
+    },
+    {
+      "type": "example",
+      "text": "Kiedy mógłby pan zacząć?",
+      "translation": "When could you start?",
+      "note": "Formal, to a man."
+    },
+    {
+      "type": "example",
+      "text": "Mogłabym zacząć od przyszłego miesiąca.",
+      "translation": "I could start from next month.",
+      "note": "Said by a woman."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Pani Nowak",
+          "text": "Dlaczego chce pan u nas pracować?",
+          "translation": "Why do you want to work for us?"
+        },
+        {
+          "speaker": "Pan Lis",
+          "text": "Interesuje mnie rozwój w międzynarodowym zespole.",
+          "translation": "I am interested in developing in an international team."
+        },
+        {
+          "speaker": "Pani Nowak",
+          "text": "A jakie są pana oczekiwania finansowe?",
+          "translation": "And what are your salary expectations?"
+        },
+        {
+          "speaker": "Pan Lis",
+          "text": "Chciałbym zarabiać około ośmiu tysięcy złotych brutto.",
+          "translation": "I would like to earn about eight thousand zlotys gross."
+        }
+      ]
+    }
+  ]
+}

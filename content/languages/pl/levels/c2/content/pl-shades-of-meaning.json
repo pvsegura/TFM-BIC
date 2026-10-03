@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shades-of-meaning",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "Near-synonyms with different shades",
+  "description": "Words that share a meaning but differ in tone, register and circumstance.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "At mastery level, the choice between near-synonyms matters as much as grammar. Take dying: umrzeć is neutral; zginąć means to die violently or in an accident; odejść (to pass away) is a gentle euphemism; polec (to fall) is reserved for soldiers in battle and sounds solemn. Similar sets exist for eating (jeść, spożywać in official texts) and speaking (mówić, rzec in literary style). Choosing the right one shows respect for the situation."
+    },
+    {
+      "type": "example",
+      "text": "Dziadek zmarł w zeszłym roku.",
+      "translation": "Grandfather died last year.",
+      "note": "Neutral."
+    },
+    {
+      "type": "example",
+      "text": "Zginął w wypadku samochodowym.",
+      "translation": "He was killed in a car accident.",
+      "note": "Violent or accidental death."
+    },
+    {
+      "type": "example",
+      "text": "Odszedł od nas nasz drogi przyjaciel.",
+      "translation": "Our dear friend has passed away.",
+      "note": "Gentle euphemism, typical of obituaries."
+    },
+    {
+      "type": "example",
+      "text": "Żołnierze polegli pod Monte Cassino.",
+      "translation": "The soldiers fell at Monte Cassino.",
+      "note": "Solemn, for death in battle."
+    },
+    {
+      "type": "example",
+      "text": "Produkt należy spożyć przed upływem daty ważności.",
+      "translation": "The product should be consumed before the expiry date.",
+      "note": "Spożyć: official for zjeść."
+    }
+  ]
+}

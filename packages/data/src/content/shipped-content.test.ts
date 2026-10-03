@@ -57,20 +57,23 @@ describe("the shipped content catalog", () => {
     });
   });
 
-  it("declares Polish A1 as available and the later CEFR levels as planned, not pretended", () => {
+  it("declares every Polish CEFR level as available, and backs each one with published content", () => {
     const status = Object.fromEntries(
       catalog.languageLevels.filter((l) => l.languageId === PL).map((l) => [l.levelId, l.status]),
     );
 
-    expect(status).toEqual({
-      a1: "available",
-      a2: "planned",
-      b1: "planned",
-      b2: "planned",
-      c1: "planned",
-      c2: "planned",
-    });
     expect(Object.keys(status).sort()).toEqual(CEFR_LEVELS.map((l) => l.id));
+    for (const level of CEFR_LEVELS) {
+      expect(status[level.id], level.id).toBe("available");
+      const items = catalog.content.filter(
+        (c) => c.languageId === PL && c.levelId === level.id && isPublished(c),
+      );
+      expect(items.length, level.id).toBeGreaterThanOrEqual(4);
+      expect(
+        items.some((c) => c.type === "lesson"),
+        level.id,
+      ).toBe(true);
+    }
   });
 
   it("gives every content item a unique, language-namespaced id", () => {
@@ -136,11 +139,13 @@ describe("the shipped content through the real use cases", () => {
     expect(languages.map((l) => l.code)).toContain("pl");
   });
 
-  it("offers exactly one selectable Polish level today: A1", async () => {
+  it("offers every Polish level, A1 to C2, as selectable", async () => {
     const { levels } = await new ListLanguageLevelsUseCase(repository).execute({ languageId: PL });
 
-    expect(levels.filter((l) => l.status === "available").map((l) => l.id)).toEqual(["a1"]);
-    expect(levels.filter((l) => l.status === "planned")).toHaveLength(5);
+    expect(levels.filter((l) => l.status === "available").map((l) => l.id)).toEqual(
+      CEFR_LEVELS.map((l) => l.id),
+    );
+    expect(levels.filter((l) => l.status === "planned")).toHaveLength(0);
   });
 
   it("lists published Polish A1 content in order, and every item can be read in full", async () => {

@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-verb-prefixes",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "explanation",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Verb prefixes: one verb, many meanings",
+  "description": "How prefixes on iść turn going into entering, leaving, arriving and crossing.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Prefixes add a direction or a nuance to a verb and usually make it perfective. With iść (to go on foot) they give a whole family: wejść (to go in), wyjść (to go out), przyjść (to arrive, come), przejść (to cross, go through), dojść (to reach), odejść (to walk away), zejść (to go down). The same prefixes work with jechać: wjechać, wyjechać, przyjechać. Learning the prefix meanings helps you guess new verbs."
+    },
+    {
+      "type": "example",
+      "text": "Wejdź, proszę.",
+      "translation": "Come in, please."
+    },
+    {
+      "type": "example",
+      "text": "Wyszedł z domu o ósmej.",
+      "translation": "He left the house at eight."
+    },
+    {
+      "type": "example",
+      "text": "Przyjdę o szóstej.",
+      "translation": "I will come at six."
+    },
+    {
+      "type": "example",
+      "text": "Proszę przejść przez ulicę na światłach.",
+      "translation": "Please cross the street at the lights."
+    },
+    {
+      "type": "example",
+      "text": "Wyjeżdżamy na urlop w sobotę.",
+      "translation": "We are leaving on holiday on Saturday.",
+      "note": "Wy- with jechać: leaving by vehicle."
+    }
+  ]
+}

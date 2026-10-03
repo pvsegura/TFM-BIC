@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-word-order",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "Word order and emphasis",
+  "description": "Use Polish's free word order to put the focus where you want it.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Because endings show who does what, Polish word order is free, but not meaningless. The neutral pattern is subject, verb, object, and the new or important information tends to come last. Moving a word to the end, or putting to before it, puts it in focus: Książkę kupiła Anna answers who bought the book. Unstressed pronouns such as mi, cię, go and się never begin a sentence and usually sit early in it, after the first stressed word."
+    },
+    {
+      "type": "example",
+      "text": "Anna kupiła książkę.",
+      "translation": "Anna bought a book.",
+      "note": "Neutral order."
+    },
+    {
+      "type": "example",
+      "text": "Książkę kupiła Anna.",
+      "translation": "It was Anna who bought the book.",
+      "note": "Anna is the new information, so it comes last."
+    },
+    {
+      "type": "example",
+      "text": "To Anna kupiła tę książkę, nie Piotr.",
+      "translation": "It was Anna, not Piotr, who bought this book."
+    },
+    {
+      "type": "example",
+      "text": "Ten film bardzo mi się podoba.",
+      "translation": "I really like this film.",
+      "note": "Mi and się follow the first stressed words."
+    },
+    {
+      "type": "example",
+      "text": "Jego nie widziałam, ale ją tak.",
+      "translation": "Him I did not see, but her I did.",
+      "note": "Stressed pronoun forms (jego, ją) can be fronted for contrast."
+    }
+  ]
+}

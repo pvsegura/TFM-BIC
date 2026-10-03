@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shopping-how-much",
+  "lessonId": "pl-shopping",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "How do you ask how much something costs?",
+  "explanation": "Ile to kosztuje? means how much is it. Gdzie to jest? asks where it is, Co to jest? asks what it is, and Jak się masz? asks how you are.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Ile to kosztuje?"
+      },
+      {
+        "id": "b",
+        "text": "Gdzie to jest?"
+      },
+      {
+        "id": "c",
+        "text": "Co to jest?"
+      },
+      {
+        "id": "d",
+        "text": "Jak się masz?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

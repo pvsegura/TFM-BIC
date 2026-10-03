@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "formal-and-academic",
+  "languageId": "pl",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "en",
+  "title": "Formal and academic Polish",
+  "description": "Connectors and words for reports, essays and official letters (C1).",
+  "items": [
+    {
+      "id": "pl-zatem",
+      "status": "published",
+      "order": 10,
+      "lemma": "zatem",
+      "translation": "therefore; thus",
+      "levelId": "c1",
+      "partOfSpeech": "conjunction",
+      "note": "Formal for więc."
+    },
+    {
+      "id": "pl-ponadto",
+      "status": "published",
+      "order": 20,
+      "lemma": "ponadto",
+      "translation": "furthermore",
+      "levelId": "c1",
+      "partOfSpeech": "adverb",
+      "note": "Formal for poza tym."
+    },
+    {
+      "id": "pl-jednakze",
+      "status": "published",
+      "order": 30,
+      "lemma": "jednakże",
+      "translation": "however",
+      "levelId": "c1",
+      "partOfSpeech": "conjunction",
+      "note": "Formal for ale or jednak."
+    },
+    {
+      "id": "pl-iz",
+      "status": "published",
+      "order": 40,
+      "lemma": "iż",
+      "translation": "that",
+      "levelId": "c1",
+      "partOfSpeech": "conjunction",
+      "note": "Formal for że."
+    },
+    {
+      "id": "pl-wniosek",
+      "status": "published",
+      "order": 50,
+      "lemma": "wniosek",
+      "translation": "conclusion; application",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-badanie",
+      "status": "published",
+      "order": 60,
+      "lemma": "badanie",
+      "translation": "study; examination",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-zjawisko",
+      "status": "published",
+      "order": 70,
+      "lemma": "zjawisko",
+      "translation": "phenomenon",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-dziedzina",
+      "status": "published",
+      "order": 80,
+      "lemma": "dziedzina",
+      "translation": "field; domain",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-zalozenie",
+      "status": "published",
+      "order": 90,
+      "lemma": "założenie",
+      "translation": "assumption",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-watpliwosc",
+      "status": "published",
+      "order": 100,
+      "lemma": "wątpliwość",
+      "translation": "doubt",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-znaczacy",
+      "status": "published",
+      "order": 110,
+      "lemma": "znaczący",
+      "translation": "significant",
+      "levelId": "c1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-dotyczyc",
+      "status": "published",
+      "order": 120,
+      "lemma": "dotyczyć",
+      "translation": "to concern",
+      "levelId": "c1",
+      "partOfSpeech": "verb",
+      "example": {
+        "text": "Pytanie dotyczy umowy.",
+        "translation": "The question concerns the contract."
+      }
+    },
+    {
+      "id": "pl-stwierdzic",
+      "status": "published",
+      "order": 130,
+      "lemma": "stwierdzić",
+      "translation": "to state; to conclude",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-podkreslic",
+      "status": "published",
+      "order": 140,
+      "lemma": "podkreślić",
+      "translation": "to emphasise; to underline",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-wykluczyc",
+      "status": "published",
+      "order": 150,
+      "lemma": "wykluczyć",
+      "translation": "to rule out",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-uzasadnic",
+      "status": "published",
+      "order": 160,
+      "lemma": "uzasadnić",
+      "translation": "to justify",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-rozstrzygnac",
+      "status": "published",
+      "order": 170,
+      "lemma": "rozstrzygnąć",
+      "translation": "to resolve; to settle",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-zaproszenie",
+      "status": "published",
+      "order": 180,
+      "lemma": "zaproszenie",
+      "translation": "invitation",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    }
+  ]
+}

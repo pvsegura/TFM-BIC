@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-hedging-rule-out",
+  "lessonId": "pl-hedging",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: It cannot be ruled out that…",
+  "explanation": "Nie można wykluczyć, że introduces a possibility the speaker does not want to dismiss.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Nie można wykluczyć, że",
+      "Nie można wykluczyć, że…",
+      "Nie można wykluczyć że"
+    ],
+    "caseSensitive": false
+  }
+}

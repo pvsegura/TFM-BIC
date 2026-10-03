@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shopping",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "At the shop",
+  "description": "Ask for things, ask about prices and pay.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To ask for something in a shop, say Poproszę followed by what you want. The thing you ask for is in the accusative case: feminine nouns ending in -a change the ending to -ę (woda becomes wodę, kawa becomes kawę), while masculine things and neuter nouns stay the same (chleb, mleko). To ask the price, say Ile to kosztuje?"
+    },
+    {
+      "type": "example",
+      "text": "Poproszę chleb.",
+      "translation": "A loaf of bread, please."
+    },
+    {
+      "type": "example",
+      "text": "Poproszę wodę.",
+      "translation": "Water, please.",
+      "note": "Woda becomes wodę after poproszę."
+    },
+    {
+      "type": "example",
+      "text": "Ile to kosztuje?",
+      "translation": "How much is it?"
+    },
+    {
+      "type": "example",
+      "text": "To kosztuje pięć złotych.",
+      "translation": "It costs five zlotys.",
+      "note": "The złoty is the Polish currency. From five upwards you say złotych."
+    },
+    {
+      "type": "example",
+      "text": "Czy mogę zapłacić kartą?",
+      "translation": "Can I pay by card?"
+    },
+    {
+      "type": "example",
+      "text": "Gotówką czy kartą?",
+      "translation": "Cash or card?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Dzień dobry. Co podać?",
+          "translation": "Hello. What can I get you?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Dzień dobry. Poproszę chleb i mleko.",
+          "translation": "Hello. Bread and milk, please."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Coś jeszcze?",
+          "translation": "Anything else?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Nie, dziękuję. Ile to kosztuje?",
+          "translation": "No, thank you. How much is it?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Dziewięć złotych.",
+          "translation": "Nine zlotys."
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Czy mogę zapłacić kartą?",
+          "translation": "Can I pay by card?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Oczywiście.",
+          "translation": "Of course."
+        }
+      ]
+    }
+  ]
+}

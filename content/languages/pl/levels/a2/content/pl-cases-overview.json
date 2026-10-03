@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-cases-overview",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "explanation",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Polish cases at a glance",
+  "description": "Why Polish nouns change their endings, and how to learn them without tables.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish nouns change their endings to show their role in the sentence. There are seven cases. You have already met several of them inside whole phrases: the accusative after poproszę and lubię (kawę), the genitive after do and after numbers from five (do pracy, pięć złotych), and the locative after w for places (w Krakowie). You do not need every table at once: learn the endings phrase by phrase, starting with the most frequent."
+    },
+    {
+      "type": "example",
+      "text": "To jest kawa.",
+      "translation": "This is coffee.",
+      "note": "Nominative: the dictionary form."
+    },
+    {
+      "type": "example",
+      "text": "Lubię kawę.",
+      "translation": "I like coffee.",
+      "note": "Accusative: the object of most verbs."
+    },
+    {
+      "type": "example",
+      "text": "Nie ma kawy.",
+      "translation": "There is no coffee.",
+      "note": "Genitive: after nie ma, after do, and after numbers from five."
+    },
+    {
+      "type": "example",
+      "text": "Mieszkam w Krakowie.",
+      "translation": "I live in Kraków.",
+      "note": "Locative: after w and na for places."
+    },
+    {
+      "type": "example",
+      "text": "Piję kawę z mlekiem.",
+      "translation": "I drink coffee with milk.",
+      "note": "Instrumental: after z meaning with."
+    }
+  ]
+}

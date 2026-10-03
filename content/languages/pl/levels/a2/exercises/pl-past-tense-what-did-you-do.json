@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-past-tense-what-did-you-do",
+  "lessonId": "pl-past-tense",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish question to a man: What did you do at the weekend?",
+  "explanation": "Robiłeś is you did, asking a man. Asking a woman, it is robiłaś.",
+  "configuration": {
+    "acceptedAnswers": ["Co robiłeś w weekend?", "Co robiłeś w weekend"],
+    "caseSensitive": false
+  }
+}

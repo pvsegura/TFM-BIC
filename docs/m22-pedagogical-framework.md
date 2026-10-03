@@ -108,7 +108,7 @@ a final recall. Pause length scales with level (A1: ~3.5 s; B1+: ~2.5 s).
 | B2    | natural speed                                            | less; nuance in context                  | choose the appropriate response  | brief notice of nuance                                 |
 | C1–C2 | authentic                                                | minimal; register, pragmatics            | interpret intent/register        | discourse-level notes                                  |
 
-The current course has **only A1 content**; the level parameters exist in the script model
+Polish now has text content for every level (A1–C2) but videos only for A1; the level parameters exist in the script model
 (`pauseSeconds`, repetition count) so higher levels change behaviour, not just length.
 
 ## 6. Quality checklist (applied before publishing)

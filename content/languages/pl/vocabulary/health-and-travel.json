@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "id": "health-and-travel",
+  "languageId": "pl",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Health and travel",
+  "description": "Words for symptoms, the doctor's, booking a trip and talking about plans (B1).",
+  "items": [
+    {
+      "id": "pl-lekarz",
+      "status": "published",
+      "order": 10,
+      "lemma": "lekarz",
+      "translation": "doctor",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "A woman doctor is lekarka."
+    },
+    {
+      "id": "pl-lekarstwo",
+      "status": "published",
+      "order": 20,
+      "lemma": "lekarstwo",
+      "translation": "medicine",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-apteka",
+      "status": "published",
+      "order": 30,
+      "lemma": "apteka",
+      "translation": "pharmacy",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-recepta",
+      "status": "published",
+      "order": 40,
+      "lemma": "recepta",
+      "translation": "prescription",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-goraczka",
+      "status": "published",
+      "order": 50,
+      "lemma": "gorączka",
+      "translation": "fever",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-bol",
+      "status": "published",
+      "order": 60,
+      "lemma": "ból",
+      "translation": "pain",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-glowa",
+      "status": "published",
+      "order": 70,
+      "lemma": "głowa",
+      "translation": "head",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-gardlo",
+      "status": "published",
+      "order": 80,
+      "lemma": "gardło",
+      "translation": "throat",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-zdrowy",
+      "status": "published",
+      "order": 90,
+      "lemma": "zdrowy",
+      "translation": "healthy",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-chory",
+      "status": "published",
+      "order": 100,
+      "lemma": "chory",
+      "translation": "ill; sick",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-pokoj",
+      "status": "published",
+      "order": 110,
+      "lemma": "pokój",
+      "translation": "room",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "pokoje"
+    },
+    {
+      "id": "pl-rezerwacja",
+      "status": "published",
+      "order": 120,
+      "lemma": "rezerwacja",
+      "translation": "booking; reservation",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-podroz",
+      "status": "published",
+      "order": 130,
+      "lemma": "podróż",
+      "translation": "journey; trip",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-pomysl",
+      "status": "published",
+      "order": 140,
+      "lemma": "pomysł",
+      "translation": "idea",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-zdanie",
+      "status": "published",
+      "order": 150,
+      "lemma": "zdanie",
+      "translation": "opinion; sentence",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "neuter",
+      "note": "Moim zdaniem: in my opinion."
+    },
+    {
+      "id": "pl-zgadzac-sie",
+      "status": "published",
+      "order": 160,
+      "lemma": "zgadzać się",
+      "translation": "to agree",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-zamierzac",
+      "status": "published",
+      "order": 170,
+      "lemma": "zamierzać",
+      "translation": "to intend",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-jezdzic",
+      "status": "published",
+      "order": 180,
+      "lemma": "jeździć",
+      "translation": "to travel or ride (regularly)",
+      "levelId": "b1",
+      "partOfSpeech": "verb",
+      "example": {
+        "text": "Często jeżdżę rowerem.",
+        "translation": "I often ride my bike."
+      }
+    }
+  ]
+}

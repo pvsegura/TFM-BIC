@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-formal-correspondence",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "Formal letters and emails",
+  "description": "Open, frame and close a formal message the way Polish institutions expect.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Formal Polish correspondence follows fixed formulas. Open with Szanowna Pani or Szanowny Panie for one person, or Szanowni Państwo for several people or an institution, followed by a comma; the next line starts with a capital letter. Frame the purpose with phrases such as w nawiązaniu do (with reference to) or zwracam się z prośbą o (I am writing to request). Pronouns addressing the reader are often capitalised as a courtesy: Pani, Państwa. Close with Z poważaniem (Yours faithfully) or, less formally, Z wyrazami szacunku."
+    },
+    {
+      "type": "example",
+      "text": "Szanowni Państwo,",
+      "translation": "Dear Sir or Madam,",
+      "note": "For an institution or several people."
+    },
+    {
+      "type": "example",
+      "text": "W nawiązaniu do naszej rozmowy telefonicznej przesyłam umowę.",
+      "translation": "With reference to our phone call, I am sending the contract."
+    },
+    {
+      "type": "example",
+      "text": "Zwracam się z uprzejmą prośbą o przesłanie faktury.",
+      "translation": "I am writing to kindly request the invoice."
+    },
+    {
+      "type": "example",
+      "text": "Będę wdzięczna za szybką odpowiedź.",
+      "translation": "I would be grateful for a prompt reply.",
+      "note": "Said by a woman; a man writes wdzięczny."
+    },
+    {
+      "type": "example",
+      "text": "Z poważaniem",
+      "translation": "Yours faithfully"
+    }
+  ]
+}

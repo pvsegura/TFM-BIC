@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-directions",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Asking the way",
+  "description": "Ask how to get somewhere and understand simple directions.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To ask the way, say Przepraszam, jak dojść do… followed by the place. After do, the place is in the genitive case: dworzec becomes do dworca, poczta becomes do poczty, and centrum stays do centrum. The answers use a few simple words: prosto (straight on), w lewo (left), w prawo (right), blisko (near) and daleko (far)."
+    },
+    {
+      "type": "example",
+      "text": "Przepraszam, jak dojść do dworca?",
+      "translation": "Excuse me, how do I get to the station?"
+    },
+    {
+      "type": "example",
+      "text": "Proszę iść prosto.",
+      "translation": "Go straight on.",
+      "note": "Proszę followed by an infinitive is a polite instruction."
+    },
+    {
+      "type": "example",
+      "text": "Potem proszę skręcić w lewo.",
+      "translation": "Then turn left."
+    },
+    {
+      "type": "example",
+      "text": "To jest blisko.",
+      "translation": "It is near."
+    },
+    {
+      "type": "example",
+      "text": "Czy to daleko?",
+      "translation": "Is it far?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Turysta",
+          "text": "Przepraszam, jak dojść do poczty?",
+          "translation": "Excuse me, how do I get to the post office?"
+        },
+        {
+          "speaker": "Pani Ewa",
+          "text": "Proszę iść prosto, a potem w prawo.",
+          "translation": "Go straight on, and then right."
+        },
+        {
+          "speaker": "Turysta",
+          "text": "Czy to daleko?",
+          "translation": "Is it far?"
+        },
+        {
+          "speaker": "Pani Ewa",
+          "text": "Nie, to blisko. Pięć minut.",
+          "translation": "No, it is near. Five minutes."
+        },
+        {
+          "speaker": "Turysta",
+          "text": "Dziękuję bardzo!",
+          "translation": "Thank you very much!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import {
+  CEFR_LEVELS,
   pedagogyFor,
   type ContentItem,
   type NarrationLine,
@@ -36,8 +37,9 @@ function words(text: string, locale: string): string[] {
 
 /**
  * The example a word's video uses: the item's own example, otherwise the first lesson example or
- * dialogue line containing the lemma verbatim as whole words (labelled with its lesson). Never
- * invented; inflected forms deliberately do not match.
+ * dialogue line containing the lemma verbatim as whole words (labelled with its lesson). Lessons are
+ * searched level by level, then by order, and never above the word's own level, so an A1 word is
+ * not illustrated with a C1 sentence. Never invented; inflected forms deliberately do not match.
  */
 export function findVocabularyExample(
   item: VocabularyItem,
@@ -55,9 +57,14 @@ export function findVocabularyExample(
     }
     return false;
   };
+  const rank = (levelId: string) => CEFR_LEVELS.findIndex((level) => level.id === levelId);
+  const ceiling = item.levelId === undefined ? Infinity : rank(item.levelId);
   const sorted = [...lessons]
-    .filter((l) => l.languageId === item.languageId && l.status === "published")
-    .sort((a, b) => a.order - b.order);
+    .filter(
+      (l) =>
+        l.languageId === item.languageId && l.status === "published" && rank(l.levelId) <= ceiling,
+    )
+    .sort((a, b) => rank(a.levelId) - rank(b.levelId) || a.order - b.order);
   for (const lesson of sorted) {
     for (const block of lesson.blocks) {
       const candidates =

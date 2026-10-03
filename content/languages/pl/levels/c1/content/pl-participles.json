@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-participles",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Participles: saying more in fewer words",
+  "description": "Adjectival and adverbial participles that compress two clauses into one.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Participles let you compress sentences. The active adjectival participle ends in -ący and agrees like an adjective: kobieta siedząca obok mnie (the woman sitting next to me). The passive participle ends in -ny, -ony or -ty: przeczytany list (the letter that has been read). The adverbial participle in -ąc describes a simultaneous action by the same subject: Czekając na autobus, czytałem gazetę. A perfective form in -wszy or -łszy (przeczytawszy, wróciwszy) describes an earlier action; it sounds literary."
+    },
+    {
+      "type": "example",
+      "text": "Kobieta siedząca obok mnie czytała książkę.",
+      "translation": "The woman sitting next to me was reading a book."
+    },
+    {
+      "type": "example",
+      "text": "Przeczytany list leżał na stole.",
+      "translation": "The letter, already read, lay on the table."
+    },
+    {
+      "type": "example",
+      "text": "Czekając na autobus, czytałem gazetę.",
+      "translation": "While waiting for the bus, I read the newspaper.",
+      "note": "Both actions have the same subject."
+    },
+    {
+      "type": "example",
+      "text": "Wróciwszy do domu, od razu zasnął.",
+      "translation": "Having returned home, he fell asleep at once.",
+      "note": "Literary style."
+    },
+    {
+      "type": "example",
+      "text": "To jest książka napisana przez moją babcię.",
+      "translation": "This is a book written by my grandmother."
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-word-order-focus-on-anna",
+  "lessonId": "pl-word-order",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which sentence answers the question: Who bought the book?",
+  "explanation": "The answer to who? is the new information, so it goes last: Książkę kupiła Anna.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Książkę kupiła Anna."
+      },
+      {
+        "id": "b",
+        "text": "Anna kupiła książkę."
+      },
+      {
+        "id": "c",
+        "text": "Kupiła Anna książkę?"
+      },
+      {
+        "id": "d",
+        "text": "Anna książkę kupiła?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

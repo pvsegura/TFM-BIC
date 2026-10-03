@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-job-interview-formal-question",
+  "lessonId": "pl-job-interview",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which question is the formal way to ask a woman about her experience?",
+  "explanation": "Formal Polish uses pani with the third-person verb: ma pani. Masz is informal, and pan is used for a man.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jakie ma pani doświadczenie?"
+      },
+      {
+        "id": "b",
+        "text": "Jakie masz doświadczenie?"
+      },
+      {
+        "id": "c",
+        "text": "Jakie ma pan doświadczenie?"
+      },
+      {
+        "id": "d",
+        "text": "Jakie mają doświadczenie?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

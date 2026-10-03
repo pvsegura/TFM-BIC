@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-reported-speech",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "Reporting what others said",
+  "description": "Powiedział, że…, zapytała, czy…, poprosił, żebym…",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Reported speech in Polish keeps the tense of the original words: he said I will come becomes powiedział, że przyjdzie (literally he said that he will come). Statements use że, yes-or-no questions use czy, and other questions keep their question word: zapytała, gdzie mieszkam. Requests and orders use żeby with the past form of the verb: poprosił, żebym zadzwonił."
+    },
+    {
+      "type": "example",
+      "text": "Powiedział, że przyjdzie później.",
+      "translation": "He said he would come later.",
+      "note": "The original was: Przyjdę później."
+    },
+    {
+      "type": "example",
+      "text": "Zapytała, czy mam czas.",
+      "translation": "She asked whether I had time."
+    },
+    {
+      "type": "example",
+      "text": "Zapytał, gdzie mieszkam.",
+      "translation": "He asked where I lived."
+    },
+    {
+      "type": "example",
+      "text": "Poprosiła, żebym zadzwonił jutro.",
+      "translation": "She asked me to call tomorrow.",
+      "note": "Said by a man; a woman says żebym zadzwoniła."
+    },
+    {
+      "type": "example",
+      "text": "Mówią, że będzie zimna zima.",
+      "translation": "They say it will be a cold winter."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Szef",
+          "text": "Co powiedział klient?",
+          "translation": "What did the client say?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Powiedział, że jest zadowolony, ale zapytał, czy możemy obniżyć cenę.",
+          "translation": "He said he was satisfied, but he asked whether we could lower the price."
+        },
+        {
+          "speaker": "Szef",
+          "text": "Poproś go, żeby przysłał e-mail.",
+          "translation": "Ask him to send an email."
+        }
+      ]
+    }
+  ]
+}

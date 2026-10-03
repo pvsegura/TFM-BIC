@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-irony-and-understatement-no-pieknie",
+  "lessonId": "pl-irony-and-understatement",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Someone spills coffee on their laptop and says: No pięknie! What do they mean?",
+  "explanation": "No pięknie is usually ironic: it expresses frustration that something has gone wrong.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Something has gone wrong."
+      },
+      {
+        "id": "b",
+        "text": "Everything is perfect."
+      },
+      {
+        "id": "c",
+        "text": "The coffee is delicious."
+      },
+      {
+        "id": "d",
+        "text": "The laptop is new."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

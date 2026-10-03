@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numerals-in-full-five-students",
+  "lessonId": "pl-numerals-in-full",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: Five students came. (Start with Przyszło.)",
+  "explanation": "From five upwards with a group of men: pięciu studentów, with the verb in the neuter singular: przyszło.",
+  "configuration": {
+    "acceptedAnswers": ["Przyszło pięciu studentów.", "Przyszło pięciu studentów"],
+    "caseSensitive": false
+  }
+}

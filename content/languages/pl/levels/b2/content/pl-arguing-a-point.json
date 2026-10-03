@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-arguing-a-point",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "Arguing a point",
+  "description": "Connect ideas in a discussion: on the one hand, moreover, therefore.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "A clear argument needs connecting words. To weigh two sides, use z jednej strony… z drugiej strony… To add a point, use co więcej (moreover) or poza tym (besides). To give a reason, use ponieważ (because) or ze względu na (because of). To draw a conclusion, use dlatego (that is why) or w związku z tym (consequently). Przede wszystkim (above all) marks the most important point."
+    },
+    {
+      "type": "example",
+      "text": "Z jednej strony samochody są wygodne, z drugiej strony zanieczyszczają powietrze.",
+      "translation": "On the one hand cars are convenient, on the other hand they pollute the air."
+    },
+    {
+      "type": "example",
+      "text": "Przede wszystkim powinniśmy oszczędzać wodę.",
+      "translation": "Above all, we should save water."
+    },
+    {
+      "type": "example",
+      "text": "Co więcej, transport publiczny jest tańszy.",
+      "translation": "Moreover, public transport is cheaper."
+    },
+    {
+      "type": "example",
+      "text": "Dlatego uważam, że miasto potrzebuje więcej ścieżek rowerowych.",
+      "translation": "That is why I believe the city needs more cycle paths."
+    },
+    {
+      "type": "example",
+      "text": "Ze względu na pogodę koncert odwołano.",
+      "translation": "Because of the weather, the concert was cancelled."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Prowadząca",
+          "text": "Czy centrum miasta powinno być zamknięte dla samochodów?",
+          "translation": "Should the city centre be closed to cars?"
+        },
+        {
+          "speaker": "Pan Kowalski",
+          "text": "Z jednej strony to poprawi jakość powietrza, z drugiej strony utrudni życie mieszkańcom.",
+          "translation": "On the one hand it will improve air quality, on the other hand it will make life harder for residents."
+        },
+        {
+          "speaker": "Pani Wójcik",
+          "text": "Co więcej, sklepy mogą stracić klientów.",
+          "translation": "Moreover, shops may lose customers."
+        }
+      ]
+    }
+  ]
+}

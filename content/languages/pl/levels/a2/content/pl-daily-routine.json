@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-daily-routine",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "My day",
+  "description": "Describe a typical day with times and everyday verbs.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To say at what time you do something, use o followed by the hour as an ordinal number: o szóstej (at six), o siódmej (at seven), o ósmej (at eight). In the I form, most verbs end in -ę or -m: wstaję (I get up), idę (I go), pracuję (I work), jem (I eat), wracam (I come back)."
+    },
+    {
+      "type": "example",
+      "text": "Wstaję o siódmej.",
+      "translation": "I get up at seven."
+    },
+    {
+      "type": "example",
+      "text": "Jem śniadanie o ósmej.",
+      "translation": "I have breakfast at eight."
+    },
+    {
+      "type": "example",
+      "text": "Idę do pracy.",
+      "translation": "I go to work.",
+      "note": "After do, praca becomes pracy (the genitive case)."
+    },
+    {
+      "type": "example",
+      "text": "Wracam do domu o piątej.",
+      "translation": "I come back home at five."
+    },
+    {
+      "type": "example",
+      "text": "Wieczorem oglądam telewizję.",
+      "translation": "In the evening I watch television."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "O której wstajesz?",
+          "translation": "What time do you get up?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Zwykle o siódmej. A ty?",
+          "translation": "Usually at seven. And you?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Ja wstaję o szóstej, bo zaczynam pracę o siódmej.",
+          "translation": "I get up at six, because I start work at seven."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Tak wcześnie!",
+          "translation": "So early!"
+        }
+      ]
+    }
+  ]
+}

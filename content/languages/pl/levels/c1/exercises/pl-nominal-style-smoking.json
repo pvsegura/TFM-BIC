@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-nominal-style-smoking",
+  "lessonId": "pl-nominal-style",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish verbal noun from palić (to smoke).",
+  "explanation": "Palić gives the verbal noun palenie, as in Palenie szkodzi zdrowiu.",
+  "configuration": {
+    "acceptedAnswers": ["palenie"],
+    "caseSensitive": false
+  }
+}

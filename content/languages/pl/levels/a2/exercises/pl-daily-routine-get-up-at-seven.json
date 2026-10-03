@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-daily-routine-get-up-at-seven",
+  "lessonId": "pl-daily-routine",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: I get up at seven.",
+  "explanation": "Wstaję means I get up, and o siódmej means at seven.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Wstaję o siódmej.",
+      "Wstaję o siódmej",
+      "O siódmej wstaję.",
+      "O siódmej wstaję"
+    ],
+    "caseSensitive": false
+  }
+}

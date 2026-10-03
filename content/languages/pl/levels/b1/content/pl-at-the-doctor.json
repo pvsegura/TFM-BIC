@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-at-the-doctor",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "At the doctor's",
+  "description": "Say what hurts, describe symptoms and understand simple advice.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To say what hurts, Polish turns the sentence around: Boli mnie głowa, literally my head hurts me. With a plural noun the verb is plural too: Bolą mnie plecy (my back hurts). Symptoms often use mam: mam gorączkę (I have a fever), mam katar (I have a runny nose). The doctor gives advice with proszę and an infinitive."
+    },
+    {
+      "type": "example",
+      "text": "Boli mnie głowa.",
+      "translation": "I have a headache."
+    },
+    {
+      "type": "example",
+      "text": "Bolą mnie plecy.",
+      "translation": "My back hurts.",
+      "note": "Plecy is plural, so the verb is plural: bolą."
+    },
+    {
+      "type": "example",
+      "text": "Mam gorączkę i kaszel.",
+      "translation": "I have a fever and a cough."
+    },
+    {
+      "type": "example",
+      "text": "Od kiedy pan się źle czuje?",
+      "translation": "Since when have you been feeling unwell?",
+      "note": "Formal, to a man. To a woman: pani."
+    },
+    {
+      "type": "example",
+      "text": "Proszę brać ten lek dwa razy dziennie.",
+      "translation": "Please take this medicine twice a day."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Lekarka",
+          "text": "Co panu dolega?",
+          "translation": "What seems to be the problem?"
+        },
+        {
+          "speaker": "Pan Jan",
+          "text": "Boli mnie gardło i mam gorączkę.",
+          "translation": "I have a sore throat and a fever."
+        },
+        {
+          "speaker": "Lekarka",
+          "text": "Od kiedy?",
+          "translation": "Since when?"
+        },
+        {
+          "speaker": "Pan Jan",
+          "text": "Od wczoraj.",
+          "translation": "Since yesterday."
+        },
+        {
+          "speaker": "Lekarka",
+          "text": "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+          "translation": "I will prescribe you some medicine. Drink a lot and rest."
+        }
+      ]
+    }
+  ]
+}

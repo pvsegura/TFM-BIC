@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-going-places-chodzic-regular",
+  "lessonId": "pl-going-places",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Chodzić is used for going on foot regularly.",
+  "explanation": "Chodzić is for habits and round trips on foot; iść is for going on foot now, in one direction.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

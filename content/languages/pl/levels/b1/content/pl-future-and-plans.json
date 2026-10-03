@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-future-and-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Plans and wishes",
+  "description": "Talk about the future with będę, and make polite requests with the conditional chciałbym.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "For a future process or habit, use the future of być with an imperfective verb: będę pracować (I will be working). For one completed future action, use the perfective verb on its own: zadzwonię (I will call). To talk about plans, say mam zamiar or zamierzam followed by an infinitive. The conditional softens a wish: a man says chciałbym (I would like), a woman says chciałabym."
+    },
+    {
+      "type": "example",
+      "text": "W przyszłym roku będę studiować w Warszawie.",
+      "translation": "Next year I will be studying in Warsaw."
+    },
+    {
+      "type": "example",
+      "text": "Zadzwonię do ciebie jutro.",
+      "translation": "I will call you tomorrow."
+    },
+    {
+      "type": "example",
+      "text": "Mam zamiar kupić rower.",
+      "translation": "I am going to buy a bike."
+    },
+    {
+      "type": "example",
+      "text": "Chciałbym zarezerwować pokój na dwie noce.",
+      "translation": "I would like to book a room for two nights.",
+      "note": "Said by a man."
+    },
+    {
+      "type": "example",
+      "text": "Chciałabym bilet do Gdańska.",
+      "translation": "I would like a ticket to Gdańsk.",
+      "note": "Said by a woman."
+    },
+    {
+      "type": "example",
+      "text": "Czy śniadanie jest wliczone w cenę?",
+      "translation": "Is breakfast included in the price?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Dzień dobry, w czym mogę pomóc?",
+          "translation": "Good morning, how can I help?"
+        },
+        {
+          "speaker": "Pan Adam",
+          "text": "Chciałbym zarezerwować pokój dwuosobowy na weekend.",
+          "translation": "I would like to book a double room for the weekend."
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Na dwie noce?",
+          "translation": "For two nights?"
+        },
+        {
+          "speaker": "Pan Adam",
+          "text": "Tak. Czy śniadanie jest wliczone w cenę?",
+          "translation": "Yes. Is breakfast included in the price?"
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Tak, śniadanie jest od siódmej do dziesiątej.",
+          "translation": "Yes, breakfast is from seven to ten."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-at-the-doctor-back-plural",
+  "lessonId": "pl-at-the-doctor",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Plecy is plural, so you say: ___ mnie plecy.",
+  "explanation": "With a plural noun the verb is plural: bolą mnie plecy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Bolą"
+      },
+      {
+        "id": "b",
+        "text": "Boli"
+      },
+      {
+        "id": "c",
+        "text": "Bolę"
+      },
+      {
+        "id": "d",
+        "text": "Bolisz"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

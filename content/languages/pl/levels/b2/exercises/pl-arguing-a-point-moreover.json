@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-arguing-a-point-moreover",
+  "lessonId": "pl-arguing-a-point",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which phrase means moreover?",
+  "explanation": "Co więcej adds a point: moreover. Dlatego means that is why, z drugiej strony on the other hand, przede wszystkim above all.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "co więcej"
+      },
+      {
+        "id": "b",
+        "text": "dlatego"
+      },
+      {
+        "id": "c",
+        "text": "z drugiej strony"
+      },
+      {
+        "id": "d",
+        "text": "przede wszystkim"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-verb-aspect",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "title": "One action, two verbs: aspect",
+  "description": "Choose between the imperfective verb (process, habit) and the perfective one (a finished result).",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Most Polish verbs come in pairs. The imperfective verb describes an action as a process, something repeated or a habit: czytać, pisać, robić. The perfective verb describes one completed action with a result: przeczytać, napisać, zrobić. The perfective verb is often the imperfective one with a prefix. In the past both are common; in the present only the imperfective is possible, because a perfective verb in the present form refers to the future."
+    },
+    {
+      "type": "example",
+      "text": "Codziennie czytam gazetę.",
+      "translation": "I read the newspaper every day.",
+      "note": "A habit: imperfective."
+    },
+    {
+      "type": "example",
+      "text": "Wczoraj przeczytałem całą książkę.",
+      "translation": "Yesterday I read the whole book.",
+      "note": "Finished, with a result: perfective."
+    },
+    {
+      "type": "example",
+      "text": "Pisałam list cały wieczór.",
+      "translation": "I was writing a letter all evening.",
+      "note": "A process: imperfective."
+    },
+    {
+      "type": "example",
+      "text": "Napisałam list i wysłałam go.",
+      "translation": "I wrote the letter and sent it.",
+      "note": "Completed actions: perfective."
+    },
+    {
+      "type": "example",
+      "text": "Jutro zrobię zakupy.",
+      "translation": "Tomorrow I will do the shopping.",
+      "note": "A perfective verb in the present form means the future."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Mama",
+          "text": "Odrobiłeś lekcje?",
+          "translation": "Have you done your homework?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Jeszcze nie. Odrabiam je teraz.",
+          "translation": "Not yet. I am doing it now."
+        },
+        {
+          "speaker": "Mama",
+          "text": "Kiedy skończysz?",
+          "translation": "When will you finish?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Skończę za pół godziny.",
+          "translation": "I will finish in half an hour."
+        }
+      ]
+    }
+  ]
+}

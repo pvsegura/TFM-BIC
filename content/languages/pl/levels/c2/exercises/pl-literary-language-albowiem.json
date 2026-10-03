@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-literary-language-albowiem",
+  "lessonId": "pl-literary-language",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "What does albowiem mean?",
+  "explanation": "Albowiem is an elevated word for bo or ponieważ: because, for.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "because; for"
+      },
+      {
+        "id": "b",
+        "text": "although"
+      },
+      {
+        "id": "c",
+        "text": "but"
+      },
+      {
+        "id": "d",
+        "text": "therefore"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

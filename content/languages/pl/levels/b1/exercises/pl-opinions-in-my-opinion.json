@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-opinions-in-my-opinion",
+  "lessonId": "pl-opinions",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which phrase means in my opinion?",
+  "explanation": "Moim zdaniem is in my opinion. Zgadzam się is I agree, masz rację is you are right, and nie wiem is I do not know.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "moim zdaniem"
+      },
+      {
+        "id": "b",
+        "text": "zgadzam się"
+      },
+      {
+        "id": "c",
+        "text": "masz rację"
+      },
+      {
+        "id": "d",
+        "text": "nie wiem"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

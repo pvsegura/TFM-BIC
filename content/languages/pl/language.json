@@ -7,11 +7,29 @@
   "direction": "ltr",
   "isActive": true,
   "levels": [
-    { "id": "a1", "status": "available" },
-    { "id": "a2", "status": "planned" },
-    { "id": "b1", "status": "planned" },
-    { "id": "b2", "status": "planned" },
-    { "id": "c1", "status": "planned" },
-    { "id": "c2", "status": "planned" }
+    {
+      "id": "a1",
+      "status": "available"
+    },
+    {
+      "id": "a2",
+      "status": "available"
+    },
+    {
+      "id": "b1",
+      "status": "available"
+    },
+    {
+      "id": "b2",
+      "status": "available"
+    },
+    {
+      "id": "c1",
+      "status": "available"
+    },
+    {
+      "id": "c2",
+      "status": "available"
+    }
   ]
 }

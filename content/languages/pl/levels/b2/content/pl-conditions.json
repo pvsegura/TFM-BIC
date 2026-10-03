@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-conditions",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "If…: real and unreal conditions",
+  "description": "Jeśli for real possibilities, gdyby for imagined ones.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "For a real possibility, use jeśli (or jeżeli) with the normal tenses; for the future, both parts are in the future: Jeśli będzie padać, zostaniemy w domu. For an imagined or impossible situation, use gdyby with a personal ending and the past form of the verb, and the conditional in the other part: Gdybym miał czas, pojechałbym w góry. The same sentence covers present and past meanings; context decides."
+    },
+    {
+      "type": "example",
+      "text": "Jeśli jutro będzie padać, zostaniemy w domu.",
+      "translation": "If it rains tomorrow, we will stay at home."
+    },
+    {
+      "type": "example",
+      "text": "Jeśli masz czas, zadzwoń do mnie.",
+      "translation": "If you have time, call me."
+    },
+    {
+      "type": "example",
+      "text": "Gdybym miał więcej czasu, pojechałbym w góry.",
+      "translation": "If I had more time, I would go to the mountains.",
+      "note": "Said by a man."
+    },
+    {
+      "type": "example",
+      "text": "Gdybym wiedziała, powiedziałabym ci.",
+      "translation": "If I had known, I would have told you.",
+      "note": "Said by a woman."
+    },
+    {
+      "type": "example",
+      "text": "Gdybyś mógł, pomógłbyś mi?",
+      "translation": "If you could, would you help me?",
+      "note": "Asking a man."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "text": "Co byś zrobił, gdybyś wygrał milion?",
+          "translation": "What would you do if you won a million?"
+        },
+        {
+          "speaker": "Igor",
+          "text": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+          "translation": "If I won a million, I would buy a house by a lake."
+        },
+        {
+          "speaker": "Marta",
+          "text": "A ja podróżowałabym po świecie.",
+          "translation": "And I would travel around the world."
+        }
+      ]
+    }
+  ]
+}

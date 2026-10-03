@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-regional-polish",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "explanation",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Regional Polish",
+  "description": "How Polish varies between Kraków, Warsaw, Poznań and Silesia.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Standard Polish is understood everywhere, but regional words are a part of daily life and are noticed at once. Going outside is wychodzić na dwór in Warsaw and most of Poland, but wychodzić na pole in Kraków and Małopolska. Potatoes are ziemniaki in the standard language, kartofle in many regions and pyry in Poznań. Silesian (ślōnsko godka) is distinct enough that some consider it a separate language. Recognising regionalisms helps you understand people; using the standard forms is always correct."
+    },
+    {
+      "type": "example",
+      "text": "Dzieci bawią się na dworze.",
+      "translation": "The children are playing outside.",
+      "note": "Standard and Warsaw usage."
+    },
+    {
+      "type": "example",
+      "text": "Dzieci bawią się na polu.",
+      "translation": "The children are playing outside.",
+      "note": "Kraków and Małopolska."
+    },
+    {
+      "type": "example",
+      "text": "Na obiad są ziemniaki.",
+      "translation": "There are potatoes for lunch.",
+      "note": "Standard."
+    },
+    {
+      "type": "example",
+      "text": "Na obiad są pyry z gzikiem.",
+      "translation": "There are potatoes with quark for lunch.",
+      "note": "Poznań: pyry (potatoes), gzik (quark with cream)."
+    },
+    {
+      "type": "example",
+      "text": "Na obiad są kartofle.",
+      "translation": "There are potatoes for lunch.",
+      "note": "Kartofle: common in many regions, slightly informal."
+    }
+  ]
+}

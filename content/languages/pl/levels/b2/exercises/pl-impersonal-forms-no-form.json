@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-impersonal-forms-no-form",
+  "lessonId": "pl-impersonal-forms",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which sentence says that a bridge was built, without saying who built it?",
+  "explanation": "Zbudowano is the impersonal -no form. The others name a subject: he, I, we.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Zbudowano most."
+      },
+      {
+        "id": "b",
+        "text": "Zbudował most."
+      },
+      {
+        "id": "c",
+        "text": "Buduję most."
+      },
+      {
+        "id": "d",
+        "text": "Zbudujemy most."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

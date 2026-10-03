@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-daily-routine-at-eight",
+  "lessonId": "pl-daily-routine",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Which phrase means at eight?",
+  "explanation": "O ósmej is at eight. O siódmej is at seven, o szóstej at six and o piątej at five.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "o ósmej"
+      },
+      {
+        "id": "b",
+        "text": "o siódmej"
+      },
+      {
+        "id": "c",
+        "text": "o szóstej"
+      },
+      {
+        "id": "d",
+        "text": "o piątej"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

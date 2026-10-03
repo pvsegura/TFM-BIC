@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-likes-and-wants-like-tea",
+  "lessonId": "pl-likes-and-wants",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Complete in Polish: Lubię ___ (herbata).",
+  "explanation": "After lubię, herbata changes its ending -a to -ę: herbatę.",
+  "configuration": {
+    "acceptedAnswers": ["herbatę"],
+    "caseSensitive": false
+  }
+}

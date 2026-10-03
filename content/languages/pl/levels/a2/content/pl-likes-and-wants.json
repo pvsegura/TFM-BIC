@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-likes-and-wants",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "en",
+  "title": "What I like and what I want",
+  "description": "Say what you like, want, have, eat and drink: the accusative case.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "After verbs such as mieć (to have), lubić (to like), chcieć (to want), pić (to drink) and jeść (to eat), the object is in the accusative case. Feminine nouns ending in -a change the ending to -ę: kawa becomes kawę, herbata becomes herbatę. Neuter nouns and masculine things do not change: mleko, sok. Masculine people and animals add -a: brat becomes brata, kot becomes kota, and pies becomes psa."
+    },
+    {
+      "type": "example",
+      "text": "Lubię kawę.",
+      "translation": "I like coffee."
+    },
+    {
+      "type": "example",
+      "text": "Piję herbatę.",
+      "translation": "I am drinking tea."
+    },
+    {
+      "type": "example",
+      "text": "Mam brata.",
+      "translation": "I have a brother."
+    },
+    {
+      "type": "example",
+      "text": "Chcę sok.",
+      "translation": "I want juice."
+    },
+    {
+      "type": "example",
+      "text": "Mam psa.",
+      "translation": "I have a dog.",
+      "note": "Pies loses its e: psa."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ania",
+          "text": "Co lubisz pić rano?",
+          "translation": "What do you like to drink in the morning?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Lubię kawę z mlekiem. A ty?",
+          "translation": "I like coffee with milk. And you?"
+        },
+        {
+          "speaker": "Ania",
+          "text": "Ja wolę herbatę.",
+          "translation": "I prefer tea."
+        }
+      ]
+    }
+  ]
+}

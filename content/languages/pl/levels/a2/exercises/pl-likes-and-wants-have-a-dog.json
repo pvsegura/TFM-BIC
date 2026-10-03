@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-likes-and-wants-have-a-dog",
+  "lessonId": "pl-likes-and-wants",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Complete: Mam ___ (pies).",
+  "explanation": "Pies is a masculine animal, so after mam it takes -a and loses its e: psa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "psa"
+      },
+      {
+        "id": "b",
+        "text": "pies"
+      },
+      {
+        "id": "c",
+        "text": "psem"
+      },
+      {
+        "id": "d",
+        "text": "psu"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

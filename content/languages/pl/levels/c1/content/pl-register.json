@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-register",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "explanation",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Register: from slang to officialese",
+  "description": "The same message in informal, neutral and official Polish.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish marks register clearly. Informal speech among friends uses ty, short forms and colloquial words: siema (hi), spoko (fine, no worries), nara (bye). Neutral Polish uses standard vocabulary and pan or pani with strangers. Official Polish prefers verbal nouns, impersonal forms and formal connectors: iż instead of że, ponadto instead of poza tym, zatem instead of więc. Choosing the wrong register is noticed immediately, so match the person and the situation."
+    },
+    {
+      "type": "example",
+      "text": "Siema, co tam?",
+      "translation": "Hi, what's up?",
+      "note": "Very informal, among friends."
+    },
+    {
+      "type": "example",
+      "text": "Spoko, nie ma problemu.",
+      "translation": "Fine, no problem.",
+      "note": "Informal."
+    },
+    {
+      "type": "example",
+      "text": "Dzień dobry, czy mogę w czymś pomóc?",
+      "translation": "Good morning, can I help you with anything?",
+      "note": "Neutral and polite."
+    },
+    {
+      "type": "example",
+      "text": "Uprzejmie informujemy, iż sklep będzie nieczynny w sobotę.",
+      "translation": "Please be advised that the shop will be closed on Saturday.",
+      "note": "Official: iż instead of że."
+    },
+    {
+      "type": "example",
+      "text": "Ponadto należy dołączyć kopię dowodu osobistego.",
+      "translation": "Furthermore, a copy of your identity card must be attached.",
+      "note": "Official style."
+    }
+  ]
+}

@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-past-tense",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "What did you do?",
+  "description": "Talk about the past: the ending shows who did it, and whether a man or a woman.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "The Polish past tense adds endings to the verb stem. In the singular, the ending also shows gender: a man says byłem (I was), a woman says byłam. He was is był, she was is była. Most verbs follow the same pattern: robić gives robiłem or robiłam (I did), mieszkać gives mieszkałem or mieszkałam (I lived). In the plural, a group that includes at least one man says byliśmy (we were); a group of women says byłyśmy."
+    },
+    {
+      "type": "example",
+      "text": "Wczoraj byłem w kinie.",
+      "translation": "Yesterday I was at the cinema.",
+      "note": "Said by a man."
+    },
+    {
+      "type": "example",
+      "text": "Wczoraj byłam w kinie.",
+      "translation": "Yesterday I was at the cinema.",
+      "note": "Said by a woman."
+    },
+    {
+      "type": "example",
+      "text": "Co robiłeś w weekend?",
+      "translation": "What did you do at the weekend?",
+      "note": "Asking a man. To a woman: Co robiłaś w weekend?"
+    },
+    {
+      "type": "example",
+      "text": "Mieszkałam w Krakowie.",
+      "translation": "I lived in Kraków.",
+      "note": "Said by a woman."
+    },
+    {
+      "type": "example",
+      "text": "Byliśmy nad morzem.",
+      "translation": "We were at the seaside."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Co robiłeś w weekend?",
+          "translation": "What did you do at the weekend?"
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Byłem w górach z bratem. A ty?",
+          "translation": "I was in the mountains with my brother. And you?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Ja byłam w domu i czytałam książkę.",
+          "translation": "I was at home and read a book."
+        }
+      ]
+    }
+  ]
+}

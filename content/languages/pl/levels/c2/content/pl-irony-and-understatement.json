@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-irony-and-understatement",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Irony and understatement",
+  "description": "Understand when Polish speakers mean the opposite, or much more, than what they say.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Everyday Polish is full of irony and understatement, and intonation does much of the work. No pięknie (well, lovely) usually means something has gone wrong. Ale się popisałeś (you really showed off) criticises a blunder. Understatement plays things down: nie było najgorzej (it was not the worst) often means it was quite good. Fixed expressions such as prędzej mi kaktus na dłoni wyrośnie (a cactus will sooner grow on my palm) say that something will never happen."
+    },
+    {
+      "type": "example",
+      "text": "No pięknie! Znowu się spóźniliśmy.",
+      "translation": "Great, just great! We are late again.",
+      "note": "Ironic."
+    },
+    {
+      "type": "example",
+      "text": "Ale się popisałeś!",
+      "translation": "Well, that was clever of you!",
+      "note": "Ironic criticism of a mistake."
+    },
+    {
+      "type": "example",
+      "text": "Nie było najgorzej.",
+      "translation": "It was not bad at all.",
+      "note": "Understatement: often means it was good."
+    },
+    {
+      "type": "example",
+      "text": "Prędzej mi kaktus na dłoni wyrośnie, niż on przeprosi.",
+      "translation": "Pigs will fly before he apologises."
+    },
+    {
+      "type": "example",
+      "text": "Nie ma to jak poniedziałek rano.",
+      "translation": "Nothing like a Monday morning.",
+      "note": "Ironic, unless you really love Mondays."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Agata",
+          "text": "Jak ci poszedł egzamin?",
+          "translation": "How did your exam go?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Nie było najgorzej. Dostałem piątkę.",
+          "translation": "Not too bad. I got top marks."
+        },
+        {
+          "speaker": "Agata",
+          "text": "No proszę, a mówiłeś, że nic nie umiesz!",
+          "translation": "Well, well, and you said you knew nothing!"
+        }
+      ]
+    }
+  ]
+}

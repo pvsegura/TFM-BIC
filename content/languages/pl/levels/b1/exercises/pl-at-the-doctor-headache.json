@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-at-the-doctor-headache",
+  "lessonId": "pl-at-the-doctor",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: I have a headache.",
+  "explanation": "Polish says boli mnie głowa: my head hurts me.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Boli mnie głowa.",
+      "Boli mnie głowa",
+      "Głowa mnie boli.",
+      "Głowa mnie boli"
+    ],
+    "caseSensitive": false
+  }
+}

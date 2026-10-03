@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-past-tense-woman-was-home",
+  "lessonId": "pl-past-tense",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "A woman wants to say: I was at home. Which sentence is correct?",
+  "explanation": "A woman says byłam. Byłem is said by a man, była means she was, and jestem is the present tense.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Byłam w domu."
+      },
+      {
+        "id": "b",
+        "text": "Byłem w domu."
+      },
+      {
+        "id": "c",
+        "text": "Była w domu."
+      },
+      {
+        "id": "d",
+        "text": "Jestem w domu."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

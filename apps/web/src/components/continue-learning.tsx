@@ -11,8 +11,9 @@ const enc = encodeURIComponent;
  * "Continue learning" on the dashboard (M21): the next lesson to open — the first one in progress,
  * else the first not started — with its video when it has one, so the dashboard leads into the
  * learning flow (watch → understand → practise) instead of ending at a points total. The profile
- * has no language preference, so it uses the catalog's first language and its first available
- * level, like the video library; nothing here names a language.
+ * has no language preference, so it shows one card per catalog language. Within a language it
+ * starts at the first available level and moves to the next one once every lesson there is
+ * completed; nothing here names a language.
  */
 export function ContinueLearning() {
   const languages = useLanguages();
@@ -38,16 +39,53 @@ function ContinueLanguage({
   languageName: string;
 }) {
   const levels = useLanguageLevels(languageCode);
-  const levelId = levels.data?.levels.find((l) => l.status === "available")?.id;
-  const lessonsQuery = useLessons(languageCode, levelId);
+  const available = (levels.data?.levels ?? [])
+    .filter((l) => l.status === "available")
+    .map((l) => ({ id: l.id, label: l.label }));
+  if (available.length === 0) return null;
+  return (
+    <ContinueLevel
+      languageCode={languageCode}
+      languageName={languageName}
+      levels={available}
+      index={0}
+    />
+  );
+}
+
+/** One level of a language: its next lesson, or — when all are done — the next level's card. */
+function ContinueLevel({
+  languageCode,
+  languageName,
+  levels,
+  index,
+}: {
+  languageCode: string;
+  languageName: string;
+  levels: readonly { id: string; label: string }[];
+  index: number;
+}) {
+  const level = levels[index];
+  const lessonsQuery = useLessons(languageCode, level?.id);
   const media = useMediaIndex();
 
-  if (!lessonsQuery.isSuccess) return null;
+  if (!level || !lessonsQuery.isSuccess) return null;
   const lessons = [...lessonsQuery.data.lessons].sort((a, b) => a.order - b.order);
   const next =
     lessons.find((l) => l.progress.status === "in_progress") ??
     lessons.find((l) => l.progress.status === "not_started");
   const done = lessons.filter((l) => l.progress.status === "completed").length;
+
+  if (!next && index + 1 < levels.length) {
+    return (
+      <ContinueLevel
+        languageCode={languageCode}
+        languageName={languageName}
+        levels={levels}
+        index={index + 1}
+      />
+    );
+  }
 
   if (!next) {
     return (
@@ -83,7 +121,7 @@ function ContinueLanguage({
       </div>
       <div className="p-5">
         <p className="text-xs font-medium uppercase tracking-wide text-accent-ink dark:text-accent">
-          {languageName} · {verb} learning · {done} of {lessons.length} lessons done
+          {languageName} {level.label} · {verb} learning · {done} of {lessons.length} lessons done
         </p>
         <h2 className="mt-1 text-xl font-semibold">{next.title}</h2>
         <p className="mt-1 text-sm text-primary/75 dark:text-surface/75">{next.description}</p>

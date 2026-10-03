@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numerals-in-full",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "title": "Numerals in full",
+  "description": "Collective numerals, numbers with groups of men, and numbers in every case.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish numerals are among the hardest parts of the grammar. Collective numerals (dwoje, troje, pięcioro) are used for children, young animals, mixed-gender groups and plural-only nouns: dwoje dzieci, troje drzwi. With groups that include men, numbers have special forms: dwaj bracia or dwóch braci (two brothers). From five upwards, the noun goes into the genitive plural and the verb into the neuter singular: pięciu studentów przyszło. Numerals also decline with the case of the phrase: z pięcioma kolegami (with five friends)."
+    },
+    {
+      "type": "example",
+      "text": "Mam dwoje dzieci.",
+      "translation": "I have two children.",
+      "note": "Collective numeral."
+    },
+    {
+      "type": "example",
+      "text": "Dwaj bracia mieszkają w Gdańsku.",
+      "translation": "Two brothers live in Gdańsk.",
+      "note": "Also correct: Dwóch braci mieszka w Gdańsku."
+    },
+    {
+      "type": "example",
+      "text": "Przyszło pięciu studentów.",
+      "translation": "Five students came.",
+      "note": "Genitive plural noun, neuter singular verb."
+    },
+    {
+      "type": "example",
+      "text": "Spotkałem się z pięcioma kolegami.",
+      "translation": "I met up with five friends.",
+      "note": "Instrumental after z."
+    },
+    {
+      "type": "example",
+      "text": "Urodziłam się w tysiąc dziewięćset dziewięćdziesiątym roku.",
+      "translation": "I was born in 1990.",
+      "note": "Only the last part of a year is an ordinal that declines."
+    }
+  ]
+}

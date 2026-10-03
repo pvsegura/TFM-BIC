@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-reported-speech-tense-kept",
+  "lessonId": "pl-reported-speech",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Polish keeps the tense of the original words in reported speech: Powiedział, że przyjdzie.",
+  "explanation": "The original Przyjdę (I will come) stays in the future: powiedział, że przyjdzie.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

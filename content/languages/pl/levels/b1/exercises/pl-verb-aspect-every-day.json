@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-verb-aspect-every-day",
+  "lessonId": "pl-verb-aspect",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Codziennie ___ gazetę. (I read the newspaper every day.)",
+  "explanation": "Every day is a habit, so the imperfective verb in the present: czytam. Przeczytam would mean I will read (it through).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "czytam"
+      },
+      {
+        "id": "b",
+        "text": "przeczytam"
+      },
+      {
+        "id": "c",
+        "text": "przeczytałem"
+      },
+      {
+        "id": "d",
+        "text": "przeczytać"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

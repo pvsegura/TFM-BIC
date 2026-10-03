@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-hedging",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Nuance and hedging",
+  "description": "Express degrees of certainty and distance yourself from a claim.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Careful speakers and writers rarely state things absolutely. Polish hedges with impersonal phrases: wydaje się, że (it seems that), trudno jednoznacznie stwierdzić (it is hard to say definitively), nie można wykluczyć, że (it cannot be ruled out that). Adverbs grade certainty: na pewno (certainly), najprawdopodobniej (most probably), raczej (rather), być może (perhaps). To highlight a point without overstating it, use warto zauważyć, że (it is worth noting that) or należy podkreślić, że (it should be stressed that)."
+    },
+    {
+      "type": "example",
+      "text": "Pociąg najprawdopodobniej się spóźni.",
+      "translation": "The train will most probably be late."
+    },
+    {
+      "type": "example",
+      "text": "Trudno jednoznacznie stwierdzić, kto ma rację.",
+      "translation": "It is hard to say definitively who is right."
+    },
+    {
+      "type": "example",
+      "text": "Nie można wykluczyć, że ceny wzrosną.",
+      "translation": "It cannot be ruled out that prices will rise."
+    },
+    {
+      "type": "example",
+      "text": "Warto zauważyć, że liczba turystów wzrosła.",
+      "translation": "It is worth noting that the number of tourists has risen."
+    },
+    {
+      "type": "example",
+      "text": "Należy podkreślić, że badanie objęło tylko sto osób.",
+      "translation": "It should be stressed that the study covered only a hundred people."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Dziennikarka",
+          "text": "Czy rząd obniży podatki?",
+          "translation": "Will the government lower taxes?"
+        },
+        {
+          "speaker": "Ekspert",
+          "text": "Trudno to jednoznacznie przewidzieć. Wydaje się jednak, że raczej nie w tym roku.",
+          "translation": "It is hard to predict definitively. It seems, however, that probably not this year."
+        }
+      ]
+    }
+  ]
+}

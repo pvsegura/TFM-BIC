@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "work-and-society",
+  "languageId": "pl",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Work and society",
+  "description": "Words for jobs, the workplace and public debate (B2).",
+  "items": [
+    {
+      "id": "pl-doswiadczenie",
+      "status": "published",
+      "order": 10,
+      "lemma": "doświadczenie",
+      "translation": "experience",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-umowa",
+      "status": "published",
+      "order": 20,
+      "lemma": "umowa",
+      "translation": "contract; agreement",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-wynagrodzenie",
+      "status": "published",
+      "order": 30,
+      "lemma": "wynagrodzenie",
+      "translation": "salary; pay",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-kierownik",
+      "status": "published",
+      "order": 40,
+      "lemma": "kierownik",
+      "translation": "manager",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "A woman manager is kierowniczka."
+    },
+    {
+      "id": "pl-zespol",
+      "status": "published",
+      "order": 50,
+      "lemma": "zespół",
+      "translation": "team; band",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-zarabiac",
+      "status": "published",
+      "order": 60,
+      "lemma": "zarabiać",
+      "translation": "to earn",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-srodowisko",
+      "status": "published",
+      "order": 70,
+      "lemma": "środowisko",
+      "translation": "environment",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-zanieczyszczenie",
+      "status": "published",
+      "order": 80,
+      "lemma": "zanieczyszczenie",
+      "translation": "pollution",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-spoleczenstwo",
+      "status": "published",
+      "order": 90,
+      "lemma": "społeczeństwo",
+      "translation": "society",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-rozwiazanie",
+      "status": "published",
+      "order": 100,
+      "lemma": "rozwiązanie",
+      "translation": "solution",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-zaleta",
+      "status": "published",
+      "order": 110,
+      "lemma": "zaleta",
+      "translation": "advantage",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-wada",
+      "status": "published",
+      "order": 120,
+      "lemma": "wada",
+      "translation": "drawback; flaw",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-wplyw",
+      "status": "published",
+      "order": 130,
+      "lemma": "wpływ",
+      "translation": "influence; impact",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-skutek",
+      "status": "published",
+      "order": 140,
+      "lemma": "skutek",
+      "translation": "effect; consequence",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-twierdzic",
+      "status": "published",
+      "order": 150,
+      "lemma": "twierdzić",
+      "translation": "to claim",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-wplywac",
+      "status": "published",
+      "order": 160,
+      "lemma": "wpływać",
+      "translation": "to influence",
+      "levelId": "b2",
+      "partOfSpeech": "verb",
+      "note": "Takes na: wpływać na środowisko."
+    },
+    {
+      "id": "pl-odwolac",
+      "status": "published",
+      "order": 170,
+      "lemma": "odwołać",
+      "translation": "to cancel",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-przyczyniac-sie",
+      "status": "published",
+      "order": 180,
+      "lemma": "przyczyniać się",
+      "translation": "to contribute",
+      "levelId": "b2",
+      "partOfSpeech": "verb",
+      "example": {
+        "text": "Samochody przyczyniają się do zanieczyszczenia powietrza.",
+        "translation": "Cars contribute to air pollution."
+      }
+    }
+  ]
+}

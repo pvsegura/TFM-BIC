@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-impersonal-forms-zostal",
+  "lessonId": "pl-impersonal-forms",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: The bridge was built in 1990.",
+  "explanation": "The passive of a completed event uses zostać with the participle: most został zbudowany.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Most został zbudowany w 1990 roku.",
+      "Most został zbudowany w 1990 roku",
+      "Most został zbudowany w 1990 r."
+    ],
+    "caseSensitive": false
+  }
+}

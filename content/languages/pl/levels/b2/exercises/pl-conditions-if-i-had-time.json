@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-conditions-if-i-had-time",
+  "lessonId": "pl-conditions",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Complete (a man speaking): Gdybym miał czas, ___ w góry. (I would go to the mountains.)",
+  "explanation": "The other part of a gdyby sentence uses the conditional: pojechałbym (a man), pojechałabym (a woman).",
+  "configuration": {
+    "acceptedAnswers": ["pojechałbym"],
+    "caseSensitive": false
+  }
+}

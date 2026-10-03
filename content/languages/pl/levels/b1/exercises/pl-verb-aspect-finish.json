@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-verb-aspect-finish",
+  "lessonId": "pl-verb-aspect",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: I will finish in half an hour.",
+  "explanation": "Skończę is the perfective future of skończyć; za pół godziny means in half an hour.",
+  "configuration": {
+    "acceptedAnswers": ["Skończę za pół godziny.", "Skończę za pół godziny"],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-going-places-train",
+  "lessonId": "pl-going-places",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Jutro ___ do Krakowa pociągiem. (Tomorrow I am going to Kraków by train.)",
+  "explanation": "By train is by vehicle, and it is one trip in one direction: jadę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "jadę"
+      },
+      {
+        "id": "b",
+        "text": "idę"
+      },
+      {
+        "id": "c",
+        "text": "chodzę"
+      },
+      {
+        "id": "d",
+        "text": "jeżdżę"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

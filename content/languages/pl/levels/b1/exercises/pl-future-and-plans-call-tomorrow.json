@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-future-and-plans-call-tomorrow",
+  "lessonId": "pl-future-and-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: I will call you tomorrow.",
+  "explanation": "Zadzwonię is the perfective future: one call, completed. Do ciebie means to you.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Zadzwonię do ciebie jutro.",
+      "Jutro do ciebie zadzwonię.",
+      "Zadzwonię do ciebie jutro",
+      "Jutro zadzwonię do ciebie."
+    ],
+    "caseSensitive": false
+  }
+}

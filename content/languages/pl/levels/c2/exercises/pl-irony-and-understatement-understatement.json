@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-irony-and-understatement-understatement",
+  "lessonId": "pl-irony-and-understatement",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Nie było najgorzej can mean that something went quite well.",
+  "explanation": "It is an understatement: literally it was not the worst, often meaning it was good.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

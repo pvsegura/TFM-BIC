@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-directions-left",
+  "lessonId": "pl-directions",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "What does w lewo mean?",
+  "explanation": "W lewo is left. Right is w prawo, straight on is prosto and far is daleko.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "left"
+      },
+      {
+        "id": "b",
+        "text": "right"
+      },
+      {
+        "id": "c",
+        "text": "straight on"
+      },
+      {
+        "id": "d",
+        "text": "far"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

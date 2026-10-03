@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-formal-correspondence-opening",
+  "lessonId": "pl-formal-correspondence",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "How do you open a formal email to an institution?",
+  "explanation": "Szanowni Państwo is the standard formal opening for an institution or several people.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Szanowni Państwo,"
+      },
+      {
+        "id": "b",
+        "text": "Cześć,"
+      },
+      {
+        "id": "c",
+        "text": "Hej wszystkim,"
+      },
+      {
+        "id": "d",
+        "text": "Drodzy przyjaciele,"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

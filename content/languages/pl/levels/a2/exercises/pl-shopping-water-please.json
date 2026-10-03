@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shopping-water-please",
+  "lessonId": "pl-shopping",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Complete in Polish: Poproszę ___ (woda).",
+  "explanation": "After poproszę, a feminine noun ending in -a changes the ending to -ę: wodę.",
+  "configuration": {
+    "acceptedAnswers": ["wodę"],
+    "caseSensitive": false
+  }
+}

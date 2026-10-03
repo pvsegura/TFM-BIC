@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-impersonal-forms",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "en",
+  "title": "Without saying who: impersonal and passive forms",
+  "description": "Forms in -no and -to, the się construction and the passive with zostać.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish has several ways to leave out who does something. The forms ending in -no or -to describe a past action without a subject: zbudowano most (a bridge was built), otwarto sklep (a shop was opened). The się construction states general facts or rules: tu się nie pali (no smoking here), mówi się, że… (people say that…). The passive uses zostać for a completed event or być for a state, with a participle that agrees with the subject: most został zbudowany."
+    },
+    {
+      "type": "example",
+      "text": "W 1990 roku zbudowano tu most.",
+      "translation": "A bridge was built here in 1990."
+    },
+    {
+      "type": "example",
+      "text": "Tu się nie pali.",
+      "translation": "No smoking here."
+    },
+    {
+      "type": "example",
+      "text": "Mówi się, że to najlepsza restauracja w mieście.",
+      "translation": "People say it is the best restaurant in town."
+    },
+    {
+      "type": "example",
+      "text": "Most został zbudowany w 1990 roku.",
+      "translation": "The bridge was built in 1990."
+    },
+    {
+      "type": "example",
+      "text": "Sklep jest otwarty do dwudziestej.",
+      "translation": "The shop is open until eight p.m.",
+      "note": "Być with a participle describes a state."
+    }
+  ]
+}

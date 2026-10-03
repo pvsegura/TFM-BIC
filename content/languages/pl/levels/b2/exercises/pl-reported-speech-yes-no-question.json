@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-reported-speech-yes-no-question",
+  "lessonId": "pl-reported-speech",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Zapytała, ___ mam czas. (She asked whether I had time.)",
+  "explanation": "A reported yes-or-no question uses czy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "czy"
+      },
+      {
+        "id": "b",
+        "text": "że"
+      },
+      {
+        "id": "c",
+        "text": "żeby"
+      },
+      {
+        "id": "d",
+        "text": "gdzie"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

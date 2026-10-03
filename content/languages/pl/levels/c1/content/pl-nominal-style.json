@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-nominal-style",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "title": "The nominal style",
+  "description": "Verbal nouns in -nie and -cie, typical of official, academic and news language.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Almost every Polish verb has a verbal noun ending in -nie or -cie: czytać gives czytanie, pić gives picie, zamknąć gives zamknięcie. These nouns are neuter and decline like other nouns. Official, academic and news Polish uses them heavily, turning actions into things: instead of Kiedy zamknięto drogę, powstały korki, a report says Zamknięcie drogi spowodowało korki. In speech, the verbal style is usually more natural."
+    },
+    {
+      "type": "example",
+      "text": "Palenie szkodzi zdrowiu.",
+      "translation": "Smoking damages your health."
+    },
+    {
+      "type": "example",
+      "text": "Zamknięcie drogi spowodowało korki.",
+      "translation": "The closure of the road caused traffic jams."
+    },
+    {
+      "type": "example",
+      "text": "Po przeczytaniu umowy podpisałem ją.",
+      "translation": "After reading the contract, I signed it."
+    },
+    {
+      "type": "example",
+      "text": "Dziękuję za zaproszenie.",
+      "translation": "Thank you for the invitation."
+    },
+    {
+      "type": "example",
+      "text": "Nauka języka wymaga czasu i cierpliwości.",
+      "translation": "Learning a language takes time and patience."
+    }
+  ]
+}

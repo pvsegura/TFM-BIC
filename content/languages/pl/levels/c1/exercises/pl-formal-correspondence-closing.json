@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-formal-correspondence-closing",
+  "lessonId": "pl-formal-correspondence",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the standard formal closing (Yours faithfully).",
+  "explanation": "Z poważaniem is the usual closing for formal letters and emails.",
+  "configuration": {
+    "acceptedAnswers": ["Z poważaniem", "Z poważaniem,"],
+    "caseSensitive": false
+  }
+}

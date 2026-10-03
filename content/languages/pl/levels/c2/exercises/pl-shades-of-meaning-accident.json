@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shades-of-meaning-accident",
+  "lessonId": "pl-shades-of-meaning",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "He died in a car accident: W wypadku samochodowym ___.",
+  "explanation": "Zginąć is used for violent or accidental death. Polec is for battle, odejść is a euphemism, and spożyć means to consume.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "zginął"
+      },
+      {
+        "id": "b",
+        "text": "poległ"
+      },
+      {
+        "id": "c",
+        "text": "odszedł"
+      },
+      {
+        "id": "d",
+        "text": "spożył"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

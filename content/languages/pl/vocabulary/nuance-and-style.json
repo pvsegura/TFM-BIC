@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "id": "nuance-and-style",
+  "languageId": "pl",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "en",
+  "title": "Nuance and style",
+  "description": "Literary connectors and words for tone, register and regional variety (C2).",
+  "items": [
+    {
+      "id": "pl-albowiem",
+      "status": "published",
+      "order": 10,
+      "lemma": "albowiem",
+      "translation": "for; because",
+      "levelId": "c2",
+      "partOfSpeech": "conjunction",
+      "note": "Elevated or literary."
+    },
+    {
+      "id": "pl-lecz",
+      "status": "published",
+      "order": 20,
+      "lemma": "lecz",
+      "translation": "but",
+      "levelId": "c2",
+      "partOfSpeech": "conjunction",
+      "note": "Literary for ale."
+    },
+    {
+      "id": "pl-acz",
+      "status": "published",
+      "order": 30,
+      "lemma": "acz",
+      "translation": "although",
+      "levelId": "c2",
+      "partOfSpeech": "conjunction",
+      "note": "Literary for chociaż."
+    },
+    {
+      "id": "pl-ow",
+      "status": "published",
+      "order": 40,
+      "lemma": "ów",
+      "translation": "that (one mentioned)",
+      "levelId": "c2",
+      "partOfSpeech": "pronoun"
+    },
+    {
+      "id": "pl-zaiste",
+      "status": "published",
+      "order": 50,
+      "lemma": "zaiste",
+      "translation": "indeed; truly",
+      "levelId": "c2",
+      "partOfSpeech": "adverb",
+      "note": "Archaic."
+    },
+    {
+      "id": "pl-ironia",
+      "status": "published",
+      "order": 60,
+      "lemma": "ironia",
+      "translation": "irony",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-niedopowiedzenie",
+      "status": "published",
+      "order": 70,
+      "lemma": "niedopowiedzenie",
+      "translation": "understatement; something left unsaid",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-gwara",
+      "status": "published",
+      "order": 80,
+      "lemma": "gwara",
+      "translation": "dialect; local speech",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-regionalizm",
+      "status": "published",
+      "order": 90,
+      "lemma": "regionalizm",
+      "translation": "regionalism",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-wydzwiek",
+      "status": "published",
+      "order": 100,
+      "lemma": "wydźwięk",
+      "translation": "tone; overtone",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-niuans",
+      "status": "published",
+      "order": 110,
+      "lemma": "niuans",
+      "translation": "nuance",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-potoczny",
+      "status": "published",
+      "order": 120,
+      "lemma": "potoczny",
+      "translation": "colloquial",
+      "levelId": "c2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-podniosly",
+      "status": "published",
+      "order": 130,
+      "lemma": "podniosły",
+      "translation": "solemn; elevated",
+      "levelId": "c2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-dosadny",
+      "status": "published",
+      "order": 140,
+      "lemma": "dosadny",
+      "translation": "blunt; outspoken",
+      "levelId": "c2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-dwuznaczny",
+      "status": "published",
+      "order": 150,
+      "lemma": "dwuznaczny",
+      "translation": "ambiguous",
+      "levelId": "c2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-zginac",
+      "status": "published",
+      "order": 160,
+      "lemma": "zginąć",
+      "translation": "to die (violently or in an accident)",
+      "levelId": "c2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-polec",
+      "status": "published",
+      "order": 170,
+      "lemma": "polec",
+      "translation": "to fall in battle",
+      "levelId": "c2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-spozywac",
+      "status": "published",
+      "order": 180,
+      "lemma": "spożywać",
+      "translation": "to consume",
+      "levelId": "c2",
+      "partOfSpeech": "verb",
+      "note": "Official for jeść.",
+      "example": {
+        "text": "Spożywać przed upływem daty ważności.",
+        "translation": "Consume before the expiry date."
+      }
+    }
+  ]
+}

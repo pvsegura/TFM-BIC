@@ -6,6 +6,7 @@ import {
 } from "@tfm-bic/application";
 import { FakeExerciseAttemptRepository } from "@tfm-bic/application/testing";
 import {
+  CEFR_LEVELS,
   createDefaultExerciseTypeRegistry,
   createLanguageId,
   createLevelId,
@@ -79,12 +80,16 @@ describe("the shipped exercises", () => {
     expect(validateContentCatalog(catalog)).toEqual([]);
   });
 
-  it("are a small representative set of Polish A1 exercises, not a course", () => {
-    const a1 = catalog.exercises.filter((e) => e.languageId === PL && e.levelId === A1);
+  it("are a small representative set for every Polish level, not an exercise bank", () => {
+    for (const level of CEFR_LEVELS) {
+      const inLevel = catalog.exercises.filter(
+        (e) => e.languageId === PL && e.levelId === level.id,
+      );
 
-    expect(a1.length).toBeGreaterThanOrEqual(6);
-    expect(a1.length).toBeLessThanOrEqual(20);
-    expect(catalog.exercises.every((e) => e.levelId === A1)).toBe(true);
+      expect(inLevel.length, level.id).toBeGreaterThanOrEqual(6);
+      expect(inLevel.length, level.id).toBeLessThanOrEqual(20);
+    }
+    expect(catalog.exercises.filter((e) => e.levelId === A1).length).toBeGreaterThanOrEqual(6);
   });
 
   it("show every exercise type the engine supports", () => {

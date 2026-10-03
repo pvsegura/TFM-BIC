@@ -58,7 +58,7 @@ inventing language or provider capabilities. Evidence and its strength: [m22-ped
     plus a `compose` command that writes render projects without rendering for visual review, and reuse of every
     identical clip (same voice, language, text).
 12. **CEFR awareness.** `pedagogyFor(level)` sets retrieval pause and introductory repetitions; plans for higher
-    levels are expected to use longer exchanges, less scaffolding and register/pragmatics (only A1 content exists).
+    levels are expected to use longer exchanges, less scaffolding and register/pragmatics (Polish now has text content for A1–C2; videos exist for A1 only).
 
 ## Alternatives considered
 

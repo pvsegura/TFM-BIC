@@ -1,0 +1,190 @@
+{
+  "schemaVersion": 1,
+  "id": "town-and-shopping",
+  "languageId": "pl",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "Town and shopping",
+  "description": "Everyday words for shops, prices, directions and the day (A2).",
+  "items": [
+    {
+      "id": "pl-sklep",
+      "status": "published",
+      "order": 10,
+      "lemma": "sklep",
+      "translation": "shop",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-cena",
+      "status": "published",
+      "order": 20,
+      "lemma": "cena",
+      "translation": "price",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-pieniadze",
+      "status": "published",
+      "order": 30,
+      "lemma": "pieniądze",
+      "translation": "money",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "note": "Used only in the plural."
+    },
+    {
+      "id": "pl-karta",
+      "status": "published",
+      "order": 40,
+      "lemma": "karta",
+      "translation": "card",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-gotowka",
+      "status": "published",
+      "order": 50,
+      "lemma": "gotówka",
+      "translation": "cash",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-rachunek",
+      "status": "published",
+      "order": 60,
+      "lemma": "rachunek",
+      "translation": "bill; receipt",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-dworzec",
+      "status": "published",
+      "order": 70,
+      "lemma": "dworzec",
+      "translation": "railway station",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-poczta",
+      "status": "published",
+      "order": 80,
+      "lemma": "poczta",
+      "translation": "post office",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-ulica",
+      "status": "published",
+      "order": 90,
+      "lemma": "ulica",
+      "translation": "street",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-prosto",
+      "status": "published",
+      "order": 100,
+      "lemma": "prosto",
+      "translation": "straight on",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-blisko",
+      "status": "published",
+      "order": 110,
+      "lemma": "blisko",
+      "translation": "near",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-daleko",
+      "status": "published",
+      "order": 120,
+      "lemma": "daleko",
+      "translation": "far",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-sniadanie",
+      "status": "published",
+      "order": 130,
+      "lemma": "śniadanie",
+      "translation": "breakfast",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-obiad",
+      "status": "published",
+      "order": 140,
+      "lemma": "obiad",
+      "translation": "lunch; the main meal of the day",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-kolacja",
+      "status": "published",
+      "order": 150,
+      "lemma": "kolacja",
+      "translation": "supper",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-kupowac",
+      "status": "published",
+      "order": 160,
+      "lemma": "kupować",
+      "translation": "to buy",
+      "levelId": "a2",
+      "partOfSpeech": "verb",
+      "example": {
+        "text": "Kupuję chleb.",
+        "translation": "I am buying bread."
+      }
+    },
+    {
+      "id": "pl-placic",
+      "status": "published",
+      "order": 170,
+      "lemma": "płacić",
+      "translation": "to pay",
+      "levelId": "a2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-wstawac",
+      "status": "published",
+      "order": 180,
+      "lemma": "wstawać",
+      "translation": "to get up",
+      "levelId": "a2",
+      "partOfSpeech": "verb"
+    }
+  ]
+}

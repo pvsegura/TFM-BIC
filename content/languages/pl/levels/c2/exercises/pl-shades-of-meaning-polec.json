@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-shades-of-meaning-polec",
+  "lessonId": "pl-shades-of-meaning",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Polec is a neutral word for any death.",
+  "explanation": "Polec is solemn and refers to soldiers dying in battle. The neutral word is umrzeć.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}
