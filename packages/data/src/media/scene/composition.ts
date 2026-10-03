@@ -386,6 +386,11 @@ function isLong(text: string): boolean {
   return text.length > LONG_PHRASE;
 }
 
+/** The card classes for a phrase: wider and wrapped when long, smaller still when very long. */
+function cardSize(text: string): string {
+  return isLong(text) ? (text.length > 60 ? " long xlong" : " long") : "";
+}
+
 function cardPosition(states: Map<string, ActorState>, speaker: string | undefined, text = "") {
   const long = isLong(text);
   const st = speaker ? states.get(speaker) : undefined;
@@ -425,7 +430,7 @@ function situationScene(
     if (beat.card) {
       const id = `${prefix}-card-${String(b)}`;
       const pos = cardPosition(states, line.speaker, beat.card.text);
-      cards.push(`<div class="phrase-card${isLong(beat.card.text) ? " long" : ""}" id="${id}" style="left:${String(pos.left)}px;top:${String(pos.top)}px">
+      cards.push(`<div class="phrase-card${cardSize(beat.card.text)}" id="${id}" style="left:${String(pos.left)}px;top:${String(pos.top)}px">
         <span class="said" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(beat.card.text)}</span>
         ${beat.card.meaning ? `<span class="gloss">${escapeHtml(beat.card.meaning)}</span>` : ""}</div>`);
       if (lastCard) tl.to(`#${lastCard}`, `{opacity:0,duration:0.2}`, line.start - 0.15);
@@ -489,7 +494,7 @@ function retrievalScene(
     <div class="dim" id="${prefix}-dim"></div>
     <div class="prompt" id="${prefix}-prompt"><span class="tag">${escapeHtml(script.labels?.yourTurn ?? "Your turn")}</span>${escapeHtml(prompt ? (scene.narration[0]?.text ?? "") : "")}</div>
     <svg class="timer" id="${prefix}-timer" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" stroke="#e8dccb" stroke-width="6" fill="#fffaf2"/><circle id="${prefix}-ring" cx="30" cy="30" r="26" stroke="#ff6b35" stroke-width="6" fill="none" stroke-dasharray="163" transform="rotate(-90 30 30)"/></svg>
-    <div class="phrase-card answer${isLong(scene.answer.text) ? " long" : ""}" id="${prefix}-answer" style="left:${String(pos.left)}px;top:${String(pos.top)}px"><span class="ok">✓</span><span class="said" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(scene.answer.text)}</span>${scene.answer.meaning ? `<span class="gloss" style="opacity:1">${escapeHtml(scene.answer.meaning)}</span>` : ""}</div>
+    <div class="phrase-card answer${cardSize(scene.answer.text)}" id="${prefix}-answer" style="left:${String(pos.left)}px;top:${String(pos.top)}px"><span class="ok">✓</span><span class="said" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(scene.answer.text)}</span>${scene.answer.meaning ? `<span class="gloss" style="opacity:1">${escapeHtml(scene.answer.meaning)}</span>` : ""}</div>
     <div class="check" id="${prefix}-check">${escapeHtml(scene.narration[2]?.text ?? "")}</div>`;
 }
 
@@ -639,6 +644,7 @@ body{margin:0;background:#f8f9fa}
 .phrase-card::after{content:"";position:absolute;left:50%;bottom:-14px;margin-left:-12px;border:12px solid transparent;border-top-color:#1d2a3f;border-bottom:0}
 .phrase-card{width:max-content}.phrase-card .said{display:block;font-size:40px;font-weight:800;line-height:1.1;white-space:nowrap}
 .phrase-card.long{max-width:640px}.phrase-card.long .said{white-space:normal;font-size:32px}
+.phrase-card.xlong .said{font-size:26px}.phrase-card.xlong .gloss{font-size:18px}
 .phrase-card .gloss{display:block;margin-top:4px;font-size:22px;color:rgba(29,42,63,0.72);opacity:0}
 .phrase-card.answer{border-color:#1f7a4d}
 .phrase-card .ok{position:absolute;left:-18px;top:-18px;width:36px;height:36px;border-radius:50%;background:#1f7a4d;color:#fff;font-size:22px;line-height:36px;text-align:center}
