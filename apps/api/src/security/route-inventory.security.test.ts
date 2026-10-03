@@ -35,6 +35,7 @@ const PUBLIC_ROUTES = new Set([
   "GET /media",
   "GET /media/lessons/:lessonId",
   "GET /media/vocabulary/:vocabularyId",
+  "GET /media/grammar/:topicId",
   "GET /media/files/*",
   // M23: the grammar reference — public, read-only lookup tables (no progress, no user data).
   "GET /grammar",

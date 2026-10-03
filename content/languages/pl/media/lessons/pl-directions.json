@@ -1,0 +1,270 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-directions",
+  "objective": "Ask how to get somewhere and understand simple directions.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "look": "man-c",
+      "voice": "tomek"
+    },
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "ewa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A tourist is looking for the post office.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "adam",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Przepraszam, jak dojść do poczty?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Proszę iść prosto, a potem w prawo.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A polite instruction: the polite word, then a verb."
+          }
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Czy to daleko?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Nie, to blisko. Pięć minut.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Dziękuję bardzo!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Directions",
+      "phrase": "Proszę iść prosto.",
+      "panels": [
+        {
+          "caption": "Straight on",
+          "text": "Proszę iść prosto."
+        },
+        {
+          "caption": "Left",
+          "text": "Potem proszę skręcić w lewo."
+        },
+        {
+          "caption": "Near",
+          "text": "To jest blisko."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Proszę iść prosto.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Straight on, left, right, near and far are short and easy to catch."
+        },
+        {
+          "say": "Listen for them in the answer.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ewa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "adam"
+        }
+      ],
+      "prompt": "Adam is looking for the station. What does he ask?",
+      "answer": "Przepraszam, jak dojść do dworca?",
+      "answerBy": "adam"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ewa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "adam"
+        }
+      ],
+      "prompt": "He asks if it is far.",
+      "answer": "Czy to daleko?",
+      "answerBy": "adam"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ewa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "Ewa says it is near.",
+      "answer": "To jest blisko.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

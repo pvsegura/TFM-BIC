@@ -23,9 +23,13 @@ const grammarTableSchema = z
     caption: plainText(200).optional(),
     columns: z.array(tableCell).min(1).max(10),
     rows: z.array(z.array(tableCell).min(1).max(10)).min(1).max(60),
+    speak: z.array(z.number().int().min(0).max(9)).min(1).max(10).optional(),
   })
   .refine((table) => table.rows.every((row) => row.length === table.columns.length), {
     error: "Every table row must have exactly one cell per column.",
+  })
+  .refine((table) => (table.speak ?? []).every((column) => column < table.columns.length), {
+    error: "speak lists a column the table does not have.",
   });
 
 const grammarExampleSchema = z.strictObject({
@@ -97,6 +101,7 @@ export const grammarTopicResponseSchema = grammarTopicSummaryResponseSchema.exte
           caption: z.string().optional(),
           columns: z.array(z.string()),
           rows: z.array(z.array(z.string())),
+          speak: z.array(z.number()).optional(),
         })
         .optional(),
       examples: z

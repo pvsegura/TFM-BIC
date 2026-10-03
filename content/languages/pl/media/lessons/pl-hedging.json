@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-hedging",
+  "objective": "Express degrees of certainty and avoid stating things absolutely.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "dziennikarka",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    },
+    {
+      "id": "ekspert",
+      "name": "The expert",
+      "look": "man-b",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "dziennikarka",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "ekspert",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A journalist interviews an economist.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "dziennikarka",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "dziennikarka",
+            "target": "Czy rząd obniży podatki?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "dziennikarka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ekspert",
+            "target": "Trudno to jednoznacznie przewidzieć. Wydaje się jednak, że raczej nie w tym roku.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ekspert"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Notice how carefully he avoids a definite answer."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Degrees of certainty",
+      "phrase": "Pociąg najprawdopodobniej się spóźni.",
+      "panels": [
+        {
+          "caption": "Cannot be ruled out",
+          "text": "Nie można wykluczyć, że ceny wzrosną."
+        },
+        {
+          "caption": "Worth noting",
+          "text": "Warto zauważyć, że liczba turystów wzrosła."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Pociąg najprawdopodobniej się spóźni.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Careful speakers rarely state things absolutely."
+        },
+        {
+          "say": "Impersonal phrases and adverbs grade how certain you are.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "dziennikarka",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ekspert",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ekspert"
+        }
+      ],
+      "prompt": "It cannot be ruled out that prices will rise.",
+      "answer": "Nie można wykluczyć, że ceny wzrosną.",
+      "answerBy": "ekspert"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "dziennikarka",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ekspert",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ekspert"
+        }
+      ],
+      "prompt": "The train will most probably be late.",
+      "answer": "Pociąg najprawdopodobniej się spóźni.",
+      "answerBy": "ekspert"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-impersonal-forms",
+  "objective": "Describe events and rules without saying who does them.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-c",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A guide shows tourists around the old town.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "bartek",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "W 1990 roku zbudowano tu most.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Who built it? We are not told."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Most został zbudowany w 1990 roku.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The same fact, in the passive."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Mówi się, że to najlepsza restauracja w mieście.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "What people say, without saying who."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Tu się nie pali.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A general rule."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Without saying who",
+      "phrase": "Most został zbudowany w 1990 roku.",
+      "panels": [
+        {
+          "caption": "No subject",
+          "text": "W 1990 roku zbudowano tu most."
+        },
+        {
+          "caption": "A general rule",
+          "text": "Tu się nie pali."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Most został zbudowany w 1990 roku.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Polish has several ways to leave out who does something."
+        },
+        {
+          "say": "Choose by style: the passive is more formal.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Say that smoking is not allowed here.",
+      "answer": "Tu się nie pali.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "The bridge was built in 1990. Use the passive.",
+      "answer": "Most został zbudowany w 1990 roku.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

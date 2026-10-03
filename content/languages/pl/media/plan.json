@@ -21,6 +21,126 @@
     {
       "contentId": "pl-spelling-and-sounds",
       "priority": 1
+    },
+    {
+      "contentId": "pl-shopping",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-daily-routine",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-past-tense",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-directions",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-likes-and-wants",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-cases-overview",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-verb-aspect",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-future-and-plans",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-going-places",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-at-the-doctor",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-opinions",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-cases-endings",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-job-interview",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-conditions",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-reported-speech",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-impersonal-forms",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-arguing-a-point",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-verb-prefixes",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-formal-correspondence",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-participles",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-nominal-style",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-hedging",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-idioms",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-register",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-literary-language",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-numerals-in-full",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-word-order",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-irony-and-understatement",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-shades-of-meaning",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-regional-polish",
+      "priority": 2
     }
   ],
   "vocabularyCategories": [
@@ -153,6 +273,71 @@
           "name": "Piotr",
           "look": "man-a",
           "voice": "piotr"
+        }
+      ]
+    },
+    {
+      "categoryId": "town-and-shopping",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "health-and-travel",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "work-and-society",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "formal-and-academic",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "nuance-and-style",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
         }
       ]
     }
@@ -1554,5 +1739,9 @@
         "at": "suitcase"
       }
     }
+  },
+  "grammar": {
+    "voice": "anna",
+    "priority": 1
   }
 }

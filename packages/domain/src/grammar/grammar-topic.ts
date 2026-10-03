@@ -62,6 +62,8 @@ export interface GrammarTable {
   caption?: string | undefined;
   columns: string[];
   rows: string[][];
+  /** Columns (0-based) whose cells are target-language forms with a recorded pronunciation. */
+  speak?: number[] | undefined;
 }
 
 export interface GrammarExample {

@@ -1,0 +1,196 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-register",
+  "objective": "Match your words to the situation: informal, neutral or official.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "The same person, three situations, three registers.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Siema, co tam?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Very informal, among friends."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Dzień dobry, czy mogę w czymś pomóc?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Neutral and polite, to a customer."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Uprzejmie informujemy, iż sklep będzie nieczynny w sobotę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Official: a notice from the shop."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Register",
+      "phrase": "Spoko, nie ma problemu.",
+      "panels": [
+        {
+          "caption": "Informal",
+          "text": "Siema, co tam?"
+        },
+        {
+          "caption": "Official",
+          "text": "Ponadto należy dołączyć kopię dowodu osobistego."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Spoko, nie ma problemu.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Polish marks register clearly."
+        },
+        {
+          "say": "Match your words to the person and the situation.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Greet a close friend informally.",
+      "answer": "Siema, co tam?",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Offer help to a customer politely.",
+      "answer": "Dzień dobry, czy mogę w czymś pomóc?",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video at your own pace.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-past-tense",
+  "objective": "Talk about the past, choosing the ending for a man or a woman.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "kasia",
+      "name": "Kasia",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Monday morning. Two friends talk about their days off.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "kasia",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Co robiłeś w weekend?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Byłem w górach z bratem. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "He is a man, so his verb ends in e m."
+          }
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Ja byłam w domu i czytałam książkę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She is a woman: listen, her verbs end in a m."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "A man or a woman?",
+      "phrase": "Wczoraj byłem w kinie.",
+      "panels": [
+        {
+          "caption": "A man",
+          "text": "Wczoraj byłem w kinie."
+        },
+        {
+          "caption": "A woman",
+          "text": "Wczoraj byłam w kinie."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Wczoraj byłem w kinie.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "In the past tense, the ending shows who is speaking."
+        },
+        {
+          "say": "A man's form and a woman's form differ by one vowel.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kasia"
+        }
+      ],
+      "prompt": "Kasia asks Piotr what he did on Saturday and Sunday. What does she say?",
+      "answer": "Co robiłeś w weekend?",
+      "answerBy": "kasia"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kasia"
+        }
+      ],
+      "prompt": "Kasia stayed at home and read. What does she say?",
+      "answer": "Ja byłam w domu i czytałam książkę.",
+      "answerBy": "kasia"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "A man says: yesterday I was at the cinema.",
+      "answer": "Wczoraj byłem w kinie.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

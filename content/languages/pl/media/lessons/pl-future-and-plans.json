@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-future-and-plans",
+  "objective": "Make polite requests with the conditional and talk about plans.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "look": "man-c",
+      "voice": "tomek"
+    },
+    {
+      "id": "recepcja",
+      "name": "Ewa",
+      "look": "woman-a",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "recepcja",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A hotel reception. Adam wants to book a room.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "adam",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "recepcja",
+            "target": "Dzień dobry, w czym mogę pomóc?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "recepcja"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Chciałbym zarezerwować pokój dwuosobowy na weekend.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A polite wish: the conditional, in the form a man uses."
+          }
+        },
+        {
+          "line": {
+            "by": "recepcja",
+            "target": "Na dwie noce?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "recepcja"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Tak. Czy śniadanie jest wliczone w cenę?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "recepcja",
+            "target": "Tak, śniadanie jest od siódmej do dziesiątej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "recepcja"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Polite wishes",
+      "phrase": "Chciałbym zarezerwować pokój na dwie noce.",
+      "panels": [
+        {
+          "caption": "A man",
+          "text": "Chciałbym zarezerwować pokój na dwie noce."
+        },
+        {
+          "caption": "A woman",
+          "text": "Chciałabym bilet do Gdańska."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Chciałbym zarezerwować pokój na dwie noce.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The conditional makes a wish polite."
+        },
+        {
+          "say": "Men and women use slightly different endings.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "recepcja",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "adam"
+        }
+      ],
+      "prompt": "Adam asks if breakfast is included. What does he say?",
+      "answer": "Tak. Czy śniadanie jest wliczone w cenę?",
+      "answerBy": "adam"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "recepcja",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "recepcja"
+        }
+      ],
+      "prompt": "A woman would like a train ticket. What does she say?",
+      "answer": "Chciałabym bilet do Gdańska.",
+      "answerBy": "recepcja"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

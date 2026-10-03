@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-cases-endings",
+  "objective": "Recognise the genitive and the locative after common prepositions.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Four short sentences, two very common cases.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Nie mam czasu.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "After a negated verb: the genitive."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Kawa bez cukru, proszę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "After without: the genitive again."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Jestem na poczcie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "After on, for a place: the locative."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Rozmawiamy o filmie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "After about: the locative."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Genitive and locative",
+      "phrase": "Idę do brata.",
+      "panels": [
+        {
+          "caption": "Genitive",
+          "text": "Nie mam czasu."
+        },
+        {
+          "caption": "Locative",
+          "text": "Jestem na poczcie."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Idę do brata.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The genitive follows many short prepositions, negation and quantities."
+        },
+        {
+          "say": "The locative follows in, on, about and by, often with a change of consonant.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "You have no time. Say it.",
+      "answer": "Nie mam czasu.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "You are at the post office. Say it.",
+      "answer": "Jestem na poczcie.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video at your own pace.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

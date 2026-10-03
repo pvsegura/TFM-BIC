@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-nominal-style",
+  "objective": "Recognise verbal nouns and the nominal style of official Polish.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "michal",
+      "name": "Michał",
+      "look": "man-c",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "michal",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A short news report, in official style.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "michal",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Zamknięcie drogi spowodowało korki.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "An action becomes a noun: the closure caused the jams."
+          }
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Palenie szkodzi zdrowiu.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Nauka języka wymaga czasu i cierpliwości.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Po przeczytaniu umowy podpisałem ją.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Actions as nouns",
+      "phrase": "Dziękuję za zaproszenie.",
+      "panels": [
+        {
+          "caption": "Smoking",
+          "text": "Palenie szkodzi zdrowiu."
+        },
+        {
+          "caption": "A closure",
+          "text": "Zamknięcie drogi spowodowało korki."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Dziękuję za zaproszenie.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Official language turns verbs into nouns."
+        },
+        {
+          "say": "In everyday speech, a verb usually sounds more natural.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "michal",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "michal"
+        }
+      ],
+      "prompt": "Smoking damages your health. Say it.",
+      "answer": "Palenie szkodzi zdrowiu.",
+      "answerBy": "michal"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "michal",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "michal"
+        }
+      ],
+      "prompt": "Thank someone for the invitation.",
+      "answer": "Dziękuję za zaproszenie.",
+      "answerBy": "michal"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

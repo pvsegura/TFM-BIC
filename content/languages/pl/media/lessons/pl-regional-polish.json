@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-regional-polish",
+  "objective": "Recognise regional words from Warsaw, Kraków and Poznań.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "basia",
+      "name": "Basia",
+      "look": "woman-a",
+      "voice": "anna"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "basia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two friends from different cities talk about everyday life.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Dzieci bawią się na dworze.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "In Warsaw and most of Poland."
+          }
+        },
+        {
+          "line": {
+            "by": "basia",
+            "target": "Dzieci bawią się na polu.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "basia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "In Kraków, the same sentence."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Na obiad są ziemniaki.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "basia",
+            "target": "Na obiad są pyry z gzikiem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "basia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "And in Poznań, potatoes have their own name."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Regional Polish",
+      "phrase": "Na obiad są kartofle.",
+      "panels": [
+        {
+          "caption": "Standard",
+          "text": "Na obiad są ziemniaki."
+        },
+        {
+          "caption": "Poznań",
+          "text": "Na obiad są pyry z gzikiem."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Na obiad są kartofle.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Standard Polish is understood everywhere."
+        },
+        {
+          "say": "Regional words are easy to recognise once you know them.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "basia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Standard Polish: the children are playing outside.",
+      "answer": "Dzieci bawią się na dworze.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "basia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "basia"
+        }
+      ],
+      "prompt": "The same sentence, as they say it in Kraków.",
+      "answer": "Dzieci bawią się na polu.",
+      "answerBy": "basia"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video at your own pace.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

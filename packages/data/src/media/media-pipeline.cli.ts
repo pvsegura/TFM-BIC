@@ -53,6 +53,7 @@ const { positionals, values } = parseArgs({
     only: { type: "string" },
     lessons: { type: "boolean", default: false },
     vocabulary: { type: "boolean", default: false },
+    grammar: { type: "boolean", default: false },
     category: { type: "string" },
     priority: { type: "string", default: "1" },
     limit: { type: "string", default: "3" },
@@ -106,8 +107,9 @@ async function main() {
       .map((s) => s.trim())
       .filter(Boolean),
     kinds: {
-      lessons: values.lessons || (!values.lessons && !values.vocabulary),
-      vocabulary: values.vocabulary || (!values.lessons && !values.vocabulary),
+      lessons: values.lessons || (!values.lessons && !values.vocabulary && !values.grammar),
+      vocabulary: values.vocabulary || (!values.lessons && !values.vocabulary && !values.grammar),
+      grammar: values.grammar || (!values.lessons && !values.vocabulary && !values.grammar),
     },
     maxPriority: intFlag("priority", values.priority, 3),
     category: values.category,
@@ -393,7 +395,7 @@ async function main() {
     }
     default:
       out(
-        "Usage: media <doctor|plan|audition|generate> [--lessons|--vocabulary|--only type:id,...] [--category id] [--priority 1-3] [--limit n] [--max-calls n] [--force] [--draft]",
+        "Usage: media <doctor|plan|audition|generate> [--lessons|--vocabulary|--grammar|--only type:id,...] [--category id] [--priority 1-3] [--limit n] [--max-calls n] [--force] [--draft]",
       );
       process.exitCode = command === "help" ? 0 : 2;
   }

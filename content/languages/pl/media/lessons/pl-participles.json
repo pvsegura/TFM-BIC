@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-participles",
+  "objective": "Use participles to say more in fewer words.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Piotr describes his morning in compact sentences.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "piotr",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Czekając na autobus, czytałem gazetę.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Two actions at the same time, with one subject."
+          }
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Kobieta siedząca obok mnie czytała książkę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Sitting describes the woman, like an adjective."
+          }
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Przeczytany list leżał na stole.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Participles",
+      "phrase": "To jest książka napisana przez moją babcię.",
+      "panels": [
+        {
+          "caption": "While doing",
+          "text": "Czekając na autobus, czytałem gazetę."
+        },
+        {
+          "caption": "Describing",
+          "text": "Kobieta siedząca obok mnie czytała książkę."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "To jest książka napisana przez moją babcię.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Participles turn a whole clause into one word."
+        },
+        {
+          "say": "Use the adverbial form only when both actions have the same subject.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "While waiting for the bus, you read the newspaper.",
+      "answer": "Czekając na autobus, czytałem gazetę.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "piotr",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "The letter, already read, lay on the table.",
+      "answer": "Przeczytany list leżał na stole.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

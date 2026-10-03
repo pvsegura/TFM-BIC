@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-literary-language",
+  "objective": "Recognise the vocative and archaic connectors in classic texts.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "school",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A literature class reads classic Polish texts.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Litwo! Ojczyzno moja! ty jesteś jak zdrowie.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The opening of a famous epic poem from 1834, with two vocatives."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Nie przyszedł, albowiem był chory.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "An elevated word for because."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Chciał pomóc, lecz nie mógł.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A literary word for but."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Ów człowiek zniknął bez śladu.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Literary forms",
+      "phrase": "Panie, zmiłuj się nad nami.",
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Panie, zmiłuj się nad nami.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The vocative case addresses someone directly."
+        },
+        {
+          "say": "Older words replace their modern equivalents; recognising them is enough.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "He did not come, for he was ill. Use the elevated word.",
+      "answer": "Nie przyszedł, albowiem był chory.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "That man vanished without a trace.",
+      "answer": "Ów człowiek zniknął bez śladu.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

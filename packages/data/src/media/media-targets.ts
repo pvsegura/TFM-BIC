@@ -15,7 +15,7 @@ import type { MediaPlan } from "./media-plan.js";
 export interface TargetFilter {
   /** Explicit `type:id` keys, e.g. `lesson:pl-greetings`, `vocabulary-item:pl-dom`. */
   only?: string[] | undefined;
-  kinds: { lessons: boolean; vocabulary: boolean };
+  kinds: { lessons: boolean; vocabulary: boolean; grammar: boolean };
   /** Include plan entries up to this priority (1 = most important). */
   maxPriority: number;
   category?: string | undefined;
@@ -163,6 +163,39 @@ export async function planMediaTargets(
           ],
         });
       }
+    }
+  }
+
+  const grammarPlan = plan.plan.grammar;
+  if (grammarPlan && (filter.kinds.grammar || filter.only)) {
+    // Grammar reference (M23): every form in a table column marked speak, once per topic.
+    for (const topic of await repos.grammarRepository.listTopics(languageId)) {
+      if (topic.status !== "published") continue;
+      const key = `grammar-topic:${topic.id}`;
+      if (!wanted(key, grammarPlan.priority)) continue;
+      const texts = new Set<string>();
+      for (const section of topic.sections) {
+        for (const column of section.table?.speak ?? []) {
+          for (const row of section.table?.rows ?? []) {
+            const text = row[column]?.trim();
+            if (text) texts.add(text);
+          }
+        }
+      }
+      if (texts.size === 0) continue;
+      targets.push({
+        audioOnly: true,
+        key,
+        priority: grammarPlan.priority,
+        label: `${topic.title} (grammar)`,
+        content: { type: "grammar-topic", id: topic.id, languageId: topic.languageId },
+        voice: grammarPlan.voice,
+        clips: [...texts].map((text) => ({
+          purpose: "pronunciation" as const,
+          text,
+          language: topic.languageId,
+        })),
+      });
     }
   }
 

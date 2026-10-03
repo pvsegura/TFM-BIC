@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-at-the-doctor",
+  "objective": "Say what hurts, describe symptoms and understand simple advice.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "jan",
+      "name": "Jan",
+      "look": "man-b",
+      "voice": "tomek"
+    },
+    {
+      "id": "lekarka",
+      "name": "Dr Nowak",
+      "look": "woman-b",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "lekarka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "At the doctor's. Jan does not feel well.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "jan",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "lekarka",
+            "target": "Co panu dolega?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "lekarka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "jan",
+            "target": "Boli mnie gardło i mam gorączkę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "jan"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Literally: my throat hurts me."
+          }
+        },
+        {
+          "line": {
+            "by": "lekarka",
+            "target": "Od kiedy?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "lekarka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "jan",
+            "target": "Od wczoraj.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "jan"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "lekarka",
+            "target": "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "lekarka"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "What hurts?",
+      "phrase": "Boli mnie głowa.",
+      "panels": [
+        {
+          "caption": "One thing",
+          "text": "Boli mnie głowa."
+        },
+        {
+          "caption": "A plural",
+          "text": "Bolą mnie plecy."
+        },
+        {
+          "caption": "Symptoms",
+          "text": "Mam gorączkę i kaszel."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Boli mnie głowa.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The thing that hurts is the subject of the sentence."
+        },
+        {
+          "say": "With a plural, the verb is plural too.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "lekarka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "jan"
+        }
+      ],
+      "prompt": "Jan has a headache. What does he say?",
+      "answer": "Boli mnie głowa.",
+      "answerBy": "jan"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "lekarka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "lekarka"
+        }
+      ],
+      "prompt": "The doctor asks since when. What does she say?",
+      "answer": "Od kiedy?",
+      "answerBy": "lekarka"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

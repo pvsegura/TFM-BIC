@@ -1,0 +1,308 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-shopping",
+  "objective": "Ask for things in a shop, ask the price and ask to pay by card.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "tomek",
+      "name": "Tomek",
+      "look": "man-a",
+      "voice": "piotr"
+    },
+    {
+      "id": "kasia",
+      "name": "Kasia",
+      "look": "shopkeeper",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A small shop in the morning. Tomek wants some bread and milk.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "tomek",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Dzień dobry. Co podać?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Dzień dobry. Poproszę chleb i mleko.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "To ask for something: the polite word, then the thing."
+          }
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Coś jeszcze?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Nie, dziękuję. Ile to kosztuje?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "And this question asks for the price."
+          }
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Dziewięć złotych.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Czy mogę zapłacić kartą?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Oczywiście.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Asking for things",
+      "phrase": "Poproszę wodę.",
+      "panels": [
+        {
+          "caption": "Feminine: -a becomes -ę",
+          "text": "Poproszę wodę."
+        },
+        {
+          "caption": "Masculine: no change",
+          "text": "Poproszę chleb."
+        },
+        {
+          "caption": "The price",
+          "text": "Ile to kosztuje?"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Poproszę wodę.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A feminine word ending in a changes its ending here."
+        },
+        {
+          "say": "Masculine things and neuter words stay the same."
+        },
+        {
+          "say": "And to ask the price, use this question.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "tomek"
+        }
+      ],
+      "prompt": "Tomek wants bread. What does he say?",
+      "answer": "Poproszę chleb.",
+      "answerBy": "tomek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "tomek"
+        }
+      ],
+      "prompt": "He wants to know the price. What does he ask?",
+      "answer": "Ile to kosztuje?",
+      "answerBy": "tomek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "tomek"
+        }
+      ],
+      "prompt": "He wants to pay by card. What does he ask?",
+      "answer": "Czy mogę zapłacić kartą?",
+      "answerBy": "tomek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

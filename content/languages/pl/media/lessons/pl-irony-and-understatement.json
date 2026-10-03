@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-irony-and-understatement",
+  "objective": "Understand irony and understatement in everyday Polish.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "agata",
+      "name": "Agata",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-b",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "school",
+        "time": "day",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "After the exam, two students meet in the corridor.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "agata",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "Jak ci poszedł egzamin?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Nie było najgorzej. Dostałem piątkę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Not the worst, he says, but he got top marks: an understatement."
+          }
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "No proszę, a mówiłeś, że nic nie umiesz!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Irony",
+      "phrase": "No pięknie! Znowu się spóźniliśmy.",
+      "panels": [
+        {
+          "caption": "Ironic",
+          "text": "Ale się popisałeś!"
+        },
+        {
+          "caption": "Understatement",
+          "text": "Nie było najgorzej."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "No pięknie! Znowu się spóźniliśmy.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Intonation does much of the work."
+        },
+        {
+          "say": "Often the words mean the opposite, or much more, than they say.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "agata"
+        }
+      ],
+      "prompt": "You are late again. React ironically.",
+      "answer": "No pięknie! Znowu się spóźniliśmy.",
+      "answerBy": "agata"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Say it was not bad at all.",
+      "answer": "Nie było najgorzej.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

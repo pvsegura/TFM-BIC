@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-arguing-a-point",
+  "objective": "Connect arguments in a discussion: two sides, adding a point, concluding.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "kowalski",
+      "name": "Mr Kowalski",
+      "look": "man-b",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "school",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kowalski",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A local debate: should the city centre be closed to cars?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Czy centrum miasta powinno być zamknięte dla samochodów?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kowalski",
+            "target": "Z jednej strony to poprawi jakość powietrza, z drugiej strony utrudni życie mieszkańcom.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kowalski"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "On the one hand, on the other: two sides weighed."
+          }
+        },
+        {
+          "line": {
+            "by": "kowalski",
+            "target": "Dlatego uważam, że miasto potrzebuje więcej ścieżek rowerowych.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kowalski"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Connecting arguments",
+      "phrase": "Co więcej, transport publiczny jest tańszy.",
+      "panels": [
+        {
+          "caption": "Above all",
+          "text": "Przede wszystkim powinniśmy oszczędzać wodę."
+        },
+        {
+          "caption": "Moreover",
+          "text": "Co więcej, transport publiczny jest tańszy."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Co więcej, transport publiczny jest tańszy.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Weigh two sides, add a point, then conclude."
+        },
+        {
+          "say": "These connecting words make an argument easy to follow.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kowalski",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kowalski"
+        }
+      ],
+      "prompt": "Add a point: buses and trams are cheaper.",
+      "answer": "Co więcej, transport publiczny jest tańszy.",
+      "answerBy": "kowalski"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kowalski",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kowalski"
+        }
+      ],
+      "prompt": "Above all, we should save water.",
+      "answer": "Przede wszystkim powinniśmy oszczędzać wodę.",
+      "answerBy": "kowalski"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

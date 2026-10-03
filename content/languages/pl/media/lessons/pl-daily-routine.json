@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-daily-routine",
+  "objective": "Say at what time you do everyday things, and ask someone about their day.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "marek",
+      "name": "Marek",
+      "look": "man-b",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "marek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two colleagues talk about their mornings.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "O której wstajesz?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marek",
+            "target": "Zwykle o siódmej. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "marek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Ja wstaję o szóstej, bo zaczynam pracę o siódmej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "To say at what time: a short word, then the hour as an ordinal number."
+          }
+        },
+        {
+          "line": {
+            "by": "marek",
+            "target": "Tak wcześnie!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marek"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "At what time?",
+      "phrase": "Wstaję o siódmej.",
+      "panels": [
+        {
+          "caption": "Getting up",
+          "text": "Wstaję o siódmej."
+        },
+        {
+          "caption": "Breakfast",
+          "text": "Jem śniadanie o ósmej."
+        },
+        {
+          "caption": "Back home",
+          "text": "Wracam do domu o piątej."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Wstaję o siódmej.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The hour comes after a short word meaning at."
+        },
+        {
+          "say": "Then the hour as an ordinal: the seventh, the eighth, the fifth.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "marek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Ola asks what time Marek gets up. What does she say?",
+      "answer": "O której wstajesz?",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "marek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Say: I get up at seven.",
+      "answer": "Wstaję o siódmej.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "marek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marek"
+        }
+      ],
+      "prompt": "Say: I go to work.",
+      "answer": "Idę do pracy.",
+      "answerBy": "marek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

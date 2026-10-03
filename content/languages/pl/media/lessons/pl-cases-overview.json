@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-cases-overview",
+  "objective": "See why Polish nouns change their endings, using one word in four sentences.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "One word, coffee, in four different sentences.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "To jest kawa.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The dictionary form."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Lubię kawę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The object of a verb: a new ending."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Nie ma kawy.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "There is none: another ending."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Piję kawę z mlekiem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Seven cases",
+      "phrase": "Mieszkam w Krakowie.",
+      "panels": [
+        {
+          "caption": "Nominative",
+          "text": "To jest kawa."
+        },
+        {
+          "caption": "Accusative",
+          "text": "Lubię kawę."
+        },
+        {
+          "caption": "Genitive",
+          "text": "Nie ma kawy."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Mieszkam w Krakowie.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Polish nouns change their endings to show their role."
+        },
+        {
+          "say": "Learn them phrase by phrase, starting with the most frequent.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "There is no coffee. Say it.",
+      "answer": "Nie ma kawy.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "You like coffee. Say it.",
+      "answer": "Lubię kawę.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video at your own pace.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

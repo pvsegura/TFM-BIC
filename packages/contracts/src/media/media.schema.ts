@@ -217,6 +217,10 @@ export const mediaPlanFileSchema = z.strictObject({
     }),
   ),
   vocabulary: z.record(slug, vocabularyVisualSchema),
+  /** Grammar reference audio (M23): the voice that pronounces the forms in tables marked speak. */
+  grammar: z
+    .strictObject({ voice: narratorId, priority: z.number().int().min(1).max(3) })
+    .optional(),
   /** Fixed framing texts in the course's instruction language (default: English). */
   framing: z
     .strictObject({
@@ -268,7 +272,7 @@ export const audioAssetResponseSchema = z.object({
 
 /** `GET /media/lessons/:lessonId` and `GET /media/vocabulary/:vocabularyId`. */
 export const contentMediaResponseSchema = z.object({
-  contentType: z.enum(["lesson", "vocabulary-item"]),
+  contentType: z.enum(["lesson", "vocabulary-item", "grammar-topic"]),
   contentId: z.string(),
   /** `null` = no video published yet — the page says "Video coming soon". */
   video: videoAssetResponseSchema.nullable(),
@@ -279,7 +283,7 @@ export const contentMediaResponseSchema = z.object({
 export const mediaIndexResponseSchema = z.object({
   items: z.array(
     z.object({
-      contentType: z.enum(["lesson", "vocabulary-item"]),
+      contentType: z.enum(["lesson", "vocabulary-item", "grammar-topic"]),
       contentId: z.string(),
       hasVideo: z.boolean(),
       hasAudio: z.boolean(),

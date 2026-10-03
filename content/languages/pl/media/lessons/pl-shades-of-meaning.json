@@ -1,0 +1,216 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-shades-of-meaning",
+  "objective": "Choose between near-synonyms that differ in tone and situation.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Four ways to say that someone died, each with its own tone.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Dziadek zmarł w zeszłym roku.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Neutral."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Zginął w wypadku samochodowym.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A violent or accidental death."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Odszedł od nas nasz drogi przyjaciel.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A gentle euphemism."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Żołnierze polegli pod Monte Cassino.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Solemn, for soldiers in battle."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Shades of meaning",
+      "phrase": "Produkt należy spożyć przed upływem daty ważności.",
+      "panels": [
+        {
+          "caption": "Neutral",
+          "text": "Dziadek zmarł w zeszłym roku."
+        },
+        {
+          "caption": "An accident",
+          "text": "Zginął w wypadku samochodowym."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Produkt należy spożyć przed upływem daty ważności.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Near-synonyms share a meaning but differ in tone."
+        },
+        {
+          "say": "Choosing the right one shows respect for the situation.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "He was killed in a car accident. Say it.",
+      "answer": "Zginął w wypadku samochodowym.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "Grandfather died last year. Say it neutrally.",
+      "answer": "Dziadek zmarł w zeszłym roku.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

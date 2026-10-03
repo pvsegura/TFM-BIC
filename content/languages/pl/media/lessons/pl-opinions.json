@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-opinions",
+  "objective": "Give your opinion, agree and disagree politely.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    },
+    {
+      "id": "pawel",
+      "name": "Paweł",
+      "look": "man-c",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "pawel",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A new park has opened. Two friends give their opinions.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Co sądzisz o nowym parku?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "pawel",
+            "target": "Moim zdaniem jest piękny, ale za mały.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "pawel"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Zgadzam się. Brakuje ławek.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Giving an opinion",
+      "phrase": "Moim zdaniem to dobry pomysł.",
+      "panels": [
+        {
+          "caption": "Opinion",
+          "text": "Myślę, że masz rację."
+        },
+        {
+          "caption": "Agreeing",
+          "text": "Zgadzam się z tobą."
+        },
+        {
+          "caption": "Disagreeing",
+          "text": "Nie do końca się zgadzam."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Moim zdaniem to dobry pomysł.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Start with in my opinion, or I think that."
+        },
+        {
+          "say": "To disagree politely, say you do not completely agree.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "pawel",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "You agree with your friend. What do you say?",
+      "answer": "Zgadzam się z tobą.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "pawel",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "pawel"
+        }
+      ],
+      "prompt": "Paweł gives his opinion about the park. What does he say?",
+      "answer": "Moim zdaniem jest piękny, ale za mały.",
+      "answerBy": "pawel"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

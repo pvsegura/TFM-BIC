@@ -1,0 +1,222 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-job-interview",
+  "objective": "Use the formal pan and pani forms in a job interview.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "lis",
+      "name": "Mr Lis",
+      "look": "man-a",
+      "voice": "tomek"
+    },
+    {
+      "id": "nowak",
+      "name": "Ms Nowak",
+      "look": "woman-a",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "lis",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "nowak",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A job interview at an international company.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "lis",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "nowak",
+            "target": "Dlaczego chce pan u nas pracować?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "nowak"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Formal: the word for sir, with the third-person verb."
+          }
+        },
+        {
+          "line": {
+            "by": "lis",
+            "target": "Interesuje mnie rozwój w międzynarodowym zespole.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "lis"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "nowak",
+            "target": "A jakie są pana oczekiwania finansowe?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "nowak"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "lis",
+            "target": "Chciałbym zarabiać około ośmiu tysięcy złotych brutto.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "lis"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "The formal you",
+      "phrase": "Jakie ma pani doświadczenie?",
+      "panels": [
+        {
+          "caption": "To a woman",
+          "text": "Jakie ma pani doświadczenie?"
+        },
+        {
+          "caption": "To a man",
+          "text": "Kiedy mógłby pan zacząć?"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Jakie ma pani doświadczenie?",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Formal speech replaces you with sir or madam."
+        },
+        {
+          "say": "The verb is in the third person, as if talking about them.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "lis",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "nowak",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "nowak"
+        }
+      ],
+      "prompt": "Ask a man, formally, when he could start.",
+      "answer": "Kiedy mógłby pan zacząć?",
+      "answerBy": "nowak"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "lis",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "nowak",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "lis"
+        }
+      ],
+      "prompt": "Say why you are interested in the job.",
+      "answer": "Interesuje mnie rozwój w międzynarodowym zespole.",
+      "answerBy": "lis"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

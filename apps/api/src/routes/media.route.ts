@@ -151,6 +151,19 @@ export function registerMediaRoutes(
     );
   });
 
+  app.get("/media/grammar/:topicId", { config }, async (request, reply) => {
+    const { topicId } = request.params as { topicId: string };
+    if (!ID.test(topicId) || topicId.length > 100) return reply.code(400).send(INVALID_REQUEST);
+    const topic = await deps.content.grammarRepository?.findTopic(topicId as never);
+    if (topic?.status !== "published") return reply.code(404).send(NOT_FOUND);
+    cacheShort(reply);
+    return toResponse(
+      "grammar-topic",
+      topicId,
+      catalog.find({ type: "grammar-topic", id: topicId }),
+    );
+  });
+
   app.get(
     "/media/files/*",
     { config: { rateLimit: routeRateLimit(deps.env, MEDIA_FILE_REQUESTS_PER_MINUTE, "1 minute") } },

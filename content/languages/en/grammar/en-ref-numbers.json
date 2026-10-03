@@ -12,24 +12,25 @@
   "sections": [
     {
       "table": {
-        "columns": ["Número", "Cardinal", "Ordinal"],
+        "columns": ["Número", "Cardinal", "Ordinal", "Abreviatura"],
         "rows": [
-          ["1", "one", "first (1st)"],
-          ["2", "two", "second (2nd)"],
-          ["3", "three", "third (3rd)"],
-          ["4", "four", "fourth (4th)"],
-          ["5", "five", "fifth (5th)"],
-          ["8", "eight", "eighth (8th)"],
-          ["9", "nine", "ninth (9th)"],
-          ["11", "eleven", "eleventh (11th)"],
-          ["12", "twelve", "twelfth (12th)"],
-          ["13", "thirteen", "thirteenth (13th)"],
-          ["20", "twenty", "twentieth (20th)"],
-          ["21", "twenty-one", "twenty-first (21st)"],
-          ["30", "thirty", "thirtieth (30th)"],
-          ["100", "one hundred", "hundredth (100th)"],
-          ["1000", "one thousand", "thousandth (1000th)"]
-        ]
+          ["1", "one", "first", "1st"],
+          ["2", "two", "second", "2nd"],
+          ["3", "three", "third", "3rd"],
+          ["4", "four", "fourth", "4th"],
+          ["5", "five", "fifth", "5th"],
+          ["8", "eight", "eighth", "8th"],
+          ["9", "nine", "ninth", "9th"],
+          ["11", "eleven", "eleventh", "11th"],
+          ["12", "twelve", "twelfth", "12th"],
+          ["13", "thirteen", "thirteenth", "13th"],
+          ["20", "twenty", "twentieth", "20th"],
+          ["21", "twenty-one", "twenty-first", "21st"],
+          ["30", "thirty", "thirtieth", "30th"],
+          ["100", "one hundred", "hundredth", "100th"],
+          ["1000", "one thousand", "thousandth", "1000th"]
+        ],
+        "speak": [1, 2]
       }
     },
     {

@@ -33,7 +33,8 @@
           ["50", "pięćdziesiąt", "pięćdziesiąty"],
           ["100", "sto", "setny"],
           ["1000", "tysiąc", "tysięczny"]
-        ]
+        ],
+        "speak": [1, 2]
       }
     },
     {

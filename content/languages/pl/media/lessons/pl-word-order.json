@@ -1,0 +1,212 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-word-order",
+  "objective": "Use word order to put the focus where you want it.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "agata",
+      "name": "Agata",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-b",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Who bought the book? Listen to where the focus falls.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "agata",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "Anna kupiła książkę.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Neutral order: who, then what."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Książkę kupiła Anna.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The same words. Now the new information comes last."
+          }
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "To Anna kupiła tę książkę, nie Piotr.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Word order",
+      "phrase": "Ten film bardzo mi się podoba.",
+      "panels": [
+        {
+          "caption": "Neutral",
+          "text": "Anna kupiła książkę."
+        },
+        {
+          "caption": "Focus",
+          "text": "Książkę kupiła Anna."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Ten film bardzo mi się podoba.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Endings show who does what, so word order is free."
+        },
+        {
+          "say": "New information goes last, and short pronouns never start a sentence.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Answer the question: who bought the book?",
+      "answer": "Książkę kupiła Anna.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "agata"
+        }
+      ],
+      "prompt": "Him I did not see, but her I did. Say it as a woman.",
+      "answer": "Jego nie widziałam, ale ją tak.",
+      "answerBy": "agata"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

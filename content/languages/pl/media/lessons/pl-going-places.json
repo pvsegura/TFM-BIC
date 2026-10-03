@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-going-places",
+  "objective": "Choose the right verb of motion: on foot or by vehicle, once or regularly.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "zosia",
+      "name": "Zosia",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "michal",
+      "name": "Michał",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two neighbours meet in the street in the morning.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "zosia",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "zosia",
+            "target": "Jak jeździsz do pracy?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "zosia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Zwykle jeżdżę tramwajem, ale dzisiaj idę pieszo.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Usually by tram, a vehicle. Today on foot: a different verb."
+          }
+        },
+        {
+          "line": {
+            "by": "zosia",
+            "target": "Daleko?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "zosia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Nie, dwadzieścia minut.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "On foot or by vehicle?",
+      "phrase": "Jadę do Gdańska pociągiem.",
+      "panels": [
+        {
+          "caption": "On foot, now",
+          "text": "Idę do szkoły."
+        },
+        {
+          "caption": "By vehicle, now",
+          "text": "Jadę do Gdańska pociągiem."
+        },
+        {
+          "caption": "Regularly",
+          "text": "Często jeżdżę rowerem."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Jadę do Gdańska pociągiem.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "One pair of verbs is for walking, the other for vehicles."
+        },
+        {
+          "say": "And each has a separate verb for habits.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "zosia"
+        }
+      ],
+      "prompt": "Zosia asks how he gets to work. What does she say?",
+      "answer": "Jak jeździsz do pracy?",
+      "answerBy": "zosia"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "michal"
+        }
+      ],
+      "prompt": "You are walking to school now. Say it.",
+      "answer": "Idę do szkoły.",
+      "answerBy": "michal"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

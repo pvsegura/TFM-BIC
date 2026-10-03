@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-reported-speech",
+  "objective": "Report what someone said, asked or requested.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-d",
+      "voice": "ola"
+    },
+    {
+      "id": "szef",
+      "name": "The boss",
+      "look": "man-b",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "szef",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Ola reports a phone call to her boss.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "szef",
+            "target": "Co powiedział klient?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "szef"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Powiedział, że jest zadowolony, ale zapytał, czy możemy obniżyć cenę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "szef",
+            "target": "Poproś go, żeby przysłał e-mail.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "szef"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Reported speech",
+      "phrase": "Powiedział, że przyjdzie później.",
+      "panels": [
+        {
+          "caption": "A statement",
+          "text": "Powiedział, że przyjdzie później."
+        },
+        {
+          "caption": "A question",
+          "text": "Zapytała, czy mam czas."
+        },
+        {
+          "caption": "A request",
+          "text": "Poprosiła, żebym zadzwonił jutro."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Powiedział, że przyjdzie później.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Polish keeps the tense of the original words."
+        },
+        {
+          "say": "Questions and requests each have their own small linking word.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "szef",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "She asked whether you had time. Report it.",
+      "answer": "Zapytała, czy mam czas.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "szef",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "szef"
+        }
+      ],
+      "prompt": "The boss asks what the client said.",
+      "answer": "Co powiedział klient?",
+      "answerBy": "szef"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

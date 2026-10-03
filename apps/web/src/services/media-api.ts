@@ -21,6 +21,11 @@ export async function fetchVocabularyMedia(vocabularyId: string): Promise<Conten
   );
 }
 
+/** Recorded pronunciations of a grammar reference topic's forms (M23). */
+export async function fetchGrammarMedia(topicId: string): Promise<ContentMediaResponse> {
+  return contentMediaResponseSchema.parse(await requestJson(`/media/grammar/${enc(topicId)}`));
+}
+
 /** Which content has media — for badges and the video library. */
 export async function fetchMediaIndex(): Promise<MediaIndexResponse> {
   return mediaIndexResponseSchema.parse(await requestJson("/media"));

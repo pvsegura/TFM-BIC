@@ -8,7 +8,7 @@ import type { LanguageId } from "../language/language-id.js";
  */
 
 /** The kinds of content that can own media. A discriminator, not a lookup: ids stay per-kind. */
-export const MEDIA_CONTENT_TYPES = ["lesson", "vocabulary-item"] as const;
+export const MEDIA_CONTENT_TYPES = ["lesson", "vocabulary-item", "grammar-topic"] as const;
 export type MediaContentType = (typeof MEDIA_CONTENT_TYPES)[number];
 
 export function isMediaContentType(value: string): value is MediaContentType {

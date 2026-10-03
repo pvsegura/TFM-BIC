@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-likes-and-wants",
+  "objective": "Say what you like, want, have, eat and drink, with the right ending.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ania",
+      "name": "Ania",
+      "look": "woman-b",
+      "voice": "ola"
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-b",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Breakfast in a café. What do they like to drink?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ania",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Co lubisz pić rano?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Lubię kawę z mlekiem. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Coffee changes its ending after the verb to like."
+          }
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Ja wolę herbatę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "What I like",
+      "phrase": "Lubię kawę.",
+      "panels": [
+        {
+          "caption": "Feminine: -a becomes -ę",
+          "text": "Piję herbatę."
+        },
+        {
+          "caption": "People and animals: -a",
+          "text": "Mam brata."
+        },
+        {
+          "caption": "Things: no change",
+          "text": "Chcę sok."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Lubię kawę.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "After like, want, have, eat and drink, the object changes."
+        },
+        {
+          "say": "Feminine words in a take a new ending; men and animals add a.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Bartek likes coffee. What does he say?",
+      "answer": "Lubię kawę.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ania"
+        }
+      ],
+      "prompt": "Ania is drinking tea. What does she say?",
+      "answer": "Piję herbatę.",
+      "answerBy": "ania"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Bartek has a dog. What does he say?",
+      "answer": "Mam psa.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

@@ -2,51 +2,112 @@
   "schemaVersion": 2,
   "languageId": "en",
   "lessons": [
-    { "contentId": "en-greetings", "priority": 1 },
-    { "contentId": "en-introducing-yourself", "priority": 1 },
-    { "contentId": "en-polite-words", "priority": 1 },
-    { "contentId": "en-articles", "priority": 1 },
-    { "contentId": "en-first-sounds", "priority": 1 }
+    {
+      "contentId": "en-greetings",
+      "priority": 1
+    },
+    {
+      "contentId": "en-introducing-yourself",
+      "priority": 1
+    },
+    {
+      "contentId": "en-polite-words",
+      "priority": 1
+    },
+    {
+      "contentId": "en-articles",
+      "priority": 1
+    },
+    {
+      "contentId": "en-first-sounds",
+      "priority": 1
+    }
   ],
   "vocabularyCategories": [
     {
       "categoryId": "greetings",
       "priority": 1,
       "narrator": "emma",
-      "cast": [{ "id": "emma", "name": "Emma", "look": "woman-c", "voice": "emma" }]
+      "cast": [
+        {
+          "id": "emma",
+          "name": "Emma",
+          "look": "woman-c",
+          "voice": "emma"
+        }
+      ]
     },
     {
       "categoryId": "everyday",
       "priority": 1,
       "narrator": "tom",
-      "cast": [{ "id": "tom", "name": "Tom", "look": "man-b", "voice": "tom" }]
+      "cast": [
+        {
+          "id": "tom",
+          "name": "Tom",
+          "look": "man-b",
+          "voice": "tom"
+        }
+      ]
     },
     {
       "categoryId": "family",
       "priority": 1,
       "narrator": "emma",
-      "cast": [{ "id": "emma", "name": "Emma", "look": "woman-d", "voice": "emma" }]
+      "cast": [
+        {
+          "id": "emma",
+          "name": "Emma",
+          "look": "woman-d",
+          "voice": "emma"
+        }
+      ]
     },
     {
       "categoryId": "food",
       "priority": 1,
       "narrator": "tom",
-      "cast": [{ "id": "tom", "name": "Tom", "look": "man-a", "voice": "tom" }]
+      "cast": [
+        {
+          "id": "tom",
+          "name": "Tom",
+          "look": "man-a",
+          "voice": "tom"
+        }
+      ]
     },
     {
       "categoryId": "numbers",
       "priority": 1,
       "narrator": "emma",
-      "cast": [{ "id": "emma", "name": "Emma", "look": "woman-a", "voice": "emma" }]
+      "cast": [
+        {
+          "id": "emma",
+          "name": "Emma",
+          "look": "woman-a",
+          "voice": "emma"
+        }
+      ]
     },
     {
       "categoryId": "travel",
       "priority": 1,
       "narrator": "tom",
-      "cast": [{ "id": "tom", "name": "Tom", "look": "man-c", "voice": "tom" }]
+      "cast": [
+        {
+          "id": "tom",
+          "name": "Tom",
+          "look": "man-c",
+          "voice": "tom"
+        }
+      ]
     }
   ],
   "vocabulary": {},
+  "grammar": {
+    "voice": "emma",
+    "priority": 1
+  },
   "framing": {
     "selfCheck": "¿Lo has dicho? Dilo otra vez, en voz alta.",
     "yourTurn": "Tu turno",

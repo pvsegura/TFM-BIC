@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-numerals-in-full",
+  "objective": "Use collective numerals, numbers with groups of men, and numbers in every case.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "kasia",
+      "name": "Kasia",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two old friends meet again and talk about their lives.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "kasia",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Mam dwoje dzieci.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Children take a collective number."
+          }
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Urodziłam się w tysiąc dziewięćset dziewięćdziesiątym roku.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Spotkałem się z pięcioma kolegami.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Przyszło pięciu studentów.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "From five upward with men: the genitive plural and a neuter verb."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Numerals",
+      "phrase": "Dwaj bracia mieszkają w Gdańsku.",
+      "panels": [
+        {
+          "caption": "Collective",
+          "text": "Mam dwoje dzieci."
+        },
+        {
+          "caption": "Five and more",
+          "text": "Przyszło pięciu studentów."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Dwaj bracia mieszkają w Gdańsku.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Polish numerals change with gender, with groups of men, and with case."
+        },
+        {
+          "say": "Learn the frequent patterns as whole phrases.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kasia"
+        }
+      ],
+      "prompt": "Say you have two children.",
+      "answer": "Mam dwoje dzieci.",
+      "answerBy": "kasia"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "Five students came. Say it.",
+      "answer": "Przyszło pięciu studentów.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

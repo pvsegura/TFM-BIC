@@ -1,6 +1,11 @@
 import { skipToken, useQuery } from "@tanstack/react-query";
 
-import { fetchLessonMedia, fetchMediaIndex, fetchVocabularyMedia } from "../services/media-api.js";
+import {
+  fetchGrammarMedia,
+  fetchLessonMedia,
+  fetchMediaIndex,
+  fetchVocabularyMedia,
+} from "../services/media-api.js";
 
 export const MEDIA_QUERY_KEY_ROOT = "media";
 
@@ -25,6 +30,17 @@ export function useVocabularyMedia(vocabularyId: string | undefined) {
     queryFn: vocabularyId === undefined ? skipToken : () => fetchVocabularyMedia(vocabularyId),
     staleTime: STALE_MS,
     retry: 1,
+  });
+}
+
+/** A grammar topic's recorded forms, as a text → clip URL lookup. */
+export function useGrammarMedia(topicId: string | undefined) {
+  return useQuery({
+    queryKey: [MEDIA_QUERY_KEY_ROOT, "grammar", topicId],
+    queryFn: topicId === undefined ? skipToken : () => fetchGrammarMedia(topicId),
+    staleTime: STALE_MS,
+    retry: false,
+    select: (data) => new Map(data.audio.map((clip) => [clip.text, clip.url])),
   });
 }
 

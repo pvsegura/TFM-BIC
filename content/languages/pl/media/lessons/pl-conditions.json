@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-conditions",
+  "objective": "Talk about real possibilities and imagined situations.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "marta",
+      "name": "Marta",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "igor",
+      "name": "Igor",
+      "look": "man-c",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two friends imagine winning the lottery.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "marta",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Co byś zrobił, gdybyś wygrał milion?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "igor",
+            "target": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "igor"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "A ja podróżowałabym po świecie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Real or imagined?",
+      "phrase": "Gdybym miał więcej czasu, pojechałbym w góry.",
+      "panels": [
+        {
+          "caption": "Real",
+          "text": "Jeśli jutro będzie padać, zostaniemy w domu."
+        },
+        {
+          "caption": "Imagined",
+          "text": "Gdybym miał więcej czasu, pojechałbym w góry."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Gdybym miał więcej czasu, pojechałbym w góry.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "For a real possibility, use if with the normal tenses."
+        },
+        {
+          "say": "For an imagined one, a different word and the conditional.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "igor"
+        }
+      ],
+      "prompt": "Igor would buy a house by a lake. What does he say?",
+      "answer": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+      "answerBy": "igor"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "If it rains tomorrow, we will stay at home.",
+      "answer": "Jeśli jutro będzie padać, zostaniemy w domu.",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

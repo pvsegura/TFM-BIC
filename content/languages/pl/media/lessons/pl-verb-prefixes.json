@@ -1,0 +1,220 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-verb-prefixes",
+  "objective": "See how prefixes turn going into entering, leaving, arriving and crossing.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "One verb of going, many prefixes.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Wejdź, proszę.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Going in."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Przyjdę o szóstej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Coming, arriving."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Wyszedł z domu o ósmej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Going out."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Wyjeżdżamy na urlop w sobotę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Leaving, by vehicle."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Prefixes",
+      "phrase": "Proszę przejść przez ulicę na światłach.",
+      "panels": [
+        {
+          "caption": "In",
+          "text": "Wejdź, proszę."
+        },
+        {
+          "caption": "Out",
+          "text": "Wyszedł z domu o ósmej."
+        },
+        {
+          "caption": "Arriving",
+          "text": "Przyjdę o szóstej."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Proszę przejść przez ulicę na światłach.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A prefix adds a direction to the verb."
+        },
+        {
+          "say": "Learn the prefixes once, and you can guess new verbs.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Invite someone to come in.",
+      "answer": "Wejdź, proszę.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Say you will come at six.",
+      "answer": "Przyjdę o szóstej.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Keep going",
+      "body": "Read the examples below the video at your own pace.",
+      "say": "Read the examples below the video at your own pace."
+    }
+  ]
+}

@@ -3,15 +3,46 @@ import type { ReactNode } from "react";
 import { useParams } from "react-router";
 
 import { Link } from "../components/app-link.js";
+import { WordAudioButton } from "../components/word-audio-button.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { useGrammarTopic } from "../hooks/use-grammar.js";
+import { useGrammarMedia } from "../hooks/use-media.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const enc = encodeURIComponent;
 
 type Section = GrammarTopicResponse["sections"][number];
 
-function Table({ table }: { table: NonNullable<Section["table"]> }) {
+/** A table cell: the text, plus a play button when the column is spoken and a clip exists. */
+function Cell({
+  text,
+  clips,
+  lang,
+}: {
+  text: string;
+  clips?: Map<string, string> | undefined;
+  lang?: string | undefined;
+}) {
+  const url = lang ? clips?.get(text.trim()) : undefined;
+  if (!url || !lang) return <>{text}</>;
+  return (
+    <span className="inline-flex items-center gap-2">
+      <span lang={lang}>{text}</span>
+      <WordAudioButton url={url} word={text} lang={lang} />
+    </span>
+  );
+}
+
+function Table({
+  table,
+  clips,
+  lang,
+}: {
+  table: NonNullable<Section["table"]>;
+  clips?: Map<string, string> | undefined;
+  lang: string;
+}) {
+  const spoken = (column: number) => table.speak?.includes(column) ?? false;
   return (
     <div className="mt-3 overflow-x-auto rounded-lg border border-primary/15 dark:border-surface/15">
       <table className="w-full border-collapse text-left text-sm">
@@ -35,11 +66,11 @@ function Table({ table }: { table: NonNullable<Section["table"]> }) {
               {row.map((cell, c) =>
                 c === 0 ? (
                   <th key={c} scope="row" className="px-3 py-2 font-medium">
-                    {cell}
+                    <Cell text={cell} clips={clips} lang={spoken(c) ? lang : undefined} />
                   </th>
                 ) : (
                   <td key={c} className="px-3 py-2">
-                    {cell}
+                    <Cell text={cell} clips={clips} lang={spoken(c) ? lang : undefined} />
                   </td>
                 ),
               )}
@@ -52,6 +83,7 @@ function Table({ table }: { table: NonNullable<Section["table"]> }) {
 }
 
 function TopicBody({ topic }: { topic: GrammarTopicResponse }) {
+  const clips = useGrammarMedia(topic.id).data;
   return (
     <>
       <p className="text-sm font-medium uppercase tracking-wide text-accent-ink dark:text-accent">
@@ -63,7 +95,9 @@ function TopicBody({ topic }: { topic: GrammarTopicResponse }) {
         <section key={i} className="mt-8">
           {section.heading ? <h2 className="text-xl font-semibold">{section.heading}</h2> : null}
           {section.text ? <p className="mt-2 max-w-3xl leading-relaxed">{section.text}</p> : null}
-          {section.table ? <Table table={section.table} /> : null}
+          {section.table ? (
+            <Table table={section.table} clips={clips} lang={topic.languageId} />
+          ) : null}
           {section.examples ? (
             <ul className="mt-3 grid gap-2">
               {section.examples.map((example, j) => (

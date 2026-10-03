@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-idioms",
+  "objective": "Understand and use common everyday idioms.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ania",
+      "name": "Ania",
+      "look": "woman-b",
+      "voice": "ola"
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two colleagues chat over coffee before Bartek's presentation.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ania",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Szef ma dziś muchy w nosie.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Literally, flies in his nose: he is in a bad mood."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Nie mój cyrk, nie moje małpy.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Not my circus, not my monkeys: not my problem."
+          }
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Trzymam za ciebie kciuki.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Holding thumbs: fingers crossed."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "To bułka z masłem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A bread roll with butter: a piece of cake."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Idioms",
+      "phrase": "Mówić do niego to jak rzucać grochem o ścianę.",
+      "panels": [
+        {
+          "caption": "Very easy",
+          "text": "To bułka z masłem."
+        },
+        {
+          "caption": "Get to the point",
+          "text": "Nie owijaj w bawełnę."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Mówić do niego to jak rzucać grochem o ścianę.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Idioms cannot be translated word by word."
+        },
+        {
+          "say": "Use them in informal speech, not in formal writing.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ania"
+        }
+      ],
+      "prompt": "Wish your friend luck.",
+      "answer": "Trzymam za ciebie kciuki.",
+      "answerBy": "ania"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ania",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Say that something is very easy.",
+      "answer": "To bułka z masłem.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

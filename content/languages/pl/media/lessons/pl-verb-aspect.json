@@ -1,0 +1,231 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-verb-aspect",
+  "objective": "Choose between the imperfective verb for a process and the perfective one for a result.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "mama",
+      "name": "Mama",
+      "look": "woman-d",
+      "voice": "ola"
+    },
+    {
+      "id": "kuba",
+      "name": "Kuba",
+      "look": "boy-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "evening",
+        "actors": [
+          {
+            "id": "mama",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Evening at home. A mother asks her son about his homework.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "mama",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "mama",
+            "target": "Odrobiłeś lekcje?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "mama"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kuba",
+            "target": "Jeszcze nie. Odrabiam je teraz.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kuba"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Right now, a process: the imperfective verb."
+          }
+        },
+        {
+          "line": {
+            "by": "mama",
+            "target": "Kiedy skończysz?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "mama"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kuba",
+            "target": "Skończę za pół godziny.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kuba"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "One finished action in the future: the perfective verb."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Process or result?",
+      "phrase": "Wczoraj przeczytałem całą książkę.",
+      "panels": [
+        {
+          "caption": "A habit",
+          "text": "Codziennie czytam gazetę."
+        },
+        {
+          "caption": "A result",
+          "text": "Wczoraj przeczytałem całą książkę."
+        },
+        {
+          "caption": "The future",
+          "text": "Jutro zrobię zakupy."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Wczoraj przeczytałem całą książkę.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Most verbs come in pairs."
+        },
+        {
+          "say": "One describes a process or a habit, the other one finished action with a result.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "mama",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kuba"
+        }
+      ],
+      "prompt": "Kuba is doing his homework right now. What does he say?",
+      "answer": "Jeszcze nie. Odrabiam je teraz.",
+      "answerBy": "kuba"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "mama",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kuba"
+        }
+      ],
+      "prompt": "He will finish in half an hour. What does he say?",
+      "answer": "Skończę za pół godziny.",
+      "answerBy": "kuba"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

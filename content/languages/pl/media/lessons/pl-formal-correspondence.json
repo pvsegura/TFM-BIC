@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-formal-correspondence",
+  "objective": "Open, frame and close a formal email with the standard formulas.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "marta",
+      "name": "Marta",
+      "look": "woman-b",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "situation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Marta writes a formal email to a company.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "marta",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Szanowni Państwo,",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The standard opening for an institution."
+          }
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "W nawiązaniu do naszej rozmowy telefonicznej przesyłam umowę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Zwracam się z uprzejmą prośbą o przesłanie faktury.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Z poważaniem",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "And the standard closing."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Formal formulas",
+      "phrase": "Będę wdzięczna za szybką odpowiedź.",
+      "panels": [
+        {
+          "caption": "Opening",
+          "text": "Szanowni Państwo,"
+        },
+        {
+          "caption": "Closing",
+          "text": "Z poważaniem"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Będę wdzięczna za szybką odpowiedź.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Formal letters use fixed formulas."
+        },
+        {
+          "say": "Learn the opening, the purpose and the closing as whole phrases.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "Open a formal email to a company.",
+      "answer": "Szanowni Państwo,",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "Close it formally.",
+      "answer": "Z poważaniem",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}
