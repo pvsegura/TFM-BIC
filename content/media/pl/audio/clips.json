@@ -143,6 +143,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:25.286Z"
   },
+  "150345c744411c53": {
+    "path": "pl/audio/marek/150345c744411c53.m4a",
+    "durationSeconds": 1.2,
+    "text": "córka",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:09.795Z"
+  },
   "1534f638662a11e7": {
     "path": "pl/audio/anna/1534f638662a11e7.m4a",
     "durationSeconds": 2.28,
@@ -206,6 +215,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:38.311Z"
   },
+  "1b2f560bfe1a916f": {
+    "path": "pl/audio/ola/1b2f560bfe1a916f.m4a",
+    "durationSeconds": 1.32,
+    "text": "Dobranoc.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-03T08:52:53.087Z"
+  },
+  "1b49f94492da857f": {
+    "path": "pl/audio/anna/1b49f94492da857f.m4a",
+    "durationSeconds": 3.84,
+    "text": "With friends and family, the greeting is informal.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:51:44.677Z"
+  },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
     "durationSeconds": 1.12,
@@ -223,6 +250,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:46:36.120Z"
+  },
+  "208e5df095b7dc5d": {
+    "path": "pl/audio/marek/208e5df095b7dc5d.m4a",
+    "durationSeconds": 2.4,
+    "text": "Now say both, out loud.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:31.184Z"
   },
   "224ec5322cb0a8f6": {
     "path": "pl/audio/marek/224ec5322cb0a8f6.m4a",
@@ -251,6 +287,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:36.532Z"
   },
+  "23fd20a625b0f6a4": {
+    "path": "pl/audio/ola/23fd20a625b0f6a4.m4a",
+    "durationSeconds": 1.04,
+    "text": "szkoła",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-03T09:00:51.806Z"
+  },
   "24a65c0fdb7f7ce7": {
     "path": "pl/audio/piotr/24a65c0fdb7f7ce7.m4a",
     "durationSeconds": 1.08,
@@ -278,6 +323,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:04.012Z"
   },
+  "26921189e9502ec4": {
+    "path": "pl/audio/marek/26921189e9502ec4.m4a",
+    "durationSeconds": 7.04,
+    "text": "Time. The pair cz sounds like ch in church.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:45.611Z"
+  },
+  "28d0d9cddea35bea": {
+    "path": "pl/audio/anna/28d0d9cddea35bea.m4a",
+    "durationSeconds": 2.56,
+    "text": "Polite, in the evening.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:34.450Z"
+  },
   "29840eac5919968a": {
     "path": "pl/audio/ola/29840eac5919968a.m4a",
     "durationSeconds": 1,
@@ -304,6 +367,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:49.078Z"
+  },
+  "2b13345cdd9524fe": {
+    "path": "pl/audio/tomek/2b13345cdd9524fe.m4a",
+    "durationSeconds": 1.08,
+    "text": "Do widzenia.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-03T08:51:11.416Z"
   },
   "2c68f280649bdbeb": {
     "path": "pl/audio/piotr/2c68f280649bdbeb.m4a",
@@ -359,6 +431,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:17.126Z"
   },
+  "33c72034ba324c1b": {
+    "path": "pl/audio/marek/33c72034ba324c1b.m4a",
+    "durationSeconds": 1,
+    "text": "czas",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:49.989Z"
+  },
   "346d85d7e3b314eb": {
     "path": "pl/audio/anna/346d85d7e3b314eb.m4a",
     "durationSeconds": 1.04,
@@ -385,6 +466,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:46.808Z"
+  },
+  "382dadde0cd17760": {
+    "path": "pl/audio/marek/382dadde0cd17760.m4a",
+    "durationSeconds": 7.92,
+    "text": "These comparisons are only approximate. Listen to native speakers to fine-tune the sounds.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:38.130Z"
+  },
+  "386eb49b6e5e3817": {
+    "path": "pl/audio/ola/386eb49b6e5e3817.m4a",
+    "durationSeconds": 1.04,
+    "text": "Cześć!",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-03T08:51:35.184Z"
   },
   "39528b92f0e93b50": {
     "path": "pl/audio/ola/39528b92f0e93b50.m4a",
@@ -746,6 +845,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:12.422Z"
   },
+  "6bf9f0e9e265eebd": {
+    "path": "pl/audio/anna/6bf9f0e9e265eebd.m4a",
+    "durationSeconds": 4.52,
+    "text": "Now practise the greetings with the exercises below the video.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:54:10.059Z"
+  },
   "6cc560223ef7c25c": {
     "path": "pl/audio/marek/6cc560223ef7c25c.m4a",
     "durationSeconds": 2.48,
@@ -782,6 +890,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:03.342Z"
   },
+  "715b33991fb3040b": {
+    "path": "pl/audio/marek/715b33991fb3040b.m4a",
+    "durationSeconds": 2.92,
+    "text": "Ewa and her daughter Zosia.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:57.378Z"
+  },
   "73d169f74e7feb7d": {
     "path": "pl/audio/anna/73d169f74e7feb7d.m4a",
     "durationSeconds": 1.96,
@@ -790,6 +907,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:29.943Z"
+  },
+  "73e0f6d5fef9bf60": {
+    "path": "pl/audio/marek/73e0f6d5fef9bf60.m4a",
+    "durationSeconds": 4.52,
+    "text": "For sz, the tongue tip curls further back.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:11.821Z"
   },
   "746559323a660f68": {
     "path": "pl/audio/anna/746559323a660f68.m4a",
@@ -800,6 +926,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:48:45.420Z"
   },
+  "746a743800cd264e": {
+    "path": "pl/audio/anna/746a743800cd264e.m4a",
+    "durationSeconds": 3.76,
+    "text": "Evening. The shopkeeper is closing up.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:52:05.525Z"
+  },
   "759e70b45e97168b": {
     "path": "pl/audio/ola/759e70b45e97168b.m4a",
     "durationSeconds": 0.88,
@@ -808,6 +943,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:48:30.893Z"
+  },
+  "774486bcedf0a1a2": {
+    "path": "pl/audio/piotr/774486bcedf0a1a2.m4a",
+    "durationSeconds": 1.24,
+    "text": "Dobry wieczór.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-03T08:52:19.939Z"
   },
   "796a76bbcefe9f0b": {
     "path": "pl/audio/marek/796a76bbcefe9f0b.m4a",
@@ -826,6 +970,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:18.373Z"
+  },
+  "7c99333ba741b4b2": {
+    "path": "pl/audio/anna/7c99333ba741b4b2.m4a",
+    "durationSeconds": 3.96,
+    "text": "The choice depends on how formal the situation is.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:12.413Z"
   },
   "7e87471c8b11a818": {
     "path": "pl/audio/anna/7e87471c8b11a818.m4a",
@@ -863,6 +1016,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:04.526Z"
   },
+  "8126fe58b6be1a6e": {
+    "path": "pl/audio/tomek/8126fe58b6be1a6e.m4a",
+    "durationSeconds": 1.28,
+    "text": "Dobry wieczór.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-03T08:52:21.954Z"
+  },
   "8356c04c71d8875a": {
     "path": "pl/audio/anna/8356c04c71d8875a.m4a",
     "durationSeconds": 3,
@@ -898,6 +1060,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:10.303Z"
+  },
+  "88933cba2d12f693": {
+    "path": "pl/audio/anna/88933cba2d12f693.m4a",
+    "durationSeconds": 3.96,
+    "text": "His friend Ola waves. What does Piotr say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:50.068Z"
   },
   "8912c50dd2af3852": {
     "path": "pl/audio/marek/8912c50dd2af3852.m4a",
@@ -944,6 +1115,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:29.356Z"
   },
+  "8caed3ad167d443d": {
+    "path": "pl/audio/anna/8caed3ad167d443d.m4a",
+    "durationSeconds": 4.88,
+    "text": "It is evening. He greets the shopkeeper. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:57.196Z"
+  },
   "8cbfcfa5a27dce9e": {
     "path": "pl/audio/marek/8cbfcfa5a27dce9e.m4a",
     "durationSeconds": 2.92,
@@ -989,6 +1169,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:48:13.358Z"
   },
+  "9043a67f9d92b878": {
+    "path": "pl/audio/anna/9043a67f9d92b878.m4a",
+    "durationSeconds": 5.08,
+    "text": "This greeting is polite. It works with people you do not know well.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:51:01.194Z"
+  },
+  "9083d036a9d36a26": {
+    "path": "pl/audio/ola/9083d036a9d36a26.m4a",
+    "durationSeconds": 0.88,
+    "text": "czas",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-03T09:01:37.170Z"
+  },
   "912b5c515c092859": {
     "path": "pl/audio/anna/912b5c515c092859.m4a",
     "durationSeconds": 2.24,
@@ -1016,6 +1214,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:09.028Z"
   },
+  "949e4400db239b28": {
+    "path": "pl/audio/marek/949e4400db239b28.m4a",
+    "durationSeconds": 8.08,
+    "text": "The pair sz sounds like English sh, and ł sounds like English w.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:06.732Z"
+  },
   "95b0a98456efb826": {
     "path": "pl/audio/marek/95b0a98456efb826.m4a",
     "durationSeconds": 1.52,
@@ -1034,6 +1241,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:40.380Z"
   },
+  "985e005dda0251d6": {
+    "path": "pl/audio/marek/985e005dda0251d6.m4a",
+    "durationSeconds": 6.88,
+    "text": "For ś, the sound is softer: the tongue body rises toward the hard palate.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:26.194Z"
+  },
   "98a3d66987069b84": {
     "path": "pl/audio/anna/98a3d66987069b84.m4a",
     "durationSeconds": 3.28,
@@ -1042,6 +1258,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:52.137Z"
+  },
+  "99620e24292142b6": {
+    "path": "pl/audio/anna/99620e24292142b6.m4a",
+    "durationSeconds": 4.08,
+    "text": "The same informal word says hello and goodbye.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:51:57.845Z"
   },
   "9d6fa85995c040d5": {
     "path": "pl/audio/anna/9d6fa85995c040d5.m4a",
@@ -1070,6 +1295,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:01:08.161Z"
   },
+  "a0e8d6850a84a3ec": {
+    "path": "pl/audio/anna/a0e8d6850a84a3ec.m4a",
+    "durationSeconds": 2.6,
+    "text": "Polite, during the day.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:23.596Z"
+  },
   "a0fb3addd21c61f2": {
     "path": "pl/audio/marek/a0fb3addd21c61f2.m4a",
     "durationSeconds": 2.88,
@@ -1079,6 +1313,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:49.783Z"
   },
+  "a26c765e3ea76a14": {
+    "path": "pl/audio/anna/a26c765e3ea76a14.m4a",
+    "durationSeconds": 2.6,
+    "text": "Goodbye. Polite, too.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:51:18.450Z"
+  },
   "a2b8542a826f4299": {
     "path": "pl/audio/anna/a2b8542a826f4299.m4a",
     "durationSeconds": 6.84,
@@ -1087,6 +1330,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:36.860Z"
+  },
+  "a40f7cb13177eaba": {
+    "path": "pl/audio/piotr/a40f7cb13177eaba.m4a",
+    "durationSeconds": 1.16,
+    "text": "Do widzenia.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-03T08:51:04.588Z"
   },
   "a4bc04e9a8c47339": {
     "path": "pl/audio/anna/a4bc04e9a8c47339.m4a",
@@ -1250,6 +1502,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:48:24.667Z"
   },
+  "b6b9e5e62d6bf316": {
+    "path": "pl/audio/anna/b6b9e5e62d6bf316.m4a",
+    "durationSeconds": 4.72,
+    "text": "Morning. Piotr walks into a shop. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:44.343Z"
+  },
+  "b8ce08b2fec9d924": {
+    "path": "pl/audio/ola/b8ce08b2fec9d924.m4a",
+    "durationSeconds": 1.2,
+    "text": "Na razie!",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-03T08:51:51.442Z"
+  },
+  "b8e0ba12a6ddc643": {
+    "path": "pl/audio/marek/b8e0ba12a6ddc643.m4a",
+    "durationSeconds": 1.44,
+    "text": "środa",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:01:17.744Z"
+  },
   "b8e380bf5944f63e": {
     "path": "pl/audio/ola/b8e380bf5944f63e.m4a",
     "durationSeconds": 1.56,
@@ -1267,6 +1546,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:46.699Z"
+  },
+  "ba8e599e92e03936": {
+    "path": "pl/audio/marek/ba8e599e92e03936.m4a",
+    "durationSeconds": 4.56,
+    "text": "Zosia is Ewa's daughter. Which word is it?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:24.000Z"
   },
   "bad8401577993e09": {
     "path": "pl/audio/anna/bad8401577993e09.m4a",
@@ -1330,6 +1618,33 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:40:58.502Z"
+  },
+  "c7c42df65055a0e5": {
+    "path": "pl/audio/anna/c7c42df65055a0e5.m4a",
+    "durationSeconds": 4.24,
+    "text": "Late at night, at home. Time to sleep.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:52:45.670Z"
+  },
+  "c8beb00297e8be99": {
+    "path": "pl/audio/marek/c8beb00297e8be99.m4a",
+    "durationSeconds": 1.36,
+    "text": "szkoła",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:00:58.266Z"
+  },
+  "cd4d5ce8661e0508": {
+    "path": "pl/audio/anna/cd4d5ce8661e0508.m4a",
+    "durationSeconds": 3.24,
+    "text": "He leaves the shop. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:54:02.748Z"
   },
   "ce54a6fceeb01525": {
     "path": "pl/audio/anna/ce54a6fceeb01525.m4a",
@@ -1421,6 +1736,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:02:10.569Z"
   },
+  "d86af0aba1a0a2b6": {
+    "path": "pl/audio/anna/d86af0aba1a0a2b6.m4a",
+    "durationSeconds": 4.2,
+    "text": "In the park, Piotr meets his friend Ola.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:51:25.446Z"
+  },
   "d908ac9b2e5dd8b9": {
     "path": "pl/audio/ola/d908ac9b2e5dd8b9.m4a",
     "durationSeconds": 1.04,
@@ -1429,6 +1753,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:00.965Z"
+  },
+  "d9da1823dff4f4ac": {
+    "path": "pl/audio/piotr/d9da1823dff4f4ac.m4a",
+    "durationSeconds": 1.2,
+    "text": "Dobranoc.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-03T08:52:57.221Z"
   },
   "da7ad330305e1fe1": {
     "path": "pl/audio/anna/da7ad330305e1fe1.m4a",
@@ -1465,6 +1798,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:22.064Z"
+  },
+  "dc6025489d0b010a": {
+    "path": "pl/audio/marek/dc6025489d0b010a.m4a",
+    "durationSeconds": 4.88,
+    "text": "Ola walks to a school. Listen to the word on the sign.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:00:46.291Z"
+  },
+  "de668c2e1ff5cf1e": {
+    "path": "pl/audio/marek/de668c2e1ff5cf1e.m4a",
+    "durationSeconds": 2.64,
+    "text": "Which word means time?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:30.991Z"
   },
   "e3b9862b9b3dae9b": {
     "path": "pl/audio/marek/e3b9862b9b3dae9b.m4a",
@@ -1511,6 +1862,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:00.653Z"
   },
+  "e72e7f25d1fce15e": {
+    "path": "pl/audio/piotr/e72e7f25d1fce15e.m4a",
+    "durationSeconds": 1,
+    "text": "Cześć!",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-03T08:51:38.058Z"
+  },
+  "e744ebe2ab76f0d3": {
+    "path": "pl/audio/anna/e744ebe2ab76f0d3.m4a",
+    "durationSeconds": 2.92,
+    "text": "Informal, with friends and family.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:37.515Z"
+  },
+  "e8b9dbb9d041ddb0": {
+    "path": "pl/audio/anna/e8b9dbb9d041ddb0.m4a",
+    "durationSeconds": 3.6,
+    "text": "In the evening, the polite greeting changes.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:52:41.195Z"
+  },
   "ea6e8df04994880a": {
     "path": "pl/audio/marek/ea6e8df04994880a.m4a",
     "durationSeconds": 0.92,
@@ -1528,6 +1906,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:13.575Z"
+  },
+  "eb71cc620c7032b2": {
+    "path": "pl/audio/marek/eb71cc620c7032b2.m4a",
+    "durationSeconds": 2.4,
+    "text": "What is this building in Polish?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:17.269Z"
+  },
+  "eb80a9c9d5424052": {
+    "path": "pl/audio/marek/eb80a9c9d5424052.m4a",
+    "durationSeconds": 9.08,
+    "text": "Daughter. The letter c sounds like ts in cats, and ó sounds the same as u.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-03T09:02:05.757Z"
   },
   "ecd0c4d19c5db1f6": {
     "path": "pl/audio/marek/ecd0c4d19c5db1f6.m4a",
@@ -1582,6 +1978,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:02.652Z"
+  },
+  "f18703188753f509": {
+    "path": "pl/audio/anna/f18703188753f509.m4a",
+    "durationSeconds": 4.76,
+    "text": "Good night is for going to sleep, not for every goodbye.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T08:53:05.613Z"
   },
   "f1cce5ee15843a15": {
     "path": "pl/audio/piotr/f1cce5ee15843a15.m4a",

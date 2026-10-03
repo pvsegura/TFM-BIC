@@ -8,21 +8,280 @@
         "id": "pl-greetings",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-greetings/video-c7907ce0ed6e.mp4",
+          "posterUrl": "pl/lesson/pl-greetings/poster-c7907ce0ed6e.jpg",
+          "captionsUrl": "pl/lesson/pl-greetings/captions-c7907ce0ed6e.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 169.93,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Morning, in a small shop. Piotr does not know the shopkeeper well.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzień dobry.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Good day"
+            },
+            {
+              "text": "Dzień dobry.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Good day"
+            },
+            {
+              "text": "This greeting is polite. It works with people you do not know well.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Do widzenia.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Goodbye."
+            },
+            {
+              "text": "Do widzenia.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Goodbye."
+            },
+            {
+              "text": "Goodbye. Polite, too.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "In the park, Piotr meets his friend Ola.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Cześć!",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Hi!"
+            },
+            {
+              "text": "Cześć!",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Hi!"
+            },
+            {
+              "text": "With friends and family, the greeting is informal.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Na razie!",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "See you! Bye!"
+            },
+            {
+              "text": "Cześć!",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Hi!"
+            },
+            {
+              "text": "The same informal word says hello and goodbye.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Evening. The shopkeeper is closing up.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dobry wieczór.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Good evening."
+            },
+            {
+              "text": "Dobry wieczór.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Good evening."
+            },
+            {
+              "text": "In the evening, the polite greeting changes.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Late at night, at home. Time to sleep.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dobranoc.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Good night."
+            },
+            {
+              "text": "Dobranoc.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Good night."
+            },
+            {
+              "text": "Good night is for going to sleep, not for every goodbye.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The choice depends on how formal the situation is.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Polite, during the day.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Polite, in the evening.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Informal, with friends and family.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Morning. Piotr walks into a shop. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzień dobry.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Good day"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "His friend Ola waves. What does Piotr say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Cześć!",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Hi!"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "It is evening. He greets the shopkeeper. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dobry wieczór.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Good evening."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He leaves the shop. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Do widzenia.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Goodbye."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise the greetings with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Choose a polite or an informal greeting, and the right one for the time of day.",
+          "targetVocabularyIds": [
+            "pl-dzien-dobry",
+            "pl-dobry-wieczor",
+            "pl-czesc",
+            "pl-do-widzenia",
+            "pl-dobranoc"
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "473ae87b0e49d7fb37b1e6f6db40d8dc51bcfcaea3bf0d02cd4040d67f9dc991",
       "narratorId": "anna",
-      "lastRun": {
-        "status": "failed",
-        "at": "2026-10-02T09:24:55.633Z",
-        "error": "Version 1 prototype unpublished in M22; version 2 pending the Gemini daily quota.",
-        "providerCalls": 4
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Choose a polite or an informal greeting, and the right one for the time of day.",
+        "level": "a1",
+        "targetVocabularyIds": [
+          "pl-dzien-dobry",
+          "pl-dobry-wieczor",
+          "pl-czesc",
+          "pl-do-widzenia",
+          "pl-dobranoc"
+        ],
+        "targetPhrases": [
+          "Dzień dobry.",
+          "Do widzenia.",
+          "Cześć!",
+          "Na razie!",
+          "Dobry wieczór.",
+          "Dobranoc."
+        ],
+        "segments": ["situation", "conversation", "reuse", "notice", "retrieval", "recap"],
+        "retrievalMoments": 4,
+        "voices": [
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          },
+          {
+            "character": "Tomek",
+            "voice": "tomek"
+          },
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
       },
-      "generator": {
-        "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
-      },
-      "createdAt": "2026-10-01T07:29:37.868Z",
-      "updatedAt": "2026-10-02T09:25:38.500Z",
       "previous": [
         {
           "version": 1,
@@ -30,7 +289,18 @@
           "scriptVersion": 1,
           "generatedAt": "2026-10-02T09:24:55.633Z"
         }
-      ]
+      ],
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T09:00:43.161Z",
+        "providerCalls": 27
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-01T07:29:37.868Z",
+      "updatedAt": "2026-10-03T09:00:43.161Z"
     },
     {
       "key": "lesson:pl-introducing-yourself",
@@ -734,21 +1004,226 @@
         "id": "pl-spelling-and-sounds",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-spelling-and-sounds/video-0727feb944d2.mp4",
+          "posterUrl": "pl/lesson/pl-spelling-and-sounds/poster-0727feb944d2.jpg",
+          "captionsUrl": "pl/lesson/pl-spelling-and-sounds/captions-0727feb944d2.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 147.08,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Ola walks to a school. Listen to the word on the sign.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "school"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "school"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "school"
+            },
+            {
+              "text": "The pair sz sounds like English sh, and ł sounds like English w.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "school"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "school"
+            },
+            {
+              "text": "For sz, the tongue tip curls further back.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "środa",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Wednesday"
+            },
+            {
+              "text": "For ś, the sound is softer: the tongue body rises toward the hard palate.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "school"
+            },
+            {
+              "text": "środa",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Wednesday"
+            },
+            {
+              "text": "Now say both, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "czas",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "time"
+            },
+            {
+              "text": "Time. The pair cz sounds like ch in church.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "czas",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "time"
+            },
+            {
+              "text": "Ewa and her daughter Zosia.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "córka",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "daughter"
+            },
+            {
+              "text": "Daughter. The letter c sounds like ts in cats, and ó sounds the same as u.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "córka",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "daughter"
+            },
+            {
+              "text": "What is this building in Polish? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "szkoła",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "school"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Zosia is Ewa's daughter. Which word is it? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "córka",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "daughter"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Which word means time? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "czas",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "time"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "These comparisons are only approximate. Listen to native speakers to fine-tune the sounds.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Hear and say sz, ł, cz, c and ó in three everyday words, and tell sz from the softer ś.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "a7267794db8406e3a2d996d7ed439d3425a0ef69807d4bd2d260df95ad9bab1b",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Hear and say sz, ł, cz, c and ó in three everyday words, and tell sz from the softer ś.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": ["szkoła", "środa", "czas", "córka"],
+        "segments": ["situation", "pronunciation", "target", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Ewa",
+            "voice": "anna"
+          },
+          {
+            "character": "Zosia",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-02T09:25:18.732Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-03T09:09:03.628Z",
+        "providerCalls": 18
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-01T07:46:57.408Z",
-      "updatedAt": "2026-10-02T09:25:18.732Z"
+      "updatedAt": "2026-10-03T09:09:03.628Z"
     },
     {
       "key": "vocabulary-item:pl-bilet",
