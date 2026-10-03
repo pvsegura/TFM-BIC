@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-plurals",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Plurales",
+  "description": "Plurales regulares e irregulares, y nombres incontables.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Regla", "Ejemplo"],
+        "rows": [
+          ["la mayoría: + -s", "book → books"],
+          ["termina en s, sh, ch, x: + -es", "bus → buses, watch → watches"],
+          ["consonante + y: -y → -ies", "city → cities"],
+          ["muchos en -f o -fe: → -ves", "knife → knives, wife → wives"]
+        ]
+      }
+    },
+    {
+      "heading": "Plurales irregulares",
+      "text": "Algunos nombres son incontables en inglés aunque en español no lo sean: information, advice, news, furniture. No llevan a ni plural: some information, a piece of advice.",
+      "table": {
+        "columns": ["Singular", "Plural", "Significado"],
+        "rows": [
+          ["man", "men", "hombre"],
+          ["woman", "women", "mujer"],
+          ["child", "children", "niño"],
+          ["person", "people", "persona"],
+          ["foot", "feet", "pie"],
+          ["tooth", "teeth", "diente"],
+          ["mouse", "mice", "ratón"],
+          ["sheep", "sheep", "oveja"]
+        ]
+      }
+    }
+  ]
+}

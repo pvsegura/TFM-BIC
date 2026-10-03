@@ -1,6 +1,7 @@
 import type {
   ContentRepository,
   ExerciseRepository,
+  GrammarReferenceRepository,
   PhoneticContentRepository,
   VideoDefinitionRepository,
   VocabularyRepository,
@@ -14,6 +15,7 @@ import { CatalogVocabularyRepository } from "./catalog-vocabulary-repository.js"
 import { ContentValidationError } from "./content-validation.error.js";
 import { DEFAULT_CONTENT_ROOT } from "./content-root.js";
 import { loadContentCatalog } from "./load-content-catalog.js";
+import { CatalogGrammarRepository, loadGrammarReference } from "./load-grammar-reference.js";
 
 export interface ContentRepositories {
   contentRepository: ContentRepository;
@@ -21,6 +23,8 @@ export interface ContentRepositories {
   vocabularyRepository: VocabularyRepository;
   phoneticRepository: PhoneticContentRepository;
   videoDefinitionRepository: VideoDefinitionRepository;
+  /** The grammar reference (M23), checked against the same catalog. */
+  grammarRepository: GrammarReferenceRepository;
 }
 
 /**
@@ -40,11 +44,16 @@ export async function loadContentRepositories(
   if (!result.ok) {
     throw new ContentValidationError(result.issues);
   }
+  const grammar = await loadGrammarReference(contentRoot, result.catalog);
+  if (!grammar.ok) {
+    throw new ContentValidationError(grammar.issues);
+  }
   return {
     contentRepository: new CatalogContentRepository(result.catalog),
     exerciseRepository: new CatalogExerciseRepository(result.catalog),
     vocabularyRepository: new CatalogVocabularyRepository(result.catalog),
     phoneticRepository: new CatalogPhoneticRepository(result.catalog),
     videoDefinitionRepository: new CatalogVideoDefinitionRepository(result.catalog),
+    grammarRepository: new CatalogGrammarRepository(grammar.topics),
   };
 }

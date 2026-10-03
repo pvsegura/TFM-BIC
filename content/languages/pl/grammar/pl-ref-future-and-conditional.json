@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-future-and-conditional",
+  "languageId": "pl",
+  "status": "published",
+  "order": 30,
+  "category": "verbs",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Future tense and conditional",
+  "description": "Będę with imperfective verbs, the perfective future, and the conditional with -by-.",
+  "sections": [
+    {
+      "text": "An imperfective verb forms its future with the future of być plus the infinitive (or the past form): będę czytać or będę czytał. A perfective verb has no compound future: its present-tense forms already refer to the future (przeczytam: I will read it through). The conditional adds -by- and a personal ending to the past form.",
+      "table": {
+        "columns": [
+          "Person",
+          "Future of być",
+          "Conditional of robić (man / mixed group)",
+          "Conditional of robić (woman / women)"
+        ],
+        "rows": [
+          ["ja", "będę", "robiłbym", "robiłabym"],
+          ["ty", "będziesz", "robiłbyś", "robiłabyś"],
+          ["on / ona", "będzie", "robiłby", "robiłaby"],
+          ["my", "będziemy", "robilibyśmy", "robiłybyśmy"],
+          ["wy", "będziecie", "robilibyście", "robiłybyście"],
+          ["oni / one", "będą", "robiliby", "robiłyby"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Jutro będę pracować w domu.",
+          "translation": "Tomorrow I will be working from home."
+        },
+        {
+          "text": "Zadzwonię wieczorem.",
+          "translation": "I will call in the evening.",
+          "note": "Perfective: one completed action."
+        },
+        {
+          "text": "Chciałbym kawę.",
+          "translation": "I would like a coffee.",
+          "note": "Said by a man."
+        },
+        {
+          "text": "Gdybym miała czas, pojechałabym nad morze.",
+          "translation": "If I had time, I would go to the seaside.",
+          "note": "Said by a woman."
+        }
+      ]
+    }
+  ]
+}

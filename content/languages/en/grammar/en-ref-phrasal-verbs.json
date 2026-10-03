@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-phrasal-verbs",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "category": "word-formation",
+  "instructionLanguage": "es",
+  "title": "Phrasal verbs frecuentes",
+  "description": "Verbo + partícula con un significado nuevo: get up, look for, give up…",
+  "sections": [
+    {
+      "text": "Un phrasal verb combina un verbo con una partícula (up, out, off, on…) y suele tener un significado distinto del verbo solo. Son muy frecuentes en la lengua hablada.",
+      "table": {
+        "columns": ["Phrasal verb", "Significado", "Ejemplo"],
+        "rows": [
+          ["get up", "levantarse", "I get up at seven."],
+          ["wake up", "despertarse", "I woke up early."],
+          ["look for", "buscar", "I'm looking for my keys."],
+          ["look after", "cuidar", "She looks after her brother."],
+          ["find out", "averiguar, enterarse", "I found out the truth."],
+          ["give up", "dejar, rendirse", "He gave up smoking."],
+          ["turn on / turn off", "encender / apagar", "Turn off the light, please."],
+          ["put on / take off", "ponerse / quitarse (ropa)", "Put on your coat."],
+          ["go out", "salir", "We go out on Fridays."],
+          ["come back", "volver", "When are you coming back?"],
+          ["carry on", "continuar", "Carry on, please."],
+          ["pick up", "recoger", "I'll pick you up at eight."]
+        ]
+      }
+    }
+  ]
+}

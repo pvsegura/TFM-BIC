@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-modal-verbs",
+  "languageId": "en",
+  "status": "published",
+  "order": 60,
+  "category": "verbs",
+  "instructionLanguage": "es",
+  "title": "Verbos modales",
+  "description": "Can, could, must, have to, should, may, might y would.",
+  "sections": [
+    {
+      "text": "Los verbos modales no añaden -s en la tercera persona, no usan do en negativas y preguntas, y van seguidos del verbo en forma base sin to: She can swim, no She cans to swim.",
+      "table": {
+        "columns": ["Modal", "Significado", "Ejemplo"],
+        "rows": [
+          ["can", "poder, saber hacer", "I can swim."],
+          ["could", "podía; podría (petición educada)", "Could you help me?"],
+          ["must", "deber (obligación que siente quien habla)", "I must study tonight."],
+          ["have to", "tener que (obligación externa)", "I have to work on Saturday."],
+          ["don't have to", "no hace falta", "You don't have to come."],
+          ["mustn't", "no se debe, está prohibido", "You mustn't smoke here."],
+          ["should", "debería (consejo)", "You should see a doctor."],
+          ["may", "puede que; ¿puedo…? (formal)", "May I come in?"],
+          ["might", "puede que (menos probable)", "It might rain later."],
+          ["would", "condicional: -ría", "I would like a coffee."]
+        ]
+      }
+    }
+  ]
+}

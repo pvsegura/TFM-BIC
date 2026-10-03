@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-case-uses",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "nouns",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "The seven cases: what each is for",
+  "description": "When to use each case, with a question and an example.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Case", "Questions", "Main uses", "Example"],
+        "rows": [
+          ["Nominative", "kto? co?", "the subject; the dictionary form", "Kot śpi."],
+          [
+            "Genitive",
+            "kogo? czego?",
+            "after negation, quantities, possession, do, od, z, bez, u",
+            "Nie mam kota."
+          ],
+          [
+            "Dative",
+            "komu? czemu?",
+            "the person you give or say something to",
+            "Daję mamie kwiaty."
+          ],
+          ["Accusative", "kogo? co?", "the direct object of most verbs", "Widzę kota."],
+          [
+            "Instrumental",
+            "z kim? z czym?",
+            "with z (with), tools, after być + noun",
+            "Jestem studentem."
+          ],
+          ["Locative", "o kim? o czym?", "only after w, na, o, przy, po", "Mieszkam w Polsce."],
+          ["Vocative", "—", "addressing someone directly", "Aniu, chodź tutaj!"]
+        ]
+      }
+    }
+  ]
+}

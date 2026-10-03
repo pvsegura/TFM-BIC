@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-comparison",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "adjectives",
+  "instructionLanguage": "es",
+  "title": "Comparativos y superlativos",
+  "description": "Taller, the tallest; more beautiful, the most beautiful; y los irregulares.",
+  "sections": [
+    {
+      "text": "Los adjetivos cortos añaden -er y -est; los largos usan more y the most. Que en las comparaciones es than. Los adjetivos en inglés no cambian con el género ni con el número.",
+      "table": {
+        "columns": ["Adjetivo", "Comparativo", "Superlativo", "Significado"],
+        "rows": [
+          ["tall", "taller", "the tallest", "alto"],
+          ["big", "bigger", "the biggest", "grande"],
+          ["happy", "happier", "the happiest", "feliz"],
+          ["beautiful", "more beautiful", "the most beautiful", "bonito"],
+          ["interesting", "more interesting", "the most interesting", "interesante"],
+          ["good", "better", "the best", "bueno"],
+          ["bad", "worse", "the worst", "malo"],
+          ["far", "further", "the furthest", "lejos"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Tom is taller than Anna.",
+          "translation": "Tom es más alto que Anna."
+        },
+        {
+          "text": "It's the best film of the year.",
+          "translation": "Es la mejor película del año."
+        },
+        {
+          "text": "This book is as good as that one.",
+          "translation": "Este libro es tan bueno como ese."
+        }
+      ]
+    }
+  ]
+}

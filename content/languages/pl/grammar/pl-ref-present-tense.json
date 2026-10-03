@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-present-tense",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Present tense: conjugation patterns",
+  "description": "The main endings of the present tense, and the most common irregular verbs.",
+  "sections": [
+    {
+      "text": "Polish verbs change their ending for each person, so the pronoun (ja, ty…) is usually left out: Czytam means I read. Most verbs follow one of a few patterns; the I form and the you form tell you which.",
+      "table": {
+        "caption": "Regular patterns",
+        "columns": [
+          "Person",
+          "czytać (to read)",
+          "mówić (to speak)",
+          "pisać (to write)",
+          "pracować (to work)"
+        ],
+        "rows": [
+          ["ja", "czytam", "mówię", "piszę", "pracuję"],
+          ["ty", "czytasz", "mówisz", "piszesz", "pracujesz"],
+          ["on / ona / ono", "czyta", "mówi", "pisze", "pracuje"],
+          ["my", "czytamy", "mówimy", "piszemy", "pracujemy"],
+          ["wy", "czytacie", "mówicie", "piszecie", "pracujecie"],
+          ["oni / one", "czytają", "mówią", "piszą", "pracują"]
+        ]
+      }
+    },
+    {
+      "heading": "Common irregular verbs",
+      "table": {
+        "columns": [
+          "Person",
+          "być (to be)",
+          "mieć (to have)",
+          "iść (to go)",
+          "jeść (to eat)",
+          "chcieć (to want)",
+          "móc (can)"
+        ],
+        "rows": [
+          ["ja", "jestem", "mam", "idę", "jem", "chcę", "mogę"],
+          ["ty", "jesteś", "masz", "idziesz", "jesz", "chcesz", "możesz"],
+          ["on / ona / ono", "jest", "ma", "idzie", "je", "chce", "może"],
+          ["my", "jesteśmy", "mamy", "idziemy", "jemy", "chcemy", "możemy"],
+          ["wy", "jesteście", "macie", "idziecie", "jecie", "chcecie", "możecie"],
+          ["oni / one", "są", "mają", "idą", "jedzą", "chcą", "mogą"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Mam dwa koty.",
+          "translation": "I have two cats."
+        },
+        {
+          "text": "Co robisz?",
+          "translation": "What are you doing?"
+        },
+        {
+          "text": "Oni mieszkają w Gdańsku.",
+          "translation": "They live in Gdańsk."
+        }
+      ]
+    }
+  ]
+}

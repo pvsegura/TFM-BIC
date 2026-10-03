@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-place-manner-adverbs",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "category": "adverbs",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Adverbs of place and manner",
+  "description": "Here, there, everywhere, well, quickly… and how to form adverbs from adjectives.",
+  "sections": [
+    {
+      "heading": "Where",
+      "text": "Nigdzie (nowhere), nikt (nobody) and nic (nothing) need nie before the verb: Nigdzie nie byłem.",
+      "table": {
+        "columns": ["Polish", "English", "Example"],
+        "rows": [
+          ["tu, tutaj", "here", "Mieszkam tutaj."],
+          ["tam", "there", "Tam jest dworzec."],
+          ["wszędzie", "everywhere", "Wszędzie są turyści."],
+          ["nigdzie", "nowhere", "Nigdzie nie byłem."],
+          ["gdzieś", "somewhere", "Gdzieś tu jest kawiarnia."],
+          ["blisko", "near", "Sklep jest blisko."],
+          ["daleko", "far", "To daleko stąd."],
+          ["na górze", "upstairs; at the top", "Sypialnia jest na górze."],
+          ["na dole", "downstairs; at the bottom", "Kuchnia jest na dole."],
+          ["w środku", "inside", "Poczekaj w środku."],
+          ["na zewnątrz", "outside", "Jest zimno na zewnątrz."]
+        ]
+      }
+    },
+    {
+      "heading": "How",
+      "text": "Most adverbs of manner come from adjectives: -y or -i becomes -o or -ie. Learn the ending with the word; dobry gives the irregular dobrze.",
+      "table": {
+        "columns": ["Adjective", "Adverb", "Meaning"],
+        "rows": [
+          ["szybki", "szybko", "quickly"],
+          ["wolny", "wolno", "slowly"],
+          ["głośny", "głośno", "loudly"],
+          ["cichy", "cicho", "quietly"],
+          ["łatwy", "łatwo", "easily"],
+          ["ładny", "ładnie", "nicely"],
+          ["dobry", "dobrze", "well"],
+          ["zły", "źle", "badly"]
+        ]
+      }
+    }
+  ]
+}

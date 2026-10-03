@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-personal-pronouns",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Pronombres personales y posesivos",
+  "description": "I, me, my, mine, myself… todas las formas en una tabla.",
+  "sections": [
+    {
+      "text": "En inglés el sujeto siempre se dice: I am tired, nunca Am tired. El posesivo concuerda con quien posee, no con lo poseído: his mother (su madre, de él), her father (su padre, de ella).",
+      "table": {
+        "columns": ["Sujeto", "Objeto", "Adjetivo posesivo", "Pronombre posesivo", "Reflexivo"],
+        "rows": [
+          ["I", "me", "my", "mine", "myself"],
+          ["you", "you", "your", "yours", "yourself"],
+          ["he", "him", "his", "his", "himself"],
+          ["she", "her", "her", "hers", "herself"],
+          ["it", "it", "its", "—", "itself"],
+          ["we", "us", "our", "ours", "ourselves"],
+          ["you (plural)", "you", "your", "yours", "yourselves"],
+          ["they", "them", "their", "theirs", "themselves"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "She loves him.",
+          "translation": "Ella lo quiere."
+        },
+        {
+          "text": "This is my book. It's mine.",
+          "translation": "Este es mi libro. Es mío."
+        },
+        {
+          "text": "They did it themselves.",
+          "translation": "Lo hicieron ellos mismos."
+        }
+      ]
+    }
+  ]
+}

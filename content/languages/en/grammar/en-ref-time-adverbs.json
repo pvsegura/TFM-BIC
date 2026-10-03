@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-time-adverbs",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Adverbios de tiempo y de frecuencia",
+  "description": "Now, today, yesterday, already, yet, always, never… con ejemplos.",
+  "sections": [
+    {
+      "heading": "Cuándo",
+      "table": {
+        "columns": ["Inglés", "Español", "Ejemplo"],
+        "rows": [
+          ["now", "ahora", "I'm busy now."],
+          ["today", "hoy", "Today is Monday."],
+          ["tonight", "esta noche", "What are you doing tonight?"],
+          ["tomorrow", "mañana", "See you tomorrow."],
+          ["yesterday", "ayer", "I was at home yesterday."],
+          ["ago", "hace (tiempo)", "I arrived two days ago."],
+          ["already", "ya", "I've already eaten."],
+          ["yet", "todavía (negativas); ya (preguntas)", "Have you finished yet?"],
+          ["still", "todavía, aún", "She still lives with her parents."],
+          ["just", "acabar de", "I've just arrived."],
+          ["soon", "pronto", "We'll be there soon."],
+          ["later", "más tarde", "I'll call you later."]
+        ]
+      }
+    },
+    {
+      "heading": "Con qué frecuencia",
+      "text": "Los adverbios de frecuencia van delante del verbo principal, pero detrás de to be: I often walk, pero I am often late.",
+      "table": {
+        "columns": ["Inglés", "Español", "Ejemplo"],
+        "rows": [
+          ["always", "siempre", "I always have breakfast."],
+          ["usually", "normalmente", "She usually takes the bus."],
+          ["often", "a menudo", "We often go to the cinema."],
+          ["sometimes", "a veces", "I sometimes cook."],
+          ["rarely", "rara vez", "He rarely watches TV."],
+          ["never", "nunca", "I never drink coffee."],
+          ["every day", "todos los días", "I read every day."]
+        ]
+      }
+    }
+  ]
+}

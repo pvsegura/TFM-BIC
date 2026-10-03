@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-tenses-overview",
+  "languageId": "en",
+  "status": "published",
+  "order": 50,
+  "category": "verbs",
+  "instructionLanguage": "es",
+  "title": "Resumen de tiempos verbales",
+  "description": "Futuro con will y going to, present perfect y pasado continuo, con ejemplos.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Tiempo", "Forma", "Uso", "Ejemplo"],
+        "rows": [
+          [
+            "Futuro con will",
+            "will + verbo",
+            "decisiones en el momento, predicciones, promesas",
+            "I'll call you later."
+          ],
+          [
+            "Futuro con going to",
+            "am / is / are going to + verbo",
+            "planes e intenciones",
+            "I'm going to visit Spain."
+          ],
+          [
+            "Present perfect",
+            "have / has + participio",
+            "experiencias y acciones pasadas con efecto en el presente",
+            "I've lost my keys."
+          ],
+          [
+            "Pasado continuo",
+            "was / were + -ing",
+            "una acción en curso en el pasado",
+            "I was cooking when you called."
+          ],
+          [
+            "Present perfect continuous",
+            "have / has been + -ing",
+            "una acción que empezó en el pasado y continúa",
+            "I've been waiting for an hour."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Have you ever been to London?",
+          "translation": "¿Has estado alguna vez en Londres?"
+        },
+        {
+          "text": "I've lived here since 2020.",
+          "translation": "Vivo aquí desde 2020.",
+          "note": "En español se usa el presente; en inglés, el present perfect."
+        }
+      ]
+    }
+  ]
+}

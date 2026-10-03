@@ -522,3 +522,18 @@ export {
   type VideoScript,
 } from "./media/video-script.js";
 export { NARRATOR_ID_PATTERN, isNarratorId, type Narrator } from "./media/narrator.js";
+// Grammar reference (M23): read-only lookup topics — tables, notes and examples per language.
+export {
+  GRAMMAR_CATEGORIES,
+  GrammarTopicNotFoundError,
+  InvalidGrammarTopicIdError,
+  createGrammarTopicId,
+  isValidGrammarTopicId,
+  sortGrammarTopics,
+  type GrammarCategory,
+  type GrammarExample,
+  type GrammarSection,
+  type GrammarTable,
+  type GrammarTopic,
+  type GrammarTopicId,
+} from "./grammar/grammar-topic.js";

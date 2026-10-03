@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-adjective-endings",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "adjectives",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Adjective endings",
+  "description": "How dobry (good) changes with gender, number and case.",
+  "sections": [
+    {
+      "text": "Adjectives agree with their noun in gender, number and case. After k, g and soft consonants, -y becomes -i: polski, drogi, tani.",
+      "table": {
+        "columns": ["Case", "Masculine", "Feminine", "Neuter", "Plural (men)", "Plural (others)"],
+        "rows": [
+          ["Nominative", "dobry", "dobra", "dobre", "dobrzy", "dobre"],
+          ["Genitive", "dobrego", "dobrej", "dobrego", "dobrych", "dobrych"],
+          ["Dative", "dobremu", "dobrej", "dobremu", "dobrym", "dobrym"],
+          [
+            "Accusative",
+            "dobry (thing), dobrego (person, animal)",
+            "dobrą",
+            "dobre",
+            "dobrych",
+            "dobre"
+          ],
+          ["Instrumental", "dobrym", "dobrą", "dobrym", "dobrymi", "dobrymi"],
+          ["Locative", "dobrym", "dobrej", "dobrym", "dobrych", "dobrych"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "To dobra książka.",
+          "translation": "It is a good book."
+        },
+        {
+          "text": "Mam dobrego przyjaciela.",
+          "translation": "I have a good friend."
+        }
+      ]
+    }
+  ]
+}

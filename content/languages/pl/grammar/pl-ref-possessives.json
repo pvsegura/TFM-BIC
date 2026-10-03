@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-possessives",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Possessive pronouns",
+  "description": "Mój, twój, nasz… agree with the thing owned; jego, jej and ich never change.",
+  "sections": [
+    {
+      "text": "Mój, twój, nasz and wasz agree in gender, number and case with the noun that follows. Jego (his, its), jej (her) and ich (their) never change. Swój refers back to the subject of the sentence: Ona kocha swojego psa means she loves her own dog.",
+      "table": {
+        "columns": ["Owner", "Masculine", "Feminine", "Neuter", "Plural (men)", "Plural (others)"],
+        "rows": [
+          ["my", "mój", "moja", "moje", "moi", "moje"],
+          ["your (ty)", "twój", "twoja", "twoje", "twoi", "twoje"],
+          ["his, its", "jego", "jego", "jego", "jego", "jego"],
+          ["her", "jej", "jej", "jej", "jej", "jej"],
+          ["our", "nasz", "nasza", "nasze", "nasi", "nasze"],
+          ["your (wy)", "wasz", "wasza", "wasze", "wasi", "wasze"],
+          ["their", "ich", "ich", "ich", "ich", "ich"],
+          ["one's own", "swój", "swoja", "swoje", "swoi", "swoje"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "To jest mój brat.",
+          "translation": "This is my brother."
+        },
+        {
+          "text": "Gdzie jest twoja walizka?",
+          "translation": "Where is your suitcase?"
+        },
+        {
+          "text": "Ona kocha swojego psa.",
+          "translation": "She loves her (own) dog."
+        }
+      ]
+    }
+  ]
+}

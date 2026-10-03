@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-past-tense",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "category": "verbs",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Past tense",
+  "description": "Past tense endings by person and gender, with the common irregular forms.",
+  "sections": [
+    {
+      "text": "The past tense is the verb stem plus -ł- and a personal ending. In the singular the ending shows gender; in the plural, -li is used for any group with at least one man, and -ły for all other groups.",
+      "table": {
+        "columns": ["Person", "być (to be)", "robić (to do)"],
+        "rows": [
+          ["ja (man)", "byłem", "robiłem"],
+          ["ja (woman)", "byłam", "robiłam"],
+          ["ty (man)", "byłeś", "robiłeś"],
+          ["ty (woman)", "byłaś", "robiłaś"],
+          ["on", "był", "robił"],
+          ["ona", "była", "robiła"],
+          ["ono", "było", "robiło"],
+          ["my (with men)", "byliśmy", "robiliśmy"],
+          ["my (women only)", "byłyśmy", "robiłyśmy"],
+          ["wy (with men)", "byliście", "robiliście"],
+          ["wy (women only)", "byłyście", "robiłyście"],
+          ["oni (with men)", "byli", "robili"],
+          ["one (no men)", "były", "robiły"]
+        ]
+      }
+    },
+    {
+      "heading": "Irregular past forms",
+      "table": {
+        "columns": [
+          "Verb",
+          "I (man)",
+          "I (woman)",
+          "he",
+          "she",
+          "they (with men)",
+          "they (no men)"
+        ],
+        "rows": [
+          ["iść (to go)", "szedłem", "szłam", "szedł", "szła", "szli", "szły"],
+          ["jeść (to eat)", "jadłem", "jadłam", "jadł", "jadła", "jedli", "jadły"],
+          ["móc (can)", "mogłem", "mogłam", "mógł", "mogła", "mogli", "mogły"],
+          ["mieć (to have)", "miałem", "miałam", "miał", "miała", "mieli", "miały"],
+          ["chcieć (to want)", "chciałem", "chciałam", "chciał", "chciała", "chcieli", "chciały"],
+          ["wziąć (to take)", "wziąłem", "wzięłam", "wziął", "wzięła", "wzięli", "wzięły"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Wczoraj byłam w pracy.",
+          "translation": "Yesterday I was at work.",
+          "note": "Said by a woman."
+        },
+        {
+          "text": "Szedłem do domu.",
+          "translation": "I was walking home.",
+          "note": "Said by a man."
+        }
+      ]
+    }
+  ]
+}

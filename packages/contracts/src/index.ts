@@ -292,3 +292,18 @@ export {
   type LessonVideoPlanFile,
   type VocabularyVisualFile,
 } from "./media/media.schema.js";
+
+// Grammar reference (M23): the on-disk topic file and the public, read-only API shapes.
+export {
+  grammarFileSchema,
+  grammarListQuerySchema,
+  grammarListResponseSchema,
+  grammarTopicIdSchema,
+  grammarTopicParamSchema,
+  grammarTopicResponseSchema,
+  grammarTopicSummaryResponseSchema,
+  type GrammarFile,
+  type GrammarListResponse,
+  type GrammarTopicResponse,
+  type GrammarTopicSummaryResponse,
+} from "./grammar/grammar.schema.js";

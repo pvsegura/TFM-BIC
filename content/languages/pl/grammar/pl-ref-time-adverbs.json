@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-time-adverbs",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Adverbs of time and frequency",
+  "description": "Now, today, yesterday, already, still, always, never… with examples.",
+  "sections": [
+    {
+      "heading": "When",
+      "table": {
+        "columns": ["Polish", "English", "Example"],
+        "rows": [
+          ["teraz", "now", "Teraz pracuję."],
+          ["dzisiaj, dziś", "today", "Dzisiaj jest poniedziałek."],
+          ["jutro", "tomorrow", "Jutro mam egzamin."],
+          ["pojutrze", "the day after tomorrow", "Wracam pojutrze."],
+          ["wczoraj", "yesterday", "Wczoraj byłem w kinie."],
+          ["przedwczoraj", "the day before yesterday", "Przyjechała przedwczoraj."],
+          ["rano", "in the morning", "Rano piję kawę."],
+          ["po południu", "in the afternoon", "Po południu mam czas."],
+          ["wieczorem", "in the evening", "Wieczorem czytam."],
+          ["w nocy", "at night", "W nocy padało."],
+          ["już", "already", "Już jestem w domu."],
+          ["jeszcze", "still; (not) yet", "Jeszcze nie wiem."],
+          ["wkrótce", "soon", "Wkrótce wrócę."],
+          ["potem", "then, afterwards", "Potem idziemy na obiad."],
+          ["później", "later", "Zadzwonię później."],
+          ["wcześniej", "earlier", "Przyszedłem wcześniej."],
+          ["od razu", "at once", "Odpisał od razu."],
+          ["niedawno", "recently", "Niedawno się przeprowadziłam."],
+          ["dawno", "a long time ago; for a long time", "Dawno cię nie widziałem."]
+        ]
+      }
+    },
+    {
+      "heading": "How often",
+      "text": "Frequency adverbs usually come before the verb. Nigdy (never) needs nie before the verb: Polish uses a double negative.",
+      "table": {
+        "columns": ["Polish", "English", "Example"],
+        "rows": [
+          ["zawsze", "always", "Zawsze jem śniadanie."],
+          ["zwykle, zazwyczaj", "usually", "Zwykle wstaję o siódmej."],
+          ["często", "often", "Często chodzę do kina."],
+          ["czasem, czasami", "sometimes", "Czasem gotuję."],
+          ["rzadko", "rarely", "Rzadko oglądam telewizję."],
+          ["nigdy", "never", "Nigdy nie piję kawy."],
+          ["codziennie", "every day", "Codziennie czytam gazetę."],
+          ["co tydzień", "every week", "Co tydzień dzwonię do mamy."]
+        ]
+      }
+    }
+  ]
+}

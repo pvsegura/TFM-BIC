@@ -533,3 +533,10 @@ export type {
   NarrationSynthesizer,
   RenderedVideo,
 } from "./media/ports/media-generation-ports.js";
+
+// Grammar reference (M23): read-only lookup topics.
+export {
+  GetGrammarTopicUseCase,
+  ListGrammarTopicsUseCase,
+  type GrammarReferenceRepository,
+} from "./grammar/grammar-reference.js";

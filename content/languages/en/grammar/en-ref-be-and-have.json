@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-be-and-have",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los verbos to be y to have",
+  "description": "Ser o estar y tener: presente, pasado y formas contraídas.",
+  "sections": [
+    {
+      "text": "To be significa ser y estar a la vez. En la conversación se usan casi siempre las formas contraídas: I'm, you're, he's, isn't, aren't. Have got es muy frecuente en inglés británico para hablar de posesión.",
+      "table": {
+        "columns": ["Persona", "be (presente)", "be (pasado)", "have (presente)", "have (pasado)"],
+        "rows": [
+          ["I", "am (I'm)", "was", "have (I've)", "had"],
+          ["you", "are (you're)", "were", "have (you've)", "had"],
+          ["he / she / it", "is (he's, she's, it's)", "was", "has (he's)", "had"],
+          ["we", "are (we're)", "were", "have (we've)", "had"],
+          ["they", "are (they're)", "were", "have (they've)", "had"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "I'm tired.",
+          "translation": "Estoy cansado; estoy cansada."
+        },
+        {
+          "text": "She isn't at home.",
+          "translation": "No está en casa."
+        },
+        {
+          "text": "We were in London last year.",
+          "translation": "Estuvimos en Londres el año pasado."
+        },
+        {
+          "text": "I've got two brothers.",
+          "translation": "Tengo dos hermanos.",
+          "note": "Have got: posesión, sobre todo en inglés británico."
+        }
+      ]
+    }
+  ]
+}

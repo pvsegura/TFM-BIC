@@ -1,0 +1,37 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-conjunctions",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "connectors",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Conjunctions",
+  "description": "And, but, or, because, that, if, when… and where the comma goes.",
+  "sections": [
+    {
+      "text": "Polish puts a comma before most conjunctions that start a clause (a, ale, bo, że, żeby, ponieważ, który), but not before a single i, oraz, lub or albo.",
+      "table": {
+        "columns": ["Polish", "English", "Example"],
+        "rows": [
+          ["i", "and", "Kawa i herbata."],
+          ["a", "and, whereas", "Ja piję kawę, a on herbatę."],
+          ["ale", "but", "Chcę iść, ale nie mam czasu."],
+          ["albo, lub", "or", "Dzisiaj albo jutro."],
+          ["czy", "or (in questions)", "Kawa czy herbata?"],
+          ["bo", "because (informal)", "Zostaję w domu, bo pada."],
+          ["ponieważ", "because", "Nie przyszedł, ponieważ był chory."],
+          ["że", "that", "Myślę, że masz rację."],
+          ["żeby", "so that, in order to", "Uczę się, żeby zdać egzamin."],
+          ["jeśli, jeżeli", "if", "Jeśli chcesz, pójdziemy razem."],
+          ["kiedy, gdy", "when", "Kiedy byłem mały, mieszkałem na wsi."],
+          ["chociaż", "although", "Chociaż jest zimno, idę na spacer."],
+          ["więc", "so", "Jestem zmęczony, więc idę spać."],
+          ["dlatego", "that is why", "Pada, dlatego zostaję w domu."],
+          ["zanim", "before", "Zadzwoń, zanim przyjdziesz."]
+        ]
+      }
+    }
+  ]
+}

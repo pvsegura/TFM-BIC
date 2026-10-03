@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-determiners",
+  "languageId": "en",
+  "status": "published",
+  "order": 30,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "This, that, some, any, much, many",
+  "description": "Demostrativos y cuantificadores: cuál usar y con qué tipo de nombre.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Palabra", "Uso", "Ejemplo"],
+        "rows": [
+          ["this / these", "esto, este; estos (cerca)", "This coffee is hot."],
+          ["that / those", "eso, aquel; esos (lejos)", "Those houses are old."],
+          ["some", "algo de, unos (afirmativas y ofrecimientos)", "I've got some apples."],
+          ["any", "nada de, ningún (negativas); algo de (preguntas)", "Have you got any milk?"],
+          ["much", "mucho (incontables, en negativas y preguntas)", "I haven't got much time."],
+          ["many", "muchos (contables)", "There are many tourists."],
+          ["a lot of", "mucho, muchos (con todo tipo de nombres)", "She drinks a lot of tea."],
+          [
+            "a little / a few",
+            "un poco de (incontable) / unos pocos (contable)",
+            "A few friends came."
+          ]
+        ]
+      }
+    }
+  ]
+}

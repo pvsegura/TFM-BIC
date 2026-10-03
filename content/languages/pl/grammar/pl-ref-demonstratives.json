@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-demonstratives",
+  "languageId": "pl",
+  "status": "published",
+  "order": 40,
+  "category": "pronouns",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "This and that",
+  "description": "Ten, ta, to and tamten, tamta, tamto, by gender and number.",
+  "sections": [
+    {
+      "text": "Ten (this) and tamten (that, over there) agree with their noun. To on its own also means this is or these are: To jest mój dom.",
+      "table": {
+        "columns": [
+          "Meaning",
+          "Masculine",
+          "Feminine",
+          "Neuter",
+          "Plural (men)",
+          "Plural (others)"
+        ],
+        "rows": [
+          ["this", "ten", "ta", "to", "ci", "te"],
+          ["that", "tamten", "tamta", "tamto", "tamci", "tamte"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Ten dom jest duży.",
+          "translation": "This house is big."
+        },
+        {
+          "text": "Tamta kobieta to moja nauczycielka.",
+          "translation": "That woman is my teacher."
+        },
+        {
+          "text": "To są moi przyjaciele.",
+          "translation": "These are my friends."
+        }
+      ]
+    }
+  ]
+}

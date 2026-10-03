@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-past-simple",
+  "languageId": "en",
+  "status": "published",
+  "order": 30,
+  "category": "verbs",
+  "instructionLanguage": "es",
+  "title": "Pasado simple",
+  "description": "Verbos regulares con -ed, negaciones y preguntas con did.",
+  "sections": [
+    {
+      "text": "El pasado simple es igual para todas las personas. Los verbos regulares añaden -ed; los irregulares tienen su propia forma (ver la tabla de verbos irregulares). En negativas y preguntas se usa did con el verbo en su forma base.",
+      "table": {
+        "columns": ["Regla de ortografía", "Ejemplo"],
+        "rows": [
+          ["la mayoría: + -ed", "work → worked"],
+          ["termina en -e: + -d", "live → lived"],
+          ["consonante + y: -y → -ied", "study → studied"],
+          ["vocal + consonante corta y acentuada: se dobla la consonante", "stop → stopped"]
+        ]
+      }
+    },
+    {
+      "heading": "Pronunciación de -ed",
+      "table": {
+        "columns": ["Sonido", "Cuándo", "Ejemplos"],
+        "rows": [
+          ["/t/", "después de sonidos sordos (p, k, s, sh, ch, f)", "worked, stopped, watched"],
+          ["/d/", "después de sonidos sonoros y vocales", "lived, played, called"],
+          ["/ɪd/", "después de t o d", "wanted, needed"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "I visited my grandmother yesterday.",
+          "translation": "Ayer visité a mi abuela."
+        },
+        {
+          "text": "She didn't call me.",
+          "translation": "No me llamó."
+        },
+        {
+          "text": "Did you watch the match?",
+          "translation": "¿Viste el partido?"
+        }
+      ]
+    }
+  ]
+}

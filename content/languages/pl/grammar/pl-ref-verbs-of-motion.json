@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-verbs-of-motion",
+  "languageId": "pl",
+  "status": "published",
+  "order": 60,
+  "category": "verbs",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Verbs of motion",
+  "description": "Iść and chodzić on foot, jechać and jeździć by vehicle, in the present tense.",
+  "sections": [
+    {
+      "text": "Iść and jechać describe one trip in one direction, often happening now. Chodzić and jeździć describe habits, repeated trips or round trips. Iść and chodzić are on foot; jechać and jeździć are by vehicle.",
+      "table": {
+        "columns": ["Person", "iść", "chodzić", "jechać", "jeździć"],
+        "rows": [
+          ["ja", "idę", "chodzę", "jadę", "jeżdżę"],
+          ["ty", "idziesz", "chodzisz", "jedziesz", "jeździsz"],
+          ["on / ona / ono", "idzie", "chodzi", "jedzie", "jeździ"],
+          ["my", "idziemy", "chodzimy", "jedziemy", "jeździmy"],
+          ["wy", "idziecie", "chodzicie", "jedziecie", "jeździcie"],
+          ["oni / one", "idą", "chodzą", "jadą", "jeżdżą"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Teraz idę do sklepu.",
+          "translation": "I am walking to the shop now."
+        },
+        {
+          "text": "W soboty chodzę na basen.",
+          "translation": "On Saturdays I go to the pool."
+        },
+        {
+          "text": "Jutro jadę do Krakowa.",
+          "translation": "Tomorrow I am going to Kraków."
+        }
+      ]
+    }
+  ]
+}

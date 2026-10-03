@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-conjunctions",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "connectors",
+  "instructionLanguage": "es",
+  "title": "Conectores",
+  "description": "And, but, or, because, so, although, however… con ejemplos.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Inglés", "Español", "Ejemplo"],
+        "rows": [
+          ["and", "y", "Tea and coffee."],
+          ["but", "pero", "It's small but nice."],
+          ["or", "o", "Now or later?"],
+          ["because", "porque", "I'm tired because I worked late."],
+          ["so", "así que, por eso", "It was raining, so we stayed in."],
+          ["although", "aunque", "Although it was cold, we went out."],
+          ["when", "cuando", "Call me when you arrive."],
+          ["if", "si", "If it rains, we'll stay at home."],
+          ["while", "mientras", "I listen to music while I cook."],
+          ["before / after", "antes de que / después de que", "Wash your hands before you eat."],
+          ["however", "sin embargo", "It's expensive. However, it's very good."],
+          ["unless", "a menos que", "We'll go unless it rains."]
+        ]
+      }
+    }
+  ]
+}

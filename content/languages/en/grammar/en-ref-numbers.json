@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-numbers",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "numbers",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Números",
+  "description": "Cardinales y ordinales, y cómo decir fechas y horas.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Número", "Cardinal", "Ordinal"],
+        "rows": [
+          ["1", "one", "first (1st)"],
+          ["2", "two", "second (2nd)"],
+          ["3", "three", "third (3rd)"],
+          ["4", "four", "fourth (4th)"],
+          ["5", "five", "fifth (5th)"],
+          ["8", "eight", "eighth (8th)"],
+          ["9", "nine", "ninth (9th)"],
+          ["11", "eleven", "eleventh (11th)"],
+          ["12", "twelve", "twelfth (12th)"],
+          ["13", "thirteen", "thirteenth (13th)"],
+          ["20", "twenty", "twentieth (20th)"],
+          ["21", "twenty-one", "twenty-first (21st)"],
+          ["30", "thirty", "thirtieth (30th)"],
+          ["100", "one hundred", "hundredth (100th)"],
+          ["1000", "one thousand", "thousandth (1000th)"]
+        ]
+      }
+    },
+    {
+      "heading": "Fechas y horas",
+      "text": "Las fechas usan ordinales: the third of May o May the third. Thirteen y thirty se distinguen por el acento: thirTEEN frente a THIRty.",
+      "examples": [
+        {
+          "text": "It's half past seven.",
+          "translation": "Son las siete y media."
+        },
+        {
+          "text": "It's quarter to nine.",
+          "translation": "Son las nueve menos cuarto."
+        },
+        {
+          "text": "My birthday is on the twenty-first of June.",
+          "translation": "Mi cumpleaños es el veintiuno de junio."
+        }
+      ]
+    }
+  ]
+}

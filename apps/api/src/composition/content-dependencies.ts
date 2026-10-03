@@ -1,6 +1,7 @@
 import type {
   ContentRepository,
   ExerciseRepository,
+  GrammarReferenceRepository,
   PhoneticContentRepository,
   VideoDefinitionRepository,
   VocabularyRepository,
@@ -34,6 +35,8 @@ export interface ContentDependencies {
    * Optional so hand-built test fixtures need not provide it; absent means "no media yet".
    */
   mediaCatalog?: FileContentMediaCatalog;
+  /** The grammar reference (M23). Optional for hand-built fixtures; absent means "no topics". */
+  grammarRepository?: GrammarReferenceRepository;
 }
 
 /**

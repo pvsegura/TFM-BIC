@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-prepositions",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "prepositions",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Prepositions and their cases",
+  "description": "Which case follows each preposition, with its meaning and an example.",
+  "sections": [
+    {
+      "text": "Every preposition takes a fixed case, and some take two with different meanings. W, na, pod, nad, przed and za take the accusative for movement towards a place, but the locative or instrumental for being there: Kładę książkę na stół (onto), but Książka leży na stole (on).",
+      "table": {
+        "columns": ["Preposition", "Case", "Meaning", "Example"],
+        "rows": [
+          ["do", "genitive", "to, into", "Idę do domu."],
+          ["od", "genitive", "from (a person); since", "List od mamy."],
+          ["z", "genitive", "from, out of", "Jestem z Polski."],
+          ["bez", "genitive", "without", "Kawa bez cukru."],
+          ["u", "genitive", "at someone's place", "Jestem u babci."],
+          ["dla", "genitive", "for", "Prezent dla ciebie."],
+          ["obok", "genitive", "next to", "Obok sklepu."],
+          ["dzięki", "dative", "thanks to", "Dzięki tobie."],
+          ["przez", "accusative", "through, across; for (time)", "Idę przez park."],
+          ["na", "accusative", "onto; for (an event, a time)", "Idę na koncert."],
+          ["z", "instrumental", "with", "Kawa z mlekiem."],
+          ["nad", "instrumental", "above; by (water)", "Nad morzem."],
+          ["pod", "instrumental", "under", "Pod stołem."],
+          ["przed", "instrumental", "in front of; before", "Przed domem."],
+          ["za", "instrumental", "behind", "Za domem."],
+          ["między", "instrumental", "between", "Między nami."],
+          ["w", "locative", "in", "W Krakowie."],
+          ["na", "locative", "on; at", "Na poczcie."],
+          ["o", "locative", "about", "O filmie."],
+          ["przy", "locative", "by, near", "Przy oknie."],
+          ["po", "locative", "after; around", "Po obiedzie."]
+        ]
+      }
+    }
+  ]
+}

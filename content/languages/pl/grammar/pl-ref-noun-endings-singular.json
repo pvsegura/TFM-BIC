@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-noun-endings-singular",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "category": "nouns",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Noun endings: singular",
+  "description": "Typical singular endings for masculine, feminine and neuter nouns in every case.",
+  "sections": [
+    {
+      "text": "These are typical patterns; some nouns differ (for example, many masculine nouns take -a instead of -u in the genitive). Masculine nouns for people and animals use the genitive form in the accusative: widzę kota, but widzę sklep.",
+      "table": {
+        "columns": ["Case", "sklep (m, thing)", "kot (m, animal)", "kobieta (f)", "okno (n)"],
+        "rows": [
+          ["Nominative", "sklep", "kot", "kobieta", "okno"],
+          ["Genitive", "sklepu", "kota", "kobiety", "okna"],
+          ["Dative", "sklepowi", "kotu", "kobiecie", "oknu"],
+          ["Accusative", "sklep", "kota", "kobietę", "okno"],
+          ["Instrumental", "sklepem", "kotem", "kobietą", "oknem"],
+          ["Locative", "sklepie", "kocie", "kobiecie", "oknie"],
+          ["Vocative", "sklepie", "kocie", "kobieto", "okno"]
+        ]
+      }
+    }
+  ]
+}

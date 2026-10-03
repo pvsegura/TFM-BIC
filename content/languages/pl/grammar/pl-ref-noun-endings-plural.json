@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-noun-endings-plural",
+  "languageId": "pl",
+  "status": "published",
+  "order": 30,
+  "category": "nouns",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Noun endings: plural",
+  "description": "Plural endings in every case, including nouns for groups of men.",
+  "sections": [
+    {
+      "text": "In the plural, the dative (-om), instrumental (-ami) and locative (-ach) endings are the same for almost every noun. Nouns for men have special nominative forms (studenci, Polacy), and their accusative is the same as the genitive.",
+      "table": {
+        "columns": [
+          "Case",
+          "sklepy (shops)",
+          "studenci (students, men)",
+          "kobiety (women)",
+          "okna (windows)"
+        ],
+        "rows": [
+          ["Nominative", "sklepy", "studenci", "kobiety", "okna"],
+          ["Genitive", "sklepów", "studentów", "kobiet", "okien"],
+          ["Dative", "sklepom", "studentom", "kobietom", "oknom"],
+          ["Accusative", "sklepy", "studentów", "kobiety", "okna"],
+          ["Instrumental", "sklepami", "studentami", "kobietami", "oknami"],
+          ["Locative", "sklepach", "studentach", "kobietach", "oknach"]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-comparison",
+  "languageId": "pl",
+  "status": "published",
+  "order": 20,
+  "category": "adjectives",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Comparatives and superlatives",
+  "description": "Wyższy, najwyższy: comparing with -szy and naj-, and the irregular forms.",
+  "sections": [
+    {
+      "text": "The comparative usually adds -szy (or -ejszy); the superlative adds naj- to the comparative. Long adjectives use bardziej and najbardziej. Than is niż. Adverbs follow the same idea: szybko, szybciej, najszybciej.",
+      "table": {
+        "columns": ["Adjective", "Comparative", "Superlative", "Meaning"],
+        "rows": [
+          ["młody", "młodszy", "najmłodszy", "young"],
+          ["wysoki", "wyższy", "najwyższy", "tall"],
+          ["tani", "tańszy", "najtańszy", "cheap"],
+          ["drogi", "droższy", "najdroższy", "expensive"],
+          ["ładny", "ładniejszy", "najładniejszy", "pretty"],
+          ["dobry", "lepszy", "najlepszy", "good"],
+          ["zły", "gorszy", "najgorszy", "bad"],
+          ["duży", "większy", "największy", "big"],
+          ["mały", "mniejszy", "najmniejszy", "small"],
+          ["interesujący", "bardziej interesujący", "najbardziej interesujący", "interesting"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Anna jest wyższa niż Piotr.",
+          "translation": "Anna is taller than Piotr."
+        },
+        {
+          "text": "To najlepsza kawa w mieście.",
+          "translation": "This is the best coffee in town."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-imperative",
+  "languageId": "pl",
+  "status": "published",
+  "order": 40,
+  "category": "verbs",
+  "levelId": "a2",
+  "instructionLanguage": "en",
+  "title": "Imperative",
+  "description": "Giving instructions: the ty, my and wy forms, and polite requests.",
+  "sections": [
+    {
+      "text": "The imperative has forms for ty (one person you know), my (let's) and wy (several people). For polite requests to strangers, use proszę with the infinitive, or niech with pan or pani and the third person. Negative instructions usually use the imperfective verb: Nie rób tego (Don't do that).",
+      "table": {
+        "columns": ["Infinitive", "ty", "my", "wy", "Meaning"],
+        "rows": [
+          ["czytać", "czytaj", "czytajmy", "czytajcie", "read"],
+          ["pisać", "pisz", "piszmy", "piszcie", "write"],
+          ["mówić", "mów", "mówmy", "mówcie", "speak"],
+          ["robić", "rób", "róbmy", "róbcie", "do"],
+          ["zrobić", "zrób", "zróbmy", "zróbcie", "do (once, to completion)"],
+          ["iść", "idź", "idźmy", "idźcie", "go"],
+          ["jeść", "jedz", "jedzmy", "jedzcie", "eat"],
+          ["być", "bądź", "bądźmy", "bądźcie", "be"],
+          ["mieć", "miej", "miejmy", "miejcie", "have"],
+          ["patrzeć", "patrz", "patrzmy", "patrzcie", "look"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Proszę usiąść.",
+          "translation": "Please sit down.",
+          "note": "Polite, to anyone."
+        },
+        {
+          "text": "Niech pan wejdzie.",
+          "translation": "Come in, sir.",
+          "note": "Polite, to a man."
+        },
+        {
+          "text": "Nie martw się!",
+          "translation": "Don't worry!"
+        }
+      ]
+    }
+  ]
+}

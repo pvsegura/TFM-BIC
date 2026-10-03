@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-question-words",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Palabras interrogativas",
+  "description": "Who, what, where, when, why, how… con un ejemplo cada una.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Inglés", "Español", "Ejemplo"],
+        "rows": [
+          ["who", "quién", "Who is that?"],
+          ["what", "qué", "What's your name?"],
+          ["where", "dónde", "Where do you live?"],
+          ["when", "cuándo", "When is the train?"],
+          ["why", "por qué", "Why are you late?"],
+          ["how", "cómo", "How are you?"],
+          ["how much", "cuánto (incontable)", "How much is it?"],
+          ["how many", "cuántos (contable)", "How many brothers have you got?"],
+          ["how old", "qué edad", "How old are you?"],
+          ["which", "cuál (entre opciones)", "Which bus goes to the centre?"],
+          ["whose", "de quién", "Whose phone is this?"]
+        ]
+      }
+    }
+  ]
+}

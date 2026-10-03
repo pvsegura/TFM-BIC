@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-aspect-pairs",
+  "languageId": "pl",
+  "status": "published",
+  "order": 50,
+  "category": "verbs",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Aspect pairs",
+  "description": "Common imperfective and perfective verb pairs, side by side.",
+  "sections": [
+    {
+      "text": "Use the imperfective verb for processes, habits and repeated actions; use the perfective verb for a single action completed with a result. Many perfectives add a prefix; some pairs change the stem, and a few use a different verb altogether.",
+      "table": {
+        "columns": ["Imperfective", "Perfective", "Meaning"],
+        "rows": [
+          ["robić", "zrobić", "to do, to make"],
+          ["pisać", "napisać", "to write"],
+          ["czytać", "przeczytać", "to read"],
+          ["jeść", "zjeść", "to eat"],
+          ["pić", "wypić", "to drink"],
+          ["płacić", "zapłacić", "to pay"],
+          ["kupować", "kupić", "to buy"],
+          ["dawać", "dać", "to give"],
+          ["wracać", "wrócić", "to come back"],
+          ["otwierać", "otworzyć", "to open"],
+          ["zamykać", "zamknąć", "to close"],
+          ["zaczynać", "zacząć", "to begin"],
+          ["kończyć", "skończyć", "to finish"],
+          ["pomagać", "pomóc", "to help"],
+          ["uczyć się", "nauczyć się", "to learn"],
+          ["brać", "wziąć", "to take"],
+          ["mówić", "powiedzieć", "to say, to tell"],
+          ["widzieć", "zobaczyć", "to see"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Codziennie kupuję gazetę.",
+          "translation": "I buy a newspaper every day."
+        },
+        {
+          "text": "Wczoraj kupiłem nowy telefon.",
+          "translation": "Yesterday I bought a new phone."
+        }
+      ]
+    }
+  ]
+}

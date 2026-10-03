@@ -19,6 +19,8 @@ import { NewsletterConfirmPage } from "./pages/newsletter-confirm-page.js";
 import { NewsletterUnsubscribePage } from "./pages/newsletter-unsubscribe-page.js";
 import { PhoneticDetailPage } from "./pages/phonetic-detail-page.js";
 import { PhoneticsPage } from "./pages/phonetics-page.js";
+import { GrammarPage } from "./pages/grammar-page.js";
+import { GrammarTopicPage } from "./pages/grammar-topic-page.js";
 import { PrivacyPage } from "./pages/privacy-page.js";
 import { ProfilePage } from "./pages/profile-page.js";
 import { RegisterPage } from "./pages/register-page.js";
@@ -95,6 +97,13 @@ const PHONETICS_ROUTES = [
   { path: "learn/phonetics/:phoneticId", element: <PhoneticDetailPage /> },
 ];
 
+/** Grammar reference (M23) — quick-lookup tables per language, and one topic. Under `/learn`
+ * because `/grammar` is the API path, the same reasoning as Phonetics. */
+const GRAMMAR_ROUTES = [
+  { path: "learn/grammar", element: <GrammarPage /> },
+  { path: "learn/grammar/:topicId", element: <GrammarTopicPage /> },
+];
+
 /** Video generation (M11) — one demo page requesting generation of the milestone's one authored
  * definition (see VideoGenerationDemoPage's doc comment for why there is no browse/list route).
  * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
@@ -135,6 +144,7 @@ const APP_ROUTES = [
   ...VOCABULARY_ROUTES,
   ...PHONETICS_ROUTES,
   ...VIDEO_ROUTES,
+  ...GRAMMAR_ROUTES,
   ...TEACHER_ROUTES,
   // M21: former Milestone-1 placeholders now lead somewhere real — progress lives on the dashboard,
   // account settings on the profile. Still behind login.

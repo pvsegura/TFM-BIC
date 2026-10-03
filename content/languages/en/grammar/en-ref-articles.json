@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-articles",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Artículos: a, an, the y sin artículo",
+  "description": "Cuándo usar a, an, the, o ningún artículo.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Artículo", "Uso", "Ejemplo"],
+        "rows": [
+          ["a", "uno cualquiera, ante sonido de consonante", "a cat, a university"],
+          ["an", "uno cualquiera, ante sonido de vocal", "an apple, an hour"],
+          ["the", "algo concreto que ya conocemos", "The cat is sleeping."],
+          [
+            "sin artículo",
+            "plurales e incontables en sentido general",
+            "I like cats. Water is important."
+          ],
+          [
+            "sin artículo",
+            "comidas, idiomas, la mayoría de países",
+            "We have lunch at one. I speak English."
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "text": "She's a teacher.",
+          "translation": "Es profesora.",
+          "note": "Con profesiones se usa a; en español, no."
+        },
+        {
+          "text": "I love music.",
+          "translation": "Me encanta la música.",
+          "note": "En sentido general, sin the."
+        }
+      ]
+    }
+  ]
+}

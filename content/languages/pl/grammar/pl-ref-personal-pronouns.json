@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-personal-pronouns",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Personal pronouns in every case",
+  "description": "Ja, ty, on, ona… and their forms in all cases, short and long.",
+  "sections": [
+    {
+      "text": "Where two forms are given, the short one (mi, cię, go, mu) is unstressed and is the usual choice; the long one (mnie, ciebie, jego, jemu) is used for emphasis or at the start of a sentence. After a preposition, third-person pronouns take a form with n-: do niego, z nią, o nich.",
+      "table": {
+        "columns": ["Nominative", "Genitive", "Dative", "Accusative", "Instrumental", "Locative"],
+        "rows": [
+          ["ja", "mnie", "mi, mnie", "mnie", "mną", "mnie"],
+          ["ty", "cię, ciebie", "ci, tobie", "cię, ciebie", "tobą", "tobie"],
+          ["on", "go, jego, niego", "mu, jemu, niemu", "go, jego, niego", "nim", "nim"],
+          ["ona", "jej, niej", "jej, niej", "ją, nią", "nią", "niej"],
+          ["ono", "go, jego, niego", "mu, jemu, niemu", "je, nie", "nim", "nim"],
+          ["my", "nas", "nam", "nas", "nami", "nas"],
+          ["wy", "was", "wam", "was", "wami", "was"],
+          ["oni", "ich, nich", "im, nim", "ich, nich", "nimi", "nich"],
+          ["one", "ich, nich", "im, nim", "je, nie", "nimi", "nich"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Daj mi to.",
+          "translation": "Give it to me."
+        },
+        {
+          "text": "Kocham cię.",
+          "translation": "I love you."
+        },
+        {
+          "text": "Idę do niego.",
+          "translation": "I am going to his place.",
+          "note": "After a preposition: niego."
+        },
+        {
+          "text": "Rozmawiamy o nich.",
+          "translation": "We are talking about them."
+        }
+      ]
+    }
+  ]
+}

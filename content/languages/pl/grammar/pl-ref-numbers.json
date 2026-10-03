@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-numbers",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "numbers",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Numbers",
+  "description": "Cardinal and ordinal numbers, and which form of the noun follows a number.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Number", "Cardinal", "Ordinal (masculine)"],
+        "rows": [
+          ["1", "jeden", "pierwszy"],
+          ["2", "dwa", "drugi"],
+          ["3", "trzy", "trzeci"],
+          ["4", "cztery", "czwarty"],
+          ["5", "pięć", "piąty"],
+          ["6", "sześć", "szósty"],
+          ["7", "siedem", "siódmy"],
+          ["8", "osiem", "ósmy"],
+          ["9", "dziewięć", "dziewiąty"],
+          ["10", "dziesięć", "dziesiąty"],
+          ["11", "jedenaście", "jedenasty"],
+          ["12", "dwanaście", "dwunasty"],
+          ["15", "piętnaście", "piętnasty"],
+          ["20", "dwadzieścia", "dwudziesty"],
+          ["30", "trzydzieści", "trzydziesty"],
+          ["40", "czterdzieści", "czterdziesty"],
+          ["50", "pięćdziesiąt", "pięćdziesiąty"],
+          ["100", "sto", "setny"],
+          ["1000", "tysiąc", "tysięczny"]
+        ]
+      }
+    },
+    {
+      "heading": "Number and noun",
+      "text": "The noun after a number changes form. Jeden and dwa also change with gender: jedna kobieta, dwie kobiety. Times use the feminine ordinal: o pierwszej (at one), o drugiej (at two).",
+      "table": {
+        "columns": ["Number", "Form of the noun", "Example"],
+        "rows": [
+          ["1", "nominative singular", "jeden kot"],
+          ["2, 3, 4 (and 22–24, 32–34…)", "nominative plural", "dwa koty"],
+          ["5–21 (and 25–31, 35–41…)", "genitive plural", "pięć kotów"]
+        ]
+      }
+    }
+  ]
+}

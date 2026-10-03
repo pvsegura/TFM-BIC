@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-present-simple",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Presente simple y presente continuo",
+  "description": "Hábitos y verdades generales frente a lo que pasa ahora mismo.",
+  "sections": [
+    {
+      "heading": "Presente simple",
+      "text": "Se usa para hábitos, rutinas y verdades generales. Solo cambia la tercera persona del singular, que añade -s (-es después de s, sh, ch, x, o; consonante + y cambia a -ies). Las negaciones y las preguntas usan do o does.",
+      "table": {
+        "columns": ["Persona", "Afirmativa", "Negativa", "Pregunta"],
+        "rows": [
+          ["I / you / we / they", "work", "don't work", "Do you work?"],
+          ["he / she / it", "works", "doesn't work", "Does she work?"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "She watches TV every evening.",
+          "translation": "Ve la tele todas las noches.",
+          "note": "watch → watches"
+        },
+        {
+          "text": "He studies English.",
+          "translation": "Estudia inglés.",
+          "note": "study → studies"
+        },
+        {
+          "text": "We don't live in London.",
+          "translation": "No vivimos en Londres."
+        }
+      ]
+    },
+    {
+      "heading": "Presente continuo",
+      "text": "Se forma con am, is o are y el verbo con -ing. Se usa para lo que está pasando ahora o en esta época, y para planes ya decididos.",
+      "examples": [
+        {
+          "text": "I'm reading a book.",
+          "translation": "Estoy leyendo un libro."
+        },
+        {
+          "text": "They're working in Madrid this month.",
+          "translation": "Este mes están trabajando en Madrid."
+        },
+        {
+          "text": "We're meeting Tom tomorrow.",
+          "translation": "Mañana quedamos con Tom.",
+          "note": "Plan ya decidido."
+        }
+      ]
+    }
+  ]
+}

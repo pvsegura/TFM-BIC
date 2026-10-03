@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-question-words",
+  "languageId": "pl",
+  "status": "published",
+  "order": 30,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "en",
+  "title": "Question words",
+  "description": "Kto, co, gdzie, kiedy, dlaczego… with an example each.",
+  "sections": [
+    {
+      "text": "A yes-or-no question can start with czy, or simply use a rising intonation. Kto and co change with case, like nouns: kogo, czego, komu, czemu, kim, czym.",
+      "table": {
+        "columns": ["Polish", "English", "Example"],
+        "rows": [
+          ["kto?", "who?", "Kto to jest?"],
+          ["co?", "what?", "Co robisz?"],
+          ["gdzie?", "where?", "Gdzie mieszkasz?"],
+          ["dokąd?", "where to?", "Dokąd idziesz?"],
+          ["skąd?", "where from?", "Skąd jesteś?"],
+          ["kiedy?", "when?", "Kiedy przyjdziesz?"],
+          ["dlaczego?", "why?", "Dlaczego się śmiejesz?"],
+          ["jak?", "how?", "Jak się masz?"],
+          ["ile?", "how much? how many?", "Ile to kosztuje?"],
+          ["który?", "which?", "Który autobus jedzie do centrum?"],
+          ["jaki?", "what kind of?", "Jaki to film?"],
+          ["czyj?", "whose?", "Czyj to telefon?"],
+          ["czy…?", "(yes-or-no question)", "Czy masz czas?"]
+        ]
+      }
+    }
+  ]
+}

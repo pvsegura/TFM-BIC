@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-place-manner-adverbs",
+  "languageId": "en",
+  "status": "published",
+  "order": 20,
+  "category": "adverbs",
+  "instructionLanguage": "es",
+  "title": "Adverbios de lugar y de modo",
+  "description": "Here, there, everywhere; quickly, well, hard… y cómo se forman con -ly.",
+  "sections": [
+    {
+      "heading": "Dónde",
+      "table": {
+        "columns": ["Inglés", "Español", "Ejemplo"],
+        "rows": [
+          ["here", "aquí", "Come here."],
+          ["there", "allí", "The station is over there."],
+          ["everywhere", "en todas partes", "There are tourists everywhere."],
+          ["somewhere", "en algún sitio", "My keys are somewhere here."],
+          ["nowhere", "en ningún sitio", "There's nowhere to park."],
+          ["upstairs / downstairs", "arriba / abajo (en un edificio)", "The bedroom is upstairs."],
+          ["inside / outside", "dentro / fuera", "Let's wait inside."]
+        ]
+      }
+    },
+    {
+      "heading": "Cómo",
+      "text": "La mayoría de adverbios de modo se forman con adjetivo + -ly, como -mente en español: quick → quickly. Hay excepciones importantes: good → well, y fast y hard no cambian.",
+      "table": {
+        "columns": ["Adjetivo", "Adverbio", "Significado"],
+        "rows": [
+          ["quick", "quickly", "rápidamente"],
+          ["slow", "slowly", "despacio"],
+          ["careful", "carefully", "con cuidado"],
+          ["easy", "easily", "fácilmente"],
+          ["good", "well", "bien"],
+          ["fast", "fast", "rápido"],
+          ["hard", "hard", "mucho, duro"]
+        ]
+      }
+    }
+  ]
+}

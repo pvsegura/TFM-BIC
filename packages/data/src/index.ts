@@ -19,6 +19,11 @@ export { FileSystemContentRepository } from "./content/file-system-content-repos
 export { formatContentReport, type ContentReport } from "./content/content-report.js";
 export { ContentValidationError, type ContentIssue } from "./content/content-validation.error.js";
 export { loadContentCatalog, type LoadContentResult } from "./content/load-content-catalog.js";
+export {
+  CatalogGrammarRepository,
+  loadGrammarReference,
+  type LoadGrammarResult,
+} from "./content/load-grammar-reference.js";
 
 // Student Profile (M4).
 export { createProfileDb, type ProfileDb, type ProfileDbHandle } from "./profile/db/client.js";

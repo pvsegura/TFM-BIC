@@ -36,6 +36,9 @@ const PUBLIC_ROUTES = new Set([
   "GET /media/lessons/:lessonId",
   "GET /media/vocabulary/:vocabularyId",
   "GET /media/files/*",
+  // M23: the grammar reference — public, read-only lookup tables (no progress, no user data).
+  "GET /grammar",
+  "GET /grammar/:topicId",
 ]);
 
 /** Authorized by an HMAC token in the link; RFC 8058 mail clients send no Origin (ADR-025). */

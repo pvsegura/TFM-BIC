@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-word-formation",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "word-formation",
+  "instructionLanguage": "es",
+  "title": "Formación de palabras",
+  "description": "Prefijos y sufijos frecuentes: -er, -ness, -ful, -less, un-, re-…",
+  "sections": [
+    {
+      "text": "Muchas palabras inglesas se forman con prefijos y sufijos. Conocerlos ayuda a entender palabras nuevas y a ampliar el vocabulario.",
+      "table": {
+        "columns": ["Afijo", "Significado", "Ejemplos"],
+        "rows": [
+          ["-er, -or", "persona que hace algo", "teach → teacher, act → actor"],
+          ["-ness", "cualidad (nombre abstracto)", "happy → happiness, kind → kindness"],
+          ["-ment", "acción o resultado", "pay → payment, develop → development"],
+          ["-tion, -sion", "acción o resultado", "inform → information, decide → decision"],
+          ["-ful", "lleno de, con", "use → useful, care → careful"],
+          ["-less", "sin", "use → useless, care → careless"],
+          ["-able", "que se puede", "wash → washable, read → readable"],
+          ["-ly", "adverbio (-mente)", "quick → quickly"],
+          [
+            "un-, in-, im-, dis-",
+            "negación",
+            "happy → unhappy, possible → impossible, like → dislike"
+          ],
+          ["re-", "otra vez", "do → redo, write → rewrite"],
+          ["over-", "demasiado", "sleep → oversleep, cook → overcook"]
+        ]
+      }
+    }
+  ]
+}

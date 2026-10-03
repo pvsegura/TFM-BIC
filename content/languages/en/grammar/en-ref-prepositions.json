@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-prepositions",
+  "languageId": "en",
+  "status": "published",
+  "order": 10,
+  "category": "prepositions",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "In, on, at: tiempo y lugar",
+  "description": "Las tres preposiciones que en español suelen ser en, y cuándo usar cada una.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Preposición", "Tiempo", "Lugar"],
+        "rows": [
+          [
+            "in",
+            "meses, años, estaciones, partes del día: in May, in 2020, in summer, in the morning",
+            "espacios cerrados, ciudades, países: in the kitchen, in London"
+          ],
+          [
+            "on",
+            "días y fechas: on Monday, on 3 May, on my birthday",
+            "superficies, calles: on the table, on Oxford Street"
+          ],
+          [
+            "at",
+            "horas y momentos: at five o'clock, at night, at the weekend",
+            "puntos concretos: at the bus stop, at home, at work"
+          ]
+        ]
+      },
+      "examples": [
+        {
+          "text": "The meeting is on Friday at ten.",
+          "translation": "La reunión es el viernes a las diez."
+        },
+        {
+          "text": "I was born in 1995.",
+          "translation": "Nací en 1995."
+        },
+        {
+          "text": "She's at work.",
+          "translation": "Está en el trabajo."
+        }
+      ]
+    }
+  ]
+}

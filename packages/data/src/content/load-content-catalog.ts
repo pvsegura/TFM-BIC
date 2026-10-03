@@ -39,13 +39,13 @@ interface SchemaIssueLike {
   message: string;
 }
 
-function describeSchemaIssue(issue: SchemaIssueLike): string {
+export function describeSchemaIssue(issue: SchemaIssueLike): string {
   const where = issue.path.map(String).join(".");
   return where.length > 0 ? `${where}: ${issue.message}` : issue.message;
 }
 
 /** Sorted so the result never depends on the file system's enumeration order. */
-async function readDirectory(directory: string) {
+export async function readDirectory(directory: string) {
   try {
     const entries = await readdir(directory, { withFileTypes: true });
     return entries.sort((a, b) => (a.name < b.name ? -1 : a.name > b.name ? 1 : 0));
@@ -57,7 +57,7 @@ async function readDirectory(directory: string) {
 /** Reads and parses one JSON file. Any failure is recorded as an issue and
  * yields `undefined`. Symlinks and non-files never reach here (callers only
  * pass real files), and no request-derived text is ever part of a path. */
-async function readJson(
+export async function readJson(
   absolute: string,
   location: string,
   issues: ContentIssue[],

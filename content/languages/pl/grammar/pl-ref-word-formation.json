@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-ref-word-formation",
+  "languageId": "pl",
+  "status": "published",
+  "order": 10,
+  "category": "word-formation",
+  "levelId": "b1",
+  "instructionLanguage": "en",
+  "title": "Word formation",
+  "description": "Suffixes and prefixes that build new words: jobs, diminutives, abstract nouns and more.",
+  "sections": [
+    {
+      "text": "Polish builds whole families of words from one root. Knowing the common suffixes and prefixes lets you guess the meaning of a new word.",
+      "table": {
+        "columns": ["Affix", "Meaning", "Examples"],
+        "rows": [
+          [
+            "-arz, -nik, -ca",
+            "a person who does something",
+            "piekarz (baker), pracownik (employee), sprzedawca (seller)"
+          ],
+          ["-ka", "the woman's form of a person noun", "nauczycielka, studentka, Polka"],
+          [
+            "-ek, -ka, -ko",
+            "small or affectionate (diminutive)",
+            "dom → domek, pies → piesek, okno → okienko"
+          ],
+          ["-ość", "an abstract quality", "młody → młodość, wolny → wolność"],
+          [
+            "-anie, -enie, -cie",
+            "the action of a verb",
+            "czytać → czytanie, palić → palenie, pić → picie"
+          ],
+          [
+            "-owy, -ny, -ski",
+            "an adjective from a noun",
+            "dom → domowy, szkoła → szkolny, Polska → polski"
+          ],
+          ["-o, -ie", "an adverb from an adjective", "szybki → szybko, ładny → ładnie"],
+          ["nie-", "not, un-", "miły → niemiły, możliwy → niemożliwy"],
+          [
+            "prze-, wy-, za-, na-",
+            "on verbs: a completed action or a new nuance",
+            "czytać → przeczytać, pić → wypić, dzwonić → zadzwonić, pisać → napisać"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "One root, many words",
+      "examples": [
+        {
+          "text": "pisać",
+          "translation": "to write"
+        },
+        {
+          "text": "pisarz",
+          "translation": "writer"
+        },
+        {
+          "text": "napis",
+          "translation": "inscription, sign"
+        },
+        {
+          "text": "opis",
+          "translation": "description"
+        },
+        {
+          "text": "podpis",
+          "translation": "signature"
+        },
+        {
+          "text": "pismo",
+          "translation": "writing; letter; magazine"
+        }
+      ]
+    }
+  ]
+}

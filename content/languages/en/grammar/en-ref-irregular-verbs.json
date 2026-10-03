@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "en-ref-irregular-verbs",
+  "languageId": "en",
+  "status": "published",
+  "order": 40,
+  "category": "verbs",
+  "instructionLanguage": "es",
+  "title": "Verbos irregulares más frecuentes",
+  "description": "Forma base, pasado y participio de los verbos irregulares más usados.",
+  "sections": [
+    {
+      "text": "El participio se usa en el present perfect (I have eaten) y en la pasiva (It was written). Conviene aprender las tres formas juntas.",
+      "table": {
+        "columns": ["Base", "Pasado", "Participio", "Significado"],
+        "rows": [
+          ["be", "was / were", "been", "ser, estar"],
+          ["begin", "began", "begun", "empezar"],
+          ["bring", "brought", "brought", "traer"],
+          ["buy", "bought", "bought", "comprar"],
+          ["come", "came", "come", "venir"],
+          ["do", "did", "done", "hacer"],
+          ["drink", "drank", "drunk", "beber"],
+          ["eat", "ate", "eaten", "comer"],
+          ["find", "found", "found", "encontrar"],
+          ["get", "got", "got", "conseguir, llegar"],
+          ["give", "gave", "given", "dar"],
+          ["go", "went", "gone", "ir"],
+          ["have", "had", "had", "tener"],
+          ["know", "knew", "known", "saber, conocer"],
+          ["leave", "left", "left", "salir, dejar"],
+          ["make", "made", "made", "hacer, fabricar"],
+          ["meet", "met", "met", "conocer, quedar con"],
+          ["put", "put", "put", "poner"],
+          ["read", "read", "read", "leer"],
+          ["say", "said", "said", "decir"],
+          ["see", "saw", "seen", "ver"],
+          ["speak", "spoke", "spoken", "hablar"],
+          ["take", "took", "taken", "tomar, llevar"],
+          ["tell", "told", "told", "contar, decir a alguien"],
+          ["think", "thought", "thought", "pensar"],
+          ["write", "wrote", "written", "escribir"]
+        ]
+      }
+    }
+  ]
+}
