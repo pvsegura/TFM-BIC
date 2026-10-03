@@ -2,6 +2,188 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "key": "lesson:en-articles",
+      "content": {
+        "type": "lesson",
+        "id": "en-articles",
+        "languageId": "en"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "en/lesson/en-articles/video-44fedae43c50.mp4",
+          "posterUrl": "en/lesson/en-articles/poster-44fedae43c50.jpg",
+          "captionsUrl": "en/lesson/en-articles/captions-44fedae43c50.vtt",
+          "captionsLanguage": "es",
+          "durationSeconds": 126.54,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Lucía",
+          "transcript": [
+            {
+              "text": "Emma está en casa con su gato.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "I have a cat.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Tengo un gato."
+            },
+            {
+              "text": "Primera vez que lo nombra: a, como un o una.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "The cat is sleeping.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "El gato está durmiendo."
+            },
+            {
+              "text": "Ahora ya sabemos de qué gato habla: the, como el o la.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "I have a dog.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Tengo un perro."
+            },
+            {
+              "text": "En la cocina.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "I have an apple.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Tengo una manzana."
+            },
+            {
+              "text": "Esta palabra empieza por sonido de vocal, así que no es a, sino an.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "A y an son como un o una: algo cualquiera.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "An, cuando la palabra siguiente empieza por sonido de vocal.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "The es como el, la, los y las: algo concreto que ya conocemos.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Y no cambian con el género.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Emma habla de su mascota: tengo un perro. ¿Qué dice? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "I have a dog.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Tengo un perro."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Tengo una manzana. ¿A o an? ¿Qué dice Emma? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "I have an apple.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Tengo una manzana."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "¿Qué hace su gato? Dilo en inglés. (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "The cat is sleeping.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "El gato está durmiendo."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Lee los ejemplos de debajo del vídeo, a tu ritmo.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            }
+          ],
+          "objective": "Elegir a, an o the según la situación: algo cualquiera, una palabra que empieza por vocal o algo concreto.",
+          "targetVocabularyIds": ["en-cat", "en-dog", "en-apple"]
+        },
+        "audio": []
+      },
+      "sourceHash": "ae1f6c98240217b4abf95b1242e8f0d291e1327d0b4c9c89fbca27c65044b396",
+      "narratorId": "lucia",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Elegir a, an o the según la situación: algo cualquiera, una palabra que empieza por vocal o algo concreto.",
+        "level": "a1",
+        "targetVocabularyIds": ["en-cat", "en-dog", "en-apple"],
+        "targetPhrases": [
+          "I have a cat.",
+          "The cat is sleeping.",
+          "I have a dog.",
+          "I have an apple."
+        ],
+        "segments": ["situation", "target", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Emma",
+            "voice": "emma"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:31:43.534Z",
+        "providerCalls": 18
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-03T15:31:43.535Z",
+      "updatedAt": "2026-10-03T15:31:43.535Z"
+    },
+    {
       "key": "lesson:pl-greetings",
       "content": {
         "type": "lesson",
@@ -1224,6 +1406,1061 @@
       },
       "createdAt": "2026-10-01T07:46:57.408Z",
       "updatedAt": "2026-10-03T09:09:03.628Z"
+    },
+    {
+      "key": "vocabulary-item:en-airport",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-airport",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/ef607db8ff96c573.m4a",
+            "durationSeconds": 1.24,
+            "text": "airport",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "c5d98ff82490f18324514c8f8d5ad50503f893fe179319fd7534c7bef895e238",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:30.955Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:30.955Z",
+      "updatedAt": "2026-10-03T15:17:30.955Z"
+    },
+    {
+      "key": "vocabulary-item:en-apple",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-apple",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/0da9c25b0d212e8a.m4a",
+            "durationSeconds": 0.96,
+            "text": "apple",
+            "language": "en",
+            "narrator": "Tom"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "en/audio/tom/6085870a29b6317a.m4a",
+            "durationSeconds": 1.52,
+            "text": "I have an apple.",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "004ade54083ab30f4dc641facc116e697a11d156d5a77fbe653ef1233cef180f",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:16:12.321Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:16:12.321Z",
+      "updatedAt": "2026-10-03T15:16:12.321Z"
+    },
+    {
+      "key": "vocabulary-item:en-book",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-book",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/227ef628abf43692.m4a",
+            "durationSeconds": 0.92,
+            "text": "book",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "15d81c432b10f5648ade84c9638cc41400bf4bd18e015a800a10ef4c693719fc",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:03.692Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:03.692Z",
+      "updatedAt": "2026-10-03T15:17:03.692Z"
+    },
+    {
+      "key": "vocabulary-item:en-bread",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-bread",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/126f9520178dee04.m4a",
+            "durationSeconds": 1,
+            "text": "bread",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "d122e26e9e19b5f1e4c2ca7536a272e6aeb9bec039247359f56059727be9eaa3",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:39.405Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:39.405Z",
+      "updatedAt": "2026-10-03T15:15:39.405Z"
+    },
+    {
+      "key": "vocabulary-item:en-brother",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-brother",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/399debdc3c7e2882.m4a",
+            "durationSeconds": 0.92,
+            "text": "brother",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "0e4595c1e60808fd15995d2228ab39e6fe810a791e5704c9fb436e254bf1ab85",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:26.446Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:26.446Z",
+      "updatedAt": "2026-10-03T15:15:26.446Z"
+    },
+    {
+      "key": "vocabulary-item:en-cat",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-cat",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/c6b595c6b7ae7de2.m4a",
+            "durationSeconds": 0.84,
+            "text": "cat",
+            "language": "en",
+            "narrator": "Tom"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "en/audio/tom/724f3d180310d324.m4a",
+            "durationSeconds": 1.4,
+            "text": "I have a cat.",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "377d24fdc705802a168aea485c40f0eb605a9ec95143a54a979ed0405f579099",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:16:44.600Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:16:44.600Z",
+      "updatedAt": "2026-10-03T15:16:44.600Z"
+    },
+    {
+      "key": "vocabulary-item:en-cheese",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-cheese",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/dc9cc00724d2679b.m4a",
+            "durationSeconds": 1.12,
+            "text": "cheese",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "6149468bc4766fa01d8e511e4c2a9e8043a6fba65e167bbfcd64bac86f3bb20e",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:16:18.625Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:16:18.625Z",
+      "updatedAt": "2026-10-03T15:16:18.625Z"
+    },
+    {
+      "key": "vocabulary-item:en-dad",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-dad",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/c6b3bf4a665e6368.m4a",
+            "durationSeconds": 1.2,
+            "text": "dad",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "4886ce7c2dc76570df40278e5f9f47e07a91cf89426ab22b2dd8cbdee1311f42",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:20.077Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:20.077Z",
+      "updatedAt": "2026-10-03T15:15:20.077Z"
+    },
+    {
+      "key": "vocabulary-item:en-dog",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-dog",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/7ab2719291cd17b7.m4a",
+            "durationSeconds": 0.96,
+            "text": "dog",
+            "language": "en",
+            "narrator": "Tom"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "en/audio/tom/40e3261d993d5088.m4a",
+            "durationSeconds": 1.6,
+            "text": "I have a dog.",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "cdda1481176efef73bc026aaa4271353cc9fc93630b01d4b633bb488c05a1b6a",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:16:57.711Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:16:57.711Z",
+      "updatedAt": "2026-10-03T15:16:57.711Z"
+    },
+    {
+      "key": "vocabulary-item:en-family",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-family",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/051ad475c55cce25.m4a",
+            "durationSeconds": 1.16,
+            "text": "family",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "3e5c5742f2e3ea7ee91cad4ebe1cdd2aa071c47b76934c2dafc9f2b6c456beb9",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:06.633Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:06.633Z",
+      "updatedAt": "2026-10-03T15:15:06.633Z"
+    },
+    {
+      "key": "vocabulary-item:en-five",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-five",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/a2d42e311d58e81e.m4a",
+            "durationSeconds": 1.16,
+            "text": "five",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "397aa5f0ffdf0a6aaf98d48fb2e593a82fa6597fc9bce61c427c6961d9b5566b",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:00.755Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:00.756Z",
+      "updatedAt": "2026-10-03T15:15:00.756Z"
+    },
+    {
+      "key": "vocabulary-item:en-four",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-four",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ed667d9251bd2122.m4a",
+            "durationSeconds": 1.24,
+            "text": "four",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "395a345eacceb692170faf7e2ef96cde43365dbda20bd7b8f05b7a81f96d9786",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:53.612Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:53.612Z",
+      "updatedAt": "2026-10-03T15:14:53.612Z"
+    },
+    {
+      "key": "vocabulary-item:en-good-evening",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-good-evening",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/7a668ee438898c73.m4a",
+            "durationSeconds": 1.2,
+            "text": "good evening",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "62ade79dd44831491c330792676e2b7e7ebe186ea3cb416a7421052f9e3e2d83",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:22.269Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:22.269Z",
+      "updatedAt": "2026-10-03T15:14:22.269Z"
+    },
+    {
+      "key": "vocabulary-item:en-good-morning",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-good-morning",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/c87366619f8ca45a.m4a",
+            "durationSeconds": 1.12,
+            "text": "good morning",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "4a20c70f92eea7041ee2cb90f498b2137e2b90e7edca43bd76ae6b7ff0300dbf",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:14.936Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:14.936Z",
+      "updatedAt": "2026-10-03T15:14:14.936Z"
+    },
+    {
+      "key": "vocabulary-item:en-good-night",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-good-night",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/971ddcda551ed964.m4a",
+            "durationSeconds": 1.28,
+            "text": "good night",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "38d641d533f1973c26eeb94bcde97df69f8b4d363ceb8b84136aa1f171fe910c",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:27.867Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:27.867Z",
+      "updatedAt": "2026-10-03T15:14:27.867Z"
+    },
+    {
+      "key": "vocabulary-item:en-goodbye",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-goodbye",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/8d173fda3656794d.m4a",
+            "durationSeconds": 0.96,
+            "text": "goodbye",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "5d3b70e01ea2a12dfbc1a88a6121b97719fde8ac0a0d8a6d71161db79b1625c1",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:08.120Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:08.120Z",
+      "updatedAt": "2026-10-03T15:14:08.120Z"
+    },
+    {
+      "key": "vocabulary-item:en-hello",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-hello",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/7bc366b788691c4b.m4a",
+            "durationSeconds": 0.96,
+            "text": "hello",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "97a7cbad4721fe34beb470093c43721cd005b7ab0afd16835dff696f610427fe",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:01.837Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:01.837Z",
+      "updatedAt": "2026-10-03T15:14:01.837Z"
+    },
+    {
+      "key": "vocabulary-item:en-house",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-house",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/aeb25bd101685489.m4a",
+            "durationSeconds": 1.04,
+            "text": "house",
+            "language": "en",
+            "narrator": "Tom"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "en/audio/tom/ada8f1e4a95391a6.m4a",
+            "durationSeconds": 2.04,
+            "text": "My house is small.",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "fcc06d623de41ef794b0fc643b25a9997ea6d81ddbb36a75dc3ee11a2be99427",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:16:32.486Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:16:32.486Z",
+      "updatedAt": "2026-10-03T15:16:32.486Z"
+    },
+    {
+      "key": "vocabulary-item:en-milk",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-milk",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/4c3a4246f2fcadc7.m4a",
+            "durationSeconds": 0.96,
+            "text": "milk",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "2feacd3de58e12bf4a9242b80ae6e11fc7f460f2c6d3f76dcd25a57c307c3854",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:58.712Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:58.712Z",
+      "updatedAt": "2026-10-03T15:15:58.712Z"
+    },
+    {
+      "key": "vocabulary-item:en-mum",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-mum",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/5d67ba1f86986b5d.m4a",
+            "durationSeconds": 0.92,
+            "text": "mum",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "22de877a18f0e881a823f5e637bc2575701a184a63539f3b38f4f370763fe7aa",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:13.521Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:13.521Z",
+      "updatedAt": "2026-10-03T15:15:13.521Z"
+    },
+    {
+      "key": "vocabulary-item:en-one",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-one",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/3136a96777b94bfc.m4a",
+            "durationSeconds": 0.92,
+            "text": "one",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "75a10cd229aa832d231a0815b4bfc5253dbf635bb9108394a1eb99e78b7662fc",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:33.973Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:33.973Z",
+      "updatedAt": "2026-10-03T15:14:33.973Z"
+    },
+    {
+      "key": "vocabulary-item:en-sister",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-sister",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/4d2be9690a78bf74.m4a",
+            "durationSeconds": 1.08,
+            "text": "sister",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "d711f7799860aedd07613536168307317811e7deea4cc72c0fcc3d4ac68de8ca",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:33.571Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:33.571Z",
+      "updatedAt": "2026-10-03T15:15:33.571Z"
+    },
+    {
+      "key": "vocabulary-item:en-suitcase",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-suitcase",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/2441e7a1d9da0ddd.m4a",
+            "durationSeconds": 1.16,
+            "text": "suitcase",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "b325469bce4adffa5b9fc0ad6f3e5d06bb83e5204acea5d7db00bb1dfdd05553",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:36.793Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:36.793Z",
+      "updatedAt": "2026-10-03T15:17:36.793Z"
+    },
+    {
+      "key": "vocabulary-item:en-three",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-three",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ec53e597de99d253.m4a",
+            "durationSeconds": 1.04,
+            "text": "three",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "f38e461e0aa3e5b1be71c759f659fcccb0bbcefcb66364172a6bec74313207f6",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:47.784Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:47.784Z",
+      "updatedAt": "2026-10-03T15:14:47.784Z"
+    },
+    {
+      "key": "vocabulary-item:en-ticket",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-ticket",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/4ab63345211e2f36.m4a",
+            "durationSeconds": 1.12,
+            "text": "ticket",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "0a0b758dfc3ce66032c2e7317870a43ed386a8997acf7c98a7d7de550716f4a4",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:24.496Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:24.496Z",
+      "updatedAt": "2026-10-03T15:17:24.496Z"
+    },
+    {
+      "key": "vocabulary-item:en-train",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-train",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/a65aeb98b5bbc20c.m4a",
+            "durationSeconds": 1.28,
+            "text": "train",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "ed0e36cc57dbb6ba5e128caf99facd593e122001fa1678e9abb6dea3fe6d9c6d",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:17.858Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:17.858Z",
+      "updatedAt": "2026-10-03T15:17:17.858Z"
+    },
+    {
+      "key": "vocabulary-item:en-two",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-two",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/7dbb15801925882e.m4a",
+            "durationSeconds": 1.08,
+            "text": "two",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "c5490b3a8f675ac378df0bc98f71bd660a986012bb00da0f055ae3d8f7c4cb22",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:14:41.222Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:14:41.222Z",
+      "updatedAt": "2026-10-03T15:14:41.222Z"
+    },
+    {
+      "key": "vocabulary-item:en-water",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-water",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/3d4c98e86c24288d.m4a",
+            "durationSeconds": 1.12,
+            "text": "water",
+            "language": "en",
+            "narrator": "Tom"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "en/audio/tom/26001ad0e3377ae9.m4a",
+            "durationSeconds": 1.6,
+            "text": "A glass of water, please.",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "688567b33dcd29350b508e68331c79491c6fafba1babc94bfb65f5095da41173",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:15:52.752Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:15:52.752Z",
+      "updatedAt": "2026-10-03T15:15:52.752Z"
+    },
+    {
+      "key": "vocabulary-item:en-work",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "en-work",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/tom/05d8401a078e9676.m4a",
+            "durationSeconds": 1.08,
+            "text": "work",
+            "language": "en",
+            "narrator": "Tom"
+          }
+        ]
+      },
+      "sourceHash": "82234b6f9ab65369e5620841dee60fa85d66f142f53fb9374675b32a3d113b3a",
+      "narratorId": "tom",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-03T15:17:10.771Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-03T15:17:10.771Z",
+      "updatedAt": "2026-10-03T15:17:10.771Z"
     },
     {
       "key": "vocabulary-item:pl-bilet",
