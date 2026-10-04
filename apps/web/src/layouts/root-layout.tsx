@@ -14,6 +14,29 @@ const NAV_LINKS = [
 
 const NAV_LIST_ID = "primary-nav-links";
 
+/** Footer groups: only pages that exist; privacy links jump to the matching notice section. */
+const FOOTER_GROUPS = [
+  {
+    title: "Learn",
+    links: [{ to: "/learn", label: "Languages and levels" }],
+  },
+  {
+    title: "Privacy and data",
+    links: [
+      { to: "/privacy", label: "Privacy notice" },
+      { to: "/privacy#privacy-what", label: "Data we store" },
+      { to: "/privacy#privacy-browser", label: "Cookies and browser storage" },
+      { to: "/privacy#privacy-why", label: "How your data is used" },
+      { to: "/privacy#privacy-rights", label: "Your rights" },
+      { to: "/profile#data-management-heading", label: "Download or delete your data" },
+    ],
+  },
+  {
+    title: "Contact",
+    links: [{ to: "/privacy#privacy-who", label: "Who is responsible" }],
+  },
+] as const;
+
 const supportsViewTransitions =
   typeof document !== "undefined" && "startViewTransition" in document;
 
@@ -29,7 +52,19 @@ export function RootLayout() {
   const toggleTheme = useThemeStore((state) => state.toggleTheme);
   const { data: currentUser } = useCurrentUser();
   const logoutMutation = useLogout();
-  const { pathname } = useLocation();
+  const { pathname, hash } = useLocation();
+
+  // In-page links (e.g. /privacy#privacy-rights): once the page has rendered, scroll to the target.
+  useEffect(() => {
+    if (!hash) return;
+    const id = decodeURIComponent(hash.slice(1));
+    const timer = window.setTimeout(() => {
+      document.getElementById(id)?.scrollIntoView({ block: "start" });
+    }, 150);
+    return () => {
+      window.clearTimeout(timer);
+    };
+  }, [pathname, hash]);
   const fullBleed = useMatches().some((match) => isFullBleedHandle(match.handle));
   const frameWidth = fullBleed ? "max-w-7xl" : "max-w-5xl";
   // M21: the signed-in navigation needs the wider frame to stay on one row; content keeps its column.
@@ -53,7 +88,7 @@ export function RootLayout() {
   }
 
   return (
-    <div className="app-paper min-h-screen text-primary dark:text-surface">
+    <div className="app-paper flex min-h-screen flex-col text-primary dark:text-surface">
       <a
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-primary"
@@ -198,7 +233,8 @@ export function RootLayout() {
 
       <main
         id="main-content"
-        className={fullBleed ? undefined : "app-column mx-auto max-w-5xl px-4"}
+        // flex-1 keeps the footer at the bottom of the window on short pages.
+        className={`w-full flex-1 ${fullBleed ? "" : "app-column mx-auto max-w-5xl px-4"}`}
         data-layout={fullBleed ? "full-bleed" : undefined}
       >
         {/* Without the View Transitions API, each new page still fades in (keyed by path). */}
@@ -208,26 +244,31 @@ export function RootLayout() {
       </main>
 
       <footer
-        className={`border-t border-primary/10 dark:border-surface/10 ${fullBleed ? "" : "mt-12"}`}
+        className={`border-t border-primary/10 bg-paper-shade/40 dark:border-surface/10 dark:bg-night-paper/40 ${fullBleed ? "" : "mt-12"}`}
       >
-        <div
-          className={`mx-auto flex ${frameWidth} flex-wrap items-center justify-between gap-4 px-4 py-6 text-sm`}
-        >
-          <nav aria-label="Footer">
-            <ul className="flex flex-wrap gap-x-6 gap-y-2">
-              <li>
-                <Link to="/learn" className="hover:underline">
-                  Languages and levels
-                </Link>
-              </li>
-              <li>
-                <Link to="/privacy" className="hover:underline">
-                  Privacy notice
-                </Link>
-              </li>
-            </ul>
+        <div className={`mx-auto ${frameWidth} px-4 py-8 text-sm`}>
+          <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-3">
+            {FOOTER_GROUPS.map((group) => (
+              <div key={group.title}>
+                <h2 className="text-xs font-semibold uppercase tracking-wide text-primary/70 dark:text-surface/70">
+                  {group.title}
+                </h2>
+                <ul className="mt-2 space-y-1.5">
+                  {group.links.map((link) => (
+                    <li key={link.to}>
+                      <Link to={link.to} className="hover:underline">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
           </nav>
-          <p className="text-primary/70 dark:text-surface/70">© 2026 pvsegura · TFM-BIC</p>
+          <p className="mt-6 border-t border-primary/10 pt-4 text-primary/70 dark:border-surface/10 dark:text-surface/70">
+            © 2026 pvsegura · TFM-BIC · A study project; contact details and legal review are
+            pending.
+          </p>
         </div>
       </footer>
     </div>
