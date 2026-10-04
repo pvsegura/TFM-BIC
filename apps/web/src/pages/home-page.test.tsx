@@ -195,7 +195,12 @@ describe("HomePage — practise scene (a local example, nothing is sent)", () =>
     await user.click(within(exercise).getByRole("radio", { name: "Przepraszam" }));
     await user.click(screen.getByRole("button", { name: "Check answer" }));
     expect(feedback).toHaveTextContent("Correct.");
-    expect(fetchSpy).not.toHaveBeenCalled();
+    // The watch scene's read of the showcase video metadata may be retried at any moment (its
+    // query retries once); answering the exercise itself must send nothing at all.
+    const sent = fetchSpy.mock.calls.filter(
+      ([input]) => !(typeof input === "string" && input.startsWith("/media/")),
+    );
+    expect(sent).toHaveLength(0);
   });
 
   it("asks for a choice before checking", async () => {
