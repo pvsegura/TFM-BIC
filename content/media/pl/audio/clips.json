@@ -62,6 +62,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:24.320Z"
   },
+  "0b9efb59c9a2f0eb": {
+    "path": "pl/audio/anna/0b9efb59c9a2f0eb.m4a",
+    "durationSeconds": 1.04,
+    "text": "dwa",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T20:32:35.968Z"
+  },
   "0c42efcd5adb9053": {
     "path": "pl/audio/anna/0c42efcd5adb9053.m4a",
     "durationSeconds": 4.28,
@@ -71,6 +80,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:58.712Z"
   },
+  "0d2214d2bc49c292": {
+    "path": "pl/audio/anna/0d2214d2bc49c292.m4a",
+    "durationSeconds": 1.36,
+    "text": "dziesiąty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:05.580Z"
+  },
   "0d4113a101a96ca4": {
     "path": "pl/audio/anna/0d4113a101a96ca4.m4a",
     "durationSeconds": 1.12,
@@ -79,6 +97,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:02.644Z"
+  },
+  "0e095e91e4559efd": {
+    "path": "pl/audio/anna/0e095e91e4559efd.m4a",
+    "durationSeconds": 1.2,
+    "text": "trzeci",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:19.927Z"
   },
   "10a900de09242355": {
     "path": "pl/audio/anna/10a900de09242355.m4a",
@@ -125,6 +152,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:23.486Z"
   },
+  "13068b596fbf33ef": {
+    "path": "pl/audio/anna/13068b596fbf33ef.m4a",
+    "durationSeconds": 1.52,
+    "text": "jedenasty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:17.175Z"
+  },
   "13c352010a42ee48": {
     "path": "pl/audio/anna/13c352010a42ee48.m4a",
     "durationSeconds": 1.88,
@@ -142,6 +178,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:25.286Z"
+  },
+  "14dcc2fd36fed248": {
+    "path": "pl/audio/anna/14dcc2fd36fed248.m4a",
+    "durationSeconds": 1.2,
+    "text": "piąty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:34.074Z"
   },
   "150345c744411c53": {
     "path": "pl/audio/marek/150345c744411c53.m4a",
@@ -188,6 +233,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:29.798Z"
   },
+  "196647a2b100f493": {
+    "path": "pl/audio/anna/196647a2b100f493.m4a",
+    "durationSeconds": 1.64,
+    "text": "pięćdziesiąty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:51.610Z"
+  },
   "19685144b2ab9c6e": {
     "path": "pl/audio/piotr/19685144b2ab9c6e.m4a",
     "durationSeconds": 1.04,
@@ -233,6 +287,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:51:44.677Z"
   },
+  "1b6a2c4206e48ee3": {
+    "path": "pl/audio/anna/1b6a2c4206e48ee3.m4a",
+    "durationSeconds": 1,
+    "text": "trzy",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T20:32:45.722Z"
+  },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
     "durationSeconds": 1.12,
@@ -250,6 +313,33 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:46:36.120Z"
+  },
+  "1eb9c12765b5f10e": {
+    "path": "pl/audio/anna/1eb9c12765b5f10e.m4a",
+    "durationSeconds": 1.4,
+    "text": "pięćdziesiąt",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:47.965Z"
+  },
+  "1f171f35ea3fad90": {
+    "path": "pl/audio/anna/1f171f35ea3fad90.m4a",
+    "durationSeconds": 1.2,
+    "text": "siódmy",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:46.085Z"
+  },
+  "206a36a17c0607bc": {
+    "path": "pl/audio/anna/206a36a17c0607bc.m4a",
+    "durationSeconds": 1.6,
+    "text": "trzydziesty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:38.927Z"
   },
   "208e5df095b7dc5d": {
     "path": "pl/audio/marek/208e5df095b7dc5d.m4a",
@@ -323,6 +413,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:04.012Z"
   },
+  "264157d349d4e307": {
+    "path": "pl/audio/anna/264157d349d4e307.m4a",
+    "durationSeconds": 1.32,
+    "text": "setny",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:58.216Z"
+  },
   "26921189e9502ec4": {
     "path": "pl/audio/marek/26921189e9502ec4.m4a",
     "durationSeconds": 7.04,
@@ -376,6 +475,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-03T08:51:11.416Z"
+  },
+  "2b48fc91492442d3": {
+    "path": "pl/audio/anna/2b48fc91492442d3.m4a",
+    "durationSeconds": 1.48,
+    "text": "czterdzieści",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:45.610Z"
   },
   "2c68f280649bdbeb": {
     "path": "pl/audio/piotr/2c68f280649bdbeb.m4a",
@@ -449,6 +557,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:50.410Z"
   },
+  "34d1bd626afe2a6e": {
+    "path": "pl/audio/anna/34d1bd626afe2a6e.m4a",
+    "durationSeconds": 1.08,
+    "text": "osiem",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:30.191Z"
+  },
   "35f95487d3141f71": {
     "path": "pl/audio/anna/35f95487d3141f71.m4a",
     "durationSeconds": 2.88,
@@ -457,6 +574,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:49.103Z"
+  },
+  "36e5246102afcb19": {
+    "path": "pl/audio/anna/36e5246102afcb19.m4a",
+    "durationSeconds": 1.08,
+    "text": "ósmy",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:52.436Z"
   },
   "37886057cf6281fb": {
     "path": "pl/audio/anna/37886057cf6281fb.m4a",
@@ -494,6 +620,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:02:17.519Z"
   },
+  "3b91bb2bf31759bd": {
+    "path": "pl/audio/anna/3b91bb2bf31759bd.m4a",
+    "durationSeconds": 1.32,
+    "text": "tysięczny",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:27:04.800Z"
+  },
   "3bd3587f8d35a99e": {
     "path": "pl/audio/anna/3bd3587f8d35a99e.m4a",
     "durationSeconds": 4.32,
@@ -511,6 +646,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:16:08.384Z"
+  },
+  "3d883e973ca23854": {
+    "path": "pl/audio/anna/3d883e973ca23854.m4a",
+    "durationSeconds": 1.4,
+    "text": "piętnasty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:25.835Z"
   },
   "3df17e5018f07010": {
     "path": "pl/audio/marek/3df17e5018f07010.m4a",
@@ -557,6 +701,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:38.197Z"
   },
+  "3f24ac774d1ed88b": {
+    "path": "pl/audio/anna/3f24ac774d1ed88b.m4a",
+    "durationSeconds": 1.16,
+    "text": "cztery",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T20:32:49.158Z"
+  },
   "3f8c7cc01f382576": {
     "path": "pl/audio/marek/3f8c7cc01f382576.m4a",
     "durationSeconds": 3.48,
@@ -601,6 +754,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:22.286Z"
+  },
+  "44c8dd10dd9cbcf0": {
+    "path": "pl/audio/anna/44c8dd10dd9cbcf0.m4a",
+    "durationSeconds": 1.36,
+    "text": "piętnaście",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:04.203Z"
   },
   "450962bc8195b839": {
     "path": "pl/audio/ola/450962bc8195b839.m4a",
@@ -746,6 +908,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:16.203Z"
   },
+  "57a3c13534740ba1": {
+    "path": "pl/audio/anna/57a3c13534740ba1.m4a",
+    "durationSeconds": 1.36,
+    "text": "dwanaście",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:02.437Z"
+  },
   "5c3edbb0d432d623": {
     "path": "pl/audio/marek/5c3edbb0d432d623.m4a",
     "durationSeconds": 5.92,
@@ -817,6 +988,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:55.631Z"
+  },
+  "656ac75355bb13b3": {
+    "path": "pl/audio/anna/656ac75355bb13b3.m4a",
+    "durationSeconds": 1.44,
+    "text": "tysiąc",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:00.806Z"
   },
   "672e5776480fef1a": {
     "path": "pl/audio/ola/672e5776480fef1a.m4a",
@@ -1034,6 +1214,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:18.786Z"
   },
+  "8395e1a3c2a76321": {
+    "path": "pl/audio/anna/8395e1a3c2a76321.m4a",
+    "durationSeconds": 1.12,
+    "text": "pięć",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:11.144Z"
+  },
   "8405fcb319f0de81": {
     "path": "pl/audio/anna/8405fcb319f0de81.m4a",
     "durationSeconds": 1.16,
@@ -1132,6 +1321,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:12.643Z"
+  },
+  "8d48225c9cb32438": {
+    "path": "pl/audio/anna/8d48225c9cb32438.m4a",
+    "durationSeconds": 1.56,
+    "text": "jedenaście",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:50.599Z"
   },
   "8d7f052683d2e46d": {
     "path": "pl/audio/marek/8d7f052683d2e46d.m4a",
@@ -1259,6 +1457,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:52.137Z"
   },
+  "9956bfb42a44f017": {
+    "path": "pl/audio/anna/9956bfb42a44f017.m4a",
+    "durationSeconds": 1.32,
+    "text": "czwarty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:26.745Z"
+  },
   "99620e24292142b6": {
     "path": "pl/audio/anna/99620e24292142b6.m4a",
     "durationSeconds": 4.08,
@@ -1358,6 +1565,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:10.231Z"
   },
+  "a6a89113720438d4": {
+    "path": "pl/audio/anna/a6a89113720438d4.m4a",
+    "durationSeconds": 1.16,
+    "text": "drugi",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:13.870Z"
+  },
+  "a8b274c5bb8fa5df": {
+    "path": "pl/audio/anna/a8b274c5bb8fa5df.m4a",
+    "durationSeconds": 1.64,
+    "text": "dwudziesty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:32.067Z"
+  },
   "a928dd9471ef15e6": {
     "path": "pl/audio/anna/a928dd9471ef15e6.m4a",
     "durationSeconds": 1,
@@ -1394,6 +1619,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:24.243Z"
   },
+  "aacf9dbed1b302a9": {
+    "path": "pl/audio/anna/aacf9dbed1b302a9.m4a",
+    "durationSeconds": 1.16,
+    "text": "sześć",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:17.770Z"
+  },
   "acea2e25bd25e99b": {
     "path": "pl/audio/marek/acea2e25bd25e99b.m4a",
     "durationSeconds": 5.2,
@@ -1402,6 +1636,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:55.807Z"
+  },
+  "ad1a5403c1565a38": {
+    "path": "pl/audio/anna/ad1a5403c1565a38.m4a",
+    "durationSeconds": 1.44,
+    "text": "dziewiąty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:59.002Z"
   },
   "ad2e7a06cb965d06": {
     "path": "pl/audio/anna/ad2e7a06cb965d06.m4a",
@@ -1420,6 +1663,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:33.067Z"
+  },
+  "afa8ea6e1ddc24bb": {
+    "path": "pl/audio/anna/afa8ea6e1ddc24bb.m4a",
+    "durationSeconds": 1.24,
+    "text": "szósty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:40.038Z"
   },
   "b108e0970e945039": {
     "path": "pl/audio/marek/b108e0970e945039.m4a",
@@ -1511,6 +1763,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:53:44.343Z"
   },
+  "b7921d450f48f4e7": {
+    "path": "pl/audio/anna/b7921d450f48f4e7.m4a",
+    "durationSeconds": 1.16,
+    "text": "jeden",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-03T20:32:30.841Z"
+  },
+  "b8a9ad4c52d46231": {
+    "path": "pl/audio/anna/b8a9ad4c52d46231.m4a",
+    "durationSeconds": 1.32,
+    "text": "trzydzieści",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:17.585Z"
+  },
   "b8ce08b2fec9d924": {
     "path": "pl/audio/ola/b8ce08b2fec9d924.m4a",
     "durationSeconds": 1.2,
@@ -1592,6 +1862,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:32:11.400Z"
   },
+  "c38f865773415be2": {
+    "path": "pl/audio/anna/c38f865773415be2.m4a",
+    "durationSeconds": 1.2,
+    "text": "pierwszy",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:25:08.098Z"
+  },
   "c4c9c6a4d2c07ee5": {
     "path": "pl/audio/marek/c4c9c6a4d2c07ee5.m4a",
     "durationSeconds": 1.2,
@@ -1609,6 +1888,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:04.868Z"
+  },
+  "c5beb344e2859b58": {
+    "path": "pl/audio/anna/c5beb344e2859b58.m4a",
+    "durationSeconds": 1.56,
+    "text": "dwadzieścia",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:10.932Z"
   },
   "c79c09d02afc917e": {
     "path": "pl/audio/marek/c79c09d02afc917e.m4a",
@@ -1637,6 +1925,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:00:58.266Z"
   },
+  "c9944be32a45dc5d": {
+    "path": "pl/audio/anna/c9944be32a45dc5d.m4a",
+    "durationSeconds": 1.56,
+    "text": "czterdziesty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:45.682Z"
+  },
+  "ca2b1c1126de4a2b": {
+    "path": "pl/audio/anna/ca2b1c1126de4a2b.m4a",
+    "durationSeconds": 1.48,
+    "text": "dwunasty",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:26:19.034Z"
+  },
   "cd4d5ce8661e0508": {
     "path": "pl/audio/anna/cd4d5ce8661e0508.m4a",
     "durationSeconds": 3.24,
@@ -1654,6 +1960,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:43.850Z"
+  },
+  "cf0fae9f24a14890": {
+    "path": "pl/audio/anna/cf0fae9f24a14890.m4a",
+    "durationSeconds": 1.36,
+    "text": "dziewięć",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:36.917Z"
   },
   "cf550d025de2fe93": {
     "path": "pl/audio/piotr/cf550d025de2fe93.m4a",
@@ -1880,6 +2195,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:53:37.515Z"
   },
+  "e7a507f6895de26f": {
+    "path": "pl/audio/anna/e7a507f6895de26f.m4a",
+    "durationSeconds": 1,
+    "text": "sto",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:24:54.047Z"
+  },
   "e8b9dbb9d041ddb0": {
     "path": "pl/audio/anna/e8b9dbb9d041ddb0.m4a",
     "durationSeconds": 3.6,
@@ -1924,6 +2248,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:02:05.757Z"
+  },
+  "eb9fe0e701198641": {
+    "path": "pl/audio/anna/eb9fe0e701198641.m4a",
+    "durationSeconds": 1.36,
+    "text": "dziesięć",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:43.463Z"
   },
   "ecd0c4d19c5db1f6": {
     "path": "pl/audio/marek/ecd0c4d19c5db1f6.m4a",
@@ -2095,6 +2428,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:18.737Z"
+  },
+  "fc807851e898baaf": {
+    "path": "pl/audio/anna/fc807851e898baaf.m4a",
+    "durationSeconds": 1.12,
+    "text": "siedem",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-04T07:23:23.766Z"
   },
   "fe4c86e6df7025a5": {
     "path": "pl/audio/ola/fe4c86e6df7025a5.m4a",

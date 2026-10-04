@@ -2,6 +2,604 @@
   "schemaVersion": 1,
   "entries": [
     {
+      "key": "grammar-topic:en-ref-numbers",
+      "content": {
+        "type": "grammar-topic",
+        "id": "en-ref-numbers",
+        "languageId": "en"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/3136a96777b94bfc.m4a",
+            "durationSeconds": 0.92,
+            "text": "one",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/7dbb15801925882e.m4a",
+            "durationSeconds": 1.08,
+            "text": "two",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ec53e597de99d253.m4a",
+            "durationSeconds": 1.04,
+            "text": "three",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ed667d9251bd2122.m4a",
+            "durationSeconds": 1.24,
+            "text": "four",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/a2d42e311d58e81e.m4a",
+            "durationSeconds": 1.16,
+            "text": "five",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ff338241787d14c8.m4a",
+            "durationSeconds": 1.04,
+            "text": "eight",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/a3b9360618783b31.m4a",
+            "durationSeconds": 1.2,
+            "text": "nine",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/8bcf9e75690a6b44.m4a",
+            "durationSeconds": 1.04,
+            "text": "eleven",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/f86dea7f7b8b761f.m4a",
+            "durationSeconds": 1.32,
+            "text": "twelve",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/738176391892556e.m4a",
+            "durationSeconds": 1.24,
+            "text": "thirteen",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/61b3d14bb2bb0c9e.m4a",
+            "durationSeconds": 1.12,
+            "text": "twenty",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/dce792e1bdbdfd9c.m4a",
+            "durationSeconds": 1.44,
+            "text": "twenty-one",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/6b520511fb10c845.m4a",
+            "durationSeconds": 1.2,
+            "text": "thirty",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/15d873babe69a820.m4a",
+            "durationSeconds": 1.36,
+            "text": "one hundred",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/e99452d10c594572.m4a",
+            "durationSeconds": 1.48,
+            "text": "one thousand",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/dba7705ad8dad375.m4a",
+            "durationSeconds": 1.28,
+            "text": "first",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/36d223406eb23996.m4a",
+            "durationSeconds": 1.28,
+            "text": "second",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/36d3460b4581275f.m4a",
+            "durationSeconds": 1,
+            "text": "third",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/89eb77a6ef79885d.m4a",
+            "durationSeconds": 0.88,
+            "text": "fourth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/0abac2c51307c64e.m4a",
+            "durationSeconds": 1.28,
+            "text": "fifth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/f9044113c2a190f9.m4a",
+            "durationSeconds": 1.04,
+            "text": "eighth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/d4fc48b9c5b3a032.m4a",
+            "durationSeconds": 1.16,
+            "text": "ninth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/8928b06f42866fc4.m4a",
+            "durationSeconds": 1.16,
+            "text": "eleventh",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/f96603215cd43d8e.m4a",
+            "durationSeconds": 1.08,
+            "text": "twelfth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/ef9d320b2b551310.m4a",
+            "durationSeconds": 1.24,
+            "text": "thirteenth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/1543c039874ab63d.m4a",
+            "durationSeconds": 1.2,
+            "text": "twentieth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/4a6d0fc398881c1d.m4a",
+            "durationSeconds": 1.52,
+            "text": "twenty-first",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/bbcc2b5ca5cc320d.m4a",
+            "durationSeconds": 1.48,
+            "text": "thirtieth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/6e5e9514d273998c.m4a",
+            "durationSeconds": 1.28,
+            "text": "hundredth",
+            "language": "en",
+            "narrator": "Emma"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "en/audio/emma/2d47a2c6b4d89e3e.m4a",
+            "durationSeconds": 1.32,
+            "text": "thousandth",
+            "language": "en",
+            "narrator": "Emma"
+          }
+        ]
+      },
+      "sourceHash": "4dd90acadaef039bddcc3c7e1ded903c2d64a4c9ead5f35993ccafa86736a49f",
+      "narratorId": "emma",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-04T07:44:43.623Z",
+        "providerCalls": 25
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-04T07:44:43.623Z",
+      "updatedAt": "2026-10-04T07:44:43.623Z"
+    },
+    {
+      "key": "grammar-topic:pl-ref-numbers",
+      "content": {
+        "type": "grammar-topic",
+        "id": "pl-ref-numbers",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/b7921d450f48f4e7.m4a",
+            "durationSeconds": 1.16,
+            "text": "jeden",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/0b9efb59c9a2f0eb.m4a",
+            "durationSeconds": 1.04,
+            "text": "dwa",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/1b6a2c4206e48ee3.m4a",
+            "durationSeconds": 1,
+            "text": "trzy",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/3f24ac774d1ed88b.m4a",
+            "durationSeconds": 1.16,
+            "text": "cztery",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/8395e1a3c2a76321.m4a",
+            "durationSeconds": 1.12,
+            "text": "pięć",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/aacf9dbed1b302a9.m4a",
+            "durationSeconds": 1.16,
+            "text": "sześć",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/fc807851e898baaf.m4a",
+            "durationSeconds": 1.12,
+            "text": "siedem",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/34d1bd626afe2a6e.m4a",
+            "durationSeconds": 1.08,
+            "text": "osiem",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/cf0fae9f24a14890.m4a",
+            "durationSeconds": 1.36,
+            "text": "dziewięć",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/eb9fe0e701198641.m4a",
+            "durationSeconds": 1.36,
+            "text": "dziesięć",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/8d48225c9cb32438.m4a",
+            "durationSeconds": 1.56,
+            "text": "jedenaście",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/57a3c13534740ba1.m4a",
+            "durationSeconds": 1.36,
+            "text": "dwanaście",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/44c8dd10dd9cbcf0.m4a",
+            "durationSeconds": 1.36,
+            "text": "piętnaście",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/c5beb344e2859b58.m4a",
+            "durationSeconds": 1.56,
+            "text": "dwadzieścia",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/b8a9ad4c52d46231.m4a",
+            "durationSeconds": 1.32,
+            "text": "trzydzieści",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/2b48fc91492442d3.m4a",
+            "durationSeconds": 1.48,
+            "text": "czterdzieści",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/1eb9c12765b5f10e.m4a",
+            "durationSeconds": 1.4,
+            "text": "pięćdziesiąt",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/e7a507f6895de26f.m4a",
+            "durationSeconds": 1,
+            "text": "sto",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/656ac75355bb13b3.m4a",
+            "durationSeconds": 1.44,
+            "text": "tysiąc",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/c38f865773415be2.m4a",
+            "durationSeconds": 1.2,
+            "text": "pierwszy",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/a6a89113720438d4.m4a",
+            "durationSeconds": 1.16,
+            "text": "drugi",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/0e095e91e4559efd.m4a",
+            "durationSeconds": 1.2,
+            "text": "trzeci",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/9956bfb42a44f017.m4a",
+            "durationSeconds": 1.32,
+            "text": "czwarty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/14dcc2fd36fed248.m4a",
+            "durationSeconds": 1.2,
+            "text": "piąty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/afa8ea6e1ddc24bb.m4a",
+            "durationSeconds": 1.24,
+            "text": "szósty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/1f171f35ea3fad90.m4a",
+            "durationSeconds": 1.2,
+            "text": "siódmy",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/36e5246102afcb19.m4a",
+            "durationSeconds": 1.08,
+            "text": "ósmy",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/ad1a5403c1565a38.m4a",
+            "durationSeconds": 1.44,
+            "text": "dziewiąty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/0d2214d2bc49c292.m4a",
+            "durationSeconds": 1.36,
+            "text": "dziesiąty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/13068b596fbf33ef.m4a",
+            "durationSeconds": 1.52,
+            "text": "jedenasty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/ca2b1c1126de4a2b.m4a",
+            "durationSeconds": 1.48,
+            "text": "dwunasty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/3d883e973ca23854.m4a",
+            "durationSeconds": 1.4,
+            "text": "piętnasty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/a8b274c5bb8fa5df.m4a",
+            "durationSeconds": 1.64,
+            "text": "dwudziesty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/206a36a17c0607bc.m4a",
+            "durationSeconds": 1.6,
+            "text": "trzydziesty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/c9944be32a45dc5d.m4a",
+            "durationSeconds": 1.56,
+            "text": "czterdziesty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/196647a2b100f493.m4a",
+            "durationSeconds": 1.64,
+            "text": "pięćdziesiąty",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/264157d349d4e307.m4a",
+            "durationSeconds": 1.32,
+            "text": "setny",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/3b91bb2bf31759bd.m4a",
+            "durationSeconds": 1.32,
+            "text": "tysięczny",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "92aabe3ec2faa23b2916a179d12d9027f59d99cb470cdf09b77bb16916566cf0",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-04T07:27:04.804Z",
+        "providerCalls": 34
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-04T07:27:04.804Z",
+      "updatedAt": "2026-10-04T07:27:04.804Z"
+    },
+    {
       "key": "lesson:en-articles",
       "content": {
         "type": "lesson",
@@ -182,6 +780,435 @@
       },
       "createdAt": "2026-10-03T15:31:43.535Z",
       "updatedAt": "2026-10-03T15:31:43.535Z"
+    },
+    {
+      "key": "lesson:en-first-sounds",
+      "content": {
+        "type": "lesson",
+        "id": "en-first-sounds",
+        "languageId": "en"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "en/lesson/en-first-sounds/video-0c73f3e8fd9b.mp4",
+          "posterUrl": "en/lesson/en-first-sounds/poster-0c73f3e8fd9b.jpg",
+          "captionsUrl": "en/lesson/en-first-sounds/captions-0c73f3e8fd9b.vtt",
+          "captionsLanguage": "es",
+          "durationSeconds": 136.11,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Javier",
+          "transcript": [
+            {
+              "text": "Ben cuenta las manzanas. Escucha el número.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "tres"
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "tres"
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "tres"
+            },
+            {
+              "text": "La punta de la lengua va entre los dientes, parecido a la zeta del español de España.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "tres"
+            },
+            {
+              "text": "house",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "casa"
+            },
+            {
+              "text": "Casa. La hache sí se pronuncia: un soplo suave, más suave que la jota.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "house",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "casa"
+            },
+            {
+              "text": "sheep",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "oveja"
+            },
+            {
+              "text": "Oveja. Una i larga y tensa, más larga que la española.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "ship",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "barco"
+            },
+            {
+              "text": "Barco. Una i corta y más abierta, entre una i y una e.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "sheep",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "oveja"
+            },
+            {
+              "text": "ship",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "barco"
+            },
+            {
+              "text": "Ahora di las dos, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "sheep",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "oveja"
+            },
+            {
+              "text": "Solo cambia la vocal, y cambia el significado.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "¿Cuántas manzanas hay? Dilo en inglés. (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "three",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "tres"
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "¿Cómo se dice casa? No olvides la hache. (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "house",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "casa"
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Un barco: i corta. ¿Qué dice Emma? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "ship",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "barco"
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Estas comparaciones son solo aproximadas. Escucha a hablantes nativos para afinar los sonidos.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            }
+          ],
+          "objective": "Oír y decir la th, la h y la diferencia entre la i larga y la i corta en cuatro palabras.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "17bc91b88f918a35e1afbf0afbe02d8e6ac426b47915334ff63918b2003ee769",
+      "narratorId": "javier",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Oír y decir la th, la h y la diferencia entre la i larga y la i corta en cuatro palabras.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": ["three", "house", "sheep", "ship"],
+        "segments": ["situation", "pronunciation", "target", "reuse", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Ben",
+            "voice": "ben"
+          },
+          {
+            "character": "Emma",
+            "voice": "emma"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-04T07:41:48.340Z",
+        "providerCalls": 19
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-04T07:41:48.341Z",
+      "updatedAt": "2026-10-04T07:41:48.341Z"
+    },
+    {
+      "key": "lesson:en-introducing-yourself",
+      "content": {
+        "type": "lesson",
+        "id": "en-introducing-yourself",
+        "languageId": "en"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "en/lesson/en-introducing-yourself/video-76639ed91104.mp4",
+          "posterUrl": "en/lesson/en-introducing-yourself/poster-76639ed91104.jpg",
+          "captionsUrl": "en/lesson/en-introducing-yourself/captions-76639ed91104.vtt",
+          "captionsLanguage": "es",
+          "durationSeconds": 121.82,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Javier",
+          "transcript": [
+            {
+              "text": "Dos personas se conocen en un parque por primera vez.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Hi! My name is Anna.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "¡Hola! Me llamo Anna."
+            },
+            {
+              "text": "Hi! I'm Tom.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "¡Hola! Soy Tom."
+            },
+            {
+              "text": "Nice to meet you.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "Encantado de conocerte; encantada de conocerte."
+            },
+            {
+              "text": "Nice to meet you, too.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Encantado de conocerte también."
+            },
+            {
+              "text": "Después dicen de dónde son.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "I'm from England.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Soy de Inglaterra."
+            },
+            {
+              "text": "I'm from Spain.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "Soy de España."
+            },
+            {
+              "text": "Para preguntar el nombre a otra persona:",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "What's your name?",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "¿Cómo te llamas?"
+            },
+            {
+              "text": "My name is Anna.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "Me llamo Anna."
+            },
+            {
+              "text": "La misma pregunta sirve con cualquier persona: en inglés no cambia.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "My name is Anna.",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "Me llamo Anna."
+            },
+            {
+              "text": "Estas tres palabras, y después tu nombre.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "I'm from Spain.",
+              "language": "en",
+              "speaker": "Narrator (Javier)",
+              "translation": "Soy de España."
+            },
+            {
+              "text": "Estas dos palabras, y después el país.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "En inglés, los países se escriben siempre con mayúscula.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Anna saluda y dice su nombre. ¿Qué dice? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Hi! My name is Anna.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "¡Hola! Me llamo Anna."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Se dan la mano. ¿Qué dice Anna? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Nice to meet you.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "Encantado de conocerte; encantada de conocerte."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Anna es de España. ¿Qué dice? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "I'm from Spain.",
+              "language": "en",
+              "speaker": "Anna",
+              "translation": "Soy de España."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Ahora preséntate en los ejercicios de debajo del vídeo.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            }
+          ],
+          "objective": "Decir tu nombre y de dónde eres, y responder al conocer a alguien.",
+          "targetVocabularyIds": ["en-hi"]
+        },
+        "audio": []
+      },
+      "sourceHash": "983cfdc43edaaa3d1ec7244a5c65c97b26e4a92a8eefbd6fc46954d69126230c",
+      "narratorId": "javier",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Decir tu nombre y de dónde eres, y responder al conocer a alguien.",
+        "level": "a1",
+        "targetVocabularyIds": ["en-hi"],
+        "targetPhrases": [
+          "Hi! My name is Anna.",
+          "Hi! I'm Tom.",
+          "Nice to meet you.",
+          "Nice to meet you, too.",
+          "I'm from England.",
+          "I'm from Spain.",
+          "What's your name?",
+          "My name is Anna."
+        ],
+        "segments": ["conversation", "target", "reuse", "form", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Anna",
+            "voice": "emma"
+          },
+          {
+            "character": "Tom",
+            "voice": "tom"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-04T07:34:49.614Z",
+        "providerCalls": 22
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-04T07:34:49.614Z",
+      "updatedAt": "2026-10-04T07:34:49.614Z"
     },
     {
       "key": "lesson:pl-greetings",

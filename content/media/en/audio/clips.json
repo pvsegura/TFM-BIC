@@ -1,4 +1,13 @@
 {
+  "04068cd9ea2cb549": {
+    "path": "en/audio/javier/04068cd9ea2cb549.m4a",
+    "durationSeconds": 2.88,
+    "text": "Ahora di las dos, en voz alta.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:03.327Z"
+  },
   "051a27fbfa96cd97": {
     "path": "en/audio/lucia/051a27fbfa96cd97.m4a",
     "durationSeconds": 7.08,
@@ -26,6 +35,24 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:17:10.766Z"
   },
+  "0abac2c51307c64e": {
+    "path": "en/audio/emma/0abac2c51307c64e.m4a",
+    "durationSeconds": 1.28,
+    "text": "fifth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:21.252Z"
+  },
+  "0b388050123ff4b0": {
+    "path": "en/audio/emma/0b388050123ff4b0.m4a",
+    "durationSeconds": 1.88,
+    "text": "My name is Anna.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:28:20.167Z"
+  },
   "0da9c25b0d212e8a": {
     "path": "en/audio/tom/0da9c25b0d212e8a.m4a",
     "durationSeconds": 0.96,
@@ -35,6 +62,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:05.832Z"
   },
+  "11b2570e4d39e2fd": {
+    "path": "en/audio/emma/11b2570e4d39e2fd.m4a",
+    "durationSeconds": 2.08,
+    "text": "Hi! My name is Anna.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:27:22.552Z"
+  },
   "126f9520178dee04": {
     "path": "en/audio/tom/126f9520178dee04.m4a",
     "durationSeconds": 1,
@@ -43,6 +79,42 @@
     "narratorId": "tom",
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:15:39.401Z"
+  },
+  "1292be8549403cda": {
+    "path": "en/audio/javier/1292be8549403cda.m4a",
+    "durationSeconds": 2.04,
+    "text": "I'm from Spain.",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:46.218Z"
+  },
+  "1543c039874ab63d": {
+    "path": "en/audio/emma/1543c039874ab63d.m4a",
+    "durationSeconds": 1.2,
+    "text": "twentieth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:44:01.184Z"
+  },
+  "15d873babe69a820": {
+    "path": "en/audio/emma/15d873babe69a820.m4a",
+    "durationSeconds": 1.36,
+    "text": "one hundred",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:42.395Z"
+  },
+  "1ea2a6a2cfd07041": {
+    "path": "en/audio/javier/1ea2a6a2cfd07041.m4a",
+    "durationSeconds": 4.28,
+    "text": "Dos personas se conocen en un parque por primera vez.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:27:16.551Z"
   },
   "227ef628abf43692": {
     "path": "en/audio/tom/227ef628abf43692.m4a",
@@ -71,6 +143,24 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:17:36.788Z"
   },
+  "257e6d0670eba0e1": {
+    "path": "en/audio/javier/257e6d0670eba0e1.m4a",
+    "durationSeconds": 3.12,
+    "text": "Se dan la mano. ¿Qué dice Anna?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:29:19.505Z"
+  },
+  "25d85262abe5013a": {
+    "path": "en/audio/javier/25d85262abe5013a.m4a",
+    "durationSeconds": 4.44,
+    "text": "En inglés, los países se escriben siempre con mayúscula.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:59.744Z"
+  },
   "25e171e0de10c7e3": {
     "path": "en/audio/emma/25e171e0de10c7e3.m4a",
     "durationSeconds": 1.36,
@@ -88,6 +178,15 @@
     "narratorId": "tom",
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:15:52.747Z"
+  },
+  "29d52c962d579212": {
+    "path": "en/audio/javier/29d52c962d579212.m4a",
+    "durationSeconds": 3.36,
+    "text": "Anna saluda y dice su nombre. ¿Qué dice?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:29:06.281Z"
   },
   "2ad73068a7f9ab31": {
     "path": "en/audio/emma/2ad73068a7f9ab31.m4a",
@@ -107,6 +206,15 @@
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:54.110Z"
   },
+  "2d47a2c6b4d89e3e": {
+    "path": "en/audio/emma/2d47a2c6b4d89e3e.m4a",
+    "durationSeconds": 1.32,
+    "text": "thousandth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:44:43.619Z"
+  },
   "2f68a23ff51c932e": {
     "path": "en/audio/emma/2f68a23ff51c932e.m4a",
     "durationSeconds": 1.32,
@@ -125,6 +233,33 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:33.970Z"
   },
+  "36d223406eb23996": {
+    "path": "en/audio/emma/36d223406eb23996.m4a",
+    "durationSeconds": 1.28,
+    "text": "second",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:01.821Z"
+  },
+  "36d3460b4581275f": {
+    "path": "en/audio/emma/36d3460b4581275f.m4a",
+    "durationSeconds": 1,
+    "text": "third",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:08.416Z"
+  },
+  "392a7cbc137e4a4e": {
+    "path": "en/audio/tom/392a7cbc137e4a4e.m4a",
+    "durationSeconds": 1.36,
+    "text": "What's your name?",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-04T07:28:13.359Z"
+  },
   "399debdc3c7e2882": {
     "path": "en/audio/emma/399debdc3c7e2882.m4a",
     "durationSeconds": 0.92,
@@ -133,6 +268,33 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:15:26.440Z"
+  },
+  "39b354738272eedb": {
+    "path": "en/audio/javier/39b354738272eedb.m4a",
+    "durationSeconds": 1.08,
+    "text": "three",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:04.483Z"
+  },
+  "3b629702ac3a83be": {
+    "path": "en/audio/javier/3b629702ac3a83be.m4a",
+    "durationSeconds": 7,
+    "text": "Estas comparaciones son solo aproximadas. Escucha a hablantes nativos para afinar los sonidos.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:51.056Z"
+  },
+  "3c486a789d388080": {
+    "path": "en/audio/javier/3c486a789d388080.m4a",
+    "durationSeconds": 2.72,
+    "text": "Para preguntar el nombre a otra persona:",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:07.572Z"
   },
   "3d4c98e86c24288d": {
     "path": "en/audio/tom/3d4c98e86c24288d.m4a",
@@ -152,6 +314,24 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:57.707Z"
   },
+  "48c6427e4cb14371": {
+    "path": "en/audio/emma/48c6427e4cb14371.m4a",
+    "durationSeconds": 1.16,
+    "text": "sheep",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:36:09.909Z"
+  },
+  "4a6d0fc398881c1d": {
+    "path": "en/audio/emma/4a6d0fc398881c1d.m4a",
+    "durationSeconds": 1.52,
+    "text": "twenty-first",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:44:07.083Z"
+  },
   "4ab63345211e2f36": {
     "path": "en/audio/tom/4ab63345211e2f36.m4a",
     "durationSeconds": 1.12,
@@ -160,6 +340,15 @@
     "narratorId": "tom",
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:17:24.489Z"
+  },
+  "4abc46880c8aa510": {
+    "path": "en/audio/javier/4abc46880c8aa510.m4a",
+    "durationSeconds": 3.6,
+    "text": "Estas dos palabras, y después el país.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:53.414Z"
   },
   "4c3a4246f2fcadc7": {
     "path": "en/audio/tom/4c3a4246f2fcadc7.m4a",
@@ -179,6 +368,42 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:15:33.567Z"
   },
+  "4dfcd86627c0080c": {
+    "path": "en/audio/emma/4dfcd86627c0080c.m4a",
+    "durationSeconds": 1.44,
+    "text": "Nice to meet you.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:27:34.883Z"
+  },
+  "5162da0b0a8602e5": {
+    "path": "en/audio/javier/5162da0b0a8602e5.m4a",
+    "durationSeconds": 1,
+    "text": "sheep",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:37.310Z"
+  },
+  "51f2ca38c4610e71": {
+    "path": "en/audio/javier/51f2ca38c4610e71.m4a",
+    "durationSeconds": 3.16,
+    "text": "Anna es de España. ¿Qué dice?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:29:25.270Z"
+  },
+  "5d0542246ca167c1": {
+    "path": "en/audio/javier/5d0542246ca167c1.m4a",
+    "durationSeconds": 3.72,
+    "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:29:13.189Z"
+  },
   "5d67ba1f86986b5d": {
     "path": "en/audio/emma/5d67ba1f86986b5d.m4a",
     "durationSeconds": 0.92,
@@ -197,6 +422,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:12.319Z"
   },
+  "61b3d14bb2bb0c9e": {
+    "path": "en/audio/emma/61b3d14bb2bb0c9e.m4a",
+    "durationSeconds": 1.12,
+    "text": "twenty",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:22.636Z"
+  },
   "6250ae3ce99647c3": {
     "path": "en/audio/lucia/6250ae3ce99647c3.m4a",
     "durationSeconds": 5.16,
@@ -205,6 +439,24 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:41.871Z"
+  },
+  "6b520511fb10c845": {
+    "path": "en/audio/emma/6b520511fb10c845.m4a",
+    "durationSeconds": 1.2,
+    "text": "thirty",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:35.962Z"
+  },
+  "6e5e9514d273998c": {
+    "path": "en/audio/emma/6e5e9514d273998c.m4a",
+    "durationSeconds": 1.28,
+    "text": "hundredth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:44:19.982Z"
   },
   "71f0a2b010d90b55": {
     "path": "en/audio/lucia/71f0a2b010d90b55.m4a",
@@ -223,6 +475,33 @@
     "narratorId": "tom",
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:44.595Z"
+  },
+  "72eda40b6e0ea54f": {
+    "path": "en/audio/javier/72eda40b6e0ea54f.m4a",
+    "durationSeconds": 3.76,
+    "text": "¿Cuántas manzanas hay? Dilo en inglés.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:23.351Z"
+  },
+  "738176391892556e": {
+    "path": "en/audio/emma/738176391892556e.m4a",
+    "durationSeconds": 1.24,
+    "text": "thirteen",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:16.242Z"
+  },
+  "78fb053b8747bf33": {
+    "path": "en/audio/emma/78fb053b8747bf33.m4a",
+    "durationSeconds": 1.2,
+    "text": "house",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:35:17.366Z"
   },
   "7a668ee438898c73": {
     "path": "en/audio/emma/7a668ee438898c73.m4a",
@@ -251,6 +530,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:50.869Z"
   },
+  "7b6359327a17fd6a": {
+    "path": "en/audio/javier/7b6359327a17fd6a.m4a",
+    "durationSeconds": 4.08,
+    "text": "Un barco: i corta. ¿Qué dice Emma?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:36.624Z"
+  },
   "7bc366b788691c4b": {
     "path": "en/audio/emma/7bc366b788691c4b.m4a",
     "durationSeconds": 0.96,
@@ -269,6 +557,60 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:41.218Z"
   },
+  "7ec6f57a3c3f0294": {
+    "path": "en/audio/javier/7ec6f57a3c3f0294.m4a",
+    "durationSeconds": 1.36,
+    "text": "house",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:30.381Z"
+  },
+  "8288a3654c9e87e3": {
+    "path": "en/audio/javier/8288a3654c9e87e3.m4a",
+    "durationSeconds": 6.24,
+    "text": "La punta de la lengua va entre los dientes, parecido a la zeta del español de España.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:13.178Z"
+  },
+  "87dec395bc8fea2f": {
+    "path": "en/audio/javier/87dec395bc8fea2f.m4a",
+    "durationSeconds": 1.8,
+    "text": "My name is Anna.",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:32.888Z"
+  },
+  "8928b06f42866fc4": {
+    "path": "en/audio/emma/8928b06f42866fc4.m4a",
+    "durationSeconds": 1.16,
+    "text": "eleventh",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:40.750Z"
+  },
+  "89eb77a6ef79885d": {
+    "path": "en/audio/emma/89eb77a6ef79885d.m4a",
+    "durationSeconds": 0.88,
+    "text": "fourth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:14.701Z"
+  },
+  "8bcf9e75690a6b44": {
+    "path": "en/audio/emma/8bcf9e75690a6b44.m4a",
+    "durationSeconds": 1.04,
+    "text": "eleven",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:03.018Z"
+  },
   "8d173fda3656794d": {
     "path": "en/audio/emma/8d173fda3656794d.m4a",
     "durationSeconds": 0.96,
@@ -278,6 +620,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:08.115Z"
   },
+  "9076d124fd584733": {
+    "path": "en/audio/tom/9076d124fd584733.m4a",
+    "durationSeconds": 1.36,
+    "text": "I'm from England.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-04T07:27:53.768Z"
+  },
   "922a6f44679e7f25": {
     "path": "en/audio/lucia/922a6f44679e7f25.m4a",
     "durationSeconds": 5.6,
@@ -286,6 +637,15 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:02.616Z"
+  },
+  "93f2768802ea64d5": {
+    "path": "en/audio/ben/93f2768802ea64d5.m4a",
+    "durationSeconds": 0.92,
+    "text": "three",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-04T07:34:57.663Z"
   },
   "955f0566b26a38aa": {
     "path": "en/audio/lucia/955f0566b26a38aa.m4a",
@@ -305,6 +665,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:27.864Z"
   },
+  "98d74449719935bc": {
+    "path": "en/audio/javier/98d74449719935bc.m4a",
+    "durationSeconds": 4.68,
+    "text": "¿Cómo se dice casa? No olvides la hache.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:29.760Z"
+  },
   "a1eeba41ed468ca8": {
     "path": "en/audio/lucia/a1eeba41ed468ca8.m4a",
     "durationSeconds": 2.16,
@@ -313,6 +682,15 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:20.913Z"
+  },
+  "a22075fab06e16ac": {
+    "path": "en/audio/tom/a22075fab06e16ac.m4a",
+    "durationSeconds": 1.56,
+    "text": "Nice to meet you, too.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-04T07:27:40.964Z"
   },
   "a2d42e311d58e81e": {
     "path": "en/audio/emma/a2d42e311d58e81e.m4a",
@@ -323,6 +701,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:15:00.750Z"
   },
+  "a3b9360618783b31": {
+    "path": "en/audio/emma/a3b9360618783b31.m4a",
+    "durationSeconds": 1.2,
+    "text": "nine",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:41:56.569Z"
+  },
   "a572cd731a894742": {
     "path": "en/audio/lucia/a572cd731a894742.m4a",
     "durationSeconds": 2.48,
@@ -331,6 +718,15 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:26:04.349Z"
+  },
+  "a58bf9000951b0e6": {
+    "path": "en/audio/javier/a58bf9000951b0e6.m4a",
+    "durationSeconds": 4.48,
+    "text": "Ahora preséntate en los ejercicios de debajo del vídeo.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:29:32.647Z"
   },
   "a65aeb98b5bbc20c": {
     "path": "en/audio/tom/a65aeb98b5bbc20c.m4a",
@@ -368,6 +764,42 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:24.705Z"
   },
+  "afd277ccaeae7152": {
+    "path": "en/audio/tom/afd277ccaeae7152.m4a",
+    "durationSeconds": 1.76,
+    "text": "Hi! I'm Tom.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-04T07:27:28.001Z"
+  },
+  "bae061603783e143": {
+    "path": "en/audio/javier/bae061603783e143.m4a",
+    "durationSeconds": 7.36,
+    "text": "Casa. La hache sí se pronuncia: un soplo suave, más suave que la jota.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:25.900Z"
+  },
+  "bbcc2b5ca5cc320d": {
+    "path": "en/audio/emma/bbcc2b5ca5cc320d.m4a",
+    "durationSeconds": 1.48,
+    "text": "thirtieth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:44:13.378Z"
+  },
+  "c0efaa8bd99274fa": {
+    "path": "en/audio/emma/c0efaa8bd99274fa.m4a",
+    "durationSeconds": 1.12,
+    "text": "ship",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:36:41.836Z"
+  },
   "c169e026fccf45b1": {
     "path": "en/audio/lucia/c169e026fccf45b1.m4a",
     "durationSeconds": 5.16,
@@ -404,6 +836,33 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:14.931Z"
   },
+  "d4fc48b9c5b3a032": {
+    "path": "en/audio/emma/d4fc48b9c5b3a032.m4a",
+    "durationSeconds": 1.16,
+    "text": "ninth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:34.771Z"
+  },
+  "dba7705ad8dad375": {
+    "path": "en/audio/emma/dba7705ad8dad375.m4a",
+    "durationSeconds": 1.28,
+    "text": "first",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:55.210Z"
+  },
+  "dc97b5f3555e84fd": {
+    "path": "en/audio/javier/dc97b5f3555e84fd.m4a",
+    "durationSeconds": 3.64,
+    "text": "Solo cambia la vocal, y cambia el significado.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:36:16.739Z"
+  },
   "dc9cc00724d2679b": {
     "path": "en/audio/tom/dc9cc00724d2679b.m4a",
     "durationSeconds": 1.12,
@@ -413,6 +872,33 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:18.621Z"
   },
+  "dce792e1bdbdfd9c": {
+    "path": "en/audio/emma/dce792e1bdbdfd9c.m4a",
+    "durationSeconds": 1.44,
+    "text": "twenty-one",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:29.212Z"
+  },
+  "df80322f3e22ffd1": {
+    "path": "en/audio/javier/df80322f3e22ffd1.m4a",
+    "durationSeconds": 3.56,
+    "text": "Ben cuenta las manzanas. Escucha el número.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:34:52.448Z"
+  },
+  "e01f6e2704595860": {
+    "path": "en/audio/emma/e01f6e2704595860.m4a",
+    "durationSeconds": 1.36,
+    "text": "I'm from Spain.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:28:00.211Z"
+  },
   "e071a68e071bb2f5": {
     "path": "en/audio/lucia/e071a68e071bb2f5.m4a",
     "durationSeconds": 1.52,
@@ -421,6 +907,24 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:26:42.066Z"
+  },
+  "e8ce58bbfb9ee04a": {
+    "path": "en/audio/javier/e8ce58bbfb9ee04a.m4a",
+    "durationSeconds": 5.16,
+    "text": "La misma pregunta sirve con cualquier persona: en inglés no cambia.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:27.798Z"
+  },
+  "e99452d10c594572": {
+    "path": "en/audio/emma/e99452d10c594572.m4a",
+    "durationSeconds": 1.48,
+    "text": "one thousand",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:49.435Z"
   },
   "ec53e597de99d253": {
     "path": "en/audio/emma/ec53e597de99d253.m4a",
@@ -458,6 +962,87 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:17:30.950Z"
   },
+  "ef9d320b2b551310": {
+    "path": "en/audio/emma/ef9d320b2b551310.m4a",
+    "durationSeconds": 1.24,
+    "text": "thirteenth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:53.879Z"
+  },
+  "f24c3ac0beb86792": {
+    "path": "en/audio/javier/f24c3ac0beb86792.m4a",
+    "durationSeconds": 1.12,
+    "text": "ship",
+    "language": "en",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:50.322Z"
+  },
+  "f348d4f6d0741e02": {
+    "path": "en/audio/javier/f348d4f6d0741e02.m4a",
+    "durationSeconds": 5.72,
+    "text": "Oveja. Una i larga y tensa, más larga que la española.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:45.003Z"
+  },
+  "f3f0f5b39c6a7430": {
+    "path": "en/audio/javier/f3f0f5b39c6a7430.m4a",
+    "durationSeconds": 7.44,
+    "text": "Barco. Una i corta y más abierta, entre una i y una e.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:35:58.424Z"
+  },
+  "f4e5b1f6756d800f": {
+    "path": "en/audio/javier/f4e5b1f6756d800f.m4a",
+    "durationSeconds": 2.68,
+    "text": "Después dicen de dónde son.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:27:47.860Z"
+  },
+  "f7fbbd144b9ca89b": {
+    "path": "en/audio/javier/f7fbbd144b9ca89b.m4a",
+    "durationSeconds": 3.36,
+    "text": "Estas tres palabras, y después tu nombre.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-04T07:28:40.116Z"
+  },
+  "f86dea7f7b8b761f": {
+    "path": "en/audio/emma/f86dea7f7b8b761f.m4a",
+    "durationSeconds": 1.32,
+    "text": "twelve",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:42:09.662Z"
+  },
+  "f9044113c2a190f9": {
+    "path": "en/audio/emma/f9044113c2a190f9.m4a",
+    "durationSeconds": 1.04,
+    "text": "eighth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:27.764Z"
+  },
+  "f96603215cd43d8e": {
+    "path": "en/audio/emma/f96603215cd43d8e.m4a",
+    "durationSeconds": 1.08,
+    "text": "twelfth",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:43:47.418Z"
+  },
   "fc28c5425342d4cb": {
     "path": "en/audio/lucia/fc28c5425342d4cb.m4a",
     "durationSeconds": 3.16,
@@ -466,5 +1051,14 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:48.189Z"
+  },
+  "ff338241787d14c8": {
+    "path": "en/audio/emma/ff338241787d14c8.m4a",
+    "durationSeconds": 1.04,
+    "text": "eight",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-04T07:41:50.480Z"
   }
 }
