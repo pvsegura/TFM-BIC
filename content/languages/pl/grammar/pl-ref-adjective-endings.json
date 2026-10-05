@@ -13,7 +13,14 @@
     {
       "text": "Adjectives agree with their noun in gender, number and case. After k, g and soft consonants, -y becomes -i: polski, drogi, tani.",
       "table": {
-        "columns": ["Case", "Masculine", "Feminine", "Neuter", "Plural (men)", "Plural (others)"],
+        "columns": [
+          "Case",
+          "Masculine (good)",
+          "Feminine (good)",
+          "Neuter (good)",
+          "Plural, men (good)",
+          "Plural, others (good)"
+        ],
         "rows": [
           ["Nominative", "dobry", "dobra", "dobre", "dobrzy", "dobre"],
           ["Genitive", "dobrego", "dobrej", "dobrego", "dobrych", "dobrych"],

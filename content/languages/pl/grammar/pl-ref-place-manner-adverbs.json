@@ -14,19 +14,29 @@
       "heading": "Where",
       "text": "Nigdzie (nowhere), nikt (nobody) and nic (nothing) need nie before the verb: Nigdzie nie byłem.",
       "table": {
-        "columns": ["Polish", "English", "Example"],
+        "columns": ["Polish", "English", "Example", "In English"],
         "rows": [
-          ["tu, tutaj", "here", "Mieszkam tutaj."],
-          ["tam", "there", "Tam jest dworzec."],
-          ["wszędzie", "everywhere", "Wszędzie są turyści."],
-          ["nigdzie", "nowhere", "Nigdzie nie byłem."],
-          ["gdzieś", "somewhere", "Gdzieś tu jest kawiarnia."],
-          ["blisko", "near", "Sklep jest blisko."],
-          ["daleko", "far", "To daleko stąd."],
-          ["na górze", "upstairs; at the top", "Sypialnia jest na górze."],
-          ["na dole", "downstairs; at the bottom", "Kuchnia jest na dole."],
-          ["w środku", "inside", "Poczekaj w środku."],
-          ["na zewnątrz", "outside", "Jest zimno na zewnątrz."]
+          ["tu, tutaj", "here", "Mieszkam tutaj.", "I live here."],
+          ["tam", "there", "Tam jest dworzec.", "The station is over there."],
+          ["wszędzie", "everywhere", "Wszędzie są turyści.", "There are tourists everywhere."],
+          ["nigdzie", "nowhere", "Nigdzie nie byłem.", "I haven't been anywhere."],
+          ["gdzieś", "somewhere", "Gdzieś tu jest kawiarnia.", "There's a café somewhere here."],
+          ["blisko", "near", "Sklep jest blisko.", "The shop is near."],
+          ["daleko", "far", "To daleko stąd.", "It's far from here."],
+          [
+            "na górze",
+            "upstairs; at the top",
+            "Sypialnia jest na górze.",
+            "The bedroom is upstairs."
+          ],
+          [
+            "na dole",
+            "downstairs; at the bottom",
+            "Kuchnia jest na dole.",
+            "The kitchen is downstairs."
+          ],
+          ["w środku", "inside", "Poczekaj w środku.", "Wait inside."],
+          ["na zewnątrz", "outside", "Jest zimno na zewnątrz.", "It's cold outside."]
         ]
       }
     },

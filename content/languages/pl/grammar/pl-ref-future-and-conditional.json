@@ -15,17 +15,17 @@
       "table": {
         "columns": [
           "Person",
-          "Future of być",
-          "Conditional of robić (man / mixed group)",
-          "Conditional of robić (woman / women)"
+          "Future of być (will be)",
+          "Conditional of robić, would do (man / mixed group)",
+          "Conditional of robić, would do (woman / women)"
         ],
         "rows": [
-          ["ja", "będę", "robiłbym", "robiłabym"],
-          ["ty", "będziesz", "robiłbyś", "robiłabyś"],
-          ["on / ona", "będzie", "robiłby", "robiłaby"],
-          ["my", "będziemy", "robilibyśmy", "robiłybyśmy"],
-          ["wy", "będziecie", "robilibyście", "robiłybyście"],
-          ["oni / one", "będą", "robiliby", "robiłyby"]
+          ["ja (I)", "będę", "robiłbym", "robiłabym"],
+          ["ty (you)", "będziesz", "robiłbyś", "robiłabyś"],
+          ["on / ona (he / she)", "będzie", "robiłby", "robiłaby"],
+          ["my (we)", "będziemy", "robilibyśmy", "robiłybyśmy"],
+          ["wy (you, plural)", "będziecie", "robilibyście", "robiłybyście"],
+          ["oni / one (they)", "będą", "robiliby", "robiłyby"]
         ]
       },
       "examples": [

@@ -12,19 +12,50 @@
   "sections": [
     {
       "table": {
-        "columns": ["Palabra", "Uso", "Ejemplo"],
+        "columns": ["Palabra", "Uso", "Ejemplo", "En español"],
         "rows": [
-          ["this / these", "esto, este; estos (cerca)", "This coffee is hot."],
-          ["that / those", "eso, aquel; esos (lejos)", "Those houses are old."],
-          ["some", "algo de, unos (afirmativas y ofrecimientos)", "I've got some apples."],
-          ["any", "nada de, ningún (negativas); algo de (preguntas)", "Have you got any milk?"],
-          ["much", "mucho (incontables, en negativas y preguntas)", "I haven't got much time."],
-          ["many", "muchos (contables)", "There are many tourists."],
-          ["a lot of", "mucho, muchos (con todo tipo de nombres)", "She drinks a lot of tea."],
+          [
+            "this / these",
+            "esto, este; estos (cerca)",
+            "This coffee is hot.",
+            "Este café está caliente."
+          ],
+          [
+            "that / those",
+            "eso, aquel; esos (lejos)",
+            "Those houses are old.",
+            "Esas casas son viejas."
+          ],
+          [
+            "some",
+            "algo de, unos (afirmativas y ofrecimientos)",
+            "I've got some apples.",
+            "Tengo unas manzanas."
+          ],
+          [
+            "any",
+            "nada de, ningún (negativas); algo de (preguntas)",
+            "Have you got any milk?",
+            "¿Tienes leche?"
+          ],
+          [
+            "much",
+            "mucho (incontables, en negativas y preguntas)",
+            "I haven't got much time.",
+            "No tengo mucho tiempo."
+          ],
+          ["many", "muchos (contables)", "There are many tourists.", "Hay muchos turistas."],
+          [
+            "a lot of",
+            "mucho, muchos (con todo tipo de nombres)",
+            "She drinks a lot of tea.",
+            "Bebe mucho té."
+          ],
           [
             "a little / a few",
             "un poco de (incontable) / unos pocos (contable)",
-            "A few friends came."
+            "A few friends came.",
+            "Vinieron unos pocos amigos."
           ]
         ]
       }

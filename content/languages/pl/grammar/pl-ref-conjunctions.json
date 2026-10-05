@@ -13,23 +13,63 @@
     {
       "text": "Polish puts a comma before most conjunctions that start a clause (a, ale, bo, że, żeby, ponieważ, który), but not before a single i, oraz, lub or albo.",
       "table": {
-        "columns": ["Polish", "English", "Example"],
+        "columns": ["Polish", "English", "Example", "In English"],
         "rows": [
-          ["i", "and", "Kawa i herbata."],
-          ["a", "and, whereas", "Ja piję kawę, a on herbatę."],
-          ["ale", "but", "Chcę iść, ale nie mam czasu."],
-          ["albo, lub", "or", "Dzisiaj albo jutro."],
-          ["czy", "or (in questions)", "Kawa czy herbata?"],
-          ["bo", "because (informal)", "Zostaję w domu, bo pada."],
-          ["ponieważ", "because", "Nie przyszedł, ponieważ był chory."],
-          ["że", "that", "Myślę, że masz rację."],
-          ["żeby", "so that, in order to", "Uczę się, żeby zdać egzamin."],
-          ["jeśli, jeżeli", "if", "Jeśli chcesz, pójdziemy razem."],
-          ["kiedy, gdy", "when", "Kiedy byłem mały, mieszkałem na wsi."],
-          ["chociaż", "although", "Chociaż jest zimno, idę na spacer."],
-          ["więc", "so", "Jestem zmęczony, więc idę spać."],
-          ["dlatego", "that is why", "Pada, dlatego zostaję w domu."],
-          ["zanim", "before", "Zadzwoń, zanim przyjdziesz."]
+          ["i", "and", "Kawa i herbata.", "Coffee and tea."],
+          [
+            "a",
+            "and, whereas",
+            "Ja piję kawę, a on herbatę.",
+            "I drink coffee, and he drinks tea."
+          ],
+          ["ale", "but", "Chcę iść, ale nie mam czasu.", "I want to go, but I don't have time."],
+          ["albo, lub", "or", "Dzisiaj albo jutro.", "Today or tomorrow."],
+          ["czy", "or (in questions)", "Kawa czy herbata?", "Coffee or tea?"],
+          [
+            "bo",
+            "because (informal)",
+            "Zostaję w domu, bo pada.",
+            "I'm staying at home because it's raining."
+          ],
+          [
+            "ponieważ",
+            "because",
+            "Nie przyszedł, ponieważ był chory.",
+            "He didn't come because he was ill."
+          ],
+          ["że", "that", "Myślę, że masz rację.", "I think you're right."],
+          [
+            "żeby",
+            "so that, in order to",
+            "Uczę się, żeby zdać egzamin.",
+            "I'm studying to pass the exam."
+          ],
+          [
+            "jeśli, jeżeli",
+            "if",
+            "Jeśli chcesz, pójdziemy razem.",
+            "If you like, we'll go together."
+          ],
+          [
+            "kiedy, gdy",
+            "when",
+            "Kiedy byłem mały, mieszkałem na wsi.",
+            "When I was little, I lived in the country."
+          ],
+          [
+            "chociaż",
+            "although",
+            "Chociaż jest zimno, idę na spacer.",
+            "Although it's cold, I'm going for a walk."
+          ],
+          ["więc", "so", "Jestem zmęczony, więc idę spać.", "I'm tired, so I'm going to bed."],
+          [
+            "dlatego",
+            "that is why",
+            "Pada, dlatego zostaję w domu.",
+            "It's raining, so I'm staying at home."
+          ],
+          ["zanim", "before", "Zadzwoń, zanim przyjdziesz.", "Call before you come."]
         ]
       }
     }

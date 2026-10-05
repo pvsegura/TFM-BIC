@@ -13,20 +13,30 @@
     {
       "heading": "Cuándo",
       "table": {
-        "columns": ["Inglés", "Español", "Ejemplo"],
+        "columns": ["Inglés", "Español", "Ejemplo", "En español"],
         "rows": [
-          ["now", "ahora", "I'm busy now."],
-          ["today", "hoy", "Today is Monday."],
-          ["tonight", "esta noche", "What are you doing tonight?"],
-          ["tomorrow", "mañana", "See you tomorrow."],
-          ["yesterday", "ayer", "I was at home yesterday."],
-          ["ago", "hace (tiempo)", "I arrived two days ago."],
-          ["already", "ya", "I've already eaten."],
-          ["yet", "todavía (negativas); ya (preguntas)", "Have you finished yet?"],
-          ["still", "todavía, aún", "She still lives with her parents."],
-          ["just", "acabar de", "I've just arrived."],
-          ["soon", "pronto", "We'll be there soon."],
-          ["later", "más tarde", "I'll call you later."]
+          ["now", "ahora", "I'm busy now.", "Ahora estoy ocupado."],
+          ["today", "hoy", "Today is Monday.", "Hoy es lunes."],
+          ["tonight", "esta noche", "What are you doing tonight?", "¿Qué haces esta noche?"],
+          ["tomorrow", "mañana", "See you tomorrow.", "Hasta mañana."],
+          ["yesterday", "ayer", "I was at home yesterday.", "Ayer estuve en casa."],
+          ["ago", "hace (tiempo)", "I arrived two days ago.", "Llegué hace dos días."],
+          ["already", "ya", "I've already eaten.", "Ya he comido."],
+          [
+            "yet",
+            "todavía (negativas); ya (preguntas)",
+            "Have you finished yet?",
+            "¿Ya has terminado?"
+          ],
+          [
+            "still",
+            "todavía, aún",
+            "She still lives with her parents.",
+            "Todavía vive con sus padres."
+          ],
+          ["just", "acabar de", "I've just arrived.", "Acabo de llegar."],
+          ["soon", "pronto", "We'll be there soon.", "Llegamos pronto."],
+          ["later", "más tarde", "I'll call you later.", "Te llamo luego."]
         ]
       }
     },
@@ -34,15 +44,15 @@
       "heading": "Con qué frecuencia",
       "text": "Los adverbios de frecuencia van delante del verbo principal, pero detrás de to be: I often walk, pero I am often late.",
       "table": {
-        "columns": ["Inglés", "Español", "Ejemplo"],
+        "columns": ["Inglés", "Español", "Ejemplo", "En español"],
         "rows": [
-          ["always", "siempre", "I always have breakfast."],
-          ["usually", "normalmente", "She usually takes the bus."],
-          ["often", "a menudo", "We often go to the cinema."],
-          ["sometimes", "a veces", "I sometimes cook."],
-          ["rarely", "rara vez", "He rarely watches TV."],
-          ["never", "nunca", "I never drink coffee."],
-          ["every day", "todos los días", "I read every day."]
+          ["always", "siempre", "I always have breakfast.", "Siempre desayuno."],
+          ["usually", "normalmente", "She usually takes the bus.", "Normalmente coge el autobús."],
+          ["often", "a menudo", "We often go to the cinema.", "Vamos a menudo al cine."],
+          ["sometimes", "a veces", "I sometimes cook.", "A veces cocino."],
+          ["rarely", "rara vez", "He rarely watches TV.", "Rara vez ve la tele."],
+          ["never", "nunca", "I never drink coffee.", "Nunca bebo café."],
+          ["every day", "todos los días", "I read every day.", "Leo todos los días."]
         ]
       }
     }

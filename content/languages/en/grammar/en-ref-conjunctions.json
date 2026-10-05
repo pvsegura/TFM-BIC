@@ -11,20 +11,50 @@
   "sections": [
     {
       "table": {
-        "columns": ["Inglés", "Español", "Ejemplo"],
+        "columns": ["Inglés", "Español", "Ejemplo", "En español"],
         "rows": [
-          ["and", "y", "Tea and coffee."],
-          ["but", "pero", "It's small but nice."],
-          ["or", "o", "Now or later?"],
-          ["because", "porque", "I'm tired because I worked late."],
-          ["so", "así que, por eso", "It was raining, so we stayed in."],
-          ["although", "aunque", "Although it was cold, we went out."],
-          ["when", "cuando", "Call me when you arrive."],
-          ["if", "si", "If it rains, we'll stay at home."],
-          ["while", "mientras", "I listen to music while I cook."],
-          ["before / after", "antes de que / después de que", "Wash your hands before you eat."],
-          ["however", "sin embargo", "It's expensive. However, it's very good."],
-          ["unless", "a menos que", "We'll go unless it rains."]
+          ["and", "y", "Tea and coffee.", "Té y café."],
+          ["but", "pero", "It's small but nice.", "Es pequeño pero bonito."],
+          ["or", "o", "Now or later?", "¿Ahora o luego?"],
+          [
+            "because",
+            "porque",
+            "I'm tired because I worked late.",
+            "Estoy cansado porque trabajé hasta tarde."
+          ],
+          [
+            "so",
+            "así que, por eso",
+            "It was raining, so we stayed in.",
+            "Llovía, así que nos quedamos en casa."
+          ],
+          [
+            "although",
+            "aunque",
+            "Although it was cold, we went out.",
+            "Aunque hacía frío, salimos."
+          ],
+          ["when", "cuando", "Call me when you arrive.", "Llámame cuando llegues."],
+          ["if", "si", "If it rains, we'll stay at home.", "Si llueve, nos quedaremos en casa."],
+          [
+            "while",
+            "mientras",
+            "I listen to music while I cook.",
+            "Escucho música mientras cocino."
+          ],
+          [
+            "before / after",
+            "antes de que / después de que",
+            "Wash your hands before you eat.",
+            "Lávate las manos antes de comer."
+          ],
+          [
+            "however",
+            "sin embargo",
+            "It's expensive. However, it's very good.",
+            "Es caro. Sin embargo, es muy bueno."
+          ],
+          ["unless", "a menos que", "We'll go unless it rains.", "Iremos a menos que llueva."]
         ]
       }
     }

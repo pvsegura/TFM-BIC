@@ -16,8 +16,13 @@
       "table": {
         "columns": ["Persona", "Afirmativa", "Negativa", "Pregunta"],
         "rows": [
-          ["I / you / we / they", "work", "don't work", "Do you work?"],
-          ["he / she / it", "works", "doesn't work", "Does she work?"]
+          [
+            "I / you / we / they (yo / tú / nosotros / ellos)",
+            "work (trabajo, trabajas…)",
+            "don't work",
+            "Do you work?"
+          ],
+          ["he / she / it (él / ella / ello)", "works (trabaja)", "doesn't work", "Does she work?"]
         ]
       },
       "examples": [

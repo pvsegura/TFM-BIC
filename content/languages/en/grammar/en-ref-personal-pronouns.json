@@ -13,16 +13,23 @@
     {
       "text": "En inglés el sujeto siempre se dice: I am tired, nunca Am tired. El posesivo concuerda con quien posee, no con lo poseído: his mother (su madre, de él), her father (su padre, de ella).",
       "table": {
-        "columns": ["Sujeto", "Objeto", "Adjetivo posesivo", "Pronombre posesivo", "Reflexivo"],
+        "columns": [
+          "Sujeto",
+          "Significado",
+          "Objeto",
+          "Adjetivo posesivo",
+          "Pronombre posesivo",
+          "Reflexivo"
+        ],
         "rows": [
-          ["I", "me", "my", "mine", "myself"],
-          ["you", "you", "your", "yours", "yourself"],
-          ["he", "him", "his", "his", "himself"],
-          ["she", "her", "her", "hers", "herself"],
-          ["it", "it", "its", "—", "itself"],
-          ["we", "us", "our", "ours", "ourselves"],
-          ["you (plural)", "you", "your", "yours", "yourselves"],
-          ["they", "them", "their", "theirs", "themselves"]
+          ["I", "yo; me, mi, mío", "me", "my", "mine", "myself"],
+          ["you", "tú, usted; te, tu, tuyo", "you", "your", "yours", "yourself"],
+          ["he", "él; lo, le, su, suyo", "him", "his", "his", "himself"],
+          ["she", "ella; la, le, su, suya", "her", "her", "hers", "herself"],
+          ["it", "ello (cosa o animal)", "it", "its", "—", "itself"],
+          ["we", "nosotros; nos, nuestro", "us", "our", "ours", "ourselves"],
+          ["you (plural)", "vosotros, ustedes; os, vuestro", "you", "your", "yours", "yourselves"],
+          ["they", "ellos, ellas; los, les, su, suyo", "them", "their", "theirs", "themselves"]
         ]
       },
       "examples": [

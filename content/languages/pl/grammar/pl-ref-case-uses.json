@@ -12,30 +12,51 @@
   "sections": [
     {
       "table": {
-        "columns": ["Case", "Questions", "Main uses", "Example"],
+        "columns": ["Case", "Questions", "Main uses", "Example", "In English"],
         "rows": [
-          ["Nominative", "kto? co?", "the subject; the dictionary form", "Kot śpi."],
+          [
+            "Nominative",
+            "kto? co?",
+            "the subject; the dictionary form",
+            "Kot śpi.",
+            "The cat is sleeping."
+          ],
           [
             "Genitive",
             "kogo? czego?",
             "after negation, quantities, possession, do, od, z, bez, u",
-            "Nie mam kota."
+            "Nie mam kota.",
+            "I don't have a cat."
           ],
           [
             "Dative",
             "komu? czemu?",
             "the person you give or say something to",
-            "Daję mamie kwiaty."
+            "Daję mamie kwiaty.",
+            "I'm giving Mum flowers."
           ],
-          ["Accusative", "kogo? co?", "the direct object of most verbs", "Widzę kota."],
+          [
+            "Accusative",
+            "kogo? co?",
+            "the direct object of most verbs",
+            "Widzę kota.",
+            "I can see the cat."
+          ],
           [
             "Instrumental",
             "z kim? z czym?",
             "with z (with), tools, after być + noun",
-            "Jestem studentem."
+            "Jestem studentem.",
+            "I am a student."
           ],
-          ["Locative", "o kim? o czym?", "only after w, na, o, przy, po", "Mieszkam w Polsce."],
-          ["Vocative", "—", "addressing someone directly", "Aniu, chodź tutaj!"]
+          [
+            "Locative",
+            "o kim? o czym?",
+            "only after w, na, o, przy, po",
+            "Mieszkam w Polsce.",
+            "I live in Poland."
+          ],
+          ["Vocative", "—", "addressing someone directly", "Aniu, chodź tutaj!", "Ania, come here!"]
         ]
       }
     }

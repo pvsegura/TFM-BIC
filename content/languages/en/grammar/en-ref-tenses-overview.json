@@ -11,37 +11,42 @@
   "sections": [
     {
       "table": {
-        "columns": ["Tiempo", "Forma", "Uso", "Ejemplo"],
+        "columns": ["Tiempo", "Forma", "Uso", "Ejemplo", "En español"],
         "rows": [
           [
             "Futuro con will",
             "will + verbo",
             "decisiones en el momento, predicciones, promesas",
-            "I'll call you later."
+            "I'll call you later.",
+            "Te llamo luego."
           ],
           [
             "Futuro con going to",
             "am / is / are going to + verbo",
             "planes e intenciones",
-            "I'm going to visit Spain."
+            "I'm going to visit Spain.",
+            "Voy a visitar España."
           ],
           [
             "Present perfect",
             "have / has + participio",
             "experiencias y acciones pasadas con efecto en el presente",
-            "I've lost my keys."
+            "I've lost my keys.",
+            "He perdido las llaves."
           ],
           [
             "Pasado continuo",
             "was / were + -ing",
             "una acción en curso en el pasado",
-            "I was cooking when you called."
+            "I was cooking when you called.",
+            "Estaba cocinando cuando llamaste."
           ],
           [
             "Present perfect continuous",
             "have / has been + -ing",
             "una acción que empezó en el pasado y continúa",
-            "I've been waiting for an hour."
+            "I've been waiting for an hour.",
+            "Llevo una hora esperando."
           ]
         ]
       },

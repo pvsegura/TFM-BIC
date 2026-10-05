@@ -12,12 +12,20 @@
   "sections": [
     {
       "table": {
-        "columns": ["Regla", "Ejemplo"],
+        "columns": ["Regla", "Ejemplo", "En español"],
         "rows": [
-          ["la mayoría: + -s", "book → books"],
-          ["termina en s, sh, ch, x: + -es", "bus → buses, watch → watches"],
-          ["consonante + y: -y → -ies", "city → cities"],
-          ["muchos en -f o -fe: → -ves", "knife → knives, wife → wives"]
+          ["la mayoría: + -s", "book → books", "libro → libros"],
+          [
+            "termina en s, sh, ch, x: + -es",
+            "bus → buses, watch → watches",
+            "autobús → autobuses, reloj → relojes"
+          ],
+          ["consonante + y: -y → -ies", "city → cities", "ciudad → ciudades"],
+          [
+            "muchos en -f o -fe: → -ves",
+            "knife → knives, wife → wives",
+            "cuchillo → cuchillos, esposa → esposas"
+          ]
         ]
       }
     },

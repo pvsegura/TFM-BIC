@@ -13,27 +13,47 @@
     {
       "heading": "When",
       "table": {
-        "columns": ["Polish", "English", "Example"],
+        "columns": ["Polish", "English", "Example", "In English"],
         "rows": [
-          ["teraz", "now", "Teraz pracuję."],
-          ["dzisiaj, dziś", "today", "Dzisiaj jest poniedziałek."],
-          ["jutro", "tomorrow", "Jutro mam egzamin."],
-          ["pojutrze", "the day after tomorrow", "Wracam pojutrze."],
-          ["wczoraj", "yesterday", "Wczoraj byłem w kinie."],
-          ["przedwczoraj", "the day before yesterday", "Przyjechała przedwczoraj."],
-          ["rano", "in the morning", "Rano piję kawę."],
-          ["po południu", "in the afternoon", "Po południu mam czas."],
-          ["wieczorem", "in the evening", "Wieczorem czytam."],
-          ["w nocy", "at night", "W nocy padało."],
-          ["już", "already", "Już jestem w domu."],
-          ["jeszcze", "still; (not) yet", "Jeszcze nie wiem."],
-          ["wkrótce", "soon", "Wkrótce wrócę."],
-          ["potem", "then, afterwards", "Potem idziemy na obiad."],
-          ["później", "later", "Zadzwonię później."],
-          ["wcześniej", "earlier", "Przyszedłem wcześniej."],
-          ["od razu", "at once", "Odpisał od razu."],
-          ["niedawno", "recently", "Niedawno się przeprowadziłam."],
-          ["dawno", "a long time ago; for a long time", "Dawno cię nie widziałem."]
+          ["teraz", "now", "Teraz pracuję.", "I'm working now."],
+          ["dzisiaj, dziś", "today", "Dzisiaj jest poniedziałek.", "Today is Monday."],
+          ["jutro", "tomorrow", "Jutro mam egzamin.", "I have an exam tomorrow."],
+          [
+            "pojutrze",
+            "the day after tomorrow",
+            "Wracam pojutrze.",
+            "I'm coming back the day after tomorrow."
+          ],
+          ["wczoraj", "yesterday", "Wczoraj byłem w kinie.", "Yesterday I was at the cinema."],
+          [
+            "przedwczoraj",
+            "the day before yesterday",
+            "Przyjechała przedwczoraj.",
+            "She arrived the day before yesterday."
+          ],
+          ["rano", "in the morning", "Rano piję kawę.", "I drink coffee in the morning."],
+          [
+            "po południu",
+            "in the afternoon",
+            "Po południu mam czas.",
+            "I have time in the afternoon."
+          ],
+          ["wieczorem", "in the evening", "Wieczorem czytam.", "I read in the evening."],
+          ["w nocy", "at night", "W nocy padało.", "It rained at night."],
+          ["już", "already", "Już jestem w domu.", "I'm already at home."],
+          ["jeszcze", "still; (not) yet", "Jeszcze nie wiem.", "I don't know yet."],
+          ["wkrótce", "soon", "Wkrótce wrócę.", "I'll be back soon."],
+          ["potem", "then, afterwards", "Potem idziemy na obiad.", "Then we're going for lunch."],
+          ["później", "later", "Zadzwonię później.", "I'll call later."],
+          ["wcześniej", "earlier", "Przyszedłem wcześniej.", "I came earlier."],
+          ["od razu", "at once", "Odpisał od razu.", "He replied at once."],
+          ["niedawno", "recently", "Niedawno się przeprowadziłam.", "I moved recently."],
+          [
+            "dawno",
+            "a long time ago; for a long time",
+            "Dawno cię nie widziałem.",
+            "I haven't seen you for a long time."
+          ]
         ]
       }
     },
@@ -41,16 +61,26 @@
       "heading": "How often",
       "text": "Frequency adverbs usually come before the verb. Nigdy (never) needs nie before the verb: Polish uses a double negative.",
       "table": {
-        "columns": ["Polish", "English", "Example"],
+        "columns": ["Polish", "English", "Example", "In English"],
         "rows": [
-          ["zawsze", "always", "Zawsze jem śniadanie."],
-          ["zwykle, zazwyczaj", "usually", "Zwykle wstaję o siódmej."],
-          ["często", "often", "Często chodzę do kina."],
-          ["czasem, czasami", "sometimes", "Czasem gotuję."],
-          ["rzadko", "rarely", "Rzadko oglądam telewizję."],
-          ["nigdy", "never", "Nigdy nie piję kawy."],
-          ["codziennie", "every day", "Codziennie czytam gazetę."],
-          ["co tydzień", "every week", "Co tydzień dzwonię do mamy."]
+          ["zawsze", "always", "Zawsze jem śniadanie.", "I always have breakfast."],
+          [
+            "zwykle, zazwyczaj",
+            "usually",
+            "Zwykle wstaję o siódmej.",
+            "I usually get up at seven."
+          ],
+          ["często", "often", "Często chodzę do kina.", "I often go to the cinema."],
+          ["czasem, czasami", "sometimes", "Czasem gotuję.", "Sometimes I cook."],
+          ["rzadko", "rarely", "Rzadko oglądam telewizję.", "I rarely watch TV."],
+          ["nigdy", "never", "Nigdy nie piję kawy.", "I never drink coffee."],
+          [
+            "codziennie",
+            "every day",
+            "Codziennie czytam gazetę.",
+            "I read the newspaper every day."
+          ],
+          ["co tydzień", "every week", "Co tydzień dzwonię do mamy.", "I call my mum every week."]
         ]
       }
     }

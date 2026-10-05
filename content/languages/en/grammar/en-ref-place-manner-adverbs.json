@@ -12,15 +12,30 @@
     {
       "heading": "Dónde",
       "table": {
-        "columns": ["Inglés", "Español", "Ejemplo"],
+        "columns": ["Inglés", "Español", "Ejemplo", "En español"],
         "rows": [
-          ["here", "aquí", "Come here."],
-          ["there", "allí", "The station is over there."],
-          ["everywhere", "en todas partes", "There are tourists everywhere."],
-          ["somewhere", "en algún sitio", "My keys are somewhere here."],
-          ["nowhere", "en ningún sitio", "There's nowhere to park."],
-          ["upstairs / downstairs", "arriba / abajo (en un edificio)", "The bedroom is upstairs."],
-          ["inside / outside", "dentro / fuera", "Let's wait inside."]
+          ["here", "aquí", "Come here.", "Ven aquí."],
+          ["there", "allí", "The station is over there.", "La estación está allí."],
+          [
+            "everywhere",
+            "en todas partes",
+            "There are tourists everywhere.",
+            "Hay turistas por todas partes."
+          ],
+          [
+            "somewhere",
+            "en algún sitio",
+            "My keys are somewhere here.",
+            "Mis llaves están por aquí."
+          ],
+          ["nowhere", "en ningún sitio", "There's nowhere to park.", "No hay dónde aparcar."],
+          [
+            "upstairs / downstairs",
+            "arriba / abajo (en un edificio)",
+            "The bedroom is upstairs.",
+            "El dormitorio está arriba."
+          ],
+          ["inside / outside", "dentro / fuera", "Let's wait inside.", "Esperemos dentro."]
         ]
       }
     },

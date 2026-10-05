@@ -13,7 +13,13 @@
     {
       "text": "These are typical patterns; some nouns differ (for example, many masculine nouns take -a instead of -u in the genitive). Masculine nouns for people and animals use the genitive form in the accusative: widzę kota, but widzę sklep.",
       "table": {
-        "columns": ["Case", "sklep (m, thing)", "kot (m, animal)", "kobieta (f)", "okno (n)"],
+        "columns": [
+          "Case",
+          "sklep, shop (m, thing)",
+          "kot, cat (m, animal)",
+          "kobieta, woman (f)",
+          "okno, window (n)"
+        ],
         "rows": [
           ["Nominative", "sklep", "kot", "kobieta", "okno"],
           ["Genitive", "sklepu", "kota", "kobiety", "okna"],

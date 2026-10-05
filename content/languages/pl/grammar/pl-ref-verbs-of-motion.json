@@ -13,14 +13,20 @@
     {
       "text": "Iść and jechać describe one trip in one direction, often happening now. Chodzić and jeździć describe habits, repeated trips or round trips. Iść and chodzić are on foot; jechać and jeździć are by vehicle.",
       "table": {
-        "columns": ["Person", "iść", "chodzić", "jechać", "jeździć"],
+        "columns": [
+          "Person",
+          "iść (go on foot, once)",
+          "chodzić (go on foot, regularly)",
+          "jechać (go by vehicle, once)",
+          "jeździć (go by vehicle, regularly)"
+        ],
         "rows": [
-          ["ja", "idę", "chodzę", "jadę", "jeżdżę"],
-          ["ty", "idziesz", "chodzisz", "jedziesz", "jeździsz"],
-          ["on / ona / ono", "idzie", "chodzi", "jedzie", "jeździ"],
-          ["my", "idziemy", "chodzimy", "jedziemy", "jeździmy"],
-          ["wy", "idziecie", "chodzicie", "jedziecie", "jeździcie"],
-          ["oni / one", "idą", "chodzą", "jadą", "jeżdżą"]
+          ["ja (I)", "idę", "chodzę", "jadę", "jeżdżę"],
+          ["ty (you, one person)", "idziesz", "chodzisz", "jedziesz", "jeździsz"],
+          ["on / ona / ono (he / she / it)", "idzie", "chodzi", "jedzie", "jeździ"],
+          ["my (we)", "idziemy", "chodzimy", "jedziemy", "jeździmy"],
+          ["wy (you, several people)", "idziecie", "chodzicie", "jedziecie", "jeździcie"],
+          ["oni / one (they)", "idą", "chodzą", "jadą", "jeżdżą"]
         ]
       },
       "examples": [

@@ -13,13 +13,25 @@
     {
       "text": "To be significa ser y estar a la vez. En la conversación se usan casi siempre las formas contraídas: I'm, you're, he's, isn't, aren't. Have got es muy frecuente en inglés británico para hablar de posesión.",
       "table": {
-        "columns": ["Persona", "be (presente)", "be (pasado)", "have (presente)", "have (pasado)"],
+        "columns": [
+          "Persona",
+          "be: ser, estar (presente)",
+          "be (pasado)",
+          "have: tener (presente)",
+          "have (pasado)"
+        ],
         "rows": [
-          ["I", "am (I'm)", "was", "have (I've)", "had"],
-          ["you", "are (you're)", "were", "have (you've)", "had"],
-          ["he / she / it", "is (he's, she's, it's)", "was", "has (he's)", "had"],
-          ["we", "are (we're)", "were", "have (we've)", "had"],
-          ["they", "are (they're)", "were", "have (they've)", "had"]
+          ["I (yo)", "am (I'm)", "was", "have (I've)", "had"],
+          ["you (tú, usted, vosotros)", "are (you're)", "were", "have (you've)", "had"],
+          [
+            "he / she / it (él / ella / ello)",
+            "is (he's, she's, it's)",
+            "was",
+            "has (he's)",
+            "had"
+          ],
+          ["we (nosotros)", "are (we're)", "were", "have (we've)", "had"],
+          ["they (ellos, ellas)", "are (they're)", "were", "have (they've)", "had"]
         ]
       },
       "examples": [

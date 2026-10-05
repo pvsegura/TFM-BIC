@@ -22,12 +22,12 @@
           "pracować (to work)"
         ],
         "rows": [
-          ["ja", "czytam", "mówię", "piszę", "pracuję"],
-          ["ty", "czytasz", "mówisz", "piszesz", "pracujesz"],
-          ["on / ona / ono", "czyta", "mówi", "pisze", "pracuje"],
-          ["my", "czytamy", "mówimy", "piszemy", "pracujemy"],
-          ["wy", "czytacie", "mówicie", "piszecie", "pracujecie"],
-          ["oni / one", "czytają", "mówią", "piszą", "pracują"]
+          ["ja (I)", "czytam", "mówię", "piszę", "pracuję"],
+          ["ty (you, one person)", "czytasz", "mówisz", "piszesz", "pracujesz"],
+          ["on / ona / ono (he / she / it)", "czyta", "mówi", "pisze", "pracuje"],
+          ["my (we)", "czytamy", "mówimy", "piszemy", "pracujemy"],
+          ["wy (you, several people)", "czytacie", "mówicie", "piszecie", "pracujecie"],
+          ["oni / one (they)", "czytają", "mówią", "piszą", "pracują"]
         ]
       }
     },
@@ -44,12 +44,20 @@
           "móc (can)"
         ],
         "rows": [
-          ["ja", "jestem", "mam", "idę", "jem", "chcę", "mogę"],
-          ["ty", "jesteś", "masz", "idziesz", "jesz", "chcesz", "możesz"],
-          ["on / ona / ono", "jest", "ma", "idzie", "je", "chce", "może"],
-          ["my", "jesteśmy", "mamy", "idziemy", "jemy", "chcemy", "możemy"],
-          ["wy", "jesteście", "macie", "idziecie", "jecie", "chcecie", "możecie"],
-          ["oni / one", "są", "mają", "idą", "jedzą", "chcą", "mogą"]
+          ["ja (I)", "jestem", "mam", "idę", "jem", "chcę", "mogę"],
+          ["ty (you, one person)", "jesteś", "masz", "idziesz", "jesz", "chcesz", "możesz"],
+          ["on / ona / ono (he / she / it)", "jest", "ma", "idzie", "je", "chce", "może"],
+          ["my (we)", "jesteśmy", "mamy", "idziemy", "jemy", "chcemy", "możemy"],
+          [
+            "wy (you, several people)",
+            "jesteście",
+            "macie",
+            "idziecie",
+            "jecie",
+            "chcecie",
+            "możecie"
+          ],
+          ["oni / one (they)", "są", "mają", "idą", "jedzą", "chcą", "mogą"]
         ]
       },
       "examples": [

@@ -41,11 +41,11 @@
       "heading": "Number and noun",
       "text": "The noun after a number changes form. Jeden and dwa also change with gender: jedna kobieta, dwie kobiety. Times use the feminine ordinal: o pierwszej (at one), o drugiej (at two).",
       "table": {
-        "columns": ["Number", "Form of the noun", "Example"],
+        "columns": ["Number", "Form of the noun", "Example", "In English"],
         "rows": [
-          ["1", "nominative singular", "jeden kot"],
-          ["2, 3, 4 (and 22–24, 32–34…)", "nominative plural", "dwa koty"],
-          ["5–21 (and 25–31, 35–41…)", "genitive plural", "pięć kotów"]
+          ["1", "nominative singular", "jeden kot", "one cat"],
+          ["2, 3, 4 (and 22–24, 32–34…)", "nominative plural", "dwa koty", "two cats"],
+          ["5–21 (and 25–31, 35–41…)", "genitive plural", "pięć kotów", "five cats"]
         ]
       }
     }

@@ -15,19 +15,19 @@
       "table": {
         "columns": ["Person", "być (to be)", "robić (to do)"],
         "rows": [
-          ["ja (man)", "byłem", "robiłem"],
-          ["ja (woman)", "byłam", "robiłam"],
-          ["ty (man)", "byłeś", "robiłeś"],
-          ["ty (woman)", "byłaś", "robiłaś"],
-          ["on", "był", "robił"],
-          ["ona", "była", "robiła"],
-          ["ono", "było", "robiło"],
-          ["my (with men)", "byliśmy", "robiliśmy"],
-          ["my (women only)", "byłyśmy", "robiłyśmy"],
-          ["wy (with men)", "byliście", "robiliście"],
-          ["wy (women only)", "byłyście", "robiłyście"],
-          ["oni (with men)", "byli", "robili"],
-          ["one (no men)", "były", "robiły"]
+          ["ja (I), man", "byłem", "robiłem"],
+          ["ja (I), woman", "byłam", "robiłam"],
+          ["ty (you), to a man", "byłeś", "robiłeś"],
+          ["ty (you), to a woman", "byłaś", "robiłaś"],
+          ["on (he)", "był", "robił"],
+          ["ona (she)", "była", "robiła"],
+          ["ono (it)", "było", "robiło"],
+          ["my (we), with men", "byliśmy", "robiliśmy"],
+          ["my (we), women only", "byłyśmy", "robiłyśmy"],
+          ["wy (you, plural), with men", "byliście", "robiliście"],
+          ["wy (you, plural), women only", "byłyście", "robiłyście"],
+          ["oni (they), with men", "byli", "robili"],
+          ["one (they), no men", "były", "robiły"]
         ]
       }
     },

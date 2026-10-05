@@ -12,20 +12,37 @@
   "sections": [
     {
       "table": {
-        "columns": ["Artículo", "Uso", "Ejemplo"],
+        "columns": ["Artículo", "Uso", "Ejemplo", "En español"],
         "rows": [
-          ["a", "uno cualquiera, ante sonido de consonante", "a cat, a university"],
-          ["an", "uno cualquiera, ante sonido de vocal", "an apple, an hour"],
-          ["the", "algo concreto que ya conocemos", "The cat is sleeping."],
+          [
+            "a",
+            "uno cualquiera, ante sonido de consonante",
+            "a cat, a university",
+            "un gato, una universidad"
+          ],
+          [
+            "an",
+            "uno cualquiera, ante sonido de vocal",
+            "an apple, an hour",
+            "una manzana, una hora"
+          ],
+          [
+            "the",
+            "algo concreto que ya conocemos",
+            "The cat is sleeping.",
+            "El gato está durmiendo."
+          ],
           [
             "sin artículo",
             "plurales e incontables en sentido general",
-            "I like cats. Water is important."
+            "I like cats. Water is important.",
+            "Me gustan los gatos. El agua es importante."
           ],
           [
             "sin artículo",
             "comidas, idiomas, la mayoría de países",
-            "We have lunch at one. I speak English."
+            "We have lunch at one. I speak English.",
+            "Comemos a la una. Hablo inglés."
           ]
         ]
       },

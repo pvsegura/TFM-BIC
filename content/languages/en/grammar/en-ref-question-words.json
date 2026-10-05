@@ -12,19 +12,29 @@
   "sections": [
     {
       "table": {
-        "columns": ["Inglés", "Español", "Ejemplo"],
+        "columns": ["Inglés", "Español", "Ejemplo", "En español"],
         "rows": [
-          ["who", "quién", "Who is that?"],
-          ["what", "qué", "What's your name?"],
-          ["where", "dónde", "Where do you live?"],
-          ["when", "cuándo", "When is the train?"],
-          ["why", "por qué", "Why are you late?"],
-          ["how", "cómo", "How are you?"],
-          ["how much", "cuánto (incontable)", "How much is it?"],
-          ["how many", "cuántos (contable)", "How many brothers have you got?"],
-          ["how old", "qué edad", "How old are you?"],
-          ["which", "cuál (entre opciones)", "Which bus goes to the centre?"],
-          ["whose", "de quién", "Whose phone is this?"]
+          ["who", "quién", "Who is that?", "¿Quién es?"],
+          ["what", "qué", "What's your name?", "¿Cómo te llamas?"],
+          ["where", "dónde", "Where do you live?", "¿Dónde vives?"],
+          ["when", "cuándo", "When is the train?", "¿Cuándo sale el tren?"],
+          ["why", "por qué", "Why are you late?", "¿Por qué llegas tarde?"],
+          ["how", "cómo", "How are you?", "¿Cómo estás?"],
+          ["how much", "cuánto (incontable)", "How much is it?", "¿Cuánto cuesta?"],
+          [
+            "how many",
+            "cuántos (contable)",
+            "How many brothers have you got?",
+            "¿Cuántos hermanos tienes?"
+          ],
+          ["how old", "qué edad", "How old are you?", "¿Cuántos años tienes?"],
+          [
+            "which",
+            "cuál (entre opciones)",
+            "Which bus goes to the centre?",
+            "¿Qué autobús va al centro?"
+          ],
+          ["whose", "de quién", "Whose phone is this?", "¿De quién es este teléfono?"]
         ]
       }
     }

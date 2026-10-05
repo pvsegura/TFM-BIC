@@ -13,21 +13,21 @@
     {
       "text": "A yes-or-no question can start with czy, or simply use a rising intonation. Kto and co change with case, like nouns: kogo, czego, komu, czemu, kim, czym.",
       "table": {
-        "columns": ["Polish", "English", "Example"],
+        "columns": ["Polish", "English", "Example", "In English"],
         "rows": [
-          ["kto?", "who?", "Kto to jest?"],
-          ["co?", "what?", "Co robisz?"],
-          ["gdzie?", "where?", "Gdzie mieszkasz?"],
-          ["dokąd?", "where to?", "Dokąd idziesz?"],
-          ["skąd?", "where from?", "Skąd jesteś?"],
-          ["kiedy?", "when?", "Kiedy przyjdziesz?"],
-          ["dlaczego?", "why?", "Dlaczego się śmiejesz?"],
-          ["jak?", "how?", "Jak się masz?"],
-          ["ile?", "how much? how many?", "Ile to kosztuje?"],
-          ["który?", "which?", "Który autobus jedzie do centrum?"],
-          ["jaki?", "what kind of?", "Jaki to film?"],
-          ["czyj?", "whose?", "Czyj to telefon?"],
-          ["czy…?", "(yes-or-no question)", "Czy masz czas?"]
+          ["kto?", "who?", "Kto to jest?", "Who is that?"],
+          ["co?", "what?", "Co robisz?", "What are you doing?"],
+          ["gdzie?", "where?", "Gdzie mieszkasz?", "Where do you live?"],
+          ["dokąd?", "where to?", "Dokąd idziesz?", "Where are you going?"],
+          ["skąd?", "where from?", "Skąd jesteś?", "Where are you from?"],
+          ["kiedy?", "when?", "Kiedy przyjdziesz?", "When will you come?"],
+          ["dlaczego?", "why?", "Dlaczego się śmiejesz?", "Why are you laughing?"],
+          ["jak?", "how?", "Jak się masz?", "How are you?"],
+          ["ile?", "how much? how many?", "Ile to kosztuje?", "How much is it?"],
+          ["który?", "which?", "Który autobus jedzie do centrum?", "Which bus goes to the centre?"],
+          ["jaki?", "what kind of?", "Jaki to film?", "What kind of film is it?"],
+          ["czyj?", "whose?", "Czyj to telefon?", "Whose phone is this?"],
+          ["czy…?", "(yes-or-no question)", "Czy masz czas?", "Do you have time?"]
         ]
       }
     }

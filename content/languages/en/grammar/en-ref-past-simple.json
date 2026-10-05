@@ -12,12 +12,16 @@
     {
       "text": "El pasado simple es igual para todas las personas. Los verbos regulares añaden -ed; los irregulares tienen su propia forma (ver la tabla de verbos irregulares). En negativas y preguntas se usa did con el verbo en su forma base.",
       "table": {
-        "columns": ["Regla de ortografía", "Ejemplo"],
+        "columns": ["Regla de ortografía", "Ejemplo", "En español"],
         "rows": [
-          ["la mayoría: + -ed", "work → worked"],
-          ["termina en -e: + -d", "live → lived"],
-          ["consonante + y: -y → -ied", "study → studied"],
-          ["vocal + consonante corta y acentuada: se dobla la consonante", "stop → stopped"]
+          ["la mayoría: + -ed", "work → worked", "trabajar → trabajé, trabajó…"],
+          ["termina en -e: + -d", "live → lived", "vivir → viví, vivió…"],
+          ["consonante + y: -y → -ied", "study → studied", "estudiar → estudié, estudió…"],
+          [
+            "vocal + consonante corta y acentuada: se dobla la consonante",
+            "stop → stopped",
+            "parar → paré, paró…"
+          ]
         ]
       }
     },

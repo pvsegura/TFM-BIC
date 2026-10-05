@@ -246,14 +246,14 @@ export function RootLayout() {
       <footer
         className={`border-t border-primary/10 bg-paper-shade/40 dark:border-surface/10 dark:bg-night-paper/40 ${fullBleed ? "" : "mt-12"}`}
       >
-        <div className={`mx-auto ${frameWidth} px-4 py-8 text-sm`}>
+        <div className={`mx-auto ${frameWidth} px-4 py-8 font-display text-[0.95rem]`}>
           <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-3">
             {FOOTER_GROUPS.map((group) => (
               <div key={group.title}>
-                <h2 className="text-xs font-semibold uppercase tracking-wide text-primary/70 dark:text-surface/70">
+                <h2 className="text-base font-bold tracking-tight text-accent-ink dark:text-accent">
                   {group.title}
                 </h2>
-                <ul className="mt-2 space-y-1.5">
+                <ul className="mt-2 space-y-1.5 font-medium">
                   {group.links.map((link) => (
                     <li key={link.to}>
                       <Link to={link.to} className="hover:underline">
@@ -265,7 +265,7 @@ export function RootLayout() {
               </div>
             ))}
           </nav>
-          <p className="mt-6 border-t border-primary/10 pt-4 text-primary/70 dark:border-surface/10 dark:text-surface/70">
+          <p className="mt-6 border-t border-primary/10 pt-4 text-sm text-primary/70 dark:border-surface/10 dark:text-surface/70">
             © 2026 pvsegura · TFM-BIC · A study project; contact details and legal review are
             pending.
           </p>
