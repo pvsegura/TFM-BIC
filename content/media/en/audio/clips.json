@@ -1,4 +1,22 @@
 {
+  "024ada4793f7c1b1": {
+    "path": "en/audio/lucia/024ada4793f7c1b1.m4a",
+    "durationSeconds": 1.28,
+    "text": "Thank you.",
+    "language": "en",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:14:56.324Z"
+  },
+  "03d1ec30951034d5": {
+    "path": "en/audio/javier/03d1ec30951034d5.m4a",
+    "durationSeconds": 4.48,
+    "text": "Ahora practica los saludos con los ejercicios de debajo del vídeo.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:06:30.769Z"
+  },
   "04068cd9ea2cb549": {
     "path": "en/audio/javier/04068cd9ea2cb549.m4a",
     "durationSeconds": 2.88,
@@ -62,6 +80,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:05.832Z"
   },
+  "10c51b567078778d": {
+    "path": "en/audio/javier/10c51b567078778d.m4a",
+    "durationSeconds": 2.96,
+    "text": "Neutro: con cualquier persona.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:45.299Z"
+  },
   "11b2570e4d39e2fd": {
     "path": "en/audio/emma/11b2570e4d39e2fd.m4a",
     "durationSeconds": 2.08,
@@ -89,6 +116,15 @@
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:28:46.218Z"
   },
+  "133a69fd13acc390": {
+    "path": "en/audio/emma/133a69fd13acc390.m4a",
+    "durationSeconds": 1.36,
+    "text": "See you later!",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:04:33.264Z"
+  },
   "1543c039874ab63d": {
     "path": "en/audio/emma/1543c039874ab63d.m4a",
     "durationSeconds": 1.2,
@@ -106,6 +142,42 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:42:42.395Z"
+  },
+  "1609b3cb97b96efd": {
+    "path": "en/audio/lucia/1609b3cb97b96efd.m4a",
+    "durationSeconds": 4.4,
+    "text": "Para pedir algo, por favor va al final de la frase.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:13:51.828Z"
+  },
+  "18f99132a75062cf": {
+    "path": "en/audio/javier/18f99132a75062cf.m4a",
+    "durationSeconds": 4.36,
+    "text": "Por la mañana, el dependiente saluda. ¿Qué dice?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:06:04.944Z"
+  },
+  "1a09986293423908": {
+    "path": "en/audio/lucia/1a09986293423908.m4a",
+    "durationSeconds": 3.6,
+    "text": "Y para responder a un gracias: de nada.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:14:24.159Z"
+  },
+  "1bf6334eb53f7e63": {
+    "path": "en/audio/lucia/1bf6334eb53f7e63.m4a",
+    "durationSeconds": 3.76,
+    "text": "Tom le da el café a Emma. ¿Qué dice él?",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:22.606Z"
   },
   "1ea2a6a2cfd07041": {
     "path": "en/audio/javier/1ea2a6a2cfd07041.m4a",
@@ -143,6 +215,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:17:36.788Z"
   },
+  "2451e57215a8ab2e": {
+    "path": "en/audio/lucia/2451e57215a8ab2e.m4a",
+    "durationSeconds": 6.32,
+    "text": "Las mismas palabras, en otro lugar. Y para pedir perdón: lo siento.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:55.588Z"
+  },
   "257e6d0670eba0e1": {
     "path": "en/audio/javier/257e6d0670eba0e1.m4a",
     "durationSeconds": 3.12,
@@ -179,6 +260,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:15:52.747Z"
   },
+  "260b624c1bb3e0da": {
+    "path": "en/audio/emma/260b624c1bb3e0da.m4a",
+    "durationSeconds": 1.16,
+    "text": "Hi!",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:04:13.739Z"
+  },
   "29d52c962d579212": {
     "path": "en/audio/javier/29d52c962d579212.m4a",
     "durationSeconds": 3.36,
@@ -196,6 +286,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:26:22.285Z"
+  },
+  "2bb6084d5b5fa4ac": {
+    "path": "en/audio/lucia/2bb6084d5b5fa4ac.m4a",
+    "durationSeconds": 3.08,
+    "text": "Para dar las gracias: gracias.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:09.997Z"
   },
   "2d342a1e41ef2a97": {
     "path": "en/audio/lucia/2d342a1e41ef2a97.m4a",
@@ -224,6 +323,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:26:36.155Z"
   },
+  "3105b25596f6e7b1": {
+    "path": "en/audio/lucia/3105b25596f6e7b1.m4a",
+    "durationSeconds": 2.76,
+    "text": "Para pedir algo: por favor.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:02.378Z"
+  },
   "3136a96777b94bfc": {
     "path": "en/audio/emma/3136a96777b94bfc.m4a",
     "durationSeconds": 0.92,
@@ -232,6 +340,33 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:33.970Z"
+  },
+  "32eb8fbc3c6e46ae": {
+    "path": "en/audio/javier/32eb8fbc3c6e46ae.m4a",
+    "durationSeconds": 4.48,
+    "text": "Es de noche y saluda al dependiente. ¿Qué dice Ben?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:06:17.849Z"
+  },
+  "34355b2eeeb43917": {
+    "path": "en/audio/lucia/34355b2eeeb43917.m4a",
+    "durationSeconds": 3.88,
+    "text": "Emma coge la taza. ¿Qué dice ella?",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:30.124Z"
+  },
+  "34ecf2a0889dd591": {
+    "path": "en/audio/javier/34ecf2a0889dd591.m4a",
+    "durationSeconds": 4.04,
+    "text": "Al saludar al final del día, el saludo cambia.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:06.199Z"
   },
   "36d223406eb23996": {
     "path": "en/audio/emma/36d223406eb23996.m4a",
@@ -296,6 +431,15 @@
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:28:07.572Z"
   },
+  "3c66448832bfaa0f": {
+    "path": "en/audio/tom/3c66448832bfaa0f.m4a",
+    "durationSeconds": 1.16,
+    "text": "You're welcome.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-05T08:14:16.904Z"
+  },
   "3d4c98e86c24288d": {
     "path": "en/audio/tom/3d4c98e86c24288d.m4a",
     "durationSeconds": 1.12,
@@ -314,6 +458,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:57.707Z"
   },
+  "4480e452558521f1": {
+    "path": "en/audio/javier/4480e452558521f1.m4a",
+    "durationSeconds": 2.04,
+    "text": "Depende de la situación.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:38.367Z"
+  },
   "48c6427e4cb14371": {
     "path": "en/audio/emma/48c6427e4cb14371.m4a",
     "durationSeconds": 1.16,
@@ -322,6 +475,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:36:09.909Z"
+  },
+  "49123e27aaf096ab": {
+    "path": "en/audio/lucia/49123e27aaf096ab.m4a",
+    "durationSeconds": 4.84,
+    "text": "Una pequeña cafetería por la mañana. Emma quiere un café.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:13:25.933Z"
   },
   "4a6d0fc398881c1d": {
     "path": "en/audio/emma/4a6d0fc398881c1d.m4a",
@@ -368,6 +530,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:15:33.567Z"
   },
+  "4d4ecea86b1872ef": {
+    "path": "en/audio/lucia/4d4ecea86b1872ef.m4a",
+    "durationSeconds": 3.2,
+    "text": "Al dar algo a alguien: aquí tienes.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:14:04.549Z"
+  },
   "4dfcd86627c0080c": {
     "path": "en/audio/emma/4dfcd86627c0080c.m4a",
     "durationSeconds": 1.44,
@@ -376,6 +547,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:27:34.883Z"
+  },
+  "50883c35ab710bc4": {
+    "path": "en/audio/javier/50883c35ab710bc4.m4a",
+    "durationSeconds": 3.4,
+    "text": "Su amiga Emma le saluda. ¿Qué dice Ben?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:06:10.985Z"
   },
   "5162da0b0a8602e5": {
     "path": "en/audio/javier/5162da0b0a8602e5.m4a",
@@ -395,6 +575,24 @@
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:29:25.270Z"
   },
+  "53b1de71117cc9ac": {
+    "path": "en/audio/javier/53b1de71117cc9ac.m4a",
+    "durationSeconds": 4.96,
+    "text": "Esta frase es para despedirse antes de dormir, no para saludar.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:33.027Z"
+  },
+  "59ecbd272a47d48c": {
+    "path": "en/audio/javier/59ecbd272a47d48c.m4a",
+    "durationSeconds": 2.44,
+    "text": "Informal: con amigos.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:51.179Z"
+  },
   "5d0542246ca167c1": {
     "path": "en/audio/javier/5d0542246ca167c1.m4a",
     "durationSeconds": 3.72,
@@ -412,6 +610,24 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:15:13.517Z"
+  },
+  "5f0865cf38e09498": {
+    "path": "en/audio/javier/5f0865cf38e09498.m4a",
+    "durationSeconds": 5.6,
+    "text": "Por la mañana, en una tienda pequeña. Ben no conoce al dependiente.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:03:31.044Z"
+  },
+  "606131e82f0ce021": {
+    "path": "en/audio/emma/606131e82f0ce021.m4a",
+    "durationSeconds": 1.04,
+    "text": "Sorry.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:15:48.292Z"
   },
   "6085870a29b6317a": {
     "path": "en/audio/tom/6085870a29b6317a.m4a",
@@ -440,6 +656,15 @@
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:41.871Z"
   },
+  "66beff20901d6c96": {
+    "path": "en/audio/javier/66beff20901d6c96.m4a",
+    "durationSeconds": 3.04,
+    "text": "Sale de la tienda. ¿Qué dice Ben?",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:06:24.584Z"
+  },
   "6b520511fb10c845": {
     "path": "en/audio/emma/6b520511fb10c845.m4a",
     "durationSeconds": 1.2,
@@ -457,6 +682,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:44:19.982Z"
+  },
+  "71ed1e88dac092f4": {
+    "path": "en/audio/javier/71ed1e88dac092f4.m4a",
+    "durationSeconds": 3.88,
+    "text": "Muy tarde, en casa. Es hora de dormir.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:12.522Z"
   },
   "71f0a2b010d90b55": {
     "path": "en/audio/lucia/71f0a2b010d90b55.m4a",
@@ -476,6 +710,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:44.595Z"
   },
+  "72d53a23103f33e6": {
+    "path": "en/audio/tom/72d53a23103f33e6.m4a",
+    "durationSeconds": 0.96,
+    "text": "Here you are.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-05T08:13:58.005Z"
+  },
   "72eda40b6e0ea54f": {
     "path": "en/audio/javier/72eda40b6e0ea54f.m4a",
     "durationSeconds": 3.76,
@@ -493,6 +736,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:42:16.242Z"
+  },
+  "745332212f0e48ac": {
+    "path": "en/audio/ben/745332212f0e48ac.m4a",
+    "durationSeconds": 1.04,
+    "text": "Hi!",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:04:20.032Z"
   },
   "78fb053b8747bf33": {
     "path": "en/audio/emma/78fb053b8747bf33.m4a",
@@ -566,6 +818,15 @@
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:35:30.381Z"
   },
+  "80694bbdb3d00efa": {
+    "path": "en/audio/javier/80694bbdb3d00efa.m4a",
+    "durationSeconds": 2.8,
+    "text": "Y la despedida, también informal.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:04:46.870Z"
+  },
   "8288a3654c9e87e3": {
     "path": "en/audio/javier/8288a3654c9e87e3.m4a",
     "durationSeconds": 6.24,
@@ -574,6 +835,24 @@
     "narratorId": "javier",
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:35:13.178Z"
+  },
+  "83f2d45deb989492": {
+    "path": "en/audio/javier/83f2d45deb989492.m4a",
+    "durationSeconds": 3.2,
+    "text": "Con amigos, el saludo es informal.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:04:27.348Z"
+  },
+  "86f4e8cb61834139": {
+    "path": "en/audio/emma/86f4e8cb61834139.m4a",
+    "durationSeconds": 1.52,
+    "text": "No, thank you.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:14:49.307Z"
   },
   "87dec395bc8fea2f": {
     "path": "en/audio/javier/87dec395bc8fea2f.m4a",
@@ -620,6 +899,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:08.115Z"
   },
+  "8eccaf85174d90d5": {
+    "path": "en/audio/javier/8eccaf85174d90d5.m4a",
+    "durationSeconds": 3.4,
+    "text": "Adiós: neutro, algo formal.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:04:00.861Z"
+  },
   "9076d124fd584733": {
     "path": "en/audio/tom/9076d124fd584733.m4a",
     "durationSeconds": 1.36,
@@ -629,6 +917,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-04T07:27:53.768Z"
   },
+  "91f078379d8cf32e": {
+    "path": "en/audio/lucia/91f078379d8cf32e.m4a",
+    "durationSeconds": 4.64,
+    "text": "Más tarde, en la calle. Tom le sujeta la puerta.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:36.392Z"
+  },
   "922a6f44679e7f25": {
     "path": "en/audio/lucia/922a6f44679e7f25.m4a",
     "durationSeconds": 5.6,
@@ -637,6 +934,15 @@
     "narratorId": "lucia",
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:02.616Z"
+  },
+  "92c33179a2c932c3": {
+    "path": "en/audio/javier/92c33179a2c932c3.m4a",
+    "durationSeconds": 3.04,
+    "text": "Y al final del día, este saludo.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:05:58.510Z"
   },
   "93f2768802ea64d5": {
     "path": "en/audio/ben/93f2768802ea64d5.m4a",
@@ -665,6 +971,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:27.864Z"
   },
+  "97e7bd5cd1489205": {
+    "path": "en/audio/emma/97e7bd5cd1489205.m4a",
+    "durationSeconds": 1.24,
+    "text": "Yes, please.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:14:36.995Z"
+  },
   "98d74449719935bc": {
     "path": "en/audio/javier/98d74449719935bc.m4a",
     "durationSeconds": 4.68,
@@ -673,6 +988,42 @@
     "narratorId": "javier",
     "fingerprint": "2a4c7137751c69e8",
     "createdAt": "2026-10-04T07:36:29.760Z"
+  },
+  "9967cf34fedad4c7": {
+    "path": "en/audio/lucia/9967cf34fedad4c7.m4a",
+    "durationSeconds": 4.8,
+    "text": "Le ofrece leche y ella quiere. ¿Qué dice?",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:16:08.465Z"
+  },
+  "9d059b738094d595": {
+    "path": "en/audio/javier/9d059b738094d595.m4a",
+    "durationSeconds": 3.68,
+    "text": "Por la noche. El dependiente cierra la tienda.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:04:53.971Z"
+  },
+  "9d861215549c62db": {
+    "path": "en/audio/emma/9d861215549c62db.m4a",
+    "durationSeconds": 1.28,
+    "text": "Excuse me.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:13:31.667Z"
+  },
+  "9e6128c79c17fbb2": {
+    "path": "en/audio/lucia/9e6128c79c17fbb2.m4a",
+    "durationSeconds": 5.08,
+    "text": "Ahora practica estas palabras con los ejercicios de debajo del vídeo.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:16:15.457Z"
   },
   "a1eeba41ed468ca8": {
     "path": "en/audio/lucia/a1eeba41ed468ca8.m4a",
@@ -746,6 +1097,15 @@
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:29.440Z"
   },
+  "a9155291413bb2f5": {
+    "path": "en/audio/javier/a9155291413bb2f5.m4a",
+    "durationSeconds": 5,
+    "text": "Un saludo neutro, y otro según la hora: por la mañana.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:03:48.538Z"
+  },
   "ada8f1e4a95391a6": {
     "path": "en/audio/tom/ada8f1e4a95391a6.m4a",
     "durationSeconds": 2.04,
@@ -764,6 +1124,15 @@
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-03T15:16:24.705Z"
   },
+  "af367014ce79719d": {
+    "path": "en/audio/ben/af367014ce79719d.m4a",
+    "durationSeconds": 0.96,
+    "text": "Hello!",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:03:34.076Z"
+  },
   "afd277ccaeae7152": {
     "path": "en/audio/tom/afd277ccaeae7152.m4a",
     "durationSeconds": 1.76,
@@ -772,6 +1141,33 @@
     "narratorId": "tom",
     "fingerprint": "ecb74d05d7b0462d",
     "createdAt": "2026-10-04T07:27:28.001Z"
+  },
+  "b01ff59bfec8c133": {
+    "path": "en/audio/emma/b01ff59bfec8c133.m4a",
+    "durationSeconds": 1.24,
+    "text": "Good night.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:05:18.367Z"
+  },
+  "b524eb654f3d1222": {
+    "path": "en/audio/lucia/b524eb654f3d1222.m4a",
+    "durationSeconds": 4.2,
+    "text": "Tom está de espaldas. ¿Cómo llama Emma su atención?",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:16:01.969Z"
+  },
+  "b5df229f3324c0c5": {
+    "path": "en/audio/ben/b5df229f3324c0c5.m4a",
+    "durationSeconds": 1.08,
+    "text": "Good evening.",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:04:58.872Z"
   },
   "bae061603783e143": {
     "path": "en/audio/javier/bae061603783e143.m4a",
@@ -809,6 +1205,24 @@
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:27:08.827Z"
   },
+  "c211b6760e5a0580": {
+    "path": "en/audio/ben/c211b6760e5a0580.m4a",
+    "durationSeconds": 1.04,
+    "text": "Goodbye.",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:03:53.900Z"
+  },
+  "c643e301fe4e0987": {
+    "path": "en/audio/emma/c643e301fe4e0987.m4a",
+    "durationSeconds": 1.44,
+    "text": "A coffee, please.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:13:44.616Z"
+  },
   "c6b3bf4a665e6368": {
     "path": "en/audio/emma/c6b3bf4a665e6368.m4a",
     "durationSeconds": 1.2,
@@ -836,6 +1250,33 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-03T15:14:14.931Z"
   },
+  "cacb3a2ed0c2cb13": {
+    "path": "en/audio/javier/cacb3a2ed0c2cb13.m4a",
+    "durationSeconds": 3.8,
+    "text": "En el parque, Ben se encuentra con su amiga Emma.",
+    "language": "es",
+    "narratorId": "javier",
+    "fingerprint": "2a4c7137751c69e8",
+    "createdAt": "2026-10-05T08:04:07.720Z"
+  },
+  "cc26587b6f52fff5": {
+    "path": "en/audio/lucia/cc26587b6f52fff5.m4a",
+    "durationSeconds": 3.04,
+    "text": "Así se llama la atención de alguien.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:13:37.784Z"
+  },
+  "cfe204cd6a039fcb": {
+    "path": "en/audio/ben/cfe204cd6a039fcb.m4a",
+    "durationSeconds": 1.16,
+    "text": "Good night.",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:05:25.082Z"
+  },
   "d4fc48b9c5b3a032": {
     "path": "en/audio/emma/d4fc48b9c5b3a032.m4a",
     "durationSeconds": 1.16,
@@ -845,6 +1286,15 @@
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:43:34.771Z"
   },
+  "d944ffa546b6a2c0": {
+    "path": "en/audio/lucia/d944ffa546b6a2c0.m4a",
+    "durationSeconds": 2.8,
+    "text": "Y para responder: de nada.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:15:15.482Z"
+  },
   "dba7705ad8dad375": {
     "path": "en/audio/emma/dba7705ad8dad375.m4a",
     "durationSeconds": 1.28,
@@ -853,6 +1303,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:42:55.210Z"
+  },
+  "dc59f4949fbf2607": {
+    "path": "en/audio/ben/dc59f4949fbf2607.m4a",
+    "durationSeconds": 1.04,
+    "text": "Bye!",
+    "language": "en",
+    "narratorId": "ben",
+    "fingerprint": "3e899c058056355c",
+    "createdAt": "2026-10-05T08:04:39.365Z"
   },
   "dc97b5f3555e84fd": {
     "path": "en/audio/javier/dc97b5f3555e84fd.m4a",
@@ -908,6 +1367,33 @@
     "fingerprint": "c92c06d6f1db9f5f",
     "createdAt": "2026-10-03T15:26:42.066Z"
   },
+  "e147da385049989f": {
+    "path": "en/audio/emma/e147da385049989f.m4a",
+    "durationSeconds": 1.24,
+    "text": "Thank you.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:14:10.140Z"
+  },
+  "e52884695e94c92e": {
+    "path": "en/audio/tom/e52884695e94c92e.m4a",
+    "durationSeconds": 1.24,
+    "text": "Good morning.",
+    "language": "en",
+    "narratorId": "tom",
+    "fingerprint": "ecb74d05d7b0462d",
+    "createdAt": "2026-10-05T08:03:41.730Z"
+  },
+  "e56c561d6271209f": {
+    "path": "en/audio/emma/e56c561d6271209f.m4a",
+    "durationSeconds": 1.56,
+    "text": "Thank you very much.",
+    "language": "en",
+    "narratorId": "emma",
+    "fingerprint": "724b64d6fdc97e43",
+    "createdAt": "2026-10-05T08:15:41.123Z"
+  },
   "e8ce58bbfb9ee04a": {
     "path": "en/audio/javier/e8ce58bbfb9ee04a.m4a",
     "durationSeconds": 5.16,
@@ -925,6 +1411,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:42:49.435Z"
+  },
+  "ebcc76fb4ad55a8d": {
+    "path": "en/audio/lucia/ebcc76fb4ad55a8d.m4a",
+    "durationSeconds": 1.44,
+    "text": "¿Y azúcar?",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:14:43.307Z"
   },
   "ec53e597de99d253": {
     "path": "en/audio/emma/ec53e597de99d253.m4a",
@@ -970,6 +1465,15 @@
     "narratorId": "emma",
     "fingerprint": "724b64d6fdc97e43",
     "createdAt": "2026-10-04T07:43:53.879Z"
+  },
+  "f0a6fadbdd99a53d": {
+    "path": "en/audio/lucia/f0a6fadbdd99a53d.m4a",
+    "durationSeconds": 1.84,
+    "text": "Le ofrece leche.",
+    "language": "es",
+    "narratorId": "lucia",
+    "fingerprint": "c92c06d6f1db9f5f",
+    "createdAt": "2026-10-05T08:14:29.812Z"
   },
   "f24c3ac0beb86792": {
     "path": "en/audio/javier/f24c3ac0beb86792.m4a",

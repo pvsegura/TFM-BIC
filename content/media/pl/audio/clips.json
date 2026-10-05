@@ -17,6 +17,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:07.219Z"
   },
+  "03324825be56b192": {
+    "path": "pl/audio/piotr/03324825be56b192.m4a",
+    "durationSeconds": 2.92,
+    "text": "Nie, dziękuję. Ile to kosztuje?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:22:02.960Z"
+  },
   "034e260161d99e33": {
     "path": "pl/audio/ola/034e260161d99e33.m4a",
     "durationSeconds": 1.92,
@@ -53,6 +62,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:01:33.743Z"
   },
+  "0715eb9dd52db059": {
+    "path": "pl/audio/ola/0715eb9dd52db059.m4a",
+    "durationSeconds": 1.76,
+    "text": "Co robiłeś w weekend?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:31:51.922Z"
+  },
   "08b661ef8c7c2ac2": {
     "path": "pl/audio/marek/08b661ef8c7c2ac2.m4a",
     "durationSeconds": 2.72,
@@ -61,6 +79,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:24.320Z"
+  },
+  "0ae81d728484392f": {
+    "path": "pl/audio/anna/0ae81d728484392f.m4a",
+    "durationSeconds": 4.08,
+    "text": "The hour comes after a short word meaning at.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:07.823Z"
   },
   "0b9efb59c9a2f0eb": {
     "path": "pl/audio/anna/0b9efb59c9a2f0eb.m4a",
@@ -179,6 +206,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:25.286Z"
   },
+  "147c9b1dc5fe549b": {
+    "path": "pl/audio/ola/147c9b1dc5fe549b.m4a",
+    "durationSeconds": 2.12,
+    "text": "Dzień dobry. Co podać?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:21:37.232Z"
+  },
   "14dcc2fd36fed248": {
     "path": "pl/audio/anna/14dcc2fd36fed248.m4a",
     "durationSeconds": 1.2,
@@ -205,6 +241,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:51.826Z"
+  },
+  "15963b0cf7b4655a": {
+    "path": "pl/audio/marek/15963b0cf7b4655a.m4a",
+    "durationSeconds": 5.24,
+    "text": "She is a woman: listen, her verbs end in a m.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-05T08:32:19.200Z"
   },
   "179165dc82d6d863": {
     "path": "pl/audio/anna/179165dc82d6d863.m4a",
@@ -295,6 +340,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T20:32:45.722Z"
+  },
+  "1c4bfb099d1bb11b": {
+    "path": "pl/audio/piotr/1c4bfb099d1bb11b.m4a",
+    "durationSeconds": 1.2,
+    "text": "Poproszę chleb.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:23:08.535Z"
   },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
@@ -413,6 +467,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:04.012Z"
   },
+  "25f814e0f5078c20": {
+    "path": "pl/audio/anna/25f814e0f5078c20.m4a",
+    "durationSeconds": 3.16,
+    "text": "And this question asks for the price.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:22:10.340Z"
+  },
   "264157d349d4e307": {
     "path": "pl/audio/anna/264157d349d4e307.m4a",
     "durationSeconds": 1.32,
@@ -467,6 +530,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:49.078Z"
   },
+  "2ab57cd6eb7b35da": {
+    "path": "pl/audio/anna/2ab57cd6eb7b35da.m4a",
+    "durationSeconds": 3.68,
+    "text": "Tomek wants bread. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:23:01.809Z"
+  },
   "2b13345cdd9524fe": {
     "path": "pl/audio/tomek/2b13345cdd9524fe.m4a",
     "durationSeconds": 1.08,
@@ -493,6 +565,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:59:00.042Z"
+  },
+  "2cb72f038abcd5a1": {
+    "path": "pl/audio/anna/2cb72f038abcd5a1.m4a",
+    "durationSeconds": 5.8,
+    "text": "A small shop in the morning. Tomek wants some bread and milk.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:21:32.202Z"
   },
   "2fe7c50c17986be6": {
     "path": "pl/audio/anna/2fe7c50c17986be6.m4a",
@@ -530,6 +611,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:39.746Z"
   },
+  "31c8a997f9fded7d": {
+    "path": "pl/audio/anna/31c8a997f9fded7d.m4a",
+    "durationSeconds": 1.52,
+    "text": "Poproszę wodę.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:22:35.767Z"
+  },
   "338df027bc3c70c3": {
     "path": "pl/audio/ola/338df027bc3c70c3.m4a",
     "durationSeconds": 1.16,
@@ -547,6 +637,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:49.989Z"
+  },
+  "33fdaf42029b72fd": {
+    "path": "pl/audio/anna/33fdaf42029b72fd.m4a",
+    "durationSeconds": 2.8,
+    "text": "Two colleagues talk about their mornings.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:27:21.602Z"
   },
   "346d85d7e3b314eb": {
     "path": "pl/audio/anna/346d85d7e3b314eb.m4a",
@@ -619,6 +718,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:02:17.519Z"
+  },
+  "3b6986afabba2da5": {
+    "path": "pl/audio/ola/3b6986afabba2da5.m4a",
+    "durationSeconds": 2.88,
+    "text": "Ja byłam w domu i czytałam książkę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:32:12.897Z"
   },
   "3b91bb2bf31759bd": {
     "path": "pl/audio/anna/3b91bb2bf31759bd.m4a",
@@ -764,6 +872,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:04.203Z"
   },
+  "44cd00d67b49dfe6": {
+    "path": "pl/audio/marek/44cd00d67b49dfe6.m4a",
+    "durationSeconds": 4.96,
+    "text": "He is a man, so his verb ends in e m.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-05T08:32:06.331Z"
+  },
   "450962bc8195b839": {
     "path": "pl/audio/ola/450962bc8195b839.m4a",
     "durationSeconds": 1.24,
@@ -790,6 +907,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:11.205Z"
+  },
+  "4648e1bf6a0b02d0": {
+    "path": "pl/audio/piotr/4648e1bf6a0b02d0.m4a",
+    "durationSeconds": 2.16,
+    "text": "Byłem w górach z bratem. A ty?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:31:58.382Z"
+  },
+  "490f13b67bc3aeab": {
+    "path": "pl/audio/ola/490f13b67bc3aeab.m4a",
+    "durationSeconds": 1.56,
+    "text": "Dziewięć złotych.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:22:16.884Z"
   },
   "4a4898095c0b7e62": {
     "path": "pl/audio/anna/4a4898095c0b7e62.m4a",
@@ -916,6 +1051,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:02.437Z"
+  },
+  "5a572ccc8ecf60e8": {
+    "path": "pl/audio/tomek/5a572ccc8ecf60e8.m4a",
+    "durationSeconds": 1.96,
+    "text": "Zwykle o siódmej. A ty?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-05T08:27:33.627Z"
   },
   "5c3edbb0d432d623": {
     "path": "pl/audio/marek/5c3edbb0d432d623.m4a",
@@ -1079,6 +1223,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:57.378Z"
   },
+  "72f6044379586248": {
+    "path": "pl/audio/tomek/72f6044379586248.m4a",
+    "durationSeconds": 1.44,
+    "text": "Tak wcześnie!",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-05T08:27:53.710Z"
+  },
+  "73058ac32c1162b6": {
+    "path": "pl/audio/ola/73058ac32c1162b6.m4a",
+    "durationSeconds": 2.76,
+    "text": "Ja wstaję o szóstej, bo zaczynam pracę o siódmej.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:27:40.260Z"
+  },
   "73d169f74e7feb7d": {
     "path": "pl/audio/anna/73d169f74e7feb7d.m4a",
     "durationSeconds": 1.96,
@@ -1114,6 +1276,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:52:05.525Z"
+  },
+  "74c9d377e0b0f362": {
+    "path": "pl/audio/anna/74c9d377e0b0f362.m4a",
+    "durationSeconds": 3.56,
+    "text": "And to ask the price, use this question.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:22:55.164Z"
   },
   "759e70b45e97168b": {
     "path": "pl/audio/ola/759e70b45e97168b.m4a",
@@ -1160,6 +1331,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:53:12.413Z"
   },
+  "7db64ead15a603b2": {
+    "path": "pl/audio/anna/7db64ead15a603b2.m4a",
+    "durationSeconds": 6.68,
+    "text": "Then the hour as an ordinal: the seventh, the eighth, the fifth.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:14.014Z"
+  },
+  "7dcd4c5bb90426f4": {
+    "path": "pl/audio/anna/7dcd4c5bb90426f4.m4a",
+    "durationSeconds": 4.8,
+    "text": "Ola asks what time Marek gets up. What does she say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:20.829Z"
+  },
   "7e87471c8b11a818": {
     "path": "pl/audio/anna/7e87471c8b11a818.m4a",
     "durationSeconds": 4.4,
@@ -1195,6 +1384,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:04.526Z"
+  },
+  "806f612fa87889b7": {
+    "path": "pl/audio/marek/806f612fa87889b7.m4a",
+    "durationSeconds": 2.4,
+    "text": "Wczoraj byłem w kinie.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-05T08:32:25.575Z"
   },
   "8126fe58b6be1a6e": {
     "path": "pl/audio/tomek/8126fe58b6be1a6e.m4a",
@@ -1240,6 +1438,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:48.277Z"
+  },
+  "846fc37c482cd1cc": {
+    "path": "pl/audio/anna/846fc37c482cd1cc.m4a",
+    "durationSeconds": 2.72,
+    "text": "Say: I get up at seven.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:25.868Z"
   },
   "874731577e5452b1": {
     "path": "pl/audio/marek/874731577e5452b1.m4a",
@@ -1430,6 +1637,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:36.594Z"
   },
+  "9697f7acf91156e8": {
+    "path": "pl/audio/anna/9697f7acf91156e8.m4a",
+    "durationSeconds": 6.44,
+    "text": "To say at what time: a short word, then the hour as an ordinal number.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:27:48.841Z"
+  },
   "982368fea4452cda": {
     "path": "pl/audio/anna/982368fea4452cda.m4a",
     "durationSeconds": 9.4,
@@ -1493,6 +1709,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:19.969Z"
   },
+  "9f84081a39fce980": {
+    "path": "pl/audio/piotr/9f84081a39fce980.m4a",
+    "durationSeconds": 2.84,
+    "text": "Dzień dobry. Poproszę chleb i mleko.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:21:43.575Z"
+  },
   "a07053a6adba9f10": {
     "path": "pl/audio/marek/a07053a6adba9f10.m4a",
     "durationSeconds": 1.24,
@@ -1501,6 +1726,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:01:08.161Z"
+  },
+  "a0d3cc69742f32c0": {
+    "path": "pl/audio/ola/a0d3cc69742f32c0.m4a",
+    "durationSeconds": 1.24,
+    "text": "Oczywiście.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:22:29.987Z"
   },
   "a0e8d6850a84a3ec": {
     "path": "pl/audio/anna/a0e8d6850a84a3ec.m4a",
@@ -1655,6 +1889,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:24.633Z"
   },
+  "ada777b12740f3b0": {
+    "path": "pl/audio/anna/ada777b12740f3b0.m4a",
+    "durationSeconds": 3.68,
+    "text": "He wants to pay by card. What does he ask?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:23:28.051Z"
+  },
   "af8398c5c013478a": {
     "path": "pl/audio/ola/af8398c5c013478a.m4a",
     "durationSeconds": 1.16,
@@ -1673,6 +1916,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:40.038Z"
   },
+  "b035cb281e282f44": {
+    "path": "pl/audio/anna/b035cb281e282f44.m4a",
+    "durationSeconds": 4.12,
+    "text": "Masculine things and neuter words stay the same.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:22:49.738Z"
+  },
   "b108e0970e945039": {
     "path": "pl/audio/marek/b108e0970e945039.m4a",
     "durationSeconds": 5.04,
@@ -1690,6 +1942,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:01.424Z"
+  },
+  "b21341fb9cd6471a": {
+    "path": "pl/audio/anna/b21341fb9cd6471a.m4a",
+    "durationSeconds": 3.56,
+    "text": "Now practise with the exercises below the video.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:23:34.884Z"
   },
   "b2e95f8f70612a2d": {
     "path": "pl/audio/marek/b2e95f8f70612a2d.m4a",
@@ -1817,6 +2078,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:46.699Z"
   },
+  "ba59b52d9f3623f0": {
+    "path": "pl/audio/anna/ba59b52d9f3623f0.m4a",
+    "durationSeconds": 4.08,
+    "text": "He wants to know the price. What does he ask?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:23:15.080Z"
+  },
   "ba8e599e92e03936": {
     "path": "pl/audio/marek/ba8e599e92e03936.m4a",
     "durationSeconds": 4.56,
@@ -1843,6 +2113,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:39.422Z"
+  },
+  "bece52ea445028a6": {
+    "path": "pl/audio/marek/bece52ea445028a6.m4a",
+    "durationSeconds": 4.12,
+    "text": "In the past tense, the ending shows who is speaking.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-05T08:32:32.058Z"
   },
   "bf29f303942f12bd": {
     "path": "pl/audio/piotr/bf29f303942f12bd.m4a",
@@ -1871,6 +2150,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:08.098Z"
   },
+  "c418f847c460a6a9": {
+    "path": "pl/audio/anna/c418f847c460a6a9.m4a",
+    "durationSeconds": 2.8,
+    "text": "Say: I go to work.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:39.669Z"
+  },
   "c4c9c6a4d2c07ee5": {
     "path": "pl/audio/marek/c4c9c6a4d2c07ee5.m4a",
     "durationSeconds": 1.2,
@@ -1897,6 +2185,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:10.932Z"
+  },
+  "c6ddece1c52fdd3a": {
+    "path": "pl/audio/anna/c6ddece1c52fdd3a.m4a",
+    "durationSeconds": 2.16,
+    "text": "Wstaję o siódmej.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:28:00.292Z"
   },
   "c79c09d02afc917e": {
     "path": "pl/audio/marek/c79c09d02afc917e.m4a",
@@ -1942,6 +2239,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:26:19.034Z"
+  },
+  "cc51c3700b31f4c4": {
+    "path": "pl/audio/marek/cc51c3700b31f4c4.m4a",
+    "durationSeconds": 4.24,
+    "text": "Monday morning. Two friends talk about their days off.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-05T08:31:46.089Z"
   },
   "cd4d5ce8661e0508": {
     "path": "pl/audio/anna/cd4d5ce8661e0508.m4a",
@@ -2069,6 +2375,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:00.965Z"
   },
+  "d90a74e270f3af4e": {
+    "path": "pl/audio/ola/d90a74e270f3af4e.m4a",
+    "durationSeconds": 1.56,
+    "text": "O której wstajesz?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:27:27.696Z"
+  },
   "d9da1823dff4f4ac": {
     "path": "pl/audio/piotr/d9da1823dff4f4ac.m4a",
     "durationSeconds": 1.2,
@@ -2105,6 +2420,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:38.743Z"
   },
+  "db948e854e9d4725": {
+    "path": "pl/audio/piotr/db948e854e9d4725.m4a",
+    "durationSeconds": 1.6,
+    "text": "Ile to kosztuje?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:23:21.640Z"
+  },
   "dbcf50e8fa94cde1": {
     "path": "pl/audio/marek/dbcf50e8fa94cde1.m4a",
     "durationSeconds": 8.64,
@@ -2113,6 +2437,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:22.064Z"
+  },
+  "dc5fb97bf396a4ef": {
+    "path": "pl/audio/piotr/dc5fb97bf396a4ef.m4a",
+    "durationSeconds": 1.84,
+    "text": "Czy mogę zapłacić kartą?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-05T08:22:22.751Z"
   },
   "dc6025489d0b010a": {
     "path": "pl/audio/marek/dc6025489d0b010a.m4a",
@@ -2123,6 +2456,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:00:46.291Z"
   },
+  "dd445f33b08e094f": {
+    "path": "pl/audio/tomek/dd445f33b08e094f.m4a",
+    "durationSeconds": 1.2,
+    "text": "Idę do pracy.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-05T08:28:45.396Z"
+  },
   "de668c2e1ff5cf1e": {
     "path": "pl/audio/marek/de668c2e1ff5cf1e.m4a",
     "durationSeconds": 2.64,
@@ -2131,6 +2473,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:02:30.991Z"
+  },
+  "e1f73b054abf3c50": {
+    "path": "pl/audio/ola/e1f73b054abf3c50.m4a",
+    "durationSeconds": 1.16,
+    "text": "Coś jeszcze?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:21:56.711Z"
   },
   "e3b9862b9b3dae9b": {
     "path": "pl/audio/marek/e3b9862b9b3dae9b.m4a",
@@ -2158,6 +2509,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:43.245Z"
+  },
+  "e5480e5fee885f78": {
+    "path": "pl/audio/anna/e5480e5fee885f78.m4a",
+    "durationSeconds": 5.24,
+    "text": "A feminine word ending in a changes its ending here.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:22:44.171Z"
   },
   "e5fc11811c500047": {
     "path": "pl/audio/ola/e5fc11811c500047.m4a",
@@ -2212,6 +2572,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:52:41.195Z"
+  },
+  "e91542f70ccba169": {
+    "path": "pl/audio/anna/e91542f70ccba169.m4a",
+    "durationSeconds": 4.4,
+    "text": "To ask for something: the polite word, then the thing.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-05T08:21:51.439Z"
   },
   "ea6e8df04994880a": {
     "path": "pl/audio/marek/ea6e8df04994880a.m4a",
@@ -2365,6 +2734,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:22.139Z"
+  },
+  "f6864f5419d455dd": {
+    "path": "pl/audio/ola/f6864f5419d455dd.m4a",
+    "durationSeconds": 1.44,
+    "text": "Wstaję o siódmej.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-05T08:28:32.885Z"
   },
   "f75bf392e402c47d": {
     "path": "pl/audio/marek/f75bf392e402c47d.m4a",

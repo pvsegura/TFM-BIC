@@ -995,6 +995,289 @@
       "updatedAt": "2026-10-04T07:41:48.341Z"
     },
     {
+      "key": "lesson:en-greetings",
+      "content": {
+        "type": "lesson",
+        "id": "en-greetings",
+        "languageId": "en"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "en/lesson/en-greetings/video-cd5550c5ba02.mp4",
+          "posterUrl": "en/lesson/en-greetings/poster-cd5550c5ba02.jpg",
+          "captionsUrl": "en/lesson/en-greetings/captions-cd5550c5ba02.vtt",
+          "captionsLanguage": "es",
+          "durationSeconds": 162.55,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Javier",
+          "transcript": [
+            {
+              "text": "Por la mañana, en una tienda pequeña. Ben no conoce al dependiente.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Hello!",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "¡Hola!"
+            },
+            {
+              "text": "Good morning.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Buenos días."
+            },
+            {
+              "text": "Un saludo neutro, y otro según la hora: por la mañana.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Goodbye.",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "Adiós."
+            },
+            {
+              "text": "Adiós: neutro, algo formal.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "En el parque, Ben se encuentra con su amiga Emma.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Hi!",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "¡Hola!"
+            },
+            {
+              "text": "Hi!",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "¡Hola!"
+            },
+            {
+              "text": "Con amigos, el saludo es informal.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "See you later!",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "¡Hasta luego!"
+            },
+            {
+              "text": "Bye!",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "¡Adiós!"
+            },
+            {
+              "text": "Y la despedida, también informal.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Por la noche. El dependiente cierra la tienda.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Good evening.",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "Buenas tardes; buenas noches."
+            },
+            {
+              "text": "Al saludar al final del día, el saludo cambia.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Muy tarde, en casa. Es hora de dormir.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Good night.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Buenas noches."
+            },
+            {
+              "text": "Good night.",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "Buenas noches."
+            },
+            {
+              "text": "Esta frase es para despedirse antes de dormir, no para saludar.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Depende de la situación.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Neutro: con cualquier persona.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Informal: con amigos.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Y al final del día, este saludo.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Por la mañana, el dependiente saluda. ¿Qué dice? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Good morning.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Buenos días."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Su amiga Emma le saluda. ¿Qué dice Ben? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Hi!",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "¡Hola!"
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Es de noche y saluda al dependiente. ¿Qué dice Ben? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Good evening.",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "Buenas tardes; buenas noches."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Sale de la tienda. ¿Qué dice Ben? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Goodbye.",
+              "language": "en",
+              "speaker": "Ben",
+              "translation": "Adiós."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            },
+            {
+              "text": "Ahora practica los saludos con los ejercicios de debajo del vídeo.",
+              "language": "es",
+              "speaker": "Narrator (Javier)"
+            }
+          ],
+          "objective": "Elegir un saludo neutro o informal, y el adecuado para cada momento del día.",
+          "targetVocabularyIds": [
+            "en-hello",
+            "en-goodbye",
+            "en-good-morning",
+            "en-good-evening",
+            "en-good-night"
+          ]
+        },
+        "audio": []
+      },
+      "sourceHash": "54b4c768b06273d1166ff59efbaeb1c34f072912356fd87f49b2ff1098d73a22",
+      "narratorId": "javier",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Elegir un saludo neutro o informal, y el adecuado para cada momento del día.",
+        "level": "a1",
+        "targetVocabularyIds": [
+          "en-hello",
+          "en-goodbye",
+          "en-good-morning",
+          "en-good-evening",
+          "en-good-night"
+        ],
+        "targetPhrases": [
+          "Hello!",
+          "Good morning.",
+          "Goodbye.",
+          "Hi!",
+          "See you later!",
+          "Bye!",
+          "Good evening.",
+          "Good night."
+        ],
+        "segments": ["situation", "conversation", "reuse", "notice", "retrieval", "recap"],
+        "retrievalMoments": 4,
+        "voices": [
+          {
+            "character": "Ben",
+            "voice": "ben"
+          },
+          {
+            "character": "Tom",
+            "voice": "tom"
+          },
+          {
+            "character": "Emma",
+            "voice": "emma"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-05T08:13:22.761Z",
+        "providerCalls": 29
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-05T08:13:22.761Z",
+      "updatedAt": "2026-10-05T08:13:22.761Z"
+    },
+    {
       "key": "lesson:en-introducing-yourself",
       "content": {
         "type": "lesson",
@@ -1209,6 +1492,439 @@
       },
       "createdAt": "2026-10-04T07:34:49.614Z",
       "updatedAt": "2026-10-04T07:34:49.614Z"
+    },
+    {
+      "key": "lesson:en-polite-words",
+      "content": {
+        "type": "lesson",
+        "id": "en-polite-words",
+        "languageId": "en"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "en/lesson/en-polite-words/video-cdf8f802b769.mp4",
+          "posterUrl": "en/lesson/en-polite-words/poster-cdf8f802b769.jpg",
+          "captionsUrl": "en/lesson/en-polite-words/captions-cdf8f802b769.vtt",
+          "captionsLanguage": "es",
+          "durationSeconds": 157.94,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Lucía",
+          "transcript": [
+            {
+              "text": "Una pequeña cafetería por la mañana. Emma quiere un café.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Excuse me.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Disculpe"
+            },
+            {
+              "text": "Así se llama la atención de alguien.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "A coffee, please.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Un café, por favor."
+            },
+            {
+              "text": "Para pedir algo, por favor va al final de la frase.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Here you are.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Aquí tienes."
+            },
+            {
+              "text": "Al dar algo a alguien: aquí tienes.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Thank you.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Gracias."
+            },
+            {
+              "text": "You're welcome.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "De nada."
+            },
+            {
+              "text": "Y para responder a un gracias: de nada.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Le ofrece leche.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Yes, please.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Sí, por favor."
+            },
+            {
+              "text": "¿Y azúcar?",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "No, thank you.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "No, gracias."
+            },
+            {
+              "text": "Thank you.",
+              "language": "en",
+              "speaker": "Narrator (Lucía)",
+              "translation": "Gracias."
+            },
+            {
+              "text": "Para pedir algo: por favor.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Para dar las gracias: gracias.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Y para responder: de nada.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Tom le da el café a Emma. ¿Qué dice él? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Here you are.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "Aquí tienes."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Emma coge la taza. ¿Qué dice ella? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Thank you.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Gracias."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Más tarde, en la calle. Tom le sujeta la puerta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Thank you very much.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Muchas gracias."
+            },
+            {
+              "text": "You're welcome.",
+              "language": "en",
+              "speaker": "Tom",
+              "translation": "De nada."
+            },
+            {
+              "text": "Sorry.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Perdón"
+            },
+            {
+              "text": "Las mismas palabras, en otro lugar. Y para pedir perdón: lo siento.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Tom está de espaldas. ¿Cómo llama Emma su atención? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Excuse me.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Disculpe"
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Le ofrece leche y ella quiere. ¿Qué dice? (pause)",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Yes, please.",
+              "language": "en",
+              "speaker": "Emma",
+              "translation": "Sí, por favor."
+            },
+            {
+              "text": "¿Lo has dicho? Dilo otra vez, en voz alta.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            },
+            {
+              "text": "Ahora practica estas palabras con los ejercicios de debajo del vídeo.",
+              "language": "es",
+              "speaker": "Narrator (Lucía)"
+            }
+          ],
+          "objective": "Pedir, dar las gracias y responder con amabilidad en una cafetería, y llamar la atención o pedir perdón.",
+          "targetVocabularyIds": ["en-milk"]
+        },
+        "audio": []
+      },
+      "sourceHash": "2ab6a7f14e8fdf0fc6a4c5391dcd31d7b141d0f3ad04ca04addd5b3efbe20862",
+      "narratorId": "lucia",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Pedir, dar las gracias y responder con amabilidad en una cafetería, y llamar la atención o pedir perdón.",
+        "level": "a1",
+        "targetVocabularyIds": ["en-milk"],
+        "targetPhrases": [
+          "Excuse me.",
+          "A coffee, please.",
+          "Here you are.",
+          "Thank you.",
+          "You're welcome.",
+          "Yes, please.",
+          "No, thank you.",
+          "Thank you very much.",
+          "Sorry."
+        ],
+        "segments": ["situation", "notice", "retrieval", "reuse", "recap"],
+        "retrievalMoments": 4,
+        "voices": [
+          {
+            "character": "Emma",
+            "voice": "emma"
+          },
+          {
+            "character": "Tom",
+            "voice": "tom"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-05T08:21:24.758Z",
+        "providerCalls": 27
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-05T08:21:24.758Z",
+      "updatedAt": "2026-10-05T08:21:24.758Z"
+    },
+    {
+      "key": "lesson:pl-daily-routine",
+      "content": {
+        "type": "lesson",
+        "id": "pl-daily-routine",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-daily-routine/video-36c045d74c3e.mp4",
+          "posterUrl": "pl/lesson/pl-daily-routine/poster-36c045d74c3e.jpg",
+          "captionsUrl": "pl/lesson/pl-daily-routine/captions-36c045d74c3e.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 95.94,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Two colleagues talk about their mornings.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "O której wstajesz?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "What time do you get up?"
+            },
+            {
+              "text": "Zwykle o siódmej. A ty?",
+              "language": "pl",
+              "speaker": "Marek",
+              "translation": "Usually at seven. And you?"
+            },
+            {
+              "text": "Ja wstaję o szóstej, bo zaczynam pracę o siódmej.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I get up at six, because I start work at seven."
+            },
+            {
+              "text": "To say at what time: a short word, then the hour as an ordinal number.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tak wcześnie!",
+              "language": "pl",
+              "speaker": "Marek",
+              "translation": "So early!"
+            },
+            {
+              "text": "Wstaję o siódmej.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "I get up at seven."
+            },
+            {
+              "text": "The hour comes after a short word meaning at.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Then the hour as an ordinal: the seventh, the eighth, the fifth.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ola asks what time Marek gets up. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "O której wstajesz?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "What time do you get up?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say: I get up at seven. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wstaję o siódmej.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I get up at seven."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say: I go to work. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Idę do pracy.",
+              "language": "pl",
+              "speaker": "Marek",
+              "translation": "I go to work."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Say at what time you do everyday things, and ask someone about their day.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "20ac185b516d82ba853dafc0ad8be8e0255de408618b24ca401d375c02bc82d7",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say at what time you do everyday things, and ask someone about their day.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "O której wstajesz?",
+          "Zwykle o siódmej. A ty?",
+          "Ja wstaję o szóstej, bo zaczynam pracę o siódmej.",
+          "Tak wcześnie!",
+          "Wstaję o siódmej.",
+          "Idę do pracy."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Marek",
+            "voice": "tomek"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-05T08:31:43.565Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-05T08:31:43.565Z",
+      "updatedAt": "2026-10-05T08:31:43.565Z"
     },
     {
       "key": "lesson:pl-greetings",
@@ -1927,6 +2643,29 @@
       "updatedAt": "2026-10-02T09:34:16.527Z"
     },
     {
+      "key": "lesson:pl-past-tense",
+      "content": {
+        "type": "lesson",
+        "id": "pl-past-tense",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-05T08:32:52.348Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 9
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-05T08:32:52.348Z",
+      "updatedAt": "2026-10-05T08:32:52.348Z"
+    },
+    {
       "key": "lesson:pl-polite-words",
       "content": {
         "type": "lesson",
@@ -2205,6 +2944,207 @@
       },
       "createdAt": "2026-10-01T07:40:54.018Z",
       "updatedAt": "2026-10-02T09:20:57.006Z"
+    },
+    {
+      "key": "lesson:pl-shopping",
+      "content": {
+        "type": "lesson",
+        "id": "pl-shopping",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-shopping/video-65335727e619.mp4",
+          "posterUrl": "pl/lesson/pl-shopping/poster-65335727e619.jpg",
+          "captionsUrl": "pl/lesson/pl-shopping/captions-65335727e619.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 112.19,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A small shop in the morning. Tomek wants some bread and milk.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzień dobry. Co podać?",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Hello. What can I get you?"
+            },
+            {
+              "text": "Dzień dobry. Poproszę chleb i mleko.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Hello. Bread and milk, please."
+            },
+            {
+              "text": "To ask for something: the polite word, then the thing.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Coś jeszcze?",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Anything else?"
+            },
+            {
+              "text": "Nie, dziękuję. Ile to kosztuje?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "No, thank you. How much is it?"
+            },
+            {
+              "text": "And this question asks for the price.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dziewięć złotych.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Nine zlotys."
+            },
+            {
+              "text": "Czy mogę zapłacić kartą?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Can I pay by card?"
+            },
+            {
+              "text": "Oczywiście.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Of course."
+            },
+            {
+              "text": "Poproszę wodę.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Water, please."
+            },
+            {
+              "text": "A feminine word ending in a changes its ending here.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Masculine things and neuter words stay the same.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "And to ask the price, use this question.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tomek wants bread. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Poproszę chleb.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "A loaf of bread, please."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He wants to know the price. What does he ask? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ile to kosztuje?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "How much is it?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He wants to pay by card. What does he ask? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy mogę zapłacić kartą?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Can I pay by card?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Ask for things in a shop, ask the price and ask to pay by card.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "d1f07a9df3762fd6100cae22a3e6fdbb2ac8ef90c8098c5061c41ee53cc02ae1",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Ask for things in a shop, ask the price and ask to pay by card.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dzień dobry. Co podać?",
+          "Dzień dobry. Poproszę chleb i mleko.",
+          "Coś jeszcze?",
+          "Nie, dziękuję. Ile to kosztuje?",
+          "Dziewięć złotych.",
+          "Czy mogę zapłacić kartą?",
+          "Oczywiście.",
+          "Poproszę wodę.",
+          "Poproszę chleb.",
+          "Ile to kosztuje?"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Tomek",
+            "voice": "piotr"
+          },
+          {
+            "character": "Kasia",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-05T08:27:18.729Z",
+        "providerCalls": 20
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-05T08:27:18.729Z",
+      "updatedAt": "2026-10-05T08:27:18.729Z"
     },
     {
       "key": "lesson:pl-spelling-and-sounds",
