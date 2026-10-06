@@ -1,9 +1,11 @@
 # ADR-034: AI Learning Coach (Gemini agent with application tools)
 
 Status: ACCEPTED (architecture, tool boundary, fake provider, text coach) / `GeminiAgentProvider`
-verified against the real API on 2026-10-06 / runtime use in production **PENDING** the same
-provider-terms decision as ADR-013 / voice (Live API) **NOT IMPLEMENTED** (deferred by the product
-owner, 2026-10-06 — not a technical blocker)
+verified against the real API on 2026-10-06, and the 15-scenario evaluation run against it the same
+day (24 requests, docs/m23-ai-evaluation.md) / runtime use **AUTHORISED by the product owner on
+2026-10-06 as an accepted risk**, with the under-18 terms question still unresolved (see "Provider
+terms") / voice (Live API) **NOT IMPLEMENTED** (deferred by the product owner, 2026-10-06 — not a
+technical blocker)
 Date: 2026-10-06
 
 ## Context
@@ -156,8 +158,19 @@ because a learner's own request now triggers the call:
 - **Under-18.** "You must be 18 years of age or older to use the APIs. You also will not use the
   Services as part of a website, application, or other service … directed towards or is likely to be
   accessed by individuals under the age of 18." A language-learning platform may well be accessed by
-  minors. **PENDING legal review** (also ADR-031/032). This is why `AI_COACH_PROVIDER` ships as
-  `fake` and must be switched on deliberately, per environment.
+  minors. The legal question is **still unresolved** (also ADR-031/032).
+
+  **Product owner decision, 2026-10-06: proceed anyway.** The owner was shown the clause and the
+  fact that M23 is the first Gemini flow a _learner_ triggers (until now TTS ran offline as an
+  operator batch job, so the clause applied to a batch of catalog text rather than to live user
+  traffic), and authorised M23 to be built, enabled and run on that basis. This ADR records an
+  **accepted risk**, not a resolved question and not a compliance finding: the clause still reads
+  the same way, no legal review has happened, and nothing here is legal advice.
+
+  The engineering consequence is unchanged — `AI_COACH_PROVIDER` ships as `fake`, production refuses
+  `fake`, and `gemini` must be chosen deliberately per environment — so the decision stays visible
+  and reversible with one variable.
+
 - **EEA/UK/Switzerland.** "You may use only Paid Services when making API Clients available to users
   in the European Economic Area, Switzerland, or the United Kingdom." The project uses a paid Gemini
   project (M21 addendum), which addresses this clause. On the paid tier Google states it does not use

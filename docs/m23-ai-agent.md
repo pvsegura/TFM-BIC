@@ -5,9 +5,11 @@ their alternatives: [ADR-034](adr/adr-034-ai-learning-agent.md). Manual scenario
 [m23-ai-evaluation.md](m23-ai-evaluation.md).
 
 Status: the text coach is implemented and tested; the Gemini adapter was verified against the real
-API on 2026-10-06 (five calls from a throwaway script). Voice (Live API) is **not implemented** — a
-product decision, not a technical blocker. Runtime use in a deployed environment stays behind
-`AI_COACH_PROVIDER` and the provider-terms question ADR-013 left open.
+API on 2026-10-06 (five calls), and the 15-scenario evaluation was run against it the same day
+(24 requests — **14 PASS, 1 N/A**, see [m23-ai-evaluation.md](m23-ai-evaluation.md)). Runtime use is
+**authorised by the product owner** as of 2026-10-06, with the ADR-013 under-18 terms question still
+unresolved and recorded as an accepted risk. Voice (Live API) is **not implemented** — a product
+decision, not a technical blocker.
 
 ## What it is
 
@@ -268,8 +270,12 @@ No monthly figure is given: it would need an expected-usage number this project 
 - The conversation is lost on reload, and rate limits are per process (a scaled-out deployment
   would need a shared store — the same assumption as M12's audio cache).
 - Voice is not implemented.
-- Automated tests never call the real API, so answer _quality_ is covered only by the manual
-  scenarios in [m23-ai-evaluation.md](m23-ai-evaluation.md).
+- Automated tests never call the real API, so answer _quality_ rests on the manual scenarios in
+  [m23-ai-evaluation.md](m23-ai-evaluation.md) — run once, on 2026-10-06, with one seeded learner.
+  A regression in answer quality would not fail CI; re-run the scenarios after any change to the
+  instructions, the tool set or the model.
+- The conversation mode's deferred corrective summary was not exercised over a long conversation
+  (the one-turn check showed it correctly not correcting mid-flow, which is only half the rule).
 
 ## Future work
 

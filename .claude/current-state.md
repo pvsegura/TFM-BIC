@@ -666,15 +666,24 @@ Verified against the real Gemini API on 2026-10-06 with five calls from a throwa
 echoed back with its opaque `signature`; `store: false` means no interaction id, so history is
 replayed; `model_output` steps replay correctly; `thinking_level: "low"` removed thought tokens.
 
+Done since the first write-up:
+
+- **Evaluation run against the real API, 2026-10-06** (24 requests, owner-authorised ahead of that
+  day's video generation): 14 of 15 scenarios PASS, 1 N/A (voice). Results, including what the run
+  does _not_ establish, are in m23-ai-evaluation.md. Highlights: the coach named the learner's own
+  stored wrong answer and corrected it; built practice from real course vocabulary; cited real
+  attempt counts in a recommendation; refused a prompt-injection, a request for another learner's
+  data and a request for an unattempted exercise's answer; and the A1 vs B2 answers to the same
+  grammar question differed clearly, with the level **derived** rather than forced.
+- **Runtime use authorised by the product owner on 2026-10-06** as an accepted risk. The ADR-013
+  under-18 clause is still unresolved and no legal review has happened — see ADR-034 "Provider
+  terms". The engineering guard is unchanged: `fake` by default, production refuses `fake`, `gemini`
+  chosen deliberately per environment.
+
 Open / not done:
 
-- **Real-provider evaluation not run.** Scenarios 1–12 in m23-ai-evaluation.md are PENDING: a pass
-  costs ~20–30 requests from the same daily quota the M21/M22 video generation is using. The HTTP
-  layer, the limits and the fallback **were** validated live with `curl` (table in that file).
 - **Not deployed to Render.** The switch is `AI_COACH_PROVIDER=gemini` + a key; nothing else changes
   (the API already serves the SPA from one origin, so no CORS and no WebSocket needed).
-- **Runtime use is still PENDING the provider-terms question** of ADR-013 (under-18 clause). M23 is
-  the first Gemini flow a learner triggers, so that clause now applies to learner traffic.
 - **Voice (Live API) not implemented** — a product decision on 2026-10-06, not a technical blocker;
   the API was verified as capable. Cost ≈ $0.023/min of conversation on the paid tier.
 - The coach's Polish has not been reviewed by a native speaker (same open item as M22).

@@ -64,8 +64,11 @@ Answer → returned to the student. Nothing is stored, here or at the provider.
 - **Stored by Google:** `store: false` is sent on every request, which the documentation describes
   as opting out of its default retention. Paid-tier prompts and responses are logged for a limited
   period for abuse monitoring, and are documented as not used to improve Google's products.
-- PENDING before enabling: the same age-restriction and EEA paid-tier terms as ADR-013 (risk #17) —
-  and they now apply to learner-initiated traffic, not only to an operator's batch job.
+- The same age-restriction and EEA paid-tier terms as ADR-013 (risk #17) apply, and they now apply
+  to **learner-initiated** traffic rather than only to an operator's batch job. The product owner
+  was shown this and **authorised proceeding on 2026-10-06**; the under-18 clause itself remains
+  unresolved, and this records an accepted risk, not a compliance finding (ADR-034, "Provider
+  terms"). Nothing here is legal advice.
 
 ## Hyperframes video rendering (M11) — `HyperframesCliProvider`
 
