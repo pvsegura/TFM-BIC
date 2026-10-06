@@ -6,6 +6,7 @@ import { TeacherRoute } from "./components/teacher-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { AccountDeletedPage } from "./pages/account-deleted-page.js";
 import { AchievementsPage } from "./pages/achievements-page.js";
+import { AiCoachPage } from "./pages/ai-coach-page.js";
 import { DashboardPage } from "./pages/dashboard-page.js";
 import { ExercisePage } from "./pages/exercise-page.js";
 import { ForgotPasswordPage } from "./pages/forgot-password-page.js";
@@ -104,6 +105,13 @@ const GRAMMAR_ROUTES = [
   { path: "learn/grammar/:topicId", element: <GrammarTopicPage /> },
 ];
 
+/** The AI Learning Coach (M23, ADR-034) — one page for every language and mode; contextual entry
+ * points land on it with a query parameter (`?lesson=`, `?exercise=`, `?vocabulary=`, `?video=`,
+ * `?phonetic=`). Under `/learn` because `/ai-coach` is the API path: the dev proxy matches API
+ * paths by prefix, so a page there would need a `bypass` like `/profile`'s, and the convention
+ * since M5 is to move the page instead (ADR-018/022). */
+const COACH_ROUTES = [{ path: "learn/coach", element: <AiCoachPage /> }];
+
 /** Video generation (M11) — one demo page requesting generation of the milestone's one authored
  * definition (see VideoGenerationDemoPage's doc comment for why there is no browse/list route).
  * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
@@ -145,6 +153,7 @@ const APP_ROUTES = [
   ...PHONETICS_ROUTES,
   ...VIDEO_ROUTES,
   ...GRAMMAR_ROUTES,
+  ...COACH_ROUTES,
   ...TEACHER_ROUTES,
   // M21: former Milestone-1 placeholders now lead somewhere real — progress lives on the dashboard,
   // account settings on the profile. Still behind login.

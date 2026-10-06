@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { useParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
+import { AskCoachLink } from "../components/ask-coach-link.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { PronunciationPlayer } from "../components/pronunciation-player.js";
 import { RelatedLesson } from "../components/related-lesson.js";
@@ -163,6 +164,13 @@ export function VocabularyDetailPage() {
           >
             View pronunciation guide
           </Link>
+          {/* M23: practise this word with the AI Coach. Only the entry's id travels; the backend
+              re-authorises it through the same use case this page used. */}
+          <AskCoachLink
+            context={{ type: "vocabulary", vocabularyItemId: item.id }}
+            languageCode={item.languageId}
+            label="Practise this word"
+          />
         </nav>
       </div>
     );

@@ -1,5 +1,7 @@
 import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
-import { render, screen, within } from "@testing-library/react";
+import { screen, within } from "@testing-library/react";
+import { renderWithProviders } from "@tfm-bic/testing";
+import { createRoutesStub } from "react-router";
 import { describe, expect, it } from "vitest";
 
 import { ExerciseResult } from "./exercise-result.js";
@@ -19,18 +21,28 @@ const INCORRECT: ExerciseAnswerResponse = {
   rewards: { pointsAwarded: 0, achievementsUnlocked: [] },
 };
 
+// M23 added a link to the AI Coach inside the result, so the component now needs a router.
 function renderResult(props: Partial<Parameters<typeof ExerciseResult>[0]> = {}) {
-  return render(
-    <ExerciseResult
-      evaluation={CORRECT}
-      correctAnswerText="Dzień dobry"
-      instructionLanguage="en"
-      learningLanguage={{ locale: "pl-PL", direction: "ltr" }}
-      isChecking={false}
-      failed={false}
-      {...props}
-    />,
-  );
+  const Stub = createRoutesStub([
+    {
+      path: "/",
+      Component: () => (
+        <ExerciseResult
+          evaluation={CORRECT}
+          correctAnswerText="Dzień dobry"
+          instructionLanguage="en"
+          learningLanguage={{ locale: "pl-PL", direction: "ltr" }}
+          isChecking={false}
+          failed={false}
+          exerciseId="pl-greetings-choice-1"
+          languageCode="pl"
+          {...props}
+        />
+      ),
+    },
+    { path: "/learn/coach", Component: () => <p>AI Coach page</p> },
+  ]);
+  return renderWithProviders(<Stub initialEntries={["/"]} />);
 }
 
 const status = () => screen.getByRole("status");

@@ -1,6 +1,7 @@
 import type { ReactNode } from "react";
 import { useParams } from "react-router";
 
+import { AskCoachLink } from "../components/ask-coach-link.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { PhoneticActions } from "../components/phonetic-actions.js";
 import { PhoneticProgressBadge } from "../components/phonetic-progress-badge.js";
@@ -109,6 +110,16 @@ export function PhoneticDetailPage() {
             status={representation.userProgress.status}
           />
         </div>
+
+        {/* M23: the coach explains this sound from the same authored phonetics data. It cannot
+            hear the learner, and its instructions forbid it from claiming otherwise. */}
+        <p className="mt-6">
+          <AskCoachLink
+            context={{ type: "phonetic", phoneticId: representation.id }}
+            languageCode={representation.languageId}
+            label="Ask about this sound"
+          />
+        </p>
       </div>
     );
   }
