@@ -94,19 +94,22 @@ export function ExerciseResult({
               Attempt {evaluation.result.attemptCount}
             </p>
             <RewardNotice rewards={evaluation.rewards} />
-            {/* M23: the coach may explain this answer — it is given the exercise and this
-                learner's own attempts by the backend, never by this link. Offered after a
-                verdict only, so it can never be a way to see an answer early. */}
-            <p className="mt-4">
-              <AskCoachLink
-                context={{ type: "exercise", exerciseId }}
-                languageCode={languageCode}
-                label={evaluation.correct ? "Ask why this is right" : "Explain my answer"}
-              />
-            </p>
           </div>
         ) : null}
       </div>
+      {/* M23: the coach may explain this answer — the backend gives it the exercise and this
+          learner's own attempts, never this link. Offered only once there is a verdict, so it can
+          never be a way to see an answer early. Deliberately *outside* the live region above: a
+          screen reader should announce the verdict, not a link to ask about it. */}
+      {evaluation ? (
+        <p className="mt-4">
+          <AskCoachLink
+            context={{ type: "exercise", exerciseId }}
+            languageCode={languageCode}
+            label={evaluation.correct ? "Ask why this is right" : "Explain my answer"}
+          />
+        </p>
+      ) : null}
       {failed ? (
         <p role="alert" className="mt-2 text-sm text-red-700 dark:text-red-300">
           We couldn&apos;t check your answer. Please try again.
