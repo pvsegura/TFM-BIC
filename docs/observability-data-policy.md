@@ -30,6 +30,7 @@ Every line: `time`, `level`, `service`, `env`, `version`, `msg`; inside a reques
 | `email.delivery_*`                                            | category, template, adapter, outcome                                                         | No — never recipient, subject or links                                   |
 | `Audio generated` / `Audio generation failed`                 | generation id, content ids, voice, duration, category                                        | No                                                                       |
 | `video.render_*`                                              | provider, `videoDefinitionId`, `durationMs`, `category`                                      | No                                                                       |
+| `ai_coach.turn_completed`                                     | mode, tool names, instruction version, token counts, history length                          | No — never the message, the answer, a tool argument or result            |
 | `readiness.lost` / `readiness.restored`, `database.*`         | a safe reason code (SQLSTATE / Node code / `timeout`)                                        | No — never a host or connection string                                   |
 | `client.error`                                                | `kind`, `name` (error class), `path` (pathname only)                                         | No (IP on the request line)                                              |
 | `process.*` (fatal), `shutdown.*`, `server.started`           | allowlisted error, signal, timings                                                           | No                                                                       |
@@ -41,7 +42,7 @@ excess collapses into `{ overflow: "true" }`.
 ## 3. Forbidden in logs, metrics and reports
 
 Passwords · session cookies/tokens · `Authorization` headers · password-reset, email-verification and unsubscribe
-tokens · API keys and secrets (`GEMINI_API_KEY`, `AUTH_SESSION_SECRET`, `EMAIL_LINK_SECRET`, `METRICS_TOKEN`) ·
+tokens · API keys and secrets (`GEMINI_API_KEY`, `GEMINI_AGENT_API_KEY`, `AUTH_SESSION_SECRET`, `EMAIL_LINK_SECRET`, `METRICS_TOKEN`) · AI Coach conversations (a learner's message, the coach's answer, a tool argument or a tool result) ·
 connection strings · query strings · request/response bodies · email addresses, names, email subjects/bodies ·
 text sent to Gemini, generated audio or video · SQL bound parameters · browser error messages and stacks ·
 localStorage/form values. As metric labels additionally: user ids, request ids, IPs, full URLs, free text.
