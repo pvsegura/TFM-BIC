@@ -1758,6 +1758,323 @@
       "updatedAt": "2026-10-05T08:21:24.758Z"
     },
     {
+      "key": "lesson:pl-at-the-doctor",
+      "content": {
+        "type": "lesson",
+        "id": "pl-at-the-doctor",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-at-the-doctor/video-46be7bb74e4e.mp4",
+          "posterUrl": "pl/lesson/pl-at-the-doctor/poster-46be7bb74e4e.jpg",
+          "captionsUrl": "pl/lesson/pl-at-the-doctor/captions-46be7bb74e4e.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 78.35,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "At the doctor's. Jan does not feel well.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co panu dolega?",
+              "language": "pl",
+              "speaker": "Dr Nowak",
+              "translation": "What seems to be the problem?"
+            },
+            {
+              "text": "Boli mnie gardło i mam gorączkę.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "I have a sore throat and a fever."
+            },
+            {
+              "text": "Literally: my throat hurts me.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Od kiedy?",
+              "language": "pl",
+              "speaker": "Dr Nowak",
+              "translation": "Since when?"
+            },
+            {
+              "text": "Od wczoraj.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "Since yesterday."
+            },
+            {
+              "text": "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+              "language": "pl",
+              "speaker": "Dr Nowak",
+              "translation": "I will prescribe you some medicine. Drink a lot and rest."
+            },
+            {
+              "text": "Boli mnie głowa.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I have a headache."
+            },
+            {
+              "text": "The thing that hurts is the subject of the sentence.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "With a plural, the verb is plural too.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jan has a headache. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Boli mnie głowa.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "I have a headache."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The doctor asks since when. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Od kiedy?",
+              "language": "pl",
+              "speaker": "Dr Nowak",
+              "translation": "Since when?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Say what hurts, describe symptoms and understand simple advice.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "79906fb72560068b2ecccd29d35ef8a7b58a54d5bb9a7811e4e6ee07a13dfdeb",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say what hurts, describe symptoms and understand simple advice.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co panu dolega?",
+          "Boli mnie gardło i mam gorączkę.",
+          "Od kiedy?",
+          "Od wczoraj.",
+          "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+          "Boli mnie głowa."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Jan",
+            "voice": "tomek"
+          },
+          {
+            "character": "Dr Nowak",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:44:14.526Z",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:44:14.526Z",
+      "updatedAt": "2026-10-06T07:44:14.526Z"
+    },
+    {
+      "key": "lesson:pl-cases-overview",
+      "content": {
+        "type": "lesson",
+        "id": "pl-cases-overview",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-cases-overview/video-3436ccebef50.mp4",
+          "posterUrl": "pl/lesson/pl-cases-overview/poster-3436ccebef50.jpg",
+          "captionsUrl": "pl/lesson/pl-cases-overview/captions-3436ccebef50.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 79.12,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "One word, coffee, in four different sentences.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To jest kawa.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "This is coffee."
+            },
+            {
+              "text": "The dictionary form.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Lubię kawę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I like coffee."
+            },
+            {
+              "text": "The object of a verb: a new ending.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Nie ma kawy.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "There is no coffee."
+            },
+            {
+              "text": "There is none: another ending.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Piję kawę z mlekiem.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I drink coffee with milk."
+            },
+            {
+              "text": "Mieszkam w Krakowie.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "I live in Kraków."
+            },
+            {
+              "text": "Polish nouns change their endings to show their role.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Learn them phrase by phrase, starting with the most frequent.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "There is no coffee. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Nie ma kawy.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "There is no coffee."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You like coffee. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Lubię kawę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I like coffee."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "See why Polish nouns change their endings, using one word in four sentences.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "dab11279e463fd8f1baf972ac80bd260228f7dfaf0cefcf93873cadb465d85be",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "See why Polish nouns change their endings, using one word in four sentences.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "To jest kawa.",
+          "Lubię kawę.",
+          "Nie ma kawy.",
+          "Piję kawę z mlekiem.",
+          "Mieszkam w Krakowie."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:28:37.107Z",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:28:37.107Z",
+      "updatedAt": "2026-10-06T07:28:37.107Z"
+    },
+    {
       "key": "lesson:pl-daily-routine",
       "content": {
         "type": "lesson",
@@ -1925,6 +2242,496 @@
       },
       "createdAt": "2026-10-05T08:31:43.565Z",
       "updatedAt": "2026-10-05T08:31:43.565Z"
+    },
+    {
+      "key": "lesson:pl-directions",
+      "content": {
+        "type": "lesson",
+        "id": "pl-directions",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-directions/video-c01eea22b652.mp4",
+          "posterUrl": "pl/lesson/pl-directions/poster-c01eea22b652.jpg",
+          "captionsUrl": "pl/lesson/pl-directions/captions-c01eea22b652.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 101.03,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A tourist is looking for the post office.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przepraszam, jak dojść do poczty?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Excuse me, how do I get to the post office?"
+            },
+            {
+              "text": "Proszę iść prosto, a potem w prawo.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Go straight on, and then right."
+            },
+            {
+              "text": "A polite instruction: the polite word, then a verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy to daleko?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Is it far?"
+            },
+            {
+              "text": "Nie, to blisko. Pięć minut.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "No, it is near. Five minutes."
+            },
+            {
+              "text": "Dziękuję bardzo!",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Thank you very much!"
+            },
+            {
+              "text": "Proszę iść prosto.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Go straight on."
+            },
+            {
+              "text": "Straight on, left, right, near and far are short and easy to catch.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Listen for them in the answer.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Adam is looking for the station. What does he ask? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przepraszam, jak dojść do dworca?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Excuse me, how do I get to the station?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He asks if it is far. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy to daleko?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Is it far?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ewa says it is near. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To jest blisko.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "It is near."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Ask how to get somewhere and understand simple directions.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "9252c4921ed9a8677ff6982537d2cdc31deca948c2122261a6d350ff5810b077",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Ask how to get somewhere and understand simple directions.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Przepraszam, jak dojść do poczty?",
+          "Proszę iść prosto, a potem w prawo.",
+          "Czy to daleko?",
+          "Nie, to blisko. Pięć minut.",
+          "Dziękuję bardzo!",
+          "Proszę iść prosto.",
+          "Przepraszam, jak dojść do dworca?",
+          "To jest blisko."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Adam",
+            "voice": "tomek"
+          },
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:20:06.225Z",
+        "providerCalls": 15
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:20:06.225Z",
+      "updatedAt": "2026-10-06T07:20:06.225Z"
+    },
+    {
+      "key": "lesson:pl-future-and-plans",
+      "content": {
+        "type": "lesson",
+        "id": "pl-future-and-plans",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-future-and-plans/video-0ced710689d4.mp4",
+          "posterUrl": "pl/lesson/pl-future-and-plans/poster-0ced710689d4.jpg",
+          "captionsUrl": "pl/lesson/pl-future-and-plans/captions-0ced710689d4.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 87.83,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A hotel reception. Adam wants to book a room.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzień dobry, w czym mogę pomóc?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Good morning, how can I help?"
+            },
+            {
+              "text": "Chciałbym zarezerwować pokój dwuosobowy na weekend.",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "I would like to book a double room for the weekend."
+            },
+            {
+              "text": "A polite wish: the conditional, in the form a man uses.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Na dwie noce?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "For two nights?"
+            },
+            {
+              "text": "Tak. Czy śniadanie jest wliczone w cenę?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Yes. Is breakfast included in the price?"
+            },
+            {
+              "text": "Tak, śniadanie jest od siódmej do dziesiątej.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Yes, breakfast is from seven to ten."
+            },
+            {
+              "text": "Chciałbym zarezerwować pokój na dwie noce.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I would like to book a room for two nights."
+            },
+            {
+              "text": "The conditional makes a wish polite.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Men and women use slightly different endings.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Adam asks if breakfast is included. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Tak. Czy śniadanie jest wliczone w cenę?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Yes. Is breakfast included in the price?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A woman would like a train ticket. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chciałabym bilet do Gdańska.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "I would like a ticket to Gdańsk."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Make polite requests with the conditional and talk about plans.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "8de2661a322da7d168a3ea4cb18d57e2b25657463968dcda334f4c050da29283",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Make polite requests with the conditional and talk about plans.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dzień dobry, w czym mogę pomóc?",
+          "Chciałbym zarezerwować pokój dwuosobowy na weekend.",
+          "Na dwie noce?",
+          "Tak. Czy śniadanie jest wliczone w cenę?",
+          "Tak, śniadanie jest od siódmej do dziesiątej.",
+          "Chciałbym zarezerwować pokój na dwie noce.",
+          "Chciałabym bilet do Gdańska."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Adam",
+            "voice": "tomek"
+          },
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:36:44.330Z",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:36:44.330Z",
+      "updatedAt": "2026-10-06T07:36:44.330Z"
+    },
+    {
+      "key": "lesson:pl-going-places",
+      "content": {
+        "type": "lesson",
+        "id": "pl-going-places",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-going-places/video-adf75292ce20.mp4",
+          "posterUrl": "pl/lesson/pl-going-places/poster-adf75292ce20.jpg",
+          "captionsUrl": "pl/lesson/pl-going-places/captions-adf75292ce20.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 77.78,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Two neighbours meet in the street in the morning.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jak jeździsz do pracy?",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "How do you get to work?"
+            },
+            {
+              "text": "Zwykle jeżdżę tramwajem, ale dzisiaj idę pieszo.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "I usually go by tram, but today I am walking."
+            },
+            {
+              "text": "Usually by tram, a vehicle. Today on foot: a different verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Daleko?",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "Is it far?"
+            },
+            {
+              "text": "Nie, dwadzieścia minut.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "No, twenty minutes."
+            },
+            {
+              "text": "Jadę do Gdańska pociągiem.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "I am going to Gdańsk by train."
+            },
+            {
+              "text": "One pair of verbs is for walking, the other for vehicles.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "And each has a separate verb for habits.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Zosia asks how he gets to work. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jak jeździsz do pracy?",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "How do you get to work?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You are walking to school now. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Idę do szkoły.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "I am walking to school."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Choose the right verb of motion: on foot or by vehicle, once or regularly.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "a3cfe389a1c942ac40a761f5ccb0d43767592136c2ae9f9bc34b5e8b48bdfec0",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Choose the right verb of motion: on foot or by vehicle, once or regularly.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Jak jeździsz do pracy?",
+          "Zwykle jeżdżę tramwajem, ale dzisiaj idę pieszo.",
+          "Daleko?",
+          "Nie, dwadzieścia minut.",
+          "Jadę do Gdańska pociągiem.",
+          "Idę do szkoły."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Zosia",
+            "voice": "ola"
+          },
+          {
+            "character": "Michał",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:40:25.589Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:40:25.589Z",
+      "updatedAt": "2026-10-06T07:40:25.589Z"
     },
     {
       "key": "lesson:pl-greetings",
@@ -2456,6 +3263,169 @@
       "updatedAt": "2026-10-02T09:16:05.991Z"
     },
     {
+      "key": "lesson:pl-likes-and-wants",
+      "content": {
+        "type": "lesson",
+        "id": "pl-likes-and-wants",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-likes-and-wants/video-3a6f53e19371.mp4",
+          "posterUrl": "pl/lesson/pl-likes-and-wants/poster-3a6f53e19371.jpg",
+          "captionsUrl": "pl/lesson/pl-likes-and-wants/captions-3a6f53e19371.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 96.97,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Breakfast in a café. What do they like to drink?",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co lubisz pić rano?",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "What do you like to drink in the morning?"
+            },
+            {
+              "text": "Lubię kawę z mlekiem. A ty?",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "I like coffee with milk. And you?"
+            },
+            {
+              "text": "Coffee changes its ending after the verb to like.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ja wolę herbatę.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "I prefer tea."
+            },
+            {
+              "text": "Lubię kawę.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I like coffee."
+            },
+            {
+              "text": "After like, want, have, eat and drink, the object changes.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Feminine words in a take a new ending; men and animals add a.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Bartek likes coffee. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Lubię kawę.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "I like coffee."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ania is drinking tea. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Piję herbatę.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "I am drinking tea."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Bartek has a dog. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Mam psa.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "I have a dog."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Say what you like, want, have, eat and drink, with the right ending.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "8ed91bc686eb0e353ceaafd727d8a03500ee35ecfb1510359f81d40ff895397b",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say what you like, want, have, eat and drink, with the right ending.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co lubisz pić rano?",
+          "Lubię kawę z mlekiem. A ty?",
+          "Ja wolę herbatę.",
+          "Lubię kawę.",
+          "Piję herbatę.",
+          "Mam psa."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Ania",
+            "voice": "ola"
+          },
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:24:40.545Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:24:40.545Z",
+      "updatedAt": "2026-10-06T07:24:40.545Z"
+    },
+    {
       "key": "lesson:pl-no-articles",
       "content": {
         "type": "lesson",
@@ -2649,21 +3619,164 @@
         "id": "pl-past-tense",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-past-tense/video-c2a2b4f431c1.mp4",
+          "posterUrl": "pl/lesson/pl-past-tense/poster-c2a2b4f431c1.jpg",
+          "captionsUrl": "pl/lesson/pl-past-tense/captions-c2a2b4f431c1.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 108.32,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Monday morning. Two friends talk about their days off.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co robiłeś w weekend?",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "What did you do at the weekend?"
+            },
+            {
+              "text": "Byłem w górach z bratem. A ty?",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "I was in the mountains with my brother. And you?"
+            },
+            {
+              "text": "He is a man, so his verb ends in e m.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ja byłam w domu i czytałam książkę.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "I was at home and read a book."
+            },
+            {
+              "text": "She is a woman: listen, her verbs end in a m.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Wczoraj byłem w kinie.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Yesterday I was at the cinema."
+            },
+            {
+              "text": "In the past tense, the ending shows who is speaking.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A man's form and a woman's form differ by one vowel.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Kasia asks Piotr what he did on Saturday and Sunday. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co robiłeś w weekend?",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "What did you do at the weekend?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Kasia stayed at home and read. What does she say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ja byłam w domu i czytałam książkę.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "I was at home and read a book."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A man says: yesterday I was at the cinema. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Wczoraj byłem w kinie.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Yesterday I was at the cinema."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Talk about the past, choosing the ending for a man or a woman.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "afbfda8432899870a72fad44530e6c51d000e31f45ef060941d9e6684b2c90b2",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Talk about the past, choosing the ending for a man or a woman.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co robiłeś w weekend?",
+          "Byłem w górach z bratem. A ty?",
+          "Ja byłam w domu i czytałam książkę.",
+          "Wczoraj byłem w kinie."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Kasia",
+            "voice": "ola"
+          },
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-05T08:32:52.348Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 9
+        "status": "ready",
+        "at": "2026-10-06T07:15:01.846Z",
+        "providerCalls": 6
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-05T08:32:52.348Z",
-      "updatedAt": "2026-10-05T08:32:52.348Z"
+      "updatedAt": "2026-10-06T07:15:01.846Z"
     },
     {
       "key": "lesson:pl-polite-words",
@@ -3373,6 +4486,163 @@
       },
       "createdAt": "2026-10-01T07:46:57.408Z",
       "updatedAt": "2026-10-03T09:09:03.628Z"
+    },
+    {
+      "key": "lesson:pl-verb-aspect",
+      "content": {
+        "type": "lesson",
+        "id": "pl-verb-aspect",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-verb-aspect/video-65a295af6924.mp4",
+          "posterUrl": "pl/lesson/pl-verb-aspect/poster-65a295af6924.jpg",
+          "captionsUrl": "pl/lesson/pl-verb-aspect/captions-65a295af6924.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 87.57,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Evening at home. A mother asks her son about his homework.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Odrobiłeś lekcje?",
+              "language": "pl",
+              "speaker": "Mama",
+              "translation": "Have you done your homework?"
+            },
+            {
+              "text": "Jeszcze nie. Odrabiam je teraz.",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "Not yet. I am doing it now."
+            },
+            {
+              "text": "Right now, a process: the imperfective verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kiedy skończysz?",
+              "language": "pl",
+              "speaker": "Mama",
+              "translation": "When will you finish?"
+            },
+            {
+              "text": "Skończę za pół godziny.",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "I will finish in half an hour."
+            },
+            {
+              "text": "One finished action in the future: the perfective verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wczoraj przeczytałem całą książkę.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Yesterday I read the whole book."
+            },
+            {
+              "text": "Most verbs come in pairs.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "One describes a process or a habit, the other one finished action with a result.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kuba is doing his homework right now. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jeszcze nie. Odrabiam je teraz.",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "Not yet. I am doing it now."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "He will finish in half an hour. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Skończę za pół godziny.",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "I will finish in half an hour."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Choose between the imperfective verb for a process and the perfective one for a result.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "d42b45292acf73b689a555053f916ef92eb7eed1418a4117e4d4ed43ab56b516",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Choose between the imperfective verb for a process and the perfective one for a result.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Odrobiłeś lekcje?",
+          "Jeszcze nie. Odrabiam je teraz.",
+          "Kiedy skończysz?",
+          "Skończę za pół godziny.",
+          "Wczoraj przeczytałem całą książkę."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Mama",
+            "voice": "ola"
+          },
+          {
+            "character": "Kuba",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-06T07:32:37.745Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-06T07:32:37.745Z",
+      "updatedAt": "2026-10-06T07:32:37.745Z"
     },
     {
       "key": "vocabulary-item:en-airport",
