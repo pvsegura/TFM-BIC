@@ -19,3 +19,4 @@ export * from "./teaching/test-support/fakes.js";
 export * from "./email/test-support/fakes.js";
 export * from "./newsletter/test-support/fakes.js";
 export * from "./privacy/test-support/fakes.js";
+export * from "./coach/test-support/fakes.js";

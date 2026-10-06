@@ -540,3 +540,66 @@ export {
   ListGrammarTopicsUseCase,
   type GrammarReferenceRepository,
 } from "./grammar/grammar-reference.js";
+
+// AI Learning Coach (M23, ADR-034): the agent port, the tool registry, the versioned instructions
+// and the orchestrating use case. Nothing exported here names Gemini — the adapter lives in
+// packages/data and is selected by AI_COACH_PROVIDER.
+export type {
+  AgentContinuation,
+  AgentRequest,
+  AgentResponse,
+  AgentToolCall,
+  AgentToolDeclaration,
+  AgentToolResult,
+  AgentToolSchema,
+  AgentUsage,
+  AiAgentService,
+} from "./coach/ports/ai-agent-service.js";
+export type {
+  LearnerActivityRecord,
+  LearnerAttemptRecord,
+  LearnerExerciseStats,
+  LearnerInsightsReadModel,
+  LearnerProgressSummary,
+} from "./coach/ports/learner-insights-read-model.js";
+export {
+  AI_COACH_INSTRUCTIONS_VERSION,
+  aiCoachInstructions,
+} from "./coach/instructions/ai-coach-instructions.js";
+export {
+  declarationsForMode,
+  TOOLS_BY_MODE,
+  type CoachTool,
+  type CoachToolContext,
+  type CoachToolRegistry,
+} from "./coach/tools/coach-tool.js";
+export {
+  createCoachToolRegistry,
+  type CoachToolDependencies,
+} from "./coach/tools/coach-tool-registry.js";
+export { createPracticeCollector, type PracticeCollector } from "./coach/tools/practice-tools.js";
+export { ToolArgumentError } from "./coach/tools/tool-arguments.js";
+export {
+  AskCoachUseCase,
+  MAX_TOOL_ROUNDS,
+  type AskCoachDependencies,
+  type AskCoachInput,
+  type AskCoachResult,
+} from "./coach/use-cases/ask-coach.use-case.js";
+export {
+  categorizeCoachError,
+  CoachBusyError,
+  CoachConfigurationError,
+  CoachProviderRateLimitedError,
+  CoachProviderRejectedError,
+  CoachProviderUnavailableError,
+  CoachResponseError,
+  CoachTimeoutError,
+  CoachUnavailableError,
+} from "./coach/errors/coach-errors.js";
+export {
+  resolveCoachContext,
+  type CoachContextDependencies,
+  type CoachContextInput,
+  type ResolvedCoachContext,
+} from "./coach/resolve-coach-context.js";
