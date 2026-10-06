@@ -9,10 +9,18 @@ import {
   type GeneratedAudio,
 } from "@tfm-bic/application";
 
+import {
+  geminiBackoffMs,
+  geminiRetryAfterMs,
+  GEMINI_RETRYABLE_STATUSES,
+  isGeminiTimeout,
+  postGeminiInteraction,
+  translateGeminiStatus,
+} from "../providers/gemini/gemini-interactions.js";
 import { isWav } from "./wav.js";
 
 /**
- * Gemini text-to-speech adapter (M12, ADR-013) — the only file that knows Gemini exists.
+ * Gemini text-to-speech adapter (M12, ADR-013) — the only file that knows how Gemini *speaks*.
  *
  * Verified against the official docs on 2026-09-25 (ai.google.dev/gemini-api/docs/speech-generation,
  * .../docs/interactions, .../docs/api-errors): TTS goes through the GA Interactions API,
@@ -24,20 +32,19 @@ import { isWav } from "./wav.js";
  * Plain `fetch` against the documented REST endpoint instead of the `@google/genai` SDK: one
  * request shape is all this needs, and owning it keeps timeout/retry behaviour explicit and adds
  * no dependency (see ADR-013). Never executed against the real API in this repository's tests.
+ *
+ * M23: the endpoint, the retry policy and the HTTP classification moved to
+ * `providers/gemini/gemini-interactions.ts`, now shared with the AI Coach adapter (ADR-034). The
+ * request body, the response reading and every error type raised here are unchanged — this adapter
+ * still owns everything specific to speech, and the offline media pipeline's behaviour is identical.
  */
-export const GEMINI_INTERACTIONS_URL =
-  "https://generativelanguage.googleapis.com/v1beta/interactions";
+export { GEMINI_INTERACTIONS_URL } from "../providers/gemini/gemini-interactions.js";
 
 /** A documented prebuilt voice. Profiles differ by delivery style, not by voice. */
 export const DEFAULT_GEMINI_VOICE = "Kore";
 
 const DEFAULT_TIMEOUT_MS = 20_000;
 const DEFAULT_MAX_RETRIES = 2;
-const BASE_BACKOFF_MS = 500;
-const MAX_BACKOFF_MS = 8_000;
-
-/** Documented as transient (retry with exponential backoff): rate limit, server error, overloaded, deadline. */
-const RETRYABLE_STATUSES = new Set([429, 500, 503, 504]);
 
 export interface GeminiAudioProviderOptions {
   apiKey: string;
@@ -153,32 +160,19 @@ function extractAudio(body: unknown): AudioPart | null {
   return null;
 }
 
-/** A non-retryable HTTP failure, translated. The response body is never read into the message. */
+/**
+ * An HTTP failure in *audio's* error vocabulary. The classification itself is the shared one
+ * (`translateGeminiStatus`), so TTS and the coach agree on what a 403 or a 503 means; only the
+ * error types differ, because an audio failure and a coaching failure are handled differently.
+ * The response body is never read into the message.
+ */
 function translateStatus(status: number): Error {
-  if (status === 401 || status === 403) {
-    return new AudioProviderConfigurationError(`authentication failed (HTTP ${status})`);
-  }
-  if (status === 402) {
-    return new AudioProviderConfigurationError(`billing required (HTTP ${status})`);
-  }
-  if (status === 404) {
-    return new AudioProviderConfigurationError(`model or endpoint not found (HTTP ${status})`);
-  }
-  if (status >= 400 && status < 500) {
-    return new AudioProviderRejectedError(`HTTP ${status}`);
-  }
-  return new AudioProviderUnavailableError(`HTTP ${status}`);
-}
-
-function retryAfterMs(response: Response): number | null {
-  const header = response.headers.get("retry-after");
-  if (header === null) return null;
-  const seconds = Number(header);
-  return Number.isFinite(seconds) && seconds >= 0 ? seconds * 1000 : null;
-}
-
-function isTimeout(error: unknown): boolean {
-  return error instanceof DOMException && error.name === "TimeoutError";
+  return translateGeminiStatus(status, {
+    configuration: (detail) => new AudioProviderConfigurationError(detail),
+    rejected: (detail) => new AudioProviderRejectedError(detail),
+    unavailable: (detail) => new AudioProviderUnavailableError(detail),
+    rateLimited: () => new AudioProviderRateLimitedError(),
+  });
 }
 
 type Attempt =
@@ -235,8 +229,7 @@ export class GeminiAudioProvider implements AudioGenerationService {
       if (attempt >= this.maxRetries) {
         throw outcome.error;
       }
-      const backoff = BASE_BACKOFF_MS * 2 ** attempt;
-      await this.sleep(Math.min(outcome.delayMs ?? backoff, MAX_BACKOFF_MS));
+      await this.sleep(geminiBackoffMs(attempt, outcome.delayMs));
     }
   }
 
@@ -244,19 +237,18 @@ export class GeminiAudioProvider implements AudioGenerationService {
     let response: Response;
     let payload: unknown;
     try {
-      response = await this.fetchFn(GEMINI_INTERACTIONS_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json", "x-goog-api-key": this.apiKey },
-        body,
-        signal: AbortSignal.timeout(this.timeoutMs),
+      response = await postGeminiInteraction(body, {
+        apiKey: this.apiKey,
+        timeoutMs: this.timeoutMs,
+        fetch: this.fetchFn,
       });
       if (!response.ok) {
-        if (RETRYABLE_STATUSES.has(response.status)) {
-          const error =
-            response.status === 429
-              ? new AudioProviderRateLimitedError()
-              : translateStatus(response.status);
-          return { kind: "retry", error, delayMs: retryAfterMs(response) };
+        if (GEMINI_RETRYABLE_STATUSES.has(response.status)) {
+          return {
+            kind: "retry",
+            error: translateStatus(response.status),
+            delayMs: geminiRetryAfterMs(response),
+          };
         }
         throw translateStatus(response.status);
       }
@@ -264,7 +256,7 @@ export class GeminiAudioProvider implements AudioGenerationService {
         throw new AudioProviderUnavailableError("unreadable response body");
       });
     } catch (error) {
-      if (isTimeout(error)) {
+      if (isGeminiTimeout(error)) {
         throw new AudioGenerationTimeoutError(this.timeoutMs);
       }
       if (error instanceof TypeError) {
