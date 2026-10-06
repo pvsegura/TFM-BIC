@@ -11,6 +11,8 @@ import type { AudioDependencies } from "./composition/audio-dependencies.js";
 import { createAudioUseCases } from "./composition/audio-use-cases.js";
 import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
+import type { CoachDependencies } from "./composition/coach-dependencies.js";
+import { createCoachUseCases } from "./composition/coach-use-cases.js";
 import type { ContentDependencies } from "./composition/content-dependencies.js";
 import type { ExerciseDependencies } from "./composition/exercise-dependencies.js";
 import { createExerciseUseCases } from "./composition/exercise-use-cases.js";
@@ -55,6 +57,7 @@ import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
 import {
+  instrumentAiAgent,
   instrumentAudioProvider,
   instrumentEmailProvider,
   instrumentVideoProvider,
@@ -62,6 +65,7 @@ import {
 import { MetricsRegistry } from "./observability/metrics.js";
 import { createReadinessMonitor } from "./observability/readiness-monitor.js";
 import { registerClientErrorRoutes } from "./routes/client-errors.route.js";
+import { registerCoachRoutes } from "./routes/coach.route.js";
 import { registerMetricsRoute } from "./routes/metrics.route.js";
 import { httpSecurityServerOptions, registerHttpSecurity } from "./security/http-security.js";
 import { loadWebApp, registerWebApp, spaShellFallback } from "./web/web-app.js";
@@ -92,6 +96,7 @@ export function buildServer(
   teachingDeps: TeachingDependencies,
   emailDeps: EmailDependencies,
   privacyDeps: PrivacyDependencies,
+  coachDeps: CoachDependencies,
   runtime: ServerRuntimeOptions = {},
 ): FastifyInstance {
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
@@ -223,8 +228,11 @@ export function buildServer(
 
     // Lessons (M6) are authenticated-only: they build on the content use cases and add only the
     // student's own progress. The user always comes from the session, never from the request.
+    // M23: the same instances are reused by the AI Coach's tools, so one change to a visibility or
+    // progress rule changes what the coach sees too.
+    const lessonUseCases = createLessonUseCases(contentUseCases, lessonDeps, gamificationUseCases);
     registerLessonRoutes(app, {
-      useCases: createLessonUseCases(contentUseCases, lessonDeps, gamificationUseCases),
+      useCases: lessonUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
       achievementTexts,
@@ -254,16 +262,18 @@ export function buildServer(
 
     // Vocabulary (M9): entries are content, reused from contentDeps; only the student's own
     // relationship to a word is stored. The user always comes from the session.
+    const vocabularyUseCases = createVocabularyUseCases(contentDeps, vocabularyDeps);
     registerVocabularyRoutes(app, {
-      useCases: createVocabularyUseCases(contentDeps, vocabularyDeps),
+      useCases: vocabularyUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });
 
     // Phonetics (M10): representations are content, reused from contentDeps; only the student's
     // own progress is stored. Independent of Vocabulary. The user always comes from the session.
+    const phoneticsUseCases = createPhoneticsUseCases(contentDeps, phoneticsDeps);
     registerPhoneticsRoutes(app, {
-      useCases: createPhoneticsUseCases(contentDeps, phoneticsDeps),
+      useCases: phoneticsUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });
@@ -327,6 +337,35 @@ export function buildServer(
     // deletion. Deletion re-checks the password through Identity's own repository and hasher.
     registerDataManagementRoutes(app, {
       useCases: createPrivacyUseCases(privacyDeps, authDeps),
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // AI Learning Coach (M23, ADR-034): authenticated; the learner always comes from the session
+    // and the CEFR level is derived by the application, never accepted from the client. Its tools
+    // are the lesson, vocabulary, phonetics and content use cases above, so every visibility rule
+    // applies to the coach unchanged. The provider behind it is selected by env.AI_COACH_PROVIDER —
+    // "fake" by default and in every automated test/CI run, and the coach is never in /ready: a
+    // provider outage must not take the platform out of rotation.
+    registerCoachRoutes(app, {
+      useCases: createCoachUseCases(
+        {
+          ...coachDeps,
+          // M18: every provider request of a turn is measured; no message, answer or tool data.
+          agent: instrumentAiAgent(coachDeps.agent, env.AI_COACH_PROVIDER, metrics),
+        },
+        {
+          content: contentDeps,
+          contentUseCases,
+          lessonUseCases,
+          vocabularyUseCases,
+          phoneticsUseCases,
+        },
+      ),
+      coach: coachDeps,
+      content: contentDeps,
+      lessonUseCases,
+      vocabularyUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });

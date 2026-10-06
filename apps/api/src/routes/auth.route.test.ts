@@ -31,6 +31,7 @@ function build(testDeps = buildTestDeps()) {
     testDeps.teachingDeps,
     testDeps.emailDeps,
     testDeps.privacyDeps,
+    testDeps.coachDeps,
   );
   return { app, ...testDeps };
 }

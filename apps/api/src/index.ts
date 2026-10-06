@@ -42,6 +42,10 @@ import {
   createPrivacyDependencies,
   type PrivacyDependencies,
 } from "./composition/privacy-dependencies.js";
+import {
+  createCoachDependencies,
+  type CoachDependencies,
+} from "./composition/coach-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
 import {
   createVideoDependencies,
@@ -87,6 +91,7 @@ let audioDeps: AudioDependencies;
 let teachingDeps: TeachingDependencies;
 let emailDeps: EmailDependencies;
 let privacyDeps: PrivacyDependencies;
+let coachDeps: CoachDependencies;
 let readiness: DatabaseReadinessCheck | undefined;
 if (env.NODE_ENV === "test") {
   ({
@@ -103,6 +108,7 @@ if (env.NODE_ENV === "test") {
     teaching: teachingDeps,
     email: emailDeps,
     privacy: privacyDeps,
+    coach: coachDeps,
   } = await createTestDependencies(env));
 } else {
   if (!env.DATABASE_URL) {
@@ -121,6 +127,7 @@ if (env.NODE_ENV === "test") {
   teachingDeps = createTeachingDependencies(env.DATABASE_URL);
   emailDeps = createEmailDependencies(env.DATABASE_URL, env);
   privacyDeps = createPrivacyDependencies(env.DATABASE_URL);
+  coachDeps = createCoachDependencies(env, env.DATABASE_URL);
   readiness = createDatabaseReadinessCheck(env.DATABASE_URL);
 }
 
@@ -139,6 +146,7 @@ const app = buildServer(
   teachingDeps,
   emailDeps,
   privacyDeps,
+  coachDeps,
   readiness
     ? { isReady: readiness.isReady, readinessFailureReason: readiness.lastFailureReason }
     : {},
@@ -160,6 +168,7 @@ const shutdown = createShutdownHandler({
     teachingDeps.close,
     emailDeps.close,
     privacyDeps.close,
+    coachDeps.close,
     ...(readiness ? [readiness.close] : []),
   ],
   timeoutMs: SHUTDOWN_TIMEOUT_MS,

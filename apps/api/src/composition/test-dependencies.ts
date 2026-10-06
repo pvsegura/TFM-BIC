@@ -1,4 +1,5 @@
 import type { AppEnv } from "@tfm-bic/config";
+import type { CoachDb } from "@tfm-bic/data";
 import { createGamificationTestDb } from "@tfm-bic/data/testing";
 
 import { createAudioDependencies, type AudioDependencies } from "./audio-dependencies.js";
@@ -15,6 +16,7 @@ import {
   buildPhoneticsDependencies,
   type PhoneticsDependencies,
 } from "./phonetics-dependencies.js";
+import { buildCoachDependencies, type CoachDependencies } from "./coach-dependencies.js";
 import { buildPrivacyDependencies, type PrivacyDependencies } from "./privacy-dependencies.js";
 import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 import { buildTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
@@ -57,6 +59,7 @@ export async function createTestDependencies(env: AppEnv): Promise<{
   teaching: TeachingDependencies;
   email: EmailDependencies;
   privacy: PrivacyDependencies;
+  coach: CoachDependencies;
 }> {
   const {
     db,
@@ -104,5 +107,9 @@ export async function createTestDependencies(env: AppEnv): Promise<{
     }),
     // Privacy (M15): the real export read model and erasure store over the same database.
     privacy: buildPrivacyDependencies(identityDb, () => Promise.resolve()),
+    // AI Coach (M23): the real SQL read model over the same database, so E2E exercises the real
+    // aggregate queries. The agent itself is the fake adapter — `loadEnv` refuses AI_COACH_PROVIDER=gemini
+    // under NODE_ENV=test, so no E2E or CI run can ever reach the paid API.
+    coach: buildCoachDependencies(env, identityDb as unknown as CoachDb, () => Promise.resolve()),
   };
 }

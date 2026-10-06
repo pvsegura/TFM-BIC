@@ -307,3 +307,18 @@ export {
   type GrammarTopicResponse,
   type GrammarTopicSummaryResponse,
 } from "./grammar/grammar.schema.js";
+
+// AI Learning Coach (M23, ADR-034): the request/response shapes of POST /ai-coach/messages and
+// GET /ai-coach/status. Strict objects built on the domain's own limits.
+export {
+  coachMessageRequestSchema,
+  coachMessageResponseSchema,
+  coachPracticeSchema,
+  coachStatusQuerySchema,
+  coachStatusResponseSchema,
+  type CoachContextRef,
+  type CoachMessageRequestBody,
+  type CoachMessageResponse,
+  type CoachPracticeResponse,
+  type CoachStatusResponse,
+} from "./coach/coach.schema.js";

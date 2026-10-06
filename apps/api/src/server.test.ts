@@ -12,7 +12,7 @@ afterEach(async () => {
   app = undefined;
 });
 
-function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof buildServer>[14] = {}) {
+function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof buildServer>[15] = {}) {
   const {
     deps,
     profileDeps,
@@ -27,6 +27,7 @@ function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof build
     teachingDeps,
     emailDeps,
     privacyDeps,
+    coachDeps,
   } = buildTestDeps();
   return buildServer(
     env,
@@ -43,6 +44,7 @@ function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof build
     teachingDeps,
     emailDeps,
     privacyDeps,
+    coachDeps,
     runtime,
   );
 }

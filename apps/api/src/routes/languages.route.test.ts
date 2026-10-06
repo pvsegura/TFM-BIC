@@ -30,6 +30,7 @@ function build(env: Record<string, string> = {}) {
     testDeps.teachingDeps,
     testDeps.emailDeps,
     testDeps.privacyDeps,
+    testDeps.coachDeps,
   );
   return { app, ...testDeps };
 }

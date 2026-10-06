@@ -53,6 +53,7 @@ function build(
     testDeps.teachingDeps,
     testDeps.emailDeps,
     testDeps.privacyDeps,
+    testDeps.coachDeps,
   );
   return { app, ...testDeps };
 }

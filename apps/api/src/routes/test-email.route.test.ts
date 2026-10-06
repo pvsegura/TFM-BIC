@@ -41,6 +41,7 @@ function build(options: { nodeEnv?: "test" | "development"; inbox?: boolean; iss
     testDeps.teachingDeps,
     emailDeps,
     testDeps.privacyDeps,
+    testDeps.coachDeps,
   );
   return { app, ...testDeps };
 }
