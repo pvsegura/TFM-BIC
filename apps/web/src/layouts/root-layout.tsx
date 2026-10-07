@@ -12,6 +12,22 @@ const NAV_LINKS = [
   { to: "/learn", label: "Learn" },
 ];
 
+/**
+ * Signed-in navigation, in the order a learner uses it: their start page, the course (languages,
+ * lessons, videos), reference material (vocabulary, grammar, phonetics), the coach, then progress.
+ */
+const SIGNED_IN_LINKS = [
+  { to: "/dashboard", label: "Dashboard" },
+  { to: "/learn", label: "Learn" },
+  { to: "/learn/lessons", label: "Lessons" },
+  { to: "/learn/videos", label: "Videos" },
+  { to: "/learn/vocabulary", label: "Vocabulary" },
+  { to: "/learn/grammar", label: "Grammar" },
+  { to: "/learn/phonetics", label: "Phonetics" },
+  { to: "/learn/coach", label: "AI Coach" },
+  { to: "/achievements", label: "Achievements" },
+] as const;
+
 const NAV_LIST_ID = "primary-nav-links";
 
 /** Footer groups: only pages that exist; privacy links jump to the matching notice section. */
@@ -131,55 +147,15 @@ export function RootLayout() {
                 menuOpen ? "order-last flex basis-full flex-col items-start py-2" : "hidden"
               } gap-x-4 gap-y-3 xl:order-none xl:flex xl:basis-auto xl:flex-row xl:flex-nowrap xl:items-center xl:py-0`}
             >
-              {NAV_LINKS.filter((link) => !(currentUser && link.to === "/")).map((link) => (
-                <li key={link.to}>
-                  <Link to={link.to} className="text-sm hover:underline">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
               {currentUser ? (
                 <>
-                  <li>
-                    <Link to="/dashboard" className="text-sm hover:underline">
-                      Dashboard
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/lessons" className="text-sm hover:underline">
-                      Lessons
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/videos" className="text-sm hover:underline">
-                      Videos
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/vocabulary" className="text-sm hover:underline">
-                      Vocabulary
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/phonetics" className="text-sm hover:underline">
-                      Phonetics
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/grammar" className="text-sm hover:underline">
-                      Grammar
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/learn/coach" className="text-sm hover:underline">
-                      AI Coach
-                    </Link>
-                  </li>
-                  <li>
-                    <Link to="/achievements" className="text-sm hover:underline">
-                      Achievements
-                    </Link>
-                  </li>
+                  {SIGNED_IN_LINKS.map((link) => (
+                    <li key={link.to}>
+                      <Link to={link.to} className="text-sm hover:underline">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                   {currentUser.role === "TEACHER" ? (
                     <li>
                       <Link to="/teacher" className="text-sm hover:underline">
@@ -187,7 +163,8 @@ export function RootLayout() {
                       </Link>
                     </li>
                   ) : null}
-                  <li>
+                  {/* Account items sit apart from the learning links on wide screens. */}
+                  <li className="xl:border-l xl:border-primary/20 xl:pl-4 dark:xl:border-surface/20">
                     <Link to="/profile" className="text-sm hover:underline">
                       Profile
                     </Link>
@@ -210,6 +187,13 @@ export function RootLayout() {
                 </>
               ) : (
                 <>
+                  {NAV_LINKS.map((link) => (
+                    <li key={link.to}>
+                      <Link to={link.to} className="text-sm hover:underline">
+                        {link.label}
+                      </Link>
+                    </li>
+                  ))}
                   <li>
                     <Link to="/login" className="text-sm hover:underline">
                       Log in
