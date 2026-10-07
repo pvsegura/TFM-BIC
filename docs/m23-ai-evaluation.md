@@ -236,3 +236,42 @@ Re-run at least 1, 2, 3, 9 and 11 after any change to: the instruction module (b
 `AI_COACH_INSTRUCTIONS_VERSION`), the tool set, a tool's output shape, the model, or
 `resolveCoachContext`. The instruction version is logged with every turn, so a change in answers can
 be traced to the change that caused it.
+
+## Provider incident — 2026-10-07
+
+A learner hit "The AI Coach took too long to answer" in the deployed application. Recorded here
+because the diagnosis corrected two wrong conclusions of mine before reaching the real one, and the
+evidence is worth keeping.
+
+Measurements, in the order they were taken:
+
+| Probe                                            | Result                                         |
+| ------------------------------------------------ | ---------------------------------------------- |
+| Render `/health`, three times                    | 0.09 s, 0.16 s, 0.29 s — the service was awake |
+| Trivial request, free-tier key                   | 3.2 s                                          |
+| Trivial request, paid key                        | 2.1 s                                          |
+| Real coach turn, free-tier key                   | timed out at 25 s, then again at 120 s         |
+| Real coach turn, paid key (20 min earlier)       | 7 s, full answer                               |
+| Big instructions, no tools, free key             | **HTTP 503 `service_unavailable`**             |
+| 16 tools, short instructions                     | no response in 45 s                            |
+| 4 tools, short instructions                      | no response in 45 s                            |
+| `gemini-3.5-flash-lite`, same request with tools | **HTTP 200 in 905 ms**, tool call correct      |
+| `gemini-3.8-flash-lite`                          | HTTP 404 — the model does not exist            |
+| `gemini-2.5-flash`                               | HTTP 404 — "no longer available to new users"  |
+
+The 503's message was explicit: `gemini-3.8-flash is currently experiencing high demand`. So it was
+a provider capacity incident, not the tier, not the tool count, not Render and not our code. The
+"free key is the problem" reading came from comparing it against a paid-key run 20 minutes earlier,
+when the model was still healthy — the discriminating variable was _time_, not the key.
+
+What this run adds to the product:
+
+- a turn budget (`AI_COACH_TURN_TIMEOUT_MS`, default 120 s) instead of a per-call timeout;
+- `AI_COACH_MODEL=gemini-3.5-flash-lite` as a verified fallback, switchable without a deploy;
+- instruction rule "never show an internal id" (`ai-coach-v2`), found because the smaller model
+  printed `pl-greetings-good-night` to the learner where the larger one used the lesson title;
+- a UI line warning that an answer can take a couple of minutes.
+
+Re-verified after the instruction change, with `gemini-3.5-flash-lite`: scenario 1 named the stored
+wrong answer and corrected it; scenario 3 recommended the real in-progress lesson **by title, with
+no id**. Answers are noticeably terser than `gemini-3.8-flash`'s but grounded and correct.

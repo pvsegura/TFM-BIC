@@ -164,6 +164,8 @@ export class GeminiAgentProvider implements AiAgentService {
   }
 
   async respond(request: AgentRequest): Promise<AgentResponse> {
+    // The turn's remaining budget wins over this adapter's default when the caller sets one.
+    const timeoutMs = request.timeoutMs ?? this.timeoutMs;
     const base: Record<string, unknown> = {
       model: this.model,
       system_instruction: request.instructions,
@@ -191,12 +193,13 @@ export class GeminiAgentProvider implements AiAgentService {
     }
     input.push(textStep("user_input", request.message));
 
-    return this.send({ base, input, pendingCalls: [] });
+    return this.send({ base, input, pendingCalls: [] }, timeoutMs);
   }
 
   async continueWithToolResults(
     continuation: AgentContinuation,
     results: readonly AgentToolResult[],
+    timeoutMs?: number,
   ): Promise<AgentResponse> {
     const state = continuation as unknown as AgentTurnState;
     if (!isRecord(state) || !Array.isArray(state.input)) {
@@ -214,7 +217,7 @@ export class GeminiAgentProvider implements AiAgentService {
         result: [{ type: "text", text: JSON.stringify(result.content) }],
       })),
     ];
-    return this.send({ base: state.base, input, pendingCalls: [] });
+    return this.send({ base: state.base, input, pendingCalls: [] }, timeoutMs ?? this.timeoutMs);
   }
 
   /**
@@ -222,11 +225,11 @@ export class GeminiAgentProvider implements AiAgentService {
    * 504, network errors) with exponential backoff. Never retried: our own timeout (the abandoned
    * call may still be billed) and every other 4xx.
    */
-  private async send(state: AgentTurnState): Promise<AgentResponse> {
+  private async send(state: AgentTurnState, timeoutMs: number): Promise<AgentResponse> {
     const body = JSON.stringify({ ...state.base, input: state.input });
 
     for (let attempt = 0; ; attempt += 1) {
-      const outcome = await this.attempt(body, state);
+      const outcome = await this.attempt(body, state, timeoutMs);
       if (outcome.kind === "done") {
         return outcome.response;
       }
@@ -240,6 +243,7 @@ export class GeminiAgentProvider implements AiAgentService {
   private async attempt(
     body: string,
     state: AgentTurnState,
+    timeoutMs: number,
   ): Promise<
     | { kind: "done"; response: AgentResponse }
     | { kind: "retry"; error: Error; delayMs: number | null }
@@ -249,7 +253,7 @@ export class GeminiAgentProvider implements AiAgentService {
     try {
       response = await postGeminiInteraction(body, {
         apiKey: this.apiKey,
-        timeoutMs: this.timeoutMs,
+        timeoutMs,
         fetch: this.fetchFn,
       });
       if (!response.ok) {
@@ -267,7 +271,7 @@ export class GeminiAgentProvider implements AiAgentService {
       });
     } catch (error) {
       if (isGeminiTimeout(error)) {
-        throw new CoachTimeoutError(this.timeoutMs);
+        throw new CoachTimeoutError(timeoutMs);
       }
       if (error instanceof TypeError) {
         return {

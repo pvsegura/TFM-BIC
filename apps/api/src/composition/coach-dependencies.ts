@@ -21,6 +21,8 @@ export interface CoachDependencies {
   insights: LearnerInsightsReadModel;
   /** `false` when the deployment switched the coach off; the route then answers 503. */
   enabled: boolean;
+  /** The whole turn's budget (env.AI_COACH_TURN_TIMEOUT_MS). */
+  turnTimeoutMs: number;
   close: () => Promise<void>;
 }
 
@@ -62,6 +64,7 @@ export function buildCoachDependencies(
     agent: selectAiAgentService(env),
     insights: new DrizzleLearnerInsightsReadModel(db),
     enabled: env.AI_COACH_PROVIDER !== "disabled",
+    turnTimeoutMs: env.AI_COACH_TURN_TIMEOUT_MS,
     close,
   };
 }

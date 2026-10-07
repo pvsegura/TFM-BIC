@@ -103,9 +103,16 @@ export function CoachConversation({
         ))}
         {isSending ? (
           <li className="flex justify-start">
-            <p role="status" className="text-sm opacity-80">
-              The AI Coach is thinking…
-            </p>
+            {/* One live region, so a screen reader hears the wait once rather than on every tick.
+                The second line is there because an answer really can take a minute or more on a
+                free provider tier (measured 2026-10-07) — a learner who is not told that assumes
+                the page is broken and reloads, which costs another turn. */}
+            <div role="status" className="text-sm opacity-80">
+              <p>The AI Coach is thinking…</p>
+              <p className="mt-1 text-xs">
+                It is reading your lessons and progress. This can take up to a couple of minutes.
+              </p>
+            </div>
           </li>
         ) : null}
       </ul>

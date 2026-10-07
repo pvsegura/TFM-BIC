@@ -132,7 +132,13 @@ Documented, and **confirmed by four real calls** against
    `GEMINI_API_KEY`. The coach and the offline media pipeline otherwise share one project's daily
    quota, and learner traffic would compete with video generation (M21/M22 need ~13 calls per
    video). One variable keeps them apart without a second integration.
-9. **Cost and abuse control, in-process only** (no Redis, no queue): a per-user limit
+9. **Cost and abuse control, in-process only** (no Redis, no queue). Revised 2026-10-07 after a
+   provider capacity incident: the deadline is a **budget for the whole turn**
+   (`AI_COACH_TURN_TIMEOUT_MS`, default 120 s), not a per-call timeout — a turn makes one call plus
+   one per tool round, so a per-call limit bounds an HTTP request rather than the learner's wait.
+   Each call is given what is left and none is attempted below 5 s remaining. The product owner chose
+   to wait rather than pay. `AI_COACH_MODEL` is the escape hatch when the default model is saturated
+   (`gemini-3.5-flash-lite` verified working at 905 ms during the incident). Also: a per-user limit
    (`perUserRateLimit`, 20 messages/hour) _and_ a per-address route limit (30/hour), a 1,000-character
    message limit, the history cap above, `MAX_TOOL_ROUNDS`, bounded tool output (every tool caps
    its own list length and text), `thinking_level: "low"`, a 25 s timeout, at most 2 retries for

@@ -18,6 +18,7 @@ describe("loadEnv", () => {
       AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
       AI_COACH_PROVIDER: "fake",
       AI_COACH_MODEL: "gemini-3.8-flash",
+      AI_COACH_TURN_TIMEOUT_MS: 120000,
       EMAIL_PROVIDER: "fake",
       EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
       TRUST_PROXY: [],

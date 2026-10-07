@@ -690,3 +690,29 @@ Open / not done:
 - The derived CEFR level is a heuristic (highest level among recent lesson activity, else the
   language's first available level).
 - One more `pg` pool per API process (the coach's read model shares the M17 process pool).
+
+### M23 — 2026-10-07: desplegado, y lo aprendido sobre latencia
+
+`main` = `e78b137`, desplegado en Render; `/ai-coach/status` responde 401 (antes 404). El usuario puso
+`AI_COACH_PROVIDER=gemini` y `GEMINI_AGENT_API_KEY` en el panel.
+
+Un alumno vio "The AI Coach took too long to answer". **No era Render, ni el nivel gratuito, ni el
+número de herramientas, ni nuestro código**: `gemini-3.8-flash` devolvía
+`503 service_unavailable — "currently experiencing high demand"`. Evidencia completa en
+docs/m23-ai-evaluation.md ("Provider incident — 2026-10-07").
+
+Cambios que salieron de ahí:
+
+- `AI_COACH_TURN_TIMEOUT_MS` (defecto 120 s) es el presupuesto del **turno**, no de cada llamada:
+  cada llamada recibe lo que queda y no se intenta ninguna por debajo de 5 s restantes. Decisión del
+  usuario: esperar antes que pagar.
+- `AI_COACH_MODEL=gemini-3.5-flash-lite` es la salida verificada cuando el modelo por defecto está
+  saturado (905 ms durante el incidente, llama herramientas bien, más barato). Se queda como
+  alternativa y no como defecto porque responde más seco.
+- Instrucciones en `ai-coach-v2`: regla de no mostrar nunca un id interno al alumno (el modelo
+  pequeño imprimió `pl-greetings-good-night` donde el grande usaba el título de la lección).
+- La interfaz avisa de que una respuesta puede tardar un par de minutos.
+
+**Voz: descartada por coste**, no por técnica. El nivel gratuito de `gemini-3.8-live` figura como
+"Free of charge", pero si el nivel gratuito no entrega un turno de texto en 25 s, una conversación en
+tiempo real es inviable; de pago son ~$0,023/min. Regla del usuario: solo si es gratis → no se hace.

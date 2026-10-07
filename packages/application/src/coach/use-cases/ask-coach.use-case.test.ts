@@ -4,6 +4,7 @@ import { describe, expect, it } from "vitest";
 import {
   CoachBusyError,
   CoachResponseError,
+  CoachTimeoutError,
   CoachUnavailableError,
 } from "../errors/coach-errors.js";
 import type {
@@ -34,6 +35,8 @@ const pl = createLanguageId("pl");
 class ScriptedAgent implements AiAgentService {
   readonly requests: AgentRequest[] = [];
   readonly resultBatches: readonly AgentToolResult[][] = [];
+  /** The budget each continuation was given, so a test can assert the turn's deadline shrinks. */
+  readonly continuationTimeouts: (number | undefined)[] = [];
   private index = 0;
 
   constructor(private readonly script: readonly AgentResponse[]) {}
@@ -46,8 +49,10 @@ class ScriptedAgent implements AiAgentService {
   continueWithToolResults(
     _continuation: AgentContinuation,
     results: readonly AgentToolResult[],
+    timeoutMs?: number,
   ): Promise<AgentResponse> {
     (this.resultBatches as AgentToolResult[][]).push([...results]);
+    this.continuationTimeouts.push(timeoutMs);
     return Promise.resolve(this.next());
   }
 
@@ -93,13 +98,20 @@ function spyTool(
 function useCase(
   agent: AiAgentService,
   tools: readonly CoachTool[],
-  options: { enabled?: boolean; maxConcurrent?: number } = {},
+  options: {
+    enabled?: boolean;
+    maxConcurrent?: number;
+    turnTimeoutMs?: number;
+    now?: () => number;
+  } = {},
 ) {
   const registry: CoachToolRegistry = new Map(tools.map((tool) => [tool.declaration.name, tool]));
   return new AskCoachUseCase({
     agent,
     enabled: options.enabled ?? true,
     maxConcurrent: options.maxConcurrent ?? 2,
+    turnTimeoutMs: options.turnTimeoutMs ?? 120_000,
+    ...(options.now ? { now: options.now } : {}),
     registryFor: () => {
       const practice = createPracticeCollector();
       return { registry, practice: () => practice.activity };
@@ -128,7 +140,7 @@ describe("AskCoachUseCase", () => {
 
     expect(result.answer).toBe("Here is why.");
     expect(result.toolsUsed).toEqual([]);
-    expect(result.instructionsVersion).toBe("ai-coach-v1");
+    expect(result.instructionsVersion).toBe("ai-coach-v2");
   });
 
   it("runs a tool the mode offers and answers from its result", async () => {
@@ -322,5 +334,75 @@ describe("AskCoachUseCase", () => {
     const result = await useCase(agent, [tool]).execute(input());
 
     expect(result.usage).toEqual({ inputTokens: 320, outputTokens: 50 });
+  });
+});
+
+/**
+ * The turn's time budget (M23, 2026-10-07). A free-tier Gemini key was measured taking well over a
+ * minute for the same request a paid key answers in seconds, so the product owner chose to wait
+ * rather than pay — up to two minutes, after which the learner is told it took too long.
+ *
+ * The budget is for the **turn**, not for one call: a turn makes one call plus one per tool round,
+ * so a per-call limit would let four rounds run for four times as long.
+ */
+describe("AskCoachUseCase — the turn's time budget", () => {
+  /** A clock the test advances by hand, so no test waits for real time to pass. */
+  function fakeClock(start = 1_000_000) {
+    let t = start;
+    return { now: () => t, advance: (ms: number) => (t += ms) };
+  }
+
+  it("gives the first call the whole budget", async () => {
+    const agent = new ScriptedAgent([answer("ok")]);
+
+    await useCase(agent, [], { turnTimeoutMs: 90_000 }).execute(input());
+
+    expect(agent.requests[0]?.timeoutMs).toBe(90_000);
+  });
+
+  it("gives a later call only what is left, so the turn stays within the budget", async () => {
+    const clock = fakeClock();
+    const tool = spyTool("get_progress_summary", () => {
+      // A tool that takes real time: its cost counts against the turn, not just the provider's.
+      clock.advance(20_000);
+      return { ok: true };
+    });
+    const agent = new ScriptedAgent([callFor("get_progress_summary"), answer("ok")]);
+
+    await useCase(agent, [tool], { turnTimeoutMs: 60_000, now: clock.now }).execute(input());
+
+    expect(agent.requests[0]?.timeoutMs).toBe(60_000);
+    // 60s minus the 20s the tool spent — not another full 60s.
+    expect(agent.continuationTimeouts[0]).toBe(40_000);
+  });
+
+  it("stops the turn once the budget is spent, instead of starting a call that cannot finish", async () => {
+    const clock = fakeClock();
+    const tool = spyTool("get_progress_summary", () => {
+      clock.advance(59_000);
+      return { ok: true };
+    });
+    const agent = new ScriptedAgent([callFor("get_progress_summary"), answer("never reached")]);
+
+    await expect(
+      useCase(agent, [tool], { turnTimeoutMs: 60_000, now: clock.now }).execute(input()),
+    ).rejects.toThrow(CoachTimeoutError);
+    // The second provider call was never made: 1s left is not worth the learner's wait.
+    expect(agent.continuationTimeouts).toEqual([]);
+  });
+
+  it("reports the budget the learner actually waited, not the leftover", async () => {
+    const clock = fakeClock();
+    const tool = spyTool("get_progress_summary", () => {
+      clock.advance(59_000);
+      return { ok: true };
+    });
+    const agent = new ScriptedAgent([callFor("get_progress_summary"), answer("x")]);
+
+    const failure = await useCase(agent, [tool], { turnTimeoutMs: 60_000, now: clock.now })
+      .execute(input())
+      .catch((error: unknown) => error);
+
+    expect((failure as CoachTimeoutError).timeoutMs).toBe(60_000);
   });
 });

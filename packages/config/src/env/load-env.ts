@@ -178,6 +178,12 @@ const envSchema = z
     // share one Gemini project's daily quota, so learner traffic competes with video generation.
     // Falls back to GEMINI_API_KEY when unset.
     GEMINI_AGENT_API_KEY: z.string().min(1).optional(),
+    // How long a whole coaching turn may take before the learner is told it took too long — the
+    // budget for the turn, not for one provider call (a turn makes one call plus one per tool
+    // round). Measured 2026-10-07: a free-tier key often needs far longer than a paid one for the
+    // same request, so a deployment on the free tier needs a generous value here and a paid one
+    // does not. Bounded at 3 minutes: past that a learner has given up anyway.
+    AI_COACH_TURN_TIMEOUT_MS: z.coerce.number().int().min(5_000).max(180_000).default(120_000),
     // Email (M14, ADR-014/ADR-025). "fake" (the default) keeps messages in memory and sends
     // nothing — local development, tests and CI. "resend" sends through Resend (needs
     // RESEND_API_KEY and a real EMAIL_FROM on a domain verified in Resend); it is refused under

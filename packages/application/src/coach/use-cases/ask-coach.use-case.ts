@@ -11,6 +11,7 @@ import {
 import {
   CoachBusyError,
   CoachResponseError,
+  CoachTimeoutError,
   CoachUnavailableError,
 } from "../errors/coach-errors.js";
 import {
@@ -84,6 +85,12 @@ const MAX_CALLS_PER_ROUND = 4;
 /** Characters of one tool result handed to the provider. Each tool already minimises; this is the backstop. */
 const MAX_TOOL_RESULT_CHARACTERS = 6_000;
 
+/**
+ * Below this much remaining budget a further provider call is not attempted: it would almost
+ * certainly time out, and failing now spares the learner the extra wait for the same outcome.
+ */
+const MIN_USEFUL_BUDGET_MS = 5_000;
+
 export interface AskCoachDependencies {
   readonly agent: AiAgentService;
   /** Built per request (it holds the practice collector) — see `createCoachToolRegistry`. */
@@ -95,6 +102,15 @@ export interface AskCoachDependencies {
   readonly enabled: boolean;
   /** Coaching turns this process will run at once. Beyond it, `CoachBusyError`. */
   readonly maxConcurrent: number;
+  /**
+   * How long a whole turn may take before the learner is told it took too long — **the budget for
+   * the turn, not for one call**. A turn makes one provider call plus one per tool round, so a
+   * per-call limit would let a four-round turn run for several times this. Each call is given what
+   * is left, so the learner's wait is bounded by this number whatever the model does.
+   */
+  readonly turnTimeoutMs: number;
+  /** Injected in tests. Defaults to the wall clock. */
+  readonly now?: () => number;
 }
 
 export class AskCoachUseCase {
@@ -135,12 +151,19 @@ export class AskCoachUseCase {
     let inputTokens = 0;
     let outputTokens = 0;
 
+    // The whole turn's deadline. Every provider call is given what is left of it, so a learner's
+    // wait is bounded by `turnTimeoutMs` however many tool rounds the model asks for.
+    const now = this.deps.now ?? (() => Date.now());
+    const deadline = now() + this.deps.turnTimeoutMs;
+    const remaining = () => deadline - now();
+
     let response = await this.deps.agent.respond({
       instructions: aiCoachInstructions(input.mode),
       history,
       message,
       context: input.context,
       tools: offered,
+      timeoutMs: this.budgetOrFail(remaining()),
     });
 
     for (let round = 0; ; round += 1) {
@@ -172,8 +195,25 @@ export class AskCoachUseCase {
       for (const call of calls) {
         results.push(await this.runTool(registry, offeredNames, toolContext, call, toolsUsed));
       }
-      response = await this.deps.agent.continueWithToolResults(response.continuation, results);
+      response = await this.deps.agent.continueWithToolResults(
+        response.continuation,
+        results,
+        // Checked *after* the tools ran, so their time counts against the turn as well.
+        this.budgetOrFail(remaining()),
+      );
     }
+  }
+
+  /**
+   * What is left of the turn, or a timeout if that is not enough to be worth a call. Failing here
+   * rather than making a call that is almost certain to time out saves the learner a second wait
+   * for the same answer.
+   */
+  private budgetOrFail(remainingMs: number): number {
+    if (remainingMs < MIN_USEFUL_BUDGET_MS) {
+      throw new CoachTimeoutError(this.deps.turnTimeoutMs);
+    }
+    return remainingMs;
   }
 
   /**

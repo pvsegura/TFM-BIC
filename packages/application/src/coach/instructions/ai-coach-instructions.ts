@@ -18,7 +18,13 @@ import type { CoachMode } from "@tfm-bic/domain";
  * is logged with every turn, so a change in answers can be traced to a change in instructions.
  */
 
-export const AI_COACH_INSTRUCTIONS_VERSION = "ai-coach-v1";
+/**
+ * v2 (2026-10-07): added the rule that an internal id is never shown to the learner. Found while
+ * checking `gemini-3.5-flash-lite` as a fallback model — it printed an exercise id where the
+ * larger model had used the lesson title. The version is logged with every turn, so a change in
+ * answers can be traced to this change.
+ */
+export const AI_COACH_INSTRUCTIONS_VERSION = "ai-coach-v2";
 
 const ROLE = `
 You are the AI Learning Coach inside a language-learning application. You are not a general-purpose
@@ -105,7 +111,12 @@ BOUNDARIES:
 const FORMAT = `
 FORMAT: plain text. Short paragraphs or a short dash list. No markdown headings, no tables, no
 code blocks, no HTML, no emoji. Target-language text goes in "quotes" with its meaning right after.
-Keep a normal answer under about 120 words; a conversation turn under about 40.`.trim();
+Keep a normal answer under about 120 words; a conversation turn under about 40.
+
+NEVER show the learner an internal identifier. Tools give you ids like "pl-greetings-good-night"
+so that you can look things up; they are not names a learner recognises. Use the title the tool
+gave you ("Greetings and goodbyes"), or describe the thing ("the exercise about saying good
+night"). If you have an id and no title, describe it — do not print the id.`.trim();
 
 /** Mode-specific guidance. Each is short on purpose: a mode steers, it does not re-teach the role. */
 const MODE_GUIDANCE: Record<CoachMode, string> = {

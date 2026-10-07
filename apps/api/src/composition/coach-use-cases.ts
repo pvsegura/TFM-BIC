@@ -16,7 +16,8 @@ export interface CoachUseCases {
   askCoach: AskCoachUseCase;
 }
 
-/** Coaching turns this process runs at once. Each holds a provider request open for seconds. */
+/** Coaching turns this process runs at once. Each holds a provider request open for seconds —
+ * minutes on a free-tier key (measured 2026-10-07), so this stays small. */
 const MAX_CONCURRENT_TURNS = 2;
 
 /**
@@ -65,6 +66,7 @@ export function createCoachUseCases(
       agent: deps.agent,
       enabled: deps.enabled,
       maxConcurrent: MAX_CONCURRENT_TURNS,
+      turnTimeoutMs: deps.turnTimeoutMs,
       registryFor: () => {
         const practice = createPracticeCollector();
         return {

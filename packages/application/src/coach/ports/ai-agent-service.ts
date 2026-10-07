@@ -74,6 +74,13 @@ export interface AgentRequest {
   /** Short, named application context (language, level, what the learner has open). */
   readonly context: readonly { readonly label: string; readonly value: string }[];
   readonly tools: readonly AgentToolDeclaration[];
+  /**
+   * How long this one call may take, in milliseconds — what is left of the whole turn's budget
+   * (see `AskCoachUseCase`). A deadline is an application concern, not a transport detail: it is
+   * how long a *learner* is willing to wait, and a turn may spend it across several calls. An
+   * adapter that cannot honour it should fall back to its own default.
+   */
+  readonly timeoutMs?: number | undefined;
 }
 
 /** Either the coach's answer, or a request to run tools first. */
@@ -100,5 +107,7 @@ export interface AiAgentService {
   continueWithToolResults(
     continuation: AgentContinuation,
     results: readonly AgentToolResult[],
+    /** What is left of the turn's budget, as in `AgentRequest.timeoutMs`. */
+    timeoutMs?: number,
   ): Promise<AgentResponse>;
 }

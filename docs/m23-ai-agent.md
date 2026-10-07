@@ -182,7 +182,7 @@ matching mode.
 
 ## Educational behaviour
 
-The instructions (`AI_COACH_INSTRUCTIONS_VERSION = "ai-coach-v1"`,
+The instructions (`AI_COACH_INSTRUCTIONS_VERSION = "ai-coach-v2"`,
 `packages/application/src/coach/instructions/`) encode the M22 framework rather than the model's
 instincts: retrieval over re-exposure, meaning before form, one focus per correction, specific
 feedback and no undeserved praise, CEFR-appropriate language, recycling what the learner has met,
@@ -256,6 +256,46 @@ tokens. Controls: `thinking_level: "low"` (thought tokens are billed as output a
 1,000-character message, 20 turns/hour per learner, and ≤2 concurrent turns per process.
 
 No monthly figure is given: it would need an expected-usage number this project does not have.
+
+## Latency, the turn budget, and the model escape hatch
+
+Measured 2026-10-07, which is the day this mattered. A learner reported
+"The AI Coach took too long to answer", and the diagnosis is worth recording because the obvious
+explanations were all wrong:
+
+| Suspect                            | Ruled out by                                                                   |
+| ---------------------------------- | ------------------------------------------------------------------------------ |
+| Render (free instance, cold start) | `/health` answered in 0.09–0.29 s, three times in a row; the service was awake |
+| The free-tier key                  | A trivial request on it returned in 3.2 s, against 2.1 s on the paid key       |
+| Too many tool declarations         | 4 tools hung exactly as 16 did                                                 |
+| Our code                           | Reproduced outside the app, with plain `fetch`                                 |
+
+The actual cause, from Google's own response body:
+
+```
+HTTP 503  "gemini-3.8-flash is currently experiencing high demand, spikes in demand are
+           usually temporary. Please try again later."  code: service_unavailable
+```
+
+A provider capacity incident. Most requests simply hung (our timeout), and some returned that clean
+503 (which the adapter retries). The same key and the same request shape had been answering in 2–7 s
+the day before, and `gemini-3.5-flash-lite` answered in **905 ms** during the incident.
+
+Two consequences, both implemented:
+
+1. **A budget for the turn, not for one call.** `AI_COACH_TURN_TIMEOUT_MS` (default 120 s) is the
+   whole turn's deadline; each provider call is given what is _left_ of it, and a call is not even
+   attempted below 5 s remaining. A per-call limit would have let a four-round turn run for four
+   times as long — the learner's wait is what needs bounding, not one HTTP request. The product
+   owner chose 2 minutes on 2026-10-07: wait rather than pay.
+2. **`AI_COACH_MODEL` is the escape hatch.** When the default model is saturated, switching to
+   `gemini-3.5-flash-lite` is one environment variable and no deploy. Verified during the incident:
+   it works, calls tools correctly, and is cheaper ($0.30 / $2.50 per 1M). It is also more laconic
+   and needed the "never show an internal id" instruction rule (which is why the instructions are at
+   `ai-coach-v2`), so the default stays `gemini-3.8-flash` for answer quality.
+
+The UI tells the learner the wait can reach a couple of minutes. Without that, a learner assumes the
+page is broken and reloads, which costs another turn.
 
 ## Limitations
 
