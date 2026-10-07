@@ -100,6 +100,23 @@ describe("ProviderTransactionalEmailSender", () => {
     expect(observer.events[0]!.outcome).toBe("failed");
   });
 
+  it("records the provider's safe failure reason, so a rejection can be diagnosed from the logs", async () => {
+    const { provider, observer, sender } = build();
+    provider.send = () =>
+      Promise.reject(new EmailDeliveryError({ reason: "http_403:validation_error" }));
+
+    await expect(
+      sender.send("ada@example.com", {
+        template: "email-verification",
+        variables: { verificationUrl: "https://app.example.com/verify-email?token=x" },
+      }),
+    ).rejects.toBeInstanceOf(EmailDeliveryError);
+    expect(observer.events[0]).toMatchObject({
+      outcome: "failed",
+      reason: "http_403:validation_error",
+    });
+  });
+
   it("does not call the provider when a template variable is invalid", async () => {
     const { provider, sender } = build();
 

@@ -1,9 +1,8 @@
 # ADR-014: Email
 
-Status: ACCEPTED (architecture and M3 dev/test strategy) / PENDING (real production provider
-account provisioning — deployment-time, out of M3 scope)
+Status: ACCEPTED — provider: Resend (adapter added 2026-10-07)
 Date: 2026-09-15
-Updated: 2026-09-17 (M3 — documented target provider and dev/test adapter); 2026-09-26 (M14 — see below)
+Updated: 2026-09-17 (M3 — documented target provider and dev/test adapter); 2026-09-26 (M14 — see below); 2026-10-07 (Resend adapter — see below)
 
 ## Context
 
@@ -64,6 +63,25 @@ The architecture above is now implemented in full — see [ADR-025](adr-025-emai
   header support and webhooks against the official docs, add the value to `EMAIL_PROVIDER`, and read its API key
   from the host's secret store.
 - `EMAIL_PROVIDER_API_KEY` was removed from `.env.example` (nothing reads it); `EMAIL_FROM` is now read.
+
+## Resend adapter (2026-10-07)
+
+The product moved to its own domain (verbysia.com), verified in Resend by the owner, so the provider decision
+is made: **Resend**. `ResendEmailProvider` (packages/data) is selected with `EMAIL_PROVIDER=resend` and needs
+`RESEND_API_KEY` and a real `EMAIL_FROM`; `loadEnv` refuses it under `NODE_ENV=test`, so CI/E2E keep using the fake.
+
+Verified against Resend's official API reference on 2026-10-07 (no SDK; plain `fetch`):
+
+- `POST https://api.resend.com/emails`, `Authorization: Bearer <key>`, and a mandatory `User-Agent` (requests
+  without one get 403). Body: `from`, `to[]`, `subject`, `html`, `text`, `reply_to`, `headers`, `tags`.
+- `Idempotency-Key` (≤ 256 chars, 24 h): one UUID per message, reused across retries.
+- Retried (max 2, 0.5 s / 1.5 s): 429 `rate_limit_exceeded`, 5xx, network errors, the 10 s timeout. Never retried:
+  401/403/422 and the daily/monthly quota 429s. Default rate limit: 10 requests/s per team.
+- Marketing messages carry `List-Unsubscribe: <url>` and `List-Unsubscribe-Post: List-Unsubscribe=One-Click`.
+- The error body shape is not documented: only an error-code-looking `name` is read, and failures are logged as
+  `email.delivery_failed` with a safe `reason` such as `http_403:validation_error` — never the message, recipient or key.
+
+Still not built: Resend webhooks (bounces/complaints) and a suppression list (ADR-025 consequences).
 
 ## Options considered
 

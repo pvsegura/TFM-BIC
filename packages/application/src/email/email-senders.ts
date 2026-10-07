@@ -78,11 +78,13 @@ async function deliver(
   try {
     await provider.send(message);
   } catch (error) {
+    const reason = error instanceof EmailDeliveryError ? error.reason : undefined;
     observer?.record({
       category,
       template: rendered.template,
       provider: provider.name,
       outcome: "failed",
+      ...(reason === undefined ? {} : { reason }),
     });
     throw error instanceof EmailDeliveryError ? error : new EmailDeliveryError({ cause: error });
   }

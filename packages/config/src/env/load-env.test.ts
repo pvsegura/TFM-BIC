@@ -193,8 +193,46 @@ describe("loadEnv", () => {
       expect(loadEnv({ NODE_ENV: "test" }).EMAIL_PROVIDER).toBe("fake");
     });
 
-    it("rejects any provider other than fake (no real provider is selected yet)", () => {
-      expect(() => loadEnv({ ...dev, EMAIL_PROVIDER: "resend" })).toThrow(/EMAIL_PROVIDER/);
+    it("rejects an unknown provider", () => {
+      expect(() => loadEnv({ ...dev, EMAIL_PROVIDER: "sendgrid" })).toThrow(/EMAIL_PROVIDER/);
+    });
+
+    describe("resend", () => {
+      const resend = {
+        ...dev,
+        EMAIL_PROVIDER: "resend",
+        RESEND_API_KEY: "re_test_key",
+        EMAIL_FROM: "Verbysia <no-reply@verbysia.com>",
+      };
+
+      it("is accepted with an API key and a real sender", () => {
+        const env = loadEnv(resend);
+        expect(env.EMAIL_PROVIDER).toBe("resend");
+        expect(env.RESEND_API_KEY).toBe("re_test_key");
+      });
+
+      it("requires RESEND_API_KEY", () => {
+        const { RESEND_API_KEY: _omit, ...withoutKey } = resend;
+        expect(() => loadEnv(withoutKey)).toThrow(/RESEND_API_KEY/);
+      });
+
+      it("requires EMAIL_FROM to be set (the placeholder sender would be rejected)", () => {
+        const { EMAIL_FROM: _omit, ...withoutFrom } = resend;
+        expect(() => loadEnv(withoutFrom)).toThrow(/EMAIL_FROM/);
+      });
+
+      it("is refused under NODE_ENV=test — automated tests never email anyone", () => {
+        expect(() => loadEnv({ ...resend, NODE_ENV: "test" })).toThrow(/EMAIL_PROVIDER/);
+      });
+
+      it("never echoes the API key in a configuration error", () => {
+        try {
+          loadEnv({ ...resend, EMAIL_FROM: "bad\nheader" });
+          expect.unreachable();
+        } catch (error) {
+          expect(String(error)).not.toContain("re_test_key");
+        }
+      });
     });
 
     it("accepts a sender and a reply-to address", () => {

@@ -10,6 +10,8 @@ export interface EmailDeliveryEvent {
   readonly template: EmailTemplateId;
   readonly provider: string;
   readonly outcome: "accepted" | "failed";
+  /** Failed attempts only: the adapter's log-safe reason, when it gave one. */
+  readonly reason?: string;
 }
 
 export interface EmailDeliveryObserver {

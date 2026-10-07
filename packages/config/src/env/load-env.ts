@@ -106,6 +106,9 @@ function singleLine(maxLength: number) {
  * Environment variables read across apps/api. See .env.example and
  * docs/deployment/environments.md for the authoritative list/grouping.
  */
+/** The default sender: fine for the fake provider, rejected by a real one. */
+const PLACEHOLDER_EMAIL_FROM = "TFM-BIC <no-reply@example.invalid>";
+
 const envSchema = z
   .object({
     NODE_ENV: z.enum(["development", "test", "staging", "production"]).default("development"),
@@ -175,13 +178,15 @@ const envSchema = z
     // share one Gemini project's daily quota, so learner traffic competes with video generation.
     // Falls back to GEMINI_API_KEY when unset.
     GEMINI_AGENT_API_KEY: z.string().min(1).optional(),
-    // Email (M14, ADR-014/ADR-025). "fake" is the only provider: it keeps messages in memory and
-    // sends nothing, in every environment, until a real provider is selected (ADR-014 PENDING) —
-    // so neither local development nor CI can email a real person. A real adapter must be added
-    // to this enum deliberately.
-    EMAIL_PROVIDER: z.enum(["fake"]).default("fake"),
+    // Email (M14, ADR-014/ADR-025). "fake" (the default) keeps messages in memory and sends
+    // nothing — local development, tests and CI. "resend" sends through Resend (needs
+    // RESEND_API_KEY and a real EMAIL_FROM on a domain verified in Resend); it is refused under
+    // NODE_ENV=test, so no automated run can ever email a real person.
+    EMAIL_PROVIDER: z.enum(["fake", "resend"]).default("fake"),
+    // Secret — set only in the host's secret store, never in a committed file.
+    RESEND_API_KEY: z.string().min(1).optional(),
     // Sender and optional reply-to shown on every email. No line breaks (header injection).
-    EMAIL_FROM: singleLine(320).default("TFM-BIC <no-reply@example.invalid>"),
+    EMAIL_FROM: singleLine(320).default(PLACEHOLDER_EMAIL_FROM),
     EMAIL_REPLY_TO: singleLine(320).optional(),
     // Signs newsletter unsubscribe links (HMAC). Required in production/staging; development and
     // test fall back to an ephemeral per-process secret, like AUTH_SESSION_SECRET. Rotating it
@@ -250,13 +255,30 @@ const envSchema = z
       );
     }
 
-    // M17: production never runs a fake provider. Email has no alternative yet (ADR-014 PENDING),
-    // so production cannot start until a real email adapter exists — deliberately.
+    if (ctx.value.EMAIL_PROVIDER === "resend") {
+      if (NODE_ENV === "test") {
+        issue(
+          "EMAIL_PROVIDER",
+          `EMAIL_PROVIDER=resend is not allowed when NODE_ENV is "test" — automated tests never send real email.`,
+        );
+      }
+      if (!ctx.value.RESEND_API_KEY) {
+        issue("RESEND_API_KEY", `RESEND_API_KEY is required when EMAIL_PROVIDER is "resend".`);
+      }
+      if (ctx.value.EMAIL_FROM === PLACEHOLDER_EMAIL_FROM) {
+        issue(
+          "EMAIL_FROM",
+          `EMAIL_FROM must be set to an address on a domain verified in Resend when EMAIL_PROVIDER is "resend".`,
+        );
+      }
+    }
+
+    // M17: production never runs a fake provider.
     if (NODE_ENV === "production") {
       if (ctx.value.EMAIL_PROVIDER === "fake") {
         issue(
           "EMAIL_PROVIDER",
-          `EMAIL_PROVIDER=fake is not allowed when NODE_ENV is "production" — it sends nothing (a real provider is PENDING, ADR-014).`,
+          `EMAIL_PROVIDER=fake is not allowed when NODE_ENV is "production" — it sends nothing; use "resend".`,
         );
       }
       if (ctx.value.AUDIO_GENERATION_PROVIDER === "fake") {

@@ -14,6 +14,7 @@ import {
   DrizzleNewsletterSubscriptionRepository,
   FakeEmailProvider,
   HmacUnsubscribeTokenCodec,
+  ResendEmailProvider,
   SystemClock,
   type NewsletterDb,
 } from "@tfm-bic/data";
@@ -54,13 +55,19 @@ export interface EmailDependencies {
 }
 
 /**
- * `EMAIL_PROVIDER` → adapter. Only "fake" exists: nothing is sent anywhere, in any environment,
- * until a real provider is selected (ADR-014 PENDING) and added here and to packages/config.
+ * `EMAIL_PROVIDER` → adapter. "fake" captures messages in memory and sends nothing (development,
+ * tests, CI). "resend" sends through Resend; packages/config guarantees RESEND_API_KEY and a real
+ * EMAIL_FROM are set, and refuses it under NODE_ENV=test.
  */
-export function selectEmailProvider(env: AppEnv): FakeEmailProvider {
+export function selectEmailProvider(env: AppEnv): EmailProvider {
   switch (env.EMAIL_PROVIDER) {
     case "fake":
       return new FakeEmailProvider();
+    case "resend":
+      return new ResendEmailProvider({
+        apiKey: env.RESEND_API_KEY ?? "",
+        userAgent: `verbysia-api/${env.APP_VERSION}`,
+      });
   }
 }
 
@@ -83,7 +90,8 @@ export function buildEmailDependencies(
     subscriptionRepository: new DrizzleNewsletterSubscriptionRepository(db),
     tokenGenerator: new CryptoTokenGenerator(),
     clock: new SystemClock(),
-    ...(options.exposeInbox ? { inbox: provider } : {}),
+    // Only the fake keeps messages; a real provider is never exposed as an inbox.
+    ...(options.exposeInbox && provider instanceof FakeEmailProvider ? { inbox: provider } : {}),
     ...(options.enableTestSupportRoutes ? { enableTestSupportRoutes: true } : {}),
     close,
   };

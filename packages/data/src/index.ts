@@ -7,6 +7,11 @@ export { CryptoTokenGenerator } from "./identity/crypto-token-generator.js";
 // Email (M14, ADR-014/025): the fake provider is the only adapter until a real provider is selected.
 export { FakeEmailProvider, type CapturedEmail } from "./email/fake-email.provider.js";
 export { HmacUnsubscribeTokenCodec } from "./email/hmac-unsubscribe-token.codec.js";
+export {
+  RESEND_EMAILS_ENDPOINT,
+  ResendEmailProvider,
+  type ResendEmailProviderOptions,
+} from "./email/resend-email.provider.js";
 export { DrizzleUserRepository } from "./identity/user.repository.js";
 export { DrizzleSessionRepository } from "./identity/session.repository.js";
 export { DrizzleEmailVerificationTokenRepository } from "./identity/email-verification-token.repository.js";
