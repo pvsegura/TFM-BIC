@@ -107,6 +107,24 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:32:46.257Z"
   },
+  "07ba1e4633e9807e": {
+    "path": "pl/audio/marek/07ba1e4633e9807e.m4a",
+    "durationSeconds": 4.64,
+    "text": "Four short sentences, two very common cases.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:47:05.347Z"
+  },
+  "07c13adee27950da": {
+    "path": "pl/audio/ola/07c13adee27950da.m4a",
+    "durationSeconds": 2.36,
+    "text": "A ja podróżowałabym po świecie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T08:02:26.497Z"
+  },
   "082102178cd4e7c6": {
     "path": "pl/audio/anna/082102178cd4e7c6.m4a",
     "durationSeconds": 4.2,
@@ -124,6 +142,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:24.320Z"
+  },
+  "0915b3f229424c34": {
+    "path": "pl/audio/ola/0915b3f229424c34.m4a",
+    "durationSeconds": 3.24,
+    "text": "Jeśli jutro będzie padać, zostaniemy w domu.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T08:03:05.471Z"
   },
   "0ae81d728484392f": {
     "path": "pl/audio/anna/0ae81d728484392f.m4a",
@@ -161,6 +188,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T20:32:35.968Z"
   },
+  "0c234cf483970f27": {
+    "path": "pl/audio/anna/0c234cf483970f27.m4a",
+    "durationSeconds": 5.12,
+    "text": "For a real possibility, use if with the normal tenses.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:40.586Z"
+  },
   "0c42efcd5adb9053": {
     "path": "pl/audio/anna/0c42efcd5adb9053.m4a",
     "durationSeconds": 4.28,
@@ -188,6 +224,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:02.644Z"
   },
+  "0df8c0155b721347": {
+    "path": "pl/audio/ola/0df8c0155b721347.m4a",
+    "durationSeconds": 2.68,
+    "text": "A jakie są pana oczekiwania finansowe?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:55:16.300Z"
+  },
   "0e095e91e4559efd": {
     "path": "pl/audio/anna/0e095e91e4559efd.m4a",
     "durationSeconds": 1.2,
@@ -196,6 +241,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:19.927Z"
+  },
+  "0f9016bc2a2488cd": {
+    "path": "pl/audio/ola/0f9016bc2a2488cd.m4a",
+    "durationSeconds": 1.76,
+    "text": "Zapytała, czy mam czas.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T08:04:14.392Z"
   },
   "0fc4123989f1dc10": {
     "path": "pl/audio/ola/0fc4123989f1dc10.m4a",
@@ -251,6 +305,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:56.310Z"
   },
+  "125fb427a8aa693a": {
+    "path": "pl/audio/anna/125fb427a8aa693a.m4a",
+    "durationSeconds": 4.4,
+    "text": "Paweł gives his opinion about the park. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:35:45.722Z"
+  },
   "128386afa71ef4c7": {
     "path": "pl/audio/marek/128386afa71ef4c7.m4a",
     "durationSeconds": 3.24,
@@ -259,6 +322,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:23.486Z"
+  },
+  "12ebcfa6cc6bb1d7": {
+    "path": "pl/audio/marek/12ebcfa6cc6bb1d7.m4a",
+    "durationSeconds": 3.28,
+    "text": "The boss asks what the client said.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:04:21.246Z"
   },
   "13068b596fbf33ef": {
     "path": "pl/audio/anna/13068b596fbf33ef.m4a",
@@ -296,6 +368,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:21:37.232Z"
   },
+  "14d36e6a00f610b4": {
+    "path": "pl/audio/marek/14d36e6a00f610b4.m4a",
+    "durationSeconds": 3.64,
+    "text": "You are at the post office. Say it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:49:02.019Z"
+  },
   "14dcc2fd36fed248": {
     "path": "pl/audio/anna/14dcc2fd36fed248.m4a",
     "durationSeconds": 1.2,
@@ -332,6 +413,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-05T08:32:19.200Z"
   },
+  "170939627522e3b7": {
+    "path": "pl/audio/anna/170939627522e3b7.m4a",
+    "durationSeconds": 5,
+    "text": "For an imagined one, a different word and the conditional.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:45.039Z"
+  },
+  "177f644d531fb01c": {
+    "path": "pl/audio/marek/177f644d531fb01c.m4a",
+    "durationSeconds": 6,
+    "text": "The genitive follows many short prepositions, negation and quantities.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:48:17.610Z"
+  },
   "179165dc82d6d863": {
     "path": "pl/audio/anna/179165dc82d6d863.m4a",
     "durationSeconds": 5.4,
@@ -359,6 +458,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:29.798Z"
   },
+  "18ad5516ae12f618": {
+    "path": "pl/audio/anna/18ad5516ae12f618.m4a",
+    "durationSeconds": 3.2,
+    "text": "Who built it? We are not told.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:09:58.193Z"
+  },
   "196647a2b100f493": {
     "path": "pl/audio/anna/196647a2b100f493.m4a",
     "durationSeconds": 1.64,
@@ -376,6 +484,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:24:27.550Z"
+  },
+  "19795db4ca6225cb": {
+    "path": "pl/audio/anna/19795db4ca6225cb.m4a",
+    "durationSeconds": 4.68,
+    "text": "Start with in my opinion, or I think that.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:35:00.555Z"
   },
   "19b3601a02ca7ac3": {
     "path": "pl/audio/anna/19b3601a02ca7ac3.m4a",
@@ -430,6 +547,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-05T08:23:08.535Z"
+  },
+  "1d2a2459fdc113ef": {
+    "path": "pl/audio/marek/1d2a2459fdc113ef.m4a",
+    "durationSeconds": 2.96,
+    "text": "You have no time. Say it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:48:50.648Z"
   },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
@@ -494,6 +620,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:31.184Z"
   },
+  "2101e26a4cf9730f": {
+    "path": "pl/audio/marek/2101e26a4cf9730f.m4a",
+    "durationSeconds": 4.4,
+    "text": "She asked whether you had time. Report it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:04:07.123Z"
+  },
   "224ec5322cb0a8f6": {
     "path": "pl/audio/marek/224ec5322cb0a8f6.m4a",
     "durationSeconds": 1.76,
@@ -503,6 +638,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:14.486Z"
   },
+  "22847878a3d75d09": {
+    "path": "pl/audio/ola/22847878a3d75d09.m4a",
+    "durationSeconds": 1.44,
+    "text": "Nie mam czasu.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:47:09.256Z"
+  },
   "22ab39876eac7446": {
     "path": "pl/audio/anna/22ab39876eac7446.m4a",
     "durationSeconds": 2.8,
@@ -511,6 +655,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:54.490Z"
+  },
+  "22d6a5139338ac49": {
+    "path": "pl/audio/ola/22d6a5139338ac49.m4a",
+    "durationSeconds": 1.56,
+    "text": "Jestem na poczcie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:47:36.180Z"
   },
   "22e31d7b2252f37a": {
     "path": "pl/audio/marek/22e31d7b2252f37a.m4a",
@@ -611,6 +764,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:21:00.439Z"
   },
+  "28691a73235cdaac": {
+    "path": "pl/audio/ola/28691a73235cdaac.m4a",
+    "durationSeconds": 2.48,
+    "text": "Co byś zrobił, gdybyś wygrał milion?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T08:02:13.367Z"
+  },
   "28804ddce4cd62eb": {
     "path": "pl/audio/marek/28804ddce4cd62eb.m4a",
     "durationSeconds": 7.56,
@@ -656,6 +818,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:49.078Z"
   },
+  "2a14d6dd02733408": {
+    "path": "pl/audio/marek/2a14d6dd02733408.m4a",
+    "durationSeconds": 5.24,
+    "text": "Formal speech replaces you with sir or madam.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:55:36.517Z"
+  },
   "2ab57cd6eb7b35da": {
     "path": "pl/audio/anna/2ab57cd6eb7b35da.m4a",
     "durationSeconds": 3.68,
@@ -683,6 +854,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:45.610Z"
   },
+  "2c643145dc5baae5": {
+    "path": "pl/audio/ola/2c643145dc5baae5.m4a",
+    "durationSeconds": 1.88,
+    "text": "Co sądzisz o nowym parku?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:34:31.477Z"
+  },
   "2c68f280649bdbeb": {
     "path": "pl/audio/piotr/2c68f280649bdbeb.m4a",
     "durationSeconds": 1.04,
@@ -709,6 +889,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:20:34.291Z"
+  },
+  "2f6f603aad0a48b3": {
+    "path": "pl/audio/piotr/2f6f603aad0a48b3.m4a",
+    "durationSeconds": 3.92,
+    "text": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T08:02:21.011Z"
   },
   "2fe7c50c17986be6": {
     "path": "pl/audio/anna/2fe7c50c17986be6.m4a",
@@ -1034,6 +1223,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:04.214Z"
   },
+  "438912efba8c02dc": {
+    "path": "pl/audio/ola/438912efba8c02dc.m4a",
+    "durationSeconds": 4.28,
+    "text": "Powiedział, że jest zadowolony, ale zapytał, czy możemy obniżyć cenę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T08:03:28.510Z"
+  },
   "438a53845bb83cee": {
     "path": "pl/audio/anna/438a53845bb83cee.m4a",
     "durationSeconds": 4.6,
@@ -1051,6 +1249,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:22.286Z"
+  },
+  "44718d8a8efdbf1a": {
+    "path": "pl/audio/piotr/44718d8a8efdbf1a.m4a",
+    "durationSeconds": 3.12,
+    "text": "Moim zdaniem jest piękny, ale za mały.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T07:34:38.003Z"
   },
   "44c8dd10dd9cbcf0": {
     "path": "pl/audio/anna/44c8dd10dd9cbcf0.m4a",
@@ -1142,6 +1349,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:05.988Z"
   },
+  "4a59cbbc0a6c54eb": {
+    "path": "pl/audio/ola/4a59cbbc0a6c54eb.m4a",
+    "durationSeconds": 1.76,
+    "text": "Rozmawiamy o filmie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:47:52.011Z"
+  },
   "4a95d8107ab85b50": {
     "path": "pl/audio/anna/4a95d8107ab85b50.m4a",
     "durationSeconds": 4.64,
@@ -1187,6 +1403,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:16.927Z"
   },
+  "4c93974fbd24c697": {
+    "path": "pl/audio/piotr/4c93974fbd24c697.m4a",
+    "durationSeconds": 3.8,
+    "text": "Most został zbudowany w 1990 roku.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T08:10:04.902Z"
+  },
+  "4d814b4035a73ac5": {
+    "path": "pl/audio/anna/4d814b4035a73ac5.m4a",
+    "durationSeconds": 3.4,
+    "text": "If it rains tomorrow, we will stay at home.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:57.958Z"
+  },
   "4e5742385edbad3b": {
     "path": "pl/audio/ola/4e5742385edbad3b.m4a",
     "durationSeconds": 1.4,
@@ -1222,6 +1456,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:35.870Z"
+  },
+  "50ede66f3d13328d": {
+    "path": "pl/audio/anna/50ede66f3d13328d.m4a",
+    "durationSeconds": 3.12,
+    "text": "Moim zdaniem to dobry pomysł.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:34:50.610Z"
   },
   "5166386f273a420a": {
     "path": "pl/audio/anna/5166386f273a420a.m4a",
@@ -1385,6 +1628,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:59:18.641Z"
   },
+  "643c4cd4720aed24": {
+    "path": "pl/audio/anna/643c4cd4720aed24.m4a",
+    "durationSeconds": 2.72,
+    "text": "The same fact, in the passive.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:11:03.819Z"
+  },
   "64668014d1df0cbe": {
     "path": "pl/audio/anna/64668014d1df0cbe.m4a",
     "durationSeconds": 2.92,
@@ -1402,6 +1654,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:25:02.315Z"
+  },
+  "64e4bd56f1d7a379": {
+    "path": "pl/audio/marek/64e4bd56f1d7a379.m4a",
+    "durationSeconds": 2.6,
+    "text": "Jakie ma pani doświadczenie?",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:55:29.031Z"
   },
   "656ac75355bb13b3": {
     "path": "pl/audio/anna/656ac75355bb13b3.m4a",
@@ -1448,6 +1709,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:54:10.059Z"
   },
+  "6c22900de71cc351": {
+    "path": "pl/audio/anna/6c22900de71cc351.m4a",
+    "durationSeconds": 3.28,
+    "text": "You agree with your friend. What do you say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:35:25.633Z"
+  },
   "6cc560223ef7c25c": {
     "path": "pl/audio/marek/6cc560223ef7c25c.m4a",
     "durationSeconds": 2.48,
@@ -1492,6 +1762,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-06T07:40:59.819Z"
+  },
+  "708a4d1ac130342f": {
+    "path": "pl/audio/ola/708a4d1ac130342f.m4a",
+    "durationSeconds": 2.64,
+    "text": "Zgadzam się. Brakuje ławek.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:34:44.961Z"
   },
   "70d99ddc63347108": {
     "path": "pl/audio/marek/70d99ddc63347108.m4a",
@@ -1610,6 +1889,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:41:46.125Z"
   },
+  "773331f910342741": {
+    "path": "pl/audio/piotr/773331f910342741.m4a",
+    "durationSeconds": 1.48,
+    "text": "Tu się nie pali.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T08:11:23.287Z"
+  },
   "774486bcedf0a1a2": {
     "path": "pl/audio/piotr/774486bcedf0a1a2.m4a",
     "durationSeconds": 1.24,
@@ -1654,6 +1942,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:18.373Z"
+  },
+  "7b2cc9efdeff98f7": {
+    "path": "pl/audio/marek/7b2cc9efdeff98f7.m4a",
+    "durationSeconds": 9.12,
+    "text": "The locative follows in, on, about and by, often with a change of consonant.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:48:40.229Z"
   },
   "7c99333ba741b4b2": {
     "path": "pl/audio/anna/7c99333ba741b4b2.m4a",
@@ -1727,6 +2024,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:28:40.743Z"
   },
+  "7ff082916a1eb7ac": {
+    "path": "pl/audio/tomek/7ff082916a1eb7ac.m4a",
+    "durationSeconds": 2.2,
+    "text": "Poproś go, żeby przysłał e-mail.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-07T08:03:42.020Z"
+  },
   "806f612fa87889b7": {
     "path": "pl/audio/marek/806f612fa87889b7.m4a",
     "durationSeconds": 2.4,
@@ -1753,6 +2059,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:33:46.608Z"
+  },
+  "8250045f4678f142": {
+    "path": "pl/audio/ola/8250045f4678f142.m4a",
+    "durationSeconds": 1.6,
+    "text": "Zgadzam się z tobą.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:35:34.410Z"
   },
   "8356c04c71d8875a": {
     "path": "pl/audio/anna/8356c04c71d8875a.m4a",
@@ -1808,6 +2123,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:40:34.784Z"
   },
+  "8519f4656983cc26": {
+    "path": "pl/audio/anna/8519f4656983cc26.m4a",
+    "durationSeconds": 4.44,
+    "text": "Igor would buy a house by a lake. What does he say?",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:51.846Z"
+  },
   "874731577e5452b1": {
     "path": "pl/audio/marek/874731577e5452b1.m4a",
     "durationSeconds": 1.24,
@@ -1816,6 +2140,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:10.303Z"
+  },
+  "8872bff86e91323e": {
+    "path": "pl/audio/piotr/8872bff86e91323e.m4a",
+    "durationSeconds": 2.64,
+    "text": "Mówi się, że to najlepsza restauracja w mieście.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T08:11:10.906Z"
   },
   "88933cba2d12f693": {
     "path": "pl/audio/anna/88933cba2d12f693.m4a",
@@ -1861,6 +2194,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:58.601Z"
+  },
+  "89bdbce84b7974d5": {
+    "path": "pl/audio/marek/89bdbce84b7974d5.m4a",
+    "durationSeconds": 3.04,
+    "text": "Say why you are interested in the job.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:56:02.451Z"
   },
   "8aacc5be91b0caa1": {
     "path": "pl/audio/anna/8aacc5be91b0caa1.m4a",
@@ -2006,6 +2348,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:26.286Z"
   },
+  "92b7d439f6745b07": {
+    "path": "pl/audio/marek/92b7d439f6745b07.m4a",
+    "durationSeconds": 4.76,
+    "text": "The verb is in the third person, as if talking about them.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:55:42.534Z"
+  },
   "9448c04d08e8799b": {
     "path": "pl/audio/anna/9448c04d08e8799b.m4a",
     "durationSeconds": 3.16,
@@ -2014,6 +2365,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:09.028Z"
+  },
+  "94867abd3a15c854": {
+    "path": "pl/audio/marek/94867abd3a15c854.m4a",
+    "durationSeconds": 5.44,
+    "text": "Questions and requests each have their own small linking word.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:04:03.039Z"
   },
   "949e4400db239b28": {
     "path": "pl/audio/marek/949e4400db239b28.m4a",
@@ -2258,6 +2618,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:13.870Z"
   },
+  "a71abbc2d1b34770": {
+    "path": "pl/audio/anna/a71abbc2d1b34770.m4a",
+    "durationSeconds": 3.36,
+    "text": "Two friends imagine winning the lottery.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:06.162Z"
+  },
   "a8b274c5bb8fa5df": {
     "path": "pl/audio/anna/a8b274c5bb8fa5df.m4a",
     "durationSeconds": 1.64,
@@ -2384,6 +2753,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:40.038Z"
   },
+  "afce6b4e95b3dc90": {
+    "path": "pl/audio/marek/afce6b4e95b3dc90.m4a",
+    "durationSeconds": 6.04,
+    "text": "Formal: the word for sir, with the third-person verb.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:55:03.985Z"
+  },
   "b035cb281e282f44": {
     "path": "pl/audio/anna/b035cb281e282f44.m4a",
     "durationSeconds": 4.12,
@@ -2411,6 +2789,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:37:11.858Z"
   },
+  "b0d6b481444785f2": {
+    "path": "pl/audio/marek/b0d6b481444785f2.m4a",
+    "durationSeconds": 3.28,
+    "text": "After without: the genitive again.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:47:34.026Z"
+  },
   "b108e0970e945039": {
     "path": "pl/audio/marek/b108e0970e945039.m4a",
     "durationSeconds": 5.04,
@@ -2428,6 +2815,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:01.424Z"
+  },
+  "b1c90918ab44d0a4": {
+    "path": "pl/audio/tomek/b1c90918ab44d0a4.m4a",
+    "durationSeconds": 1.44,
+    "text": "Co powiedział klient?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-07T08:03:21.434Z"
   },
   "b21341fb9cd6471a": {
     "path": "pl/audio/anna/b21341fb9cd6471a.m4a",
@@ -2509,6 +2905,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:19.345Z"
+  },
+  "b659e5c5e0557022": {
+    "path": "pl/audio/anna/b659e5c5e0557022.m4a",
+    "durationSeconds": 4.8,
+    "text": "To disagree politely, say you do not completely agree.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:35:16.538Z"
   },
   "b6b7f7a3c986e765": {
     "path": "pl/audio/anna/b6b7f7a3c986e765.m4a",
@@ -2645,6 +3050,24 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-06T07:37:00.103Z"
   },
+  "bd189ee5ac06767e": {
+    "path": "pl/audio/marek/bd189ee5ac06767e.m4a",
+    "durationSeconds": 3.48,
+    "text": "Polish keeps the tense of the original words.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:03:56.439Z"
+  },
+  "bd649e13799a6bc7": {
+    "path": "pl/audio/piotr/bd649e13799a6bc7.m4a",
+    "durationSeconds": 3.6,
+    "text": "W 1990 roku zbudowano tu most.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-07T08:09:51.927Z"
+  },
   "be55a16863c05a72": {
     "path": "pl/audio/anna/be55a16863c05a72.m4a",
     "durationSeconds": 4.72,
@@ -2689,6 +3112,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:29:45.521Z"
+  },
+  "c03f681335f054bd": {
+    "path": "pl/audio/marek/c03f681335f054bd.m4a",
+    "durationSeconds": 3.08,
+    "text": "Powiedział, że przyjdzie później.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:03:46.366Z"
   },
   "c0b9b44c86dab8dd": {
     "path": "pl/audio/anna/c0b9b44c86dab8dd.m4a",
@@ -2906,6 +3338,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:25:48.621Z"
   },
+  "d1b422bc78635b77": {
+    "path": "pl/audio/marek/d1b422bc78635b77.m4a",
+    "durationSeconds": 3.12,
+    "text": "After about: the locative.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:48:05.417Z"
+  },
   "d1f753b49845271c": {
     "path": "pl/audio/piotr/d1f753b49845271c.m4a",
     "durationSeconds": 1.2,
@@ -2977,6 +3418,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:25:54.479Z"
+  },
+  "d6239bfa4a135c59": {
+    "path": "pl/audio/marek/d6239bfa4a135c59.m4a",
+    "durationSeconds": 3.68,
+    "text": "Ola reports a phone call to her boss.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T08:03:17.289Z"
   },
   "d645bdbd24e5f257": {
     "path": "pl/audio/anna/d645bdbd24e5f257.m4a",
@@ -3059,6 +3509,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:02:10.569Z"
   },
+  "d8527479eee4e4a2": {
+    "path": "pl/audio/anna/d8527479eee4e4a2.m4a",
+    "durationSeconds": 3.48,
+    "text": "What people say, without saying who.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:11:17.704Z"
+  },
   "d86af0aba1a0a2b6": {
     "path": "pl/audio/anna/d86af0aba1a0a2b6.m4a",
     "durationSeconds": 4.2,
@@ -3077,6 +3536,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:00.965Z"
   },
+  "d90a4ce308392595": {
+    "path": "pl/audio/ola/d90a4ce308392595.m4a",
+    "durationSeconds": 1.96,
+    "text": "Kiedy mógłby pan zacząć?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:55:54.759Z"
+  },
   "d90a74e270f3af4e": {
     "path": "pl/audio/ola/d90a74e270f3af4e.m4a",
     "durationSeconds": 1.56,
@@ -3085,6 +3553,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:27:27.696Z"
+  },
+  "d983f4448385de44": {
+    "path": "pl/audio/anna/d983f4448385de44.m4a",
+    "durationSeconds": 4.44,
+    "text": "A new park has opened. Two friends give their opinions.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T07:34:28.023Z"
   },
   "d9da1823dff4f4ac": {
     "path": "pl/audio/piotr/d9da1823dff4f4ac.m4a",
@@ -3121,6 +3598,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:38.743Z"
+  },
+  "db401b9ea651860a": {
+    "path": "pl/audio/tomek/db401b9ea651860a.m4a",
+    "durationSeconds": 3.28,
+    "text": "Interesuje mnie rozwój w międzynarodowym zespole.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-07T07:55:09.725Z"
   },
   "db948e854e9d4725": {
     "path": "pl/audio/piotr/db948e854e9d4725.m4a",
@@ -3176,6 +3662,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:21:19.443Z"
   },
+  "ddd9fd09ef17e80f": {
+    "path": "pl/audio/anna/ddd9fd09ef17e80f.m4a",
+    "durationSeconds": 3.8,
+    "text": "A guide shows tourists around the old town.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:09:44.637Z"
+  },
   "de668c2e1ff5cf1e": {
     "path": "pl/audio/marek/de668c2e1ff5cf1e.m4a",
     "durationSeconds": 2.64,
@@ -3211,6 +3706,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:21:56.711Z"
+  },
+  "e3b9120ee8159000": {
+    "path": "pl/audio/marek/e3b9120ee8159000.m4a",
+    "durationSeconds": 2.24,
+    "text": "Idę do brata.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:48:08.493Z"
   },
   "e3b9862b9b3dae9b": {
     "path": "pl/audio/marek/e3b9862b9b3dae9b.m4a",
@@ -3256,6 +3760,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:22:44.171Z"
+  },
+  "e5529b0891092160": {
+    "path": "pl/audio/marek/e5529b0891092160.m4a",
+    "durationSeconds": 3.44,
+    "text": "A job interview at an international company.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:54:50.588Z"
   },
   "e5fc11811c500047": {
     "path": "pl/audio/ola/e5fc11811c500047.m4a",
@@ -3320,6 +3833,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:54.047Z"
   },
+  "e7d07eef5f64d469": {
+    "path": "pl/audio/marek/e7d07eef5f64d469.m4a",
+    "durationSeconds": 3.8,
+    "text": "Ask a man, formally, when he could start.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:55:49.041Z"
+  },
   "e8b9dbb9d041ddb0": {
     "path": "pl/audio/anna/e8b9dbb9d041ddb0.m4a",
     "durationSeconds": 3.6,
@@ -3337,6 +3859,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:21:51.439Z"
+  },
+  "e92178b2168e37d3": {
+    "path": "pl/audio/ola/e92178b2168e37d3.m4a",
+    "durationSeconds": 1.64,
+    "text": "Kawa bez cukru, proszę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:47:22.360Z"
   },
   "ea6e8df04994880a": {
     "path": "pl/audio/marek/ea6e8df04994880a.m4a",
@@ -3410,6 +3941,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:31.633Z"
   },
+  "edd4cfb28ed091f3": {
+    "path": "pl/audio/ola/edd4cfb28ed091f3.m4a",
+    "durationSeconds": 2.36,
+    "text": "Dlaczego chce pan u nas pracować?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-07T07:54:57.384Z"
+  },
   "eef7989dc265a9c8": {
     "path": "pl/audio/marek/eef7989dc265a9c8.m4a",
     "durationSeconds": 6.36,
@@ -3428,6 +3968,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:40:27.934Z"
   },
+  "ef7d756efd2668b0": {
+    "path": "pl/audio/anna/ef7d756efd2668b0.m4a",
+    "durationSeconds": 3.96,
+    "text": "Gdybym miał więcej czasu, pojechałbym w góry.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-07T08:02:32.335Z"
+  },
   "ef83c5802c0526cd": {
     "path": "pl/audio/marek/ef83c5802c0526cd.m4a",
     "durationSeconds": 2.68,
@@ -3445,6 +3994,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:33:26.095Z"
+  },
+  "f00f76613a694944": {
+    "path": "pl/audio/marek/f00f76613a694944.m4a",
+    "durationSeconds": 4.2,
+    "text": "After on, for a place: the locative.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:47:49.373Z"
   },
   "f01e64a785c4984a": {
     "path": "pl/audio/marek/f01e64a785c4984a.m4a",
@@ -3653,6 +4211,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:42:00.888Z"
   },
+  "f948a1937fe76fa9": {
+    "path": "pl/audio/marek/f948a1937fe76fa9.m4a",
+    "durationSeconds": 3.72,
+    "text": "After a negated verb: the genitive.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-07T07:47:17.600Z"
+  },
   "f991029ab75bcd2e": {
     "path": "pl/audio/anna/f991029ab75bcd2e.m4a",
     "durationSeconds": 2.6,
@@ -3661,6 +4228,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:31.897Z"
+  },
+  "f9e0eb30aab0b48f": {
+    "path": "pl/audio/tomek/f9e0eb30aab0b48f.m4a",
+    "durationSeconds": 3.32,
+    "text": "Chciałbym zarabiać około ośmiu tysięcy złotych brutto.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-07T07:55:22.730Z"
   },
   "fa8563affa380690": {
     "path": "pl/audio/marek/fa8563affa380690.m4a",

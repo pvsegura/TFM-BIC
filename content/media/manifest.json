@@ -1758,6 +1758,29 @@
       "updatedAt": "2026-10-05T08:21:24.758Z"
     },
     {
+      "key": "lesson:pl-arguing-a-point",
+      "content": {
+        "type": "lesson",
+        "id": "pl-arguing-a-point",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:15:18.706Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:12:07.131Z",
+      "updatedAt": "2026-10-07T08:15:18.706Z"
+    },
+    {
       "key": "lesson:pl-at-the-doctor",
       "content": {
         "type": "lesson",
@@ -1917,6 +1940,169 @@
       "updatedAt": "2026-10-06T07:44:14.526Z"
     },
     {
+      "key": "lesson:pl-cases-endings",
+      "content": {
+        "type": "lesson",
+        "id": "pl-cases-endings",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-cases-endings/video-44190fcdd0ca.mp4",
+          "posterUrl": "pl/lesson/pl-cases-endings/poster-44190fcdd0ca.jpg",
+          "captionsUrl": "pl/lesson/pl-cases-endings/captions-44190fcdd0ca.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 92.47,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Four short sentences, two very common cases.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie mam czasu.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I do not have time."
+            },
+            {
+              "text": "After a negated verb: the genitive.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Kawa bez cukru, proszę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Coffee without sugar, please."
+            },
+            {
+              "text": "After without: the genitive again.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jestem na poczcie.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I am at the post office."
+            },
+            {
+              "text": "After on, for a place: the locative.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Rozmawiamy o filmie.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "We are talking about the film."
+            },
+            {
+              "text": "After about: the locative.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Idę do brata.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I am going to my brother's."
+            },
+            {
+              "text": "The genitive follows many short prepositions, negation and quantities.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The locative follows in, on, about and by, often with a change of consonant.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "You have no time. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie mam czasu.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I do not have time."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "You are at the post office. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jestem na poczcie.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I am at the post office."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Recognise the genitive and the locative after common prepositions.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "d20135f1f45330c323e630282703ac73f3e48ce3d0981f00ba25945cc1f38ad0",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Recognise the genitive and the locative after common prepositions.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Nie mam czasu.",
+          "Kawa bez cukru, proszę.",
+          "Jestem na poczcie.",
+          "Rozmawiamy o filmie.",
+          "Idę do brata."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T07:54:47.465Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T07:54:47.465Z",
+      "updatedAt": "2026-10-07T07:54:47.465Z"
+    },
+    {
       "key": "lesson:pl-cases-overview",
       "content": {
         "type": "lesson",
@@ -2073,6 +2259,147 @@
       },
       "createdAt": "2026-10-06T07:28:37.107Z",
       "updatedAt": "2026-10-06T07:28:37.107Z"
+    },
+    {
+      "key": "lesson:pl-conditions",
+      "content": {
+        "type": "lesson",
+        "id": "pl-conditions",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-conditions/video-df9bbe6cb6c5.mp4",
+          "posterUrl": "pl/lesson/pl-conditions/poster-df9bbe6cb6c5.jpg",
+          "captionsUrl": "pl/lesson/pl-conditions/captions-df9bbe6cb6c5.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 79.94,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Two friends imagine winning the lottery.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Co byś zrobił, gdybyś wygrał milion?",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "What would you do if you won a million?"
+            },
+            {
+              "text": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "If I won a million, I would buy a house by a lake."
+            },
+            {
+              "text": "A ja podróżowałabym po świecie.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "And I would travel around the world."
+            },
+            {
+              "text": "Gdybym miał więcej czasu, pojechałbym w góry.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "If I had more time, I would go to the mountains."
+            },
+            {
+              "text": "For a real possibility, use if with the normal tenses.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "For an imagined one, a different word and the conditional.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Igor would buy a house by a lake. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "If I won a million, I would buy a house by a lake."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "If it rains tomorrow, we will stay at home. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jeśli jutro będzie padać, zostaniemy w domu.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "If it rains tomorrow, we will stay at home."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Talk about real possibilities and imagined situations.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "ffc57e6c0cdca45bf1e603b9fe394522f86f51ad52b2a098fcb7d5eec548262c",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Talk about real possibilities and imagined situations.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co byś zrobił, gdybyś wygrał milion?",
+          "Gdybym wygrał milion, kupiłbym dom nad jeziorem.",
+          "A ja podróżowałabym po świecie.",
+          "Gdybym miał więcej czasu, pojechałbym w góry.",
+          "Jeśli jutro będzie padać, zostaniemy w domu."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Marta",
+            "voice": "ola"
+          },
+          {
+            "character": "Igor",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T08:07:32.924Z",
+        "providerCalls": 10
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:07:32.924Z",
+      "updatedAt": "2026-10-07T08:07:32.924Z"
     },
     {
       "key": "lesson:pl-daily-routine",
@@ -2419,6 +2746,29 @@
       },
       "createdAt": "2026-10-06T07:20:06.225Z",
       "updatedAt": "2026-10-06T07:20:06.225Z"
+    },
+    {
+      "key": "lesson:pl-formal-correspondence",
+      "content": {
+        "type": "lesson",
+        "id": "pl-formal-correspondence",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:16:04.892Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:12:53.405Z",
+      "updatedAt": "2026-10-07T08:16:04.892Z"
     },
     {
       "key": "lesson:pl-future-and-plans",
@@ -3035,6 +3385,191 @@
       "updatedAt": "2026-10-03T09:00:43.161Z"
     },
     {
+      "key": "lesson:pl-hedging",
+      "content": {
+        "type": "lesson",
+        "id": "pl-hedging",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:17:13.962Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:17:13.962Z",
+      "updatedAt": "2026-10-07T08:17:13.962Z"
+    },
+    {
+      "key": "lesson:pl-impersonal-forms",
+      "content": {
+        "type": "lesson",
+        "id": "pl-impersonal-forms",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-impersonal-forms/video-4427cf029bd5.mp4",
+          "posterUrl": "pl/lesson/pl-impersonal-forms/poster-4427cf029bd5.jpg",
+          "captionsUrl": "pl/lesson/pl-impersonal-forms/captions-4427cf029bd5.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 95.67,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A guide shows tourists around the old town.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "W 1990 roku zbudowano tu most.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "A bridge was built here in 1990."
+            },
+            {
+              "text": "Who built it? We are not told.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Most został zbudowany w 1990 roku.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "The bridge was built in 1990."
+            },
+            {
+              "text": "The same fact, in the passive.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mówi się, że to najlepsza restauracja w mieście.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "People say it is the best restaurant in town."
+            },
+            {
+              "text": "What people say, without saying who.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tu się nie pali.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "No smoking here."
+            },
+            {
+              "text": "A general rule.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Most został zbudowany w 1990 roku.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "The bridge was built in 1990."
+            },
+            {
+              "text": "Polish has several ways to leave out who does something.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Choose by style: the passive is more formal.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say that smoking is not allowed here. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Tu się nie pali.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "No smoking here."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The bridge was built in 1990. Use the passive. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Most został zbudowany w 1990 roku.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "The bridge was built in 1990."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Describe events and rules without saying who does them.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "49a18b940e0b339d77c86002c5b7ee1b2cef373ffc3c2fb55978aeb8df1f1cb6",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Describe events and rules without saying who does them.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "W 1990 roku zbudowano tu most.",
+          "Most został zbudowany w 1990 roku.",
+          "Mówi się, że to najlepsza restauracja w mieście.",
+          "Tu się nie pali."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T08:15:01.847Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:15:01.847Z",
+      "updatedAt": "2026-10-07T08:15:01.847Z"
+    },
+    {
       "key": "lesson:pl-introducing-yourself",
       "content": {
         "type": "lesson",
@@ -3261,6 +3796,159 @@
       },
       "createdAt": "2026-10-01T07:25:05.800Z",
       "updatedAt": "2026-10-02T09:16:05.991Z"
+    },
+    {
+      "key": "lesson:pl-job-interview",
+      "content": {
+        "type": "lesson",
+        "id": "pl-job-interview",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-job-interview/video-92809ae74344.mp4",
+          "posterUrl": "pl/lesson/pl-job-interview/poster-92809ae74344.jpg",
+          "captionsUrl": "pl/lesson/pl-job-interview/captions-92809ae74344.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 86.7,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A job interview at an international company.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dlaczego chce pan u nas pracować?",
+              "language": "pl",
+              "speaker": "Ms Nowak",
+              "translation": "Why do you want to work for us?"
+            },
+            {
+              "text": "Formal: the word for sir, with the third-person verb.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Interesuje mnie rozwój w międzynarodowym zespole.",
+              "language": "pl",
+              "speaker": "Mr Lis",
+              "translation": "I am interested in developing in an international team."
+            },
+            {
+              "text": "A jakie są pana oczekiwania finansowe?",
+              "language": "pl",
+              "speaker": "Ms Nowak",
+              "translation": "And what are your salary expectations?"
+            },
+            {
+              "text": "Chciałbym zarabiać około ośmiu tysięcy złotych brutto.",
+              "language": "pl",
+              "speaker": "Mr Lis",
+              "translation": "I would like to earn about eight thousand zlotys gross."
+            },
+            {
+              "text": "Jakie ma pani doświadczenie?",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "What experience do you have?"
+            },
+            {
+              "text": "Formal speech replaces you with sir or madam.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The verb is in the third person, as if talking about them.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask a man, formally, when he could start. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Kiedy mógłby pan zacząć?",
+              "language": "pl",
+              "speaker": "Ms Nowak",
+              "translation": "When could you start?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Say why you are interested in the job. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Interesuje mnie rozwój w międzynarodowym zespole.",
+              "language": "pl",
+              "speaker": "Mr Lis",
+              "translation": "I am interested in developing in an international team."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Use the formal pan and pani forms in a job interview.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "999ace51d34a15aa102d3fb144c9ef739b84ca3245a9ce2623330314440124f3",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Use the formal pan and pani forms in a job interview.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dlaczego chce pan u nas pracować?",
+          "Interesuje mnie rozwój w międzynarodowym zespole.",
+          "A jakie są pana oczekiwania finansowe?",
+          "Chciałbym zarabiać około ośmiu tysięcy złotych brutto.",
+          "Jakie ma pani doświadczenie?",
+          "Kiedy mógłby pan zacząć?"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Mr Lis",
+            "voice": "tomek"
+          },
+          {
+            "character": "Ms Nowak",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T08:02:03.327Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:02:03.328Z",
+      "updatedAt": "2026-10-07T08:02:03.328Z"
     },
     {
       "key": "lesson:pl-likes-and-wants",
@@ -3611,6 +4299,193 @@
       },
       "createdAt": "2026-10-01T07:44:57.008Z",
       "updatedAt": "2026-10-02T09:34:16.527Z"
+    },
+    {
+      "key": "lesson:pl-nominal-style",
+      "content": {
+        "type": "lesson",
+        "id": "pl-nominal-style",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:16:50.967Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:16:50.967Z",
+      "updatedAt": "2026-10-07T08:16:50.967Z"
+    },
+    {
+      "key": "lesson:pl-opinions",
+      "content": {
+        "type": "lesson",
+        "id": "pl-opinions",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-opinions/video-fb335a2d00a8.mp4",
+          "posterUrl": "pl/lesson/pl-opinions/poster-fb335a2d00a8.jpg",
+          "captionsUrl": "pl/lesson/pl-opinions/captions-fb335a2d00a8.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 75.98,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A new park has opened. Two friends give their opinions.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Co sądzisz o nowym parku?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "What do you think of the new park?"
+            },
+            {
+              "text": "Moim zdaniem jest piękny, ale za mały.",
+              "language": "pl",
+              "speaker": "Paweł",
+              "translation": "In my opinion it is beautiful, but too small."
+            },
+            {
+              "text": "Zgadzam się. Brakuje ławek.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "I agree. There are not enough benches."
+            },
+            {
+              "text": "Moim zdaniem to dobry pomysł.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "In my opinion it is a good idea."
+            },
+            {
+              "text": "Start with in my opinion, or I think that.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To disagree politely, say you do not completely agree.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You agree with your friend. What do you say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Zgadzam się z tobą.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "I agree with you."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Paweł gives his opinion about the park. What does he say? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Moim zdaniem jest piękny, ale za mały.",
+              "language": "pl",
+              "speaker": "Paweł",
+              "translation": "In my opinion it is beautiful, but too small."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Give your opinion, agree and disagree politely.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "9d7dcd369783fd97bfbe2730ec221b23cca50a8e23fa3ad6e5a91f2c07efcbe2",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Give your opinion, agree and disagree politely.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co sądzisz o nowym parku?",
+          "Moim zdaniem jest piękny, ale za mały.",
+          "Zgadzam się. Brakuje ławek.",
+          "Moim zdaniem to dobry pomysł.",
+          "Zgadzam się z tobą."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          },
+          {
+            "character": "Paweł",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T07:47:00.642Z",
+        "providerCalls": 10
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T07:47:00.642Z",
+      "updatedAt": "2026-10-07T07:47:00.642Z"
+    },
+    {
+      "key": "lesson:pl-participles",
+      "content": {
+        "type": "lesson",
+        "id": "pl-participles",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:16:27.967Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:13:16.489Z",
+      "updatedAt": "2026-10-07T08:16:27.967Z"
     },
     {
       "key": "lesson:pl-past-tense",
@@ -4057,6 +4932,147 @@
       },
       "createdAt": "2026-10-01T07:40:54.018Z",
       "updatedAt": "2026-10-02T09:20:57.006Z"
+    },
+    {
+      "key": "lesson:pl-reported-speech",
+      "content": {
+        "type": "lesson",
+        "id": "pl-reported-speech",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-reported-speech/video-520456b8fdd7.mp4",
+          "posterUrl": "pl/lesson/pl-reported-speech/poster-520456b8fdd7.jpg",
+          "captionsUrl": "pl/lesson/pl-reported-speech/captions-520456b8fdd7.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 72.34,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Ola reports a phone call to her boss.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co powiedział klient?",
+              "language": "pl",
+              "speaker": "The boss",
+              "translation": "What did the client say?"
+            },
+            {
+              "text": "Powiedział, że jest zadowolony, ale zapytał, czy możemy obniżyć cenę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "He said he was satisfied, but he asked whether we could lower the price."
+            },
+            {
+              "text": "Poproś go, żeby przysłał e-mail.",
+              "language": "pl",
+              "speaker": "The boss",
+              "translation": "Ask him to send an email."
+            },
+            {
+              "text": "Powiedział, że przyjdzie później.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "He said he would come later."
+            },
+            {
+              "text": "Polish keeps the tense of the original words.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Questions and requests each have their own small linking word.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "She asked whether you had time. Report it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Zapytała, czy mam czas.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "She asked whether I had time."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The boss asks what the client said. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co powiedział klient?",
+              "language": "pl",
+              "speaker": "The boss",
+              "translation": "What did the client say?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Report what someone said, asked or requested.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "279eccc9678d3dbda20833958b5f68ab3add0a3bc924ffff068950495c1e88df",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Report what someone said, asked or requested.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co powiedział klient?",
+          "Powiedział, że jest zadowolony, ale zapytał, czy możemy obniżyć cenę.",
+          "Poproś go, żeby przysłał e-mail.",
+          "Powiedział, że przyjdzie później.",
+          "Zapytała, czy mam czas."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "The boss",
+            "voice": "tomek"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-07T08:09:41.968Z",
+        "providerCalls": 10
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:09:41.969Z",
+      "updatedAt": "2026-10-07T08:09:41.969Z"
     },
     {
       "key": "lesson:pl-shopping",
@@ -4643,6 +5659,29 @@
       },
       "createdAt": "2026-10-06T07:32:37.745Z",
       "updatedAt": "2026-10-06T07:32:37.745Z"
+    },
+    {
+      "key": "lesson:pl-verb-prefixes",
+      "content": {
+        "type": "lesson",
+        "id": "pl-verb-prefixes",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-07T08:15:41.752Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:12:30.498Z",
+      "updatedAt": "2026-10-07T08:15:41.752Z"
     },
     {
       "key": "vocabulary-item:en-airport",
