@@ -171,6 +171,11 @@ export function RootLayout() {
                     </Link>
                   </li>
                   <li>
+                    <Link to="/learn/coach" className="text-sm hover:underline">
+                      AI Coach
+                    </Link>
+                  </li>
+                  <li>
                     <Link to="/achievements" className="text-sm hover:underline">
                       Achievements
                     </Link>

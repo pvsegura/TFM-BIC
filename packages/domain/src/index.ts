@@ -537,3 +537,42 @@ export {
   type GrammarTopic,
   type GrammarTopicId,
 } from "./grammar/grammar-topic.js";
+// AI Learning Coach (M23, ADR-034): the vocabulary of a coaching conversation. Nothing here names
+// a provider, a model or an API — the domain does not know Gemini exists.
+export {
+  COACH_MESSAGE_MAX_LENGTH,
+  createCoachMessage,
+  sanitizeCoachText,
+  type CoachMessage,
+} from "./coach/coach-message.js";
+export {
+  InvalidCoachMessageError,
+  type InvalidCoachMessageReason,
+} from "./coach/errors/invalid-coach-message.error.js";
+export {
+  COACH_MODES,
+  DEFAULT_COACH_MODE,
+  isCoachMode,
+  type CoachMode,
+} from "./coach/coach-mode.js";
+export {
+  COACH_TURN_ROLES,
+  MAX_HISTORY_TURNS,
+  MAX_HISTORY_TURN_LENGTH,
+  normalizeCoachHistory,
+  type CoachTurn,
+  type CoachTurnRole,
+} from "./coach/coach-conversation.js";
+export {
+  PRACTICE_EXPLANATION_MAX_LENGTH,
+  PRACTICE_MAX_ITEMS,
+  PRACTICE_MAX_OPTIONS,
+  PRACTICE_MIN_ITEMS,
+  PRACTICE_MIN_OPTIONS,
+  PRACTICE_OPTION_MAX_LENGTH,
+  PRACTICE_PROMPT_MAX_LENGTH,
+  PRACTICE_TITLE_MAX_LENGTH,
+  validateGeneratedPractice,
+  type GeneratedPractice,
+  type GeneratedPracticeItem,
+} from "./coach/coach-practice.js";

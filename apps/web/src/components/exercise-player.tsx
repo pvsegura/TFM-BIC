@@ -133,6 +133,8 @@ export function ExercisePlayer({
         isChecking={isSubmitting}
         failed={submitFailed}
         statusRef={statusRef}
+        exerciseId={exercise.id}
+        languageCode={exercise.languageId}
       />
 
       {evaluation ? (

@@ -271,3 +271,38 @@ changes, security advisories, then test/lint/typecheck/build before committing. 
 No invented APIs/SDKs/versions/pricing/limits/legal requirements. Unverifiable → `UNKNOWN`.
 Multiple valid options → `OPTION A/B/C` with trade-offs, not a silent pick. Detail:
 [.claude/skills/anti-hallucination/SKILL.md](skills/anti-hallucination/SKILL.md).
+
+## AI Coach conventions (since M23)
+
+Rationale: [ADR-034](../docs/adr/adr-034-ai-learning-agent.md); reference: [docs/m23-ai-agent.md](../docs/m23-ai-agent.md).
+
+- **The application is authoritative, the model only reasons.** Gemini never reads the database. A new
+  capability for the coach is **a tool**: a declaration + a Zod-free argument parse + a handler that wraps an
+  **existing use case**, plus a row in the tool table in m23-ai-agent.md. Never a new query against another
+  context's tables, and never a second visibility rule.
+- **A tool cannot see a user id it was not given.** Handlers take `CoachToolContext` (the session's user, from
+  `request.currentUser`); no tool declares a `userId`/`studentId`/`teacherId`/`email` argument, so a crafted tool
+  call has nowhere to put one. Unexpected arguments are refused, never ignored.
+- **No mutating tool.** Read tools plus `propose_practice_activity`, which writes nothing: a generated activity is
+  never an exercise attempt, a point transaction or a progress row. Adding a tool that writes is a new ADR.
+- **Never reveal an answer the learner has not earned**: `get_exercise_context` adds `correctAnswer` only when the
+  learner has a stored attempt, and gets it by re-running M7's registered evaluator on their own answer — never by
+  reading the configuration here.
+- **Bound everything.** Each tool caps its own list length and text; the orchestrator caps tool rounds (4), calls
+  per round (4) and serialised result size; the domain caps the message (1,000 characters) and the replayed
+  history (12 turns × 2,000). A new tool without a cap is a cost bug.
+- **`store: false`, and the conversation is not persisted.** No `ai_conversations` table, no `localStorage`. The
+  client replays the transcript and the server accepts **only** `learner`/`coach` text from it — never a tool step
+  or a provider signature. Adding persistence needs a privacy decision, a register entry and an export field.
+- **Instructions are versioned, in the backend** (`AI_COACH_INSTRUCTIONS_VERSION`), never in a React component, and
+  the learner's message is passed as learner input — never concatenated into them. Behaviour changes bump the
+  version (it is logged with every turn). **Prompt text is not a security boundary**: every "never" in it is also
+  enforced in code.
+- **The CEFR level is derived by the application**, never accepted from the client; "unknown" is said in words and
+  the coach is told not to guess.
+- **Never log or return** a message, an answer, a tool argument, a tool result or a provider's words. One
+  `ai_coach.turn_completed` line with mode, tool names, instruction version and token counts; metrics use
+  `operation="ai_coach"` with a bounded category.
+- The provider is `AI_COACH_PROVIDER` (`fake` by default everywhere, refused in production; `gemini` refused under
+  `NODE_ENV=test`). Query key root `["coach", …]` is user-scoped; the page lives at `/learn/coach` because
+  `/ai-coach` is the API path.

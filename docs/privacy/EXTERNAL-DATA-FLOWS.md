@@ -29,6 +29,47 @@ Generated content → cached in memory by (text, voice) → returned to the stud
   unless `store: false`; paid-tier content logged 30 days for abuse monitoring) applies to catalog text only.
 - PENDING before enabling: the age-restriction and EEA paid-tier terms (ADR-013, risk #17).
 
+## Gemini AI Learning Coach (M23) — `GeminiAgentProvider`
+
+Selected only with `AI_COACH_PROVIDER=gemini` (default `fake`; refused under `NODE_ENV=test`, so no
+test or CI run can call it). **This is the first Gemini flow that carries text a learner typed** —
+unlike M12's TTS, where the server supplies the text from the catalog.
+
+```
+Student (session)
+  ↓  POST /ai-coach/messages { message, mode, language, history[], context? }
+API
+  ↓  derives the CEFR level from the learner's own progress; re-authorises the context id
+  ↓  POST generativelanguage.googleapis.com/v1beta/interactions   (x-goog-api-key, store: false)
+Google Gemini
+  ↓  may ask for a tool; the API runs it for the SESSION's user and returns a minimised result
+  ↓  (at most 4 rounds)
+Answer → returned to the student. Nothing is stored, here or at the provider.
+```
+
+- **Sent:** the versioned instruction text; the learner's typed message; the bounded transcript of
+  the current conversation (≤12 turns, ≤2,000 characters each); a small named context (target
+  language, derived CEFR level, and the id/title of the lesson, exercise, word or video they have
+  open); the tool declarations; and each tool's minimised result — which may include the learner's
+  own submitted exercise answer, their lesson/vocabulary statuses and their attempt counts.
+- **Never sent:** user id, email, name, nickname, avatar, role, password or hash, session cookie or
+  token, IP address, points-ledger detail, newsletter state, teacher or classmate data, another
+  learner's anything, or any environment variable. The request originates from the server, so Google
+  sees the server's address, not the learner's.
+- Personal data in this flow: **yes** — a learner's free text and their own learning records. It is
+  pseudonymous (no identifier accompanies it), but it is content about one person.
+- **Stored by us:** nothing. There is no conversation table and no browser storage; the transcript
+  lives in the page and is gone when the tab closes, so account deletion and the personal-data
+  export have nothing to add (no `USER_DATA_REGISTER` entry — the coach owns no table).
+- **Stored by Google:** `store: false` is sent on every request, which the documentation describes
+  as opting out of its default retention. Paid-tier prompts and responses are logged for a limited
+  period for abuse monitoring, and are documented as not used to improve Google's products.
+- The same age-restriction and EEA paid-tier terms as ADR-013 (risk #17) apply, and they now apply
+  to **learner-initiated** traffic rather than only to an operator's batch job. The product owner
+  was shown this and **authorised proceeding on 2026-10-06**; the under-18 clause itself remains
+  unresolved, and this records an accepted risk, not a compliance finding (ADR-034, "Provider
+  terms"). Nothing here is legal advice.
+
 ## Hyperframes video rendering (M11) — `HyperframesCliProvider`
 
 Selected only with `VIDEO_GENERATION_PROVIDER=hyperframes` (default `fake`). Never executed for real so far.

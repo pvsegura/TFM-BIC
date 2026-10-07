@@ -54,6 +54,8 @@ answer `401` without a session, or if a state-changing route skips the Origin ch
 | `POST /video-generations`                                                          | ❌ 401    | ✅      | ✅      | Own        | Origin; per-IP **and per-user** limit (M16)                                     |
 | `GET /video-generations/:jobId`                                                    | ❌ 401    | ✅      | ✅      | Own        | Another user's job = same `404` as missing                                      |
 | `POST /audio-generations`                                                          | ❌ 401    | ✅      | ✅      | —          | Origin; text from content only; per-IP **and per-user** limit (M16)             |
+| `GET /ai-coach/status`                                                             | ❌ 401    | ✅      | ✅      | Own        | M23: derived level is the server's; no-store                                    |
+| `POST /ai-coach/messages`                                                          | ❌ 401    | ✅      | ✅      | Own        | M23: Origin; user from session only; per-IP **and per-user** limit; no-store    |
 | `GET /email-preferences`                                                           | ❌ 401    | ✅      | ✅      | Own        |                                                                                 |
 | `POST`/`DELETE /email-preferences/newsletter/subscription`                         | ❌ 401    | ✅      | ✅      | Own        | Origin; address from the session                                                |
 | `GET /data-management/export`                                                      | ❌ 401    | ✅      | ✅      | Own        | Per-IP **and per-user** limit (M16); no-store                                   |

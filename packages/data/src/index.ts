@@ -167,3 +167,23 @@ export {
   MEDIA_FILES_URL_PREFIX,
   type ServableMediaFile,
 } from "./media/file-content-media-catalog.js";
+
+// AI Learning Coach (M23, ADR-034): `FakeAiAgentService` is the adapter selected by default and in
+// every automated test/CI run; `GeminiAgentProvider` is selected only via AI_COACH_PROVIDER=gemini.
+// The shared Gemini boundary is used by both this and the M12 TTS adapter.
+export { DisabledAiAgentService, FakeAiAgentService } from "./coach/fake-ai-agent.service.js";
+export {
+  GeminiAgentProvider,
+  type GeminiAgentProviderOptions,
+} from "./coach/gemini-agent.provider.js";
+export { DrizzleLearnerInsightsReadModel } from "./coach/learner-insights.read-model.js";
+export { createCoachDb, type CoachDb, type CoachDbHandle } from "./coach/db/client.js";
+export {
+  geminiBackoffMs,
+  geminiRetryAfterMs,
+  GEMINI_RETRYABLE_STATUSES,
+  isGeminiTimeout,
+  postGeminiInteraction,
+  translateGeminiStatus,
+  type GeminiFailureTranslator,
+} from "./providers/gemini/gemini-interactions.js";

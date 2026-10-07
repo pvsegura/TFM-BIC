@@ -16,6 +16,8 @@ describe("loadEnv", () => {
       AUDIO_GENERATION_PROVIDER: "fake",
       GEMINI_TTS_MODEL: "gemini-3.8-flash-tts",
       AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
+      AI_COACH_PROVIDER: "fake",
+      AI_COACH_MODEL: "gemini-3.8-flash",
       EMAIL_PROVIDER: "fake",
       EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
       TRUST_PROXY: [],
@@ -512,6 +514,71 @@ describe("loadEnv", () => {
       for (const value of [...Object.values(secrets), "db-password-456"]) {
         expect(message).not.toContain(value);
       }
+    });
+  });
+
+  describe("AI Coach provider (M23, ADR-034)", () => {
+    const dev = { NODE_ENV: "development", DATABASE_URL: "postgres://u:p@localhost:5432/db" };
+
+    it("defaults to the fake provider — no Gemini key needed anywhere by default", () => {
+      const env = loadEnv(dev);
+      expect(env.AI_COACH_PROVIDER).toBe("fake");
+      expect(env.GEMINI_AGENT_API_KEY).toBeUndefined();
+      expect(env.AI_COACH_MODEL).toBe("gemini-3.8-flash");
+    });
+
+    it("accepts gemini with its own key, and a model override", () => {
+      const env = loadEnv({
+        ...dev,
+        AI_COACH_PROVIDER: "gemini",
+        GEMINI_AGENT_API_KEY: "k",
+        AI_COACH_MODEL: "gemini-3.5-flash-lite",
+      });
+      expect(env.AI_COACH_PROVIDER).toBe("gemini");
+      expect(env.AI_COACH_MODEL).toBe("gemini-3.5-flash-lite");
+    });
+
+    it("accepts gemini with the shared GEMINI_API_KEY as a fallback", () => {
+      expect(
+        loadEnv({ ...dev, AI_COACH_PROVIDER: "gemini", GEMINI_API_KEY: "k" }).AI_COACH_PROVIDER,
+      ).toBe("gemini");
+    });
+
+    it("refuses gemini with no key at all, naming the coach-specific variable", () => {
+      expect(() => loadEnv({ ...dev, AI_COACH_PROVIDER: "gemini" })).toThrow(
+        /GEMINI_AGENT_API_KEY/,
+      );
+    });
+
+    it("refuses gemini under NODE_ENV=test — automated tests never call a paid provider", () => {
+      expect(() =>
+        loadEnv({ NODE_ENV: "test", AI_COACH_PROVIDER: "gemini", GEMINI_AGENT_API_KEY: "k" }),
+      ).toThrow(/AI_COACH_PROVIDER/);
+    });
+
+    it("refuses the fake coach in production — it answers without calling any provider", () => {
+      expect(() =>
+        loadEnv({
+          NODE_ENV: "production",
+          DATABASE_URL: "postgres://u:p@db.example.com:5432/db?sslmode=require",
+          AUTH_SESSION_SECRET: "a".repeat(32),
+          EMAIL_LINK_SECRET: "b".repeat(32),
+          APP_BASE_URL: "https://app.example.com",
+          EMAIL_PROVIDER: "fake",
+          AI_COACH_PROVIDER: "fake",
+        }),
+      ).toThrow(/AI_COACH_PROVIDER/);
+    });
+
+    it("never echoes the coach key in a configuration error", () => {
+      let message = "";
+      try {
+        loadEnv({ ...dev, GEMINI_AGENT_API_KEY: "coach-secret-value", PORT: "not-a-port" });
+      } catch (error) {
+        message = (error as Error).message;
+      }
+      expect(message).toContain("PORT");
+      expect(message).not.toContain("coach-secret-value");
     });
   });
 });

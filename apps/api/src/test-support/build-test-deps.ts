@@ -32,10 +32,12 @@ import {
   FakeVideoGenerationJobRepository,
   FakeVocabularyEventPublisher,
   FakeVocabularyRepository,
+  FakeLearnerInsightsReadModel,
   FixedClock,
   makeSampleCatalog,
 } from "@tfm-bic/application/testing";
 import {
+  FakeAiAgentService,
   FakeAudioGenerationService,
   FakeEmailProvider,
   HmacUnsubscribeTokenCodec,
@@ -45,6 +47,7 @@ import {
 
 import type { AudioDependencies } from "../composition/audio-dependencies.js";
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
+import type { CoachDependencies } from "../composition/coach-dependencies.js";
 import type { ContentDependencies } from "../composition/content-dependencies.js";
 import type { EmailDependencies } from "../composition/email-dependencies.js";
 import type { ExerciseDependencies } from "../composition/exercise-dependencies.js";
@@ -199,10 +202,23 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  // AI Learning Coach (M23): the fake agent (no provider call) over an in-memory read model.
+  // `insights` is returned as well, so a test can give one learner data and prove a coaching turn
+  // for another never sees it.
+  const learnerInsights = new FakeLearnerInsightsReadModel();
+  const coachDeps: CoachDependencies = {
+    agent: new FakeAiAgentService(),
+    insights: learnerInsights,
+    enabled: true,
+    close: () => Promise.resolve(),
+  };
+
   return {
     deps,
     emailDeps,
     privacyDeps,
+    coachDeps,
+    learnerInsights,
     personalDataReadModel,
     erasureStore,
     emailProvider,

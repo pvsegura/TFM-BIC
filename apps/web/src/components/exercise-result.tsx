@@ -1,6 +1,7 @@
 import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
 import type { Ref } from "react";
 
+import { AskCoachLink } from "./ask-coach-link.js";
 import type { LearningLanguage } from "./content-blocks.js";
 import { RewardNotice } from "./reward-notice.js";
 
@@ -16,6 +17,10 @@ export interface ExerciseResultProps {
   failed: boolean;
   /** So the player can move focus here once a verdict arrives. */
   statusRef?: Ref<HTMLDivElement>;
+  /** M23: the exercise this verdict is for, so the learner can ask the AI Coach about it. */
+  exerciseId: string;
+  /** The language being learned, passed to the coach link so it opens on the right course. */
+  languageCode?: string | undefined;
 }
 
 /**
@@ -41,6 +46,8 @@ export function ExerciseResult({
   isChecking,
   failed,
   statusRef,
+  exerciseId,
+  languageCode,
 }: ExerciseResultProps) {
   return (
     <section aria-label="Result" className="mt-6">
@@ -90,6 +97,19 @@ export function ExerciseResult({
           </div>
         ) : null}
       </div>
+      {/* M23: the coach may explain this answer — the backend gives it the exercise and this
+          learner's own attempts, never this link. Offered only once there is a verdict, so it can
+          never be a way to see an answer early. Deliberately *outside* the live region above: a
+          screen reader should announce the verdict, not a link to ask about it. */}
+      {evaluation ? (
+        <p className="mt-4">
+          <AskCoachLink
+            context={{ type: "exercise", exerciseId }}
+            languageCode={languageCode}
+            label={evaluation.correct ? "Ask why this is right" : "Explain my answer"}
+          />
+        </p>
+      ) : null}
       {failed ? (
         <p role="alert" className="mt-2 text-sm text-red-700 dark:text-red-300">
           We couldn&apos;t check your answer. Please try again.

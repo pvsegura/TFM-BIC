@@ -19,6 +19,7 @@ Browser ──HTTPS──▶ Host edge (TLS termination, proxy)   ← provider P
                      ▼               ▼
              PostgreSQL (Neon)   Email provider (PENDING — blocker)
                                  Gemini TTS (disabled until ADR-013)
+                                 Gemini AI Coach (M23: AI_COACH_PROVIDER)
                                  Hyperframes (disabled; unverified, no media storage)
 ```
 
@@ -40,19 +41,21 @@ validation (`validate-image.sh`) is a throwaway staging.
 
 ## Runtime configuration
 
-| Variable                                         | production                           | Notes                                        |
-| ------------------------------------------------ | ------------------------------------ | -------------------------------------------- |
-| `NODE_ENV`                                       | `production` (image default)         |                                              |
-| `PORT`                                           | `3000` (image default)               | Or what the host injects.                    |
-| `APP_VERSION`                                    | Baked at build (`<version>+<sha12>`) | Shown by `/health`.                          |
-| `WEB_DIST_DIR`, `CONTENT_DIR`                    | Baked (`/app/web`, `/app/content`)   |                                              |
-| `DATABASE_URL`                                   | Secret; app role; `sslmode=require`+ | Loopback hosts refused.                      |
-| `AUTH_SESSION_SECRET`, `EMAIL_LINK_SECRET`       | Secrets, ≥ 32 chars                  |                                              |
-| `APP_BASE_URL`                                   | `https://<domain>`                   | Email links, Origin check. Loopback refused. |
-| `TRUST_PROXY`                                    | Host's proxy range                   | Must come from the provider's documentation. |
-| `EMAIL_PROVIDER`, `EMAIL_FROM`, `EMAIL_REPLY_TO` | Real provider (none exists yet)      | `fake` refused.                              |
-| `AUDIO_GENERATION_PROVIDER`                      | `disabled` (or `gemini` + key)       | `fake` refused.                              |
-| `VIDEO_GENERATION_PROVIDER`                      | `disabled`                           | `fake`, `hyperframes` refused.               |
+| Variable                                         | production                           | Notes                                                         |
+| ------------------------------------------------ | ------------------------------------ | ------------------------------------------------------------- |
+| `NODE_ENV`                                       | `production` (image default)         |                                                               |
+| `PORT`                                           | `3000` (image default)               | Or what the host injects.                                     |
+| `APP_VERSION`                                    | Baked at build (`<version>+<sha12>`) | Shown by `/health`.                                           |
+| `WEB_DIST_DIR`, `CONTENT_DIR`                    | Baked (`/app/web`, `/app/content`)   |                                                               |
+| `DATABASE_URL`                                   | Secret; app role; `sslmode=require`+ | Loopback hosts refused.                                       |
+| `AUTH_SESSION_SECRET`, `EMAIL_LINK_SECRET`       | Secrets, ≥ 32 chars                  |                                                               |
+| `APP_BASE_URL`                                   | `https://<domain>`                   | Email links, Origin check. Loopback refused.                  |
+| `TRUST_PROXY`                                    | Host's proxy range                   | Must come from the provider's documentation.                  |
+| `EMAIL_PROVIDER`, `EMAIL_FROM`, `EMAIL_REPLY_TO` | Real provider (none exists yet)      | `fake` refused.                                               |
+| `AUDIO_GENERATION_PROVIDER`                      | `disabled` (or `gemini` + key)       | `fake` refused.                                               |
+| `VIDEO_GENERATION_PROVIDER`                      | `disabled`                           | `fake`, `hyperframes` refused.                                |
+| `AI_COACH_PROVIDER`                              | `disabled` (or `gemini` + key)       | M23, ADR-034. `fake` refused.                                 |
+| `AI_COACH_MODEL`, `GEMINI_AGENT_API_KEY`         | Optional (model default is GA)       | Own key keeps learner traffic off the media pipeline's quota. |
 
 `pnpm --filter @tfm-bic/config`'s `loadEnv` validates all of it at start-up and lists every problem
 at once without printing values. There are no frontend (`VITE_*`) variables: the SPA calls its own

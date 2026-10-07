@@ -646,3 +646,47 @@ must resolve before the real adapter can be trusted.
 `M17` (not started). Before any deployment: the M16 security checklist in docs/deployment/environments.md. Blockers before any public launch remain legal/product, not engineering: controller identity and
 contact, lawful bases, retention periods, DPAs/transfers, final notice wording (docs/privacy/PROCESSING-REGISTER.md),
 plus a real email provider (ADR-014) and hosting (ADR-015).
+
+## M23 — AI Learning Coach (2026-10-06)
+
+Branch `feature/gemini-ai-learning-agent`. Implemented and green locally; **not deployed**.
+Reference: [docs/m23-ai-agent.md](../docs/m23-ai-agent.md), [ADR-034](../docs/adr/adr-034-ai-learning-agent.md),
+scenarios and results: [docs/m23-ai-evaluation.md](../docs/m23-ai-evaluation.md).
+
+Built: a Gemini-powered coach at `/learn/coach` with two authenticated routes
+(`GET /ai-coach/status`, `POST /ai-coach/messages`), an orchestrator (`AskCoachUseCase`) that runs a
+bounded tool loop, sixteen read-only tools wrapping the existing M5–M22 use cases, a versioned
+instruction module (`ai-coach-v1`) built on the M22 framework, a validated practice-generation tool
+that writes nothing, and contextual entry points on the exercise result, lesson, video, vocabulary
+and phonetics pages.
+
+Verified against the real Gemini API on 2026-10-06 with five calls from a throwaway script:
+`gemini-3.8-flash` function calling works; a call's identity arrives as `id` and goes back as
+`call_id` (the two doc pages disagree — the real API settled it); a `function_call` step must be
+echoed back with its opaque `signature`; `store: false` means no interaction id, so history is
+replayed; `model_output` steps replay correctly; `thinking_level: "low"` removed thought tokens.
+
+Done since the first write-up:
+
+- **Evaluation run against the real API, 2026-10-06** (24 requests, owner-authorised ahead of that
+  day's video generation): 14 of 15 scenarios PASS, 1 N/A (voice). Results, including what the run
+  does _not_ establish, are in m23-ai-evaluation.md. Highlights: the coach named the learner's own
+  stored wrong answer and corrected it; built practice from real course vocabulary; cited real
+  attempt counts in a recommendation; refused a prompt-injection, a request for another learner's
+  data and a request for an unattempted exercise's answer; and the A1 vs B2 answers to the same
+  grammar question differed clearly, with the level **derived** rather than forced.
+- **Runtime use authorised by the product owner on 2026-10-06** as an accepted risk. The ADR-013
+  under-18 clause is still unresolved and no legal review has happened — see ADR-034 "Provider
+  terms". The engineering guard is unchanged: `fake` by default, production refuses `fake`, `gemini`
+  chosen deliberately per environment.
+
+Open / not done:
+
+- **Not deployed to Render.** The switch is `AI_COACH_PROVIDER=gemini` + a key; nothing else changes
+  (the API already serves the SPA from one origin, so no CORS and no WebSocket needed).
+- **Voice (Live API) not implemented** — a product decision on 2026-10-06, not a technical blocker;
+  the API was verified as capable. Cost ≈ $0.023/min of conversation on the paid tier.
+- The coach's Polish has not been reviewed by a native speaker (same open item as M22).
+- The derived CEFR level is a heuristic (highest level among recent lesson activity, else the
+  language's first available level).
+- One more `pg` pool per API process (the coach's read model shares the M17 process pool).

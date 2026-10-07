@@ -162,6 +162,19 @@ const envSchema = z
     // Characters per clip. Capped at the domain's SPEECH_TEXT_MAX_LENGTH (500), which this package
     // cannot import (it depends on nothing internal) — keep the two in step.
     AUDIO_GENERATION_MAX_TEXT_LENGTH: z.coerce.number().int().min(1).max(500).default(300),
+    // AI Learning Coach (M23, ADR-034). "fake" (the default) is a real, committed adapter that
+    // calls nothing and is what development, tests and CI use. "gemini" needs an API key and is
+    // refused under NODE_ENV=test, so no automated run can ever reach the paid API. "disabled"
+    // refuses every coaching request with a safe 503 and calls nothing — the setting to use until
+    // the provider-terms question of ADR-013 (the under-18 clause) is decided.
+    AI_COACH_PROVIDER: z.enum(["fake", "gemini", "disabled"]).default("fake"),
+    // The GA model with function calling, verified 2026-10-06. Read only by the coach's
+    // composition root, like GEMINI_TTS_MODEL.
+    AI_COACH_MODEL: z.string().min(1).default("gemini-3.8-flash"),
+    // Optional: a key for the coach alone. Without it the coach and the offline media pipeline
+    // share one Gemini project's daily quota, so learner traffic competes with video generation.
+    // Falls back to GEMINI_API_KEY when unset.
+    GEMINI_AGENT_API_KEY: z.string().min(1).optional(),
     // Email (M14, ADR-014/ADR-025). "fake" is the only provider: it keeps messages in memory and
     // sends nothing, in every environment, until a real provider is selected (ADR-014 PENDING) —
     // so neither local development nor CI can email a real person. A real adapter must be added
@@ -264,6 +277,14 @@ const envSchema = z
           `LOG_LEVEL=debug is not allowed when NODE_ENV is "production" (use staging to debug, ADR-029).`,
         );
       }
+      // M23: as for audio — production serves learners, so it never runs the offline coach that
+      // calls nothing while telling learners it is an AI.
+      if (ctx.value.AI_COACH_PROVIDER === "fake") {
+        issue(
+          "AI_COACH_PROVIDER",
+          `AI_COACH_PROVIDER must be "gemini" or "disabled" when NODE_ENV is "production" (never "fake", which answers without calling any provider — ADR-034).`,
+        );
+      }
     }
 
     if (
@@ -321,6 +342,28 @@ const envSchema = z
           input: ctx.value,
           path: ["GEMINI_API_KEY"],
           message: `GEMINI_API_KEY is required when AUDIO_GENERATION_PROVIDER is "gemini" (see docs/adr/adr-013-audio-generation.md).`,
+        });
+      }
+    }
+
+    // M23 (ADR-034): the same two guards as audio, for the coach. The key may be the coach's own
+    // (GEMINI_AGENT_API_KEY, which keeps learner traffic off the media pipeline's daily quota) or
+    // the shared one.
+    if (ctx.value.AI_COACH_PROVIDER === "gemini") {
+      if (NODE_ENV === "test") {
+        ctx.issues.push({
+          code: "custom",
+          input: ctx.value,
+          path: ["AI_COACH_PROVIDER"],
+          message: `AI_COACH_PROVIDER=gemini is not allowed when NODE_ENV is "test" (see docs/adr/adr-034-ai-learning-agent.md).`,
+        });
+      }
+      if (!ctx.value.GEMINI_AGENT_API_KEY && !ctx.value.GEMINI_API_KEY) {
+        ctx.issues.push({
+          code: "custom",
+          input: ctx.value,
+          path: ["GEMINI_AGENT_API_KEY"],
+          message: `GEMINI_AGENT_API_KEY (or GEMINI_API_KEY) is required when AI_COACH_PROVIDER is "gemini" (see docs/adr/adr-034-ai-learning-agent.md).`,
         });
       }
     }

@@ -105,3 +105,15 @@ see [current-state.md](current-state.md) for what that means concretely.
 
 [current-state.md](current-state.md) — tells you what milestone is active and what's actually
 been built vs. only documented.
+
+- AI Learning Coach (M23): a Gemini-powered coach at `/learn/coach` over two authenticated routes
+  (`GET /ai-coach/status`, `POST /ai-coach/messages`). The model **reasons and chooses tools**; the
+  application **owns identity, authorization and every fact**. Sixteen read-only tools wrap the
+  existing M5–M22 use cases, so their visibility rules apply unchanged; none declares a user id, so
+  a prompt cannot reach another learner. Practice generation writes nothing. The conversation is
+  replayed from the browser (`store: false`, no table, nothing persisted). Instructions are a
+  versioned backend module built on the M22 framework. Provider: `AI_COACH_PROVIDER` (`fake` by
+  default everywhere, refused in production; `gemini` refused under `NODE_ENV=test`). Verified
+  against the real API 2026-10-06. Voice (Live API) **not implemented**; runtime use **PENDING** the
+  same provider-terms question as ADR-013. See [ADR-034](../docs/adr/adr-034-ai-learning-agent.md)
+  and [docs/m23-ai-agent.md](../docs/m23-ai-agent.md).

@@ -2,6 +2,7 @@ import type { ReactNode } from "react";
 import { useParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
+import { AskCoachLink } from "../components/ask-coach-link.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import type { LearningLanguage } from "../components/content-blocks.js";
 import { EducationalVideo } from "../components/educational-video.js";
@@ -97,15 +98,33 @@ export function LessonPage() {
               title={lesson.title}
               subject="this lesson"
               afterVideo={
-                <p className="flex flex-wrap gap-x-5 gap-y-1">
-                  <span className="font-medium">Next:</span>
-                  <a href="#lesson-content" className="underline underline-offset-2">
-                    Read the examples
-                  </a>
-                  <a href="#practice" className="underline underline-offset-2">
-                    Practise with the exercises
-                  </a>
-                </p>
+                <>
+                  <p className="flex flex-wrap gap-x-5 gap-y-1">
+                    <span className="font-medium">Next:</span>
+                    <a href="#lesson-content" className="underline underline-offset-2">
+                      Read the examples
+                    </a>
+                    <a href="#practice" className="underline underline-offset-2">
+                      Practise with the exercises
+                    </a>
+                  </p>
+                  {/* M23: two entry points, because they are different questions — one about the
+                      video's lines (the coach reads its transcript), one about the lesson itself. */}
+                  <p className="mt-3 flex flex-wrap gap-2">
+                    {mediaQuery.data?.video ? (
+                      <AskCoachLink
+                        context={{ type: "video", lessonId: lesson.id }}
+                        languageCode={lesson.languageId}
+                        label="Ask about this video"
+                      />
+                    ) : null}
+                    <AskCoachLink
+                      context={{ type: "lesson", lessonId: lesson.id }}
+                      languageCode={lesson.languageId}
+                      label="Ask about this lesson"
+                    />
+                  </p>
+                </>
               }
             />
           }

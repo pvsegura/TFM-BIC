@@ -1,9 +1,11 @@
 import {
   categorizeAudioGenerationError,
+  categorizeCoachError,
   EmailDeliveryError,
   VideoGenerationTimeoutError,
   VideoProviderRejectedError,
   VideoProviderUnavailableError,
+  type AiAgentService,
   type AudioGenerationService,
   type EmailProvider,
   type VideoGenerationService,
@@ -20,7 +22,7 @@ import type { MetricsRegistry } from "./metrics.js";
  * same error.
  */
 
-type Operation = "audio" | "video" | "email";
+type Operation = "audio" | "video" | "email" | "ai_coach";
 
 interface EventLog {
   info(details: object, msg: string): void;
@@ -121,6 +123,31 @@ export function instrumentEmailProvider(
         { provider: inner.name, operation: "email" },
         (error) => (error instanceof EmailDeliveryError ? "provider_error" : "unknown"),
         () => inner.send(message),
+      ),
+  };
+}
+
+/**
+ * The AI Coach's agent provider (M23, ADR-034; or the fake). Both calls of a turn are measured —
+ * the first request and each tool-result continuation — so `provider_calls_total` counts actual
+ * provider requests, which is what the daily quota is spent on, not coaching turns.
+ *
+ * Nothing from the conversation is recorded: not the learner's message, not the answer, not a tool
+ * argument, not a tool result, not the instructions. Only the provider name, the operation, the
+ * outcome and a bounded failure category — all controlled values, as `metrics.ts` requires.
+ */
+export function instrumentAiAgent(
+  inner: AiAgentService,
+  provider: string,
+  metrics: MetricsRegistry,
+): AiAgentService {
+  const labels = { provider, operation: "ai_coach" as const };
+  return {
+    respond: (request) =>
+      measure(metrics, labels, categorizeCoachError, () => inner.respond(request)),
+    continueWithToolResults: (continuation, results) =>
+      measure(metrics, labels, categorizeCoachError, () =>
+        inner.continueWithToolResults(continuation, results),
       ),
   };
 }

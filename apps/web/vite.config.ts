@@ -61,6 +61,9 @@ export default defineConfig({
       // Grammar reference (M23): `/grammar` and `/grammar/:topicId`. The pages live under
       // /learn/grammar, so it needs no page-vs-API bypass.
       "/grammar": { target: "http://localhost:3000", changeOrigin: true },
+      // AI Learning Coach (M23, ADR-034): `/ai-coach/status` and `/ai-coach/messages`. The page
+      // lives at /learn/coach, so this needs no page-vs-API bypass.
+      "/ai-coach": { target: "http://localhost:3000", changeOrigin: true },
       // Email preferences and newsletter (M14): `/email-preferences/...`. The pages live at /profile
       // and /newsletter/*, so this needs no page-vs-API bypass (ADR-025).
       "/email-preferences": { target: "http://localhost:3000", changeOrigin: true },
