@@ -8,6 +8,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:49:42.133Z"
   },
+  "002ebcea7da9134a": {
+    "path": "pl/audio/piotr/002ebcea7da9134a.m4a",
+    "durationSeconds": 3.4,
+    "text": "Nauka języka wymaga czasu i cierpliwości.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:17:13.699Z"
+  },
   "004651bd342a81f4": {
     "path": "pl/audio/ola/004651bd342a81f4.m4a",
     "durationSeconds": 2.4,
@@ -79,6 +88,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:48.590Z"
+  },
+  "06b5f9e12bcb8808": {
+    "path": "pl/audio/piotr/06b5f9e12bcb8808.m4a",
+    "durationSeconds": 1.92,
+    "text": "Palenie szkodzi zdrowiu.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:17:06.799Z"
   },
   "06cb50496d496829": {
     "path": "pl/audio/ola/06cb50496d496829.m4a",
@@ -160,6 +178,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:28:07.823Z"
+  },
+  "0b01d2da87a6ae1b": {
+    "path": "pl/audio/tomek/0b01d2da87a6ae1b.m4a",
+    "durationSeconds": 2.8,
+    "text": "Przede wszystkim powinniśmy oszczędzać wodę.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T10:00:30.164Z"
   },
   "0b415fe588771e9e": {
     "path": "pl/audio/marek/0b415fe588771e9e.m4a",
@@ -260,6 +287,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:25:28.671Z"
   },
+  "101956a0f6707c24": {
+    "path": "pl/audio/ola/101956a0f6707c24.m4a",
+    "durationSeconds": 1.64,
+    "text": "Trzymam za ciebie kciuki.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:25:28.331Z"
+  },
   "10a900de09242355": {
     "path": "pl/audio/anna/10a900de09242355.m4a",
     "durationSeconds": 5.36,
@@ -314,6 +350,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T07:35:45.722Z"
   },
+  "12738f4a8400721e": {
+    "path": "pl/audio/anna/12738f4a8400721e.m4a",
+    "durationSeconds": 1.6,
+    "text": "Going in.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:04:57.201Z"
+  },
   "128386afa71ef4c7": {
     "path": "pl/audio/marek/128386afa71ef4c7.m4a",
     "durationSeconds": 3.24,
@@ -340,6 +385,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:26:17.175Z"
+  },
+  "13245ec1ca8e6881": {
+    "path": "pl/audio/piotr/13245ec1ca8e6881.m4a",
+    "durationSeconds": 1.68,
+    "text": "Dziękuję za zaproszenie.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:17:59.603Z"
   },
   "13c352010a42ee48": {
     "path": "pl/audio/anna/13c352010a42ee48.m4a",
@@ -412,6 +466,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-05T08:32:19.200Z"
+  },
+  "16cd6d2d0b6174f1": {
+    "path": "pl/audio/marek/16cd6d2d0b6174f1.m4a",
+    "durationSeconds": 4.08,
+    "text": "Marta writes a formal email to a company.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:08:59.241Z"
+  },
+  "16fa2979e0837702": {
+    "path": "pl/audio/marek/16fa2979e0837702.m4a",
+    "durationSeconds": 4.4,
+    "text": "A literature class reads classic Polish texts.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:36:36.972Z"
   },
   "170939627522e3b7": {
     "path": "pl/audio/anna/170939627522e3b7.m4a",
@@ -512,6 +584,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:38.311Z"
   },
+  "1a153c0ae53b7d75": {
+    "path": "pl/audio/piotr/1a153c0ae53b7d75.m4a",
+    "durationSeconds": 2.64,
+    "text": "Zamknięcie drogi spowodowało korki.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:16:53.740Z"
+  },
+  "1ac659ff55fc35d9": {
+    "path": "pl/audio/marek/1ac659ff55fc35d9.m4a",
+    "durationSeconds": 2.12,
+    "text": "Wish your friend luck.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:26:13.501Z"
+  },
   "1b2f560bfe1a916f": {
     "path": "pl/audio/ola/1b2f560bfe1a916f.m4a",
     "durationSeconds": 1.32,
@@ -539,6 +629,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T20:32:45.722Z"
   },
+  "1c19acc0f1eeead8": {
+    "path": "pl/audio/piotr/1c19acc0f1eeead8.m4a",
+    "durationSeconds": 3.04,
+    "text": "Czekając na autobus, czytałem gazetę.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:12:53.304Z"
+  },
   "1c4bfb099d1bb11b": {
     "path": "pl/audio/piotr/1c4bfb099d1bb11b.m4a",
     "durationSeconds": 1.2,
@@ -547,6 +646,33 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-05T08:23:08.535Z"
+  },
+  "1cb783df11366cc5": {
+    "path": "pl/audio/anna/1cb783df11366cc5.m4a",
+    "durationSeconds": 4.28,
+    "text": "It cannot be ruled out that prices will rise.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:54.863Z"
+  },
+  "1cd137dd97a139de": {
+    "path": "pl/audio/anna/1cd137dd97a139de.m4a",
+    "durationSeconds": 2.72,
+    "text": "Offer help to a customer politely.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:36.036Z"
+  },
+  "1ce88396b27d26d6": {
+    "path": "pl/audio/marek/1ce88396b27d26d6.m4a",
+    "durationSeconds": 2.04,
+    "text": "Close it formally.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:10:11.126Z"
   },
   "1d2a2459fdc113ef": {
     "path": "pl/audio/marek/1d2a2459fdc113ef.m4a",
@@ -602,6 +728,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:46.085Z"
   },
+  "1f490964ff36356e": {
+    "path": "pl/audio/marek/1f490964ff36356e.m4a",
+    "durationSeconds": 4.92,
+    "text": "A local debate: should the city centre be closed to cars?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T09:59:21.667Z"
+  },
   "206a36a17c0607bc": {
     "path": "pl/audio/anna/206a36a17c0607bc.m4a",
     "durationSeconds": 1.6,
@@ -610,6 +745,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:26:38.927Z"
+  },
+  "208d0e544d40fa25": {
+    "path": "pl/audio/tomek/208d0e544d40fa25.m4a",
+    "durationSeconds": 5.16,
+    "text": "Trudno to jednoznacznie przewidzieć. Wydaje się jednak, że raczej nie w tym roku.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T10:21:23.433Z"
   },
   "208e5df095b7dc5d": {
     "path": "pl/audio/marek/208e5df095b7dc5d.m4a",
@@ -637,6 +781,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:14.486Z"
+  },
+  "225dadeeda9698a3": {
+    "path": "pl/audio/ola/225dadeeda9698a3.m4a",
+    "durationSeconds": 1.68,
+    "text": "Siema, co tam?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:30:30.036Z"
   },
   "22847878a3d75d09": {
     "path": "pl/audio/ola/22847878a3d75d09.m4a",
@@ -755,6 +908,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:45.611Z"
   },
+  "2718c9acd4fe770b": {
+    "path": "pl/audio/anna/2718c9acd4fe770b.m4a",
+    "durationSeconds": 4.04,
+    "text": "Sitting describes the woman, like an adjective.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:14.039Z"
+  },
   "273e82b6ef3e06fd": {
     "path": "pl/audio/marek/273e82b6ef3e06fd.m4a",
     "durationSeconds": 3.56,
@@ -827,6 +989,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:55:36.517Z"
   },
+  "2a1df12ad68f83c5": {
+    "path": "pl/audio/anna/2a1df12ad68f83c5.m4a",
+    "durationSeconds": 1.4,
+    "text": "Going out.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:22.737Z"
+  },
   "2ab57cd6eb7b35da": {
     "path": "pl/audio/anna/2ab57cd6eb7b35da.m4a",
     "durationSeconds": 3.68,
@@ -890,6 +1061,33 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:20:34.291Z"
   },
+  "2d58ec30f9d8ac11": {
+    "path": "pl/audio/ola/2d58ec30f9d8ac11.m4a",
+    "durationSeconds": 1.4,
+    "text": "Z poważaniem",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:09:31.807Z"
+  },
+  "2e75149cf57e56e7": {
+    "path": "pl/audio/marek/2e75149cf57e56e7.m4a",
+    "durationSeconds": 3.96,
+    "text": "Będę wdzięczna za szybką odpowiedź.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:09:45.805Z"
+  },
+  "2e96222dbbc9e2ae": {
+    "path": "pl/audio/marek/2e96222dbbc9e2ae.m4a",
+    "durationSeconds": 3.52,
+    "text": "Formal letters use fixed formulas.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:09:51.462Z"
+  },
   "2f6f603aad0a48b3": {
     "path": "pl/audio/piotr/2f6f603aad0a48b3.m4a",
     "durationSeconds": 3.92,
@@ -944,6 +1142,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:22:35.767Z"
   },
+  "31ed49202f1b7c58": {
+    "path": "pl/audio/ola/31ed49202f1b7c58.m4a",
+    "durationSeconds": 2.36,
+    "text": "Nie przyszedł, albowiem był chory.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:36:54.872Z"
+  },
+  "33621a423af775ae": {
+    "path": "pl/audio/marek/33621a423af775ae.m4a",
+    "durationSeconds": 4.92,
+    "text": "In everyday speech, a verb usually sounds more natural.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:40.061Z"
+  },
   "338df027bc3c70c3": {
     "path": "pl/audio/ola/338df027bc3c70c3.m4a",
     "durationSeconds": 1.16,
@@ -961,6 +1177,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:49.989Z"
+  },
+  "33cc817e0511639f": {
+    "path": "pl/audio/anna/33cc817e0511639f.m4a",
+    "durationSeconds": 2.6,
+    "text": "Spoko, nie ma problemu.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:10.228Z"
   },
   "33fdaf42029b72fd": {
     "path": "pl/audio/anna/33fdaf42029b72fd.m4a",
@@ -1043,6 +1268,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:46.808Z"
   },
+  "37d889fd5ceda82e": {
+    "path": "pl/audio/piotr/37d889fd5ceda82e.m4a",
+    "durationSeconds": 2.44,
+    "text": "Po przeczytaniu umowy podpisałem ją.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:17:20.893Z"
+  },
   "382dadde0cd17760": {
     "path": "pl/audio/marek/382dadde0cd17760.m4a",
     "durationSeconds": 7.92,
@@ -1070,6 +1304,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:02:17.519Z"
   },
+  "3979f4c24008e19e": {
+    "path": "pl/audio/marek/3979f4c24008e19e.m4a",
+    "durationSeconds": 3.4,
+    "text": "Above all, we should save water.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:00:23.907Z"
+  },
   "39dca3ad9cc09e40": {
     "path": "pl/audio/piotr/39dca3ad9cc09e40.m4a",
     "durationSeconds": 2.32,
@@ -1078,6 +1321,24 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-06T07:28:52.284Z"
+  },
+  "3abdf880543af604": {
+    "path": "pl/audio/anna/3abdf880543af604.m4a",
+    "durationSeconds": 4.16,
+    "text": "Match your words to the person and the situation.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:23.200Z"
+  },
+  "3b68ac40307947cc": {
+    "path": "pl/audio/anna/3b68ac40307947cc.m4a",
+    "durationSeconds": 3.08,
+    "text": "A journalist interviews an economist.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:09.861Z"
   },
   "3b6986afabba2da5": {
     "path": "pl/audio/ola/3b6986afabba2da5.m4a",
@@ -1160,6 +1421,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:52.821Z"
   },
+  "3eb362c0f256c3d1": {
+    "path": "pl/audio/tomek/3eb362c0f256c3d1.m4a",
+    "durationSeconds": 6.4,
+    "text": "Z jednej strony to poprawi jakość powietrza, z drugiej strony utrudni życie mieszkańcom.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T09:59:33.077Z"
+  },
   "3ed53c8fbc430e87": {
     "path": "pl/audio/anna/3ed53c8fbc430e87.m4a",
     "durationSeconds": 8.12,
@@ -1214,6 +1484,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:32:04.702Z"
   },
+  "40b55d0967944a61": {
+    "path": "pl/audio/anna/40b55d0967944a61.m4a",
+    "durationSeconds": 3.32,
+    "text": "A prefix adds a direction to the verb.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:50.010Z"
+  },
   "41be406e0f9fa309": {
     "path": "pl/audio/marek/41be406e0f9fa309.m4a",
     "durationSeconds": 6.88,
@@ -1258,6 +1537,33 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-07T07:34:38.003Z"
+  },
+  "448c05681e94c32a": {
+    "path": "pl/audio/piotr/448c05681e94c32a.m4a",
+    "durationSeconds": 2.92,
+    "text": "Kobieta siedząca obok mnie czytała książkę.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:13:06.415Z"
+  },
+  "44bd50d343490725": {
+    "path": "pl/audio/piotr/44bd50d343490725.m4a",
+    "durationSeconds": 2.52,
+    "text": "Nie mój cyrk, nie moje małpy.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:25:15.032Z"
+  },
+  "44c265dcb8ab1208": {
+    "path": "pl/audio/anna/44c265dcb8ab1208.m4a",
+    "durationSeconds": 4.64,
+    "text": "Careful speakers rarely state things absolutely.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:42.226Z"
   },
   "44c8dd10dd9cbcf0": {
     "path": "pl/audio/anna/44c8dd10dd9cbcf0.m4a",
@@ -1313,6 +1619,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:11.205Z"
   },
+  "463d199697f71375": {
+    "path": "pl/audio/anna/463d199697f71375.m4a",
+    "durationSeconds": 3.72,
+    "text": "To jest książka napisana przez moją babcię.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:26.698Z"
+  },
   "4648e1bf6a0b02d0": {
     "path": "pl/audio/piotr/4648e1bf6a0b02d0.m4a",
     "durationSeconds": 2.16,
@@ -1331,6 +1646,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:33:00.837Z"
   },
+  "485d1721a3e2b1e7": {
+    "path": "pl/audio/anna/485d1721a3e2b1e7.m4a",
+    "durationSeconds": 4.24,
+    "text": "Participles turn a whole clause into one word.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:32.526Z"
+  },
   "490f13b67bc3aeab": {
     "path": "pl/audio/ola/490f13b67bc3aeab.m4a",
     "durationSeconds": 1.56,
@@ -1339,6 +1663,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:22:16.884Z"
+  },
+  "49d982caed27d4eb": {
+    "path": "pl/audio/anna/49d982caed27d4eb.m4a",
+    "durationSeconds": 4.32,
+    "text": "Piotr describes his morning in compact sentences.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:12:47.105Z"
   },
   "4a4898095c0b7e62": {
     "path": "pl/audio/anna/4a4898095c0b7e62.m4a",
@@ -1375,6 +1708,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:42.115Z"
+  },
+  "4ad8c16baaea31e1": {
+    "path": "pl/audio/piotr/4ad8c16baaea31e1.m4a",
+    "durationSeconds": 1.8,
+    "text": "To bułka z masłem.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:25:41.175Z"
   },
   "4b1848d5e940a3de": {
     "path": "pl/audio/ola/4b1848d5e940a3de.m4a",
@@ -1438,6 +1780,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:42:08.002Z"
+  },
+  "4f33c9fe9134091b": {
+    "path": "pl/audio/marek/4f33c9fe9134091b.m4a",
+    "durationSeconds": 4.12,
+    "text": "Idioms cannot be translated word by word.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:26:01.734Z"
   },
   "5035799c950538bd": {
     "path": "pl/audio/anna/5035799c950538bd.m4a",
@@ -1520,6 +1871,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:42.711Z"
   },
+  "567283c00d90bc72": {
+    "path": "pl/audio/marek/567283c00d90bc72.m4a",
+    "durationSeconds": 3.56,
+    "text": "The standard opening for an institution.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:09:12.310Z"
+  },
+  "568ce0218fbaecfa": {
+    "path": "pl/audio/ola/568ce0218fbaecfa.m4a",
+    "durationSeconds": 2.28,
+    "text": "Wyjeżdżamy na urlop w sobotę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:05:29.899Z"
+  },
+  "56f0d5af49d1462a": {
+    "path": "pl/audio/tomek/56f0d5af49d1462a.m4a",
+    "durationSeconds": 4.24,
+    "text": "Dlatego uważam, że miasto potrzebuje więcej ścieżek rowerowych.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T09:59:45.085Z"
+  },
   "578b2b8a0aa979d2": {
     "path": "pl/audio/marek/578b2b8a0aa979d2.m4a",
     "durationSeconds": 1.12,
@@ -1537,6 +1915,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:02.437Z"
+  },
+  "5986288d212c7265": {
+    "path": "pl/audio/ola/5986288d212c7265.m4a",
+    "durationSeconds": 1.96,
+    "text": "Czy rząd obniży podatki?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:21:15.719Z"
   },
   "5a47791ed673fa46": {
     "path": "pl/audio/anna/5a47791ed673fa46.m4a",
@@ -1565,6 +1952,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-05T08:27:33.627Z"
   },
+  "5c1564d7f178ca27": {
+    "path": "pl/audio/ola/5c1564d7f178ca27.m4a",
+    "durationSeconds": 3.36,
+    "text": "Czy centrum miasta powinno być zamknięte dla samochodów?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T09:59:25.958Z"
+  },
   "5c3edbb0d432d623": {
     "path": "pl/audio/marek/5c3edbb0d432d623.m4a",
     "durationSeconds": 5.92,
@@ -1573,6 +1969,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:37.741Z"
+  },
+  "5d0ae5f3b275c019": {
+    "path": "pl/audio/marek/5d0ae5f3b275c019.m4a",
+    "durationSeconds": 4.24,
+    "text": "These connecting words make an argument easy to follow.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:00:04.422Z"
   },
   "5d35269f03182dac": {
     "path": "pl/audio/marek/5d35269f03182dac.m4a",
@@ -1619,6 +2024,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:42.288Z"
   },
+  "62c4de1187e74fd6": {
+    "path": "pl/audio/marek/62c4de1187e74fd6.m4a",
+    "durationSeconds": 4.64,
+    "text": "Not my circus, not my monkeys: not my problem.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:25:22.364Z"
+  },
   "632d0cad69ddeae5": {
     "path": "pl/audio/piotr/632d0cad69ddeae5.m4a",
     "durationSeconds": 1.08,
@@ -1664,6 +2078,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:55:29.031Z"
   },
+  "65165faf02b11bcf": {
+    "path": "pl/audio/anna/65165faf02b11bcf.m4a",
+    "durationSeconds": 3.72,
+    "text": "While waiting for the bus, you read the newspaper.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:45.766Z"
+  },
   "656ac75355bb13b3": {
     "path": "pl/audio/anna/656ac75355bb13b3.m4a",
     "durationSeconds": 1.44,
@@ -1672,6 +2095,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:00.806Z"
+  },
+  "66110613d8570374": {
+    "path": "pl/audio/anna/66110613d8570374.m4a",
+    "durationSeconds": 4.36,
+    "text": "Learn the prefixes once, and you can guess new verbs.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:56.053Z"
   },
   "672e5776480fef1a": {
     "path": "pl/audio/ola/672e5776480fef1a.m4a",
@@ -1718,6 +2150,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T07:35:25.633Z"
   },
+  "6c2fe8c1c8e68a1c": {
+    "path": "pl/audio/ola/6c2fe8c1c8e68a1c.m4a",
+    "durationSeconds": 1.92,
+    "text": "Wyszedł z domu o ósmej.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:05:17.088Z"
+  },
   "6cc560223ef7c25c": {
     "path": "pl/audio/marek/6cc560223ef7c25c.m4a",
     "durationSeconds": 2.48,
@@ -1735,6 +2176,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:49:09.442Z"
+  },
+  "6e0303636c94130d": {
+    "path": "pl/audio/marek/6e0303636c94130d.m4a",
+    "durationSeconds": 2.92,
+    "text": "Open a formal email to a company.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:10:04.782Z"
   },
   "6f5b0475693611c3": {
     "path": "pl/audio/ola/6f5b0475693611c3.m4a",
@@ -1798,6 +2248,24 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:29:04.754Z"
+  },
+  "72e3540fd7494fde": {
+    "path": "pl/audio/marek/72e3540fd7494fde.m4a",
+    "durationSeconds": 5,
+    "text": "Use them in informal speech, not in formal writing.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:26:08.036Z"
+  },
+  "72f219c3a6f955eb": {
+    "path": "pl/audio/ola/72f219c3a6f955eb.m4a",
+    "durationSeconds": 2.6,
+    "text": "Dzień dobry, czy mogę w czymś pomóc?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:30:43.424Z"
   },
   "72f6044379586248": {
     "path": "pl/audio/tomek/72f6044379586248.m4a",
@@ -1880,6 +2348,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:48:30.893Z"
   },
+  "75d02a9dd6dc353a": {
+    "path": "pl/audio/ola/75d02a9dd6dc353a.m4a",
+    "durationSeconds": 1.4,
+    "text": "Przyjdę o szóstej.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:05:02.898Z"
+  },
   "75e7a4a6fab6dc74": {
     "path": "pl/audio/marek/75e7a4a6fab6dc74.m4a",
     "durationSeconds": 4.44,
@@ -1888,6 +2365,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:41:46.125Z"
+  },
+  "75f290ad6c784e86": {
+    "path": "pl/audio/marek/75f290ad6c784e86.m4a",
+    "durationSeconds": 4.8,
+    "text": "Co więcej, transport publiczny jest tańszy.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T09:59:52.032Z"
   },
   "773331f910342741": {
     "path": "pl/audio/piotr/773331f910342741.m4a",
@@ -1951,6 +2437,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:48:40.229Z"
+  },
+  "7be425700b525ba1": {
+    "path": "pl/audio/marek/7be425700b525ba1.m4a",
+    "durationSeconds": 6.04,
+    "text": "An action becomes a noun: the closure caused the jams.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:01.623Z"
+  },
+  "7c42ef0dfc77b79b": {
+    "path": "pl/audio/anna/7c42ef0dfc77b79b.m4a",
+    "durationSeconds": 2.8,
+    "text": "Say you will come at six.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:06:09.538Z"
   },
   "7c99333ba741b4b2": {
     "path": "pl/audio/anna/7c99333ba741b4b2.m4a",
@@ -2105,6 +2609,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:48.277Z"
   },
+  "846615e15a0014a9": {
+    "path": "pl/audio/marek/846615e15a0014a9.m4a",
+    "durationSeconds": 2.96,
+    "text": "Dziękuję za zaproszenie.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:26.845Z"
+  },
   "846fc37c482cd1cc": {
     "path": "pl/audio/anna/846fc37c482cd1cc.m4a",
     "durationSeconds": 2.72,
@@ -2140,6 +2653,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:10.303Z"
+  },
+  "87df8058270bec12": {
+    "path": "pl/audio/piotr/87df8058270bec12.m4a",
+    "durationSeconds": 2.52,
+    "text": "Przeczytany list leżał na stole.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-08T10:13:19.626Z"
   },
   "8872bff86e91323e": {
     "path": "pl/audio/piotr/8872bff86e91323e.m4a",
@@ -2384,6 +2906,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:06.732Z"
   },
+  "94e07f48f25049f5": {
+    "path": "pl/audio/marek/94e07f48f25049f5.m4a",
+    "durationSeconds": 2.24,
+    "text": "Thank someone for the invitation.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:52.368Z"
+  },
   "9569d4b34968746a": {
     "path": "pl/audio/tomek/9569d4b34968746a.m4a",
     "durationSeconds": 3.6,
@@ -2411,6 +2942,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:27:48.841Z"
   },
+  "971a6c8b002e2dbd": {
+    "path": "pl/audio/anna/971a6c8b002e2dbd.m4a",
+    "durationSeconds": 3.64,
+    "text": "The train will most probably be late.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:22:07.909Z"
+  },
   "982368fea4452cda": {
     "path": "pl/audio/anna/982368fea4452cda.m4a",
     "durationSeconds": 9.4,
@@ -2428,6 +2968,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-06T07:40:41.203Z"
+  },
+  "984c5d6a40d4e056": {
+    "path": "pl/audio/ola/984c5d6a40d4e056.m4a",
+    "durationSeconds": 4.24,
+    "text": "Litwo! Ojczyzno moja! ty jesteś jak zdrowie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:36:43.488Z"
   },
   "985e005dda0251d6": {
     "path": "pl/audio/marek/985e005dda0251d6.m4a",
@@ -2483,6 +3032,33 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:37:25.822Z"
   },
+  "9b738f874af79bd2": {
+    "path": "pl/audio/marek/9b738f874af79bd2.m4a",
+    "durationSeconds": 6.44,
+    "text": "The opening of a famous epic poem from 1834, with two vocatives.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:36:50.712Z"
+  },
+  "9bcdfb6a50a657af": {
+    "path": "pl/audio/marek/9bcdfb6a50a657af.m4a",
+    "durationSeconds": 4.48,
+    "text": "Mówić do niego to jak rzucać grochem o ścianę.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:25:54.784Z"
+  },
+  "9cee943cd28e8312": {
+    "path": "pl/audio/tomek/9cee943cd28e8312.m4a",
+    "durationSeconds": 2.88,
+    "text": "Pociąg najprawdopodobniej się spóźni.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T10:22:14.502Z"
+  },
   "9d6fa85995c040d5": {
     "path": "pl/audio/anna/9d6fa85995c040d5.m4a",
     "durationSeconds": 1.24,
@@ -2500,6 +3076,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:19.969Z"
+  },
+  "9e5b1e4e84802737": {
+    "path": "pl/audio/marek/9e5b1e4e84802737.m4a",
+    "durationSeconds": 5.12,
+    "text": "Weigh two sides, add a point, then conclude.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T09:59:59.215Z"
   },
   "9f84081a39fce980": {
     "path": "pl/audio/piotr/9f84081a39fce980.m4a",
@@ -2563,6 +3148,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:36.860Z"
+  },
+  "a2ca1c5e9a8c192b": {
+    "path": "pl/audio/anna/a2ca1c5e9a8c192b.m4a",
+    "durationSeconds": 3.92,
+    "text": "One verb of going, many prefixes.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:04:44.113Z"
   },
   "a40f7cb13177eaba": {
     "path": "pl/audio/piotr/a40f7cb13177eaba.m4a",
@@ -2644,6 +3238,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:22.984Z"
+  },
+  "a9647b09a4efe327": {
+    "path": "pl/audio/marek/a9647b09a4efe327.m4a",
+    "durationSeconds": 4,
+    "text": "Smoking damages your health. Say it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:47.196Z"
+  },
+  "a9bed0e96c7978c6": {
+    "path": "pl/audio/marek/a9bed0e96c7978c6.m4a",
+    "durationSeconds": 5.36,
+    "text": "Learn the opening, the purpose and the closing as whole phrases.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:09:59.251Z"
   },
   "a9cd7153eec67310": {
     "path": "pl/audio/anna/a9cd7153eec67310.m4a",
@@ -2735,6 +3347,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:23:28.051Z"
   },
+  "adcddda394a09648": {
+    "path": "pl/audio/anna/adcddda394a09648.m4a",
+    "durationSeconds": 4.08,
+    "text": "Notice how carefully he avoids a definite answer.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:29.094Z"
+  },
   "af8398c5c013478a": {
     "path": "pl/audio/ola/af8398c5c013478a.m4a",
     "durationSeconds": 1.16,
@@ -2789,6 +3410,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:37:11.858Z"
   },
+  "b0bc0f93dbab4496": {
+    "path": "pl/audio/anna/b0bc0f93dbab4496.m4a",
+    "durationSeconds": 4.68,
+    "text": "The same person, three situations, three registers.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:30:24.385Z"
+  },
   "b0d6b481444785f2": {
     "path": "pl/audio/marek/b0d6b481444785f2.m4a",
     "durationSeconds": 3.28,
@@ -2834,6 +3464,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:23:34.884Z"
   },
+  "b22068a818701424": {
+    "path": "pl/audio/marek/b22068a818701424.m4a",
+    "durationSeconds": 3.24,
+    "text": "A short news report, in official style.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:16:48.125Z"
+  },
   "b28b59e4ce858189": {
     "path": "pl/audio/anna/b28b59e4ce858189.m4a",
     "durationSeconds": 4.16,
@@ -2842,6 +3481,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:16:23.874Z"
+  },
+  "b2b4f1496e5304da": {
+    "path": "pl/audio/marek/b2b4f1496e5304da.m4a",
+    "durationSeconds": 3.8,
+    "text": "Official language turns verbs into nouns.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:17:33.788Z"
+  },
+  "b2d5656f993199fa": {
+    "path": "pl/audio/marek/b2d5656f993199fa.m4a",
+    "durationSeconds": 2.6,
+    "text": "And the standard closing.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:09:38.946Z"
   },
   "b2e95f8f70612a2d": {
     "path": "pl/audio/marek/b2e95f8f70612a2d.m4a",
@@ -2860,6 +3517,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-06T07:33:12.662Z"
+  },
+  "b3501a5a72c717ea": {
+    "path": "pl/audio/tomek/b3501a5a72c717ea.m4a",
+    "durationSeconds": 2.76,
+    "text": "Nie można wykluczyć, że ceny wzrosną.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T10:22:01.040Z"
   },
   "b45e622f182c6f85": {
     "path": "pl/audio/anna/b45e622f182c6f85.m4a",
@@ -2887,6 +3553,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-02T09:24:35.366Z"
+  },
+  "b5ada91660f38217": {
+    "path": "pl/audio/ola/b5ada91660f38217.m4a",
+    "durationSeconds": 1.4,
+    "text": "Wejdź, proszę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:04:50.113Z"
   },
   "b5f769ad3599e219": {
     "path": "pl/audio/anna/b5f769ad3599e219.m4a",
@@ -2942,6 +3617,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:16:35.717Z"
   },
+  "b76a19993ddf4d96": {
+    "path": "pl/audio/ola/b76a19993ddf4d96.m4a",
+    "durationSeconds": 3.76,
+    "text": "W nawiązaniu do naszej rozmowy telefonicznej przesyłam umowę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:09:19.456Z"
+  },
   "b7921d450f48f4e7": {
     "path": "pl/audio/anna/b7921d450f48f4e7.m4a",
     "durationSeconds": 1.16,
@@ -2950,6 +3634,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T20:32:30.841Z"
+  },
+  "b85973ad3446238c": {
+    "path": "pl/audio/tomek/b85973ad3446238c.m4a",
+    "durationSeconds": 3.24,
+    "text": "Co więcej, transport publiczny jest tańszy.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-08T10:00:18.025Z"
   },
   "b8a9ad4c52d46231": {
     "path": "pl/audio/anna/b8a9ad4c52d46231.m4a",
@@ -3041,6 +3734,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:37:38.829Z"
   },
+  "bbbc32972e6ddcd4": {
+    "path": "pl/audio/ola/bbbc32972e6ddcd4.m4a",
+    "durationSeconds": 3.96,
+    "text": "Uprzejmie informujemy, iż sklep będzie nieczynny w sobotę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:30:56.446Z"
+  },
   "bcfe6ae250c9b553": {
     "path": "pl/audio/piotr/bcfe6ae250c9b553.m4a",
     "durationSeconds": 3.48,
@@ -3104,6 +3806,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:01:14.943Z"
   },
+  "c035e863706975fb": {
+    "path": "pl/audio/marek/c035e863706975fb.m4a",
+    "durationSeconds": 3.08,
+    "text": "Holding thumbs: fingers crossed.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:25:35.870Z"
+  },
   "c03ac0ca55960a40": {
     "path": "pl/audio/anna/c03ac0ca55960a40.m4a",
     "durationSeconds": 4.88,
@@ -3131,6 +3842,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:32:11.400Z"
   },
+  "c1923b17385ede07": {
+    "path": "pl/audio/anna/c1923b17385ede07.m4a",
+    "durationSeconds": 3.64,
+    "text": "Proszę przejść przez ulicę na światłach.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:43.378Z"
+  },
+  "c2891a35c906ed79": {
+    "path": "pl/audio/ola/c2891a35c906ed79.m4a",
+    "durationSeconds": 1.92,
+    "text": "Szef ma dziś muchy w nosie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:25:01.778Z"
+  },
   "c31b3c8d26b35028": {
     "path": "pl/audio/marek/c31b3c8d26b35028.m4a",
     "durationSeconds": 3.4,
@@ -3157,6 +3886,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:28:39.669Z"
+  },
+  "c4a4758f8b3b2b56": {
+    "path": "pl/audio/anna/c4a4758f8b3b2b56.m4a",
+    "durationSeconds": 3.6,
+    "text": "Pociąg najprawdopodobniej się spóźni.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:35.575Z"
   },
   "c4c9c6a4d2c07ee5": {
     "path": "pl/audio/marek/c4c9c6a4d2c07ee5.m4a",
@@ -3212,6 +3950,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:28:00.292Z"
   },
+  "c72194bc19ff57e2": {
+    "path": "pl/audio/anna/c72194bc19ff57e2.m4a",
+    "durationSeconds": 4,
+    "text": "The letter, already read, lay on the table.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:52.132Z"
+  },
   "c73981445f40c1ec": {
     "path": "pl/audio/anna/c73981445f40c1ec.m4a",
     "durationSeconds": 6.12,
@@ -3238,6 +3985,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:52:45.670Z"
+  },
+  "c8932c2c15aaf60b": {
+    "path": "pl/audio/anna/c8932c2c15aaf60b.m4a",
+    "durationSeconds": 2.2,
+    "text": "Leaving, by vehicle.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:36.561Z"
   },
   "c8beb00297e8be99": {
     "path": "pl/audio/marek/c8beb00297e8be99.m4a",
@@ -3292,6 +4048,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:40:47.345Z"
+  },
+  "cd0efd43b752eba1": {
+    "path": "pl/audio/anna/cd0efd43b752eba1.m4a",
+    "durationSeconds": 6.08,
+    "text": "Use the adverbial form only when both actions have the same subject.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:40.518Z"
   },
   "cd4d5ce8661e0508": {
     "path": "pl/audio/anna/cd4d5ce8661e0508.m4a",
@@ -3364,6 +4129,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:16.031Z"
+  },
+  "d2925e4a81ca10d7": {
+    "path": "pl/audio/ola/d2925e4a81ca10d7.m4a",
+    "durationSeconds": 1.64,
+    "text": "Szanowni Państwo,",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:09:05.100Z"
   },
   "d2c25516dceb77ea": {
     "path": "pl/audio/anna/d2c25516dceb77ea.m4a",
@@ -3499,6 +4273,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:07:44.801Z"
+  },
+  "d7e84b21143ee3b3": {
+    "path": "pl/audio/marek/d7e84b21143ee3b3.m4a",
+    "durationSeconds": 4.72,
+    "text": "On the one hand, on the other: two sides weighed.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T09:59:38.592Z"
   },
   "d85158e36b96817a": {
     "path": "pl/audio/piotr/d85158e36b96817a.m4a",
@@ -3680,6 +4463,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:02:30.991Z"
   },
+  "de6be7d3dc5d1ae3": {
+    "path": "pl/audio/anna/de6be7d3dc5d1ae3.m4a",
+    "durationSeconds": 3.28,
+    "text": "Polish marks register clearly.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:17.228Z"
+  },
   "dfc5a24c91a5ffb3": {
     "path": "pl/audio/tomek/dfc5a24c91a5ffb3.m4a",
     "durationSeconds": 1.44,
@@ -3707,6 +4499,33 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:21:56.711Z"
   },
+  "e22ea165e8a8eda8": {
+    "path": "pl/audio/anna/e22ea165e8a8eda8.m4a",
+    "durationSeconds": 3.12,
+    "text": "Greet a close friend informally.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:32.093Z"
+  },
+  "e2a23a4764c299ba": {
+    "path": "pl/audio/anna/e2a23a4764c299ba.m4a",
+    "durationSeconds": 2.88,
+    "text": "Very informal, among friends.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:30:36.999Z"
+  },
+  "e2f2b1a1aa89383f": {
+    "path": "pl/audio/anna/e2f2b1a1aa89383f.m4a",
+    "durationSeconds": 4.28,
+    "text": "Two actions at the same time, with one subject.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:13:00.167Z"
+  },
   "e3b9120ee8159000": {
     "path": "pl/audio/marek/e3b9120ee8159000.m4a",
     "durationSeconds": 2.24,
@@ -3724,6 +4543,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:18.135Z"
+  },
+  "e41635d165599783": {
+    "path": "pl/audio/anna/e41635d165599783.m4a",
+    "durationSeconds": 5.56,
+    "text": "Impersonal phrases and adverbs grade how certain you are.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:21:48.959Z"
   },
   "e4452371e0ffda0d": {
     "path": "pl/audio/piotr/e4452371e0ffda0d.m4a",
@@ -3824,6 +4652,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:29:51.567Z"
   },
+  "e78d76ff0f994697": {
+    "path": "pl/audio/marek/e78d76ff0f994697.m4a",
+    "durationSeconds": 3.2,
+    "text": "Say that something is very easy.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:26:20.954Z"
+  },
   "e7a507f6895de26f": {
     "path": "pl/audio/anna/e7a507f6895de26f.m4a",
     "durationSeconds": 1,
@@ -3868,6 +4705,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-07T07:47:22.360Z"
+  },
+  "e970e962ef4082bf": {
+    "path": "pl/audio/anna/e970e962ef4082bf.m4a",
+    "durationSeconds": 2.96,
+    "text": "Neutral and polite, to a customer.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:30:50.572Z"
   },
   "ea6e8df04994880a": {
     "path": "pl/audio/marek/ea6e8df04994880a.m4a",
@@ -3931,6 +4777,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:23:43.463Z"
+  },
+  "ec295285fbefa5ae": {
+    "path": "pl/audio/anna/ec295285fbefa5ae.m4a",
+    "durationSeconds": 2.56,
+    "text": "Coming, arriving.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:05:10.813Z"
   },
   "ecd0c4d19c5db1f6": {
     "path": "pl/audio/marek/ecd0c4d19c5db1f6.m4a",
@@ -4049,6 +4904,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:02.652Z"
   },
+  "f1128e1207f29abd": {
+    "path": "pl/audio/ola/f1128e1207f29abd.m4a",
+    "durationSeconds": 3.96,
+    "text": "Zwracam się z uprzejmą prośbą o przesłanie faktury.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-08T10:09:25.330Z"
+  },
   "f15d0278ecb86a67": {
     "path": "pl/audio/marek/f15d0278ecb86a67.m4a",
     "durationSeconds": 4.36,
@@ -4075,6 +4939,24 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:01:44.400Z"
+  },
+  "f1d0b54b6f25e73f": {
+    "path": "pl/audio/marek/f1d0b54b6f25e73f.m4a",
+    "durationSeconds": 3.76,
+    "text": "A bread roll with butter: a piece of cake.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:25:48.879Z"
+  },
+  "f2382a6cc931ec66": {
+    "path": "pl/audio/anna/f2382a6cc931ec66.m4a",
+    "durationSeconds": 3.2,
+    "text": "Official: a notice from the shop.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:31:03.223Z"
   },
   "f2732b0b84a45f5b": {
     "path": "pl/audio/anna/f2732b0b84a45f5b.m4a",
@@ -4138,6 +5020,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:22.139Z"
+  },
+  "f5ebf173adf11658": {
+    "path": "pl/audio/marek/f5ebf173adf11658.m4a",
+    "durationSeconds": 4.44,
+    "text": "Two colleagues chat over coffee before Bartek's presentation.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:24:56.825Z"
   },
   "f6864f5419d455dd": {
     "path": "pl/audio/ola/f6864f5419d455dd.m4a",
@@ -4229,6 +5120,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:31.897Z"
   },
+  "f9ca0d16d35b7feb": {
+    "path": "pl/audio/marek/f9ca0d16d35b7feb.m4a",
+    "durationSeconds": 3.48,
+    "text": "Add a point: buses and trams are cheaper.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:00:11.207Z"
+  },
   "f9e0eb30aab0b48f": {
     "path": "pl/audio/tomek/f9e0eb30aab0b48f.m4a",
     "durationSeconds": 3.32,
@@ -4265,6 +5165,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:23:23.766Z"
   },
+  "fddcc774acb2d020": {
+    "path": "pl/audio/anna/fddcc774acb2d020.m4a",
+    "durationSeconds": 2.08,
+    "text": "Invite someone to come in.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-08T10:06:02.646Z"
+  },
   "fe4c86e6df7025a5": {
     "path": "pl/audio/ola/fe4c86e6df7025a5.m4a",
     "durationSeconds": 0.92,
@@ -4282,5 +5191,14 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:33:59.323Z"
+  },
+  "ff621a1c08c45b74": {
+    "path": "pl/audio/marek/ff621a1c08c45b74.m4a",
+    "durationSeconds": 5.6,
+    "text": "Literally, flies in his nose: he is in a bad mood.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-08T10:25:09.902Z"
   }
 }

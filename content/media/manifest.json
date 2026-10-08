@@ -1764,21 +1764,144 @@
         "id": "pl-arguing-a-point",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-arguing-a-point/video-5de52d1bf18d.mp4",
+          "posterUrl": "pl/lesson/pl-arguing-a-point/poster-5de52d1bf18d.jpg",
+          "captionsUrl": "pl/lesson/pl-arguing-a-point/captions-5de52d1bf18d.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 91.77,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A local debate: should the city centre be closed to cars?",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Czy centrum miasta powinno być zamknięte dla samochodów?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Should the city centre be closed to cars?"
+            },
+            {
+              "text": "Z jednej strony to poprawi jakość powietrza, z drugiej strony utrudni życie mieszkańcom.",
+              "language": "pl",
+              "speaker": "Mr Kowalski",
+              "translation": "On the one hand it will improve air quality, on the other hand it will make life harder for residents."
+            },
+            {
+              "text": "On the one hand, on the other: two sides weighed.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dlatego uważam, że miasto potrzebuje więcej ścieżek rowerowych.",
+              "language": "pl",
+              "speaker": "Mr Kowalski",
+              "translation": "That is why I believe the city needs more cycle paths."
+            },
+            {
+              "text": "Co więcej, transport publiczny jest tańszy.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Moreover, public transport is cheaper."
+            },
+            {
+              "text": "Weigh two sides, add a point, then conclude.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "These connecting words make an argument easy to follow.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Add a point: buses and trams are cheaper. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co więcej, transport publiczny jest tańszy.",
+              "language": "pl",
+              "speaker": "Mr Kowalski",
+              "translation": "Moreover, public transport is cheaper."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Above all, we should save water. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Przede wszystkim powinniśmy oszczędzać wodę.",
+              "language": "pl",
+              "speaker": "Mr Kowalski",
+              "translation": "Above all, we should save water."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Connect arguments in a discussion: two sides, adding a point, concluding.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "94b908ab0274c7728163b9374efa374aa4e5b962be5ec869b40028c840e5db98",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Connect arguments in a discussion: two sides, adding a point, concluding.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Czy centrum miasta powinno być zamknięte dla samochodów?",
+          "Z jednej strony to poprawi jakość powietrza, z drugiej strony utrudni życie mieszkańcom.",
+          "Dlatego uważam, że miasto potrzebuje więcej ścieżek rowerowych.",
+          "Co więcej, transport publiczny jest tańszy.",
+          "Przede wszystkim powinniśmy oszczędzać wodę."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          },
+          {
+            "character": "Mr Kowalski",
+            "voice": "tomek"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-07T08:15:18.706Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-08T10:04:41.666Z",
+        "providerCalls": 12
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-07T08:12:07.131Z",
-      "updatedAt": "2026-10-07T08:15:18.706Z"
+      "updatedAt": "2026-10-08T10:04:41.666Z"
     },
     {
       "key": "lesson:pl-at-the-doctor",
@@ -2754,21 +2877,151 @@
         "id": "pl-formal-correspondence",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-formal-correspondence/video-a32a916fd848.mp4",
+          "posterUrl": "pl/lesson/pl-formal-correspondence/poster-a32a916fd848.jpg",
+          "captionsUrl": "pl/lesson/pl-formal-correspondence/captions-a32a916fd848.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 80.89,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Marta writes a formal email to a company.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Szanowni Państwo,",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Dear Sir or Madam,"
+            },
+            {
+              "text": "The standard opening for an institution.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "W nawiązaniu do naszej rozmowy telefonicznej przesyłam umowę.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "With reference to our phone call, I am sending the contract."
+            },
+            {
+              "text": "Zwracam się z uprzejmą prośbą o przesłanie faktury.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "I am writing to kindly request the invoice."
+            },
+            {
+              "text": "Z poważaniem",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Yours faithfully"
+            },
+            {
+              "text": "And the standard closing.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Będę wdzięczna za szybką odpowiedź.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I would be grateful for a prompt reply."
+            },
+            {
+              "text": "Formal letters use fixed formulas.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Learn the opening, the purpose and the closing as whole phrases.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Open a formal email to a company. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Szanowni Państwo,",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Dear Sir or Madam,"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Close it formally. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Z poważaniem",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Yours faithfully"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Open, frame and close a formal email with the standard formulas.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "5b139976e43d0edef773924d8e34999b090c99c4615ca482f34241845b27fe0b",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Open, frame and close a formal email with the standard formulas.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Szanowni Państwo,",
+          "W nawiązaniu do naszej rozmowy telefonicznej przesyłam umowę.",
+          "Zwracam się z uprzejmą prośbą o przesłanie faktury.",
+          "Z poważaniem",
+          "Będę wdzięczna za szybką odpowiedź."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Marta",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-07T08:16:04.892Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-08T10:12:44.631Z",
+        "providerCalls": 12
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-07T08:12:53.405Z",
-      "updatedAt": "2026-10-07T08:16:04.892Z"
+      "updatedAt": "2026-10-08T10:12:44.631Z"
     },
     {
       "key": "lesson:pl-future-and-plans",
@@ -3391,21 +3644,304 @@
         "id": "pl-hedging",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-hedging/video-94ff9a97493a.mp4",
+          "posterUrl": "pl/lesson/pl-hedging/poster-94ff9a97493a.jpg",
+          "captionsUrl": "pl/lesson/pl-hedging/captions-94ff9a97493a.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 81.16,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A journalist interviews an economist.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy rząd obniży podatki?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Will the government lower taxes?"
+            },
+            {
+              "text": "Trudno to jednoznacznie przewidzieć. Wydaje się jednak, że raczej nie w tym roku.",
+              "language": "pl",
+              "speaker": "The expert",
+              "translation": "It is hard to predict definitively. It seems, however, that probably not this year."
+            },
+            {
+              "text": "Notice how carefully he avoids a definite answer.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Pociąg najprawdopodobniej się spóźni.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "The train will most probably be late."
+            },
+            {
+              "text": "Careful speakers rarely state things absolutely.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Impersonal phrases and adverbs grade how certain you are.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "It cannot be ruled out that prices will rise. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Nie można wykluczyć, że ceny wzrosną.",
+              "language": "pl",
+              "speaker": "The expert",
+              "translation": "It cannot be ruled out that prices will rise."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The train will most probably be late. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Pociąg najprawdopodobniej się spóźni.",
+              "language": "pl",
+              "speaker": "The expert",
+              "translation": "The train will most probably be late."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Express degrees of certainty and avoid stating things absolutely.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "7cb72982b59c9ca90806b7b0996f079fedd41345482b4e5f7066e5b139a7ace0",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Express degrees of certainty and avoid stating things absolutely.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Czy rząd obniży podatki?",
+          "Trudno to jednoznacznie przewidzieć. Wydaje się jednak, że raczej nie w tym roku.",
+          "Pociąg najprawdopodobniej się spóźni.",
+          "Nie można wykluczyć, że ceny wzrosną."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          },
+          {
+            "character": "The expert",
+            "voice": "tomek"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-07T08:17:13.962Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-08T10:24:53.489Z",
+        "providerCalls": 11
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-07T08:17:13.962Z",
-      "updatedAt": "2026-10-07T08:17:13.962Z"
+      "updatedAt": "2026-10-08T10:24:53.489Z"
+    },
+    {
+      "key": "lesson:pl-idioms",
+      "content": {
+        "type": "lesson",
+        "id": "pl-idioms",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-idioms/video-794ebb603211.mp4",
+          "posterUrl": "pl/lesson/pl-idioms/poster-794ebb603211.jpg",
+          "captionsUrl": "pl/lesson/pl-idioms/captions-794ebb603211.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 91.91,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Two colleagues chat over coffee before Bartek's presentation.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Szef ma dziś muchy w nosie.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "The boss is in a bad mood today."
+            },
+            {
+              "text": "Literally, flies in his nose: he is in a bad mood.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie mój cyrk, nie moje małpy.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Not my problem."
+            },
+            {
+              "text": "Not my circus, not my monkeys: not my problem.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Trzymam za ciebie kciuki.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "I am keeping my fingers crossed for you."
+            },
+            {
+              "text": "Holding thumbs: fingers crossed.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To bułka z masłem.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "It is a piece of cake."
+            },
+            {
+              "text": "A bread roll with butter: a piece of cake.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Mówić do niego to jak rzucać grochem o ścianę.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Talking to him is like talking to a brick wall."
+            },
+            {
+              "text": "Idioms cannot be translated word by word.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Use them in informal speech, not in formal writing.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Wish your friend luck. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Trzymam za ciebie kciuki.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "I am keeping my fingers crossed for you."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Say that something is very easy. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To bułka z masłem.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "It is a piece of cake."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Understand and use common everyday idioms.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "d98f703f3069a11c7e2f4b5688d72ff427f45986c31faea634a7c5a1c949e3f5",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Understand and use common everyday idioms.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Szef ma dziś muchy w nosie.",
+          "Nie mój cyrk, nie moje małpy.",
+          "Trzymam za ciebie kciuki.",
+          "To bułka z masłem.",
+          "Mówić do niego to jak rzucać grochem o ścianę."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ania",
+            "voice": "ola"
+          },
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-08T10:30:21.466Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-08T10:30:21.466Z",
+      "updatedAt": "2026-10-08T10:30:21.466Z"
     },
     {
       "key": "lesson:pl-impersonal-forms",
@@ -4114,6 +4650,29 @@
       "updatedAt": "2026-10-06T07:24:40.545Z"
     },
     {
+      "key": "lesson:pl-literary-language",
+      "content": {
+        "type": "lesson",
+        "id": "pl-literary-language",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-08T10:37:16.499Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 5
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-08T10:37:16.499Z",
+      "updatedAt": "2026-10-08T10:37:16.499Z"
+    },
+    {
       "key": "lesson:pl-no-articles",
       "content": {
         "type": "lesson",
@@ -4307,12 +4866,160 @@
         "id": "pl-nominal-style",
         "languageId": "pl"
       },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-nominal-style/video-72228c30dd82.mp4",
+          "posterUrl": "pl/lesson/pl-nominal-style/poster-72228c30dd82.jpg",
+          "captionsUrl": "pl/lesson/pl-nominal-style/captions-72228c30dd82.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 80.46,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A short news report, in official style.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Zamknięcie drogi spowodowało korki.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "The closure of the road caused traffic jams."
+            },
+            {
+              "text": "An action becomes a noun: the closure caused the jams.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Palenie szkodzi zdrowiu.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "Smoking damages your health."
+            },
+            {
+              "text": "Nauka języka wymaga czasu i cierpliwości.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "Learning a language takes time and patience."
+            },
+            {
+              "text": "Po przeczytaniu umowy podpisałem ją.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "After reading the contract, I signed it."
+            },
+            {
+              "text": "Dziękuję za zaproszenie.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Thank you for the invitation."
+            },
+            {
+              "text": "Official language turns verbs into nouns.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "In everyday speech, a verb usually sounds more natural.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Smoking damages your health. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Palenie szkodzi zdrowiu.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "Smoking damages your health."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Thank someone for the invitation. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dziękuję za zaproszenie.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "Thank you for the invitation."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Recognise verbal nouns and the nominal style of official Polish.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "0b8f7a8d30ce1692ba9b1d75941fa5e6167d8a7a2f8ac7a78543fe30237cd6e4",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Recognise verbal nouns and the nominal style of official Polish.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Zamknięcie drogi spowodowało korki.",
+          "Palenie szkodzi zdrowiu.",
+          "Nauka języka wymaga czasu i cierpliwości.",
+          "Po przeczytaniu umowy podpisałem ją.",
+          "Dziękuję za zaproszenie."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Michał",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-08T10:21:06.862Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-07T08:16:50.967Z",
+      "updatedAt": "2026-10-08T10:21:06.862Z"
+    },
+    {
+      "key": "lesson:pl-numerals-in-full",
+      "content": {
+        "type": "lesson",
+        "id": "pl-numerals-in-full",
+        "languageId": "pl"
+      },
       "published": null,
       "sourceHash": null,
-      "narratorId": "marek",
+      "narratorId": "anna",
       "lastRun": {
         "status": "failed",
-        "at": "2026-10-07T08:16:50.967Z",
+        "at": "2026-10-08T10:37:39.472Z",
         "error": "The audio generation provider's rate limit was exceeded.",
         "providerCalls": 1
       },
@@ -4320,8 +5027,8 @@
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
-      "createdAt": "2026-10-07T08:16:50.967Z",
-      "updatedAt": "2026-10-07T08:16:50.967Z"
+      "createdAt": "2026-10-08T10:37:39.472Z",
+      "updatedAt": "2026-10-08T10:37:39.472Z"
     },
     {
       "key": "lesson:pl-opinions",
@@ -4471,21 +5178,144 @@
         "id": "pl-participles",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-participles/video-336dda4b34d2.mp4",
+          "posterUrl": "pl/lesson/pl-participles/poster-336dda4b34d2.jpg",
+          "captionsUrl": "pl/lesson/pl-participles/captions-336dda4b34d2.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 88.88,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Piotr describes his morning in compact sentences.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czekając na autobus, czytałem gazetę.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "While waiting for the bus, I read the newspaper."
+            },
+            {
+              "text": "Two actions at the same time, with one subject.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kobieta siedząca obok mnie czytała książkę.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "The woman sitting next to me was reading a book."
+            },
+            {
+              "text": "Sitting describes the woman, like an adjective.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przeczytany list leżał na stole.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "The letter, already read, lay on the table."
+            },
+            {
+              "text": "To jest książka napisana przez moją babcię.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "This is a book written by my grandmother."
+            },
+            {
+              "text": "Participles turn a whole clause into one word.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Use the adverbial form only when both actions have the same subject.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "While waiting for the bus, you read the newspaper. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czekając na autobus, czytałem gazetę.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "While waiting for the bus, I read the newspaper."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The letter, already read, lay on the table. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przeczytany list leżał na stole.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "The letter, already read, lay on the table."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Use participles to say more in fewer words.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "4f3c797a30b6b02bab000301a5700a040a95518883f0cc2fac19c0ba7fa2b099",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Use participles to say more in fewer words.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Czekając na autobus, czytałem gazetę.",
+          "Kobieta siedząca obok mnie czytała książkę.",
+          "Przeczytany list leżał na stole.",
+          "To jest książka napisana przez moją babcię."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-07T08:16:27.967Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-08T10:16:45.196Z",
+        "providerCalls": 11
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-07T08:13:16.489Z",
-      "updatedAt": "2026-10-07T08:16:27.967Z"
+      "updatedAt": "2026-10-08T10:16:45.196Z"
     },
     {
       "key": "lesson:pl-past-tense",
@@ -4932,6 +5762,157 @@
       },
       "createdAt": "2026-10-01T07:40:54.018Z",
       "updatedAt": "2026-10-02T09:20:57.006Z"
+    },
+    {
+      "key": "lesson:pl-register",
+      "content": {
+        "type": "lesson",
+        "id": "pl-register",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-register/video-379a3b224c45.mp4",
+          "posterUrl": "pl/lesson/pl-register/poster-379a3b224c45.jpg",
+          "captionsUrl": "pl/lesson/pl-register/captions-379a3b224c45.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 82.15,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "The same person, three situations, three registers.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Siema, co tam?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Hi, what's up?"
+            },
+            {
+              "text": "Very informal, among friends.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzień dobry, czy mogę w czymś pomóc?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Good morning, can I help you with anything?"
+            },
+            {
+              "text": "Neutral and polite, to a customer.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Uprzejmie informujemy, iż sklep będzie nieczynny w sobotę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Please be advised that the shop will be closed on Saturday."
+            },
+            {
+              "text": "Official: a notice from the shop.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Spoko, nie ma problemu.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Fine, no problem."
+            },
+            {
+              "text": "Polish marks register clearly.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Match your words to the person and the situation.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Greet a close friend informally. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Siema, co tam?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Hi, what's up?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Offer help to a customer politely. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzień dobry, czy mogę w czymś pomóc?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Good morning, can I help you with anything?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Match your words to the situation: informal, neutral or official.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "5364f2625ab7ae13f3b5cfabd446faf18abeaec36e3c7255817f27ae2384f6e8",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Match your words to the situation: informal, neutral or official.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Siema, co tam?",
+          "Dzień dobry, czy mogę w czymś pomóc?",
+          "Uprzejmie informujemy, iż sklep będzie nieczynny w sobotę.",
+          "Spoko, nie ma problemu."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-08T10:36:33.396Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-08T10:36:33.396Z",
+      "updatedAt": "2026-10-08T10:36:33.396Z"
     },
     {
       "key": "lesson:pl-reported-speech",
@@ -5667,21 +6648,161 @@
         "id": "pl-verb-prefixes",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-verb-prefixes/video-e28237a0dfca.mp4",
+          "posterUrl": "pl/lesson/pl-verb-prefixes/poster-e28237a0dfca.jpg",
+          "captionsUrl": "pl/lesson/pl-verb-prefixes/captions-e28237a0dfca.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 77.23,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "One verb of going, many prefixes.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wejdź, proszę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Come in, please."
+            },
+            {
+              "text": "Going in.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przyjdę o szóstej.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I will come at six."
+            },
+            {
+              "text": "Coming, arriving.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wyszedł z domu o ósmej.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "He left the house at eight."
+            },
+            {
+              "text": "Going out.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wyjeżdżamy na urlop w sobotę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "We are leaving on holiday on Saturday."
+            },
+            {
+              "text": "Leaving, by vehicle.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Proszę przejść przez ulicę na światłach.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Please cross the street at the lights."
+            },
+            {
+              "text": "A prefix adds a direction to the verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Learn the prefixes once, and you can guess new verbs.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Invite someone to come in. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wejdź, proszę.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Come in, please."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say you will come at six. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przyjdę o szóstej.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I will come at six."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "See how prefixes turn going into entering, leaving, arriving and crossing.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "eeabc51b9e6bc5a3abb4aa42cbb6e5b0cbfd29800f2a8f26c7cc4d77eecd9d70",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "See how prefixes turn going into entering, leaving, arriving and crossing.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Wejdź, proszę.",
+          "Przyjdę o szóstej.",
+          "Wyszedł z domu o ósmej.",
+          "Wyjeżdżamy na urlop w sobotę.",
+          "Proszę przejść przez ulicę na światłach."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-07T08:15:41.752Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-08T10:08:56.769Z",
+        "providerCalls": 14
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-07T08:12:30.498Z",
-      "updatedAt": "2026-10-07T08:15:41.752Z"
+      "updatedAt": "2026-10-08T10:08:56.769Z"
     },
     {
       "key": "vocabulary-item:en-airport",
