@@ -26,6 +26,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:58:07.219Z"
   },
+  "01f8caf8ff57371f": {
+    "path": "pl/audio/ola/01f8caf8ff57371f.m4a",
+    "durationSeconds": 1.68,
+    "text": "Mam dwoje dzieci.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:08:37.138Z"
+  },
   "03324825be56b192": {
     "path": "pl/audio/piotr/03324825be56b192.m4a",
     "durationSeconds": 2.92,
@@ -80,6 +89,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:33:19.436Z"
   },
+  "041014cde749ad6c": {
+    "path": "pl/audio/marek/041014cde749ad6c.m4a",
+    "durationSeconds": 5.24,
+    "text": "Him I did not see, but her I did. Say it as a woman.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:13:21.348Z"
+  },
   "0498ac74fc2a86b3": {
     "path": "pl/audio/marek/0498ac74fc2a86b3.m4a",
     "durationSeconds": 3.16,
@@ -88,6 +106,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:48.590Z"
+  },
+  "04f510ebf12d730a": {
+    "path": "pl/audio/ola/04f510ebf12d730a.m4a",
+    "durationSeconds": 2.28,
+    "text": "Ów człowiek zniknął bez śladu.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:04:53.532Z"
+  },
+  "05d28ac929f4d8f7": {
+    "path": "pl/audio/marek/05d28ac929f4d8f7.m4a",
+    "durationSeconds": 4.92,
+    "text": "The same words. Now the new information comes last.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:12:42.079Z"
   },
   "06b5f9e12bcb8808": {
     "path": "pl/audio/piotr/06b5f9e12bcb8808.m4a",
@@ -233,6 +269,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:58.712Z"
   },
+  "0c8e1fac2f7f4b9e": {
+    "path": "pl/audio/ola/0c8e1fac2f7f4b9e.m4a",
+    "durationSeconds": 1.76,
+    "text": "Na obiad są ziemniaki.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:24:19.662Z"
+  },
   "0d2214d2bc49c292": {
     "path": "pl/audio/anna/0d2214d2bc49c292.m4a",
     "durationSeconds": 1.36,
@@ -322,6 +367,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:48:50.015Z"
+  },
+  "117a8fc6f27f30b9": {
+    "path": "pl/audio/ola/117a8fc6f27f30b9.m4a",
+    "durationSeconds": 3.12,
+    "text": "No proszę, a mówiłeś, że nic nie umiesz!",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:16:24.930Z"
   },
   "11a411c47477f155": {
     "path": "pl/audio/anna/11a411c47477f155.m4a",
@@ -539,6 +593,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T08:09:58.193Z"
   },
+  "18b2eb35d18fb006": {
+    "path": "pl/audio/marek/18b2eb35d18fb006.m4a",
+    "durationSeconds": 4.16,
+    "text": "Regional words are easy to recognise once you know them.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:52.868Z"
+  },
   "196647a2b100f493": {
     "path": "pl/audio/anna/196647a2b100f493.m4a",
     "durationSeconds": 1.64,
@@ -683,6 +746,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:48:50.648Z"
   },
+  "1d6938bd4599716c": {
+    "path": "pl/audio/marek/1d6938bd4599716c.m4a",
+    "durationSeconds": 3.44,
+    "text": "An elevated word for because.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:04:38.692Z"
+  },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
     "durationSeconds": 1.12,
@@ -826,6 +898,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:36.532Z"
+  },
+  "23735367f4b720ce": {
+    "path": "pl/audio/ola/23735367f4b720ce.m4a",
+    "durationSeconds": 2.88,
+    "text": "Odszedł od nas nasz drogi przyjaciel.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:20:12.635Z"
   },
   "23fd20a625b0f6a4": {
     "path": "pl/audio/ola/23fd20a625b0f6a4.m4a",
@@ -998,6 +1079,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:05:22.737Z"
   },
+  "2a38150326a3cfc5": {
+    "path": "pl/audio/anna/2a38150326a3cfc5.m4a",
+    "durationSeconds": 6.72,
+    "text": "Polish numerals change with gender, with groups of men, and with case.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:24.449Z"
+  },
+  "2a67e523de4fa3cc": {
+    "path": "pl/audio/marek/2a67e523de4fa3cc.m4a",
+    "durationSeconds": 4.08,
+    "text": "Who bought the book? Listen to where the focus falls.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:12:16.031Z"
+  },
   "2ab57cd6eb7b35da": {
     "path": "pl/audio/anna/2ab57cd6eb7b35da.m4a",
     "durationSeconds": 3.68,
@@ -1069,6 +1168,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-08T10:09:31.807Z"
+  },
+  "2dd915815cef0178": {
+    "path": "pl/audio/marek/2dd915815cef0178.m4a",
+    "durationSeconds": 5.72,
+    "text": "Older words replace their modern equivalents; recognising them is enough.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:05:14.622Z"
   },
   "2e75149cf57e56e7": {
     "path": "pl/audio/marek/2e75149cf57e56e7.m4a",
@@ -1178,6 +1286,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:49.989Z"
   },
+  "33cb0f7abe4949bb": {
+    "path": "pl/audio/marek/33cb0f7abe4949bb.m4a",
+    "durationSeconds": 3.64,
+    "text": "Neutral order: who, then what.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:12:28.425Z"
+  },
   "33cc817e0511639f": {
     "path": "pl/audio/anna/33cc817e0511639f.m4a",
     "durationSeconds": 2.6,
@@ -1250,6 +1367,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:49.103Z"
   },
+  "367ec193ac34f237": {
+    "path": "pl/audio/ola/367ec193ac34f237.m4a",
+    "durationSeconds": 1.8,
+    "text": "Jak ci poszedł egzamin?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:16:06.101Z"
+  },
   "36e5246102afcb19": {
     "path": "pl/audio/anna/36e5246102afcb19.m4a",
     "durationSeconds": 1.08,
@@ -1294,6 +1420,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-03T08:51:35.184Z"
+  },
+  "3917584d62b8cb1d": {
+    "path": "pl/audio/piotr/3917584d62b8cb1d.m4a",
+    "durationSeconds": 1.52,
+    "text": "Nie było najgorzej.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-09T07:17:10.160Z"
   },
   "39528b92f0e93b50": {
     "path": "pl/audio/ola/39528b92f0e93b50.m4a",
@@ -1376,6 +1511,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:16:08.384Z"
   },
+  "3cf60e7287e986b7": {
+    "path": "pl/audio/marek/3cf60e7287e986b7.m4a",
+    "durationSeconds": 3.24,
+    "text": "A literary word for but.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:04:47.644Z"
+  },
   "3d37f9e36ee34d18": {
     "path": "pl/audio/marek/3d37f9e36ee34d18.m4a",
     "durationSeconds": 4.04,
@@ -1402,6 +1546,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:21.440Z"
+  },
+  "3e94b51b9bf4a08e": {
+    "path": "pl/audio/marek/3e94b51b9bf4a08e.m4a",
+    "durationSeconds": 4.04,
+    "text": "He was killed in a car accident. Say it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:58.348Z"
   },
   "3e952ced32cf7fe8": {
     "path": "pl/audio/piotr/3e952ced32cf7fe8.m4a",
@@ -1493,6 +1646,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:05:50.010Z"
   },
+  "412c15e27bde6a02": {
+    "path": "pl/audio/marek/412c15e27bde6a02.m4a",
+    "durationSeconds": 4.28,
+    "text": "Choosing the right one shows respect for the situation.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:51.633Z"
+  },
   "41be406e0f9fa309": {
     "path": "pl/audio/marek/41be406e0f9fa309.m4a",
     "durationSeconds": 6.88,
@@ -1501,6 +1663,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:41:04.214Z"
+  },
+  "41fb25fb59e7cfd5": {
+    "path": "pl/audio/marek/41fb25fb59e7cfd5.m4a",
+    "durationSeconds": 5.28,
+    "text": "Produkt należy spożyć przed upływem daty ważności.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:39.099Z"
   },
   "438912efba8c02dc": {
     "path": "pl/audio/ola/438912efba8c02dc.m4a",
@@ -1655,6 +1826,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:13:32.526Z"
   },
+  "48d5cb3e2e229a02": {
+    "path": "pl/audio/marek/48d5cb3e2e229a02.m4a",
+    "durationSeconds": 3.44,
+    "text": "In Warsaw and most of Poland.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:00.697Z"
+  },
   "490f13b67bc3aeab": {
     "path": "pl/audio/ola/490f13b67bc3aeab.m4a",
     "durationSeconds": 1.56,
@@ -1745,6 +1925,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:16.927Z"
   },
+  "4b9dd32f1f418def": {
+    "path": "pl/audio/marek/4b9dd32f1f418def.m4a",
+    "durationSeconds": 4.68,
+    "text": "Near-synonyms share a meaning but differ in tone.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:45.369Z"
+  },
   "4c93974fbd24c697": {
     "path": "pl/audio/piotr/4c93974fbd24c697.m4a",
     "durationSeconds": 3.8,
@@ -1762,6 +1951,24 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T08:02:57.958Z"
+  },
+  "4e084e6fbedf1068": {
+    "path": "pl/audio/marek/4e084e6fbedf1068.m4a",
+    "durationSeconds": 3.12,
+    "text": "Ten film bardzo mi się podoba.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:12:54.059Z"
+  },
+  "4e2552915848efd2": {
+    "path": "pl/audio/piotr/4e2552915848efd2.m4a",
+    "durationSeconds": 1.84,
+    "text": "Książkę kupiła Anna.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-09T07:12:34.115Z"
   },
   "4e5742385edbad3b": {
     "path": "pl/audio/ola/4e5742385edbad3b.m4a",
@@ -1789,6 +1996,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:26:01.734Z"
+  },
+  "50088e00ee74321e": {
+    "path": "pl/audio/marek/50088e00ee74321e.m4a",
+    "durationSeconds": 4.4,
+    "text": "And in Poznań, potatoes have their own name.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:34.306Z"
   },
   "5035799c950538bd": {
     "path": "pl/audio/anna/5035799c950538bd.m4a",
@@ -1853,6 +2069,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:21:27.318Z"
   },
+  "531c3529d946376e": {
+    "path": "pl/audio/marek/531c3529d946376e.m4a",
+    "durationSeconds": 3.16,
+    "text": "A violent or accidental death.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:06.334Z"
+  },
   "559e8674d219e105": {
     "path": "pl/audio/tomek/559e8674d219e105.m4a",
     "durationSeconds": 1.6,
@@ -1870,6 +2095,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:42.711Z"
+  },
+  "564dd03cbf17380e": {
+    "path": "pl/audio/anna/564dd03cbf17380e.m4a",
+    "durationSeconds": 2.68,
+    "text": "Dzieci bawią się na polu.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:24:07.852Z"
   },
   "567283c00d90bc72": {
     "path": "pl/audio/marek/567283c00d90bc72.m4a",
@@ -1915,6 +2149,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:02.437Z"
+  },
+  "58c89a902a36295f": {
+    "path": "pl/audio/anna/58c89a902a36295f.m4a",
+    "durationSeconds": 4.04,
+    "text": "You are late again. React ironically.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:16:51.721Z"
   },
   "5986288d212c7265": {
     "path": "pl/audio/ola/5986288d212c7265.m4a",
@@ -2123,6 +2366,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:10.165Z"
   },
+  "67b4ebb24a6c089b": {
+    "path": "pl/audio/marek/67b4ebb24a6c089b.m4a",
+    "durationSeconds": 1.16,
+    "text": "Neutral.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:19:52.823Z"
+  },
   "68858c8ba8765998": {
     "path": "pl/audio/anna/68858c8ba8765998.m4a",
     "durationSeconds": 2.04,
@@ -2168,6 +2420,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:14.107Z"
   },
+  "6d6800db063a0079": {
+    "path": "pl/audio/ola/6d6800db063a0079.m4a",
+    "durationSeconds": 3.32,
+    "text": "No pięknie! Znowu się spóźniliśmy.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:16:57.661Z"
+  },
+  "6d7cf1588c2f3ca8": {
+    "path": "pl/audio/marek/6d7cf1588c2f3ca8.m4a",
+    "durationSeconds": 3.04,
+    "text": "In Kraków, the same sentence.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:13.788Z"
+  },
   "6de669405e41c6ba": {
     "path": "pl/audio/ola/6de669405e41c6ba.m4a",
     "durationSeconds": 0.84,
@@ -2204,6 +2474,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-06T07:37:58.158Z"
   },
+  "7052ab70462c5ec5": {
+    "path": "pl/audio/ola/7052ab70462c5ec5.m4a",
+    "durationSeconds": 2.16,
+    "text": "Dziadek zmarł w zeszłym roku.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:19:46.828Z"
+  },
   "7066c4255e7562a5": {
     "path": "pl/audio/tomek/7066c4255e7562a5.m4a",
     "durationSeconds": 1.24,
@@ -2231,6 +2510,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:03.342Z"
   },
+  "7135da8383bcbd7c": {
+    "path": "pl/audio/marek/7135da8383bcbd7c.m4a",
+    "durationSeconds": 5.24,
+    "text": "He did not come, for he was ill. Use the elevated word.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:05:20.821Z"
+  },
   "715b33991fb3040b": {
     "path": "pl/audio/marek/715b33991fb3040b.m4a",
     "durationSeconds": 2.92,
@@ -2239,6 +2527,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:57.378Z"
+  },
+  "71a2262c7d7a94ad": {
+    "path": "pl/audio/marek/71a2262c7d7a94ad.m4a",
+    "durationSeconds": 3.12,
+    "text": "Solemn, for soldiers in battle.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:32.120Z"
   },
   "72590a24add57d70": {
     "path": "pl/audio/ola/72590a24add57d70.m4a",
@@ -2375,6 +2672,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T09:59:52.032Z"
   },
+  "76c6dba40f29e116": {
+    "path": "pl/audio/ola/76c6dba40f29e116.m4a",
+    "durationSeconds": 2.04,
+    "text": "Anna kupiła książkę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:12:21.538Z"
+  },
   "773331f910342741": {
     "path": "pl/audio/piotr/773331f910342741.m4a",
     "durationSeconds": 1.48,
@@ -2464,6 +2770,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:53:12.413Z"
+  },
+  "7cc2d49ed6e26f1c": {
+    "path": "pl/audio/marek/7cc2d49ed6e26f1c.m4a",
+    "durationSeconds": 3.08,
+    "text": "Answer the question: who bought the book?",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:13:14.340Z"
   },
   "7db64ead15a603b2": {
     "path": "pl/audio/anna/7db64ead15a603b2.m4a",
@@ -2555,6 +2870,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-03T08:52:21.954Z"
   },
+  "815d527d35f329b2": {
+    "path": "pl/audio/piotr/815d527d35f329b2.m4a",
+    "durationSeconds": 2.4,
+    "text": "Spotkałem się z pięcioma kolegami.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-09T07:08:56.888Z"
+  },
   "8162c671ebc467a3": {
     "path": "pl/audio/marek/8162c671ebc467a3.m4a",
     "durationSeconds": 4.24,
@@ -2564,6 +2888,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:33:46.608Z"
   },
+  "8248922806e92430": {
+    "path": "pl/audio/ola/8248922806e92430.m4a",
+    "durationSeconds": 2.6,
+    "text": "Chciał pomóc, lecz nie mógł.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:04:40.864Z"
+  },
   "8250045f4678f142": {
     "path": "pl/audio/ola/8250045f4678f142.m4a",
     "durationSeconds": 1.6,
@@ -2572,6 +2905,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-07T07:35:34.410Z"
+  },
+  "8295cccb348dbf1d": {
+    "path": "pl/audio/anna/8295cccb348dbf1d.m4a",
+    "durationSeconds": 3.72,
+    "text": "After the exam, two students meet in the corridor.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:15:59.553Z"
   },
   "8356c04c71d8875a": {
     "path": "pl/audio/anna/8356c04c71d8875a.m4a",
@@ -2798,6 +3140,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:32.564Z"
   },
+  "8daf487afc0d6c65": {
+    "path": "pl/audio/anna/8daf487afc0d6c65.m4a",
+    "durationSeconds": 3.28,
+    "text": "Dwaj bracia mieszkają w Gdańsku.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:16.977Z"
+  },
   "8e7e8c049293887d": {
     "path": "pl/audio/marek/8e7e8c049293887d.m4a",
     "durationSeconds": 2.8,
@@ -2879,6 +3230,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:55:42.534Z"
   },
+  "92c43464259eb95a": {
+    "path": "pl/audio/marek/92c43464259eb95a.m4a",
+    "durationSeconds": 5.36,
+    "text": "Four ways to say that someone died, each with its own tone.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:19:40.441Z"
+  },
   "9448c04d08e8799b": {
     "path": "pl/audio/anna/9448c04d08e8799b.m4a",
     "durationSeconds": 3.16,
@@ -2887,6 +3247,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:29:09.028Z"
+  },
+  "94777fa7b747c125": {
+    "path": "pl/audio/anna/94777fa7b747c125.m4a",
+    "durationSeconds": 5.96,
+    "text": "From five upward with men: the genitive plural and a neuter verb.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:10.986Z"
   },
   "94867abd3a15c854": {
     "path": "pl/audio/marek/94867abd3a15c854.m4a",
@@ -2950,6 +3319,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:22:07.909Z"
+  },
+  "974cdb4c9c04f285": {
+    "path": "pl/audio/ola/974cdb4c9c04f285.m4a",
+    "durationSeconds": 2.92,
+    "text": "To Anna kupiła tę książkę, nie Piotr.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:12:47.865Z"
   },
   "982368fea4452cda": {
     "path": "pl/audio/anna/982368fea4452cda.m4a",
@@ -3131,6 +3509,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:49.783Z"
   },
+  "a1c306ac4e8bc2ba": {
+    "path": "pl/audio/anna/a1c306ac4e8bc2ba.m4a",
+    "durationSeconds": 4.96,
+    "text": "Often the words mean the opposite, or much more, than they say.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:16:45.669Z"
+  },
+  "a206a5868e256682": {
+    "path": "pl/audio/ola/a206a5868e256682.m4a",
+    "durationSeconds": 3.28,
+    "text": "Urodziłam się w tysiąc dziewięćset dziewięćdziesiątym roku.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:08:50.758Z"
+  },
   "a26c765e3ea76a14": {
     "path": "pl/audio/anna/a26c765e3ea76a14.m4a",
     "durationSeconds": 2.6,
@@ -3221,6 +3617,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T08:02:06.162Z"
   },
+  "a80f069a03529abe": {
+    "path": "pl/audio/marek/a80f069a03529abe.m4a",
+    "durationSeconds": 4.56,
+    "text": "Two friends from different cities talk about everyday life.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:23:48.060Z"
+  },
   "a8b274c5bb8fa5df": {
     "path": "pl/audio/anna/a8b274c5bb8fa5df.m4a",
     "durationSeconds": 1.64,
@@ -3238,6 +3643,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:37:22.984Z"
+  },
+  "a94f724d19215ba7": {
+    "path": "pl/audio/ola/a94f724d19215ba7.m4a",
+    "durationSeconds": 2.64,
+    "text": "Żołnierze polegli pod Monte Cassino.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:20:26.024Z"
   },
   "a9647b09a4efe327": {
     "path": "pl/audio/marek/a9647b09a4efe327.m4a",
@@ -3446,6 +3860,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:01.424Z"
   },
+  "b176b929e18aa531": {
+    "path": "pl/audio/anna/b176b929e18aa531.m4a",
+    "durationSeconds": 3.24,
+    "text": "Na obiad są pyry z gzikiem.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:24:26.926Z"
+  },
   "b1c90918ab44d0a4": {
     "path": "pl/audio/tomek/b1c90918ab44d0a4.m4a",
     "durationSeconds": 1.44,
@@ -3536,6 +3959,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:36.968Z"
   },
+  "b4f9a4ed72a09861": {
+    "path": "pl/audio/anna/b4f9a4ed72a09861.m4a",
+    "durationSeconds": 3.2,
+    "text": "Say it was not bad at all.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:17:04.033Z"
+  },
   "b52f8590d1899da4": {
     "path": "pl/audio/marek/b52f8590d1899da4.m4a",
     "durationSeconds": 7.76,
@@ -3554,6 +3986,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-02T09:24:35.366Z"
   },
+  "b584d78e59db2139": {
+    "path": "pl/audio/marek/b584d78e59db2139.m4a",
+    "durationSeconds": 5.2,
+    "text": "Endings show who does what, so word order is free.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:13:01.478Z"
+  },
   "b5ada91660f38217": {
     "path": "pl/audio/ola/b5ada91660f38217.m4a",
     "durationSeconds": 1.4,
@@ -3562,6 +4003,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-08T10:04:50.113Z"
+  },
+  "b5d8ad8b693b1702": {
+    "path": "pl/audio/anna/b5d8ad8b693b1702.m4a",
+    "durationSeconds": 3.4,
+    "text": "Five students came. Say it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:43.005Z"
   },
   "b5f769ad3599e219": {
     "path": "pl/audio/anna/b5f769ad3599e219.m4a",
@@ -3644,6 +4094,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-08T10:00:18.025Z"
   },
+  "b8a7d32dab951904": {
+    "path": "pl/audio/marek/b8a7d32dab951904.m4a",
+    "durationSeconds": 2.88,
+    "text": "Na obiad są kartofle.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:39.627Z"
+  },
   "b8a9ad4c52d46231": {
     "path": "pl/audio/anna/b8a9ad4c52d46231.m4a",
     "durationSeconds": 1.32,
@@ -3688,6 +4147,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:46.699Z"
+  },
+  "ba114fa6d2f33eca": {
+    "path": "pl/audio/anna/ba114fa6d2f33eca.m4a",
+    "durationSeconds": 3.44,
+    "text": "No pięknie! Znowu się spóźniliśmy.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:16:31.608Z"
   },
   "ba1a24504f2b3f5e": {
     "path": "pl/audio/marek/ba1a24504f2b3f5e.m4a",
@@ -3770,6 +4238,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-07T08:09:51.927Z"
   },
+  "bd7bf4c4d55efe87": {
+    "path": "pl/audio/marek/bd7bf4c4d55efe87.m4a",
+    "durationSeconds": 3.36,
+    "text": "The same sentence, as they say it in Kraków.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:25:05.921Z"
+  },
   "be55a16863c05a72": {
     "path": "pl/audio/anna/be55a16863c05a72.m4a",
     "durationSeconds": 4.72,
@@ -3787,6 +4264,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:39.422Z"
+  },
+  "bea2079c36af4f61": {
+    "path": "pl/audio/marek/bea2079c36af4f61.m4a",
+    "durationSeconds": 3.84,
+    "text": "Standard Polish is understood everywhere.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:47.315Z"
   },
   "bece52ea445028a6": {
     "path": "pl/audio/marek/bece52ea445028a6.m4a",
@@ -3923,6 +4409,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:24:10.932Z"
   },
+  "c60ccfdcdfd9410b": {
+    "path": "pl/audio/marek/c60ccfdcdfd9410b.m4a",
+    "durationSeconds": 3.12,
+    "text": "Panie, zmiłuj się nad nami.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:05:00.629Z"
+  },
   "c6398bb39e7e76c2": {
     "path": "pl/audio/marek/c6398bb39e7e76c2.m4a",
     "durationSeconds": 3.64,
@@ -3976,6 +4471,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:40:58.502Z"
+  },
+  "c7c30235289ba0ba": {
+    "path": "pl/audio/ola/c7c30235289ba0ba.m4a",
+    "durationSeconds": 2.36,
+    "text": "Jego nie widziałam, ale ją tak.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:13:26.834Z"
   },
   "c7c42df65055a0e5": {
     "path": "pl/audio/anna/c7c42df65055a0e5.m4a",
@@ -4058,6 +4562,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:13:40.518Z"
   },
+  "cd2ff5cd59576567": {
+    "path": "pl/audio/anna/cd2ff5cd59576567.m4a",
+    "durationSeconds": 2.52,
+    "text": "Say you have two children.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:35.985Z"
+  },
   "cd4d5ce8661e0508": {
     "path": "pl/audio/anna/cd4d5ce8661e0508.m4a",
     "durationSeconds": 3.24,
@@ -4075,6 +4588,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:43.850Z"
+  },
+  "ce9ca610de96b832": {
+    "path": "pl/audio/marek/ce9ca610de96b832.m4a",
+    "durationSeconds": 4.68,
+    "text": "Grandfather died last year. Say it neutrally.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:21:04.615Z"
   },
   "cf0fae9f24a14890": {
     "path": "pl/audio/anna/cf0fae9f24a14890.m4a",
@@ -4111,6 +4633,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:48:05.417Z"
+  },
+  "d1ea7d546e0dd305": {
+    "path": "pl/audio/ola/d1ea7d546e0dd305.m4a",
+    "durationSeconds": 2.44,
+    "text": "Zginął w wypadku samochodowym.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:19:59.025Z"
+  },
+  "d1f3d8b87a890d7b": {
+    "path": "pl/audio/anna/d1f3d8b87a890d7b.m4a",
+    "durationSeconds": 4.64,
+    "text": "Two old friends meet again and talk about their lives.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:08:32.411Z"
   },
   "d1f753b49845271c": {
     "path": "pl/audio/piotr/d1f753b49845271c.m4a",
@@ -4165,6 +4705,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:07:24.759Z"
+  },
+  "d47ce6a046570fe9": {
+    "path": "pl/audio/anna/d47ce6a046570fe9.m4a",
+    "durationSeconds": 2.84,
+    "text": "Children take a collective number.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:08:44.307Z"
   },
   "d4ad3539cfd19f10": {
     "path": "pl/audio/anna/d4ad3539cfd19f10.m4a",
@@ -4301,6 +4850,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T08:11:17.704Z"
   },
+  "d85fa918c8b50d30": {
+    "path": "pl/audio/marek/d85fa918c8b50d30.m4a",
+    "durationSeconds": 3.88,
+    "text": "Standard Polish: the children are playing outside.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:24:59.353Z"
+  },
   "d86af0aba1a0a2b6": {
     "path": "pl/audio/anna/d86af0aba1a0a2b6.m4a",
     "durationSeconds": 4.2,
@@ -4382,6 +4940,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:20:38.743Z"
   },
+  "db268c4736593062": {
+    "path": "pl/audio/marek/db268c4736593062.m4a",
+    "durationSeconds": 6.2,
+    "text": "New information goes last, and short pronouns never start a sentence.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:13:08.386Z"
+  },
   "db401b9ea651860a": {
     "path": "pl/audio/tomek/db401b9ea651860a.m4a",
     "durationSeconds": 3.28,
@@ -4426,6 +4993,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:00:46.291Z"
+  },
+  "dca8d24e37e9ab8d": {
+    "path": "pl/audio/anna/dca8d24e37e9ab8d.m4a",
+    "durationSeconds": 3.96,
+    "text": "Learn the frequent patterns as whole phrases.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:09:29.930Z"
   },
   "dd445f33b08e094f": {
     "path": "pl/audio/tomek/dd445f33b08e094f.m4a",
@@ -4489,6 +5065,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:15:04.456Z"
+  },
+  "e162c072108ce147": {
+    "path": "pl/audio/marek/e162c072108ce147.m4a",
+    "durationSeconds": 2.24,
+    "text": "A gentle euphemism.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:20:18.444Z"
   },
   "e1f73b054abf3c50": {
     "path": "pl/audio/ola/e1f73b054abf3c50.m4a",
@@ -4606,6 +5191,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:01:01.769Z"
+  },
+  "e6aa46e350f14099": {
+    "path": "pl/audio/anna/e6aa46e350f14099.m4a",
+    "durationSeconds": 6.48,
+    "text": "Not the worst, he says, but he got top marks: an understatement.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:16:20.268Z"
   },
   "e6ce101d494a05e8": {
     "path": "pl/audio/anna/e6ce101d494a05e8.m4a",
@@ -4795,6 +5389,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:31.633Z"
+  },
+  "edc23562bd480c5b": {
+    "path": "pl/audio/piotr/edc23562bd480c5b.m4a",
+    "durationSeconds": 2.04,
+    "text": "Przyszło pięciu studentów.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-09T07:09:03.356Z"
   },
   "edd4cfb28ed091f3": {
     "path": "pl/audio/ola/edd4cfb28ed091f3.m4a",
@@ -5003,6 +5606,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:58.261Z"
   },
+  "f41c43444aec46de": {
+    "path": "pl/audio/marek/f41c43444aec46de.m4a",
+    "durationSeconds": 3.6,
+    "text": "That man vanished without a trace.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:05:26.861Z"
+  },
   "f429d69efda89ff6": {
     "path": "pl/audio/anna/f429d69efda89ff6.m4a",
     "durationSeconds": 6.68,
@@ -5021,6 +5633,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:22.139Z"
   },
+  "f5bc40de713e5694": {
+    "path": "pl/audio/anna/f5bc40de713e5694.m4a",
+    "durationSeconds": 3.04,
+    "text": "Intonation does much of the work.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:16:38.861Z"
+  },
   "f5ebf173adf11658": {
     "path": "pl/audio/marek/f5ebf173adf11658.m4a",
     "durationSeconds": 4.44,
@@ -5029,6 +5650,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:24:56.825Z"
+  },
+  "f6736b5f06b9d7e2": {
+    "path": "pl/audio/ola/f6736b5f06b9d7e2.m4a",
+    "durationSeconds": 1.84,
+    "text": "Dzieci bawią się na dworze.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-09T07:23:54.580Z"
   },
   "f6864f5419d455dd": {
     "path": "pl/audio/ola/f6864f5419d455dd.m4a",
@@ -5138,6 +5768,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-07T07:55:22.730Z"
   },
+  "fa40775a568a47ee": {
+    "path": "pl/audio/marek/fa40775a568a47ee.m4a",
+    "durationSeconds": 4,
+    "text": "The vocative case addresses someone directly.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:05:07.787Z"
+  },
   "fa8563affa380690": {
     "path": "pl/audio/marek/fa8563affa380690.m4a",
     "durationSeconds": 6.56,
@@ -5164,6 +5803,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:23:23.766Z"
+  },
+  "fce2389a5e046c02": {
+    "path": "pl/audio/piotr/fce2389a5e046c02.m4a",
+    "durationSeconds": 3.32,
+    "text": "Nie było najgorzej. Dostałem piątkę.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-09T07:16:14.442Z"
   },
   "fddcc774acb2d020": {
     "path": "pl/audio/anna/fddcc774acb2d020.m4a",

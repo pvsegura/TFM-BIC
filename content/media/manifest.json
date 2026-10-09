@@ -4334,6 +4334,152 @@
       "updatedAt": "2026-10-02T09:16:05.991Z"
     },
     {
+      "key": "lesson:pl-irony-and-understatement",
+      "content": {
+        "type": "lesson",
+        "id": "pl-irony-and-understatement",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-irony-and-understatement/video-d5057ef24e7d.mp4",
+          "posterUrl": "pl/lesson/pl-irony-and-understatement/poster-d5057ef24e7d.jpg",
+          "captionsUrl": "pl/lesson/pl-irony-and-understatement/captions-d5057ef24e7d.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 81.33,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "After the exam, two students meet in the corridor.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jak ci poszedł egzamin?",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "How did your exam go?"
+            },
+            {
+              "text": "Nie było najgorzej. Dostałem piątkę.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Not too bad. I got top marks."
+            },
+            {
+              "text": "Not the worst, he says, but he got top marks: an understatement.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "No proszę, a mówiłeś, że nic nie umiesz!",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Well, well, and you said you knew nothing!"
+            },
+            {
+              "text": "No pięknie! Znowu się spóźniliśmy.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Great, just great! We are late again."
+            },
+            {
+              "text": "Intonation does much of the work.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Often the words mean the opposite, or much more, than they say.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You are late again. React ironically. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "No pięknie! Znowu się spóźniliśmy.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Great, just great! We are late again."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say it was not bad at all. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Nie było najgorzej.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "It was not bad at all."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Understand irony and understatement in everyday Polish.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "89a55fd9f542721d4c18fc8a44bab602f013b47f100c69d222ea33f088e3f3f2",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Understand irony and understatement in everyday Polish.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Jak ci poszedł egzamin?",
+          "Nie było najgorzej. Dostałem piątkę.",
+          "No proszę, a mówiłeś, że nic nie umiesz!",
+          "No pięknie! Znowu się spóźniliśmy.",
+          "Nie było najgorzej."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Agata",
+            "voice": "ola"
+          },
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:19:37.545Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-09T07:19:37.545Z",
+      "updatedAt": "2026-10-09T07:19:37.545Z"
+    },
+    {
       "key": "lesson:pl-job-interview",
       "content": {
         "type": "lesson",
@@ -4656,21 +4802,156 @@
         "id": "pl-literary-language",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-literary-language/video-e0e3bdbeaf40.mp4",
+          "posterUrl": "pl/lesson/pl-literary-language/poster-e0e3bdbeaf40.jpg",
+          "captionsUrl": "pl/lesson/pl-literary-language/captions-e0e3bdbeaf40.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 96.32,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A literature class reads classic Polish texts.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Litwo! Ojczyzno moja! ty jesteś jak zdrowie.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Lithuania, my homeland! You are like health."
+            },
+            {
+              "text": "The opening of a famous epic poem from 1834, with two vocatives.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie przyszedł, albowiem był chory.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "He did not come, for he was ill."
+            },
+            {
+              "text": "An elevated word for because.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chciał pomóc, lecz nie mógł.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "He wanted to help, but he could not."
+            },
+            {
+              "text": "A literary word for but.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ów człowiek zniknął bez śladu.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "That man vanished without a trace."
+            },
+            {
+              "text": "Panie, zmiłuj się nad nami.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Lord, have mercy on us."
+            },
+            {
+              "text": "The vocative case addresses someone directly.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Older words replace their modern equivalents; recognising them is enough.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "He did not come, for he was ill. Use the elevated word. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie przyszedł, albowiem był chory.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "He did not come, for he was ill."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "That man vanished without a trace. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ów człowiek zniknął bez śladu.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "That man vanished without a trace."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Recognise the vocative and archaic connectors in classic texts.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "cc0fa0df0aaa2bb1c01092aedeeacdce20d16d32981bc0f356ef0dfad1360db7",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Recognise the vocative and archaic connectors in classic texts.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Litwo! Ojczyzno moja! ty jesteś jak zdrowie.",
+          "Nie przyszedł, albowiem był chory.",
+          "Chciał pomóc, lecz nie mógł.",
+          "Ów człowiek zniknął bez śladu.",
+          "Panie, zmiłuj się nad nami."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-08T10:37:16.499Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 5
+        "status": "ready",
+        "at": "2026-10-09T07:08:28.952Z",
+        "providerCalls": 9
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-08T10:37:16.499Z",
-      "updatedAt": "2026-10-08T10:37:16.499Z"
+      "updatedAt": "2026-10-09T07:08:28.952Z"
     },
     {
       "key": "lesson:pl-no-articles",
@@ -5014,21 +5295,155 @@
         "id": "pl-numerals-in-full",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-numerals-in-full/video-8ba2fb847d2b.mp4",
+          "posterUrl": "pl/lesson/pl-numerals-in-full/poster-8ba2fb847d2b.jpg",
+          "captionsUrl": "pl/lesson/pl-numerals-in-full/captions-8ba2fb847d2b.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 85.69,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Two old friends meet again and talk about their lives.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam dwoje dzieci.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "I have two children."
+            },
+            {
+              "text": "Children take a collective number.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Urodziłam się w tysiąc dziewięćset dziewięćdziesiątym roku.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "I was born in 1990."
+            },
+            {
+              "text": "Spotkałem się z pięcioma kolegami.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "I met up with five friends."
+            },
+            {
+              "text": "Przyszło pięciu studentów.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Five students came."
+            },
+            {
+              "text": "From five upward with men: the genitive plural and a neuter verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dwaj bracia mieszkają w Gdańsku.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Two brothers live in Gdańsk."
+            },
+            {
+              "text": "Polish numerals change with gender, with groups of men, and with case.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Learn the frequent patterns as whole phrases.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say you have two children. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam dwoje dzieci.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "I have two children."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Five students came. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przyszło pięciu studentów.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Five students came."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Use collective numerals, numbers with groups of men, and numbers in every case.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "6b1045c6fa637536c10468a3b14235e358bc46eb4dd1baeb408c1be4113366c9",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Use collective numerals, numbers with groups of men, and numbers in every case.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Mam dwoje dzieci.",
+          "Urodziłam się w tysiąc dziewięćset dziewięćdziesiątym roku.",
+          "Spotkałem się z pięcioma kolegami.",
+          "Przyszło pięciu studentów.",
+          "Dwaj bracia mieszkają w Gdańsku."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Kasia",
+            "voice": "ola"
+          },
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-08T10:37:39.472Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-09T07:12:12.868Z",
+        "providerCalls": 12
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-08T10:37:39.472Z",
-      "updatedAt": "2026-10-08T10:37:39.472Z"
+      "updatedAt": "2026-10-09T07:12:12.868Z"
     },
     {
       "key": "lesson:pl-opinions",
@@ -5764,6 +6179,168 @@
       "updatedAt": "2026-10-02T09:20:57.006Z"
     },
     {
+      "key": "lesson:pl-regional-polish",
+      "content": {
+        "type": "lesson",
+        "id": "pl-regional-polish",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-regional-polish/video-0872860ca391.mp4",
+          "posterUrl": "pl/lesson/pl-regional-polish/poster-0872860ca391.jpg",
+          "captionsUrl": "pl/lesson/pl-regional-polish/captions-0872860ca391.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 88.92,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Two friends from different cities talk about everyday life.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzieci bawią się na dworze.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "The children are playing outside."
+            },
+            {
+              "text": "In Warsaw and most of Poland.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzieci bawią się na polu.",
+              "language": "pl",
+              "speaker": "Basia",
+              "translation": "The children are playing outside."
+            },
+            {
+              "text": "In Kraków, the same sentence.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Na obiad są ziemniaki.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "There are potatoes for lunch."
+            },
+            {
+              "text": "Na obiad są pyry z gzikiem.",
+              "language": "pl",
+              "speaker": "Basia",
+              "translation": "There are potatoes with quark for lunch."
+            },
+            {
+              "text": "And in Poznań, potatoes have their own name.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Na obiad są kartofle.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "There are potatoes for lunch."
+            },
+            {
+              "text": "Standard Polish is understood everywhere.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Regional words are easy to recognise once you know them.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Standard Polish: the children are playing outside. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzieci bawią się na dworze.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "The children are playing outside."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The same sentence, as they say it in Kraków. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzieci bawią się na polu.",
+              "language": "pl",
+              "speaker": "Basia",
+              "translation": "The children are playing outside."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Read the examples below the video at your own pace.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Recognise regional words from Warsaw, Kraków and Poznań.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "a07228bfb20b6be5513bd9aeb14212430fccd3058c55311703987af060764ed9",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Recognise regional words from Warsaw, Kraków and Poznań.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dzieci bawią się na dworze.",
+          "Dzieci bawią się na polu.",
+          "Na obiad są ziemniaki.",
+          "Na obiad są pyry z gzikiem.",
+          "Na obiad są kartofle."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Basia",
+            "voice": "anna"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:27:50.110Z",
+        "providerCalls": 13
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-09T07:27:50.110Z",
+      "updatedAt": "2026-10-09T07:27:50.110Z"
+    },
+    {
       "key": "lesson:pl-register",
       "content": {
         "type": "lesson",
@@ -6054,6 +6631,169 @@
       },
       "createdAt": "2026-10-07T08:09:41.969Z",
       "updatedAt": "2026-10-07T08:09:41.969Z"
+    },
+    {
+      "key": "lesson:pl-shades-of-meaning",
+      "content": {
+        "type": "lesson",
+        "id": "pl-shades-of-meaning",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-shades-of-meaning/video-3c227769bc22.mp4",
+          "posterUrl": "pl/lesson/pl-shades-of-meaning/poster-3c227769bc22.jpg",
+          "captionsUrl": "pl/lesson/pl-shades-of-meaning/captions-3c227769bc22.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 94.03,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Four ways to say that someone died, each with its own tone.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dziadek zmarł w zeszłym roku.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Grandfather died last year."
+            },
+            {
+              "text": "Neutral.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Zginął w wypadku samochodowym.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "He was killed in a car accident."
+            },
+            {
+              "text": "A violent or accidental death.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Odszedł od nas nasz drogi przyjaciel.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Our dear friend has passed away."
+            },
+            {
+              "text": "A gentle euphemism.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Żołnierze polegli pod Monte Cassino.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "The soldiers fell at Monte Cassino."
+            },
+            {
+              "text": "Solemn, for soldiers in battle.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Produkt należy spożyć przed upływem daty ważności.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "The product should be consumed before the expiry date."
+            },
+            {
+              "text": "Near-synonyms share a meaning but differ in tone.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Choosing the right one shows respect for the situation.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "He was killed in a car accident. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Zginął w wypadku samochodowym.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "He was killed in a car accident."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Grandfather died last year. Say it neutrally. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dziadek zmarł w zeszłym roku.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Grandfather died last year."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Choose between near-synonyms that differ in tone and situation.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "8b6d89e87cc299d0c59be4b00b95c68f4e900e9f7593f958b0fbf8f93b649002",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Choose between near-synonyms that differ in tone and situation.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dziadek zmarł w zeszłym roku.",
+          "Zginął w wypadku samochodowym.",
+          "Odszedł od nas nasz drogi przyjaciel.",
+          "Żołnierze polegli pod Monte Cassino.",
+          "Produkt należy spożyć przed upływem daty ważności."
+        ],
+        "segments": ["situation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:23:45.382Z",
+        "providerCalls": 14
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-09T07:23:45.382Z",
+      "updatedAt": "2026-10-09T07:23:45.382Z"
     },
     {
       "key": "lesson:pl-shopping",
@@ -6803,6 +7543,157 @@
       },
       "createdAt": "2026-10-07T08:12:30.498Z",
       "updatedAt": "2026-10-08T10:08:56.769Z"
+    },
+    {
+      "key": "lesson:pl-word-order",
+      "content": {
+        "type": "lesson",
+        "id": "pl-word-order",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-word-order/video-5799466b74f6.mp4",
+          "posterUrl": "pl/lesson/pl-word-order/poster-5799466b74f6.jpg",
+          "captionsUrl": "pl/lesson/pl-word-order/captions-5799466b74f6.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 86.04,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Who bought the book? Listen to where the focus falls.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Anna kupiła książkę.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Anna bought a book."
+            },
+            {
+              "text": "Neutral order: who, then what.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Książkę kupiła Anna.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "It was Anna who bought the book."
+            },
+            {
+              "text": "The same words. Now the new information comes last.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To Anna kupiła tę książkę, nie Piotr.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "It was Anna, not Piotr, who bought this book."
+            },
+            {
+              "text": "Ten film bardzo mi się podoba.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I really like this film."
+            },
+            {
+              "text": "Endings show who does what, so word order is free.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "New information goes last, and short pronouns never start a sentence.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Answer the question: who bought the book? (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Książkę kupiła Anna.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "It was Anna who bought the book."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Him I did not see, but her I did. Say it as a woman. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Jego nie widziałam, ale ją tak.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Him I did not see, but her I did."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Use word order to put the focus where you want it.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "cf42aad25c2d2226657a32b2e2b18d645fdfc67978f4c4a5019dc3b28b9d5899",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Use word order to put the focus where you want it.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Anna kupiła książkę.",
+          "Książkę kupiła Anna.",
+          "To Anna kupiła tę książkę, nie Piotr.",
+          "Ten film bardzo mi się podoba.",
+          "Jego nie widziałam, ale ją tak."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Agata",
+            "voice": "ola"
+          },
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:15:56.908Z",
+        "providerCalls": 12
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-09T07:15:56.908Z",
+      "updatedAt": "2026-10-09T07:15:56.908Z"
     },
     {
       "key": "vocabulary-item:en-airport",
