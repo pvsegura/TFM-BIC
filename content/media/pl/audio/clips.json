@@ -62,6 +62,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:03:03.053Z"
   },
+  "03d8dfca318449ea": {
+    "path": "pl/audio/anna/03d8dfca318449ea.m4a",
+    "durationSeconds": 1.08,
+    "text": "karta",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:39.538Z"
+  },
   "03db2e09840cf1a4": {
     "path": "pl/audio/ola/03db2e09840cf1a4.m4a",
     "durationSeconds": 1.64,
@@ -601,6 +610,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:24:52.868Z"
+  },
+  "18fed96cc71ae0b8": {
+    "path": "pl/audio/anna/18fed96cc71ae0b8.m4a",
+    "durationSeconds": 1.36,
+    "text": "daleko",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:38.015Z"
   },
   "196647a2b100f493": {
     "path": "pl/audio/anna/196647a2b100f493.m4a",
@@ -1457,6 +1475,24 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-06T07:28:52.284Z"
   },
+  "39dd73ce4f901e43": {
+    "path": "pl/audio/anna/39dd73ce4f901e43.m4a",
+    "durationSeconds": 1.16,
+    "text": "cena",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:26.867Z"
+  },
+  "39f1b05e5e1e3ff8": {
+    "path": "pl/audio/anna/39f1b05e5e1e3ff8.m4a",
+    "durationSeconds": 1.2,
+    "text": "ulica",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:12.560Z"
+  },
   "3abdf880543af604": {
     "path": "pl/audio/anna/3abdf880543af604.m4a",
     "durationSeconds": 4.16,
@@ -1808,6 +1844,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-05T08:31:58.382Z"
   },
+  "46ee682606b875cf": {
+    "path": "pl/audio/marek/46ee682606b875cf.m4a",
+    "durationSeconds": 1.52,
+    "text": "recepta",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:34:09.873Z"
+  },
   "47108ecec260249b": {
     "path": "pl/audio/marek/47108ecec260249b.m4a",
     "durationSeconds": 5.32,
@@ -1852,6 +1897,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:12:47.105Z"
+  },
+  "4a483d7a8e857f8d": {
+    "path": "pl/audio/anna/4a483d7a8e857f8d.m4a",
+    "durationSeconds": 1.4,
+    "text": "gotówka",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:46.991Z"
   },
   "4a4898095c0b7e62": {
     "path": "pl/audio/anna/4a4898095c0b7e62.m4a",
@@ -1970,6 +2024,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-09T07:12:34.115Z"
   },
+  "4e25e271cfa89e2d": {
+    "path": "pl/audio/anna/4e25e271cfa89e2d.m4a",
+    "durationSeconds": 1.2,
+    "text": "wstawać",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:37.360Z"
+  },
   "4e5742385edbad3b": {
     "path": "pl/audio/ola/4e5742385edbad3b.m4a",
     "durationSeconds": 1.4,
@@ -2032,6 +2095,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T07:34:50.610Z"
+  },
+  "511fdaaae36b0a76": {
+    "path": "pl/audio/anna/511fdaaae36b0a76.m4a",
+    "durationSeconds": 1.32,
+    "text": "prosto",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:18.846Z"
   },
   "5166386f273a420a": {
     "path": "pl/audio/anna/5166386f273a420a.m4a",
@@ -2141,6 +2213,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:16.203Z"
   },
+  "57a25a5ca7c180f8": {
+    "path": "pl/audio/marek/57a25a5ca7c180f8.m4a",
+    "durationSeconds": 1.6,
+    "text": "lekarstwo",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:33:50.414Z"
+  },
   "57a3c13534740ba1": {
     "path": "pl/audio/anna/57a3c13534740ba1.m4a",
     "durationSeconds": 1.36,
@@ -2213,6 +2294,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:37.741Z"
   },
+  "5cd99f24b26a5672": {
+    "path": "pl/audio/marek/5cd99f24b26a5672.m4a",
+    "durationSeconds": 5.28,
+    "text": "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:33:57.868Z"
+  },
+  "5ce26f34ba789b1a": {
+    "path": "pl/audio/marek/5ce26f34ba789b1a.m4a",
+    "durationSeconds": 1.56,
+    "text": "gorączka",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:34:17.298Z"
+  },
   "5d0ae5f3b275c019": {
     "path": "pl/audio/marek/5d0ae5f3b275c019.m4a",
     "durationSeconds": 4.24,
@@ -2230,6 +2329,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:12.176Z"
+  },
+  "5dfed8aabebcc0d0": {
+    "path": "pl/audio/marek/5dfed8aabebcc0d0.m4a",
+    "durationSeconds": 1.28,
+    "text": "lekarz",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:33:44.179Z"
   },
   "5fcf2799116273ea": {
     "path": "pl/audio/marek/5fcf2799116273ea.m4a",
@@ -2383,6 +2491,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:12.422Z"
+  },
+  "6bf6c84d91f2a9ab": {
+    "path": "pl/audio/anna/6bf6c84d91f2a9ab.m4a",
+    "durationSeconds": 1.88,
+    "text": "To jest blisko.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:32.795Z"
   },
   "6bf9f0e9e265eebd": {
     "path": "pl/audio/anna/6bf9f0e9e265eebd.m4a",
@@ -2590,6 +2707,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:25:35.107Z"
+  },
+  "73cd6bec1258ce1c": {
+    "path": "pl/audio/anna/73cd6bec1258ce1c.m4a",
+    "durationSeconds": 1.52,
+    "text": "Czy to daleko?",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:45.731Z"
   },
   "73d169f74e7feb7d": {
     "path": "pl/audio/anna/73d169f74e7feb7d.m4a",
@@ -2816,6 +2942,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:40.515Z"
   },
+  "7f0707920ff9eb11": {
+    "path": "pl/audio/anna/7f0707920ff9eb11.m4a",
+    "durationSeconds": 1.08,
+    "text": "poczta",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:05.567Z"
+  },
   "7f39a81ef4c61a52": {
     "path": "pl/audio/marek/7f39a81ef4c61a52.m4a",
     "durationSeconds": 7.12,
@@ -2861,6 +2996,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-05T08:32:25.575Z"
   },
+  "809cc6cf26ae66ec": {
+    "path": "pl/audio/marek/809cc6cf26ae66ec.m4a",
+    "durationSeconds": 1.32,
+    "text": "gardło",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:35:00.224Z"
+  },
   "8126fe58b6be1a6e": {
     "path": "pl/audio/tomek/8126fe58b6be1a6e.m4a",
     "durationSeconds": 1.28,
@@ -2905,6 +3049,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-07T07:35:34.410Z"
+  },
+  "8289bd68ee384711": {
+    "path": "pl/audio/anna/8289bd68ee384711.m4a",
+    "durationSeconds": 2.68,
+    "text": "Jem śniadanie o ósmej.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:58.278Z"
   },
   "8295cccb348dbf1d": {
     "path": "pl/audio/anna/8295cccb348dbf1d.m4a",
@@ -3221,6 +3374,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:26.286Z"
   },
+  "92824b6bf300c2e5": {
+    "path": "pl/audio/anna/92824b6bf300c2e5.m4a",
+    "durationSeconds": 1.72,
+    "text": "Kupuję chleb.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:24.059Z"
+  },
   "92b7d439f6745b07": {
     "path": "pl/audio/marek/92b7d439f6745b07.m4a",
     "durationSeconds": 4.76,
@@ -3392,6 +3554,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:51:57.845Z"
   },
+  "996e6e3fd38f793c": {
+    "path": "pl/audio/anna/996e6e3fd38f793c.m4a",
+    "durationSeconds": 1.36,
+    "text": "pieniądze",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:33.706Z"
+  },
   "99aef83c7672a915": {
     "path": "pl/audio/marek/99aef83c7672a915.m4a",
     "durationSeconds": 5.16,
@@ -3454,6 +3625,15 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:58:19.969Z"
+  },
+  "9e313a3032306314": {
+    "path": "pl/audio/anna/9e313a3032306314.m4a",
+    "durationSeconds": 1,
+    "text": "blisko",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:24.990Z"
   },
   "9e5b1e4e84802737": {
     "path": "pl/audio/marek/9e5b1e4e84802737.m4a",
@@ -3932,6 +4112,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:17.979Z"
   },
+  "b311f5bfdba75f5c": {
+    "path": "pl/audio/anna/b311f5bfdba75f5c.m4a",
+    "durationSeconds": 1.44,
+    "text": "dworzec",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:59.058Z"
+  },
   "b345780b71172d9f": {
     "path": "pl/audio/tomek/b345780b71172d9f.m4a",
     "durationSeconds": 3.12,
@@ -4211,6 +4400,24 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-08T10:30:56.446Z"
   },
+  "bc29a5f1a1a05896": {
+    "path": "pl/audio/anna/bc29a5f1a1a05896.m4a",
+    "durationSeconds": 1.24,
+    "text": "kupować",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:17.084Z"
+  },
+  "bc7afa5fdbbd52d8": {
+    "path": "pl/audio/anna/bc7afa5fdbbd52d8.m4a",
+    "durationSeconds": 1.32,
+    "text": "śniadanie",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:32:51.401Z"
+  },
   "bcfe6ae250c9b553": {
     "path": "pl/audio/piotr/bcfe6ae250c9b553.m4a",
     "durationSeconds": 3.48,
@@ -4399,6 +4606,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:02:04.868Z"
+  },
+  "c5809a0b05085551": {
+    "path": "pl/audio/anna/c5809a0b05085551.m4a",
+    "durationSeconds": 1.24,
+    "text": "obiad",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:04.145Z"
   },
   "c5beb344e2859b58": {
     "path": "pl/audio/anna/c5beb344e2859b58.m4a",
@@ -4625,6 +4841,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:25:48.621Z"
   },
+  "d118662c91dccf8a": {
+    "path": "pl/audio/marek/d118662c91dccf8a.m4a",
+    "durationSeconds": 1.36,
+    "text": "apteka",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:34:02.757Z"
+  },
   "d1b422bc78635b77": {
     "path": "pl/audio/marek/d1b422bc78635b77.m4a",
     "durationSeconds": 3.12,
@@ -4777,6 +5002,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:37:51.640Z"
+  },
+  "d6883af6080922b5": {
+    "path": "pl/audio/marek/d6883af6080922b5.m4a",
+    "durationSeconds": 1.08,
+    "text": "ból",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-09T07:34:22.299Z"
   },
   "d69c791c16623523": {
     "path": "pl/audio/ola/d69c791c16623523.m4a",
@@ -4993,6 +5227,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:00:46.291Z"
+  },
+  "dc7f2a43cf0d98eb": {
+    "path": "pl/audio/anna/dc7f2a43cf0d98eb.m4a",
+    "durationSeconds": 1.28,
+    "text": "kolacja",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:10.973Z"
   },
   "dca8d24e37e9ab8d": {
     "path": "pl/audio/anna/dca8d24e37e9ab8d.m4a",
@@ -5336,6 +5579,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:13.575Z"
   },
+  "ea9f6843fc597768": {
+    "path": "pl/audio/anna/ea9f6843fc597768.m4a",
+    "durationSeconds": 1.32,
+    "text": "rachunek",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:53.834Z"
+  },
   "eb28a9c3a8d59777": {
     "path": "pl/audio/anna/eb28a9c3a8d59777.m4a",
     "durationSeconds": 2.28,
@@ -5551,6 +5803,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:25:48.879Z"
+  },
+  "f20d17e95eb193e2": {
+    "path": "pl/audio/anna/f20d17e95eb193e2.m4a",
+    "durationSeconds": 1.28,
+    "text": "płacić",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:33:30.590Z"
+  },
+  "f225b2be36c87a02": {
+    "path": "pl/audio/anna/f225b2be36c87a02.m4a",
+    "durationSeconds": 1.16,
+    "text": "sklep",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-09T07:31:20.337Z"
   },
   "f2382a6cc931ec66": {
     "path": "pl/audio/anna/f2382a6cc931ec66.m4a",

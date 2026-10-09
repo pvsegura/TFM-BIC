@@ -8751,6 +8751,41 @@
       "updatedAt": "2026-10-03T15:17:10.771Z"
     },
     {
+      "key": "vocabulary-item:pl-apteka",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-apteka",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/d118662c91dccf8a.m4a",
+            "durationSeconds": 1.36,
+            "text": "apteka",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "98230dae678563f0ddab1219e45da760fd537ca43772726b6fb8ca8100bcfaed",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:34:02.763Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:34:02.763Z",
+      "updatedAt": "2026-10-09T07:34:02.763Z"
+    },
+    {
       "key": "vocabulary-item:pl-bilet",
       "content": {
         "type": "vocabulary-item",
@@ -8786,6 +8821,84 @@
       "updatedAt": "2026-10-02T09:01:21.032Z"
     },
     {
+      "key": "vocabulary-item:pl-blisko",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-blisko",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/9e313a3032306314.m4a",
+            "durationSeconds": 1,
+            "text": "blisko",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/anna/6bf6c84d91f2a9ab.m4a",
+            "durationSeconds": 1.88,
+            "text": "To jest blisko.",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "5e80eec13f1da41f6fe27da1fa2f0a0adc3ff23547ff6e7fd157a5676d8a305b",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:32.802Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:32.802Z",
+      "updatedAt": "2026-10-09T07:32:32.802Z"
+    },
+    {
+      "key": "vocabulary-item:pl-bol",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-bol",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/d6883af6080922b5.m4a",
+            "durationSeconds": 1.08,
+            "text": "ból",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "0b57c2cbd6d44195a231fb38af0a40fdeaf15ee6499e5f1bfb4f9ff8c96b34e6",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:34:22.304Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:34:22.304Z",
+      "updatedAt": "2026-10-09T07:34:22.304Z"
+    },
+    {
       "key": "vocabulary-item:pl-brat",
       "content": {
         "type": "vocabulary-item",
@@ -8819,6 +8932,41 @@
       },
       "createdAt": "2026-10-02T08:59:32.729Z",
       "updatedAt": "2026-10-02T08:59:32.729Z"
+    },
+    {
+      "key": "vocabulary-item:pl-cena",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-cena",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/39dd73ce4f901e43.m4a",
+            "durationSeconds": 1.16,
+            "text": "cena",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "7dd387c094a9f41f26be211512eaef4ae02855e0403b24151678d563d5e3218c",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:26.874Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:26.874Z",
+      "updatedAt": "2026-10-09T07:31:26.874Z"
     },
     {
       "key": "vocabulary-item:pl-chleb",
@@ -8932,6 +9080,49 @@
       },
       "createdAt": "2026-10-02T08:59:00.045Z",
       "updatedAt": "2026-10-02T08:59:00.045Z"
+    },
+    {
+      "key": "vocabulary-item:pl-daleko",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-daleko",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/18fed96cc71ae0b8.m4a",
+            "durationSeconds": 1.36,
+            "text": "daleko",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/anna/73cd6bec1258ce1c.m4a",
+            "durationSeconds": 1.52,
+            "text": "Czy to daleko?",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "77422d02dbda681a7092ba2f2673d47efe21cde413b892f117b39b395f70057f",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:45.737Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:45.737Z",
+      "updatedAt": "2026-10-09T07:32:45.737Z"
     },
     {
       "key": "vocabulary-item:pl-do-widzenia",
@@ -9125,6 +9316,41 @@
       "updatedAt": "2026-10-02T08:58:46.702Z"
     },
     {
+      "key": "vocabulary-item:pl-dworzec",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-dworzec",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/b311f5bfdba75f5c.m4a",
+            "durationSeconds": 1.44,
+            "text": "dworzec",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "d0d693c6ffd9393663f38cf0975977718c8ad97746d9eee7bc72c7d51789df2b",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:59.065Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:59.065Z",
+      "updatedAt": "2026-10-09T07:31:59.065Z"
+    },
+    {
       "key": "vocabulary-item:pl-dzien-dobry",
       "content": {
         "type": "vocabulary-item",
@@ -9158,6 +9384,76 @@
       },
       "createdAt": "2026-10-01T07:47:44.247Z",
       "updatedAt": "2026-10-02T08:58:13.542Z"
+    },
+    {
+      "key": "vocabulary-item:pl-goraczka",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-goraczka",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/5ce26f34ba789b1a.m4a",
+            "durationSeconds": 1.56,
+            "text": "gorączka",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "9f7423f627b0571c66bbbc8ca5e8450db902ba087498180749e424230fd698ca",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:34:17.308Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:34:17.308Z",
+      "updatedAt": "2026-10-09T07:34:17.308Z"
+    },
+    {
+      "key": "vocabulary-item:pl-gotowka",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-gotowka",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/4a483d7a8e857f8d.m4a",
+            "durationSeconds": 1.4,
+            "text": "gotówka",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "b1ba3b59bda485610aad4a20a909db0502122a8b7bc038b1a7362cfafdfcba2d",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:46.997Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:46.997Z",
+      "updatedAt": "2026-10-09T07:31:46.997Z"
     },
     {
       "key": "vocabulary-item:pl-jablko",
@@ -9228,6 +9524,76 @@
       },
       "createdAt": "2026-10-02T08:58:39.749Z",
       "updatedAt": "2026-10-02T08:58:39.749Z"
+    },
+    {
+      "key": "vocabulary-item:pl-karta",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-karta",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/03d8dfca318449ea.m4a",
+            "durationSeconds": 1.08,
+            "text": "karta",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "342c08869637fee12f4ea11ab075cea0fc3f2f3d9607c2beff9dce075b097fda",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:39.544Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:39.544Z",
+      "updatedAt": "2026-10-09T07:31:39.544Z"
+    },
+    {
+      "key": "vocabulary-item:pl-kolacja",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-kolacja",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/dc7f2a43cf0d98eb.m4a",
+            "durationSeconds": 1.28,
+            "text": "kolacja",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "c0e46fa41b7668f25bf38cbc1fca5d6e29a22ff064b19de37afd7ea33aba098e",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:10.978Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:10.978Z",
+      "updatedAt": "2026-10-09T07:33:10.978Z"
     },
     {
       "key": "vocabulary-item:pl-kot",
@@ -9306,6 +9672,127 @@
       },
       "createdAt": "2026-10-02T09:01:01.774Z",
       "updatedAt": "2026-10-02T09:01:01.774Z"
+    },
+    {
+      "key": "vocabulary-item:pl-kupowac",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-kupowac",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/bc29a5f1a1a05896.m4a",
+            "durationSeconds": 1.24,
+            "text": "kupować",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/anna/92824b6bf300c2e5.m4a",
+            "durationSeconds": 1.72,
+            "text": "Kupuję chleb.",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "72d82108fccf1f8859b1576fb4ae529e8f2e7209a80ed0ce8df1ff58ca8573b4",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:24.065Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:24.065Z",
+      "updatedAt": "2026-10-09T07:33:24.065Z"
+    },
+    {
+      "key": "vocabulary-item:pl-lekarstwo",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-lekarstwo",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/57a25a5ca7c180f8.m4a",
+            "durationSeconds": 1.6,
+            "text": "lekarstwo",
+            "language": "pl",
+            "narrator": "Marek"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/marek/5cd99f24b26a5672.m4a",
+            "durationSeconds": 5.28,
+            "text": "Przepiszę panu lekarstwo. Proszę dużo pić i odpoczywać.",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "51b87aee7a3c31b2fc620955c7d3af88195cc6e76a650be8e24d1a6177b52a5d",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:57.874Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:57.874Z",
+      "updatedAt": "2026-10-09T07:33:57.874Z"
+    },
+    {
+      "key": "vocabulary-item:pl-lekarz",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-lekarz",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/5dfed8aabebcc0d0.m4a",
+            "durationSeconds": 1.28,
+            "text": "lekarz",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "844ce3cd79727d39bda854f4b3f4201fdaca79a3be9b5d454aa81fa7dbc69558",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:44.186Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:44.186Z",
+      "updatedAt": "2026-10-09T07:33:44.186Z"
     },
     {
       "key": "vocabulary-item:pl-lotnisko",
@@ -9413,6 +9900,41 @@
       "updatedAt": "2026-10-02T08:59:57.893Z"
     },
     {
+      "key": "vocabulary-item:pl-obiad",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-obiad",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/c5809a0b05085551.m4a",
+            "durationSeconds": 1.24,
+            "text": "obiad",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "aa64a071f7fa0266377b846dd59e0c8e125ed9d6220e6bb643707de4dfdb3198",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:04.151Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:04.151Z",
+      "updatedAt": "2026-10-09T07:33:04.151Z"
+    },
+    {
       "key": "vocabulary-item:pl-piec",
       "content": {
         "type": "vocabulary-item",
@@ -9446,6 +9968,41 @@
       },
       "createdAt": "2026-10-02T08:59:05.505Z",
       "updatedAt": "2026-10-02T08:59:05.505Z"
+    },
+    {
+      "key": "vocabulary-item:pl-pieniadze",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-pieniadze",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/996e6e3fd38f793c.m4a",
+            "durationSeconds": 1.36,
+            "text": "pieniądze",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "5327ca565bbcbab17f92c1de106cedb47776e95c2869cc8324efc714690597d7",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:33.712Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:33.712Z",
+      "updatedAt": "2026-10-09T07:31:33.712Z"
     },
     {
       "key": "vocabulary-item:pl-pies",
@@ -9483,6 +10040,41 @@
       "updatedAt": "2026-10-02T09:00:54.711Z"
     },
     {
+      "key": "vocabulary-item:pl-placic",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-placic",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/f20d17e95eb193e2.m4a",
+            "durationSeconds": 1.28,
+            "text": "płacić",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "8ec6d6ee17dae1152b20c33bb54c0ecaa3a3185cd7d3b1d56e1886319c759df8",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:30.597Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:30.597Z",
+      "updatedAt": "2026-10-09T07:33:30.597Z"
+    },
+    {
       "key": "vocabulary-item:pl-pociag",
       "content": {
         "type": "vocabulary-item",
@@ -9518,6 +10110,41 @@
       "updatedAt": "2026-10-02T09:01:14.946Z"
     },
     {
+      "key": "vocabulary-item:pl-poczta",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-poczta",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/7f0707920ff9eb11.m4a",
+            "durationSeconds": 1.08,
+            "text": "poczta",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "4f073d2d6d3adb6179c6e39f39a5e8490af6a14962f8b0f1346201a45c9f8f4c",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:05.573Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:05.573Z",
+      "updatedAt": "2026-10-09T07:32:05.573Z"
+    },
+    {
       "key": "vocabulary-item:pl-praca",
       "content": {
         "type": "vocabulary-item",
@@ -9551,6 +10178,119 @@
       },
       "createdAt": "2026-10-02T09:01:08.165Z",
       "updatedAt": "2026-10-02T09:01:08.165Z"
+    },
+    {
+      "key": "vocabulary-item:pl-prosto",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-prosto",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/511fdaaae36b0a76.m4a",
+            "durationSeconds": 1.32,
+            "text": "prosto",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/anna/d645bdbd24e5f257.m4a",
+            "durationSeconds": 2.28,
+            "text": "Proszę iść prosto.",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "c57878e6d437164ff5e01075b97f67821bda85716b41fb9a144ae06cd45d4da4",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:18.852Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:18.852Z",
+      "updatedAt": "2026-10-09T07:32:18.852Z"
+    },
+    {
+      "key": "vocabulary-item:pl-rachunek",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-rachunek",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/ea9f6843fc597768.m4a",
+            "durationSeconds": 1.32,
+            "text": "rachunek",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "aaf9ca73a43f84cccfa115e5a2d453707f8056fb019bdf2f261c18ed63b5cf78",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:53.839Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:53.839Z",
+      "updatedAt": "2026-10-09T07:31:53.839Z"
+    },
+    {
+      "key": "vocabulary-item:pl-recepta",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-recepta",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/marek/46ee682606b875cf.m4a",
+            "durationSeconds": 1.52,
+            "text": "recepta",
+            "language": "pl",
+            "narrator": "Marek"
+          }
+        ]
+      },
+      "sourceHash": "f42b3d1dda48a1cb147f405a734e88004de41422d16327cb9b5d13c4a73e720c",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:34:09.880Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:34:09.880Z",
+      "updatedAt": "2026-10-09T07:34:09.880Z"
     },
     {
       "key": "vocabulary-item:pl-rodzina",
@@ -9658,6 +10398,84 @@
       "updatedAt": "2026-10-02T08:59:38.024Z"
     },
     {
+      "key": "vocabulary-item:pl-sklep",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-sklep",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/f225b2be36c87a02.m4a",
+            "durationSeconds": 1.16,
+            "text": "sklep",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "6bba4a815a4d2f172ff8289dc3aae4d136446f9b86c8188bbf654e1f3c747b9f",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:31:20.349Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:31:20.349Z",
+      "updatedAt": "2026-10-09T07:31:20.349Z"
+    },
+    {
+      "key": "vocabulary-item:pl-sniadanie",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-sniadanie",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/bc7afa5fdbbd52d8.m4a",
+            "durationSeconds": 1.32,
+            "text": "śniadanie",
+            "language": "pl",
+            "narrator": "Anna"
+          },
+          {
+            "purpose": "example-pronunciation",
+            "url": "pl/audio/anna/8289bd68ee384711.m4a",
+            "durationSeconds": 2.68,
+            "text": "Jem śniadanie o ósmej.",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "4b3e4ea23a5130f581d488a96fe21657928f29abac411976d04fadc3f83fb611",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:58.285Z",
+        "providerCalls": 2
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:58.285Z",
+      "updatedAt": "2026-10-09T07:32:58.285Z"
+    },
+    {
       "key": "vocabulary-item:pl-tata",
       "content": {
         "type": "vocabulary-item",
@@ -9728,6 +10546,41 @@
       "updatedAt": "2026-10-02T08:58:54.323Z"
     },
     {
+      "key": "vocabulary-item:pl-ulica",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-ulica",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/39f1b05e5e1e3ff8.m4a",
+            "durationSeconds": 1.2,
+            "text": "ulica",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "68057633207f931e84866e199b3fe7bf4015b468cbc49e737618c132fff3c964",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:32:12.567Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:32:12.567Z",
+      "updatedAt": "2026-10-09T07:32:12.567Z"
+    },
+    {
       "key": "vocabulary-item:pl-walizka",
       "content": {
         "type": "vocabulary-item",
@@ -9796,6 +10649,41 @@
       },
       "createdAt": "2026-10-02T08:59:51.429Z",
       "updatedAt": "2026-10-02T08:59:51.429Z"
+    },
+    {
+      "key": "vocabulary-item:pl-wstawac",
+      "content": {
+        "type": "vocabulary-item",
+        "id": "pl-wstawac",
+        "languageId": "pl"
+      },
+      "published": {
+        "audio": [
+          {
+            "purpose": "pronunciation",
+            "url": "pl/audio/anna/4e25e271cfa89e2d.m4a",
+            "durationSeconds": 1.2,
+            "text": "wstawać",
+            "language": "pl",
+            "narrator": "Anna"
+          }
+        ]
+      },
+      "sourceHash": "159a4c08d9b6287b9af0d3f62b42e1beafd0aead53a5e46ea0401d7d49bf2ae5",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 0,
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-09T07:33:37.367Z",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "none (audio only)"
+      },
+      "createdAt": "2026-10-09T07:33:37.367Z",
+      "updatedAt": "2026-10-09T07:33:37.367Z"
     }
   ]
 }
