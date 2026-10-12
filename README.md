@@ -234,7 +234,7 @@ Antes de la entrega final debe comprobarse que la cuenta de profesor existe en l
 
 ## 7. Arquitectura
 
-El sistema utiliza un **monolito modular**, evitando microservicios, Kubernetes, CQRS o event sourcing salvo que una ADR futura justificase explícitamente una excepción.
+El sistema utiliza un **monolito modular** con **Clean Architecture** y **arquitectura hexagonal** (puertos y adaptadores), evitando microservicios, Kubernetes, CQRS o event sourcing salvo que una ADR futura justificase explícitamente una excepción.
 
 ### Capas
 

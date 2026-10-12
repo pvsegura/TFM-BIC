@@ -191,14 +191,11 @@ Infraestructura actual:
 
 No se incluyen credenciales reales en este README.
 
-Para la entrega académica deben crearse cuentas de demostración sin datos personales reales y completar:
+Para la entrega académica se crean cuentas de demostración sin datos personales reales y completar:
 
-| Rol      | Email        | Contraseña   |
-| -------- | ------------ | ------------ |
-| Profesor | `[RELLENAR]` | `[RELLENAR]` |
-| Alumno   | `[RELLENAR]` | `[RELLENAR]` |
-
-Antes de la entrega final debe comprobarse que la cuenta de profesor existe en la base de datos de la demo y que el alumno tiene actividad suficiente para que el dashboard muestre datos.
+| Rol      | Email           | Contraseña        |
+| -------- | --------------- | ----------------- |
+| Profesor | `test@test.com` | `um6cT8Uhf4HiEHR` |
 
 ---
 
@@ -234,7 +231,7 @@ Antes de la entrega final debe comprobarse que la cuenta de profesor existe en l
 
 ## 7. Arquitectura
 
-El sistema utiliza un **monolito modular**, evitando microservicios, Kubernetes, CQRS o event sourcing salvo que una ADR futura justificase explícitamente una excepción.
+El sistema utiliza un **monolito modular** con **Clean Architecture** y **arquitectura hexagonal** (puertos y adaptadores), evitando microservicios, Kubernetes, CQRS o event sourcing salvo que una ADR futura justificase explícitamente una excepción.
 
 ### Capas
 
@@ -328,7 +325,7 @@ La IA se utiliza en tres niveles.
 
 ### 9.1 IA como herramienta de desarrollo
 
-Claude Code se utilizó como agente de desarrollo para código, tests, arquitectura y documentación. Gemini y ChatGPT también se utilizaron durante el proceso.
+Claude Code se utilizó como agente de desarrollo para código, tests, arquitectura y documentación. Gemini y ChatGPT también se utilizaron durante el proceso osbretodo para consulta y desarrollo de prompts.
 
 El proyecto mantiene una regla explícita contra la invención de APIs, versiones, precios o requisitos legales. Lo no verificable se marca como `UNKNOWN` o `PENDING`.
 
