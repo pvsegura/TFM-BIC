@@ -635,5 +635,3 @@ La aparición de la cara/cámara es opcional.
 **Demo:** https://www.verbysia.com
 
 ---
-
-> **Nota de entrega:** los campos `[RELLENAR]` se han dejado deliberadamente sin completar para no inventar datos. Antes de entregar el TFM deben sustituirse por los datos reales del autor, repositorio, cuentas de demostración y enlaces de presentación/vídeo.
