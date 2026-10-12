@@ -484,6 +484,19 @@ pnpm check
 
 > Nunca debe subirse un `.env` real al repositorio. Utilizar `.env.example` como referencia.
 
+### CI local con Docker (Jenkins y SonarQube)
+
+El pipeline (`Jenkinsfile`) y el análisis de calidad (`sonar-project.properties`) se ejecutan en un Jenkins y un SonarQube locales, levantados como contenedores Docker:
+
+- Jenkins: `http://localhost:8080`
+- SonarQube: `http://localhost:9000`
+
+```bash
+docker start sonarqube-db sonarqube jenkins
+```
+
+SonarQube tarda alrededor de un minuto en estar disponible. Estos servicios no son necesarios para ejecutar la aplicación: solo para lanzar el pipeline y consultar el quality gate. Sus ficheros Compose pertenecen al entorno local de CI y no forman parte del repositorio; la configuración que necesita Jenkins está descrita en `infrastructure/jenkins/README.md` y `docs/deployment/ci-cd-pipeline.md`.
+
 ---
 
 ## 13. Scripts
