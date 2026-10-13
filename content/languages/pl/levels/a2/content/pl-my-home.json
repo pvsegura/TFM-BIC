@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-home",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Where I live",
+  "description": "Say where you live and describe your flat or house.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Mieszkam means I live. A place after w takes the locative case: w bloku, w domu, w centrum, w Warszawie. To say what a flat has, use jest for one thing and są for several: W mieszkaniu jest kuchnia; W mieszkaniu są dwa pokoje. The rooms are pokój, kuchnia, łazienka and sypialnia."
+    },
+    {
+      "type": "example",
+      "text": "Gdzie mieszkasz?",
+      "translation": "Where do you live?"
+    },
+    {
+      "type": "example",
+      "text": "Mieszkam w bloku w centrum.",
+      "translation": "I live in a block of flats in the centre."
+    },
+    {
+      "type": "example",
+      "text": "W mieszkaniu są dwa pokoje i kuchnia.",
+      "translation": "The flat has two rooms and a kitchen.",
+      "note": "Literally: in the flat there are two rooms and a kitchen."
+    },
+    {
+      "type": "example",
+      "text": "Łazienka jest mała.",
+      "translation": "The bathroom is small."
+    },
+    {
+      "type": "example",
+      "text": "Mam duży balkon.",
+      "translation": "I have a big balcony."
+    },
+    {
+      "type": "example",
+      "text": "Mieszkam w domu z ogrodem.",
+      "translation": "I live in a house with a garden."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Zosia",
+          "text": "Gdzie mieszkasz?",
+          "translation": "Where do you live?"
+        },
+        {
+          "speaker": "Michał",
+          "text": "Mieszkam w bloku w centrum. A ty?",
+          "translation": "I live in a block of flats in the centre. And you?"
+        },
+        {
+          "speaker": "Zosia",
+          "text": "Ja mieszkam w domu z ogrodem.",
+          "translation": "I live in a house with a garden."
+        },
+        {
+          "speaker": "Michał",
+          "text": "Super! Moje mieszkanie jest małe, ale mam duży balkon.",
+          "translation": "Great! My flat is small, but I have a big balcony."
+        }
+      ]
+    }
+  ]
+}

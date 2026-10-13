@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "id": "business-and-argument",
+  "languageId": "pl",
+  "status": "published",
+  "order": 105,
+  "instructionLanguage": "en",
+  "title": "Business and argument",
+  "description": "Words for negotiating, for conceding a point and for contrasting (C1).",
+  "items": [
+    {
+      "id": "pl-negocjacje",
+      "status": "published",
+      "order": 10,
+      "lemma": "negocjacje",
+      "translation": "negotiations",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "note": "Usually used in the plural."
+    },
+    {
+      "id": "pl-oferta",
+      "status": "published",
+      "order": 20,
+      "lemma": "oferta",
+      "translation": "offer",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-warunek",
+      "status": "published",
+      "order": 30,
+      "lemma": "warunek",
+      "translation": "condition",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-kompromis",
+      "status": "published",
+      "order": 40,
+      "lemma": "kompromis",
+      "translation": "compromise",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-ustepstwo",
+      "status": "published",
+      "order": 50,
+      "lemma": "ustępstwo",
+      "translation": "concession",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-budzet",
+      "status": "published",
+      "order": 60,
+      "lemma": "budżet",
+      "translation": "budget",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-koszt",
+      "status": "published",
+      "order": 70,
+      "lemma": "koszt",
+      "translation": "cost",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-rynek",
+      "status": "published",
+      "order": 80,
+      "lemma": "rynek",
+      "translation": "market; market square",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-konkurencja",
+      "status": "published",
+      "order": 90,
+      "lemma": "konkurencja",
+      "translation": "competition",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-oddzial",
+      "status": "published",
+      "order": 100,
+      "lemma": "oddział",
+      "translation": "branch; department",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-sklonny",
+      "status": "published",
+      "order": 110,
+      "lemma": "skłonny",
+      "translation": "willing; inclined",
+      "levelId": "c1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-obnizyc",
+      "status": "published",
+      "order": 120,
+      "lemma": "obniżyć",
+      "translation": "to lower; to reduce",
+      "levelId": "c1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-chociaz",
+      "status": "published",
+      "order": 130,
+      "lemma": "chociaż",
+      "translation": "although",
+      "levelId": "c1",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "id": "pl-mimo",
+      "status": "published",
+      "order": 140,
+      "lemma": "mimo",
+      "translation": "despite",
+      "levelId": "c1",
+      "partOfSpeech": "preposition",
+      "note": "Takes the genitive."
+    },
+    {
+      "id": "pl-wprawdzie",
+      "status": "published",
+      "order": 150,
+      "lemma": "wprawdzie",
+      "translation": "admittedly; it is true that",
+      "levelId": "c1",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-natomiast",
+      "status": "published",
+      "order": 160,
+      "lemma": "natomiast",
+      "translation": "whereas; however",
+      "levelId": "c1",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "id": "pl-niemniej-jednak",
+      "status": "published",
+      "order": 170,
+      "lemma": "niemniej jednak",
+      "translation": "nevertheless",
+      "levelId": "c1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-zdrobnienie",
+      "status": "published",
+      "order": 180,
+      "lemma": "zdrobnienie",
+      "translation": "diminutive",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-chwileczka",
+      "status": "published",
+      "order": 190,
+      "lemma": "chwileczka",
+      "translation": "a brief moment",
+      "levelId": "c1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "A diminutive of chwila, a moment."
+    }
+  ]
+}

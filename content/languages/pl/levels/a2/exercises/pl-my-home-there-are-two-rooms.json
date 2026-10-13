@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-home-there-are-two-rooms",
+  "lessonId": "pl-my-home",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Which word completes the sentence? W mieszkaniu ... dwa pokoje.",
+  "explanation": "Use są for several things and jest for one: W mieszkaniu są dwa pokoje, but W mieszkaniu jest kuchnia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "jest"
+      },
+      {
+        "id": "b",
+        "text": "mam"
+      },
+      {
+        "id": "c",
+        "text": "są"
+      },
+      {
+        "id": "d",
+        "text": "mieszkam"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

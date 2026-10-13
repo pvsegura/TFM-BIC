@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 1,
+  "id": "home-and-weather",
+  "languageId": "pl",
+  "status": "published",
+  "order": 72,
+  "instructionLanguage": "en",
+  "title": "Home and weather",
+  "description": "Words for the home, the weather and the seasons (A2).",
+  "items": [
+    {
+      "id": "pl-mieszkanie",
+      "status": "published",
+      "order": 10,
+      "lemma": "mieszkanie",
+      "translation": "flat; apartment",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-blok",
+      "status": "published",
+      "order": 20,
+      "lemma": "blok",
+      "translation": "block of flats",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-kuchnia",
+      "status": "published",
+      "order": 30,
+      "lemma": "kuchnia",
+      "translation": "kitchen",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-lazienka",
+      "status": "published",
+      "order": 40,
+      "lemma": "łazienka",
+      "translation": "bathroom",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-sypialnia",
+      "status": "published",
+      "order": 50,
+      "lemma": "sypialnia",
+      "translation": "bedroom",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-balkon",
+      "status": "published",
+      "order": 60,
+      "lemma": "balkon",
+      "translation": "balcony",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-ogrod",
+      "status": "published",
+      "order": 70,
+      "lemma": "ogród",
+      "translation": "garden",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-okno",
+      "status": "published",
+      "order": 80,
+      "lemma": "okno",
+      "translation": "window",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-drzwi",
+      "status": "published",
+      "order": 90,
+      "lemma": "drzwi",
+      "translation": "door",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "note": "Used only in the plural."
+    },
+    {
+      "id": "pl-mieszkac",
+      "status": "published",
+      "order": 100,
+      "lemma": "mieszkać",
+      "translation": "to live (in a place)",
+      "levelId": "a2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-pogoda",
+      "status": "published",
+      "order": 110,
+      "lemma": "pogoda",
+      "translation": "weather",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-deszcz",
+      "status": "published",
+      "order": 120,
+      "lemma": "deszcz",
+      "translation": "rain",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-snieg",
+      "status": "published",
+      "order": 130,
+      "lemma": "śnieg",
+      "translation": "snow",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-slonce",
+      "status": "published",
+      "order": 140,
+      "lemma": "słońce",
+      "translation": "sun",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-wiatr",
+      "status": "published",
+      "order": 150,
+      "lemma": "wiatr",
+      "translation": "wind",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-zimno",
+      "status": "published",
+      "order": 160,
+      "lemma": "zimno",
+      "translation": "cold (it is cold)",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-cieplo",
+      "status": "published",
+      "order": 170,
+      "lemma": "ciepło",
+      "translation": "warm (it is warm)",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-goraco",
+      "status": "published",
+      "order": 180,
+      "lemma": "gorąco",
+      "translation": "hot (it is hot)",
+      "levelId": "a2",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-wiosna",
+      "status": "published",
+      "order": 190,
+      "lemma": "wiosna",
+      "translation": "spring",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-lato",
+      "status": "published",
+      "order": 200,
+      "lemma": "lato",
+      "translation": "summer",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-jesien",
+      "status": "published",
+      "order": 210,
+      "lemma": "jesień",
+      "translation": "autumn",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-zima",
+      "status": "published",
+      "order": 220,
+      "lemma": "zima",
+      "translation": "winter",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

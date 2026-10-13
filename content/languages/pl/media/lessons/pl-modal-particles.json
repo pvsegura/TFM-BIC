@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-modal-particles",
+  "objective": "Hear the attitude that a particle adds to a sentence: reproach, doubt or sarcasm.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "kasia",
+      "name": "Kasia",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Kasia is about to leave and cannot find her keys.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "kasia",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Gdzie są klucze? Przecież leżały na stole.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Chyba zostawiłaś je w samochodzie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A reproach, then a guess. Neither word adds a fact."
+          }
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Akurat! Nigdy ich tam nie zostawiam.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "Niby nie, a w zeszłym tygodniu?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Sarcasm, answered with doubt."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Attitude, not facts",
+      "phrase": "Niby tak, ale nie jestem przekonana.",
+      "panels": [
+        {
+          "caption": "You should know this",
+          "text": "Przecież ci mówiłem."
+        },
+        {
+          "caption": "Disbelief",
+          "text": "Chyba żartujesz!"
+        },
+        {
+          "caption": "Sarcastic denial",
+          "text": "Akurat!"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Niby tak, ale nie jestem przekonana.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "These small words say how the speaker feels about the sentence."
+        },
+        {
+          "say": "Remove them and the facts stay the same, but the tone is gone."
+        },
+        {
+          "say": "Intonation decides the rest.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "But I told you.",
+      "answer": "Przecież ci mówiłem.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "kasia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kasia"
+        }
+      ],
+      "prompt": "You must be joking!",
+      "answer": "Chyba żartujesz!",
+      "answerBy": "kasia"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

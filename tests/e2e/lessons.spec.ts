@@ -19,6 +19,9 @@ const LESSON_TITLES_IN_ORDER = [
   "Greetings and goodbyes",
   "Introducing yourself",
   "Please, thank you and sorry",
+  "Numbers and age",
+  "My family",
+  "Days of the week",
 ];
 
 /** Pixels by which the page is wider than the viewport (0 = no sideways scrolling). */
@@ -79,7 +82,7 @@ test.describe("lesson discovery", () => {
     const titles = await page.getByRole("heading", { level: 3 }).allTextContents();
     expect(titles).toEqual(LESSON_TITLES_IN_ORDER);
     await expect(cards.first()).toContainText("Lesson 1");
-    await expect(cards.last()).toContainText("Lesson 3");
+    await expect(cards.last()).toContainText("Lesson 6");
   });
 
   test("a lesson that has not been opened says Not started, and later levels are coming soon", async ({
@@ -110,12 +113,12 @@ test.describe("lesson discovery", () => {
     );
   });
 
-  test("the public content browser is unaffected: /learn/pl/a1 still lists all five items", async ({
+  test("the public content browser is unaffected: /learn/pl/a1 still lists all eight items", async ({
     page,
   }) => {
     await page.goto("/learn/pl/a1");
 
-    await expect(page.getByRole("list", { name: "Content" }).getByRole("listitem")).toHaveCount(5);
+    await expect(page.getByRole("list", { name: "Content" }).getByRole("listitem")).toHaveCount(8);
   });
 });
 

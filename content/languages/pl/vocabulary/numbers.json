@@ -6,7 +6,7 @@
   "order": 20,
   "instructionLanguage": "en",
   "title": "Numbers",
-  "description": "The cardinal numbers one to five.",
+  "description": "The cardinal numbers one to ten, and twenty.",
   "items": [
     {
       "id": "pl-jeden",
@@ -50,6 +50,60 @@
       "order": 50,
       "lemma": "pięć",
       "translation": "five",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-szesc",
+      "status": "published",
+      "order": 60,
+      "lemma": "sześć",
+      "translation": "six",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-siedem",
+      "status": "published",
+      "order": 70,
+      "lemma": "siedem",
+      "translation": "seven",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-osiem",
+      "status": "published",
+      "order": 80,
+      "lemma": "osiem",
+      "translation": "eight",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-dziewiec",
+      "status": "published",
+      "order": 90,
+      "lemma": "dziewięć",
+      "translation": "nine",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-dziesiec",
+      "status": "published",
+      "order": 100,
+      "lemma": "dziesięć",
+      "translation": "ten",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-dwadziescia",
+      "status": "published",
+      "order": 110,
+      "lemma": "dwadzieścia",
+      "translation": "twenty",
       "levelId": "a1",
       "partOfSpeech": "numeral"
     }

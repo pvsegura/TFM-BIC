@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-family-my-dad",
+  "lessonId": "pl-my-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which word completes the sentence? To jest ... tata.",
+  "explanation": "Tata is masculine although it ends in -a, so it takes mój: To jest mój tata.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "moja"
+      },
+      {
+        "id": "b",
+        "text": "mój"
+      },
+      {
+        "id": "c",
+        "text": "moje"
+      },
+      {
+        "id": "d",
+        "text": "mam"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

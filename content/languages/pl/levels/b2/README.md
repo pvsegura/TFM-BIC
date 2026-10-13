@@ -1,6 +1,6 @@
 # Polish — B2
 
-B2 (vantage): formal register at work, real and unreal conditions, reported speech, impersonal and passive forms, verb prefixes and structured argument.
+B2 (vantage): formal register at work, real and unreal conditions, reported speech, impersonal and passive forms, verb prefixes, structured argument, complaints, relative clauses and żeby clauses.
 
 `content/` holds the published items, one JSON file per item, named by its id. Their order is the explicit `order` field, not the file name. See [content-architecture.md](../../../../../docs/architecture/content-architecture.md).
 

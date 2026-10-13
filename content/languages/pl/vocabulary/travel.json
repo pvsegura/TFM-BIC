@@ -47,6 +47,66 @@
       "levelId": "a1",
       "partOfSpeech": "noun",
       "gender": "feminine"
+    },
+    {
+      "id": "pl-samochod",
+      "status": "published",
+      "order": 50,
+      "lemma": "samochód",
+      "translation": "car",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-autobus",
+      "status": "published",
+      "order": 60,
+      "lemma": "autobus",
+      "translation": "bus",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-tramwaj",
+      "status": "published",
+      "order": 70,
+      "lemma": "tramwaj",
+      "translation": "tram",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-rower",
+      "status": "published",
+      "order": 80,
+      "lemma": "rower",
+      "translation": "bicycle",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-samolot",
+      "status": "published",
+      "order": 90,
+      "lemma": "samolot",
+      "translation": "plane",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-przystanek",
+      "status": "published",
+      "order": 100,
+      "lemma": "przystanek",
+      "translation": "bus or tram stop",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
     }
   ]
 }

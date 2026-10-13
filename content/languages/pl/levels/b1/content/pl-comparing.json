@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-comparing",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "Comparing things",
+  "description": "Say that something is cheaper, better or the best.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Many adjectives form the comparative with -szy or -ejszy: tani becomes tańszy, szybki becomes szybszy, ładny becomes ładniejszy. The superlative adds naj-: najtańszy, najszybszy, najładniejszy. A few are irregular: dobry, lepszy, najlepszy; zły, gorszy, najgorszy; duży, większy, największy; mały, mniejszy, najmniejszy. Than is niż with the nominative or od with the genitive."
+    },
+    {
+      "type": "example",
+      "text": "Ten telefon jest tańszy niż tamten.",
+      "translation": "This phone is cheaper than that one."
+    },
+    {
+      "type": "example",
+      "text": "Kraków jest mniejszy od Warszawy.",
+      "translation": "Kraków is smaller than Warsaw.",
+      "note": "Od takes the genitive: Warszawa becomes Warszawy."
+    },
+    {
+      "type": "example",
+      "text": "To jest najlepsza kawiarnia w mieście.",
+      "translation": "This is the best café in town."
+    },
+    {
+      "type": "example",
+      "text": "Pociąg jest szybszy, ale droższy.",
+      "translation": "The train is faster but more expensive."
+    },
+    {
+      "type": "example",
+      "text": "Który jest lepszy?",
+      "translation": "Which one is better?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Adam",
+          "text": "Który telefon jest lepszy?",
+          "translation": "Which phone is better?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Ten jest szybszy i ma lepszy aparat.",
+          "translation": "This one is faster and has a better camera."
+        },
+        {
+          "speaker": "Adam",
+          "text": "A tamten?",
+          "translation": "And that one?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Tamten jest tańszy, ale ma mniejszy ekran.",
+          "translation": "That one is cheaper, but it has a smaller screen."
+        },
+        {
+          "speaker": "Adam",
+          "text": "W takim razie wezmę ten tańszy.",
+          "translation": "In that case I will take the cheaper one."
+        }
+      ]
+    }
+  ]
+}

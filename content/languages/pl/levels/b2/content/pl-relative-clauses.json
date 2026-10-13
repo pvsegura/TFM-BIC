@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-relative-clauses",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Który: adding information about a noun",
+  "description": "Describe a person or thing with a clause introduced by który.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Który introduces a clause that describes a noun. It agrees with that noun in gender and number (który, która, które), but its case comes from its role inside its own clause: Książka, którą czytam uses the accusative, because I am reading it. A preposition stands before it: Restauracja, o której ci mówiłem. Polish always puts a comma before the clause."
+    },
+    {
+      "type": "example",
+      "text": "To jest sąsiad, który mieszka nad nami.",
+      "translation": "This is the neighbour who lives above us."
+    },
+    {
+      "type": "example",
+      "text": "Kobieta, która tu pracuje, jest lekarką.",
+      "translation": "The woman who works here is a doctor."
+    },
+    {
+      "type": "example",
+      "text": "Książka, którą czytam, jest bardzo ciekawa.",
+      "translation": "The book I am reading is very interesting.",
+      "note": "Którą is accusative: I am reading it."
+    },
+    {
+      "type": "example",
+      "text": "To jest restauracja, o której ci mówiłem.",
+      "translation": "This is the restaurant I told you about.",
+      "note": "The preposition o stands before której."
+    },
+    {
+      "type": "example",
+      "text": "Ludzie, z którymi pracuję, są bardzo mili.",
+      "translation": "The people I work with are very nice."
+    },
+    {
+      "type": "example",
+      "text": "Dziecko, które płacze, jest głodne.",
+      "translation": "The child who is crying is hungry."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "Kim jest ten mężczyzna, który stoi przy oknie?",
+          "translation": "Who is the man standing by the window?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "To jest kolega, z którym pracuję.",
+          "translation": "That is the colleague I work with."
+        },
+        {
+          "speaker": "Ola",
+          "text": "A kobieta, z którą rozmawia?",
+          "translation": "And the woman he is talking to?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "To jego żona, o której ci opowiadałem.",
+          "translation": "That is his wife, whom I told you about."
+        }
+      ]
+    }
+  ]
+}

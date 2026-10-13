@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-making-plans",
+  "objective": "Suggest meeting a friend, accept or decline, and agree on a time and place.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-a",
+      "voice": "piotr"
+    },
+    {
+      "id": "ania",
+      "name": "Ania",
+      "look": "woman-b",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "ania",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Bartek would like to see a new film with Ania this weekend.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "bartek",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Co robisz w sobotę? Może pójdziemy do kina?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Niestety w sobotę nie mogę. A może w piątek?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She declines politely and offers another day."
+          }
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Dobrze, piątek mi pasuje. O której się spotkamy?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ania",
+            "target": "Spotkajmy się o szóstej przed kinem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ania"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Świetnie. Do zobaczenia!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Suggest, accept, decline",
+      "phrase": "Może pójdziemy do kina?",
+      "panels": [
+        {
+          "caption": "Accept",
+          "text": "Chętnie!"
+        },
+        {
+          "caption": "Decline",
+          "text": "Niestety nie mogę, muszę pracować."
+        },
+        {
+          "caption": "Fix the time",
+          "text": "O której się spotkamy?"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Może pójdziemy do kina?",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A suggestion opens with the word for maybe."
+        },
+        {
+          "say": "To decline politely, say unfortunately and add a reason."
+        },
+        {
+          "say": "Then agree on the time and the place.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ania",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Suggest going to the cinema.",
+      "answer": "Może pójdziemy do kina?",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "bartek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ania",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ania"
+        }
+      ],
+      "prompt": "Ask what time you will meet.",
+      "answer": "O której się spotkamy?",
+      "answerBy": "ania"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

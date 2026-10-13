@@ -57,6 +57,66 @@
       "levelId": "a1",
       "partOfSpeech": "noun",
       "gender": "masculine"
+    },
+    {
+      "id": "pl-kawa",
+      "status": "published",
+      "order": 60,
+      "lemma": "kawa",
+      "translation": "coffee",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-herbata",
+      "status": "published",
+      "order": 70,
+      "lemma": "herbata",
+      "translation": "tea",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-sok",
+      "status": "published",
+      "order": 80,
+      "lemma": "sok",
+      "translation": "juice",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-zupa",
+      "status": "published",
+      "order": 90,
+      "lemma": "zupa",
+      "translation": "soup",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-cukier",
+      "status": "published",
+      "order": 100,
+      "lemma": "cukier",
+      "translation": "sugar",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-maslo",
+      "status": "published",
+      "order": 110,
+      "lemma": "masło",
+      "translation": "butter",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
     }
   ]
 }

@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "id": "services-and-complaints",
+  "languageId": "pl",
+  "status": "published",
+  "order": 95,
+  "instructionLanguage": "en",
+  "title": "Services and complaints",
+  "description": "Words for returning goods and dealing with services (B2).",
+  "items": [
+    {
+      "id": "pl-reklamacja",
+      "status": "published",
+      "order": 10,
+      "lemma": "reklamacja",
+      "translation": "complaint (about a product)",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-zwrot",
+      "status": "published",
+      "order": 20,
+      "lemma": "zwrot",
+      "translation": "return; refund",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-paragon",
+      "status": "published",
+      "order": 30,
+      "lemma": "paragon",
+      "translation": "receipt",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-gwarancja",
+      "status": "published",
+      "order": 40,
+      "lemma": "gwarancja",
+      "translation": "guarantee; warranty",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-naprawa",
+      "status": "published",
+      "order": 50,
+      "lemma": "naprawa",
+      "translation": "repair",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-wymiana",
+      "status": "published",
+      "order": 60,
+      "lemma": "wymiana",
+      "translation": "exchange",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-towar",
+      "status": "published",
+      "order": 70,
+      "lemma": "towar",
+      "translation": "product; goods",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-uszkodzony",
+      "status": "published",
+      "order": 80,
+      "lemma": "uszkodzony",
+      "translation": "damaged",
+      "levelId": "b2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-wymienic",
+      "status": "published",
+      "order": 90,
+      "lemma": "wymienić",
+      "translation": "to exchange",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-naprawic",
+      "status": "published",
+      "order": 100,
+      "lemma": "naprawić",
+      "translation": "to repair",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-zwrocic",
+      "status": "published",
+      "order": 110,
+      "lemma": "zwrócić",
+      "translation": "to return; to give back",
+      "levelId": "b2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-klient",
+      "status": "published",
+      "order": 120,
+      "lemma": "klient",
+      "translation": "customer; client",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-usluga",
+      "status": "published",
+      "order": 130,
+      "lemma": "usługa",
+      "translation": "service",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-zamowienie",
+      "status": "published",
+      "order": 140,
+      "lemma": "zamówienie",
+      "translation": "order",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-dostawa",
+      "status": "published",
+      "order": 150,
+      "lemma": "dostawa",
+      "translation": "delivery",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-opoznienie",
+      "status": "published",
+      "order": 160,
+      "lemma": "opóźnienie",
+      "translation": "delay",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-sasiad",
+      "status": "published",
+      "order": 170,
+      "lemma": "sąsiad",
+      "translation": "neighbour",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-urodziny",
+      "status": "published",
+      "order": 180,
+      "lemma": "urodziny",
+      "translation": "birthday",
+      "levelId": "b2",
+      "partOfSpeech": "noun",
+      "note": "Used only in the plural."
+    },
+    {
+      "id": "pl-zeby",
+      "status": "published",
+      "order": 190,
+      "lemma": "żeby",
+      "translation": "so that; in order to",
+      "levelId": "b2",
+      "partOfSpeech": "conjunction"
+    },
+    {
+      "id": "pl-ktory",
+      "status": "published",
+      "order": 200,
+      "lemma": "który",
+      "translation": "who; which; that",
+      "levelId": "b2",
+      "partOfSpeech": "pronoun"
+    }
+  ]
+}

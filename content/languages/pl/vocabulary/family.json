@@ -59,6 +59,88 @@
       "levelId": "a1",
       "partOfSpeech": "noun",
       "gender": "feminine"
+    },
+    {
+      "id": "pl-rodzenstwo",
+      "status": "published",
+      "order": 60,
+      "lemma": "rodzeństwo",
+      "translation": "brothers and sisters; siblings",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter",
+      "note": "One word for brothers and sisters as a group."
+    },
+    {
+      "id": "pl-babcia",
+      "status": "published",
+      "order": 70,
+      "lemma": "babcia",
+      "translation": "grandmother; grandma",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-dziadek",
+      "status": "published",
+      "order": 80,
+      "lemma": "dziadek",
+      "translation": "grandfather; grandpa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-syn",
+      "status": "published",
+      "order": 90,
+      "lemma": "syn",
+      "translation": "son",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-corka",
+      "status": "published",
+      "order": 100,
+      "lemma": "córka",
+      "translation": "daughter",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-maz",
+      "status": "published",
+      "order": 110,
+      "lemma": "mąż",
+      "translation": "husband",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-zona",
+      "status": "published",
+      "order": 120,
+      "lemma": "żona",
+      "translation": "wife",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-dziecko",
+      "status": "published",
+      "order": 130,
+      "lemma": "dziecko",
+      "translation": "child",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter",
+      "plural": "dzieci"
     }
   ]
 }

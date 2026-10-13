@@ -1,6 +1,6 @@
 # Polish — A2
 
-A2 (waystage): everyday transactions, daily routines, directions, the past tense and the first noun cases, learned through whole phrases.
+A2 (waystage): everyday transactions, daily routines, directions, the past tense, the first noun cases, eating out, the weather and the home, learned through whole phrases.
 
 `content/` holds the published items, one JSON file per item, named by its id. Their order is the explicit `order` field, not the file name. See [content-architecture.md](../../../../../docs/architecture/content-architecture.md).
 

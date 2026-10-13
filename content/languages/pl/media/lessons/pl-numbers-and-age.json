@@ -1,0 +1,249 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-numbers-and-age",
+  "objective": "Ask how old someone is and give your own age.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "kuba",
+      "name": "Kuba",
+      "look": "boy-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "park",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "In the park, Ola meets the boy who lives next door.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ola",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Cześć! Jak masz na imię?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kuba",
+            "target": "Mam na imię Kuba.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kuba"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Ile masz lat, Kuba?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She asks his age. Word for word: how many years do you have?"
+          }
+        },
+        {
+          "line": {
+            "by": "kuba",
+            "target": "Mam osiem lat. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kuba"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Ja mam dwadzieścia dwa lata.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Listen again to the last word. It changed."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Lat or lata?",
+      "phrase": "Mam dwadzieścia dwa lata.",
+      "panels": [
+        {
+          "caption": "The question",
+          "text": "Ile masz lat?"
+        },
+        {
+          "caption": "Twenty",
+          "text": "Mam dwadzieścia lat."
+        },
+        {
+          "caption": "Twenty-two",
+          "text": "Mam dwadzieścia dwa lata."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Mam dwadzieścia dwa lata.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The word for years depends on the number."
+        },
+        {
+          "say": "After a number ending in two, three or four, it takes a longer form."
+        },
+        {
+          "say": "With most other numbers it takes the short form.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Ask a friend how old they are.",
+      "answer": "Ile masz lat?",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "park",
+        "actors": [
+          {
+            "id": "ola",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kuba",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "You are twenty years old. Say it.",
+      "answer": "Mam dwadzieścia lat.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-proverbs",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "Proverbs and sayings",
+  "description": "Understand common proverbs and when speakers quote them.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Proverbs are quoted whole and usually without comment; speakers also allude to them by saying only the first half. Many keep old grammar or vocabulary, such as kołacz, a festive bread, in Bez pracy nie ma kołaczy. They are common in conversation and in journalism, where a headline often twists a proverb for effect, but they are out of place in official or academic writing."
+    },
+    {
+      "type": "example",
+      "text": "Co kraj, to obyczaj.",
+      "translation": "Every country has its own customs.",
+      "note": "Literally: what country, that custom."
+    },
+    {
+      "type": "example",
+      "text": "Lepiej późno niż wcale.",
+      "translation": "Better late than never."
+    },
+    {
+      "type": "example",
+      "text": "Bez pracy nie ma kołaczy.",
+      "translation": "No pain, no gain.",
+      "note": "Literally: without work there are no festive breads."
+    },
+    {
+      "type": "example",
+      "text": "Gdzie kucharek sześć, tam nie ma co jeść.",
+      "translation": "Too many cooks spoil the broth.",
+      "note": "Literally: where there are six cooks, there is nothing to eat."
+    },
+    {
+      "type": "example",
+      "text": "Nie chwal dnia przed zachodem słońca.",
+      "translation": "Don't count your chickens before they hatch.",
+      "note": "Literally: do not praise the day before sunset."
+    },
+    {
+      "type": "example",
+      "text": "Co ma wisieć, nie utonie.",
+      "translation": "What will be, will be.",
+      "note": "Literally: what is meant to hang will not drown."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Agata",
+          "text": "Przepraszam za spóźnienie, pociąg miał godzinę opóźnienia.",
+          "translation": "Sorry I am late, the train was an hour late."
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Nic się nie stało. Lepiej późno niż wcale.",
+          "translation": "No harm done. Better late than never."
+        },
+        {
+          "speaker": "Agata",
+          "text": "Projekt jest już prawie gotowy, więc chyba możemy świętować.",
+          "translation": "The project is almost ready, so I suppose we can celebrate."
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Spokojnie. Nie chwal dnia przed zachodem słońca.",
+          "translation": "Easy. Don't count your chickens before they hatch."
+        }
+      ]
+    }
+  ]
+}

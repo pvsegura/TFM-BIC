@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-days-of-the-week",
+  "objective": "Say what day it is and say goodbye until another day.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "tomek",
+      "name": "Tomek",
+      "look": "man-b",
+      "voice": "tomek"
+    },
+    {
+      "id": "ola",
+      "name": "Ola",
+      "look": "woman-c",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "The end of a long week at work. Tomek has lost track of the days.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "tomek",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Jaki dzisiaj jest dzień?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "Dzisiaj jest piątek.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Super! Jutro jest sobota.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Today, and then tomorrow."
+          }
+        },
+        {
+          "line": {
+            "by": "ola",
+            "target": "W sobotę mam wolne. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ola"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "tomek",
+            "target": "Ja też. Do zobaczenia w poniedziałek!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "tomek"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Today, tomorrow, on Saturday",
+      "phrase": "W sobotę mam wolne.",
+      "panels": [
+        {
+          "caption": "Today",
+          "text": "Dzisiaj jest poniedziałek."
+        },
+        {
+          "caption": "Tomorrow",
+          "text": "Jutro jest wtorek."
+        },
+        {
+          "caption": "On Saturday",
+          "text": "W sobotę mam wolne."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "W sobotę mam wolne.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "To say on a day, put one short word in front of it."
+        },
+        {
+          "say": "A day that ends in the letter a also changes its ending."
+        },
+        {
+          "say": "The names of the days are written with a small letter.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "tomek"
+        }
+      ],
+      "prompt": "Ask what day it is today.",
+      "answer": "Jaki dzisiaj jest dzień?",
+      "answerBy": "tomek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ola"
+        }
+      ],
+      "prompt": "Today is Monday. Say it.",
+      "answer": "Dzisiaj jest poniedziałek.",
+      "answerBy": "ola"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "tomek",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "ola",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "tomek"
+        }
+      ],
+      "prompt": "Say goodbye until tomorrow.",
+      "answer": "Do jutra!",
+      "answerBy": "tomek"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

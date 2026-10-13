@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-negotiating",
+  "objective": "Make a careful proposal, attach a condition to it and push back politely.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "kupiec",
+      "name": "The buyer",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "dostawca",
+      "name": "The supplier",
+      "look": "man-c",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "kupiec",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "dostawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two companies are close to a deal. Only the price is still open.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "kupiec",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kupiec",
+            "target": "Państwa oferta jest ciekawa, ale cena przekracza nasz budżet.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kupiec"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "dostawca",
+            "target": "Bylibyśmy skłonni obniżyć cenę pod warunkiem, że zamówią państwo większą partię.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "dostawca"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A concession, tied to a condition."
+          }
+        },
+        {
+          "line": {
+            "by": "kupiec",
+            "target": "O ile większą?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kupiec"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "dostawca",
+            "target": "O dwadzieścia procent.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "dostawca"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kupiec",
+            "target": "Zgoda. Przygotujemy umowę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kupiec"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Soften the proposal, then set a condition",
+      "phrase": "Proponowałbym obniżenie ceny o pięć procent.",
+      "panels": [
+        {
+          "caption": "Willingness",
+          "text": "Bylibyśmy skłonni podpisać umowę na dwa lata."
+        },
+        {
+          "caption": "Pushing back",
+          "text": "Obawiam się, że to przekracza nasz budżet."
+        },
+        {
+          "caption": "Closing",
+          "text": "W takim razie jesteśmy umówieni."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Proponowałbym obniżenie ceny o pięć procent.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The conditional turns a demand into a proposal."
+        },
+        {
+          "say": "To refuse without confrontation, begin with a phrase of regret."
+        },
+        {
+          "say": "And say clearly when the deal is closed.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "kupiec",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "dostawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "dostawca"
+        }
+      ],
+      "prompt": "Both sides have to compromise.",
+      "answer": "Obie strony muszą pójść na kompromis.",
+      "answerBy": "dostawca"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "kupiec",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "dostawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kupiec"
+        }
+      ],
+      "prompt": "I am afraid that exceeds our budget.",
+      "answer": "Obawiam się, że to przekracza nasz budżet.",
+      "answerBy": "kupiec"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

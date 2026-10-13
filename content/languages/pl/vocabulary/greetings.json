@@ -57,6 +57,34 @@
       "levelId": "a1",
       "partOfSpeech": "interjection",
       "note": "Said when parting for the night, not as a general goodbye."
+    },
+    {
+      "id": "pl-na-razie",
+      "status": "published",
+      "order": 60,
+      "lemma": "na razie",
+      "translation": "see you; bye for now",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "note": "Informal."
+    },
+    {
+      "id": "pl-do-jutra",
+      "status": "published",
+      "order": 70,
+      "lemma": "do jutra",
+      "translation": "see you tomorrow",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-do-zobaczenia",
+      "status": "published",
+      "order": 80,
+      "lemma": "do zobaczenia",
+      "translation": "see you",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
     }
   ]
 }

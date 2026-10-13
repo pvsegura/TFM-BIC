@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numbers-and-age",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "en",
+  "title": "Numbers and age",
+  "description": "Count from one to ten and say how old you are.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "The numbers from one to ten are jeden, dwa, trzy, cztery, pięć, sześć, siedem, osiem, dziewięć and dziesięć. To ask a friend's age, say Ile masz lat? The answer uses mam, I have: Mam dwadzieścia lat. The word for years depends on the number: with numbers ending in two, three or four (but not twelve to fourteen) it is lata, as in dwadzieścia dwa lata; otherwise it is lat."
+    },
+    {
+      "type": "example",
+      "text": "Ile masz lat?",
+      "translation": "How old are you?",
+      "note": "Literally: how many years do you have? Informal."
+    },
+    {
+      "type": "example",
+      "text": "Mam dwadzieścia lat.",
+      "translation": "I am twenty years old."
+    },
+    {
+      "type": "example",
+      "text": "Mam dwadzieścia dwa lata.",
+      "translation": "I am twenty-two years old.",
+      "note": "Lata, not lat, after a number ending in two, three or four."
+    },
+    {
+      "type": "example",
+      "text": "Ile pan ma lat?",
+      "translation": "How old are you?",
+      "note": "Formal, to a man. To a woman: Ile pani ma lat?"
+    },
+    {
+      "type": "example",
+      "text": "Jeden, dwa, trzy!",
+      "translation": "One, two, three!"
+    },
+    {
+      "type": "example",
+      "text": "Dziesięć złotych.",
+      "translation": "Ten zlotys."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "Cześć! Jak masz na imię?",
+          "translation": "Hi! What is your name?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Mam na imię Kuba.",
+          "translation": "My name is Kuba."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Ile masz lat, Kuba?",
+          "translation": "How old are you, Kuba?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Mam osiem lat. A ty?",
+          "translation": "I am eight. And you?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Ja mam dwadzieścia dwa lata.",
+          "translation": "I am twenty-two."
+        }
+      ]
+    }
+  ]
+}

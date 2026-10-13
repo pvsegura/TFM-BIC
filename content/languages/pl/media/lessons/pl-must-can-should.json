@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-must-can-should",
+  "objective": "Say what you must, can and should do, and what is or is not allowed.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "jan",
+      "name": "Jan",
+      "look": "man-b",
+      "voice": "tomek"
+    },
+    {
+      "id": "kasjerka",
+      "name": "The clerk",
+      "look": "woman-a",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "station",
+        "time": "day",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kasjerka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "At the railway station, Jan is in a hurry.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "jan",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "jan",
+            "target": "Przepraszam, czy tu można kupić bilet?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "jan"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kasjerka",
+            "target": "Tak. Dokąd chce pan jechać?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kasjerka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "jan",
+            "target": "Muszę być w Gdańsku o piątej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "jan"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "An obligation. Now listen to her advice."
+          }
+        },
+        {
+          "line": {
+            "by": "kasjerka",
+            "target": "W takim razie powinien pan jechać pociągiem o pierwszej.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasjerka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "jan",
+            "target": "Dobrze. Poproszę jeden bilet.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "jan"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Words that never change",
+      "phrase": "Trzeba kupić bilet.",
+      "panels": [
+        {
+          "caption": "It is necessary",
+          "text": "Trzeba kupić bilet."
+        },
+        {
+          "caption": "It is not allowed",
+          "text": "Tu nie wolno parkować."
+        },
+        {
+          "caption": "A learned skill",
+          "text": "Umiem pływać."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Trzeba kupić bilet.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Some of these words stay the same for every person."
+        },
+        {
+          "say": "They name a rule, not the person who follows it."
+        },
+        {
+          "say": "The others change their ending like any verb.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "station",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasjerka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "jan"
+        }
+      ],
+      "prompt": "You have to go now. Say it.",
+      "answer": "Muszę już iść.",
+      "answerBy": "jan"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "station",
+        "actors": [
+          {
+            "id": "jan",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasjerka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "jan"
+        }
+      ],
+      "prompt": "Ask if you may sit here.",
+      "answer": "Czy mogę tu usiąść?",
+      "answerBy": "jan"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

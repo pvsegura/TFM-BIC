@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-relative-clauses-which-case",
+  "lessonId": "pl-relative-clauses",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which form completes the sentence? Książka, ... czytam, jest bardzo ciekawa.",
+  "explanation": "Inside its clause the book is the object of czytam, so który is in the accusative: którą.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "która"
+      },
+      {
+        "id": "b",
+        "text": "którą"
+      },
+      {
+        "id": "c",
+        "text": "której"
+      },
+      {
+        "id": "d",
+        "text": "który"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

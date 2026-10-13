@@ -1,0 +1,228 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-public-speaking",
+  "objective": "Open a formal speech, lead the audience through its parts and close it.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "The speaker",
+      "look": "woman-d",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "school",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right",
+            "offstage": true
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A professor opens a conference in a full lecture hall.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 560
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Szanowni Państwo, drodzy goście!",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Pozwolą państwo, że zacznę od krótkiej anegdoty.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Ten minutes later, she moves to her main point."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Przejdę teraz do najważniejszej kwestii.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Czy możemy sobie pozwolić na bezczynność?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "A question that expects no answer. And finally, the close."
+          }
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Dziękuję za uwagę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Signposting a speech",
+      "phrase": "Na zakończenie chciałabym podkreślić jedno.",
+      "panels": [
+        {
+          "caption": "Opening",
+          "text": "Pozwolą państwo, że zacznę od krótkiej anegdoty."
+        },
+        {
+          "caption": "Moving on",
+          "text": "Przejdę teraz do najważniejszej kwestii."
+        },
+        {
+          "caption": "Closing",
+          "text": "Dziękuję za uwagę."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Na zakończenie chciałabym podkreślić jedno.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A good speaker tells the audience where the speech is going."
+        },
+        {
+          "say": "Each part is announced with a fixed phrase."
+        },
+        {
+          "say": "The last words thank the listeners.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "Thank the audience for their attention.",
+      "answer": "Dziękuję za uwagę.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "school",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 560,
+            "facing": "right"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "I will now turn to the most important issue.",
+      "answer": "Przejdę teraz do najważniejszej kwestii.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

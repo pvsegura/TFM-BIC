@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-days-of-the-week-see-you-tomorrow",
+  "lessonId": "pl-days-of-the-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: See you tomorrow!",
+  "explanation": "Jutro is tomorrow; after do it becomes jutra: Do jutra!",
+  "configuration": {
+    "acceptedAnswers": ["Do jutra!", "Do jutra", "Do jutra."],
+    "caseSensitive": false
+  }
+}

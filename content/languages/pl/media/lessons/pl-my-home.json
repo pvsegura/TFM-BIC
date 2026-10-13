@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-my-home",
+  "objective": "Say where you live and describe your home in a few words.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "zosia",
+      "name": "Zosia",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "michal",
+      "name": "Michał",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "suburb",
+        "time": "day",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Two new colleagues walk home together after work.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "zosia",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "zosia",
+            "target": "Gdzie mieszkasz?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "zosia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Mieszkam w bloku w centrum. A ty?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "After the little word for in, the place changes its ending."
+          }
+        },
+        {
+          "line": {
+            "by": "zosia",
+            "target": "Ja mieszkam w domu z ogrodem.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "zosia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "michal",
+            "target": "Super! Moje mieszkanie jest małe, ale mam duży balkon.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "michal"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Describing your home",
+      "phrase": "Mieszkam w bloku w centrum.",
+      "panels": [
+        {
+          "caption": "The question",
+          "text": "Gdzie mieszkasz?"
+        },
+        {
+          "caption": "In a place",
+          "text": "Mieszkam w bloku w centrum."
+        },
+        {
+          "caption": "There are",
+          "text": "W mieszkaniu są dwa pokoje i kuchnia."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Mieszkam w bloku w centrum.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A place that follows the word for in takes a new ending."
+        },
+        {
+          "say": "To list what a home has, begin with the place."
+        },
+        {
+          "say": "Then say there is, or there are.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "suburb",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "zosia"
+        }
+      ],
+      "prompt": "Ask a friend where they live.",
+      "answer": "Gdzie mieszkasz?",
+      "answerBy": "zosia"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "suburb",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "michal"
+        }
+      ],
+      "prompt": "The bathroom is small. Say it.",
+      "answer": "Łazienka jest mała.",
+      "answerBy": "michal"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "suburb",
+        "actors": [
+          {
+            "id": "zosia",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "michal",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "michal"
+        }
+      ],
+      "prompt": "You have a big balcony. Say it.",
+      "answer": "Mam duży balkon.",
+      "answerBy": "michal"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

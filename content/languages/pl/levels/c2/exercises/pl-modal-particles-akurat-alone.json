@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-modal-particles-akurat-alone",
+  "lessonId": "pl-modal-particles",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Said alone, Akurat! expresses enthusiastic agreement.",
+  "explanation": "Akurat means precisely, but said alone it is a sarcastic denial: Yeah, right!",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

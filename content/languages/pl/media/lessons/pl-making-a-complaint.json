@@ -1,0 +1,259 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-making-a-complaint",
+  "objective": "File a complaint about a faulty product and ask for a refund.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "marta",
+      "name": "Marta",
+      "look": "woman-b",
+      "voice": "ola"
+    },
+    {
+      "id": "sprzedawca",
+      "name": "The assistant",
+      "look": "man-a",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "sprzedawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Marta returns to the shop with a kettle that broke after one week.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "marta",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Dzień dobry. Chciałabym złożyć reklamację.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "sprzedawca",
+            "target": "Co się stało?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "sprzedawca"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Kupiłam ten czajnik tydzień temu i już nie działa.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She names the fault and says when she bought it."
+          }
+        },
+        {
+          "line": {
+            "by": "sprzedawca",
+            "target": "Bardzo mi przykro. Czy ma pani paragon?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "sprzedawca"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Tak, proszę. Wolałabym zwrot pieniędzy niż naprawę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "sprzedawca",
+            "target": "Rozumiem. Zwrócimy pani pieniądze na kartę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "sprzedawca"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "The fault, then what you expect",
+      "phrase": "Towar jest uszkodzony.",
+      "panels": [
+        {
+          "caption": "The fault",
+          "text": "Towar jest uszkodzony."
+        },
+        {
+          "caption": "What you expect",
+          "text": "Proszę o zwrot pieniędzy."
+        },
+        {
+          "caption": "Or an exchange",
+          "text": "Czy mogę wymienić go na nowy?"
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Towar jest uszkodzony.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "First describe the fault in plain words."
+        },
+        {
+          "say": "Then say exactly what you expect."
+        },
+        {
+          "say": "A polite, firm tone works better than an angry one.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "sprzedawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "Say that you would like to file a complaint.",
+      "answer": "Chciałabym złożyć reklamację.",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "sprzedawca",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "Ask for a refund.",
+      "answer": "Proszę o zwrot pieniędzy.",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

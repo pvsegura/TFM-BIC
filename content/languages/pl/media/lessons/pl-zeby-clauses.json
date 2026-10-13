@@ -1,0 +1,230 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-zeby-clauses",
+  "objective": "Say what you want someone else to do, and say why you do something.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "look": "man-a",
+      "voice": "tomek"
+    },
+    {
+      "id": "szefowa",
+      "name": "The manager",
+      "look": "woman-b",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "szefowa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Monday morning. The manager has a task for Adam.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "adam",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "szefowa",
+            "target": "Chciałabym, żeby pan przygotował raport do piątku.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "szefowa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Dobrze. Czy chce pani, żebym wysłał go też do klienta?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "One person wants, another person acts."
+          }
+        },
+        {
+          "line": {
+            "by": "szefowa",
+            "target": "Nie, wolałabym, żeby najpierw trafił do mnie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "szefowa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Rozumiem. Zrobię wszystko, żeby zdążyć.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "In his last sentence the subject stays the same, so an infinitive follows."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Two subjects, or one",
+      "phrase": "Chcę, żebyś przyszedł na moje urodziny.",
+      "panels": [
+        {
+          "caption": "Two subjects",
+          "text": "Lekarz powiedział, żebym więcej spał."
+        },
+        {
+          "caption": "One subject",
+          "text": "Uczę się polskiego, żeby pracować w Polsce."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Chcę, żebyś przyszedł na moje urodziny.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "With two different subjects, the verb looks like the past tense."
+        },
+        {
+          "say": "The personal ending moves onto the linking word."
+        },
+        {
+          "say": "With one subject, use the infinitive to give your purpose.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "szefowa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "szefowa"
+        }
+      ],
+      "prompt": "I want you to come to my birthday.",
+      "answer": "Chcę, żebyś przyszedł na moje urodziny.",
+      "answerBy": "szefowa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "szefowa",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "adam"
+        }
+      ],
+      "prompt": "I am learning Polish in order to work in Poland.",
+      "answer": "Uczę się polskiego, żeby pracować w Polsce.",
+      "answerBy": "adam"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

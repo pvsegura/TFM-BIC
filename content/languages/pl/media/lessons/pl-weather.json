@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-weather",
+  "objective": "Ask what the weather is like and describe it.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "marta",
+      "name": "Marta",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "igor",
+      "name": "Igor",
+      "look": "man-c",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "street",
+        "time": "day",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Marta phones Igor before leaving home. He is already outside.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "marta",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Jaka jest dzisiaj pogoda?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "igor",
+            "target": "Jest zimno i pada deszcz.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "igor"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Cold, and raining."
+          }
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "Znowu? Wczoraj też padało.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "igor",
+            "target": "Tak, ale jutro będzie ciepło.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "igor"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "marta",
+            "target": "To dobrze. Jutro idziemy do parku!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "marta"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Talking about the weather",
+      "phrase": "Pada deszcz.",
+      "panels": [
+        {
+          "caption": "Rain",
+          "text": "Pada deszcz."
+        },
+        {
+          "caption": "Cold",
+          "text": "Jest zimno."
+        },
+        {
+          "caption": "In winter",
+          "text": "Zimą pada śnieg."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Pada deszcz.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Rain and snow both use the same verb, the verb to fall."
+        },
+        {
+          "say": "For cold, warm and hot, start with the word for is."
+        },
+        {
+          "say": "The name of a season changes its ending to say when.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "marta"
+        }
+      ],
+      "prompt": "Ask what the weather is like today.",
+      "answer": "Jaka jest dzisiaj pogoda?",
+      "answerBy": "marta"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "igor"
+        }
+      ],
+      "prompt": "It is raining. Say it.",
+      "answer": "Pada deszcz.",
+      "answerBy": "igor"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "street",
+        "actors": [
+          {
+            "id": "marta",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "igor",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "igor"
+        }
+      ],
+      "prompt": "It is cold. Say it.",
+      "answer": "Jest zimno.",
+      "answerBy": "igor"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

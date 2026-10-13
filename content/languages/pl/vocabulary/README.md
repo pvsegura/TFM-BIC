@@ -1,5 +1,5 @@
-Polish vocabulary (M9): six small, hand-written categories — `greetings`, `numbers`, `family`,
-`food`, `everyday`, `travel` — about 30 entries in all. Each file is one category and its entries;
+Polish vocabulary (M9, extended since): hand-written categories from A1 (`greetings`, `numbers`, `family`,
+`food`, `everyday`, `travel`, `days-and-time`) to C2, two or three per later level — about 270 entries in all. Each file is one category and its entries;
 see [content/languages/README.md](../../README.md) and
 [docs/architecture/content-architecture.md](../../../../docs/architecture/content-architecture.md)
 for the format and validation.

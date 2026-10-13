@@ -2063,6 +2063,202 @@
       "updatedAt": "2026-10-06T07:44:14.526Z"
     },
     {
+      "key": "lesson:pl-at-the-restaurant",
+      "content": {
+        "type": "lesson",
+        "id": "pl-at-the-restaurant",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-at-the-restaurant/video-672f8168d272.mp4",
+          "posterUrl": "pl/lesson/pl-at-the-restaurant/poster-672f8168d272.jpg",
+          "captionsUrl": "pl/lesson/pl-at-the-restaurant/captions-672f8168d272.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 105.52,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Lunchtime. Ewa sits down in a small restaurant.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzień dobry. Co dla pani?",
+              "language": "pl",
+              "speaker": "The waiter",
+              "translation": "Hello. What would you like?"
+            },
+            {
+              "text": "Co pan poleca?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "What do you recommend?"
+            },
+            {
+              "text": "She asks the waiter for advice.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzisiaj polecam zupę pomidorową i pierogi.",
+              "language": "pl",
+              "speaker": "The waiter",
+              "translation": "Today I recommend the tomato soup and the pierogi."
+            },
+            {
+              "text": "Dobrze, poproszę zupę i pierogi.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Fine, soup and pierogi, please."
+            },
+            {
+              "text": "Coś do picia?",
+              "language": "pl",
+              "speaker": "The waiter",
+              "translation": "Something to drink?"
+            },
+            {
+              "text": "Wodę, proszę.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "Water, please."
+            },
+            {
+              "text": "Proszę. Smacznego!",
+              "language": "pl",
+              "speaker": "The waiter",
+              "translation": "Here you are. Enjoy your meal!"
+            },
+            {
+              "text": "Poproszę zupę pomidorową.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Tomato soup, please."
+            },
+            {
+              "text": "Order with the polite word, then the dish.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A feminine dish changes its ending, and so does the word that describes it.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "When you finish, ask for the bill in the same way.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask the waiter what he recommends. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co pan poleca?",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "What do you recommend?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Wish someone a good meal. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Smacznego!",
+              "language": "pl",
+              "speaker": "The waiter",
+              "translation": "Enjoy your meal!"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "You have finished. Ask for the bill. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Poproszę rachunek.",
+              "language": "pl",
+              "speaker": "Ewa",
+              "translation": "The bill, please."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Ask a waiter for advice, order a meal and ask for the bill.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "ef45e18671eb954bfd9e1a0b01025dd2812524bda98a843d47a653b39b790dd2",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Ask a waiter for advice, order a meal and ask for the bill.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dzień dobry. Co dla pani?",
+          "Co pan poleca?",
+          "Dzisiaj polecam zupę pomidorową i pierogi.",
+          "Dobrze, poproszę zupę i pierogi.",
+          "Coś do picia?",
+          "Wodę, proszę.",
+          "Proszę. Smacznego!",
+          "Poproszę zupę pomidorową.",
+          "Smacznego!",
+          "Poproszę rachunek."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Ewa",
+            "voice": "ola"
+          },
+          {
+            "character": "The waiter",
+            "voice": "tomek"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T10:09:37.928Z",
+        "providerCalls": 18
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:09:37.928Z",
+      "updatedAt": "2026-10-13T10:09:37.928Z"
+    },
+    {
       "key": "lesson:pl-cases-endings",
       "content": {
         "type": "lesson",
@@ -2384,6 +2580,52 @@
       "updatedAt": "2026-10-06T07:28:37.107Z"
     },
     {
+      "key": "lesson:pl-comparing",
+      "content": {
+        "type": "lesson",
+        "id": "pl-comparing",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:25:39.878Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:20:56.655Z",
+      "updatedAt": "2026-10-13T10:25:39.878Z"
+    },
+    {
+      "key": "lesson:pl-concession-and-contrast",
+      "content": {
+        "type": "lesson",
+        "id": "pl-concession-and-contrast",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:23:15.053Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:23:15.053Z",
+      "updatedAt": "2026-10-13T10:23:15.053Z"
+    },
+    {
       "key": "lesson:pl-conditions",
       "content": {
         "type": "lesson",
@@ -2692,6 +2934,211 @@
       },
       "createdAt": "2026-10-05T08:31:43.565Z",
       "updatedAt": "2026-10-05T08:31:43.565Z"
+    },
+    {
+      "key": "lesson:pl-days-of-the-week",
+      "content": {
+        "type": "lesson",
+        "id": "pl-days-of-the-week",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-days-of-the-week/video-7faac9690ab7.mp4",
+          "posterUrl": "pl/lesson/pl-days-of-the-week/poster-7faac9690ab7.jpg",
+          "captionsUrl": "pl/lesson/pl-days-of-the-week/captions-7faac9690ab7.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 103.92,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "The end of a long week at work. Tomek has lost track of the days.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jaki dzisiaj jest dzień?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "What day is it today?"
+            },
+            {
+              "text": "Dzisiaj jest piątek.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Today is Friday."
+            },
+            {
+              "text": "Super! Jutro jest sobota.",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Great! Tomorrow is Saturday."
+            },
+            {
+              "text": "Today, and then tomorrow.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "W sobotę mam wolne. A ty?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "On Saturday I am free. And you?"
+            },
+            {
+              "text": "Ja też. Do zobaczenia w poniedziałek!",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "Me too. See you on Monday!"
+            },
+            {
+              "text": "W sobotę mam wolne.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "On Saturday I am free."
+            },
+            {
+              "text": "To say on a day, put one short word in front of it.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "A day that ends in the letter a also changes its ending.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The names of the days are written with a small letter.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ask what day it is today. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jaki dzisiaj jest dzień?",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "What day is it today?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Today is Monday. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Dzisiaj jest poniedziałek.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Today is Monday."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Say goodbye until tomorrow. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Do jutra!",
+              "language": "pl",
+              "speaker": "Tomek",
+              "translation": "See you tomorrow!"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Say what day it is and say goodbye until another day.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "bc619feb80355a7bffbfc00dcf570cc76db1c9f231f3b50a893c9185584c6048",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say what day it is and say goodbye until another day.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Jaki dzisiaj jest dzień?",
+          "Dzisiaj jest piątek.",
+          "Super! Jutro jest sobota.",
+          "W sobotę mam wolne. A ty?",
+          "Ja też. Do zobaczenia w poniedziałek!",
+          "W sobotę mam wolne.",
+          "Dzisiaj jest poniedziałek.",
+          "Do jutra!"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Tomek",
+            "voice": "tomek"
+          },
+          {
+            "character": "Ola",
+            "voice": "ola"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T10:03:52.460Z",
+        "providerCalls": 16
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:03:52.460Z",
+      "updatedAt": "2026-10-13T10:03:52.460Z"
+    },
+    {
+      "key": "lesson:pl-diminutives",
+      "content": {
+        "type": "lesson",
+        "id": "pl-diminutives",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:23:38.075Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:23:38.075Z",
+      "updatedAt": "2026-10-13T10:23:38.075Z"
     },
     {
       "key": "lesson:pl-directions",
@@ -4954,6 +5401,486 @@
       "updatedAt": "2026-10-09T07:08:28.952Z"
     },
     {
+      "key": "lesson:pl-making-a-complaint",
+      "content": {
+        "type": "lesson",
+        "id": "pl-making-a-complaint",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:22:05.834Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:22:05.834Z",
+      "updatedAt": "2026-10-13T10:22:05.834Z"
+    },
+    {
+      "key": "lesson:pl-making-plans",
+      "content": {
+        "type": "lesson",
+        "id": "pl-making-plans",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:21:19.715Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:21:19.715Z",
+      "updatedAt": "2026-10-13T10:21:19.715Z"
+    },
+    {
+      "key": "lesson:pl-modal-particles",
+      "content": {
+        "type": "lesson",
+        "id": "pl-modal-particles",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:24:47.179Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:24:47.179Z",
+      "updatedAt": "2026-10-13T10:24:47.179Z"
+    },
+    {
+      "key": "lesson:pl-must-can-should",
+      "content": {
+        "type": "lesson",
+        "id": "pl-must-can-should",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:21:42.753Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:21:42.753Z",
+      "updatedAt": "2026-10-13T10:21:42.753Z"
+    },
+    {
+      "key": "lesson:pl-my-family",
+      "content": {
+        "type": "lesson",
+        "id": "pl-my-family",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-my-family/video-a28e28b924a3.mp4",
+          "posterUrl": "pl/lesson/pl-my-family/poster-a28e28b924a3.jpg",
+          "captionsUrl": "pl/lesson/pl-my-family/captions-a28e28b924a3.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 105.53,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "At home, Piotr shows Anna some photos of his family.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Kto to jest?",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "Who is this?"
+            },
+            {
+              "text": "To jest moja siostra, Ola.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "This is my sister, Ola."
+            },
+            {
+              "text": "A to?",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "And this?"
+            },
+            {
+              "text": "To jest mój brat, Tomek.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "This is my brother, Tomek."
+            },
+            {
+              "text": "The word for my changed. It follows the gender of the person.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A ty? Masz rodzeństwo?",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "And you? Do you have brothers or sisters?"
+            },
+            {
+              "text": "Tak, mam siostrę.",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "Yes, I have a sister."
+            },
+            {
+              "text": "To jest mój tata.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "This is my dad."
+            },
+            {
+              "text": "The word for my agrees with the person you present.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "One form goes with women, another with men.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "And after the verb to have, a feminine word changes its last letter.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Present your mum. This is my mum. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To jest moja mama.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "This is my mum."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "You have a sister. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Mam siostrę.",
+              "language": "pl",
+              "speaker": "Anna",
+              "translation": "I have a sister."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask a friend if they have brothers or sisters. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Masz rodzeństwo?",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Do you have brothers or sisters?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Present the people in your family and say whether you have brothers or sisters.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "1f7979aaa8647ac9fc0bc57048bbab429935cd1bdccefa3f1873804b946d0ba3",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Present the people in your family and say whether you have brothers or sisters.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Kto to jest?",
+          "To jest moja siostra, Ola.",
+          "A to?",
+          "To jest mój brat, Tomek.",
+          "A ty? Masz rodzeństwo?",
+          "Tak, mam siostrę.",
+          "To jest mój tata.",
+          "To jest moja mama.",
+          "Mam siostrę.",
+          "Masz rodzeństwo?"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Anna",
+            "voice": "ola"
+          },
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T09:58:13.693Z",
+        "providerCalls": 18
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T09:58:13.693Z",
+      "updatedAt": "2026-10-13T09:58:13.693Z"
+    },
+    {
+      "key": "lesson:pl-my-home",
+      "content": {
+        "type": "lesson",
+        "id": "pl-my-home",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-my-home/video-577d10888d0e.mp4",
+          "posterUrl": "pl/lesson/pl-my-home/poster-577d10888d0e.jpg",
+          "captionsUrl": "pl/lesson/pl-my-home/captions-577d10888d0e.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 103.21,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Two new colleagues walk home together after work.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Gdzie mieszkasz?",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "Where do you live?"
+            },
+            {
+              "text": "Mieszkam w bloku w centrum. A ty?",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "I live in a block of flats in the centre. And you?"
+            },
+            {
+              "text": "After the little word for in, the place changes its ending.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ja mieszkam w domu z ogrodem.",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "I live in a house with a garden."
+            },
+            {
+              "text": "Super! Moje mieszkanie jest małe, ale mam duży balkon.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "Great! My flat is small, but I have a big balcony."
+            },
+            {
+              "text": "Mieszkam w bloku w centrum.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I live in a block of flats in the centre."
+            },
+            {
+              "text": "A place that follows the word for in takes a new ending.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To list what a home has, begin with the place.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Then say there is, or there are.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask a friend where they live. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Gdzie mieszkasz?",
+              "language": "pl",
+              "speaker": "Zosia",
+              "translation": "Where do you live?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The bathroom is small. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Łazienka jest mała.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "The bathroom is small."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "You have a big balcony. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Mam duży balkon.",
+              "language": "pl",
+              "speaker": "Michał",
+              "translation": "I have a big balcony."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Say where you live and describe your home in a few words.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "308985390bae82487fdeef90bb2da8b4292928ebf4b4b2f5995a130260558740",
+      "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say where you live and describe your home in a few words.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Gdzie mieszkasz?",
+          "Mieszkam w bloku w centrum. A ty?",
+          "Ja mieszkam w domu z ogrodem.",
+          "Super! Moje mieszkanie jest małe, ale mam duży balkon.",
+          "Mieszkam w bloku w centrum.",
+          "Łazienka jest mała.",
+          "Mam duży balkon."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Zosia",
+            "voice": "ola"
+          },
+          {
+            "character": "Michał",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T10:20:20.269Z",
+        "providerCalls": 15
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:20:20.269Z",
+      "updatedAt": "2026-10-13T10:20:20.269Z"
+    },
+    {
+      "key": "lesson:pl-negotiating",
+      "content": {
+        "type": "lesson",
+        "id": "pl-negotiating",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:24:01.112Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:24:01.112Z",
+      "updatedAt": "2026-10-13T10:24:01.112Z"
+    },
+    {
       "key": "lesson:pl-no-articles",
       "content": {
         "type": "lesson",
@@ -5287,6 +6214,177 @@
       },
       "createdAt": "2026-10-07T08:16:50.967Z",
       "updatedAt": "2026-10-08T10:21:06.862Z"
+    },
+    {
+      "key": "lesson:pl-numbers-and-age",
+      "content": {
+        "type": "lesson",
+        "id": "pl-numbers-and-age",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-numbers-and-age/video-e9e06d50a198.mp4",
+          "posterUrl": "pl/lesson/pl-numbers-and-age/poster-e9e06d50a198.jpg",
+          "captionsUrl": "pl/lesson/pl-numbers-and-age/captions-e9e06d50a198.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 88.17,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "In the park, Ola meets the boy who lives next door.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Cześć! Jak masz na imię?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Hi! What is your name?"
+            },
+            {
+              "text": "Mam na imię Kuba.",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "My name is Kuba."
+            },
+            {
+              "text": "Ile masz lat, Kuba?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "How old are you, Kuba?"
+            },
+            {
+              "text": "She asks his age. Word for word: how many years do you have?",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam osiem lat. A ty?",
+              "language": "pl",
+              "speaker": "Kuba",
+              "translation": "I am eight. And you?"
+            },
+            {
+              "text": "Ja mam dwadzieścia dwa lata.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I am twenty-two."
+            },
+            {
+              "text": "Listen again to the last word. It changed.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam dwadzieścia dwa lata.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "I am twenty-two years old."
+            },
+            {
+              "text": "The word for years depends on the number.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "After a number ending in two, three or four, it takes a longer form.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "With most other numbers it takes the short form.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ask a friend how old they are. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ile masz lat?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "How old are you?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You are twenty years old. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mam dwadzieścia lat.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "I am twenty years old."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Ask how old someone is and give your own age.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "c7a5b0da943dd8f2ea72a5cff4a7ed9c753dac3dc9bfa11229560307aa268a14",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Ask how old someone is and give your own age.",
+        "level": "a1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Cześć! Jak masz na imię?",
+          "Mam na imię Kuba.",
+          "Ile masz lat, Kuba?",
+          "Mam osiem lat. A ty?",
+          "Ja mam dwadzieścia dwa lata.",
+          "Mam dwadzieścia dwa lata.",
+          "Ile masz lat?",
+          "Mam dwadzieścia lat."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Kuba",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T09:51:28.180Z",
+        "providerCalls": 16
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T09:51:28.180Z",
+      "updatedAt": "2026-10-13T09:51:28.180Z"
     },
     {
       "key": "lesson:pl-numerals-in-full",
@@ -6179,6 +7277,52 @@
       "updatedAt": "2026-10-02T09:20:57.006Z"
     },
     {
+      "key": "lesson:pl-proverbs",
+      "content": {
+        "type": "lesson",
+        "id": "pl-proverbs",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:24:24.164Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:24:24.164Z",
+      "updatedAt": "2026-10-13T10:24:24.164Z"
+    },
+    {
+      "key": "lesson:pl-public-speaking",
+      "content": {
+        "type": "lesson",
+        "id": "pl-public-speaking",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:25:10.231Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:25:10.231Z",
+      "updatedAt": "2026-10-13T10:25:10.231Z"
+    },
+    {
       "key": "lesson:pl-regional-polish",
       "content": {
         "type": "lesson",
@@ -6490,6 +7634,29 @@
       },
       "createdAt": "2026-10-08T10:36:33.396Z",
       "updatedAt": "2026-10-08T10:36:33.396Z"
+    },
+    {
+      "key": "lesson:pl-relative-clauses",
+      "content": {
+        "type": "lesson",
+        "id": "pl-relative-clauses",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "anna",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:22:28.917Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:22:28.917Z",
+      "updatedAt": "2026-10-13T10:22:28.917Z"
     },
     {
       "key": "lesson:pl-reported-speech",
@@ -7545,6 +8712,187 @@
       "updatedAt": "2026-10-08T10:08:56.769Z"
     },
     {
+      "key": "lesson:pl-weather",
+      "content": {
+        "type": "lesson",
+        "id": "pl-weather",
+        "languageId": "pl"
+      },
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-weather/video-7a6a6b40aff4.mp4",
+          "posterUrl": "pl/lesson/pl-weather/poster-7a6a6b40aff4.jpg",
+          "captionsUrl": "pl/lesson/pl-weather/captions-7a6a6b40aff4.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 102.86,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Marta phones Igor before leaving home. He is already outside.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jaka jest dzisiaj pogoda?",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "What is the weather like today?"
+            },
+            {
+              "text": "Jest zimno i pada deszcz.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "It is cold and it is raining."
+            },
+            {
+              "text": "Cold, and raining.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Znowu? Wczoraj też padało.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Again? It rained yesterday too."
+            },
+            {
+              "text": "Tak, ale jutro będzie ciepło.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "Yes, but tomorrow it will be warm."
+            },
+            {
+              "text": "To dobrze. Jutro idziemy do parku!",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "That is good. Tomorrow we are going to the park!"
+            },
+            {
+              "text": "Pada deszcz.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "It is raining."
+            },
+            {
+              "text": "Rain and snow both use the same verb, the verb to fall.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "For cold, warm and hot, start with the word for is.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The name of a season changes its ending to say when.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ask what the weather is like today. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jaka jest dzisiaj pogoda?",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "What is the weather like today?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "It is raining. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Pada deszcz.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "It is raining."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "It is cold. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Jest zimno.",
+              "language": "pl",
+              "speaker": "Igor",
+              "translation": "It is cold."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Ask what the weather is like and describe it.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "10de694ef7b1532e599e86c03446fd59cca77f2ce390956da72bba06e470dae5",
+      "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Ask what the weather is like and describe it.",
+        "level": "a2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Jaka jest dzisiaj pogoda?",
+          "Jest zimno i pada deszcz.",
+          "Znowu? Wczoraj też padało.",
+          "Tak, ale jutro będzie ciepło.",
+          "To dobrze. Jutro idziemy do parku!",
+          "Pada deszcz.",
+          "Jest zimno."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 3,
+        "voices": [
+          {
+            "character": "Marta",
+            "voice": "ola"
+          },
+          {
+            "character": "Igor",
+            "voice": "piotr"
+          }
+        ]
+      },
+      "lastRun": {
+        "status": "ready",
+        "at": "2026-10-13T10:15:03.831Z",
+        "providerCalls": 16
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:15:03.831Z",
+      "updatedAt": "2026-10-13T10:15:03.831Z"
+    },
+    {
       "key": "lesson:pl-word-order",
       "content": {
         "type": "lesson",
@@ -7694,6 +9042,29 @@
       },
       "createdAt": "2026-10-09T07:15:56.908Z",
       "updatedAt": "2026-10-09T07:15:56.908Z"
+    },
+    {
+      "key": "lesson:pl-zeby-clauses",
+      "content": {
+        "type": "lesson",
+        "id": "pl-zeby-clauses",
+        "languageId": "pl"
+      },
+      "published": null,
+      "sourceHash": null,
+      "narratorId": "marek",
+      "lastRun": {
+        "status": "failed",
+        "at": "2026-10-13T10:22:52.046Z",
+        "error": "The audio generation provider's rate limit was exceeded.",
+        "providerCalls": 1
+      },
+      "generator": {
+        "audio": "gemini:gemini-3.8-flash-tts",
+        "video": "hyperframes@0.8.92/template-3"
+      },
+      "createdAt": "2026-10-13T10:22:52.046Z",
+      "updatedAt": "2026-10-13T10:22:52.046Z"
     },
     {
       "key": "vocabulary-item:en-airport",

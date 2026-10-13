@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-must-can-should",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Must, can and should",
+  "description": "Talk about obligation, ability, permission and advice.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Muszę means I must, mogę means I can or I may, and umiem means I know how to. Powinienem, said by a man, and powinnam, said by a woman, mean I should. All of them are followed by an infinitive. Some words never change for the person: trzeba (it is necessary), można (one can, it is allowed) and nie wolno (it is not allowed)."
+    },
+    {
+      "type": "example",
+      "text": "Muszę już iść.",
+      "translation": "I have to go now."
+    },
+    {
+      "type": "example",
+      "text": "Czy mogę tu usiąść?",
+      "translation": "May I sit here?"
+    },
+    {
+      "type": "example",
+      "text": "Umiem pływać.",
+      "translation": "I can swim.",
+      "note": "Umiem is for a learned skill; mogę is for possibility or permission."
+    },
+    {
+      "type": "example",
+      "text": "Powinieneś więcej spać.",
+      "translation": "You should sleep more.",
+      "note": "To a woman: Powinnaś więcej spać."
+    },
+    {
+      "type": "example",
+      "text": "Trzeba kupić bilet.",
+      "translation": "You need to buy a ticket.",
+      "note": "Trzeba names no person: it is necessary."
+    },
+    {
+      "type": "example",
+      "text": "Tu nie wolno parkować.",
+      "translation": "Parking is not allowed here."
+    },
+    {
+      "type": "example",
+      "text": "Czy tu można płacić kartą?",
+      "translation": "Can one pay by card here?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Jan",
+          "text": "Przepraszam, czy tu można kupić bilet?",
+          "translation": "Excuse me, can one buy a ticket here?"
+        },
+        {
+          "speaker": "Kasjerka",
+          "text": "Tak. Dokąd chce pan jechać?",
+          "translation": "Yes. Where do you want to go?"
+        },
+        {
+          "speaker": "Jan",
+          "text": "Muszę być w Gdańsku o piątej.",
+          "translation": "I have to be in Gdańsk at five."
+        },
+        {
+          "speaker": "Kasjerka",
+          "text": "W takim razie powinien pan jechać pociągiem o pierwszej.",
+          "translation": "In that case you should take the one o'clock train."
+        },
+        {
+          "speaker": "Jan",
+          "text": "Dobrze. Poproszę jeden bilet.",
+          "translation": "Fine. One ticket, please."
+        }
+      ]
+    }
+  ]
+}

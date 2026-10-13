@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-weather-it-is-cold",
+  "lessonId": "pl-weather",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: It is cold.",
+  "explanation": "Many weather sentences are Jest and an adverb: Jest zimno.",
+  "configuration": {
+    "acceptedAnswers": ["Jest zimno", "Jest zimno."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numbers-and-age-how-old",
+  "lessonId": "pl-numbers-and-age",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "How do you ask a friend how old they are?",
+  "explanation": "Ile masz lat? asks a friend's age: literally, how many years do you have? Jak masz na imię? asks the name and Ile to kosztuje? asks the price.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jak masz na imię?"
+      },
+      {
+        "id": "b",
+        "text": "Ile to kosztuje?"
+      },
+      {
+        "id": "c",
+        "text": "Ile masz lat?"
+      },
+      {
+        "id": "d",
+        "text": "Jaki dzisiaj jest dzień?"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

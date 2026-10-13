@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-negotiating",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Negotiating",
+  "description": "Make a proposal, set a condition, push back and close a deal.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "In a negotiation, proposals are softened with the conditional: Proponowałbym, Bylibyśmy skłonni. A concession is tied to a condition with pod warunkiem, że. To push back without confrontation, speakers say Obawiam się, że or Trudno będzie nam się na to zgodzić. Agreement is sealed with W takim razie jesteśmy umówieni. Pójść na kompromis and pójść na ustępstwa are the usual expressions for meeting halfway."
+    },
+    {
+      "type": "example",
+      "text": "Proponowałbym obniżenie ceny o pięć procent.",
+      "translation": "I would suggest lowering the price by five per cent."
+    },
+    {
+      "type": "example",
+      "text": "Bylibyśmy skłonni podpisać umowę na dwa lata.",
+      "translation": "We would be willing to sign a two-year contract."
+    },
+    {
+      "type": "example",
+      "text": "Zgodzimy się pod warunkiem, że dostawa nastąpi do końca miesiąca.",
+      "translation": "We will agree on condition that delivery takes place by the end of the month."
+    },
+    {
+      "type": "example",
+      "text": "Obawiam się, że to przekracza nasz budżet.",
+      "translation": "I am afraid that exceeds our budget."
+    },
+    {
+      "type": "example",
+      "text": "Obie strony muszą pójść na kompromis.",
+      "translation": "Both sides have to compromise."
+    },
+    {
+      "type": "example",
+      "text": "W takim razie jesteśmy umówieni.",
+      "translation": "In that case we have a deal."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kupiec",
+          "text": "Państwa oferta jest ciekawa, ale cena przekracza nasz budżet.",
+          "translation": "Your offer is interesting, but the price exceeds our budget."
+        },
+        {
+          "speaker": "Dostawca",
+          "text": "Bylibyśmy skłonni obniżyć cenę pod warunkiem, że zamówią państwo większą partię.",
+          "translation": "We would be willing to lower the price on condition that you order a larger batch."
+        },
+        {
+          "speaker": "Kupiec",
+          "text": "O ile większą?",
+          "translation": "How much larger?"
+        },
+        {
+          "speaker": "Dostawca",
+          "text": "O dwadzieścia procent.",
+          "translation": "Twenty per cent larger."
+        },
+        {
+          "speaker": "Kupiec",
+          "text": "Zgoda. Przygotujemy umowę.",
+          "translation": "Agreed. We will prepare the contract."
+        }
+      ]
+    }
+  ]
+}

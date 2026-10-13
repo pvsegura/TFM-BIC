@@ -1,0 +1,244 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-comparing",
+  "objective": "Compare two things and say which one is better, cheaper or the best.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "adam",
+      "name": "Adam",
+      "look": "man-c",
+      "voice": "tomek"
+    },
+    {
+      "id": "kasia",
+      "name": "The assistant",
+      "look": "shopkeeper",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "shop",
+        "time": "day",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Adam needs a new phone and cannot decide between two models.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "adam",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "Który telefon jest lepszy?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Ten jest szybszy i ma lepszy aparat.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "A tamten?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kasia",
+            "target": "Tamten jest tańszy, ale ma mniejszy ekran.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kasia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Faster, better, cheaper, smaller: four comparatives in two sentences."
+          }
+        },
+        {
+          "line": {
+            "by": "adam",
+            "target": "W takim razie wezmę ten tańszy.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "adam"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Cheaper, better, the best",
+      "phrase": "Ten telefon jest tańszy niż tamten.",
+      "panels": [
+        {
+          "caption": "Comparative",
+          "text": "Pociąg jest szybszy, ale droższy."
+        },
+        {
+          "caption": "Than, with the genitive",
+          "text": "Kraków jest mniejszy od Warszawy."
+        },
+        {
+          "caption": "Superlative",
+          "text": "To jest najlepsza kawiarnia w mieście."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Ten telefon jest tańszy niż tamten.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The comparative adds an ending to the adjective."
+        },
+        {
+          "say": "The superlative puts three more letters in front of it."
+        },
+        {
+          "say": "The most common adjectives are irregular, so learn them as pairs.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "adam"
+        }
+      ],
+      "prompt": "Ask which one is better.",
+      "answer": "Który jest lepszy?",
+      "answerBy": "adam"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "shop",
+        "actors": [
+          {
+            "id": "adam",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kasia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kasia"
+        }
+      ],
+      "prompt": "This is the best café in town. Say it.",
+      "answer": "To jest najlepsza kawiarnia w mieście.",
+      "answerBy": "kasia"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

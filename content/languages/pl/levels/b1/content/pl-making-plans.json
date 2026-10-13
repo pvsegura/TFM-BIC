@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Making arrangements",
+  "description": "Suggest meeting, accept or decline, and fix the time and place.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To suggest something, start with Może and a verb in the first person plural: Może pójdziemy do kina? Accept with Chętnie or Świetny pomysł. Decline politely with Niestety nie mogę and give a reason. To fix the details, ask O której się spotkamy? and Gdzie się spotkamy? Umówić się means to arrange to meet; Jesteśmy umówieni means that it is settled."
+    },
+    {
+      "type": "example",
+      "text": "Może pójdziemy do kina?",
+      "translation": "Shall we go to the cinema?"
+    },
+    {
+      "type": "example",
+      "text": "Chętnie!",
+      "translation": "Gladly!"
+    },
+    {
+      "type": "example",
+      "text": "Niestety nie mogę, muszę pracować.",
+      "translation": "Unfortunately I can't, I have to work."
+    },
+    {
+      "type": "example",
+      "text": "Pasuje ci piątek?",
+      "translation": "Does Friday suit you?"
+    },
+    {
+      "type": "example",
+      "text": "O której się spotkamy?",
+      "translation": "What time shall we meet?"
+    },
+    {
+      "type": "example",
+      "text": "Spotkajmy się o szóstej przed kinem.",
+      "translation": "Let's meet at six in front of the cinema."
+    },
+    {
+      "type": "example",
+      "text": "Jesteśmy umówieni na sobotę.",
+      "translation": "We have arranged to meet on Saturday."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Bartek",
+          "text": "Co robisz w sobotę? Może pójdziemy do kina?",
+          "translation": "What are you doing on Saturday? Shall we go to the cinema?"
+        },
+        {
+          "speaker": "Ania",
+          "text": "Niestety w sobotę nie mogę. A może w piątek?",
+          "translation": "Unfortunately I can't on Saturday. How about Friday?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Dobrze, piątek mi pasuje. O której się spotkamy?",
+          "translation": "Fine, Friday suits me. What time shall we meet?"
+        },
+        {
+          "speaker": "Ania",
+          "text": "Spotkajmy się o szóstej przed kinem.",
+          "translation": "Let's meet at six in front of the cinema."
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Świetnie. Do zobaczenia!",
+          "translation": "Great. See you!"
+        }
+      ]
+    }
+  ]
+}

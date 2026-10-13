@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "id": "days-and-time",
+  "languageId": "pl",
+  "status": "published",
+  "order": 65,
+  "instructionLanguage": "en",
+  "title": "Days and time",
+  "description": "The days of the week and the words for today, tomorrow and yesterday (A1).",
+  "items": [
+    {
+      "id": "pl-poniedzialek",
+      "status": "published",
+      "order": 10,
+      "lemma": "poniedziałek",
+      "translation": "Monday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-wtorek",
+      "status": "published",
+      "order": 20,
+      "lemma": "wtorek",
+      "translation": "Tuesday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-sroda",
+      "status": "published",
+      "order": 30,
+      "lemma": "środa",
+      "translation": "Wednesday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-czwartek",
+      "status": "published",
+      "order": 40,
+      "lemma": "czwartek",
+      "translation": "Thursday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-piatek",
+      "status": "published",
+      "order": 50,
+      "lemma": "piątek",
+      "translation": "Friday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-sobota",
+      "status": "published",
+      "order": 60,
+      "lemma": "sobota",
+      "translation": "Saturday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-niedziela",
+      "status": "published",
+      "order": 70,
+      "lemma": "niedziela",
+      "translation": "Sunday",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-dzien",
+      "status": "published",
+      "order": 80,
+      "lemma": "dzień",
+      "translation": "day",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "dni"
+    },
+    {
+      "id": "pl-tydzien",
+      "status": "published",
+      "order": 90,
+      "lemma": "tydzień",
+      "translation": "week",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-dzisiaj",
+      "status": "published",
+      "order": 100,
+      "lemma": "dzisiaj",
+      "translation": "today",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-jutro",
+      "status": "published",
+      "order": 110,
+      "lemma": "jutro",
+      "translation": "tomorrow",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-wczoraj",
+      "status": "published",
+      "order": 120,
+      "lemma": "wczoraj",
+      "translation": "yesterday",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

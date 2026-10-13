@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-home-small-bathroom",
+  "lessonId": "pl-my-home",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: The bathroom is small.",
+  "explanation": "Łazienka is feminine, so the adjective ends in -a: mała.",
+  "configuration": {
+    "acceptedAnswers": ["Łazienka jest mała", "Łazienka jest mała."],
+    "caseSensitive": false
+  }
+}

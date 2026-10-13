@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-weather-it-is-raining",
+  "lessonId": "pl-weather",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which sentence means: It is raining?",
+  "explanation": "Rain uses the verb padać: Pada deszcz. Jest zimno means it is cold and Jest gorąco means it is hot.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jest zimno."
+      },
+      {
+        "id": "b",
+        "text": "Pada deszcz."
+      },
+      {
+        "id": "c",
+        "text": "Świeci słońce."
+      },
+      {
+        "id": "d",
+        "text": "Jest gorąco."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

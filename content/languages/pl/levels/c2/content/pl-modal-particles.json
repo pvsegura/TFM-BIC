@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-modal-particles",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Small words, big effect: particles",
+  "description": "Hear the attitude behind przecież, chyba, niby, akurat and bynajmniej.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Particles such as przecież, chyba, niby and akurat carry the speaker's attitude rather than facts. Przecież appeals to something the listener should already know. Chyba marks a guess, and in Chyba żartujesz it expresses disbelief. Niby signals doubt about what is claimed. Akurat means precisely, but said alone it is a sarcastic denial. Bynajmniej means not at all and is often confused with przynajmniej, at least."
+    },
+    {
+      "type": "example",
+      "text": "Przecież ci mówiłem.",
+      "translation": "But I told you.",
+      "note": "Przecież: you should know this already."
+    },
+    {
+      "type": "example",
+      "text": "Chyba żartujesz!",
+      "translation": "You must be joking!"
+    },
+    {
+      "type": "example",
+      "text": "Niby tak, ale nie jestem przekonana.",
+      "translation": "Supposedly yes, but I am not convinced."
+    },
+    {
+      "type": "example",
+      "text": "Akurat wtedy zadzwonił telefon.",
+      "translation": "Just at that moment the phone rang."
+    },
+    {
+      "type": "example",
+      "text": "Akurat!",
+      "translation": "Yeah, right!",
+      "note": "Said alone, it is a sarcastic denial."
+    },
+    {
+      "type": "example",
+      "text": "Nie jestem bynajmniej przeciwny tej propozycji.",
+      "translation": "I am by no means against this proposal."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Gdzie są klucze? Przecież leżały na stole.",
+          "translation": "Where are the keys? But they were on the table."
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Chyba zostawiłaś je w samochodzie.",
+          "translation": "You probably left them in the car."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Akurat! Nigdy ich tam nie zostawiam.",
+          "translation": "Yeah, right! I never leave them there."
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Niby nie, a w zeszłym tygodniu?",
+          "translation": "Supposedly not, and last week?"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-diminutives-just-a-moment",
+  "lessonId": "pl-diminutives",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the diminutive that completes the request: Poczekaj ... (just a moment).",
+  "explanation": "Chwileczka is a diminutive of chwila, a moment; after poczekaj it is chwileczkę.",
+  "configuration": {
+    "acceptedAnswers": ["chwileczkę", "chwileczkę.", "Poczekaj chwileczkę", "Poczekaj chwileczkę."],
+    "caseSensitive": false
+  }
+}

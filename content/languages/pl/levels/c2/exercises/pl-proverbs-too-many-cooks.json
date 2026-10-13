@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-proverbs-too-many-cooks",
+  "lessonId": "pl-proverbs",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which proverb warns that too many people in charge spoil the result?",
+  "explanation": "Gdzie kucharek sześć, tam nie ma co jeść: where there are six cooks, there is nothing to eat.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Co kraj, to obyczaj."
+      },
+      {
+        "id": "b",
+        "text": "Lepiej późno niż wcale."
+      },
+      {
+        "id": "c",
+        "text": "Gdzie kucharek sześć, tam nie ma co jeść."
+      },
+      {
+        "id": "d",
+        "text": "Bez pracy nie ma kołaczy."
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

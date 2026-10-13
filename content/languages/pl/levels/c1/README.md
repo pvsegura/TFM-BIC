@@ -1,6 +1,6 @@
 # Polish — C1
 
-C1 (effective operational proficiency): formal correspondence, participles, the nominal style, hedging and nuance, idioms and switching register.
+C1 (effective operational proficiency): formal correspondence, participles, the nominal style, hedging and nuance, idioms, switching register, concession and contrast, diminutives and negotiating.
 
 `content/` holds the published items, one JSON file per item, named by its id. Their order is the explicit `order` field, not the file name. See [content-architecture.md](../../../../../docs/architecture/content-architecture.md).
 

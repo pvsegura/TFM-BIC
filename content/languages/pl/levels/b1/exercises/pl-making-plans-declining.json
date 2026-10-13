@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-plans-declining",
+  "lessonId": "pl-making-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which answer politely declines an invitation?",
+  "explanation": "Niestety nie mogę declines politely and is followed by a reason. Chętnie and Świetny pomysł accept.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Chętnie!"
+      },
+      {
+        "id": "b",
+        "text": "Świetny pomysł."
+      },
+      {
+        "id": "c",
+        "text": "O której się spotkamy?"
+      },
+      {
+        "id": "d",
+        "text": "Niestety nie mogę, muszę pracować."
+      }
+    ],
+    "correctOptionId": "d"
+  }
+}

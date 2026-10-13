@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-concession-and-contrast",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "Conceding and contrasting",
+  "description": "Concede a point and set two facts against each other.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To concede a point, Polish uses chociaż, or the more formal mimo że and choć, each followed by a clause; mimo and pomimo on their own take a noun in the genitive: mimo deszczu. Wprawdzie announces a concession that ale or lecz then answers. To set two facts side by side, use natomiast or z kolei, which often stand after the first element of their clause. Niemniej jednak means nevertheless."
+    },
+    {
+      "type": "example",
+      "text": "Chociaż był zmęczony, pracował do północy.",
+      "translation": "Although he was tired, he worked until midnight."
+    },
+    {
+      "type": "example",
+      "text": "Mimo że padało, mecz się odbył.",
+      "translation": "Even though it was raining, the match took place."
+    },
+    {
+      "type": "example",
+      "text": "Mimo deszczu mecz się odbył.",
+      "translation": "Despite the rain, the match took place.",
+      "note": "Mimo without że takes a noun in the genitive."
+    },
+    {
+      "type": "example",
+      "text": "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+      "translation": "The project is admittedly expensive, but it will bring large savings."
+    },
+    {
+      "type": "example",
+      "text": "Eksport wzrósł, import natomiast spadł.",
+      "translation": "Exports rose, whereas imports fell."
+    },
+    {
+      "type": "example",
+      "text": "Wyniki są dobre. Niemniej jednak nie możemy spocząć na laurach.",
+      "translation": "The results are good. Nevertheless, we cannot rest on our laurels."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Dyrektor",
+          "text": "Czy powinniśmy otworzyć drugi oddział?",
+          "translation": "Should we open a second branch?"
+        },
+        {
+          "speaker": "Analityczka",
+          "text": "Wprawdzie koszty są wysokie, ale rynek rośnie.",
+          "translation": "The costs are admittedly high, but the market is growing."
+        },
+        {
+          "speaker": "Dyrektor",
+          "text": "A konkurencja?",
+          "translation": "And the competition?"
+        },
+        {
+          "speaker": "Analityczka",
+          "text": "Konkurencja jest silna w stolicy, na południu natomiast prawie jej nie ma.",
+          "translation": "Competition is strong in the capital, whereas in the south there is almost none."
+        }
+      ]
+    }
+  ]
+}

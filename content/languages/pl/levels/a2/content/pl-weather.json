@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-weather",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "The weather and the seasons",
+  "description": "Ask about the weather and say what it is like in each season.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To ask about the weather, say Jaka jest pogoda? Many answers start with Jest and an adverb: Jest zimno, Jest ciepło, Jest gorąco. Rain and snow use the verb padać: Pada deszcz, Pada śnieg. The seasons are wiosna, lato, jesień and zima; in a season is wiosną, latem, jesienią and zimą."
+    },
+    {
+      "type": "example",
+      "text": "Jaka jest dzisiaj pogoda?",
+      "translation": "What is the weather like today?"
+    },
+    {
+      "type": "example",
+      "text": "Jest zimno.",
+      "translation": "It is cold."
+    },
+    {
+      "type": "example",
+      "text": "Jest ciepło i świeci słońce.",
+      "translation": "It is warm and the sun is shining."
+    },
+    {
+      "type": "example",
+      "text": "Pada deszcz.",
+      "translation": "It is raining."
+    },
+    {
+      "type": "example",
+      "text": "Zimą pada śnieg.",
+      "translation": "In winter it snows."
+    },
+    {
+      "type": "example",
+      "text": "Latem jest gorąco.",
+      "translation": "In summer it is hot."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "text": "Jaka jest dzisiaj pogoda?",
+          "translation": "What is the weather like today?"
+        },
+        {
+          "speaker": "Igor",
+          "text": "Jest zimno i pada deszcz.",
+          "translation": "It is cold and it is raining."
+        },
+        {
+          "speaker": "Marta",
+          "text": "Znowu? Wczoraj też padało.",
+          "translation": "Again? It rained yesterday too."
+        },
+        {
+          "speaker": "Igor",
+          "text": "Tak, ale jutro będzie ciepło.",
+          "translation": "Yes, but tomorrow it will be warm."
+        },
+        {
+          "speaker": "Marta",
+          "text": "To dobrze. Jutro idziemy do parku!",
+          "translation": "That is good. Tomorrow we are going to the park!"
+        }
+      ]
+    }
+  ]
+}

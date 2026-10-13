@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "id": "eating-out",
+  "languageId": "pl",
+  "status": "published",
+  "order": 74,
+  "instructionLanguage": "en",
+  "title": "Eating out",
+  "description": "Words for ordering and paying in a restaurant (A2).",
+  "items": [
+    {
+      "id": "pl-restauracja",
+      "status": "published",
+      "order": 10,
+      "lemma": "restauracja",
+      "translation": "restaurant",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-kelner",
+      "status": "published",
+      "order": 20,
+      "lemma": "kelner",
+      "translation": "waiter",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "A waitress is kelnerka."
+    },
+    {
+      "id": "pl-stolik",
+      "status": "published",
+      "order": 30,
+      "lemma": "stolik",
+      "translation": "table (in a restaurant)",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-danie",
+      "status": "published",
+      "order": 40,
+      "lemma": "danie",
+      "translation": "dish; course",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-deser",
+      "status": "published",
+      "order": 50,
+      "lemma": "deser",
+      "translation": "dessert",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-napoj",
+      "status": "published",
+      "order": 60,
+      "lemma": "napój",
+      "translation": "drink",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-pierogi",
+      "status": "published",
+      "order": 70,
+      "lemma": "pierogi",
+      "translation": "pierogi (filled dumplings)",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "note": "Usually used in the plural."
+    },
+    {
+      "id": "pl-napiwek",
+      "status": "published",
+      "order": 80,
+      "lemma": "napiwek",
+      "translation": "tip",
+      "levelId": "a2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-smaczny",
+      "status": "published",
+      "order": 90,
+      "lemma": "smaczny",
+      "translation": "tasty",
+      "levelId": "a2",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-polecac",
+      "status": "published",
+      "order": 100,
+      "lemma": "polecać",
+      "translation": "to recommend",
+      "levelId": "a2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-zamawiac",
+      "status": "published",
+      "order": 110,
+      "lemma": "zamawiać",
+      "translation": "to order",
+      "levelId": "a2",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-smacznego",
+      "status": "published",
+      "order": 120,
+      "lemma": "smacznego",
+      "translation": "enjoy your meal",
+      "levelId": "a2",
+      "partOfSpeech": "interjection"
+    }
+  ]
+}

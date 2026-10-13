@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-diminutives",
+  "languageId": "pl",
+  "levelId": "c1",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Diminutives: small words, warm tone",
+  "description": "Recognise diminutives and what they add: size, warmth, politeness or irony.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Polish forms diminutives freely with suffixes such as -ek, -ik, -ka and -ko: dom becomes domek, kot becomes kotek, kawa becomes kawka. They can mean that something is small, but more often they add warmth, politeness or informality: a waiter may offer kawka and herbatka without implying a small cup. A second suffix intensifies the feeling: kotek, koteczek. Overused, diminutives sound childish or ironic, and they are avoided in formal writing."
+    },
+    {
+      "type": "example",
+      "text": "Mamy mały domek nad jeziorem.",
+      "translation": "We have a little house by the lake."
+    },
+    {
+      "type": "example",
+      "text": "Napijesz się kawki?",
+      "translation": "Will you have a nice cup of coffee?",
+      "note": "Kawka is friendly; the cup is not necessarily small."
+    },
+    {
+      "type": "example",
+      "text": "Poczekaj chwileczkę.",
+      "translation": "Wait just a moment."
+    },
+    {
+      "type": "example",
+      "text": "Nasz kotek śpi na kanapie.",
+      "translation": "Our kitty is sleeping on the sofa."
+    },
+    {
+      "type": "example",
+      "text": "Daj mi rączkę.",
+      "translation": "Give me your little hand.",
+      "note": "Typical of speech to children."
+    },
+    {
+      "type": "example",
+      "text": "Pieniążki same się nie zarobią.",
+      "translation": "The money will not earn itself.",
+      "note": "Here the diminutive of pieniądze is ironic."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Babcia",
+          "text": "Chodź, kochanie, zjesz zupkę?",
+          "translation": "Come, darling, will you have some soup?"
+        },
+        {
+          "speaker": "Wnuk",
+          "text": "Dziękuję, babciu, tylko troszeczkę.",
+          "translation": "Thank you, grandma, just a tiny bit."
+        },
+        {
+          "speaker": "Babcia",
+          "text": "A potem herbatka i ciasteczko.",
+          "translation": "And then a nice tea and a biscuit."
+        },
+        {
+          "speaker": "Wnuk",
+          "text": "Babciu, ja mam trzydzieści lat!",
+          "translation": "Grandma, I am thirty years old!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "My family",
+  "description": "Present your family and say my: mój, moja, moje.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "To present someone, say To jest and the person. My is mój with masculine nouns, moja with feminine nouns and moje with neuter nouns: mój brat, moja siostra, moje dziecko. To say that you have a brother or a sister, use mam; the noun then changes its ending: brat becomes brata and siostra becomes siostrę."
+    },
+    {
+      "type": "example",
+      "text": "To jest moja mama.",
+      "translation": "This is my mum."
+    },
+    {
+      "type": "example",
+      "text": "To jest mój tata.",
+      "translation": "This is my dad.",
+      "note": "Tata ends in -a but is masculine, so it takes mój."
+    },
+    {
+      "type": "example",
+      "text": "To jest moja siostra.",
+      "translation": "This is my sister."
+    },
+    {
+      "type": "example",
+      "text": "Mam siostrę.",
+      "translation": "I have a sister.",
+      "note": "Siostra becomes siostrę after mam."
+    },
+    {
+      "type": "example",
+      "text": "Masz rodzeństwo?",
+      "translation": "Do you have brothers or sisters?",
+      "note": "Rodzeństwo means brothers and sisters as a group."
+    },
+    {
+      "type": "example",
+      "text": "Nie mam rodzeństwa.",
+      "translation": "I have no brothers or sisters."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Anna",
+          "text": "Kto to jest?",
+          "translation": "Who is this?"
+        },
+        {
+          "speaker": "Piotr",
+          "text": "To jest moja siostra, Ola.",
+          "translation": "This is my sister, Ola."
+        },
+        {
+          "speaker": "Anna",
+          "text": "A to?",
+          "translation": "And this?"
+        },
+        {
+          "speaker": "Piotr",
+          "text": "To jest mój brat, Tomek.",
+          "translation": "This is my brother, Tomek."
+        },
+        {
+          "speaker": "Piotr",
+          "text": "A ty? Masz rodzeństwo?",
+          "translation": "And you? Do you have brothers or sisters?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Tak, mam siostrę.",
+          "translation": "Yes, I have a sister."
+        }
+      ]
+    }
+  ]
+}

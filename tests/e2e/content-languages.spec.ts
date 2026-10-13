@@ -13,6 +13,9 @@ const A1_TITLES_IN_ORDER = [
   "Please, thank you and sorry",
   "Polish has no articles",
   "A first look at Polish spelling and sounds",
+  "Numbers and age",
+  "My family",
+  "Days of the week",
 ];
 
 /** Pixels by which the page is wider than the viewport (0 = no sideways scrolling). */

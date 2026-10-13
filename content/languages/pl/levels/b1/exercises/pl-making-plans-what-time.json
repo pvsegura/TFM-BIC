@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-plans-what-time",
+  "lessonId": "pl-making-plans",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: What time shall we meet?",
+  "explanation": "O której asks at what time, and się spotkamy is we will meet.",
+  "configuration": {
+    "acceptedAnswers": ["O której się spotkamy?", "O której się spotkamy"],
+    "caseSensitive": false
+  }
+}

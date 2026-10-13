@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-a-complaint-a-refund",
+  "lessonId": "pl-making-a-complaint",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which phrase means: a refund?",
+  "explanation": "Zwrot pieniędzy is a refund. Wymiana is an exchange, naprawa is a repair and reklamacja is the complaint itself.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "wymiana"
+      },
+      {
+        "id": "b",
+        "text": "naprawa"
+      },
+      {
+        "id": "c",
+        "text": "zwrot pieniędzy"
+      },
+      {
+        "id": "d",
+        "text": "reklamacja"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

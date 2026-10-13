@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-public-speaking-closing-a-speech",
+  "lessonId": "pl-public-speaking",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which phrase closes a formal speech?",
+  "explanation": "Dziękuję za uwagę is the usual closing formula. Szanowni Państwo opens a speech and Przejdę teraz do moves to a new part.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Pozwolą państwo, że zacznę od krótkiej anegdoty."
+      },
+      {
+        "id": "b",
+        "text": "Przejdę teraz do najważniejszej kwestii."
+      },
+      {
+        "id": "c",
+        "text": "Dziękuję za uwagę."
+      },
+      {
+        "id": "d",
+        "text": "Szanowni Państwo, drodzy goście!"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

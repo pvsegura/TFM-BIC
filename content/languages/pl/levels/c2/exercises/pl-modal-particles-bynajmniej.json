@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-modal-particles-bynajmniej",
+  "lessonId": "pl-modal-particles",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "What does bynajmniej mean?",
+  "explanation": "Bynajmniej means not at all. It is often confused with przynajmniej, which means at least.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "at least"
+      },
+      {
+        "id": "b",
+        "text": "not at all"
+      },
+      {
+        "id": "c",
+        "text": "probably"
+      },
+      {
+        "id": "d",
+        "text": "precisely"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

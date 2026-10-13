@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-zeby-clauses-you-to-come",
+  "lessonId": "pl-zeby-clauses",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "I want you to come to my birthday. Which form completes the sentence? Chcę, ... przyszedł na moje urodziny.",
+  "explanation": "The personal ending attaches to żeby. For you, one person, it is żebyś: Chcę, żebyś przyszedł.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "żebym"
+      },
+      {
+        "id": "b",
+        "text": "żebyś"
+      },
+      {
+        "id": "c",
+        "text": "żebyśmy"
+      },
+      {
+        "id": "d",
+        "text": "żebyście"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

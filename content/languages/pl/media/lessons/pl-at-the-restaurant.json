@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-at-the-restaurant",
+  "objective": "Ask a waiter for advice, order a meal and ask for the bill.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "ewa",
+      "name": "Ewa",
+      "look": "woman-d",
+      "voice": "ola"
+    },
+    {
+      "id": "kelner",
+      "name": "The waiter",
+      "look": "barista",
+      "voice": "tomek"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "cafe",
+        "time": "day",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "kelner",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Lunchtime. Ewa sits down in a small restaurant.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "ewa",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "kelner",
+            "target": "Dzień dobry. Co dla pani?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kelner"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Co pan poleca?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She asks the waiter for advice."
+          }
+        },
+        {
+          "line": {
+            "by": "kelner",
+            "target": "Dzisiaj polecam zupę pomidorową i pierogi.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "kelner"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Dobrze, poproszę zupę i pierogi.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kelner",
+            "target": "Coś do picia?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "kelner"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "ewa",
+            "target": "Wodę, proszę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "ewa"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "kelner",
+            "target": "Proszę. Smacznego!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "kelner"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Ordering a meal",
+      "phrase": "Poproszę zupę pomidorową.",
+      "panels": [
+        {
+          "caption": "Asking for advice",
+          "text": "Co pan poleca?"
+        },
+        {
+          "caption": "The dish changes its ending",
+          "text": "Poproszę zupę pomidorową."
+        },
+        {
+          "caption": "At the end",
+          "text": "Poproszę rachunek."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Poproszę zupę pomidorową.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "Order with the polite word, then the dish."
+        },
+        {
+          "say": "A feminine dish changes its ending, and so does the word that describes it."
+        },
+        {
+          "say": "When you finish, ask for the bill in the same way.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kelner",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "Ask the waiter what he recommends.",
+      "answer": "Co pan poleca?",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kelner",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "kelner"
+        }
+      ],
+      "prompt": "Wish someone a good meal.",
+      "answer": "Smacznego!",
+      "answerBy": "kelner"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "cafe",
+        "actors": [
+          {
+            "id": "ewa",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "kelner",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "ewa"
+        }
+      ],
+      "prompt": "You have finished. Ask for the bill.",
+      "answer": "Poproszę rachunek.",
+      "answerBy": "ewa"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Polish — C2
 
-C2 (mastery): literary and archaic forms, the full numeral system, word order for emphasis, irony and understatement, near-synonyms that differ in tone, and regional variety.
+C2 (mastery): literary and archaic forms, the full numeral system, word order for emphasis, irony and understatement, near-synonyms that differ in tone, regional variety, proverbs, attitude particles and public speaking.
 
 `content/` holds the published items, one JSON file per item, named by its id. Their order is the explicit `order` field, not the file name. See [content-architecture.md](../../../../../docs/architecture/content-architecture.md).
 

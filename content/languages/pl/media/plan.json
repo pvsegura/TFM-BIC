@@ -141,6 +141,78 @@
     {
       "contentId": "pl-regional-polish",
       "priority": 2
+    },
+    {
+      "contentId": "pl-numbers-and-age",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-my-family",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-days-of-the-week",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-at-the-restaurant",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-weather",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-my-home",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-comparing",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-making-plans",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-must-can-should",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-making-a-complaint",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-relative-clauses",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-zeby-clauses",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-concession-and-contrast",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-diminutives",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-negotiating",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-proverbs",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-modal-particles",
+      "priority": 2
+    },
+    {
+      "contentId": "pl-public-speaking",
+      "priority": 2
     }
   ],
   "vocabularyCategories": [
@@ -330,6 +402,97 @@
     },
     {
       "categoryId": "nuance-and-style",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "days-and-time",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "home-and-weather",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "eating-out",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "plans-and-comparisons",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "services-and-complaints",
+      "priority": 2,
+      "narrator": "anna",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "business-and-argument",
+      "priority": 2,
+      "narrator": "marek",
+      "cast": [
+        {
+          "id": "ola",
+          "name": "Ola",
+          "look": "woman-a",
+          "voice": "ola"
+        }
+      ]
+    },
+    {
+      "categoryId": "sayings-and-rhetoric",
       "priority": 2,
       "narrator": "anna",
       "cast": [

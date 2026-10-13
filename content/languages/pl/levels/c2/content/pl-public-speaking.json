@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-public-speaking",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Speaking in public",
+  "description": "Open a formal speech, signpost its parts and close it.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "A formal speech opens with Szanowni Państwo; guests of honour are addressed first, by title. The speaker signposts the structure with phrases such as Zacznę od, Przejdę teraz do and Na zakończenie. Rhetorical questions and groups of three are common devices. The usual closing formula is Dziękuję za uwagę."
+    },
+    {
+      "type": "example",
+      "text": "Szanowni Państwo, drodzy goście!",
+      "translation": "Ladies and gentlemen, dear guests!"
+    },
+    {
+      "type": "example",
+      "text": "Pozwolą państwo, że zacznę od krótkiej anegdoty.",
+      "translation": "Allow me to begin with a short anecdote."
+    },
+    {
+      "type": "example",
+      "text": "Przejdę teraz do najważniejszej kwestii.",
+      "translation": "I will now turn to the most important issue."
+    },
+    {
+      "type": "example",
+      "text": "Czy możemy sobie pozwolić na bezczynność?",
+      "translation": "Can we afford to do nothing?",
+      "note": "A rhetorical question: no answer is expected."
+    },
+    {
+      "type": "example",
+      "text": "Na zakończenie chciałabym podkreślić jedno.",
+      "translation": "In closing, I would like to stress one thing.",
+      "note": "A man says chciałbym."
+    },
+    {
+      "type": "example",
+      "text": "Dziękuję za uwagę.",
+      "translation": "Thank you for your attention."
+    }
+  ]
+}

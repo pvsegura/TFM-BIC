@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-days-of-the-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "en",
+  "title": "Days of the week",
+  "description": "Name the days, and say today, tomorrow and on Saturday.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "The days are poniedziałek, wtorek, środa, czwartek, piątek, sobota and niedziela; they are written with a small letter. Dzisiaj is today, jutro is tomorrow and wczoraj is yesterday. To say on a day, use w and a new ending for the days in -a: w poniedziałek, w piątek, but w środę and w sobotę. Before wtorek the preposition is we: we wtorek."
+    },
+    {
+      "type": "example",
+      "text": "Jaki dzisiaj jest dzień?",
+      "translation": "What day is it today?"
+    },
+    {
+      "type": "example",
+      "text": "Dzisiaj jest poniedziałek.",
+      "translation": "Today is Monday."
+    },
+    {
+      "type": "example",
+      "text": "Jutro jest wtorek.",
+      "translation": "Tomorrow is Tuesday."
+    },
+    {
+      "type": "example",
+      "text": "W sobotę mam wolne.",
+      "translation": "On Saturday I am free.",
+      "note": "Sobota becomes sobotę after w."
+    },
+    {
+      "type": "example",
+      "text": "Do jutra!",
+      "translation": "See you tomorrow!"
+    },
+    {
+      "type": "example",
+      "text": "Do zobaczenia w piątek!",
+      "translation": "See you on Friday!"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Tomek",
+          "text": "Jaki dzisiaj jest dzień?",
+          "translation": "What day is it today?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Dzisiaj jest piątek.",
+          "translation": "Today is Friday."
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Super! Jutro jest sobota.",
+          "translation": "Great! Tomorrow is Saturday."
+        },
+        {
+          "speaker": "Ola",
+          "text": "W sobotę mam wolne. A ty?",
+          "translation": "On Saturday I am free. And you?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Ja też. Do zobaczenia w poniedziałek!",
+          "translation": "Me too. See you on Monday!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,6 @@
 # Polish — B1
 
-B1 (threshold): verb aspect, the future and the conditional, verbs of motion, health, travel arrangements and giving an opinion.
+B1 (threshold): verb aspect, the future and the conditional, verbs of motion, health, travel arrangements, giving an opinion, comparing, making arrangements and obligation or ability.
 
 `content/` holds the published items, one JSON file per item, named by its id. Their order is the explicit `order` field, not the file name. See [content-architecture.md](../../../../../docs/architecture/content-architecture.md).
 

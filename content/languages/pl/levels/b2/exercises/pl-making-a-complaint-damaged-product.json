@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-a-complaint-damaged-product",
+  "lessonId": "pl-making-a-complaint",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: The product is damaged.",
+  "explanation": "Towar is the product and uszkodzony means damaged.",
+  "configuration": {
+    "acceptedAnswers": ["Towar jest uszkodzony", "Towar jest uszkodzony."],
+    "caseSensitive": false
+  }
+}

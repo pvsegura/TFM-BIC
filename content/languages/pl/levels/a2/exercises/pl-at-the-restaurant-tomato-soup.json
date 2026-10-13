@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-at-the-restaurant-tomato-soup",
+  "lessonId": "pl-at-the-restaurant",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Complete the order with the right form of zupa pomidorowa: Poproszę ...",
+  "explanation": "After poproszę the dish is in the accusative: zupa pomidorowa becomes zupę pomidorową.",
+  "configuration": {
+    "acceptedAnswers": [
+      "zupę pomidorową",
+      "zupę pomidorową.",
+      "Poproszę zupę pomidorową",
+      "Poproszę zupę pomidorową."
+    ],
+    "caseSensitive": false
+  }
+}

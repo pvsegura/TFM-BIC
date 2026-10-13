@@ -87,7 +87,7 @@ describe("the shipped exercises", () => {
       );
 
       expect(inLevel.length, level.id).toBeGreaterThanOrEqual(6);
-      expect(inLevel.length, level.id).toBeLessThanOrEqual(20);
+      expect(inLevel.length, level.id).toBeLessThanOrEqual(30);
     }
     expect(catalog.exercises.filter((e) => e.levelId === A1).length).toBeGreaterThanOrEqual(6);
   });

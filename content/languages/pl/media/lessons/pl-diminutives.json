@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-diminutives",
+  "objective": "Recognise a diminutive and tell whether it means small, friendly or ironic.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "wnuk",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    },
+    {
+      "id": "babcia",
+      "name": "Grandma",
+      "look": "woman-b",
+      "voice": "anna"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "kitchen",
+        "time": "day",
+        "actors": [
+          {
+            "id": "wnuk",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "babcia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Sunday lunch. Piotr visits his grandmother.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "wnuk",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "babcia",
+            "target": "Chodź, kochanie, zjesz zupkę?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "babcia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "wnuk",
+            "target": "Dziękuję, babciu, tylko troszeczkę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "wnuk"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "Nothing here is small. The endings carry affection."
+          }
+        },
+        {
+          "line": {
+            "by": "babcia",
+            "target": "A potem herbatka i ciasteczko.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "babcia"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "wnuk",
+            "target": "Babciu, ja mam trzydzieści lat!",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "wnuk"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Smaller, or just warmer?",
+      "phrase": "Napijesz się kawki?",
+      "panels": [
+        {
+          "caption": "Really small",
+          "text": "Mamy mały domek nad jeziorem."
+        },
+        {
+          "caption": "Friendly",
+          "text": "Napijesz się kawki?"
+        },
+        {
+          "caption": "Softening a request",
+          "text": "Poczekaj chwileczkę."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Napijesz się kawki?",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A diminutive can describe size, but more often it sets the tone."
+        },
+        {
+          "say": "It makes an offer friendlier and a request softer."
+        },
+        {
+          "say": "In formal writing it is out of place.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "wnuk",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "babcia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "wnuk"
+        }
+      ],
+      "prompt": "Ask someone to wait just a moment.",
+      "answer": "Poczekaj chwileczkę.",
+      "answerBy": "wnuk"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "kitchen",
+        "actors": [
+          {
+            "id": "wnuk",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "babcia",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "babcia"
+        }
+      ],
+      "prompt": "Offer a friend a nice cup of coffee.",
+      "answer": "Napijesz się kawki?",
+      "answerBy": "babcia"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

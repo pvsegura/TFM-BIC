@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-making-a-complaint",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "Making a complaint",
+  "description": "Describe a fault, file a complaint and say what you expect.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "A formal complaint about a product is a reklamacja; you file one with złożyć reklamację. Describe the fault plainly (nie działa, jest uszkodzony), say when you bought the item and state what you want: wymiana (an exchange), naprawa (a repair) or zwrot pieniędzy (a refund). Stay polite and firm with Chciałbym or Chciałabym, Proszę o and Wolałbym or Wolałabym."
+    },
+    {
+      "type": "example",
+      "text": "Chciałabym złożyć reklamację.",
+      "translation": "I would like to file a complaint.",
+      "note": "A man says Chciałbym."
+    },
+    {
+      "type": "example",
+      "text": "Kupiłam ten czajnik tydzień temu i już nie działa.",
+      "translation": "I bought this kettle a week ago and it no longer works."
+    },
+    {
+      "type": "example",
+      "text": "Towar jest uszkodzony.",
+      "translation": "The product is damaged."
+    },
+    {
+      "type": "example",
+      "text": "Proszę o zwrot pieniędzy.",
+      "translation": "I would like a refund, please."
+    },
+    {
+      "type": "example",
+      "text": "Czy ma pani paragon?",
+      "translation": "Do you have the receipt?"
+    },
+    {
+      "type": "example",
+      "text": "Czy mogę wymienić go na nowy?",
+      "translation": "Can I exchange it for a new one?"
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Klientka",
+          "text": "Dzień dobry. Chciałabym złożyć reklamację.",
+          "translation": "Hello. I would like to file a complaint."
+        },
+        {
+          "speaker": "Sprzedawca",
+          "text": "Co się stało?",
+          "translation": "What happened?"
+        },
+        {
+          "speaker": "Klientka",
+          "text": "Kupiłam ten czajnik tydzień temu i już nie działa.",
+          "translation": "I bought this kettle a week ago and it no longer works."
+        },
+        {
+          "speaker": "Sprzedawca",
+          "text": "Bardzo mi przykro. Czy ma pani paragon?",
+          "translation": "I am very sorry. Do you have the receipt?"
+        },
+        {
+          "speaker": "Klientka",
+          "text": "Tak, proszę. Wolałabym zwrot pieniędzy niż naprawę.",
+          "translation": "Yes, here it is. I would prefer a refund to a repair."
+        },
+        {
+          "speaker": "Sprzedawca",
+          "text": "Rozumiem. Zwrócimy pani pieniądze na kartę.",
+          "translation": "I understand. We will refund the money to your card."
+        }
+      ]
+    }
+  ]
+}

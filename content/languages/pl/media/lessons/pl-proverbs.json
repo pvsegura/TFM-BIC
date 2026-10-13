@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-proverbs",
+  "objective": "Understand four common proverbs and the moments when speakers quote them.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "agata",
+      "name": "Agata",
+      "look": "woman-c",
+      "voice": "ola"
+    },
+    {
+      "id": "bartek",
+      "name": "Bartek",
+      "look": "man-b",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "Agata arrives at the office an hour after everyone else.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "agata",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "Przepraszam za spóźnienie, pociąg miał godzinę opóźnienia.",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Nic się nie stało. Lepiej późno niż wcale.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "He quotes a proverb whole, and adds no comment."
+          }
+        },
+        {
+          "line": {
+            "by": "agata",
+            "target": "Projekt jest już prawie gotowy, więc chyba możemy świętować.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "agata"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "bartek",
+            "target": "Spokojnie. Nie chwal dnia przed zachodem słońca.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "bartek"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Quoted whole, never explained",
+      "phrase": "Co kraj, to obyczaj.",
+      "panels": [
+        {
+          "caption": "On effort",
+          "text": "Bez pracy nie ma kołaczy."
+        },
+        {
+          "caption": "On caution",
+          "text": "Nie chwal dnia przed zachodem słońca."
+        },
+        {
+          "caption": "On fate",
+          "text": "Co ma wisieć, nie utonie."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Co kraj, to obyczaj.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A proverb is quoted as a fixed whole."
+        },
+        {
+          "say": "Many preserve old words that survive nowhere else."
+        },
+        {
+          "say": "They belong to conversation and journalism, not to official writing.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "bartek"
+        }
+      ],
+      "prompt": "Better late than never.",
+      "answer": "Lepiej późno niż wcale.",
+      "answerBy": "bartek"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "agata",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "bartek",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "agata"
+        }
+      ],
+      "prompt": "Too many cooks spoil the broth.",
+      "answer": "Gdzie kucharek sześć, tam nie ma co jeść.",
+      "answerBy": "agata"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

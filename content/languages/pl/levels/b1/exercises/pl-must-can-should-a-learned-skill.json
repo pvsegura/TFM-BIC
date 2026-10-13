@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-must-can-should-a-learned-skill",
+  "lessonId": "pl-must-can-should",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which sentence talks about a learned skill?",
+  "explanation": "Umiem is for a learned skill: Umiem pływać. Muszę is obligation, trzeba is necessity and nie wolno is a prohibition.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Muszę już iść."
+      },
+      {
+        "id": "b",
+        "text": "Umiem pływać."
+      },
+      {
+        "id": "c",
+        "text": "Trzeba kupić bilet."
+      },
+      {
+        "id": "d",
+        "text": "Tu nie wolno parkować."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

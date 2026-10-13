@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-zeby-clauses",
+  "languageId": "pl",
+  "levelId": "b2",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "en",
+  "title": "Żeby: wanting someone else to act",
+  "description": "Say what you want others to do, and say why you do something.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "When one person wants another to do something, Polish uses żeby with a verb that looks like the past tense: Chcę, żebyś przyszedł. The personal ending attaches to żeby: żebym, żebyś, żeby, żebyśmy, żebyście, żeby. When the subject is the same in both parts, żeby is followed by an infinitive and expresses purpose: Uczę się polskiego, żeby pracować w Polsce."
+    },
+    {
+      "type": "example",
+      "text": "Chcę, żebyś przyszedł na moje urodziny.",
+      "translation": "I want you to come to my birthday.",
+      "note": "To a woman: żebyś przyszła."
+    },
+    {
+      "type": "example",
+      "text": "Mama prosi, żebyśmy wrócili przed dziesiątą.",
+      "translation": "Mum asks us to come back before ten."
+    },
+    {
+      "type": "example",
+      "text": "Lekarz powiedział, żebym więcej spał.",
+      "translation": "The doctor told me to sleep more."
+    },
+    {
+      "type": "example",
+      "text": "Uczę się polskiego, żeby pracować w Polsce.",
+      "translation": "I am learning Polish in order to work in Poland.",
+      "note": "The same subject in both parts: żeby and an infinitive."
+    },
+    {
+      "type": "example",
+      "text": "Wolałabym, żebyście nie palili w domu.",
+      "translation": "I would rather you did not smoke in the house."
+    },
+    {
+      "type": "example",
+      "text": "Zależy mi na tym, żeby wszyscy byli zadowoleni.",
+      "translation": "It matters to me that everyone is happy."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Szefowa",
+          "text": "Chciałabym, żeby pan przygotował raport do piątku.",
+          "translation": "I would like you to prepare the report by Friday."
+        },
+        {
+          "speaker": "Adam",
+          "text": "Dobrze. Czy chce pani, żebym wysłał go też do klienta?",
+          "translation": "Fine. Do you want me to send it to the client too?"
+        },
+        {
+          "speaker": "Szefowa",
+          "text": "Nie, wolałabym, żeby najpierw trafił do mnie.",
+          "translation": "No, I would rather it came to me first."
+        },
+        {
+          "speaker": "Adam",
+          "text": "Rozumiem. Zrobię wszystko, żeby zdążyć.",
+          "translation": "I understand. I will do everything to make it on time."
+        }
+      ]
+    }
+  ]
+}

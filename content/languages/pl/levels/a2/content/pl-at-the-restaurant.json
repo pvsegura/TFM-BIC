@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-at-the-restaurant",
+  "languageId": "pl",
+  "levelId": "a2",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "en",
+  "title": "At the restaurant",
+  "description": "Ask for advice, order a meal and ask for the bill.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "In a restaurant the waiter may ask Co dla pana? to a man or Co dla pani? to a woman. Order with Poproszę and the dish in the accusative: zupa pomidorowa becomes zupę pomidorową. To ask for advice, say Co pan poleca? to a waiter or Co pani poleca? to a waitress. Before eating, people say Smacznego! At the end, ask for the bill: Poproszę rachunek."
+    },
+    {
+      "type": "example",
+      "text": "Poproszę kartę.",
+      "translation": "The menu, please."
+    },
+    {
+      "type": "example",
+      "text": "Co pan poleca?",
+      "translation": "What do you recommend?",
+      "note": "To a waitress: Co pani poleca?"
+    },
+    {
+      "type": "example",
+      "text": "Poproszę zupę pomidorową.",
+      "translation": "Tomato soup, please."
+    },
+    {
+      "type": "example",
+      "text": "Na drugie danie poproszę pierogi.",
+      "translation": "For the main course, pierogi, please."
+    },
+    {
+      "type": "example",
+      "text": "Smacznego!",
+      "translation": "Enjoy your meal!"
+    },
+    {
+      "type": "example",
+      "text": "Poproszę rachunek.",
+      "translation": "The bill, please."
+    },
+    {
+      "type": "example",
+      "text": "To było bardzo smaczne.",
+      "translation": "That was very tasty."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kelner",
+          "text": "Dzień dobry. Co dla pani?",
+          "translation": "Hello. What would you like?"
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Co pan poleca?",
+          "translation": "What do you recommend?"
+        },
+        {
+          "speaker": "Kelner",
+          "text": "Dzisiaj polecam zupę pomidorową i pierogi.",
+          "translation": "Today I recommend the tomato soup and the pierogi."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Dobrze, poproszę zupę i pierogi.",
+          "translation": "Fine, soup and pierogi, please."
+        },
+        {
+          "speaker": "Kelner",
+          "text": "Coś do picia?",
+          "translation": "Something to drink?"
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Wodę, proszę.",
+          "translation": "Water, please."
+        },
+        {
+          "speaker": "Kelner",
+          "text": "Proszę. Smacznego!",
+          "translation": "Here you are. Enjoy your meal!"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-numbers-and-age-i-am-twenty",
+  "lessonId": "pl-numbers-and-age",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: I am twenty years old.",
+  "explanation": "Age is said with mam, I have: Mam dwadzieścia lat.",
+  "configuration": {
+    "acceptedAnswers": ["Mam dwadzieścia lat", "Mam dwadzieścia lat."],
+    "caseSensitive": false
+  }
+}

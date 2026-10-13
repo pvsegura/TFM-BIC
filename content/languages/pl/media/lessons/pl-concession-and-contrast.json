@@ -1,0 +1,234 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-concession-and-contrast",
+  "objective": "Concede a point before answering it, and set two facts against each other.",
+  "narrator": "anna",
+  "cast": [
+    {
+      "id": "dyrektor",
+      "name": "The director",
+      "look": "man-b",
+      "voice": "tomek"
+    },
+    {
+      "id": "analityczka",
+      "name": "The analyst",
+      "look": "woman-d",
+      "voice": "ola"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "office",
+        "time": "day",
+        "actors": [
+          {
+            "id": "dyrektor",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "analityczka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "A board meeting. The company is thinking about expanding.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "dyrektor",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "dyrektor",
+            "target": "Czy powinniśmy otworzyć drugi oddział?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "dyrektor"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "analityczka",
+            "target": "Wprawdzie koszty są wysokie, ale rynek rośnie.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "analityczka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "She concedes one point, then answers it."
+          }
+        },
+        {
+          "line": {
+            "by": "dyrektor",
+            "target": "A konkurencja?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "dyrektor"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "analityczka",
+            "target": "Konkurencja jest silna w stolicy, na południu natomiast prawie jej nie ma.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "analityczka"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "And here she sets two regions against each other."
+          }
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Concede, then answer",
+      "phrase": "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+      "panels": [
+        {
+          "caption": "With a clause",
+          "text": "Mimo że padało, mecz się odbył."
+        },
+        {
+          "caption": "With a noun",
+          "text": "Mimo deszczu mecz się odbył."
+        },
+        {
+          "caption": "Side by side",
+          "text": "Eksport wzrósł, import natomiast spadł."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "A concession admits one fact before the main point arrives."
+        },
+        {
+          "say": "The same linking word takes either a full clause or a single noun."
+        },
+        {
+          "say": "To contrast two facts, the linking word often comes second in its clause.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "dyrektor",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "analityczka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "dyrektor"
+        }
+      ],
+      "prompt": "Despite the rain, the match took place.",
+      "answer": "Mimo deszczu mecz się odbył.",
+      "answerBy": "dyrektor"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "office",
+        "actors": [
+          {
+            "id": "dyrektor",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "analityczka",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "analityczka"
+        }
+      ],
+      "prompt": "Although he was tired, he worked until midnight.",
+      "answer": "Chociaż był zmęczony, pracował do północy.",
+      "answerBy": "analityczka"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "id": "sayings-and-rhetoric",
+  "languageId": "pl",
+  "status": "published",
+  "order": 115,
+  "instructionLanguage": "en",
+  "title": "Sayings and rhetoric",
+  "description": "Words for proverbs, public speaking and the particles that colour a sentence (C2).",
+  "items": [
+    {
+      "id": "pl-przyslowie",
+      "status": "published",
+      "order": 10,
+      "lemma": "przysłowie",
+      "translation": "proverb",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-powiedzenie",
+      "status": "published",
+      "order": 20,
+      "lemma": "powiedzenie",
+      "translation": "saying",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-obyczaj",
+      "status": "published",
+      "order": 30,
+      "lemma": "obyczaj",
+      "translation": "custom",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-kolacz",
+      "status": "published",
+      "order": 40,
+      "lemma": "kołacz",
+      "translation": "a festive bread",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Today known mainly from the proverb."
+    },
+    {
+      "id": "pl-przemowienie",
+      "status": "published",
+      "order": 50,
+      "lemma": "przemówienie",
+      "translation": "speech; address",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-sluchacz",
+      "status": "published",
+      "order": 60,
+      "lemma": "słuchacz",
+      "translation": "listener",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-anegdota",
+      "status": "published",
+      "order": 70,
+      "lemma": "anegdota",
+      "translation": "anecdote",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-kwestia",
+      "status": "published",
+      "order": 80,
+      "lemma": "kwestia",
+      "translation": "issue; matter",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-bezczynnosc",
+      "status": "published",
+      "order": 90,
+      "lemma": "bezczynność",
+      "translation": "inaction; idleness",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-uwaga",
+      "status": "published",
+      "order": 100,
+      "lemma": "uwaga",
+      "translation": "attention; remark",
+      "levelId": "c2",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-przeciez",
+      "status": "published",
+      "order": 110,
+      "lemma": "przecież",
+      "translation": "but; after all",
+      "levelId": "c2",
+      "partOfSpeech": "particle",
+      "note": "Appeals to what the listener should already know."
+    },
+    {
+      "id": "pl-chyba",
+      "status": "published",
+      "order": 120,
+      "lemma": "chyba",
+      "translation": "probably; I suppose",
+      "levelId": "c2",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-niby",
+      "status": "published",
+      "order": 130,
+      "lemma": "niby",
+      "translation": "supposedly",
+      "levelId": "c2",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-akurat",
+      "status": "published",
+      "order": 140,
+      "lemma": "akurat",
+      "translation": "precisely; just",
+      "levelId": "c2",
+      "partOfSpeech": "particle",
+      "note": "Said alone, a sarcastic denial."
+    },
+    {
+      "id": "pl-bynajmniej",
+      "status": "published",
+      "order": 150,
+      "lemma": "bynajmniej",
+      "translation": "not at all; by no means",
+      "levelId": "c2",
+      "partOfSpeech": "particle",
+      "note": "Not to be confused with przynajmniej, at least."
+    },
+    {
+      "id": "pl-przynajmniej",
+      "status": "published",
+      "order": 160,
+      "lemma": "przynajmniej",
+      "translation": "at least",
+      "levelId": "c2",
+      "partOfSpeech": "particle"
+    }
+  ]
+}

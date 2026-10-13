@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-my-family-this-is-my-mum",
+  "lessonId": "pl-my-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: This is my mum.",
+  "explanation": "To jest presents a person, and mama is feminine, so it takes moja.",
+  "configuration": {
+    "acceptedAnswers": ["To jest moja mama", "To jest moja mama."],
+    "caseSensitive": false
+  }
+}

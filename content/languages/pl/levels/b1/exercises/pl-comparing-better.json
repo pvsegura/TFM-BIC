@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-comparing-better",
+  "lessonId": "pl-comparing",
+  "languageId": "pl",
+  "levelId": "b1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which word is the comparative of dobry?",
+  "explanation": "Dobry is irregular: dobry, lepszy, najlepszy. Gorszy is the comparative of zły, większy of duży and mniejszy of mały.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gorszy"
+      },
+      {
+        "id": "b",
+        "text": "większy"
+      },
+      {
+        "id": "c",
+        "text": "mniejszy"
+      },
+      {
+        "id": "d",
+        "text": "lepszy"
+      }
+    ],
+    "correctOptionId": "d"
+  }
+}

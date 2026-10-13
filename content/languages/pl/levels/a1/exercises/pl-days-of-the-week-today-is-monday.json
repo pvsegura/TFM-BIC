@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-days-of-the-week-today-is-monday",
+  "lessonId": "pl-days-of-the-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "en",
+  "prompt": "Which sentence means: Today is Monday?",
+  "explanation": "Dzisiaj is today and poniedziałek is Monday. Jutro jest wtorek means tomorrow is Tuesday.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jutro jest wtorek."
+      },
+      {
+        "id": "b",
+        "text": "W sobotę mam wolne."
+      },
+      {
+        "id": "c",
+        "text": "Dzisiaj jest poniedziałek."
+      },
+      {
+        "id": "d",
+        "text": "Do jutra!"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

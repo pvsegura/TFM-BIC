@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "id": "plans-and-comparisons",
+  "languageId": "pl",
+  "status": "published",
+  "order": 85,
+  "instructionLanguage": "en",
+  "title": "Plans and comparisons",
+  "description": "Words for arranging to meet, for obligation and ability, and for comparing (B1).",
+  "items": [
+    {
+      "id": "pl-kino",
+      "status": "published",
+      "order": 10,
+      "lemma": "kino",
+      "translation": "cinema",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-spotkanie",
+      "status": "published",
+      "order": 20,
+      "lemma": "spotkanie",
+      "translation": "meeting",
+      "levelId": "b1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-umowic-sie",
+      "status": "published",
+      "order": 30,
+      "lemma": "umówić się",
+      "translation": "to arrange to meet",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-spotkac-sie",
+      "status": "published",
+      "order": 40,
+      "lemma": "spotkać się",
+      "translation": "to meet",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-chetnie",
+      "status": "published",
+      "order": 50,
+      "lemma": "chętnie",
+      "translation": "gladly; with pleasure",
+      "levelId": "b1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-niestety",
+      "status": "published",
+      "order": 60,
+      "lemma": "niestety",
+      "translation": "unfortunately",
+      "levelId": "b1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-wolny",
+      "status": "published",
+      "order": 70,
+      "lemma": "wolny",
+      "translation": "free",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-zajety",
+      "status": "published",
+      "order": 80,
+      "lemma": "zajęty",
+      "translation": "busy",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-musiec",
+      "status": "published",
+      "order": 90,
+      "lemma": "musieć",
+      "translation": "to have to; must",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-moc",
+      "status": "published",
+      "order": 100,
+      "lemma": "móc",
+      "translation": "to be able to; can, may",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-umiec",
+      "status": "published",
+      "order": 110,
+      "lemma": "umieć",
+      "translation": "to know how to",
+      "levelId": "b1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-trzeba",
+      "status": "published",
+      "order": 120,
+      "lemma": "trzeba",
+      "translation": "it is necessary",
+      "levelId": "b1",
+      "note": "Never changes for the person."
+    },
+    {
+      "id": "pl-mozna",
+      "status": "published",
+      "order": 130,
+      "lemma": "można",
+      "translation": "one can; it is allowed",
+      "levelId": "b1",
+      "note": "Never changes for the person."
+    },
+    {
+      "id": "pl-tani",
+      "status": "published",
+      "order": 140,
+      "lemma": "tani",
+      "translation": "cheap",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-drogi",
+      "status": "published",
+      "order": 150,
+      "lemma": "drogi",
+      "translation": "expensive; dear",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-szybki",
+      "status": "published",
+      "order": 160,
+      "lemma": "szybki",
+      "translation": "fast",
+      "levelId": "b1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-lepszy",
+      "status": "published",
+      "order": 170,
+      "lemma": "lepszy",
+      "translation": "better",
+      "levelId": "b1",
+      "partOfSpeech": "adjective",
+      "note": "The comparative of dobry."
+    },
+    {
+      "id": "pl-gorszy",
+      "status": "published",
+      "order": 180,
+      "lemma": "gorszy",
+      "translation": "worse",
+      "levelId": "b1",
+      "partOfSpeech": "adjective",
+      "note": "The comparative of zły."
+    },
+    {
+      "id": "pl-wiekszy",
+      "status": "published",
+      "order": 190,
+      "lemma": "większy",
+      "translation": "bigger",
+      "levelId": "b1",
+      "partOfSpeech": "adjective",
+      "note": "The comparative of duży."
+    },
+    {
+      "id": "pl-mniejszy",
+      "status": "published",
+      "order": 200,
+      "lemma": "mniejszy",
+      "translation": "smaller",
+      "levelId": "b1",
+      "partOfSpeech": "adjective",
+      "note": "The comparative of mały."
+    }
+  ]
+}

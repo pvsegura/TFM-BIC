@@ -1,0 +1,288 @@
+{
+  "schemaVersion": 2,
+  "contentId": "pl-my-family",
+  "objective": "Present the people in your family and say whether you have brothers or sisters.",
+  "narrator": "marek",
+  "cast": [
+    {
+      "id": "anna",
+      "name": "Anna",
+      "look": "woman-a",
+      "voice": "ola"
+    },
+    {
+      "id": "piotr",
+      "name": "Piotr",
+      "look": "man-a",
+      "voice": "piotr"
+    }
+  ],
+  "targetVocabularyIds": [],
+  "scenes": [
+    {
+      "kind": "situation",
+      "segment": "conversation",
+      "overlayTitle": true,
+      "stage": {
+        "environment": "home",
+        "time": "day",
+        "actors": [
+          {
+            "id": "anna",
+            "x": 520,
+            "facing": "right",
+            "offstage": true
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "beats": [
+        {
+          "line": {
+            "say": "At home, Piotr shows Anna some photos of his family.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "enter",
+              "actor": "anna",
+              "to": 520
+            }
+          ]
+        },
+        {
+          "line": {
+            "by": "anna",
+            "target": "Kto to jest?",
+            "leadIn": 0.5
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "anna"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "To jest moja siostra, Ola.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "anna",
+            "target": "A to?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "anna"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "To jest mój brat, Tomek.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "nod",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "say": "The word for my changed. It follows the gender of the person."
+          }
+        },
+        {
+          "line": {
+            "by": "piotr",
+            "target": "A ty? Masz rodzeństwo?",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "wave",
+              "actor": "piotr"
+            }
+          ],
+          "card": true
+        },
+        {
+          "line": {
+            "by": "anna",
+            "target": "Tak, mam siostrę.",
+            "leadIn": 0.3
+          },
+          "actions": [
+            {
+              "when": "with",
+              "do": "raise-hand",
+              "actor": "anna"
+            }
+          ],
+          "card": true
+        }
+      ]
+    },
+    {
+      "kind": "focus",
+      "segment": "notice",
+      "heading": "Mój or moja?",
+      "phrase": "To jest mój tata.",
+      "panels": [
+        {
+          "caption": "Feminine",
+          "text": "To jest moja mama."
+        },
+        {
+          "caption": "Masculine",
+          "text": "To jest mój tata."
+        },
+        {
+          "caption": "After mam",
+          "text": "Mam siostrę."
+        }
+      ],
+      "lines": [
+        {
+          "by": "narrator",
+          "target": "To jest mój tata.",
+          "pauseAfter": 0.8
+        },
+        {
+          "say": "The word for my agrees with the person you present."
+        },
+        {
+          "say": "One form goes with women, another with men."
+        },
+        {
+          "say": "And after the verb to have, a feminine word changes its last letter.",
+          "pauseAfter": 0.8
+        }
+      ]
+    },
+    {
+      "kind": "retrieval",
+      "segment": "retrieval",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "anna",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "Present your mum. This is my mum.",
+      "answer": "To jest moja mama.",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "anna",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "anna"
+        }
+      ],
+      "prompt": "You have a sister. Say it.",
+      "answer": "Mam siostrę.",
+      "answerBy": "anna"
+    },
+    {
+      "kind": "retrieval",
+      "segment": "recap",
+      "stage": {
+        "environment": "home",
+        "actors": [
+          {
+            "id": "anna",
+            "x": 520,
+            "facing": "right"
+          },
+          {
+            "id": "piotr",
+            "x": 760,
+            "facing": "left"
+          }
+        ],
+        "props": []
+      },
+      "setup": [
+        {
+          "do": "highlight",
+          "target": "piotr"
+        }
+      ],
+      "prompt": "Ask a friend if they have brothers or sisters.",
+      "answer": "Masz rodzeństwo?",
+      "answerBy": "piotr"
+    },
+    {
+      "kind": "next-step",
+      "segment": "recap",
+      "heading": "Your turn",
+      "body": "Practise with the exercises below the video.",
+      "say": "Now practise with the exercises below the video."
+    }
+  ]
+}

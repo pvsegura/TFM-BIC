@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-public-speaking-thank-you-for-your-attention",
+  "lessonId": "pl-public-speaking",
+  "languageId": "pl",
+  "levelId": "c2",
+  "type": "text-answer",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "en",
+  "prompt": "Type the Polish for: Thank you for your attention.",
+  "explanation": "Uwaga is attention; after za it becomes uwagę.",
+  "configuration": {
+    "acceptedAnswers": ["Dziękuję za uwagę", "Dziękuję za uwagę."],
+    "caseSensitive": false
+  }
+}
