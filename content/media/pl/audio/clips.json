@@ -179,6 +179,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:12:42.079Z"
   },
+  "06374f325c53bd69": {
+    "path": "pl/audio/anna/06374f325c53bd69.m4a",
+    "durationSeconds": 3.96,
+    "text": "Although he was tired, he worked until midnight.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:58.899Z"
+  },
   "06b5f9e12bcb8808": {
     "path": "pl/audio/piotr/06b5f9e12bcb8808.m4a",
     "durationSeconds": 1.92,
@@ -394,6 +403,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-09T07:24:19.662Z"
+  },
+  "0d08cc0fbb621018": {
+    "path": "pl/audio/marek/0d08cc0fbb621018.m4a",
+    "durationSeconds": 3.84,
+    "text": "It makes an offer friendlier and a request softer.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T15:06:54.265Z"
   },
   "0d2214d2bc49c292": {
     "path": "pl/audio/anna/0d2214d2bc49c292.m4a",
@@ -647,6 +665,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-13T09:59:47.097Z"
   },
+  "1457b0c397773acc": {
+    "path": "pl/audio/tomek/1457b0c397773acc.m4a",
+    "durationSeconds": 2.96,
+    "text": "Czy powinniśmy otworzyć drugi oddział?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:55:05.133Z"
+  },
   "147c9b1dc5fe549b": {
     "path": "pl/audio/ola/147c9b1dc5fe549b.m4a",
     "durationSeconds": 2.12,
@@ -764,6 +791,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-07T08:02:45.039Z"
   },
+  "175ee434f171502b": {
+    "path": "pl/audio/marek/175ee434f171502b.m4a",
+    "durationSeconds": 1.76,
+    "text": "Napijesz się kawki?",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T15:06:40.765Z"
+  },
   "177f644d531fb01c": {
     "path": "pl/audio/marek/177f644d531fb01c.m4a",
     "durationSeconds": 6,
@@ -799,6 +835,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:29.798Z"
+  },
+  "18abe769eee6f3df": {
+    "path": "pl/audio/tomek/18abe769eee6f3df.m4a",
+    "durationSeconds": 1.52,
+    "text": "A konkurencja?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:55:28.329Z"
   },
   "18ad5516ae12f618": {
     "path": "pl/audio/anna/18ad5516ae12f618.m4a",
@@ -1070,6 +1115,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-13T10:05:32.073Z"
   },
+  "1f9f0f78edeffb68": {
+    "path": "pl/audio/anna/1f9f0f78edeffb68.m4a",
+    "durationSeconds": 6.04,
+    "text": "To contrast two facts, the linking word often comes second in its clause.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:38.919Z"
+  },
   "20378a2b96f9bc18": {
     "path": "pl/audio/marek/20378a2b96f9bc18.m4a",
     "durationSeconds": 5,
@@ -1142,6 +1196,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-07T07:47:09.256Z"
   },
+  "22906c0caaa179aa": {
+    "path": "pl/audio/anna/22906c0caaa179aa.m4a",
+    "durationSeconds": 6.32,
+    "text": "The same linking word takes either a full clause or a single noun.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:33.110Z"
+  },
   "22ab39876eac7446": {
     "path": "pl/audio/anna/22ab39876eac7446.m4a",
     "durationSeconds": 2.8,
@@ -1213,6 +1276,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:29:39.562Z"
+  },
+  "24f3af138dba36ef": {
+    "path": "pl/audio/anna/24f3af138dba36ef.m4a",
+    "durationSeconds": 2.48,
+    "text": "Chodź, kochanie, zjesz zupkę?",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T15:06:00.566Z"
   },
   "25b5b6aeccca3813": {
     "path": "pl/audio/anna/25b5b6aeccca3813.m4a",
@@ -1664,6 +1736,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-13T10:15:18.911Z"
   },
+  "334b0282f6b5983d": {
+    "path": "pl/audio/ola/334b0282f6b5983d.m4a",
+    "durationSeconds": 3.72,
+    "text": "Wprawdzie koszty są wysokie, ale rynek rośnie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:55:13.540Z"
+  },
   "33621a423af775ae": {
     "path": "pl/audio/marek/33621a423af775ae.m4a",
     "durationSeconds": 4.92,
@@ -1933,6 +2014,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-09T07:32:12.560Z"
+  },
+  "3a648958fa73b43e": {
+    "path": "pl/audio/piotr/3a648958fa73b43e.m4a",
+    "durationSeconds": 2.8,
+    "text": "Babciu, ja mam trzydzieści lat!",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T15:06:34.518Z"
   },
   "3abdf880543af604": {
     "path": "pl/audio/anna/3abdf880543af604.m4a",
@@ -2303,6 +2393,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:11.205Z"
   },
+  "45c58ed352fecf3f": {
+    "path": "pl/audio/ola/45c58ed352fecf3f.m4a",
+    "durationSeconds": 4.76,
+    "text": "Konkurencja jest silna w stolicy, na południu natomiast prawie jej nie ma.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:55:39.713Z"
+  },
   "463d199697f71375": {
     "path": "pl/audio/anna/463d199697f71375.m4a",
     "durationSeconds": 3.72,
@@ -2374,6 +2473,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-05T08:22:16.884Z"
+  },
+  "4911a1abb0fb96e9": {
+    "path": "pl/audio/anna/4911a1abb0fb96e9.m4a",
+    "durationSeconds": 5.52,
+    "text": "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:00.483Z"
   },
   "49d982caed27d4eb": {
     "path": "pl/audio/anna/49d982caed27d4eb.m4a",
@@ -3068,6 +3176,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:55.631Z"
   },
+  "64bb7bde7b628c83": {
+    "path": "pl/audio/marek/64bb7bde7b628c83.m4a",
+    "durationSeconds": 4.04,
+    "text": "Sunday lunch. Piotr visits his grandmother.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T15:05:53.765Z"
+  },
   "64cea4211e96da4e": {
     "path": "pl/audio/ola/64cea4211e96da4e.m4a",
     "durationSeconds": 1.24,
@@ -3103,6 +3220,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:00.806Z"
+  },
+  "65c7f34cd4cfd32b": {
+    "path": "pl/audio/tomek/65c7f34cd4cfd32b.m4a",
+    "durationSeconds": 2.48,
+    "text": "Mimo deszczu mecz się odbył.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:56:52.838Z"
   },
   "66110613d8570374": {
     "path": "pl/audio/anna/66110613d8570374.m4a",
@@ -3257,6 +3383,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:10:04.782Z"
   },
+  "6e4da2493c41bf1e": {
+    "path": "pl/audio/anna/6e4da2493c41bf1e.m4a",
+    "durationSeconds": 4.16,
+    "text": "And here she sets two regions against each other.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:55:44.311Z"
+  },
   "6ea38ee8e0dfaeb0": {
     "path": "pl/audio/anna/6ea38ee8e0dfaeb0.m4a",
     "durationSeconds": 1.48,
@@ -3265,6 +3400,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-13T10:10:26.107Z"
+  },
+  "6ede219a27c5e068": {
+    "path": "pl/audio/marek/6ede219a27c5e068.m4a",
+    "durationSeconds": 5.24,
+    "text": "Nothing here is small. The endings carry affection.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T15:06:13.981Z"
   },
   "6f5b0475693611c3": {
     "path": "pl/audio/ola/6f5b0475693611c3.m4a",
@@ -3599,6 +3743,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-03T08:52:19.939Z"
   },
+  "7775c5014e2b7903": {
+    "path": "pl/audio/anna/7775c5014e2b7903.m4a",
+    "durationSeconds": 3.48,
+    "text": "She concedes one point, then answers it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:55:24.821Z"
+  },
   "78fe516b981176a7": {
     "path": "pl/audio/tomek/78fe516b981176a7.m4a",
     "durationSeconds": 3.12,
@@ -3742,6 +3895,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-13T10:15:45.628Z"
+  },
+  "7e44c98ca67a0aeb": {
+    "path": "pl/audio/marek/7e44c98ca67a0aeb.m4a",
+    "durationSeconds": 3.8,
+    "text": "One person wants, another person acts.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:53:46.584Z"
   },
   "7e6037780d32249d": {
     "path": "pl/audio/anna/7e6037780d32249d.m4a",
@@ -5750,6 +5912,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T08:03:46.366Z"
   },
+  "c09c42a433b6409f": {
+    "path": "pl/audio/anna/c09c42a433b6409f.m4a",
+    "durationSeconds": 2.52,
+    "text": "A potem herbatka i ciasteczko.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T15:06:20.003Z"
+  },
   "c0b9b44c86dab8dd": {
     "path": "pl/audio/anna/c0b9b44c86dab8dd.m4a",
     "durationSeconds": 4.84,
@@ -5830,6 +6001,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-02T09:00:54.707Z"
+  },
+  "c4d12d06afc52428": {
+    "path": "pl/audio/ola/c4d12d06afc52428.m4a",
+    "durationSeconds": 3,
+    "text": "Chociaż był zmęczony, pracował do północy.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:57:07.861Z"
   },
   "c4fc4258bcfe837d": {
     "path": "pl/audio/ola/c4fc4258bcfe837d.m4a",
@@ -6299,6 +6479,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:05.625Z"
   },
+  "d2e12e4b0b0c7e34": {
+    "path": "pl/audio/ola/d2e12e4b0b0c7e34.m4a",
+    "durationSeconds": 2.64,
+    "text": "Nie, wolałabym, żeby najpierw trafił do mnie.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:53:52.525Z"
+  },
   "d35a1552c5127669": {
     "path": "pl/audio/ola/d35a1552c5127669.m4a",
     "durationSeconds": 3.52,
@@ -6605,6 +6794,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:22.064Z"
   },
+  "dc4f1d167b557fd0": {
+    "path": "pl/audio/anna/dc4f1d167b557fd0.m4a",
+    "durationSeconds": 4.32,
+    "text": "A board meeting. The company is thinking about expanding.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:55:01.103Z"
+  },
   "dc5fb97bf396a4ef": {
     "path": "pl/audio/piotr/dc5fb97bf396a4ef.m4a",
     "durationSeconds": 1.84,
@@ -6902,6 +7100,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:25:42.650Z"
   },
+  "e6da29c62ec8707f": {
+    "path": "pl/audio/marek/e6da29c62ec8707f.m4a",
+    "durationSeconds": 5.64,
+    "text": "A diminutive can describe size, but more often it sets the tone.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T15:06:48.618Z"
+  },
   "e7069d72f97a94e2": {
     "path": "pl/audio/anna/e7069d72f97a94e2.m4a",
     "durationSeconds": 2.76,
@@ -7172,6 +7379,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:10:52.602Z"
   },
+  "ef42fc57ecfc131c": {
+    "path": "pl/audio/anna/ef42fc57ecfc131c.m4a",
+    "durationSeconds": 5.56,
+    "text": "A concession admits one fact before the main point arrives.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:06.352Z"
+  },
   "ef5282df42302451": {
     "path": "pl/audio/marek/ef5282df42302451.m4a",
     "durationSeconds": 4.08,
@@ -7216,6 +7432,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:47:49.373Z"
+  },
+  "f019a09a0790db30": {
+    "path": "pl/audio/anna/f019a09a0790db30.m4a",
+    "durationSeconds": 3.52,
+    "text": "Despite the rain, the match took place.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:56:45.360Z"
   },
   "f01e64a785c4984a": {
     "path": "pl/audio/marek/f01e64a785c4984a.m4a",
@@ -7324,6 +7549,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:25:48.879Z"
+  },
+  "f1dc5b2d8677004d": {
+    "path": "pl/audio/piotr/f1dc5b2d8677004d.m4a",
+    "durationSeconds": 2.76,
+    "text": "Dziękuję, babciu, tylko troszeczkę.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T15:06:06.496Z"
   },
   "f20d17e95eb193e2": {
     "path": "pl/audio/anna/f20d17e95eb193e2.m4a",

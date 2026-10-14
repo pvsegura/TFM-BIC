@@ -2752,21 +2752,162 @@
         "id": "pl-concession-and-contrast",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-concession-and-contrast/video-6ba8d8083c40.mp4",
+          "posterUrl": "pl/lesson/pl-concession-and-contrast/poster-6ba8d8083c40.jpg",
+          "captionsUrl": "pl/lesson/pl-concession-and-contrast/captions-6ba8d8083c40.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 102.68,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "A board meeting. The company is thinking about expanding.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy powinniśmy otworzyć drugi oddział?",
+              "language": "pl",
+              "speaker": "The director",
+              "translation": "Should we open a second branch?"
+            },
+            {
+              "text": "Wprawdzie koszty są wysokie, ale rynek rośnie.",
+              "language": "pl",
+              "speaker": "The analyst",
+              "translation": "The costs are admittedly high, but the market is growing."
+            },
+            {
+              "text": "She concedes one point, then answers it.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "A konkurencja?",
+              "language": "pl",
+              "speaker": "The director",
+              "translation": "And the competition?"
+            },
+            {
+              "text": "Konkurencja jest silna w stolicy, na południu natomiast prawie jej nie ma.",
+              "language": "pl",
+              "speaker": "The analyst",
+              "translation": "Competition is strong in the capital, whereas in the south there is almost none."
+            },
+            {
+              "text": "And here she sets two regions against each other.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "The project is admittedly expensive, but it will bring large savings."
+            },
+            {
+              "text": "A concession admits one fact before the main point arrives.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The same linking word takes either a full clause or a single noun.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To contrast two facts, the linking word often comes second in its clause.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Despite the rain, the match took place. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Mimo deszczu mecz się odbył.",
+              "language": "pl",
+              "speaker": "The director",
+              "translation": "Despite the rain, the match took place."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Although he was tired, he worked until midnight. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Chociaż był zmęczony, pracował do północy.",
+              "language": "pl",
+              "speaker": "The analyst",
+              "translation": "Although he was tired, he worked until midnight."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Concede a point before answering it, and set two facts against each other.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "f6b2484bb686c90829617114cdfca6b5f0bc1819a7706ddb614608ab14ba1e04",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Concede a point before answering it, and set two facts against each other.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Czy powinniśmy otworzyć drugi oddział?",
+          "Wprawdzie koszty są wysokie, ale rynek rośnie.",
+          "A konkurencja?",
+          "Konkurencja jest silna w stolicy, na południu natomiast prawie jej nie ma.",
+          "Wprawdzie projekt jest drogi, ale przyniesie duże oszczędności.",
+          "Mimo deszczu mecz się odbył.",
+          "Chociaż był zmęczony, pracował do północy."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "The director",
+            "voice": "tomek"
+          },
+          {
+            "character": "The analyst",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:23:15.053Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T15:05:50.397Z",
+        "providerCalls": 15
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:23:15.053Z",
-      "updatedAt": "2026-10-13T10:23:15.053Z"
+      "updatedAt": "2026-10-14T15:05:50.397Z"
     },
     {
       "key": "lesson:pl-conditions",
@@ -3272,16 +3413,16 @@
       "narratorId": "marek",
       "lastRun": {
         "status": "failed",
-        "at": "2026-10-13T10:23:38.075Z",
+        "at": "2026-10-14T15:07:15.034Z",
         "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "providerCalls": 10
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:23:38.075Z",
-      "updatedAt": "2026-10-13T10:23:38.075Z"
+      "updatedAt": "2026-10-14T15:07:15.034Z"
     },
     {
       "key": "lesson:pl-directions",
@@ -9768,16 +9909,16 @@
       "narratorId": "marek",
       "lastRun": {
         "status": "failed",
-        "at": "2026-10-13T10:22:52.046Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "at": "2026-10-14T14:54:49.929Z",
+        "error": "The audio generation provider is unavailable: unreadable response body",
+        "providerCalls": 6
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:22:52.046Z",
-      "updatedAt": "2026-10-13T10:22:52.046Z"
+      "updatedAt": "2026-10-14T14:54:49.929Z"
     },
     {
       "key": "vocabulary-item:en-airport",
