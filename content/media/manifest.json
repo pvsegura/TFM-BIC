@@ -2586,21 +2586,164 @@
         "id": "pl-comparing",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-comparing/video-db9f5b1d6557.mp4",
+          "posterUrl": "pl/lesson/pl-comparing/poster-db9f5b1d6557.jpg",
+          "captionsUrl": "pl/lesson/pl-comparing/captions-db9f5b1d6557.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 93.62,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Adam needs a new phone and cannot decide between two models.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Który telefon jest lepszy?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Which phone is better?"
+            },
+            {
+              "text": "Ten jest szybszy i ma lepszy aparat.",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "This one is faster and has a better camera."
+            },
+            {
+              "text": "A tamten?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "And that one?"
+            },
+            {
+              "text": "Tamten jest tańszy, ale ma mniejszy ekran.",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "That one is cheaper, but it has a smaller screen."
+            },
+            {
+              "text": "Faster, better, cheaper, smaller: four comparatives in two sentences.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "W takim razie wezmę ten tańszy.",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "In that case I will take the cheaper one."
+            },
+            {
+              "text": "Ten telefon jest tańszy niż tamten.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "This phone is cheaper than that one."
+            },
+            {
+              "text": "The comparative adds an ending to the adjective.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The superlative puts three more letters in front of it.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The most common adjectives are irregular, so learn them as pairs.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ask which one is better. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Który jest lepszy?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Which one is better?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "This is the best café in town. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To jest najlepsza kawiarnia w mieście.",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "This is the best café in town."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Compare two things and say which one is better, cheaper or the best.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "2fe902c47df6bb2325dc7d8f5b7c0396568d0ea9799ef4f0f3da2b68315ce560",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Compare two things and say which one is better, cheaper or the best.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Który telefon jest lepszy?",
+          "Ten jest szybszy i ma lepszy aparat.",
+          "A tamten?",
+          "Tamten jest tańszy, ale ma mniejszy ekran.",
+          "W takim razie wezmę ten tańszy.",
+          "Ten telefon jest tańszy niż tamten.",
+          "Który jest lepszy?",
+          "To jest najlepsza kawiarnia w mieście."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Adam",
+            "voice": "tomek"
+          },
+          {
+            "character": "The assistant",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:25:39.878Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T14:29:45.308Z",
+        "providerCalls": 12
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:20:56.655Z",
-      "updatedAt": "2026-10-13T10:25:39.878Z"
+      "updatedAt": "2026-10-14T14:29:45.308Z"
     },
     {
       "key": "lesson:pl-concession-and-contrast",
@@ -5407,21 +5550,171 @@
         "id": "pl-making-a-complaint",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-making-a-complaint/video-2f0286404a05.mp4",
+          "posterUrl": "pl/lesson/pl-making-a-complaint/poster-2f0286404a05.jpg",
+          "captionsUrl": "pl/lesson/pl-making-a-complaint/captions-2f0286404a05.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 92.19,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Marta returns to the shop with a kettle that broke after one week.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dzień dobry. Chciałabym złożyć reklamację.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Hello. I would like to file a complaint."
+            },
+            {
+              "text": "Co się stało?",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "What happened?"
+            },
+            {
+              "text": "Kupiłam ten czajnik tydzień temu i już nie działa.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "I bought this kettle a week ago and it no longer works."
+            },
+            {
+              "text": "She names the fault and says when she bought it.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Bardzo mi przykro. Czy ma pani paragon?",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "I am very sorry. Do you have the receipt?"
+            },
+            {
+              "text": "Tak, proszę. Wolałabym zwrot pieniędzy niż naprawę.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "Yes, here it is. I would prefer a refund to a repair."
+            },
+            {
+              "text": "Rozumiem. Zwrócimy pani pieniądze na kartę.",
+              "language": "pl",
+              "speaker": "The assistant",
+              "translation": "I understand. We will refund the money to your card."
+            },
+            {
+              "text": "Towar jest uszkodzony.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "The product is damaged."
+            },
+            {
+              "text": "First describe the fault in plain words.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Then say exactly what you expect.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A polite, firm tone works better than an angry one.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Say that you would like to file a complaint. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chciałabym złożyć reklamację.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "I would like to file a complaint."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask for a refund. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Proszę o zwrot pieniędzy.",
+              "language": "pl",
+              "speaker": "Marta",
+              "translation": "I would like a refund, please."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "File a complaint about a faulty product and ask for a refund.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "141e34ab1c3eac7af2e3b2f83ffac6817fa161d17d4aa66528523bb4fccff400",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "File a complaint about a faulty product and ask for a refund.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Dzień dobry. Chciałabym złożyć reklamację.",
+          "Co się stało?",
+          "Kupiłam ten czajnik tydzień temu i już nie działa.",
+          "Bardzo mi przykro. Czy ma pani paragon?",
+          "Tak, proszę. Wolałabym zwrot pieniędzy niż naprawę.",
+          "Rozumiem. Zwrócimy pani pieniądze na kartę.",
+          "Towar jest uszkodzony.",
+          "Chciałabym złożyć reklamację.",
+          "Proszę o zwrot pieniędzy."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Marta",
+            "voice": "ola"
+          },
+          {
+            "character": "The assistant",
+            "voice": "tomek"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:22:05.834Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T14:48:22.156Z",
+        "providerCalls": 16
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:22:05.834Z",
-      "updatedAt": "2026-10-13T10:22:05.834Z"
+      "updatedAt": "2026-10-14T14:48:22.156Z"
     },
     {
       "key": "lesson:pl-making-plans",
@@ -5430,21 +5723,163 @@
         "id": "pl-making-plans",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-making-plans/video-eb9f403697f6.mp4",
+          "posterUrl": "pl/lesson/pl-making-plans/poster-eb9f403697f6.jpg",
+          "captionsUrl": "pl/lesson/pl-making-plans/captions-eb9f403697f6.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 87.38,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Bartek would like to see a new film with Ania this weekend.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Co robisz w sobotę? Może pójdziemy do kina?",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "What are you doing on Saturday? Shall we go to the cinema?"
+            },
+            {
+              "text": "Niestety w sobotę nie mogę. A może w piątek?",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "Unfortunately I can't on Saturday. How about Friday?"
+            },
+            {
+              "text": "She declines politely and offers another day.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dobrze, piątek mi pasuje. O której się spotkamy?",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Fine, Friday suits me. What time shall we meet?"
+            },
+            {
+              "text": "Spotkajmy się o szóstej przed kinem.",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "Let's meet at six in front of the cinema."
+            },
+            {
+              "text": "Świetnie. Do zobaczenia!",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Great. See you!"
+            },
+            {
+              "text": "Może pójdziemy do kina?",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Shall we go to the cinema?"
+            },
+            {
+              "text": "A suggestion opens with the word for maybe.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "To decline politely, say unfortunately and add a reason.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Then agree on the time and the place.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Suggest going to the cinema. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Może pójdziemy do kina?",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Shall we go to the cinema?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask what time you will meet. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "O której się spotkamy?",
+              "language": "pl",
+              "speaker": "Ania",
+              "translation": "What time shall we meet?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Suggest meeting a friend, accept or decline, and agree on a time and place.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "ebd9b67882fca20a4a8d4516e8aa70afeffc68dcefc89f7ea8969f51f5b04506",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Suggest meeting a friend, accept or decline, and agree on a time and place.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Co robisz w sobotę? Może pójdziemy do kina?",
+          "Niestety w sobotę nie mogę. A może w piątek?",
+          "Dobrze, piątek mi pasuje. O której się spotkamy?",
+          "Spotkajmy się o szóstej przed kinem.",
+          "Świetnie. Do zobaczenia!",
+          "Może pójdziemy do kina?",
+          "O której się spotkamy?"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          },
+          {
+            "character": "Ania",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:21:19.715Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T14:38:58.854Z",
+        "providerCalls": 15
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:21:19.715Z",
-      "updatedAt": "2026-10-13T10:21:19.715Z"
+      "updatedAt": "2026-10-14T14:38:58.854Z"
     },
     {
       "key": "lesson:pl-modal-particles",
@@ -5476,21 +5911,164 @@
         "id": "pl-must-can-should",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-must-can-should/video-855c02e3249b.mp4",
+          "posterUrl": "pl/lesson/pl-must-can-should/poster-855c02e3249b.jpg",
+          "captionsUrl": "pl/lesson/pl-must-can-should/captions-855c02e3249b.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 82.7,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "At the railway station, Jan is in a hurry.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przepraszam, czy tu można kupić bilet?",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "Excuse me, can one buy a ticket here?"
+            },
+            {
+              "text": "Tak. Dokąd chce pan jechać?",
+              "language": "pl",
+              "speaker": "The clerk",
+              "translation": "Yes. Where do you want to go?"
+            },
+            {
+              "text": "Muszę być w Gdańsku o piątej.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "I have to be in Gdańsk at five."
+            },
+            {
+              "text": "An obligation. Now listen to her advice.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "W takim razie powinien pan jechać pociągiem o pierwszej.",
+              "language": "pl",
+              "speaker": "The clerk",
+              "translation": "In that case you should take the one o'clock train."
+            },
+            {
+              "text": "Dobrze. Poproszę jeden bilet.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "Fine. One ticket, please."
+            },
+            {
+              "text": "Trzeba kupić bilet.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "You need to buy a ticket."
+            },
+            {
+              "text": "Some of these words stay the same for every person.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "They name a rule, not the person who follows it.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The others change their ending like any verb.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You have to go now. Say it. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Muszę już iść.",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "I have to go now."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Ask if you may sit here. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Czy mogę tu usiąść?",
+              "language": "pl",
+              "speaker": "Jan",
+              "translation": "May I sit here?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Say what you must, can and should do, and what is or is not allowed.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "1fb9d7d4e5e947ec13f1ce2e0dbef50294660679615dcbece4a1d0c21a419930",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say what you must, can and should do, and what is or is not allowed.",
+        "level": "b1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Przepraszam, czy tu można kupić bilet?",
+          "Tak. Dokąd chce pan jechać?",
+          "Muszę być w Gdańsku o piątej.",
+          "W takim razie powinien pan jechać pociągiem o pierwszej.",
+          "Dobrze. Poproszę jeden bilet.",
+          "Trzeba kupić bilet.",
+          "Muszę już iść.",
+          "Czy mogę tu usiąść?"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Jan",
+            "voice": "tomek"
+          },
+          {
+            "character": "The clerk",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:21:42.753Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T14:43:34.648Z",
+        "providerCalls": 15
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:21:42.753Z",
-      "updatedAt": "2026-10-13T10:21:42.753Z"
+      "updatedAt": "2026-10-14T14:43:34.648Z"
     },
     {
       "key": "lesson:pl-my-family",
@@ -7642,21 +8220,156 @@
         "id": "pl-relative-clauses",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-relative-clauses/video-22a935edcd3f.mp4",
+          "posterUrl": "pl/lesson/pl-relative-clauses/poster-22a935edcd3f.jpg",
+          "captionsUrl": "pl/lesson/pl-relative-clauses/captions-22a935edcd3f.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 88.61,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "At a party, Ola does not know many of the guests.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Kim jest ten mężczyzna, który stoi przy oknie?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "Who is the man standing by the window?"
+            },
+            {
+              "text": "To jest kolega, z którym pracuję.",
+              "language": "pl",
+              "speaker": "Paweł",
+              "translation": "That is the colleague I work with."
+            },
+            {
+              "text": "The same word again, with a preposition and a new ending.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "A kobieta, z którą rozmawia?",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "And the woman he is talking to?"
+            },
+            {
+              "text": "To jego żona, o której ci opowiadałem.",
+              "language": "pl",
+              "speaker": "Paweł",
+              "translation": "That is his wife, whom I told you about."
+            },
+            {
+              "text": "Książka, którą czytam, jest bardzo ciekawa.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "The book I am reading is very interesting."
+            },
+            {
+              "text": "The linking word takes its gender from the noun it describes.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Its case depends on what it does inside its own clause.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "A comma always comes before it.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "The book I am reading is very interesting. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Książka, którą czytam, jest bardzo ciekawa.",
+              "language": "pl",
+              "speaker": "Ola",
+              "translation": "The book I am reading is very interesting."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "This is the restaurant I told you about. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To jest restauracja, o której ci mówiłem.",
+              "language": "pl",
+              "speaker": "Paweł",
+              "translation": "This is the restaurant I told you about."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Describe a person or a thing with a clause that begins with który.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "2f6488ffa9eb56ac0b889ba6b7b75f38e12e7f567036f4b86380a0648b2f99eb",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Describe a person or a thing with a clause that begins with który.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Kim jest ten mężczyzna, który stoi przy oknie?",
+          "To jest kolega, z którym pracuję.",
+          "A kobieta, z którą rozmawia?",
+          "To jego żona, o której ci opowiadałem.",
+          "Książka, którą czytam, jest bardzo ciekawa.",
+          "To jest restauracja, o której ci mówiłem."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Ola",
+            "voice": "ola"
+          },
+          {
+            "character": "Paweł",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:22:28.917Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-14T14:53:23.434Z",
+        "providerCalls": 14
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:22:28.917Z",
-      "updatedAt": "2026-10-13T10:22:28.917Z"
+      "updatedAt": "2026-10-14T14:53:23.434Z"
     },
     {
       "key": "lesson:pl-reported-speech",

@@ -260,6 +260,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:37:45.454Z"
   },
+  "08822d6252f6343c": {
+    "path": "pl/audio/ola/08822d6252f6343c.m4a",
+    "durationSeconds": 3.12,
+    "text": "Tamten jest tańszy, ale ma mniejszy ekran.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:18:46.372Z"
+  },
   "08b661ef8c7c2ac2": {
     "path": "pl/audio/marek/08b661ef8c7c2ac2.m4a",
     "durationSeconds": 2.72,
@@ -277,6 +286,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-07T08:03:05.471Z"
+  },
+  "09ca6dd35b3a412a": {
+    "path": "pl/audio/anna/09ca6dd35b3a412a.m4a",
+    "durationSeconds": 2.92,
+    "text": "You have to go now. Say it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:40:13.570Z"
   },
   "09e9b5e809ec43f7": {
     "path": "pl/audio/anna/09e9b5e809ec43f7.m4a",
@@ -314,6 +332,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:21:14.307Z"
   },
+  "0b584e9b7f12680d": {
+    "path": "pl/audio/tomek/0b584e9b7f12680d.m4a",
+    "durationSeconds": 1.16,
+    "text": "A tamten?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:18:42.060Z"
+  },
   "0b93b443049238f1": {
     "path": "pl/audio/ola/0b93b443049238f1.m4a",
     "durationSeconds": 1.72,
@@ -350,6 +377,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:58.712Z"
   },
+  "0c4efc6fd12ee3ed": {
+    "path": "pl/audio/anna/0c4efc6fd12ee3ed.m4a",
+    "durationSeconds": 4.12,
+    "text": "Książka, którą czytam, jest bardzo ciekawa.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:05.012Z"
+  },
   "0c8e1fac2f7f4b9e": {
     "path": "pl/audio/ola/0c8e1fac2f7f4b9e.m4a",
     "durationSeconds": 1.76,
@@ -367,6 +403,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:26:05.580Z"
+  },
+  "0d345fe3d74baa47": {
+    "path": "pl/audio/piotr/0d345fe3d74baa47.m4a",
+    "durationSeconds": 2.32,
+    "text": "Świetnie. Do zobaczenia!",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:30:28.304Z"
   },
   "0d4113a101a96ca4": {
     "path": "pl/audio/anna/0d4113a101a96ca4.m4a",
@@ -404,6 +449,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-13T09:59:08.414Z"
   },
+  "0e6b04d38c46e2ab": {
+    "path": "pl/audio/anna/0e6b04d38c46e2ab.m4a",
+    "durationSeconds": 3.72,
+    "text": "The others change their ending like any verb.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:40:07.469Z"
+  },
   "0f870f9e2e0d84d2": {
     "path": "pl/audio/tomek/0f870f9e2e0d84d2.m4a",
     "durationSeconds": 1.24,
@@ -439,6 +493,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-08T10:25:28.331Z"
+  },
+  "102c9c051215d85c": {
+    "path": "pl/audio/tomek/102c9c051215d85c.m4a",
+    "durationSeconds": 2.32,
+    "text": "Dobrze. Poproszę jeden bilet.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:39:40.630Z"
   },
   "10a900de09242355": {
     "path": "pl/audio/anna/10a900de09242355.m4a",
@@ -646,6 +709,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-13T09:53:32.933Z"
+  },
+  "158e1b34f512cc72": {
+    "path": "pl/audio/anna/158e1b34f512cc72.m4a",
+    "durationSeconds": 3.96,
+    "text": "An obligation. Now listen to her advice.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:39:28.837Z"
   },
   "15963b0cf7b4655a": {
     "path": "pl/audio/marek/15963b0cf7b4655a.m4a",
@@ -899,6 +971,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:10:11.126Z"
   },
+  "1d109af692785008": {
+    "path": "pl/audio/anna/1d109af692785008.m4a",
+    "durationSeconds": 3.12,
+    "text": "A comma always comes before it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:24.119Z"
+  },
   "1d2a2459fdc113ef": {
     "path": "pl/audio/marek/1d2a2459fdc113ef.m4a",
     "durationSeconds": 2.96,
@@ -916,6 +997,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:04:38.692Z"
+  },
+  "1dcd7fbec0e15918": {
+    "path": "pl/audio/tomek/1dcd7fbec0e15918.m4a",
+    "durationSeconds": 3.16,
+    "text": "Rozumiem. Zwrócimy pani pieniądze na kartę.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:44:22.769Z"
   },
   "1de1bdb3198c474e": {
     "path": "pl/audio/anna/1de1bdb3198c474e.m4a",
@@ -979,6 +1069,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-13T10:05:32.073Z"
+  },
+  "20378a2b96f9bc18": {
+    "path": "pl/audio/marek/20378a2b96f9bc18.m4a",
+    "durationSeconds": 5,
+    "text": "Bartek would like to see a new film with Ania this weekend.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:29:49.542Z"
   },
   "206a36a17c0607bc": {
     "path": "pl/audio/anna/206a36a17c0607bc.m4a",
@@ -1132,6 +1231,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:04.012Z"
+  },
+  "25ec40c2e82c75cd": {
+    "path": "pl/audio/anna/25ec40c2e82c75cd.m4a",
+    "durationSeconds": 3.68,
+    "text": "At the railway station, Jan is in a hurry.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:39:02.843Z"
   },
   "25f814e0f5078c20": {
     "path": "pl/audio/anna/25f814e0f5078c20.m4a",
@@ -1394,6 +1502,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:05:14.622Z"
   },
+  "2e16d46d1ed497f8": {
+    "path": "pl/audio/tomek/2e16d46d1ed497f8.m4a",
+    "durationSeconds": 2.72,
+    "text": "W takim razie wezmę ten tańszy.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:18:58.809Z"
+  },
   "2e52c6afd2f66894": {
     "path": "pl/audio/marek/2e52c6afd2f66894.m4a",
     "durationSeconds": 2.24,
@@ -1420,6 +1537,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:09:51.462Z"
+  },
+  "2eacb8b35770a35b": {
+    "path": "pl/audio/anna/2eacb8b35770a35b.m4a",
+    "durationSeconds": 3.52,
+    "text": "The book I am reading is very interesting.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:30.645Z"
   },
   "2f04d56485f3e363": {
     "path": "pl/audio/marek/2f04d56485f3e363.m4a",
@@ -1520,6 +1646,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-13T10:09:59.338Z"
   },
+  "32af58d3317da66d": {
+    "path": "pl/audio/marek/32af58d3317da66d.m4a",
+    "durationSeconds": 5.52,
+    "text": "Marta returns to the shop with a kettle that broke after one week.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:43:40.553Z"
+  },
   "3344beddef0832de": {
     "path": "pl/audio/piotr/3344beddef0832de.m4a",
     "durationSeconds": 2.32,
@@ -1546,6 +1681,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:17.126Z"
+  },
+  "33bc240e2abf3472": {
+    "path": "pl/audio/ola/33bc240e2abf3472.m4a",
+    "durationSeconds": 1.72,
+    "text": "O której się spotkamy?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:31:33.231Z"
   },
   "33c72034ba324c1b": {
     "path": "pl/audio/marek/33c72034ba324c1b.m4a",
@@ -1601,6 +1745,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:23:30.191Z"
   },
+  "34f3cf0705a3762b": {
+    "path": "pl/audio/anna/34f3cf0705a3762b.m4a",
+    "durationSeconds": 5.28,
+    "text": "The most common adjectives are irregular, so learn them as pairs.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:28.536Z"
+  },
   "3593ab7300aca523": {
     "path": "pl/audio/piotr/3593ab7300aca523.m4a",
     "durationSeconds": 2.08,
@@ -1636,6 +1789,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:49:49.103Z"
+  },
+  "36161c5b8246c8c4": {
+    "path": "pl/audio/anna/36161c5b8246c8c4.m4a",
+    "durationSeconds": 8.24,
+    "text": "Faster, better, cheaper, smaller: four comparatives in two sentences.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:18:54.458Z"
   },
   "367ec193ac34f237": {
     "path": "pl/audio/ola/367ec193ac34f237.m4a",
@@ -1700,6 +1862,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-03T08:51:35.184Z"
   },
+  "38a7cbef3dc5ff59": {
+    "path": "pl/audio/ola/38a7cbef3dc5ff59.m4a",
+    "durationSeconds": 2.72,
+    "text": "To jest najlepsza kawiarnia w mieście.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:19:54.544Z"
+  },
   "3917584d62b8cb1d": {
     "path": "pl/audio/piotr/3917584d62b8cb1d.m4a",
     "durationSeconds": 1.52,
@@ -1726,6 +1897,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:00:23.907Z"
+  },
+  "39ae3560f603521b": {
+    "path": "pl/audio/piotr/39ae3560f603521b.m4a",
+    "durationSeconds": 2.28,
+    "text": "To jest restauracja, o której ci mówiłem.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:49:50.056Z"
   },
   "39dca3ad9cc09e40": {
     "path": "pl/audio/piotr/39dca3ad9cc09e40.m4a",
@@ -1979,6 +2159,24 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:20:39.099Z"
   },
+  "42132132fb9337c5": {
+    "path": "pl/audio/anna/42132132fb9337c5.m4a",
+    "durationSeconds": 5,
+    "text": "Its case depends on what it does inside its own clause.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:17.845Z"
+  },
+  "431c53d042e2a130": {
+    "path": "pl/audio/anna/431c53d042e2a130.m4a",
+    "durationSeconds": 4.52,
+    "text": "At a party, Ola does not know many of the guests.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:48:26.190Z"
+  },
   "438912efba8c02dc": {
     "path": "pl/audio/ola/438912efba8c02dc.m4a",
     "durationSeconds": 4.28,
@@ -1996,6 +2194,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:28:42.924Z"
+  },
+  "43d8b7a1c7d64ce3": {
+    "path": "pl/audio/tomek/43d8b7a1c7d64ce3.m4a",
+    "durationSeconds": 1.8,
+    "text": "Czy mogę tu usiąść?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:40:32.632Z"
   },
   "441624cb6a2113f9": {
     "path": "pl/audio/marek/441624cb6a2113f9.m4a",
@@ -2222,6 +2429,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T08:50:42.115Z"
   },
+  "4acee3b01cbb4672": {
+    "path": "pl/audio/anna/4acee3b01cbb4672.m4a",
+    "durationSeconds": 4.04,
+    "text": "This is the best café in town. Say it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:50.776Z"
+  },
   "4ad8c16baaea31e1": {
     "path": "pl/audio/piotr/4ad8c16baaea31e1.m4a",
     "durationSeconds": 1.8,
@@ -2248,6 +2464,24 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T08:59:05.502Z"
+  },
+  "4b754f55cc8ff9b5": {
+    "path": "pl/audio/ola/4b754f55cc8ff9b5.m4a",
+    "durationSeconds": 2.16,
+    "text": "Chciałabym złożyć reklamację.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:45:05.577Z"
+  },
+  "4b7a733fd538e31d": {
+    "path": "pl/audio/anna/4b7a733fd538e31d.m4a",
+    "durationSeconds": 4.24,
+    "text": "The superlative puts three more letters in front of it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:18.932Z"
   },
   "4b8cb619f423bf29": {
     "path": "pl/audio/anna/4b8cb619f423bf29.m4a",
@@ -2429,6 +2663,15 @@
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-02T09:01:27.446Z"
   },
+  "523d54906bec8144": {
+    "path": "pl/audio/tomek/523d54906bec8144.m4a",
+    "durationSeconds": 1.6,
+    "text": "Który jest lepszy?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:19:37.830Z"
+  },
   "5263abaabab5576a": {
     "path": "pl/audio/marek/5263abaabab5576a.m4a",
     "durationSeconds": 3.8,
@@ -2446,6 +2689,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:20:06.334Z"
+  },
+  "557a7005fae7a1b7": {
+    "path": "pl/audio/ola/557a7005fae7a1b7.m4a",
+    "durationSeconds": 3.08,
+    "text": "Chciałabym, żeby pan przygotował raport do piątku.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:53:33.791Z"
   },
   "559e8674d219e105": {
     "path": "pl/audio/tomek/559e8674d219e105.m4a",
@@ -2591,6 +2843,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-08T10:21:15.719Z"
   },
+  "59d585ac4ffa5e95": {
+    "path": "pl/audio/anna/59d585ac4ffa5e95.m4a",
+    "durationSeconds": 2.92,
+    "text": "This is the restaurant I told you about.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:43.826Z"
+  },
   "5a47791ed673fa46": {
     "path": "pl/audio/anna/5a47791ed673fa46.m4a",
     "durationSeconds": 8.24,
@@ -2716,6 +2977,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:08:31.229Z"
+  },
+  "61293bba04decc95": {
+    "path": "pl/audio/ola/61293bba04decc95.m4a",
+    "durationSeconds": 3.76,
+    "text": "Niestety w sobotę nie mogę. A może w piątek?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:30:02.190Z"
   },
   "61757bfc1e128d65": {
     "path": "pl/audio/ola/61757bfc1e128d65.m4a",
@@ -3086,6 +3356,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:05:20.821Z"
   },
+  "714cbae246007a3a": {
+    "path": "pl/audio/anna/714cbae246007a3a.m4a",
+    "durationSeconds": 4.64,
+    "text": "The linking word takes its gender from the noun it describes.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:49:11.549Z"
+  },
   "715b33991fb3040b": {
     "path": "pl/audio/marek/715b33991fb3040b.m4a",
     "durationSeconds": 2.92,
@@ -3112,6 +3391,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:29:04.754Z"
+  },
+  "728d01e46af19e50": {
+    "path": "pl/audio/piotr/728d01e46af19e50.m4a",
+    "durationSeconds": 3.36,
+    "text": "Co robisz w sobotę? Może pójdziemy do kina?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:29:54.974Z"
   },
   "72e3540fd7494fde": {
     "path": "pl/audio/marek/72e3540fd7494fde.m4a",
@@ -3212,6 +3500,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-05T08:22:55.164Z"
   },
+  "7541d1a51653dfb6": {
+    "path": "pl/audio/marek/7541d1a51653dfb6.m4a",
+    "durationSeconds": 2.16,
+    "text": "Ask for a refund.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:45:09.668Z"
+  },
   "755d806f746e06c2": {
     "path": "pl/audio/tomek/755d806f746e06c2.m4a",
     "durationSeconds": 2.8,
@@ -3229,6 +3526,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T08:48:30.893Z"
+  },
+  "75a2288c46fd56ac": {
+    "path": "pl/audio/anna/75a2288c46fd56ac.m4a",
+    "durationSeconds": 4.2,
+    "text": "Some of these words stay the same for every person.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:39:54.307Z"
   },
   "75ad5164ad095384": {
     "path": "pl/audio/anna/75ad5164ad095384.m4a",
@@ -3338,6 +3644,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:18.373Z"
   },
+  "79fbbf015deb13b1": {
+    "path": "pl/audio/marek/79fbbf015deb13b1.m4a",
+    "durationSeconds": 3.16,
+    "text": "Then say exactly what you expect.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:43.031Z"
+  },
   "7a2c1396263d2943": {
     "path": "pl/audio/ola/7a2c1396263d2943.m4a",
     "durationSeconds": 1.36,
@@ -3383,6 +3698,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-03T08:53:12.413Z"
   },
+  "7cae76157818124d": {
+    "path": "pl/audio/marek/7cae76157818124d.m4a",
+    "durationSeconds": 2.28,
+    "text": "Towar jest uszkodzony.",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:29.909Z"
+  },
   "7cc2d49ed6e26f1c": {
     "path": "pl/audio/marek/7cc2d49ed6e26f1c.m4a",
     "durationSeconds": 3.08,
@@ -3418,6 +3742,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-13T10:15:45.628Z"
+  },
+  "7e6037780d32249d": {
+    "path": "pl/audio/anna/7e6037780d32249d.m4a",
+    "durationSeconds": 4.2,
+    "text": "They name a rule, not the person who follows it.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:40:01.253Z"
   },
   "7e87471c8b11a818": {
     "path": "pl/audio/anna/7e87471c8b11a818.m4a",
@@ -3581,6 +3914,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-02T09:07:18.786Z"
   },
+  "838a1119ef1f49d3": {
+    "path": "pl/audio/tomek/838a1119ef1f49d3.m4a",
+    "durationSeconds": 2.36,
+    "text": "Przepraszam, czy tu można kupić bilet?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:39:08.676Z"
+  },
   "8395e1a3c2a76321": {
     "path": "pl/audio/anna/8395e1a3c2a76321.m4a",
     "durationSeconds": 1.12,
@@ -3589,6 +3931,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:23:11.144Z"
+  },
+  "83f4609a57d9facb": {
+    "path": "pl/audio/anna/83f4609a57d9facb.m4a",
+    "durationSeconds": 4.68,
+    "text": "The same word again, with a preposition and a new ending.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:48:45.689Z"
   },
   "8405fcb319f0de81": {
     "path": "pl/audio/anna/8405fcb319f0de81.m4a",
@@ -3743,6 +4094,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:56:02.451Z"
   },
+  "89f8620bfd956f9a": {
+    "path": "pl/audio/marek/89f8620bfd956f9a.m4a",
+    "durationSeconds": 3.88,
+    "text": "She declines politely and offers another day.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:30:08.255Z"
+  },
   "8aacc5be91b0caa1": {
     "path": "pl/audio/anna/8aacc5be91b0caa1.m4a",
     "durationSeconds": 4.6,
@@ -3833,6 +4193,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-09T07:09:16.977Z"
   },
+  "8dc64cbf8df9c91e": {
+    "path": "pl/audio/anna/8dc64cbf8df9c91e.m4a",
+    "durationSeconds": 2.08,
+    "text": "Ask if you may sit here.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:40:26.577Z"
+  },
   "8e30d6839411cd29": {
     "path": "pl/audio/tomek/8e30d6839411cd29.m4a",
     "durationSeconds": 3.84,
@@ -3842,6 +4211,15 @@
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-13T10:04:21.110Z"
   },
+  "8e4ad839e420d531": {
+    "path": "pl/audio/marek/8e4ad839e420d531.m4a",
+    "durationSeconds": 3.28,
+    "text": "Then agree on the time and the place.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:30:55.145Z"
+  },
   "8e7e8c049293887d": {
     "path": "pl/audio/marek/8e7e8c049293887d.m4a",
     "durationSeconds": 2.8,
@@ -3850,6 +4228,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:25:08.307Z"
+  },
+  "8fc3a6fe4633a1f9": {
+    "path": "pl/audio/ola/8fc3a6fe4633a1f9.m4a",
+    "durationSeconds": 2.16,
+    "text": "Tak. Dokąd chce pan jechać?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:39:15.030Z"
+  },
+  "8ff9cdc245ba71f3": {
+    "path": "pl/audio/marek/8ff9cdc245ba71f3.m4a",
+    "durationSeconds": 3.2,
+    "text": "Say that you would like to file a complaint.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:56.038Z"
   },
   "9008c25f555d709a": {
     "path": "pl/audio/anna/9008c25f555d709a.m4a",
@@ -3922,6 +4318,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:19:26.286Z"
+  },
+  "91e09388107d3eed": {
+    "path": "pl/audio/marek/91e09388107d3eed.m4a",
+    "durationSeconds": 4.6,
+    "text": "A polite, firm tone works better than an angry one.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:50.432Z"
   },
   "922238edfaa223c0": {
     "path": "pl/audio/piotr/922238edfaa223c0.m4a",
@@ -4004,6 +4409,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:01:06.732Z"
   },
+  "94a84c61a3b0d453": {
+    "path": "pl/audio/marek/94a84c61a3b0d453.m4a",
+    "durationSeconds": 2.64,
+    "text": "Może pójdziemy do kina?",
+    "language": "pl",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:30:33.785Z"
+  },
   "94c32ae2ac4eef90": {
     "path": "pl/audio/marek/94c32ae2ac4eef90.m4a",
     "durationSeconds": 3.56,
@@ -4022,6 +4436,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:17:52.368Z"
   },
+  "951b08f4b6291c13": {
+    "path": "pl/audio/tomek/951b08f4b6291c13.m4a",
+    "durationSeconds": 3.32,
+    "text": "Bardzo mi przykro. Czy ma pani paragon?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:44:10.271Z"
+  },
   "9569d4b34968746a": {
     "path": "pl/audio/tomek/9569d4b34968746a.m4a",
     "durationSeconds": 3.6,
@@ -4030,6 +4453,15 @@
     "narratorId": "tomek",
     "fingerprint": "42c68cccb517fe8f",
     "createdAt": "2026-10-06T07:32:53.393Z"
+  },
+  "95af63337989fe2c": {
+    "path": "pl/audio/tomek/95af63337989fe2c.m4a",
+    "durationSeconds": 2.28,
+    "text": "Muszę być w Gdańsku o piątej.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:39:21.138Z"
   },
   "95b0a98456efb826": {
     "path": "pl/audio/marek/95b0a98456efb826.m4a",
@@ -4184,6 +4616,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-06T07:37:25.822Z"
   },
+  "9a3449ceb86fc72f": {
+    "path": "pl/audio/ola/9a3449ceb86fc72f.m4a",
+    "durationSeconds": 2.96,
+    "text": "Książka, którą czytam, jest bardzo ciekawa.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:49:36.676Z"
+  },
   "9a5044f1bb1da698": {
     "path": "pl/audio/anna/9a5044f1bb1da698.m4a",
     "durationSeconds": 2,
@@ -4201,6 +4642,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:36:50.712Z"
+  },
+  "9b7e4b8a16e7cabc": {
+    "path": "pl/audio/ola/9b7e4b8a16e7cabc.m4a",
+    "durationSeconds": 1.88,
+    "text": "Proszę o zwrot pieniędzy.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:45:18.970Z"
   },
   "9bcdfb6a50a657af": {
     "path": "pl/audio/marek/9bcdfb6a50a657af.m4a",
@@ -4355,6 +4805,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:04:44.113Z"
   },
+  "a3b3ddd4b9187398": {
+    "path": "pl/audio/tomek/a3b3ddd4b9187398.m4a",
+    "durationSeconds": 1.16,
+    "text": "Co się stało?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:43:50.045Z"
+  },
   "a40f7cb13177eaba": {
     "path": "pl/audio/piotr/a40f7cb13177eaba.m4a",
     "durationSeconds": 1.16,
@@ -4408,6 +4867,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:33:05.382Z"
+  },
+  "a69992721ff5155f": {
+    "path": "pl/audio/piotr/a69992721ff5155f.m4a",
+    "durationSeconds": 3.36,
+    "text": "Dobrze, piątek mi pasuje. O której się spotkamy?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:30:15.214Z"
   },
   "a6a89113720438d4": {
     "path": "pl/audio/anna/a6a89113720438d4.m4a",
@@ -4490,6 +4958,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:32.450Z"
   },
+  "aa1b0b91faecb24f": {
+    "path": "pl/audio/ola/aa1b0b91faecb24f.m4a",
+    "durationSeconds": 2.44,
+    "text": "Spotkajmy się o szóstej przed kinem.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:30:20.656Z"
+  },
   "aa3555a5be0688bd": {
     "path": "pl/audio/ola/aa3555a5be0688bd.m4a",
     "durationSeconds": 0.96,
@@ -4498,6 +4975,15 @@
     "narratorId": "ola",
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-02T09:00:42.185Z"
+  },
+  "aa48d5d6e753a706": {
+    "path": "pl/audio/tomek/aa48d5d6e753a706.m4a",
+    "durationSeconds": 1.72,
+    "text": "Muszę już iść.",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:40:19.123Z"
   },
   "aa82b04764e152de": {
     "path": "pl/audio/marek/aa82b04764e152de.m4a",
@@ -4607,6 +5093,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:25:40.038Z"
   },
+  "afc12626de8f95aa": {
+    "path": "pl/audio/piotr/afc12626de8f95aa.m4a",
+    "durationSeconds": 2.52,
+    "text": "To jego żona, o której ci opowiadałem.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:48:58.141Z"
+  },
   "afce6b4e95b3dc90": {
     "path": "pl/audio/marek/afce6b4e95b3dc90.m4a",
     "durationSeconds": 6.04,
@@ -4615,6 +5110,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-07T07:55:03.985Z"
+  },
+  "b02874f94912620e": {
+    "path": "pl/audio/marek/b02874f94912620e.m4a",
+    "durationSeconds": 5.48,
+    "text": "To decline politely, say unfortunately and add a reason.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:30:50.486Z"
   },
   "b035cb281e282f44": {
     "path": "pl/audio/anna/b035cb281e282f44.m4a",
@@ -4858,6 +5362,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:45:07.035Z"
+  },
+  "b608c72975619bd1": {
+    "path": "pl/audio/ola/b608c72975619bd1.m4a",
+    "durationSeconds": 3.04,
+    "text": "Kim jest ten mężczyzna, który stoi przy oknie?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:48:32.027Z"
   },
   "b6272d28059fce17": {
     "path": "pl/audio/anna/b6272d28059fce17.m4a",
@@ -5146,6 +5659,24 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:25:05.921Z"
+  },
+  "bda8d4dddf063188": {
+    "path": "pl/audio/anna/bda8d4dddf063188.m4a",
+    "durationSeconds": 2.4,
+    "text": "Trzeba kupić bilet.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:39:47.651Z"
+  },
+  "be06a3669e4684b5": {
+    "path": "pl/audio/marek/be06a3669e4684b5.m4a",
+    "durationSeconds": 2.36,
+    "text": "Suggest going to the cinema.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:31:02.768Z"
   },
   "be55a16863c05a72": {
     "path": "pl/audio/anna/be55a16863c05a72.m4a",
@@ -5444,6 +5975,24 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-13T10:15:32.746Z"
   },
+  "c82f20297410c7cd": {
+    "path": "pl/audio/marek/c82f20297410c7cd.m4a",
+    "durationSeconds": 3.84,
+    "text": "A suggestion opens with the word for maybe.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:30:41.733Z"
+  },
+  "c88479b5e2d77603": {
+    "path": "pl/audio/ola/c88479b5e2d77603.m4a",
+    "durationSeconds": 3.08,
+    "text": "Dzień dobry. Chciałabym złożyć reklamację.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:43:44.041Z"
+  },
   "c8932c2c15aaf60b": {
     "path": "pl/audio/anna/c8932c2c15aaf60b.m4a",
     "durationSeconds": 2.2,
@@ -5488,6 +6037,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-04T07:26:19.034Z"
+  },
+  "caa958d0ec251c71": {
+    "path": "pl/audio/piotr/caa958d0ec251c71.m4a",
+    "durationSeconds": 1.6,
+    "text": "Może pójdziemy do kina?",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:31:07.101Z"
   },
   "cb26fbcb31ce39e3": {
     "path": "pl/audio/anna/cb26fbcb31ce39e3.m4a",
@@ -5606,6 +6164,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:21:04.615Z"
   },
+  "cef648345d91535f": {
+    "path": "pl/audio/ola/cef648345d91535f.m4a",
+    "durationSeconds": 2.24,
+    "text": "A kobieta, z którą rozmawia?",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:48:50.908Z"
+  },
   "cf0fae9f24a14890": {
     "path": "pl/audio/anna/cf0fae9f24a14890.m4a",
     "durationSeconds": 1.36,
@@ -5659,6 +6226,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-09T07:34:02.757Z"
+  },
+  "d11eb1c01a58a423": {
+    "path": "pl/audio/marek/d11eb1c01a58a423.m4a",
+    "durationSeconds": 2.36,
+    "text": "Ask what time you will meet.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:31:26.722Z"
   },
   "d1b422bc78635b77": {
     "path": "pl/audio/marek/d1b422bc78635b77.m4a",
@@ -6425,6 +7001,24 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-08T10:30:50.572Z"
   },
+  "e98a07dd1ec05866": {
+    "path": "pl/audio/ola/e98a07dd1ec05866.m4a",
+    "durationSeconds": 3.68,
+    "text": "Tak, proszę. Wolałabym zwrot pieniędzy niż naprawę.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:44:16.775Z"
+  },
+  "e9b9166dc9fd3cd4": {
+    "path": "pl/audio/anna/e9b9166dc9fd3cd4.m4a",
+    "durationSeconds": 3.88,
+    "text": "Ten telefon jest tańszy niż tamten.",
+    "language": "pl",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:05.279Z"
+  },
   "e9c031cf2cd25743": {
     "path": "pl/audio/anna/e9c031cf2cd25743.m4a",
     "durationSeconds": 2.96,
@@ -6488,6 +7082,15 @@
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-03T09:02:17.269Z"
   },
+  "eb800864813fc945": {
+    "path": "pl/audio/ola/eb800864813fc945.m4a",
+    "durationSeconds": 3.2,
+    "text": "W takim razie powinien pan jechać pociągiem o pierwszej.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:39:34.469Z"
+  },
   "eb80a9c9d5424052": {
     "path": "pl/audio/marek/eb80a9c9d5424052.m4a",
     "durationSeconds": 9.08,
@@ -6532,6 +7135,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-01T07:08:31.633Z"
+  },
+  "ed9b976f9c1d9dd1": {
+    "path": "pl/audio/anna/ed9b976f9c1d9dd1.m4a",
+    "durationSeconds": 3.8,
+    "text": "The comparative adds an ending to the adjective.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:12.763Z"
   },
   "edc23562bd480c5b": {
     "path": "pl/audio/piotr/edc23562bd480c5b.m4a",
@@ -6640,6 +7252,15 @@
     "narratorId": "anna",
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:36:44.752Z"
+  },
+  "f0c27b258b75c2dc": {
+    "path": "pl/audio/ola/f0c27b258b75c2dc.m4a",
+    "durationSeconds": 3.6,
+    "text": "Kupiłam ten czajnik tydzień temu i już nie działa.",
+    "language": "pl",
+    "narratorId": "ola",
+    "fingerprint": "d38d554a98a05139",
+    "createdAt": "2026-10-14T14:43:57.466Z"
   },
   "f0d48da74737f5e1": {
     "path": "pl/audio/anna/f0d48da74737f5e1.m4a",
@@ -6757,6 +7378,15 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-06T07:20:28.258Z"
+  },
+  "f3625947730473d1": {
+    "path": "pl/audio/marek/f3625947730473d1.m4a",
+    "durationSeconds": 3.72,
+    "text": "She names the fault and says when she bought it.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:04.275Z"
   },
   "f36cf1d280f5be1b": {
     "path": "pl/audio/anna/f36cf1d280f5be1b.m4a",
@@ -6983,6 +7613,15 @@
     "fingerprint": "def3af0cfda82851",
     "createdAt": "2026-10-01T07:31:18.737Z"
   },
+  "fbac303e32cef850": {
+    "path": "pl/audio/marek/fbac303e32cef850.m4a",
+    "durationSeconds": 4.48,
+    "text": "Monday morning. The manager has a task for Adam.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:53:30.445Z"
+  },
   "fc807851e898baaf": {
     "path": "pl/audio/anna/fc807851e898baaf.m4a",
     "durationSeconds": 1.12,
@@ -7000,6 +7639,24 @@
     "narratorId": "piotr",
     "fingerprint": "3da27bd212ea8714",
     "createdAt": "2026-10-09T07:16:14.442Z"
+  },
+  "fd32fba54a18f309": {
+    "path": "pl/audio/anna/fd32fba54a18f309.m4a",
+    "durationSeconds": 2.48,
+    "text": "Ask which one is better.",
+    "language": "en",
+    "narratorId": "anna",
+    "fingerprint": "def3af0cfda82851",
+    "createdAt": "2026-10-14T14:19:31.592Z"
+  },
+  "fdb76b4026457af6": {
+    "path": "pl/audio/marek/fdb76b4026457af6.m4a",
+    "durationSeconds": 4.16,
+    "text": "First describe the fault in plain words.",
+    "language": "en",
+    "narratorId": "marek",
+    "fingerprint": "e42f0dd317e9841c",
+    "createdAt": "2026-10-14T14:44:36.819Z"
   },
   "fddcc774acb2d020": {
     "path": "pl/audio/anna/fddcc774acb2d020.m4a",
@@ -7028,6 +7685,15 @@
     "fingerprint": "d38d554a98a05139",
     "createdAt": "2026-10-06T07:33:59.323Z"
   },
+  "ff2ab387649a458f": {
+    "path": "pl/audio/tomek/ff2ab387649a458f.m4a",
+    "durationSeconds": 3.32,
+    "text": "Dobrze. Czy chce pani, żebym wysłał go też do klienta?",
+    "language": "pl",
+    "narratorId": "tomek",
+    "fingerprint": "42c68cccb517fe8f",
+    "createdAt": "2026-10-14T14:53:40.966Z"
+  },
   "ff621a1c08c45b74": {
     "path": "pl/audio/marek/ff621a1c08c45b74.m4a",
     "durationSeconds": 5.6,
@@ -7036,5 +7702,14 @@
     "narratorId": "marek",
     "fingerprint": "e42f0dd317e9841c",
     "createdAt": "2026-10-08T10:25:09.902Z"
+  },
+  "fff83b5630282f87": {
+    "path": "pl/audio/piotr/fff83b5630282f87.m4a",
+    "durationSeconds": 2.28,
+    "text": "To jest kolega, z którym pracuję.",
+    "language": "pl",
+    "narratorId": "piotr",
+    "fingerprint": "3da27bd212ea8714",
+    "createdAt": "2026-10-14T14:48:37.776Z"
   }
 }
