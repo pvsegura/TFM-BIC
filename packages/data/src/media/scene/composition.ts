@@ -1,7 +1,7 @@
 import type { TimedLine, VideoTimeline } from "@tfm-bic/application";
 import type { Stage, StageAction, VideoScene, VideoScript } from "@tfm-bic/domain";
 
-import { characterMetrics, characterSvg } from "./characters.js";
+import { MOUTH, characterMetrics, characterSvg } from "./characters.js";
 import { environmentSvg, FLOOR_Y } from "./environments.js";
 import { countedProp, propSvg } from "./props.js";
 
@@ -26,7 +26,7 @@ export const COMPOSITION_ID = "main";
 export const WIDTH = 1280;
 export const HEIGHT = 720;
 /** Bump when the template changes: part of every video's source hash. */
-export const TEMPLATE_VERSION = 3;
+export const TEMPLATE_VERSION = 4;
 
 const ESCAPES: Record<string, string> = {
   "&": "&amp;",
@@ -316,7 +316,7 @@ function stageMarkup(
         const inner = p.count ? countedProp(p.type, p.count) : propSvg(p.type);
         const big = BIG.has(p.type);
         return `<g id="${prefix}-p-${p.id}-wrap">
-        <g id="${prefix}-p-${p.id}" transform="translate(${n(p.x)} ${n(p.y)}) scale(${n(scale)})" opacity="${p.hidden ? "0" : "1"}"><ellipse id="${prefix}-p-${p.id}-hl" cx="0" cy="${big ? "-110" : "-30"}" rx="${n((big ? 150 : 52) + (p.count ? p.count * 32 : 0))}" ry="${big ? "140" : "48"}" fill="#ff6b35" fill-opacity="0.18" stroke="#ff6b35" stroke-width="${n(5 / scale)}" opacity="0"/>${inner}</g>
+        <g id="${prefix}-p-${p.id}" transform="translate(${n(p.x)} ${n(p.y)}) scale(${n(scale)})" opacity="${p.hidden ? "0" : "1"}"><ellipse id="${prefix}-p-${p.id}-hl" cx="0" cy="${big ? "-110" : "-30"}" rx="${n((big ? 150 : 52) + (p.count ? p.count * 32 : 0))}" ry="${big ? "140" : "48"}" fill="#e2559b" fill-opacity="0.16" stroke="#e2559b" stroke-width="${n(5 / scale)}" opacity="0"/>${inner}</g>
         <g id="${prefix}-z-${p.id}" opacity="0" transform="translate(${n(p.x + 40 * scale)} ${n(p.y - 90 * scale)})"><g class="zz">${propSvg("sleep-z")}</g></g></g>`;
       })
       .join("");
@@ -330,7 +330,7 @@ function stageMarkup(
       const x = a.offstage ? (a.facing === "right" ? -160 : WIDTH + 160) : a.x;
       const st: ActorState = { x, dir, scale: m.scale, look: member.look };
       states.set(a.id, st);
-      return `<ellipse id="${prefix}-a-${a.id}-hl" cx="${n(a.x)}" cy="${n(FLOOR_Y - m.headTop / 2)}" rx="${n(80 * m.scale)}" ry="${n(m.headTop / 2 + 20)}" fill="#ff6b35" fill-opacity="0.12" stroke="#ff6b35" stroke-width="5" opacity="0"/>
+      return `<ellipse id="${prefix}-a-${a.id}-hl" cx="${n(a.x)}" cy="${n(FLOOR_Y - m.headTop / 2)}" rx="${n(80 * m.scale)}" ry="${n(m.headTop / 2 + 20)}" fill="#e2559b" fill-opacity="0.12" stroke="#e2559b" stroke-width="5" opacity="0"/>
         <g id="${prefix}-a-${a.id}" transform="${actorTransform(st)}"><g id="${prefix}-a-${a.id}-flip" transform="scale(${String(dir)} 1)">${characterSvg(`${prefix}-a-${a.id}`, member.look)}</g></g>
         <g id="${prefix}-z-${a.id}" opacity="0" transform="translate(${n(a.x + 40)} ${n(FLOOR_Y - m.headTop - 10)})"><g class="zz">${propSvg("sleep-z")}</g></g>`;
     })
@@ -360,10 +360,10 @@ function liveliness(
     const reps = Math.max(1, Math.floor(line.duration / 0.13)) | 1;
     tl.to(
       mouth,
-      `{attr:{ry:5.5},duration:0.13,yoyo:true,repeat:${String(reps)},ease:"sine.inOut"}`,
+      `{attr:{ry:${String(MOUTH.open)}},duration:0.13,yoyo:true,repeat:${String(reps)},ease:"sine.inOut"}`,
       line.start,
     );
-    tl.set(mouth, `{attr:{ry:1.6}}`, line.start + line.duration + 0.02);
+    tl.set(mouth, `{attr:{ry:${String(MOUTH.rest)}}}`, line.start + line.duration + 0.02);
   }
   let k = 0;
   for (const name of states.keys()) {
@@ -493,7 +493,7 @@ function retrievalScene(
   return `${svg}
     <div class="dim" id="${prefix}-dim"></div>
     <div class="prompt" id="${prefix}-prompt"><span class="tag">${escapeHtml(script.labels?.yourTurn ?? "Your turn")}</span>${escapeHtml(prompt ? (scene.narration[0]?.text ?? "") : "")}</div>
-    <svg class="timer" id="${prefix}-timer" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" stroke="#e8dccb" stroke-width="6" fill="#fffaf2"/><circle id="${prefix}-ring" cx="30" cy="30" r="26" stroke="#ff6b35" stroke-width="6" fill="none" stroke-dasharray="163" transform="rotate(-90 30 30)"/></svg>
+    <svg class="timer" id="${prefix}-timer" viewBox="0 0 60 60"><circle cx="30" cy="30" r="26" stroke="#e4daf7" stroke-width="6" fill="#ffffff"/><circle id="${prefix}-ring" cx="30" cy="30" r="26" stroke="#7c4dd6" stroke-width="6" fill="none" stroke-dasharray="163" transform="rotate(-90 30 30)"/></svg>
     <div class="phrase-card answer${cardSize(scene.answer.text)}" id="${prefix}-answer" style="left:${String(pos.left)}px;top:${String(pos.top)}px"><span class="ok">✓</span><span class="said" lang="${escapeHtml(script.targetLanguage)}">${escapeHtml(scene.answer.text)}</span>${scene.answer.meaning ? `<span class="gloss" style="opacity:1">${escapeHtml(scene.answer.meaning)}</span>` : ""}</div>
     <div class="check" id="${prefix}-check">${escapeHtml(scene.narration[2]?.text ?? "")}</div>`;
 }
@@ -607,12 +607,12 @@ function contrastScene(
     );
     tl.to(
       `#${prefix}-col-${String(i)}`,
-      `{borderColor:"rgb(255,107,53)",duration:0.2}`,
+      `{borderColor:"rgb(124,77,214)",duration:0.2}`,
       line.start,
     );
     tl.to(
       `#${prefix}-col-${String(i)}`,
-      `{borderColor:"rgba(29,42,63,0.15)",duration:0.3}`,
+      `{borderColor:"rgba(91,61,160,0.18)",duration:0.3}`,
       line.start + line.duration + 0.3,
     );
   });
@@ -633,44 +633,47 @@ const STYLE = `
 @font-face{font-family:"Bricolage";src:url("fonts/latin-ext.woff2") format("woff2");font-weight:200 800;unicode-range:U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;}
 @font-face{font-family:"Bricolage";src:url("fonts/latin.woff2") format("woff2");font-weight:200 800;unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;}
 *{box-sizing:border-box;margin:0}
-body{margin:0;background:#f8f9fa}
-#root{position:relative;width:1280px;height:720px;overflow:hidden;font-family:"Bricolage",system-ui,sans-serif;color:#1d2a3f;background:#f8f9fa}
+body{margin:0;background:#efe9fb}
+#root{position:relative;width:1280px;height:720px;overflow:hidden;font-family:"Bricolage",system-ui,sans-serif;color:#2a1d3d;background:#efe9fb}
 .clip.scene{position:absolute;inset:0}
 .stage{position:absolute;inset:0}
-#level{position:absolute;left:28px;top:24px;z-index:20;font-weight:800;font-size:22px;letter-spacing:0.04em;background:#fffaf2;border:3px solid #1d2a3f;border-radius:12px;padding:4px 12px}
-#progress{position:absolute;left:0;bottom:0;height:6px;width:1280px;background:#ff6b35;transform-origin:0 50%;z-index:20}
-.overlay-title{position:absolute;left:100px;top:26px;font-size:24px;font-weight:700;background:rgba(255,250,242,0.92);border-radius:10px;padding:5px 14px;opacity:0}
-.phrase-card{position:absolute;transform:translateX(-50%);min-width:180px;max-width:440px;background:#fffaf2;border:3px solid #1d2a3f;border-radius:18px;padding:12px 22px;text-align:center;opacity:0;box-shadow:0 8px 0 rgba(29,42,63,0.12)}
-.phrase-card::after{content:"";position:absolute;left:50%;bottom:-14px;margin-left:-12px;border:12px solid transparent;border-top-color:#1d2a3f;border-bottom:0}
-.phrase-card{width:max-content}.phrase-card .said{display:block;font-size:40px;font-weight:800;line-height:1.1;white-space:nowrap}
+.backdrop{filter:blur(7px) saturate(1.1);transform:scale(1.04)}
+.backdrop + .board{background:radial-gradient(circle at 88% 12%,rgba(255,226,190,0.55) 0,rgba(255,226,190,0) 34%),linear-gradient(160deg,rgba(246,241,255,0.86) 0%,rgba(236,228,252,0.8) 60%,rgba(248,232,243,0.84) 100%)}
+#level{position:absolute;left:28px;top:22px;z-index:20;font-weight:800;font-size:21px;letter-spacing:0.06em;color:#ffffff;background:linear-gradient(135deg,#7c4dd6,#b24fc7);border-radius:14px;padding:5px 14px;box-shadow:0 6px 16px rgba(60,20,120,0.3)}
+#progress{position:absolute;left:0;bottom:0;height:6px;width:1280px;background:linear-gradient(90deg,#ff8a5b,#e2559b,#7c4dd6);transform-origin:0 50%;z-index:20}
+.overlay-title{position:absolute;left:112px;top:24px;font-size:23px;font-weight:700;color:#3b2566;background:rgba(255,255,255,0.88);border-radius:14px;padding:6px 16px;opacity:0;box-shadow:0 6px 16px rgba(60,20,120,0.18)}
+.phrase-card{position:absolute;transform:translateX(-50%);min-width:180px;max-width:440px;background:#ffffff;border:3px solid #5b3da0;border-radius:22px;padding:12px 24px;text-align:center;opacity:0;box-shadow:0 10px 24px rgba(60,20,120,0.25),0 4px 0 rgba(91,61,160,0.25)}
+.phrase-card::after{content:"";position:absolute;left:50%;bottom:-14px;margin-left:-12px;border:12px solid transparent;border-top-color:#5b3da0;border-bottom:0}
+.phrase-card{width:max-content}.phrase-card .said{display:block;font-size:40px;font-weight:800;line-height:1.1;white-space:nowrap;color:#2a1d3d}
 .phrase-card.long{max-width:640px}.phrase-card.long .said{white-space:normal;font-size:32px}
 .phrase-card.xlong .said{font-size:26px}.phrase-card.xlong .gloss{font-size:18px}
-.phrase-card .gloss{display:block;margin-top:4px;font-size:22px;color:rgba(29,42,63,0.72);opacity:0}
-.phrase-card.answer{border-color:#1f7a4d}
-.phrase-card .ok{position:absolute;left:-18px;top:-18px;width:36px;height:36px;border-radius:50%;background:#1f7a4d;color:#fff;font-size:22px;line-height:36px;text-align:center}
-.dim{position:absolute;inset:0;background:rgba(255,250,242,0.35)}
-.prompt{position:absolute;left:50%;top:64px;transform:translateX(-50%);background:#1d2a3f;color:#fffaf2;font-size:30px;font-weight:700;border-radius:16px;padding:14px 26px;opacity:0;width:max-content;max-width:1000px;text-align:center}
-.prompt .tag{display:block;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#ffb38f;margin-bottom:4px}
+.phrase-card .gloss{display:block;margin-top:4px;font-size:22px;color:#6a5a8a;opacity:0}
+.phrase-card.answer{border-color:#1f8a5b}.phrase-card.answer::after{border-top-color:#1f8a5b}
+.phrase-card .ok{position:absolute;left:-18px;top:-18px;width:36px;height:36px;border-radius:50%;background:#1f8a5b;color:#fff;font-size:22px;line-height:36px;text-align:center}
+.dim{position:absolute;inset:0;background:rgba(40,16,80,0.28)}
+.prompt{position:absolute;left:50%;top:64px;transform:translateX(-50%);background:linear-gradient(135deg,#3b2566,#5b3da0);color:#ffffff;font-size:30px;font-weight:700;border-radius:18px;padding:14px 28px;opacity:0;width:max-content;max-width:1000px;text-align:center;box-shadow:0 12px 28px rgba(40,16,80,0.35)}
+.prompt .tag{display:block;font-size:16px;letter-spacing:0.12em;text-transform:uppercase;color:#ffb3d4;margin-bottom:4px}
 .timer{position:absolute;left:50%;top:236px;margin-left:-30px;width:60px;height:60px;opacity:0}
-.check{position:absolute;left:50%;bottom:46px;transform:translateX(-50%);font-size:26px;font-weight:600;background:rgba(255,250,242,0.95);border-radius:12px;padding:8px 18px;opacity:0;white-space:nowrap}
-.board{position:absolute;inset:0;padding:120px 120px 60px;background:#fbf8f2 repeating-linear-gradient(180deg,transparent 0 47px,rgba(29,42,63,0.06) 47px 48px);display:flex;flex-direction:column;justify-content:center;gap:16px}
-.board::before{content:"";position:absolute;left:92px;top:0;bottom:0;width:3px;background:#ff6b35}
-.heading{font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#b84010}
-.focus-phrase{font-size:110px;font-weight:800;line-height:1;letter-spacing:-0.02em}
+.check{position:absolute;left:50%;bottom:46px;transform:translateX(-50%);font-size:26px;font-weight:600;color:#3b2566;background:rgba(255,255,255,0.94);border-radius:14px;padding:8px 20px;opacity:0;white-space:nowrap;box-shadow:0 8px 20px rgba(60,20,120,0.2)}
+.board{position:absolute;inset:0;padding:120px 120px 60px;background:radial-gradient(circle at 88% 12%,rgba(255,214,170,0.75) 0,rgba(255,214,170,0) 32%),radial-gradient(circle at 8% 92%,rgba(226,85,155,0.22) 0,rgba(226,85,155,0) 38%),linear-gradient(160deg,#f3edff 0%,#e6dcfb 55%,#f6e3f0 100%);display:flex;flex-direction:column;justify-content:center;gap:16px}
+.board::before{content:"";position:absolute;left:92px;top:90px;bottom:90px;width:6px;border-radius:3px;background:linear-gradient(180deg,#ff8a5b,#e2559b,#7c4dd6)}
+.board::after{content:"";position:absolute;right:-120px;top:-160px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(255,255,255,0.7) 0,rgba(255,255,255,0) 70%)}
+.heading{font-size:22px;font-weight:700;text-transform:uppercase;letter-spacing:0.08em;color:#7c4dd6}
+.focus-phrase{font-size:110px;font-weight:800;line-height:1;letter-spacing:-0.02em;color:#2a1d3d}
 .focus-phrase.long{font-size:60px;line-height:1.1}
-.focus-phrase mark{background:linear-gradient(transparent 60%,rgba(255,107,53,0.55) 60%) no-repeat;background-size:0% 40%;background-position:0 100%;color:inherit}
-.focus-meaning{font-size:40px;color:rgba(29,42,63,0.8);opacity:0}
-.respell{font-size:34px;opacity:0}.respell b{color:#b84010}
+.focus-phrase mark{background:linear-gradient(transparent 60%,rgba(226,85,155,0.45) 60%) no-repeat;background-size:0% 40%;background-position:0 100%;color:inherit}
+.focus-meaning{font-size:40px;color:#5a4a7a;opacity:0}
+.respell{font-size:34px;opacity:0}.respell b{color:#c2407f}
 .panels{display:flex;gap:18px;margin-top:10px}
-.panel{background:#fffaf2;border:2px solid rgba(29,42,63,0.18);border-radius:16px;padding:14px 20px;opacity:0;transform:translateY(12px)}
-.panel .cap{display:block;font-size:18px;color:rgba(29,42,63,0.65)}.panel .said{font-size:34px;font-weight:800}
+.panel{background:#ffffff;border:2px solid rgba(91,61,160,0.18);border-radius:18px;padding:14px 20px;opacity:0;transform:translateY(12px);box-shadow:0 8px 20px rgba(60,20,120,0.12)}
+.panel .cap{display:block;font-size:18px;color:#7a6a9a}.panel .said{font-size:34px;font-weight:800}
 .contrast{display:flex;gap:40px}
-.col{flex:1;border:3px solid rgba(29,42,63,0.15);border-radius:20px;padding:16px 24px;background:#fffaf2;text-align:center}
+.col{flex:1;border:3px solid rgba(91,61,160,0.18);border-radius:22px;padding:16px 24px;background:#ffffff;text-align:center;box-shadow:0 8px 20px rgba(60,20,120,0.12)}
 .col .spell{font-size:72px;font-weight:800;line-height:1}.col .mouth{width:270px;height:210px}
-.col .word{font-size:40px;font-weight:800}.col .gloss{font-size:22px;color:rgba(29,42,63,0.72)}
-.note-small{font-size:18px;color:rgba(29,42,63,0.6)}
-.body{font-size:40px;line-height:1.3;max-width:900px}
-.arrow{width:180px;height:60px;fill:none;stroke:#ff6b35;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
+.col .word{font-size:40px;font-weight:800}.col .gloss{font-size:22px;color:#6a5a8a}
+.note-small{font-size:18px;color:#7a6a9a}
+.body{font-size:40px;line-height:1.3;max-width:900px;color:#3b2566}
+.arrow{width:180px;height:60px;fill:none;stroke:#e2559b;stroke-width:6;stroke-linecap:round;stroke-linejoin:round}
 `;
 
 export function buildComposition(
@@ -684,6 +687,13 @@ export function buildComposition(
     `tl.fromTo("#progress",{scaleX:0},{scaleX:1,duration:${n(D)},ease:"none"},0);`,
   ];
 
+  // Board scenes sit over the last place seen, blurred, so the video keeps one visual world.
+  let lastPlace: Stage | undefined = script.scenes.find((s) => "stage" in s)?.stage;
+  const backdrop = () =>
+    lastPlace
+      ? `<svg class="stage backdrop" viewBox="0 0 ${String(WIDTH)} ${String(HEIGHT)}" width="${String(WIDTH)}" height="${String(HEIGHT)}">${environmentSvg(lastPlace.environment, lastPlace.time ?? "day").back}</svg>`
+      : "";
+
   script.scenes.forEach((scene, index) => {
     const timed = timeline.scenes[index];
     if (!timed) throw new Error("Timeline does not match the script.");
@@ -693,6 +703,7 @@ export function buildComposition(
     const start = timed.start;
     const end = timed.start + timed.duration;
     let html = "";
+    if ("stage" in scene) lastPlace = scene.stage;
     switch (scene.kind) {
       case "situation":
         html = situationScene(scene, prefix, lines, start, end, script, tl);
@@ -701,10 +712,10 @@ export function buildComposition(
         html = retrievalScene(scene, prefix, lines, start, end, script, tl);
         break;
       case "focus":
-        html = focusScene(scene, prefix, lines, start, script, tl);
+        html = backdrop() + focusScene(scene, prefix, lines, start, script, tl);
         break;
       case "contrast":
-        html = contrastScene(scene, prefix, lines, script, tl);
+        html = backdrop() + contrastScene(scene, prefix, lines, script, tl);
         break;
       case "next-step":
         tl.push(
@@ -713,7 +724,7 @@ export function buildComposition(
         tl.push(
           `tl.fromTo("#${prefix} .arrow",{x:-12,opacity:0},{x:0,opacity:1,duration:0.5},${n(start + 0.6)});`,
         );
-        html = `<div class="board"><p class="focus-phrase heading-big" style="font-size:64px">${escapeHtml(scene.heading)}</p><p class="body">${escapeHtml(scene.body)}</p><svg class="arrow" viewBox="0 0 120 40"><path d="M4 20 H108 M90 6 L110 20 L90 34"/></svg></div>`;
+        html = `${backdrop()}<div class="board"><p class="focus-phrase heading-big" style="font-size:64px">${escapeHtml(scene.heading)}</p><p class="body">${escapeHtml(scene.body)}</p><svg class="arrow" viewBox="0 0 120 40"><path d="M4 20 H108 M90 6 L110 20 L90 34"/></svg></div>`;
         break;
     }
     scenes.push(

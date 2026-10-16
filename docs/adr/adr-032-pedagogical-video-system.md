@@ -115,3 +115,20 @@ inventing language or provider capabilities. Evidence and its strength: [m22-ped
 - **Web.** "Continue learning" shows one card per catalog language; the videos page has a language switcher.
 - **Generation** follows the same offline, quota-bounded daily batches; English word audio first, then the
   five lesson videos.
+
+## Addendum 2026-10-16 — visual restyle (template 4)
+
+- **New look, same lessons.** The product owner supplied reference illustrations (cartoon offices with lavender
+  and purple walls, tall windows onto a pale city skyline, pendant lamps, plants, mustard armchairs, sun rays)
+  and asked for the videos to look like them. Only the picture changes: scripts, timing, choreography and the
+  narration clips are untouched, so a re-render reuses every stored clip and costs no provider calls.
+- **Illustration kit.** `packages/data/src/media/scene/illustration.ts` holds the shared pieces (window walls
+  with a clipped city view, ceilings with downlights, pendant lamps, floors, rays, bokeh, plants, furniture,
+  vignette). Every environment in `environments.ts` is drawn with it; surfaces that plans place props on keep
+  their positions.
+- **Characters.** Slimmer and shaded, with eye whites and brows, using the same joints and ids as before. Each
+  eye is clipped by an ellipse with class `eye`, so the existing blink tween closes the whole eye. Mouth sizes
+  for talking come from `MOUTH` in `characters.ts`.
+- **Boards.** Focus, contrast and next-step scenes are laid over the last place seen, blurred, under a frosted
+  layer, so a video stays in one visual world. Accent colours move from orange to the purple/pink palette.
+- `TEMPLATE_VERSION` is 4, so every earlier video counts as outdated until it is re-rendered.
