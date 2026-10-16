@@ -609,9 +609,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "en/lesson/en-articles/video-44fedae43c50.mp4",
-          "posterUrl": "en/lesson/en-articles/poster-44fedae43c50.jpg",
-          "captionsUrl": "en/lesson/en-articles/captions-44fedae43c50.vtt",
+          "url": "en/lesson/en-articles/video-b7efedb015d6.mp4",
+          "posterUrl": "en/lesson/en-articles/poster-b7efedb015d6.jpg",
+          "captionsUrl": "en/lesson/en-articles/captions-b7efedb015d6.vtt",
           "captionsLanguage": "es",
           "durationSeconds": 126.54,
           "width": 1280,
@@ -746,9 +746,9 @@
         },
         "audio": []
       },
-      "sourceHash": "ae1f6c98240217b4abf95b1242e8f0d291e1327d0b4c9c89fbca27c65044b396",
+      "sourceHash": "0c128a7ea325ae88d5c701db8d56e8f4359a66b1606bdc9f2afc7b3959f9681e",
       "narratorId": "lucia",
-      "version": 1,
+      "version": 2,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Elegir a, an o the según la situación: algo cualquiera, una palabra que empieza por vocal o algo concreto.",
@@ -769,17 +769,25 @@
           }
         ]
       },
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "ae1f6c98240217b4abf95b1242e8f0d291e1327d0b4c9c89fbca27c65044b396",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-03T15:31:43.535Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-03T15:31:43.534Z",
-        "providerCalls": 18
+        "at": "2026-10-16T16:04:37.607Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
+        "video": "hyperframes@0.8.92/template-4"
       },
       "createdAt": "2026-10-03T15:31:43.535Z",
-      "updatedAt": "2026-10-03T15:31:43.535Z"
+      "updatedAt": "2026-10-16T16:04:37.607Z"
     },
     {
       "key": "lesson:en-first-sounds",
@@ -791,9 +799,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "en/lesson/en-first-sounds/video-0c73f3e8fd9b.mp4",
-          "posterUrl": "en/lesson/en-first-sounds/poster-0c73f3e8fd9b.jpg",
-          "captionsUrl": "en/lesson/en-first-sounds/captions-0c73f3e8fd9b.vtt",
+          "url": "en/lesson/en-first-sounds/video-cbe4fb9cd445.mp4",
+          "posterUrl": "en/lesson/en-first-sounds/poster-cbe4fb9cd445.jpg",
+          "captionsUrl": "en/lesson/en-first-sounds/captions-cbe4fb9cd445.vtt",
           "captionsLanguage": "es",
           "durationSeconds": 136.11,
           "width": 1280,
@@ -960,9 +968,9 @@
         },
         "audio": []
       },
-      "sourceHash": "17bc91b88f918a35e1afbf0afbe02d8e6ac426b47915334ff63918b2003ee769",
+      "sourceHash": "87d3a32c515072a950134f033657ae053de082127d88ce27cb0bb100dbcd1527",
       "narratorId": "javier",
-      "version": 1,
+      "version": 2,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Oír y decir la th, la h y la diferencia entre la i larga y la i corta en cuatro palabras.",
@@ -982,17 +990,25 @@
           }
         ]
       },
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "17bc91b88f918a35e1afbf0afbe02d8e6ac426b47915334ff63918b2003ee769",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-04T07:41:48.341Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-04T07:41:48.340Z",
-        "providerCalls": 19
+        "at": "2026-10-16T16:09:11.201Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
+        "video": "hyperframes@0.8.92/template-4"
       },
       "createdAt": "2026-10-04T07:41:48.341Z",
-      "updatedAt": "2026-10-04T07:41:48.341Z"
+      "updatedAt": "2026-10-16T16:09:11.201Z"
     },
     {
       "key": "lesson:en-greetings",
@@ -1004,9 +1020,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "en/lesson/en-greetings/video-cd5550c5ba02.mp4",
-          "posterUrl": "en/lesson/en-greetings/poster-cd5550c5ba02.jpg",
-          "captionsUrl": "en/lesson/en-greetings/captions-cd5550c5ba02.vtt",
+          "url": "en/lesson/en-greetings/video-879d24f34a69.mp4",
+          "posterUrl": "en/lesson/en-greetings/poster-879d24f34a69.jpg",
+          "captionsUrl": "en/lesson/en-greetings/captions-879d24f34a69.vtt",
           "captionsLanguage": "es",
           "durationSeconds": 162.55,
           "width": 1280,
@@ -1224,9 +1240,9 @@
         },
         "audio": []
       },
-      "sourceHash": "54b4c768b06273d1166ff59efbaeb1c34f072912356fd87f49b2ff1098d73a22",
+      "sourceHash": "c5fadb45c2538e8fb72291184ba9c08743124c8c51ef7fa054634080facadc61",
       "narratorId": "javier",
-      "version": 1,
+      "version": 2,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Elegir un saludo neutro o informal, y el adecuado para cada momento del día.",
@@ -1265,17 +1281,25 @@
           }
         ]
       },
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "54b4c768b06273d1166ff59efbaeb1c34f072912356fd87f49b2ff1098d73a22",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-05T08:13:22.761Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-05T08:13:22.761Z",
-        "providerCalls": 29
+        "at": "2026-10-16T15:50:41.937Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
+        "video": "hyperframes@0.8.92/template-4"
       },
       "createdAt": "2026-10-05T08:13:22.761Z",
-      "updatedAt": "2026-10-05T08:13:22.761Z"
+      "updatedAt": "2026-10-16T15:50:41.937Z"
     },
     {
       "key": "lesson:en-introducing-yourself",
@@ -1287,9 +1311,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "en/lesson/en-introducing-yourself/video-76639ed91104.mp4",
-          "posterUrl": "en/lesson/en-introducing-yourself/poster-76639ed91104.jpg",
-          "captionsUrl": "en/lesson/en-introducing-yourself/captions-76639ed91104.vtt",
+          "url": "en/lesson/en-introducing-yourself/video-b5a6cf880c66.mp4",
+          "posterUrl": "en/lesson/en-introducing-yourself/poster-b5a6cf880c66.jpg",
+          "captionsUrl": "en/lesson/en-introducing-yourself/captions-b5a6cf880c66.vtt",
           "captionsLanguage": "es",
           "durationSeconds": 121.82,
           "width": 1280,
@@ -1450,9 +1474,9 @@
         },
         "audio": []
       },
-      "sourceHash": "983cfdc43edaaa3d1ec7244a5c65c97b26e4a92a8eefbd6fc46954d69126230c",
+      "sourceHash": "84a22176b7e54d843754ea5d603e6a31b1766e8d89cf3491f15cec4e87de7fe9",
       "narratorId": "javier",
-      "version": 1,
+      "version": 2,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Decir tu nombre y de dónde eres, y responder al conocer a alguien.",
@@ -1481,17 +1505,25 @@
           }
         ]
       },
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "983cfdc43edaaa3d1ec7244a5c65c97b26e4a92a8eefbd6fc46954d69126230c",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-04T07:34:49.614Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-04T07:34:49.614Z",
-        "providerCalls": 22
+        "at": "2026-10-16T15:55:01.704Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
+        "video": "hyperframes@0.8.92/template-4"
       },
       "createdAt": "2026-10-04T07:34:49.614Z",
-      "updatedAt": "2026-10-04T07:34:49.614Z"
+      "updatedAt": "2026-10-16T15:55:01.704Z"
     },
     {
       "key": "lesson:en-polite-words",
@@ -1503,9 +1535,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "en/lesson/en-polite-words/video-cdf8f802b769.mp4",
-          "posterUrl": "en/lesson/en-polite-words/poster-cdf8f802b769.jpg",
-          "captionsUrl": "en/lesson/en-polite-words/captions-cdf8f802b769.vtt",
+          "url": "en/lesson/en-polite-words/video-ee55771b5a0c.mp4",
+          "posterUrl": "en/lesson/en-polite-words/poster-ee55771b5a0c.jpg",
+          "captionsUrl": "en/lesson/en-polite-words/captions-ee55771b5a0c.vtt",
           "captionsLanguage": "es",
           "durationSeconds": 157.94,
           "width": 1280,
@@ -1713,9 +1745,9 @@
         },
         "audio": []
       },
-      "sourceHash": "2ab6a7f14e8fdf0fc6a4c5391dcd31d7b141d0f3ad04ca04addd5b3efbe20862",
+      "sourceHash": "d1fc0270f25a9cdf743081097e9305e17d77ca7bd81565046336a78be051e8d2",
       "narratorId": "lucia",
-      "version": 1,
+      "version": 2,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Pedir, dar las gracias y responder con amabilidad en una cafetería, y llamar la atención o pedir perdón.",
@@ -1745,17 +1777,25 @@
           }
         ]
       },
+      "previous": [
+        {
+          "version": 1,
+          "sourceHash": "2ab6a7f14e8fdf0fc6a4c5391dcd31d7b141d0f3ad04ca04addd5b3efbe20862",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-05T08:21:24.758Z"
+        }
+      ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-05T08:21:24.758Z",
-        "providerCalls": 27
+        "at": "2026-10-16T16:00:16.391Z",
+        "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-3"
+        "video": "hyperframes@0.8.92/template-4"
       },
       "createdAt": "2026-10-05T08:21:24.758Z",
-      "updatedAt": "2026-10-05T08:21:24.758Z"
+      "updatedAt": "2026-10-16T16:00:16.391Z"
     },
     {
       "key": "lesson:pl-arguing-a-point",
