@@ -3408,21 +3408,156 @@
         "id": "pl-diminutives",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-diminutives/video-f4076462c2d2.mp4",
+          "posterUrl": "pl/lesson/pl-diminutives/poster-f4076462c2d2.jpg",
+          "captionsUrl": "pl/lesson/pl-diminutives/captions-f4076462c2d2.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 82.89,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Sunday lunch. Piotr visits his grandmother.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chodź, kochanie, zjesz zupkę?",
+              "language": "pl",
+              "speaker": "Grandma",
+              "translation": "Come, darling, will you have some soup?"
+            },
+            {
+              "text": "Dziękuję, babciu, tylko troszeczkę.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Thank you, grandma, just a tiny bit."
+            },
+            {
+              "text": "Nothing here is small. The endings carry affection.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "A potem herbatka i ciasteczko.",
+              "language": "pl",
+              "speaker": "Grandma",
+              "translation": "And then a nice tea and a biscuit."
+            },
+            {
+              "text": "Babciu, ja mam trzydzieści lat!",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Grandma, I am thirty years old!"
+            },
+            {
+              "text": "Napijesz się kawki?",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Will you have a nice cup of coffee?"
+            },
+            {
+              "text": "A diminutive can describe size, but more often it sets the tone.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "It makes an offer friendlier and a request softer.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "In formal writing it is out of place.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Ask someone to wait just a moment. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Poczekaj chwileczkę.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Wait just a moment."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Offer a friend a nice cup of coffee. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Napijesz się kawki?",
+              "language": "pl",
+              "speaker": "Grandma",
+              "translation": "Will you have a nice cup of coffee?"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Recognise a diminutive and tell whether it means small, friendly or ironic.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "4143726b3d8cd9a2b3d57ed6a5322e4d8ebd7049da1d8151ef2ad9cbc95d86b3",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Recognise a diminutive and tell whether it means small, friendly or ironic.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Chodź, kochanie, zjesz zupkę?",
+          "Dziękuję, babciu, tylko troszeczkę.",
+          "A potem herbatka i ciasteczko.",
+          "Babciu, ja mam trzydzieści lat!",
+          "Napijesz się kawki?",
+          "Poczekaj chwileczkę."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          },
+          {
+            "character": "Grandma",
+            "voice": "anna"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-14T15:07:15.034Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 10
+        "status": "ready",
+        "at": "2026-10-15T18:25:55.352Z",
+        "providerCalls": 5
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:23:38.075Z",
-      "updatedAt": "2026-10-14T15:07:15.034Z"
+      "updatedAt": "2026-10-15T18:25:55.352Z"
     },
     {
       "key": "lesson:pl-directions",
@@ -6029,21 +6164,162 @@
         "id": "pl-modal-particles",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-modal-particles/video-301f011814b8.mp4",
+          "posterUrl": "pl/lesson/pl-modal-particles/poster-301f011814b8.jpg",
+          "captionsUrl": "pl/lesson/pl-modal-particles/captions-301f011814b8.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 87.2,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Kasia is about to leave and cannot find her keys.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Gdzie są klucze? Przecież leżały na stole.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Where are the keys? But they were on the table."
+            },
+            {
+              "text": "Chyba zostawiłaś je w samochodzie.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "You probably left them in the car."
+            },
+            {
+              "text": "A reproach, then a guess. Neither word adds a fact.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Akurat! Nigdy ich tam nie zostawiam.",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "Yeah, right! I never leave them there."
+            },
+            {
+              "text": "Niby nie, a w zeszłym tygodniu?",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "Supposedly not, and last week?"
+            },
+            {
+              "text": "Sarcasm, answered with doubt.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Niby tak, ale nie jestem przekonana.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "Supposedly yes, but I am not convinced."
+            },
+            {
+              "text": "These small words say how the speaker feels about the sentence.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Remove them and the facts stay the same, but the tone is gone.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Intonation decides the rest.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "But I told you. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Przecież ci mówiłem.",
+              "language": "pl",
+              "speaker": "Piotr",
+              "translation": "But I told you."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "You must be joking! (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Chyba żartujesz!",
+              "language": "pl",
+              "speaker": "Kasia",
+              "translation": "You must be joking!"
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Hear the attitude that a particle adds to a sentence: reproach, doubt or sarcasm.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "aa896150013d5b0fbaa44c53a880d62c4a9c7db8a0e051425a7813acf3601e22",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Hear the attitude that a particle adds to a sentence: reproach, doubt or sarcasm.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Gdzie są klucze? Przecież leżały na stole.",
+          "Chyba zostawiłaś je w samochodzie.",
+          "Akurat! Nigdy ich tam nie zostawiam.",
+          "Niby nie, a w zeszłym tygodniu?",
+          "Niby tak, ale nie jestem przekonana.",
+          "Przecież ci mówiłem.",
+          "Chyba żartujesz!"
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Kasia",
+            "voice": "ola"
+          },
+          {
+            "character": "Piotr",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:24:47.179Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-15T18:41:41.025Z",
+        "providerCalls": 15
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:24:47.179Z",
-      "updatedAt": "2026-10-13T10:24:47.179Z"
+      "updatedAt": "2026-10-15T18:41:41.025Z"
     },
     {
       "key": "lesson:pl-must-can-should",
@@ -6583,21 +6859,164 @@
         "id": "pl-negotiating",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-negotiating/video-b00f856f6142.mp4",
+          "posterUrl": "pl/lesson/pl-negotiating/poster-b00f856f6142.jpg",
+          "captionsUrl": "pl/lesson/pl-negotiating/captions-b00f856f6142.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 97.18,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Anna",
+          "transcript": [
+            {
+              "text": "Two companies are close to a deal. Only the price is still open.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Państwa oferta jest ciekawa, ale cena przekracza nasz budżet.",
+              "language": "pl",
+              "speaker": "The buyer",
+              "translation": "Your offer is interesting, but the price exceeds our budget."
+            },
+            {
+              "text": "Bylibyśmy skłonni obniżyć cenę pod warunkiem, że zamówią państwo większą partię.",
+              "language": "pl",
+              "speaker": "The supplier",
+              "translation": "We would be willing to lower the price on condition that you order a larger batch."
+            },
+            {
+              "text": "A concession, tied to a condition.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "O ile większą?",
+              "language": "pl",
+              "speaker": "The buyer",
+              "translation": "How much larger?"
+            },
+            {
+              "text": "O dwadzieścia procent.",
+              "language": "pl",
+              "speaker": "The supplier",
+              "translation": "Twenty per cent larger."
+            },
+            {
+              "text": "Zgoda. Przygotujemy umowę.",
+              "language": "pl",
+              "speaker": "The buyer",
+              "translation": "Agreed. We will prepare the contract."
+            },
+            {
+              "text": "Proponowałbym obniżenie ceny o pięć procent.",
+              "language": "pl",
+              "speaker": "Narrator (Anna)",
+              "translation": "I would suggest lowering the price by five per cent."
+            },
+            {
+              "text": "The conditional turns a demand into a proposal.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "To refuse without confrontation, begin with a phrase of regret.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "And say clearly when the deal is closed.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Both sides have to compromise. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Obie strony muszą pójść na kompromis.",
+              "language": "pl",
+              "speaker": "The supplier",
+              "translation": "Both sides have to compromise."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "I am afraid that exceeds our budget. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Obawiam się, że to przekracza nasz budżet.",
+              "language": "pl",
+              "speaker": "The buyer",
+              "translation": "I am afraid that exceeds our budget."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Anna)"
+            }
+          ],
+          "objective": "Make a careful proposal, attach a condition to it and push back politely.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "75e8c819bb551c21f65c6858dfac5cd46e0ea1592ecd14a997cc9458e52097e0",
       "narratorId": "anna",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Make a careful proposal, attach a condition to it and push back politely.",
+        "level": "c1",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Państwa oferta jest ciekawa, ale cena przekracza nasz budżet.",
+          "Bylibyśmy skłonni obniżyć cenę pod warunkiem, że zamówią państwo większą partię.",
+          "O ile większą?",
+          "O dwadzieścia procent.",
+          "Zgoda. Przygotujemy umowę.",
+          "Proponowałbym obniżenie ceny o pięć procent.",
+          "Obie strony muszą pójść na kompromis.",
+          "Obawiam się, że to przekracza nasz budżet."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "The buyer",
+            "voice": "ola"
+          },
+          {
+            "character": "The supplier",
+            "voice": "tomek"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:24:01.112Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-15T18:31:12.901Z",
+        "providerCalls": 15
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:24:01.112Z",
-      "updatedAt": "2026-10-13T10:24:01.112Z"
+      "updatedAt": "2026-10-15T18:31:12.902Z"
     },
     {
       "key": "lesson:pl-no-articles",
@@ -8002,21 +8421,157 @@
         "id": "pl-proverbs",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-proverbs/video-9f30a92c5089.mp4",
+          "posterUrl": "pl/lesson/pl-proverbs/poster-9f30a92c5089.jpg",
+          "captionsUrl": "pl/lesson/pl-proverbs/captions-9f30a92c5089.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 90.53,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Agata arrives at the office an hour after everyone else.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Przepraszam za spóźnienie, pociąg miał godzinę opóźnienia.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Sorry I am late, the train was an hour late."
+            },
+            {
+              "text": "Nic się nie stało. Lepiej późno niż wcale.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "No harm done. Better late than never."
+            },
+            {
+              "text": "He quotes a proverb whole, and adds no comment.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Projekt jest już prawie gotowy, więc chyba możemy świętować.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "The project is almost ready, so I suppose we can celebrate."
+            },
+            {
+              "text": "Spokojnie. Nie chwal dnia przed zachodem słońca.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Easy. Don't count your chickens before they hatch."
+            },
+            {
+              "text": "Co kraj, to obyczaj.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "Every country has its own customs."
+            },
+            {
+              "text": "A proverb is quoted as a fixed whole.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Many preserve old words that survive nowhere else.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "They belong to conversation and journalism, not to official writing.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Better late than never. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Lepiej późno niż wcale.",
+              "language": "pl",
+              "speaker": "Bartek",
+              "translation": "Better late than never."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Too many cooks spoil the broth. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Gdzie kucharek sześć, tam nie ma co jeść.",
+              "language": "pl",
+              "speaker": "Agata",
+              "translation": "Too many cooks spoil the broth."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Understand four common proverbs and the moments when speakers quote them.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "c87ed1201794a566f758b2442104ec49b5a9ba803099d5d933c750c227abef51",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Understand four common proverbs and the moments when speakers quote them.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Przepraszam za spóźnienie, pociąg miał godzinę opóźnienia.",
+          "Nic się nie stało. Lepiej późno niż wcale.",
+          "Projekt jest już prawie gotowy, więc chyba możemy świętować.",
+          "Spokojnie. Nie chwal dnia przed zachodem słońca.",
+          "Co kraj, to obyczaj.",
+          "Lepiej późno niż wcale.",
+          "Gdzie kucharek sześć, tam nie ma co jeść."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Agata",
+            "voice": "ola"
+          },
+          {
+            "character": "Bartek",
+            "voice": "piotr"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:24:24.164Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-15T18:35:56.279Z",
+        "providerCalls": 14
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:24:24.164Z",
-      "updatedAt": "2026-10-13T10:24:24.164Z"
+      "updatedAt": "2026-10-15T18:35:56.279Z"
     },
     {
       "key": "lesson:pl-public-speaking",
@@ -8025,21 +8580,163 @@
         "id": "pl-public-speaking",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-public-speaking/video-baba23ba8a98.mp4",
+          "posterUrl": "pl/lesson/pl-public-speaking/poster-baba23ba8a98.jpg",
+          "captionsUrl": "pl/lesson/pl-public-speaking/captions-baba23ba8a98.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 94.33,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "A professor opens a conference in a full lecture hall.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Szanowni Państwo, drodzy goście!",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "Ladies and gentlemen, dear guests!"
+            },
+            {
+              "text": "Pozwolą państwo, że zacznę od krótkiej anegdoty.",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "Allow me to begin with a short anecdote."
+            },
+            {
+              "text": "Ten minutes later, she moves to her main point.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Przejdę teraz do najważniejszej kwestii.",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "I will now turn to the most important issue."
+            },
+            {
+              "text": "Czy możemy sobie pozwolić na bezczynność?",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "Can we afford to do nothing?"
+            },
+            {
+              "text": "A question that expects no answer. And finally, the close.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dziękuję za uwagę.",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "Thank you for your attention."
+            },
+            {
+              "text": "Na zakończenie chciałabym podkreślić jedno.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "In closing, I would like to stress one thing."
+            },
+            {
+              "text": "A good speaker tells the audience where the speech is going.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Each part is announced with a fixed phrase.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The last words thank the listeners.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Thank the audience for their attention. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Dziękuję za uwagę.",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "Thank you for your attention."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "I will now turn to the most important issue. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Przejdę teraz do najważniejszej kwestii.",
+              "language": "pl",
+              "speaker": "The speaker",
+              "translation": "I will now turn to the most important issue."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Open a formal speech, lead the audience through its parts and close it.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "02bea2e8f0aee68c970789d403f6f2ee45c722fadf79d4e6c986effb29da4c49",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Open a formal speech, lead the audience through its parts and close it.",
+        "level": "c2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Szanowni Państwo, drodzy goście!",
+          "Pozwolą państwo, że zacznę od krótkiej anegdoty.",
+          "Przejdę teraz do najważniejszej kwestii.",
+          "Czy możemy sobie pozwolić na bezczynność?",
+          "Dziękuję za uwagę.",
+          "Na zakończenie chciałabym podkreślić jedno."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "The speaker",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-13T10:25:10.231Z",
-        "error": "The audio generation provider's rate limit was exceeded.",
-        "providerCalls": 1
+        "status": "ready",
+        "at": "2026-10-15T18:46:33.048Z",
+        "providerCalls": 14
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:25:10.231Z",
-      "updatedAt": "2026-10-13T10:25:10.231Z"
+      "updatedAt": "2026-10-15T18:46:33.048Z"
     },
     {
       "key": "lesson:pl-regional-polish",
@@ -9904,21 +10601,161 @@
         "id": "pl-zeby-clauses",
         "languageId": "pl"
       },
-      "published": null,
-      "sourceHash": null,
+      "published": {
+        "video": {
+          "purpose": "lesson-explanation",
+          "url": "pl/lesson/pl-zeby-clauses/video-f12ee64f6ca0.mp4",
+          "posterUrl": "pl/lesson/pl-zeby-clauses/poster-f12ee64f6ca0.jpg",
+          "captionsUrl": "pl/lesson/pl-zeby-clauses/captions-f12ee64f6ca0.vtt",
+          "captionsLanguage": "en",
+          "durationSeconds": 100.44,
+          "width": 1280,
+          "height": 720,
+          "narrator": "Marek",
+          "transcript": [
+            {
+              "text": "Monday morning. The manager has a task for Adam.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chciałabym, żeby pan przygotował raport do piątku.",
+              "language": "pl",
+              "speaker": "The manager",
+              "translation": "I would like you to prepare the report by Friday."
+            },
+            {
+              "text": "Dobrze. Czy chce pani, żebym wysłał go też do klienta?",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "Fine. Do you want me to send it to the client too?"
+            },
+            {
+              "text": "One person wants, another person acts.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Nie, wolałabym, żeby najpierw trafił do mnie.",
+              "language": "pl",
+              "speaker": "The manager",
+              "translation": "No, I would rather it came to me first."
+            },
+            {
+              "text": "Rozumiem. Zrobię wszystko, żeby zdążyć.",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "I understand. I will do everything to make it on time."
+            },
+            {
+              "text": "In his last sentence the subject stays the same, so an infinitive follows.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chcę, żebyś przyszedł na moje urodziny.",
+              "language": "pl",
+              "speaker": "Narrator (Marek)",
+              "translation": "I want you to come to my birthday."
+            },
+            {
+              "text": "With two different subjects, the verb looks like the past tense.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "The personal ending moves onto the linking word.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "With one subject, use the infinitive to give your purpose.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "I want you to come to my birthday. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Chcę, żebyś przyszedł na moje urodziny.",
+              "language": "pl",
+              "speaker": "The manager",
+              "translation": "I want you to come to my birthday."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "I am learning Polish in order to work in Poland. (pause)",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Uczę się polskiego, żeby pracować w Polsce.",
+              "language": "pl",
+              "speaker": "Adam",
+              "translation": "I am learning Polish in order to work in Poland."
+            },
+            {
+              "text": "Did you say it? Say it once more, out loud.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            },
+            {
+              "text": "Now practise with the exercises below the video.",
+              "language": "en",
+              "speaker": "Narrator (Marek)"
+            }
+          ],
+          "objective": "Say what you want someone else to do, and say why you do something.",
+          "targetVocabularyIds": []
+        },
+        "audio": []
+      },
+      "sourceHash": "e47907ca141757fbf03c2352081f11dc887ae81a28a4746a244a853cca7ae65e",
       "narratorId": "marek",
+      "version": 1,
+      "scriptVersion": 2,
+      "pedagogy": {
+        "objective": "Say what you want someone else to do, and say why you do something.",
+        "level": "b2",
+        "targetVocabularyIds": [],
+        "targetPhrases": [
+          "Chciałabym, żeby pan przygotował raport do piątku.",
+          "Dobrze. Czy chce pani, żebym wysłał go też do klienta?",
+          "Nie, wolałabym, żeby najpierw trafił do mnie.",
+          "Rozumiem. Zrobię wszystko, żeby zdążyć.",
+          "Chcę, żebyś przyszedł na moje urodziny.",
+          "Uczę się polskiego, żeby pracować w Polsce."
+        ],
+        "segments": ["conversation", "notice", "retrieval", "recap"],
+        "retrievalMoments": 2,
+        "voices": [
+          {
+            "character": "Adam",
+            "voice": "tomek"
+          },
+          {
+            "character": "The manager",
+            "voice": "ola"
+          }
+        ]
+      },
       "lastRun": {
-        "status": "failed",
-        "at": "2026-10-14T14:54:49.929Z",
-        "error": "The audio generation provider is unavailable: unreadable response body",
-        "providerCalls": 6
+        "status": "ready",
+        "at": "2026-10-15T18:21:26.066Z",
+        "providerCalls": 10
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
         "video": "hyperframes@0.8.92/template-3"
       },
       "createdAt": "2026-10-13T10:22:52.046Z",
-      "updatedAt": "2026-10-14T14:54:49.929Z"
+      "updatedAt": "2026-10-15T18:21:26.066Z"
     },
     {
       "key": "vocabulary-item:en-airport",
