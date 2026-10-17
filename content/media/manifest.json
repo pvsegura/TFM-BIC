@@ -1807,9 +1807,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-arguing-a-point/video-d53b02c98519.mp4",
-          "posterUrl": "pl/lesson/pl-arguing-a-point/poster-d53b02c98519.jpg",
-          "captionsUrl": "pl/lesson/pl-arguing-a-point/captions-d53b02c98519.vtt",
+          "url": "pl/lesson/pl-arguing-a-point/video-7418fa6ba484.mp4",
+          "posterUrl": "pl/lesson/pl-arguing-a-point/poster-7418fa6ba484.jpg",
+          "captionsUrl": "pl/lesson/pl-arguing-a-point/captions-7418fa6ba484.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 91.77,
           "width": 1280,
@@ -1903,9 +1903,9 @@
         },
         "audio": []
       },
-      "sourceHash": "7b24b8323727ce11d511de5c5c210d66c6f59f9fb889ad7d60781a21d88bbba9",
+      "sourceHash": "da141a32af128d6be9698d341ff48476d95991bb3b4ce991341c7d3b26303fcd",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Connect arguments in a discussion: two sides, adding a point, concluding.",
@@ -1933,6 +1933,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "7b24b8323727ce11d511de5c5c210d66c6f59f9fb889ad7d60781a21d88bbba9",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:08:21.488Z"
+        },
+        {
           "version": 1,
           "sourceHash": "94b908ab0274c7728163b9374efa374aa4e5b962be5ec869b40028c840e5db98",
           "scriptVersion": 2,
@@ -1941,15 +1947,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:08:21.488Z",
+        "at": "2026-10-17T16:36:48.080Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:12:07.131Z",
-      "updatedAt": "2026-10-16T10:08:21.488Z"
+      "updatedAt": "2026-10-17T16:36:48.080Z"
     },
     {
       "key": "lesson:pl-at-the-doctor",
@@ -2107,16 +2113,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:51:59.293Z",
+        "status": "failed",
+        "at": "2026-10-17T15:48:07.191Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  FFmpeg cannot start\n\n   Failed to run \"C:\\Users\\usuario\\AppData\\Local\\Microsoft\\WinGet\\Packages\\Gyan.FFmpeg_Microsoft.Winget.Source_8wekyb3d8bbwe\\ffmpeg-9.0.2-full_build\\bin\\ffmpeg.exe\" -version.\n   Install",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:44:14.526Z",
-      "updatedAt": "2026-10-16T09:51:59.293Z"
+      "updatedAt": "2026-10-17T15:48:07.200Z"
     },
     {
       "key": "lesson:pl-at-the-restaurant",
@@ -2332,9 +2339,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-cases-endings/video-88d95b24c2af.mp4",
-          "posterUrl": "pl/lesson/pl-cases-endings/poster-88d95b24c2af.jpg",
-          "captionsUrl": "pl/lesson/pl-cases-endings/captions-88d95b24c2af.vtt",
+          "url": "pl/lesson/pl-cases-endings/video-3238b675ffd0.mp4",
+          "posterUrl": "pl/lesson/pl-cases-endings/poster-3238b675ffd0.jpg",
+          "captionsUrl": "pl/lesson/pl-cases-endings/captions-3238b675ffd0.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 92.47,
           "width": 1280,
@@ -2449,9 +2456,9 @@
         },
         "audio": []
       },
-      "sourceHash": "0c54cc54460013aac64123af7124ae6e537dccdff49c54b66375cb83feb4c829",
+      "sourceHash": "71c71d065a59d8032847872a98505516f6a254c5c2f99dad8ecd22faa73e0e94",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Recognise the genitive and the locative after common prepositions.",
@@ -2475,6 +2482,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "0c54cc54460013aac64123af7124ae6e537dccdff49c54b66375cb83feb4c829",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:58:31.681Z"
+        },
+        {
           "version": 1,
           "sourceHash": "d20135f1f45330c323e630282703ac73f3e48ce3d0981f00ba25945cc1f38ad0",
           "scriptVersion": 2,
@@ -2483,15 +2496,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:58:31.681Z",
+        "at": "2026-10-17T16:06:44.285Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T07:54:47.465Z",
-      "updatedAt": "2026-10-16T09:58:31.681Z"
+      "updatedAt": "2026-10-17T16:06:44.286Z"
     },
     {
       "key": "lesson:pl-cases-overview",
@@ -2648,16 +2661,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:38:51.481Z",
+        "status": "failed",
+        "at": "2026-10-17T15:45:11.564Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\AppData\\Local\\Temp\n   Renders produce large temp files. Free disk space before rendering.\n\n\n✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\TFM-BIC\\.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:28:37.107Z",
-      "updatedAt": "2026-10-16T09:38:51.481Z"
+      "updatedAt": "2026-10-17T15:45:11.564Z"
     },
     {
       "key": "lesson:pl-comparing",
@@ -3015,9 +3029,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-conditions/video-41f231d860ea.mp4",
-          "posterUrl": "pl/lesson/pl-conditions/poster-41f231d860ea.jpg",
-          "captionsUrl": "pl/lesson/pl-conditions/captions-41f231d860ea.vtt",
+          "url": "pl/lesson/pl-conditions/video-4d8de212b610.mp4",
+          "posterUrl": "pl/lesson/pl-conditions/poster-4d8de212b610.jpg",
+          "captionsUrl": "pl/lesson/pl-conditions/captions-4d8de212b610.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 82.54,
           "width": 1280,
@@ -3106,9 +3120,9 @@
         },
         "audio": []
       },
-      "sourceHash": "f4ecdbb5d68220c4d88c281a47a0f490d8291e6f467004d467be83909d882286",
+      "sourceHash": "df4a43fc9638e2e738170ef3f3d7cd60e10b86bd086bf2fdfda47f4a9087d252",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Talk about real possibilities and imagined situations.",
@@ -3136,6 +3150,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "f4ecdbb5d68220c4d88c281a47a0f490d8291e6f467004d467be83909d882286",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:01:47.094Z"
+        },
+        {
           "version": 1,
           "sourceHash": "ffc57e6c0cdca45bf1e603b9fe394522f86f51ad52b2a098fcb7d5eec548262c",
           "scriptVersion": 2,
@@ -3144,15 +3164,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:01:47.094Z",
+        "at": "2026-10-17T16:28:09.825Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:07:32.924Z",
-      "updatedAt": "2026-10-16T10:01:47.094Z"
+      "updatedAt": "2026-10-17T16:28:09.825Z"
     },
     {
       "key": "lesson:pl-daily-routine",
@@ -3164,9 +3184,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-daily-routine/video-81fe94f7590d.mp4",
-          "posterUrl": "pl/lesson/pl-daily-routine/poster-81fe94f7590d.jpg",
-          "captionsUrl": "pl/lesson/pl-daily-routine/captions-81fe94f7590d.vtt",
+          "url": "pl/lesson/pl-daily-routine/video-56639ab1e439.mp4",
+          "posterUrl": "pl/lesson/pl-daily-routine/poster-56639ab1e439.jpg",
+          "captionsUrl": "pl/lesson/pl-daily-routine/captions-56639ab1e439.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 95.94,
           "width": 1280,
@@ -3282,9 +3302,9 @@
         },
         "audio": []
       },
-      "sourceHash": "74d58c1df7d1a4f5bfc446663ee7c30d78765bd3868bafcb00569ff443f75843",
+      "sourceHash": "152fb9864387e871027c10fc22fbd15ccdc198f918fd2d9247c4fa608d08014a",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Say at what time you do everyday things, and ask someone about their day.",
@@ -3313,6 +3333,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "74d58c1df7d1a4f5bfc446663ee7c30d78765bd3868bafcb00569ff443f75843",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:21:59.941Z"
+        },
+        {
           "version": 1,
           "sourceHash": "20ac185b516d82ba853dafc0ad8be8e0255de408618b24ca401d375c02bc82d7",
           "scriptVersion": 2,
@@ -3321,15 +3347,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:21:59.941Z",
+        "at": "2026-10-17T15:20:44.570Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-05T08:31:43.565Z",
-      "updatedAt": "2026-10-16T09:21:59.941Z"
+      "updatedAt": "2026-10-17T15:20:44.570Z"
     },
     {
       "key": "lesson:pl-days-of-the-week",
@@ -3697,9 +3723,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-directions/video-3cdd9f194cf9.mp4",
-          "posterUrl": "pl/lesson/pl-directions/poster-3cdd9f194cf9.jpg",
-          "captionsUrl": "pl/lesson/pl-directions/captions-3cdd9f194cf9.vtt",
+          "url": "pl/lesson/pl-directions/video-1e480e0c730b.mp4",
+          "posterUrl": "pl/lesson/pl-directions/poster-1e480e0c730b.jpg",
+          "captionsUrl": "pl/lesson/pl-directions/captions-1e480e0c730b.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 101.03,
           "width": 1280,
@@ -3821,9 +3847,9 @@
         },
         "audio": []
       },
-      "sourceHash": "926c8f21103d1b3795f3104d66504fda13e298d1cac9dee2d212ecf397e9935f",
+      "sourceHash": "45e660a32381fbebaaf5e820d6b316183cc7d85b700ff400a34c72f9b78b329a",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Ask how to get somewhere and understand simple directions.",
@@ -3854,6 +3880,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "926c8f21103d1b3795f3104d66504fda13e298d1cac9dee2d212ecf397e9935f",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:31:16.835Z"
+        },
+        {
           "version": 1,
           "sourceHash": "9252c4921ed9a8677ff6982537d2cdc31deca948c2122261a6d350ff5810b077",
           "scriptVersion": 2,
@@ -3862,15 +3894,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:31:16.835Z",
+        "at": "2026-10-17T15:44:43.125Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:20:06.225Z",
-      "updatedAt": "2026-10-16T09:31:16.835Z"
+      "updatedAt": "2026-10-17T15:44:43.125Z"
     },
     {
       "key": "lesson:pl-formal-correspondence",
@@ -3882,9 +3914,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-formal-correspondence/video-64b40ee376bb.mp4",
-          "posterUrl": "pl/lesson/pl-formal-correspondence/poster-64b40ee376bb.jpg",
-          "captionsUrl": "pl/lesson/pl-formal-correspondence/captions-64b40ee376bb.vtt",
+          "url": "pl/lesson/pl-formal-correspondence/video-d9a005a8ed41.mp4",
+          "posterUrl": "pl/lesson/pl-formal-correspondence/poster-d9a005a8ed41.jpg",
+          "captionsUrl": "pl/lesson/pl-formal-correspondence/captions-d9a005a8ed41.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 80.89,
           "width": 1280,
@@ -3989,9 +4021,9 @@
         },
         "audio": []
       },
-      "sourceHash": "2a5c9d3efc45d696a9edef18abd8c9705935438bbbb9092021c172f9fbd35b93",
+      "sourceHash": "74f977869cb352f2b17579053ab2e213fbde4d43e18bdcdc2f21843107f16b63",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Open, frame and close a formal email with the standard formulas.",
@@ -4015,6 +4047,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "2a5c9d3efc45d696a9edef18abd8c9705935438bbbb9092021c172f9fbd35b93",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:15:04.558Z"
+        },
+        {
           "version": 1,
           "sourceHash": "5b139976e43d0edef773924d8e34999b090c99c4615ca482f34241845b27fe0b",
           "scriptVersion": 2,
@@ -4023,15 +4061,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:15:04.558Z",
+        "at": "2026-10-17T16:43:53.179Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:12:53.405Z",
-      "updatedAt": "2026-10-16T10:15:04.558Z"
+      "updatedAt": "2026-10-17T16:43:53.179Z"
     },
     {
       "key": "lesson:pl-future-and-plans",
@@ -4190,16 +4228,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:45:52.559Z",
+        "status": "failed",
+        "at": "2026-10-17T15:45:38.675Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\AppData\\Local\\Temp\n   Renders produce large temp files. Free disk space before rendering.\n\n\n✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\TFM-BIC\\.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:36:44.330Z",
-      "updatedAt": "2026-10-16T09:45:52.559Z"
+      "updatedAt": "2026-10-17T15:45:38.676Z"
     },
     {
       "key": "lesson:pl-going-places",
@@ -4351,16 +4390,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:48:55.655Z",
+        "status": "failed",
+        "at": "2026-10-17T15:46:00.941Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\AppData\\Local\\Temp\n   Renders produce large temp files. Free disk space before rendering.\n\n\n✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\TFM-BIC\\.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:40:25.589Z",
-      "updatedAt": "2026-10-16T09:48:55.655Z"
+      "updatedAt": "2026-10-17T15:46:00.942Z"
     },
     {
       "key": "lesson:pl-greetings",
@@ -4658,16 +4698,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T08:49:03.293Z",
+        "status": "failed",
+        "at": "2026-10-17T13:55:22.518Z",
+        "error": "The video generation provider did not respond within 1200000ms.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-01T07:29:37.868Z",
-      "updatedAt": "2026-10-16T08:49:03.293Z"
+      "updatedAt": "2026-10-17T13:55:22.519Z"
     },
     {
       "key": "lesson:pl-hedging",
@@ -4679,9 +4720,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-hedging/video-aac7fdb8b053.mp4",
-          "posterUrl": "pl/lesson/pl-hedging/poster-aac7fdb8b053.jpg",
-          "captionsUrl": "pl/lesson/pl-hedging/captions-aac7fdb8b053.vtt",
+          "url": "pl/lesson/pl-hedging/video-739679ac8d91.mp4",
+          "posterUrl": "pl/lesson/pl-hedging/poster-739679ac8d91.jpg",
+          "captionsUrl": "pl/lesson/pl-hedging/captions-739679ac8d91.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 81.16,
           "width": 1280,
@@ -4769,9 +4810,9 @@
         },
         "audio": []
       },
-      "sourceHash": "7ebea896a5bd394d89bfe8bbee91ac3e2303bfbab1520a57f0445e317cc26ccd",
+      "sourceHash": "dbec4026d06bb5c94931888f1414a65db857971aecc6efa564d6343718ed0031",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Express degrees of certainty and avoid stating things absolutely.",
@@ -4798,6 +4839,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "7ebea896a5bd394d89bfe8bbee91ac3e2303bfbab1520a57f0445e317cc26ccd",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:25:07.395Z"
+        },
+        {
           "version": 1,
           "sourceHash": "7cb72982b59c9ca90806b7b0996f079fedd41345482b4e5f7066e5b139a7ace0",
           "scriptVersion": 2,
@@ -4806,15 +4853,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:25:07.395Z",
+        "at": "2026-10-17T16:54:56.076Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:17:13.962Z",
-      "updatedAt": "2026-10-16T10:25:07.395Z"
+      "updatedAt": "2026-10-17T16:54:56.076Z"
     },
     {
       "key": "lesson:pl-idioms",
@@ -4826,9 +4873,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-idioms/video-45b88ae79111.mp4",
-          "posterUrl": "pl/lesson/pl-idioms/poster-45b88ae79111.jpg",
-          "captionsUrl": "pl/lesson/pl-idioms/captions-45b88ae79111.vtt",
+          "url": "pl/lesson/pl-idioms/video-45f7dd2d0158.mp4",
+          "posterUrl": "pl/lesson/pl-idioms/poster-45f7dd2d0158.jpg",
+          "captionsUrl": "pl/lesson/pl-idioms/captions-45f7dd2d0158.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 91.91,
           "width": 1280,
@@ -4943,9 +4990,9 @@
         },
         "audio": []
       },
-      "sourceHash": "b9c90073484a97479798f442e4fdea808d9517cf141f89d2222f9916438fa773",
+      "sourceHash": "be613d90e9daa2e8d4c663d196729b9c85fedc1cecf5941b5f350ead0685a36e",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Understand and use common everyday idioms.",
@@ -4973,6 +5020,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "b9c90073484a97479798f442e4fdea808d9517cf141f89d2222f9916438fa773",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:28:46.282Z"
+        },
+        {
           "version": 1,
           "sourceHash": "d98f703f3069a11c7e2f4b5688d72ff427f45986c31faea634a7c5a1c949e3f5",
           "scriptVersion": 2,
@@ -4981,15 +5034,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:28:46.282Z",
+        "at": "2026-10-17T16:59:27.851Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-08T10:30:21.466Z",
-      "updatedAt": "2026-10-16T10:28:46.282Z"
+      "updatedAt": "2026-10-17T16:59:27.851Z"
     },
     {
       "key": "lesson:pl-impersonal-forms",
@@ -5163,9 +5216,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-introducing-yourself/video-39004edc94f9.mp4",
-          "posterUrl": "pl/lesson/pl-introducing-yourself/poster-39004edc94f9.jpg",
-          "captionsUrl": "pl/lesson/pl-introducing-yourself/captions-39004edc94f9.vtt",
+          "url": "pl/lesson/pl-introducing-yourself/video-112133e09c60.mp4",
+          "posterUrl": "pl/lesson/pl-introducing-yourself/poster-112133e09c60.jpg",
+          "captionsUrl": "pl/lesson/pl-introducing-yourself/captions-112133e09c60.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 125.85,
           "width": 1280,
@@ -5320,9 +5373,9 @@
         },
         "audio": []
       },
-      "sourceHash": "21d608374167dafbd82f3d2ab148b42c7712d425680596a3a5d07ec0e1adf897",
+      "sourceHash": "48f3da116263fbdeae57e21db6c724f60d8a1a2388de9f31f1d198385dbdce51",
       "narratorId": "marek",
-      "version": 4,
+      "version": 5,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Say your name and where you are from, and react when you meet someone.",
@@ -5357,6 +5410,12 @@
       },
       "previous": [
         {
+          "version": 4,
+          "sourceHash": "21d608374167dafbd82f3d2ab148b42c7712d425680596a3a5d07ec0e1adf897",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T08:54:12.622Z"
+        },
+        {
           "version": 3,
           "sourceHash": "f25891d0d4f2d1f765eeb5fe9ff549645a723173b18b746bb63b7f2c7e048b40",
           "scriptVersion": 2,
@@ -5377,15 +5436,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T08:54:12.622Z",
+        "at": "2026-10-17T14:05:22.257Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-01T07:25:05.800Z",
-      "updatedAt": "2026-10-16T08:54:12.622Z"
+      "updatedAt": "2026-10-17T14:05:22.257Z"
     },
     {
       "key": "lesson:pl-irony-and-understatement",
@@ -5397,9 +5456,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-irony-and-understatement/video-a8b058f70025.mp4",
-          "posterUrl": "pl/lesson/pl-irony-and-understatement/poster-a8b058f70025.jpg",
-          "captionsUrl": "pl/lesson/pl-irony-and-understatement/captions-a8b058f70025.vtt",
+          "url": "pl/lesson/pl-irony-and-understatement/video-61e9e287e617.mp4",
+          "posterUrl": "pl/lesson/pl-irony-and-understatement/poster-61e9e287e617.jpg",
+          "captionsUrl": "pl/lesson/pl-irony-and-understatement/captions-61e9e287e617.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 81.33,
           "width": 1280,
@@ -5493,9 +5552,9 @@
         },
         "audio": []
       },
-      "sourceHash": "9dfeb33df517774f0a282ef13d8c0566bbc128afc7eef9caec739fee87661d74",
+      "sourceHash": "5fbb56879c4e35dd90a8eaca99e544bd747ede36cab6ae3760cadc3c514c5c90",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Understand irony and understatement in everyday Polish.",
@@ -5523,6 +5582,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "9dfeb33df517774f0a282ef13d8c0566bbc128afc7eef9caec739fee87661d74",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T11:05:50.012Z"
+        },
+        {
           "version": 1,
           "sourceHash": "89a55fd9f542721d4c18fc8a44bab602f013b47f100c69d222ea33f088e3f3f2",
           "scriptVersion": 2,
@@ -5531,15 +5596,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T11:05:50.012Z",
+        "at": "2026-10-17T17:34:50.095Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-09T07:19:37.545Z",
-      "updatedAt": "2026-10-16T11:05:50.012Z"
+      "updatedAt": "2026-10-17T17:34:50.095Z"
     },
     {
       "key": "lesson:pl-job-interview",
@@ -5551,9 +5616,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-job-interview/video-b1874fb28478.mp4",
-          "posterUrl": "pl/lesson/pl-job-interview/poster-b1874fb28478.jpg",
-          "captionsUrl": "pl/lesson/pl-job-interview/captions-b1874fb28478.vtt",
+          "url": "pl/lesson/pl-job-interview/video-d53b5faba63d.mp4",
+          "posterUrl": "pl/lesson/pl-job-interview/poster-d53b5faba63d.jpg",
+          "captionsUrl": "pl/lesson/pl-job-interview/captions-d53b5faba63d.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 86.7,
           "width": 1280,
@@ -5653,9 +5718,9 @@
         },
         "audio": []
       },
-      "sourceHash": "a7d09ccbefe80db02208fc9ff1f908785227f64e50987d9fbcae2a571ed02f1b",
+      "sourceHash": "a360795ddb4752fdac30c1c89dd072e63241e1846c45a75c66d665a95ccb7e56",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Use the formal pan and pani forms in a job interview.",
@@ -5684,6 +5749,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "a7d09ccbefe80db02208fc9ff1f908785227f64e50987d9fbcae2a571ed02f1b",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T08:16:05.849Z"
+        },
+        {
           "version": 1,
           "sourceHash": "999ace51d34a15aa102d3fb144c9ef739b84ca3245a9ce2623330314440124f3",
           "scriptVersion": 2,
@@ -5692,15 +5763,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T08:16:05.849Z",
+        "at": "2026-10-17T16:18:56.035Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:02:03.328Z",
-      "updatedAt": "2026-10-16T08:16:05.849Z"
+      "updatedAt": "2026-10-17T16:18:56.035Z"
     },
     {
       "key": "lesson:pl-likes-and-wants",
@@ -5862,16 +5933,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:35:53.794Z",
+        "status": "failed",
+        "at": "2026-10-17T15:45:00.249Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\AppData\\Local\\Temp\n   Renders produce large temp files. Free disk space before rendering.\n\n\n✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\TFM-BIC\\.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:24:40.545Z",
-      "updatedAt": "2026-10-16T09:35:53.794Z"
+      "updatedAt": "2026-10-17T15:45:00.249Z"
     },
     {
       "key": "lesson:pl-literary-language",
@@ -5883,9 +5955,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-literary-language/video-f04951ff41d8.mp4",
-          "posterUrl": "pl/lesson/pl-literary-language/poster-f04951ff41d8.jpg",
-          "captionsUrl": "pl/lesson/pl-literary-language/captions-f04951ff41d8.vtt",
+          "url": "pl/lesson/pl-literary-language/video-d154c01b763c.mp4",
+          "posterUrl": "pl/lesson/pl-literary-language/poster-d154c01b763c.jpg",
+          "captionsUrl": "pl/lesson/pl-literary-language/captions-d154c01b763c.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 96.32,
           "width": 1280,
@@ -5995,9 +6067,9 @@
         },
         "audio": []
       },
-      "sourceHash": "b816110454a25d0b5d056702ae603a2eebb08666bab354d20d41f7e0d991c8f0",
+      "sourceHash": "1f0772ae1f5bfd00222549a3fe01aeeb89f489d1e1888f503c1a94ce70f2954d",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Recognise the vocative and archaic connectors in classic texts.",
@@ -6021,6 +6093,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "b816110454a25d0b5d056702ae603a2eebb08666bab354d20d41f7e0d991c8f0",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:45:30.687Z"
+        },
+        {
           "version": 1,
           "sourceHash": "cc0fa0df0aaa2bb1c01092aedeeacdce20d16d32981bc0f356ef0dfad1360db7",
           "scriptVersion": 2,
@@ -6029,15 +6107,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:45:30.687Z",
+        "at": "2026-10-17T17:09:53.356Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-08T10:37:16.499Z",
-      "updatedAt": "2026-10-16T10:45:30.687Z"
+      "updatedAt": "2026-10-17T17:09:53.356Z"
     },
     {
       "key": "lesson:pl-making-a-complaint",
@@ -7476,16 +7554,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:07:33.883Z",
+        "status": "failed",
+        "at": "2026-10-17T14:42:31.740Z",
+        "error": "The video generation provider did not respond within 1200000ms.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-01T07:44:57.008Z",
-      "updatedAt": "2026-10-16T09:07:33.883Z"
+      "updatedAt": "2026-10-17T14:42:31.741Z"
     },
     {
       "key": "lesson:pl-nominal-style",
@@ -7497,9 +7576,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-nominal-style/video-11318138356e.mp4",
-          "posterUrl": "pl/lesson/pl-nominal-style/poster-11318138356e.jpg",
-          "captionsUrl": "pl/lesson/pl-nominal-style/captions-11318138356e.vtt",
+          "url": "pl/lesson/pl-nominal-style/video-9e2bc5bd6b4e.mp4",
+          "posterUrl": "pl/lesson/pl-nominal-style/poster-9e2bc5bd6b4e.jpg",
+          "captionsUrl": "pl/lesson/pl-nominal-style/captions-9e2bc5bd6b4e.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 80.46,
           "width": 1280,
@@ -7599,9 +7678,9 @@
         },
         "audio": []
       },
-      "sourceHash": "c8d4148866e02e7721dc49f32ad32563275e3b78a7040c387786778fddce9426",
+      "sourceHash": "dde2facdb36d32e37b932c0a777f9e60f2748dc5bc190430e99e4417b55144ba",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Recognise verbal nouns and the nominal style of official Polish.",
@@ -7625,6 +7704,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "c8d4148866e02e7721dc49f32ad32563275e3b78a7040c387786778fddce9426",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:21:57.583Z"
+        },
+        {
           "version": 1,
           "sourceHash": "0b8f7a8d30ce1692ba9b1d75941fa5e6167d8a7a2f8ac7a78543fe30237cd6e4",
           "scriptVersion": 2,
@@ -7633,15 +7718,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:21:57.582Z",
+        "at": "2026-10-17T16:51:42.588Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:16:50.967Z",
-      "updatedAt": "2026-10-16T10:21:57.583Z"
+      "updatedAt": "2026-10-17T16:51:42.588Z"
     },
     {
       "key": "lesson:pl-numbers-and-age",
@@ -7832,9 +7917,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-numerals-in-full/video-68dbcfa38f20.mp4",
-          "posterUrl": "pl/lesson/pl-numerals-in-full/poster-68dbcfa38f20.jpg",
-          "captionsUrl": "pl/lesson/pl-numerals-in-full/captions-68dbcfa38f20.vtt",
+          "url": "pl/lesson/pl-numerals-in-full/video-65046e8c7db0.mp4",
+          "posterUrl": "pl/lesson/pl-numerals-in-full/poster-65046e8c7db0.jpg",
+          "captionsUrl": "pl/lesson/pl-numerals-in-full/captions-65046e8c7db0.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 85.69,
           "width": 1280,
@@ -7939,9 +8024,9 @@
         },
         "audio": []
       },
-      "sourceHash": "38a67ba624daa68cf172ec111709d555ca2d09b7306006327c468eb681d145de",
+      "sourceHash": "398b9d46eb398feedeafaa04c477211483b37d24d13f0613bf9caa367dd90519",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Use collective numerals, numbers with groups of men, and numbers in every case.",
@@ -7969,6 +8054,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "38a67ba624daa68cf172ec111709d555ca2d09b7306006327c468eb681d145de",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:54:47.054Z"
+        },
+        {
           "version": 1,
           "sourceHash": "6b1045c6fa637536c10468a3b14235e358bc46eb4dd1baeb408c1be4113366c9",
           "scriptVersion": 2,
@@ -7977,15 +8068,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:54:47.054Z",
+        "at": "2026-10-17T17:18:14.276Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-08T10:37:39.472Z",
-      "updatedAt": "2026-10-16T10:54:47.054Z"
+      "updatedAt": "2026-10-17T17:18:14.276Z"
     },
     {
       "key": "lesson:pl-opinions",
@@ -7997,9 +8088,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-opinions/video-f47ad1f0b670.mp4",
-          "posterUrl": "pl/lesson/pl-opinions/poster-f47ad1f0b670.jpg",
-          "captionsUrl": "pl/lesson/pl-opinions/captions-f47ad1f0b670.vtt",
+          "url": "pl/lesson/pl-opinions/video-e41303845260.mp4",
+          "posterUrl": "pl/lesson/pl-opinions/poster-e41303845260.jpg",
+          "captionsUrl": "pl/lesson/pl-opinions/captions-e41303845260.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 75.98,
           "width": 1280,
@@ -8088,9 +8179,9 @@
         },
         "audio": []
       },
-      "sourceHash": "8462d7e1df81c6c7a849e44c63bffd3a06082f7f43f718871ba52ad041706530",
+      "sourceHash": "ccf19ce8eccd3fafe2a20bfeaaab4e23311285eb77e7a85cd4eb8fd5da0b182f",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Give your opinion, agree and disagree politely.",
@@ -8118,6 +8209,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "8462d7e1df81c6c7a849e44c63bffd3a06082f7f43f718871ba52ad041706530",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:54:55.260Z"
+        },
+        {
           "version": 1,
           "sourceHash": "9d7dcd369783fd97bfbe2730ec221b23cca50a8e23fa3ad6e5a91f2c07efcbe2",
           "scriptVersion": 2,
@@ -8126,15 +8223,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:54:55.260Z",
+        "at": "2026-10-17T15:56:43.668Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T07:47:00.642Z",
-      "updatedAt": "2026-10-16T09:54:55.260Z"
+      "updatedAt": "2026-10-17T15:56:43.668Z"
     },
     {
       "key": "lesson:pl-participles",
@@ -8146,9 +8243,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-participles/video-a60bc0762675.mp4",
-          "posterUrl": "pl/lesson/pl-participles/poster-a60bc0762675.jpg",
-          "captionsUrl": "pl/lesson/pl-participles/captions-a60bc0762675.vtt",
+          "url": "pl/lesson/pl-participles/video-498cfffa22eb.mp4",
+          "posterUrl": "pl/lesson/pl-participles/poster-498cfffa22eb.jpg",
+          "captionsUrl": "pl/lesson/pl-participles/captions-498cfffa22eb.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 88.88,
           "width": 1280,
@@ -8247,9 +8344,9 @@
         },
         "audio": []
       },
-      "sourceHash": "46b23ac138e437903f457c3b2951538a4461ac298ad78ed435f94ff064e18d85",
+      "sourceHash": "0986f166f17ad0a5a5684667408014484af0349cb40a393ff91bfa2c5177433c",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Use participles to say more in fewer words.",
@@ -8272,6 +8369,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "46b23ac138e437903f457c3b2951538a4461ac298ad78ed435f94ff064e18d85",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:18:34.949Z"
+        },
+        {
           "version": 1,
           "sourceHash": "4f3c797a30b6b02bab000301a5700a040a95518883f0cc2fac19c0ba7fa2b099",
           "scriptVersion": 2,
@@ -8280,15 +8383,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:18:34.949Z",
+        "at": "2026-10-17T16:47:28.139Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:13:16.489Z",
-      "updatedAt": "2026-10-16T10:18:34.949Z"
+      "updatedAt": "2026-10-17T16:47:28.139Z"
     },
     {
       "key": "lesson:pl-past-tense",
@@ -8300,9 +8403,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-past-tense/video-9bc536401cc4.mp4",
-          "posterUrl": "pl/lesson/pl-past-tense/poster-9bc536401cc4.jpg",
-          "captionsUrl": "pl/lesson/pl-past-tense/captions-9bc536401cc4.vtt",
+          "url": "pl/lesson/pl-past-tense/video-d91440adc5b2.mp4",
+          "posterUrl": "pl/lesson/pl-past-tense/poster-d91440adc5b2.jpg",
+          "captionsUrl": "pl/lesson/pl-past-tense/captions-d91440adc5b2.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 108.32,
           "width": 1280,
@@ -8417,9 +8520,9 @@
         },
         "audio": []
       },
-      "sourceHash": "fd78b2a5034cb806241e1ea55773f014ee490cdb41f4405fd8ef801d4dbb88d3",
+      "sourceHash": "d9fa44b4fb9b5789a3af592e74f5a9cc2b601b816a0051baa95b38458f45eb8c",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Talk about the past, choosing the ending for a man or a woman.",
@@ -8446,6 +8549,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "fd78b2a5034cb806241e1ea55773f014ee490cdb41f4405fd8ef801d4dbb88d3",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:26:44.517Z"
+        },
+        {
           "version": 1,
           "sourceHash": "afbfda8432899870a72fad44530e6c51d000e31f45ef060941d9e6684b2c90b2",
           "scriptVersion": 2,
@@ -8454,15 +8563,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:26:44.517Z",
+        "at": "2026-10-17T15:31:43.385Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-05T08:32:52.348Z",
-      "updatedAt": "2026-10-16T09:26:44.517Z"
+      "updatedAt": "2026-10-17T15:31:43.385Z"
     },
     {
       "key": "lesson:pl-polite-words",
@@ -8474,9 +8583,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-polite-words/video-5144958ab816.mp4",
-          "posterUrl": "pl/lesson/pl-polite-words/poster-5144958ab816.jpg",
-          "captionsUrl": "pl/lesson/pl-polite-words/captions-5144958ab816.vtt",
+          "url": "pl/lesson/pl-polite-words/video-60000fee5138.mp4",
+          "posterUrl": "pl/lesson/pl-polite-words/poster-60000fee5138.jpg",
+          "captionsUrl": "pl/lesson/pl-polite-words/captions-60000fee5138.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 159.71,
           "width": 1280,
@@ -8689,9 +8798,9 @@
         },
         "audio": []
       },
-      "sourceHash": "2effc8ad00e2c2cb9bc0ca1f08bbed703dec8e1f33f91050756d9ad44697b2e1",
+      "sourceHash": "a1b54a6aa50c18158842ea5aaacf2c61a295061b4d79d1e05afcde6a69d3c10b",
       "narratorId": "anna",
-      "version": 4,
+      "version": 5,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Use proszę, dziękuję and przepraszam in a café, and tell from the situation which meaning of proszę is meant.",
@@ -8720,6 +8829,12 @@
       },
       "previous": [
         {
+          "version": 4,
+          "sourceHash": "2effc8ad00e2c2cb9bc0ca1f08bbed703dec8e1f33f91050756d9ad44697b2e1",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:03:42.509Z"
+        },
+        {
           "version": 3,
           "sourceHash": "ead1dcab4d4e177a8451218c520a305c97574aec7ad3a7085320e86764be1284",
           "scriptVersion": 2,
@@ -8740,15 +8855,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:03:42.509Z",
+        "at": "2026-10-17T14:22:20.182Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-01T07:40:54.018Z",
-      "updatedAt": "2026-10-16T09:03:42.509Z"
+      "updatedAt": "2026-10-17T14:22:20.183Z"
     },
     {
       "key": "lesson:pl-proverbs",
@@ -9270,9 +9385,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-register/video-5753384abf76.mp4",
-          "posterUrl": "pl/lesson/pl-register/poster-5753384abf76.jpg",
-          "captionsUrl": "pl/lesson/pl-register/captions-5753384abf76.vtt",
+          "url": "pl/lesson/pl-register/video-b2368b33547a.mp4",
+          "posterUrl": "pl/lesson/pl-register/poster-b2368b33547a.jpg",
+          "captionsUrl": "pl/lesson/pl-register/captions-b2368b33547a.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 82.15,
           "width": 1280,
@@ -9376,9 +9491,9 @@
         },
         "audio": []
       },
-      "sourceHash": "d81a99212f6a0b2db18b33fd15556ad46f54cd6776ab739bf159e7259fb7ca10",
+      "sourceHash": "a68da86c63c54bb84951f5fe4c6d147c58484c806cc3654429a05d1894451500",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Match your words to the situation: informal, neutral or official.",
@@ -9401,6 +9516,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "d81a99212f6a0b2db18b33fd15556ad46f54cd6776ab739bf159e7259fb7ca10",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:32:23.834Z"
+        },
+        {
           "version": 1,
           "sourceHash": "5364f2625ab7ae13f3b5cfabd446faf18abeaec36e3c7255817f27ae2384f6e8",
           "scriptVersion": 2,
@@ -9409,15 +9530,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:32:23.833Z",
+        "at": "2026-10-17T17:04:03.131Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-08T10:36:33.396Z",
-      "updatedAt": "2026-10-16T10:32:23.834Z"
+      "updatedAt": "2026-10-17T17:04:03.131Z"
     },
     {
       "key": "lesson:pl-relative-clauses",
@@ -9595,9 +9716,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-reported-speech/video-e73ebcf7c8c6.mp4",
-          "posterUrl": "pl/lesson/pl-reported-speech/poster-e73ebcf7c8c6.jpg",
-          "captionsUrl": "pl/lesson/pl-reported-speech/captions-e73ebcf7c8c6.vtt",
+          "url": "pl/lesson/pl-reported-speech/video-68866a065a7f.mp4",
+          "posterUrl": "pl/lesson/pl-reported-speech/poster-68866a065a7f.jpg",
+          "captionsUrl": "pl/lesson/pl-reported-speech/captions-68866a065a7f.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 72.34,
           "width": 1280,
@@ -9686,9 +9807,9 @@
         },
         "audio": []
       },
-      "sourceHash": "4a2ebdee96d0062a546fa3e8becb6e2fd3d4ea5bf665ff06e10aecd9bd2fd075",
+      "sourceHash": "f7b842f3065ff7e6cd4d7408a80cb27c21de32b242c85c86d661df12433bfe4e",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Report what someone said, asked or requested.",
@@ -9716,6 +9837,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "4a2ebdee96d0062a546fa3e8becb6e2fd3d4ea5bf665ff06e10aecd9bd2fd075",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:04:40.261Z"
+        },
+        {
           "version": 1,
           "sourceHash": "279eccc9678d3dbda20833958b5f68ab3add0a3bc924ffff068950495c1e88df",
           "scriptVersion": 2,
@@ -9724,15 +9851,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:04:40.261Z",
+        "at": "2026-10-17T16:32:10.532Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:09:41.969Z",
-      "updatedAt": "2026-10-16T10:04:40.261Z"
+      "updatedAt": "2026-10-17T16:32:10.532Z"
     },
     {
       "key": "lesson:pl-shades-of-meaning",
@@ -9744,9 +9871,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-shades-of-meaning/video-a1300ba68805.mp4",
-          "posterUrl": "pl/lesson/pl-shades-of-meaning/poster-a1300ba68805.jpg",
-          "captionsUrl": "pl/lesson/pl-shades-of-meaning/captions-a1300ba68805.vtt",
+          "url": "pl/lesson/pl-shades-of-meaning/video-e3356b1c3054.mp4",
+          "posterUrl": "pl/lesson/pl-shades-of-meaning/poster-e3356b1c3054.jpg",
+          "captionsUrl": "pl/lesson/pl-shades-of-meaning/captions-e3356b1c3054.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 94.03,
           "width": 1280,
@@ -9861,9 +9988,9 @@
         },
         "audio": []
       },
-      "sourceHash": "3cf76fd66527e6438796bbc9823f44e46d90155f2e2075a9cfcb3eb2e8cc9b24",
+      "sourceHash": "2f1e96b8914f128a00628bff2d4d54cc182b420e10ffcec2a8f62a22a90432eb",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Choose between near-synonyms that differ in tone and situation.",
@@ -9887,6 +10014,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "3cf76fd66527e6438796bbc9823f44e46d90155f2e2075a9cfcb3eb2e8cc9b24",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T11:12:06.898Z"
+        },
+        {
           "version": 1,
           "sourceHash": "8b6d89e87cc299d0c59be4b00b95c68f4e900e9f7593f958b0fbf8f93b649002",
           "scriptVersion": 2,
@@ -9895,15 +10028,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T11:12:06.898Z",
+        "at": "2026-10-17T17:41:46.576Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-09T07:23:45.382Z",
-      "updatedAt": "2026-10-16T11:12:06.898Z"
+      "updatedAt": "2026-10-17T17:41:46.576Z"
     },
     {
       "key": "lesson:pl-shopping",
@@ -9915,9 +10048,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-shopping/video-c336aae48569.mp4",
-          "posterUrl": "pl/lesson/pl-shopping/poster-c336aae48569.jpg",
-          "captionsUrl": "pl/lesson/pl-shopping/captions-c336aae48569.vtt",
+          "url": "pl/lesson/pl-shopping/video-096f8790dc15.mp4",
+          "posterUrl": "pl/lesson/pl-shopping/poster-096f8790dc15.jpg",
+          "captionsUrl": "pl/lesson/pl-shopping/captions-096f8790dc15.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 112.19,
           "width": 1280,
@@ -10061,9 +10194,9 @@
         },
         "audio": []
       },
-      "sourceHash": "a86c9ad2b3abd45ffd8e42669f756fa9764d503e1ccff05253ee7e66cc495d0c",
+      "sourceHash": "255f40f50e269ab6e6d33c32af00e405c210554e15a6749d1fe5787ca5a4f5e1",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Ask for things in a shop, ask the price and ask to pay by card.",
@@ -10096,6 +10229,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "a86c9ad2b3abd45ffd8e42669f756fa9764d503e1ccff05253ee7e66cc495d0c",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:17:45.729Z"
+        },
+        {
           "version": 1,
           "sourceHash": "d1f07a9df3762fd6100cae22a3e6fdbb2ac8ef90c8098c5061c41ee53cc02ae1",
           "scriptVersion": 2,
@@ -10104,15 +10243,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:17:45.729Z",
+        "at": "2026-10-17T15:08:11.395Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-05T08:27:18.729Z",
-      "updatedAt": "2026-10-16T09:17:45.729Z"
+      "updatedAt": "2026-10-17T15:08:11.395Z"
     },
     {
       "key": "lesson:pl-spelling-and-sounds",
@@ -10124,9 +10263,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-spelling-and-sounds/video-cdd552b33577.mp4",
-          "posterUrl": "pl/lesson/pl-spelling-and-sounds/poster-cdd552b33577.jpg",
-          "captionsUrl": "pl/lesson/pl-spelling-and-sounds/captions-cdd552b33577.vtt",
+          "url": "pl/lesson/pl-spelling-and-sounds/video-ace6fdd969c9.mp4",
+          "posterUrl": "pl/lesson/pl-spelling-and-sounds/poster-ace6fdd969c9.jpg",
+          "captionsUrl": "pl/lesson/pl-spelling-and-sounds/captions-ace6fdd969c9.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 147.08,
           "width": 1280,
@@ -10304,9 +10443,9 @@
         },
         "audio": []
       },
-      "sourceHash": "fa820760fd9a7644e4581f8d73b192ea709417f76a45a50ff536b0f479ad6067",
+      "sourceHash": "f70fd31895ccedf9ec2873e6c4b5139b1080a488031bae155129bd5c7b0e7b0b",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Hear and say sz, ł, cz, c and ó in three everyday words, and tell sz from the softer ś.",
@@ -10332,6 +10471,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "fa820760fd9a7644e4581f8d73b192ea709417f76a45a50ff536b0f479ad6067",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T09:13:22.794Z"
+        },
+        {
           "version": 1,
           "sourceHash": "a7267794db8406e3a2d996d7ed439d3425a0ef69807d4bd2d260df95ad9bab1b",
           "scriptVersion": 2,
@@ -10340,15 +10485,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T09:13:22.794Z",
+        "at": "2026-10-17T15:00:22.405Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-01T07:46:57.408Z",
-      "updatedAt": "2026-10-16T09:13:22.794Z"
+      "updatedAt": "2026-10-17T15:00:22.405Z"
     },
     {
       "key": "lesson:pl-verb-aspect",
@@ -10504,16 +10649,17 @@
         }
       ],
       "lastRun": {
-        "status": "ready",
-        "at": "2026-10-16T09:42:18.663Z",
+        "status": "failed",
+        "at": "2026-10-17T15:45:20.918Z",
+        "error": "The video generation provider rejected the request: hyperframes render exited with code 1: ✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\AppData\\Local\\Temp\n   Renders produce large temp files. Free disk space before rendering.\n\n\n✗  Low disk space\n\n   0.8 GB free at C:\\Users\\usuario\\TFM-BIC\\.",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-06T07:32:37.745Z",
-      "updatedAt": "2026-10-16T09:42:18.663Z"
+      "updatedAt": "2026-10-17T15:45:20.918Z"
     },
     {
       "key": "lesson:pl-verb-prefixes",
@@ -10525,9 +10671,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-verb-prefixes/video-e444a0325812.mp4",
-          "posterUrl": "pl/lesson/pl-verb-prefixes/poster-e444a0325812.jpg",
-          "captionsUrl": "pl/lesson/pl-verb-prefixes/captions-e444a0325812.vtt",
+          "url": "pl/lesson/pl-verb-prefixes/video-0ac95c39117e.mp4",
+          "posterUrl": "pl/lesson/pl-verb-prefixes/poster-0ac95c39117e.jpg",
+          "captionsUrl": "pl/lesson/pl-verb-prefixes/captions-0ac95c39117e.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 77.23,
           "width": 1280,
@@ -10642,9 +10788,9 @@
         },
         "audio": []
       },
-      "sourceHash": "bdbce5dc5b64df42e62ace12105613b95f034dea468e9d4011635b0ce98178f2",
+      "sourceHash": "31232603dec235a5b4137e35b87a15d2b8007d4e0031e9fd6cbb6ecfb3aaeb85",
       "narratorId": "anna",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "See how prefixes turn going into entering, leaving, arriving and crossing.",
@@ -10668,6 +10814,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "bdbce5dc5b64df42e62ace12105613b95f034dea468e9d4011635b0ce98178f2",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:11:48.130Z"
+        },
+        {
           "version": 1,
           "sourceHash": "eeabc51b9e6bc5a3abb4aa42cbb6e5b0cbfd29800f2a8f26c7cc4d77eecd9d70",
           "scriptVersion": 2,
@@ -10676,15 +10828,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:11:48.130Z",
+        "at": "2026-10-17T16:39:54.231Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-07T08:12:30.498Z",
-      "updatedAt": "2026-10-16T10:11:48.130Z"
+      "updatedAt": "2026-10-17T16:39:54.231Z"
     },
     {
       "key": "lesson:pl-weather",
@@ -10885,9 +11037,9 @@
       "published": {
         "video": {
           "purpose": "lesson-explanation",
-          "url": "pl/lesson/pl-word-order/video-442b4f67768b.mp4",
-          "posterUrl": "pl/lesson/pl-word-order/poster-442b4f67768b.jpg",
-          "captionsUrl": "pl/lesson/pl-word-order/captions-442b4f67768b.vtt",
+          "url": "pl/lesson/pl-word-order/video-b28c9ac91d2e.mp4",
+          "posterUrl": "pl/lesson/pl-word-order/poster-b28c9ac91d2e.jpg",
+          "captionsUrl": "pl/lesson/pl-word-order/captions-b28c9ac91d2e.vtt",
           "captionsLanguage": "en",
           "durationSeconds": 86.04,
           "width": 1280,
@@ -10986,9 +11138,9 @@
         },
         "audio": []
       },
-      "sourceHash": "4c2a819b922aac15968d48b2bf07266ed3b7209fa156984030e98ca553af59a2",
+      "sourceHash": "6ca8baaa2556231c5bfb20eb438782105cb9f5ab529da2211d1749d51a207c93",
       "narratorId": "marek",
-      "version": 2,
+      "version": 3,
       "scriptVersion": 2,
       "pedagogy": {
         "objective": "Use word order to put the focus where you want it.",
@@ -11016,6 +11168,12 @@
       },
       "previous": [
         {
+          "version": 2,
+          "sourceHash": "4c2a819b922aac15968d48b2bf07266ed3b7209fa156984030e98ca553af59a2",
+          "scriptVersion": 2,
+          "generatedAt": "2026-10-16T10:59:11.090Z"
+        },
+        {
           "version": 1,
           "sourceHash": "cf42aad25c2d2226657a32b2e2b18d645fdfc67978f4c4a5019dc3b28b9d5899",
           "scriptVersion": 2,
@@ -11024,15 +11182,15 @@
       ],
       "lastRun": {
         "status": "ready",
-        "at": "2026-10-16T10:59:11.090Z",
+        "at": "2026-10-17T17:26:42.240Z",
         "providerCalls": 0
       },
       "generator": {
         "audio": "gemini:gemini-3.8-flash-tts",
-        "video": "hyperframes@0.8.92/template-4"
+        "video": "hyperframes@0.8.92/template-5"
       },
       "createdAt": "2026-10-09T07:15:56.908Z",
-      "updatedAt": "2026-10-16T10:59:11.090Z"
+      "updatedAt": "2026-10-17T17:26:42.240Z"
     },
     {
       "key": "lesson:pl-zeby-clauses",
