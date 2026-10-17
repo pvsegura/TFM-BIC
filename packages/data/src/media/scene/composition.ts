@@ -26,7 +26,7 @@ export const COMPOSITION_ID = "main";
 export const WIDTH = 1280;
 export const HEIGHT = 720;
 /** Bump when the template changes: part of every video's source hash. */
-export const TEMPLATE_VERSION = 4;
+export const TEMPLATE_VERSION = 5;
 
 const ESCAPES: Record<string, string> = {
   "&": "&amp;",
@@ -39,6 +39,15 @@ export function escapeHtml(text: string): string {
   return text.replace(/[&<>"']/g, (c) => ESCAPES[c] ?? c);
 }
 const n = (v: number) => v.toFixed(3);
+
+/**
+ * Gives a scene its own copy of the illustration ids (gradients, clip paths). Every scene is an <svg>
+ * in one document, and a url(#id) resolves to the first element with that id — which, for a place
+ * seen earlier, sits in a scene that is already hidden, so its clip path no longer applies.
+ */
+function scopeIds(svg: string, prefix: string): string {
+  return svg.replace(/(id="|url\(#)(ill-[\w-]+)/g, `$1${prefix}-$2`);
+}
 const q = JSON.stringify;
 
 interface ActorState {
@@ -341,7 +350,7 @@ function stageMarkup(
     stage.sign ? escapeHtml(stage.sign.toLocaleUpperCase(script.targetLanguage)) : undefined,
   );
   return {
-    svg: `<svg class="stage" viewBox="0 0 ${String(WIDTH)} ${String(HEIGHT)}" width="${String(WIDTH)}" height="${String(HEIGHT)}">${env.back}${propMarkup(false)}${actors}${env.front}${propMarkup(true)}</svg>`,
+    svg: `<svg class="stage" viewBox="0 0 ${String(WIDTH)} ${String(HEIGHT)}" width="${String(WIDTH)}" height="${String(HEIGHT)}">${scopeIds(env.back, prefix)}${propMarkup(false)}${actors}${scopeIds(env.front, prefix)}${propMarkup(true)}</svg>`,
     states,
   };
 }
@@ -689,9 +698,9 @@ export function buildComposition(
 
   // Board scenes sit over the last place seen, blurred, so the video keeps one visual world.
   let lastPlace: Stage | undefined = script.scenes.find((s) => "stage" in s)?.stage;
-  const backdrop = () =>
+  const backdrop = (prefix: string) =>
     lastPlace
-      ? `<svg class="stage backdrop" viewBox="0 0 ${String(WIDTH)} ${String(HEIGHT)}" width="${String(WIDTH)}" height="${String(HEIGHT)}">${environmentSvg(lastPlace.environment, lastPlace.time ?? "day").back}</svg>`
+      ? `<svg class="stage backdrop" viewBox="0 0 ${String(WIDTH)} ${String(HEIGHT)}" width="${String(WIDTH)}" height="${String(HEIGHT)}">${scopeIds(environmentSvg(lastPlace.environment, lastPlace.time ?? "day").back, `${prefix}-bd`)}</svg>`
       : "";
 
   script.scenes.forEach((scene, index) => {
@@ -712,10 +721,10 @@ export function buildComposition(
         html = retrievalScene(scene, prefix, lines, start, end, script, tl);
         break;
       case "focus":
-        html = backdrop() + focusScene(scene, prefix, lines, start, script, tl);
+        html = backdrop(prefix) + focusScene(scene, prefix, lines, start, script, tl);
         break;
       case "contrast":
-        html = backdrop() + contrastScene(scene, prefix, lines, script, tl);
+        html = backdrop(prefix) + contrastScene(scene, prefix, lines, script, tl);
         break;
       case "next-step":
         tl.push(
@@ -724,7 +733,7 @@ export function buildComposition(
         tl.push(
           `tl.fromTo("#${prefix} .arrow",{x:-12,opacity:0},{x:0,opacity:1,duration:0.5},${n(start + 0.6)});`,
         );
-        html = `${backdrop()}<div class="board"><p class="focus-phrase heading-big" style="font-size:64px">${escapeHtml(scene.heading)}</p><p class="body">${escapeHtml(scene.body)}</p><svg class="arrow" viewBox="0 0 120 40"><path d="M4 20 H108 M90 6 L110 20 L90 34"/></svg></div>`;
+        html = `${backdrop(prefix)}<div class="board"><p class="focus-phrase heading-big" style="font-size:64px">${escapeHtml(scene.heading)}</p><p class="body">${escapeHtml(scene.body)}</p><svg class="arrow" viewBox="0 0 120 40"><path d="M4 20 H108 M90 6 L110 20 L90 34"/></svg></div>`;
         break;
     }
     scenes.push(

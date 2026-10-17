@@ -132,3 +132,7 @@ inventing language or provider capabilities. Evidence and its strength: [m22-ped
 - **Boards.** Focus, contrast and next-step scenes are laid over the last place seen, blurred, under a frosted
   layer, so a video stays in one visual world. Accent colours move from orange to the purple/pink palette.
 - `TEMPLATE_VERSION` is 4, so every earlier video counts as outdated until it is re-rendered.
+- **Template 5 (fix).** Each scene is its own `<svg>` in one document, and `url(#id)` resolves to the first
+  element with that id. A place seen a second time pointed at the first scene's clip path, which was hidden by
+  then, so the sky and skyline disappeared from every later scene in that place. The composition now gives each
+  scene its own copy of the illustration ids (`scopeIds`). All lesson videos were re-rendered.
