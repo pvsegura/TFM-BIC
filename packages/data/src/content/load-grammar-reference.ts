@@ -5,7 +5,7 @@ import { grammarFileSchema } from "@tfm-bic/contracts";
 import type { ContentCatalog, GrammarTopic, GrammarTopicId, LanguageId } from "@tfm-bic/domain";
 
 import type { ContentIssue } from "./content-validation.error.js";
-import { describeSchemaIssue, readDirectory, readJson } from "./load-content-catalog.js";
+import { readDirectory, readParsedJson } from "./load-content-catalog.js";
 
 export type LoadGrammarResult =
   { ok: true; topics: GrammarTopic[] } | { ok: false; issues: ContentIssue[] };
@@ -32,16 +32,13 @@ export async function loadGrammarReference(
     for (const entry of (await readDirectory(dir)) ?? []) {
       if (!entry.isFile() || !entry.name.endsWith(".json")) continue;
       const location = `languages/${language.code}/grammar/${entry.name}`;
-      const raw = await readJson(path.join(dir, entry.name), location, issues);
-      if (raw === undefined) continue;
-      const parsed = grammarFileSchema.safeParse(raw);
-      if (!parsed.success) {
-        for (const issue of parsed.error.issues) {
-          issues.push({ location, message: describeSchemaIssue(issue) });
-        }
-        continue;
-      }
-      const file = parsed.data;
+      const file = await readParsedJson(
+        grammarFileSchema,
+        path.join(dir, entry.name),
+        location,
+        issues,
+      );
+      if (!file) continue;
       const problems: string[] = [];
       if (file.languageId !== language.code)
         problems.push(

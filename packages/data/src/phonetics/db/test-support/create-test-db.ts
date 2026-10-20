@@ -1,23 +1,10 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import type { SQL } from "drizzle-orm";
 
-import { PGlite } from "@electric-sql/pglite";
-import { sql, type SQL } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/pglite";
-import { migrate } from "drizzle-orm/pglite/migrator";
-
+import { createPgliteTestDb } from "../../../db/test-support/pglite-test-db.js";
 import type { IdentityDb } from "../../../identity/db/client.js";
 import * as identitySchema from "../../../identity/db/schema.js";
 import type { PhoneticsDb } from "../client.js";
 import * as phoneticsSchema from "../schema.js";
-
-const here = path.dirname(fileURLToPath(import.meta.url));
-const dataSrc = path.join(here, "..", "..", "..");
-const identityMigrationsFolder = path.join(dataSrc, "identity", "db", "migrations");
-const phoneticsMigrationsFolder = path.join(here, "..", "migrations");
-
-/** Must match `migrations.table` in drizzle.phonetics.config.ts. */
-const PHONETICS_MIGRATIONS_TABLE = "__drizzle_migrations_phonetics";
 
 export interface PhoneticsTestDbHandle {
   db: PhoneticsDb;
@@ -45,46 +32,18 @@ export interface PhoneticsTestDbHandle {
  * docs/adr/adr-005-database.md. Test-only.
  */
 export async function createPhoneticsTestDb(): Promise<PhoneticsTestDbHandle> {
-  const client = new PGlite();
-  const pgliteDb = drizzle(client, {
+  const base = await createPgliteTestDb({
+    contexts: ["phonetics"],
     schema: { ...identitySchema, ...phoneticsSchema },
+    truncate: ["user_phonetic_progress", "users"],
   });
-
-  await migrate(pgliteDb, { migrationsFolder: identityMigrationsFolder });
-  await migrate(pgliteDb, {
-    migrationsFolder: phoneticsMigrationsFolder,
-    migrationsTable: PHONETICS_MIGRATIONS_TABLE,
-  });
-
-  let seededUsers = 0;
 
   return {
-    // See identity/db/client.ts: PgliteDatabase matches NodePgDatabase at runtime; only
-    // driver-specific result types differ.
-    db: pgliteDb as unknown as PhoneticsDb,
-    identityDb: pgliteDb as unknown as IdentityDb,
-    seedUser: async (email) => {
-      seededUsers += 1;
-      const address = email ?? `student-${String(seededUsers)}@example.com`;
-      const [row] = await pgliteDb
-        .insert(identitySchema.users)
-        .values({
-          email: address,
-          normalizedEmail: address.toLowerCase(),
-          passwordHash: "test-only-not-a-real-hash",
-        })
-        .returning({ id: identitySchema.users.id });
-      if (!row) {
-        throw new Error("Seeding a test user returned no row.");
-      }
-      return row.id;
-    },
-    reset: async () => {
-      await pgliteDb.execute(
-        sql`TRUNCATE TABLE "user_phonetic_progress", "users" RESTART IDENTITY CASCADE;`,
-      );
-    },
-    rawExecute: (query: SQL) => pgliteDb.execute(query),
-    close: () => client.close(),
+    db: base.as<PhoneticsDb>(),
+    identityDb: base.as<IdentityDb>(),
+    seedUser: base.seedUser,
+    reset: base.reset,
+    rawExecute: base.rawExecute,
+    close: base.close,
   };
 }

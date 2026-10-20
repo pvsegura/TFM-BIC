@@ -1,19 +1,8 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import type { SQL } from "drizzle-orm";
 
-import { PGlite } from "@electric-sql/pglite";
-import { sql, type SQL } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/pglite";
-import { migrate } from "drizzle-orm/pglite/migrator";
-
+import { createPgliteTestDb } from "../../../db/test-support/pglite-test-db.js";
 import type { IdentityDb } from "../client.js";
 import * as schema from "../schema.js";
-
-const migrationsFolder = path.join(
-  path.dirname(fileURLToPath(import.meta.url)),
-  "..",
-  "migrations",
-);
 
 export interface TestDbHandle {
   db: IdentityDb;
@@ -36,24 +25,16 @@ export interface TestDbHandle {
  * the package's public index; test-only.
  */
 export async function createTestDb(): Promise<TestDbHandle> {
-  const client = new PGlite();
-  const pgliteDb = drizzle(client, { schema });
-  await migrate(pgliteDb, { migrationsFolder });
-
-  // `PgliteDatabase` implements the same query-builder surface as
-  // `NodePgDatabase` at runtime — only the driver-specific `QueryResultHKT`
-  // (e.g. `pg`'s row metadata) differs at the type level, which repository
-  // code never inspects. See db/client.ts for the full rationale.
-  const db = pgliteDb as unknown as IdentityDb;
+  const base = await createPgliteTestDb({
+    contexts: [],
+    schema,
+    truncate: ["users", "sessions", "email_verification_tokens", "password_reset_tokens"],
+  });
 
   return {
-    db,
-    reset: async () => {
-      await pgliteDb.execute(
-        sql`TRUNCATE TABLE "users", "sessions", "email_verification_tokens", "password_reset_tokens" RESTART IDENTITY CASCADE;`,
-      );
-    },
-    rawExecute: (query: SQL) => pgliteDb.execute(query),
-    close: () => client.close(),
+    db: base.as<IdentityDb>(),
+    reset: base.reset,
+    rawExecute: base.rawExecute,
+    close: base.close,
   };
 }

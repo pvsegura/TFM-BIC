@@ -1,11 +1,6 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import type { SQL } from "drizzle-orm";
 
-import { PGlite } from "@electric-sql/pglite";
-import { sql, type SQL } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/pglite";
-import { migrate } from "drizzle-orm/pglite/migrator";
-
+import { createPgliteTestDb } from "../../../db/test-support/pglite-test-db.js";
 import type { IdentityDb } from "../../../identity/db/client.js";
 import * as identitySchema from "../../../identity/db/schema.js";
 import type { LessonsDb } from "../../../lessons/db/client.js";
@@ -14,18 +9,6 @@ import type { ProfileDb } from "../../../profile/db/client.js";
 import * as profileSchema from "../../../profile/db/schema.js";
 import type { ExercisesDb } from "../client.js";
 import * as exercisesSchema from "../schema.js";
-
-const here = path.dirname(fileURLToPath(import.meta.url));
-const dataSrc = path.join(here, "..", "..", "..");
-const identityMigrationsFolder = path.join(dataSrc, "identity", "db", "migrations");
-const profileMigrationsFolder = path.join(dataSrc, "profile", "db", "migrations");
-const lessonsMigrationsFolder = path.join(dataSrc, "lessons", "db", "migrations");
-const exercisesMigrationsFolder = path.join(here, "..", "migrations");
-
-/** Must match `migrations.table` in each context's drizzle.*.config.ts. */
-const PROFILE_MIGRATIONS_TABLE = "__drizzle_migrations_profile";
-const LESSONS_MIGRATIONS_TABLE = "__drizzle_migrations_lessons";
-const EXERCISES_MIGRATIONS_TABLE = "__drizzle_migrations_exercises";
 
 export interface ExercisesTestDbHandle {
   db: ExercisesDb;
@@ -59,56 +42,20 @@ export interface ExercisesTestDbHandle {
  * docs/adr/adr-005-database.md. Test-only.
  */
 export async function createExercisesTestDb(): Promise<ExercisesTestDbHandle> {
-  const client = new PGlite();
-  const pgliteDb = drizzle(client, {
+  const base = await createPgliteTestDb({
+    contexts: ["profile", "lessons", "exercises"],
     schema: { ...identitySchema, ...profileSchema, ...lessonsSchema, ...exercisesSchema },
+    truncate: ["exercise_attempts", "lesson_progress", "student_profiles", "users"],
   });
-
-  await migrate(pgliteDb, { migrationsFolder: identityMigrationsFolder });
-  await migrate(pgliteDb, {
-    migrationsFolder: profileMigrationsFolder,
-    migrationsTable: PROFILE_MIGRATIONS_TABLE,
-  });
-  await migrate(pgliteDb, {
-    migrationsFolder: lessonsMigrationsFolder,
-    migrationsTable: LESSONS_MIGRATIONS_TABLE,
-  });
-  await migrate(pgliteDb, {
-    migrationsFolder: exercisesMigrationsFolder,
-    migrationsTable: EXERCISES_MIGRATIONS_TABLE,
-  });
-
-  let seededUsers = 0;
 
   return {
-    // See identity/db/client.ts: PgliteDatabase matches NodePgDatabase at
-    // runtime; only driver-specific result types differ.
-    db: pgliteDb as unknown as ExercisesDb,
-    identityDb: pgliteDb as unknown as IdentityDb,
-    profileDb: pgliteDb as unknown as ProfileDb,
-    lessonsDb: pgliteDb as unknown as LessonsDb,
-    seedUser: async (email) => {
-      seededUsers += 1;
-      const address = email ?? `student-${String(seededUsers)}@example.com`;
-      const [row] = await pgliteDb
-        .insert(identitySchema.users)
-        .values({
-          email: address,
-          normalizedEmail: address.toLowerCase(),
-          passwordHash: "test-only-not-a-real-hash",
-        })
-        .returning({ id: identitySchema.users.id });
-      if (!row) {
-        throw new Error("Seeding a test user returned no row.");
-      }
-      return row.id;
-    },
-    reset: async () => {
-      await pgliteDb.execute(
-        sql`TRUNCATE TABLE "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
-      );
-    },
-    rawExecute: (query: SQL) => pgliteDb.execute(query),
-    close: () => client.close(),
+    db: base.as<ExercisesDb>(),
+    identityDb: base.as<IdentityDb>(),
+    profileDb: base.as<ProfileDb>(),
+    lessonsDb: base.as<LessonsDb>(),
+    seedUser: base.seedUser,
+    reset: base.reset,
+    rawExecute: base.rawExecute,
+    close: base.close,
   };
 }

@@ -80,16 +80,47 @@ export async function readJson(
   }
 }
 
+/** The part of a file schema (contracts, Zod) the loaders use. */
+interface FileSchema<T> {
+  safeParse(
+    raw: unknown,
+  ): { success: true; data: T } | { success: false; error: { issues: readonly SchemaIssueLike[] } };
+}
+
+/** `readJson`, then the file's schema. Every schema issue is recorded; `undefined` then. */
+export async function readParsedJson<T>(
+  schema: FileSchema<T>,
+  absolute: string,
+  location: string,
+  issues: ContentIssue[],
+): Promise<T | undefined> {
+  const raw = await readJson(absolute, location, issues);
+  if (raw === undefined) {
+    return undefined;
+  }
+  const parsed = schema.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      issues.push({ location, message: describeSchemaIssue(issue) });
+    }
+    return undefined;
+  }
+  return parsed.data;
+}
+
+/** Where a file was found: its language folder, its level folder for level-scoped content, and
+ * its file name. */
 interface ExpectedLocation {
   languageId: string;
-  levelId: string;
+  levelId?: string;
   fileName: string;
 }
 
-/** A file must sit where it says it belongs: its folder names its language and
- * level, and its file name is its id. Records every mismatch; true when there is none. */
+/** A file must sit where it says it belongs: its folder names its language (and, for
+ * level-scoped content, its level), and its file name is its id. Records every mismatch; true
+ * when there is none. */
 function isWhereItSaysItIs(
-  file: { id: string; languageId: string; levelId: string },
+  file: { id: string; languageId: string; levelId?: string | undefined },
   expected: ExpectedLocation,
   location: string,
   issues: ContentIssue[],
@@ -102,10 +133,10 @@ function isWhereItSaysItIs(
     });
     consistent = false;
   }
-  if (file.levelId !== expected.levelId) {
+  if (expected.levelId !== undefined && file.levelId !== expected.levelId) {
     issues.push({
       location,
-      message: `levelId "${file.levelId}" does not match its folder "${expected.levelId}".`,
+      message: `levelId "${String(file.levelId)}" does not match its folder "${expected.levelId}".`,
     });
     consistent = false;
   }
@@ -116,27 +147,21 @@ function isWhereItSaysItIs(
   return consistent;
 }
 
+type FileLoader<T> = (
+  absolute: string,
+  location: string,
+  expected: ExpectedLocation,
+  issues: ContentIssue[],
+) => Promise<T | undefined>;
+
 async function loadContentFile(
   absolute: string,
   location: string,
   expected: ExpectedLocation,
   issues: ContentIssue[],
 ): Promise<ContentItem | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = contentFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
-    return undefined;
-  }
-
-  const file = parsed.data;
-  if (!isWhereItSaysItIs(file, expected, location, issues)) {
+  const file = await readParsedJson(contentFileSchema, absolute, location, issues);
+  if (!file || !isWhereItSaysItIs(file, expected, location, issues)) {
     return undefined;
   }
 
@@ -160,23 +185,15 @@ async function loadExerciseFile(
   expected: ExpectedLocation,
   issues: ContentIssue[],
 ): Promise<Exercise | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = exerciseFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
+  const file = await readParsedJson(exerciseFileSchema, absolute, location, issues);
+  if (!file) {
     return undefined;
   }
 
   // The format's own `schemaVersion` is not part of the exercise; everything else is, and the
   // assignment to `Exercise` is checked by the compiler, so the file format and the domain
   // model cannot drift apart unnoticed.
-  const { schemaVersion: _formatVersion, ...exercise } = parsed.data;
+  const { schemaVersion: _formatVersion, ...exercise } = file;
   return isWhereItSaysItIs(exercise, expected, location, issues) ? exercise : undefined;
 }
 
@@ -193,36 +210,11 @@ interface LoadedVocabulary {
 async function loadVocabularyFile(
   absolute: string,
   location: string,
-  expected: { languageId: string; fileName: string },
+  expected: ExpectedLocation,
   issues: ContentIssue[],
 ): Promise<LoadedVocabulary | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = vocabularyFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
-    return undefined;
-  }
-
-  const file = parsed.data;
-  let consistent = true;
-  if (file.languageId !== expected.languageId) {
-    issues.push({
-      location,
-      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
-    });
-    consistent = false;
-  }
-  if (expected.fileName !== `${file.id}.json`) {
-    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
-    consistent = false;
-  }
-  if (!consistent) {
+  const file = await readParsedJson(vocabularyFileSchema, absolute, location, issues);
+  if (!file || !isWhereItSaysItIs(file, expected, location, issues)) {
     return undefined;
   }
 
@@ -246,31 +238,6 @@ async function loadVocabularyFile(
   };
 }
 
-async function loadVocabulary(
-  languageDir: string,
-  languageId: string,
-  catalog: { vocabularyCategories: VocabularyCategory[]; vocabulary: VocabularyItem[] },
-  issues: ContentIssue[],
-): Promise<void> {
-  const location = `languages/${languageId}/vocabulary`;
-  const files = (await readDirectory(path.join(languageDir, "vocabulary"))) ?? [];
-  for (const file of files) {
-    if (!file.isFile() || !file.name.endsWith(".json")) {
-      continue;
-    }
-    const loaded = await loadVocabularyFile(
-      path.join(languageDir, "vocabulary", file.name),
-      `${location}/${file.name}`,
-      { languageId, fileName: file.name },
-      issues,
-    );
-    if (loaded) {
-      catalog.vocabularyCategories.push(loaded.category);
-      catalog.vocabulary.push(...loaded.items);
-    }
-  }
-}
-
 interface LoadedPhonetics {
   topic: PhoneticTopic;
   items: PhoneticRepresentation[];
@@ -285,36 +252,11 @@ interface LoadedPhonetics {
 async function loadPhoneticFile(
   absolute: string,
   location: string,
-  expected: { languageId: string; fileName: string },
+  expected: ExpectedLocation,
   issues: ContentIssue[],
 ): Promise<LoadedPhonetics | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = phoneticFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
-    return undefined;
-  }
-
-  const file = parsed.data;
-  let consistent = true;
-  if (file.languageId !== expected.languageId) {
-    issues.push({
-      location,
-      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
-    });
-    consistent = false;
-  }
-  if (expected.fileName !== `${file.id}.json`) {
-    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
-    consistent = false;
-  }
-  if (!consistent) {
+  const file = await readParsedJson(phoneticFileSchema, absolute, location, issues);
+  if (!file || !isWhereItSaysItIs(file, expected, location, issues)) {
     return undefined;
   }
 
@@ -338,31 +280,6 @@ async function loadPhoneticFile(
   };
 }
 
-async function loadPhonetics(
-  languageDir: string,
-  languageId: string,
-  catalog: { phoneticTopics: PhoneticTopic[]; phonetics: PhoneticRepresentation[] },
-  issues: ContentIssue[],
-): Promise<void> {
-  const location = `languages/${languageId}/phonetics`;
-  const files = (await readDirectory(path.join(languageDir, "phonetics"))) ?? [];
-  for (const file of files) {
-    if (!file.isFile() || !file.name.endsWith(".json")) {
-      continue;
-    }
-    const loaded = await loadPhoneticFile(
-      path.join(languageDir, "phonetics", file.name),
-      `${location}/${file.name}`,
-      { languageId, fileName: file.name },
-      issues,
-    );
-    if (loaded) {
-      catalog.phoneticTopics.push(loaded.topic);
-      catalog.phonetics.push(...loaded.items);
-    }
-  }
-}
-
 /**
  * One video definition file: `content/languages/<languageId>/videos/<videoId>.json` — a single
  * item per file, like a lesson content item, not a topic-with-items file like phonetics or
@@ -373,36 +290,11 @@ async function loadPhonetics(
 async function loadVideoFile(
   absolute: string,
   location: string,
-  expected: { languageId: string; fileName: string },
+  expected: ExpectedLocation,
   issues: ContentIssue[],
 ): Promise<VideoDefinition | undefined> {
-  const raw = await readJson(absolute, location, issues);
-  if (raw === undefined) {
-    return undefined;
-  }
-
-  const parsed = videoFileSchema.safeParse(raw);
-  if (!parsed.success) {
-    for (const issue of parsed.error.issues) {
-      issues.push({ location, message: describeSchemaIssue(issue) });
-    }
-    return undefined;
-  }
-
-  const file = parsed.data;
-  let consistent = true;
-  if (file.languageId !== expected.languageId) {
-    issues.push({
-      location,
-      message: `languageId "${file.languageId}" does not match its folder "${expected.languageId}".`,
-    });
-    consistent = false;
-  }
-  if (expected.fileName !== `${file.id}.json`) {
-    issues.push({ location, message: `File must be named "${file.id}.json" (its id).` });
-    consistent = false;
-  }
-  if (!consistent) {
+  const file = await readParsedJson(videoFileSchema, absolute, location, issues);
+  if (!file || !isWhereItSaysItIs(file, expected, location, issues)) {
     return undefined;
   }
 
@@ -420,42 +312,13 @@ async function loadVideoFile(
   };
 }
 
-async function loadVideos(
-  languageDir: string,
-  languageId: string,
-  catalog: { videoDefinitions: VideoDefinition[] },
-  issues: ContentIssue[],
-): Promise<void> {
-  const location = `languages/${languageId}/videos`;
-  const files = (await readDirectory(path.join(languageDir, "videos"))) ?? [];
-  for (const file of files) {
-    if (!file.isFile() || !file.name.endsWith(".json")) {
-      continue;
-    }
-    const loaded = await loadVideoFile(
-      path.join(languageDir, "videos", file.name),
-      `${location}/${file.name}`,
-      { languageId, fileName: file.name },
-      issues,
-    );
-    if (loaded) {
-      catalog.videoDefinitions.push(loaded);
-    }
-  }
-}
-
-/** Reads every `.json` file in one folder with `load`, in name order, keeping what is valid. */
+/** Reads every `.json` file in one folder with `load`, in name order, handing on what is valid. */
 async function loadFolder<T>(
   directory: string,
   location: string,
-  scope: { languageId: string; levelId: string },
-  load: (
-    absolute: string,
-    location: string,
-    expected: ExpectedLocation,
-    issues: ContentIssue[],
-  ) => Promise<T | undefined>,
-  into: T[],
+  scope: { languageId: string; levelId?: string },
+  load: FileLoader<T>,
+  onLoaded: (loaded: T) => void,
   issues: ContentIssue[],
 ): Promise<void> {
   const files = (await readDirectory(directory)) ?? [];
@@ -470,7 +333,7 @@ async function loadFolder<T>(
       issues,
     );
     if (loaded) {
-      into.push(loaded);
+      onLoaded(loaded);
     }
   }
 }
@@ -498,7 +361,7 @@ async function loadLevel(
     `${levelLocation}/content`,
     scope,
     loadContentFile,
-    catalog.content,
+    (item) => catalog.content.push(item),
     issues,
   );
   await loadFolder(
@@ -506,7 +369,7 @@ async function loadLevel(
     `${levelLocation}/exercises`,
     scope,
     loadExerciseFile,
-    catalog.exercises,
+    (exercise) => catalog.exercises.push(exercise),
     issues,
   );
 }
@@ -540,35 +403,32 @@ async function loadLanguage(
   const fileLocation = `${languageLocation}/language.json`;
   const siblings = (await readDirectory(languageDir)) ?? [];
   if (siblings.some((entry) => entry.isFile() && entry.name === "language.json")) {
-    const raw = await readJson(path.join(languageDir, "language.json"), fileLocation, issues);
-    const parsed = raw === undefined ? undefined : languageFileSchema.safeParse(raw);
-    if (parsed && !parsed.success) {
-      for (const issue of parsed.error.issues) {
-        issues.push({ location: fileLocation, message: describeSchemaIssue(issue) });
-      }
-    } else if (parsed?.success) {
-      const file = parsed.data;
-      if (file.code !== languageId) {
-        issues.push({
-          location: fileLocation,
-          message: `code "${file.code}" does not match its folder "${languageId}".`,
+    const file = await readParsedJson(
+      languageFileSchema,
+      path.join(languageDir, "language.json"),
+      fileLocation,
+      issues,
+    );
+    if (file && file.code !== languageId) {
+      issues.push({
+        location: fileLocation,
+        message: `code "${file.code}" does not match its folder "${languageId}".`,
+      });
+    } else if (file) {
+      catalog.languages.push({
+        code: file.code,
+        name: file.name,
+        nativeName: file.nativeName,
+        locale: file.locale,
+        direction: file.direction,
+        isActive: file.isActive,
+      });
+      for (const level of file.levels) {
+        catalog.languageLevels.push({
+          languageId: file.code,
+          levelId: level.id,
+          status: level.status,
         });
-      } else {
-        catalog.languages.push({
-          code: file.code,
-          name: file.name,
-          nativeName: file.nativeName,
-          locale: file.locale,
-          direction: file.direction,
-          isActive: file.isActive,
-        });
-        for (const level of file.levels) {
-          catalog.languageLevels.push({
-            languageId: file.code,
-            levelId: level.id,
-            status: level.status,
-          });
-        }
       }
     }
   } else {
@@ -582,9 +442,38 @@ async function loadLanguage(
     }
   }
 
-  await loadVocabulary(languageDir, languageId, catalog, issues);
-  await loadPhonetics(languageDir, languageId, catalog, issues);
-  await loadVideos(languageDir, languageId, catalog, issues);
+  // Language-scoped content: one folder per kind, directly under the language.
+  const scope = { languageId };
+  await loadFolder(
+    path.join(languageDir, "vocabulary"),
+    `${languageLocation}/vocabulary`,
+    scope,
+    loadVocabularyFile,
+    ({ category, items }) => {
+      catalog.vocabularyCategories.push(category);
+      catalog.vocabulary.push(...items);
+    },
+    issues,
+  );
+  await loadFolder(
+    path.join(languageDir, "phonetics"),
+    `${languageLocation}/phonetics`,
+    scope,
+    loadPhoneticFile,
+    ({ topic, items }) => {
+      catalog.phoneticTopics.push(topic);
+      catalog.phonetics.push(...items);
+    },
+    issues,
+  );
+  await loadFolder(
+    path.join(languageDir, "videos"),
+    `${languageLocation}/videos`,
+    scope,
+    loadVideoFile,
+    (definition) => catalog.videoDefinitions.push(definition),
+    issues,
+  );
 }
 
 /**

@@ -1,11 +1,6 @@
-import path from "node:path";
-import { fileURLToPath } from "node:url";
+import type { SQL } from "drizzle-orm";
 
-import { PGlite } from "@electric-sql/pglite";
-import { sql, type SQL } from "drizzle-orm";
-import { drizzle } from "drizzle-orm/pglite";
-import { migrate } from "drizzle-orm/pglite/migrator";
-
+import { createPgliteTestDb } from "../../../db/test-support/pglite-test-db.js";
 import * as exercisesSchema from "../../../exercises/db/schema.js";
 import type { ExercisesDb } from "../../../exercises/db/client.js";
 import * as identitySchema from "../../../identity/db/schema.js";
@@ -26,23 +21,6 @@ import type { VideoDb } from "../../../video/db/client.js";
 import * as videoSchema from "../../../video/db/schema.js";
 import type { VocabularyDb } from "../../../vocabulary/db/client.js";
 import * as vocabularySchema from "../../../vocabulary/db/schema.js";
-
-const here = path.dirname(fileURLToPath(import.meta.url));
-const dataSrc = path.join(here, "..", "..", "..");
-const migrationsOf = (context: string) => path.join(dataSrc, context, "db", "migrations");
-
-/** Must match `migrations.table` in each context's drizzle.*.config.ts. */
-const CONTEXTS = [
-  { folder: migrationsOf("profile"), table: "__drizzle_migrations_profile" },
-  { folder: migrationsOf("lessons"), table: "__drizzle_migrations_lessons" },
-  { folder: migrationsOf("exercises"), table: "__drizzle_migrations_exercises" },
-  { folder: migrationsOf("gamification"), table: "__drizzle_migrations_gamification" },
-  { folder: migrationsOf("vocabulary"), table: "__drizzle_migrations_vocabulary" },
-  { folder: migrationsOf("phonetics"), table: "__drizzle_migrations_phonetics" },
-  { folder: migrationsOf("video"), table: "__drizzle_migrations_video" },
-  { folder: migrationsOf("teaching"), table: "__drizzle_migrations_teaching" },
-  { folder: migrationsOf("newsletter"), table: "__drizzle_migrations_newsletter" },
-] as const;
 
 export interface GamificationTestDbHandle {
   db: GamificationDb;
@@ -80,8 +58,18 @@ export interface GamificationTestDbHandle {
  * see docs/adr/adr-005-database.md. Test-only.
  */
 export async function createGamificationTestDb(): Promise<GamificationTestDbHandle> {
-  const client = new PGlite();
-  const pgliteDb = drizzle(client, {
+  const base = await createPgliteTestDb({
+    contexts: [
+      "profile",
+      "lessons",
+      "exercises",
+      "gamification",
+      "vocabulary",
+      "phonetics",
+      "video",
+      "teaching",
+      "newsletter",
+    ],
     schema: {
       ...identitySchema,
       ...profileSchema,
@@ -94,51 +82,35 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...teachingSchema,
       ...newsletterSchema,
     },
+    truncate: [
+      "newsletter_subscriptions",
+      "teacher_students",
+      "point_transactions",
+      "user_achievements",
+      "user_vocabulary",
+      "user_phonetic_progress",
+      "video_generation_jobs",
+      "exercise_attempts",
+      "lesson_progress",
+      "student_profiles",
+      "users",
+    ],
   });
 
-  await migrate(pgliteDb, { migrationsFolder: migrationsOf("identity") });
-  for (const { folder, table } of CONTEXTS) {
-    await migrate(pgliteDb, { migrationsFolder: folder, migrationsTable: table });
-  }
-
-  let seededUsers = 0;
-
   return {
-    // See identity/db/client.ts: PgliteDatabase matches NodePgDatabase at runtime; only
-    // driver-specific result types differ.
-    db: pgliteDb as unknown as GamificationDb,
-    identityDb: pgliteDb as unknown as IdentityDb,
-    profileDb: pgliteDb as unknown as ProfileDb,
-    lessonsDb: pgliteDb as unknown as LessonsDb,
-    exercisesDb: pgliteDb as unknown as ExercisesDb,
-    vocabularyDb: pgliteDb as unknown as VocabularyDb,
-    phoneticsDb: pgliteDb as unknown as PhoneticsDb,
-    videoDb: pgliteDb as unknown as VideoDb,
-    teachingDb: pgliteDb as unknown as TeachingDb,
-    newsletterDb: pgliteDb as unknown as NewsletterDb,
-    seedUser: async (email, role = "STUDENT") => {
-      seededUsers += 1;
-      const address = email ?? `student-${String(seededUsers)}@example.com`;
-      const [row] = await pgliteDb
-        .insert(identitySchema.users)
-        .values({
-          email: address,
-          normalizedEmail: address.toLowerCase(),
-          passwordHash: "test-only-not-a-real-hash",
-          role,
-        })
-        .returning({ id: identitySchema.users.id });
-      if (!row) {
-        throw new Error("Seeding a test user returned no row.");
-      }
-      return row.id;
-    },
-    reset: async () => {
-      await pgliteDb.execute(
-        sql`TRUNCATE TABLE "newsletter_subscriptions", "teacher_students", "point_transactions", "user_achievements", "user_vocabulary", "user_phonetic_progress", "video_generation_jobs", "exercise_attempts", "lesson_progress", "student_profiles", "users" RESTART IDENTITY CASCADE;`,
-      );
-    },
-    rawExecute: (query: SQL) => pgliteDb.execute(query),
-    close: () => client.close(),
+    db: base.as<GamificationDb>(),
+    identityDb: base.as<IdentityDb>(),
+    profileDb: base.as<ProfileDb>(),
+    lessonsDb: base.as<LessonsDb>(),
+    exercisesDb: base.as<ExercisesDb>(),
+    vocabularyDb: base.as<VocabularyDb>(),
+    phoneticsDb: base.as<PhoneticsDb>(),
+    videoDb: base.as<VideoDb>(),
+    teachingDb: base.as<TeachingDb>(),
+    newsletterDb: base.as<NewsletterDb>(),
+    seedUser: base.seedUser,
+    reset: base.reset,
+    rawExecute: base.rawExecute,
+    close: base.close,
   };
 }
