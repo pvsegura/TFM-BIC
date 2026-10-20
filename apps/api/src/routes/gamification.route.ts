@@ -14,30 +14,13 @@ import {
   pointHistoryQuerySchema,
   pointHistoryResponseSchema,
 } from "@tfm-bic/contracts";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { GamificationUseCases } from "../composition/gamification-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { gamificationReadRateLimit } from "./gamification-rate-limit.js";
 import { requestLocale } from "./interface-locale.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
-
-/** Points and achievements are per student, so no shared cache (browser, proxy or CDN) may keep any of it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
-
-/** The student the request is for — always the session's, set by `authenticate`. */
-function sessionUserId(request: FastifyRequest): string {
-  const user = request.currentUser;
-  if (!user) {
-    // Unreachable: `authenticate` replies 401 before any handler runs. Failing loudly beats
-    // carrying on with no identity.
-    throw new Error("A gamification handler ran without an authenticated user.");
-  }
-  return user.id;
-}
+import { INVALID_REQUEST, noStore, sessionUserId } from "./route-helpers.js";
 
 function toTransactionResponse(transaction: PointTransactionView) {
   return {

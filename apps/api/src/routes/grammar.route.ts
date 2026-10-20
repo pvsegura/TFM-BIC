@@ -1,8 +1,3 @@
-import {
-  GetGrammarTopicUseCase,
-  ListGrammarTopicsUseCase,
-  type GrammarReferenceRepository,
-} from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import {
   grammarListQuerySchema,
@@ -13,16 +8,11 @@ import {
 import { GrammarTopicNotFoundError, type GrammarTopic } from "@tfm-bic/domain";
 import type { FastifyInstance } from "fastify";
 
+import type { ContentUseCases } from "../composition/content-use-cases.js";
 import { publicRateLimit } from "./public-rate-limit.js";
+import { INVALID_REQUEST } from "./route-helpers.js";
 
-const INVALID_REQUEST = { error: "Invalid request." } as const;
 const NOT_FOUND = { error: "Grammar topic not found." } as const;
-
-/** An empty reference: what a server built without grammar content (a test fixture) serves. */
-const NO_GRAMMAR: GrammarReferenceRepository = {
-  listTopics: () => Promise.resolve([]),
-  findTopic: () => Promise.resolve(null),
-};
 
 function summary(topic: GrammarTopic) {
   return {
@@ -42,11 +32,9 @@ function summary(topic: GrammarTopic) {
  */
 export function registerGrammarRoutes(
   app: FastifyInstance,
-  deps: { repository?: GrammarReferenceRepository | undefined; env: AppEnv },
+  deps: { useCases: ContentUseCases; env: AppEnv },
 ): void {
-  const repository = deps.repository ?? NO_GRAMMAR;
-  const list = new ListGrammarTopicsUseCase(repository);
-  const get = new GetGrammarTopicUseCase(repository);
+  const { listGrammarTopics: list, getGrammarTopic: get } = deps.useCases;
   const config = { rateLimit: publicRateLimit(deps.env) };
 
   app.get("/grammar", { config }, async (request, reply) => {

@@ -15,22 +15,17 @@ import {
   teacherStudentsResponseSchema,
 } from "@tfm-bic/contracts";
 import { TeachingStudentNotFoundError } from "@tfm-bic/domain";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { TeachingUseCases } from "../composition/teaching-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createRequireRoleHook } from "../hooks/require-role.js";
 import { requestLocale } from "./interface-locale.js";
 import { teacherDashboardRateLimit } from "./teacher-dashboard-rate-limit.js";
+import { INVALID_REQUEST, noStore } from "./route-helpers.js";
 
-const INVALID_REQUEST = { error: "Invalid request." } as const;
 /** One body for "does not exist", "not a student", "not yours" and "malformed id" alike. */
 const STUDENT_NOT_FOUND = { error: "Student not found." } as const;
-
-/** Student data is per teacher, so no shared cache (browser, proxy or CDN) may keep any of it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
 
 /** The viewer is always the session's user, set by `authenticate` — never the request. */
 function sessionViewer(request: FastifyRequest): TeachingViewer {

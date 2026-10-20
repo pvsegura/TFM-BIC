@@ -1,6 +1,6 @@
 import { createReadStream } from "node:fs";
 
-import type { ContentMediaCatalog, GetContentMediaUseCase } from "@tfm-bic/application";
+import type { ContentMediaCatalog } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import {
   contentMediaResponseSchema,
@@ -19,10 +19,11 @@ import {
 import type { FastifyInstance, FastifyReply } from "fastify";
 
 import type { ContentDependencies } from "../composition/content-dependencies.js";
+import type { ContentUseCases } from "../composition/content-use-cases.js";
 import { publicRateLimit } from "./public-rate-limit.js";
 import { routeRateLimit } from "../security/rate-limits.js";
+import { INVALID_REQUEST } from "./route-helpers.js";
 
-const INVALID_REQUEST = { error: "Invalid request." } as const;
 const NOT_FOUND = { error: "Not found." } as const;
 /** Seeking a video issues many small range requests; generous, but still bounded per client. */
 const MEDIA_FILE_REQUESTS_PER_MINUTE = 600;
@@ -109,7 +110,7 @@ function sendFile(reply: FastifyReply, file: ServableMediaFile, rangeHeader: str
  */
 export function registerMediaRoutes(
   app: FastifyInstance,
-  deps: { content: ContentDependencies; getContentMedia: GetContentMediaUseCase; env: AppEnv },
+  deps: { content: ContentDependencies; useCases: ContentUseCases; env: AppEnv },
 ): void {
   const catalog: MediaCatalog = deps.content.mediaCatalog ?? EMPTY_CATALOG;
   const config = { rateLimit: publicRateLimit(deps.env) };
@@ -140,7 +141,7 @@ export function registerMediaRoutes(
     id: string,
   ): Promise<ContentMediaResponse | FastifyReply> {
     try {
-      const media = await deps.getContentMedia.execute({ type, id });
+      const media = await deps.useCases.getContentMedia.execute({ type, id });
       cacheShort(reply);
       return toResponse(type, id, media);
     } catch (error) {

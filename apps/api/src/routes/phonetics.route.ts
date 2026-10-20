@@ -20,35 +20,18 @@ import {
   type PhoneticRepresentationResponse,
   type PhoneticUserProgressResponse,
 } from "@tfm-bic/contracts";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { PhoneticsUseCases } from "../composition/phonetics-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import { mapPhoneticsError } from "./phonetics-error.mapper.js";
 import { phoneticsReadRateLimit, phoneticsWriteRateLimit } from "./phonetics-rate-limit.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST, privateResponse, sessionUserId } from "./route-helpers.js";
 
 /** `view`, `practice` and `complete` take no body at all; anything bigger than a handful of bytes
  * is rejected (413) before it is parsed. */
 const ACTION_BODY_LIMIT_BYTES = 1024;
-
-/** Phonetics progress is per student, so no shared cache (browser, proxy or CDN) may keep any of it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
-
-/** The student the request is for — always the session's, set by `authenticate`. */
-function sessionUserId(request: FastifyRequest): string {
-  const user = request.currentUser;
-  if (!user) {
-    // Unreachable: `authenticate` replies 401 before any handler runs. Failing loudly beats
-    // carrying on with no identity.
-    throw new Error("A phonetics handler ran without an authenticated user.");
-  }
-  return user.id;
-}
 
 function toProgressResponse(progress: PhoneticUserProgressView): PhoneticUserProgressResponse {
   return phoneticUserProgressResponseSchema.parse({
@@ -141,7 +124,7 @@ export function registerPhoneticsRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapPhoneticsError, async () => {
       const result = await useCases.listPhonetics.execute({
         userId: sessionUserId(request),
         languageId: query.data.language,
@@ -151,12 +134,8 @@ export function registerPhoneticsRoutes(
         limit: query.data.limit,
         after: query.data.after,
       });
-      noStore(reply);
       return toListResponse(result);
-    } catch (error) {
-      const mapped = mapPhoneticsError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   app.get(
@@ -168,17 +147,13 @@ export function registerPhoneticsRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      try {
+      return privateResponse(reply, mapPhoneticsError, async () => {
         const result = await useCases.listPhoneticTopics.execute({
           userId: sessionUserId(request),
           languageId: query.data.language,
         });
-        noStore(reply);
         return toTopicsResponse(result);
-      } catch (error) {
-        const mapped = mapPhoneticsError(error);
-        return reply.code(mapped.statusCode).send(mapped.body);
-      }
+      });
     },
   );
 
@@ -191,17 +166,13 @@ export function registerPhoneticsRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      try {
+      return privateResponse(reply, mapPhoneticsError, async () => {
         const detail = await useCases.getPhoneticRepresentation.execute({
           userId: sessionUserId(request),
           phoneticRepresentationId: params.data.phoneticId,
         });
-        noStore(reply);
         return toDetailResponse(detail);
-      } catch (error) {
-        const mapped = mapPhoneticsError(error);
-        return reply.code(mapped.statusCode).send(mapped.body);
-      }
+      });
     },
   );
 
@@ -221,17 +192,13 @@ export function registerPhoneticsRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapPhoneticsError, async () => {
       const progress = await useCases.recordPhoneticView.execute({
         userId: sessionUserId(request),
         phoneticRepresentationId,
       });
-      noStore(reply);
       return toProgressResponse(progress);
-    } catch (error) {
-      const mapped = mapPhoneticsError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   app.post("/phonetics/:phoneticId/practice", actionRoute, async (request, reply) => {
@@ -240,17 +207,13 @@ export function registerPhoneticsRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapPhoneticsError, async () => {
       const progress = await useCases.recordPhoneticPractice.execute({
         userId: sessionUserId(request),
         phoneticRepresentationId,
       });
-      noStore(reply);
       return toProgressResponse(progress);
-    } catch (error) {
-      const mapped = mapPhoneticsError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   app.post("/phonetics/:phoneticId/complete", actionRoute, async (request, reply) => {
@@ -259,16 +222,12 @@ export function registerPhoneticsRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapPhoneticsError, async () => {
       const progress = await useCases.completePhonetic.execute({
         userId: sessionUserId(request),
         phoneticRepresentationId,
       });
-      noStore(reply);
       return toProgressResponse(progress);
-    } catch (error) {
-      const mapped = mapPhoneticsError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 }

@@ -17,7 +17,7 @@ import {
   lessonResponseSchema,
   type LessonProgressResponse,
 } from "@tfm-bic/contracts";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { LessonUseCases } from "../composition/lesson-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
@@ -25,28 +25,11 @@ import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import { requestLocale } from "./interface-locale.js";
 import { mapLessonError } from "./lesson-error.mapper.js";
 import { lessonRateLimit } from "./lesson-rate-limit.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST, privateResponse, sessionUserId } from "./route-helpers.js";
 
 /** `start` and `complete` take no input, so nothing legitimate needs more than a
  * few bytes; anything bigger is rejected (413) before it is parsed. */
 const ACTION_BODY_LIMIT_BYTES = 1024;
-
-/** Progress is per student, so no shared cache (browser, proxy or CDN) may keep it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
-
-/** The student the request is for — always the session's, set by `authenticate`. */
-function sessionUserId(request: FastifyRequest): string {
-  const user = request.currentUser;
-  if (!user) {
-    // Unreachable: `authenticate` replies 401 before any handler runs. Failing
-    // loudly beats carrying on with no identity.
-    throw new Error("A lesson handler ran without an authenticated user.");
-  }
-  return user.id;
-}
 
 function toProgressResponse(progress: LessonProgressView): LessonProgressResponse {
   return lessonProgressResponseSchema.parse({
@@ -124,18 +107,14 @@ export function registerLessonRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapLessonError, async () => {
       const lessons = await useCases.listLessons.execute({
         userId: sessionUserId(request),
         languageId: query.data.language,
         levelId: query.data.level,
       });
-      noStore(reply);
       return lessonListResponseSchema.parse({ lessons: lessons.map(toSummaryResponse) });
-    } catch (error) {
-      const mapped = mapLessonError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   app.get("/lessons/:lessonId", { config, preHandler: [authenticate] }, async (request, reply) => {
@@ -144,17 +123,13 @@ export function registerLessonRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapLessonError, async () => {
       const detail = await useCases.getLesson.execute({
         userId: sessionUserId(request),
         lessonId: params.data.lessonId,
       });
-      noStore(reply);
       return toLessonResponse(detail);
-    } catch (error) {
-      const mapped = mapLessonError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   const actionRoute = {
@@ -177,18 +152,14 @@ export function registerLessonRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapLessonError, async () => {
       const progress = await useCases.startLesson.execute({
         userId: sessionUserId(request),
         lessonId,
       });
       request.log.info({ lessonId, status: progress.status }, "Lesson start");
-      noStore(reply);
       return toProgressResponse(progress);
-    } catch (error) {
-      const mapped = mapLessonError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 
   app.post("/lessons/:lessonId/complete", actionRoute, async (request, reply) => {
@@ -197,7 +168,7 @@ export function registerLessonRoutes(
       return reply.code(400).send(INVALID_REQUEST);
     }
 
-    try {
+    return privateResponse(reply, mapLessonError, async () => {
       const outcome = await useCases.completeLesson.execute({
         userId: sessionUserId(request),
         lessonId,
@@ -213,11 +184,7 @@ export function registerLessonRoutes(
         },
         "Lesson complete",
       );
-      noStore(reply);
       return toCompletionResponse(outcome);
-    } catch (error) {
-      const mapped = mapLessonError(error);
-      return reply.code(mapped.statusCode).send(mapped.body);
-    }
+    });
   });
 }

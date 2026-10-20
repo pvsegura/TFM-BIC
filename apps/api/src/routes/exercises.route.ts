@@ -18,7 +18,7 @@ import {
   lessonIdParamSchema,
   type ExerciseResultResponse,
 } from "@tfm-bic/contracts";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance } from "fastify";
 
 import type { ExerciseUseCases } from "../composition/exercise-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
@@ -26,28 +26,11 @@ import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import { mapExerciseError } from "./exercise-error.mapper.js";
 import { exerciseAnswerRateLimit, exerciseReadRateLimit } from "./exercise-rate-limit.js";
 import { requestLocale } from "./interface-locale.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST, privateResponse, sessionUserId } from "./route-helpers.js";
 
 /** An answer is at most a few hundred characters of text; anything bigger is rejected (413)
  * before it is parsed. */
 const ANSWER_BODY_LIMIT_BYTES = 2048;
-
-/** Results are per student, so no shared cache (browser, proxy or CDN) may keep any of it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
-
-/** The student the request is for — always the session's, set by `authenticate`. */
-function sessionUserId(request: FastifyRequest): string {
-  const user = request.currentUser;
-  if (!user) {
-    // Unreachable: `authenticate` replies 401 before any handler runs. Failing loudly beats
-    // carrying on with no identity.
-    throw new Error("An exercise handler ran without an authenticated user.");
-  }
-  return user.id;
-}
 
 function toResultResponse(result: ExerciseResultView): ExerciseResultResponse {
   return exerciseResultResponseSchema.parse({
@@ -136,17 +119,13 @@ export function registerExerciseRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      try {
+      return privateResponse(reply, mapExerciseError, async () => {
         const listed = await useCases.listLessonExercises.execute({
           userId: sessionUserId(request),
           lessonId: params.data.lessonId,
         });
-        noStore(reply);
         return toListResponse(listed);
-      } catch (error) {
-        const mapped = mapExerciseError(error);
-        return reply.code(mapped.statusCode).send(mapped.body);
-      }
+      });
     },
   );
 
@@ -159,17 +138,13 @@ export function registerExerciseRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      try {
+      return privateResponse(reply, mapExerciseError, async () => {
         const detail = await useCases.getExercise.execute({
           userId: sessionUserId(request),
           exerciseId: params.data.exerciseId,
         });
-        noStore(reply);
         return toExerciseResponse(detail);
-      } catch (error) {
-        const mapped = mapExerciseError(error);
-        return reply.code(mapped.statusCode).send(mapped.body);
-      }
+      });
     },
   );
 
@@ -189,7 +164,7 @@ export function registerExerciseRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      try {
+      return privateResponse(reply, mapExerciseError, async () => {
         const outcome = await useCases.submitAnswer.execute({
           userId: sessionUserId(request),
           exerciseId: params.data.exerciseId,
@@ -206,12 +181,8 @@ export function registerExerciseRoutes(
           },
           "Exercise answered",
         );
-        noStore(reply);
         return toAnswerResponse(outcome);
-      } catch (error) {
-        const mapped = mapExerciseError(error);
-        return reply.code(mapped.statusCode).send(mapped.body);
-      }
+      });
     },
   );
 }

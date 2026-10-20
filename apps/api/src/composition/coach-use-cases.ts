@@ -2,8 +2,12 @@ import {
   AskCoachUseCase,
   createCoachToolRegistry,
   createPracticeCollector,
+  GetCoachLearnerUseCase,
+  resolveCoachContext,
+  type CoachContextInput,
+  type ResolvedCoachContext,
 } from "@tfm-bic/application";
-import { createDefaultExerciseTypeRegistry } from "@tfm-bic/domain";
+import { createDefaultExerciseTypeRegistry, type LanguageId } from "@tfm-bic/domain";
 
 import type { CoachDependencies } from "./coach-dependencies.js";
 import type { ContentDependencies } from "./content-dependencies.js";
@@ -14,6 +18,16 @@ import type { VocabularyUseCases } from "./vocabulary-use-cases.js";
 
 export interface CoachUseCases {
   askCoach: AskCoachUseCase;
+  /** What the page shows before the first question: the course context the coach will get. */
+  getLearner: GetCoachLearnerUseCase;
+  /** The authorised context block of one turn: derived level plus the page the learner is on. */
+  resolveContext: (input: {
+    userId: string;
+    languageId: LanguageId;
+    context: CoachContextInput | undefined;
+  }) => Promise<ResolvedCoachContext>;
+  /** `false` when the deployment switched the coach off. */
+  enabled: boolean;
 }
 
 /** Coaching turns this process runs at once. Each holds a provider request open for seconds —
@@ -61,7 +75,18 @@ export function createCoachUseCases(
     registry: exerciseRegistry,
   };
 
+  // A context id is re-authorised through the same use cases the lesson and vocabulary pages use.
+  const contextDeps = {
+    contentRepository: wiring.content.contentRepository,
+    insights: deps.insights,
+    getLesson: wiring.lessonUseCases.getLesson,
+    getVocabularyItem: wiring.vocabularyUseCases.getVocabularyItem,
+  };
+
   return {
+    getLearner: new GetCoachLearnerUseCase(contextDeps),
+    resolveContext: (input) => resolveCoachContext(contextDeps, input),
+    enabled: deps.enabled,
     askCoach: new AskCoachUseCase({
       agent: deps.agent,
       enabled: deps.enabled,

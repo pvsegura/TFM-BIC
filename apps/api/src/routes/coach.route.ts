@@ -1,8 +1,4 @@
-import {
-  resolveCoachContext,
-  type CoachContextInput,
-  type ResolveSessionUseCase,
-} from "@tfm-bic/application";
+import type { CoachContextInput, ResolveSessionUseCase } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import {
   coachMessageRequestSchema,
@@ -12,13 +8,9 @@ import {
   type CoachContextRef,
 } from "@tfm-bic/contracts";
 import { COACH_MESSAGE_MAX_LENGTH, COACH_MODES, createLanguageId } from "@tfm-bic/domain";
-import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
+import type { FastifyInstance } from "fastify";
 
-import type { CoachDependencies } from "../composition/coach-dependencies.js";
 import type { CoachUseCases } from "../composition/coach-use-cases.js";
-import type { ContentDependencies } from "../composition/content-dependencies.js";
-import type { LessonUseCases } from "../composition/lesson-use-cases.js";
-import type { VocabularyUseCases } from "../composition/vocabulary-use-cases.js";
 import { createAuthenticateHook } from "../hooks/authenticate.js";
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";
 import { mapCoachError } from "./coach-error.mapper.js";
@@ -27,8 +19,7 @@ import {
   coachMessageUserRateLimit,
   coachStatusRateLimit,
 } from "./coach-rate-limit.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST, noStore, sessionUserId } from "./route-helpers.js";
 
 /**
  * A coaching turn carries a message and a replayed transcript, so it needs more than an action
@@ -37,22 +28,6 @@ const INVALID_REQUEST = { error: "Invalid request." } as const;
  * refusing anything larger before it is parsed.
  */
 const MESSAGE_BODY_LIMIT_BYTES = 64 * 1024;
-
-/** A conversation is per learner, so no shared cache (browser, proxy or CDN) may keep any of it. */
-function noStore(reply: FastifyReply): void {
-  void reply.header("Cache-Control", "private, no-store");
-}
-
-/** The learner the request is for — always the session's, set by `authenticate`. */
-function sessionUserId(request: FastifyRequest): string {
-  const user = request.currentUser;
-  if (!user) {
-    // Unreachable: `authenticate` replies 401 before any handler runs. Failing loudly beats
-    // carrying on with no identity — which, here, would mean asking an AI about nobody.
-    throw new Error("An AI Coach handler ran without an authenticated user.");
-  }
-  return user.id;
-}
 
 /** The contract's discriminated union, as the application's own input type. */
 function toContextInput(context: CoachContextRef | undefined): CoachContextInput | undefined {
@@ -97,25 +72,13 @@ export function registerCoachRoutes(
   app: FastifyInstance,
   deps: {
     useCases: CoachUseCases;
-    coach: CoachDependencies;
-    content: ContentDependencies;
-    lessonUseCases: LessonUseCases;
-    vocabularyUseCases: VocabularyUseCases;
     resolveSession: ResolveSessionUseCase;
     env: AppEnv;
   },
 ): void {
-  const { useCases, coach, content, lessonUseCases, vocabularyUseCases, resolveSession, env } =
-    deps;
+  const { useCases, resolveSession, env } = deps;
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
-
-  const contextDeps = {
-    contentRepository: content.contentRepository,
-    insights: coach.insights,
-    getLesson: lessonUseCases.getLesson,
-    getVocabularyItem: vocabularyUseCases.getVocabularyItem,
-  };
 
   app.get(
     "/ai-coach/status",
@@ -126,36 +89,17 @@ export function registerCoachRoutes(
         return reply.code(400).send(INVALID_REQUEST);
       }
 
-      // With a language, the page is told the same course context the coach will be given — in
-      // particular the level the *application* derived, so a learner sees it rather than guessing.
-      let learner: { languageId: string; languageName: string; cefrLevel: string | null } | null =
-        null;
-      if (query.data.language) {
-        try {
-          const languageId = createLanguageId(query.data.language);
-          const language = await content.contentRepository.findLanguage(languageId);
-          if (language) {
-            const resolved = await resolveCoachContext(contextDeps, {
-              userId: sessionUserId(request),
-              languageId,
-              context: undefined,
-            });
-            learner = {
-              languageId,
-              languageName: language.name,
-              cefrLevel: resolved.levelId?.toUpperCase() ?? null,
-            };
-          }
-        } catch {
-          // An unknown or malformed language is simply "no course context", not an error: the
-          // coach is still available and the page still works.
-          learner = null;
-        }
-      }
+      // With a language, the page is told the same course context the coach will be given.
+      const learner = query.data.language
+        ? await useCases.getLearner.execute({
+            userId: sessionUserId(request),
+            language: query.data.language,
+          })
+        : null;
 
       noStore(reply);
       return coachStatusResponseSchema.parse({
-        available: coach.enabled,
+        available: useCases.enabled,
         modes: [...COACH_MODES],
         maxMessageLength: COACH_MESSAGE_MAX_LENGTH,
         learner,
@@ -187,7 +131,7 @@ export function registerCoachRoutes(
 
       const userId = sessionUserId(request);
       try {
-        const resolved = await resolveCoachContext(contextDeps, {
+        const resolved = await useCases.resolveContext({
           userId,
           languageId,
           context: toContextInput(body.data.context),

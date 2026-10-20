@@ -1,10 +1,6 @@
 import { randomBytes } from "node:crypto";
 
-import {
-  GetContentMediaUseCase,
-  GetHealthStatusUseCase,
-  type ContentMediaCatalog,
-} from "@tfm-bic/application";
+import { GetHealthStatusUseCase } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import { sharedPostgresPools, SystemClock } from "@tfm-bic/data";
 import fastifyCookie from "@fastify/cookie";
@@ -84,9 +80,6 @@ export interface ServerRuntimeOptions {
   /** The process's metrics (M18). A fresh registry per server when left out. */
   metrics?: MetricsRegistry;
 }
-
-/** Media metadata when no manifest is loaded (hand-built test fixtures): nothing published. */
-const NO_MEDIA: ContentMediaCatalog = { find: () => undefined, list: () => [] };
 
 export function buildServer(
   env: AppEnv,
@@ -224,18 +217,9 @@ export function buildServer(
     registerContentRoutes(app, { useCases: contentUseCases, env });
     // Published educational media (M21, ADR-031): public, read-only, generated offline — no request
     // here can reach a video or audio provider.
-    registerMediaRoutes(app, {
-      content: contentDeps,
-      getContentMedia: new GetContentMediaUseCase({
-        contentRepository: contentDeps.contentRepository,
-        vocabulary: contentDeps.vocabularyRepository,
-        grammar: contentDeps.grammarRepository,
-        catalog: contentDeps.mediaCatalog ?? NO_MEDIA,
-      }),
-      env,
-    });
+    registerMediaRoutes(app, { content: contentDeps, useCases: contentUseCases, env });
     // Grammar reference (M23): public, read-only lookup tables — no session, no user data.
-    registerGrammarRoutes(app, { repository: contentDeps.grammarRepository, env });
+    registerGrammarRoutes(app, { useCases: contentUseCases, env });
 
     // Gamification (M8): points and achievements. Rewards are granted only inside the exercise and
     // lesson use cases below (through `awardRewards`), never by a route that asks for them.
@@ -378,10 +362,6 @@ export function buildServer(
           phoneticsUseCases,
         },
       ),
-      coach: coachDeps,
-      content: contentDeps,
-      lessonUseCases,
-      vocabularyUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });

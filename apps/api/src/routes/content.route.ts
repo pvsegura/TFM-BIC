@@ -10,8 +10,7 @@ import type { FastifyInstance } from "fastify";
 import type { ContentUseCases } from "../composition/content-use-cases.js";
 import { mapCatalogError } from "./catalog-error.mapper.js";
 import { publicRateLimit } from "./public-rate-limit.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST } from "./route-helpers.js";
 
 /**
  * Content discovery — public and read-only (ADR-018). Only published content

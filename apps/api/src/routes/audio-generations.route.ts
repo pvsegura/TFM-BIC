@@ -15,8 +15,7 @@ import {
   AUDIO_GENERATIONS_PER_USER,
   audioGenerationRateLimit,
 } from "./audio-generations-rate-limit.js";
-
-const INVALID_REQUEST = { error: "Invalid request." } as const;
+import { INVALID_REQUEST } from "./route-helpers.js";
 
 /** The feature is switched off in this deployment (M17). No Retry-After: waiting will not help. */
 const AUDIO_DISABLED = { error: "Audio generation is not available." } as const;

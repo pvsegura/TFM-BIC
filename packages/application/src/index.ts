@@ -591,6 +591,10 @@ export {
   type AskCoachResult,
 } from "./coach/use-cases/ask-coach.use-case.js";
 export {
+  GetCoachLearnerUseCase,
+  type CoachLearner,
+} from "./coach/use-cases/get-coach-learner.use-case.js";
+export {
   categorizeCoachError,
   CoachBusyError,
   CoachConfigurationError,
