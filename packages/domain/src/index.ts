@@ -499,6 +499,7 @@ export {
   type VideoAsset,
   type VideoPurpose,
 } from "./media/media-asset.js";
+export { ContentMediaNotFoundError } from "./media/errors/content-media-not-found.error.js";
 export {
   narrationOf,
   pedagogyFor,

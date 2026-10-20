@@ -1,14 +1,21 @@
 import { createReadStream } from "node:fs";
 
-import type { ContentMediaCatalog } from "@tfm-bic/application";
+import type { ContentMediaCatalog, GetContentMediaUseCase } from "@tfm-bic/application";
 import type { AppEnv } from "@tfm-bic/config";
 import {
   contentMediaResponseSchema,
+  grammarTopicParamSchema,
+  lessonIdParamSchema,
   mediaIndexResponseSchema,
+  vocabularyIdParamSchema,
   type ContentMediaResponse,
 } from "@tfm-bic/contracts";
 import type { ServableMediaFile } from "@tfm-bic/data";
-import type { ContentMedia, MediaContentType } from "@tfm-bic/domain";
+import {
+  ContentMediaNotFoundError,
+  type ContentMedia,
+  type MediaContentType,
+} from "@tfm-bic/domain";
 import type { FastifyInstance, FastifyReply } from "fastify";
 
 import type { ContentDependencies } from "../composition/content-dependencies.js";
@@ -17,7 +24,6 @@ import { routeRateLimit } from "../security/rate-limits.js";
 
 const INVALID_REQUEST = { error: "Invalid request." } as const;
 const NOT_FOUND = { error: "Not found." } as const;
-const ID = /^[a-z0-9]+(?:-[a-z0-9]+)*$/;
 /** Seeking a video issues many small range requests; generous, but still bounded per client. */
 const MEDIA_FILE_REQUESTS_PER_MINUTE = 600;
 
@@ -98,12 +104,12 @@ function sendFile(reply: FastifyReply, file: ServableMediaFile, rangeHeader: str
  *   GET /media/vocabulary/:vocabularyId a word's video and pronunciation clips
  *   GET /media/files/*                  a published file — only paths listed in the manifest
  *
- * Media of content that is not published (anymore) is not served: each metadata request checks
- * the catalog first, the same visibility rule as the lesson and vocabulary endpoints.
+ * Media of content a student cannot see is not served: each metadata request goes through
+ * `GetContentMediaUseCase`, the same visibility rule as the content's own endpoint.
  */
 export function registerMediaRoutes(
   app: FastifyInstance,
-  deps: { content: ContentDependencies; env: AppEnv },
+  deps: { content: ContentDependencies; getContentMedia: GetContentMediaUseCase; env: AppEnv },
 ): void {
   const catalog: MediaCatalog = deps.content.mediaCatalog ?? EMPTY_CATALOG;
   const config = { rateLimit: publicRateLimit(deps.env) };
@@ -127,41 +133,38 @@ export function registerMediaRoutes(
     });
   });
 
+  /** A visible item's media — or 404, whatever the reason it is not visible. */
+  async function sendContentMedia(
+    reply: FastifyReply,
+    type: MediaContentType,
+    id: string,
+  ): Promise<ContentMediaResponse | FastifyReply> {
+    try {
+      const media = await deps.getContentMedia.execute({ type, id });
+      cacheShort(reply);
+      return toResponse(type, id, media);
+    } catch (error) {
+      if (error instanceof ContentMediaNotFoundError) return reply.code(404).send(NOT_FOUND);
+      throw error;
+    }
+  }
+
   app.get("/media/lessons/:lessonId", { config }, async (request, reply) => {
-    const { lessonId } = request.params as { lessonId: string };
-    if (!ID.test(lessonId) || lessonId.length > 100) return reply.code(400).send(INVALID_REQUEST);
-    const lesson = await deps.content.contentRepository.findContent(lessonId as never);
-    if (lesson?.status !== "published") return reply.code(404).send(NOT_FOUND);
-    cacheShort(reply);
-    return toResponse("lesson", lessonId, catalog.find({ type: "lesson", id: lessonId }));
+    const params = lessonIdParamSchema.safeParse(request.params);
+    if (!params.success) return reply.code(400).send(INVALID_REQUEST);
+    return sendContentMedia(reply, "lesson", params.data.lessonId);
   });
 
   app.get("/media/vocabulary/:vocabularyId", { config }, async (request, reply) => {
-    const { vocabularyId } = request.params as { vocabularyId: string };
-    if (!ID.test(vocabularyId) || vocabularyId.length > 100) {
-      return reply.code(400).send(INVALID_REQUEST);
-    }
-    const item = await deps.content.vocabularyRepository.findItem(vocabularyId as never);
-    if (item?.status !== "published") return reply.code(404).send(NOT_FOUND);
-    cacheShort(reply);
-    return toResponse(
-      "vocabulary-item",
-      vocabularyId,
-      catalog.find({ type: "vocabulary-item", id: vocabularyId }),
-    );
+    const params = vocabularyIdParamSchema.safeParse(request.params);
+    if (!params.success) return reply.code(400).send(INVALID_REQUEST);
+    return sendContentMedia(reply, "vocabulary-item", params.data.vocabularyId);
   });
 
   app.get("/media/grammar/:topicId", { config }, async (request, reply) => {
-    const { topicId } = request.params as { topicId: string };
-    if (!ID.test(topicId) || topicId.length > 100) return reply.code(400).send(INVALID_REQUEST);
-    const topic = await deps.content.grammarRepository?.findTopic(topicId as never);
-    if (topic?.status !== "published") return reply.code(404).send(NOT_FOUND);
-    cacheShort(reply);
-    return toResponse(
-      "grammar-topic",
-      topicId,
-      catalog.find({ type: "grammar-topic", id: topicId }),
-    );
+    const params = grammarTopicParamSchema.safeParse(request.params);
+    if (!params.success) return reply.code(400).send(INVALID_REQUEST);
+    return sendContentMedia(reply, "grammar-topic", params.data.topicId);
   });
 
   app.get(

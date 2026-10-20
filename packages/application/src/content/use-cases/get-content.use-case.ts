@@ -1,11 +1,11 @@
 import {
   ContentNotFoundError,
-  isLevelSelectable,
   isPublished,
   type ContentId,
   type ContentItem,
 } from "@tfm-bic/domain";
 
+import { isVisibleInCatalog } from "../is-visible-in-catalog.js";
 import type { ContentRepository } from "../ports/content-repository.js";
 
 export interface GetContentInput {
@@ -22,21 +22,9 @@ export class GetContentUseCase {
 
   async execute(input: GetContentInput): Promise<ContentItem> {
     const item = await this.contentRepository.findContent(input.contentId);
-    if (!item || !isPublished(item)) {
+    if (!item || !isPublished(item) || !(await isVisibleInCatalog(this.contentRepository, item))) {
       throw new ContentNotFoundError(input.contentId);
     }
-
-    const language = await this.contentRepository.findLanguage(item.languageId);
-    if (!language?.isActive) {
-      throw new ContentNotFoundError(input.contentId);
-    }
-
-    const declared = await this.contentRepository.listLanguageLevels(item.languageId);
-    const entry = declared.find((candidate) => candidate.levelId === item.levelId);
-    if (!entry || !isLevelSelectable(entry)) {
-      throw new ContentNotFoundError(input.contentId);
-    }
-
     return item;
   }
 }

@@ -522,6 +522,10 @@ export {
   type PronunciationRequest,
   type TargetOutcome,
 } from "./media/generate-content-media.use-case.js";
+export {
+  GetContentMediaUseCase,
+  type GetContentMediaDependencies,
+} from "./media/get-content-media.use-case.js";
 export type {
   ContentMediaCatalog,
   EducationalVideoRenderer,
