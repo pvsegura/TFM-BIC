@@ -17,22 +17,6 @@ export function buildTestServer(
   testDeps = buildTestDeps(),
 ): { app: FastifyInstance; testDeps: ReturnType<typeof buildTestDeps> } {
   const env = loadEnv({ NODE_ENV: "test", APP_BASE_URL: TEST_APP_BASE_URL, ...envOverrides });
-  const app = buildServer(
-    env,
-    testDeps.deps,
-    testDeps.profileDeps,
-    testDeps.contentDeps,
-    testDeps.lessonDeps,
-    testDeps.exerciseDeps,
-    testDeps.gamificationDeps,
-    testDeps.vocabularyDeps,
-    testDeps.phoneticsDeps,
-    testDeps.videoDeps,
-    testDeps.audioDeps,
-    testDeps.teachingDeps,
-    testDeps.emailDeps,
-    testDeps.privacyDeps,
-    testDeps.coachDeps,
-  );
+  const app = buildServer(env, testDeps.appDeps);
   return { app, testDeps };
 }

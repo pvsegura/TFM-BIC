@@ -2,33 +2,21 @@ import type { AppEnv } from "@tfm-bic/config";
 import type { CoachDb } from "@tfm-bic/data";
 import { createGamificationTestDb } from "@tfm-bic/data/testing";
 
-import { createAudioDependencies, type AudioDependencies } from "./audio-dependencies.js";
-import { buildAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";
-import { createContentDependencies, type ContentDependencies } from "./content-dependencies.js";
-import { buildEmailDependencies, type EmailDependencies } from "./email-dependencies.js";
-import { buildExerciseDependencies, type ExerciseDependencies } from "./exercise-dependencies.js";
-import {
-  buildGamificationDependencies,
-  type GamificationDependencies,
-} from "./gamification-dependencies.js";
-import { buildLessonDependencies, type LessonDependencies } from "./lesson-dependencies.js";
-import {
-  buildPhoneticsDependencies,
-  type PhoneticsDependencies,
-} from "./phonetics-dependencies.js";
-import { buildCoachDependencies, type CoachDependencies } from "./coach-dependencies.js";
-import { buildPrivacyDependencies, type PrivacyDependencies } from "./privacy-dependencies.js";
-import { buildProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
-import { buildTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
-import {
-  buildVideoDependencies,
-  selectVideoGenerationProvider,
-  type VideoDependencies,
-} from "./video-dependencies.js";
-import {
-  buildVocabularyDependencies,
-  type VocabularyDependencies,
-} from "./vocabulary-dependencies.js";
+import type { AppDependencies } from "./app-dependencies.js";
+import { createAudioDependencies } from "./audio-dependencies.js";
+import { buildAuthDependencies } from "./auth-dependencies.js";
+import { createContentDependencies } from "./content-dependencies.js";
+import { buildEmailDependencies } from "./email-dependencies.js";
+import { buildExerciseDependencies } from "./exercise-dependencies.js";
+import { buildGamificationDependencies } from "./gamification-dependencies.js";
+import { buildLessonDependencies } from "./lesson-dependencies.js";
+import { buildPhoneticsDependencies } from "./phonetics-dependencies.js";
+import { buildCoachDependencies } from "./coach-dependencies.js";
+import { buildPrivacyDependencies } from "./privacy-dependencies.js";
+import { buildProfileDependencies } from "./profile-dependencies.js";
+import { buildTeachingDependencies } from "./teaching-dependencies.js";
+import { buildVideoDependencies, selectVideoGenerationProvider } from "./video-dependencies.js";
+import { buildVocabularyDependencies } from "./vocabulary-dependencies.js";
 
 /**
  * Same real adapters as the production composition, except the database is
@@ -45,22 +33,7 @@ import {
  * only exist alongside the user they belong to. The instance is closed once, via `auth.close`;
  * the other `close`s are no-ops so shutting everything down never closes it twice.
  */
-export async function createTestDependencies(env: AppEnv): Promise<{
-  auth: AuthDependencies;
-  profile: ProfileDependencies;
-  content: ContentDependencies;
-  lessons: LessonDependencies;
-  exercises: ExerciseDependencies;
-  gamification: GamificationDependencies;
-  vocabulary: VocabularyDependencies;
-  phonetics: PhoneticsDependencies;
-  video: VideoDependencies;
-  audio: AudioDependencies;
-  teaching: TeachingDependencies;
-  email: EmailDependencies;
-  privacy: PrivacyDependencies;
-  coach: CoachDependencies;
-}> {
+export async function createTestDependencies(env: AppEnv): Promise<AppDependencies> {
   const {
     db,
     identityDb,

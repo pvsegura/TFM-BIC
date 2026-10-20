@@ -2,7 +2,7 @@ import { loadEnv } from "@tfm-bic/config";
 import { afterEach, describe, expect, it } from "vitest";
 import type { FastifyInstance } from "fastify";
 
-import { buildServer } from "./server.js";
+import { buildServer, type ServerRuntimeOptions } from "./server.js";
 import { buildTestDeps } from "./test-support/build-test-deps.js";
 
 let app: FastifyInstance | undefined;
@@ -12,41 +12,8 @@ afterEach(async () => {
   app = undefined;
 });
 
-function build(env: ReturnType<typeof loadEnv>, runtime: Parameters<typeof buildServer>[15] = {}) {
-  const {
-    deps,
-    profileDeps,
-    contentDeps,
-    lessonDeps,
-    exerciseDeps,
-    gamificationDeps,
-    vocabularyDeps,
-    phoneticsDeps,
-    videoDeps,
-    audioDeps,
-    teachingDeps,
-    emailDeps,
-    privacyDeps,
-    coachDeps,
-  } = buildTestDeps();
-  return buildServer(
-    env,
-    deps,
-    profileDeps,
-    contentDeps,
-    lessonDeps,
-    exerciseDeps,
-    gamificationDeps,
-    vocabularyDeps,
-    phoneticsDeps,
-    videoDeps,
-    audioDeps,
-    teachingDeps,
-    emailDeps,
-    privacyDeps,
-    coachDeps,
-    runtime,
-  );
+function build(env: ReturnType<typeof loadEnv>, runtime: ServerRuntimeOptions = {}) {
+  return buildServer(env, buildTestDeps().appDeps, runtime);
 }
 
 describe("GET /health", () => {

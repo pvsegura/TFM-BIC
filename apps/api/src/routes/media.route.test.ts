@@ -41,20 +41,7 @@ function build(options: { polishActive?: boolean } = {}) {
       APP_BASE_URL: "https://app.example.com",
       AUTH_SESSION_SECRET: "test-secret-value",
     }),
-    testDeps.deps,
-    testDeps.profileDeps,
-    testDeps.contentDeps,
-    testDeps.lessonDeps,
-    testDeps.exerciseDeps,
-    testDeps.gamificationDeps,
-    testDeps.vocabularyDeps,
-    testDeps.phoneticsDeps,
-    testDeps.videoDeps,
-    testDeps.audioDeps,
-    testDeps.teachingDeps,
-    testDeps.emailDeps,
-    testDeps.privacyDeps,
-    testDeps.coachDeps,
+    testDeps.appDeps,
   );
   return app;
 }

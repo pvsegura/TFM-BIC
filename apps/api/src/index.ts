@@ -1,60 +1,12 @@
 import { loadEnv } from "@tfm-bic/config";
 import { createDatabaseReadinessCheck, type DatabaseReadinessCheck } from "@tfm-bic/data";
 
-import { createAuthDependencies, type AuthDependencies } from "./composition/auth-dependencies.js";
 import {
-  createProfileDependencies,
-  type ProfileDependencies,
-} from "./composition/profile-dependencies.js";
-import {
-  createContentDependencies,
-  type ContentDependencies,
-} from "./composition/content-dependencies.js";
-import {
-  createLessonDependencies,
-  type LessonDependencies,
-} from "./composition/lesson-dependencies.js";
-import {
-  createExerciseDependencies,
-  type ExerciseDependencies,
-} from "./composition/exercise-dependencies.js";
-import {
-  createGamificationDependencies,
-  type GamificationDependencies,
-} from "./composition/gamification-dependencies.js";
-import {
-  createVocabularyDependencies,
-  type VocabularyDependencies,
-} from "./composition/vocabulary-dependencies.js";
-import {
-  createPhoneticsDependencies,
-  type PhoneticsDependencies,
-} from "./composition/phonetics-dependencies.js";
-import {
-  createAudioDependencies,
-  type AudioDependencies,
-} from "./composition/audio-dependencies.js";
-import {
-  createEmailDependencies,
-  type EmailDependencies,
-} from "./composition/email-dependencies.js";
-import {
-  createPrivacyDependencies,
-  type PrivacyDependencies,
-} from "./composition/privacy-dependencies.js";
-import {
-  createCoachDependencies,
-  type CoachDependencies,
-} from "./composition/coach-dependencies.js";
+  connectionClosers,
+  createAppDependencies,
+  type AppDependencies,
+} from "./composition/app-dependencies.js";
 import { createTestDependencies } from "./composition/test-dependencies.js";
-import {
-  createVideoDependencies,
-  type VideoDependencies,
-} from "./composition/video-dependencies.js";
-import {
-  createTeachingDependencies,
-  type TeachingDependencies,
-} from "./composition/teaching-dependencies.js";
 import {
   createShutdownHandler,
   registerFatalErrorHandlers,
@@ -78,75 +30,21 @@ const env = loadEnv();
 // not require DATABASE_URL in this case. Every other environment requires
 // a real DATABASE_URL and fails fast without one (defensive re-check below
 // — the primary guard is loadEnv() itself).
-let authDeps: AuthDependencies;
-let profileDeps: ProfileDependencies;
-let contentDeps: ContentDependencies;
-let lessonDeps: LessonDependencies;
-let exerciseDeps: ExerciseDependencies;
-let gamificationDeps: GamificationDependencies;
-let vocabularyDeps: VocabularyDependencies;
-let phoneticsDeps: PhoneticsDependencies;
-let videoDeps: VideoDependencies;
-let audioDeps: AudioDependencies;
-let teachingDeps: TeachingDependencies;
-let emailDeps: EmailDependencies;
-let privacyDeps: PrivacyDependencies;
-let coachDeps: CoachDependencies;
+let deps: AppDependencies;
 let readiness: DatabaseReadinessCheck | undefined;
 if (env.NODE_ENV === "test") {
-  ({
-    auth: authDeps,
-    profile: profileDeps,
-    content: contentDeps,
-    lessons: lessonDeps,
-    exercises: exerciseDeps,
-    gamification: gamificationDeps,
-    vocabulary: vocabularyDeps,
-    phonetics: phoneticsDeps,
-    video: videoDeps,
-    audio: audioDeps,
-    teaching: teachingDeps,
-    email: emailDeps,
-    privacy: privacyDeps,
-    coach: coachDeps,
-  } = await createTestDependencies(env));
+  deps = await createTestDependencies(env);
 } else {
   if (!env.DATABASE_URL) {
     throw new Error("DATABASE_URL is required outside of NODE_ENV=test.");
   }
-  authDeps = createAuthDependencies(env.DATABASE_URL);
-  profileDeps = createProfileDependencies(env.DATABASE_URL);
-  contentDeps = await createContentDependencies(env.CONTENT_DIR);
-  lessonDeps = createLessonDependencies(env.DATABASE_URL);
-  exerciseDeps = createExerciseDependencies(env.DATABASE_URL);
-  gamificationDeps = createGamificationDependencies(env.DATABASE_URL);
-  vocabularyDeps = createVocabularyDependencies(env.DATABASE_URL);
-  phoneticsDeps = createPhoneticsDependencies(env.DATABASE_URL);
-  videoDeps = createVideoDependencies(env.DATABASE_URL, env);
-  audioDeps = createAudioDependencies(env);
-  teachingDeps = createTeachingDependencies(env.DATABASE_URL);
-  emailDeps = createEmailDependencies(env.DATABASE_URL, env);
-  privacyDeps = createPrivacyDependencies(env.DATABASE_URL);
-  coachDeps = createCoachDependencies(env, env.DATABASE_URL);
+  deps = await createAppDependencies(env, env.DATABASE_URL);
   readiness = createDatabaseReadinessCheck(env.DATABASE_URL);
 }
 
 const app = buildServer(
   env,
-  authDeps,
-  profileDeps,
-  contentDeps,
-  lessonDeps,
-  exerciseDeps,
-  gamificationDeps,
-  vocabularyDeps,
-  phoneticsDeps,
-  videoDeps,
-  audioDeps,
-  teachingDeps,
-  emailDeps,
-  privacyDeps,
-  coachDeps,
+  deps,
   readiness
     ? { isReady: readiness.isReady, readinessFailureReason: readiness.lastFailureReason }
     : {},
@@ -156,21 +54,7 @@ const app = buildServer(
 // while closing), let in-flight ones finish, release the shared pool, exit — within a hard limit.
 const shutdown = createShutdownHandler({
   closeServer: () => app.close(),
-  closers: [
-    authDeps.close,
-    profileDeps.close,
-    lessonDeps.close,
-    exerciseDeps.close,
-    gamificationDeps.close,
-    vocabularyDeps.close,
-    phoneticsDeps.close,
-    videoDeps.close,
-    teachingDeps.close,
-    emailDeps.close,
-    privacyDeps.close,
-    coachDeps.close,
-    ...(readiness ? [readiness.close] : []),
-  ],
+  closers: [...connectionClosers(deps), ...(readiness ? [readiness.close] : [])],
   timeoutMs: SHUTDOWN_TIMEOUT_MS,
   exit: (code) => process.exit(code),
   log: app.log,

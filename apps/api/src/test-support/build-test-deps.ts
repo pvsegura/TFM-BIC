@@ -45,6 +45,7 @@ import {
   InMemoryAudioCache,
 } from "@tfm-bic/data";
 
+import type { AppDependencies } from "../composition/app-dependencies.js";
 import type { AudioDependencies } from "../composition/audio-dependencies.js";
 import type { AuthDependencies } from "../composition/auth-dependencies.js";
 import type { CoachDependencies } from "../composition/coach-dependencies.js";
@@ -214,7 +215,27 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     close: () => Promise.resolve(),
   };
 
+  // What `buildServer` takes. The same objects as the fields below, so a test can arrange a
+  // repository through either and the server sees it.
+  const appDeps: AppDependencies = {
+    auth: deps,
+    profile: profileDeps,
+    content: contentDeps,
+    lessons: lessonDeps,
+    exercises: exerciseDeps,
+    gamification: gamificationDeps,
+    vocabulary: vocabularyDeps,
+    phonetics: phoneticsDeps,
+    video: videoDeps,
+    audio: audioDeps,
+    teaching: teachingDeps,
+    email: emailDeps,
+    privacy: privacyDeps,
+    coach: coachDeps,
+  };
+
   return {
+    appDeps,
     deps,
     emailDeps,
     privacyDeps,

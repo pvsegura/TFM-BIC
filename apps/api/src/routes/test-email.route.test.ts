@@ -28,20 +28,7 @@ function build(options: { nodeEnv?: "test" | "development"; inbox?: boolean; iss
       AUTH_SESSION_SECRET: "test-secret-value",
       DATABASE_URL: "postgres://unused",
     }),
-    testDeps.deps,
-    testDeps.profileDeps,
-    testDeps.contentDeps,
-    testDeps.lessonDeps,
-    testDeps.exerciseDeps,
-    testDeps.gamificationDeps,
-    testDeps.vocabularyDeps,
-    testDeps.phoneticsDeps,
-    testDeps.videoDeps,
-    testDeps.audioDeps,
-    testDeps.teachingDeps,
-    emailDeps,
-    testDeps.privacyDeps,
-    testDeps.coachDeps,
+    { ...testDeps.appDeps, email: emailDeps },
   );
   return { app, ...testDeps };
 }

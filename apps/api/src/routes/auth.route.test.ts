@@ -18,20 +18,7 @@ afterEach(async () => {
 function build(testDeps = buildTestDeps()) {
   app = buildServer(
     loadEnv({ NODE_ENV: "test", APP_BASE_URL, AUTH_SESSION_SECRET: "test-secret-value" }),
-    testDeps.deps,
-    testDeps.profileDeps,
-    testDeps.contentDeps,
-    testDeps.lessonDeps,
-    testDeps.exerciseDeps,
-    testDeps.gamificationDeps,
-    testDeps.vocabularyDeps,
-    testDeps.phoneticsDeps,
-    testDeps.videoDeps,
-    testDeps.audioDeps,
-    testDeps.teachingDeps,
-    testDeps.emailDeps,
-    testDeps.privacyDeps,
-    testDeps.coachDeps,
+    testDeps.appDeps,
   );
   return { app, ...testDeps };
 }

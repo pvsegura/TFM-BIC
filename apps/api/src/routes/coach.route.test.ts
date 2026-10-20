@@ -40,20 +40,7 @@ function build(overrides: Partial<Parameters<typeof loadEnv>[0]> = {}) {
       AUTH_SESSION_SECRET: "test-secret-value",
       ...overrides,
     }),
-    testDeps.deps,
-    testDeps.profileDeps,
-    testDeps.contentDeps,
-    testDeps.lessonDeps,
-    testDeps.exerciseDeps,
-    testDeps.gamificationDeps,
-    testDeps.vocabularyDeps,
-    testDeps.phoneticsDeps,
-    testDeps.videoDeps,
-    testDeps.audioDeps,
-    testDeps.teachingDeps,
-    testDeps.emailDeps,
-    testDeps.privacyDeps,
-    testDeps.coachDeps,
+    testDeps.appDeps,
   );
   return { app, ...testDeps };
 }

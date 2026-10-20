@@ -7,33 +7,20 @@ import fastifyCookie from "@fastify/cookie";
 import fastifyRateLimit from "@fastify/rate-limit";
 import Fastify, { type FastifyInstance } from "fastify";
 
-import type { AudioDependencies } from "./composition/audio-dependencies.js";
+import type { AppDependencies } from "./composition/app-dependencies.js";
 import { createAudioUseCases } from "./composition/audio-use-cases.js";
-import type { AuthDependencies } from "./composition/auth-dependencies.js";
 import { createAuthUseCases } from "./composition/auth-use-cases.js";
-import type { CoachDependencies } from "./composition/coach-dependencies.js";
 import { createCoachUseCases } from "./composition/coach-use-cases.js";
-import type { ContentDependencies } from "./composition/content-dependencies.js";
-import type { ExerciseDependencies } from "./composition/exercise-dependencies.js";
 import { createExerciseUseCases } from "./composition/exercise-use-cases.js";
-import type { GamificationDependencies } from "./composition/gamification-dependencies.js";
 import { createGamificationUseCases } from "./composition/gamification-use-cases.js";
 import { createContentUseCases } from "./composition/content-use-cases.js";
-import type { EmailDependencies } from "./composition/email-dependencies.js";
 import { createEmailUseCases } from "./composition/email-use-cases.js";
-import type { LessonDependencies } from "./composition/lesson-dependencies.js";
 import { createLessonUseCases } from "./composition/lesson-use-cases.js";
-import type { PhoneticsDependencies } from "./composition/phonetics-dependencies.js";
 import { createPhoneticsUseCases } from "./composition/phonetics-use-cases.js";
-import type { PrivacyDependencies } from "./composition/privacy-dependencies.js";
 import { createPrivacyUseCases } from "./composition/privacy-use-cases.js";
-import type { ProfileDependencies } from "./composition/profile-dependencies.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
-import type { TeachingDependencies } from "./composition/teaching-dependencies.js";
 import { createTeachingUseCases } from "./composition/teaching-use-cases.js";
-import type { VideoDependencies } from "./composition/video-dependencies.js";
 import { createVideoUseCases } from "./composition/video-use-cases.js";
-import type { VocabularyDependencies } from "./composition/vocabulary-dependencies.js";
 import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js";
 import { registerAudioGenerationRoutes } from "./routes/audio-generations.route.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
@@ -83,22 +70,25 @@ export interface ServerRuntimeOptions {
 
 export function buildServer(
   env: AppEnv,
-  authDeps: AuthDependencies,
-  profileDeps: ProfileDependencies,
-  contentDeps: ContentDependencies,
-  lessonDeps: LessonDependencies,
-  exerciseDeps: ExerciseDependencies,
-  gamificationDeps: GamificationDependencies,
-  vocabularyDeps: VocabularyDependencies,
-  phoneticsDeps: PhoneticsDependencies,
-  videoDeps: VideoDependencies,
-  audioDeps: AudioDependencies,
-  teachingDeps: TeachingDependencies,
-  emailDeps: EmailDependencies,
-  privacyDeps: PrivacyDependencies,
-  coachDeps: CoachDependencies,
+  deps: AppDependencies,
   runtime: ServerRuntimeOptions = {},
 ): FastifyInstance {
+  const {
+    auth: authDeps,
+    profile: profileDeps,
+    content: contentDeps,
+    lessons: lessonDeps,
+    exercises: exerciseDeps,
+    gamification: gamificationDeps,
+    vocabulary: vocabularyDeps,
+    phonetics: phoneticsDeps,
+    video: videoDeps,
+    audio: audioDeps,
+    teaching: teachingDeps,
+    email: emailDeps,
+    privacy: privacyDeps,
+    coach: coachDeps,
+  } = deps;
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
   // Body limit, request timeout, random request ids and TRUST_PROXY: security/http-security.ts (M16).
   const app = Fastify({
