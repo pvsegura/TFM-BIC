@@ -2,6 +2,7 @@ import {
   coachMessageResponseSchema,
   coachStatusResponseSchema,
   type CoachContextRef,
+  type CoachMessageRequestBody,
   type CoachMessageResponse,
   type CoachStatusResponse,
 } from "@tfm-bic/contracts";
@@ -21,10 +22,8 @@ import { requestJson } from "./api-request.js";
 
 export type CoachMode = CoachMessageResponse["mode"];
 
-export interface CoachTurn {
-  role: "learner" | "coach";
-  text: string;
-}
+/** One turn of the conversation, exactly as the API accepts it back. */
+export type CoachTurn = CoachMessageRequestBody["history"][number];
 
 export interface CoachMessageRequest {
   message: string;
