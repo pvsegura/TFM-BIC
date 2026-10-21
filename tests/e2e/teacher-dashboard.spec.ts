@@ -1,5 +1,7 @@
 import { expect, test, type APIRequestContext, type Page } from "@playwright/test";
 
+import { API, PASSWORD } from "./helpers/config.js";
+import { signInApi } from "./helpers/session.js";
 import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
 import { signInViaUi } from "./helpers/ui.js";
 
@@ -13,8 +15,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * support route, which runs the same operator use cases as `pnpm teacher:admin` (ADR-024).
  */
 
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 const LESSON = "pl-greetings";
 const EXERCISE = "pl-greetings-polite-hello";
 
@@ -23,12 +23,6 @@ interface Classroom {
   teacherB: string;
   anaId: string;
   boId: string;
-}
-
-async function signInApi(request: APIRequestContext, email: string): Promise<string> {
-  const response = await request.post(`${API}/auth/login`, { data: { email, password: PASSWORD } });
-  expect(response.ok()).toBe(true);
-  return ((await response.json()) as { id: string }).id;
 }
 
 async function link(request: APIRequestContext, teacherEmail: string, studentEmail: string) {

@@ -1,23 +1,13 @@
 import { expect, test, type Page } from "@playwright/test";
 
-import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
-import { signInViaUi } from "./helpers/ui.js";
+import { API } from "./helpers/config.js";
+import { arrangeSignedIn } from "./helpers/session.js";
 
 /**
  * M9 — Vocabulary, end to end against the real API (NODE_ENV=test: real server, real HTTP,
  * in-process Postgres, the real shipped `content/` tree) behind the real dev server. Each test
  * uses its own fresh user, so state never leaks between tests.
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
-
-async function arrangeSignedIn(page: Page, request: Parameters<typeof registerAndVerifyUser>[0]) {
-  const email = uniqueEmail("vocabulary");
-  await registerAndVerifyUser(request, email, PASSWORD);
-  await signInViaUi(page, email, PASSWORD);
-  return email;
-}
 
 /** Opens Vocabulary the way a student does: the nav link, then Polish. */
 async function openPolishVocabulary(page: Page) {
@@ -54,7 +44,7 @@ test.describe("browsing vocabulary", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "vocabulary");
 
     await openPolishVocabulary(page);
 
@@ -68,7 +58,7 @@ test.describe("browsing vocabulary", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "vocabulary");
     await openPolishVocabulary(page);
 
     await page.getByRole("searchbox", { name: "Search" }).fill("dom");
@@ -86,7 +76,7 @@ test.describe("saving and learning a word", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "vocabulary");
     await openPolishVocabulary(page);
     await openWord(page, "dom");
     await expect(page).toHaveURL(/\/learn\/vocabulary\/pl-dom$/);
@@ -108,7 +98,7 @@ test.describe("saving and learning a word", () => {
   });
 
   test("removing a saved word takes it off My Vocabulary", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "vocabulary");
     await openPolishVocabulary(page);
     await openWord(page, "dom");
     await page.getByRole("button", { name: "Save word" }).click();
@@ -128,14 +118,14 @@ test.describe("security — one student cannot see or change another student's v
     request,
     browser,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "vocabulary");
     await page.goto("/learn/vocabulary/pl-dom");
     await page.getByRole("button", { name: "Save word" }).click();
     await expect(page.getByText("Saved", { exact: true })).toBeVisible();
 
     const otherContext = await browser.newContext();
     const otherPage = await otherContext.newPage();
-    await arrangeSignedIn(otherPage, otherContext.request);
+    await arrangeSignedIn(otherPage, otherContext.request, "vocabulary");
     await otherPage.goto("/learn/vocabulary/mine?language=pl");
     await expect(otherPage.getByText("No vocabulary saved yet.")).toBeVisible();
 

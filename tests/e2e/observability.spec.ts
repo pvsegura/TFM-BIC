@@ -1,7 +1,8 @@
 import { expect, test } from "@playwright/test";
 
+import { API } from "./helpers/config.js";
+
 /** The API the E2E web server proxies to (playwright.config.ts). */
-const API = "http://localhost:3000";
 const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-4[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
 test("probes answer, and every response carries its own request id for log correlation (M18)", async ({

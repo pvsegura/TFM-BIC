@@ -1,7 +1,8 @@
-import { expect, test, type APIResponse, type Page } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 
-import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
-import { signInViaUi } from "./helpers/ui.js";
+import { API } from "./helpers/config.js";
+import { arrangeSignedIn, jsonOf } from "./helpers/session.js";
+import { horizontalOverflow } from "./helpers/ui.js";
 
 /**
  * M7 — Exercises, end to end against the real API (NODE_ENV=test: real server,
@@ -9,9 +10,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * real dev server. Each test uses its own fresh user, so attempts never leak
  * between tests.
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 
 const MC_PROMPT = "Which greeting is polite and suits someone you do not know well?";
 const TF_PROMPT = "Cześć is informal. It can be used to say hello and also to say goodbye.";
@@ -41,21 +39,7 @@ interface VerdictBody {
   result: ResultBody;
 }
 
-async function jsonOf<T>(response: APIResponse): Promise<T> {
-  return (await response.json()) as T;
-}
-
 /** Pixels by which the page is wider than the viewport (0 = no sideways scrolling). */
-async function horizontalOverflow(page: Page): Promise<number> {
-  return page.locator("html").evaluate((root) => root.scrollWidth - root.clientWidth);
-}
-
-async function arrangeSignedIn(page: Page, request: Parameters<typeof registerAndVerifyUser>[0]) {
-  const email = uniqueEmail("exercises");
-  await registerAndVerifyUser(request, email, PASSWORD);
-  await signInViaUi(page, email, PASSWORD);
-  return email;
-}
 
 async function openGreetingsLesson(page: Page) {
   await page.goto("/learn/lessons/pl-greetings");
@@ -78,7 +62,7 @@ test.describe("discovering exercises from a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     await page
       .getByRole("navigation", { name: "Primary" })
@@ -112,7 +96,7 @@ test.describe("discovering exercises from a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openGreetingsLesson(page);
 
     await page.getByRole("link", { name: "Start exercise 1" }).click();
@@ -126,7 +110,7 @@ test.describe("discovering exercises from a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
     await page.getByRole("radio", { name: "Dzień dobry" }).check();
     await check(page).click();
@@ -141,7 +125,7 @@ test.describe("discovering exercises from a lesson", () => {
 
 test.describe("multiple choice", () => {
   test("select the right option, submit, and see it is correct", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
 
     await page.getByRole("radio", { name: "Dzień dobry" }).check();
@@ -157,7 +141,7 @@ test.describe("multiple choice", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
 
     await page.getByRole("radio", { name: "Cześć" }).check();
@@ -171,7 +155,7 @@ test.describe("multiple choice", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
 
     await expect(page.getByText(/Correct answer/)).toHaveCount(0);
@@ -185,7 +169,7 @@ test.describe("multiple choice", () => {
   });
 
   test("can be answered with the keyboard alone", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
 
     await page.getByRole("radio", { name: "Dzień dobry" }).focus();
@@ -204,7 +188,7 @@ test.describe("text answers", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.typed);
 
     await page.getByLabel(TEXT_PROMPT).fill("dobra noc");
@@ -227,7 +211,7 @@ test.describe("text answers", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.typed);
 
     await page.getByLabel(TEXT_PROMPT).fill("Dobranoc.");
@@ -244,7 +228,7 @@ test.describe("text answers", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, "pl-polite-words-thank-you");
     const prompt = "Type the Polish word for: thank you.";
 
@@ -263,7 +247,7 @@ test.describe("text answers", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.typed);
 
     await check(page).click();
@@ -280,7 +264,7 @@ test.describe("text answers", () => {
 
 test.describe("true / false", () => {
   test("select an answer, submit, and see the result", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.statement);
 
     await page.getByRole("radio", { name: "True" }).check();
@@ -294,7 +278,7 @@ test.describe("true / false", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, "pl-polite-words-tak-means-no");
 
     await page.getByRole("radio", { name: "False" }).check();
@@ -308,7 +292,7 @@ test.describe("true / false", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.statement);
     await expect(page.getByRole("group", { name: TF_PROMPT })).toBeVisible();
 
@@ -325,7 +309,7 @@ test.describe("attempts are persisted", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
     await page.getByRole("radio", { name: "Cześć" }).check();
     await check(page).click();
@@ -349,7 +333,7 @@ test.describe("attempts are persisted", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
     await page.getByRole("radio", { name: "Dzień dobry" }).check();
     await check(page).click();
@@ -372,7 +356,7 @@ test.describe("attempts are persisted", () => {
   });
 
   test("a double-click on Check answer is one attempt, not two", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
     await page.getByRole("radio", { name: "Dzień dobry" }).check();
 
@@ -387,7 +371,7 @@ test.describe("attempts are persisted", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.statement);
 
     for (const [name, attempt] of [
@@ -415,7 +399,7 @@ test.describe("moving through a lesson's exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openGreetingsLesson(page);
     await page.getByRole("link", { name: "Start exercise 1" }).click();
 
@@ -449,7 +433,7 @@ test.describe("the answer key stays on the server", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     const bodies: string[] = [];
     page.on("response", (response) => {
       // Only the exercise endpoints (`/exercises/:id`, `/lessons/:id/exercises`): the lesson body's
@@ -485,7 +469,7 @@ test.describe("the answer key stays on the server", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     const choice = await page.request.get(`${API}/exercises/${GREETINGS_EXERCISES.choice}`);
     const typed = await page.request.get(`${API}/exercises/${GREETINGS_EXERCISES.typed}`);
@@ -512,7 +496,7 @@ test.describe("the answer key stays on the server", () => {
   });
 
   test("the verdict endpoint returns the verdict and nothing more", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     const verdict = await page.request.post(
       `${API}/exercises/${GREETINGS_EXERCISES.typed}/answer`,
@@ -542,7 +526,7 @@ test.describe("the answer key stays on the server", () => {
 
 test.describe("the server is authoritative", () => {
   test("a client cannot supply a verdict, a user, a score or a time", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     const url = `${API}/exercises/${GREETINGS_EXERCISES.choice}/answer`;
 
     const forged = await page.request.post(url, {
@@ -567,7 +551,7 @@ test.describe("the server is authoritative", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     const unknownOption = await page.request.post(
       `${API}/exercises/${GREETINGS_EXERCISES.choice}/answer`,
@@ -610,7 +594,7 @@ test.describe("access", () => {
     request,
     browser,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
     await page.getByRole("radio", { name: "Dzień dobry" }).check();
     await check(page).click();
@@ -618,7 +602,7 @@ test.describe("access", () => {
 
     const otherContext = await browser.newContext();
     const otherPage = await otherContext.newPage();
-    await arrangeSignedIn(otherPage, otherContext.request);
+    await arrangeSignedIn(otherPage, otherContext.request, "exercises");
     await otherPage.goto("/learn/lessons/pl-greetings");
     const items = otherPage.getByRole("list", { name: "Exercises" }).getByRole("listitem");
     await expect(items.nth(0)).toContainText("Not answered");
@@ -644,7 +628,7 @@ test.describe("exercises that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     await page.goto("/learn/exercises/pl-secret-draft-exercise");
 
@@ -655,7 +639,7 @@ test.describe("exercises that are not there", () => {
   });
 
   test("a malformed id is the same safe not-found", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     await page.goto("/learn/exercises/..%2F..%2Fetc%2Fpasswd");
 
@@ -666,7 +650,7 @@ test.describe("exercises that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     const ids = [
       encodeURIComponent("pl-x'; DROP TABLE exercise_attempts;--"),
       encodeURIComponent("../../etc/passwd"),
@@ -689,7 +673,7 @@ test.describe("exercises that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
 
     const read = await page.request.get(`${API}/exercises/pl-no-such-exercise`);
     const write = await page.request.post(`${API}/exercises/pl-no-such-exercise/answer`, {
@@ -708,7 +692,7 @@ test.describe("mobile", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openGreetingsLesson(page);
     await page.getByRole("link", { name: "Start exercise 1" }).scrollIntoViewIfNeeded();
     expect(await horizontalOverflow(page)).toBe(0);
@@ -733,7 +717,7 @@ test.describe("mobile", () => {
   });
 
   test("the options are large enough to tap", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await openExercise(page, GREETINGS_EXERCISES.choice);
 
     const box = await page.getByRole("radio", { name: "Dzień dobry" }).locator("..").boundingBox();
@@ -744,7 +728,7 @@ test.describe("mobile", () => {
 
 test.describe("dark mode", () => {
   test("the exercise list, player and verdict work in dark mode", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "exercises");
     await page.getByRole("button", { name: "Toggle dark mode" }).click();
     await expect(page.locator("html")).toHaveClass(/dark/);
 

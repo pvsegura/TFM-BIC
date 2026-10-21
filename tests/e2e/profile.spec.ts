@@ -1,9 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
 
+import { PASSWORD } from "./helpers/config.js";
 import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
 import { openProfileViaNav, signInViaUi } from "./helpers/ui.js";
-
-const PASSWORD = "a-good-password-123";
 
 /** A fresh verified user, signed in through the UI and sitting on the
  * profile page. */

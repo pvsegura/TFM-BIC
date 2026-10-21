@@ -25,3 +25,8 @@ export async function openProfileViaNav(page: Page): Promise<void> {
   await expect(page.getByRole("heading", { level: 1, name: "Your profile" })).toBeVisible();
   await expect(page.getByLabel("First name")).toBeVisible();
 }
+
+/** How far the page scrolls sideways — 0 when nothing overflows the viewport. */
+export async function horizontalOverflow(page: Page): Promise<number> {
+  return page.locator("html").evaluate((root) => root.scrollWidth - root.clientWidth);
+}

@@ -1,5 +1,7 @@
 import { expect, test, type Page } from "@playwright/test";
 
+import { horizontalOverflow } from "./helpers/ui.js";
+
 /**
  * M5 — Content & Languages, end to end against the real API (NODE_ENV=test,
  * serving the real shipped `content/` tree) behind the real dev server. No
@@ -19,9 +21,6 @@ const A1_TITLES_IN_ORDER = [
 ];
 
 /** Pixels by which the page is wider than the viewport (0 = no sideways scrolling). */
-async function horizontalOverflow(page: Page): Promise<number> {
-  return page.locator("html").evaluate((root) => root.scrollWidth - root.clientWidth);
-}
 
 async function openPolishA1(page: Page) {
   await page.goto("/learn");

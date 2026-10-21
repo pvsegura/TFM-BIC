@@ -1,7 +1,8 @@
 import { expect, test, type Page } from "@playwright/test";
 
-import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
-import { signInViaUi } from "./helpers/ui.js";
+import { API } from "./helpers/config.js";
+import { arrangeSignedIn } from "./helpers/session.js";
+import { horizontalOverflow } from "./helpers/ui.js";
 
 /**
  * M6 — Lessons, end to end against the real API (NODE_ENV=test: real server,
@@ -9,9 +10,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * real dev server. Each test uses its own fresh user, so progress never leaks
  * between tests.
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 
 /** The Polish A1 lessons in their defined order. The two `explanation` items of
  * the same level are reference notes, not lessons, and are not listed. */
@@ -25,16 +23,6 @@ const LESSON_TITLES_IN_ORDER = [
 ];
 
 /** Pixels by which the page is wider than the viewport (0 = no sideways scrolling). */
-async function horizontalOverflow(page: Page): Promise<number> {
-  return page.locator("html").evaluate((root) => root.scrollWidth - root.clientWidth);
-}
-
-async function arrangeSignedIn(page: Page, request: Parameters<typeof registerAndVerifyUser>[0]) {
-  const email = uniqueEmail("lessons");
-  await registerAndVerifyUser(request, email, PASSWORD);
-  await signInViaUi(page, email, PASSWORD);
-  return email;
-}
 
 /** Opens Lessons the way a student does: the nav link, then Polish, then A1. */
 async function openPolishA1Lessons(page: Page) {
@@ -73,7 +61,7 @@ test.describe("lesson discovery", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await openPolishA1Lessons(page);
 
@@ -89,7 +77,7 @@ test.describe("lesson discovery", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
 
     await expect(lessonCard(page, "Greetings and goodbyes")).toContainText("Not started");
@@ -103,7 +91,7 @@ test.describe("lesson discovery", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await page.goto("/learn/lessons?language=pl&level=a1");
 
@@ -127,7 +115,7 @@ test.describe("opening a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
 
     await openGreetings(page);
@@ -153,7 +141,7 @@ test.describe("opening a lesson", () => {
   });
 
   test("opening a lesson marks it In progress, but never Completed", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
     await expect(page.getByRole("article").getByText("In progress")).toBeVisible();
@@ -172,7 +160,7 @@ test.describe("opening a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
     await expect(page.getByRole("article").getByText("In progress")).toBeVisible();
@@ -189,7 +177,7 @@ test.describe("completing a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
 
@@ -214,7 +202,7 @@ test.describe("completing a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
     await page.getByRole("button", { name: "Complete lesson" }).click();
@@ -230,7 +218,7 @@ test.describe("completing a lesson", () => {
   });
 
   test("can be done from the keyboard alone", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
 
@@ -246,7 +234,7 @@ test.describe("completing a lesson", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
 
@@ -283,7 +271,7 @@ test.describe("completing a lesson", () => {
   });
 
   test("clicking Complete lesson twice quickly still completes once", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
     const completions: string[] = [];
@@ -332,7 +320,7 @@ test.describe("access control", () => {
     request,
     browser,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await openPolishA1Lessons(page);
     await openGreetings(page);
     await page.getByRole("button", { name: "Complete lesson" }).click();
@@ -340,7 +328,7 @@ test.describe("access control", () => {
 
     const otherContext = await browser.newContext();
     const otherPage = await otherContext.newPage();
-    await arrangeSignedIn(otherPage, otherContext.request);
+    await arrangeSignedIn(otherPage, otherContext.request, "lessons");
     await otherPage.goto("/learn/lessons?language=pl&level=a1");
     await expect(lessonCard(otherPage, "Greetings and goodbyes")).toContainText("Not started");
 
@@ -364,7 +352,7 @@ test.describe("lessons that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await page.goto("/learn/lessons/pl-does-not-exist");
 
@@ -379,7 +367,7 @@ test.describe("lessons that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await page.goto(`/learn/lessons/${encodeURIComponent("<img src=x onerror=alert(1)>")}`);
 
@@ -391,7 +379,7 @@ test.describe("lessons that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await page.goto("/learn/lessons/pl-no-articles");
 
@@ -404,7 +392,7 @@ test.describe("lessons that are not there", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     for (const id of [
       encodeURIComponent("pl-greetings'; DROP TABLE lesson_progress;--"),
@@ -418,7 +406,7 @@ test.describe("lessons that are not there", () => {
   });
 
   test("a planned level shows coming soon and no lessons", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
 
     await page.goto("/learn/lessons?language=pl&level=a2");
 
@@ -434,7 +422,7 @@ test.describe("mobile", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await page.goto("/learn/lessons?language=pl&level=a1");
     await expect(page.getByRole("list", { name: "Lessons" })).toBeVisible();
     expect(await horizontalOverflow(page)).toBe(0);
@@ -462,7 +450,7 @@ test.describe("dark mode", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "lessons");
     await page.getByRole("button", { name: "Toggle dark mode" }).click();
     await expect(page.locator("html")).toHaveClass(/dark/);
 

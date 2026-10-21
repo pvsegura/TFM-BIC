@@ -1,23 +1,13 @@
 import { expect, test, type Page } from "@playwright/test";
 
-import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
-import { signInViaUi } from "./helpers/ui.js";
+import { API } from "./helpers/config.js";
+import { arrangeSignedIn } from "./helpers/session.js";
 
 /**
  * M10 — Phonetics, end to end against the real API (NODE_ENV=test: real server, real HTTP,
  * in-process Postgres, the real shipped `content/` tree) behind the real dev server. Each test
  * uses its own fresh user, so state never leaks between tests.
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
-
-async function arrangeSignedIn(page: Page, request: Parameters<typeof registerAndVerifyUser>[0]) {
-  const email = uniqueEmail("phonetics");
-  await registerAndVerifyUser(request, email, PASSWORD);
-  await signInViaUi(page, email, PASSWORD);
-  return email;
-}
 
 /** Opens Phonetics the way a student does: the nav link, then Polish. */
 async function openPolishPhonetics(page: Page) {
@@ -36,7 +26,7 @@ async function openPolishPhonetics(page: Page) {
 
 test.describe("browsing phonetics", () => {
   test("login, open Phonetics: Polish sounds are listed with topics", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
 
     await openPolishPhonetics(page);
 
@@ -47,7 +37,7 @@ test.describe("browsing phonetics", () => {
   });
 
   test("filters the list by topic", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
     await openPolishPhonetics(page);
 
     await page.getByRole("button", { name: /Nasal vowels/ }).click();
@@ -63,7 +53,7 @@ test.describe("a sound's detail and progress", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
     await openPolishPhonetics(page);
 
     await page.getByRole("link", { name: "IPA symbol t͡ʂ" }).first().click();
@@ -80,7 +70,7 @@ test.describe("a sound's detail and progress", () => {
   });
 
   test("marks a practiced sound as completed", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
     await page.goto("/learn/phonetics/pl-ipa-cz");
     await page.getByRole("button", { name: "Practice" }).click();
     await expect(page.getByText("Practiced", { exact: true })).toBeVisible();
@@ -100,7 +90,7 @@ test.describe("integration with vocabulary", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
     await page.goto("/learn/vocabulary/pl-dom");
     await expect(page.getByRole("heading", { level: 1, name: "dom" })).toBeVisible();
 
@@ -117,14 +107,14 @@ test.describe("security — one student cannot see or change another student's p
     request,
     browser,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "phonetics");
     await page.goto("/learn/phonetics/pl-ipa-cz");
     await page.getByRole("button", { name: "Practice" }).click();
     await expect(page.getByText("Practiced", { exact: true })).toBeVisible();
 
     const otherContext = await browser.newContext();
     const otherPage = await otherContext.newPage();
-    await arrangeSignedIn(otherPage, otherContext.request);
+    await arrangeSignedIn(otherPage, otherContext.request, "phonetics");
     await otherPage.goto("/learn/phonetics/pl-ipa-cz");
     await expect(otherPage.getByText("Not started", { exact: true })).toBeVisible();
 

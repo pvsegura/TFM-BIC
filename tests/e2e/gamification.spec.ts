@@ -1,7 +1,9 @@
-import { expect, test, type APIResponse, type Page } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 
+import { API, PASSWORD } from "./helpers/config.js";
+import { arrangeSignedIn, jsonOf } from "./helpers/session.js";
 import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
-import { signInViaUi } from "./helpers/ui.js";
+import { horizontalOverflow, signInViaUi } from "./helpers/ui.js";
 
 /**
  * M8 — Gamification, end to end against the real API (NODE_ENV=test: real server, real HTTP,
@@ -14,8 +16,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * nine, so it is proved at the application/database layers instead).
  */
 
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 const MC = "pl-greetings-polite-hello";
 const TF = "pl-greetings-informal-hi";
 
@@ -31,21 +31,6 @@ interface SummaryBody {
   totalPoints: number;
   achievements: { unlockedCount: number; totalCount: number };
   recentTransactions: { amount: number; reason: string }[];
-}
-
-async function jsonOf<T>(response: APIResponse): Promise<T> {
-  return (await response.json()) as T;
-}
-
-async function horizontalOverflow(page: Page): Promise<number> {
-  return page.locator("html").evaluate((root) => root.scrollWidth - root.clientWidth);
-}
-
-async function arrangeSignedIn(page: Page, request: Parameters<typeof registerAndVerifyUser>[0]) {
-  const email = uniqueEmail("gamification");
-  await registerAndVerifyUser(request, email, PASSWORD);
-  await signInViaUi(page, email, PASSWORD);
-  return email;
 }
 
 async function summary(page: Page): Promise<SummaryBody> {
@@ -65,7 +50,7 @@ test.describe("earning points from exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     await answerCorrectlyInUi(page);
 
@@ -79,7 +64,7 @@ test.describe("earning points from exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await answerCorrectlyInUi(page);
     await expect(notice(page)).toBeVisible();
 
@@ -96,7 +81,7 @@ test.describe("earning points from exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await page.goto(`/learn/exercises/${MC}`);
     await page.getByRole("radio", { name: "Cześć" }).check();
     await page.getByRole("button", { name: "Check answer" }).click();
@@ -115,7 +100,7 @@ test.describe("earning points from exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     const responses = await Promise.all(
       Array.from({ length: 6 }, () =>
@@ -133,7 +118,7 @@ test.describe("earning points from exercises", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     const named = await page.request.post(`${API}/exercises/${MC}/answer`, {
       data: { answer: "b", points: 1000, correct: true },
@@ -155,7 +140,7 @@ test.describe("earning points from lessons", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await page.goto("/learn/lessons/pl-greetings");
 
     await page.getByRole("button", { name: "Complete lesson" }).click();
@@ -176,7 +161,7 @@ test.describe("earning points from lessons", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     await Promise.all(
       Array.from({ length: 5 }, () => page.request.post(`${API}/lessons/pl-greetings/complete`)),
@@ -199,7 +184,7 @@ test.describe("the dashboard and the achievements page", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await earnEverything(page);
 
     await page.getByRole("link", { name: "Dashboard" }).click();
@@ -218,7 +203,7 @@ test.describe("the dashboard and the achievements page", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await earnEverything(page);
 
     await page.getByRole("link", { name: "Achievements" }).click();
@@ -244,7 +229,7 @@ test.describe("the dashboard and the achievements page", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     await page.goto("/dashboard");
 
@@ -260,7 +245,7 @@ test.describe("the dashboard and the achievements page", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await answerCorrectlyInUi(page);
     await expect(notice(page)).toBeVisible();
     await page.goto("/dashboard");
@@ -282,7 +267,7 @@ test.describe("the dashboard and the achievements page", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await earnEverything(page);
     await page.setViewportSize({ width: 375, height: 667 });
 
@@ -300,7 +285,7 @@ test.describe("the dashboard and the achievements page", () => {
   });
 
   test("the achievements page is usable with the keyboard alone", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await page.goto("/dashboard");
     await expect(page.getByRole("region", { name: "Your points" })).toBeVisible();
 
@@ -334,14 +319,14 @@ test.describe("privacy and authorization", () => {
     request,
     browser,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await answerCorrectlyInUi(page);
     await expect(notice(page)).toBeVisible();
     const me = await jsonOf<{ id: string }>(await page.request.get(`${API}/auth/me`));
 
     const otherContext = await browser.newContext();
     const otherPage = await otherContext.newPage();
-    await arrangeSignedIn(otherPage, otherContext.request);
+    await arrangeSignedIn(otherPage, otherContext.request, "gamification");
     const theirs = await jsonOf<SummaryBody>(
       await otherContext.request.get(`${API}/gamification/summary`),
     );
@@ -361,7 +346,7 @@ test.describe("privacy and authorization", () => {
   });
 
   test("the responses carry no user id and are not cacheable", async ({ page, request }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
     await answerCorrectlyInUi(page);
     await expect(notice(page)).toBeVisible();
     const me = await jsonOf<{ id: string }>(await page.request.get(`${API}/auth/me`));
@@ -379,7 +364,7 @@ test.describe("privacy and authorization", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     for (const query of ["limit=0", "limit=999", "limit=abc", "before=-1", "before=1;DROP"]) {
       const response = await page.request.get(`${API}/gamification/point-transactions?${query}`);
@@ -392,7 +377,7 @@ test.describe("privacy and authorization", () => {
     page,
     request,
   }) => {
-    await arrangeSignedIn(page, request);
+    await arrangeSignedIn(page, request, "gamification");
 
     const missing = await page.request.post(`${API}/exercises/pl-greetings-nope/answer`, {
       data: { answer: true },

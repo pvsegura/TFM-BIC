@@ -1,5 +1,6 @@
 import { expect, test } from "@playwright/test";
 
+import { API, PASSWORD } from "./helpers/config.js";
 import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
 import { signInViaUi } from "./helpers/ui.js";
 
@@ -9,9 +10,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * always drives this: AUDIO_GENERATION_PROVIDER defaults to "fake", and loadEnv refuses "gemini"
  * under NODE_ENV=test — no Gemini key, network call or paid request is ever involved (ADR-013).
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 
 test.describe("listening to a vocabulary entry", () => {
   test("login, open a word, listen to it slowly, and get a clip the browser can actually play", async ({

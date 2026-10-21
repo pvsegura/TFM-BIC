@@ -1,5 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 
+import { API, PASSWORD } from "./helpers/config.js";
 import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verify.js";
 
 /**
@@ -12,9 +13,6 @@ import { registerAndVerifyUser, uniqueEmail } from "./helpers/register-and-verif
  * pages' reads. Write flows under CSP (e.g. blob: audio playback) are covered by the policy's unit
  * test and the dev-server specs; see docs/security/M16-SECURITY-TESTS.md.
  */
-
-const PASSWORD = "a-good-password-123";
-const API = "http://localhost:3000";
 
 async function collectViolations(page: Page): Promise<() => Promise<string[]>> {
   const consoleErrors: string[] = [];

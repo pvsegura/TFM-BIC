@@ -1,7 +1,9 @@
 import { readFile } from "node:fs/promises";
 
-import { expect, test, type APIRequestContext, type Page } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 
+import { API, PASSWORD } from "./helpers/config.js";
+import { signInApi } from "./helpers/session.js";
 import {
   appPathOf,
   getCapturedEmail,
@@ -15,8 +17,6 @@ import { signInViaUi } from "./helpers/ui.js";
  * Postgres, fake email provider — nothing is ever sent) behind the real dev server.
  */
 
-const API = "http://localhost:3000";
-const PASSWORD = "a-good-password-123";
 const LESSON = "pl-greetings";
 
 interface ExportDocument {
@@ -28,12 +28,6 @@ interface ExportDocument {
     essentialEmails: string;
     newsletter: { status: string; consentVersion: string; unsubscribedAt: string | null } | null;
   };
-}
-
-async function signInApi(request: APIRequestContext, email: string): Promise<string> {
-  const response = await request.post(`${API}/auth/login`, { data: { email, password: PASSWORD } });
-  expect(response.ok()).toBe(true);
-  return ((await response.json()) as { id: string }).id;
 }
 
 async function openYourData(page: Page): Promise<void> {

@@ -1,6 +1,6 @@
 import type { APIRequestContext } from "@playwright/test";
 
-const API_BASE = "http://localhost:3000";
+import { API as API_BASE } from "./config.js";
 
 export function uniqueEmail(prefix = "e2e"): string {
   return `${prefix}-${Date.now()}-${Math.random().toString(36).slice(2)}@example.com`;

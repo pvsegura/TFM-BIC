@@ -1,5 +1,6 @@
 import { expect, test, type Page } from "@playwright/test";
 
+import { PASSWORD } from "./helpers/config.js";
 import {
   appPathOf,
   getCapturedEmail,
@@ -14,7 +15,6 @@ import { signInViaUi } from "./helpers/ui.js";
  */
 
 const API_BASE = "http://localhost:3000";
-const PASSWORD = "a-good-password-123";
 
 async function openEmailPreferences(page: Page): Promise<void> {
   await page.goto("/profile");
