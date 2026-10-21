@@ -19,3 +19,11 @@ export class ApiError extends Error {
 export function isNotFoundError(error: unknown): boolean {
   return error instanceof ApiError && (error.status === 404 || error.status === 400);
 }
+
+/** What a person is told when the API gave no message of its own (network failure, bad body). */
+export const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
+
+/** The message to show for a failed request: the API's own fixed text, or the generic one. */
+export function errorMessage(error: unknown): string {
+  return error instanceof ApiError ? error.message : GENERIC_ERROR_MESSAGE;
+}

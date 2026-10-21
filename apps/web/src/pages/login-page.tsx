@@ -6,7 +6,7 @@ import { useLocation, useNavigate, type Location } from "react-router";
 import { Link } from "../components/app-link.js";
 
 import { useLogin } from "../hooks/use-login.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 interface LocationState {
   from?: Location;
@@ -61,9 +61,7 @@ export function LoginPage() {
 
         {loginMutation.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {loginMutation.error instanceof ApiError
-              ? loginMutation.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(loginMutation.error)}
           </p>
         ) : null}
 

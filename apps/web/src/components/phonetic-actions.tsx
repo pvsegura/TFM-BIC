@@ -2,6 +2,7 @@ import { Button } from "@tfm-bic/ui";
 import { useState } from "react";
 
 import { useCompletePhonetic, useRecordPhoneticPractice } from "../hooks/use-phonetics.js";
+import { GENERIC_ERROR_MESSAGE } from "../services/api-error.js";
 
 export interface PhoneticActionsProps {
   phoneticId: string;
@@ -58,7 +59,7 @@ export function PhoneticActions({ phoneticId, status }: PhoneticActionsProps) {
       </p>
       {(practiceMutation.isError || completeMutation.isError) && (
         <p role="alert" className="w-full text-sm text-red-600 dark:text-red-400">
-          Something went wrong. Please try again.
+          {GENERIC_ERROR_MESSAGE}
         </p>
       )}
     </div>

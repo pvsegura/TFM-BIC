@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "../components/app-link.js";
 
 import { useRequestPasswordReset } from "../hooks/use-request-password-reset.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 export function ForgotPasswordPage() {
   const requestReset = useRequestPasswordReset();
@@ -55,9 +55,7 @@ export function ForgotPasswordPage() {
 
         {requestReset.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {requestReset.error instanceof ApiError
-              ? requestReset.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(requestReset.error)}
           </p>
         ) : null}
 

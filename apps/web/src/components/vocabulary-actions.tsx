@@ -6,6 +6,7 @@ import {
   useSaveVocabularyItem,
   useUnsaveVocabularyItem,
 } from "../hooks/use-vocabulary.js";
+import { GENERIC_ERROR_MESSAGE } from "../services/api-error.js";
 
 export interface VocabularyActionsProps {
   vocabularyId: string;
@@ -70,7 +71,7 @@ export function VocabularyActions({ vocabularyId, status }: VocabularyActionsPro
       </p>
       {(saveMutation.isError || unsaveMutation.isError || learnedMutation.isError) && (
         <p role="alert" className="w-full text-sm text-red-600 dark:text-red-400">
-          Something went wrong. Please try again.
+          {GENERIC_ERROR_MESSAGE}
         </p>
       )}
     </div>

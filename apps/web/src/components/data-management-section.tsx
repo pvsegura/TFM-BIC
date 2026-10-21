@@ -2,13 +2,7 @@ import { Button, TextField } from "@tfm-bic/ui";
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 
 import { useDeleteAccount, useExportPersonalData } from "../hooks/use-data-management.js";
-import { ApiError } from "../services/api-error.js";
-
-const GENERIC_ERROR = "Something went wrong. Please try again.";
-
-function messageOf(error: unknown): string {
-  return error instanceof ApiError ? error.message : GENERIC_ERROR;
-}
+import { errorMessage } from "../services/api-error.js";
 
 /**
  * "Your data" (M15, ADR-026): download a copy of what is stored about the account, and delete the
@@ -59,7 +53,7 @@ function ExportPersonalData() {
       ) : null}
       {exportData.isError ? (
         <p role="alert" className="mt-3 text-sm text-red-600 dark:text-red-400">
-          {messageOf(exportData.error)}
+          {errorMessage(exportData.error)}
         </p>
       ) : null}
     </div>
@@ -205,7 +199,7 @@ function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
         ) : null}
         {deletion.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {messageOf(deletion.error)}
+            {errorMessage(deletion.error)}
           </p>
         ) : null}
         <div className="flex flex-wrap gap-3">

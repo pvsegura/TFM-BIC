@@ -11,7 +11,7 @@ import {
   type VerifyEmailRequest,
 } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { requestJson, toApiError } from "./api-request.js";
 
 /**
  * `/auth` is same-origin — the Vite dev server proxies it to apps/api (see
@@ -22,30 +22,18 @@ import { ApiError } from "./api-error.js";
  */
 const AUTH_BASE = "/auth";
 
-async function safeErrorMessage(response: Response): Promise<string> {
-  try {
-    const data = (await response.json()) as { error?: string };
-    return data.error ?? "Something went wrong. Please try again.";
-  } catch {
-    return "Something went wrong. Please try again.";
-  }
-}
-
 async function postJson<T>(
   path: string,
   body: unknown,
   schema: { parse: (data: unknown) => T },
 ): Promise<T> {
-  const response = await fetch(`${AUTH_BASE}${path}`, {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    credentials: "include",
-    body: JSON.stringify(body),
-  });
-  if (!response.ok) {
-    throw new ApiError(await safeErrorMessage(response), response.status);
-  }
-  return schema.parse(await response.json());
+  return schema.parse(
+    await requestJson(`${AUTH_BASE}${path}`, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(body),
+    }),
+  );
 }
 
 export function register(input: RegisterRequest): Promise<MessageResponse> {
@@ -61,7 +49,7 @@ export function login(input: LoginRequest): Promise<AuthUserResponse> {
 export async function logout(): Promise<void> {
   const response = await fetch(`${AUTH_BASE}/logout`, { method: "POST", credentials: "include" });
   if (!response.ok && response.status !== 401) {
-    throw new ApiError(await safeErrorMessage(response), response.status);
+    throw await toApiError(response);
   }
 }
 
@@ -73,7 +61,7 @@ export async function fetchCurrentUser(): Promise<AuthUserResponse | null> {
     return null;
   }
   if (!response.ok) {
-    throw new ApiError(await safeErrorMessage(response), response.status);
+    throw await toApiError(response);
   }
   return authUserResponseSchema.parse(await response.json());
 }

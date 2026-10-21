@@ -2,7 +2,7 @@ import { Button } from "@tfm-bic/ui";
 import { useSearchParams } from "react-router";
 
 import { useUnsubscribeWithToken } from "../hooks/use-email-preferences.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 /**
  * Unsubscribe from the link in a newsletter (M14). No login and no password: the signed token in
@@ -45,9 +45,7 @@ export function NewsletterUnsubscribePage() {
         </Button>
         {unsubscribe.isError ? (
           <p role="alert" className="mt-4 text-sm text-red-600 dark:text-red-400">
-            {unsubscribe.error instanceof ApiError
-              ? unsubscribe.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(unsubscribe.error)}
           </p>
         ) : null}
       </>

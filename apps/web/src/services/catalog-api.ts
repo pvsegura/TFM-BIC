@@ -1,5 +1,4 @@
 import {
-  catalogErrorResponseSchema,
   contentListResponseSchema,
   contentResponseSchema,
   languageLevelsResponseSchema,
@@ -10,34 +9,14 @@ import {
   type LanguagesResponse,
 } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { requestPublicJson } from "./api-request.js";
 
 /**
  * Language and content discovery is public and read-only, so — unlike the
- * auth and profile clients — these requests send no credentials. Same-origin
- * like the rest (see vite.config.ts): the browser only ever talks to one origin.
+ * auth and profile clients — these requests ask for no credentials
+ * (`requestPublicJson`). Same-origin like the rest (see vite.config.ts).
  */
-const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
-
-async function toApiError(response: Response): Promise<ApiError> {
-  try {
-    const parsed = catalogErrorResponseSchema.safeParse(await response.json());
-    return new ApiError(
-      parsed.success ? parsed.data.error : GENERIC_ERROR_MESSAGE,
-      response.status,
-    );
-  } catch {
-    return new ApiError(GENERIC_ERROR_MESSAGE, response.status);
-  }
-}
-
-async function getJson(url: string): Promise<unknown> {
-  const response = await fetch(url, { headers: { Accept: "application/json" } });
-  if (!response.ok) {
-    throw await toApiError(response);
-  }
-  return response.json();
-}
+const getJson = requestPublicJson;
 
 /** Every value that becomes part of a URL is percent-encoded, so a route
  * parameter can never add path segments or query parameters to a request. */

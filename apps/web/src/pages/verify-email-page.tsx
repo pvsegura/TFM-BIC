@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
 import { useVerifyEmail } from "../hooks/use-verify-email.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 export function VerifyEmailPage() {
   const [searchParams] = useSearchParams();
@@ -43,9 +43,7 @@ export function VerifyEmailPage() {
           </>
         ) : verifyEmailMutation.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {verifyEmailMutation.error instanceof ApiError
-              ? verifyEmailMutation.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(verifyEmailMutation.error)}
           </p>
         ) : null}
       </div>

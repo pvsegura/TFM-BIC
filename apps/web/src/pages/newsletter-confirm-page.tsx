@@ -3,7 +3,7 @@ import { useSearchParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
 import { useConfirmNewsletterSubscription } from "../hooks/use-email-preferences.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 /**
  * Double opt-in step 2 (M14), opened from the confirmation email. Public — the token is the
@@ -40,9 +40,7 @@ export function NewsletterConfirmPage() {
         </Button>
         {confirm.isError ? (
           <p role="alert" className="mt-4 text-sm text-red-600 dark:text-red-400">
-            {confirm.error instanceof ApiError
-              ? confirm.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(confirm.error)}
           </p>
         ) : null}
       </>

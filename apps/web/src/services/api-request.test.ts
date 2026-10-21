@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 
-import { ApiError } from "./api-error.js";
-import { requestJson } from "./api-request.js";
+import { ApiError, errorMessage, GENERIC_ERROR_MESSAGE } from "./api-error.js";
+import { requestJson, requestPublicJson } from "./api-request.js";
 
 function stub(status: number, body: () => Promise<unknown>) {
   const fetchMock = vi
@@ -71,5 +71,60 @@ describe("requestJson", () => {
       message: "Something went wrong. Please try again.",
       status: 502,
     });
+  });
+});
+
+describe("requestPublicJson", () => {
+  it("asks for JSON without asking for credentials — public, read-only data", async () => {
+    const fetchMock = stub(200, () => Promise.resolve({ languages: [] }));
+
+    const body = await requestPublicJson("/languages");
+
+    expect(body).toEqual({ languages: [] });
+    expect(fetchMock).toHaveBeenCalledWith("/languages", {
+      headers: { Accept: "application/json" },
+    });
+  });
+
+  it("turns a refusal into an ApiError like the authenticated requests", async () => {
+    stub(404, () => Promise.resolve({ error: "Language not found." }));
+
+    await expect(requestPublicJson("/languages/xx/levels")).rejects.toMatchObject({
+      message: "Language not found.",
+      status: 404,
+    });
+  });
+});
+
+describe("field errors", () => {
+  it("keeps the per-field messages of a validation error, and only for known fields", async () => {
+    stub(400, () =>
+      Promise.resolve({
+        error: "Some fields are invalid.",
+        fields: { nickname: "Too long.", role: "Not editable." },
+      }),
+    );
+
+    const error = await requestJson("/profile").catch((e: unknown) => e);
+
+    expect(error).toMatchObject({ status: 400, fieldErrors: { nickname: "Too long." } });
+  });
+
+  it("has no field errors when the API names none", async () => {
+    stub(404, () => Promise.resolve({ error: "Not found." }));
+
+    const error = (await requestJson("/x").catch((e: unknown) => e)) as ApiError;
+
+    expect(error.fieldErrors).toBeUndefined();
+  });
+});
+
+describe("errorMessage", () => {
+  it("is the API's own message for an ApiError and the generic one for anything else", () => {
+    expect(errorMessage(new ApiError("Invalid email or password.", 401))).toBe(
+      "Invalid email or password.",
+    );
+    expect(errorMessage(new TypeError("Failed to fetch"))).toBe(GENERIC_ERROR_MESSAGE);
+    expect(GENERIC_ERROR_MESSAGE).toBe("Something went wrong. Please try again.");
   });
 });

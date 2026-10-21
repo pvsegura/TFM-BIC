@@ -1,6 +1,6 @@
 import { AUDIO_RESPONSE_CONTENT_TYPES, type AudioGenerationRequestBody } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { ApiError, GENERIC_ERROR_MESSAGE } from "./api-error.js";
 import { toApiError } from "./api-request.js";
 
 export interface VocabularyAudioRequest {
@@ -38,7 +38,7 @@ export async function requestVocabularyAudio(request: VocabularyAudioRequest): P
   }
   const contentType = response.headers.get("Content-Type") ?? "";
   if (!(AUDIO_RESPONSE_CONTENT_TYPES as readonly string[]).includes(contentType)) {
-    throw new ApiError("Something went wrong. Please try again.", response.status);
+    throw new ApiError(GENERIC_ERROR_MESSAGE, response.status);
   }
   return response.blob();
 }

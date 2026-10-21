@@ -7,7 +7,7 @@ import { Link } from "../components/app-link.js";
 import { z } from "zod";
 
 import { useConfirmPasswordReset } from "../hooks/use-confirm-password-reset.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 /** Only the field the user actually fills in — `token` comes from the URL,
  * not the form, but reuses the same password-policy rule as the shared
@@ -79,9 +79,7 @@ export function ResetPasswordPage() {
 
         {confirmReset.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {confirmReset.error instanceof ApiError
-              ? confirmReset.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(confirmReset.error)}
           </p>
         ) : null}
 

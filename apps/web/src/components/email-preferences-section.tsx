@@ -7,14 +7,9 @@ import {
   useSubscribeToNewsletter,
   useUnsubscribeFromNewsletter,
 } from "../hooks/use-email-preferences.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
-const GENERIC_ERROR = "Something went wrong. Please try again.";
 const DATE_FORMAT = new Intl.DateTimeFormat("en", { dateStyle: "long" });
-
-function messageOf(error: unknown): string {
-  return error instanceof ApiError ? error.message : GENERIC_ERROR;
-}
 
 function formatSince(since: string | null): string {
   return since ? ` since ${DATE_FORMAT.format(new Date(since))}` : "";
@@ -194,7 +189,7 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
       ) : null}
       {error ? (
         <p role="alert" className="mt-3 text-sm text-red-600 dark:text-red-400">
-          {messageOf(error)}
+          {errorMessage(error)}
         </p>
       ) : null}
     </fieldset>

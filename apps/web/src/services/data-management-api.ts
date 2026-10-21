@@ -25,7 +25,7 @@ function fileNameOf(response: Response): string {
   return name !== undefined && !name.startsWith(".") ? name : FALLBACK_FILE_NAME;
 }
 
-/** Downloads and validates the session user's export (version 1). */
+/** Downloads and validates the session user's export (the current `exportVersion` only). */
 export async function fetchPersonalDataExport(): Promise<PersonalDataExportFile> {
   const response = await fetch(EXPORT_URL, {
     credentials: "include",

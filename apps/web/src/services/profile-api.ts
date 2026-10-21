@@ -1,11 +1,10 @@
 import {
   profileResponseSchema,
-  profileValidationErrorResponseSchema,
   type ProfileResponse,
   type UpdateProfileRequest,
 } from "@tfm-bic/contracts";
 
-import { ApiError } from "./api-error.js";
+import { requestJson } from "./api-request.js";
 
 /**
  * Same-origin like `/auth` (see services/auth-api.ts and vite.config.ts). The
@@ -15,53 +14,21 @@ import { ApiError } from "./api-error.js";
  */
 const PROFILE_URL = "/profile";
 
-const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
-
-async function toApiError(response: Response): Promise<ApiError> {
-  try {
-    const parsed = profileValidationErrorResponseSchema.safeParse(await response.json());
-    if (!parsed.success) {
-      return new ApiError(GENERIC_ERROR_MESSAGE, response.status);
-    }
-    const fields = Object.fromEntries(
-      Object.entries(parsed.data.fields ?? {}).filter(
-        (entry): entry is [string, string] => typeof entry[1] === "string",
-      ),
-    );
-    return new ApiError(
-      parsed.data.error,
-      response.status,
-      Object.keys(fields).length > 0 ? fields : undefined,
-    );
-  } catch {
-    return new ApiError(GENERIC_ERROR_MESSAGE, response.status);
-  }
-}
-
 /** The authenticated student's profile. The user is identified by the session
  * cookie alone — no id is ever sent. */
 export async function fetchCurrentProfile(): Promise<ProfileResponse> {
-  const response = await fetch(PROFILE_URL, {
-    credentials: "include",
-    headers: { Accept: "application/json" },
-  });
-  if (!response.ok) {
-    throw await toApiError(response);
-  }
-  return profileResponseSchema.parse(await response.json());
+  return profileResponseSchema.parse(await requestJson(PROFILE_URL));
 }
 
 /** Resolves with the profile as persisted by the server — the caller should
- * show that, not what it submitted. */
+ * show that, not what it submitted. Field-level validation messages arrive as
+ * `ApiError.fieldErrors`. */
 export async function updateProfile(input: UpdateProfileRequest): Promise<ProfileResponse> {
-  const response = await fetch(PROFILE_URL, {
-    method: "PATCH",
-    credentials: "include",
-    headers: { "Content-Type": "application/json", Accept: "application/json" },
-    body: JSON.stringify(input),
-  });
-  if (!response.ok) {
-    throw await toApiError(response);
-  }
-  return profileResponseSchema.parse(await response.json());
+  return profileResponseSchema.parse(
+    await requestJson(PROFILE_URL, {
+      method: "PATCH",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(input),
+    }),
+  );
 }

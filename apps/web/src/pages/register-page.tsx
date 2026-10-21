@@ -5,7 +5,7 @@ import { useForm } from "react-hook-form";
 import { Link } from "../components/app-link.js";
 
 import { useRegister } from "../hooks/use-register.js";
-import { ApiError } from "../services/api-error.js";
+import { errorMessage } from "../services/api-error.js";
 
 export function RegisterPage() {
   const registerMutation = useRegister();
@@ -59,9 +59,7 @@ export function RegisterPage() {
 
         {registerMutation.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {registerMutation.error instanceof ApiError
-              ? registerMutation.error.message
-              : "Something went wrong. Please try again."}
+            {errorMessage(registerMutation.error)}
           </p>
         ) : null}
 
