@@ -2,14 +2,8 @@ import type {
   PhoneticRepresentationResponse,
   PhoneticUserProgressResponse,
 } from "@tfm-bic/contracts";
-import {
-  skipToken,
-  useMutation,
-  useQuery,
-  useQueryClient,
-  type QueryClient,
-} from "@tanstack/react-query";
-import { useCallback, useEffect, useRef } from "react";
+import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
+import { useEffect, useRef } from "react";
 
 import {
   completePhonetic,
@@ -20,7 +14,9 @@ import {
   recordPhoneticView,
   type PhoneticFilters,
 } from "../services/phonetics-api.js";
-import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { endSessionIfUnauthorized } from "./session-cache.js";
+import { useUserScopedQuery } from "./use-user-scoped-query.js";
+import { useSingleFlight } from "./use-single-flight.js";
 
 /**
  * Query-key root for phonetics. Every route is authenticated and every response carries the
@@ -36,45 +32,31 @@ const detailKey = (phoneticId: string) => [PHONETICS_QUERY_KEY_ROOT, "detail", p
 /** The phonetics of one language a student can browse, filtered and paged, each representation
  * with the student's own progress. Idle until a language is known. */
 export function usePhonetics(languageCode: string | undefined, filters: PhoneticFilters = {}) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...LIST_KEY, languageCode, filters],
-    queryFn:
-      languageCode === undefined
-        ? skipToken
-        : () =>
-            endingSessionOnUnauthorized(queryClient, () => fetchPhonetics(languageCode, filters)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...LIST_KEY, languageCode, filters],
+    languageCode === undefined ? undefined : () => fetchPhonetics(languageCode, filters),
+  );
 }
 
 /** A language's phonetics topics, each with the student's progress, and the language's total. */
 export function usePhoneticTopics(languageCode: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...TOPICS_KEY, languageCode],
-    queryFn:
-      languageCode === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchPhoneticTopics(languageCode)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...TOPICS_KEY, languageCode],
+    languageCode === undefined ? undefined : () => fetchPhoneticTopics(languageCode),
+  );
 }
 
 /** One representation with its topic and the student's progress. Idle without an id. */
 export function usePhonetic(phoneticId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: detailKey(phoneticId ?? ""),
-    queryFn:
-      phoneticId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchPhonetic(phoneticId)),
-    retry: false,
-    // The representation itself does not change while it is on screen; a background refetch on
-    // focus would only re-request the same content.
-    refetchOnWindowFocus: false,
-  });
+  return useUserScopedQuery(
+    detailKey(phoneticId ?? ""),
+    phoneticId === undefined ? undefined : () => fetchPhonetic(phoneticId),
+    {
+      // The representation itself does not change while it is on screen; a background refetch on
+      // focus would only re-request the same content.
+      refetchOnWindowFocus: false,
+    },
+  );
 }
 
 /**
@@ -112,24 +94,7 @@ function usePhoneticAction(action: (phoneticId: string) => Promise<PhoneticUserP
     },
   });
 
-  const inFlight = useRef(false);
-  const { mutate } = mutation;
-  const mutateOnce = useCallback(
-    (phoneticId: string) => {
-      if (inFlight.current) {
-        return;
-      }
-      inFlight.current = true;
-      mutate(phoneticId, {
-        onSettled: () => {
-          inFlight.current = false;
-        },
-      });
-    },
-    [mutate],
-  );
-
-  return { ...mutation, mutate: mutateOnce };
+  return useSingleFlight(mutation);
 }
 
 /** Records a view. Idempotent on the server; never regresses a further-along representation. */

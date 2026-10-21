@@ -1,9 +1,10 @@
 import type { ExerciseAnswerRequest, ExerciseResponse } from "@tfm-bic/contracts";
-import { skipToken, useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
-import { useCallback, useRef } from "react";
+import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { fetchExercise, fetchLessonExercises, submitAnswer } from "../services/exercises-api.js";
-import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { endSessionIfUnauthorized } from "./session-cache.js";
+import { useUserScopedQuery } from "./use-user-scoped-query.js";
+import { useSingleFlight } from "./use-single-flight.js";
 import { invalidateGamification } from "./use-gamification.js";
 
 /**
@@ -26,31 +27,23 @@ const LIST_KEY = [EXERCISES_QUERY_KEY_ROOT, "list"] as const;
  * lesson is known. Loaded for the lesson being viewed only — never the whole bank.
  */
 export function useLessonExercises(lessonId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...LIST_KEY, lessonId],
-    queryFn:
-      lessonId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchLessonExercises(lessonId)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...LIST_KEY, lessonId],
+    lessonId === undefined ? undefined : () => fetchLessonExercises(lessonId),
+  );
 }
 
 /** One exercise as a student may see it before answering, plus their result. Idle without an id. */
 export function useExercise(exerciseId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [EXERCISES_QUERY_KEY_ROOT, "detail", exerciseId],
-    queryFn:
-      exerciseId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchExercise(exerciseId)),
-    retry: false,
-    // The exercise itself does not change while it is on screen; a background refetch on focus
-    // would only re-request the same prompt.
-    refetchOnWindowFocus: false,
-  });
+  return useUserScopedQuery(
+    [EXERCISES_QUERY_KEY_ROOT, "detail", exerciseId],
+    exerciseId === undefined ? undefined : () => fetchExercise(exerciseId),
+    {
+      // The exercise itself does not change while it is on screen; a background refetch on focus
+      // would only re-request the same prompt.
+      refetchOnWindowFocus: false,
+    },
+  );
 }
 
 export interface SubmitAnswerInput {
@@ -93,23 +86,5 @@ export function useSubmitAnswer() {
     },
   });
 
-  const inFlight = useRef(false);
-  const { mutate } = mutation;
-
-  const mutateOnce = useCallback(
-    (input: SubmitAnswerInput) => {
-      if (inFlight.current) {
-        return;
-      }
-      inFlight.current = true;
-      mutate(input, {
-        onSettled: () => {
-          inFlight.current = false;
-        },
-      });
-    },
-    [mutate],
-  );
-
-  return { ...mutation, mutate: mutateOnce };
+  return useSingleFlight(mutation);
 }

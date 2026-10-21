@@ -3,14 +3,7 @@ import type {
   VocabularyStatusRequest,
   VocabularyUserStateResponse,
 } from "@tfm-bic/contracts";
-import {
-  skipToken,
-  useMutation,
-  useQuery,
-  useQueryClient,
-  type QueryClient,
-} from "@tanstack/react-query";
-import { useCallback, useRef } from "react";
+import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
 
 import {
   fetchUserVocabulary,
@@ -23,7 +16,9 @@ import {
   updateVocabularyStatus,
   type VocabularyFilters,
 } from "../services/vocabulary-api.js";
-import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { endSessionIfUnauthorized } from "./session-cache.js";
+import { useUserScopedQuery } from "./use-user-scoped-query.js";
+import { useSingleFlight } from "./use-single-flight.js";
 
 /**
  * Query-key root for vocabulary. Every route is authenticated and every response carries the
@@ -42,16 +37,10 @@ const detailKey = (vocabularyId: string) =>
 /** The vocabulary of one language a student can browse, filtered, searched and paged, each entry
  * with the student's own state. Idle until a language is known. */
 export function useVocabulary(languageCode: string | undefined, filters: VocabularyFilters = {}) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...LIST_KEY, languageCode, filters],
-    queryFn:
-      languageCode === undefined
-        ? skipToken
-        : () =>
-            endingSessionOnUnauthorized(queryClient, () => fetchVocabulary(languageCode, filters)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...LIST_KEY, languageCode, filters],
+    languageCode === undefined ? undefined : () => fetchVocabulary(languageCode, filters),
+  );
 }
 
 /** "My Vocabulary": only the words the student has touched. Idle until a language is known. */
@@ -59,48 +48,31 @@ export function useUserVocabulary(
   languageCode: string | undefined,
   filters: VocabularyFilters = {},
 ) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...MINE_KEY, languageCode, filters],
-    queryFn:
-      languageCode === undefined
-        ? skipToken
-        : () =>
-            endingSessionOnUnauthorized(queryClient, () =>
-              fetchUserVocabulary(languageCode, filters),
-            ),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...MINE_KEY, languageCode, filters],
+    languageCode === undefined ? undefined : () => fetchUserVocabulary(languageCode, filters),
+  );
 }
 
 /** A language's vocabulary topics, each with the student's progress, and the language's total. */
 export function useVocabularyCategories(languageCode: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [...CATEGORIES_KEY, languageCode],
-    queryFn:
-      languageCode === undefined
-        ? skipToken
-        : () =>
-            endingSessionOnUnauthorized(queryClient, () => fetchVocabularyCategories(languageCode)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [...CATEGORIES_KEY, languageCode],
+    languageCode === undefined ? undefined : () => fetchVocabularyCategories(languageCode),
+  );
 }
 
 /** One entry with its category and the student's state. Idle without an id. */
 export function useVocabularyItem(vocabularyId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: detailKey(vocabularyId ?? ""),
-    queryFn:
-      vocabularyId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchVocabularyItem(vocabularyId)),
-    retry: false,
-    // The entry itself does not change while it is on screen; a background refetch on focus would
-    // only re-request the same content.
-    refetchOnWindowFocus: false,
-  });
+  return useUserScopedQuery(
+    detailKey(vocabularyId ?? ""),
+    vocabularyId === undefined ? undefined : () => fetchVocabularyItem(vocabularyId),
+    {
+      // The entry itself does not change while it is on screen; a background refetch on focus would
+      // only re-request the same content.
+      refetchOnWindowFocus: false,
+    },
+  );
 }
 
 /**
@@ -142,24 +114,7 @@ function useVocabularyAction<TInput extends { vocabularyId: string }>(
     },
   });
 
-  const inFlight = useRef(false);
-  const { mutate } = mutation;
-  const mutateOnce = useCallback(
-    (input: TInput) => {
-      if (inFlight.current) {
-        return;
-      }
-      inFlight.current = true;
-      mutate(input, {
-        onSettled: () => {
-          inFlight.current = false;
-        },
-      });
-    },
-    [mutate],
-  );
-
-  return { ...mutation, mutate: mutateOnce };
+  return useSingleFlight(mutation);
 }
 
 /** Puts a word on the list. Idempotent on the server. */

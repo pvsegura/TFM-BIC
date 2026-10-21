@@ -1,15 +1,11 @@
 import type { LessonProgressResponse, LessonResponse } from "@tfm-bic/contracts";
-import {
-  skipToken,
-  useMutation,
-  useQuery,
-  useQueryClient,
-  type QueryClient,
-} from "@tanstack/react-query";
-import { useCallback, useEffect, useRef } from "react";
+import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
+import { useEffect, useRef } from "react";
 
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "../services/lessons-api.js";
-import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { endSessionIfUnauthorized } from "./session-cache.js";
+import { useUserScopedQuery } from "./use-user-scoped-query.js";
+import { useSingleFlight } from "./use-single-flight.js";
 import { invalidateGamification } from "./use-gamification.js";
 
 /**
@@ -30,31 +26,25 @@ const detailKey = (lessonId: string) => [LESSONS_QUERY_KEY_ROOT, "detail", lesso
  * straight away. Idle until a language and level are known.
  */
 export function useLessons(languageCode: string | undefined, levelId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [LESSONS_QUERY_KEY_ROOT, "list", languageCode, levelId],
-    queryFn:
-      languageCode === undefined || levelId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchLessons(languageCode, levelId)),
-    retry: false,
-  });
+  return useUserScopedQuery(
+    [LESSONS_QUERY_KEY_ROOT, "list", languageCode, levelId],
+    languageCode === undefined || levelId === undefined
+      ? undefined
+      : () => fetchLessons(languageCode, levelId),
+  );
 }
 
 /** One lesson with its blocks and the student's progress. Idle without an id. */
 export function useLesson(lessonId: string | undefined) {
-  const queryClient = useQueryClient();
-  return useQuery({
-    queryKey: [LESSONS_QUERY_KEY_ROOT, "detail", lessonId],
-    queryFn:
-      lessonId === undefined
-        ? skipToken
-        : () => endingSessionOnUnauthorized(queryClient, () => fetchLesson(lessonId)),
-    retry: false,
-    // The page holds the lesson while it is read; a background refetch on focus
-    // would only re-request text that has not changed.
-    refetchOnWindowFocus: false,
-  });
+  return useUserScopedQuery(
+    [LESSONS_QUERY_KEY_ROOT, "detail", lessonId],
+    lessonId === undefined ? undefined : () => fetchLesson(lessonId),
+    {
+      // The page holds the lesson while it is read; a background refetch on focus
+      // would only re-request text that has not changed.
+      refetchOnWindowFocus: false,
+    },
+  );
 }
 
 /**
@@ -120,25 +110,7 @@ export function useCompleteLesson() {
       void invalidateGamification(queryClient);
     }
   });
-  const inFlight = useRef(false);
-  const { mutate } = mutation;
-
-  const mutateOnce = useCallback(
-    (lessonId: string) => {
-      if (inFlight.current) {
-        return;
-      }
-      inFlight.current = true;
-      mutate(lessonId, {
-        onSettled: () => {
-          inFlight.current = false;
-        },
-      });
-    },
-    [mutate],
-  );
-
-  return { ...mutation, mutate: mutateOnce };
+  return useSingleFlight(mutation);
 }
 
 /**
