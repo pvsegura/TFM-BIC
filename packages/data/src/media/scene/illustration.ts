@@ -1,5 +1,7 @@
 import type { TimeOfDay } from "@tfm-bic/domain";
 
+import { shade, tint } from "./color.js";
+
 /**
  * The illustration kit for scenes (template 4): the soft cartoon-interior look — lavender and
  * purple rooms, tall windows onto a pale city skyline, pendant lamps that glow, potted plants,
@@ -312,8 +314,8 @@ export function plant(
 
 /** A plump lounge armchair seen from the front-side; x = centre, colour = upholstery. */
 export function armchair(x: number, color: string, facing: 1 | -1 = 1, size = 1): string {
-  const dk = darken(color, 0.78);
-  const lt = lighten(color, 0.25);
+  const dk = shade(color, 0.78);
+  const lt = tint(color, 0.25);
   return `<g transform="translate(${s(x)} ${s(FLOOR_Y)}) scale(${s(facing * size)} ${s(size)})">
     <ellipse cx="0" cy="2" rx="96" ry="10" fill="#000" opacity="0.15"/>
     <path d="M-70 -10 L-74 0 M70 -10 L74 0 M-40 -10 L-42 0 M40 -10 L42 0" stroke="#3a2a4a" stroke-width="6" stroke-linecap="round"/>
@@ -351,19 +353,6 @@ export function desk(x: number, width = 300, monitor = true, time: TimeOfDay = "
     }`;
 }
 
-/** A swivel office chair seen from behind; x = centre. */
-export function officeChair(x: number, color = "#3b3570"): string {
-  const y = FLOOR_Y;
-  return `<ellipse cx="${s(x)}" cy="${s(y + 2)}" rx="56" ry="7" fill="#000" opacity="0.15"/>
-    <path d="M${s(x - 44)} ${s(y - 8)} L${s(x)} ${s(y - 22)} L${s(x + 44)} ${s(y - 8)}" stroke="#bdb6d4" stroke-width="7" fill="none" stroke-linecap="round"/>
-    ${[-44, 0, 44].map((d) => `<circle cx="${s(x + d)}" cy="${s(y - 5)}" r="6" fill="#2c2340"/>`).join("")}
-    <rect x="${s(x - 5)}" y="${s(y - 90)}" width="10" height="70" fill="#cfc8e2"/>
-    <path d="M${s(x - 48)} ${s(y - 100)} Q${s(x)} ${s(y - 112)} ${s(x + 48)} ${s(y - 100)} L${s(x + 44)} ${s(y - 84)} L${s(x - 44)} ${s(y - 84)} Z" fill="${darken(color, 0.8)}"/>
-    <path d="M${s(x - 46)} ${s(y - 210)} Q${s(x)} ${s(y - 230)} ${s(x + 46)} ${s(y - 210)} L${s(x + 40)} ${s(y - 100)} Q${s(x)} ${s(y - 94)} ${s(x - 40)} ${s(y - 100)} Z" fill="${color}"/>
-    <path d="M${s(x - 36)} ${s(y - 206)} Q${s(x - 10)} ${s(y - 220)} ${s(x + 20)} ${s(y - 214)}" stroke="#ffffff" stroke-width="3" opacity="0.35" fill="none" stroke-linecap="round"/>
-    <path d="M${s(x)} ${s(y - 214)} V${s(y - 104)}" stroke="#000" stroke-opacity="0.12" stroke-width="2"/>`;
-}
-
 /** A water cooler; x = centre. */
 export function waterCooler(x: number): string {
   const y = FLOOR_Y;
@@ -377,32 +366,7 @@ export function waterCooler(x: number): string {
     <path d="M${s(x - 20)} ${s(y - 226)} Q${s(x - 26)} ${s(y - 200)} ${s(x - 20)} ${s(y - 162)}" stroke="#ffffff" stroke-width="5" opacity="0.5" fill="none" stroke-linecap="round"/>`;
 }
 
-/** A board on the wall with sticky notes. */
-export function noteBoard(x: number, y: number, w: number, h: number): string {
-  const notes = [
-    ["#f7d84a", 0.12, 0.2],
-    ["#f48fb1", 0.38, 0.3],
-    ["#a5d86a", 0.62, 0.18],
-    ["#f7d84a", 0.8, 0.5],
-    ["#90caf9", 0.22, 0.6],
-  ] as const;
-  return `<rect x="${s(x)}" y="${s(y)}" width="${s(w)}" height="${s(h)}" rx="6" fill="#fdfbff" stroke="#d9d0ef" stroke-width="8"/>
-    ${notes.map(([c, fx, fy], i) => `<rect x="${s(x + w * fx)}" y="${s(y + h * fy)}" width="34" height="32" fill="${c}" transform="rotate(${s(i % 2 ? 4 : -3)} ${s(x + w * fx + 17)} ${s(y + h * fy + 16)})"/>`).join("")}`;
-}
-
 /** Overall colour wash over the whole picture, placed in front of the characters. */
 export function vignette(time: TimeOfDay): string {
   return `<rect width="1280" height="720" fill="url(#ill-vignette-${time})" pointer-events="none"/>`;
-}
-
-function darken(hex: string, f: number) {
-  const n = Number.parseInt(hex.slice(1), 16);
-  const c = (v: number) => Math.round(v * f);
-  return `#${((c(n >> 16) << 16) | (c((n >> 8) & 255) << 8) | c(n & 255)).toString(16).padStart(6, "0")}`;
-}
-
-function lighten(hex: string, f: number) {
-  const n = Number.parseInt(hex.slice(1), 16);
-  const c = (v: number) => Math.round(v + (255 - v) * f);
-  return `#${((c(n >> 16) << 16) | (c((n >> 8) & 255) << 8) | c(n & 255)).toString(16).padStart(6, "0")}`;
 }

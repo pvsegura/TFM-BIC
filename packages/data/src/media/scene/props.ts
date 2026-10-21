@@ -52,7 +52,3 @@ export function propSvg(type: string): string {
   if (svg === undefined) throw new Error(`Unknown prop "${type}".`);
   return svg;
 }
-
-export function hasProp(type: string): boolean {
-  return type in P;
-}

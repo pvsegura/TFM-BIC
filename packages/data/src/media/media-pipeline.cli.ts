@@ -11,7 +11,7 @@ import {
   type AudioGenerationService,
   type MediaRunStatus,
 } from "@tfm-bic/application";
-import { narrationOf, voiceOf, type LanguageId } from "@tfm-bic/domain";
+import { createLanguageId, narrationOf, voiceOf, type LanguageId } from "@tfm-bic/domain";
 
 import { SystemClock } from "../clock/system-clock.js";
 import { GeminiAudioProvider } from "../audio/gemini-audio.provider.js";
@@ -92,11 +92,26 @@ function intFlag(name: string, raw: string | undefined, max: number): number {
   return value;
 }
 
+/** What every command needs, prepared once by `main`. */
+interface PipelineContext {
+  languageId: LanguageId;
+  repos: Awaited<ReturnType<typeof loadContentRepositories>>;
+  plan: Awaited<ReturnType<typeof loadMediaPlan>>;
+  localeOf: (language: string) => string;
+  tools: FfmpegTools;
+  model: string;
+  filter: Parameters<typeof planMediaTargets>[2];
+  draft: boolean;
+  mediaRoot: string;
+  manifest: FileMediaManifestRepository;
+  synthesizer: (key: string | undefined, root?: string) => StoredNarrationSynthesizer;
+}
+
 async function main() {
-  const languageId = values.language ?? "pl";
+  const languageId = createLanguageId(values.language ?? "pl");
   const repos = await loadContentRepositories(DEFAULT_CONTENT_ROOT);
   const plan = await loadMediaPlan(DEFAULT_CONTENT_ROOT, languageId);
-  const language = await repos.contentRepository.findLanguage(languageId as never);
+  const language = await repos.contentRepository.findLanguage(languageId);
   const localeOf = (lang: string) => (lang === language?.code ? language.locale : lang);
   const tools = ffmpegTools();
   const model = process.env.GEMINI_TTS_MODEL ?? DEFAULT_MODEL;
@@ -205,200 +220,237 @@ async function main() {
       mode: modeFor(key),
     });
 
-  switch (command) {
-    case "doctor": {
-      const key = loadKey();
-      out(`Hyperframes        ${HYPERFRAMES_VERSION} (pinned devDependency)`);
-      out(`FFmpeg             ${tools.ffmpeg}`);
-      out(
-        `Media plan         ${String(plan.narrators.size)} narrators, ${String(plan.plan.lessons.length)} lessons, ${String(plan.plan.vocabularyCategories.length)} vocabulary categories`,
-      );
-      out(`TTS model          ${model}`);
-      out(`GEMINI_API_KEY     ${key ? "configured" : "NOT configured"}`);
-      out(
-        `Key file ignored   ${existsSync(ENV_FILE) ? "present (git-ignored by .env.*)" : "absent"}`,
-      );
-      return;
-    }
-    case "plan": {
-      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
-      const synth = synthesizer(undefined);
-      const clipIndex = path.join(mediaRoot, languageId, "audio", "clips.json");
-      const clips = existsSync(clipIndex)
-        ? (JSON.parse(await readFile(clipIndex, "utf8")) as Record<string, unknown>)
-        : {};
-      const useCase = useCaseFor(
-        synth,
-        manifest,
-        mediaRoot,
-        tools,
-        localeOf,
-        draft ? "draft-silence" : `gemini:${model}`,
-      );
-      const seen = new Set<string>();
-      let newLines = 0;
-      for (const t of targets) {
-        const entry = await manifest.get(t.key);
-        const audioOnly = isAudioTarget(t);
-        const upToDate = audioOnly
-          ? Boolean(entry?.published?.audio.length) &&
-            !entry?.published?.video &&
-            entry?.sourceHash === useCase.audioSourceHashOf(t)
-          : Boolean(entry?.published?.video) &&
-            entry?.sourceHash === useCase.sourceHashOf(t.script);
-        let fresh = 0;
-        const spoken = audioOnly
-          ? t.clips.map((c) => ({ voice: t.voice, language: c.language, text: c.text }))
-          : narrationOf(t.script).map((line) => ({
-              voice: voiceOf(t.script, line),
-              language: line.language,
-              text: line.text,
-            }));
-        for (const line of spoken) {
-          const k = createHash("sha256")
-            .update(
-              JSON.stringify([
-                synth.fingerprint(line.voice),
-                line.language,
-                line.text.replace(/\s+/g, " ").trim(),
-              ]),
-            )
-            .digest("hex")
-            .slice(0, 16);
-          if (!(k in clips) && !seen.has(k)) {
-            seen.add(k);
-            fresh += 1;
-          }
-        }
-        if (!upToDate) newLines += fresh;
-        out(
-          `${t.key.padEnd(34)} p${String(t.priority)}  ${(upToDate ? "up to date" : entry?.published ? "outdated" : entry?.lastRun.status === "failed" ? "failed" : "missing").padEnd(10)}  ${String(fresh).padStart(3)} new clips  ${audioOnly ? "audio · " : "video · "}${t.label}`,
-        );
-      }
-      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED     ${b.label} — ${b.reason}`);
-      out();
-      out(
-        `${String(targets.length)} targets, ${String(blocked.length)} blocked; generating the missing/outdated ones needs about ${String(newLines)} provider calls.`,
-      );
-      return;
-    }
-    case "audition": {
-      const key = loadKey();
-      const synth = synthesizer(key, path.join(BUILD_ROOT, "audition"));
-      const sample = await firstExamplePhrase(repos, languageId);
-      const only = values.only?.split(",").map((v) => v.trim());
-      for (const narratorId of plan.narrators.keys()) {
-        if (only && !only.includes(narratorId)) continue;
-        for (const line of [
-          { text: "Hello. In this lesson you will learn how to greet people.", language: "en" },
-          { text: sample, language: languageId },
-        ]) {
-          const clip = await synth.synthesize({
-            narratorId,
-            text: line.text,
-            language: line.language as LanguageId,
-          });
-          const f0 = await medianPitchHz(tools, path.join(BUILD_ROOT, "audition", clip.path));
-          out(
-            `${narratorId.padEnd(8)} ${line.language}  ${clip.durationSeconds.toFixed(2)} s  median pitch ${f0 ? `${String(f0)} Hz` : "n/a"}  .media-build/audition/${clip.path}`,
-          );
-        }
-      }
-      out(`Provider calls: ${String(synth.providerCalls)}`);
-      return;
-    }
-    case "compose": {
-      // Review aid: build scripts, synthesize (draft silence unless real audio already exists),
-      // and write the Hyperframes projects without rendering — frames can then be inspected fast.
-      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
-      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
-      const synth = synthesizer(draft ? undefined : loadKey());
-      const renderer = new HyperframesVideoRenderer({
-        mediaRoot,
-        buildRoot: path.join(BUILD_ROOT, "projects"),
-        ffmpeg: tools,
-        localeOf,
-      });
-      for (const t of targets) {
-        if (isAudioTarget(t)) continue;
-        const clips = [];
-        for (const line of narrationOf(t.script)) {
-          clips.push(
-            await synth.synthesize({
-              narratorId: voiceOf(t.script, line),
-              text: line.text,
-              language: line.language,
-            }),
-          );
-        }
-        const timeline = planVideoTimeline(t.script, clips);
-        const dir = await renderer.writeProject(t.script, timeline);
-        out(
-          `${t.key.padEnd(34)} ${timeline.durationSeconds.toFixed(1)} s  ${path.relative(REPO_ROOT, dir)}`,
-        );
-        for (const scene of timeline.scenes)
-          out(
-            `    scene ${String(scene.index)} ${t.script.scenes[scene.index]?.kind ?? ""} ${scene.start.toFixed(1)}–${(scene.start + scene.duration).toFixed(1)}`,
-          );
-      }
-      out(`Provider calls: ${String(synth.providerCalls)}`);
-      return;
-    }
-    case "generate": {
-      const key = draft ? undefined : loadKey();
-      if (!draft && !key) {
-        throw new Error(
-          "GEMINI_API_KEY is not configured. Use --draft to check layout without any provider call.",
-        );
-      }
-      const limit = intFlag("limit", values.limit, MAX_LIMIT);
-      const maxCalls = intFlag("max-calls", values["max-calls"], MAX_CALLS_CEILING);
-      const { targets, blocked } = await planMediaTargets(repos, plan, filter);
-      for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
-      if (targets.length > limit && !values.yes) {
-        out(
-          `${String(targets.length)} targets match; at most ${String(limit)} will be generated this run (--limit).`,
-        );
-      }
-      await mkdir(BUILD_ROOT, { recursive: true });
-      const synth = synthesizer(key);
-      const useCase = useCaseFor(
-        synth,
-        manifest,
-        mediaRoot,
-        tools,
-        localeOf,
-        draft ? "draft-silence" : `gemini:${model}`,
-        (k, status, detail) => {
-          out(
-            `${new Date().toISOString().slice(11, 19)}  ${k.padEnd(34)} ${status}${detail ? ` — ${detail}` : ""}`,
-          );
-        },
-      );
-      const outcomes = await useCase.execute({
-        targets,
-        force: values.force === true,
-        maxItems: limit,
-        maxProviderCalls: maxCalls,
-      });
-      out();
-      for (const o of outcomes) {
-        out(
-          `${o.key.padEnd(34)} ${o.status.padEnd(8)} calls=${String(o.providerCalls)}${o.durationSeconds ? ` ${o.durationSeconds.toFixed(1)} s` : ""}${o.reason ? ` (${o.reason})` : ""}`,
-        );
-      }
-      out(
-        `Provider calls this run: ${String(synth.providerCalls)}${draft ? " (draft: none are real)" : ""}`,
-      );
-      if (outcomes.some((o) => o.status === "failed")) process.exitCode = 1;
-      return;
-    }
-    default:
-      out(
-        "Usage: media <doctor|plan|audition|generate> [--lessons|--vocabulary|--grammar|--only type:id,...] [--category id] [--priority 1-3] [--limit n] [--max-calls n] [--force] [--draft]",
-      );
-      process.exitCode = command === "help" ? 0 : 2;
+  const ctx: PipelineContext = {
+    languageId,
+    repos,
+    plan,
+    localeOf,
+    tools,
+    model,
+    filter,
+    draft,
+    mediaRoot,
+    manifest,
+    synthesizer,
+  };
+  const commands: Record<string, (ctx: PipelineContext) => void | Promise<void>> = {
+    doctor,
+    plan: planCommand,
+    audition,
+    compose,
+    generate,
+  };
+  const run = commands[command];
+  if (run) {
+    await run(ctx);
+    return;
   }
+  out(
+    "Usage: media <doctor|plan|audition|generate> [--lessons|--vocabulary|--grammar|--only type:id,...] [--category id] [--priority 1-3] [--limit n] [--max-calls n] [--force] [--draft]",
+  );
+  process.exitCode = command === "help" ? 0 : 2;
+}
+
+function doctor(ctx: PipelineContext): void {
+  const { plan, tools, model } = ctx;
+  const key = loadKey();
+  out(`Hyperframes        ${HYPERFRAMES_VERSION} (pinned devDependency)`);
+  out(`FFmpeg             ${tools.ffmpeg}`);
+  out(
+    `Media plan         ${String(plan.narrators.size)} narrators, ${String(plan.plan.lessons.length)} lessons, ${String(plan.plan.vocabularyCategories.length)} vocabulary categories`,
+  );
+  out(`TTS model          ${model}`);
+  out(`GEMINI_API_KEY     ${key ? "configured" : "NOT configured"}`);
+  out(`Key file ignored   ${existsSync(ENV_FILE) ? "present (git-ignored by .env.*)" : "absent"}`);
+}
+
+async function planCommand(ctx: PipelineContext): Promise<void> {
+  const {
+    languageId,
+    repos,
+    plan,
+    localeOf,
+    tools,
+    model,
+    filter,
+    draft,
+    mediaRoot,
+    manifest,
+    synthesizer,
+  } = ctx;
+  const { targets, blocked } = await planMediaTargets(repos, plan, filter);
+  const synth = synthesizer(undefined);
+  const clipIndex = path.join(mediaRoot, languageId, "audio", "clips.json");
+  const clips = existsSync(clipIndex)
+    ? (JSON.parse(await readFile(clipIndex, "utf8")) as Record<string, unknown>)
+    : {};
+  const useCase = useCaseFor(
+    synth,
+    manifest,
+    mediaRoot,
+    tools,
+    localeOf,
+    draft ? "draft-silence" : `gemini:${model}`,
+  );
+  const seen = new Set<string>();
+  let newLines = 0;
+  for (const t of targets) {
+    const entry = await manifest.get(t.key);
+    const audioOnly = isAudioTarget(t);
+    const upToDate = audioOnly
+      ? Boolean(entry?.published?.audio.length) &&
+        !entry?.published?.video &&
+        entry?.sourceHash === useCase.audioSourceHashOf(t)
+      : Boolean(entry?.published?.video) && entry?.sourceHash === useCase.sourceHashOf(t.script);
+    let fresh = 0;
+    const spoken = audioOnly
+      ? t.clips.map((c) => ({ voice: t.voice, language: c.language, text: c.text }))
+      : narrationOf(t.script).map((line) => ({
+          voice: voiceOf(t.script, line),
+          language: line.language,
+          text: line.text,
+        }));
+    for (const line of spoken) {
+      const k = createHash("sha256")
+        .update(
+          JSON.stringify([
+            synth.fingerprint(line.voice),
+            line.language,
+            line.text.replace(/\s+/g, " ").trim(),
+          ]),
+        )
+        .digest("hex")
+        .slice(0, 16);
+      if (!(k in clips) && !seen.has(k)) {
+        seen.add(k);
+        fresh += 1;
+      }
+    }
+    if (!upToDate) newLines += fresh;
+    out(
+      `${t.key.padEnd(34)} p${String(t.priority)}  ${(upToDate ? "up to date" : entry?.published ? "outdated" : entry?.lastRun.status === "failed" ? "failed" : "missing").padEnd(10)}  ${String(fresh).padStart(3)} new clips  ${audioOnly ? "audio · " : "video · "}${t.label}`,
+    );
+  }
+  for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED     ${b.label} — ${b.reason}`);
+  out();
+  out(
+    `${String(targets.length)} targets, ${String(blocked.length)} blocked; generating the missing/outdated ones needs about ${String(newLines)} provider calls.`,
+  );
+}
+
+async function audition(ctx: PipelineContext): Promise<void> {
+  const { languageId, repos, plan, tools, synthesizer } = ctx;
+  const key = loadKey();
+  const synth = synthesizer(key, path.join(BUILD_ROOT, "audition"));
+  const sample = await firstExamplePhrase(repos, languageId);
+  const only = values.only?.split(",").map((v) => v.trim());
+  for (const narratorId of plan.narrators.keys()) {
+    if (only && !only.includes(narratorId)) continue;
+    for (const line of [
+      { text: "Hello. In this lesson you will learn how to greet people.", language: "en" },
+      { text: sample, language: languageId },
+    ]) {
+      const clip = await synth.synthesize({
+        narratorId,
+        text: line.text,
+        language: line.language as LanguageId,
+      });
+      const f0 = await medianPitchHz(tools, path.join(BUILD_ROOT, "audition", clip.path));
+      out(
+        `${narratorId.padEnd(8)} ${line.language}  ${clip.durationSeconds.toFixed(2)} s  median pitch ${f0 ? `${String(f0)} Hz` : "n/a"}  .media-build/audition/${clip.path}`,
+      );
+    }
+  }
+  out(`Provider calls: ${String(synth.providerCalls)}`);
+}
+
+async function compose(ctx: PipelineContext): Promise<void> {
+  const { repos, plan, localeOf, tools, filter, draft, mediaRoot, synthesizer } = ctx;
+  // Review aid: build scripts, synthesize (draft silence unless real audio already exists),
+  // and write the Hyperframes projects without rendering — frames can then be inspected fast.
+  const { targets, blocked } = await planMediaTargets(repos, plan, filter);
+  for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
+  const synth = synthesizer(draft ? undefined : loadKey());
+  const renderer = new HyperframesVideoRenderer({
+    mediaRoot,
+    buildRoot: path.join(BUILD_ROOT, "projects"),
+    ffmpeg: tools,
+    localeOf,
+  });
+  for (const t of targets) {
+    if (isAudioTarget(t)) continue;
+    const clips = [];
+    for (const line of narrationOf(t.script)) {
+      clips.push(
+        await synth.synthesize({
+          narratorId: voiceOf(t.script, line),
+          text: line.text,
+          language: line.language,
+        }),
+      );
+    }
+    const timeline = planVideoTimeline(t.script, clips);
+    const dir = await renderer.writeProject(t.script, timeline);
+    out(
+      `${t.key.padEnd(34)} ${timeline.durationSeconds.toFixed(1)} s  ${path.relative(REPO_ROOT, dir)}`,
+    );
+    for (const scene of timeline.scenes)
+      out(
+        `    scene ${String(scene.index)} ${t.script.scenes[scene.index]?.kind ?? ""} ${scene.start.toFixed(1)}–${(scene.start + scene.duration).toFixed(1)}`,
+      );
+  }
+  out(`Provider calls: ${String(synth.providerCalls)}`);
+}
+
+async function generate(ctx: PipelineContext): Promise<void> {
+  const { repos, plan, localeOf, tools, model, filter, draft, mediaRoot, manifest, synthesizer } =
+    ctx;
+  const key = draft ? undefined : loadKey();
+  if (!draft && !key) {
+    throw new Error(
+      "GEMINI_API_KEY is not configured. Use --draft to check layout without any provider call.",
+    );
+  }
+  const limit = intFlag("limit", values.limit, MAX_LIMIT);
+  const maxCalls = intFlag("max-calls", values["max-calls"], MAX_CALLS_CEILING);
+  const { targets, blocked } = await planMediaTargets(repos, plan, filter);
+  for (const b of blocked) out(`${b.key.padEnd(34)} BLOCKED — ${b.reason}`);
+  if (targets.length > limit && !values.yes) {
+    out(
+      `${String(targets.length)} targets match; at most ${String(limit)} will be generated this run (--limit).`,
+    );
+  }
+  await mkdir(BUILD_ROOT, { recursive: true });
+  const synth = synthesizer(key);
+  const useCase = useCaseFor(
+    synth,
+    manifest,
+    mediaRoot,
+    tools,
+    localeOf,
+    draft ? "draft-silence" : `gemini:${model}`,
+    (k, status, detail) => {
+      out(
+        `${new Date().toISOString().slice(11, 19)}  ${k.padEnd(34)} ${status}${detail ? ` — ${detail}` : ""}`,
+      );
+    },
+  );
+  const outcomes = await useCase.execute({
+    targets,
+    force: values.force === true,
+    maxItems: limit,
+    maxProviderCalls: maxCalls,
+  });
+  out();
+  for (const o of outcomes) {
+    out(
+      `${o.key.padEnd(34)} ${o.status.padEnd(8)} calls=${String(o.providerCalls)}${o.durationSeconds ? ` ${o.durationSeconds.toFixed(1)} s` : ""}${o.reason ? ` (${o.reason})` : ""}`,
+    );
+  }
+  out(
+    `Provider calls this run: ${String(synth.providerCalls)}${draft ? " (draft: none are real)" : ""}`,
+  );
+  if (outcomes.some((o) => o.status === "failed")) process.exitCode = 1;
 }
 
 function useCaseFor(
@@ -429,14 +481,11 @@ function useCaseFor(
 
 async function firstExamplePhrase(
   repos: Awaited<ReturnType<typeof loadContentRepositories>>,
-  languageId: string,
+  languageId: LanguageId,
 ) {
-  const levels = await repos.contentRepository.listLanguageLevels(languageId as never);
+  const levels = await repos.contentRepository.listLanguageLevels(languageId);
   for (const level of levels) {
-    for (const item of await repos.contentRepository.listContent(
-      languageId as never,
-      level.levelId,
-    )) {
+    for (const item of await repos.contentRepository.listContent(languageId, level.levelId)) {
       const block = item.blocks.find((b) => b.type === "example");
       if (block?.type === "example") return block.text;
     }

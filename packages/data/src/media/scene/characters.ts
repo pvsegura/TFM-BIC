@@ -1,3 +1,5 @@
+import { shade, tint } from "./color.js";
+
 /**
  * Illustrated characters for educational videos (M22, ADR-032; restyled in template 4). Slim,
  * recognisable people in a soft cartoon-illustration style — shaded clothes, rim light, faces with
@@ -147,26 +149,6 @@ export const LOOKS: Record<string, Look> = {
 };
 
 const INK = "#2a1d3d";
-
-/** Mix a colour towards black (f < 1) — shadows, back sleeves, folds. */
-function shade(hex: string, f = 0.8): string {
-  return mix(hex, 0x000000, 1 - f);
-}
-
-/** Mix a colour towards white — highlights. */
-function tint(hex: string, f = 0.3): string {
-  return mix(hex, 0xffffff, f);
-}
-
-function mix(hex: string, other: number, f: number): string {
-  const n = Number.parseInt(hex.slice(1), 16);
-  const ch = (shift: number) => {
-    const a = (n >> shift) & 255;
-    const b = (other >> shift) & 255;
-    return Math.max(0, Math.min(255, Math.round(a + (b - a) * f)));
-  };
-  return `#${((ch(16) << 16) | (ch(8) << 8) | ch(0)).toString(16).padStart(6, "0")}`;
-}
 
 /** Hair behind the head (drawn first) and over it (drawn after the face). Head centre ≈ (3, -281). */
 function hairShape(style: Look["hairStyle"], color: string): { back: string; front: string } {
