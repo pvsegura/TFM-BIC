@@ -1,64 +1,16 @@
-import type { ReactNode } from "react";
 import { useSearchParams } from "react-router";
 
 import { LoadError } from "../components/catalog-notices.js";
-import { LanguageSelector } from "../components/language-selector.js";
+import { LanguagePickerSection } from "../components/language-picker-section.js";
 import { PhoneticList } from "../components/phonetic-list.js";
 import { PhoneticTopicList } from "../components/phonetic-topic-list.js";
-import { useLanguages } from "../hooks/use-catalog.js";
 import { usePhonetics, usePhoneticTopics } from "../hooks/use-phonetics.js";
+import { useSearchParamFilters } from "../hooks/use-search-param-filters.js";
 
 const enc = encodeURIComponent;
 
-function updatedSearch(current: URLSearchParams, patch: Record<string, string>): string {
-  const next = new URLSearchParams(current);
-  for (const [key, value] of Object.entries(patch)) {
-    if (value === "") {
-      next.delete(key);
-    } else {
-      next.set(key, value);
-    }
-  }
-  return next.toString();
-}
-
-function LanguageSection({ selectedCode }: { selectedCode: string | undefined }) {
-  const languagesQuery = useLanguages();
-
-  let body: ReactNode;
-  if (languagesQuery.isPending) {
-    body = <p role="status">Loading languages…</p>;
-  } else if (languagesQuery.isError) {
-    body = (
-      <LoadError
-        message="We couldn't load the languages. Please try again."
-        onRetry={() => void languagesQuery.refetch()}
-      />
-    );
-  } else if (languagesQuery.data.languages.length === 0) {
-    body = <p>No languages are available yet.</p>;
-  } else {
-    body = (
-      <LanguageSelector
-        languages={languagesQuery.data.languages}
-        selectedCode={selectedCode}
-        getHref={(code) => `/learn/phonetics?language=${enc(code)}`}
-      />
-    );
-  }
-
-  return (
-    <section aria-labelledby="phonetics-language-heading" className="mt-6">
-      <h2 id="phonetics-language-heading" className="mb-3 text-lg font-semibold">
-        Language
-      </h2>
-      {body}
-    </section>
-  );
-}
-
 function PhoneticsSection({ languageCode }: { languageCode: string }) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setFilters] = useSearchParamFilters();
   const topic = searchParams.get("topic") ?? "";
   const status = searchParams.get("status") ?? "";
 
@@ -67,10 +19,6 @@ function PhoneticsSection({ languageCode }: { languageCode: string }) {
   if (topic) filters.topic = topic;
   if (status) filters.status = status;
   const phoneticsQuery = usePhonetics(languageCode, filters);
-
-  function setFilters(patch: Record<string, string>) {
-    setSearchParams(updatedSearch(searchParams, patch));
-  }
 
   return (
     <>
@@ -129,7 +77,11 @@ export function PhoneticsPage() {
       <h1 id="phonetics-page-heading" className="text-2xl font-semibold">
         Phonetics
       </h1>
-      <LanguageSection selectedCode={languageCode} />
+      <LanguagePickerSection
+        headingId="phonetics-language-heading"
+        selectedCode={languageCode}
+        getHref={(code) => `/learn/phonetics?language=${enc(code)}`}
+      />
       {languageCode === undefined ? null : <PhoneticsSection languageCode={languageCode} />}
     </section>
   );

@@ -1,66 +1,20 @@
-import type { ReactNode } from "react";
 import { useSearchParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
 import { LoadError } from "../components/catalog-notices.js";
-import { LanguageSelector } from "../components/language-selector.js";
+import { LanguagePickerSection } from "../components/language-picker-section.js";
 import {
   VocabularyFilters,
   type VocabularyFiltersValue,
 } from "../components/vocabulary-filters.js";
 import { VocabularyList } from "../components/vocabulary-list.js";
-import { useLanguages } from "../hooks/use-catalog.js";
 import { useUserVocabulary, useVocabularyCategories } from "../hooks/use-vocabulary.js";
+import { useSearchParamFilters } from "../hooks/use-search-param-filters.js";
 
 const enc = encodeURIComponent;
 
-function updatedSearch(current: URLSearchParams, patch: Record<string, string>): string {
-  const next = new URLSearchParams(current);
-  for (const [key, value] of Object.entries(patch)) {
-    if (value === "") {
-      next.delete(key);
-    } else {
-      next.set(key, value);
-    }
-  }
-  return next.toString();
-}
-
-function LanguageSection({ selectedCode }: { selectedCode: string | undefined }) {
-  const languagesQuery = useLanguages();
-
-  let body: ReactNode;
-  if (languagesQuery.isPending) {
-    body = <p role="status">Loading languages…</p>;
-  } else if (languagesQuery.isError) {
-    body = (
-      <LoadError
-        message="We couldn't load the languages. Please try again."
-        onRetry={() => void languagesQuery.refetch()}
-      />
-    );
-  } else {
-    body = (
-      <LanguageSelector
-        languages={languagesQuery.data.languages}
-        selectedCode={selectedCode}
-        getHref={(code) => `/learn/vocabulary/mine?language=${enc(code)}`}
-      />
-    );
-  }
-
-  return (
-    <section aria-labelledby="my-vocabulary-language-heading" className="mt-6">
-      <h2 id="my-vocabulary-language-heading" className="mb-3 text-lg font-semibold">
-        Language
-      </h2>
-      {body}
-    </section>
-  );
-}
-
 function MyVocabularySection({ languageCode }: { languageCode: string }) {
-  const [searchParams, setSearchParams] = useSearchParams();
+  const [searchParams, setFilters] = useSearchParamFilters();
   const category = searchParams.get("category") ?? "";
   const status = searchParams.get("status") ?? "";
   const q = searchParams.get("q") ?? "";
@@ -71,10 +25,6 @@ function MyVocabularySection({ languageCode }: { languageCode: string }) {
   if (status) filters.status = status;
   if (q) filters.q = q;
   const mineQuery = useUserVocabulary(languageCode, filters);
-
-  function setFilters(patch: Record<string, string>) {
-    setSearchParams(updatedSearch(searchParams, patch));
-  }
 
   const filterValue: VocabularyFiltersValue = { category, status, q };
 
@@ -133,7 +83,11 @@ export function MyVocabularyPage() {
           Browse vocabulary
         </Link>
       </div>
-      <LanguageSection selectedCode={languageCode} />
+      <LanguagePickerSection
+        headingId="my-vocabulary-language-heading"
+        selectedCode={languageCode}
+        getHref={(code) => `/learn/vocabulary/mine?language=${enc(code)}`}
+      />
       {languageCode === undefined ? null : <MyVocabularySection languageCode={languageCode} />}
     </section>
   );

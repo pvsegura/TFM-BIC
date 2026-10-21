@@ -1,10 +1,10 @@
 import type { LanguageLevelsResponse } from "@tfm-bic/contracts";
 import type { ReactNode } from "react";
 
-import { useLanguageLevels, useLanguages } from "../hooks/use-catalog.js";
+import { useLanguageLevels } from "../hooks/use-catalog.js";
 import { isNotFoundError } from "../services/api-error.js";
 import { LoadError, NotFoundNotice } from "./catalog-notices.js";
-import { LanguageSelector } from "./language-selector.js";
+import { LanguagePickerSection } from "./language-picker-section.js";
 import { LevelSelector } from "./level-selector.js";
 
 export interface LanguageLevelPickerProps {
@@ -15,47 +15,6 @@ export interface LanguageLevelPickerProps {
   /** What to show for a selected level the catalog says is `available` — only
    * such a level is ever asked for, so a planned one never requests anything. */
   renderAvailableLevel: (languageCode: string, levelId: string) => ReactNode;
-}
-
-function LanguageSection({
-  selectedCode,
-  getHref,
-}: {
-  selectedCode: string | undefined;
-  getHref: (languageCode: string) => string;
-}) {
-  const languagesQuery = useLanguages();
-
-  let body: ReactNode;
-  if (languagesQuery.isPending) {
-    body = <p role="status">Loading languages…</p>;
-  } else if (languagesQuery.isError) {
-    body = (
-      <LoadError
-        message="We couldn't load the languages. Please try again."
-        onRetry={() => void languagesQuery.refetch()}
-      />
-    );
-  } else if (languagesQuery.data.languages.length === 0) {
-    body = <p>No languages are available yet.</p>;
-  } else {
-    body = (
-      <LanguageSelector
-        languages={languagesQuery.data.languages}
-        selectedCode={selectedCode}
-        getHref={getHref}
-      />
-    );
-  }
-
-  return (
-    <section aria-labelledby="language-heading" className="mt-6">
-      <h2 id="language-heading" className="mb-3 text-lg font-semibold">
-        Language
-      </h2>
-      {body}
-    </section>
-  );
 }
 
 function LevelDetail({
@@ -159,7 +118,11 @@ export function LanguageLevelPicker({
 }: LanguageLevelPickerProps) {
   return (
     <>
-      <LanguageSection selectedCode={languageCode} getHref={getLanguageHref} />
+      <LanguagePickerSection
+        headingId="language-heading"
+        selectedCode={languageCode}
+        getHref={getLanguageHref}
+      />
       {languageCode === undefined ? null : (
         <LevelSection
           languageCode={languageCode}
