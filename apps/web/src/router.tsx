@@ -30,7 +30,6 @@ import { RoutePlaceholder } from "./pages/route-placeholder.js";
 import { TeacherDashboardPage } from "./pages/teacher-dashboard-page.js";
 import { TeacherStudentPage } from "./pages/teacher-student-page.js";
 import { VerifyEmailPage } from "./pages/verify-email-page.js";
-import { VideoGenerationDemoPage } from "./pages/video-generation-demo-page.js";
 import { VideosPage } from "./pages/videos-page.js";
 import { VocabularyDetailPage } from "./pages/vocabulary-detail-page.js";
 import { VocabularyPage } from "./pages/vocabulary-page.js";
@@ -112,16 +111,9 @@ const GRAMMAR_ROUTES = [
  * since M5 is to move the page instead (ADR-018/022). */
 const COACH_ROUTES = [{ path: "learn/coach", element: <AiCoachPage /> }];
 
-/** Video generation (M11) — one demo page requesting generation of the milestone's one authored
- * definition (see VideoGenerationDemoPage's doc comment for why there is no browse/list route).
- * Under `/learn` because `/video-generations` is the API path, the same reasoning as Phonetics. */
-const VIDEO_ROUTES = [
-  // M21 (ADR-031): the video library — published explainer videos of lessons and words.
-  { path: "learn/videos", element: <VideosPage /> },
-  // M11's on-demand render demo, kept for its API but no longer linked: learners watch published
-  // videos; generation is an offline operator step.
-  { path: "learn/videos/render-demo", element: <VideoGenerationDemoPage /> },
-];
+/** The video library (M21, ADR-031) — published explainer videos of lessons and words. Videos are
+ * produced offline by the media pipeline; nothing here generates one. */
+const VIDEO_ROUTES = [{ path: "learn/videos", element: <VideosPage /> }];
 
 /** The teacher dashboard (M13) — the overview/roster and one student. Behind login *and* the
  * TeacherRoute guard, which only spares a student a page of refused requests: the API authorises
@@ -141,7 +133,7 @@ const TEACHER_ROUTES = [
  * which only hides UI; the backend remains the real authorization
  * boundary on every request. Profile is the real M4 page, lessons the
  * real M6 pages, exercises the real M7 page, vocabulary the real M9 pages, phonetics the real
- * M10 pages, video generation the real M11 demo page, and the dashboard and achievements the real
+ * M10 pages, the video library the M21 page, and the dashboard and achievements the real
  * M8 pages (their API is under `/gamification`, so no page-vs-API path
  * clash); the rest are still placeholders for their features, real now only in that they require
  * login. */

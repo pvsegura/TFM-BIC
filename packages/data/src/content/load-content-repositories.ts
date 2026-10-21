@@ -3,14 +3,12 @@ import type {
   ExerciseRepository,
   GrammarReferenceRepository,
   PhoneticContentRepository,
-  VideoDefinitionRepository,
   VocabularyRepository,
 } from "@tfm-bic/application";
 
 import { CatalogContentRepository } from "./catalog-content-repository.js";
 import { CatalogExerciseRepository } from "./catalog-exercise-repository.js";
 import { CatalogPhoneticRepository } from "./catalog-phonetic-repository.js";
-import { CatalogVideoDefinitionRepository } from "./catalog-video-definition-repository.js";
 import { CatalogVocabularyRepository } from "./catalog-vocabulary-repository.js";
 import { ContentValidationError } from "./content-validation.error.js";
 import { DEFAULT_CONTENT_ROOT } from "./content-root.js";
@@ -22,7 +20,6 @@ export interface ContentRepositories {
   exerciseRepository: ExerciseRepository;
   vocabularyRepository: VocabularyRepository;
   phoneticRepository: PhoneticContentRepository;
-  videoDefinitionRepository: VideoDefinitionRepository;
   /** The grammar reference (M23), checked against the same catalog. */
   grammarRepository: GrammarReferenceRepository;
 }
@@ -53,7 +50,6 @@ export async function loadContentRepositories(
     exerciseRepository: new CatalogExerciseRepository(result.catalog),
     vocabularyRepository: new CatalogVocabularyRepository(result.catalog),
     phoneticRepository: new CatalogPhoneticRepository(result.catalog),
-    videoDefinitionRepository: new CatalogVideoDefinitionRepository(result.catalog),
     grammarRepository: new CatalogGrammarRepository(grammar.topics),
   };
 }

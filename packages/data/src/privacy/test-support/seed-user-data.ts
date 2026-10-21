@@ -48,12 +48,6 @@ export async function seedEveryUserTable(
     INSERT INTO user_phonetic_progress (user_id, phonetic_representation_id, status, first_viewed_at, last_viewed_at)
     VALUES (${userId}::uuid, 'pl-ipa-onasal', 'viewed', '2026-02-05T00:00:00Z', '2026-02-06T00:00:00Z')`);
   await run(sql`
-    INSERT INTO video_generation_jobs (user_id, video_definition_id, status, provider_job_reference,
-                                       media_reference, created_at, updated_at, completed_at)
-    VALUES (${userId}::uuid, 'pl-a1-nasal-vowels-demo', 'completed', ${`provider-ref-${tag}`},
-            ${`/srv/media/output-${tag}.mp4`}, '2026-02-07T00:00:00Z', '2026-02-07T00:01:00Z',
-            '2026-02-07T00:01:00Z')`);
-  await run(sql`
     INSERT INTO newsletter_subscriptions (user_id, status, unsubscribe_key, consent_version,
                                           consent_source, requested_at, confirmed_at, updated_at)
     VALUES (${userId}::uuid, 'subscribed', ${`unsubscribe-key-${tag}`}, 'newsletter-consent-v1',

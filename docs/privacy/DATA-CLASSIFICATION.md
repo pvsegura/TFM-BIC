@@ -14,7 +14,7 @@ product collects health, biometric, ethnic, religious or similar data.
 | Class                | Meaning                                               | Examples in this codebase                                                                                  |
 | -------------------- | ----------------------------------------------------- | ---------------------------------------------------------------------------------------------------------- |
 | `PUBLIC`             | Published content anyone may read                     | Languages, levels, published lesson/vocabulary/phonetics content                                           |
-| `INTERNAL`           | Operational data about the system, not about a person | `video_generation_jobs.provider_job_reference`, `media_reference` (server path), migration tables          |
+| `INTERNAL`           | Operational data about the system, not about a person | migration tables, the published media manifest (content, not about a person)                               |
 | `PERSONAL`           | Data about an identifiable user                       | `users.email`, profile names, progress, attempts (including free-text answers), points, consent records    |
 | `SECURITY_SENSITIVE` | Credentials and their derivatives                     | `users.password_hash`, `sessions`, verification/reset tokens, `unsubscribe_key`, `confirmation_token_hash` |
 

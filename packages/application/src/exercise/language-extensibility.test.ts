@@ -72,7 +72,6 @@ const catalog: ContentCatalog = {
   vocabulary: [],
   phoneticTopics: [],
   phonetics: [],
-  videoDefinitions: [],
 };
 
 function setup() {

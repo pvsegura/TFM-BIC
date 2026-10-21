@@ -47,10 +47,10 @@ Application (Use Case, e.g. GenerateLessonAudioUseCase)
 ```
 
 ```
-Application (Use Case, e.g. GenerateLessonVideoUseCase)
-  -> Service interface (VideoGenerationService)
-  -> Infrastructure adapter (HyperframesProvider)
-  -> External provider (Hyperframes renderer)
+Application (Use Case, e.g. GenerateContentMediaUseCase — offline media pipeline)
+  -> Service interface (EducationalVideoRenderer)
+  -> Infrastructure adapter (HyperframesVideoRenderer, in packages/data)
+  -> External tool (Hyperframes renderer, local process)
 ```
 
 The domain and application layers depend only on interfaces they own. Concrete SDKs

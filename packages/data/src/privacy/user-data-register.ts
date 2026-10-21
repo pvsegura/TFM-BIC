@@ -100,13 +100,6 @@ export const USER_DATA_REGISTER: readonly UserDataRegisterEntry[] = [
     classification: "PERSONAL",
     erasure: "delete",
   },
-  {
-    store: "video_generation_jobs",
-    context: "video",
-    userReferences: ["user_id"],
-    classification: "PERSONAL",
-    erasure: "delete",
-  },
   // The account itself — deleted last. Its "user reference" is its own primary key.
   {
     store: "users",

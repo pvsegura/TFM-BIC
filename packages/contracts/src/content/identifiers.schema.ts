@@ -4,7 +4,6 @@ import {
   createLanguageId,
   createPhoneticRepresentationId,
   createPhoneticTopicId,
-  createVideoDefinitionId,
   createVocabularyCategoryId,
   createVocabularyItemId,
   isValidContentId,
@@ -12,7 +11,6 @@ import {
   isValidLanguageId,
   isValidPhoneticRepresentationId,
   isValidPhoneticTopicId,
-  isValidVideoDefinitionId,
   isValidVocabularyCategoryId,
   isValidVocabularyItemId,
   LEVEL_IDS,
@@ -67,11 +65,3 @@ export const phoneticTopicIdSchema = z
   .string()
   .refine(isValidPhoneticTopicId, { error: "Expected a lowercase slug such as consonants." })
   .transform(createPhoneticTopicId);
-
-/** A video definition's permanent id — a language-prefixed slug such as `pl-a1-nasal-vowels-demo`. */
-export const videoDefinitionIdSchema = z
-  .string()
-  .refine(isValidVideoDefinitionId, {
-    error: "Expected a lowercase slug such as pl-a1-nasal-vowels-demo.",
-  })
-  .transform(createVideoDefinitionId);

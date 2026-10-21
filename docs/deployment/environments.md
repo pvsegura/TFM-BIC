@@ -43,20 +43,13 @@ Variable groups (see `.env.example` for the authoritative current list):
   network); `loadEnv` refuses `gemini` when `NODE_ENV=test`. staging/production: `fake` until the
   provider-terms decision in ADR-013 is made (Gemini forbids services likely to be used by under-18s;
   EEA deployments need a paid project); then `gemini` with a key from the host's secret store.
-- Video generation (M11): `VIDEO_GENERATION_PROVIDER` (`fake` default, or `hyperframes`) — read by
-  `packages/config`. `fake` selects a real, committed adapter (never Hyperframes); it is what every
-  automated test and CI run uses. `hyperframes` selects `HyperframesCliProvider`, which shells out
-  to `npx hyperframes render` — implemented against Hyperframes' verified, no-auth-required local
-  CLI, but not executed end-to-end in the implementation environment (see
-  `content/video-scripts/README.md` and ADR-012). No API key: local self-hosted Hyperframes
-  rendering needs no credential. Real use requires Node 22+, FFmpeg and headless Chrome on the
-  host — none confirmed available until ADR-015 (hosting) is resolved.
+- Video generation (M11) was retired on 2026-10-21: `VIDEO_GENERATION_PROVIDER` no longer exists and is ignored if a
+  deployment still sets it. Videos are produced offline by the media pipeline (ADR-031).
 - Production readiness (M17, ADR-028): `WEB_DIST_DIR` — the built SPA the API serves from its own origin
   (required in staging/production; unset in development/test, where Vite serves it and proxies the API paths, see
   `apps/web/vite.config.ts`); `APP_VERSION` — build identifier shown by `/health` (default `development`, set by the
-  image). Production additionally refuses `EMAIL_PROVIDER=fake`, `AUDIO_GENERATION_PROVIDER=fake`, any
-  `VIDEO_GENERATION_PROVIDER` but `disabled`, a loopback `APP_BASE_URL`/`DATABASE_URL` host, and a `DATABASE_URL`
-  without `sslmode=require|verify-ca|verify-full`. Audio and video accept `disabled` everywhere (503, no provider call).
+  image). Production additionally refuses `EMAIL_PROVIDER=fake`, `AUDIO_GENERATION_PROVIDER=fake`, a loopback `APP_BASE_URL`/`DATABASE_URL` host, and a `DATABASE_URL`
+  without `sslmode=require|verify-ca|verify-full`. Audio accepts `disabled` everywhere (503, no provider call).
   The former reserved `API_BASE_URL`/`WEB_BASE_URL` were removed: nothing read them, and the SPA calls its own origin.
 - Observability (M18, ADR-029): `LOG_LEVEL` — `error|warn|info|debug`, default `info`; production refuses `debug`
   (NODE_ENV=test is always silent). `METRICS_TOKEN` — optional secret (≥ 32 chars); when set, `GET /internal/metrics`

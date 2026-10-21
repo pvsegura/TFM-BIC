@@ -1,8 +1,9 @@
 /**
  * The personal-data export's schema version (M15, docs/privacy/DATA-EXPORT-FORMAT.md).
  * Bump it — never silently change the shape — when a field is added, renamed or removed.
+ * Version 2 removed the `media` section with video generation (its table is dropped).
  */
-export const PERSONAL_DATA_EXPORT_VERSION = "1";
+export const PERSONAL_DATA_EXPORT_VERSION = "2";
 
 /**
  * The download's file name: the product and the UTC date, nothing that identifies the user (the

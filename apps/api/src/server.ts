@@ -20,7 +20,6 @@ import { createPhoneticsUseCases } from "./composition/phonetics-use-cases.js";
 import { createPrivacyUseCases } from "./composition/privacy-use-cases.js";
 import { createProfileUseCases } from "./composition/profile-use-cases.js";
 import { createTeachingUseCases } from "./composition/teaching-use-cases.js";
-import { createVideoUseCases } from "./composition/video-use-cases.js";
 import { createVocabularyUseCases } from "./composition/vocabulary-use-cases.js";
 import { registerAudioGenerationRoutes } from "./routes/audio-generations.route.js";
 import { registerAuthRoutes } from "./routes/auth.route.js";
@@ -39,7 +38,6 @@ import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route.js";
 import { registerTeacherDashboardTestSupportRoutes } from "./routes/teacher-dashboard-test-support.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
-import { registerVideoGenerationRoutes } from "./routes/video-generations.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
@@ -47,7 +45,6 @@ import {
   instrumentAiAgent,
   instrumentAudioProvider,
   instrumentEmailProvider,
-  instrumentVideoProvider,
 } from "./observability/instrumented-providers.js";
 import { MetricsRegistry } from "./observability/metrics.js";
 import { createReadinessMonitor } from "./observability/readiness-monitor.js";
@@ -82,7 +79,6 @@ export function buildServer(
     gamification: gamificationDeps,
     vocabulary: vocabularyDeps,
     phonetics: phoneticsDeps,
-    video: videoDeps,
     audio: audioDeps,
     teaching: teachingDeps,
     email: emailDeps,
@@ -264,25 +260,6 @@ export function buildServer(
     const phoneticsUseCases = createPhoneticsUseCases(contentDeps, phoneticsDeps);
     registerPhoneticsRoutes(app, {
       useCases: phoneticsUseCases,
-      resolveSession: authUseCases.resolveSession,
-      env,
-    });
-
-    // Video generation (M11): definitions are content, reused from contentDeps; only the
-    // student's own generation jobs are stored. The user always comes from the session. The
-    // provider behind this is selected by env.VIDEO_GENERATION_PROVIDER (ADR-011/012) — "fake" by
-    // default and in every automated test/CI run.
-    registerVideoGenerationRoutes(app, {
-      // M18: the render is logged (start/end) and measured by the provider decorator.
-      useCases: createVideoUseCases(contentDeps, {
-        ...videoDeps,
-        provider: instrumentVideoProvider(
-          videoDeps.provider,
-          env.VIDEO_GENERATION_PROVIDER,
-          metrics,
-          app.log,
-        ),
-      }),
       resolveSession: authUseCases.resolveSession,
       env,
     });

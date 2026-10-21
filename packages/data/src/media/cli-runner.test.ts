@@ -2,7 +2,7 @@ import { tmpdir } from "node:os";
 
 import { describe, expect, it } from "vitest";
 
-import { realCliRunner } from "./hyperframes-cli-runner.js";
+import { realCliRunner } from "./cli-runner.js";
 
 /**
  * Exercises `realCliRunner`'s actual `child_process` wiring for real — spawn failure, a clean

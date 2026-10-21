@@ -5,5 +5,4 @@
  */
 export * from "./exercise/test-support/exercise-fixtures.js";
 export * from "./phonetics/test-support/phonetics-fixtures.js";
-export * from "./video/test-support/video-fixtures.js";
 export * from "./vocabulary/test-support/vocabulary-fixtures.js";

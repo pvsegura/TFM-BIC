@@ -70,7 +70,8 @@ content/
             pl-greetings-polite-hello.json   # file name == exercise id (M7)
             ...
         a2/ … c2/                        # planned: no content/ folder yet
-  exercises/  video-scripts/             # `exercises/` is only a pointer (README); video-scripts is reserved
+  exercises/                            # only a pointer (README)
+  media/                                # published videos and audio + manifest (M21, ADR-031)
 ```
 
 A language is the folder `content/languages/<code>/`; its `language.json` is the only per-language

@@ -46,9 +46,6 @@ export default defineConfig({
       // Phonetics (M10): `/phonetics`, `/phonetics/topics` and `/phonetics/:id/...`. The pages
       // live under /learn/phonetics, so — like vocabulary — this needs no page-vs-API bypass.
       "/phonetics": { target: "http://localhost:3000", changeOrigin: true },
-      // Video generation (M11): `/video-generations` and `/video-generations/:id`. The page lives
-      // at /learn/videos, so — like phonetics — this needs no page-vs-API bypass.
-      "/video-generations": { target: "http://localhost:3000", changeOrigin: true },
       // Audio generation (M12): `POST /audio-generations`. No page lives at this path (the
       // "Listen" action is on the vocabulary detail page), so it needs no page-vs-API bypass.
       "/audio-generations": { target: "http://localhost:3000", changeOrigin: true },

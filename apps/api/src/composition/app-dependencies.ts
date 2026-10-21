@@ -18,7 +18,6 @@ import {
 import { createPrivacyDependencies, type PrivacyDependencies } from "./privacy-dependencies.js";
 import { createProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 import { createTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
-import { createVideoDependencies, type VideoDependencies } from "./video-dependencies.js";
 import {
   createVocabularyDependencies,
   type VocabularyDependencies,
@@ -34,7 +33,6 @@ export interface AppDependencies {
   gamification: GamificationDependencies;
   vocabulary: VocabularyDependencies;
   phonetics: PhoneticsDependencies;
-  video: VideoDependencies;
   audio: AudioDependencies;
   teaching: TeachingDependencies;
   email: EmailDependencies;
@@ -56,7 +54,6 @@ export async function createAppDependencies(
     gamification: createGamificationDependencies(databaseUrl),
     vocabulary: createVocabularyDependencies(databaseUrl),
     phonetics: createPhoneticsDependencies(databaseUrl),
-    video: createVideoDependencies(databaseUrl, env),
     audio: createAudioDependencies(env),
     teaching: createTeachingDependencies(databaseUrl),
     email: createEmailDependencies(databaseUrl, env),
@@ -75,7 +72,6 @@ export function connectionClosers(deps: AppDependencies): (() => Promise<void>)[
     deps.gamification.close,
     deps.vocabulary.close,
     deps.phonetics.close,
-    deps.video.close,
     deps.teaching.close,
     deps.email.close,
     deps.privacy.close,

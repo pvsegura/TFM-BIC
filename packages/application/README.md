@@ -1,6 +1,6 @@
 # packages/application
 
-Use cases and service interfaces (e.g. `VideoGenerationService`, `AudioGenerationService`,
+Use cases and service interfaces (e.g. `EducationalVideoRenderer`, `AudioGenerationService`,
 `EmailService`, repository interfaces). Depends on `packages/domain` only — never on
 `packages/data` implementations or external SDKs directly.
 

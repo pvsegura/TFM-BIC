@@ -2,13 +2,9 @@ import {
   categorizeAudioGenerationError,
   categorizeCoachError,
   EmailDeliveryError,
-  VideoGenerationTimeoutError,
-  VideoProviderRejectedError,
-  VideoProviderUnavailableError,
   type AiAgentService,
   type AudioGenerationService,
   type EmailProvider,
-  type VideoGenerationService,
 } from "@tfm-bic/application";
 
 import type { MetricsRegistry } from "./metrics.js";
@@ -22,29 +18,19 @@ import type { MetricsRegistry } from "./metrics.js";
  * same error.
  */
 
-type Operation = "audio" | "video" | "email" | "ai_coach";
-
-interface EventLog {
-  info(details: object, msg: string): void;
-  warn(details: object, msg: string): void;
-}
+type Operation = "audio" | "email" | "ai_coach";
 
 async function measure<T>(
   metrics: MetricsRegistry,
   labels: { provider: string; operation: Operation },
   categorize: (error: unknown) => string,
   call: () => Promise<T>,
-  onDone?: (outcome: { durationMs: number; category: string | undefined }) => void,
 ): Promise<T> {
   const startedAt = performance.now();
   const record = (outcome: "success" | "failure", category: string) => {
     const durationMs = performance.now() - startedAt;
     metrics.increment("provider_calls_total", { ...labels, outcome, category });
     metrics.observe("provider_call_duration_ms", { ...labels, outcome }, durationMs);
-    onDone?.({
-      durationMs: Math.round(durationMs),
-      category: outcome === "failure" ? category : undefined,
-    });
   };
   try {
     const result = await call();
@@ -67,46 +53,6 @@ export function instrumentAudioProvider(
       measure(metrics, { provider, operation: "audio" }, categorizeAudioGenerationError, () =>
         inner.generate(request),
       ),
-  };
-}
-
-/** The same categories the video use case stores on a failed job. */
-function categorizeVideoError(error: unknown): string {
-  if (error instanceof VideoProviderRejectedError) return "provider_rejected";
-  if (error instanceof VideoGenerationTimeoutError) return "timeout";
-  if (error instanceof VideoProviderUnavailableError) return "provider_unavailable";
-  return "unknown";
-}
-
-/**
- * Hyperframes (or the fake). The render runs as an in-process background task (ADR-012) that
- * logged nothing, so this also writes its start and end. The definition id is catalog content,
- * not personal data; the job's owner is never logged here.
- */
-export function instrumentVideoProvider(
-  inner: VideoGenerationService,
-  provider: string,
-  metrics: MetricsRegistry,
-  log: EventLog,
-): VideoGenerationService {
-  return {
-    generate: (request) => {
-      const context = { provider, videoDefinitionId: request.videoDefinitionId };
-      log.info(context, "video.render_started");
-      return measure(
-        metrics,
-        { provider, operation: "video" },
-        categorizeVideoError,
-        () => inner.generate(request),
-        ({ durationMs, category }) => {
-          if (category === undefined) {
-            log.info({ ...context, durationMs }, "video.render_completed");
-          } else {
-            log.warn({ ...context, durationMs, category }, "video.render_failed");
-          }
-        },
-      );
-    },
   };
 }
 

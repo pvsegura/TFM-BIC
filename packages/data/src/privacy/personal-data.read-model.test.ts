@@ -98,13 +98,6 @@ describe("SqlPersonalDataReadModel", () => {
     expect(records!.achievements).toEqual([
       { achievementKey: "first-lesson", unlockedAt: at("2026-02-02T00:00:00Z") },
     ]);
-    expect(records!.videoGenerationJobs).toEqual([
-      expect.objectContaining({
-        videoDefinitionId: "pl-a1-nasal-vowels-demo",
-        status: "completed",
-        errorCategory: null,
-      }),
-    ]);
     expect(records!.newsletter).toEqual({
       status: "subscribed",
       consentVersion: "newsletter-consent-v1",
@@ -166,8 +159,6 @@ describe("SqlPersonalDataReadModel", () => {
       "verify-hash-ana",
       "reset-hash-ana",
       "unsubscribe-key-ana",
-      "provider-ref-ana",
-      "/srv/media/output-ana.mp4",
       "passwordHash",
       "tokenHash",
       "normalizedEmail",
@@ -190,7 +181,6 @@ describe("SqlPersonalDataReadModel", () => {
       phonetics: [],
       pointTransactions: [],
       achievements: [],
-      videoGenerationJobs: [],
       teacherLinks: [],
       linkedStudentCount: 0,
     });

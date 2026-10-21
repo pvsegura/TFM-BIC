@@ -15,7 +15,6 @@ export const NOT_INCLUDED_IN_EXPORT = [
   "Session, email-verification and password-reset token hashes (security credentials).",
   "The newsletter unsubscribe key and confirmation token hash (security credentials).",
   "The identity of teachers linked to your account, and the data of students linked to it (other people's data).",
-  "Internal provider job references and server file paths of generated media (infrastructure data).",
   "Server logs (kept by the hosting platform, not in the application database).",
 ] as const;
 
@@ -86,17 +85,6 @@ export interface PersonalDataExport {
     totalPoints: number;
     pointTransactions: { reason: string; sourceId: string; amount: number; createdAt: Iso }[];
     achievements: { key: string; unlockedAt: Iso }[];
-  };
-  media: {
-    videoGenerationJobs: {
-      jobId: string;
-      videoDefinitionId: string;
-      status: string;
-      errorCategory: string | null;
-      createdAt: Iso;
-      updatedAt: Iso;
-      completedAt: Iso | null;
-    }[];
   };
   communication: {
     /** Transactional email cannot be switched off (M14); stated, not stored. */
@@ -187,17 +175,6 @@ function toExport(records: PersonalDataRecords, generatedAt: Date): PersonalData
       achievements: records.achievements.map((row) => ({
         key: row.achievementKey,
         unlockedAt: iso(row.unlockedAt),
-      })),
-    },
-    media: {
-      videoGenerationJobs: records.videoGenerationJobs.map((row) => ({
-        jobId: row.jobId,
-        videoDefinitionId: row.videoDefinitionId,
-        status: row.status,
-        errorCategory: row.errorCategory,
-        createdAt: iso(row.createdAt),
-        updatedAt: iso(row.updatedAt),
-        completedAt: isoOrNull(row.completedAt),
       })),
     },
     communication: {

@@ -1,0 +1,1 @@
+DROP TABLE "video_generation_jobs" CASCADE;

@@ -12,7 +12,6 @@ describe("loadEnv", () => {
       DEFAULT_LANGUAGE: "pl",
       APP_BASE_URL: "http://localhost:5173",
       E2E_RELAXED_RATE_LIMITS: false,
-      VIDEO_GENERATION_PROVIDER: "fake",
       AUDIO_GENERATION_PROVIDER: "fake",
       GEMINI_TTS_MODEL: "gemini-3.8-flash-tts",
       AUDIO_GENERATION_MAX_TEXT_LENGTH: 300,
@@ -49,18 +48,10 @@ describe("loadEnv", () => {
     expect(env.DEFAULT_LANGUAGE).toBe("en");
   });
 
-  it("defaults VIDEO_GENERATION_PROVIDER to fake, and accepts hyperframes explicitly", () => {
-    expect(loadEnv({ NODE_ENV: "test" }).VIDEO_GENERATION_PROVIDER).toBe("fake");
-    expect(
-      loadEnv({ NODE_ENV: "test", VIDEO_GENERATION_PROVIDER: "hyperframes" })
-        .VIDEO_GENERATION_PROVIDER,
-    ).toBe("hyperframes");
-  });
+  it("ignores VIDEO_GENERATION_PROVIDER, which a deployment may still set from before video generation was retired", () => {
+    const env = loadEnv({ NODE_ENV: "test", VIDEO_GENERATION_PROVIDER: "disabled" });
 
-  it("rejects an unknown VIDEO_GENERATION_PROVIDER value", () => {
-    expect(() => loadEnv({ NODE_ENV: "test", VIDEO_GENERATION_PROVIDER: "gemini" })).toThrow(
-      /VIDEO_GENERATION_PROVIDER/,
-    );
+    expect(env).not.toHaveProperty("VIDEO_GENERATION_PROVIDER");
   });
 
   it("throws a readable error for an invalid NODE_ENV", () => {
@@ -384,7 +375,6 @@ describe("loadEnv", () => {
       DATABASE_URL: "postgres://app:pass@db.example.com:5432/tfm_bic?sslmode=require",
       APP_BASE_URL: "https://app.example.com",
       AUDIO_GENERATION_PROVIDER: "disabled",
-      VIDEO_GENERATION_PROVIDER: "disabled",
     };
 
     function configurationError(source: Record<string, string>): string {
@@ -400,14 +390,13 @@ describe("loadEnv", () => {
       const env = loadEnv(staging);
       expect(env.EMAIL_PROVIDER).toBe("fake");
       expect(env.AUDIO_GENERATION_PROVIDER).toBe("fake");
-      expect(env.VIDEO_GENERATION_PROVIDER).toBe("fake");
     });
 
     it("refuses the fake email provider in production — the only one that exists yet", () => {
       expect(configurationError(production)).toMatch(/EMAIL_PROVIDER/);
     });
 
-    it.each(["AUDIO_GENERATION_PROVIDER", "VIDEO_GENERATION_PROVIDER"])(
+    it.each(["AUDIO_GENERATION_PROVIDER"])(
       "refuses %s=fake in production, and when it is left at its default",
       (name) => {
         expect(configurationError({ ...production, [name]: "fake" })).toMatch(new RegExp(name));
@@ -417,21 +406,10 @@ describe("loadEnv", () => {
       },
     );
 
-    it("accepts disabled for audio and video in every environment", () => {
-      const env = loadEnv({
-        NODE_ENV: "test",
-        AUDIO_GENERATION_PROVIDER: "disabled",
-        VIDEO_GENERATION_PROVIDER: "disabled",
-      });
+    it("accepts disabled for audio in every environment", () => {
+      const env = loadEnv({ NODE_ENV: "test", AUDIO_GENERATION_PROVIDER: "disabled" });
       expect(env.AUDIO_GENERATION_PROVIDER).toBe("disabled");
-      expect(env.VIDEO_GENERATION_PROVIDER).toBe("disabled");
       expect(configurationError(production)).not.toMatch(/GENERATION_PROVIDER/);
-    });
-
-    it("refuses hyperframes in production (unverified adapter, no persistent media storage)", () => {
-      expect(
-        configurationError({ ...production, VIDEO_GENERATION_PROVIDER: "hyperframes" }),
-      ).toMatch(/VIDEO_GENERATION_PROVIDER/);
     });
 
     it.each([
@@ -546,7 +524,6 @@ describe("loadEnv", () => {
         "WEB_DIST_DIR",
         "EMAIL_PROVIDER",
         "AUDIO_GENERATION_PROVIDER",
-        "VIDEO_GENERATION_PROVIDER",
       ]) {
         expect(message).toContain(name);
       }

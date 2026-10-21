@@ -28,8 +28,6 @@ import {
   FakePhoneticContentRepository,
   FakeUserPhoneticProgressRepository,
   FakeUserVocabularyRepository,
-  FakeVideoDefinitionRepository,
-  FakeVideoGenerationJobRepository,
   FakeVocabularyEventPublisher,
   FakeVocabularyRepository,
   FakeLearnerInsightsReadModel,
@@ -41,7 +39,6 @@ import {
   FakeAudioGenerationService,
   FakeEmailProvider,
   HmacUnsubscribeTokenCodec,
-  FakeVideoGenerationService,
   InMemoryAudioCache,
 } from "@tfm-bic/data";
 
@@ -58,7 +55,6 @@ import type { TeachingDependencies } from "../composition/teaching-dependencies.
 import type { PhoneticsDependencies } from "../composition/phonetics-dependencies.js";
 import type { PrivacyDependencies } from "../composition/privacy-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
-import type { VideoDependencies } from "../composition/video-dependencies.js";
 import type { VocabularyDependencies } from "../composition/vocabulary-dependencies.js";
 
 /** Fast, in-memory dependencies for apps/api's own HTTP-layer tests —
@@ -97,13 +93,11 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   const exerciseRepository = new FakeExerciseRepository();
   const vocabularyRepository = new FakeVocabularyRepository();
   const phoneticRepository = new FakePhoneticContentRepository();
-  const videoDefinitionRepository = new FakeVideoDefinitionRepository();
   const contentDeps: ContentDependencies = {
     contentRepository,
     exerciseRepository,
     vocabularyRepository,
     phoneticRepository,
-    videoDefinitionRepository,
   };
 
   const lessonProgressRepository = new FakeLessonProgressRepository();
@@ -147,15 +141,6 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   const userPhoneticProgressRepository = new FakeUserPhoneticProgressRepository();
   const phoneticsDeps: PhoneticsDependencies = {
     userPhoneticProgressRepository,
-    clock,
-    close: () => Promise.resolve(),
-  };
-
-  const videoGenerationJobRepository = new FakeVideoGenerationJobRepository();
-  const videoGenerationProvider = new FakeVideoGenerationService();
-  const videoDeps: VideoDependencies = {
-    videoGenerationJobRepository,
-    provider: videoGenerationProvider,
     clock,
     close: () => Promise.resolve(),
   };
@@ -226,7 +211,6 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     gamification: gamificationDeps,
     vocabulary: vocabularyDeps,
     phonetics: phoneticsDeps,
-    video: videoDeps,
     audio: audioDeps,
     teaching: teachingDeps,
     email: emailDeps,
@@ -253,7 +237,6 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     gamificationDeps,
     vocabularyDeps,
     phoneticsDeps,
-    videoDeps,
     audioDeps,
     teachingDeps,
     teacherLinks,
@@ -264,12 +247,9 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     exerciseRepository,
     vocabularyRepository,
     phoneticRepository,
-    videoDefinitionRepository,
     userVocabularyRepository,
     vocabularyEvents,
     userPhoneticProgressRepository,
-    videoGenerationJobRepository,
-    videoGenerationProvider,
     clock,
     userRepository,
     sessionRepository,

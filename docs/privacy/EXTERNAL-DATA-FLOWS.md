@@ -70,23 +70,12 @@ Answer → returned to the student. Nothing is stored, here or at the provider.
   unresolved, and this records an accepted risk, not a compliance finding (ADR-034, "Provider
   terms"). Nothing here is legal advice.
 
-## Hyperframes video rendering (M11) — `HyperframesCliProvider`
+## Hyperframes video rendering (M21) — offline media pipeline
 
-Selected only with `VIDEO_GENERATION_PROVIDER=hyperframes` (default `fake`). Never executed for real so far.
-
-```
-Student (session)
-  ↓  POST /video-generations { videoDefinitionId }
-API → video_generation_jobs row (user_id, definition id, status)          ← personal data stays in the DB
-  ↓  npx hyperframes render --output content/video-scripts/<id>/output.mp4 (local child process)
-Educational content: the authored HTML project for that definition
-  ↓
-Generated content: one file per definition, shared by everyone who requests it
-```
-
-- **Nothing about the user leaves the server.** The render is local; the project is authored content.
-- `npx` may download the `hyperframes` package from the npm registry at run time — a supply-chain concern (tracked
-  in ADR-012), not a personal-data flow.
+Lesson and word videos are rendered by the operator's offline media pipeline (`pnpm --filter @tfm-bic/data media`,
+ADR-031), never from a request. Hyperframes runs as a local child process over authored content and published
+narration clips; **no user data is involved**. M11's per-learner, on-demand generation
+(`POST /video-generations` and the `video_generation_jobs` table) was retired on 2026-10-21.
 
 ## Email (M3/M14) — `EmailProvider`
 

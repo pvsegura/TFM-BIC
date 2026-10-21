@@ -30,8 +30,7 @@ function PlayIcon() {
  * The video library (M21): every lesson and every word of a language, with its explainer video
  * when one is published and an honest "Video coming soon" when not — content without a video is
  * listed, not hidden. Posters load lazily; no video element is created here, so opening the page
- * downloads no video at all. Replaces M11's render demo as the "Videos" destination; that demo
- * now lives, unlinked, at /learn/videos/render-demo.
+ * downloads no video at all.
  */
 export function VideosPage() {
   const [searchParams] = useSearchParams();

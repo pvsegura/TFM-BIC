@@ -87,19 +87,6 @@ export const personalDataExportSchema = z.object({
     ),
     achievements: z.array(z.object({ key: z.string(), unlockedAt: iso })),
   }),
-  media: z.object({
-    videoGenerationJobs: z.array(
-      z.object({
-        jobId: z.uuid(),
-        videoDefinitionId: z.string(),
-        status: z.string(),
-        errorCategory: z.string().nullable(),
-        createdAt: iso,
-        updatedAt: iso,
-        completedAt: isoOrNull,
-      }),
-    ),
-  }),
   communication: z.object({
     essentialEmails: z.literal("always-on"),
     newsletter: z

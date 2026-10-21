@@ -160,12 +160,6 @@ describe("per-user limits on sensitive and expensive routes (S-03, S-04)", () =>
       request: { method: "POST", url: "/audio-generations" },
       payload: {},
     },
-    {
-      name: "video generation",
-      max: 10,
-      request: { method: "POST", url: "/video-generations" },
-      payload: {},
-    },
   ] as const;
 
   it.each(cases)(

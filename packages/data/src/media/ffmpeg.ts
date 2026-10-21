@@ -1,4 +1,4 @@
-import { realCliRunner, type CliRunner } from "../video/hyperframes-cli-runner.js";
+import { realCliRunner, type CliRunner } from "./cli-runner.js";
 
 /**
  * FFmpeg/FFprobe for the offline media pipeline (M21): transcoding narration to AAC, measuring

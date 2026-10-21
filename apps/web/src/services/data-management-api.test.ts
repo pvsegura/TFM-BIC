@@ -4,7 +4,7 @@ import { ApiError } from "./api-error.js";
 import { deleteAccount, fetchPersonalDataExport } from "./data-management-api.js";
 
 const EXPORT = {
-  exportVersion: "1",
+  exportVersion: "2",
   generatedAt: "2026-09-26T10:00:00.000Z",
   account: {
     userId: "user-1",
@@ -19,7 +19,6 @@ const EXPORT = {
   vocabulary: { items: [] },
   phonetics: { items: [] },
   gamification: { totalPoints: 0, pointTransactions: [], achievements: [] },
-  media: { videoGenerationJobs: [] },
   communication: { essentialEmails: "always-on", newsletter: null },
   teaching: { linkedTeachers: [], linkedStudentCount: 0 },
   notIncluded: [],
@@ -82,8 +81,8 @@ describe("fetchPersonalDataExport", () => {
     expect((await fetchPersonalDataExport()).fileName).toBe("tfm-bic-personal-data.json");
   });
 
-  it("refuses a body that is not a version-1 export", async () => {
-    mockFetch(200, { ...EXPORT, exportVersion: "2" });
+  it("refuses a body that is not a version-2 export", async () => {
+    mockFetch(200, { ...EXPORT, exportVersion: "1" });
 
     await expect(fetchPersonalDataExport()).rejects.toThrow();
   });

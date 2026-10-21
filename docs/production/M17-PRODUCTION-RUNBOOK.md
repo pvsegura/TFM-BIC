@@ -130,7 +130,6 @@ See [secrets management — rotation](M17-SECRETS-MANAGEMENT.md#rotation-procedu
 | Feature | Switch it off (production-safe)      | Notes                                                         |
 | ------- | ------------------------------------ | ------------------------------------------------------------- |
 | Audio   | `AUDIO_GENERATION_PROVIDER=disabled` | Route answers 503; Gemini never called.                       |
-| Video   | `VIDEO_GENERATION_PROVIDER=disabled` | The only production value until Hyperframes + storage exist.  |
 | Email   | — (no off switch)                    | Needed for verification/reset; a real adapter is blocker B-2. |
 
 Change the variable, restart, check `/ready` and the smoke test.

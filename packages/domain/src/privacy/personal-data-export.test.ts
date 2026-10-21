@@ -6,8 +6,8 @@ import {
 } from "./personal-data-export.js";
 
 describe("personal data export format", () => {
-  it("is version 1", () => {
-    expect(PERSONAL_DATA_EXPORT_VERSION).toBe("1");
+  it("is version 2 (no media section since video generation was retired)", () => {
+    expect(PERSONAL_DATA_EXPORT_VERSION).toBe("2");
   });
 
   it("names the file after the product and the UTC date only — never a user id or address", () => {

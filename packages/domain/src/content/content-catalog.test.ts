@@ -49,7 +49,6 @@ function catalog(overrides: Partial<ContentCatalog> = {}): ContentCatalog {
     vocabulary: [],
     phoneticTopics: [],
     phonetics: [],
-    videoDefinitions: [],
     ...overrides,
   };
 }

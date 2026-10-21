@@ -8,7 +8,6 @@ import type {
   StoredLessonProgressStatus,
   StoredPhoneticProgressStatus,
   StoredVocabularyStatus,
-  VideoGenerationStatus,
 } from "@tfm-bic/domain";
 import { sql, type SQL } from "drizzle-orm";
 
@@ -33,9 +32,9 @@ function answer(value: unknown): ExerciseAnswerValue {
 /**
  * The personal-data export's reads (M15, ADR-026): a fixed number of statements (one per store,
  * whatever the volume), each selecting an **explicit column list** filtered by the one user id —
- * never `SELECT *`, so a password hash, token hash, unsubscribe key, provider job reference or
- * server path is never read. All reads run in one `REPEATABLE READ, READ ONLY` transaction, so
- * the export is a consistent snapshot even while the user keeps learning in another tab.
+ * never `SELECT *`, so a password hash, token hash or unsubscribe key is never read. All reads
+ * run in one `REPEATABLE READ, READ ONLY` transaction, so the export is a consistent snapshot
+ * even while the user keeps learning in another tab.
  */
 export class SqlPersonalDataReadModel implements PersonalDataReadModel {
   constructor(private readonly db: PrivacyDb) {}
@@ -78,9 +77,6 @@ export class SqlPersonalDataReadModel implements PersonalDataReadModel {
         const achievements = await rows(sql`
           SELECT achievement_key, unlocked_at
           FROM user_achievements WHERE user_id = ${id} ORDER BY unlocked_at, achievement_key`);
-        const videoJobs = await rows(sql`
-          SELECT id, video_definition_id, status, error_category, created_at, updated_at, completed_at
-          FROM video_generation_jobs WHERE user_id = ${id} ORDER BY created_at, id`);
         const [newsletter] = await rows(sql`
           SELECT status, consent_version, consent_source, requested_at, confirmed_at, unsubscribed_at
           FROM newsletter_subscriptions WHERE user_id = ${id}`);
@@ -146,15 +142,6 @@ export class SqlPersonalDataReadModel implements PersonalDataReadModel {
           achievements: achievements.map((row) => ({
             achievementKey: text(row.achievement_key),
             unlockedAt: date(row.unlocked_at),
-          })),
-          videoGenerationJobs: videoJobs.map((row) => ({
-            jobId: text(row.id),
-            videoDefinitionId: text(row.video_definition_id),
-            status: row.status as VideoGenerationStatus,
-            errorCategory: textOrNull(row.error_category),
-            createdAt: date(row.created_at),
-            updatedAt: date(row.updated_at),
-            completedAt: dateOrNull(row.completed_at),
           })),
           newsletter:
             newsletter === undefined

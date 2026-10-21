@@ -7,10 +7,9 @@ import { drizzle } from "drizzle-orm/pglite";
 import { migrate } from "drizzle-orm/pglite/migrator";
 
 import * as identitySchema from "../../identity/db/schema.js";
-import { MIGRATION_TABLES, type MigratedContext } from "../migration-tables.js";
+import { MIGRATION_SETS } from "../../migrations/run-migrations.js";
 
 const dataSrc = path.join(path.dirname(fileURLToPath(import.meta.url)), "..", "..");
-const migrationsOf = (context: string) => path.join(dataSrc, context, "db", "migrations");
 
 export interface PgliteTestDb {
   /**
@@ -36,11 +35,12 @@ export interface PgliteTestDb {
 /**
  * A real (WASM-compiled) Postgres with Identity's migrations applied first (the FK target `users`
  * must exist), then each listed context's, in the order given — each set tracked in its own
- * table exactly as `drizzle-kit migrate` does (MIGRATION_TABLES). See
+ * table exactly as production's migration runner does (MIGRATION_SETS). See
  * docs/adr/adr-005-database.md. Test-only: every context's test-support builds on this.
  */
 export async function createPgliteTestDb(options: {
-  contexts: readonly MigratedContext[];
+  /** Context names from MIGRATION_SETS, other than Identity (always applied first). */
+  contexts: readonly string[];
   schema: Record<string, unknown>;
   /** Tables `reset` empties. Constants of the calling test-support, never input. */
   truncate: readonly string[];
@@ -48,11 +48,14 @@ export async function createPgliteTestDb(options: {
   const client = new PGlite();
   const pgliteDb = drizzle(client, { schema: options.schema });
 
-  await migrate(pgliteDb, { migrationsFolder: migrationsOf("identity") });
-  for (const context of options.contexts) {
+  for (const context of ["identity", ...options.contexts]) {
+    const set = MIGRATION_SETS.find((candidate) => candidate.context === context);
+    if (!set) {
+      throw new Error(`No migration set for context "${context}".`);
+    }
     await migrate(pgliteDb, {
-      migrationsFolder: migrationsOf(context),
-      migrationsTable: MIGRATION_TABLES[context],
+      migrationsFolder: path.join(dataSrc, set.folder),
+      migrationsTable: set.table,
     });
   }
 

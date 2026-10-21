@@ -28,9 +28,8 @@ auth.route.ts` for the full, real Identity & Authentication chain (M3), or
 
 Never called directly from domain/application logic. Always: interface (owned by
 application/contracts) → adapter (in `packages/data`) → real provider.
-`VideoGenerationService` → `FakeVideoGenerationService` (default everywhere — dev, test, CI) or
-`HyperframesCliProvider` (real, `VIDEO_GENERATION_PROVIDER=hyperframes` only, implemented but
-**unverified end-to-end** — see ADR-012 and `content/video-scripts/README.md`) → Hyperframes (M11).
+`EducationalVideoRenderer` → `HyperframesVideoRenderer` → Hyperframes, run only by the offline media pipeline
+(M21, ADR-031) — never from a request. M11's on-demand `VideoGenerationService` was retired on 2026-10-21.
 `AudioGenerationService` → `FakeAudioGenerationService` (default everywhere — dev, test, CI; a
 deterministic WAV tone) or `GeminiAudioProvider` (`AUDIO_GENERATION_PROVIDER=gemini` only — plain
 `fetch` to the GA Interactions API, implemented against verified docs but **never run against the

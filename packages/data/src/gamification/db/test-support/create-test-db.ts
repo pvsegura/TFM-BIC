@@ -17,8 +17,6 @@ import * as profileSchema from "../../../profile/db/schema.js";
 import type { ProfileDb } from "../../../profile/db/client.js";
 import type { GamificationDb } from "../client.js";
 import * as gamificationSchema from "../schema.js";
-import type { VideoDb } from "../../../video/db/client.js";
-import * as videoSchema from "../../../video/db/schema.js";
 import type { VocabularyDb } from "../../../vocabulary/db/client.js";
 import * as vocabularySchema from "../../../vocabulary/db/schema.js";
 
@@ -34,7 +32,6 @@ export interface GamificationTestDbHandle {
   exercisesDb: ExercisesDb;
   vocabularyDb: VocabularyDb;
   phoneticsDb: PhoneticsDb;
-  videoDb: VideoDb;
   teachingDb: TeachingDb;
   newsletterDb: NewsletterDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
@@ -51,7 +48,8 @@ export interface GamificationTestDbHandle {
 /**
  * A real (WASM-compiled) Postgres with every bounded context's migrations applied in dependency
  * order — Identity first (the FK target `users` must exist), then Student Profile, Lessons,
- * Exercises, Gamification, Vocabulary, Phonetics and Video, each set tracked in its own table
+ * Exercises, Gamification, Vocabulary, Phonetics, Video (retired: created, then dropped), Teaching and
+ * Newsletter, each set tracked in its own table
  * exactly as `drizzle-kit migrate` does. It is the whole application's schema, which is what the E2E
  * composition needs; the gamification repository tests use it too. Same approach as the other
  * contexts' test-support —
@@ -66,6 +64,8 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       "gamification",
       "vocabulary",
       "phonetics",
+      // Retired (M11): its migrations still run — create, then drop `video_generation_jobs` — so
+      // the drop is exercised exactly as on a deployed database.
       "video",
       "teaching",
       "newsletter",
@@ -78,7 +78,6 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...gamificationSchema,
       ...vocabularySchema,
       ...phoneticsSchema,
-      ...videoSchema,
       ...teachingSchema,
       ...newsletterSchema,
     },
@@ -89,7 +88,6 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       "user_achievements",
       "user_vocabulary",
       "user_phonetic_progress",
-      "video_generation_jobs",
       "exercise_attempts",
       "lesson_progress",
       "student_profiles",
@@ -105,7 +103,6 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     exercisesDb: base.as<ExercisesDb>(),
     vocabularyDb: base.as<VocabularyDb>(),
     phoneticsDb: base.as<PhoneticsDb>(),
-    videoDb: base.as<VideoDb>(),
     teachingDb: base.as<TeachingDb>(),
     newsletterDb: base.as<NewsletterDb>(),
     seedUser: base.seedUser,

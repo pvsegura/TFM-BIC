@@ -146,19 +146,12 @@ const envSchema = z
       .enum(["true", "false"])
       .default("false")
       .transform((value) => value === "true"),
-    // Video generation (M11, ADR-011/012). "fake" (the default) is a real, committed adapter —
-    // never Hyperframes — used everywhere except a manually configured real-provider run;
-    // automated tests and CI never set this to "hyperframes". Local self-hosted Hyperframes
-    // rendering needs no credential, so there is no accompanying API-key variable.
-    // "disabled" (M17): the feature is switched off — requests are refused with 503 and no
-    // provider is called. The only setting production accepts until Hyperframes is verified.
-    VIDEO_GENERATION_PROVIDER: z.enum(["fake", "hyperframes", "disabled"]).default("fake"),
     // Audio generation (M12, ADR-013). "fake" (the default) is a real, committed adapter that
     // returns a short tone — never Gemini — and is what development, tests and CI use. "gemini"
     // needs GEMINI_API_KEY and is refused under NODE_ENV=test, so no automated run can ever call a
     // paid provider. GEMINI_TTS_MODEL is read only by the Gemini adapter's composition; the default
     // is the GA TTS model verified on 2026-09-25.
-    // "disabled" (M17): as for video — requests get 503, Gemini is never called.
+    // "disabled" (M17): the feature is switched off — requests get 503, Gemini is never called.
     AUDIO_GENERATION_PROVIDER: z.enum(["fake", "gemini", "disabled"]).default("fake"),
     GEMINI_API_KEY: z.string().min(1).optional(),
     GEMINI_TTS_MODEL: z.string().min(1).default("gemini-3.8-flash-tts"),
@@ -291,12 +284,6 @@ const envSchema = z
         issue(
           "AUDIO_GENERATION_PROVIDER",
           `AUDIO_GENERATION_PROVIDER must be "gemini" or "disabled" when NODE_ENV is "production" (never "fake").`,
-        );
-      }
-      if (ctx.value.VIDEO_GENERATION_PROVIDER !== "disabled") {
-        issue(
-          "VIDEO_GENERATION_PROVIDER",
-          `VIDEO_GENERATION_PROVIDER must be "disabled" when NODE_ENV is "production": "fake" is not real and "hyperframes" is unverified with no persistent media storage (ADR-012, ADR-028).`,
         );
       }
       if (ctx.value.LOG_LEVEL === "debug") {

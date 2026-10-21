@@ -38,7 +38,6 @@ describe("ListLanguagesUseCase", () => {
       vocabulary: [],
       phoneticTopics: [],
       phonetics: [],
-      videoDefinitions: [],
     });
 
     const languages = await new ListLanguagesUseCase(repository).execute();
@@ -56,7 +55,6 @@ describe("ListLanguagesUseCase", () => {
       vocabulary: [],
       phoneticTopics: [],
       phonetics: [],
-      videoDefinitions: [],
     });
 
     expect(await new ListLanguagesUseCase(repository).execute()).toEqual([]);

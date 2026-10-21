@@ -81,7 +81,7 @@ test.describe("Privacy and data management", () => {
 
     expect(fileName).toMatch(/^tfm-bic-personal-data-\d{4}-\d{2}-\d{2}\.json$/);
     const document = JSON.parse(raw) as ExportDocument;
-    expect(document.exportVersion).toBe("1");
+    expect(document.exportVersion).toBe("2");
     expect(document.account.email).toBe(email);
     expect(document.profile?.nickname).toBe("exporter");
     expect(document.learning.lessons).toEqual([

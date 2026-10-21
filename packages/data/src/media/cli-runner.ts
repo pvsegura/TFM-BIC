@@ -17,11 +17,11 @@ export type CliRunner = (
 ) => Promise<CliRunResult>;
 
 /**
- * The real process runner, used only by `HyperframesCliProvider` in production. Wraps
- * `child_process.execFile` (never a shell — no shell-injection surface from `scriptPath`, which is
- * already restricted to a safe slug by `videoFileSchema`) with a hard timeout. Never throws: every
- * outcome (clean exit, non-zero exit, timeout, or the command failing to start at all) is reported
- * in the returned `CliRunResult` for the caller to translate into a typed application error.
+ * The real process runner of the offline media pipeline (Hyperframes, FFmpeg). Wraps
+ * `child_process.execFile` (never a shell — no shell-injection surface from any argument) with a
+ * hard timeout. Never throws: every outcome (clean exit, non-zero exit, timeout, or the command
+ * failing to start at all) is reported in the returned `CliRunResult` for the caller to translate
+ * into its own error.
  */
 export const realCliRunner: CliRunner = (command, args, { cwd, timeoutMs }) =>
   new Promise((resolve) => {

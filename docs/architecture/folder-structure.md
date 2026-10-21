@@ -20,7 +20,6 @@ packages/
 content/
   languages/            Per-language content (see content-architecture.md)
   exercises/            Exercise-type definitions shared across languages
-  video-scripts/        Hyperframes scene scripts
 
 infrastructure/
   docker/                Container definitions

@@ -78,7 +78,9 @@ describe("ExportPersonalDataUseCase", () => {
     expect(result!.gamification.achievements).toEqual([
       { key: "first-lesson", unlockedAt: "2026-02-02T00:00:00.000Z" },
     ]);
-    expect(result!.media.videoGenerationJobs[0]).toMatchObject({ status: "completed" });
+    // Version 2: video generation was retired, so there is no media section any more.
+    expect(result!.exportVersion).toBe("2");
+    expect(result).not.toHaveProperty("media");
     expect(result!.communication.newsletter).toEqual({
       status: "unsubscribed",
       consentVersion: "newsletter-consent-v1",

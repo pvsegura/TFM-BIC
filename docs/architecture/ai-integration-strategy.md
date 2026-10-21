@@ -49,12 +49,10 @@ requires a new adapter — no change to use cases or domain.
   HTML/timeline project); the platform automates _rendering_ an already-authored project, not
   _authoring_ one from a runtime prompt. `content/video-scripts/<id>/` holds one hand-authored
   example project for M11's vertical slice.
-- **Implementation status (M11)**: `VideoGenerationService` (port), `FakeVideoGenerationService`
-  (the default dev/test/CI adapter, packages/data) and `HyperframesCliProvider` (real, shells out
-  to `npx hyperframes render --output <file>`, packages/data) are implemented. The real adapter is
-  **not executed end-to-end** in the M11 implementation environment (FFmpeg/headless Chrome
-  availability unconfirmed; ADR-015 hosting still PENDING) — see ADR-012 and
-  `content/video-scripts/README.md`.
+- **Implementation status (current)**: M11's on-demand `VideoGenerationService` (port, fake and CLI providers,
+  `POST /video-generations`) was retired on 2026-10-21. Videos are rendered by the offline media pipeline
+  (M21, ADR-031) through `EducationalVideoRenderer` → `HyperframesVideoRenderer`, which has rendered every
+  published video.
 
 ## Audio: Gemini API TTS — re-verified facts (2026-09-25, M12)
 

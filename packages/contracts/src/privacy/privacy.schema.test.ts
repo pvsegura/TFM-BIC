@@ -7,7 +7,7 @@ import {
 } from "./privacy.schema.js";
 
 const EXPORT = {
-  exportVersion: "1",
+  exportVersion: "2",
   generatedAt: "2026-09-26T10:00:00.000Z",
   account: {
     userId: "11111111-1111-4111-8111-111111111111",
@@ -40,7 +40,6 @@ const EXPORT = {
   vocabulary: { items: [] },
   phonetics: { items: [] },
   gamification: { totalPoints: 0, pointTransactions: [], achievements: [] },
-  media: { videoGenerationJobs: [] },
   communication: { essentialEmails: "always-on", newsletter: null },
   teaching: { linkedTeachers: [], linkedStudentCount: 0 },
   notIncluded: ["Your password hash."],
@@ -62,8 +61,8 @@ describe("personalDataExportSchema", () => {
     expect(parsed.account).not.toHaveProperty("normalizedEmail");
   });
 
-  it("rejects an unknown export version", () => {
-    expect(personalDataExportSchema.safeParse({ ...EXPORT, exportVersion: "2" }).success).toBe(
+  it("rejects any other export version, including the retired version 1", () => {
+    expect(personalDataExportSchema.safeParse({ ...EXPORT, exportVersion: "1" }).success).toBe(
       false,
     );
   });

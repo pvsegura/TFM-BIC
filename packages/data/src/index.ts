@@ -82,29 +82,6 @@ export {
 } from "./phonetics/db/client.js";
 export { DrizzleUserPhoneticProgressRepository } from "./phonetics/user-phonetic-progress.repository.js";
 
-// Video (M11) — a generation job's lifecycle. Video definition content is read from the same
-// validated tree as lessons, exercises, vocabulary and phonetics. The provider boundary
-// (ADR-011/012): `FakeVideoGenerationService` is the only adapter selected by default and in
-// tests/CI; `HyperframesCliProvider` is real but implemented-and-unverified (BLOCKED/PENDING — see
-// content/video-scripts/README.md), selected only via VIDEO_GENERATION_PROVIDER=hyperframes.
-export { CatalogVideoDefinitionRepository } from "./content/catalog-video-definition-repository.js";
-export { createVideoDb, type VideoDb, type VideoDbHandle } from "./video/db/client.js";
-export { DrizzleVideoGenerationJobRepository } from "./video/video-generation-job.repository.js";
-export {
-  FAKE_VIDEO_GENERATION_SCENARIOS,
-  FakeVideoGenerationService,
-  type FakeVideoGenerationScenario,
-} from "./video/fake-video-generation.service.js";
-export {
-  HyperframesCliProvider,
-  type HyperframesCliProviderOptions,
-} from "./video/hyperframes-cli.provider.js";
-export {
-  realCliRunner,
-  type CliRunner,
-  type CliRunResult,
-} from "./video/hyperframes-cli-runner.js";
-
 // Audio generation (M12, ADR-013): `FakeAudioGenerationService` is the adapter selected by default
 // and in every automated test/CI run; `GeminiAudioProvider` is selected only via
 // AUDIO_GENERATION_PROVIDER=gemini. `InMemoryAudioCache` is a bounded, non-durable cache — not storage.
@@ -148,12 +125,9 @@ export { DrizzleAccountErasureStore } from "./privacy/account-erasure.store.js";
 export { SqlPersonalDataReadModel } from "./privacy/personal-data.read-model.js";
 export { NON_USER_STORES, USER_DATA_REGISTER } from "./privacy/user-data-register.js";
 
-// Production readiness (M17, ADR-028): what AUDIO/VIDEO_GENERATION_PROVIDER=disabled select, so a
+// Production readiness (M17, ADR-028): what AUDIO_GENERATION_PROVIDER=disabled selects, so a
 // switched-off feature never falls back to a fake adapter.
-export {
-  DisabledAudioGenerationService,
-  DisabledVideoGenerationService,
-} from "./providers/disabled-generation-services.js";
+export { DisabledAudioGenerationService } from "./providers/disabled-generation-services.js";
 
 // The process's one bounded Postgres pool, and the readiness check over it (M17).
 export {

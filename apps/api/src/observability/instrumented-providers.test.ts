@@ -1,19 +1,13 @@
 import {
   AudioProviderRateLimitedError,
   EmailDeliveryError,
-  VideoGenerationTimeoutError,
   type AudioGenerationRequest,
   type AudioGenerationService,
   type OutgoingEmail,
-  type VideoGenerationService,
 } from "@tfm-bic/application";
 import { describe, expect, it, vi } from "vitest";
 
-import {
-  instrumentAudioProvider,
-  instrumentEmailProvider,
-  instrumentVideoProvider,
-} from "./instrumented-providers.js";
+import { instrumentAudioProvider, instrumentEmailProvider } from "./instrumented-providers.js";
 import { MetricsRegistry } from "./metrics.js";
 
 const AUDIO_REQUEST: AudioGenerationRequest = {
@@ -84,64 +78,6 @@ describe("instrumentAudioProvider (Gemini)", () => {
       provider: "gemini",
     });
     expect(JSON.stringify(metrics.snapshot())).not.toContain("private words");
-  });
-});
-
-describe("instrumentVideoProvider (Hyperframes)", () => {
-  const request = { videoDefinitionId: "pl-greetings-video", scriptPath: "s", title: "Hello" };
-
-  it("logs the render start and completion with duration, and counts them", async () => {
-    const metrics = new MetricsRegistry();
-    const log = { info: vi.fn(), warn: vi.fn() };
-    const result = { providerJobReference: "job-1", mediaReference: "media-1" };
-    const inner: VideoGenerationService = { generate: vi.fn().mockResolvedValue(result) };
-
-    await expect(
-      instrumentVideoProvider(inner, "hyperframes", metrics, log).generate(request),
-    ).resolves.toBe(result);
-
-    expect(log.info).toHaveBeenCalledWith(
-      { provider: "hyperframes", videoDefinitionId: "pl-greetings-video" },
-      "video.render_started",
-    );
-    expect(log.info).toHaveBeenCalledWith(
-      expect.objectContaining({
-        provider: "hyperframes",
-        videoDefinitionId: "pl-greetings-video",
-        durationMs: expect.any(Number) as number,
-      }),
-      "video.render_completed",
-    );
-    expect(calls(metrics)[0]?.labels).toMatchObject({ operation: "video", outcome: "success" });
-  });
-
-  it("logs a failed render at warn with its category only — never the provider's message", async () => {
-    const metrics = new MetricsRegistry();
-    const log = { info: vi.fn(), warn: vi.fn() };
-    const inner: VideoGenerationService = {
-      generate: vi.fn().mockRejectedValue(new VideoGenerationTimeoutError(1000)),
-    };
-
-    await expect(
-      instrumentVideoProvider(inner, "hyperframes", metrics, log).generate(request),
-    ).rejects.toBeInstanceOf(VideoGenerationTimeoutError);
-
-    expect(log.warn).toHaveBeenCalledWith(
-      expect.objectContaining({ category: "timeout", videoDefinitionId: "pl-greetings-video" }),
-      "video.render_failed",
-    );
-    expect(calls(metrics)[0]?.labels).toMatchObject({ outcome: "failure", category: "timeout" });
-  });
-
-  it("categorises an unexpected error as unknown", async () => {
-    const metrics = new MetricsRegistry();
-    const inner: VideoGenerationService = { generate: vi.fn().mockRejectedValue(new Error("x")) };
-    await expect(
-      instrumentVideoProvider(inner, "fake", metrics, { info: vi.fn(), warn: vi.fn() }).generate(
-        request,
-      ),
-    ).rejects.toThrow("x");
-    expect(calls(metrics)[0]?.labels.category).toBe("unknown");
   });
 });
 

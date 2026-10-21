@@ -401,7 +401,7 @@ Rationale: [ADR-027](../adr/adr-027-security-hardening.md). Applies to every end
   `500 { "error": "Internal Server Error" }`. Endpoint-specific errors are unchanged.
 - **Rate limits** are per client address (`TRUST_PROXY` decides which address). `POST /auth/login` is also
   limited to **10 per 15 minutes per account** (normalised email, whether or not it exists). Account deletion and
-  export (5/hour), `POST /audio-generations` (30/hour) and `POST /video-generations` (10/hour) are also limited
+  export (5/hour), `POST /audio-generations` (30/hour) are also limited
   **per signed-in user**. `GET /profile` 120/min and `PATCH /profile` 30/min per client.
 - **Origin**: every state-changing endpoint except one-click unsubscribe refuses a foreign `Origin` (`403`). If
   `Origin` is absent, it also refuses a browser `Sec-Fetch-Site` of `cross-site`/`same-site`.
@@ -421,8 +421,8 @@ dependency).
 | GET    | `/health` | none | Liveness only — never touches the database or a provider. `200 { status: "ok", timestamp, defaultLanguage, version }` (`version` = `APP_VERSION`). |
 | GET    | `/ready`  | none | Readiness: `200 { ready: true }` when the database answers `SELECT 1` within 2 s, otherwise `503 { ready: false }` (reason never disclosed).       |
 
-When `AUDIO_GENERATION_PROVIDER`/`VIDEO_GENERATION_PROVIDER` is `disabled`, `POST /audio-generations` and
-`POST /video-generations` answer `503 { error: "Audio|Video generation is not available." }` after authentication, with no
+When `AUDIO_GENERATION_PROVIDER` is `disabled`, `POST /audio-generations` answers
+`503 { error: "Audio generation is not available." }` after authentication, with no
 `Retry-After`, and record nothing.
 
 In staging/production (`WEB_DIST_DIR` set) the API also serves the built SPA: `GET /`, every file of the build, and the

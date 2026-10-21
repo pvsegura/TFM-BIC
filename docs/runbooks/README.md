@@ -27,7 +27,6 @@ holds for the whole window, not one request.
 | High latency         | p95 `http_request_duration_ms` upper bound ≥ 1000 ms on a route with ≥ 20 requests, over 10 min  | Medium   | Manual                   | [high-latency.md](high-latency.md)                                   |
 | Pool exhaustion      | `database.waitingRequests` > 0 on consecutive scrapes ≥ 1 min apart                              | High     | Manual                   | [database-unavailable.md](database-unavailable.md)                   |
 | Gemini failures      | ≥ 3 audio provider failures and ≥ 50 % failure ratio over 15 min                                 | Medium   | Manual                   | [gemini-failure.md](gemini-failure.md)                               |
-| Hyperframes failures | ≥ 2 `video.render_failed` over 30 min                                                            | Low      | Manual                   | [hyperframes-failure.md](hyperframes-failure.md)                     |
 | Email failures       | any `email.delivery_failed` burst: ≥ 3 in 15 min, or every attempt failing                       | High     | Manual                   | [email-provider-failure.md](email-provider-failure.md)               |
 | Auth abuse (signal)  | `auth.login_failure` or 429 `request.rejected` far above normal for 15 min                       | Medium   | Manual                   | [high-error-rate.md](high-error-rate.md#4xx-spikes-security-signals) |
 
@@ -57,7 +56,7 @@ Deliberately **not** alerts: a single 5xx, a single provider failure, 4xx in gen
 
 [api-unavailable](api-unavailable.md) · [database-unavailable](database-unavailable.md) ·
 [high-error-rate](high-error-rate.md) · [high-latency](high-latency.md) · [gemini-failure](gemini-failure.md) ·
-[hyperframes-failure](hyperframes-failure.md) · [email-provider-failure](email-provider-failure.md)
+[email-provider-failure](email-provider-failure.md)
 
 Host-specific commands are written only where the host (Render, staging demo) was verified; anything else is
 marked **PROVIDER-SPECIFIC** until the production host is chosen (ADR-015).

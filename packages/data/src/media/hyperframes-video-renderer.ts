@@ -11,7 +11,7 @@ import {
 } from "@tfm-bic/application";
 import type { VideoScript } from "@tfm-bic/domain";
 
-import { HyperframesCliProvider } from "../video/hyperframes-cli.provider.js";
+import { HyperframesCli } from "./hyperframes-cli.js";
 import { extractPoster, fastStart, type FfmpegTools } from "./ffmpeg.js";
 import {
   HEIGHT,
@@ -49,20 +49,18 @@ const DEFAULT_RENDER_ARGS = ["--fps", "30", "--quality", "standard", "--workers"
 
 /**
  * Renders a video script with Hyperframes (M21, ADR-031): writes a self-contained render project
- * (composition, self-hosted font, GSAP, the narration clips), renders it through the existing
- * `HyperframesCliProvider` (M11's adapter, started via the pinned package's bin so it also works
- * on Windows), then moves the MP4 index to the front for streaming, extracts a poster frame and
+ * (composition, self-hosted font, GSAP, the narration clips), renders it through `HyperframesCli`
+ * (started via the pinned package's bin so it also works on Windows), then moves the MP4 index to the front for streaming, extracts a poster frame and
  * writes WebVTT captions from the timeline. Output names carry a content hash, so a published
  * file never changes under the same URL and can be cached forever.
  */
 export class HyperframesVideoRenderer implements EducationalVideoRenderer {
   readonly version = `hyperframes@${HYPERFRAMES_VERSION}/template-${String(TEMPLATE_VERSION)}`;
-  private readonly provider: HyperframesCliProvider;
+  private readonly cli: HyperframesCli;
 
   constructor(private readonly options: HyperframesVideoRendererOptions) {
     disableHyperframesTelemetry();
-    this.provider = new HyperframesCliProvider({
-      videoScriptsRoot: options.buildRoot,
+    this.cli = new HyperframesCli({
       command: {
         file: process.execPath,
         args: [require.resolve("hyperframes/bin/hyperframes.mjs")],
@@ -114,16 +112,10 @@ export class HyperframesVideoRenderer implements EducationalVideoRenderer {
     outputDir: string;
   }): Promise<RenderedVideo> {
     const { script, timeline } = input;
-    const slug = `${script.content.type}-${script.content.id}`;
-    await this.writeProject(script, timeline);
+    const project = await this.writeProject(script, timeline);
+    const rendered = await this.cli.render(project);
 
-    const result = await this.provider.generate({
-      videoDefinitionId: slug,
-      scriptPath: slug,
-      title: script.title,
-    });
-
-    const bytes = await readFile(result.mediaReference);
+    const bytes = await readFile(rendered);
     const hash = createHash("sha256").update(bytes).digest("hex").slice(0, 12);
     const outDir = path.join(this.options.mediaRoot, input.outputDir);
     await mkdir(outDir, { recursive: true });
@@ -135,7 +127,7 @@ export class HyperframesVideoRenderer implements EducationalVideoRenderer {
     const videoName = `video-${hash}.mp4`;
     const posterName = `poster-${hash}.jpg`;
     const captionsName = `captions-${hash}.vtt`;
-    await fastStart(this.options.ffmpeg, result.mediaReference, path.join(outDir, videoName));
+    await fastStart(this.options.ffmpeg, rendered, path.join(outDir, videoName));
 
     // Poster: the first moment the main subject is fully on screen (second scene), else 1.5 s in.
     const second = timeline.scenes[1];

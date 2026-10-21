@@ -1,4 +1,4 @@
-# Personal-data export format (version 1)
+# Personal-data export format (version 2)
 
 Status: ACCEPTED (M15, [ADR-026](../adr/adr-026-privacy-data-management.md)). Not legal advice — see the
 [disclaimer](README.md).
@@ -13,7 +13,7 @@ All timestamps are ISO 8601 UTC strings. Arrays are ordered oldest first.
 
 ```jsonc
 {
-  "exportVersion": "1",
+  "exportVersion": "2",
   "generatedAt": "2026-09-26T10:00:00.000Z",
   "account": { "userId", "email", "role", "emailVerified", "createdAt", "updatedAt" },
   "profile": { "firstName", "lastName", "nickname", "avatarId", "createdAt", "updatedAt" } | null,
@@ -28,7 +28,6 @@ All timestamps are ISO 8601 UTC strings. Arrays are ordered oldest first.
     "pointTransactions": [{ "reason", "sourceId", "amount", "createdAt" }],
     "achievements": [{ "key", "unlockedAt" }]
   },
-  "media": { "videoGenerationJobs": [{ "jobId", "videoDefinitionId", "status", "errorCategory", "createdAt", "updatedAt", "completedAt" }] },
   "communication": {
     "essentialEmails": "always-on",         // transactional email cannot be switched off (M14)
     "newsletter": { "status", "consentVersion", "consentSource", "requestedAt", "confirmedAt", "unsubscribedAt" } | null
@@ -41,6 +40,15 @@ All timestamps are ISO 8601 UTC strings. Arrays are ordered oldest first.
 }
 ```
 
+## Version history
+
+| Version | Change                                                                                                                       |
+| ------- | ---------------------------------------------------------------------------------------------------------------------------- |
+| 1       | M15: the first format.                                                                                                       |
+| 2       | 2026-10-21: the `media` section (`videoGenerationJobs`) removed with M11's on-demand video generation; its table is dropped. |
+
+A client that only understands version 1 must refuse a version 2 document rather than guess.
+
 ## Deliberately excluded (and listed in `notIncluded`)
 
 | Excluded                                                             | Why                                                                                                                                                                   |
@@ -49,7 +57,6 @@ All timestamps are ISO 8601 UTC strings. Arrays are ordered oldest first.
 | `unsubscribe_key`, `confirmation_token_hash`, `confirmation_sent_at` | Credentials / internal cooldown bookkeeping                                                                                                                           |
 | `normalized_email`                                                   | A derived copy of `email`, already exported                                                                                                                           |
 | Teacher identity on a link; linked students' data                    | Another person's personal data. **PENDING product decision:** whether a student should be told which teacher can see their data (tied to M13's open notice question). |
-| `provider_job_reference`, `media_reference`                          | INTERNAL infrastructure data (a provider reference and a server file path)                                                                                            |
 | Server logs                                                          | Not in the database; hosting-dependent                                                                                                                                |
 
 ## Security

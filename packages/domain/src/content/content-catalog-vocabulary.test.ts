@@ -63,7 +63,6 @@ function catalog(
     vocabulary,
     phoneticTopics: [],
     phonetics: [],
-    videoDefinitions: [],
   };
 }
 

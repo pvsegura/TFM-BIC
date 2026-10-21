@@ -15,7 +15,6 @@ import { buildCoachDependencies } from "./coach-dependencies.js";
 import { buildPrivacyDependencies } from "./privacy-dependencies.js";
 import { buildProfileDependencies } from "./profile-dependencies.js";
 import { buildTeachingDependencies } from "./teaching-dependencies.js";
-import { buildVideoDependencies, selectVideoGenerationProvider } from "./video-dependencies.js";
 import { buildVocabularyDependencies } from "./vocabulary-dependencies.js";
 
 /**
@@ -42,7 +41,6 @@ export async function createTestDependencies(env: AppEnv): Promise<AppDependenci
     exercisesDb,
     vocabularyDb,
     phoneticsDb,
-    videoDb,
     teachingDb,
     newsletterDb,
     close,
@@ -58,11 +56,6 @@ export async function createTestDependencies(env: AppEnv): Promise<AppDependenci
     gamification: buildGamificationDependencies(db, () => Promise.resolve()),
     vocabulary: buildVocabularyDependencies(vocabularyDb, () => Promise.resolve()),
     phonetics: buildPhoneticsDependencies(phoneticsDb, () => Promise.resolve()),
-    // Same provider selection as production (env.VIDEO_GENERATION_PROVIDER) — "fake" by default,
-    // so E2E never depends on Hyperframes/FFmpeg/headless Chrome being available.
-    video: buildVideoDependencies(videoDb, selectVideoGenerationProvider(env), () =>
-      Promise.resolve(),
-    ),
     // Same provider selection as production — and loadEnv refuses AUDIO_GENERATION_PROVIDER=gemini
     // under NODE_ENV=test, so E2E always gets the fake adapter and never needs a Gemini key.
     audio: createAudioDependencies(env),

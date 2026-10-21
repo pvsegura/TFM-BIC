@@ -80,17 +80,6 @@ export function makePersonalDataRecords(userId: string): PersonalDataRecords {
     achievements: [
       { achievementKey: "first-lesson", unlockedAt: new Date("2026-02-02T00:00:00.000Z") },
     ],
-    videoGenerationJobs: [
-      {
-        jobId: "44444444-4444-4444-8444-444444444444",
-        videoDefinitionId: "pl-a1-nasal-vowels-demo",
-        status: "completed",
-        errorCategory: null,
-        createdAt: new Date("2026-02-07T00:00:00.000Z"),
-        updatedAt: new Date("2026-02-07T00:01:00.000Z"),
-        completedAt: new Date("2026-02-07T00:01:00.000Z"),
-      },
-    ],
     newsletter: {
       status: "unsubscribed",
       consentVersion: "newsletter-consent-v1",

@@ -7,14 +7,12 @@ import type {
   StoredLessonProgressStatus,
   StoredPhoneticProgressStatus,
   StoredVocabularyStatus,
-  VideoGenerationStatus,
 } from "@tfm-bic/domain";
 
 /**
  * Everything the personal-data export may contain about one user (M15, ADR-026), read in one
  * consistent snapshot. Each record is an **allowlist**: the adapter selects exactly these
- * columns, so a password hash, a session or token hash, an unsubscribe key, a provider job
- * reference or a server file path can never reach the export — they are not in these types.
+ * columns, so a password hash, a session or token hash, or an unsubscribe key can never reach the export — they are not in these types.
  */
 export interface PersonalDataRecords {
   readonly account: {
@@ -68,15 +66,6 @@ export interface PersonalDataRecords {
     readonly createdAt: Date;
   }[];
   readonly achievements: readonly { readonly achievementKey: string; readonly unlockedAt: Date }[];
-  readonly videoGenerationJobs: readonly {
-    readonly jobId: string;
-    readonly videoDefinitionId: string;
-    readonly status: VideoGenerationStatus;
-    readonly errorCategory: string | null;
-    readonly createdAt: Date;
-    readonly updatedAt: Date;
-    readonly completedAt: Date | null;
-  }[];
   readonly newsletter: {
     readonly status: NewsletterStatus;
     readonly consentVersion: string;

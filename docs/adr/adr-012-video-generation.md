@@ -1,7 +1,11 @@
 # ADR-012: Video Generation (Hyperframes)
 
-Status: ACCEPTED (architecture and fake-provider path) — the real `HyperframesCliProvider`
-adapter is implemented but **not verified end-to-end** (see Consequences)
+Status: SUPERSEDED by [ADR-031](adr-031-video-first-educational-media.md). The per-learner, on-demand generation
+this ADR describes (`POST /video-generations`, the `video_generation_jobs` table, the fake and CLI providers) was
+retired on 2026-10-21: videos are rendered offline by the media pipeline and served as published media. The table is
+dropped by the video context's migration 0001; the Hyperframes CLI wrapper lives on as
+`packages/data/src/media/hyperframes-cli.ts`. Kept as the record of the original decision.
+Previously: ACCEPTED (architecture and fake-provider path), real adapter implemented but not verified end-to-end
 Date: 2026-09-15, revised 2026-09-24 (M11)
 
 ## Context
