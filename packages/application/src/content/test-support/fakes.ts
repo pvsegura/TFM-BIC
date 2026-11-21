@@ -77,6 +77,9 @@ export function makeContentItem(
     status: "published",
     order: 10,
     instructionLanguage: createLanguageId("en"),
+    // Free unless a test says otherwise, so pre-Verbysia tests keep testing what they test;
+    // licence gating is covered with explicit `access: "course"` items.
+    access: "free",
     title: `Title of ${id}`,
     description: `Description of ${id}`,
     blocks: [{ type: "explanation", text: `Body of ${id}` }],

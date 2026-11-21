@@ -4,6 +4,7 @@ import type {
   LessonDetail,
   LessonProgressView,
   LessonSummary,
+  ContentGate,
   ResolveSessionUseCase,
 } from "@verbysia/application";
 import type { AppEnv } from "@verbysia/config";
@@ -26,6 +27,7 @@ import { requestLocale } from "./interface-locale.js";
 import { mapLessonError } from "./lesson-error.mapper.js";
 import { lessonRateLimit } from "./lesson-rate-limit.js";
 import { INVALID_REQUEST, privateResponse, sessionUserId } from "./route-helpers.js";
+import { createContentAccessHook, paramOf } from "../hooks/content-access.js";
 
 /** `start` and `complete` take no input, so nothing legitimate needs more than a
  * few bytes; anything bigger is rejected (413) before it is parsed. */
@@ -93,6 +95,8 @@ export function registerLessonRoutes(
     useCases: LessonUseCases;
     resolveSession: ResolveSessionUseCase;
     env: AppEnv;
+    /** Verbysia: paid lessons need a licence (checked after authentication). */
+    contentGate?: ContentGate;
     achievementTexts: AchievementTexts;
   },
 ): void {
@@ -100,6 +104,14 @@ export function registerLessonRoutes(
   const verifyOrigin = createVerifyOriginHook(env.APP_BASE_URL);
   const authenticate = createAuthenticateHook(resolveSession);
   const config = { rateLimit: lessonRateLimit(env) };
+  const lessonGate = deps.contentGate
+    ? [
+        createContentAccessHook(deps.contentGate, (request) => {
+          const id = paramOf(request, "lessonId");
+          return id ? { kind: "content", id } : null;
+        }),
+      ]
+    : [];
 
   app.get("/lessons", { config, preHandler: [authenticate] }, async (request, reply) => {
     const query = lessonListQuerySchema.safeParse(request.query);
@@ -117,25 +129,29 @@ export function registerLessonRoutes(
     });
   });
 
-  app.get("/lessons/:lessonId", { config, preHandler: [authenticate] }, async (request, reply) => {
-    const params = lessonIdParamSchema.safeParse(request.params);
-    if (!params.success) {
-      return reply.code(400).send(INVALID_REQUEST);
-    }
+  app.get(
+    "/lessons/:lessonId",
+    { config, preHandler: [authenticate, ...lessonGate] },
+    async (request, reply) => {
+      const params = lessonIdParamSchema.safeParse(request.params);
+      if (!params.success) {
+        return reply.code(400).send(INVALID_REQUEST);
+      }
 
-    return privateResponse(reply, mapLessonError, async () => {
-      const detail = await useCases.getLesson.execute({
-        userId: sessionUserId(request),
-        lessonId: params.data.lessonId,
+      return privateResponse(reply, mapLessonError, async () => {
+        const detail = await useCases.getLesson.execute({
+          userId: sessionUserId(request),
+          lessonId: params.data.lessonId,
+        });
+        return toLessonResponse(detail);
       });
-      return toLessonResponse(detail);
-    });
-  });
+    },
+  );
 
   const actionRoute = {
     config,
     bodyLimit: ACTION_BODY_LIMIT_BYTES,
-    preHandler: [verifyOrigin, authenticate],
+    preHandler: [verifyOrigin, authenticate, ...lessonGate],
   };
 
   /** The client controls nothing but which lesson: a body naming a user, a time or a status is

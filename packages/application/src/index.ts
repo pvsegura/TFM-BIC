@@ -629,3 +629,4 @@ export {
   type MemorySession,
   type MemoryStats,
 } from "./memory/memory-use-cases.js";
+export { ContentGate, type GateDecision } from "./commerce/content-gate.js";

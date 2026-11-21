@@ -16,6 +16,7 @@ import { buildPrivacyDependencies } from "./privacy-dependencies.js";
 import { buildProfileDependencies } from "./profile-dependencies.js";
 import { buildTeachingDependencies } from "./teaching-dependencies.js";
 import { buildVocabularyDependencies } from "./vocabulary-dependencies.js";
+import { buildCommerceDependencies } from "./verbysia-dependencies.js";
 
 /**
  * Same real adapters as the production composition, except the database is
@@ -43,6 +44,8 @@ export async function createTestDependencies(env: AppEnv): Promise<AppDependenci
     phoneticsDb,
     teachingDb,
     newsletterDb,
+    commerceDb,
+    memoryDb,
     close,
   } = await createGamificationTestDb();
 
@@ -77,5 +80,7 @@ export async function createTestDependencies(env: AppEnv): Promise<AppDependenci
     // aggregate queries. The agent itself is the fake adapter — `loadEnv` refuses AI_COACH_PROVIDER=gemini
     // under NODE_ENV=test, so no E2E or CI run can ever reach the paid API.
     coach: buildCoachDependencies(env, identityDb as unknown as CoachDb, () => Promise.resolve()),
+    // Verbysia commerce and memory trainer: the real repositories over the same database.
+    commerce: buildCommerceDependencies(commerceDb, memoryDb, () => Promise.resolve()),
   };
 }

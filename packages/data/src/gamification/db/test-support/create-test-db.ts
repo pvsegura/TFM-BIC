@@ -19,6 +19,10 @@ import type { GamificationDb } from "../client.js";
 import * as gamificationSchema from "../schema.js";
 import type { VocabularyDb } from "../../../vocabulary/db/client.js";
 import * as vocabularySchema from "../../../vocabulary/db/schema.js";
+import type { CommerceDb } from "../../../commerce/db/client.js";
+import * as commerceSchema from "../../../commerce/db/schema.js";
+import type { MemoryDb } from "../../../memory/db/client.js";
+import * as memorySchema from "../../../memory/db/schema.js";
 
 export interface GamificationTestDbHandle {
   db: GamificationDb;
@@ -34,8 +38,10 @@ export interface GamificationTestDbHandle {
   phoneticsDb: PhoneticsDb;
   teachingDb: TeachingDb;
   newsletterDb: NewsletterDb;
+  commerceDb: CommerceDb;
+  memoryDb: MemoryDb;
   /** Inserts a real `users` row and returns its id — every gamification row has a foreign key to `users`. */
-  seedUser: (email?: string, role?: "STUDENT" | "TEACHER") => Promise<string>;
+  seedUser: (email?: string, role?: "STUDENT" | "TEACHER" | "ADMIN") => Promise<string>;
   /** Clears every table — cheaper between tests than booting a fresh WASM Postgres each time. */
   reset: () => Promise<void>;
   /** Raw SQL escape hatch for setup outside the query-builder surface (deleting a user to
@@ -69,6 +75,8 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       "video",
       "teaching",
       "newsletter",
+      "commerce",
+      "memory",
     ],
     schema: {
       ...identitySchema,
@@ -80,8 +88,16 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
       ...phoneticsSchema,
       ...teachingSchema,
       ...newsletterSchema,
+      ...commerceSchema,
+      ...memorySchema,
     },
     truncate: [
+      "memory_reviews",
+      "memory_cards",
+      "licences",
+      "purchases",
+      "subscriptions",
+      "admin_audit_log",
       "newsletter_subscriptions",
       "teacher_students",
       "point_transactions",
@@ -105,6 +121,8 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     phoneticsDb: base.as<PhoneticsDb>(),
     teachingDb: base.as<TeachingDb>(),
     newsletterDb: base.as<NewsletterDb>(),
+    commerceDb: base.as<CommerceDb>(),
+    memoryDb: base.as<MemoryDb>(),
     seedUser: base.seedUser,
     reset: base.reset,
     rawExecute: base.rawExecute,

@@ -11,6 +11,12 @@ import type { ContentUseCases } from "../composition/content-use-cases.js";
 import { mapCatalogError } from "./catalog-error.mapper.js";
 import { publicRateLimit } from "./public-rate-limit.js";
 import { INVALID_REQUEST } from "./route-helpers.js";
+import {
+  createContentAccessHook,
+  createOptionalSessionHook,
+  paramOf,
+} from "../hooks/content-access.js";
+import type { ContentGate, ResolveSessionUseCase } from "@verbysia/application";
 
 /**
  * Content discovery — public and read-only (ADR-018). Only published content
@@ -23,9 +29,25 @@ import { INVALID_REQUEST } from "./route-helpers.js";
  */
 export function registerContentRoutes(
   app: FastifyInstance,
-  deps: { useCases: ContentUseCases; env: AppEnv },
+  deps: {
+    useCases: ContentUseCases;
+    env: AppEnv;
+    /** Verbysia: paid items need a licence; free items stay public. */
+    contentGate?: ContentGate;
+    resolveSession?: ResolveSessionUseCase;
+  },
 ): void {
   const { useCases, env } = deps;
+  const gated =
+    deps.contentGate && deps.resolveSession
+      ? [
+          createOptionalSessionHook(deps.resolveSession),
+          createContentAccessHook(deps.contentGate, (request) => {
+            const id = paramOf(request, "contentId");
+            return id ? { kind: "content", id } : null;
+          }),
+        ]
+      : [];
   const config = { rateLimit: publicRateLimit(env) };
 
   app.get("/content", { config }, async (request, reply) => {
@@ -46,7 +68,7 @@ export function registerContentRoutes(
     }
   });
 
-  app.get("/content/:contentId", { config }, async (request, reply) => {
+  app.get("/content/:contentId", { config, preHandler: gated }, async (request, reply) => {
     const params = contentIdParamSchema.safeParse(request.params);
     if (!params.success) {
       return reply.code(400).send(INVALID_REQUEST);

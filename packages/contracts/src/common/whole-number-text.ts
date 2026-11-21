@@ -8,3 +8,12 @@ import { z } from "zod";
 export const wholeNumberText = z
   .string()
   .regex(/^[1-9]\d{0,8}$/, { error: "Expected a whole number." });
+
+/** A query-string integer within `[min, max]` (digits only, no sign), parsed to a number. */
+export function boundedIntText(min: number, max: number) {
+  return z
+    .string()
+    .regex(/^\d{1,9}$/, { error: "Expected a whole number." })
+    .transform(Number)
+    .pipe(z.number().int().min(min).max(max));
+}

@@ -21,7 +21,7 @@ export interface PgliteTestDb {
   as: <Db>() => Db;
   /** Inserts a real `users` row and returns its id — most per-user tables have a foreign key to
    * `users`, so their rows can only exist for a real user. */
-  seedUser: (email?: string, role?: "STUDENT" | "TEACHER") => Promise<string>;
+  seedUser: (email?: string, role?: "STUDENT" | "TEACHER" | "ADMIN") => Promise<string>;
   /** Clears the listed tables — cheaper between tests than booting a fresh WASM Postgres each
    * time. `CASCADE` also clears everything that references them. */
   reset: () => Promise<void>;

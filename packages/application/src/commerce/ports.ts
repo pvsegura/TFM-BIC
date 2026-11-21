@@ -30,12 +30,12 @@ export interface LicenceRepository {
 }
 
 export interface ProductChanges {
-  status?: ProductStatus;
-  namePl?: string;
-  descriptionPl?: string;
-  priceMinor?: number;
-  accessDays?: number | null;
-  providerPriceId?: string | null;
+  status?: ProductStatus | undefined;
+  namePl?: string | undefined;
+  descriptionPl?: string | undefined;
+  priceMinor?: number | undefined;
+  accessDays?: number | null | undefined;
+  providerPriceId?: string | null | undefined;
 }
 
 export interface ProductRepository {

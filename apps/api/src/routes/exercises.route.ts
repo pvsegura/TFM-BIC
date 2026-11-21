@@ -4,6 +4,7 @@ import type {
   ExerciseResultView,
   ExerciseSummary,
   LessonExercises,
+  ContentGate,
   ResolveSessionUseCase,
   SubmitExerciseAnswerWithRewardsResult,
 } from "@verbysia/application";
@@ -27,6 +28,7 @@ import { mapExerciseError } from "./exercise-error.mapper.js";
 import { exerciseAnswerRateLimit, exerciseReadRateLimit } from "./exercise-rate-limit.js";
 import { requestLocale } from "./interface-locale.js";
 import { INVALID_REQUEST, privateResponse, sessionUserId } from "./route-helpers.js";
+import { createContentAccessHook, paramOf } from "../hooks/content-access.js";
 
 /** An answer is at most a few hundred characters of text; anything bigger is rejected (413)
  * before it is parsed. */
@@ -101,6 +103,8 @@ export function registerExerciseRoutes(
     useCases: ExerciseUseCases;
     resolveSession: ResolveSessionUseCase;
     env: AppEnv;
+    /** Verbysia: an exercise inherits its lesson's access (checked after authentication). */
+    contentGate?: ContentGate;
     achievementTexts: AchievementTexts;
   },
 ): void {
@@ -109,10 +113,19 @@ export function registerExerciseRoutes(
   const authenticate = createAuthenticateHook(resolveSession);
   const readConfig = { rateLimit: exerciseReadRateLimit(env) };
   const answerConfig = { rateLimit: exerciseAnswerRateLimit(env) };
+  const gate = (kind: "content" | "exercise", param: string) =>
+    deps.contentGate
+      ? [
+          createContentAccessHook(deps.contentGate, (request) => {
+            const id = paramOf(request, param);
+            return id ? { kind, id } : null;
+          }),
+        ]
+      : [];
 
   app.get(
     "/lessons/:lessonId/exercises",
-    { config: readConfig, preHandler: [authenticate] },
+    { config: readConfig, preHandler: [authenticate, ...gate("content", "lessonId")] },
     async (request, reply) => {
       const params = lessonIdParamSchema.safeParse(request.params);
       if (!params.success) {
@@ -131,7 +144,7 @@ export function registerExerciseRoutes(
 
   app.get(
     "/exercises/:exerciseId",
-    { config: readConfig, preHandler: [authenticate] },
+    { config: readConfig, preHandler: [authenticate, ...gate("exercise", "exerciseId")] },
     async (request, reply) => {
       const params = exerciseIdParamSchema.safeParse(request.params);
       if (!params.success) {
@@ -153,7 +166,7 @@ export function registerExerciseRoutes(
     {
       config: answerConfig,
       bodyLimit: ANSWER_BODY_LIMIT_BYTES,
-      preHandler: [verifyOrigin, authenticate],
+      preHandler: [verifyOrigin, authenticate, ...gate("exercise", "exerciseId")],
     },
     async (request, reply) => {
       const params = exerciseIdParamSchema.safeParse(request.params);

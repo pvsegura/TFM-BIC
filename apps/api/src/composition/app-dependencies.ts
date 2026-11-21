@@ -18,6 +18,7 @@ import {
 import { createPrivacyDependencies, type PrivacyDependencies } from "./privacy-dependencies.js";
 import { createProfileDependencies, type ProfileDependencies } from "./profile-dependencies.js";
 import { createTeachingDependencies, type TeachingDependencies } from "./teaching-dependencies.js";
+import { createCommerceDependencies, type CommerceDependencies } from "./verbysia-dependencies.js";
 import {
   createVocabularyDependencies,
   type VocabularyDependencies,
@@ -38,6 +39,7 @@ export interface AppDependencies {
   email: EmailDependencies;
   privacy: PrivacyDependencies;
   coach: CoachDependencies;
+  commerce: CommerceDependencies;
 }
 
 /** The real adapters over a live Postgres `DATABASE_URL` and the content folder. */
@@ -59,6 +61,7 @@ export async function createAppDependencies(
     email: createEmailDependencies(databaseUrl, env),
     privacy: createPrivacyDependencies(databaseUrl),
     coach: createCoachDependencies(env, databaseUrl),
+    commerce: createCommerceDependencies(databaseUrl),
   };
 }
 
@@ -76,5 +79,6 @@ export function connectionClosers(deps: AppDependencies): (() => Promise<void>)[
     deps.email.close,
     deps.privacy.close,
     deps.coach.close,
+    deps.commerce.close,
   ];
 }

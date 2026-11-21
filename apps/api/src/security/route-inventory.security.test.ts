@@ -40,6 +40,21 @@ const PUBLIC_ROUTES = new Set([
   // M23: the grammar reference — public, read-only lookup tables (no progress, no user data).
   "GET /grammar",
   "GET /grammar/:topicId",
+  // Verbysia: the price list — public like a shop window; nothing personal, nothing purchasable here.
+  "GET /products",
+]);
+
+/** ADMIN only (`requireRole`), in addition to a session; writes are audited. */
+const ADMIN_ROUTES = new Set([
+  "GET /admin/users",
+  "GET /admin/users/:userId",
+  "POST /admin/users/:userId/licences",
+  "POST /admin/licences/:licenceId/revoke",
+  "GET /admin/products",
+  "PATCH /admin/products/:productId",
+  "GET /admin/purchases",
+  "GET /admin/subscriptions",
+  "GET /admin/audit",
 ]);
 
 /** Authorized by an HMAC token in the link; RFC 8058 mail clients send no Origin (ADR-025). */
@@ -170,7 +185,18 @@ describe("route inventory (default deny)", () => {
     }
   });
 
-  it("no route takes a user id in its path (identity always comes from the session)", () => {
-    expect(routes.filter((r) => /:(userId|ownerId|accountId)\b/.test(r.url))).toEqual([]);
+  it("every admin route refuses an authenticated student (403)", async () => {
+    for (const key of ADMIN_ROUTES) {
+      const route = routes.find((r) => r.key === key);
+      expect(route, key).toBeDefined();
+      const response = await send(route!, { origin: TEST_APP_BASE_URL }, studentCookie);
+      expect(response.statusCode, key).toBe(403);
+    }
+  });
+
+  it("no route takes a user id in its path (identity always comes from the session), except the ADMIN-only panel", () => {
+    expect(
+      routes.filter((r) => /:(userId|ownerId|accountId)\b/.test(r.url) && !ADMIN_ROUTES.has(r.key)),
+    ).toEqual([]);
   });
 });

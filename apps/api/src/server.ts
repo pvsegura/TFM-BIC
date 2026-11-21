@@ -39,6 +39,10 @@ import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route
 import { registerTeacherDashboardTestSupportRoutes } from "./routes/teacher-dashboard-test-support.route.js";
 import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
+import { registerCommerceRoutes } from "./routes/commerce.route.js";
+import { registerMemoryRoutes } from "./routes/memory.route.js";
+import { createCommerceUseCases } from "./composition/verbysia-dependencies.js";
+import { AccessPolicy, ContentGate } from "@verbysia/application";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
 import {
@@ -84,6 +88,7 @@ export function buildServer(
     email: emailDeps,
     privacy: privacyDeps,
     coach: coachDeps,
+    commerce: commerceDeps,
   } = deps;
   // Never log secrets/PII: redaction, no query strings, allowlisted errors (logger-options.ts).
   // Body limit, request timeout, random request ids and TRUST_PROXY: security/http-security.ts (M16).
@@ -200,7 +205,18 @@ export function buildServer(
     // Language/content discovery is public and read-only (ADR-018): no session, no user data.
     const contentUseCases = createContentUseCases(contentDeps);
     registerLanguageRoutes(app, { useCases: contentUseCases, env });
-    registerContentRoutes(app, { useCases: contentUseCases, env });
+    // Verbysia: the one server-side gate for paid lessons, content and exercises (licences).
+    const contentGate = new ContentGate(
+      contentDeps.contentRepository,
+      contentDeps.exerciseRepository,
+      new AccessPolicy(commerceDeps.repositories.licences, commerceDeps.clock),
+    );
+    registerContentRoutes(app, {
+      useCases: contentUseCases,
+      env,
+      contentGate,
+      resolveSession: authUseCases.resolveSession,
+    });
     // Published educational media (M21, ADR-031): public, read-only, generated offline — no request
     // here can reach a video or audio provider.
     registerMediaRoutes(app, { content: contentDeps, useCases: contentUseCases, env });
@@ -222,6 +238,7 @@ export function buildServer(
       resolveSession: authUseCases.resolveSession,
       env,
       achievementTexts,
+      contentGate,
     });
 
     // Exercises (M7) are authenticated-only too: they build on the content and lesson rules, and
@@ -237,6 +254,7 @@ export function buildServer(
       resolveSession: authUseCases.resolveSession,
       env,
       achievementTexts,
+      contentGate,
     });
 
     // The student's own points and achievements: read-only, session-derived, no `:userId`.
@@ -251,6 +269,20 @@ export function buildServer(
     const vocabularyUseCases = createVocabularyUseCases(contentDeps, vocabularyDeps);
     registerVocabularyRoutes(app, {
       useCases: vocabularyUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+
+    // Verbysia: prices, own licences, the admin panel API and the PUENTE memory trainer. Access to
+    // paid material is decided here on the server from licences, never by the client.
+    const commerceUseCases = createCommerceUseCases(contentDeps, commerceDeps);
+    registerCommerceRoutes(app, {
+      useCases: commerceUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+    registerMemoryRoutes(app, {
+      useCases: commerceUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });

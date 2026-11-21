@@ -309,3 +309,7 @@ export {
   type CoachPracticeResponse,
   type CoachStatusResponse,
 } from "./coach/coach.schema.js";
+
+// Verbysia — memory trainer, public price list, own access and admin panel shapes.
+export * from "./memory/memory.schema.js";
+export * from "./commerce/commerce.schema.js";

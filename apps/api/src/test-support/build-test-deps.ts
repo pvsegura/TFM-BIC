@@ -31,6 +31,8 @@ import {
   FakeVocabularyEventPublisher,
   FakeVocabularyRepository,
   FakeLearnerInsightsReadModel,
+  FakeCommerce,
+  FakeMemoryCardRepository,
   FixedClock,
   makeSampleCatalog,
 } from "@verbysia/application/testing";
@@ -56,6 +58,7 @@ import type { PhoneticsDependencies } from "../composition/phonetics-dependencie
 import type { PrivacyDependencies } from "../composition/privacy-dependencies.js";
 import type { ProfileDependencies } from "../composition/profile-dependencies.js";
 import type { VocabularyDependencies } from "../composition/vocabulary-dependencies.js";
+import type { CommerceDependencies } from "../composition/verbysia-dependencies.js";
 
 /** Fast, in-memory dependencies for apps/api's own HTTP-layer tests —
  * repository/constraint correctness is already covered by packages/data's
@@ -125,6 +128,16 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
       DEFAULT_ACHIEVEMENT_TEXT_CATALOG,
       DEFAULT_INTERFACE_LOCALE,
     ),
+    clock,
+    close: () => Promise.resolve(),
+  };
+
+  // Verbysia commerce and memory trainer: in-memory ports with the Drizzle repositories behaviour.
+  const commerce = new FakeCommerce();
+  const memoryCards = new FakeMemoryCardRepository();
+  const commerceDeps: CommerceDependencies = {
+    repositories: commerce,
+    memoryCards,
     clock,
     close: () => Promise.resolve(),
   };
@@ -210,6 +223,7 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     exercises: exerciseDeps,
     gamification: gamificationDeps,
     vocabulary: vocabularyDeps,
+    commerce: commerceDeps,
     phonetics: phoneticsDeps,
     audio: audioDeps,
     teaching: teachingDeps,
@@ -236,6 +250,8 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     exerciseDeps,
     gamificationDeps,
     vocabularyDeps,
+    commerce,
+    memoryCards,
     phoneticsDeps,
     audioDeps,
     teachingDeps,
