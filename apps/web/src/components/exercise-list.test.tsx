@@ -1,4 +1,4 @@
-import type { ExerciseSummaryResponse } from "@tfm-bic/contracts";
+import type { ExerciseSummaryResponse } from "@verbysia/contracts";
 import { render, screen, within } from "@testing-library/react";
 import { MemoryRouter } from "react-router";
 import { describe, expect, it } from "vitest";

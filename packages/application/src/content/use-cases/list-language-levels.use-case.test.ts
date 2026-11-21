@@ -1,4 +1,4 @@
-import { createLanguageId, LanguageNotFoundError } from "@tfm-bic/domain";
+import { createLanguageId, LanguageNotFoundError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository, makeLanguage, makeSampleCatalog } from "../test-support/fakes.js";

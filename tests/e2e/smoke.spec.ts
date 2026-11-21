@@ -3,7 +3,7 @@ import { expect, test } from "@playwright/test";
 test("home page loads and exposes the primary navigation", async ({ page }) => {
   await page.goto("/");
 
-  await expect(page).toHaveTitle(/TFM-BIC/);
+  await expect(page).toHaveTitle(/VerbySia/);
   await expect(page.getByRole("navigation", { name: "Primary" })).toBeVisible();
   await expect(page.getByRole("link", { name: "Log in" })).toBeVisible();
 });

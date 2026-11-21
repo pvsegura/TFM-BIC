@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Outlet, useLocation, useMatches } from "react-router";
 import { Link } from "../components/app-link.js";
@@ -123,7 +123,7 @@ export function RootLayout() {
             to="/"
             className="font-display text-lg font-bold tracking-tight underline decoration-accent decoration-2 underline-offset-[6px]"
           >
-            TFM-BIC
+            VerbySia
           </Link>
 
           <nav
@@ -255,7 +255,7 @@ export function RootLayout() {
             ))}
           </nav>
           <p className="mt-6 border-t border-primary/10 pt-4 text-sm text-primary/70 dark:border-surface/10 dark:text-surface/70">
-            © 2026 pvsegura · TFM-BIC · A study project; contact details and legal review are
+            © 2026 pvsegura · VerbySia · A study project; contact details and legal review are
             pending.
           </p>
         </div>

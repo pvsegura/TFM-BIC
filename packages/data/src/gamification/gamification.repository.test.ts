@@ -1,12 +1,12 @@
-import { AwardRewardsUseCase, type RewardTrigger } from "@tfm-bic/application";
-import { FixedClock } from "@tfm-bic/application/testing";
+import { AwardRewardsUseCase, type RewardTrigger } from "@verbysia/application";
+import { FixedClock } from "@verbysia/application/testing";
 import {
   createAchievementKey,
   createContentId,
   createDefaultAchievementRegistry,
   createExerciseId,
   type NewPointTransaction,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 

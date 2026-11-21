@@ -1,5 +1,5 @@
-import { EmailDeliveryError, type EmailProvider, type OutgoingEmail } from "@tfm-bic/application";
-import type { EmailTemplateId } from "@tfm-bic/domain";
+import { EmailDeliveryError, type EmailProvider, type OutgoingEmail } from "@verbysia/application";
+import type { EmailTemplateId } from "@verbysia/domain";
 
 export interface CapturedEmail extends OutgoingEmail {
   /** Absolute links found in the text part, in order — what a test would "click". */

@@ -2,7 +2,7 @@ import {
   InvalidAvatarIdError,
   InvalidNicknameError,
   InvalidProfileNameError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { mapProfileError } from "./profile-error.mapper.js";

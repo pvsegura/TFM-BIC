@@ -5,12 +5,12 @@ import {
   type AiAgentService,
   type AudioGenerationService,
   type EmailProvider,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { MetricsRegistry } from "./metrics.js";
 
 /**
- * Provider decorators (M18, ADR-029): each wraps a port from @tfm-bic/application and records
+ * Provider decorators (M18, ADR-029): each wraps a port from @verbysia/application and records
  * `provider_calls_total` / `provider_call_duration_ms` by provider, operation, outcome and a
  * bounded failure category. They live in the composition layer, so neither the domain nor the
  * application layer knows about metrics. Nothing from the request (text, recipient, subject,

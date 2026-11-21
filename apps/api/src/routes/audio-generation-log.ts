@@ -1,4 +1,4 @@
-import { categorizeAudioGenerationError, type GenerateAudioResult } from "@tfm-bic/application";
+import { categorizeAudioGenerationError, type GenerateAudioResult } from "@verbysia/application";
 
 interface LogContext {
   generationId: string;

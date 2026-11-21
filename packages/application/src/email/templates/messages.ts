@@ -38,7 +38,7 @@ export interface EmailMessages {
 
 export const EMAIL_MESSAGES: Record<EmailLocale, EmailMessages> = {
   en: {
-    productName: "TFM-BIC",
+    productName: "VerbySia",
     footerTransactional:
       "This is an account email. It is sent because of an action on your account and is not a newsletter.",
     footerMarketing:

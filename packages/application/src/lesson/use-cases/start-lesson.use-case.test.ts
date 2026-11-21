@@ -1,4 +1,4 @@
-import { createContentId, LessonNotFoundError } from "@tfm-bic/domain";
+import { createContentId, LessonNotFoundError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository } from "../../content/test-support/fakes.js";

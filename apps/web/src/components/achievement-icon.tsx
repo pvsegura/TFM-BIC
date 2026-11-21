@@ -1,4 +1,4 @@
-import type { AchievementResponse } from "@tfm-bic/contracts";
+import type { AchievementResponse } from "@verbysia/contracts";
 
 /**
  * How each icon id is drawn. The API sends a symbolic id, never a path or markup, so the browser

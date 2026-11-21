@@ -1,13 +1,13 @@
-import type { CoachContextInput, ResolveSessionUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+import type { CoachContextInput, ResolveSessionUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   coachMessageRequestSchema,
   coachMessageResponseSchema,
   coachStatusQuerySchema,
   coachStatusResponseSchema,
   type CoachContextRef,
-} from "@tfm-bic/contracts";
-import { COACH_MESSAGE_MAX_LENGTH, COACH_MODES, createLanguageId } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import { COACH_MESSAGE_MAX_LENGTH, COACH_MODES, createLanguageId } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { CoachUseCases } from "../composition/coach-use-cases.js";

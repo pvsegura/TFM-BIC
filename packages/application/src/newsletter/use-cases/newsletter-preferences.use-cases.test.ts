@@ -4,7 +4,7 @@ import {
   InvalidNewsletterTokenError,
   NEWSLETTER_CONSENT_VERSION,
   NewsletterTokenExpiredError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { EmailDeliveryError } from "../../email/email-delivery.error.js";
@@ -33,7 +33,7 @@ function build() {
   const tokens = new FakeTokenGenerator();
   const provider = new RecordingEmailProvider();
   const sender = new ProviderTransactionalEmailSender(provider, {
-    from: "TFM-BIC <no-reply@example.com>",
+    from: "VerbySia <no-reply@example.com>",
     replyTo: null,
     appBaseUrl: APP,
     locale: "en",

@@ -27,7 +27,7 @@ was scoped to the session's own user. Three decisions were needed:
 `teacher_students (teacher_id, student_id, linked_at)`, primary key `(teacher_id, student_id)`, an index on
 `student_id`, `CHECK (teacher_id <> student_id)`, both columns `ON DELETE CASCADE` to `users`. No school, class or
 invitation. The only writers are three operator use cases (`PromoteUserToTeacher`, `LinkStudentToTeacher`,
-`UnlinkStudentFromTeacher`) run from `pnpm --filter @tfm-bic/data teacher:admin`. No production HTTP route creates a
+`UnlinkStudentFromTeacher`) run from `pnpm --filter @verbysia/data teacher:admin`. No production HTTP route creates a
 link or changes a role, so neither a teacher nor a student can grant themselves access. The domain rule
 (`assertCanLink`: a TEACHER, a STUDENT, two different users) is enforced by the use case; a linked student cannot be
 promoted until unlinked. E2E reaches the same use cases through `POST /teacher-dashboard/_test/links`, registered

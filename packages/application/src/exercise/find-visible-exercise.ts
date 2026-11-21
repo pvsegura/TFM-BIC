@@ -4,7 +4,7 @@ import {
   LessonNotFoundError,
   type Exercise,
   type ExerciseId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { GetContentUseCase } from "../content/use-cases/get-content.use-case.js";
 import { findVisibleLesson } from "../lesson/find-visible-lesson.js";

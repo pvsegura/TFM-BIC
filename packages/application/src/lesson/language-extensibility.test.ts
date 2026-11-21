@@ -1,4 +1,4 @@
-import { createContentId, createLanguageId, createLevelId } from "@tfm-bic/domain";
+import { createContentId, createLanguageId, createLevelId } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

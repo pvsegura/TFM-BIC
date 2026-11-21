@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { passwordResetRequestSchema, type PasswordResetRequest } from "@tfm-bic/contracts";
-import { Button, TextField } from "@tfm-bic/ui";
+import { passwordResetRequestSchema, type PasswordResetRequest } from "@verbysia/contracts";
+import { Button, TextField } from "@verbysia/ui";
 import { useForm } from "react-hook-form";
 import { Link } from "../components/app-link.js";
 

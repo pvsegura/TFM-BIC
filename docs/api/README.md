@@ -127,7 +127,7 @@ object, so `limit`/`cursor` can be added later without breaking clients.
 **Path note:** these paths are the API; the web pages are under `/learn/lessons` so they do not share a path
 with it (no page-vs-API proxy workaround, unlike `/profile`).
 
-Database: the `lesson_progress` table has its own migration set (`pnpm --filter @tfm-bic/data
+Database: the `lesson_progress` table has its own migration set (`pnpm --filter @verbysia/data
 db:migrate:lessons`, after Identity's `db:migrate`).
 
 ## Exercise endpoints (M7)
@@ -166,7 +166,7 @@ that is not available) and `Lesson not found.` for the list; `413` for an oversi
 generic `500` otherwise (including an exercise whose stored configuration is broken — nothing is recorded).
 
 The submitted answer is never logged. Database: the `exercise_attempts` table has its own migration set (`pnpm
---filter @tfm-bic/data db:migrate:exercises`, after Identity's `db:migrate`).
+--filter @verbysia/data db:migrate:exercises`, after Identity's `db:migrate`).
 
 **Path note:** these paths are the API; the web pages are under `/learn/exercises` so they do not share a path with it
 (no page-vs-API proxy workaround, unlike `/profile`).
@@ -203,7 +203,7 @@ could not be stored the request answers with the generic `500` (the attempt or c
 grants the reward).
 
 Database: `point_transactions` and `user_achievements` have their own migration set
-(`pnpm --filter @tfm-bic/data db:migrate:gamification`, after Identity's `db:migrate`). The pages are `/dashboard` and
+(`pnpm --filter @verbysia/data db:migrate:gamification`, after Identity's `db:migrate`). The pages are `/dashboard` and
 `/achievements` (not API paths, so the dev proxy needs no page-vs-API bypass for `/gamification`).
 
 ## Vocabulary endpoints (M9)
@@ -246,7 +246,7 @@ found.` (the same body for a missing, draft, archived entry, or one whose catego
 found.`, `Level not available.`; `409 Invalid vocabulary status change.` for a status step the domain refuses; `429`
 when rate-limited; a generic `500` otherwise.
 
-Database: `user_vocabulary` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:vocabulary`, after
+Database: `user_vocabulary` has its own migration set (`pnpm --filter @verbysia/data db:migrate:vocabulary`, after
 Identity's `db:migrate`). The pages are under `/learn/vocabulary` (not `/vocabulary`/`/user-vocabulary`, which are
 these API paths), so the dev proxy needs no page-vs-API bypass.
 
@@ -288,7 +288,7 @@ or body key; `401 Unauthenticated`; `403 Forbidden` (cross-origin write); `404` 
 found.` (the same body for a missing, draft representation, or one whose topic or level is hidden), `Language not
 found.`, `Level not available.`; `429` when rate-limited; a generic `500` otherwise.
 
-Database: `user_phonetic_progress` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:phonetics`,
+Database: `user_phonetic_progress` has its own migration set (`pnpm --filter @verbysia/data db:migrate:phonetics`,
 after Identity's `db:migrate`). The pages are under `/learn/phonetics` (not `/phonetics`, which is this API path),
 so the dev proxy needs no page-vs-API bypass.
 
@@ -341,11 +341,11 @@ appears in any response.
 **another teacher's student** all return the identical `404 { "error": "Student not found." }`. A successful detail
 read is logged as `teacher.student_viewed` (teacher and student ids only).
 
-**No write routes.** Teachers and links are created by operators (`pnpm --filter @tfm-bic/data teacher:admin`). Under
+**No write routes.** Teachers and links are created by operators (`pnpm --filter @verbysia/data teacher:admin`). Under
 `NODE_ENV=test` only, and only in the E2E composition, `POST /teacher-dashboard/_test/links`
 `{ teacherEmail, studentEmail }` → `204` runs the same operator use cases for Playwright setup.
 
-Database: `teacher_students` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:teaching`, after
+Database: `teacher_students` has its own migration set (`pnpm --filter @verbysia/data db:migrate:teaching`, after
 Identity's `db:migrate`). The pages are `/teacher` and `/teacher/students/:studentId` (not API paths).
 
 ## Email preferences and newsletter endpoints (M14)
@@ -369,7 +369,7 @@ now returns `{ kind, template, category, subject, url, links, listUnsubscribeUrl
 `POST /email-preferences/_test/newsletter-issues` `{ subject, title, paragraphs }` sends an issue to every confirmed
 subscription through the marketing path.
 
-Database: `newsletter_subscriptions` has its own migration set (`pnpm --filter @tfm-bic/data db:migrate:newsletter`,
+Database: `newsletter_subscriptions` has its own migration set (`pnpm --filter @verbysia/data db:migrate:newsletter`,
 after Identity's `db:migrate`). The pages are `/profile` (settings section), `/newsletter/confirm` and
 `/newsletter/unsubscribe` (not API paths).
 
@@ -381,7 +381,7 @@ Not under `/privacy`, which is the public notice page.
 
 | Method | Path                                | Auth    | Rate limit                     | Notes                                                                                                                                                                                                                                                   |
 | ------ | ----------------------------------- | ------- | ------------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| GET    | `/data-management/export`           | session | 5/hour (+5/hour per user, M16) | The caller's personal-data export (JSON, `exportVersion: "1"`) as an attachment named `tfm-bic-personal-data-YYYY-MM-DD.json`. Any query parameter is a `400`; `404` if the account vanished. `private, no-store`, `nosniff`.                           |
+| GET    | `/data-management/export`           | session | 5/hour (+5/hour per user, M16) | The caller's personal-data export (JSON, `exportVersion: "1"`) as an attachment named `verbysia-personal-data-YYYY-MM-DD.json`. Any query parameter is a `400`; `404` if the account vanished. `private, no-store`, `nosniff`.                          |
 | POST   | `/data-management/account-deletion` | session | 5/hour (+5/hour per user, M16) | Body `{ "password": string, "confirm": true }` and nothing else. `204` + cleared session cookie on success; `403 { "error": "The password is incorrect." }`; `400` for any other body. Origin checked; body capped at 1 KB. Immediate and irreversible. |
 
 ## Cross-cutting behaviour (M16)

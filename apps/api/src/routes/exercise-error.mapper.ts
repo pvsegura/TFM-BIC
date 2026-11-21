@@ -2,7 +2,7 @@ import {
   ExerciseNotFoundError,
   InvalidExerciseAnswerError,
   UnsupportedExerciseTypeError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { MappedCatalogError } from "./catalog-error.mapper.js";
 import { mapLessonError } from "./lesson-error.mapper.js";

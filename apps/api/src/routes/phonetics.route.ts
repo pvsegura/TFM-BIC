@@ -6,8 +6,8 @@ import type {
   PhoneticTopicView,
   PhoneticUserProgressView,
   ResolveSessionUseCase,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   phoneticActionRequestSchema,
   phoneticIdParamSchema,
@@ -19,7 +19,7 @@ import {
   phoneticUserProgressResponseSchema,
   type PhoneticRepresentationResponse,
   type PhoneticUserProgressResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { PhoneticsUseCases } from "../composition/phonetics-use-cases.js";

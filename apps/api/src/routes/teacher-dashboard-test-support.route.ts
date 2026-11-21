@@ -1,6 +1,6 @@
-import { TeachingUserNotFoundError } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
-import { InvalidTeacherStudentLinkError } from "@tfm-bic/domain";
+import { TeachingUserNotFoundError } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
+import { InvalidTeacherStudentLinkError } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { TeachingUseCases } from "../composition/teaching-use-cases.js";
@@ -29,7 +29,7 @@ function parseLinkBody(body: unknown): { teacherEmail: string; studentEmail: str
 
 /**
  * E2E setup only: M13 has no product flow that creates a teacher or a link — that is an operator
- * command (`pnpm --filter @tfm-bic/data teacher:admin`, ADR-024) which cannot reach the E2E
+ * command (`pnpm --filter @verbysia/data teacher:admin`, ADR-024) which cannot reach the E2E
  * server's in-process database. This route runs the *same* operator use cases. Registered ONLY
  * when `NODE_ENV=test` **and** the E2E composition enabled it (test-dependencies.ts) — the same
  * double guard as the test email inbox — so it can never exist in development, staging or

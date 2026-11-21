@@ -1,4 +1,4 @@
-import type { LessonId } from "@tfm-bic/domain";
+import type { LessonId } from "@verbysia/domain";
 
 import type { LessonProgressView } from "../../lesson/progress-view.js";
 import type { CompleteLessonUseCase } from "../../lesson/use-cases/complete-lesson.use-case.js";

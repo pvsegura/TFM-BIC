@@ -2,7 +2,7 @@ import type {
   VocabularyItemResponse,
   VocabularyStatusRequest,
   VocabularyUserStateResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
 
 import {

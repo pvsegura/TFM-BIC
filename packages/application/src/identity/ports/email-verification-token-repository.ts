@@ -1,4 +1,4 @@
-import type { EmailVerificationToken } from "@tfm-bic/domain";
+import type { EmailVerificationToken } from "@verbysia/domain";
 
 import type { TokenConsumption } from "./token-consumption.js";
 

@@ -76,7 +76,7 @@ answer `401` without a session, or if a state-changing route skips the Origin ch
 
 ## Operator-only (no HTTP route)
 
-Promoting a user to TEACHER and linking/unlinking students: `pnpm --filter @tfm-bic/data
+Promoting a user to TEACHER and linking/unlinking students: `pnpm --filter @verbysia/data
 teacher:admin` with database access (ADR-024). Roles are never read from a request.
 
 ## Error semantics (deliberate)

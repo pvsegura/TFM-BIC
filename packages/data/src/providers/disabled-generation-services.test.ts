@@ -1,4 +1,4 @@
-import { AudioProviderUnavailableError, type AudioGenerationService } from "@tfm-bic/application";
+import { AudioProviderUnavailableError, type AudioGenerationService } from "@verbysia/application";
 import { describe, expect, it } from "vitest";
 
 import { DisabledAudioGenerationService } from "./disabled-generation-services.js";

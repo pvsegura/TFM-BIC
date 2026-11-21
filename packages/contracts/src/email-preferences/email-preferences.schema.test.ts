@@ -1,4 +1,4 @@
-import { NEWSLETTER_CONSENT_VERSION } from "@tfm-bic/domain";
+import { NEWSLETTER_CONSENT_VERSION } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

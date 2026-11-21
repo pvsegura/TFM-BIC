@@ -1,5 +1,5 @@
-import type { CreateSessionInput, SessionRepository } from "@tfm-bic/application";
-import type { Session } from "@tfm-bic/domain";
+import type { CreateSessionInput, SessionRepository } from "@verbysia/application";
+import type { Session } from "@verbysia/domain";
 import { eq } from "drizzle-orm";
 
 import type { IdentityDb } from "./db/client.js";

@@ -7,7 +7,7 @@ import {
   TokenAlreadyUsedError,
   TokenExpiredError,
   WeakPasswordError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 export interface MappedAuthError {
   statusCode: number;

@@ -1,6 +1,6 @@
 import { createHash, randomBytes } from "node:crypto";
 
-import type { TokenGenerator } from "@tfm-bic/application";
+import type { TokenGenerator } from "@verbysia/application";
 
 const TOKEN_BYTES = 32; // 256 bits of entropy — resistant to guessing (ADR-006).
 

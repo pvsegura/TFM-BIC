@@ -1,5 +1,5 @@
 import Fastify, { type FastifyInstance } from "fastify";
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { createLoggerOptions } from "../logging/logger-options.js";

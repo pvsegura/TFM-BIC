@@ -12,8 +12,8 @@ import {
   type EmailDeliveryObserver,
   type EmailSenderConfig,
   type EmailService,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 
 import type { EmailDependencies } from "./email-dependencies.js";
 

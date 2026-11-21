@@ -25,7 +25,7 @@ against [m22-pedagogical-framework.md](m22-pedagogical-framework.md).
 **Visual**
 
 - Slide deck: heading + big text + fade; no people, no places, no objects (except one pictogram).
-- `TFM-BIC · A1` brand on every frame (must be only `A1`).
+- `VerbySia · A1` brand on every frame (must be only `A1`).
 - Dialogue as chat bubbles; recap as a card grid.
 - Empty frames: the explanation scene's sentences appear only as each is read, leaving a heading alone for
   ~1 s at scene start.

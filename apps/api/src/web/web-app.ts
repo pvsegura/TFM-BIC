@@ -2,7 +2,7 @@ import { existsSync, readdirSync, readFileSync } from "node:fs";
 import path from "node:path";
 import { brotliCompressSync, constants as zlib, gzipSync } from "node:zlib";
 
-import { WEB_SECURITY_HEADERS } from "@tfm-bic/contracts";
+import { WEB_SECURITY_HEADERS } from "@verbysia/contracts";
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 
 /**

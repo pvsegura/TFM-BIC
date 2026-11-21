@@ -2,7 +2,7 @@ import type {
   PhoneticRepresentation,
   PhoneticRepresentationId,
   PhoneticTopicId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import { findVisiblePhoneticRepresentation } from "../find-visible-phonetic-representation.js";

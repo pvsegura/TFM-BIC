@@ -1,4 +1,4 @@
-import type { PhoneticTopicsResponse } from "@tfm-bic/contracts";
+import type { PhoneticTopicsResponse } from "@verbysia/contracts";
 
 export interface PhoneticTopicListProps {
   topics: readonly PhoneticTopicsResponse["topics"][number][];

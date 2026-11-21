@@ -1,4 +1,4 @@
-import type { LessonId, LessonProgress } from "@tfm-bic/domain";
+import type { LessonId, LessonProgress } from "@verbysia/domain";
 
 /**
  * Where a student's lesson progress is kept. Owned by this layer, implemented

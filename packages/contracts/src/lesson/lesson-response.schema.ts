@@ -1,4 +1,4 @@
-import { LESSON_PROGRESS_VIEW_STATUSES } from "@tfm-bic/domain";
+import { LESSON_PROGRESS_VIEW_STATUSES } from "@verbysia/domain";
 import { z } from "zod";
 
 import { contentBlockSchema } from "../content/content-block.schema.js";

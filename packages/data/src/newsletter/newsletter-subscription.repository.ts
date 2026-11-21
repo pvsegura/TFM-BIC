@@ -1,9 +1,9 @@
-import type { NewsletterSubscriptionRepository, SubscribedRecipient } from "@tfm-bic/application";
+import type { NewsletterSubscriptionRepository, SubscribedRecipient } from "@verbysia/application";
 import type {
   NewsletterConsentSource,
   NewsletterStatus,
   NewsletterSubscription,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { eq } from "drizzle-orm";
 
 import { users } from "../identity/db/schema.js";

@@ -1,5 +1,5 @@
-import { loadEnv } from "@tfm-bic/config";
-import { createDatabaseReadinessCheck, type DatabaseReadinessCheck } from "@tfm-bic/data";
+import { loadEnv } from "@verbysia/config";
+import { createDatabaseReadinessCheck, type DatabaseReadinessCheck } from "@verbysia/data";
 
 import {
   connectionClosers,

@@ -3,14 +3,14 @@ import {
   type LinkStudentToTeacherUseCase,
   type PromoteUserToTeacherUseCase,
   type UnlinkStudentFromTeacherUseCase,
-} from "@tfm-bic/application";
-import { InvalidTeacherStudentLinkError } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { InvalidTeacherStudentLinkError } from "@verbysia/domain";
 
 export const TEACHER_ADMIN_USAGE = [
   "Usage:",
-  "  pnpm --filter @tfm-bic/data teacher:admin promote <email>",
-  "  pnpm --filter @tfm-bic/data teacher:admin link <teacherEmail> <studentEmail>",
-  "  pnpm --filter @tfm-bic/data teacher:admin unlink <teacherEmail> <studentEmail>",
+  "  pnpm --filter @verbysia/data teacher:admin promote <email>",
+  "  pnpm --filter @verbysia/data teacher:admin link <teacherEmail> <studentEmail>",
+  "  pnpm --filter @verbysia/data teacher:admin unlink <teacherEmail> <studentEmail>",
 ].join("\n");
 
 export interface TeacherAdminUseCases {
@@ -65,7 +65,7 @@ async function dispatch(
 }
 
 /**
- * The operator command behind `pnpm --filter @tfm-bic/data teacher:admin` (ADR-024): the only
+ * The operator command behind `pnpm --filter @verbysia/data teacher:admin` (ADR-024): the only
  * production path that creates a TEACHER or a teacher–student link in M13. Its output names no
  * account (no email, no id) so a terminal log or CI transcript leaks nothing. Rule violations and
  * unknown accounts are exit code 1, usage errors 2; anything unexpected is rethrown.

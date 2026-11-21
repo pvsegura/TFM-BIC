@@ -3,7 +3,7 @@ import {
   startPendingSubscription,
   unsubscribe,
   type NewsletterSubscription,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it } from "vitest";
 

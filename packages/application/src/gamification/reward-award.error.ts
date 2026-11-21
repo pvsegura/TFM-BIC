@@ -1,4 +1,4 @@
-import type { RewardReason } from "@tfm-bic/domain";
+import type { RewardReason } from "@verbysia/domain";
 
 /**
  * A reward could not be stored. Everything the same request wrote was rolled back, so nothing

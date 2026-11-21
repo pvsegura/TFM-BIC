@@ -1,4 +1,4 @@
-import { Button, TextField } from "@tfm-bic/ui";
+import { Button, TextField } from "@verbysia/ui";
 import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 
 import { useDeleteAccount, useExportPersonalData } from "../hooks/use-data-management.js";

@@ -3,7 +3,7 @@ import { tmpdir } from "node:os";
 import path from "node:path";
 import { brotliDecompressSync, gunzipSync } from "node:zlib";
 
-import { CONTENT_SECURITY_POLICY } from "@tfm-bic/contracts";
+import { CONTENT_SECURITY_POLICY } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 

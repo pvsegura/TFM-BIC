@@ -2,7 +2,7 @@ import {
   ContentNotFoundError,
   LanguageNotFoundError,
   LevelNotAvailableError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { mapCatalogError } from "./catalog-error.mapper.js";

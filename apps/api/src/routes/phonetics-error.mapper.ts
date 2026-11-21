@@ -1,4 +1,4 @@
-import { PhoneticRepresentationNotFoundError } from "@tfm-bic/domain";
+import { PhoneticRepresentationNotFoundError } from "@verbysia/domain";
 
 import { mapCatalogError, type MappedCatalogError } from "./catalog-error.mapper.js";
 

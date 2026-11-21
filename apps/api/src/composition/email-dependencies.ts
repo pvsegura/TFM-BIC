@@ -6,8 +6,8 @@ import type {
   NewsletterSubscriptionRepository,
   TokenGenerator,
   UnsubscribeTokenCodec,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   createNewsletterDb,
   CryptoTokenGenerator,
@@ -17,8 +17,8 @@ import {
   ResendEmailProvider,
   SystemClock,
   type NewsletterDb,
-} from "@tfm-bic/data";
-import type { EmailCategory, EmailTemplateId } from "@tfm-bic/domain";
+} from "@verbysia/data";
+import type { EmailCategory, EmailTemplateId } from "@verbysia/domain";
 
 /** What the NODE_ENV=test inbox route reads — a narrow structural view of `FakeEmailProvider`. */
 export interface EmailInbox {

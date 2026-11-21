@@ -1,4 +1,4 @@
-import type { EmailCategory, EmailTemplateId } from "@tfm-bic/domain";
+import type { EmailCategory, EmailTemplateId } from "@verbysia/domain";
 
 /**
  * A fully rendered, provider-independent message (M14). Adapters translate it into their own API;

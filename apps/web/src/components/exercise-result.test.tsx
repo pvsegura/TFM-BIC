@@ -1,6 +1,6 @@
-import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
+import type { ExerciseAnswerResponse } from "@verbysia/contracts";
 import { screen, within } from "@testing-library/react";
-import { renderWithProviders } from "@tfm-bic/testing";
+import { renderWithProviders } from "@verbysia/testing";
 import { createRoutesStub } from "react-router";
 import { describe, expect, it } from "vitest";
 

@@ -1,4 +1,4 @@
-import type { PasswordResetToken } from "@tfm-bic/domain";
+import type { PasswordResetToken } from "@verbysia/domain";
 
 import type { TokenConsumption } from "./token-consumption.js";
 

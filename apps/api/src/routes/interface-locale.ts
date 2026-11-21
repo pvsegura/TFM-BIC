@@ -1,4 +1,4 @@
-import type { AchievementTexts } from "@tfm-bic/application";
+import type { AchievementTexts } from "@verbysia/application";
 import type { FastifyRequest } from "fastify";
 
 const MAX_ENTRIES = 10;

@@ -5,8 +5,8 @@ import {
   AudioProviderRejectedError,
   AudioProviderUnavailableError,
   type AudioGenerationRequest,
-} from "@tfm-bic/application";
-import { createLanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { createLanguageId } from "@verbysia/domain";
 import { describe, expect, it, vi } from "vitest";
 
 import {

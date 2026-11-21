@@ -5,7 +5,7 @@ import {
   type Role,
   type Session,
   type User,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { EmailDeliveryError } from "../../email/email-delivery.error.js";
 import type { Clock } from "../../ports/clock.js";

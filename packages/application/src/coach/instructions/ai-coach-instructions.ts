@@ -1,4 +1,4 @@
-import type { CoachMode } from "@tfm-bic/domain";
+import type { CoachMode } from "@verbysia/domain";
 
 /**
  * The AI Coach's instructions (M23, ADR-034) — versioned, in the backend, and never in a React

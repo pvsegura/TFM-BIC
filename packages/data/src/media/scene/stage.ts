@@ -1,5 +1,5 @@
-import type { TimedLine } from "@tfm-bic/application";
-import type { Stage, VideoScript } from "@tfm-bic/domain";
+import type { TimedLine } from "@verbysia/application";
+import type { Stage, VideoScript } from "@verbysia/domain";
 
 import { actorTransform, type ActorState, type SceneTimeline } from "./actions.js";
 import { MOUTH, characterMetrics, characterSvg } from "./characters.js";

@@ -5,7 +5,7 @@ import {
   isLevelSelectable,
   type LanguageId,
   type LevelId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../content/ports/content-repository.js";
 import type { GetLessonUseCase } from "../lesson/use-cases/get-lesson.use-case.js";

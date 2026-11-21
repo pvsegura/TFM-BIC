@@ -3,7 +3,7 @@ import type {
   ExerciseAttemptSummary,
   ExerciseId,
   NewExerciseAttempt,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where a student's exercise attempts are kept. Owned by this layer, implemented

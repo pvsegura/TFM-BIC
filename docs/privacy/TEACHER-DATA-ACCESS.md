@@ -7,7 +7,7 @@ Status: LIVE — verified against the M13 implementation on 2026-09-26. Not lega
 ## Relationship model
 
 - One row per `(teacher_id, student_id)` in `teacher_students`. No schools, classes or invitations.
-- Links and the TEACHER role are created **only by operators** (`pnpm --filter @tfm-bic/data teacher:admin`, or the
+- Links and the TEACHER role are created **only by operators** (`pnpm --filter @verbysia/data teacher:admin`, or the
   `NODE_ENV=test`-only E2E route). No production route creates a link or changes a role.
 - A student is not told which teacher is linked, and does not consent to the link in the app — **PENDING
   product/legal decision** (M13 open question). The M15 export tells a student _that_ and _when_ a teacher was

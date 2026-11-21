@@ -1,4 +1,4 @@
-import type { Brand } from "@tfm-bic/shared";
+import type { Brand } from "@verbysia/shared";
 
 import type { LanguageId } from "../language/language-id.js";
 import { InvalidSpeechTextError } from "./errors/invalid-speech-text.error.js";

@@ -1,4 +1,4 @@
-import { PHONETIC_PROGRESS_STATUSES } from "@tfm-bic/domain";
+import { PHONETIC_PROGRESS_STATUSES } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { check, pgTable, primaryKey, text, timestamp, uuid } from "drizzle-orm/pg-core";
 

@@ -1,4 +1,4 @@
-import type { ExerciseSummaryResponse } from "@tfm-bic/contracts";
+import type { ExerciseSummaryResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 import { exerciseTypeLabel } from "./exercise-view-registry.js";

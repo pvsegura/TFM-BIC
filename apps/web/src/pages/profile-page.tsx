@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import type { ReactNode } from "react";
 
 import { DataManagementSection } from "../components/data-management-section.js";

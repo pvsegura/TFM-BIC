@@ -5,7 +5,7 @@ import {
   type VocabularyCategoryId,
   type VocabularyItemId,
   type VocabularyStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type { UserVocabularyRepository } from "../ports/user-vocabulary-repository.js";

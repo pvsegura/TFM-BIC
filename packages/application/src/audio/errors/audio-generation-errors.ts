@@ -1,4 +1,4 @@
-import { InvalidSpeechTextError } from "@tfm-bic/domain";
+import { InvalidSpeechTextError } from "@verbysia/domain";
 
 /**
  * Audio generation failures (M12, ADR-013), in the platform's own terms. A provider adapter

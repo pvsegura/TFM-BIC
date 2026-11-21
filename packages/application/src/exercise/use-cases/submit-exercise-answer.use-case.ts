@@ -1,4 +1,4 @@
-import type { EvaluationResult, ExerciseId, ExerciseTypeRegistry } from "@tfm-bic/domain";
+import type { EvaluationResult, ExerciseId, ExerciseTypeRegistry } from "@verbysia/domain";
 
 import type { GetContentUseCase } from "../../content/use-cases/get-content.use-case.js";
 import type { Clock } from "../../ports/clock.js";

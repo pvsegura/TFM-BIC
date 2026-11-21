@@ -1,4 +1,4 @@
-import type { GeneratedAudio } from "@tfm-bic/application";
+import type { GeneratedAudio } from "@verbysia/application";
 import { describe, expect, it } from "vitest";
 
 import { InMemoryAudioCache } from "./in-memory-audio-cache.js";

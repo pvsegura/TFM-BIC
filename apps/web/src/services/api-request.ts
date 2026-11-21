@@ -1,4 +1,4 @@
-import { profileValidationErrorResponseSchema } from "@tfm-bic/contracts";
+import { profileValidationErrorResponseSchema } from "@verbysia/contracts";
 
 import { ApiError, GENERIC_ERROR_MESSAGE } from "./api-error.js";
 

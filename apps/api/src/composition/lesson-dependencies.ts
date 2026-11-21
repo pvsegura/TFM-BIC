@@ -1,10 +1,10 @@
-import type { Clock, LessonProgressRepository } from "@tfm-bic/application";
+import type { Clock, LessonProgressRepository } from "@verbysia/application";
 import {
   createLessonsDb,
   DrizzleLessonProgressRepository,
   SystemClock,
   type LessonsDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the lesson routes need beyond the content dependencies (lesson

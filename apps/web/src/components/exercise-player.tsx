@@ -1,5 +1,5 @@
-import type { ExerciseAnswerResponse, ExerciseResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { ExerciseAnswerResponse, ExerciseResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 import { useEffect, useRef, useState } from "react";
 import { Link } from "./app-link.js";
 

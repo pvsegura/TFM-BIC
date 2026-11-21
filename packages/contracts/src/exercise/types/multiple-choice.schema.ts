@@ -1,4 +1,4 @@
-import { isValidOptionId, MAX_OPTIONS, MIN_OPTIONS } from "@tfm-bic/domain";
+import { isValidOptionId, MAX_OPTIONS, MIN_OPTIONS } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../../content/content-block.schema.js";

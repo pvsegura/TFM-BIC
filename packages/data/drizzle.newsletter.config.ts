@@ -2,7 +2,7 @@ import { defineConfig } from "drizzle-kit";
 
 /**
  * Newsletter's own migration set (M14): the `newsletter_subscriptions` table. It has a foreign key
- * to `users`, so on a fresh database run Identity's migration first (`pnpm --filter @tfm-bic/data
+ * to `users`, so on a fresh database run Identity's migration first (`pnpm --filter @verbysia/data
  * db:migrate`), then this one (`db:migrate:newsletter`). Independent of every other context.
  *
  * Tracked in its own table, like every other context (see drizzle.video.config.ts for why).

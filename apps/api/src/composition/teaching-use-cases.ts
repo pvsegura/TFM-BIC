@@ -6,7 +6,7 @@ import {
   PromoteUserToTeacherUseCase,
   type AchievementTexts,
   type UserRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ContentDependencies } from "./content-dependencies.js";
 import type { ContentUseCases } from "./content-use-cases.js";

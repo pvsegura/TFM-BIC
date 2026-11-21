@@ -2,7 +2,7 @@ import type {
   StoredVocabularyStatus,
   UserVocabularyEntry,
   VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where a student's relationship to vocabulary is kept. Owned by this layer, implemented in

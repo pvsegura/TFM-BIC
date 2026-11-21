@@ -1,5 +1,5 @@
-import { MAX_TEXT_ANSWER_LENGTH, type ExerciseResponse } from "@tfm-bic/contracts";
-import { Button, TextField } from "@tfm-bic/ui";
+import { MAX_TEXT_ANSWER_LENGTH, type ExerciseResponse } from "@verbysia/contracts";
+import { Button, TextField } from "@verbysia/ui";
 import { useState, type FormEvent } from "react";
 
 import type { ExerciseViewProps } from "./exercise-view-types.js";

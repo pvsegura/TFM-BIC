@@ -1,4 +1,4 @@
-import type { VocabularyItemId } from "@tfm-bic/domain";
+import type { VocabularyItemId } from "@verbysia/domain";
 
 import type { UserVocabularyRepository } from "../ports/user-vocabulary-repository.js";
 import { toUserStateView, type VocabularyUserStateView } from "../vocabulary-view.js";

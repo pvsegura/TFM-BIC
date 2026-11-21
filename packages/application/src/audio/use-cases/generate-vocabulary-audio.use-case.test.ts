@@ -1,4 +1,4 @@
-import { createVocabularyItemId, VocabularyItemNotFoundError } from "@tfm-bic/domain";
+import { createVocabularyItemId, VocabularyItemNotFoundError } from "@verbysia/domain";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { FakeContentRepository } from "../../content/test-support/fakes.js";

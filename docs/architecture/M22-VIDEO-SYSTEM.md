@@ -41,11 +41,11 @@ course content (lessons, vocabulary, phonetics)        authored plans (content/l
 ## Commands (CMD)
 
 ```
-pnpm --filter @tfm-bic/data media plan --priority 3            # targets, blocked, calls needed
-pnpm --filter @tfm-bic/data media audition --only ola,piotr,tomek   # 2 clips per voice + median pitch
-pnpm --filter @tfm-bic/data media compose --draft --only lesson:pl-polite-words   # projects, no render
-pnpm --filter @tfm-bic/data media generate --only lesson:pl-polite-words,vocabulary-item:pl-dom
-pnpm --filter @tfm-bic/data media generate --priority 3 --limit 40 --max-calls 100
+pnpm --filter @verbysia/data media plan --priority 3            # targets, blocked, calls needed
+pnpm --filter @verbysia/data media audition --only ola,piotr,tomek   # 2 clips per voice + median pitch
+pnpm --filter @verbysia/data media compose --draft --only lesson:pl-polite-words   # projects, no render
+pnpm --filter @verbysia/data media generate --only lesson:pl-polite-words,vocabulary-item:pl-dom
+pnpm --filter @verbysia/data media generate --priority 3 --limit 40 --max-calls 100
 ```
 
 `compose` writes `.media-build/projects/<type>-<id>/index.html`; opening it in a browser and seeking `window.__timelines.main` (a small local Playwright helper was used in M22, not committed) gives frames in seconds.

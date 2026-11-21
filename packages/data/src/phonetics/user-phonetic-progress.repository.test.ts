@@ -1,4 +1,4 @@
-import { createPhoneticRepresentationId } from "@tfm-bic/domain";
+import { createPhoneticRepresentationId } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 

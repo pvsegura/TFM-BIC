@@ -10,12 +10,12 @@ import {
   type ExerciseId,
   type LessonId,
   type NewExerciseAttempt,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import {
   makeMultipleChoiceExercise,
   makeTextAnswerExercise,
   makeTrueFalseExercise,
-} from "@tfm-bic/domain/testing";
+} from "@verbysia/domain/testing";
 
 import { makeContentItem } from "../../content/test-support/fakes.js";
 import { makeLessonCatalog } from "../../lesson/test-support/fakes.js";

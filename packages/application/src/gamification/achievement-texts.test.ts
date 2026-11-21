@@ -4,7 +4,7 @@ import {
   createAchievementKey,
   createDefaultAchievementRegistry,
   InvalidAchievementError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

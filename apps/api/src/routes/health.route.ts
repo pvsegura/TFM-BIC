@@ -1,6 +1,6 @@
-import type { GetHealthStatusUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
-import { healthResponseSchema } from "@tfm-bic/contracts";
+import type { GetHealthStatusUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
+import { healthResponseSchema } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 /**

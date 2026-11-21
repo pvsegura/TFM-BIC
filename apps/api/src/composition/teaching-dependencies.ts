@@ -2,14 +2,14 @@ import type {
   Clock,
   TeacherDashboardReadModel,
   TeacherStudentLinkRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   createTeachingDb,
   DrizzleTeacherDashboardReadModel,
   DrizzleTeacherStudentLinkRepository,
   SystemClock,
   type TeachingDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the teacher dashboard needs beyond what other contexts already provide (content,

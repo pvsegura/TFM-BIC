@@ -1,4 +1,4 @@
-import type { EmailTemplateId } from "@tfm-bic/domain";
+import type { EmailTemplateId } from "@verbysia/domain";
 
 import { EmailTemplateError } from "./email-template.error.js";
 import { escapeHtml } from "./escape-html.js";

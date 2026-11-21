@@ -1,5 +1,5 @@
-import type { LanguageLevelsResponse, LanguagesResponse } from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+import type { LanguageLevelsResponse, LanguagesResponse } from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";
@@ -126,7 +126,7 @@ describe("HomePage — structure", () => {
   it("sets the document title and meta description", async () => {
     renderHome();
 
-    expect(document.title).toBe("TFM-BIC — Learn a language one word at a time");
+    expect(document.title).toBe("VerbySia — Learn a language one word at a time");
     expect(document.querySelector('meta[name="description"]')).toHaveAttribute(
       "content",
       expect.stringContaining("Lessons, sounds, vocabulary and practice"),

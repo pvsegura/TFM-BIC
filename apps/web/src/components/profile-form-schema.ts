@@ -2,7 +2,7 @@ import {
   avatarIdSchema,
   updateProfileRequestSchema,
   type ProfileResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import { z } from "zod";
 
 /** What the form's inputs hold: text inputs are always strings (blank when

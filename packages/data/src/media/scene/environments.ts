@@ -1,4 +1,4 @@
-import type { Environment, TimeOfDay } from "@tfm-bic/domain";
+import type { Environment, TimeOfDay } from "@verbysia/domain";
 
 import * as ill from "./illustration.js";
 

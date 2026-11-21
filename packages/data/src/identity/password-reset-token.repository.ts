@@ -2,8 +2,8 @@ import type {
   CreatePasswordResetTokenInput,
   PasswordResetTokenRepository,
   TokenConsumption,
-} from "@tfm-bic/application";
-import type { PasswordResetToken } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { PasswordResetToken } from "@verbysia/domain";
 import { and, eq, gt, isNull } from "drizzle-orm";
 
 import type { IdentityDb } from "./db/client.js";

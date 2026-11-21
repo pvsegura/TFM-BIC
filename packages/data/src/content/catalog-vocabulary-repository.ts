@@ -1,4 +1,4 @@
-import type { VocabularyRepository } from "@tfm-bic/application";
+import type { VocabularyRepository } from "@verbysia/application";
 import type {
   ContentCatalog,
   LanguageId,
@@ -6,7 +6,7 @@ import type {
   VocabularyCategoryId,
   VocabularyItem,
   VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * A `VocabularyRepository` over an already-validated catalog held in memory — the same catalog

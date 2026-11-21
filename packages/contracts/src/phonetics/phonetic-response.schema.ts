@@ -1,4 +1,4 @@
-import { PHONETIC_PROGRESS_VIEW_STATUSES } from "@tfm-bic/domain";
+import { PHONETIC_PROGRESS_VIEW_STATUSES } from "@verbysia/domain";
 import { z } from "zod";
 
 import { wholeNumberText } from "../common/whole-number-text.js";

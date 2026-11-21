@@ -1,4 +1,4 @@
-import type { RosterQuery } from "@tfm-bic/application";
+import type { RosterQuery } from "@verbysia/application";
 import { sql } from "drizzle-orm";
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from "vitest";
 

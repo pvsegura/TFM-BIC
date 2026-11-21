@@ -1,4 +1,4 @@
-import type { GrammarTopicSummaryResponse } from "@tfm-bic/contracts";
+import type { GrammarTopicSummaryResponse } from "@verbysia/contracts";
 import { useState } from "react";
 import { useSearchParams } from "react-router";
 

@@ -1,5 +1,5 @@
-import { loadEnv } from "@tfm-bic/config";
-import type { LanguageLevelsResponse, LanguagesResponse } from "@tfm-bic/contracts";
+import { loadEnv } from "@verbysia/config";
+import type { LanguageLevelsResponse, LanguagesResponse } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

@@ -1,4 +1,4 @@
-import { EmailDeliveryError, type OutgoingEmail } from "@tfm-bic/application";
+import { EmailDeliveryError, type OutgoingEmail } from "@verbysia/application";
 import { describe, expect, it, vi } from "vitest";
 
 import { ResendEmailProvider } from "./resend-email.provider.js";

@@ -2,7 +2,7 @@ import {
   categoryOfTemplate,
   type MarketingRecipient,
   type TransactionalTemplateId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { EmailDeliveryError } from "./email-delivery.error.js";
 import type { EmailDeliveryObserver } from "./ports/email-delivery-observer.js";
@@ -17,7 +17,7 @@ import {
 } from "./templates/render-email.js";
 
 export interface EmailSenderConfig {
-  /** The configured sender, e.g. `TFM-BIC <no-reply@example.com>`. */
+  /** The configured sender, e.g. `VerbySia <no-reply@example.com>`. */
   readonly from: string;
   readonly replyTo: string | null;
   /** The configured public app URL — the only origin email links may point at. */

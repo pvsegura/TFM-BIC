@@ -1,5 +1,5 @@
-import { loadEnv } from "@tfm-bic/config";
-import type { ProfileResponse, ProfileValidationErrorResponse } from "@tfm-bic/contracts";
+import { loadEnv } from "@verbysia/config";
+import type { ProfileResponse, ProfileValidationErrorResponse } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it, vi } from "vitest";
 

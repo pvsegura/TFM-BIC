@@ -4,7 +4,7 @@ import type {
   GrammarReferenceRepository,
   PhoneticContentRepository,
   VocabularyRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import { CatalogContentRepository } from "./catalog-content-repository.js";
 import { CatalogExerciseRepository } from "./catalog-exercise-repository.js";

@@ -1,4 +1,4 @@
-import type { PointTransactionResponse } from "@tfm-bic/contracts";
+import type { PointTransactionResponse } from "@verbysia/contracts";
 
 import { formatDate, formatPointsEarned, rewardReasonLabel } from "./reward-labels.js";
 

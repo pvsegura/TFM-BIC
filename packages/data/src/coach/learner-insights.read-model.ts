@@ -4,8 +4,8 @@ import type {
   LearnerExerciseStats,
   LearnerInsightsReadModel,
   LearnerProgressSummary,
-} from "@tfm-bic/application";
-import type { ExerciseAnswerValue, StoredLessonProgressStatus } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { ExerciseAnswerValue, StoredLessonProgressStatus } from "@verbysia/domain";
 import { sql, type SQL } from "drizzle-orm";
 
 import type { CoachDb } from "./db/client.js";

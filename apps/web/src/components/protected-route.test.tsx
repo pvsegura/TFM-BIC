@@ -1,4 +1,4 @@
-import { renderWithProviders } from "@tfm-bic/testing";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen } from "@testing-library/react";
 import { createRoutesStub } from "react-router";
 import { afterEach, describe, expect, it, vi } from "vitest";

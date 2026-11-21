@@ -1,4 +1,4 @@
-import { renderWithProviders } from "@tfm-bic/testing";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";

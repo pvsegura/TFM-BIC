@@ -1,4 +1,4 @@
-import type { VocabularyCategoriesResponse } from "@tfm-bic/contracts";
+import type { VocabularyCategoriesResponse } from "@verbysia/contracts";
 
 export interface VocabularyCategoryListProps {
   categories: readonly VocabularyCategoriesResponse["categories"][number][];

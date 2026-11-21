@@ -9,7 +9,7 @@ import {
   type RegisterRequest,
   type ResendVerificationRequest,
   type VerifyEmailRequest,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson, toApiError } from "./api-request.js";
 

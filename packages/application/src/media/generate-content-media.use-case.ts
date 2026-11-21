@@ -9,7 +9,7 @@ import {
   type TranscriptLine,
   type VideoAsset,
   type VideoScript,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { Clock } from "../ports/clock.js";
 import { planVideoTimeline } from "./plan-video-timeline.js";

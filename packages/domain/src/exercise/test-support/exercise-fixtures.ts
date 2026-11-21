@@ -8,7 +8,7 @@ import type { TrueFalseExercise } from "../types/true-false.js";
 
 /**
  * Builders for well-formed exercises, shared by every layer's tests (through
- * `@tfm-bic/domain/testing`). Test-only: never import this from production code.
+ * `@verbysia/domain/testing`). Test-only: never import this from production code.
  */
 const COMMON = {
   lessonId: createContentId("pl-greetings"),

@@ -2,7 +2,7 @@ import {
   AudioProviderUnavailableError,
   type AudioGenerationService,
   type GeneratedAudio,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 /**
  * The adapter behind `AUDIO_GENERATION_PROVIDER=disabled` (M17, ADR-028): the feature is switched

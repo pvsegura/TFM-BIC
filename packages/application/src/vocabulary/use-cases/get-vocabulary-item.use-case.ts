@@ -1,4 +1,4 @@
-import type { VocabularyItem, VocabularyItemId } from "@tfm-bic/domain";
+import type { VocabularyItem, VocabularyItemId } from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import { findVisibleVocabularyItem } from "../find-visible-vocabulary-item.js";

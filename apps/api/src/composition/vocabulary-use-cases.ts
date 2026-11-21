@@ -7,7 +7,7 @@ import {
   SaveVocabularyItemUseCase,
   UnsaveVocabularyItemUseCase,
   UpdateVocabularyStatusUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ContentDependencies } from "./content-dependencies.js";
 import type { VocabularyDependencies } from "./vocabulary-dependencies.js";

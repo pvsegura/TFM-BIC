@@ -1,11 +1,11 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type {
   LessonListResponse,
   LessonCompletionResponse,
   LessonProgressResponse,
   LessonResponse,
-} from "@tfm-bic/contracts";
-import { makeContentItem, makeLessonCatalog } from "@tfm-bic/application/testing";
+} from "@verbysia/contracts";
+import { makeContentItem, makeLessonCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

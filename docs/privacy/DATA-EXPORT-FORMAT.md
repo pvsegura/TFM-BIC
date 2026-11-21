@@ -69,7 +69,7 @@ A client that only understands version 1 must refuse a version 2 document rather
 | Consistent snapshot              | All reads in one `REPEATABLE READ, READ ONLY` transaction                                                                                |
 | Not cached                       | `Cache-Control: private, no-store`; the web client uses a mutation (never the query cache)                                               |
 | Not sniffed / not rendered       | `X-Content-Type-Options: nosniff`, `Content-Disposition: attachment`                                                                     |
-| File name reveals nothing        | `tfm-bic-personal-data-YYYY-MM-DD.json` (date only); the client accepts only a plain `*.json` name                                       |
+| File name reveals nothing        | `verbysia-personal-data-YYYY-MM-DD.json` (date only); the client accepts only a plain `*.json` name                                      |
 | No public URL, no temporary file | Generated per request in memory; the browser saves it from an object URL revoked immediately                                             |
 | Not logged                       | Only `privacy.data_export_generated` with the user id                                                                                    |
 | Rate limited                     | 5 per hour per client IP (each export reads every store; a person has no reason to export more often)                                    |

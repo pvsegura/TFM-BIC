@@ -5,7 +5,7 @@ import {
   type PhoneticProgressStatus,
   type PhoneticRepresentationId,
   type PhoneticTopicId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type { PhoneticContentRepository } from "../ports/phonetic-content-repository.js";

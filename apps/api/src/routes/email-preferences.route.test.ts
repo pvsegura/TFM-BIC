@@ -1,5 +1,5 @@
-import { loadEnv } from "@tfm-bic/config";
-import { NEWSLETTER_CONSENT_VERSION } from "@tfm-bic/domain";
+import { loadEnv } from "@verbysia/config";
+import { NEWSLETTER_CONSENT_VERSION } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

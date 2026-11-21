@@ -20,7 +20,7 @@ instruction). Rationale: [ADR-030](../docs/adr/adr-030-public-homepage.md); audi
   `HomepageMotionContext` (pin only with motion at ≥ 960px), `useMediaQuery`/`usePrefersReducedMotion`. All
   scroll-linked styling in `homepage/homepage.css`. No animation library.
 - **Root layout**: Menu disclosure on small screens (Escape/navigation close it), `handle.fullBleed`, footer nav
-  (Languages and levels, Privacy notice) + "© 2026 pvsegura · TFM-BIC", skip link now navy on orange (AA).
+  (Languages and levels, Privacy notice) + "© 2026 pvsegura · VerbySia", skip link now navy on orange (AA).
 - **Tokens** (`styles/index.css`): accent-ink, success/danger pairs, night paper, `--font-display` (self-hosted
   Bricolage Grotesque, OFL), `--ease-thread`, duration tokens.
 - **SEO/static**: meta description + Open Graph in `index.html` (page-specific title/description set by the
@@ -83,7 +83,7 @@ audio/video `disabled`; deployed smoke test **18/18**. Production still blocked 
 - **Migrations**: `pnpm db:migrate` / `node dist/migrate.js` — all 10 sets in `MIGRATION_SETS` order under an advisory
   lock with `lock_timeout`; guard test keeps the list in step with folders and drizzle configs.
 - **SPA served by the API** (`WEB_DIST_DIR`, `apps/api/src/web/web-app.ts`): in memory, explicit routes, SPA headers
-  (now in `@tfm-bic/contracts/web-security-headers`), brotli/gzip, immutable hashed assets, shell for navigations,
+  (now in `@verbysia/contracts/web-security-headers`), brotli/gzip, immutable hashed assets, shell for navigations,
   `/profile` page-vs-API split.
 - **Build**: `apps/api` `build` = `tsc --noEmit && node build.mjs` (esbuild bundle; PGlite test composition stubbed,
   metafile leak check). `start` runs the bundle; E2E uses `start:test` (tsx).
@@ -175,7 +175,7 @@ sources and tests: [docs/security/M16-SECURITY-AUDIT.md](../docs/security/M16-SE
   (retain/anonymise need a reason), `PERSONAL_DATA_EXPORT_VERSION` = "1", date-only file name,
   `AccountDeletionRefusedError`.
 - **Application**: ports `PersonalDataReadModel`, `AccountErasureStore`; `ExportPersonalDataUseCase`,
-  `DeleteAccountUseCase` (reuses Identity's repository + hasher). Fakes in `@tfm-bic/application/testing`.
+  `DeleteAccountUseCase` (reuses Identity's repository + hasher). Fakes in `@verbysia/application/testing`.
 - **Data**: `USER_DATA_REGISTER` (14 tables, class + disposition; guard test against `information_schema` /
   `pg_constraint`); `DrizzleAccountErasureStore` (one transaction: `FOR UPDATE`, explicit deletes, `users` last);
   `SqlPersonalDataReadModel` (explicit columns, `REPEATABLE READ, READ ONLY`); pool `max: 2`. **No migration.**
@@ -279,7 +279,7 @@ reference: [email-newsletter.md](../docs/architecture/email-newsletter.md).
 - **Data** (`packages/data/src/teaching/`): `teacher_students` (PK `(teacher_id, student_id)`, index on
   `student_id`, self-link CHECK, cascades) with its own migration set (`db:migrate:teaching`); link repository; SQL
   read model — every statement starts from a roster CTE scoped to the session's teacher and role STUDENT; overview 1
-  statement, roster page 1, detail 5, regardless of roster size; `pnpm --filter @tfm-bic/data teacher:admin
+  statement, roster page 1, detail 5, regardless of roster size; `pnpm --filter @verbysia/data teacher:admin
 promote|link|unlink` CLI.
 - **API**: `GET /teacher-dashboard/overview`, `/students` (q, activity, sort, direction, page, pageSize),
   `/students/:studentId`; `authenticate` → `requireRole(TEACHER)` → strict schema; `no-store`; 120/min; IDOR-safe

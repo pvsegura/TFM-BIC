@@ -1,4 +1,4 @@
-import type { AudioFormat, LanguageId, VoiceProfile } from "@tfm-bic/domain";
+import type { AudioFormat, LanguageId, VoiceProfile } from "@verbysia/domain";
 
 /**
  * What a use case asks an audio provider for — in the platform's terms, never a provider SDK

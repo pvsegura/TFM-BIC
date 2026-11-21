@@ -1,4 +1,4 @@
-import { createLanguageId, type LanguageId } from "@tfm-bic/domain";
+import { createLanguageId, type LanguageId } from "@verbysia/domain";
 
 import type { Clock } from "../ports/clock.js";
 

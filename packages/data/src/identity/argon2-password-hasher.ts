@@ -1,4 +1,4 @@
-import type { PasswordHasher } from "@tfm-bic/application";
+import type { PasswordHasher } from "@verbysia/application";
 import argon2 from "argon2";
 
 /**

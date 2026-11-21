@@ -1,4 +1,4 @@
-import { LessonNotFoundError } from "@tfm-bic/domain";
+import { LessonNotFoundError } from "@verbysia/domain";
 
 import { mapCatalogError, type MappedCatalogError } from "./catalog-error.mapper.js";
 

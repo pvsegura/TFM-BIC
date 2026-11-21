@@ -6,7 +6,7 @@ import { defineConfig } from "drizzle-kit";
  * (drizzle.profile.config.ts), Lessons' (drizzle.lessons.config.ts) and Exercises'
  * (drizzle.exercises.config.ts) so each bounded context owns its schema and history. Both
  * tables have a foreign key to `users`, so on a fresh database run Identity's migration first
- * (`pnpm --filter @tfm-bic/data db:migrate`), then this one (`db:migrate:gamification`). It does
+ * (`pnpm --filter @verbysia/data db:migrate`), then this one (`db:migrate:gamification`). It does
  * not depend on the Profile, Lessons or Exercises tables, so their order relative to it does
  * not matter.
  *

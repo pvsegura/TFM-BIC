@@ -14,7 +14,7 @@ import {
   isValidVocabularyCategoryId,
   isValidVocabularyItemId,
   LEVEL_IDS,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 /**

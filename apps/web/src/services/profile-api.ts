@@ -2,7 +2,7 @@ import {
   profileResponseSchema,
   type ProfileResponse,
   type UpdateProfileRequest,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

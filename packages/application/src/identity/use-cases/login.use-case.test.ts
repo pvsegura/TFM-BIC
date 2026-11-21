@@ -1,4 +1,4 @@
-import { InvalidCredentialsError } from "@tfm-bic/domain";
+import { InvalidCredentialsError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

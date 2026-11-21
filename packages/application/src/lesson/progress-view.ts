@@ -1,4 +1,4 @@
-import { progressStatusOf, type LessonProgress, type LessonProgressStatus } from "@tfm-bic/domain";
+import { progressStatusOf, type LessonProgress, type LessonProgressStatus } from "@verbysia/domain";
 
 /**
  * A student's progress in one lesson as the rest of the system sees it: always

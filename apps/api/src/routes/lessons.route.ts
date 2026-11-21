@@ -5,8 +5,8 @@ import type {
   LessonProgressView,
   LessonSummary,
   ResolveSessionUseCase,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   lessonActionRequestSchema,
   lessonCompletionResponseSchema,
@@ -16,7 +16,7 @@ import {
   lessonProgressResponseSchema,
   lessonResponseSchema,
   type LessonProgressResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { LessonUseCases } from "../composition/lesson-use-cases.js";

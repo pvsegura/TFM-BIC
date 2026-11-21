@@ -1,4 +1,4 @@
-import type { PersonalDataReadModel, PersonalDataRecords } from "@tfm-bic/application";
+import type { PersonalDataReadModel, PersonalDataRecords } from "@verbysia/application";
 import type {
   ExerciseAnswerValue,
   NewsletterConsentSource,
@@ -8,7 +8,7 @@ import type {
   StoredLessonProgressStatus,
   StoredPhoneticProgressStatus,
   StoredVocabularyStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { sql, type SQL } from "drizzle-orm";
 
 import type { PrivacyDb } from "./db/client.js";

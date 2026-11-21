@@ -3,7 +3,7 @@ import {
   grammarTopicResponseSchema,
   type GrammarListResponse,
   type GrammarTopicResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

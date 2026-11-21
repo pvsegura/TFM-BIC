@@ -1,4 +1,4 @@
-import { DuplicateEmailError } from "@tfm-bic/domain";
+import { DuplicateEmailError } from "@verbysia/domain";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 
 import { createTestDb, type TestDbHandle } from "./db/test-support/create-test-db.js";

@@ -1,4 +1,4 @@
-import { InvalidTokenError, TokenAlreadyUsedError, TokenExpiredError } from "@tfm-bic/domain";
+import { InvalidTokenError, TokenAlreadyUsedError, TokenExpiredError } from "@verbysia/domain";
 
 import type { TokenConsumption } from "./ports/token-consumption.js";
 

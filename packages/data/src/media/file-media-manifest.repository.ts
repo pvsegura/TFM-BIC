@@ -1,7 +1,7 @@
 import { mkdir, readFile, rename, writeFile } from "node:fs/promises";
 import path from "node:path";
 
-import type { MediaManifestEntry, MediaManifestRepository } from "@tfm-bic/application";
+import type { MediaManifestEntry, MediaManifestRepository } from "@verbysia/application";
 
 interface ManifestFile {
   schemaVersion: 1;

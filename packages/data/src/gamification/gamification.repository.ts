@@ -5,14 +5,14 @@ import type {
   PointHistoryRequest,
   PointTransactionPage,
   UserAchievement,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   createAchievementKey,
   factsFromTotals,
   type GamificationFacts,
   type NewPointTransaction,
   type PointTransaction,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { and, asc, desc, eq, lt, sql } from "drizzle-orm";
 
 import type { GamificationDb } from "./db/client.js";

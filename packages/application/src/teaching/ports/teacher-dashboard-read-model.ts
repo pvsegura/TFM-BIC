@@ -3,7 +3,7 @@ import type {
   RosterSortDirection,
   RosterSortField,
   StoredLessonProgressStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * One of a teacher's students as the roster shows them: teacher-visible profile fields and

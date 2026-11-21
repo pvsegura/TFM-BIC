@@ -1,5 +1,5 @@
-import type { ExerciseResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { ExerciseResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 import { useState, type FormEvent } from "react";
 
 import { ExerciseChoiceGroup } from "./exercise-choice-group.js";

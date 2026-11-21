@@ -1,4 +1,4 @@
-import type { TeacherStudentLinkRepository } from "@tfm-bic/application";
+import type { TeacherStudentLinkRepository } from "@verbysia/application";
 import { and, eq } from "drizzle-orm";
 
 import type { TeachingDb } from "./db/client.js";

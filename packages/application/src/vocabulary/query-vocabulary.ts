@@ -11,7 +11,7 @@ import {
   type VocabularyCategoryId,
   type VocabularyItem,
   type VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../content/ports/content-repository.js";
 import type { UserVocabularyRepository } from "./ports/user-vocabulary-repository.js";

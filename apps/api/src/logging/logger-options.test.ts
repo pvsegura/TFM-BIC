@@ -25,7 +25,7 @@ describe("createLoggerOptions (M18)", () => {
     const [line] = capture.lines();
     expect(line).toMatchObject({
       level: "info",
-      service: "tfm-bic-api",
+      service: "verbysia-api",
       env: "staging",
       version: "0.1.0+abc123",
       msg: "something.happened",

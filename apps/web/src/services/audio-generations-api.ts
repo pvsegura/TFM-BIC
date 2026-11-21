@@ -1,4 +1,4 @@
-import { AUDIO_RESPONSE_CONTENT_TYPES, type AudioGenerationRequestBody } from "@tfm-bic/contracts";
+import { AUDIO_RESPONSE_CONTENT_TYPES, type AudioGenerationRequestBody } from "@verbysia/contracts";
 
 import { ApiError, GENERIC_ERROR_MESSAGE } from "./api-error.js";
 import { toApiError } from "./api-request.js";

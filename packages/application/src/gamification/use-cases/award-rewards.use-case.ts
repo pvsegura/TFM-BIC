@@ -9,7 +9,7 @@ import {
   type LessonId,
   type PointTransaction,
   type RewardReason,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type {

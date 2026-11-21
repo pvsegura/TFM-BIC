@@ -1,4 +1,4 @@
-import type { CoachContextRef, CoachPracticeResponse } from "@tfm-bic/contracts";
+import type { CoachContextRef, CoachPracticeResponse } from "@verbysia/contracts";
 import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import { useCallback, useState } from "react";
 

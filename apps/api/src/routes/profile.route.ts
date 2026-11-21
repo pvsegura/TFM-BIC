@@ -1,12 +1,12 @@
-import type { ResolveSessionUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+import type { ResolveSessionUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   profileResponseSchema,
   updateProfileRequestSchema,
   type ProfileResponse,
   type ProfileValidationErrorResponse,
-} from "@tfm-bic/contracts";
-import type { StudentProfile, User } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import type { StudentProfile, User } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { ProfileUseCases } from "../composition/profile-use-cases.js";

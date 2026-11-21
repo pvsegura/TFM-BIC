@@ -1,5 +1,5 @@
-import type { VocabularyEventPublisher } from "@tfm-bic/application";
-import type { VocabularyEvent } from "@tfm-bic/domain";
+import type { VocabularyEventPublisher } from "@verbysia/application";
+import type { VocabularyEvent } from "@verbysia/domain";
 
 /**
  * The M9 wiring for `VocabularyEventPublisher`: acknowledges every event and does nothing with

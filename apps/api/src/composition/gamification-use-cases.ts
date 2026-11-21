@@ -4,7 +4,7 @@ import {
   ListAchievementsUseCase,
   ListPointTransactionsUseCase,
   type AchievementTexts,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { GamificationDependencies } from "./gamification-dependencies.js";
 

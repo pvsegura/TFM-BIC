@@ -2,7 +2,7 @@ import {
   LinkStudentToTeacherUseCase,
   PromoteUserToTeacherUseCase,
   UnlinkStudentFromTeacherUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import { SystemClock } from "../clock/system-clock.js";
 import { createIdentityDb } from "../identity/db/client.js";
@@ -12,7 +12,7 @@ import { runTeacherAdminCommand } from "./teacher-admin-command.js";
 import { DrizzleTeacherStudentLinkRepository } from "./teacher-student-link.repository.js";
 
 /**
- * `pnpm --filter @tfm-bic/data teacher:admin <promote|link|unlink> …` against `DATABASE_URL`.
+ * `pnpm --filter @verbysia/data teacher:admin <promote|link|unlink> …` against `DATABASE_URL`.
  * Bootstrap only (argv in, exit code out): the logic is `runTeacherAdminCommand`, which is
  * unit-tested, so this file is excluded from coverage like the other entry points.
  */

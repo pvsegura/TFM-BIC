@@ -1,4 +1,4 @@
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 
 import { routeRateLimit } from "../security/rate-limits.js";
 

@@ -1,5 +1,5 @@
-import type { AppEnv } from "@tfm-bic/config";
-import { clientErrorReportSchema } from "@tfm-bic/contracts";
+import type { AppEnv } from "@verbysia/config";
+import { clientErrorReportSchema } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 import { createVerifyOriginHook } from "../hooks/verify-origin.js";

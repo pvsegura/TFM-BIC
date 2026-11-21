@@ -1,4 +1,4 @@
-import { createVocabularyItemId } from "@tfm-bic/domain";
+import { createVocabularyItemId } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 

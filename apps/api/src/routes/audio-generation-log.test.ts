@@ -1,4 +1,4 @@
-import { AudioProviderUnavailableError } from "@tfm-bic/application";
+import { AudioProviderUnavailableError } from "@verbysia/application";
 import { describe, expect, it } from "vitest";
 
 import { audioGenerationFailureLog, audioGenerationSuccessLog } from "./audio-generation-log.js";

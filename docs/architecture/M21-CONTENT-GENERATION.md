@@ -18,7 +18,7 @@ Architecture: [m21-video-architecture.md](m21-video-architecture.md); decision: 
    repository root containing `GEMINI_API_KEY=...`. `.env.*` is git-ignored.
 3. Environment: only the operator machine. The deployed app does not need it (it serves stored files;
    `AUDIO_GENERATION_PROVIDER` can stay `disabled`).
-4. Check it is set: `pnpm --filter @tfm-bic/data media doctor` prints `GEMINI_API_KEY configured` — never the
+4. Check it is set: `pnpm --filter @verbysia/data media doctor` prints `GEMINI_API_KEY configured` — never the
    value.
 5. Check it is not exposed: `git check-ignore -v .env.media.local` shows the ignore rule; `git status` does not
    list the file; the manifest records `gemini:<model>` only.
@@ -30,13 +30,13 @@ cd C:\Users\usuario\TFM-BIC-m21
 set "FFMPEG_PATH=C:\...\ffmpeg.exe"
 set "FFPROBE_PATH=C:\...\ffprobe.exe"
 
-pnpm --filter @tfm-bic/data media doctor
-pnpm --filter @tfm-bic/data media plan --priority 3
-pnpm --filter @tfm-bic/data media audition
-pnpm --filter @tfm-bic/data media generate --draft --only lesson:pl-greetings
-pnpm --filter @tfm-bic/data media generate --only lesson:pl-greetings,vocabulary-item:pl-dom
-pnpm --filter @tfm-bic/data media generate --vocabulary --category greetings --limit 5
-pnpm --filter @tfm-bic/data media generate --lessons --priority 1 --limit 5 --max-calls 150
+pnpm --filter @verbysia/data media doctor
+pnpm --filter @verbysia/data media plan --priority 3
+pnpm --filter @verbysia/data media audition
+pnpm --filter @verbysia/data media generate --draft --only lesson:pl-greetings
+pnpm --filter @verbysia/data media generate --only lesson:pl-greetings,vocabulary-item:pl-dom
+pnpm --filter @verbysia/data media generate --vocabulary --category greetings --limit 5
+pnpm --filter @verbysia/data media generate --lessons --priority 1 --limit 5 --max-calls 150
 ```
 
 | Flag                         | Meaning                                                                                       |
@@ -81,8 +81,8 @@ CLI against the target database (CMD):
 
 ```
 set "DATABASE_URL=<the database connection string from the host's secret store>"
-pnpm --filter @tfm-bic/data teacher:admin promote teacher@example.com
-pnpm --filter @tfm-bic/data teacher:admin link teacher@example.com student@example.com
+pnpm --filter @verbysia/data teacher:admin promote teacher@example.com
+pnpm --filter @verbysia/data teacher:admin link teacher@example.com student@example.com
 ```
 
 Both accounts must already be registered and verified. Run it against production data only deliberately.

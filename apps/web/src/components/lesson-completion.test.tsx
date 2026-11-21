@@ -1,4 +1,4 @@
-import type { RewardsResponse } from "@tfm-bic/contracts";
+import type { RewardsResponse } from "@verbysia/contracts";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";

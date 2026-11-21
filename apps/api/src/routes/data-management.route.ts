@@ -1,11 +1,11 @@
-import type { ResolveSessionUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+import type { ResolveSessionUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   deleteAccountRequestSchema,
   personalDataExportQuerySchema,
   personalDataExportSchema,
-} from "@tfm-bic/contracts";
-import { AccountDeletionRefusedError, personalDataExportFileName } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import { AccountDeletionRefusedError, personalDataExportFileName } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { PrivacyUseCases } from "../composition/privacy-use-cases.js";

@@ -1,9 +1,9 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import {
   DisabledAudioGenerationService,
   FakeAudioGenerationService,
   GeminiAudioProvider,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 import { describe, expect, it } from "vitest";
 
 import { createAudioDependencies, selectAudioGenerationProvider } from "./audio-dependencies.js";

@@ -1,4 +1,4 @@
-import { createLanguageId, createLevelId } from "@tfm-bic/domain";
+import { createLanguageId, createLevelId } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { isVisibleInCatalog } from "./is-visible-in-catalog.js";

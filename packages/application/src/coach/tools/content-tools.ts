@@ -8,7 +8,7 @@ import {
   sortGrammarTopics,
   type ContentBlock,
   type GrammarTopic,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { GrammarReferenceRepository } from "../../grammar/grammar-reference.js";
 import type { GetLessonUseCase } from "../../lesson/use-cases/get-lesson.use-case.js";

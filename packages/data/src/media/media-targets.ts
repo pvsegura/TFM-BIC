@@ -6,8 +6,8 @@ import {
   type AudioTarget,
   type MediaTarget,
   type VocabularyVisual,
-} from "@tfm-bic/application";
-import type { ContentItem, LanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { ContentItem, LanguageId } from "@verbysia/domain";
 
 import type { ContentRepositories } from "../content/load-content-repositories.js";
 import type { MediaPlan } from "./media-plan.js";

@@ -1,5 +1,5 @@
-import { AVATAR_CATALOG } from "@tfm-bic/contracts";
-import { hasAvatarGlyph } from "@tfm-bic/ui";
+import { AVATAR_CATALOG } from "@verbysia/contracts";
+import { hasAvatarGlyph } from "@verbysia/ui";
 import { describe, expect, it } from "vitest";
 
 import { profileFormSchema, toFormValues } from "./profile-form-schema.js";

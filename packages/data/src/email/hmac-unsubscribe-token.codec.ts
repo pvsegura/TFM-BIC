@@ -1,6 +1,6 @@
 import { createHmac, timingSafeEqual } from "node:crypto";
 
-import type { UnsubscribeTokenCodec } from "@tfm-bic/application";
+import type { UnsubscribeTokenCodec } from "@verbysia/application";
 
 const MIN_SECRET_LENGTH = 32;
 const BASE64URL = /^[A-Za-z0-9_-]+$/;

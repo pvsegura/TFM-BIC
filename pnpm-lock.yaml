@@ -217,19 +217,19 @@ importers:
       '@fastify/rate-limit':
         specifier: 11.2.0
         version: 11.2.0
-      '@tfm-bic/application':
+      '@verbysia/application':
         specifier: workspace:*
         version: link:../../packages/application
-      '@tfm-bic/config':
+      '@verbysia/config':
         specifier: workspace:*
         version: link:../../packages/config
-      '@tfm-bic/contracts':
+      '@verbysia/contracts':
         specifier: workspace:*
         version: link:../../packages/contracts
-      '@tfm-bic/data':
+      '@verbysia/data':
         specifier: workspace:*
         version: link:../../packages/data
-      '@tfm-bic/domain':
+      '@verbysia/domain':
         specifier: workspace:*
         version: link:../../packages/domain
       argon2:
@@ -266,10 +266,10 @@ importers:
       '@tanstack/react-query':
         specifier: ^5.102.8
         version: 5.102.8(react@19.3.0)
-      '@tfm-bic/contracts':
+      '@verbysia/contracts':
         specifier: workspace:*
         version: link:../../packages/contracts
-      '@tfm-bic/ui':
+      '@verbysia/ui':
         specifier: workspace:*
         version: link:../../packages/ui
       react:
@@ -303,7 +303,7 @@ importers:
       '@testing-library/user-event':
         specifier: ^14.6.6
         version: 14.6.7(@testing-library/dom@10.4.2)
-      '@tfm-bic/testing':
+      '@verbysia/testing':
         specifier: workspace:*
         version: link:../../packages/testing
       '@types/react':
@@ -333,7 +333,7 @@ importers:
 
   packages/application:
     dependencies:
-      '@tfm-bic/domain':
+      '@verbysia/domain':
         specifier: workspace:*
         version: link:../domain
     devDependencies:
@@ -362,7 +362,7 @@ importers:
 
   packages/contracts:
     dependencies:
-      '@tfm-bic/domain':
+      '@verbysia/domain':
         specifier: workspace:*
         version: link:../domain
       zod:
@@ -378,13 +378,13 @@ importers:
 
   packages/data:
     dependencies:
-      '@tfm-bic/application':
+      '@verbysia/application':
         specifier: workspace:*
         version: link:../application
-      '@tfm-bic/contracts':
+      '@verbysia/contracts':
         specifier: workspace:*
         version: link:../contracts
-      '@tfm-bic/domain':
+      '@verbysia/domain':
         specifier: workspace:*
         version: link:../domain
       argon2:
@@ -427,7 +427,7 @@ importers:
 
   packages/domain:
     dependencies:
-      '@tfm-bic/shared':
+      '@verbysia/shared':
         specifier: workspace:*
         version: link:../shared
     devDependencies:

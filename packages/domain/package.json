@@ -1,5 +1,5 @@
 {
-  "name": "@tfm-bic/domain",
+  "name": "@verbysia/domain",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -15,7 +15,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tfm-bic/shared": "workspace:*"
+    "@verbysia/shared": "workspace:*"
   },
   "devDependencies": {
     "typescript": "~6.0.3",

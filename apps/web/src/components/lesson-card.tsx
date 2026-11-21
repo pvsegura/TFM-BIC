@@ -1,4 +1,4 @@
-import type { LessonSummaryResponse } from "@tfm-bic/contracts";
+import type { LessonSummaryResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 import { LessonStatusBadge } from "./lesson-status-badge.js";

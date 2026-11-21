@@ -1,9 +1,9 @@
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 import {
   languageCodeParamSchema,
   languageLevelsResponseSchema,
   languagesResponseSchema,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 import type { ContentUseCases } from "../composition/content-use-cases.js";

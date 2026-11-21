@@ -3,8 +3,8 @@ import {
   ListContentUseCase,
   ListLanguageLevelsUseCase,
   ListLanguagesUseCase,
-} from "@tfm-bic/application";
-import { createContentId, createLanguageId, createLevelId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { createContentId, createLanguageId, createLevelId } from "@verbysia/domain";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { ContentValidationError } from "./content-validation.error.js";

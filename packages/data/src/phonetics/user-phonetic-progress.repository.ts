@@ -1,9 +1,9 @@
-import type { UserPhoneticProgressRepository } from "@tfm-bic/application";
+import type { UserPhoneticProgressRepository } from "@verbysia/application";
 import {
   createPhoneticRepresentationId,
   type PhoneticRepresentationId,
   type UserPhoneticProgress,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { and, eq, inArray, sql } from "drizzle-orm";
 
 import type { PhoneticsDb } from "./db/client.js";

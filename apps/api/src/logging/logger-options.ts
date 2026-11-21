@@ -1,4 +1,4 @@
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 
 import { redactParams, serializeError } from "./error-serializer.js";
 import { serializeRequest } from "./request-serializer.js";
@@ -43,7 +43,7 @@ const REDACT_PATHS = [
   ...SECRET_FIELDS.flatMap((field) => [field, `*.${field}`]),
 ];
 
-export const LOG_SERVICE_NAME = "tfm-bic-api";
+export const LOG_SERVICE_NAME = "verbysia-api";
 
 /**
  * The API's logger configuration. Never log secrets or unnecessary personal data — see

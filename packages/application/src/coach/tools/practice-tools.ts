@@ -8,7 +8,7 @@ import {
   PRACTICE_TITLE_MAX_LENGTH,
   validateGeneratedPractice,
   type GeneratedPractice,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { CoachTool } from "./coach-tool.js";
 import { readArguments, requiredString, ToolArgumentError } from "./tool-arguments.js";

@@ -1,4 +1,4 @@
-import { InvalidEmailError, WeakPasswordError } from "@tfm-bic/domain";
+import { InvalidEmailError, WeakPasswordError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

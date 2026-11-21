@@ -3,7 +3,7 @@ import {
   TokenAlreadyUsedError,
   TokenExpiredError,
   WeakPasswordError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

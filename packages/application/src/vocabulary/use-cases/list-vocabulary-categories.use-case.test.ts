@@ -1,4 +1,4 @@
-import { LanguageNotFoundError } from "@tfm-bic/domain";
+import { LanguageNotFoundError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository } from "../../content/test-support/fakes.js";

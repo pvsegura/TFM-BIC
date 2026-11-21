@@ -1,4 +1,4 @@
-import type { Brand } from "@tfm-bic/shared";
+import type { Brand } from "@verbysia/shared";
 
 import { isValidContentId } from "../content/content-id.js";
 import type { ContentStatus } from "../content/content-status.js";

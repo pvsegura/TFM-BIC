@@ -8,7 +8,7 @@ import {
   InvalidRewardSourceError,
   totalPointsRule,
   type ExerciseId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FixedClock } from "../../identity/test-support/fakes.js";

@@ -1,7 +1,7 @@
 import { createReadStream } from "node:fs";
 
-import type { ContentMediaCatalog } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+import type { ContentMediaCatalog } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   contentMediaResponseSchema,
   grammarTopicParamSchema,
@@ -9,13 +9,13 @@ import {
   mediaIndexResponseSchema,
   vocabularyIdParamSchema,
   type ContentMediaResponse,
-} from "@tfm-bic/contracts";
-import type { ServableMediaFile } from "@tfm-bic/data";
+} from "@verbysia/contracts";
+import type { ServableMediaFile } from "@verbysia/data";
 import {
   ContentMediaNotFoundError,
   type ContentMedia,
   type MediaContentType,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import type { FastifyInstance, FastifyReply } from "fastify";
 
 import type { ContentDependencies } from "../composition/content-dependencies.js";

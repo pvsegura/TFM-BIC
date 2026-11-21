@@ -1,13 +1,13 @@
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
-import { AwardRewardsUseCase, type RewardTrigger } from "@tfm-bic/application";
-import { FixedClock } from "@tfm-bic/application/testing";
+import { AwardRewardsUseCase, type RewardTrigger } from "@verbysia/application";
+import { FixedClock } from "@verbysia/application/testing";
 import {
   createAchievementKey,
   createDefaultAchievementRegistry,
   createExerciseId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { drizzle, type NodePgDatabase } from "drizzle-orm/node-postgres";
 import { migrate } from "drizzle-orm/node-postgres/migrator";
@@ -26,7 +26,7 @@ import { DrizzleGamificationRepository } from "./gamification.repository.js";
  * be created and dropped — the local dev container from infrastructure/docker is enough):
  *
  *   TEST_DATABASE_URL=postgres://tfm_bic:tfm_bic_dev_only@localhost:5432/postgres \
- *     pnpm --filter @tfm-bic/data exec vitest run src/gamification/gamification.repository.postgres
+ *     pnpm --filter @verbysia/data exec vitest run src/gamification/gamification.repository.postgres
  *
  * It creates a throwaway database, applies every context's migrations in order, and drops it.
  */
@@ -34,7 +34,7 @@ const adminUrl = process.env.TEST_DATABASE_URL;
 
 const dataSrc = path.join(path.dirname(fileURLToPath(import.meta.url)), "..");
 const migrations = (context: string) => path.join(dataSrc, context, "db", "migrations");
-const scratchName = `tfm_bic_m8_${String(Date.now())}_${Math.random().toString(36).slice(2, 8)}`;
+const scratchName = `verbysia_m8_${String(Date.now())}_${Math.random().toString(36).slice(2, 8)}`;
 
 describe.skipIf(!adminUrl)("gamification against a real PostgreSQL (multi-connection)", () => {
   let admin: Pool;

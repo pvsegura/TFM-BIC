@@ -1,5 +1,5 @@
-import type { ProfilePatch, ProfileRepository } from "@tfm-bic/application";
-import { isValidAvatarId, type StudentProfile } from "@tfm-bic/domain";
+import type { ProfilePatch, ProfileRepository } from "@verbysia/application";
+import { isValidAvatarId, type StudentProfile } from "@verbysia/domain";
 import { eq, sql } from "drizzle-orm";
 
 import type { ProfileDb } from "./db/client.js";

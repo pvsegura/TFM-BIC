@@ -5,7 +5,7 @@ import {
   type LanguageId,
   type LevelId,
   type LevelStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../ports/content-repository.js";
 

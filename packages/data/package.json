@@ -1,5 +1,5 @@
 {
-  "name": "@tfm-bic/data",
+  "name": "@verbysia/data",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -37,9 +37,9 @@
     "media": "tsx src/media/media-pipeline.cli.ts"
   },
   "dependencies": {
-    "@tfm-bic/application": "workspace:*",
-    "@tfm-bic/contracts": "workspace:*",
-    "@tfm-bic/domain": "workspace:*",
+    "@verbysia/application": "workspace:*",
+    "@verbysia/contracts": "workspace:*",
+    "@verbysia/domain": "workspace:*",
     "argon2": "0.45.1",
     "drizzle-orm": "0.45.2",
     "pg": "8.23.0"

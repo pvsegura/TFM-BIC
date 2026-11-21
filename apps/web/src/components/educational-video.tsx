@@ -1,5 +1,5 @@
-import type { VideoAssetResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { VideoAssetResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 import { useId, useRef, useState, type ReactNode } from "react";
 
 import { formatDuration } from "./format-duration.js";

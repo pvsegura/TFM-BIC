@@ -1,8 +1,8 @@
 import { readFileSync, statSync } from "node:fs";
 import path from "node:path";
 
-import type { ContentMediaCatalog, MediaManifestEntry } from "@tfm-bic/application";
-import { mediaContentKey, type ContentMedia, type MediaContentRef } from "@tfm-bic/domain";
+import type { ContentMediaCatalog, MediaManifestEntry } from "@verbysia/application";
+import { mediaContentKey, type ContentMedia, type MediaContentRef } from "@verbysia/domain";
 
 /** The URL prefix published media files are served under (same origin as the app). */
 export const MEDIA_FILES_URL_PREFIX = "/media/files/";

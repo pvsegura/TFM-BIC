@@ -2,8 +2,8 @@ import type {
   CreateEmailVerificationTokenInput,
   EmailVerificationTokenRepository,
   TokenConsumption,
-} from "@tfm-bic/application";
-import type { EmailVerificationToken } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { EmailVerificationToken } from "@verbysia/domain";
 import { and, eq, gt, isNull } from "drizzle-orm";
 
 import type { IdentityDb } from "./db/client.js";

@@ -1,7 +1,7 @@
 import { createHash, timingSafeEqual } from "node:crypto";
 
-import type { AppEnv } from "@tfm-bic/config";
-import type { SharedPoolStats } from "@tfm-bic/data";
+import type { AppEnv } from "@verbysia/config";
+import type { SharedPoolStats } from "@verbysia/data";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import { LOG_SERVICE_NAME } from "../logging/logger-options.js";

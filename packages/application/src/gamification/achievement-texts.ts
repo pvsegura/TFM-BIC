@@ -2,7 +2,7 @@ import {
   InvalidAchievementError,
   type AchievementKey,
   type AchievementRegistry,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /** What a student reads for one achievement in one language. */
 export interface AchievementText {

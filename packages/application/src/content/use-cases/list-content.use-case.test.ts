@@ -3,7 +3,7 @@ import {
   createLevelId,
   LanguageNotFoundError,
   LevelNotAvailableError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository, makeLanguage, makeSampleCatalog } from "../test-support/fakes.js";

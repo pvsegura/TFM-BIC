@@ -1,10 +1,10 @@
-import type { AccountErasureStore, PersonalDataReadModel } from "@tfm-bic/application";
+import type { AccountErasureStore, PersonalDataReadModel } from "@verbysia/application";
 import {
   createPrivacyDb,
   DrizzleAccountErasureStore,
   SqlPersonalDataReadModel,
   type PrivacyDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Privacy & Data Management (M15, ADR-026): the export read model and the account-erasure store.

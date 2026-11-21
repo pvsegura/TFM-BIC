@@ -19,7 +19,7 @@ describe("loadEnv", () => {
       AI_COACH_MODEL: "gemini-3.8-flash",
       AI_COACH_TURN_TIMEOUT_MS: 120000,
       EMAIL_PROVIDER: "fake",
-      EMAIL_FROM: "TFM-BIC <no-reply@example.invalid>",
+      EMAIL_FROM: "VerbySia <no-reply@example.invalid>",
       TRUST_PROXY: [],
       APP_VERSION: "development",
       LOG_LEVEL: "info",
@@ -363,7 +363,7 @@ describe("loadEnv", () => {
   describe("production readiness (M17)", () => {
     const staging = {
       NODE_ENV: "staging",
-      DATABASE_URL: "postgres://app:pass@db.internal:5432/tfm_bic",
+      DATABASE_URL: "postgres://app:pass@db.internal:5432/verbysia",
       AUTH_SESSION_SECRET: "s".repeat(32),
       EMAIL_LINK_SECRET: "e".repeat(32),
       APP_BASE_URL: "https://staging.example.com",
@@ -372,7 +372,7 @@ describe("loadEnv", () => {
     const production: Record<string, string> = {
       ...staging,
       NODE_ENV: "production",
-      DATABASE_URL: "postgres://app:pass@db.example.com:5432/tfm_bic?sslmode=require",
+      DATABASE_URL: "postgres://app:pass@db.example.com:5432/verbysia?sslmode=require",
       APP_BASE_URL: "https://app.example.com",
       AUDIO_GENERATION_PROVIDER: "disabled",
     };
@@ -426,7 +426,7 @@ describe("loadEnv", () => {
     it.each(["localhost", "127.0.0.1", "[::1]", "0.0.0.0"])(
       "refuses a DATABASE_URL on %s in production, without echoing the URL",
       (host) => {
-        const url = `postgres://app:hunter2-db-pass@${host}:5432/tfm_bic?sslmode=require`;
+        const url = `postgres://app:hunter2-db-pass@${host}:5432/verbysia?sslmode=require`;
         const message = configurationError({ ...production, DATABASE_URL: url });
         expect(message).toMatch(/DATABASE_URL/);
         expect(message).not.toContain("hunter2-db-pass");
@@ -434,7 +434,7 @@ describe("loadEnv", () => {
     );
 
     it("requires TLS (sslmode require, verify-ca or verify-full) on the production DATABASE_URL", () => {
-      const withoutTls = "postgres://app:pass@db.example.com:5432/tfm_bic";
+      const withoutTls = "postgres://app:pass@db.example.com:5432/verbysia";
       expect(configurationError({ ...production, DATABASE_URL: withoutTls })).toMatch(
         /DATABASE_URL/,
       );

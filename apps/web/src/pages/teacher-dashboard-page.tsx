@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import { useSearchParams } from "react-router";
 
 import { LoadError } from "../components/catalog-notices.js";

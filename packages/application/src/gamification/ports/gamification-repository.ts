@@ -3,7 +3,7 @@ import type {
   GamificationFacts,
   NewPointTransaction,
   PointTransaction,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /** A student's unlocked achievement: which one, and when. There is one per (student, achievement). */
 export interface UserAchievement {

@@ -13,9 +13,9 @@ Conventions: [.claude/skills/react-typescript](../../.claude/skills/react-typesc
   justified so far per ADR-003 ("Zustand only where justified").
 - `react-hook-form` and `zod` are installed per ADR-003 but not wired to a form yet — the first
   real form belongs to the Identity & Auth feature, not this milestone.
-- Depends on `@tfm-bic/ui` (presentation primitives) and `@tfm-bic/contracts` (shared DTOs).
+- Depends on `@verbysia/ui` (presentation primitives) and `@verbysia/contracts` (shared DTOs).
 
 ## Commands
 
-Run from the repo root: `pnpm dev:web`, `pnpm --filter @tfm-bic/web test`, `pnpm --filter @tfm-bic/web build`.
+Run from the repo root: `pnpm dev:web`, `pnpm --filter @verbysia/web test`, `pnpm --filter @verbysia/web build`.
 See the [root README](../../README.md) for the full command list.

@@ -1,4 +1,4 @@
-import { GenerateAudioUseCase, GenerateVocabularyAudioUseCase } from "@tfm-bic/application";
+import { GenerateAudioUseCase, GenerateVocabularyAudioUseCase } from "@verbysia/application";
 
 import type { AudioDependencies } from "./audio-dependencies.js";
 import type { ContentDependencies } from "./content-dependencies.js";

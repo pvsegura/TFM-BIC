@@ -1,4 +1,4 @@
-import type { CoachTurn } from "@tfm-bic/domain";
+import type { CoachTurn } from "@verbysia/domain";
 
 /**
  * The AI agent capability, provider-independent (M23, ADR-034 / ADR-011's interface-per-capability

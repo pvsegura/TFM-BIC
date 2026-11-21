@@ -1,4 +1,4 @@
-import type { ExerciseAnswerResponse } from "@tfm-bic/contracts";
+import type { ExerciseAnswerResponse } from "@verbysia/contracts";
 import type { Ref } from "react";
 
 import { AskCoachLink } from "./ask-coach-link.js";

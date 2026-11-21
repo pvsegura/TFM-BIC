@@ -1,4 +1,4 @@
-import { renderWithProviders } from "@tfm-bic/testing";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";
@@ -31,7 +31,7 @@ async function openDeletion(user: ReturnType<typeof userEvent.setup>) {
 describe("DataManagementSection — export", () => {
   it("downloads the export under the server's file name and says so", async () => {
     vi.spyOn(dataApi, "fetchPersonalDataExport").mockResolvedValue({
-      fileName: "tfm-bic-personal-data-2026-09-26.json",
+      fileName: "verbysia-personal-data-2026-09-26.json",
       content: "{}",
     });
     const save = vi.spyOn(download, "saveTextFile").mockImplementation(() => undefined);
@@ -41,10 +41,10 @@ describe("DataManagementSection — export", () => {
     await user.click(screen.getByRole("button", { name: "Download my data" }));
 
     expect(await screen.findByRole("status")).toHaveTextContent(
-      /downloaded as tfm-bic-personal-data-2026-09-26\.json/i,
+      /downloaded as verbysia-personal-data-2026-09-26\.json/i,
     );
     expect(save).toHaveBeenCalledWith(
-      "tfm-bic-personal-data-2026-09-26.json",
+      "verbysia-personal-data-2026-09-26.json",
       "{}",
       "application/json",
     );

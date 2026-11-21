@@ -5,7 +5,7 @@ import type {
   MediaContentRef,
   VideoAsset,
   VideoScript,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { VideoTimeline } from "../plan-video-timeline.js";
 

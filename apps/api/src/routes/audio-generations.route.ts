@@ -1,8 +1,8 @@
 import { randomUUID } from "node:crypto";
 
-import type { ResolveSessionUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
-import { audioGenerationRequestSchema } from "@tfm-bic/contracts";
+import type { ResolveSessionUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
+import { audioGenerationRequestSchema } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 import type { AudioUseCases } from "../composition/audio-use-cases.js";

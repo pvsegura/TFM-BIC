@@ -1,4 +1,4 @@
-import type { Role, User } from "@tfm-bic/domain";
+import type { Role, User } from "@verbysia/domain";
 
 export interface CreateUserInput {
   email: string;

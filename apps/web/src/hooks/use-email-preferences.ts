@@ -1,4 +1,4 @@
-import type { EmailPreferencesResponse, NewsletterPreferenceResponse } from "@tfm-bic/contracts";
+import type { EmailPreferencesResponse, NewsletterPreferenceResponse } from "@verbysia/contracts";
 import { useMutation, useQuery, useQueryClient, type QueryClient } from "@tanstack/react-query";
 
 import {

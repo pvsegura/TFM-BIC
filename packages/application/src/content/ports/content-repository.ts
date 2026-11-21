@@ -5,7 +5,7 @@ import type {
   LanguageId,
   LanguageLevel,
   LevelId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where languages and content come from. Owned by this layer, implemented in

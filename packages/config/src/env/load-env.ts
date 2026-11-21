@@ -107,7 +107,7 @@ function singleLine(maxLength: number) {
  * docs/deployment/environments.md for the authoritative list/grouping.
  */
 /** The default sender: fine for the fake provider, rejected by a real one. */
-const PLACEHOLDER_EMAIL_FROM = "TFM-BIC <no-reply@example.invalid>";
+const PLACEHOLDER_EMAIL_FROM = "VerbySia <no-reply@example.invalid>";
 
 const envSchema = z
   .object({

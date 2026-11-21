@@ -1,4 +1,4 @@
-import { contentIdBelongsToLanguage, createContentId, createLanguageId } from "@tfm-bic/domain";
+import { contentIdBelongsToLanguage, createContentId, createLanguageId } from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type {

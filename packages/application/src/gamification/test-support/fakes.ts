@@ -5,7 +5,7 @@ import {
   type NewPointTransaction,
   type PointTransaction,
   type RewardTotal,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type {
   GamificationRepository,

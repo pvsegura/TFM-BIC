@@ -7,9 +7,9 @@ import {
   registerRequestSchema,
   resendVerificationRequestSchema,
   verifyEmailRequestSchema,
-} from "@tfm-bic/contracts";
-import type { AppEnv } from "@tfm-bic/config";
-import { toSafeUser } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import type { AppEnv } from "@verbysia/config";
+import { toSafeUser } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import {

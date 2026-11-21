@@ -7,8 +7,8 @@ import {
   CoachResponseError,
   CoachTimeoutError,
   CoachUnavailableError,
-} from "@tfm-bic/application";
-import { InvalidCoachMessageError } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { InvalidCoachMessageError } from "@verbysia/domain";
 
 import type { MappedCatalogError } from "./catalog-error.mapper.js";
 

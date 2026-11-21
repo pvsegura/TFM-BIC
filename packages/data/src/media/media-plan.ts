@@ -1,14 +1,14 @@
 import { readdir, readFile } from "node:fs/promises";
 import path from "node:path";
 
-import type { LessonVideoPlan } from "@tfm-bic/application";
+import type { LessonVideoPlan } from "@verbysia/application";
 import {
   lessonVideoPlanSchema,
   mediaPlanFileSchema,
   narratorsFileSchema,
   type MediaPlanFile,
   type NarratorsFile,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 /**
  * The operator-side media configuration of one language (M21, ADR-031), kept with its content:

@@ -3,7 +3,7 @@ import {
   ListContentUseCase,
   ListLanguageLevelsUseCase,
   ListLanguagesUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   CEFR_LEVELS,
   type ContentCatalog,
@@ -12,7 +12,7 @@ import {
   isPublished,
   sortContentItems,
   validateContentCatalog,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { DEFAULT_CONTENT_ROOT } from "./content-root.js";

@@ -11,7 +11,7 @@ import {
   PRACTICE_OPTION_MAX_LENGTH,
   PRACTICE_PROMPT_MAX_LENGTH,
   PRACTICE_TITLE_MAX_LENGTH,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { contentIdSchema, vocabularyItemIdSchema } from "../content/identifiers.schema.js";

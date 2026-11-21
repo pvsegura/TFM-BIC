@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 
 import { AchievementList } from "../components/achievement-list.js";
 import { LoadError } from "../components/catalog-notices.js";

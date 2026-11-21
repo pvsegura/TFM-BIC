@@ -7,8 +7,8 @@ import type {
   NarrationClip,
   NarrationRequest,
   NarrationSynthesizer,
-} from "@tfm-bic/application";
-import type { LanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { LanguageId } from "@verbysia/domain";
 
 import { durationSeconds, silenceWav, transcodeToAac, type FfmpegTools } from "./ffmpeg.js";
 import type { MediaPlan } from "./media-plan.js";

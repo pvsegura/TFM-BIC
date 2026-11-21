@@ -1,4 +1,4 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type { FastifyInstance } from "fastify";
 
 import { buildServer } from "../server.js";

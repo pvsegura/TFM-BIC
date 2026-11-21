@@ -1,4 +1,4 @@
-import type { CoachPracticeResponse } from "@tfm-bic/contracts";
+import type { CoachPracticeResponse } from "@verbysia/contracts";
 import { useState } from "react";
 
 /**

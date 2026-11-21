@@ -1,4 +1,4 @@
-import { statusOf, type UserVocabularyEntry, type VocabularyStatus } from "@tfm-bic/domain";
+import { statusOf, type UserVocabularyEntry, type VocabularyStatus } from "@verbysia/domain";
 
 /** A student's own state for one entry, as the rest of the system sees it: always present, with
  * `new` (and no times) standing in for "no record yet". */

@@ -4,7 +4,7 @@ import { defineConfig } from "drizzle-kit";
  * Student Profile's own migration set (M4), kept separate from Identity's
  * (drizzle.config.ts) so each bounded context owns its schema and history.
  * `student_profiles` has a foreign key to `users`, so on a fresh database run
- * Identity's migration first (`pnpm --filter @tfm-bic/data db:migrate`), then
+ * Identity's migration first (`pnpm --filter @verbysia/data db:migrate`), then
  * this one (`db:migrate:profile`).
  *
  * It tracks applied migrations in its own table: drizzle applies only

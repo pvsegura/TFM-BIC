@@ -6,8 +6,8 @@ import type {
   VocabularyListResult,
   VocabularyUserStateView,
   ResolveSessionUseCase,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   userVocabularyQuerySchema,
   vocabularyActionRequestSchema,
@@ -21,7 +21,7 @@ import {
   vocabularyUserStateResponseSchema,
   type VocabularyItemResponse,
   type VocabularyUserStateResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { VocabularyUseCases } from "../composition/vocabulary-use-cases.js";

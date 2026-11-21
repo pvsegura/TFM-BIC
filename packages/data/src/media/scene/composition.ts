@@ -1,5 +1,5 @@
-import type { VideoTimeline } from "@tfm-bic/application";
-import type { Stage, VideoScript } from "@tfm-bic/domain";
+import type { VideoTimeline } from "@verbysia/application";
+import type { Stage, VideoScript } from "@verbysia/domain";
 
 import { SceneTimeline } from "./actions.js";
 import { environmentSvg } from "./environments.js";

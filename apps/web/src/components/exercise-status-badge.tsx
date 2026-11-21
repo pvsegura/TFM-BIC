@@ -1,4 +1,4 @@
-import type { ExerciseResultResponse } from "@tfm-bic/contracts";
+import type { ExerciseResultResponse } from "@verbysia/contracts";
 
 type ResultStatus = ExerciseResultResponse["status"];
 

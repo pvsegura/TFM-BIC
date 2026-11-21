@@ -1,4 +1,4 @@
-import { isValidLocaleForLanguage, LEVEL_STATUSES, TEXT_DIRECTIONS } from "@tfm-bic/domain";
+import { isValidLocaleForLanguage, LEVEL_STATUSES, TEXT_DIRECTIONS } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "./content-block.schema.js";

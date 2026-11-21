@@ -1,4 +1,4 @@
-// Declarative Jenkins pipeline for TFM-BIC: quality validation (M2), then (M17) secret scanning, the
+// Declarative Jenkins pipeline for VerbySia: quality validation (M2), then (M17) secret scanning, the
 // production image build and validation, and a release-candidate record. No deploy stage yet.
 //
 // Prerequisites on the Jenkins controller (see infrastructure/jenkins/README.md /
@@ -48,14 +48,14 @@ pipeline {
         booleanParam(
             name: 'PUSH_IMAGE',
             defaultValue: false,
-            description: 'Push the validated image to IMAGE_REGISTRY (main only; needs the tfm-bic-registry credential).'
+            description: 'Push the validated image to IMAGE_REGISTRY (main only; needs the verbysia-registry credential).'
         )
     }
 
     environment {
         CI = 'true'
         // Immutable image identity (M17): the full commit's first 12 hex digits, never `latest`.
-        IMAGE_NAME = 'tfm-bic'
+        IMAGE_NAME = 'verbysia'
         // Pinned; bump deliberately (docs/production/M17-PRODUCTION-RUNBOOK.md).
         GITLEAKS_IMAGE = 'ghcr.io/gitleaks/gitleaks:v8.30.1'
     }
@@ -295,7 +295,7 @@ EOF
         }
 
         // Registry: PENDING decision. Runs only when asked for, on main, with IMAGE_REGISTRY set on
-        // the job and a `tfm-bic-registry` username/password credential (a deploy token, never a
+        // the job and a `verbysia-registry` username/password credential (a deploy token, never a
         // person's account). The password goes through stdin, never the command line or the log.
         stage('Push Image') {
             when {
@@ -306,7 +306,7 @@ EOF
             }
             steps {
                 withCredentials([usernamePassword(
-                    credentialsId: 'tfm-bic-registry',
+                    credentialsId: 'verbysia-registry',
                     usernameVariable: 'REGISTRY_USER',
                     passwordVariable: 'REGISTRY_TOKEN'
                 )]) {

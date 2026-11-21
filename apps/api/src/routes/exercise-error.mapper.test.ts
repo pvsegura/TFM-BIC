@@ -5,7 +5,7 @@ import {
   InvalidExerciseConfigurationError,
   LessonNotFoundError,
   UnsupportedExerciseTypeError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { mapExerciseError } from "./exercise-error.mapper.js";

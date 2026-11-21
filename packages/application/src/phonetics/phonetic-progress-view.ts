@@ -2,7 +2,7 @@ import {
   phoneticProgressStatusOf,
   type PhoneticProgressStatus,
   type UserPhoneticProgress,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /** A student's own progress on one representation, as the rest of the system sees it: always
  * present, with `not_started` (and no times) standing in for "no record yet". */

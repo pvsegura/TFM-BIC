@@ -3,7 +3,7 @@ import {
   normalizeEmail,
   toSafeUser,
   type SafeUser,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { PasswordHasher } from "../ports/password-hasher.js";

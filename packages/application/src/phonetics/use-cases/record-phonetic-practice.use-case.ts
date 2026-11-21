@@ -1,4 +1,4 @@
-import type { PhoneticRepresentationId } from "@tfm-bic/domain";
+import type { PhoneticRepresentationId } from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type { Clock } from "../../ports/clock.js";

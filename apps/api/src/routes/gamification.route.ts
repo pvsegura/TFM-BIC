@@ -5,15 +5,15 @@ import type {
   PointTransactionsPage,
   PointTransactionView,
   ResolveSessionUseCase,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   achievementsResponseSchema,
   gamificationQuerySchema,
   gamificationSummaryResponseSchema,
   pointHistoryQuerySchema,
   pointHistoryResponseSchema,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { GamificationUseCases } from "../composition/gamification-use-cases.js";

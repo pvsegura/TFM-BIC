@@ -4,14 +4,14 @@ import {
   DEFAULT_INTERFACE_LOCALE,
   type Clock,
   type GamificationRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   createGamificationDb,
   DrizzleGamificationRepository,
   SystemClock,
   type GamificationDb,
-} from "@tfm-bic/data";
-import { createDefaultAchievementRegistry, type AchievementRegistry } from "@tfm-bic/domain";
+} from "@verbysia/data";
+import { createDefaultAchievementRegistry, type AchievementRegistry } from "@verbysia/domain";
 
 /**
  * Everything the gamification use cases need: the ledger store, the achievement rules, the words

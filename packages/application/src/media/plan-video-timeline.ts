@@ -1,4 +1,4 @@
-import type { LanguageId, VideoScript } from "@tfm-bic/domain";
+import type { LanguageId, VideoScript } from "@verbysia/domain";
 
 import type { NarrationClip } from "./ports/media-generation-ports.js";
 

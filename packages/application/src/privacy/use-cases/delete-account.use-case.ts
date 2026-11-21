@@ -1,4 +1,4 @@
-import { AccountDeletionRefusedError } from "@tfm-bic/domain";
+import { AccountDeletionRefusedError } from "@verbysia/domain";
 
 import type { PasswordHasher } from "../../identity/ports/password-hasher.js";
 import type { UserRepository } from "../../identity/ports/user-repository.js";

@@ -1,5 +1,5 @@
-import type { LanguagesResponse } from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+import type { LanguagesResponse } from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { MemoryRouter } from "react-router";

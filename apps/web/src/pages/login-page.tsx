@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginRequestSchema, type LoginRequest } from "@tfm-bic/contracts";
-import { Button, TextField } from "@tfm-bic/ui";
+import { loginRequestSchema, type LoginRequest } from "@verbysia/contracts";
+import { Button, TextField } from "@verbysia/ui";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate, type Location } from "react-router";
 import { Link } from "../components/app-link.js";

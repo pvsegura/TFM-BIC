@@ -1,4 +1,4 @@
-import { PERSONAL_DATA_EXPORT_VERSION, ROLES } from "@tfm-bic/domain";
+import { PERSONAL_DATA_EXPORT_VERSION, ROLES } from "@verbysia/domain";
 import { z } from "zod";
 
 /**

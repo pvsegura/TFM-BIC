@@ -6,7 +6,7 @@ import {
   type EmailPreferencesResponse,
   type NewsletterPreferenceResponse,
   type NewsletterSubscriptionResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import { z } from "zod";
 
 import { requestJson } from "./api-request.js";

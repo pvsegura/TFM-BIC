@@ -1,4 +1,4 @@
-import type { ContentRepository } from "@tfm-bic/application";
+import type { ContentRepository } from "@verbysia/application";
 import type {
   ContentCatalog,
   ContentId,
@@ -7,7 +7,7 @@ import type {
   LanguageId,
   LanguageLevel,
   LevelId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * A `ContentRepository` over an already-validated catalog held in memory.

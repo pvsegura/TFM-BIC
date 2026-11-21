@@ -1,7 +1,7 @@
-import { makePersonalDataRecords } from "@tfm-bic/application/testing";
-import { loadEnv } from "@tfm-bic/config";
-import { personalDataExportSchema } from "@tfm-bic/contracts";
-import { NEWSLETTER_CONSENT_VERSION } from "@tfm-bic/domain";
+import { makePersonalDataRecords } from "@verbysia/application/testing";
+import { loadEnv } from "@verbysia/config";
+import { personalDataExportSchema } from "@verbysia/contracts";
+import { NEWSLETTER_CONSENT_VERSION } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 
@@ -105,7 +105,7 @@ describe("GET /data-management/export", () => {
     expect(response.headers["content-type"]).toMatch(/^application\/json/);
     // The file name carries the date only — never the user id or email address.
     expect(response.headers["content-disposition"]).toBe(
-      'attachment; filename="tfm-bic-personal-data-2026-01-01.json"',
+      'attachment; filename="verbysia-personal-data-2026-01-01.json"',
     );
     expect(built.personalDataReadModel.requestedUserIds).toEqual([user.id]);
   });

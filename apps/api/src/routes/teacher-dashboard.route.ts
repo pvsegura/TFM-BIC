@@ -4,8 +4,8 @@ import type {
   TeacherStudentDetail,
   TeacherStudentsPage,
   TeachingViewer,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   teacherDashboardEmptyQuerySchema,
   teacherOverviewResponseSchema,
@@ -13,8 +13,8 @@ import {
   teacherStudentIdParamSchema,
   teacherStudentListQuerySchema,
   teacherStudentsResponseSchema,
-} from "@tfm-bic/contracts";
-import { TeachingStudentNotFoundError } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import { TeachingStudentNotFoundError } from "@verbysia/domain";
 import type { FastifyInstance, FastifyRequest } from "fastify";
 
 import type { TeachingUseCases } from "../composition/teaching-use-cases.js";

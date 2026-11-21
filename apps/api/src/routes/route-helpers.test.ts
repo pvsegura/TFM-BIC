@@ -1,4 +1,4 @@
-import type { User } from "@tfm-bic/domain";
+import type { User } from "@verbysia/domain";
 import Fastify, { type FastifyInstance, type FastifyRequest } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

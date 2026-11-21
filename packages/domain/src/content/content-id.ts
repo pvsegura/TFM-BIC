@@ -1,4 +1,4 @@
-import type { Brand } from "@tfm-bic/shared";
+import type { Brand } from "@verbysia/shared";
 
 import type { LanguageId } from "../language/language-id.js";
 import { InvalidContentIdError } from "./errors/invalid-content-id.error.js";

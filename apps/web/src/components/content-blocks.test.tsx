@@ -1,5 +1,5 @@
-import type { ContentResponse } from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+import type { ContentResponse } from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, within } from "@testing-library/react";
 import { describe, expect, it } from "vitest";
 

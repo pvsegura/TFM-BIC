@@ -1,4 +1,4 @@
-import type { ExerciseAnswerValue, StoredLessonProgressStatus } from "@tfm-bic/domain";
+import type { ExerciseAnswerValue, StoredLessonProgressStatus } from "@verbysia/domain";
 
 /**
  * Aggregates of **one learner's own** stored records (M6 lesson progress, M7 attempts, M9

@@ -3,7 +3,7 @@ import {
   startPendingSubscription,
   toMarketingRecipient,
   type MarketingRecipient,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { EmailDeliveryError } from "./email-delivery.error.js";
@@ -20,7 +20,7 @@ import {
 } from "./test-support/fakes.js";
 
 const CONFIG: EmailSenderConfig = {
-  from: "TFM-BIC <no-reply@example.com>",
+  from: "VerbySia <no-reply@example.com>",
   replyTo: "support@example.com",
   appBaseUrl: "https://app.example.com",
   locale: "en",

@@ -6,7 +6,7 @@ import {
   type AudioGenerationRequest,
   type AudioGenerationService,
   type GeneratedAudio,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import { encodeWavPcm16 } from "./wav.js";
 

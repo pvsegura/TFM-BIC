@@ -4,7 +4,7 @@ Container definitions for `apps/web`, `apps/api`, and local dev dependencies.
 
 ## `docker-compose.yml` (M3)
 
-Local-only Postgres 17 for `pnpm --filter @tfm-bic/api dev` — see
+Local-only Postgres 17 for `pnpm --filter @verbysia/api dev` — see
 [ADR-005](../../docs/adr/adr-005-database.md). Not used by automated tests (those run against an
 in-process PGlite instance) and not the production architecture (production targets Neon, a
 remote managed Postgres — account provisioning is a deployment-time action, out of M3 scope).

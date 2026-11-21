@@ -15,7 +15,7 @@ import {
   type LanguageId,
   type LevelId,
   type StoredLessonProgressStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type { ListContentUseCase } from "../../content/use-cases/list-content.use-case.js";

@@ -1,5 +1,5 @@
-import type { AppEnv } from "@tfm-bic/config";
-import { isTransactionalTemplate, isMarketingTemplate } from "@tfm-bic/domain";
+import type { AppEnv } from "@verbysia/config";
+import { isTransactionalTemplate, isMarketingTemplate } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { EmailInbox } from "../composition/email-dependencies.js";

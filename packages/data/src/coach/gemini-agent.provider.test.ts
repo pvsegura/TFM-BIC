@@ -6,7 +6,7 @@ import {
   CoachTimeoutError,
   type AgentContinuation,
   type AgentRequest,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import { describe, expect, it, vi } from "vitest";
 
 import { GEMINI_INTERACTIONS_URL } from "../providers/gemini/gemini-interactions.js";

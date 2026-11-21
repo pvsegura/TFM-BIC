@@ -1,12 +1,12 @@
 import {
   createDefaultAchievementRegistry,
   createDefaultExerciseTypeRegistry,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import {
   AchievementTexts,
   DEFAULT_ACHIEVEMENT_TEXT_CATALOG,
   DEFAULT_INTERFACE_LOCALE,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   FakeAccountErasureStore,
   FakeContentRepository,
@@ -33,14 +33,14 @@ import {
   FakeLearnerInsightsReadModel,
   FixedClock,
   makeSampleCatalog,
-} from "@tfm-bic/application/testing";
+} from "@verbysia/application/testing";
 import {
   FakeAiAgentService,
   FakeAudioGenerationService,
   FakeEmailProvider,
   HmacUnsubscribeTokenCodec,
   InMemoryAudioCache,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 import type { AppDependencies } from "../composition/app-dependencies.js";
 import type { AudioDependencies } from "../composition/audio-dependencies.js";

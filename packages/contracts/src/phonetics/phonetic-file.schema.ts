@@ -1,4 +1,4 @@
-import { CONTENT_STATUSES } from "@tfm-bic/domain";
+import { CONTENT_STATUSES } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../content/content-block.schema.js";

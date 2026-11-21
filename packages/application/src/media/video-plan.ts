@@ -4,7 +4,7 @@ import type {
   Stage,
   StageAction,
   ActionTiming,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Authored video plans (M22, ADR-032): content-side JSON that decides *where* a lesson happens, who

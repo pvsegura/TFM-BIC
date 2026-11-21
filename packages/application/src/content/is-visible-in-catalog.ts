@@ -1,4 +1,4 @@
-import { isLevelSelectable, type LanguageId, type LevelId } from "@tfm-bic/domain";
+import { isLevelSelectable, type LanguageId, type LevelId } from "@verbysia/domain";
 
 import type { ContentRepository } from "./ports/content-repository.js";
 

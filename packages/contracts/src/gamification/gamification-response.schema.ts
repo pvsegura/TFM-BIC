@@ -3,7 +3,7 @@ import {
   isValidAchievementKey,
   isValidRewardSourceId,
   REWARD_REASONS,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { wholeNumberText } from "../common/whole-number-text.js";

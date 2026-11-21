@@ -1,4 +1,4 @@
-import type { Language } from "@tfm-bic/domain";
+import type { Language } from "@verbysia/domain";
 
 import type { ContentRepository } from "../ports/content-repository.js";
 

@@ -4,7 +4,7 @@ import {
   createLanguageId,
   createPhoneticRepresentationId,
   createVocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { afterEach, describe, expect, it } from "vitest";
 
 import { ContentValidationError } from "./content-validation.error.js";

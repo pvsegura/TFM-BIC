@@ -2,12 +2,12 @@ import {
   LinkStudentToTeacherUseCase,
   PromoteUserToTeacherUseCase,
   UnlinkStudentFromTeacherUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   FakeTeacherStudentLinkRepository,
   FakeUserRepository,
   FixedClock,
-} from "@tfm-bic/application/testing";
+} from "@verbysia/application/testing";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { runTeacherAdminCommand, TEACHER_ADMIN_USAGE } from "./teacher-admin-command.js";

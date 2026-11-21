@@ -3,7 +3,7 @@ import {
   PARTS_OF_SPEECH,
   STORED_VOCABULARY_STATUSES,
   VOCABULARY_VIEW_STATUSES,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { wholeNumberText } from "../common/whole-number-text.js";

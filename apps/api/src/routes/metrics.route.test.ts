@@ -51,7 +51,7 @@ describe("GET /internal/metrics (M18)", () => {
     expect(response.headers["cache-control"]).toBe("no-store");
     const body = response.json<Record<string, unknown>>();
     expect(body).toMatchObject({
-      service: "tfm-bic-api",
+      service: "verbysia-api",
       env: "test",
       version: "0.1.0+abc",
       uptimeSeconds: expect.any(Number) as number,

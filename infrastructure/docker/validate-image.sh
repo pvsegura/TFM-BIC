@@ -1,9 +1,9 @@
 #!/usr/bin/env bash
-# Validates a built TFM-BIC image end to end (M17) — the Jenkins "Validate Image" stage, and what an
+# Validates a built VerbySia image end to end (M17) — the Jenkins "Validate Image" stage, and what an
 # operator runs before promoting an image. Everything is ephemeral: a private Docker network, a
 # throwaway Postgres 17, generated one-time secrets; all removed on exit.
 #
-#   infrastructure/docker/validate-image.sh tfm-bic:<git-sha> [expected-app-version]
+#   infrastructure/docker/validate-image.sh verbysia:<git-sha> [expected-app-version]
 #
 # Checks: migrations on a clean database (as a non-superuser migrator role), idempotent re-run,
 # start-up in NODE_ENV=staging as a least-privilege app role, the smoke test (with writes, on a
@@ -40,24 +40,24 @@ cleanup() {
 trap cleanup EXIT
 
 ADMIN_PW="$(secret)"; MIGRATOR_PW="$(secret)"; APP_PW="$(secret)"
-MIGRATOR_URL="postgres://tfm_migrator:$MIGRATOR_PW@$DB:5432/tfm_bic"
-APP_URL="postgres://tfm_app:$APP_PW@$DB:5432/tfm_bic"
+MIGRATOR_URL="postgres://tfm_migrator:$MIGRATOR_PW@$DB:5432/verbysia"
+APP_URL="postgres://tfm_app:$APP_PW@$DB:5432/verbysia"
 
 step "Ephemeral Postgres with separate migrator (DDL) and app (DML only) roles"
 docker network create "$NET" >/dev/null
 docker run -d --name "$DB" --network "$NET" -e POSTGRES_USER=admin -e POSTGRES_PASSWORD="$ADMIN_PW" \
-  -e POSTGRES_DB=tfm_bic "$PG_IMAGE" >/dev/null
+  -e POSTGRES_DB=verbysia "$PG_IMAGE" >/dev/null
 # Over TCP: during initialisation the image runs a temporary server on the Unix socket only.
 for _ in $(seq 1 60); do
-  docker exec "$DB" pg_isready -h 127.0.0.1 -U admin -d tfm_bic >/dev/null 2>&1 && break
+  docker exec "$DB" pg_isready -h 127.0.0.1 -U admin -d verbysia >/dev/null 2>&1 && break
   sleep 1
 done
-docker exec -i "$DB" psql -q -v ON_ERROR_STOP=1 -U admin -d tfm_bic \
+docker exec -i "$DB" psql -q -v ON_ERROR_STOP=1 -U admin -d verbysia \
   -v mpw="$MIGRATOR_PW" -v apw="$APP_PW" <<'SQL'
 CREATE ROLE tfm_migrator LOGIN PASSWORD :'mpw';
 CREATE ROLE tfm_app LOGIN PASSWORD :'apw';
-GRANT CONNECT, CREATE ON DATABASE tfm_bic TO tfm_migrator;
-GRANT CONNECT ON DATABASE tfm_bic TO tfm_app;
+GRANT CONNECT, CREATE ON DATABASE verbysia TO tfm_migrator;
+GRANT CONNECT ON DATABASE verbysia TO tfm_app;
 ALTER SCHEMA public OWNER TO tfm_migrator;
 GRANT USAGE ON SCHEMA public TO tfm_app;
 ALTER DEFAULT PRIVILEGES FOR ROLE tfm_migrator IN SCHEMA public
@@ -74,9 +74,9 @@ migrate() {
 step "Migrations on a clean database"
 migrate | tee /dev/stderr | grep -q '"migrations.completed"' || fail "migrations did not complete"
 step "Migrations again (must be a no-op)"
-before="$(docker exec "$DB" psql -tAU admin -d tfm_bic -c 'SELECT count(*) FROM drizzle.__drizzle_migrations')"
+before="$(docker exec "$DB" psql -tAU admin -d verbysia -c 'SELECT count(*) FROM drizzle.__drizzle_migrations')"
 migrate >/dev/null || fail "second migration run failed"
-after="$(docker exec "$DB" psql -tAU admin -d tfm_bic -c 'SELECT count(*) FROM drizzle.__drizzle_migrations')"
+after="$(docker exec "$DB" psql -tAU admin -d verbysia -c 'SELECT count(*) FROM drizzle.__drizzle_migrations')"
 [ "$before" = "$after" ] || fail "second run changed the migration history ($before -> $after)"
 
 step "Production configuration refuses the fake providers (fail fast, no secret printed)"

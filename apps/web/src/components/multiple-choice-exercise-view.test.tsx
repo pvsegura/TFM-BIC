@@ -1,4 +1,4 @@
-import type { ExerciseResponse } from "@tfm-bic/contracts";
+import type { ExerciseResponse } from "@verbysia/contracts";
 import { render, screen } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { describe, expect, it, vi } from "vitest";

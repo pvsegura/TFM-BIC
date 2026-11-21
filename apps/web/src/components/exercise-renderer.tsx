@@ -1,4 +1,4 @@
-import type { ExerciseResponse } from "@tfm-bic/contracts";
+import type { ExerciseResponse } from "@verbysia/contracts";
 
 import { viewFor } from "./exercise-view-registry.js";
 import type { ExerciseViewProps } from "./exercise-view-types.js";

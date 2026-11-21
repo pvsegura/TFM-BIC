@@ -6,8 +6,8 @@ import type {
   LessonExercises,
   ResolveSessionUseCase,
   SubmitExerciseAnswerWithRewardsResult,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   exerciseAnswerRequestSchema,
   exerciseAnswerResponseSchema,
@@ -17,7 +17,7 @@ import {
   exerciseResultResponseSchema,
   lessonIdParamSchema,
   type ExerciseResultResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 import type { ExerciseUseCases } from "../composition/exercise-use-cases.js";

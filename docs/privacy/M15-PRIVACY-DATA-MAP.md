@@ -39,7 +39,7 @@ video files per user, any analytics identifier.
 | API process logs (stdout, Pino)               | Per request (one `request.completed` line since M18): method, route template, path **without query string**, **client IP address**, status, duration; every line also carries service, environment and release (M18). Events with a user id (see J). Cookies/authorization redacted. |
 | `FakeEmailProvider` memory (all environments) | The last 500 rendered emails (recipient address, subject, body with link tokens) — kept in process memory because no real provider exists (ADR-014/025). Lost on restart. Readable over HTTP only under `NODE_ENV=test`.                                                             |
 | `InMemoryAudioCache` (API memory)             | Generated clips keyed by content text + voice — **no user data**.                                                                                                                                                                                                                    |
-| Browser                                       | `tfm_bic_session` cookie (httpOnly, signed, SameSite=Strict, 7 days); `tfm-bic-theme` in localStorage (light/dark). TanStack Query cache in memory (cleared on logout/deletion).                                                                                                     |
+| Browser                                       | `verbysia_session` cookie (httpOnly, signed, SameSite=Strict, 7 days); `verbysia-theme` in localStorage (light/dark). TanStack Query cache in memory (cleared on logout/deletion).                                                                                                   |
 
 ## C. Why each category is stored (technical/product purpose)
 

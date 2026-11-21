@@ -1,4 +1,4 @@
-import type { NewsletterSubscription } from "@tfm-bic/domain";
+import type { NewsletterSubscription } from "@verbysia/domain";
 
 import type {
   NewsletterSubscriptionRepository,

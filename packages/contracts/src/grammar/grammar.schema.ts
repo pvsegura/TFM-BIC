@@ -3,7 +3,7 @@ import {
   GRAMMAR_CATEGORIES,
   createGrammarTopicId,
   isValidGrammarTopicId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../content/content-block.schema.js";

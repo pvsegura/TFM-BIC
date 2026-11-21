@@ -1,4 +1,4 @@
-import type { PhoneticUserProgressResponse } from "@tfm-bic/contracts";
+import type { PhoneticUserProgressResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
 

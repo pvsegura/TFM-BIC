@@ -4,7 +4,7 @@ import type {
   VocabularyCategoryId,
   VocabularyItem,
   VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where vocabulary content comes from. Owned by this layer, implemented in `packages/data` (today:

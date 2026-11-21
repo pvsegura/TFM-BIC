@@ -8,7 +8,7 @@ import {
   ResolveSessionUseCase,
   VerifyEmailUseCase,
   type EmailService,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { AuthDependencies } from "./auth-dependencies.js";
 

@@ -16,7 +16,7 @@ boundaries) are tested regardless of whether the percentage target is already me
 
 Practical setup since M1: one root `vitest.config.ts` (`test.projects`) aggregates every
 package/app's own `vitest.config.ts` (built via the shared `vitest.shared.ts` helper) — `pnpm
-test` runs everything in one process; `pnpm --filter @tfm-bic/<pkg> test` runs just one project.
+test` runs everything in one process; `pnpm --filter @verbysia/<pkg> test` runs just one project.
 RTL's auto-cleanup does **not** register itself (`vitest.shared.ts` sets `globals: false`), so any
 new `vitest.config.ts` with `environment: "jsdom"` needs a `setupFiles` entry that imports
 `@testing-library/jest-dom/vitest` and calls `afterEach(cleanup)` explicitly — see

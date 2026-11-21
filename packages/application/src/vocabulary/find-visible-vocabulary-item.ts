@@ -3,7 +3,7 @@ import {
   VocabularyItemNotFoundError,
   type VocabularyItem,
   type VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { isVisibleInCatalog } from "../content/is-visible-in-catalog.js";
 import type { ContentRepository } from "../content/ports/content-repository.js";

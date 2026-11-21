@@ -1,8 +1,8 @@
 import path from "node:path";
 
-import type { GrammarReferenceRepository } from "@tfm-bic/application";
-import { grammarFileSchema } from "@tfm-bic/contracts";
-import type { ContentCatalog, GrammarTopic, GrammarTopicId, LanguageId } from "@tfm-bic/domain";
+import type { GrammarReferenceRepository } from "@verbysia/application";
+import { grammarFileSchema } from "@verbysia/contracts";
+import type { ContentCatalog, GrammarTopic, GrammarTopicId, LanguageId } from "@verbysia/domain";
 
 import type { ContentIssue } from "./content-validation.error.js";
 import { readDirectory, readParsedJson } from "./load-content-catalog.js";

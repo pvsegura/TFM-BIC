@@ -4,8 +4,8 @@ import type {
   LessonCompletionResponse,
   LessonProgressResponse,
   LessonResponse,
-} from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+} from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { StrictMode } from "react";

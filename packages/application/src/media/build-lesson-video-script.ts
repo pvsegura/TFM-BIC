@@ -8,7 +8,7 @@ import {
   type VideoScene,
   type VideoScript,
   type VocabularyItem,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { LessonVideoPlan, PlanLine } from "./video-plan.js";
 

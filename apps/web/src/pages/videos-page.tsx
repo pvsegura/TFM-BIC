@@ -1,4 +1,4 @@
-import type { ContentSummaryResponse } from "@tfm-bic/contracts";
+import type { ContentSummaryResponse } from "@verbysia/contracts";
 import { useQueries } from "@tanstack/react-query";
 import { useSearchParams } from "react-router";
 import { Link } from "../components/app-link.js";

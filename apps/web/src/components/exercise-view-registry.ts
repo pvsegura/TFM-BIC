@@ -1,4 +1,4 @@
-import type { ExerciseResponse } from "@tfm-bic/contracts";
+import type { ExerciseResponse } from "@verbysia/contracts";
 import { createElement, type ReactElement } from "react";
 
 import { MultipleChoiceExerciseView } from "./multiple-choice-exercise-view.js";

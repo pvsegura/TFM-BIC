@@ -1,4 +1,4 @@
-import type { LessonResponse, RewardsResponse } from "@tfm-bic/contracts";
+import type { LessonResponse, RewardsResponse } from "@verbysia/contracts";
 import type { ReactNode } from "react";
 import { Link } from "./app-link.js";
 

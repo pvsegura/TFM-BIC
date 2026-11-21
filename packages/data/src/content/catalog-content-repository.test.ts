@@ -3,7 +3,7 @@ import {
   createLanguageId,
   createLevelId,
   type ContentCatalog,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { CatalogContentRepository } from "./catalog-content-repository.js";

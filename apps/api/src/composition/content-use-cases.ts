@@ -8,7 +8,7 @@ import {
   ListLanguagesUseCase,
   type ContentMediaCatalog,
   type GrammarReferenceRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ContentDependencies } from "./content-dependencies.js";
 

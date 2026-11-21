@@ -1,4 +1,4 @@
-import { isValidEmail } from "@tfm-bic/domain";
+import { isValidEmail } from "@verbysia/domain";
 import { z } from "zod";
 
 /**

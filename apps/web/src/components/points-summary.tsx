@@ -1,4 +1,4 @@
-import type { GamificationSummaryResponse } from "@tfm-bic/contracts";
+import type { GamificationSummaryResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 import { AchievementProgress } from "./achievement-list.js";

@@ -8,7 +8,7 @@ import {
   type GamificationFacts,
   type PointTransaction,
   type RewardReason,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { AchievementTexts } from "./achievement-texts.js";
 import type { UserAchievement } from "./ports/gamification-repository.js";

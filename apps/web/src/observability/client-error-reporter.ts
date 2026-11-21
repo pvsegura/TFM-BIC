@@ -1,4 +1,4 @@
-import { clientErrorReportSchema, type ClientErrorReport } from "@tfm-bic/contracts";
+import { clientErrorReportSchema, type ClientErrorReport } from "@verbysia/contracts";
 
 export type ClientErrorKind = ClientErrorReport["kind"];
 export type ReportClientError = (kind: ClientErrorKind, error: unknown) => void;

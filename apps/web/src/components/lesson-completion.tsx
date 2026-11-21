@@ -1,5 +1,5 @@
-import type { LessonProgressResponse, RewardsResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { LessonProgressResponse, RewardsResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 
 import { RewardNotice } from "./reward-notice.js";
 

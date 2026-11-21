@@ -4,7 +4,7 @@ import {
   type ContentCatalog,
   type LessonId,
   type LessonProgress,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { makeContentItem, makeSampleCatalog } from "../../content/test-support/fakes.js";
 import type { LessonProgressRepository } from "../ports/lesson-progress-repository.js";

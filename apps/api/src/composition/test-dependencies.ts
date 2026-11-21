@@ -1,6 +1,6 @@
-import type { AppEnv } from "@tfm-bic/config";
-import type { CoachDb } from "@tfm-bic/data";
-import { createGamificationTestDb } from "@tfm-bic/data/testing";
+import type { AppEnv } from "@verbysia/config";
+import type { CoachDb } from "@verbysia/data";
+import { createGamificationTestDb } from "@verbysia/data/testing";
 
 import type { AppDependencies } from "./app-dependencies.js";
 import { createAudioDependencies } from "./audio-dependencies.js";

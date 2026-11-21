@@ -5,7 +5,7 @@ import { defineConfig } from "drizzle-kit";
  * Identity's (drizzle.config.ts), Student Profile's, Lessons', Exercises', Gamification's and
  * Vocabulary's, so each bounded context owns its schema and history. `user_phonetic_progress` has
  * a foreign key to `users`, so on a fresh database run Identity's migration first
- * (`pnpm --filter @tfm-bic/data db:migrate`), then this one (`db:migrate:phonetics`). It does not
+ * (`pnpm --filter @verbysia/data db:migrate`), then this one (`db:migrate:phonetics`). It does not
  * depend on Profile, Lessons, Exercises, Gamification or Vocabulary, so their order relative to it
  * does not matter.
  *

@@ -4,14 +4,14 @@ import type {
   GrammarReferenceRepository,
   PhoneticContentRepository,
   VocabularyRepository,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import path from "node:path";
 
 import {
   DEFAULT_CONTENT_ROOT,
   FileContentMediaCatalog,
   loadContentRepositories,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the language/content/exercise-content/vocabulary-content/phonetics-content/media

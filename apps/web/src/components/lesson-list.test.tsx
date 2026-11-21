@@ -1,5 +1,5 @@
-import type { LessonSummaryResponse } from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+import type { LessonSummaryResponse } from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, within } from "@testing-library/react";
 import { createRoutesStub } from "react-router";
 import { describe, expect, it } from "vitest";

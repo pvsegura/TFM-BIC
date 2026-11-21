@@ -2,7 +2,7 @@ import {
   resultStatusOf,
   type ExerciseAttemptSummary,
   type ExerciseResultStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * A student's standing on one exercise as the rest of the system sees it: always

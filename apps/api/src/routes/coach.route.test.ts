@@ -1,6 +1,6 @@
-import { loadEnv } from "@tfm-bic/config";
-import type { CoachMessageResponse, CoachStatusResponse } from "@tfm-bic/contracts";
-import { makeSampleCatalog } from "@tfm-bic/application/testing";
+import { loadEnv } from "@verbysia/config";
+import type { CoachMessageResponse, CoachStatusResponse } from "@verbysia/contracts";
+import { makeSampleCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

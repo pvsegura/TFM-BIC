@@ -1,4 +1,4 @@
-import { MAX_POINT_AMOUNT, REWARD_REASONS } from "@tfm-bic/domain";
+import { MAX_POINT_AMOUNT, REWARD_REASONS } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import {
   bigint,

@@ -1,4 +1,4 @@
-import { ACTIVE_WINDOW_DAYS, accuracyPercent, activeSince, requireRole } from "@tfm-bic/domain";
+import { ACTIVE_WINDOW_DAYS, accuracyPercent, activeSince, requireRole } from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { TeacherDashboardReadModel } from "../ports/teacher-dashboard-read-model.js";

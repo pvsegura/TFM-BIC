@@ -4,7 +4,7 @@ import { defineConfig } from "drizzle-kit";
  * Vocabulary's own migration set (M9): the `user_vocabulary` table, kept separate from Identity's
  * (drizzle.config.ts), Student Profile's, Lessons', Exercises' and Gamification's so each bounded
  * context owns its schema and history. `user_vocabulary` has a foreign key to `users`, so on a
- * fresh database run Identity's migration first (`pnpm --filter @tfm-bic/data db:migrate`), then
+ * fresh database run Identity's migration first (`pnpm --filter @verbysia/data db:migrate`), then
  * this one (`db:migrate:vocabulary`). It does not depend on Profile, Lessons, Exercises or
  * Gamification, so their order relative to it does not matter.
  *

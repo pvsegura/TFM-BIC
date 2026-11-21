@@ -1,4 +1,4 @@
-import type { Brand } from "@tfm-bic/shared";
+import type { Brand } from "@verbysia/shared";
 
 import { isValidContentId } from "../content/content-id.js";
 import { InvalidAchievementError } from "./errors/invalid-achievement.error.js";

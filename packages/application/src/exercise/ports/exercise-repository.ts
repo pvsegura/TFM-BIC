@@ -1,4 +1,4 @@
-import type { Exercise, ExerciseId, LessonId } from "@tfm-bic/domain";
+import type { Exercise, ExerciseId, LessonId } from "@verbysia/domain";
 
 /**
  * Where exercises come from. Owned by this layer, implemented in `packages/data`

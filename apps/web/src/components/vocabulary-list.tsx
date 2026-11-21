@@ -1,4 +1,4 @@
-import type { VocabularyItemResponse } from "@tfm-bic/contracts";
+import type { VocabularyItemResponse } from "@verbysia/contracts";
 
 import { VocabularyItemCard } from "./vocabulary-item-card.js";
 

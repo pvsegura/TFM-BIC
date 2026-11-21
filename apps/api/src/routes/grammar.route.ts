@@ -1,11 +1,11 @@
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 import {
   grammarListQuerySchema,
   grammarListResponseSchema,
   grammarTopicParamSchema,
   grammarTopicResponseSchema,
-} from "@tfm-bic/contracts";
-import { GrammarTopicNotFoundError, type GrammarTopic } from "@tfm-bic/domain";
+} from "@verbysia/contracts";
+import { GrammarTopicNotFoundError, type GrammarTopic } from "@verbysia/domain";
 import type { FastifyInstance } from "fastify";
 
 import type { ContentUseCases } from "../composition/content-use-cases.js";

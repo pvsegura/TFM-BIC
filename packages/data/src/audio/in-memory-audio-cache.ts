@@ -1,4 +1,4 @@
-import type { AudioCache, GeneratedAudio } from "@tfm-bic/application";
+import type { AudioCache, GeneratedAudio } from "@verbysia/application";
 
 export interface InMemoryAudioCacheOptions {
   maxEntries: number;

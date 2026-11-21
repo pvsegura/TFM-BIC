@@ -2,7 +2,7 @@ import {
   ContentNotFoundError,
   LanguageNotFoundError,
   LevelNotAvailableError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 export interface MappedCatalogError {
   statusCode: number;

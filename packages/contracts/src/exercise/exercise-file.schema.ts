@@ -1,4 +1,4 @@
-import { CONTENT_STATUSES, type ExerciseType } from "@tfm-bic/domain";
+import { CONTENT_STATUSES, type ExerciseType } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../content/content-block.schema.js";

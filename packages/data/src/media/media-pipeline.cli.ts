@@ -10,8 +10,8 @@ import {
   planVideoTimeline,
   type AudioGenerationService,
   type MediaRunStatus,
-} from "@tfm-bic/application";
-import { createLanguageId, narrationOf, voiceOf, type LanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { createLanguageId, narrationOf, voiceOf, type LanguageId } from "@verbysia/domain";
 
 import { SystemClock } from "../clock/system-clock.js";
 import { GeminiAudioProvider } from "../audio/gemini-audio.provider.js";
@@ -25,7 +25,7 @@ import { planMediaTargets } from "./media-targets.js";
 import { StoredNarrationSynthesizer, type NarrationMode } from "./stored-narration-synthesizer.js";
 
 /**
- * `pnpm --filter @tfm-bic/data media <command>` — the offline educational-media pipeline (M21,
+ * `pnpm --filter @verbysia/data media <command>` — the offline educational-media pipeline (M21,
  * ADR-031, docs/m21-content-generation.md). Operator-only: nothing in the API or the web app runs
  * it, and no page visit can trigger it.
  *

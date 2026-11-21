@@ -1,4 +1,4 @@
-import type { VocabularyItemResponse } from "@tfm-bic/contracts";
+import type { VocabularyItemResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 import { useMediaIndex } from "../hooks/use-media.js";

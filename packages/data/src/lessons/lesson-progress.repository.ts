@@ -1,5 +1,5 @@
-import type { LessonProgressRepository } from "@tfm-bic/application";
-import { createContentId, type LessonId, type LessonProgress } from "@tfm-bic/domain";
+import type { LessonProgressRepository } from "@verbysia/application";
+import { createContentId, type LessonId, type LessonProgress } from "@verbysia/domain";
 import { and, eq, inArray, sql } from "drizzle-orm";
 
 import type { LessonsDb } from "./db/client.js";

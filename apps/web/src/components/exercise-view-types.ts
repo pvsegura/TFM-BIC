@@ -1,4 +1,4 @@
-import type { ExerciseAnswerRequest, ExerciseResponse } from "@tfm-bic/contracts";
+import type { ExerciseAnswerRequest, ExerciseResponse } from "@verbysia/contracts";
 
 import type { LearningLanguage } from "./content-blocks.js";
 

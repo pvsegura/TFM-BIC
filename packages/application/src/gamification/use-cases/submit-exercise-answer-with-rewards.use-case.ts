@@ -1,4 +1,4 @@
-import type { ExerciseId } from "@tfm-bic/domain";
+import type { ExerciseId } from "@verbysia/domain";
 
 import type {
   SubmitExerciseAnswerResult,

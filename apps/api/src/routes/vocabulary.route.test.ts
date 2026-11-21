@@ -1,11 +1,11 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type {
   VocabularyCategoriesResponse,
   VocabularyItemResponse,
   VocabularyListResponse,
   VocabularyUserStateResponse,
-} from "@tfm-bic/contracts";
-import { makeVocabularyCatalog } from "@tfm-bic/application/testing";
+} from "@verbysia/contracts";
+import { makeVocabularyCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

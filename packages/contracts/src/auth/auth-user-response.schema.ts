@@ -1,4 +1,4 @@
-import { ROLES } from "@tfm-bic/domain";
+import { ROLES } from "@verbysia/domain";
 import { z } from "zod";
 
 /**

@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 
-import { EmailDeliveryError, type EmailProvider, type OutgoingEmail } from "@tfm-bic/application";
+import { EmailDeliveryError, type EmailProvider, type OutgoingEmail } from "@verbysia/application";
 
 /**
  * Resend adapter (ADR-014, M14 follow-up). Plain `fetch` against the documented REST endpoint —

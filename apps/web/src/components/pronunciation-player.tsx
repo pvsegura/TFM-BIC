@@ -1,5 +1,5 @@
-import type { AudioAssetResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { AudioAssetResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 import { useId, useRef, useState } from "react";
 
 const LABELS: Record<AudioAssetResponse["purpose"], string> = {

@@ -1,4 +1,4 @@
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 
 import { createAudioDependencies, type AudioDependencies } from "./audio-dependencies.js";
 import { createAuthDependencies, type AuthDependencies } from "./auth-dependencies.js";

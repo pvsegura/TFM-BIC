@@ -3,7 +3,7 @@ import {
   speechRequestKey,
   type LanguageId,
   type VoiceProfile,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import {

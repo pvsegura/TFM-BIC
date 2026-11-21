@@ -3,7 +3,7 @@ import {
   createNickname,
   createProfileName,
   type StudentProfile,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ProfilePatch, ProfileRepository } from "../ports/profile-repository.js";
 

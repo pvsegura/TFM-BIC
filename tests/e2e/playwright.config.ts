@@ -82,7 +82,7 @@ export default defineConfig({
       // it only signs ephemeral E2E session cookies, never a real secret.
       // NODE_ENV=test runs the TypeScript sources through tsx (in-process PGlite database); the
       // compiled `start` bundle deliberately excludes that test composition (M17).
-      command: "pnpm --filter @tfm-bic/api start:test",
+      command: "pnpm --filter @verbysia/api start:test",
       cwd: repoRoot,
       url: `http://localhost:${API_PORT}/health`,
       reuseExistingServer: !process.env.CI,
@@ -101,7 +101,7 @@ export default defineConfig({
       },
     },
     {
-      command: "pnpm --filter @tfm-bic/web dev",
+      command: "pnpm --filter @verbysia/web dev",
       cwd: repoRoot,
       url: baseURL,
       reuseExistingServer: !process.env.CI,
@@ -111,7 +111,7 @@ export default defineConfig({
       // Builds apps/web and serves dist/ with the security headers of
       // apps/web/src/security/security-headers.ts; API paths are proxied like the dev server.
       command:
-        "pnpm --filter @tfm-bic/web build && pnpm --filter @tfm-bic/web preview --port 4173 --strictPort",
+        "pnpm --filter @verbysia/web build && pnpm --filter @verbysia/web preview --port 4173 --strictPort",
       cwd: repoRoot,
       url: productionBuildURL,
       reuseExistingServer: !process.env.CI,

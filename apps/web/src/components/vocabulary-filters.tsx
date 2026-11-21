@@ -1,5 +1,5 @@
-import { TextField } from "@tfm-bic/ui";
-import type { VocabularyCategoriesResponse } from "@tfm-bic/contracts";
+import { TextField } from "@verbysia/ui";
+import type { VocabularyCategoriesResponse } from "@verbysia/contracts";
 
 export interface VocabularyFiltersValue {
   category: string;

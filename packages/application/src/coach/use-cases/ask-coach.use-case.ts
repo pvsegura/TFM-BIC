@@ -6,7 +6,7 @@ import {
   type GeneratedPractice,
   type LanguageId,
   type LevelId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import {
   CoachBusyError,

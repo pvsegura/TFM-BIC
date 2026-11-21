@@ -1,4 +1,4 @@
-import type { ExerciseId, ExerciseTypeRegistry, PresentedExercise } from "@tfm-bic/domain";
+import type { ExerciseId, ExerciseTypeRegistry, PresentedExercise } from "@verbysia/domain";
 
 import type { GetContentUseCase } from "../../content/use-cases/get-content.use-case.js";
 import { findVisibleExercise } from "../find-visible-exercise.js";

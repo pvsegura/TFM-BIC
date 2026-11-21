@@ -1,5 +1,5 @@
-import { AVATAR_CATALOG, type ProfileResponse } from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+import { AVATAR_CATALOG, type ProfileResponse } from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, within } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";

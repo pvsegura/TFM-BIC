@@ -1,5 +1,5 @@
-import type { RosterStudentResponse } from "@tfm-bic/contracts";
-import { Avatar } from "@tfm-bic/ui";
+import type { RosterStudentResponse } from "@verbysia/contracts";
+import { Avatar } from "@verbysia/ui";
 import { Link } from "./app-link.js";
 
 import { formatNumber } from "./reward-labels.js";

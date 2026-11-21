@@ -7,7 +7,7 @@ import type { VocabularyItem } from "../vocabulary-item.js";
 
 /**
  * Builders for well-formed vocabulary, shared by every layer's tests (through
- * `@tfm-bic/domain/testing`). Test-only: never import this from production code.
+ * `@verbysia/domain/testing`). Test-only: never import this from production code.
  */
 export function makeVocabularyCategory(
   overrides: Partial<VocabularyCategory> = {},

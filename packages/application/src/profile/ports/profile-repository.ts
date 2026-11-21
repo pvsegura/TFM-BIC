@@ -1,4 +1,4 @@
-import type { AvatarId, StudentProfile } from "@tfm-bic/domain";
+import type { AvatarId, StudentProfile } from "@verbysia/domain";
 
 /**
  * The fields a student may change. Every field is optional: an omitted

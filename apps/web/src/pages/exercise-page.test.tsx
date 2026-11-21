@@ -3,8 +3,8 @@ import type {
   ExerciseListResponse,
   ExerciseResponse,
   LanguagesResponse,
-} from "@tfm-bic/contracts";
-import { renderWithProviders } from "@tfm-bic/testing";
+} from "@verbysia/contracts";
+import { renderWithProviders } from "@verbysia/testing";
 import { screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
 import { createRoutesStub } from "react-router";

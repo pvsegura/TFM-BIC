@@ -1,4 +1,4 @@
-import type { LessonProgressResponse, LessonResponse } from "@tfm-bic/contracts";
+import type { LessonProgressResponse, LessonResponse } from "@verbysia/contracts";
 import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
 

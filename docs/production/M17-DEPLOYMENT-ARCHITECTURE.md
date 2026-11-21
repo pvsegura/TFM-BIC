@@ -10,7 +10,7 @@ Browser ──HTTPS──▶ Host edge (TLS termination, proxy)   ← provider P
                          │  HTTP, X-Forwarded-For
                          ▼
              ┌─────────────────────────────────┐
-             │ tfm-bic container (1 instance)   │   node dist/index.js, user node, NODE_ENV=production
+             │ verbysia container (1 instance)   │   node dist/index.js, user node, NODE_ENV=production
              │  Fastify                          │
              │   ├─ SPA: /, /assets/*, deep links│   in-memory apps/web/dist, SPA security headers
              │   └─ API: /auth, /lessons, …      │   API security headers, rate limits (in memory)
@@ -57,7 +57,7 @@ validation (`validate-image.sh`) is a throwaway staging.
 | `AI_COACH_PROVIDER`                              | `disabled` (or `gemini` + key)       | M23, ADR-034. `fake` refused.                                 |
 | `AI_COACH_MODEL`, `GEMINI_AGENT_API_KEY`         | Optional (model default is GA)       | Own key keeps learner traffic off the media pipeline's quota. |
 
-`pnpm --filter @tfm-bic/config`'s `loadEnv` validates all of it at start-up and lists every problem
+`pnpm --filter @verbysia/config`'s `loadEnv` validates all of it at start-up and lists every problem
 at once without printing values. There are no frontend (`VITE_*`) variables: the SPA calls its own
 origin, so no API URL, key or secret can end up in the bundle.
 
@@ -105,8 +105,8 @@ requests finish → the shared pool is closed → exit 0 (exit 1 if anything fai
 -- once, as the provider's admin role
 CREATE ROLE tfm_migrator LOGIN PASSWORD '…';
 CREATE ROLE tfm_app LOGIN PASSWORD '…';
-GRANT CONNECT, CREATE ON DATABASE tfm_bic TO tfm_migrator;
-GRANT CONNECT ON DATABASE tfm_bic TO tfm_app;
+GRANT CONNECT, CREATE ON DATABASE verbysia TO tfm_migrator;
+GRANT CONNECT ON DATABASE verbysia TO tfm_app;
 ALTER SCHEMA public OWNER TO tfm_migrator;
 GRANT USAGE ON SCHEMA public TO tfm_app;
 ALTER DEFAULT PRIVILEGES FOR ROLE tfm_migrator IN SCHEMA public
@@ -129,7 +129,7 @@ ALTER DEFAULT PRIVILEGES FOR ROLE tfm_migrator IN SCHEMA public
 
 ### Deployment order
 
-1. Build once → validate → (push) the image `tfm-bic:<sha12>`.
+1. Build once → validate → (push) the image `verbysia:<sha12>`.
 2. **Run migrations with the new image** (one-off container/release command).
 3. Replace the running container with the new image (recreate).
 4. Wait for `/ready` = 200 (timeout, e.g. 60 s), then run the smoke test.
@@ -176,7 +176,7 @@ blue/green strategy depends on the chosen host's capabilities.
 
 ## Artifact promotion and versioning
 
-- Build once: Jenkins builds `tfm-bic:<first 12 hex of the commit>`; the same image is validated,
+- Build once: Jenkins builds `verbysia:<first 12 hex of the commit>`; the same image is validated,
   then (once a registry exists) pushed and deployed to staging and later production. Never rebuilt
   per environment, never `latest`.
 - `APP_VERSION = <package.json version>+<sha12>` (semver build metadata), shown by `/health`.
@@ -190,7 +190,7 @@ blue/green strategy depends on the chosen host's capabilities.
 - HTTPS and certificates belong to the host (automatic TLS on the managed options). The app sends
   HSTS (`max-age=31536000; includeSubDomains`, no preload) in staging/production; the host should
   redirect HTTP→HTTPS (verify per provider).
-- SPA responses carry the M16 SPA headers (single source: `@tfm-bic/contracts/web-security-headers`),
+- SPA responses carry the M16 SPA headers (single source: `@verbysia/contracts/web-security-headers`),
   API responses the API headers. No exceptions were needed.
 - CORS: **none configured** — the app is same-origin, so no `Access-Control-Allow-*` header is ever
   sent and browsers deny cross-origin reads. State-changing requests from another Origin get 403.

@@ -3,8 +3,8 @@ import {
   AudioProviderRateLimitedError,
   AudioProviderRejectedError,
   AudioProviderUnavailableError,
-} from "@tfm-bic/application";
-import { createLanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { createLanguageId } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeAudioGenerationService } from "./fake-audio-generation.service.js";

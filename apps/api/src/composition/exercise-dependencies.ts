@@ -1,11 +1,11 @@
-import type { Clock, ExerciseAttemptRepository } from "@tfm-bic/application";
+import type { Clock, ExerciseAttemptRepository } from "@verbysia/application";
 import {
   createExercisesDb,
   DrizzleExerciseAttemptRepository,
   SystemClock,
   type ExercisesDb,
-} from "@tfm-bic/data";
-import { createDefaultExerciseTypeRegistry, type ExerciseTypeRegistry } from "@tfm-bic/domain";
+} from "@verbysia/data";
+import { createDefaultExerciseTypeRegistry, type ExerciseTypeRegistry } from "@verbysia/domain";
 
 /**
  * Everything the exercise routes need beyond the content dependencies (exercise

@@ -4,7 +4,7 @@ import {
   GetLessonUseCase,
   ListLessonsUseCase,
   StartLessonUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ContentUseCases } from "./content-use-cases.js";
 import type { GamificationUseCases } from "./gamification-use-cases.js";

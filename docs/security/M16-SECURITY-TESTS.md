@@ -26,7 +26,7 @@ guard over all of them.
 ## How to run
 
 ```bash
-pnpm --filter @tfm-bic/api exec vitest run src/security src/hooks   # API security suites
+pnpm --filter @verbysia/api exec vitest run src/security src/hooks   # API security suites
 pnpm test                                                            # everything (Vitest)
 pnpm test:e2e                                                        # both Playwright projects
 pnpm exec playwright test --config tests/e2e/playwright.config.ts --project=production-build

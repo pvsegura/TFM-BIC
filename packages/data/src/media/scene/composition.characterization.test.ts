@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 
-import { isAudioTarget, planVideoTimeline, type NarrationClip } from "@tfm-bic/application";
-import { narrationOf, voiceOf } from "@tfm-bic/domain";
+import { isAudioTarget, planVideoTimeline, type NarrationClip } from "@verbysia/application";
+import { narrationOf, voiceOf } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { DEFAULT_CONTENT_ROOT } from "../../content/content-root.js";

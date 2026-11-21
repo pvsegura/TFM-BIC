@@ -1,11 +1,11 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type {
   PhoneticListResponse,
   PhoneticRepresentationResponse,
   PhoneticTopicsResponse,
   PhoneticUserProgressResponse,
-} from "@tfm-bic/contracts";
-import { makePhoneticsCatalog } from "@tfm-bic/application/testing";
+} from "@verbysia/contracts";
+import { makePhoneticsCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

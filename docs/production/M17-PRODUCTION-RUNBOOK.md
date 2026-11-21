@@ -5,7 +5,7 @@ marked **PROVIDER-SPECIFIC** (hosting is PENDING: those steps are done in the ch
 console/CLI, and are filled in once it is selected). Never paste real secrets into a shell history
 you share; export them from your password manager in the current shell only.
 
-Conventions: `IMAGE=tfm-bic:<sha12>`, `BASE=https://<public-origin>`. On Windows Git Bash prefix
+Conventions: `IMAGE=verbysia:<sha12>`, `BASE=https://<public-origin>`. On Windows Git Bash prefix
 `docker` commands that pass container paths with `MSYS_NO_PATHCONV=1` (otherwise `/app/...` is
 rewritten to a Windows path — seen in M17).
 
@@ -15,8 +15,8 @@ rewritten to a Windows path — seen in M17).
 SHA=$(git rev-parse --short=12 HEAD)
 docker build -f infrastructure/docker/app.Dockerfile \
   --build-arg APP_VERSION="0.1.0+$SHA" --build-arg GIT_COMMIT="$(git rev-parse HEAD)" \
-  -t tfm-bic:$SHA .
-infrastructure/docker/validate-image.sh tfm-bic:$SHA "0.1.0+$SHA"     # must end with IMAGE VALID
+  -t verbysia:$SHA .
+infrastructure/docker/validate-image.sh verbysia:$SHA "0.1.0+$SHA"     # must end with IMAGE VALID
 ```
 
 Jenkins does the same (stages Build Image → Validate Image → Record Release Candidate).
@@ -33,7 +33,7 @@ Jenkins does the same (stages Build Image → Validate Image → Record Release 
 With the **migrator** role (never the app role):
 
 ```sh
-export DATABASE_URL='postgres://tfm_migrator:…@<host>/tfm_bic?sslmode=require'
+export DATABASE_URL='postgres://tfm_migrator:…@<host>/verbysia?sslmode=require'
 docker run --rm -e DATABASE_URL "$IMAGE" node dist/migrate.js --migrations-root /app/migrations
 # or, from a checkout: pnpm db:migrate
 ```
@@ -77,7 +77,7 @@ would use):
 
 ```sh
 docker rename app app-previous && docker stop app-previous      # stop version N
-docker run -d --name app … tfm-bic:<N+1>                        # start N+1
+docker run -d --name app … verbysia:<N+1>                        # start N+1
 # N+1 never became ready (exited 1: "WEB_DIST_DIR has no index.html")
 docker rm -f app && docker rename app-previous app && docker start app   # restore N
 ```
@@ -114,7 +114,7 @@ Take a dump before any risky operation:
 
 ```sh
 docker run --rm -e SRC_URL -v tfm-backups:/backup postgres:17-bookworm \
-  sh -c 'pg_dump --format=custom --no-owner --no-privileges --dbname="$SRC_URL" --file=/backup/tfm_bic-$(date +%Y%m%dT%H%M).dump'
+  sh -c 'pg_dump --format=custom --no-owner --no-privileges --dbname="$SRC_URL" --file=/backup/verbysia-$(date +%Y%m%dT%H%M).dump'
 ```
 
 Practice: `infrastructure/deployment/restore-drill.sh "$IMAGE"` (optionally with

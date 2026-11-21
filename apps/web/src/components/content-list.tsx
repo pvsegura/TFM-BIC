@@ -1,4 +1,4 @@
-import type { ContentSummaryResponse } from "@tfm-bic/contracts";
+import type { ContentSummaryResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 export interface ContentListProps {

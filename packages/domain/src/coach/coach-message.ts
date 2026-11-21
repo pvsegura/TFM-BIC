@@ -1,4 +1,4 @@
-import type { Brand } from "@tfm-bic/shared";
+import type { Brand } from "@verbysia/shared";
 
 import { InvalidCoachMessageError } from "./errors/invalid-coach-message.error.js";
 

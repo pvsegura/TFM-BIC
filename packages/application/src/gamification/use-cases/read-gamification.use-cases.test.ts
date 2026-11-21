@@ -5,7 +5,7 @@ import {
   createContentId,
   createDefaultAchievementRegistry,
   createExerciseId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

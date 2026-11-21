@@ -8,8 +8,8 @@ import {
   type EducationalVideoRenderer,
   type RenderedVideo,
   type VideoTimeline,
-} from "@tfm-bic/application";
-import type { VideoScript } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { VideoScript } from "@verbysia/domain";
 
 import { HyperframesCli } from "./hyperframes-cli.js";
 import { extractPoster, fastStart, type FfmpegTools } from "./ffmpeg.js";

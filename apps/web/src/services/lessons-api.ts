@@ -7,7 +7,7 @@ import {
   type LessonListResponse,
   type LessonProgressResponse,
   type LessonResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

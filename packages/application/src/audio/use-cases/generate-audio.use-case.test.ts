@@ -1,4 +1,4 @@
-import { createLanguageId, InvalidSpeechTextError } from "@tfm-bic/domain";
+import { createLanguageId, InvalidSpeechTextError } from "@verbysia/domain";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { FakeContentRepository, makeSampleCatalog } from "../../content/test-support/fakes.js";

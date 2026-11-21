@@ -1,4 +1,4 @@
-import { EmailDeliveryError, type OutgoingEmail } from "@tfm-bic/application";
+import { EmailDeliveryError, type OutgoingEmail } from "@verbysia/application";
 import { describe, expect, it } from "vitest";
 
 import { FakeEmailProvider } from "./fake-email.provider.js";
@@ -6,7 +6,7 @@ import { FakeEmailProvider } from "./fake-email.provider.js";
 function message(overrides: Partial<OutgoingEmail> = {}): OutgoingEmail {
   return {
     to: "ada@example.com",
-    from: "TFM-BIC <no-reply@example.com>",
+    from: "VerbySia <no-reply@example.com>",
     replyTo: null,
     subject: "Verify your email address",
     html: '<p><a href="https://app.example.com/verify-email?token=abc">Verify</a></p>',

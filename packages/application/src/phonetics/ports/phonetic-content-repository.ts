@@ -4,7 +4,7 @@ import type {
   PhoneticRepresentationId,
   PhoneticTopic,
   PhoneticTopicId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where phonetics content comes from. Owned by this layer, implemented in `packages/data` (today:

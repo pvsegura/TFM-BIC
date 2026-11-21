@@ -1,4 +1,4 @@
-import { requireRole, type Role } from "@tfm-bic/domain";
+import { requireRole, type Role } from "@verbysia/domain";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 /**

@@ -7,7 +7,7 @@ import {
   languageFileSchema,
   phoneticFileSchema,
   vocabularyFileSchema,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import {
   isValidLanguageId,
   isValidLevelId,
@@ -21,7 +21,7 @@ import {
   type PhoneticTopic,
   type VocabularyCategory,
   type VocabularyItem,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentIssue } from "./content-validation.error.js";
 

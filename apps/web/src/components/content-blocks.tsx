@@ -1,4 +1,4 @@
-import type { ContentResponse } from "@tfm-bic/contracts";
+import type { ContentResponse } from "@verbysia/contracts";
 import type { ReactNode } from "react";
 
 type ContentBlock = ContentResponse["blocks"][number];

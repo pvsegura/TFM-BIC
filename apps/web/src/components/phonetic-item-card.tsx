@@ -1,4 +1,4 @@
-import type { PhoneticRepresentationResponse } from "@tfm-bic/contracts";
+import type { PhoneticRepresentationResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 import { PhoneticActions } from "./phonetic-actions.js";

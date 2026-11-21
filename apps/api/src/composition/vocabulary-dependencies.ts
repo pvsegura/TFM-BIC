@@ -2,14 +2,14 @@ import type {
   Clock,
   UserVocabularyRepository,
   VocabularyEventPublisher,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import {
   createVocabularyDb,
   DrizzleUserVocabularyRepository,
   NoopVocabularyEventPublisher,
   SystemClock,
   type VocabularyDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the vocabulary routes need beyond the content dependencies (vocabulary content is

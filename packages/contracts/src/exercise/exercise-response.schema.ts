@@ -1,4 +1,4 @@
-import { EXERCISE_RESULT_STATUSES, EXERCISE_TYPES, MAX_TEXT_ANSWER_LENGTH } from "@tfm-bic/domain";
+import { EXERCISE_RESULT_STATUSES, EXERCISE_TYPES, MAX_TEXT_ANSWER_LENGTH } from "@verbysia/domain";
 import { z } from "zod";
 
 import { rewardsResponseSchema } from "../gamification/gamification-response.schema.js";

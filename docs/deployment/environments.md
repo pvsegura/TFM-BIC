@@ -31,7 +31,7 @@ Variable groups (see `.env.example` for the authoritative current list):
 - `E2E_RELAXED_RATE_LIMITS` — test-only (Playwright); since M16 refused unless `NODE_ENV=test`.
 - Email (M14, ADR-014/ADR-025): `EMAIL_PROVIDER` (`fake`, the default — captures in memory, sends nothing; or
   `resend` — refused under `NODE_ENV=test`), `RESEND_API_KEY` (secret; required with `resend`), `EMAIL_FROM` (default
-  `TFM-BIC <no-reply@example.invalid>`, which `resend` refuses — use an address on the domain verified in Resend),
+  `VerbySia <no-reply@example.invalid>`, which `resend` refuses — use an address on the domain verified in Resend),
   `EMAIL_REPLY_TO` (optional; both refuse line breaks), `EMAIL_LINK_SECRET` (≥ 32 chars, signs newsletter
   unsubscribe links; required in staging/production, ephemeral in dev/test; rotating it breaks links in sent
   newsletters). `APP_BASE_URL` must be the exact public origin (e.g. `https://www.verbysia.com`): email links and

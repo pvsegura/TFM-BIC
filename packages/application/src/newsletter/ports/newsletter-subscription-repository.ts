@@ -1,4 +1,4 @@
-import type { NewsletterSubscription } from "@tfm-bic/domain";
+import type { NewsletterSubscription } from "@verbysia/domain";
 
 /** A confirmed subscription and the account's current email address. */
 export interface SubscribedRecipient {

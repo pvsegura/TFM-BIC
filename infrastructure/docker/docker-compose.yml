@@ -3,7 +3,7 @@ name: tfm-bic-dev
 # Local development Postgres only — see docs/adr/adr-005-database.md. Not the production
 # architecture (production targets Neon, a remote managed Postgres); automated tests do not use
 # this either (they run against an in-process PGlite instance, see packages/data). This container
-# is purely a convenience for `pnpm --filter @tfm-bic/api dev` against a real local database.
+# is purely a convenience for `pnpm --filter @verbysia/api dev` against a real local database.
 services:
   postgres:
     image: postgres:17-bookworm

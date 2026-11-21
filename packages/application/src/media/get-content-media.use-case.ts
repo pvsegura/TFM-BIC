@@ -11,7 +11,7 @@ import {
   isValidVocabularyItemId,
   type ContentMedia,
   type MediaContentRef,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { ContentRepository } from "../content/ports/content-repository.js";
 import { GetContentUseCase } from "../content/use-cases/get-content.use-case.js";

@@ -5,7 +5,7 @@ import {
   ListPhoneticTopicsUseCase,
   RecordPhoneticPracticeUseCase,
   RecordPhoneticViewUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ContentDependencies } from "./content-dependencies.js";
 import type { PhoneticsDependencies } from "./phonetics-dependencies.js";

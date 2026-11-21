@@ -1,4 +1,4 @@
-import type { ExerciseAnswerRequest, ExerciseResponse } from "@tfm-bic/contracts";
+import type { ExerciseAnswerRequest, ExerciseResponse } from "@verbysia/contracts";
 import { useMutation, useQueryClient } from "@tanstack/react-query";
 
 import { fetchExercise, fetchLessonExercises, submitAnswer } from "../services/exercises-api.js";

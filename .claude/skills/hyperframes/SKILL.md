@@ -45,7 +45,7 @@ minimal adapter.
 `GenerateContentMediaUseCase -> EducationalVideoRenderer (port, packages/application) ->`
 `HyperframesVideoRenderer (packages/data/src/media) -> HyperframesCli (media/hyperframes-cli.ts) -> hyperframes render`
 
-- Runs only as an operator command: `pnpm --filter @tfm-bic/data media` (`media-pipeline.cli.ts`). No HTTP
+- Runs only as an operator command: `pnpm --filter @verbysia/data media` (`media-pipeline.cli.ts`). No HTTP
   request can start a render.
 - The renderer writes a self-contained render project under the git-ignored `.media-build/` (composition from
   `media/scene/`, font, GSAP, narration clips) and runs the pinned package's `bin/hyperframes.mjs` through

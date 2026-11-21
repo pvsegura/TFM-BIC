@@ -45,7 +45,7 @@ async function downloadExport(page: Page): Promise<{ fileName: string; raw: stri
 }
 
 async function sessionCookieValue(page: Page): Promise<string> {
-  const cookie = (await page.context().cookies()).find((c) => c.name === "tfm_bic_session");
+  const cookie = (await page.context().cookies()).find((c) => c.name === "verbysia_session");
   expect(cookie).toBeDefined();
   return cookie!.value;
 }
@@ -73,7 +73,7 @@ test.describe("Privacy and data management", () => {
     const { fileName, raw } = await downloadExport(page);
     await expect(page.getByText(`Your data was downloaded as ${fileName}.`)).toBeVisible();
 
-    expect(fileName).toMatch(/^tfm-bic-personal-data-\d{4}-\d{2}-\d{2}\.json$/);
+    expect(fileName).toMatch(/^verbysia-personal-data-\d{4}-\d{2}-\d{2}\.json$/);
     const document = JSON.parse(raw) as ExportDocument;
     expect(document.exportVersion).toBe("2");
     expect(document.account.email).toBe(email);
@@ -165,7 +165,7 @@ test.describe("Privacy and data management", () => {
 
     // The old session cookie is dead, even replayed from another browser context.
     const replay = await browser.newContext();
-    await replay.addCookies([{ name: "tfm_bic_session", value: cookie, url: API }]);
+    await replay.addCookies([{ name: "verbysia_session", value: cookie, url: API }]);
     expect((await replay.request.get(`${API}/auth/me`)).status()).toBe(401);
     expect((await replay.request.get(`${API}/data-management/export`)).status()).toBe(401);
     await replay.close();

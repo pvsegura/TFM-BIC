@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import { Link } from "./app-link.js";
 
 export interface NotFoundNoticeProps {

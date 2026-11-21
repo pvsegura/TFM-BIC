@@ -5,8 +5,8 @@ import {
   type ContentCatalog,
   type VocabularyCategory,
   type VocabularyItem,
-} from "@tfm-bic/domain";
-import { makeVocabularyCategory, makeVocabularyItem } from "@tfm-bic/domain/testing";
+} from "@verbysia/domain";
+import { makeVocabularyCategory, makeVocabularyItem } from "@verbysia/domain/testing";
 import { describe, expect, it } from "vitest";
 
 import { CatalogVocabularyRepository } from "./catalog-vocabulary-repository.js";

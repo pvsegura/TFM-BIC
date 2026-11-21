@@ -26,7 +26,7 @@ tokens per second of audio (until 2026-12-31).
 
 ## Decision
 
-1. **Generation is an offline operator step**, never a request handler: `pnpm --filter @tfm-bic/data media
+1. **Generation is an offline operator step**, never a request handler: `pnpm --filter @verbysia/data media
 <doctor|plan|audition|generate>`. Visiting a page cannot cause a provider call.
 2. **Content-driven scripts.** A `VideoScript` (domain: scenes of a few layouts plus the lines spoken in each) is
    built by the application layer from the lesson or vocabulary item. All language is verbatim content; the

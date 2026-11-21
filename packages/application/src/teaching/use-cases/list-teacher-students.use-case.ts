@@ -7,7 +7,7 @@ import {
   type RosterActivityFilter,
   type RosterSortDirection,
   type RosterSortField,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { TeacherDashboardReadModel } from "../ports/teacher-dashboard-read-model.js";

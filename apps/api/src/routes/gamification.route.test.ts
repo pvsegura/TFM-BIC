@@ -1,12 +1,12 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type {
   AchievementsResponse,
   ExerciseAnswerResponse,
   GamificationSummaryResponse,
   LessonCompletionResponse,
   PointHistoryResponse,
-} from "@tfm-bic/contracts";
-import { makeExerciseCatalog } from "@tfm-bic/application/testing";
+} from "@verbysia/contracts";
+import { makeExerciseCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

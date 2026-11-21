@@ -1,4 +1,4 @@
-import { isLesson, type LanguageId, type LevelId } from "@tfm-bic/domain";
+import { isLesson, type LanguageId, type LevelId } from "@verbysia/domain";
 
 import type {
   ContentSummary,

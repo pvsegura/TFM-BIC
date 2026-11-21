@@ -1,6 +1,6 @@
 import { randomUUID } from "node:crypto";
 
-import type { AppEnv } from "@tfm-bic/config";
+import type { AppEnv } from "@verbysia/config";
 import type { FastifyError, FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 
 /**

@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// Post-deployment smoke test (M17) for a running TFM-BIC instance — staging or production.
+// Post-deployment smoke test (M17) for a running VerbySia instance — staging or production.
 // Plain Node 24 (built-in fetch), no dependencies, so Jenkins or an operator can run it anywhere:
 //
 //   SMOKE_BASE_URL=https://app.example.com node infrastructure/deployment/smoke-test.mjs

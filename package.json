@@ -1,5 +1,5 @@
 {
-  "name": "tfm-bic",
+  "name": "verbysia",
   "version": "0.1.0",
   "private": true,
   "description": "Language-learning platform monorepo (TypeScript, React, Node.js).",
@@ -10,9 +10,9 @@
   },
   "packageManager": "pnpm@12.4.2",
   "scripts": {
-    "dev": "pnpm --parallel --filter @tfm-bic/web --filter @tfm-bic/api dev",
-    "dev:web": "pnpm --filter @tfm-bic/web dev",
-    "dev:api": "pnpm --filter @tfm-bic/api dev",
+    "dev": "pnpm --parallel --filter @verbysia/web --filter @verbysia/api dev",
+    "dev:web": "pnpm --filter @verbysia/web dev",
+    "dev:api": "pnpm --filter @verbysia/api dev",
     "build": "pnpm -r --if-present run build",
     "test": "vitest run",
     "test:watch": "vitest",
@@ -27,8 +27,8 @@
     "typecheck": "pnpm -r --if-present run typecheck",
     "check": "pnpm lint && pnpm format:check && pnpm typecheck && pnpm test && pnpm build",
     "prepare": "husky",
-    "content:validate": "pnpm --filter @tfm-bic/data content:validate",
-    "db:migrate": "pnpm --filter @tfm-bic/data db:migrate:all"
+    "content:validate": "pnpm --filter @verbysia/data content:validate",
+    "db:migrate": "pnpm --filter @verbysia/data db:migrate:all"
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",

@@ -1,5 +1,5 @@
-import type { CreateUserInput, UserRepository } from "@tfm-bic/application";
-import { DuplicateEmailError, type Role, type User } from "@tfm-bic/domain";
+import type { CreateUserInput, UserRepository } from "@verbysia/application";
+import { DuplicateEmailError, type Role, type User } from "@verbysia/domain";
 import { eq } from "drizzle-orm";
 
 import type { IdentityDb } from "./db/client.js";

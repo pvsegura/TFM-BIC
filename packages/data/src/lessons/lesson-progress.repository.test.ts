@@ -1,4 +1,4 @@
-import { createContentId, isValidContentId } from "@tfm-bic/domain";
+import { createContentId, isValidContentId } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, afterEach, beforeAll, describe, expect, it } from "vitest";
 

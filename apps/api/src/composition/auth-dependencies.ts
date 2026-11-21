@@ -5,8 +5,8 @@ import type {
   SessionRepository,
   TokenGenerator,
   UserRepository,
-} from "@tfm-bic/application";
-import type { Clock } from "@tfm-bic/application";
+} from "@verbysia/application";
+import type { Clock } from "@verbysia/application";
 import {
   Argon2PasswordHasher,
   createIdentityDb,
@@ -17,7 +17,7 @@ import {
   DrizzleUserRepository,
   SystemClock,
   type IdentityDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the auth routes need, gathered behind one bag so `server.ts`

@@ -1,4 +1,4 @@
-import type { AchievementResponse } from "@tfm-bic/contracts";
+import type { AchievementResponse } from "@verbysia/contracts";
 import { render, screen, within } from "@testing-library/react";
 import { afterEach, describe, expect, it } from "vitest";
 

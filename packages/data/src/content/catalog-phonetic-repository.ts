@@ -1,4 +1,4 @@
-import type { PhoneticContentRepository } from "@tfm-bic/application";
+import type { PhoneticContentRepository } from "@verbysia/application";
 import type {
   ContentCatalog,
   LanguageId,
@@ -6,7 +6,7 @@ import type {
   PhoneticRepresentationId,
   PhoneticTopic,
   PhoneticTopicId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * A `PhoneticContentRepository` over an already-validated catalog held in memory — the same

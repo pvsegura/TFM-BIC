@@ -11,7 +11,7 @@ See [database skill](../../.claude/skills/database/SKILL.md),
 
 ## What's here (M1)
 
-`SystemClock` (`src/clock/`) — the only concrete adapter so far, implementing `@tfm-bic/application`'s
+`SystemClock` (`src/clock/`) — the only concrete adapter so far, implementing `@verbysia/application`'s
 `Clock` port with real `Date`/wall-clock I/O. No PostgreSQL/provider adapters yet — ADR-005's
 provider decision is still PENDING, and M1 must not couple domain/application to an unpicked
 provider.

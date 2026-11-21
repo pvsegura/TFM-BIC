@@ -28,7 +28,7 @@ function mockFetch(
   status: number,
   body: unknown,
   headers: Record<string, string> = {
-    "content-disposition": 'attachment; filename="tfm-bic-personal-data-2026-09-26.json"',
+    "content-disposition": 'attachment; filename="verbysia-personal-data-2026-09-26.json"',
   },
 ) {
   const text = typeof body === "string" ? body : JSON.stringify(body);
@@ -68,17 +68,17 @@ describe("fetchPersonalDataExport", () => {
 
     const result = await fetchPersonalDataExport();
 
-    expect(result.fileName).toBe("tfm-bic-personal-data-2026-09-26.json");
+    expect(result.fileName).toBe("verbysia-personal-data-2026-09-26.json");
     expect(JSON.parse(result.content)).toEqual(EXPORT);
     expect(result.content).toContain("\n  ");
   });
 
   it("falls back to a generic file name when the header is missing or unsafe", async () => {
     mockFetch(200, EXPORT, {});
-    expect((await fetchPersonalDataExport()).fileName).toBe("tfm-bic-personal-data.json");
+    expect((await fetchPersonalDataExport()).fileName).toBe("verbysia-personal-data.json");
 
     mockFetch(200, EXPORT, { "content-disposition": 'attachment; filename="../../evil.sh"' });
-    expect((await fetchPersonalDataExport()).fileName).toBe("tfm-bic-personal-data.json");
+    expect((await fetchPersonalDataExport()).fileName).toBe("verbysia-personal-data.json");
   });
 
   it("refuses a body that is not a version-2 export", async () => {

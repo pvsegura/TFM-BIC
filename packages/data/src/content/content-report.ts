@@ -1,4 +1,4 @@
-import { isPublished } from "@tfm-bic/domain";
+import { isPublished } from "@verbysia/domain";
 
 import type { LoadContentResult } from "./load-content-catalog.js";
 

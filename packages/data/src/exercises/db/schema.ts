@@ -1,4 +1,4 @@
-import type { ExerciseAnswerValue } from "@tfm-bic/domain";
+import type { ExerciseAnswerValue } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import {
   bigint,

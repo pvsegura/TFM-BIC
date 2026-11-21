@@ -1,4 +1,4 @@
-import type { AchievementRegistry } from "@tfm-bic/domain";
+import type { AchievementRegistry } from "@verbysia/domain";
 
 import type { AchievementTexts } from "../achievement-texts.js";
 import type { GamificationRepository } from "../ports/gamification-repository.js";

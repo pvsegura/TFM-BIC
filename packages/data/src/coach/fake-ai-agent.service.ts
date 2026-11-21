@@ -5,7 +5,7 @@ import {
   type AgentResponse,
   type AgentToolResult,
   type AiAgentService,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 /**
  * The default AI Coach provider in development, every automated test and CI (M23, ADR-034,

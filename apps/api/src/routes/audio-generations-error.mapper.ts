@@ -7,8 +7,8 @@ import {
   AudioProviderRejectedError,
   AudioProviderUnavailableError,
   AudioSourceTextMissingError,
-} from "@tfm-bic/application";
-import { InvalidSpeechTextError, VocabularyItemNotFoundError } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { InvalidSpeechTextError, VocabularyItemNotFoundError } from "@verbysia/domain";
 
 import type { MappedCatalogError } from "./catalog-error.mapper.js";
 

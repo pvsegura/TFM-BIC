@@ -3,8 +3,8 @@ import {
   GetExerciseUseCase,
   ListLessonExercisesUseCase,
   type ExerciseAttemptRepository,
-} from "@tfm-bic/application";
-import { FakeExerciseAttemptRepository } from "@tfm-bic/application/testing";
+} from "@verbysia/application";
+import { FakeExerciseAttemptRepository } from "@verbysia/application/testing";
 import {
   CEFR_LEVELS,
   createDefaultExerciseTypeRegistry,
@@ -16,7 +16,7 @@ import {
   type ContentCatalog,
   type Exercise,
   type ExerciseAnswerValue,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { CatalogExerciseRepository } from "./catalog-exercise-repository.js";

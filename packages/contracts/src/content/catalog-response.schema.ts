@@ -1,4 +1,4 @@
-import { CONTENT_TYPES, LEVEL_STATUSES, TEXT_DIRECTIONS } from "@tfm-bic/domain";
+import { CONTENT_TYPES, LEVEL_STATUSES, TEXT_DIRECTIONS } from "@verbysia/domain";
 import { z } from "zod";
 
 import { contentBlockSchema } from "./content-block.schema.js";

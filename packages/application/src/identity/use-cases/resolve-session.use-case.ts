@@ -1,4 +1,4 @@
-import { isSessionExpired, type User } from "@tfm-bic/domain";
+import { isSessionExpired, type User } from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { SessionRepository } from "../ports/session-repository.js";

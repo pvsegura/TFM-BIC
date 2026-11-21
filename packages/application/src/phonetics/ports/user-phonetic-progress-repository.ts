@@ -1,4 +1,4 @@
-import type { PhoneticRepresentationId, UserPhoneticProgress } from "@tfm-bic/domain";
+import type { PhoneticRepresentationId, UserPhoneticProgress } from "@verbysia/domain";
 
 /**
  * Where a student's progress on phonetics is kept. Owned by this layer, implemented in

@@ -9,8 +9,8 @@ import type {
   TeacherDashboardReadModel,
   TeacherOverviewTotals,
   WeeklyActivityRecord,
-} from "@tfm-bic/application";
-import type { RosterSortDirection, RosterSortField } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import type { RosterSortDirection, RosterSortField } from "@verbysia/domain";
 import { sql, type SQL } from "drizzle-orm";
 
 import type { TeachingDb } from "./db/client.js";

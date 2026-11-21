@@ -1,4 +1,4 @@
-import { accuracyPercent, isActiveStudent, type Role } from "@tfm-bic/domain";
+import { accuracyPercent, isActiveStudent, type Role } from "@verbysia/domain";
 
 import type { RosterStudentRecord } from "./ports/teacher-dashboard-read-model.js";
 

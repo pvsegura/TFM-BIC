@@ -2,7 +2,7 @@ import { defineConfig } from "drizzle-kit";
 
 /**
  * Teaching's own migration set (M13): the `teacher_students` table. It has two foreign keys to
- * `users`, so on a fresh database run Identity's migration first (`pnpm --filter @tfm-bic/data
+ * `users`, so on a fresh database run Identity's migration first (`pnpm --filter @verbysia/data
  * db:migrate`), then this one (`db:migrate:teaching`). The teacher dashboard's read model also
  * *reads* Profile, Lessons, Exercises and Gamification tables, but defines none of them, so the
  * order relative to those migrations does not matter for applying this one.

@@ -1,7 +1,7 @@
 import type {
   PhoneticRepresentationResponse,
   PhoneticUserProgressResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-query";
 import { useEffect, useRef } from "react";
 

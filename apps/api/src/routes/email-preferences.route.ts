@@ -2,20 +2,20 @@ import {
   EmailDeliveryError,
   NewsletterConsentVersionMismatchError,
   type ResolveSessionUseCase,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   emailPreferencesResponseSchema,
   newsletterPreferenceResponseSchema,
   newsletterSubscriptionRequestSchema,
   newsletterSubscriptionResponseSchema,
   newsletterTokenRequestSchema,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import {
   InvalidNewsletterTokenError,
   NewsletterTokenExpiredError,
   type NewsletterPreference,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import type { FastifyInstance, FastifyReply } from "fastify";
 
 import type { EmailUseCases } from "../composition/email-use-cases.js";

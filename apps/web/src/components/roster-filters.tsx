@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import { useState, type FormEvent } from "react";
 
 import type { StudentListParams } from "../services/teacher-dashboard-api.js";

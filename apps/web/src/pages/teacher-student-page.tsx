@@ -1,5 +1,5 @@
-import type { TeacherStudentDetailResponse } from "@tfm-bic/contracts";
-import { Avatar } from "@tfm-bic/ui";
+import type { TeacherStudentDetailResponse } from "@verbysia/contracts";
+import { Avatar } from "@verbysia/ui";
 import { useParams } from "react-router";
 import { Link } from "../components/app-link.js";
 

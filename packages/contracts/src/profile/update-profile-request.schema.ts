@@ -4,7 +4,7 @@ import {
   MAX_NICKNAME_LENGTH,
   MAX_PROFILE_NAME_LENGTH,
   MIN_NICKNAME_LENGTH,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { avatarIdSchema } from "./avatar-catalog.schema.js";

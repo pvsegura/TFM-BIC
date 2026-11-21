@@ -1,4 +1,4 @@
-import { createLanguageId } from "@tfm-bic/domain";
+import { createLanguageId } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { createContentDependencies } from "./content-dependencies.js";

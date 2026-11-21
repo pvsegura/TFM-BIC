@@ -1,5 +1,5 @@
-import type { AiAgentService, LearnerInsightsReadModel } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+import type { AiAgentService, LearnerInsightsReadModel } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   createCoachDb,
   DisabledAiAgentService,
@@ -7,7 +7,7 @@ import {
   FakeAiAgentService,
   GeminiAgentProvider,
   type CoachDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * The AI Learning Coach's dependencies (M23, ADR-034): the agent provider and the learner read

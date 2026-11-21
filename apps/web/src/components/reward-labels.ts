@@ -1,4 +1,4 @@
-import type { PointTransactionResponse } from "@tfm-bic/contracts";
+import type { PointTransactionResponse } from "@verbysia/contracts";
 
 /**
  * What a student reads for each reason points can be earned. The reasons themselves are stable,

@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { AVATAR_CATALOG, type ProfileResponse } from "@tfm-bic/contracts";
-import { Avatar, AvatarPicker, Button, TextField } from "@tfm-bic/ui";
+import { AVATAR_CATALOG, type ProfileResponse } from "@verbysia/contracts";
+import { Avatar, AvatarPicker, Button, TextField } from "@verbysia/ui";
 import { useRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 

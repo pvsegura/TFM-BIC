@@ -1,11 +1,11 @@
-import type { ExerciseAttemptRepository } from "@tfm-bic/application";
+import type { ExerciseAttemptRepository } from "@verbysia/application";
 import {
   createExerciseId,
   type ExerciseAttempt,
   type ExerciseAttemptSummary,
   type ExerciseId,
   type NewExerciseAttempt,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { and, desc, eq, inArray, sql } from "drizzle-orm";
 
 import type { ExercisesDb } from "./db/client.js";

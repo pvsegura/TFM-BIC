@@ -7,7 +7,7 @@ import type { PhoneticTopic } from "../phonetic-topic.js";
 
 /**
  * Builders for well-formed phonetics, shared by every layer's tests (through
- * `@tfm-bic/domain/testing`). Test-only: never import this from production code.
+ * `@verbysia/domain/testing`). Test-only: never import this from production code.
  */
 export function makePhoneticTopic(overrides: Partial<PhoneticTopic> = {}): PhoneticTopic {
   return {

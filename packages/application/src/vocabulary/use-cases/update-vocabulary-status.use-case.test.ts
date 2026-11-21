@@ -1,4 +1,4 @@
-import { InvalidVocabularyTransitionError, VocabularyItemNotFoundError } from "@tfm-bic/domain";
+import { InvalidVocabularyTransitionError, VocabularyItemNotFoundError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository } from "../../content/test-support/fakes.js";

@@ -10,5 +10,5 @@ Bounded-context analysis: [docs/architecture/domain-model.md](../../docs/archite
 `LanguageId` (`src/language/`) — a validated value object for the ISO-639-style language codes
 used throughout `content/languages/<languageId>/...`. It's a foundational, cross-cutting
 primitive rather than a business feature, chosen to prove the domain package builds/tests in
-complete isolation (only depends on `@tfm-bic/shared`'s `Brand` type utility) ahead of real
+complete isolation (only depends on `@verbysia/shared`'s `Brand` type utility) ahead of real
 bounded-context entities (User, Lesson, Exercise, ...) landing in later milestones.

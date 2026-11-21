@@ -1,4 +1,4 @@
-import { confirmSubscription, startPendingSubscription, unsubscribe } from "@tfm-bic/domain";
+import { confirmSubscription, startPendingSubscription, unsubscribe } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { ProviderMarketingEmailSender } from "../../email/email-senders.js";
@@ -42,7 +42,7 @@ function build() {
   const sender = new ProviderMarketingEmailSender(
     provider,
     {
-      from: "TFM-BIC <news@example.com>",
+      from: "VerbySia <news@example.com>",
       replyTo: null,
       appBaseUrl: "https://app.example.com",
       locale: "en",

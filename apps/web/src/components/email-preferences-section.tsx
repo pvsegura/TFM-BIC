@@ -1,5 +1,5 @@
-import type { NewsletterPreferenceResponse } from "@tfm-bic/contracts";
-import { Button } from "@tfm-bic/ui";
+import type { NewsletterPreferenceResponse } from "@verbysia/contracts";
+import { Button } from "@verbysia/ui";
 import { useId, useState, type FormEvent, type ReactNode } from "react";
 
 import {

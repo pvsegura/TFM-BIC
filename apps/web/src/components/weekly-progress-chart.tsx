@@ -1,4 +1,4 @@
-import type { TeacherStudentDetailResponse } from "@tfm-bic/contracts";
+import type { TeacherStudentDetailResponse } from "@verbysia/contracts";
 
 import { formatNumber } from "./reward-labels.js";
 import { formatPercent, formatWeek } from "./teacher-labels.js";

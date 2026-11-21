@@ -1,4 +1,4 @@
-import type { LanguageLevelsResponse } from "@tfm-bic/contracts";
+import type { LanguageLevelsResponse } from "@verbysia/contracts";
 import type { ReactNode } from "react";
 
 import { useLanguageLevels } from "../hooks/use-catalog.js";

@@ -1,7 +1,7 @@
 import {
   GetCurrentStudentProfileUseCase,
   UpdateCurrentStudentProfileUseCase,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import type { ProfileDependencies } from "./profile-dependencies.js";
 

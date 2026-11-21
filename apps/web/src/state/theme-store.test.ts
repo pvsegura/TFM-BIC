@@ -23,7 +23,7 @@ describe("useThemeStore", () => {
   it("persists the current theme to localStorage", () => {
     useThemeStore.getState().toggleTheme();
 
-    const stored = JSON.parse(localStorage.getItem("tfm-bic-theme") ?? "{}") as {
+    const stored = JSON.parse(localStorage.getItem("verbysia-theme") ?? "{}") as {
       state?: { theme?: string };
     };
     expect(stored.state?.theme).toBe("dark");

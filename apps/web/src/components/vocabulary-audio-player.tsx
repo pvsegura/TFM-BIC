@@ -1,4 +1,4 @@
-import { Button } from "@tfm-bic/ui";
+import { Button } from "@verbysia/ui";
 import { useEffect, useId, useRef, useState } from "react";
 
 import { useVocabularyAudio } from "../hooks/use-audio-generation.js";

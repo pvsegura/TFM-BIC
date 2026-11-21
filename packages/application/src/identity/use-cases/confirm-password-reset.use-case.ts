@@ -1,4 +1,4 @@
-import { createPassword } from "@tfm-bic/domain";
+import { createPassword } from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type { PasswordHasher } from "../ports/password-hasher.js";

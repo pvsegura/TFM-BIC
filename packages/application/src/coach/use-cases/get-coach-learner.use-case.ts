@@ -1,4 +1,4 @@
-import { createLanguageId, isValidLanguageId } from "@tfm-bic/domain";
+import { createLanguageId, isValidLanguageId } from "@verbysia/domain";
 
 import { resolveCoachContext, type CoachContextDependencies } from "../resolve-coach-context.js";
 

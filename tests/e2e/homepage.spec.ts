@@ -59,7 +59,7 @@ test.describe("public homepage — desktop", () => {
     const problems = watchForProblems(page);
     await page.goto("/");
 
-    await expect(page).toHaveTitle("TFM-BIC — Learn a language one word at a time");
+    await expect(page).toHaveTitle("VerbySia — Learn a language one word at a time");
     await expect(page.getByRole("heading", { level: 1 })).toHaveText(SCENES[0] ?? "");
     await expect(page.locator("[data-motion]")).toHaveAttribute("data-motion", "full");
     await expect(page.getByRole("navigation", { name: "Primary" })).toBeVisible();

@@ -1,4 +1,4 @@
-import { AccountDeletionRefusedError, PERSONAL_DATA_EXPORT_VERSION } from "@tfm-bic/domain";
+import { AccountDeletionRefusedError, PERSONAL_DATA_EXPORT_VERSION } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

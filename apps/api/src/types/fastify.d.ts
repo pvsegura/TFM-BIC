@@ -1,4 +1,4 @@
-import type { User } from "@tfm-bic/domain";
+import type { User } from "@verbysia/domain";
 
 declare module "fastify" {
   interface FastifyRequest {

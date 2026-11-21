@@ -1,6 +1,10 @@
-import { loadEnv } from "@tfm-bic/config";
-import { FakeAudioGenerationService, isWav, type FakeAudioGenerationScenario } from "@tfm-bic/data";
-import { makeVocabularyCatalog } from "@tfm-bic/application/testing";
+import { loadEnv } from "@verbysia/config";
+import {
+  FakeAudioGenerationService,
+  isWav,
+  type FakeAudioGenerationScenario,
+} from "@verbysia/data";
+import { makeVocabularyCatalog } from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it, vi } from "vitest";
 

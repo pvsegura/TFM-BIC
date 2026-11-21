@@ -4,7 +4,7 @@ import {
   LessonNotFoundError,
   type ContentItem,
   type LessonId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import type { GetContentUseCase } from "../content/use-cases/get-content.use-case.js";
 

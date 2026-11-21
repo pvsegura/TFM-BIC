@@ -1,4 +1,4 @@
-import { normalizeTextAnswer } from "@tfm-bic/domain";
+import { normalizeTextAnswer } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../../content/content-block.schema.js";

@@ -7,7 +7,7 @@ import type {
   StoredLessonProgressStatus,
   StoredPhoneticProgressStatus,
   StoredVocabularyStatus,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Everything the personal-data export may contain about one user (M15, ADR-026), read in one

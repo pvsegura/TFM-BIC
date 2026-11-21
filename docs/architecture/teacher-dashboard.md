@@ -31,10 +31,10 @@ The web `TeacherRoute` guard and the teacher-only nav link are UX only.
 ## Relationship management (operators)
 
 ```
-pnpm --filter @tfm-bic/data db:migrate:teaching      # once, after Identity's migration
-pnpm --filter @tfm-bic/data teacher:admin promote <email>
-pnpm --filter @tfm-bic/data teacher:admin link   <teacherEmail> <studentEmail>
-pnpm --filter @tfm-bic/data teacher:admin unlink <teacherEmail> <studentEmail>
+pnpm --filter @verbysia/data db:migrate:teaching      # once, after Identity's migration
+pnpm --filter @verbysia/data teacher:admin promote <email>
+pnpm --filter @verbysia/data teacher:admin link   <teacherEmail> <studentEmail>
+pnpm --filter @verbysia/data teacher:admin unlink <teacherEmail> <studentEmail>
 ```
 
 Output names no account. Exit codes: 0 done, 1 rule violation/unknown account, 2 usage.

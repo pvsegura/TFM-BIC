@@ -167,7 +167,7 @@ describe("createLoggerOptions", () => {
     await app.inject({
       method: "GET",
       url: "/",
-      headers: { cookie: "tfm_bic_session=secret-cookie", authorization: "Bearer secret-bearer" },
+      headers: { cookie: "verbysia_session=secret-cookie", authorization: "Bearer secret-bearer" },
     });
     await app.close();
 

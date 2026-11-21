@@ -152,7 +152,7 @@ nothing in the dependency tree touches native addons — worth re-verifying on t
 Jenkins run rather than assuming.
 
 The Playwright config's `webServer` step now starts **two** servers inside the same container the
-tests run in: `pnpm --filter @tfm-bic/web dev` (`apps/web`) and `pnpm --filter @tfm-bic/api start:test`
+tests run in: `pnpm --filter @verbysia/web dev` (`apps/web`) and `pnpm --filter @verbysia/api start:test`
 with `NODE_ENV=test` (`apps/api`, booting against an in-process PGlite instance — no
 Docker/network database needed even in CI, see [ADR-005](../adr/adr-005-database.md) and
 `tests/e2e/playwright.config.ts`). No separate "deploy to a preview environment" step exists yet
@@ -272,10 +272,10 @@ Added after the Quality Gate (the M2 stages are unchanged):
 | Stage                    | What it does                                                                                                                                                                                                       |
 | ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | Secret Scan              | gitleaks `v8.30.1` over the full Git history; `.git` is streamed via stdin because the controller uses the host's Docker daemon (a `-v` path would resolve on the host). Findings are redacted and fail the build. |
-| Build Image              | `infrastructure/docker/app.Dockerfile` → `tfm-bic:<first 12 hex of the commit>`; only `APP_VERSION` and `GIT_COMMIT` are build args.                                                                               |
+| Build Image              | `infrastructure/docker/app.Dockerfile` → `verbysia:<first 12 hex of the commit>`; only `APP_VERSION` and `GIT_COMMIT` are build args.                                                                              |
 | Validate Image           | `infrastructure/docker/validate-image.sh` (throwaway Postgres + staging container; see the script header).                                                                                                         |
 | Record Release Candidate | `release-candidate.json` (commit, version, image tag and id, migrations) archived and fingerprinted.                                                                                                               |
-| Push Image               | Only with `PUSH_IMAGE=true` on `main`, `IMAGE_REGISTRY` set and a `tfm-bic-registry` credential — registry PENDING, so skipped by default.                                                                         |
+| Push Image               | Only with `PUSH_IMAGE=true` on `main`, `IMAGE_REGISTRY` set and a `verbysia-registry` credential — registry PENDING, so skipped by default.                                                                        |
 
 Deploy to staging, staging smoke, the production approval `input` gate, production deploy and production smoke are **not
 defined** until the hosting provider is decided (never deploy to an unapproved target). They will call

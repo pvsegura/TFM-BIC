@@ -11,9 +11,9 @@
 
 | Campo                 | Valor                                                                                                                        |
 | --------------------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| Nombre                | **TFM-BIC** — plataforma web para aprender idiomas                                                                           |
+| Nombre                | **VerbySia** — plataforma web para aprender idiomas                                                                          |
 | Contexto              | Trabajo de Fin de Máster, _Máster en Desarrollo de Software con IA_ (BIC)                                                    |
-| Autor                 | **[RELLENAR: nombre completo]** (usuario GitHub `pascual143`, firma en la web: "© 2026 pvsegura · TFM-BIC")                  |
+| Autor                 | **[RELLENAR: nombre completo]** (usuario GitHub `pascual143`, firma en la web: "© 2026 pvsegura · VerbySia")                 |
 | Repositorio           | **[RELLENAR: URL de GitHub]** (rama principal `main`)                                                                        |
 | Demo pública          | **https://www.verbysia.com** (Render Free + Neon Free; entorno `staging`)                                                    |
 | Dominio               | **verbysia.com**, comprado en **Namecheap**; `verbysia.com` redirige (301) a `www.verbysia.com`, que apunta por DNS a Render |
@@ -448,8 +448,8 @@ la base de datos de la demo (Neon)**. Hay que crearla antes de entregar:
 2. Desde el repo, en **CMD**, con la cadena de conexión de Neon (no la compartas ni la subas a Git):
    ```
    set "DATABASE_URL=postgresql://...?sslmode=require"
-   pnpm --filter @tfm-bic/data teacher:admin promote <emailProfesor>
-   pnpm --filter @tfm-bic/data teacher:admin link <emailProfesor> <emailAlumno>
+   pnpm --filter @verbysia/data teacher:admin promote <emailProfesor>
+   pnpm --filter @verbysia/data teacher:admin link <emailProfesor> <emailAlumno>
    ```
 3. Entrar como profesor → aparece el enlace **Teacher** → `/teacher`.
 4. Con la cuenta de alumno se puede probar también el **AI Coach** en `/learn/coach` (p. ej. fallar un ejercicio y
@@ -510,7 +510,7 @@ Requisitos:
 
 ```
 Con el contexto anterior, redacta el contenido de un documento Word (8–12 páginas) titulado
-"TFM-BIC — Memoria resumida del proceso de desarrollo", en español formal y académico.
+"VerbySia — Memoria resumida del proceso de desarrollo", en español formal y académico.
 Estructura:
 1. Portada (título, autor [RELLENAR], máster, fecha 2026-10).
 2. Índice.
@@ -541,7 +541,7 @@ Con el contexto anterior, crea una presentación de 10 diapositivas en español 
 Para cada diapositiva dame: título, 3–5 viñetas cortas, sugerencia visual (diagrama/icono/captura) y notas
 del orador (60–90 palabras). Estilo visual: papel de cuaderno claro, acento naranja (#F26A21 aprox.) y azul
 marino, tipografía sans geométrica (tipo Bricolage Grotesque). Estructura:
-1. Portada: TFM-BIC — aprender idiomas con vídeo, un coach de IA y gamificación (autor, máster, URL demo).
+1. Portada: VerbySia — aprender idiomas con vídeo, un coach de IA y gamificación (autor, máster, URL demo).
 2. El problema.
 3. La solución: qué es la aplicación.
 4. Funcionalidades: alumno, profesor y público (dashboard del profesor destacado).

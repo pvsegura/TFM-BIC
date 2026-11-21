@@ -1,12 +1,12 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import type {
   ExerciseAnswerResponse,
   ExerciseListResponse,
   ExerciseResponse,
-} from "@tfm-bic/contracts";
-import { makeExerciseCatalog } from "@tfm-bic/application/testing";
-import { createExerciseId, ExerciseTypeRegistry, type Exercise } from "@tfm-bic/domain";
-import { makeMultipleChoiceExercise } from "@tfm-bic/domain/testing";
+} from "@verbysia/contracts";
+import { makeExerciseCatalog } from "@verbysia/application/testing";
+import { createExerciseId, ExerciseTypeRegistry, type Exercise } from "@verbysia/domain";
+import { makeMultipleChoiceExercise } from "@verbysia/domain/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

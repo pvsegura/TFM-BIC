@@ -1,11 +1,11 @@
-import type { UserVocabularyRepository } from "@tfm-bic/application";
+import type { UserVocabularyRepository } from "@verbysia/application";
 import {
   ALLOWED_STATUS_CHANGES,
   createVocabularyItemId,
   type StoredVocabularyStatus,
   type UserVocabularyEntry,
   type VocabularyItemId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { and, eq, inArray, sql } from "drizzle-orm";
 
 import type { VocabularyDb } from "./db/client.js";

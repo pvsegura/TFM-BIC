@@ -8,7 +8,7 @@ import {
   multipleChoiceEvaluator,
   multipleChoicePresenter,
   UnsupportedExerciseTypeError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { GetContentUseCase } from "../../content/use-cases/get-content.use-case.js";

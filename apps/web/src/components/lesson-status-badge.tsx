@@ -1,4 +1,4 @@
-import type { LessonProgressResponse } from "@tfm-bic/contracts";
+import type { LessonProgressResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
 

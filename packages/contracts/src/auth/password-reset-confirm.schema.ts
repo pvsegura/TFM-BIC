@@ -1,4 +1,4 @@
-import { MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH } from "@tfm-bic/domain";
+import { MAX_PASSWORD_LENGTH, MIN_PASSWORD_LENGTH } from "@verbysia/domain";
 import { z } from "zod";
 
 export const passwordResetConfirmSchema = z

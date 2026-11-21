@@ -9,7 +9,7 @@ import {
   ROSTER_ACTIVITY_FILTERS,
   ROSTER_SORT_DIRECTIONS,
   ROSTER_SORT_FIELDS,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { wholeNumberText } from "../common/whole-number-text.js";

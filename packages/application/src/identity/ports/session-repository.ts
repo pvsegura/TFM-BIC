@@ -1,4 +1,4 @@
-import type { Session } from "@tfm-bic/domain";
+import type { Session } from "@verbysia/domain";
 
 export interface CreateSessionInput {
   userId: string;

@@ -1,10 +1,10 @@
-import type { Clock, UserPhoneticProgressRepository } from "@tfm-bic/application";
+import type { Clock, UserPhoneticProgressRepository } from "@verbysia/application";
 import {
   createPhoneticsDb,
   DrizzleUserPhoneticProgressRepository,
   SystemClock,
   type PhoneticsDb,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the phonetics routes need beyond the content dependencies (phonetics content is the

@@ -1,4 +1,4 @@
-import type { StudentProfile } from "@tfm-bic/domain";
+import type { StudentProfile } from "@verbysia/domain";
 
 import type { ProfileRepository } from "../ports/profile-repository.js";
 

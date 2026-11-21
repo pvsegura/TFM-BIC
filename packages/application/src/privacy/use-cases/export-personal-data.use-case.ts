@@ -1,4 +1,4 @@
-import { PERSONAL_DATA_EXPORT_VERSION, type Role } from "@tfm-bic/domain";
+import { PERSONAL_DATA_EXPORT_VERSION, type Role } from "@verbysia/domain";
 
 import type { Clock } from "../../ports/clock.js";
 import type {

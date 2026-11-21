@@ -3,7 +3,7 @@ import {
   isPublished,
   validateContentCatalog,
   type ContentCatalog,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { beforeAll, describe, expect, it } from "vitest";
 
 import { DEFAULT_CONTENT_ROOT } from "./content-root.js";

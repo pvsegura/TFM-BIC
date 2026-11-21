@@ -1,5 +1,5 @@
-import type { AccountErasureStore } from "@tfm-bic/application";
-import { validateUserDataRegister, type UserDataRegisterEntry } from "@tfm-bic/domain";
+import type { AccountErasureStore } from "@verbysia/application";
+import { validateUserDataRegister, type UserDataRegisterEntry } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 
 import type { PrivacyDb } from "./db/client.js";

@@ -1,5 +1,5 @@
-import type { ExerciseRepository } from "@tfm-bic/application";
-import type { ContentCatalog, Exercise, ExerciseId, LessonId } from "@tfm-bic/domain";
+import type { ExerciseRepository } from "@verbysia/application";
+import type { ContentCatalog, Exercise, ExerciseId, LessonId } from "@verbysia/domain";
 
 /**
  * An `ExerciseRepository` over an already-validated catalog held in memory — the

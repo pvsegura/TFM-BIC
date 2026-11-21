@@ -3,7 +3,7 @@ import {
   isPublished,
   type ContentId,
   type ContentItem,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { isVisibleInCatalog } from "../is-visible-in-catalog.js";
 import type { ContentRepository } from "../ports/content-repository.js";

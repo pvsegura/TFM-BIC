@@ -6,8 +6,8 @@ import {
   resolveCoachContext,
   type CoachContextInput,
   type ResolvedCoachContext,
-} from "@tfm-bic/application";
-import { createDefaultExerciseTypeRegistry, type LanguageId } from "@tfm-bic/domain";
+} from "@verbysia/application";
+import { createDefaultExerciseTypeRegistry, type LanguageId } from "@verbysia/domain";
 
 import type { CoachDependencies } from "./coach-dependencies.js";
 import type { ContentDependencies } from "./content-dependencies.js";

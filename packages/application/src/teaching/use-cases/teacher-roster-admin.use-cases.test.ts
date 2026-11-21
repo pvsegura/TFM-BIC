@@ -1,4 +1,4 @@
-import { InvalidTeacherStudentLinkError } from "@tfm-bic/domain";
+import { InvalidTeacherStudentLinkError } from "@verbysia/domain";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { FakeUserRepository, FixedClock } from "../../identity/test-support/fakes.js";

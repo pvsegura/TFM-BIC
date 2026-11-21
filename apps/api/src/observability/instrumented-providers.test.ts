@@ -4,7 +4,7 @@ import {
   type AudioGenerationRequest,
   type AudioGenerationService,
   type OutgoingEmail,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 import { describe, expect, it, vi } from "vitest";
 
 import { instrumentAudioProvider, instrumentEmailProvider } from "./instrumented-providers.js";

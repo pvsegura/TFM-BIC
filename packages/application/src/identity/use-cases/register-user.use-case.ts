@@ -1,4 +1,4 @@
-import { createEmail, createPassword, DuplicateEmailError } from "@tfm-bic/domain";
+import { createEmail, createPassword, DuplicateEmailError } from "@verbysia/domain";
 
 import { ignoreEmailDeliveryFailure } from "../ignore-email-delivery-failure.js";
 import type { Clock } from "../../ports/clock.js";

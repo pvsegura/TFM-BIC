@@ -2,7 +2,7 @@ import {
   InvalidAvatarIdError,
   InvalidNicknameError,
   InvalidProfileNameError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 export interface MappedProfileError {
   statusCode: number;

@@ -1,5 +1,5 @@
-import { loadEnv } from "@tfm-bic/config";
-import type { ContentListResponse, ContentResponse } from "@tfm-bic/contracts";
+import { loadEnv } from "@verbysia/config";
+import type { ContentListResponse, ContentResponse } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 
@@ -215,7 +215,7 @@ describe("GET /content/:contentId", () => {
     const response = await app.inject({ method: "GET", url: "/content/..%2F..%2Fpackage.json" });
 
     expect([400, 404]).toContain(response.statusCode);
-    expect(response.body).not.toContain("tfm-bic");
+    expect(response.body).not.toContain("verbysia");
   });
 
   it("serializes ordinary punctuation as inert JSON string data, unchanged", async () => {

@@ -1,4 +1,4 @@
-import type { CoachMode, LanguageId, LevelId } from "@tfm-bic/domain";
+import type { CoachMode, LanguageId, LevelId } from "@verbysia/domain";
 
 import type { AgentToolDeclaration } from "../ports/ai-agent-service.js";
 

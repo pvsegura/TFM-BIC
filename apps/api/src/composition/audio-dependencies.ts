@@ -2,14 +2,14 @@ import type {
   AudioCache,
   AudioGenerationService,
   GenerateAudioOptions,
-} from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
+} from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
 import {
   DisabledAudioGenerationService,
   FakeAudioGenerationService,
   GeminiAudioProvider,
   InMemoryAudioCache,
-} from "@tfm-bic/data";
+} from "@verbysia/data";
 
 /**
  * Everything the audio-generation routes need beyond the content dependencies (the text comes from

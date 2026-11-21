@@ -1,4 +1,8 @@
-import { MAX_NICKNAME_LENGTH, MAX_PROFILE_NAME_LENGTH, MIN_NICKNAME_LENGTH } from "@tfm-bic/domain";
+import {
+  MAX_NICKNAME_LENGTH,
+  MAX_PROFILE_NAME_LENGTH,
+  MIN_NICKNAME_LENGTH,
+} from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { check, pgTable, text, timestamp, uuid } from "drizzle-orm/pg-core";
 

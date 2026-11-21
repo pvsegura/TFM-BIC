@@ -5,8 +5,8 @@ import {
   type ContentCatalog,
   type PhoneticRepresentation,
   type PhoneticTopic,
-} from "@tfm-bic/domain";
-import { makePhoneticRepresentation, makePhoneticTopic } from "@tfm-bic/domain/testing";
+} from "@verbysia/domain";
+import { makePhoneticRepresentation, makePhoneticTopic } from "@verbysia/domain/testing";
 import { describe, expect, it } from "vitest";
 
 import { CatalogPhoneticRepository } from "./catalog-phonetic-repository.js";

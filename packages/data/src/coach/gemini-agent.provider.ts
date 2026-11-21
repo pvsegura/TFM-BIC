@@ -11,7 +11,7 @@ import {
   type AgentToolResult,
   type AgentUsage,
   type AiAgentService,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import {
   geminiBackoffMs,

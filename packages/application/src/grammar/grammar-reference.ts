@@ -5,7 +5,7 @@ import {
   type GrammarTopic,
   type GrammarTopicId,
   type LanguageId,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 /**
  * Where grammar reference topics come from (M23). Storage only: it returns every status, and

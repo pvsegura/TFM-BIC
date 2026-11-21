@@ -8,7 +8,7 @@ import {
   startPendingSubscription,
   unsubscribe,
   type NewsletterPreference,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import { EmailDeliveryError } from "../../email/email-delivery.error.js";
 import {

@@ -1,4 +1,4 @@
-import type { RewardsResponse } from "@tfm-bic/contracts";
+import type { RewardsResponse } from "@verbysia/contracts";
 
 import { AchievementIcon } from "./achievement-icon.js";
 import { formatPointsEarned } from "./reward-labels.js";

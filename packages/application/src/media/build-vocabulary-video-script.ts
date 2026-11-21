@@ -8,7 +8,7 @@ import {
   type VideoScript,
   type VocabularyCategory,
   type VocabularyItem,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 
 import {
   FRAMING,

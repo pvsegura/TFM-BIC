@@ -1,4 +1,4 @@
-import { InvalidSpeechTextError } from "@tfm-bic/domain";
+import { InvalidSpeechTextError } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

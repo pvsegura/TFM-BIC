@@ -10,5 +10,5 @@ export const PERSONAL_DATA_EXPORT_VERSION = "2";
  * name can end up in a shared downloads folder, a browser history or a support ticket).
  */
 export function personalDataExportFileName(generatedAt: Date): string {
-  return `tfm-bic-personal-data-${generatedAt.toISOString().slice(0, 10)}.json`;
+  return `verbysia-personal-data-${generatedAt.toISOString().slice(0, 10)}.json`;
 }

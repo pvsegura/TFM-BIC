@@ -1,4 +1,4 @@
-import type { LevelResponse } from "@tfm-bic/contracts";
+import type { LevelResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 export interface LevelSelectorProps {

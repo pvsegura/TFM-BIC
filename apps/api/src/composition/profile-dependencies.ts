@@ -1,5 +1,5 @@
-import type { ProfileRepository } from "@tfm-bic/application";
-import { createProfileDb, DrizzleProfileRepository, type ProfileDb } from "@tfm-bic/data";
+import type { ProfileRepository } from "@verbysia/application";
+import { createProfileDb, DrizzleProfileRepository, type ProfileDb } from "@verbysia/data";
 
 /**
  * Everything the profile routes need, behind one bag so `server.ts` doesn't

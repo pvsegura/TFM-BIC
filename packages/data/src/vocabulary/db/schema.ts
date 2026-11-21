@@ -1,4 +1,4 @@
-import { STORED_VOCABULARY_STATUSES } from "@tfm-bic/domain";
+import { STORED_VOCABULARY_STATUSES } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { check, pgTable, primaryKey, text, timestamp, uuid } from "drizzle-orm/pg-core";
 

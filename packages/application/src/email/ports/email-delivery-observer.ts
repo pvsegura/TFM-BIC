@@ -1,4 +1,4 @@
-import type { EmailCategory, EmailTemplateId } from "@tfm-bic/domain";
+import type { EmailCategory, EmailTemplateId } from "@verbysia/domain";
 
 /**
  * What the senders report after each attempt — for a structured log line. It carries no

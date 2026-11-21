@@ -1,4 +1,4 @@
-import type { LanguageResponse } from "@tfm-bic/contracts";
+import type { LanguageResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
 
 export interface LanguageSelectorProps {

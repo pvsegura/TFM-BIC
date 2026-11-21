@@ -1,4 +1,4 @@
-import { createLanguageId, type CoachMode } from "@tfm-bic/domain";
+import { createLanguageId, type CoachMode } from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import {

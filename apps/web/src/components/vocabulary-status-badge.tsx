@@ -1,4 +1,4 @@
-import type { VocabularyUserStateResponse } from "@tfm-bic/contracts";
+import type { VocabularyUserStateResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
 

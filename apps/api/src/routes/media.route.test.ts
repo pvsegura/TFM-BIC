@@ -1,9 +1,9 @@
-import { loadEnv } from "@tfm-bic/config";
+import { loadEnv } from "@verbysia/config";
 import {
   makeContentItem,
   makeLanguageLevel,
   makeVocabularyCatalog,
-} from "@tfm-bic/application/testing";
+} from "@verbysia/application/testing";
 import type { FastifyInstance } from "fastify";
 import { afterEach, describe, expect, it } from "vitest";
 

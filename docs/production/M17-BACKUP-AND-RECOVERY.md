@@ -42,7 +42,7 @@ the minimum (runbook).
 Never restore over production in place. Restore into a **new** database/branch, validate, then switch.
 
 1. Create an empty target (Neon: a branch from a point in time, or a new database; locally: a container).
-2. Restore: `pg_restore --no-owner --no-privileges --exit-on-error --dbname="$TARGET_URL" tfm_bic.dump`
+2. Restore: `pg_restore --no-owner --no-privileges --exit-on-error --dbname="$TARGET_URL" verbysia.dump`
    (for a Neon point-in-time branch this step is not needed).
 3. Re-apply role grants (the dump carries no owners/privileges): run the SQL in
    [deployment architecture — Database](M17-DEPLOYMENT-ARCHITECTURE.md#database), then

@@ -1,4 +1,4 @@
-import type { VocabularyItemId } from "@tfm-bic/domain";
+import type { VocabularyItemId } from "@verbysia/domain";
 
 import type { ContentRepository } from "../../content/ports/content-repository.js";
 import type { Clock } from "../../ports/clock.js";

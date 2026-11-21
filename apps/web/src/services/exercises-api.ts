@@ -6,7 +6,7 @@ import {
   type ExerciseAnswerResponse,
   type ExerciseListResponse,
   type ExerciseResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

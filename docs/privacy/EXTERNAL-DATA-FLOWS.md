@@ -72,7 +72,7 @@ Answer → returned to the student. Nothing is stored, here or at the provider.
 
 ## Hyperframes video rendering (M21) — offline media pipeline
 
-Lesson and word videos are rendered by the operator's offline media pipeline (`pnpm --filter @tfm-bic/data media`,
+Lesson and word videos are rendered by the operator's offline media pipeline (`pnpm --filter @verbysia/data media`,
 ADR-031), never from a request. Hyperframes runs as a local child process over authored content and published
 narration clips; **no user data is involved**. M11's per-learner, on-demand generation
 (`POST /video-generations` and the `video_generation_jobs` table) was retired on 2026-10-21.

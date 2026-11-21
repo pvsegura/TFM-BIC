@@ -1,4 +1,4 @@
-import type { VocabularyEvent } from "@tfm-bic/domain";
+import type { VocabularyEvent } from "@verbysia/domain";
 
 /**
  * Where a vocabulary use case hands off something that happened, without knowing who — if anyone

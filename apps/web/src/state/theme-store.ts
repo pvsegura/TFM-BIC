@@ -37,7 +37,7 @@ export const useThemeStore = create<ThemeState>()(
       },
     }),
     {
-      name: "tfm-bic-theme",
+      name: "verbysia-theme",
       storage: createJSONStorage(() => localStorage),
     },
   ),

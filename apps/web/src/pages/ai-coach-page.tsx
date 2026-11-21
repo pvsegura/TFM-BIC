@@ -3,7 +3,7 @@ import {
   vocabularyItemIdSchema,
   type CoachContextRef,
   type CoachStatusResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
 

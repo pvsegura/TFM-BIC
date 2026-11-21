@@ -1,4 +1,4 @@
-import type { ResolveSessionUseCase } from "@tfm-bic/application";
+import type { ResolveSessionUseCase } from "@verbysia/application";
 import type { FastifyReply, FastifyRequest } from "fastify";
 
 import { SESSION_COOKIE_NAME } from "../constants/session-cookie.js";

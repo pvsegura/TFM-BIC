@@ -1,4 +1,4 @@
-import type { Stage, StageAction } from "@tfm-bic/domain";
+import type { Stage, StageAction } from "@verbysia/domain";
 
 import { characterMetrics } from "./characters.js";
 import { FLOOR_Y } from "./environments.js";

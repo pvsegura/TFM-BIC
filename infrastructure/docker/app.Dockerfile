@@ -1,12 +1,12 @@
 # syntax=docker/dockerfile:1
 #
-# The TFM-BIC production image (M17, ADR-028): one image, one process — the API, which also serves
+# The VerbySia production image (M17, ADR-028): one image, one process — the API, which also serves
 # the built SPA from the same origin. Build from the repository root:
 #
 #   docker build -f infrastructure/docker/app.Dockerfile \
 #     --build-arg APP_VERSION="0.1.0+$(git rev-parse --short=12 HEAD)" \
 #     --build-arg GIT_COMMIT="$(git rev-parse HEAD)" \
-#     -t tfm-bic:<git-sha> .
+#     -t verbysia:<git-sha> .
 #
 # No secret is passed at build time or stored in any layer: every credential is injected at run time
 # by the platform (docs/production/M17-SECRETS-MANAGEMENT.md). The image defaults to
@@ -32,8 +32,8 @@ RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
 
 # Content is validated with the same loader the API runs at start-up, then both apps are built.
 RUN pnpm content:validate \
- && pnpm --filter @tfm-bic/web build \
- && pnpm --filter @tfm-bic/api build
+ && pnpm --filter @verbysia/web build \
+ && pnpm --filter @verbysia/api build
 
 # Assemble exactly what the runtime needs:
 #   dist/        the bundled API and migration runner (plain JavaScript)
@@ -53,7 +53,7 @@ RUN set -eu; \
       cp -r "$dir" "/out/migrations/$context/db/migrations"; \
     done; \
     cp -rL "$(dirname "$(readlink -f apps/api/node_modules/argon2)")" /out/node_modules; \
-    printf '{\n  "name": "tfm-bic-runtime",\n  "private": true,\n  "type": "module"\n}\n' > /out/package.json
+    printf '{\n  "name": "verbysia-runtime",\n  "private": true,\n  "type": "module"\n}\n' > /out/package.json
 
 # ---------------------------------------------------------------------------------------------------
 FROM ${NODE_IMAGE} AS runtime
@@ -65,7 +65,7 @@ RUN rm -rf /usr/local/lib/node_modules/npm /usr/local/lib/node_modules/corepack 
 
 ARG APP_VERSION=unknown
 ARG GIT_COMMIT=unknown
-LABEL org.opencontainers.image.title="tfm-bic" \
+LABEL org.opencontainers.image.title="verbysia" \
       org.opencontainers.image.version="${APP_VERSION}" \
       org.opencontainers.image.revision="${GIT_COMMIT}"
 

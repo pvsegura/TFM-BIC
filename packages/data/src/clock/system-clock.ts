@@ -1,4 +1,4 @@
-import type { Clock } from "@tfm-bic/application";
+import type { Clock } from "@verbysia/application";
 
 /**
  * Real adapter for the `Clock` port — the only place in this package that

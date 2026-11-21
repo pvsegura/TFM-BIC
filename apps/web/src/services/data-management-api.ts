@@ -1,4 +1,4 @@
-import { personalDataExportSchema } from "@tfm-bic/contracts";
+import { personalDataExportSchema } from "@verbysia/contracts";
 
 import { toApiError } from "./api-request.js";
 
@@ -9,7 +9,7 @@ import { toApiError } from "./api-request.js";
  */
 const EXPORT_URL = "/data-management/export";
 const DELETION_URL = "/data-management/account-deletion";
-const FALLBACK_FILE_NAME = "tfm-bic-personal-data.json";
+const FALLBACK_FILE_NAME = "verbysia-personal-data.json";
 /** Only a plain file name from the server is used; anything else (a path, quotes) is ignored. */
 const SAFE_FILE_NAME = /filename="([A-Za-z0-9._-]+\.json)"/;
 

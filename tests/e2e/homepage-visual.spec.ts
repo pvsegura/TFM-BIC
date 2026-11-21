@@ -61,7 +61,7 @@ test.describe("homepage — phone and dark theme", () => {
     await page.setViewportSize({ width: 1440, height: 900 });
     await page.addInitScript(() =>
       localStorage.setItem(
-        "tfm-bic-theme",
+        "verbysia-theme",
         JSON.stringify({ state: { theme: "dark" }, version: 0 }),
       ),
     );

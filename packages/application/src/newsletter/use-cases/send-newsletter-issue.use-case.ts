@@ -1,4 +1,4 @@
-import { toMarketingRecipient } from "@tfm-bic/domain";
+import { toMarketingRecipient } from "@verbysia/domain";
 
 import { EmailDeliveryError } from "../../email/email-delivery.error.js";
 import type { MarketingEmailSender } from "../../email/email-senders.js";

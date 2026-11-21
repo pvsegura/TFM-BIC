@@ -1,4 +1,4 @@
-# TFM-BIC — VerbySia
+# VerbySia
 
 ### Plataforma web para aprender idiomas con vídeo pedagógico, audio generado con IA, gamificación y un AI Learning Coach
 
@@ -51,7 +51,7 @@
 
 ## 1. Descripción
 
-**VerbySia / TFM-BIC** es una aplicación web para aprender idiomas mediante una combinación de:
+**VerbySia** es una aplicación web para aprender idiomas mediante una combinación de:
 
 - vídeos pedagógicos generados con IA;
 - audio de pronunciación generado con Gemini TTS;

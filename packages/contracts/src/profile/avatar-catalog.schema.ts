@@ -1,4 +1,4 @@
-import { AVATAR_CATALOG, AVATAR_IDS, type AvatarId } from "@tfm-bic/domain";
+import { AVATAR_CATALOG, AVATAR_IDS, type AvatarId } from "@verbysia/domain";
 import { z } from "zod";
 
 /**

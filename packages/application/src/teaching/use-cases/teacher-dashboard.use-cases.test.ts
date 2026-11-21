@@ -5,12 +5,12 @@ import {
   ForbiddenError,
   TeachingStudentNotFoundError,
   type ContentCatalog,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { beforeEach, describe, expect, it } from "vitest";
 
 import { FakeContentRepository, makeSampleCatalog } from "../../content/test-support/fakes.js";
 import { ListContentUseCase } from "../../content/use-cases/list-content.use-case.js";
-import { makeTrueFalseExercise } from "@tfm-bic/domain/testing";
+import { makeTrueFalseExercise } from "@verbysia/domain/testing";
 import { FakeExerciseRepository } from "../../exercise/test-support/fakes.js";
 import {
   AchievementTexts,

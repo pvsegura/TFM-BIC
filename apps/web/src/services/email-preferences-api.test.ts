@@ -1,4 +1,4 @@
-import { NEWSLETTER_CONSENT_VERSION } from "@tfm-bic/contracts";
+import { NEWSLETTER_CONSENT_VERSION } from "@verbysia/contracts";
 import { afterEach, describe, expect, it, vi } from "vitest";
 
 import { ApiError } from "./api-error.js";

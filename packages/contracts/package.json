@@ -1,5 +1,5 @@
 {
-  "name": "@tfm-bic/contracts",
+  "name": "@verbysia/contracts",
   "version": "0.1.0",
   "private": true,
   "type": "module",
@@ -15,7 +15,7 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@tfm-bic/domain": "workspace:*",
+    "@verbysia/domain": "workspace:*",
     "zod": "^4.4.3"
   },
   "devDependencies": {

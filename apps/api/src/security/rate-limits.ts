@@ -1,5 +1,5 @@
-import type { AppEnv } from "@tfm-bic/config";
-import { normalizeEmail } from "@tfm-bic/domain";
+import type { AppEnv } from "@verbysia/config";
+import { normalizeEmail } from "@verbysia/domain";
 import type { FastifyInstance, FastifyReply, FastifyRequest } from "fastify";
 
 /**

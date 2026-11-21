@@ -6,7 +6,7 @@ import {
   type TeacherOverviewResponse,
   type TeacherStudentDetailResponse,
   type TeacherStudentsResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

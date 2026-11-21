@@ -7,7 +7,7 @@ import {
   type ContentResponse,
   type LanguageLevelsResponse,
   type LanguagesResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestPublicJson } from "./api-request.js";
 

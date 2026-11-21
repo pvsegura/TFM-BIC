@@ -1,4 +1,4 @@
-import type { UserDataRegisterEntry } from "@tfm-bic/domain";
+import type { UserDataRegisterEntry } from "@verbysia/domain";
 
 /**
  * Every table that holds rows about a user, what they are, and what account deletion does to

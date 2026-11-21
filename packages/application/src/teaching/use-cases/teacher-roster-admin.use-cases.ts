@@ -1,4 +1,4 @@
-import { assertCanLink, InvalidTeacherStudentLinkError, normalizeEmail } from "@tfm-bic/domain";
+import { assertCanLink, InvalidTeacherStudentLinkError, normalizeEmail } from "@verbysia/domain";
 
 import type { UserRepository } from "../../identity/ports/user-repository.js";
 import type { Clock } from "../../ports/clock.js";

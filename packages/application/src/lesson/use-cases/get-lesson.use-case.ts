@@ -1,4 +1,4 @@
-import type { ContentItem, LessonId } from "@tfm-bic/domain";
+import type { ContentItem, LessonId } from "@verbysia/domain";
 
 import type { GetContentUseCase } from "../../content/use-cases/get-content.use-case.js";
 import { findVisibleLesson } from "../find-visible-lesson.js";

@@ -6,7 +6,7 @@ import {
   ExerciseNotFoundError,
   InvalidExerciseAnswerError,
   LessonNotFoundError,
-} from "@tfm-bic/domain";
+} from "@verbysia/domain";
 import { describe, expect, it } from "vitest";
 
 import { FakeContentRepository } from "../../content/test-support/fakes.js";

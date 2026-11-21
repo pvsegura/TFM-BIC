@@ -1,4 +1,4 @@
-import { DeleteAccountUseCase, ExportPersonalDataUseCase } from "@tfm-bic/application";
+import { DeleteAccountUseCase, ExportPersonalDataUseCase } from "@verbysia/application";
 
 import type { AuthDependencies } from "./auth-dependencies.js";
 import type { PrivacyDependencies } from "./privacy-dependencies.js";

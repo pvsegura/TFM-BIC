@@ -11,8 +11,8 @@ import {
   type PhoneticTopic,
   type PhoneticTopicId,
   type UserPhoneticProgress,
-} from "@tfm-bic/domain";
-import { makePhoneticRepresentation, makePhoneticTopic } from "@tfm-bic/domain/testing";
+} from "@verbysia/domain";
+import { makePhoneticRepresentation, makePhoneticTopic } from "@verbysia/domain/testing";
 
 import { makeSampleCatalog } from "../../content/test-support/fakes.js";
 import type { PhoneticContentRepository } from "../ports/phonetic-content-repository.js";

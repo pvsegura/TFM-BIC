@@ -39,9 +39,9 @@ trap cleanup EXIT
 
 start_pg() { # name password
   docker run -d --name "$1" --network "$NET" -e POSTGRES_USER=admin -e POSTGRES_PASSWORD="$2" \
-    -e POSTGRES_DB=tfm_bic "$PG_IMAGE" >/dev/null
+    -e POSTGRES_DB=verbysia "$PG_IMAGE" >/dev/null
   for _ in $(seq 1 60); do
-    docker exec "$1" pg_isready -h 127.0.0.1 -U admin -d tfm_bic >/dev/null 2>&1 && return 0
+    docker exec "$1" pg_isready -h 127.0.0.1 -U admin -d verbysia >/dev/null 2>&1 && return 0
     sleep 1
   done
   fail "$1 did not start"
@@ -75,7 +75,7 @@ if [ -z "${SOURCE_DATABASE_URL:-}" ]; then
   step "Source: a throwaway database, migrated and filled through the app"
   SRC_PW="$(secret)"
   start_pg "$SRC" "$SRC_PW"
-  SOURCE_DATABASE_URL="postgres://admin:$SRC_PW@$SRC:5432/tfm_bic"
+  SOURCE_DATABASE_URL="postgres://admin:$SRC_PW@$SRC:5432/verbysia"
   docker run --rm --network "$NET" -e DATABASE_URL="$SOURCE_DATABASE_URL" "$IMAGE" \
     node dist/migrate.js --migrations-root /app/migrations | grep -q migrations.completed
   run_app "$SOURCE_DATABASE_URL"
@@ -99,27 +99,27 @@ fi
 step "Backup: pg_dump --format=custom (runs in a $PG_IMAGE client container)"
 t0=$(date +%s)
 docker run --rm --network "$NET" -e SRC_URL="$SOURCE_DATABASE_URL" -v "$VOL:/backup" "$PG_IMAGE" \
-  sh -c 'pg_dump --format=custom --no-owner --no-privileges --dbname="$SRC_URL" --file=/backup/tfm_bic.dump'
-echo "dump: $(docker run --rm -v "$VOL:/backup" "$PG_IMAGE" du -h /backup/tfm_bic.dump | cut -f1) in $(( $(date +%s) - t0 ))s"
+  sh -c 'pg_dump --format=custom --no-owner --no-privileges --dbname="$SRC_URL" --file=/backup/verbysia.dump'
+echo "dump: $(docker run --rm -v "$VOL:/backup" "$PG_IMAGE" du -h /backup/verbysia.dump | cut -f1) in $(( $(date +%s) - t0 ))s"
 
 step "Restore into a NEW, empty database"
 start_pg "$DST" "$DST_PW"
 t0=$(date +%s)
-docker run --rm --network "$NET" -e DST_URL="postgres://admin:$DST_PW@$DST:5432/tfm_bic" \
+docker run --rm --network "$NET" -e DST_URL="postgres://admin:$DST_PW@$DST:5432/verbysia" \
   -v "$VOL:/backup" "$PG_IMAGE" \
-  sh -c 'pg_restore --no-owner --no-privileges --exit-on-error --dbname="$DST_URL" /backup/tfm_bic.dump'
+  sh -c 'pg_restore --no-owner --no-privileges --exit-on-error --dbname="$DST_URL" /backup/verbysia.dump'
 echo "restored in $(( $(date +%s) - t0 ))s"
 
 step "Validate: every table has the same row count in source and restore"
 COUNT_SQL="SELECT string_agg(format('%s.%s=%s', schemaname, relname, (xpath('/row/c/text()', query_to_xml(format('SELECT count(*) AS c FROM %I.%I', schemaname, relname), false, true, '')))[1]::text), ' ' ORDER BY schemaname, relname) FROM pg_stat_user_tables"
 count() { docker run --rm --network "$NET" -e URL="$1" "$PG_IMAGE" psql -tA --dbname="$1" -c "$COUNT_SQL"; }
 src_counts="$(count "$SOURCE_DATABASE_URL")"
-dst_counts="$(count "postgres://admin:$DST_PW@$DST:5432/tfm_bic")"
+dst_counts="$(count "postgres://admin:$DST_PW@$DST:5432/verbysia")"
 echo "$dst_counts" | tr ' ' '\n' | grep -v '=0$' || true
 [ "$src_counts" = "$dst_counts" ] || fail "row counts differ between source and restore"
 
 step "Validate: the application runs on the restored copy"
-run_app "postgres://admin:$DST_PW@$DST:5432/tfm_bic"
+run_app "postgres://admin:$DST_PW@$DST:5432/verbysia"
 if [ -n "$DRILL_EMAIL" ]; then
   node -e '
     const [base, origin, email, password] = process.argv.slice(1);

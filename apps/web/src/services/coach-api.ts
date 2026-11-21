@@ -5,7 +5,7 @@ import {
   type CoachMessageRequestBody,
   type CoachMessageResponse,
   type CoachStatusResponse,
-} from "@tfm-bic/contracts";
+} from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
 

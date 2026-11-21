@@ -1,8 +1,8 @@
 import { randomBytes } from "node:crypto";
 
-import { GetHealthStatusUseCase } from "@tfm-bic/application";
-import type { AppEnv } from "@tfm-bic/config";
-import { sharedPostgresPools, SystemClock } from "@tfm-bic/data";
+import { GetHealthStatusUseCase } from "@verbysia/application";
+import type { AppEnv } from "@verbysia/config";
+import { sharedPostgresPools, SystemClock } from "@verbysia/data";
 import fastifyCookie from "@fastify/cookie";
 import fastifyRateLimit from "@fastify/rate-limit";
 import Fastify, { type FastifyInstance } from "fastify";

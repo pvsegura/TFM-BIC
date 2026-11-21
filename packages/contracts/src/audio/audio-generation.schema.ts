@@ -1,4 +1,4 @@
-import { AUDIO_FORMATS, VOICE_PROFILES } from "@tfm-bic/domain";
+import { AUDIO_FORMATS, VOICE_PROFILES } from "@verbysia/domain";
 import { z } from "zod";
 
 import { vocabularyItemIdSchema } from "../content/identifiers.schema.js";

@@ -1,4 +1,4 @@
-import { InvalidVocabularyTransitionError, VocabularyItemNotFoundError } from "@tfm-bic/domain";
+import { InvalidVocabularyTransitionError, VocabularyItemNotFoundError } from "@verbysia/domain";
 
 import { mapCatalogError, type MappedCatalogError } from "./catalog-error.mapper.js";
 

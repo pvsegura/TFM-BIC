@@ -7,7 +7,7 @@ import {
   type AudioGenerationRequest,
   type AudioGenerationService,
   type GeneratedAudio,
-} from "@tfm-bic/application";
+} from "@verbysia/application";
 
 import {
   geminiBackoffMs,

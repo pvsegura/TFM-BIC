@@ -1,4 +1,4 @@
-import { validateUserDataRegister } from "@tfm-bic/domain";
+import { validateUserDataRegister } from "@verbysia/domain";
 import { sql } from "drizzle-orm";
 import { afterAll, beforeAll, describe, expect, it } from "vitest";
 

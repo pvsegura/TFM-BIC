@@ -1,4 +1,4 @@
-import { CONTENT_STATUSES, GRAMMATICAL_GENDERS, PARTS_OF_SPEECH } from "@tfm-bic/domain";
+import { CONTENT_STATUSES, GRAMMATICAL_GENDERS, PARTS_OF_SPEECH } from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../content/content-block.schema.js";

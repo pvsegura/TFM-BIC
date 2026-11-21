@@ -5,7 +5,7 @@ import { defineConfig } from "drizzle-kit";
  * Identity's (drizzle.config.ts), Student Profile's, Lessons', Exercises', Gamification's,
  * Vocabulary's and Phonetics', so each bounded context owns its schema and history.
  * `video_generation_jobs` has a foreign key to `users`, so on a fresh database run Identity's
- * migration first (`pnpm --filter @tfm-bic/data db:migrate`), then this one
+ * migration first (`pnpm --filter @verbysia/data db:migrate`), then this one
  * (`db:migrate:video`). It does not depend on Profile, Lessons, Exercises, Gamification,
  * Vocabulary or Phonetics, so their order relative to it does not matter.
  *

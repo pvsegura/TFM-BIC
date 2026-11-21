@@ -1,4 +1,4 @@
-import type { TimeOfDay } from "@tfm-bic/domain";
+import type { TimeOfDay } from "@verbysia/domain";
 
 import { shade, tint } from "./color.js";
 
