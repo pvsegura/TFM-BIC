@@ -25,9 +25,10 @@ import { loadContentCatalog } from "./load-content-catalog.js";
  * here (and in `pnpm content:validate`) before it can reach a student.
  */
 const PL = createLanguageId("pl");
+const ES = createLanguageId("es");
 const A1 = createLevelId("a1");
-/** The language each course explains itself in: Polish for English speakers, English for Spanish speakers. */
-const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es" };
+/** The language each course explains itself in: English for the (hidden) Polish course, Spanish for the (hidden) English course, Polish for the Spanish course. */
+const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es", es: "pl" };
 
 let catalog: ContentCatalog;
 
@@ -44,7 +45,7 @@ describe("the shipped content catalog", () => {
     expect(validateContentCatalog(catalog)).toEqual([]);
   });
 
-  it("registers Polish with valid metadata", () => {
+  it("registers Polish with valid metadata, hidden from the catalog since the Spanish-for-Polish pivot", () => {
     const polish = catalog.languages.find((l) => l.code === PL);
 
     expect(polish).toEqual({
@@ -53,8 +54,23 @@ describe("the shipped content catalog", () => {
       nativeName: "polski",
       locale: "pl-PL",
       direction: "ltr",
+      isActive: false,
+    });
+  });
+
+  it("registers Spanish as the active course: A1 available, A2-B2 planned", () => {
+    expect(catalog.languages.find((l) => l.code === ES)).toEqual({
+      code: "es",
+      name: "Spanish",
+      nativeName: "español",
+      locale: "es-ES",
+      direction: "ltr",
       isActive: true,
     });
+    const status = Object.fromEntries(
+      catalog.languageLevels.filter((l) => l.languageId === ES).map((l) => [l.levelId, l.status]),
+    );
+    expect(status).toEqual({ a1: "available", a2: "planned", b1: "planned", b2: "planned" });
   });
 
   it("declares every Polish CEFR level as available, and backs each one with published content", () => {
@@ -133,24 +149,26 @@ describe("the shipped content through the real use cases", () => {
     repository = await FileSystemContentRepository.load(DEFAULT_CONTENT_ROOT);
   });
 
-  it("offers Polish as a language", async () => {
+  it("offers only Spanish as a language", async () => {
     const languages = await new ListLanguagesUseCase(repository).execute();
 
-    expect(languages.map((l) => l.code)).toContain("pl");
+    expect(languages.map((l) => l.code)).toEqual(["es"]);
   });
 
-  it("offers every Polish level, A1 to C2, as selectable", async () => {
-    const { levels } = await new ListLanguageLevelsUseCase(repository).execute({ languageId: PL });
+  it("offers Spanish A1 as selectable and A2-B2 as planned", async () => {
+    const { levels } = await new ListLanguageLevelsUseCase(repository).execute({ languageId: ES });
 
-    expect(levels.filter((l) => l.status === "available").map((l) => l.id)).toEqual(
-      CEFR_LEVELS.map((l) => l.id),
-    );
-    expect(levels.filter((l) => l.status === "planned")).toHaveLength(0);
+    expect(levels.filter((l) => l.status === "available").map((l) => l.id)).toEqual(["a1"]);
+    expect(levels.filter((l) => l.status === "planned").map((l) => l.id)).toEqual([
+      "a2",
+      "b1",
+      "b2",
+    ]);
   });
 
-  it("lists published Polish A1 content in order, and every item can be read in full", async () => {
-    const items = await new ListContentUseCase(repository).execute({ languageId: PL, levelId: A1 });
-    expect(items.length).toBeGreaterThanOrEqual(4);
+  it("lists published Spanish A1 content (the 7-day challenge) in order, and every item can be read in full", async () => {
+    const items = await new ListContentUseCase(repository).execute({ languageId: ES, levelId: A1 });
+    expect(items.length).toBeGreaterThanOrEqual(7);
     expect(items.map((i) => i.order)).toEqual([...items.map((i) => i.order)].sort((a, b) => a - b));
 
     const get = new GetContentUseCase(repository);

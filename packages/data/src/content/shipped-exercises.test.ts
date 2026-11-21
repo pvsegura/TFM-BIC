@@ -33,8 +33,8 @@ import { loadContentCatalog } from "./load-content-catalog.js";
  */
 const PL = createLanguageId("pl");
 const A1 = createLevelId("a1");
-/** The language each course explains itself in: Polish for English speakers, English for Spanish speakers. */
-const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es" };
+/** The language each course explains itself in: English for the (hidden) Polish course, Spanish for the (hidden) English course, Polish for the Spanish course. */
+const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es", es: "pl" };
 const registry = createDefaultExerciseTypeRegistry();
 
 let catalog: ContentCatalog;
@@ -231,7 +231,9 @@ describe("the shipped exercises through the real use cases", () => {
   });
 
   it("lists each lesson's exercises in order, and every one can be opened", async () => {
-    const lessonIds = [...new Set(catalog.exercises.map((e) => e.lessonId))];
+    const active = new Set(catalog.languages.filter((l) => l.isActive).map((l) => l.code));
+    const visible = catalog.exercises.filter((e) => active.has(e.languageId));
+    const lessonIds = [...new Set(visible.map((e) => e.lessonId))];
     expect(lessonIds.length).toBeGreaterThanOrEqual(2);
 
     for (const lessonId of lessonIds) {
