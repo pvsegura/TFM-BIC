@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-room-number",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "W dialogu z recepcji: jaki numer ma pokój Marka?",
+  "explanation": "Doscientos cuatro to 204.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "124"
+      },
+      {
+        "id": "b",
+        "text": "204"
+      },
+      {
+        "id": "c",
+        "text": "240"
+      },
+      {
+        "id": "d",
+        "text": "402"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

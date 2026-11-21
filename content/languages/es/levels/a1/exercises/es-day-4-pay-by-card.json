@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-pay-by-card",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Czy mogę zapłacić kartą?",
+  "explanation": "¿Puedo pagar con tarjeta? — puedo (mogę) + pagar (zapłacić) + con tarjeta (kartą).",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Puedo pagar con tarjeta?",
+      "Puedo pagar con tarjeta?",
+      "Puedo pagar con tarjeta",
+      "¿Puedo pagar con tarjeta"
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "title": "Dzień 2. Budujesz zdania: ser, estar, tener, querer",
+  "description": "Cztery czasowniki, z których zbudujesz dziesiątki zdań — i najważniejsza różnica między ser a estar.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — zamiast uczyć się list słówek, uczysz się wzorów zdań. Jeden wzór + wymiana jednego elementu = wiele nowych zdań. Dziś cztery czasowniki: ser i estar (oba znaczą „być”), tener (mieć) i querer (chcieć)."
+    },
+    {
+      "type": "explanation",
+      "text": "Odmiana w czasie teraźniejszym. ser: soy, eres, es, somos, sois, son. estar: estoy, estás, está, estamos, estáis, están. tener: tengo, tienes, tiene, tenemos, tenéis, tienen. querer: quiero, quieres, quiere, queremos, queréis, quieren."
+    },
+    {
+      "type": "explanation",
+      "text": "Ser czy estar? To największa pułapka dla Polaków, bo po polsku mamy jedno „być”. Ser opisuje, KIM lub CZYM ktoś jest: tożsamość, pochodzenie, zawód, cechy (soy polaco, es profesora, es alto). Estar opisuje, GDZIE coś jest i W JAKIM STANIE jest teraz (estoy en Madrid, estoy cansado, la sopa está fría)."
+    },
+    {
+      "type": "example",
+      "text": "Soy de Polonia. Estoy en Madrid.",
+      "translation": "Jestem z Polski. Jestem w Madrycie.",
+      "note": "Pochodzenie → ser. Miejsce, w którym jesteś → estar."
+    },
+    {
+      "type": "example",
+      "text": "Estoy cansado.",
+      "translation": "Jestem zmęczony.",
+      "note": "Stan w tej chwili → estar. Częsty błąd Polaków: soy cansado."
+    },
+    {
+      "type": "example",
+      "text": "Mi hermana es médica.",
+      "translation": "Moja siostra jest lekarką.",
+      "note": "Zawód → ser. Po ser przed zawodem nie stawiamy rodzajnika: es médica, nie es una médica."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: eSTAR zaczyna się jak STAN — opisuje stan i położenie (gdzie jesteś, jak się czujesz). SER kojarz z SERcem: to, co należy do twojej istoty — kim jesteś i skąd pochodzisz. To pomoc na początek, a nie pełna reguła: z czasem poznasz wyjątki."
+    },
+    {
+      "type": "explanation",
+      "text": "Tener i querer: wzory do wymiany. Tengo + rzeczownik (tengo un hermano, tengo tiempo). Tengo + wiek: tengo treinta años — po hiszpańsku wiek się „ma”, a nie „jest”. Quiero + rzeczownik (quiero un café) albo quiero + bezokolicznik (quiero aprender español)."
+    },
+    {
+      "type": "example",
+      "text": "Tengo treinta años.",
+      "translation": "Mam trzydzieści lat.",
+      "note": "Nigdy: soy treinta años."
+    },
+    {
+      "type": "example",
+      "text": "Quiero aprender español.",
+      "translation": "Chcę uczyć się hiszpańskiego."
+    },
+    {
+      "type": "example",
+      "text": "Quiero vivir en España.",
+      "translation": "Chcę mieszkać w Hiszpanii."
+    },
+    {
+      "type": "explanation",
+      "text": "Rozbudowa krok po kroku (TRANSFORMAR): Quiero. → Quiero un café. → Quiero un café con leche. → Quiero un café con leche, por favor. Ćwicz tak: powiedz krótkie zdanie, a potem dokładaj po jednym elemencie."
+    },
+    {
+      "type": "explanation",
+      "text": "Przeczenie jest proste: no przed czasownikiem. No tengo tiempo (nie mam czasu), no estoy cansada (nie jestem zmęczona), no quiero café (nie chcę kawy)."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        { "speaker": "Carlos", "text": "¿Estás bien?", "translation": "Wszystko w porządku?" },
+        {
+          "speaker": "Ewa",
+          "text": "Estoy un poco cansada. Tengo mucho trabajo.",
+          "translation": "Jestem trochę zmęczona. Mam dużo pracy."
+        },
+        { "speaker": "Carlos", "text": "¿Quieres un café?", "translation": "Chcesz kawę?" },
+        {
+          "speaker": "Ewa",
+          "text": "Sí, quiero un café con leche, por favor.",
+          "translation": "Tak, poproszę kawę z mlekiem."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia: powiedz o sobie cztery zdania, po jednym z każdym czasownikiem. Przykład: Soy de Gdańsk. Estoy en casa. Tengo cuarenta años. Quiero viajar a Sevilla."
+    }
+  ]
+}

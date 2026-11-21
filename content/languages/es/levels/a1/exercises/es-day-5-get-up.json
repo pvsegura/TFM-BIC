@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-get-up",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Wstaję o siódmej.",
+  "explanation": "Levantarse jest zwrotne: me levanto. Godzina: a las siete.",
+  "configuration": {
+    "acceptedAnswers": ["Me levanto a las siete", "Me levanto a las siete."],
+    "caseSensitive": false
+  }
+}

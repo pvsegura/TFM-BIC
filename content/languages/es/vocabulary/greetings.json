@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "id": "greetings",
+  "languageId": "es",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "title": "Powitania i grzeczności",
+  "description": "Pierwsze zwroty: powitania, pożegnania i podziękowania.",
+  "items": [
+    {
+      "id": "es-hola",
+      "status": "published",
+      "order": 10,
+      "lemma": "hola",
+      "translation": "cześć; dzień dobry",
+      "levelId": "a1",
+      "partOfSpeech": "interjection",
+      "note": "Litery h nie wymawiamy: [ola].",
+      "example": {
+        "text": "¡Hola! ¿Qué tal?",
+        "translation": "Cześć! Co słychać?"
+      }
+    },
+    {
+      "id": "es-buenos-dias",
+      "status": "published",
+      "order": 20,
+      "lemma": "buenos días",
+      "translation": "dzień dobry (rano)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "note": "Do obiadu, czyli w Hiszpanii mniej więcej do 14:00."
+    },
+    {
+      "id": "es-buenas-tardes",
+      "status": "published",
+      "order": 30,
+      "lemma": "buenas tardes",
+      "translation": "dzień dobry (po południu)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-buenas-noches",
+      "status": "published",
+      "order": 40,
+      "lemma": "buenas noches",
+      "translation": "dobry wieczór; dobranoc",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-adios",
+      "status": "published",
+      "order": 50,
+      "lemma": "adiós",
+      "translation": "do widzenia",
+      "levelId": "a1",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "id": "es-hasta-luego",
+      "status": "published",
+      "order": 60,
+      "lemma": "hasta luego",
+      "translation": "na razie; do zobaczenia",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-gracias",
+      "status": "published",
+      "order": 70,
+      "lemma": "gracias",
+      "translation": "dziękuję",
+      "levelId": "a1",
+      "partOfSpeech": "interjection",
+      "note": "Skojarzenie: GRACJA — dziękujesz z gracją, kłaniając się nisko."
+    },
+    {
+      "id": "es-por-favor",
+      "status": "published",
+      "order": 80,
+      "lemma": "por favor",
+      "translation": "proszę (prosząc o coś)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-de-nada",
+      "status": "published",
+      "order": 90,
+      "lemma": "de nada",
+      "translation": "nie ma za co",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-perdon",
+      "status": "published",
+      "order": 100,
+      "lemma": "perdón",
+      "translation": "przepraszam",
+      "levelId": "a1",
+      "partOfSpeech": "interjection",
+      "note": "Do zaczepienia kogoś: Perdón, ¿dónde está…?"
+    },
+    {
+      "id": "es-encantado",
+      "status": "published",
+      "order": 110,
+      "lemma": "encantado / encantada",
+      "translation": "miło mi",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Forma zależy od osoby mówiącej."
+    }
+  ]
+}

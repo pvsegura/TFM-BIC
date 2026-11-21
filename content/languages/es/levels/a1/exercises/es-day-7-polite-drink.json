@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-polite-drink",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Javier pyta: ¿Quieres tomar algo? Co to znaczy?",
+  "explanation": "Tomar algo to „napić się/zjeść coś”, zwykle w barze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Gdzie mieszkasz?"
+      },
+      {
+        "id": "b",
+        "text": "Napijesz się czegoś?"
+      },
+      {
+        "id": "c",
+        "text": "Czym się zajmujesz?"
+      },
+      {
+        "id": "d",
+        "text": "Masz czas?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

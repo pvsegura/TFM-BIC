@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-tired",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jak powiesz: Jestem zmęczony?",
+  "explanation": "Zmęczenie to stan w tej chwili, dlatego używamy estar: estoy cansado.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy cansado."
+      },
+      {
+        "id": "b",
+        "text": "Estoy cansado."
+      },
+      {
+        "id": "c",
+        "text": "Tengo cansado."
+      },
+      {
+        "id": "d",
+        "text": "Es cansado."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

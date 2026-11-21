@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "title": "Dzień 6. Rozumiesz hiszpański ze słuchu",
+  "description": "Strategie słuchania: wyłapujesz słowa-klucze i rozumiesz sens z kontekstu.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Hiszpanie mówią szybko, a słowa zlewają się ze sobą: ¿Qué es esto? brzmi jak [kesesto]. To normalne. Nie próbuj rozumieć każdego słowa. Szukaj słów-kluczy: kto, co, gdzie, kiedy, ile. Resztę uzupełni kontekst."
+    },
+    {
+      "type": "explanation",
+      "text": "Technika trzech odsłuchów (PERCIBIR): 1) Słuchasz bez tekstu i odpowiadasz sobie, o czym jest rozmowa. 2) Słuchasz jeszcze raz i notujesz słowa-klucze. 3) Słuchasz z tekstem i sprawdzasz, czego nie wyłapałeś. Przy trudnych fragmentach zwolnij nagranie, a potem wróć do normalnej prędkości."
+    },
+    {
+      "type": "explanation",
+      "text": "Łączenie wyrazów: gdy jeden wyraz kończy się samogłoską, a następny zaczyna samogłoską, wymawia się je razem: ¿Dónde está el hotel? → [dondestaelotel]. Gdy wyraz kończy się spółgłoską, a następny zaczyna samogłoską, spółgłoska „przeskakuje”: los amigos → [losamigos]."
+    },
+    {
+      "type": "example",
+      "text": "Vamos a la playa.",
+      "translation": "Idziemy na plażę.",
+      "note": "Słychać: [bamosalaplaja]. Litery b i v brzmią w hiszpańskim tak samo."
+    },
+    {
+      "type": "example",
+      "text": "¿Qué hora es? — Son las tres y media.",
+      "translation": "Która godzina? — Wpół do czwartej (piętnasta trzydzieści).",
+      "note": "Godziny: es la una, son las dos, son las tres y cuarto, son las cuatro menos cuarto."
+    },
+    {
+      "type": "explanation",
+      "text": "Słowa, które pomagają zrozumieć sens: pero (ale), porque (bo, ponieważ), entonces (więc, wtedy), también (też), tampoco (też nie), ya (już), todavía (jeszcze). Gdy je usłyszysz, wiesz, w którą stronę idzie wypowiedź."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Recepcionista",
+          "text": "Buenas noches. ¿Tiene una reserva?",
+          "translation": "Dobry wieczór. Ma Pan rezerwację?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Sí, a nombre de Marek Nowak.",
+          "translation": "Tak, na nazwisko Marek Nowak."
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Perfecto. Es una habitación doble para tres noches, ¿verdad?",
+          "translation": "Świetnie. To pokój dwuosobowy na trzy noce, prawda?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Sí. ¿A qué hora es el desayuno?",
+          "translation": "Tak. O której jest śniadanie?"
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "De siete a diez, en el primer piso. Su habitación es la doscientos cuatro.",
+          "translation": "Od siódmej do dziesiątej, na pierwszym piętrze. Pana pokój to dwieście cztery."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Muchas gracias. ¡Buenas noches!",
+          "translation": "Bardzo dziękuję. Dobranoc!"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia: odsłuchaj dialog z recepcji trzy razy techniką trzech odsłuchów. Bez patrzenia na tekst odpowiedz: na ile nocy jest rezerwacja, o której jest śniadanie i jaki jest numer pokoju."
+    }
+  ]
+}

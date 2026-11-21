@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-how-much",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jesteś na targu i chcesz zapytać o cenę. Co mówisz?",
+  "explanation": "¿Cuánto cuesta? znaczy: ile to kosztuje?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Dónde está?"
+      },
+      {
+        "id": "b",
+        "text": "¿Cuánto cuesta?"
+      },
+      {
+        "id": "c",
+        "text": "¿Quién es?"
+      },
+      {
+        "id": "d",
+        "text": "¿Cuándo abre?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

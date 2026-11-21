@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-the-bill",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Chcesz poprosić o rachunek. Co mówisz?",
+  "explanation": "La cuenta to rachunek; la carta to karta dań.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "La carta, por favor."
+      },
+      {
+        "id": "b",
+        "text": "La cuenta, por favor."
+      },
+      {
+        "id": "c",
+        "text": "La mesa, por favor."
+      },
+      {
+        "id": "d",
+        "text": "La tarjeta, por favor."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

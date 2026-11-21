@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-where-is",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ¿Dónde ___ el baño?",
+  "explanation": "Pytając o położenie konkretnej rzeczy, używamy estar: ¿Dónde está el baño?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "es"
+      },
+      {
+        "id": "b",
+        "text": "está"
+      },
+      {
+        "id": "c",
+        "text": "tiene"
+      },
+      {
+        "id": "d",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

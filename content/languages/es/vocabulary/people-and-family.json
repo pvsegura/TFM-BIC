@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "id": "people-and-family",
+  "languageId": "es",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "title": "Ludzie i rodzina",
+  "description": "Rodzina, praca i mówienie o sobie.",
+  "items": [
+    {
+      "id": "es-padre",
+      "status": "published",
+      "order": 10,
+      "lemma": "el padre",
+      "translation": "ojciec",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los padres",
+      "note": "Los padres znaczy też „rodzice”."
+    },
+    {
+      "id": "es-madre",
+      "status": "published",
+      "order": 20,
+      "lemma": "la madre",
+      "translation": "matka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las madres"
+    },
+    {
+      "id": "es-hermano",
+      "status": "published",
+      "order": 30,
+      "lemma": "el hermano",
+      "translation": "brat",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los hermanos",
+      "note": "Los hermanos: bracia albo rodzeństwo."
+    },
+    {
+      "id": "es-hermana",
+      "status": "published",
+      "order": 40,
+      "lemma": "la hermana",
+      "translation": "siostra",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las hermanas"
+    },
+    {
+      "id": "es-hijo",
+      "status": "published",
+      "order": 50,
+      "lemma": "el hijo",
+      "translation": "syn",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los hijos",
+      "note": "Los hijos: synowie albo dzieci."
+    },
+    {
+      "id": "es-hija",
+      "status": "published",
+      "order": 60,
+      "lemma": "la hija",
+      "translation": "córka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las hijas"
+    },
+    {
+      "id": "es-trabajo",
+      "status": "published",
+      "order": 70,
+      "lemma": "el trabajo",
+      "translation": "praca",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los trabajos"
+    },
+    {
+      "id": "es-casa",
+      "status": "published",
+      "order": 80,
+      "lemma": "la casa",
+      "translation": "dom",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las casas",
+      "note": "En casa — w domu."
+    },
+    {
+      "id": "es-amigo",
+      "status": "published",
+      "order": 90,
+      "lemma": "el amigo / la amiga",
+      "translation": "przyjaciel; kolega",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los amigos"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "schemaVersion": 1,
+  "code": "es",
+  "name": "Spanish",
+  "nativeName": "español",
+  "locale": "es-ES",
+  "direction": "ltr",
+  "isActive": true,
+  "levels": [
+    { "id": "a1", "status": "available" },
+    { "id": "a2", "status": "planned" },
+    { "id": "b1", "status": "planned" },
+    { "id": "b2", "status": "planned" }
+  ]
+}

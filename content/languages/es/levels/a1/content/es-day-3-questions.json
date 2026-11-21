@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "title": "Dzień 3. Pytasz i odpowiadasz",
+  "description": "Qué, quién, dónde, cuándo, cuánto — pięć pytań, które otwierają każdą rozmowę.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Po hiszpańsku pytanie zapisuje się z odwróconym znakiem zapytania na początku: ¿Dónde está el hotel? Wszystkie słowa pytające mają akcent graficzny: qué, quién, dónde, cuándo, cuánto, cómo."
+    },
+    {
+      "type": "example",
+      "text": "¿Qué es esto?",
+      "translation": "Co to jest?"
+    },
+    {
+      "type": "example",
+      "text": "¿Quién es?",
+      "translation": "Kto to jest?",
+      "note": "Liczba mnoga: ¿Quiénes son? (Kim oni są?)"
+    },
+    {
+      "type": "example",
+      "text": "¿Dónde está el baño?",
+      "translation": "Gdzie jest łazienka/toaleta?",
+      "note": "Pytanie o położenie → dónde + estar."
+    },
+    {
+      "type": "example",
+      "text": "¿Cuándo abre la farmacia?",
+      "translation": "Kiedy otwierają aptekę?"
+    },
+    {
+      "type": "example",
+      "text": "¿Cuánto cuesta?",
+      "translation": "Ile to kosztuje?",
+      "note": "Bardzo przydatne w sklepie i na targu."
+    },
+    {
+      "type": "example",
+      "text": "¿Cómo estás?",
+      "translation": "Jak się masz?",
+      "note": "Stan → estar. Odpowiedź: Bien, gracias. ¿Y tú?"
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — rodzina słów na K: wszystkie pytania z „k” na początku (qué, quién, cuándo, cuánto, cómo) wymawiasz z twardym [k], tak jak polskie „kto”, „kiedy”, „ile”. Połącz je w jeden obraz: wyobraź sobie Kioskarza, który na każde Twoje pytanie odpowiada innym pytaniem: ¿Qué? ¿Quién? ¿Cuándo? ¿Cuánto? ¿Cómo? Dónde jest wyjątkiem — kojarz je z polskim „dokąd”, które również pyta o miejsce."
+    },
+    {
+      "type": "explanation",
+      "text": "Szybkie odpowiedzi: nie musisz odpowiadać pełnym zdaniem. ¿Dónde? — Aquí (tutaj), allí (tam). ¿Cuándo? — Hoy (dziś), mañana (jutro), ahora (teraz). ¿Cuánto? — Cinco euros. W rozmowie liczy się szybka, zrozumiała odpowiedź, a nie idealna gramatyka."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga na intonację: pytanie bez słowa pytającego tworzysz samą melodią głosu, bez zmiany szyku. Tienes tiempo. (Masz czas.) → ¿Tienes tiempo? (Masz czas?) Podobnie jak po polsku, ale bez „czy” na początku."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Turista",
+          "text": "Perdón, ¿dónde está la estación?",
+          "translation": "Przepraszam, gdzie jest dworzec?"
+        },
+        {
+          "speaker": "Señora",
+          "text": "Está allí, a la derecha.",
+          "translation": "Jest tam, po prawej."
+        },
+        {
+          "speaker": "Turista",
+          "text": "¿Y cuándo sale el tren a Toledo?",
+          "translation": "A kiedy odjeżdża pociąg do Toledo?"
+        },
+        { "speaker": "Señora", "text": "A las diez.", "translation": "O dziesiątej." },
+        { "speaker": "Turista", "text": "¡Muchas gracias!", "translation": "Bardzo dziękuję!" },
+        { "speaker": "Señora", "text": "De nada.", "translation": "Nie ma za co." }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia: zadaj na głos pięć pytań, każde z innym słowem pytającym, i odpowiedz na każde jednym słowem. Przykład: ¿Dónde está el hotel? — Aquí."
+    }
+  ]
+}

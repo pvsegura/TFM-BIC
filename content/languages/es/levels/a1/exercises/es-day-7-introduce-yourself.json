@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-introduce-yourself",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jestem z Polski.",
+  "explanation": "Pochodzenie → ser + de: soy de Polonia.",
+  "configuration": {
+    "acceptedAnswers": ["Soy de Polonia", "Soy de Polonia."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-want-coffee",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Chcę kawę.",
+  "explanation": "Quiero + rzeczownik. Najbardziej naturalnie: quiero un café.",
+  "configuration": {
+    "acceptedAnswers": ["Quiero un café", "Quiero un café.", "Quiero café", "Quiero café."],
+    "caseSensitive": false
+  }
+}

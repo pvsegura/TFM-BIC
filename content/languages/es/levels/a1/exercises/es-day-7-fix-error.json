@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-fix-error",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Estoy cansada — stan → estar. Pozostałe: me gustan los libros, tengo treinta años, es médica.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me gusta los libros."
+      },
+      {
+        "id": "b",
+        "text": "Soy treinta años."
+      },
+      {
+        "id": "c",
+        "text": "Estoy cansada."
+      },
+      {
+        "id": "d",
+        "text": "Es una médica."
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

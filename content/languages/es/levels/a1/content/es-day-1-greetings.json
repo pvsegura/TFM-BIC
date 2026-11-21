@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "title": "Dzień 1. Pierwszy kontakt: powitania i przedstawianie się",
+  "description": "Witasz się, przedstawiasz i poznajesz zaimki osobowe oraz pierwsze hiszpańskie dźwięki.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "PERCIBIR — najpierw słuchaj. Hiszpański wymawia się prawie tak, jak się pisze, więc szybko połączysz dźwięk z zapisem. Dziś poznasz kilka zwrotów, które usłyszysz w Hiszpanii od pierwszej minuty."
+    },
+    {
+      "type": "example",
+      "text": "¡Hola!",
+      "translation": "Cześć! Dzień dobry!",
+      "note": "Uniwersalne i swobodne. Litery h nie wymawiamy: [ola]."
+    },
+    {
+      "type": "example",
+      "text": "Buenos días.",
+      "translation": "Dzień dobry.",
+      "note": "Rano, mniej więcej do obiadu (w Hiszpanii około 14:00)."
+    },
+    {
+      "type": "example",
+      "text": "Buenas tardes.",
+      "translation": "Dzień dobry (po południu).",
+      "note": "Od obiadu do zmroku."
+    },
+    {
+      "type": "example",
+      "text": "Buenas noches.",
+      "translation": "Dobry wieczór. / Dobranoc.",
+      "note": "Wieczorem — zarówno na powitanie, jak i na pożegnanie."
+    },
+    {
+      "type": "example",
+      "text": "Adiós. / Hasta luego.",
+      "translation": "Do widzenia. / Na razie.",
+      "note": "Hasta luego mówi się bardzo często, nawet gdy nie planujesz kolejnego spotkania."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — przedstawianie się. Najprostszy wzór to Me llamo… (dosłownie: nazywam siebie…). Równie naturalne jest Soy… (jestem…)."
+    },
+    {
+      "type": "example",
+      "text": "Me llamo Marta. ¿Y tú? ¿Cómo te llamas?",
+      "translation": "Mam na imię Marta. A ty? Jak masz na imię?"
+    },
+    {
+      "type": "example",
+      "text": "Soy Piotr. Soy de Polonia.",
+      "translation": "Jestem Piotr. Jestem z Polski."
+    },
+    {
+      "type": "example",
+      "text": "Encantado. / Encantada.",
+      "translation": "Miło mi.",
+      "note": "Mężczyzna mówi encantado, kobieta encantada — zależy od tego, kto mówi, nie od rozmówcy."
+    },
+    {
+      "type": "explanation",
+      "text": "Zaimki osobowe: yo (ja), tú (ty), él (on), ella (ona), usted (Pan/Pani), nosotros/nosotras (my), vosotros/vosotras (wy), ellos/ellas (oni/one), ustedes (Państwo). Tak jak w polskim, zaimek zwykle pomijamy, bo forma czasownika mówi, kto działa: Soy Piotr, a nie Yo soy Piotr. Zaimek dodajemy dla podkreślenia lub kontrastu: Yo soy de Polonia, ¿y tú?"
+    },
+    {
+      "type": "explanation",
+      "text": "Dźwięki, na które Polak musi uważać: j i g przed e/i brzmią jak twarde polskie h/ch (jamón [hamon], gente [hente]); ll i y brzmią w większości Hiszpanii podobnie do polskiego j (me llamo [me jamo]); ñ to polskie ń (España [espania]); z oraz c przed e/i to w środkowej i północnej Hiszpanii dźwięk podobny do angielskiego th w think (gracias [grathjas]) — w Andaluzji i Ameryce Łacińskiej brzmią jak s. Hiszpańskie samogłoski są krótkie i czyste: nie ma polskiego y ani nosowych ą/ę."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie na start. Llamo brzmi jak [jamo]: wyobraź sobie, że wołasz swoje imię w głąb ogromnej jamy, a echo odpowiada „me llamo… me llamo…”. Im dziwniejszy i wyraźniejszy obraz, tym łatwiej go przywołać. Skojarzenie pomaga zapamiętać znaczenie; wymowę zawsze sprawdzaj w nagraniu."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        { "speaker": "Lucía", "text": "¡Hola! Buenos días.", "translation": "Cześć! Dzień dobry." },
+        {
+          "speaker": "Piotr",
+          "text": "Buenos días. Me llamo Piotr.",
+          "translation": "Dzień dobry. Mam na imię Piotr."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Yo soy Lucía. ¿De dónde eres?",
+          "translation": "Ja jestem Lucía. Skąd jesteś?"
+        },
+        {
+          "speaker": "Piotr",
+          "text": "Soy de Polonia, de Cracovia.",
+          "translation": "Jestem z Polski, z Krakowa."
+        },
+        { "speaker": "Lucía", "text": "¡Encantada, Piotr!", "translation": "Miło mi, Piotrze!" },
+        {
+          "speaker": "Piotr",
+          "text": "Encantado. ¡Hasta luego!",
+          "translation": "Miło mi. Na razie!"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia (EXPRESAR): nagraj się albo powiedz na głos trzy zdania: powitanie, swoje imię i skąd jesteś. Przykład: ¡Hola! Me llamo Anna. Soy de Polonia."
+    }
+  ]
+}

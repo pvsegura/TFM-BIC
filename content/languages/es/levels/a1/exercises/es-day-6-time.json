@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-time",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy: Son las tres y media?",
+  "explanation": "Las tres y media to 3:30, czyli po polsku „wpół do czwartej”.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jest trzecia."
+      },
+      {
+        "id": "b",
+        "text": "Jest wpół do czwartej."
+      },
+      {
+        "id": "c",
+        "text": "Jest kwadrans po trzeciej."
+      },
+      {
+        "id": "d",
+        "text": "Jest za kwadrans trzecia."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

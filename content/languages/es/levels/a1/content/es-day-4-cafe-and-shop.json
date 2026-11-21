@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "title": "Dzień 4. Prawdziwe sytuacje: kawiarnia, restauracja, sklep",
+  "description": "Zamawiasz, pytasz o cenę i płacisz — uprzejmie i naturalnie.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "W hiszpańskiej kawiarni najczęściej słyszy się bardzo krótkie zamówienia. Wystarczy rzeczownik i por favor: Un café, por favor. Bardziej uprzejmie: Me pone un café, por favor? (dosłownie: postawi mi Pan kawę?) albo Quería un café (chciałbym/chciałabym kawę)."
+    },
+    {
+      "type": "example",
+      "text": "Un café con leche, por favor.",
+      "translation": "Kawę z mlekiem, proszę."
+    },
+    {
+      "type": "example",
+      "text": "¿Me pone una caña?",
+      "translation": "Poproszę małe piwo z beczki.",
+      "note": "Caña to typowe w Hiszpanii małe piwo z kranu."
+    },
+    {
+      "type": "example",
+      "text": "Quería una mesa para dos.",
+      "translation": "Chciałbym/Chciałabym stolik dla dwóch osób.",
+      "note": "Quería (czas przeszły) brzmi grzeczniej niż quiero — podobnie jak polskie „chciałbym”."
+    },
+    {
+      "type": "example",
+      "text": "¿Qué me recomienda?",
+      "translation": "Co mi Pan/Pani poleca?"
+    },
+    {
+      "type": "example",
+      "text": "La cuenta, por favor.",
+      "translation": "Rachunek, proszę."
+    },
+    {
+      "type": "example",
+      "text": "¿Puedo pagar con tarjeta?",
+      "translation": "Czy mogę zapłacić kartą?"
+    },
+    {
+      "type": "explanation",
+      "text": "Rodzajniki — kolejna różnica z polskim. Po polsku nie ma rodzajników, a po hiszpańsku rzeczownik prawie zawsze je ma. Un/una (jakiś, jeden) — gdy mówisz o czymś po raz pierwszy lub zamawiasz: un café, una cerveza. El/la (ten konkretny) — gdy obie strony wiedzą, o co chodzi: la cuenta, el baño. Rzeczowniki na -o są zwykle męskie (el vino), na -a zwykle żeńskie (la mesa), ale są wyjątki: el día, la mano."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — kolory rodzaju: wyobrażaj sobie męskie rzeczowniki jako niebieskie, a żeńskie jako czerwone. El vino — niebieska butelka wina. La mesa — czerwony stół. Gdy uczysz się nowego słowa, zawsze ucz się go RAZEM z rodzajnikiem i kolorem, nigdy samego."
+    },
+    {
+      "type": "explanation",
+      "text": "W sklepie: ¿Cuánto cuesta? (ile kosztuje — jedna rzecz), ¿Cuánto cuestan? (ile kosztują — kilka rzeczy), ¿Tiene…? (czy ma Pan/Pani…?), Solo estoy mirando, gracias (tylko się rozglądam, dziękuję)."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "text": "Hola, buenas tardes. ¿Qué le pongo?",
+          "translation": "Dzień dobry. Co podać?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Un café con leche y un agua, por favor.",
+          "translation": "Kawę z mlekiem i wodę, proszę."
+        },
+        {
+          "speaker": "Camarero",
+          "text": "¿El agua fría o natural?",
+          "translation": "Woda zimna czy w temperaturze pokojowej?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Fría, por favor. ¿Cuánto es?",
+          "translation": "Zimna, proszę. Ile płacę?"
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Son tres euros con cincuenta.",
+          "translation": "Trzy euro pięćdziesiąt."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "¿Puedo pagar con tarjeta?",
+          "translation": "Mogę zapłacić kartą?"
+        },
+        { "speaker": "Camarero", "text": "Sí, claro.", "translation": "Tak, oczywiście." }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia: odegraj na głos całe zamówienie w kawiarni — przywitanie, zamówienie dwóch rzeczy, pytanie o cenę i płatność kartą. Mów pełnymi, krótkimi zdaniami."
+    }
+  ]
+}

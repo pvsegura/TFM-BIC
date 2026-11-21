@@ -5,7 +5,7 @@
   "nativeName": "polski",
   "locale": "pl-PL",
   "direction": "ltr",
-  "isActive": true,
+  "isActive": false,
   "levels": [
     {
       "id": "a1",

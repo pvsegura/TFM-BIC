@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-evening-greeting",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jest 21:00, wchodzisz do restauracji. Jak się witasz?",
+  "explanation": "Buenas noches mówi się wieczorem — na powitanie i na pożegnanie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Buenos días."
+      },
+      {
+        "id": "b",
+        "text": "Buenas noches."
+      },
+      {
+        "id": "c",
+        "text": "Hasta luego."
+      },
+      {
+        "id": "d",
+        "text": "Adiós."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

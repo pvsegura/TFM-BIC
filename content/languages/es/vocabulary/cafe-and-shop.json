@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "id": "cafe-and-shop",
+  "languageId": "es",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "title": "Kawiarnia i sklep",
+  "description": "Słowa do zamawiania, płacenia i robienia zakupów.",
+  "items": [
+    {
+      "id": "es-cafe",
+      "status": "published",
+      "order": 10,
+      "lemma": "el café",
+      "translation": "kawa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los cafés"
+    },
+    {
+      "id": "es-cafe-con-leche",
+      "status": "published",
+      "order": 20,
+      "lemma": "el café con leche",
+      "translation": "kawa z mlekiem",
+      "levelId": "a1",
+      "partOfSpeech": "phrase",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-agua",
+      "status": "published",
+      "order": 30,
+      "lemma": "el agua",
+      "translation": "woda",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las aguas",
+      "note": "Rzeczownik żeński, ale w liczbie pojedynczej mówi się el agua (ze względu na akcentowane a-)."
+    },
+    {
+      "id": "es-cerveza",
+      "status": "published",
+      "order": 40,
+      "lemma": "la cerveza",
+      "translation": "piwo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las cervezas"
+    },
+    {
+      "id": "es-mesa",
+      "status": "published",
+      "order": 50,
+      "lemma": "la mesa",
+      "translation": "stół; stolik",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las mesas",
+      "note": "Czerwony stół: żeński rodzaj."
+    },
+    {
+      "id": "es-cuenta",
+      "status": "published",
+      "order": 60,
+      "lemma": "la cuenta",
+      "translation": "rachunek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las cuentas",
+      "note": "Nie myl z la carta (karta dań)."
+    },
+    {
+      "id": "es-carta",
+      "status": "published",
+      "order": 70,
+      "lemma": "la carta",
+      "translation": "karta dań; list",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las cartas"
+    },
+    {
+      "id": "es-tarjeta",
+      "status": "published",
+      "order": 80,
+      "lemma": "la tarjeta",
+      "translation": "karta (płatnicza)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las tarjetas"
+    },
+    {
+      "id": "es-euro",
+      "status": "published",
+      "order": 90,
+      "lemma": "el euro",
+      "translation": "euro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los euros"
+    },
+    {
+      "id": "es-cuanto-cuesta",
+      "status": "published",
+      "order": 100,
+      "lemma": "¿cuánto cuesta?",
+      "translation": "ile kosztuje?",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

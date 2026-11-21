@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "title": "Dzień 7. Twoja pierwsza rozmowa",
+  "description": "Łączysz wszystko z całego tygodnia w jednej prowadzonej rozmowie i sprawdzasz typowe błędy.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "EXPRESAR — dziś składasz cały tydzień w jedną rozmowę. Celem nie jest płynność, tylko to, żebyś przeprowadził(a) prostą, prowadzoną rozmowę: przywitanie, przedstawienie się, kilka pytań i odpowiedzi, zamówienie i pożegnanie. Błędy są w porządku — liczy się, że się porozumiesz."
+    },
+    {
+      "type": "explanation",
+      "text": "Przygotowanie (dwie minuty): zamknij oczy i wyobraź sobie konkretne miejsce — na przykład tarasowy bar w Walencji. Zobacz stolik, usłysz gwar, poczuj zapach kawy. Potem powiedz w myślach pierwsze zdanie, które tam wypowiesz. Takie przygotowanie nie jest metodą z naukowym dowodem skuteczności, ale wielu osobom pomaga ograniczyć stres przed mówieniem."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "¡Hola! ¿Está libre esta silla?",
+          "translation": "Cześć! Czy to krzesło jest wolne?"
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Sí, claro. Siéntate.",
+          "translation": "Tak, oczywiście. Usiądź."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Gracias. Me llamo Javier. ¿Y tú?",
+          "translation": "Dzięki. Mam na imię Javier. A ty?"
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Soy Agnieszka. Soy de Polonia, de Poznań.",
+          "translation": "Jestem Agnieszka. Jestem z Polski, z Poznania."
+        },
+        {
+          "speaker": "Javier",
+          "text": "¡Qué bien! ¿Estás de vacaciones?",
+          "translation": "Super! Jesteś na wakacjach?"
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Sí, estoy aquí una semana. Quiero aprender español.",
+          "translation": "Tak, jestem tu tydzień. Chcę nauczyć się hiszpańskiego."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Pues hablas muy bien. ¿A qué te dedicas?",
+          "translation": "No to mówisz bardzo dobrze. Czym się zajmujesz?"
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Soy diseñadora. ¿Y tú?",
+          "translation": "Jestem projektantką. A ty?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Soy profesor. ¿Quieres tomar algo?",
+          "translation": "Jestem nauczycielem. Napijesz się czegoś?"
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Sí, un café con leche, por favor.",
+          "translation": "Tak, kawę z mlekiem, poproszę."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Perfecto. Encantado, Agnieszka.",
+          "translation": "Świetnie. Miło mi, Agnieszko."
+        },
+        {
+          "speaker": "Agnieszka",
+          "text": "Encantada. ¡Hasta luego!",
+          "translation": "Miło mi. Na razie!"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Przegląd typowych błędów z tego tygodnia. 1) Soy cansado → Estoy cansado (stan → estar). 2) Soy treinta años → Tengo treinta años (wiek się „ma”). 3) Me gusta los libros → Me gustan los libros (czasownik zgadza się z rzeczą). 4) Es una médica → Es médica (zawód bez rodzajnika). 5) Café con leche, por favor → Un café con leche, por favor (przy zamówieniu dodajemy rodzajnik un/una)."
+    },
+    {
+      "type": "explanation",
+      "text": "Teraz Twoja kolej (TRANSFORMAR → EXPRESAR): przeczytaj dialog na głos jako Agnieszka, a potem przeprowadź go jeszcze raz, ale z własnymi odpowiedziami — swoim imieniem, miastem, pracą i zamówieniem. Nagraj się i porównaj z wzorem."
+    },
+    {
+      "type": "explanation",
+      "text": "Co dalej? Po siedmiu dniach znasz już podstawy, z których zbudujesz setki zdań: ser, estar, tener, querer, gustar, pięć słów pytających i zwroty z kawiarni. Słówka z wyzwania trafiły do trenera pamięci — wracaj do nich, gdy system przypomni Ci o powtórce. Kolejny krok to kurs A1, który rozwija każdy z tych tematów."
+    }
+  ]
+}

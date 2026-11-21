@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-me-gustan",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ los libros.",
+  "explanation": "Czasownik zgadza się z rzeczą, którą lubisz. Los libros to liczba mnoga → me gustan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gusta"
+      },
+      {
+        "id": "b",
+        "text": "gustan"
+      },
+      {
+        "id": "c",
+        "text": "gusto"
+      },
+      {
+        "id": "d",
+        "text": "gustas"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

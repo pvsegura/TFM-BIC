@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-age",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Mam trzydzieści lat to po hiszpańsku: Soy treinta años.",
+  "explanation": "Wiek się „ma”: tengo treinta años.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

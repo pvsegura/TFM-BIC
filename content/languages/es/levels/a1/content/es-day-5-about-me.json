@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "title": "Dzień 5. Mówisz o sobie: rodzina, praca, upodobania, codzienność",
+  "description": "Opowiadasz, kim jesteś, czym się zajmujesz, co lubisz i jak wygląda twój dzień.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Rodzina: el padre (ojciec), la madre (matka), el hermano / la hermana (brat / siostra), el hijo / la hija (syn / córka), el marido / la mujer (mąż / żona), la pareja (partner, partnerka). Mi hermano — mój brat; mis hermanos — moi bracia albo moje rodzeństwo."
+    },
+    {
+      "type": "example",
+      "text": "Tengo dos hijos y una hermana.",
+      "translation": "Mam dwoje dzieci i siostrę."
+    },
+    {
+      "type": "explanation",
+      "text": "Praca: Soy ingeniero (jestem inżynierem), Trabajo en un hotel (pracuję w hotelu), Trabajo como enfermera (pracuję jako pielęgniarka). Pamiętaj: zawód po ser bez rodzajnika."
+    },
+    {
+      "type": "example",
+      "text": "Soy programador y trabajo desde casa.",
+      "translation": "Jestem programistą i pracuję z domu."
+    },
+    {
+      "type": "explanation",
+      "text": "Upodobania: me gusta działa inaczej niż polskie „lubię”. Dosłownie znaczy „podoba mi się”. Dlatego czasownik zgadza się z RZECZĄ, którą lubisz, a nie z tobą: me gusta el café (jedna rzecz), me gustan los libros (wiele rzeczy), me gusta viajar (czynność — zawsze gusta)."
+    },
+    {
+      "type": "example",
+      "text": "Me gusta la música, pero no me gustan los conciertos.",
+      "translation": "Lubię muzykę, ale nie lubię koncertów."
+    },
+    {
+      "type": "example",
+      "text": "¿Te gusta cocinar?",
+      "translation": "Lubisz gotować?"
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: wyobraź sobie, że rzeczy SAME ci się podobają i to one wykonują ruch: książki tańczą przed tobą w szeregu — me gustan los libros, bo książek jest wiele. Jedna filiżanka kawy tańczy sama — me gusta el café."
+    },
+    {
+      "type": "explanation",
+      "text": "Codzienność — czasowniki zwrotne: levantarse (wstawać), ducharse (brać prysznic), acostarse (kłaść się spać). Zaimek stoi przed odmienioną formą: me levanto a las siete (wstaję o siódmej), me acuesto tarde (kładę się późno). Inne czynności: desayuno (jem śniadanie), trabajo (pracuję), como (jem obiad), ceno (jem kolację)."
+    },
+    {
+      "type": "example",
+      "text": "Me levanto a las siete, desayuno y voy al trabajo.",
+      "translation": "Wstaję o siódmej, jem śniadanie i idę do pracy."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        { "speaker": "Elena", "text": "¿A qué te dedicas?", "translation": "Czym się zajmujesz?" },
+        {
+          "speaker": "Tomasz",
+          "text": "Soy contable. Trabajo en una empresa en Varsovia.",
+          "translation": "Jestem księgowym. Pracuję w firmie w Warszawie."
+        },
+        {
+          "speaker": "Elena",
+          "text": "¿Y qué te gusta hacer en tu tiempo libre?",
+          "translation": "A co lubisz robić w wolnym czasie?"
+        },
+        {
+          "speaker": "Tomasz",
+          "text": "Me gusta correr y me gustan mucho las películas españolas.",
+          "translation": "Lubię biegać i bardzo lubię hiszpańskie filmy."
+        },
+        { "speaker": "Elena", "text": "¿Tienes familia?", "translation": "Masz rodzinę?" },
+        {
+          "speaker": "Tomasz",
+          "text": "Sí, tengo una mujer y una hija.",
+          "translation": "Tak, mam żonę i córkę."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja dnia: przygotuj i nagraj krótką prezentację o sobie (5–6 zdań): imię, skąd jesteś, praca, rodzina, dwie rzeczy, które lubisz, i o której wstajesz."
+    }
+  ]
+}

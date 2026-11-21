@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-profession",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Zdanie Soy una enfermera jest poprawne.",
+  "explanation": "Po ser przed zawodem nie stawiamy rodzajnika: soy enfermera.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}
