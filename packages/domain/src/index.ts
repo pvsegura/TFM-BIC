@@ -550,3 +550,26 @@ export {
   type GeneratedPractice,
   type GeneratedPracticeItem,
 } from "./coach/coach-practice.js";
+
+// Verbysia — PUENTE memory trainer (SM-2) and server-side licences.
+export {
+  INITIAL_EASE,
+  isDifficultCard,
+  isRecallGrade,
+  MIN_EASE,
+  newMemoryCardSchedule,
+  RECALL_GRADES,
+  scheduleReview,
+  type MemoryCardSchedule,
+  type RecallGrade,
+} from "./memory/sm2.js";
+export {
+  canAccess,
+  hasPremium,
+  isLicenceActive,
+  isLicenceKind,
+  LICENCE_KINDS,
+  type ContentAccess,
+  type Licence,
+  type LicenceKind,
+} from "./commerce/entitlement.js";
