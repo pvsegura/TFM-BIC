@@ -1,4 +1,4 @@
-import { CONTENT_STATUSES, CONTENT_TYPES } from "@verbysia/domain";
+import { CONTENT_ACCESS_LEVELS, CONTENT_STATUSES, CONTENT_TYPES } from "@verbysia/domain";
 import { z } from "zod";
 
 import { contentBlockSchema, MAX_BLOCKS_PER_ITEM, plainText } from "./content-block.schema.js";
@@ -21,6 +21,8 @@ export const contentFileSchema = z.strictObject({
   status: z.enum(CONTENT_STATUSES),
   order: z.number().int().min(1).max(100_000),
   instructionLanguage: languageIdSchema,
+  /** Who may open it: `free` for everyone signed in; `course` (the default) needs a licence for its level. */
+  access: z.enum(CONTENT_ACCESS_LEVELS).optional(),
   title: plainText(120),
   description: plainText(300),
   blocks: z.array(contentBlockSchema).min(1).max(MAX_BLOCKS_PER_ITEM),

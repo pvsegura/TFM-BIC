@@ -573,3 +573,26 @@ export {
   type Licence,
   type LicenceKind,
 } from "./commerce/entitlement.js";
+export {
+  CONTENT_ACCESS_LEVELS,
+  contentAccessFor,
+  type ContentAccessLevel,
+} from "./content/content-access.js";
+export {
+  isPurchasable,
+  LICENCE_SOURCES,
+  PRODUCT_BILLING,
+  PRODUCT_STATUSES,
+  PURCHASE_STATUSES,
+  SUBSCRIPTION_STATUSES,
+  type AdminAuditEntry,
+  type LicenceRecord,
+  type LicenceSource,
+  type Product,
+  type ProductBilling,
+  type ProductStatus,
+  type Purchase,
+  type PurchaseStatus,
+  type Subscription,
+  type SubscriptionStatus,
+} from "./commerce/commerce.js";

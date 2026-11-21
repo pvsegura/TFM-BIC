@@ -1,3 +1,4 @@
+import type { ContentAccessLevel } from "../content/content-access.js";
 import type { ContentStatus } from "../content/content-status.js";
 import type { LanguageId } from "../language/language-id.js";
 import type { VocabularyCategoryId } from "./vocabulary-category-id.js";
@@ -16,6 +17,8 @@ export interface VocabularyCategory {
   order: number;
   /** The language `title` and `description` are written in. */
   instructionLanguage: LanguageId;
+  /** Absent means `course`: a licence for each entry's level is required. */
+  access?: ContentAccessLevel | undefined;
   title: string;
   description?: string | undefined;
 }

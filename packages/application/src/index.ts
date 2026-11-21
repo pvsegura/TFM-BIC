@@ -588,3 +588,44 @@ export {
   type CoachContextInput,
   type ResolvedCoachContext,
 } from "./coach/resolve-coach-context.js";
+
+// Verbysia — commerce (products, licences, admin) and the PUENTE memory trainer.
+export type {
+  AdminAuditLog,
+  AdminUserDirectory,
+  AdminUserSummary,
+  GrantLicenceInput,
+  LicenceRepository,
+  ProductChanges,
+  ProductRepository,
+  PurchaseRepository,
+  SubscriptionRepository,
+} from "./commerce/ports.js";
+export { AccessPolicy, UserAccess } from "./commerce/access-policy.js";
+export {
+  AdminCommerceUseCases,
+  CommerceNotFoundError,
+  GetMyAccessUseCase,
+  InvalidCommerceInputError,
+  ListPublicProductsUseCase,
+  type MyAccessView,
+  type PublicProductView,
+} from "./commerce/commerce-use-cases.js";
+export type {
+  MemoryCard,
+  MemoryCardRepository,
+  MemoryReviewLog,
+  RecordReviewInput,
+  RecordReviewResult,
+} from "./memory/ports.js";
+export {
+  GetMemorySessionUseCase,
+  GetMemoryStatsUseCase,
+  MATURE_INTERVAL_DAYS,
+  MAX_SESSION_SIZE,
+  NEW_CARDS_PER_SESSION,
+  ReviewMemoryCardUseCase,
+  type MemoryCardView,
+  type MemorySession,
+  type MemoryStats,
+} from "./memory/memory-use-cases.js";

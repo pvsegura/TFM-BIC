@@ -4,7 +4,7 @@
  * means adding a value here (and a migration), not a schema rewrite, since
  * this is modeled as an enum, never a boolean flag.
  */
-export const ROLES = ["STUDENT", "TEACHER"] as const;
+export const ROLES = ["STUDENT", "TEACHER", "ADMIN"] as const;
 
 export type Role = (typeof ROLES)[number];
 

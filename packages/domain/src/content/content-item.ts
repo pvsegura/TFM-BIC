@@ -1,3 +1,4 @@
+import type { ContentAccessLevel } from "./content-access.js";
 import type { LanguageId } from "../language/language-id.js";
 import type { LevelId } from "../language/level-id.js";
 import type { ContentId } from "./content-id.js";
@@ -57,6 +58,8 @@ export interface ContentItem {
   /** Position within its language and level; unique there, gaps allowed. */
   order: number;
   instructionLanguage: LanguageId;
+  /** Absent means `course`: a licence for this level is required (see commerce/entitlement.ts). */
+  access?: ContentAccessLevel | undefined;
   title: string;
   /** One-sentence summary shown in lists. */
   description: string;

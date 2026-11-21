@@ -27,3 +27,4 @@ export {
   createVocabularyTestDb,
   type VocabularyTestDbHandle,
 } from "./vocabulary/db/test-support/create-test-db.js";
+export { createVerbysiaTestDb } from "./memory/db/test-support/create-test-db.js";

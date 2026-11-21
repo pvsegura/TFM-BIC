@@ -3,7 +3,7 @@ import { boolean, pgEnum, pgTable, text, timestamp, uniqueIndex, uuid } from "dr
 /** STUDENT/TEACHER only at M3 — see ADR-006. Adding ADMIN/CONTENT_EDITOR/
  * SUPPORT/MODERATOR later is `ALTER TYPE ... ADD VALUE` in a migration,
  * not a schema rewrite. */
-export const userRoleEnum = pgEnum("user_role", ["STUDENT", "TEACHER"]);
+export const userRoleEnum = pgEnum("user_role", ["STUDENT", "TEACHER", "ADMIN"]);
 
 export const users = pgTable(
   "users",

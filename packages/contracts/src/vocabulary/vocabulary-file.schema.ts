@@ -1,4 +1,9 @@
-import { CONTENT_STATUSES, GRAMMATICAL_GENDERS, PARTS_OF_SPEECH } from "@verbysia/domain";
+import {
+  CONTENT_ACCESS_LEVELS,
+  CONTENT_STATUSES,
+  GRAMMATICAL_GENDERS,
+  PARTS_OF_SPEECH,
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { plainText } from "../content/content-block.schema.js";
@@ -51,6 +56,8 @@ export const vocabularyFileSchema = z.strictObject({
   status: z.enum(CONTENT_STATUSES),
   order: z.number().int().min(1).max(100_000),
   instructionLanguage: languageIdSchema,
+  /** Who may study it; `course` (the default) needs a licence for each entry's level. */
+  access: z.enum(CONTENT_ACCESS_LEVELS).optional(),
   title: plainText(80),
   description: plainText(300).optional(),
   items: z.array(vocabularyItemFileSchema).min(1).max(MAX_VOCABULARY_ITEMS_PER_FILE),

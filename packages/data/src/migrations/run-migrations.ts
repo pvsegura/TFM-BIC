@@ -32,6 +32,8 @@ export const MIGRATION_SETS: readonly MigrationSet[] = [
   set("video", "__drizzle_migrations_video"),
   set("teaching", "__drizzle_migrations_teaching"),
   set("newsletter", "__drizzle_migrations_newsletter"),
+  set("commerce", "__drizzle_migrations_commerce"),
+  set("memory", "__drizzle_migrations_memory"),
 ];
 
 /** One database session: the lock and every set run on the same connection. */

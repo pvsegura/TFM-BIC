@@ -166,3 +166,13 @@ export {
   translateGeminiStatus,
   type GeminiFailureTranslator,
 } from "./providers/gemini/gemini-interactions.js";
+
+// Verbysia — commerce (products, licences, purchases, subscriptions, admin audit) and the
+// PUENTE memory trainer (SM-2 cards and review log).
+export { createCommerceDb, type CommerceDb, type CommerceDbHandle } from "./commerce/db/client.js";
+export {
+  createCommerceRepositories,
+  type CommerceRepositories,
+} from "./commerce/commerce.repository.js";
+export { createMemoryDb, type MemoryDb, type MemoryDbHandle } from "./memory/db/client.js";
+export { DrizzleMemoryCardRepository } from "./memory/memory-card.repository.js";
