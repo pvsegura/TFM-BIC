@@ -7,6 +7,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Speaking in public",
   "description": "Open a formal speech, signpost its parts and close it.",
   "blocks": [

@@ -1,3 +1,5 @@
+import type { ReactElement } from "react";
+
 import {
   INTERFACE_LANGUAGES,
   LANGUAGE,
@@ -9,40 +11,42 @@ import {
  * Inline SVG flags (emoji flags don't render on Windows). Simplified designs: Poland, the United
  * Kingdom for English, Spain without the coat of arms.
  */
-function Flag({ code }: { code: InterfaceLanguage }) {
-  const common = {
-    width: 24,
-    height: 16,
-    viewBox: "0 0 24 16",
-    "aria-hidden": true as const,
-    className: "rounded-[2px] shadow-sm",
-  };
-  if (code === "pl") {
-    return (
-      <svg {...common}>
-        <rect width="24" height="8" fill="#ffffff" />
-        <rect y="8" width="24" height="8" fill="#dc143c" />
-        <rect width="24" height="16" fill="none" stroke="#00000022" />
-      </svg>
-    );
-  }
-  if (code === "es") {
-    return (
-      <svg {...common}>
-        <rect width="24" height="16" fill="#c60b1e" />
-        <rect y="4" width="24" height="8" fill="#ffc400" />
-      </svg>
-    );
-  }
-  return (
-    <svg {...common}>
+const FLAG_SIZE = {
+  width: 24,
+  height: 16,
+  viewBox: "0 0 24 16",
+  "aria-hidden": true as const,
+  className: "rounded-[2px] shadow-sm",
+};
+
+const FLAGS: Record<InterfaceLanguage, () => ReactElement> = {
+  pl: () => (
+    <svg {...FLAG_SIZE}>
+      <rect width="24" height="8" fill="#ffffff" />
+      <rect y="8" width="24" height="8" fill="#dc143c" />
+      <rect width="24" height="16" fill="none" stroke="#00000022" />
+    </svg>
+  ),
+  es: () => (
+    <svg {...FLAG_SIZE}>
+      <rect width="24" height="16" fill="#c60b1e" />
+      <rect y="4" width="24" height="8" fill="#ffc400" />
+    </svg>
+  ),
+  en: () => (
+    <svg {...FLAG_SIZE}>
       <rect width="24" height="16" fill="#012169" />
       <path d="M0 0L24 16M24 0L0 16" stroke="#ffffff" strokeWidth="3.2" />
       <path d="M0 0L24 16M24 0L0 16" stroke="#c8102e" strokeWidth="1.2" />
       <path d="M12 0V16M0 8H24" stroke="#ffffff" strokeWidth="5" />
       <path d="M12 0V16M0 8H24" stroke="#c8102e" strokeWidth="3" />
     </svg>
-  );
+  ),
+};
+
+function Flag({ code }: { code: InterfaceLanguage }) {
+  const Svg = FLAGS[code];
+  return <Svg />;
 }
 
 /** Interface language flags in the header. Each label is written in its own language. */

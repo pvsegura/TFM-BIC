@@ -7,6 +7,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Days of the week",
   "description": "Name the days, and say today, tomorrow and on Saturday.",
   "blocks": [

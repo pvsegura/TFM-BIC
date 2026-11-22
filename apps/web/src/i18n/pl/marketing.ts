@@ -124,9 +124,9 @@ export const marketing = {
       "Ćwiczenia wyobraźni i wyznaczanie celów mogą zmniejszyć stres przed mówieniem, ale nie przedstawiamy ich jako metody o udowodnionej skuteczności.",
       "Nie dopasowujemy nauki do „stylów uczenia się” (wzrokowiec, słuchowiec) — badania nie potwierdzają, że to pomaga.",
     ],
-    polishTitle: "Zaprojektowane dla Polaków",
-    polishLead: "Oto kilka trudności, które uprzedzamy od pierwszych lekcji:",
-    polishPoints: [
+    learnerTitle: "Zaprojektowane dla Polaków",
+    learnerLead: "Oto kilka trudności, które uprzedzamy od pierwszych lekcji:",
+    learnerPoints: [
       "ser i estar — jedno polskie „być”, dwa hiszpańskie czasowniki",
       "rodzajniki el, la, un, una — których w polskim nie ma",
       "rodzaj rzeczowników: la leche, ale „mleko” jest nijakie",

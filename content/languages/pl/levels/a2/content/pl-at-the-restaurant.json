@@ -7,6 +7,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "At the restaurant",
   "description": "Ask for advice, order a meal and ask for the bill.",
   "blocks": [

@@ -1,5 +1,18 @@
 /** The learner area: dashboard, lessons, exercises, progress and rewards. */
 export const learn = {
+  otherCourses: {
+    title: "Inne kursy",
+    lead: "Poza hiszpańskim dla Polaków udostępniamy dwa wcześniejsze kursy. Są bezpłatne i rozwijamy je niezależnie od kursu głównego.",
+    descriptions: {
+      pl: "Polski dla anglojęzycznych — wyjaśnienia po angielsku, poziomy A1–C2.",
+      en: "Angielski dla hiszpańskojęzycznych — wyjaśnienia po hiszpańsku.",
+    } as Record<string, string>,
+    browse: "Przeglądaj materiały",
+    lessons: "Lekcje",
+    note: "Kurs główny Verbysii to hiszpański dla Polaków. Te kursy nie korzystają z planu Premium ani z trenera pamięci.",
+    loading: "Wczytywanie kursów…",
+    empty: "Brak innych kursów.",
+  },
   languageNames: { es: "hiszpański", pl: "polski", en: "angielski" } as Record<string, string>,
   chooseLanguage: "Wybierz kurs",
   dashboard: {

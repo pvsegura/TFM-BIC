@@ -5,6 +5,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Numbers",
   "description": "The cardinal numbers one to ten, and twenty.",
   "items": [

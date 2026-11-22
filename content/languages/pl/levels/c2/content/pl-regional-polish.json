@@ -7,6 +7,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Regional Polish",
   "description": "How Polish varies between Kraków, Warsaw, Poznań and Silesia.",
   "blocks": [

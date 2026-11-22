@@ -5,6 +5,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "es",
+  "access": "free",
   "title": "Comida",
   "description": "Alimentos y bebidas de todos los días.",
   "items": [

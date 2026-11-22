@@ -55,6 +55,7 @@ export const en: Messages = {
       { to: "/wyzwanie-7-dni", label: "7-day challenge" },
       { to: "/cennik", label: "Pricing" },
       { to: "/faq", label: "FAQ" },
+      { to: "/inne-kursy", label: "Other courses" },
     ],
     login: "Log in",
     register: "Start for free",
@@ -67,6 +68,7 @@ export const en: Messages = {
       { to: "/learn/grammar", label: "Grammar" },
       { to: "/learn/phonetics", label: "Pronunciation" },
       { to: "/learn/coach", label: "AI assistant" },
+      { to: "/inne-kursy", label: "Other courses" },
       { to: "/achievements", label: "Achievements" },
     ],
     teaching: "Teacher dashboard",
@@ -245,9 +247,9 @@ export const en: Messages = {
         "Visualisation and goal-setting exercises may reduce anxiety about speaking, but we don't present them as proven methods.",
         "We don't tailor learning to “learning styles” (visual, auditory) — research doesn't show that it helps.",
       ],
-      polishTitle: "Designed for Polish speakers",
-      polishLead: "Some of the difficulties we anticipate from the first lessons:",
-      polishPoints: [
+      learnerTitle: "Designed for Polish speakers",
+      learnerLead: "Some of the difficulties we anticipate from the first lessons:",
+      learnerPoints: [
         "ser and estar — one Polish “być”, two Spanish verbs",
         "the articles el, la, un, una — which Polish doesn't have",
         "noun gender: la leche, while Polish “mleko” is neuter",
@@ -652,6 +654,19 @@ export const en: Messages = {
     },
   },
   learn: {
+    otherCourses: {
+      title: "Other courses",
+      lead: "Besides Spanish for Polish speakers, we offer two earlier courses. They are free and developed separately from the main course.",
+      descriptions: {
+        pl: "Polish for English speakers — explanations in English, levels A1–C2.",
+        en: "English for Spanish speakers — explanations in Spanish.",
+      },
+      browse: "Browse materials",
+      lessons: "Lessons",
+      note: "Verbysia’s main course is Spanish for Polish speakers. These courses are not part of Premium or the memory trainer.",
+      loading: "Loading courses…",
+      empty: "No other courses.",
+    },
     languageNames: { es: "Spanish", pl: "Polish", en: "English" },
     chooseLanguage: "Choose a course",
     dashboard: {

@@ -7,6 +7,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Numbers and age",
   "description": "Count from one to ten and say how old you are.",
   "blocks": [

@@ -56,6 +56,7 @@ export const es: Messages = {
       { to: "/wyzwanie-7-dni", label: "Reto de 7 días" },
       { to: "/cennik", label: "Precios" },
       { to: "/faq", label: "Preguntas frecuentes" },
+      { to: "/inne-kursy", label: "Otros cursos" },
     ],
     login: "Iniciar sesión",
     register: "Empieza gratis",
@@ -68,6 +69,7 @@ export const es: Messages = {
       { to: "/learn/grammar", label: "Gramática" },
       { to: "/learn/phonetics", label: "Pronunciación" },
       { to: "/learn/coach", label: "Asistente IA" },
+      { to: "/inne-kursy", label: "Otros cursos" },
       { to: "/achievements", label: "Logros" },
     ],
     teaching: "Panel del profesor",
@@ -248,9 +250,9 @@ export const es: Messages = {
         "Los ejercicios de visualización y los objetivos pueden reducir los nervios al hablar, pero no los presentamos como métodos de eficacia demostrada.",
         "No adaptamos el aprendizaje a «estilos de aprendizaje» (visual, auditivo): la investigación no muestra que ayude.",
       ],
-      polishTitle: "Pensado para polacos",
-      polishLead: "Algunas dificultades que anticipamos desde las primeras lecciones:",
-      polishPoints: [
+      learnerTitle: "Pensado para polacos",
+      learnerLead: "Algunas dificultades que anticipamos desde las primeras lecciones:",
+      learnerPoints: [
         "ser y estar: un solo «być» polaco, dos verbos en español",
         "los artículos el, la, un, una, que el polaco no tiene",
         "el género de los sustantivos: la leche, mientras que «mleko» es neutro",
@@ -652,6 +654,19 @@ export const es: Messages = {
     },
   },
   learn: {
+    otherCourses: {
+      title: "Otros cursos",
+      lead: "Además del español para polacos, ofrecemos dos cursos anteriores. Son gratuitos y se desarrollan aparte del curso principal.",
+      descriptions: {
+        pl: "Polaco para angloparlantes — explicaciones en inglés, niveles A1–C2.",
+        en: "Inglés para hispanohablantes — explicaciones en español.",
+      },
+      browse: "Ver materiales",
+      lessons: "Lecciones",
+      note: "El curso principal de Verbysia es español para polacos. Estos cursos no forman parte de Premium ni del entrenador de memoria.",
+      loading: "Cargando cursos…",
+      empty: "No hay otros cursos.",
+    },
     languageNames: { es: "español", pl: "polaco", en: "inglés" },
     chooseLanguage: "Elige un curso",
     dashboard: {

@@ -40,8 +40,8 @@ export function MethodPage() {
         </div>
       </Section>
 
-      <Section id="method-polish" title={t.polishTitle} lead={t.polishLead}>
-        <CheckList items={t.polishPoints} />
+      <Section id="method-learner" title={t.learnerTitle} lead={t.learnerLead}>
+        <CheckList items={t.learnerPoints} />
         <p className="mt-6 text-sm text-primary/60 dark:text-surface/60">{t.nameNote}</p>
       </Section>
     </div>

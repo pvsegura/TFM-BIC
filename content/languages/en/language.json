@@ -5,7 +5,7 @@
   "nativeName": "English",
   "locale": "en-GB",
   "direction": "ltr",
-  "isActive": false,
+  "isActive": true,
   "levels": [
     { "id": "a1", "status": "available" },
     { "id": "a2", "status": "planned" },

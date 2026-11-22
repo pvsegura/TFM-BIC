@@ -7,6 +7,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "es",
+  "access": "free",
   "title": "Saludos y despedidas",
   "description": "Cómo saludar y despedirse en inglés, de forma neutra, informal y según la hora del día.",
   "blocks": [

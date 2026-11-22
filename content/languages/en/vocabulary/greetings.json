@@ -5,6 +5,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "es",
+  "access": "free",
   "title": "Saludos",
   "description": "Palabras y frases cortas para saludar y despedirse.",
   "items": [

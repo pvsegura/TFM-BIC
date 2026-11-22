@@ -7,6 +7,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "es",
+  "access": "free",
   "title": "Presentarte",
   "description": "Decir tu nombre, preguntar el de otra persona y decir de dónde eres.",
   "blocks": [

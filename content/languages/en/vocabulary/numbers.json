@@ -5,6 +5,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "es",
+  "access": "free",
   "title": "Números",
   "description": "Los números del uno al cinco.",
   "items": [

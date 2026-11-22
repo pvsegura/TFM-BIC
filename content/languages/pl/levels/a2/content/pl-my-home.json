@@ -7,6 +7,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Where I live",
   "description": "Say where you live and describe your flat or house.",
   "blocks": [

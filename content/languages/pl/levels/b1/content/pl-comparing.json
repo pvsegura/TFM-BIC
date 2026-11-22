@@ -7,6 +7,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Comparing things",
   "description": "Say that something is cheaper, better or the best.",
   "blocks": [

@@ -7,6 +7,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "One action, two verbs: aspect",
   "description": "Choose between the imperfective verb (process, habit) and the perfective one (a finished result).",
   "blocks": [

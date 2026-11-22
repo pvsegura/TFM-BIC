@@ -7,6 +7,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Reporting what others said",
   "description": "Powiedział, że…, zapytała, czy…, poprosił, żebym…",
   "blocks": [

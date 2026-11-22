@@ -7,6 +7,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Making arrangements",
   "description": "Suggest meeting, accept or decline, and fix the time and place.",
   "blocks": [

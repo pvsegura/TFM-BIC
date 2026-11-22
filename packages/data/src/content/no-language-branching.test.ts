@@ -48,7 +48,10 @@ async function sourceFiles(directory: string): Promise<string[]> {
     entries.map(async (entry) => {
       const full = path.join(directory, entry.name);
       if (entry.isDirectory()) {
-        return entry.name === "node_modules" || entry.name === "test-support"
+        // i18n holds interface texts (data in every interface language), not application logic.
+        return entry.name === "node_modules" ||
+          entry.name === "test-support" ||
+          entry.name === "i18n"
           ? []
           : sourceFiles(full);
       }

@@ -45,7 +45,7 @@ describe("the shipped content catalog", () => {
     expect(validateContentCatalog(catalog)).toEqual([]);
   });
 
-  it("registers Polish with valid metadata, hidden from the catalog since the Spanish-for-Polish pivot", () => {
+  it('registers Polish with valid metadata (kept as a free secondary course under "Other courses")', () => {
     const polish = catalog.languages.find((l) => l.code === PL);
 
     expect(polish).toEqual({
@@ -54,7 +54,7 @@ describe("the shipped content catalog", () => {
       nativeName: "polski",
       locale: "pl-PL",
       direction: "ltr",
-      isActive: false,
+      isActive: true,
     });
   });
 
@@ -149,10 +149,10 @@ describe("the shipped content through the real use cases", () => {
     repository = await FileSystemContentRepository.load(DEFAULT_CONTENT_ROOT);
   });
 
-  it("offers only Spanish as a language", async () => {
+  it("offers Spanish plus the free secondary Polish and English courses", async () => {
     const languages = await new ListLanguagesUseCase(repository).execute();
 
-    expect(languages.map((l) => l.code)).toEqual(["es"]);
+    expect(languages.map((l) => l.code).sort()).toEqual(["en", "es", "pl"]);
   });
 
   it("offers Spanish A1 as selectable and A2-B2 as planned", async () => {

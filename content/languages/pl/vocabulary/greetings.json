@@ -5,6 +5,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "en",
+  "access": "free",
   "title": "Greetings",
   "description": "Common words and short phrases for saying hello and goodbye.",
   "items": [
