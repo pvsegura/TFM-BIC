@@ -1,5 +1,6 @@
 import type { LanguageResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
+import { m } from "../i18n/index.js";
 
 export interface LanguageSelectorProps {
   /** The catalog, exactly as the API returned it — this component defines no language of its own. */
@@ -19,7 +20,7 @@ export interface LanguageSelectorProps {
  */
 export function LanguageSelector({ languages, selectedCode, getHref }: LanguageSelectorProps) {
   return (
-    <nav aria-label="Languages">
+    <nav aria-label={m.learn.catalog.languagesNav}>
       <ul className="grid gap-3 sm:grid-cols-2">
         {languages.map((language) => {
           const selected = language.code === selectedCode;

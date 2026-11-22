@@ -1,6 +1,7 @@
 import { Navigate, Outlet, useLocation } from "react-router";
 
 import { useCurrentUser } from "../hooks/use-current-user.js";
+import { m } from "../i18n/index.js";
 
 /**
  * Frontend route protection is NOT authorization — the backend remains
@@ -14,7 +15,7 @@ export function ProtectedRoute() {
   const location = useLocation();
 
   if (isPending) {
-    return <p role="status">Loading…</p>;
+    return <p role="status">{m.common.loading}</p>;
   }
 
   if (!user) {

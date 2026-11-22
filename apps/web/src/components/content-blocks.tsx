@@ -1,5 +1,6 @@
 import type { ContentResponse } from "@verbysia/contracts";
 import type { ReactNode } from "react";
+import { m } from "../i18n/index.js";
 
 type ContentBlock = ContentResponse["blocks"][number];
 
@@ -96,7 +97,7 @@ function DialogueView({
 function UnsupportedView() {
   return (
     <p className="rounded-lg border border-dashed border-primary/30 px-4 py-3 text-sm dark:border-surface/30">
-      This part can&apos;t be displayed in this version of the app.
+      {m.learn.catalog.unsupportedBlock}
     </p>
   );
 }

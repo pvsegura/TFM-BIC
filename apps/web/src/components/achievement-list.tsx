@@ -2,6 +2,7 @@ import type { AchievementResponse } from "@verbysia/contracts";
 
 import { AchievementIcon } from "./achievement-icon.js";
 import { formatDate, formatNumber, formatPointsEarned } from "./reward-labels.js";
+import { m } from "../i18n/index.js";
 
 /** How far along a locked achievement is: a native `<progress>` (announced with its value) and the same numbers in words. */
 export function AchievementProgress({
@@ -43,14 +44,14 @@ function AchievementCard({ achievement }: { achievement: AchievementResponse }) 
           {unlocked ? (
             <p className="mt-2 text-sm font-medium">
               <span aria-hidden="true">✓ </span>
-              Unlocked
+              {m.learn.achievements.unlocked}
               {unlockedAt === null ? null : <> {formatDate(unlockedAt)}</>}
             </p>
           ) : (
             <>
               <p className="mt-2 text-sm font-medium">
                 <span aria-hidden="true">🔒 </span>
-                Locked
+                {m.learn.achievements.locked}
               </p>
               <AchievementProgress
                 title={achievement.title}
@@ -81,7 +82,7 @@ export function AchievementList({
   achievements: readonly AchievementResponse[];
 }) {
   return (
-    <ul aria-label="Achievements" className="grid gap-3 sm:grid-cols-2">
+    <ul aria-label={m.learn.achievements.listLabel} className="grid gap-3 sm:grid-cols-2">
       {achievements.map((achievement) => (
         <AchievementCard key={achievement.key} achievement={achievement} />
       ))}

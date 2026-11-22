@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 
 import { ExerciseChoiceGroup } from "./exercise-choice-group.js";
 import type { ExerciseViewProps } from "./exercise-view-types.js";
+import { m } from "../i18n/index.js";
 
 type MultipleChoice = Extract<ExerciseResponse, { type: "multiple-choice" }>;
 
@@ -25,7 +26,7 @@ export function MultipleChoiceExerciseView({
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (choice === null) {
-      setError("Choose an answer.");
+      setError(m.learn.exercises.chooseAnswer);
       return;
     }
     onSubmit(choice);
@@ -46,7 +47,7 @@ export function MultipleChoiceExerciseView({
         error={error}
       />
       <Button type="submit" className="mt-4" disabled={disabled}>
-        Check answer
+        {m.learn.exercises.check}
       </Button>
     </form>
   );

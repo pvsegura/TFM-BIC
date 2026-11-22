@@ -1,0 +1,63 @@
+export const layout = {
+  brand: "Verbysia",
+  skipToContent: "Przejdź do treści",
+  primaryNavLabel: "Główna nawigacja",
+  footerNavLabel: "Stopka",
+  menu: "Menu",
+  publicLinks: [
+    { to: "/", label: "Strona główna" },
+    { to: "/metoda-puente", label: "Metoda PUENTE" },
+    { to: "/kurs-a1", label: "Kurs A1" },
+    { to: "/wyzwanie-7-dni", label: "Wyzwanie 7 dni" },
+    { to: "/cennik", label: "Cennik" },
+    { to: "/faq", label: "FAQ" },
+  ],
+  login: "Zaloguj się",
+  register: "Zacznij za darmo",
+  signedInLinks: [
+    { to: "/dashboard", label: "Mój panel" },
+    { to: "/wyzwanie-7-dni", label: "Wyzwanie 7 dni" },
+    { to: "/learn/lessons", label: "Lekcje" },
+    { to: "/learn/memory", label: "Trener pamięci" },
+    { to: "/learn/vocabulary", label: "Słownictwo" },
+    { to: "/learn/grammar", label: "Gramatyka" },
+    { to: "/learn/phonetics", label: "Wymowa" },
+    { to: "/learn/coach", label: "Asystent AI" },
+    { to: "/achievements", label: "Osiągnięcia" },
+  ],
+  teaching: "Panel nauczyciela",
+  admin: "Administracja",
+  profile: "Profil",
+  logout: "Wyloguj się",
+  themeToggleLabel: "Przełącz tryb ciemny",
+  themeDark: "Tryb ciemny",
+  themeLight: "Tryb jasny",
+  footerGroups: [
+    {
+      title: "Nauka",
+      links: [
+        { to: "/metoda-puente", label: "Metoda PUENTE" },
+        { to: "/kurs-a1", label: "Kurs hiszpańskiego A1" },
+        { to: "/wyzwanie-7-dni", label: "Darmowe wyzwanie 7 dni" },
+        { to: "/cennik", label: "Cennik" },
+        { to: "/faq", label: "Najczęstsze pytania" },
+      ],
+    },
+    {
+      title: "Prywatność i dane",
+      links: [
+        { to: "/privacy", label: "Polityka prywatności" },
+        { to: "/privacy#privacy-what", label: "Jakie dane przechowujemy" },
+        { to: "/privacy#privacy-browser", label: "Pliki cookie i pamięć przeglądarki" },
+        { to: "/privacy#privacy-rights", label: "Twoje prawa" },
+        { to: "/profile#data-management-heading", label: "Pobierz lub usuń swoje dane" },
+      ],
+    },
+    {
+      title: "Kontakt",
+      links: [{ to: "/privacy#privacy-who", label: "Kto odpowiada za dane" }],
+    },
+  ],
+  copyright:
+    "© 2026 Verbysia · Hiszpański dla Polaków metodą PUENTE · Dane kontaktowe i regulamin w przygotowaniu (wymagają weryfikacji prawnej).",
+} as const;

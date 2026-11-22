@@ -6,6 +6,7 @@ import { isNotFoundError } from "../services/api-error.js";
 import { LoadError, NotFoundNotice } from "./catalog-notices.js";
 import { LanguagePickerSection } from "./language-picker-section.js";
 import { LevelSelector } from "./level-selector.js";
+import { m } from "../i18n/index.js";
 
 export interface LanguageLevelPickerProps {
   languageCode: string | undefined;
@@ -31,13 +32,16 @@ function LevelDetail({
   const level = levels.levels.find((candidate) => candidate.id === levelId);
   if (!level) {
     return (
-      <NotFoundNotice title="Level not found" message="This language does not offer that level." />
+      <NotFoundNotice
+        title={m.learn.catalog.levelNotFound}
+        message={m.learn.catalog.levelNotOffered}
+      />
     );
   }
   if (level.status !== "available") {
     return (
       <p role="status" className="mt-6">
-        {level.label} is coming soon for {levels.language.name}. There is no content to show yet.
+        {m.learn.catalog.levelComingSoon(level.id.toUpperCase())}
       </p>
     );
   }
@@ -60,21 +64,21 @@ function LevelSection({
   if (levelsQuery.isPending) {
     return (
       <p role="status" className="mt-6">
-        Loading levels…
+        {m.learn.catalog.loadingLevels}
       </p>
     );
   }
   if (levelsQuery.isError) {
     if (isNotFoundError(levelsQuery.error)) {
       return (
-        <NotFoundNotice title="Language not found" message="That language is not available." />
+        <NotFoundNotice
+          title={m.learn.catalog.languageNotFound}
+          message={m.learn.catalog.languageNotAvailable}
+        />
       );
     }
     return (
-      <LoadError
-        message="We couldn't load the levels. Please try again."
-        onRetry={() => void levelsQuery.refetch()}
-      />
+      <LoadError message={m.learn.catalog.levelsError} onRetry={() => void levelsQuery.refetch()} />
     );
   }
 
@@ -83,7 +87,9 @@ function LevelSection({
     <>
       <section aria-labelledby="level-heading" className="mt-6">
         <h2 id="level-heading" className="mb-3 text-lg font-semibold">
-          Level for {levels.language.name}
+          {m.learn.catalog.levelHeading(
+            m.learn.languageNames[languageCode] ?? levels.language.name,
+          )}
         </h2>
         <LevelSelector
           levels={levels.levels}

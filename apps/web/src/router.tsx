@@ -2,6 +2,7 @@ import { createBrowserRouter, Navigate, type RouteObject } from "react-router";
 
 import { ProtectedRoute } from "./components/protected-route.js";
 import { RouteErrorFallback } from "./components/route-error-fallback.js";
+import { AdminRoute } from "./components/admin-route.js";
 import { TeacherRoute } from "./components/teacher-route.js";
 import { RootLayout } from "./layouts/root-layout.js";
 import { AccountDeletedPage } from "./pages/account-deleted-page.js";
@@ -52,6 +53,41 @@ const PUBLIC_ROUTES = [
  * generic page set for every language; the choice lives in the URL. Deliberately not under
  * `/languages` or `/content`: those are the API paths, and a page and an API sharing a path
  * needs a proxy workaround (see ADR-017). */
+/** Verbysia public pages, with Polish slugs (SEO). Each its own chunk. */
+const MARKETING_ROUTES: RouteObject[] = [
+  {
+    path: "metoda-puente",
+    lazy: () =>
+      import("./pages/public/method-page.js").then(({ MethodPage }) => ({ Component: MethodPage })),
+  },
+  {
+    path: "wyzwanie-7-dni",
+    lazy: () =>
+      import("./pages/public/challenge-page.js").then(({ ChallengePage }) => ({
+        Component: ChallengePage,
+      })),
+  },
+  {
+    path: "kurs-a1",
+    lazy: () =>
+      import("./pages/public/course-a1-page.js").then(({ CourseA1Page }) => ({
+        Component: CourseA1Page,
+      })),
+  },
+  {
+    path: "cennik",
+    lazy: () =>
+      import("./pages/public/pricing-page.js").then(({ PricingPage }) => ({
+        Component: PricingPage,
+      })),
+  },
+  {
+    path: "faq",
+    lazy: () =>
+      import("./pages/public/faq-page.js").then(({ FaqPage }) => ({ Component: FaqPage })),
+  },
+];
+
 const LEARN_ROUTES = [
   { path: "learn/:languageCode?/:levelId?", element: <LearnPage /> },
   { path: "learn/:languageCode/:levelId/:contentId", element: <ContentPage /> },
@@ -115,6 +151,32 @@ const COACH_ROUTES: RouteObject[] = [
  * produced offline by the media pipeline; nothing here generates one. */
 const VIDEO_ROUTES = [{ path: "learn/videos", element: <VideosPage /> }];
 
+/** The PUENTE memory trainer (spaced repetition). The API checks licences on every request. */
+const MEMORY_ROUTES: RouteObject[] = [
+  {
+    path: "learn/memory",
+    lazy: () =>
+      import("./pages/memory-trainer-page.js").then(({ MemoryTrainerPage }) => ({
+        Component: MemoryTrainerPage,
+      })),
+  },
+];
+
+/** The admin panel: AdminRoute only spares non-admins a page of refused requests; the API
+ * authorises every request by role (ADMIN) and audits every change. */
+const ADMIN_ROUTES: RouteObject[] = [
+  {
+    element: <AdminRoute />,
+    children: [
+      {
+        path: "admin",
+        lazy: () =>
+          import("./pages/admin-page.js").then(({ AdminPage }) => ({ Component: AdminPage })),
+      },
+    ],
+  },
+];
+
 /** The teacher dashboard (M13) — the overview/roster and one student. Behind login *and* the
  * TeacherRoute guard, which only spares a student a page of refused requests: the API authorises
  * every request by role and teacher–student link (ADR-024). Not under `/teacher-dashboard`, which
@@ -154,7 +216,9 @@ const APP_ROUTES = [
   ...VIDEO_ROUTES,
   ...GRAMMAR_ROUTES,
   ...COACH_ROUTES,
+  ...MEMORY_ROUTES,
   ...TEACHER_ROUTES,
+  ...ADMIN_ROUTES,
   // M21: former Milestone-1 placeholders now lead somewhere real — progress lives on the dashboard,
   // account settings on the profile. Still behind login.
   { path: "progress", element: <Navigate to="/dashboard" replace /> },
@@ -177,12 +241,16 @@ export const routes: RouteObject[] = [
     children: [
       // The public homepage (M20A): its own chunk (scenes, stylesheet), so no other page carries it;
       // full-bleed, so the root layout drops its centred column for it.
+      // Verbysia: the Polish public homepage (the M20A scroll homepage in pages/home-page.tsx is no
+      // longer routed — it told the old Polish-for-English-speakers story; kept until removal is approved).
       {
         index: true,
-        handle: { fullBleed: true },
         lazy: () =>
-          import("./pages/home-page.js").then(({ HomePage }) => ({ Component: HomePage })),
+          import("./pages/public/verbysia-home-page.js").then(({ VerbysiaHomePage }) => ({
+            Component: VerbysiaHomePage,
+          })),
       },
+      ...MARKETING_ROUTES,
       ...PUBLIC_ROUTES,
       ...LEARN_ROUTES,
       {

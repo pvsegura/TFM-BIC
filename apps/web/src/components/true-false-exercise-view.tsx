@@ -4,12 +4,13 @@ import { useState, type FormEvent } from "react";
 
 import { ExerciseChoiceGroup } from "./exercise-choice-group.js";
 import type { ExerciseViewProps } from "./exercise-view-types.js";
+import { m } from "../i18n/index.js";
 
 type TrueFalse = Extract<ExerciseResponse, { type: "true-false" }>;
 
 const CHOICES = [
-  { id: "true", label: "True" },
-  { id: "false", label: "False" },
+  { id: "true", label: m.learn.exercises.trueLabel },
+  { id: "false", label: m.learn.exercises.falseLabel },
 ] as const;
 
 /**
@@ -29,7 +30,7 @@ export function TrueFalseExerciseView({
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (choice === null) {
-      setError("Choose an answer.");
+      setError(m.learn.exercises.chooseAnswer);
       return;
     }
     onSubmit(choice === "true");
@@ -50,7 +51,7 @@ export function TrueFalseExerciseView({
         error={error}
       />
       <Button type="submit" className="mt-4" disabled={disabled}>
-        Check answer
+        {m.learn.exercises.check}
       </Button>
     </form>
   );

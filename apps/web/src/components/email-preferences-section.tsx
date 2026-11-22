@@ -8,6 +8,7 @@ import {
   useUnsubscribeFromNewsletter,
 } from "../hooks/use-email-preferences.js";
 import { errorMessage } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 const DATE_FORMAT = new Intl.DateTimeFormat("en", { dateStyle: "long" });
 
@@ -25,15 +26,15 @@ export function EmailPreferencesSection() {
 
   let body: ReactNode;
   if (preferencesQuery.isPending) {
-    body = <p role="status">Loading your email preferences…</p>;
+    body = <p role="status">{m.account.email.loading}</p>;
   } else if (preferencesQuery.isError) {
     body = (
       <div>
         <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-          We couldn&apos;t load your email preferences.
+          {m.account.email.error}
         </p>
         <Button className="mt-4" onClick={() => void preferencesQuery.refetch()}>
-          Try again
+          {m.account.email.tryAgain}
         </Button>
       </div>
     );
@@ -41,11 +42,9 @@ export function EmailPreferencesSection() {
     body = (
       <>
         <fieldset className="mt-4 rounded-md border border-primary/20 p-4">
-          <legend className="px-1 font-medium">Essential emails</legend>
+          <legend className="px-1 font-medium">{m.account.email.essentialLegend}</legend>
           <p className="text-sm">
-            <strong>Always on.</strong> Account and security emails — email verification, password
-            resets and other messages about your account. They are needed to use your account and
-            are never marketing, so they can&apos;t be turned off here.
+            <strong>{m.account.email.essentialAlwaysOn}</strong> {m.account.email.essentialBody}
           </p>
         </fieldset>
         <NewsletterPreference newsletter={preferencesQuery.data.newsletter} />
@@ -56,7 +55,7 @@ export function EmailPreferencesSection() {
   return (
     <section aria-labelledby="email-preferences-heading" className="mt-10">
       <h2 id="email-preferences-heading" className="text-xl font-semibold">
-        Email preferences
+        {m.account.email.heading}
       </h2>
       {body}
     </section>
@@ -80,10 +79,10 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
       onSuccess: (result) => {
         setNotice(
           result.newsletter.status === "subscribed"
-            ? "You are already subscribed."
+            ? m.account.email.alreadySubscribed
             : result.confirmationEmailSent
-              ? "We sent a confirmation link to your email address. Your subscription starts once you open it."
-              : "A confirmation link was sent a moment ago — please check your inbox.",
+              ? m.account.email.confirmationSent
+              : m.account.email.confirmationRecent,
         );
       },
     });
@@ -118,22 +117,20 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
       <>
         <p className="text-sm">{`Subscribed${formatSince(newsletter.since)}.`}</p>
         <Button className="mt-3" variant="secondary" disabled={busy} onClick={onUnsubscribe}>
-          Unsubscribe
+          {m.account.email.unsubscribe}
         </Button>
       </>
     );
   } else if (newsletter.status === "pending") {
     content = (
       <>
-        <p className="text-sm">
-          Waiting for your confirmation. Open the link we emailed you to start your subscription.
-        </p>
+        <p className="text-sm">{m.account.email.pending}</p>
         <div className="mt-3 flex flex-wrap gap-3">
           <Button disabled={busy} onClick={requestSubscription}>
-            Resend confirmation email
+            {m.account.email.resend}
           </Button>
           <Button variant="secondary" disabled={busy} onClick={onUnsubscribe}>
-            Cancel request
+            {m.account.email.cancelRequest}
           </Button>
         </div>
       </>
@@ -141,7 +138,7 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
   } else {
     content = (
       <form noValidate onSubmit={onSubscribe}>
-        <p className="text-sm">Not subscribed.</p>
+        <p className="text-sm">{m.account.email.notSubscribed}</p>
         <div className="mt-3 flex items-start gap-2">
           <input
             id={ids.consent}
@@ -158,21 +155,19 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
             aria-describedby={consentMissing ? `${ids.description} ${ids.error}` : ids.description}
           />
           <label htmlFor={ids.consent} className="text-sm">
-            I want to receive the newsletter by email: occasional news about new lessons and
-            features.
+            {m.account.email.consentLabel}
           </label>
         </div>
         <p id={ids.description} className="mt-2 text-xs text-primary/70 dark:text-surface/70">
-          We will first email you a link to confirm. You can unsubscribe at any time here or with
-          the link in every newsletter.
+          {m.account.email.consentHelp}
         </p>
         {consentMissing ? (
           <p id={ids.error} role="alert" className="mt-2 text-sm text-red-600 dark:text-red-400">
-            Please tick the box to confirm you want the newsletter.
+            {m.account.email.consentMissing}
           </p>
         ) : null}
         <Button type="submit" className="mt-3" disabled={busy}>
-          Subscribe
+          {m.account.email.subscribe}
         </Button>
       </form>
     );
@@ -180,7 +175,7 @@ function NewsletterPreference({ newsletter }: { newsletter: NewsletterPreference
 
   return (
     <fieldset className="mt-4 rounded-md border border-primary/20 p-4">
-      <legend className="px-1 font-medium">Newsletter</legend>
+      <legend className="px-1 font-medium">{m.account.email.newsletterLegend}</legend>
       {content}
       {notice ? (
         <p role="status" className="mt-3 text-sm">

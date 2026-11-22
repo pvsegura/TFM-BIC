@@ -7,6 +7,7 @@ import { ExercisePlayer } from "../components/exercise-player.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import { useExercise, useLessonExercises, useSubmitAnswer } from "../hooks/use-exercises.js";
 import { isNotFoundError } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 const LESSONS_HREF = "/learn/lessons";
@@ -85,30 +86,27 @@ function ExerciseScreen({ exerciseId }: { exerciseId: string | undefined }) {
   if (exerciseQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading exercise…
+        {m.learn.exercises.loading}
       </p>
     );
   } else if (isNotFoundError(exerciseQuery.error)) {
     body = (
       <NotFoundNotice
-        title="Exercise not found"
-        message="That exercise is not available."
+        title={m.learn.exercises.notFoundTitle}
+        message={m.learn.exercises.notFoundBody}
         backTo={LESSONS_HREF}
-        backLabel="Back to lessons"
+        backLabel={m.learn.lessons.backToLessons}
       />
     );
   } else {
     body = (
-      <LoadError
-        message="We couldn't load this exercise. Please try again."
-        onRetry={() => void exerciseQuery.refetch()}
-      />
+      <LoadError message={m.learn.exercises.error} onRetry={() => void exerciseQuery.refetch()} />
     );
   }
 
   return (
     <div className="mx-auto max-w-3xl py-8">
-      <h1 className="text-2xl font-semibold">Exercise</h1>
+      <h1 className="text-2xl font-semibold">{m.learn.exercises.heading}</h1>
       {body}
     </div>
   );

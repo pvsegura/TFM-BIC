@@ -1,5 +1,6 @@
 import { Button } from "@verbysia/ui";
 import { Link } from "./app-link.js";
+import { m } from "../i18n/index.js";
 
 export interface NotFoundNoticeProps {
   title: string;
@@ -15,7 +16,7 @@ export function NotFoundNotice({
   title,
   message,
   backTo = "/learn",
-  backLabel = "Choose a language",
+  backLabel = m.learn.chooseLanguage,
 }: NotFoundNoticeProps) {
   return (
     <div className="mt-6 rounded-lg border border-primary/20 px-4 py-4 dark:border-surface/20">
@@ -36,7 +37,7 @@ export function LoadError({ message, onRetry }: { message: string; onRetry: () =
         {message}
       </p>
       <Button className="mt-3" onClick={onRetry}>
-        Try again
+        {m.learn.notices.tryAgain}
       </Button>
     </div>
   );

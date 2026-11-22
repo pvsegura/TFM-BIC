@@ -4,6 +4,7 @@ import { useEffect, useId, useRef, useState } from "react";
 import { useVocabularyAudio } from "../hooks/use-audio-generation.js";
 import { ApiError } from "../services/api-error.js";
 import type { VocabularyAudioRequest } from "../services/audio-generations-api.js";
+import { m } from "../i18n/index.js";
 
 export interface VocabularyAudioPlayerProps {
   vocabularyId: string;
@@ -15,8 +16,16 @@ type Voice = VocabularyAudioRequest["voice"];
 
 const PART_LABELS: Record<Part, string> = { lemma: "the word", example: "the example" };
 const VOICE_OPTIONS: { value: Voice; label: string; description: string }[] = [
-  { value: "standard", label: "Normal speed", description: "normal speed" },
-  { value: "slow", label: "Slow", description: "slow" },
+  {
+    value: "standard",
+    label: m.vocabulary.speeds.standard,
+    description: m.vocabulary.speedDescriptions.standard,
+  },
+  {
+    value: "slow",
+    label: m.vocabulary.speeds.slow,
+    description: m.vocabulary.speedDescriptions.slow,
+  },
 ];
 
 interface Clip {
@@ -65,7 +74,7 @@ export function VocabularyAudioPlayer({ vocabularyId, hasExample }: VocabularyAu
 
   return (
     <fieldset className="rounded-md border border-primary/20 p-4 dark:border-surface/20">
-      <legend className="px-1 text-sm font-medium">Listen</legend>
+      <legend className="px-1 text-sm font-medium">{m.vocabulary.listen}</legend>
 
       <div className="flex flex-wrap items-center gap-4">
         {VOICE_OPTIONS.map((option) => (
@@ -84,7 +93,7 @@ export function VocabularyAudioPlayer({ vocabularyId, hasExample }: VocabularyAu
 
       <div className="mt-3 flex flex-wrap gap-2">
         <Button variant="secondary" disabled={mutation.isPending} onClick={() => listen("lemma")}>
-          Listen to the word
+          {m.vocabulary.listenWord}
         </Button>
         {hasExample ? (
           <Button
@@ -92,13 +101,13 @@ export function VocabularyAudioPlayer({ vocabularyId, hasExample }: VocabularyAu
             disabled={mutation.isPending}
             onClick={() => listen("example")}
           >
-            Listen to the example
+            {m.vocabulary.listenExample}
           </Button>
         ) : null}
       </div>
 
       <p role="status" aria-live="polite" className="mt-2 text-sm">
-        {mutation.isPending ? "Generating audio…" : null}
+        {mutation.isPending ? m.vocabulary.generatingAudio : null}
       </p>
       {mutation.isError ? (
         <p role="alert" className="text-sm text-red-600 dark:text-red-400">

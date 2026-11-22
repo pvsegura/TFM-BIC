@@ -1,15 +1,24 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { loginRequestSchema, type LoginRequest } from "@verbysia/contracts";
 import { Button, TextField } from "@verbysia/ui";
 import { useForm } from "react-hook-form";
 import { useLocation, useNavigate, type Location } from "react-router";
-import { Link } from "../components/app-link.js";
 
+import { Link } from "../components/app-link.js";
+import { loginFormSchema, type LoginForm } from "../components/auth-form-schemas.js";
 import { useLogin } from "../hooks/use-login.js";
-import { errorMessage } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
+import { ApiError, errorMessage } from "../services/api-error.js";
+
+const t = m.auth;
 
 interface LocationState {
   from?: Location;
+}
+
+function loginError(error: unknown): string {
+  if (error instanceof ApiError && error.status === 401) return t.login.invalidCredentials;
+  if (error instanceof ApiError && error.status === 403) return t.login.unverified;
+  return errorMessage(error);
 }
 
 export function LoginPage() {
@@ -20,7 +29,7 @@ export function LoginPage() {
     register: registerField,
     handleSubmit,
     formState: { errors },
-  } = useForm<LoginRequest>({ resolver: zodResolver(loginRequestSchema) });
+  } = useForm<LoginForm>({ resolver: zodResolver(loginFormSchema) });
 
   const state = location.state as LocationState | null;
   const redirectTo = state?.from?.pathname ?? "/dashboard";
@@ -28,7 +37,7 @@ export function LoginPage() {
   return (
     <section aria-labelledby="login-heading" className="mx-auto max-w-md py-12">
       <h1 id="login-heading" className="text-2xl font-semibold">
-        Log in
+        {t.login.title}
       </h1>
 
       <form
@@ -45,14 +54,14 @@ export function LoginPage() {
         }}
       >
         <TextField
-          label="Email"
+          label={t.email}
           type="email"
           autoComplete="email"
           error={errors.email?.message}
           {...registerField("email")}
         />
         <TextField
-          label="Password"
+          label={t.password}
           type="password"
           autoComplete="current-password"
           error={errors.password?.message}
@@ -61,21 +70,21 @@ export function LoginPage() {
 
         {loginMutation.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {errorMessage(loginMutation.error)}
+            {loginError(loginMutation.error)}
           </p>
         ) : null}
 
         <Button type="submit" disabled={loginMutation.isPending}>
-          {loginMutation.isPending ? "Logging in…" : "Log in"}
+          {loginMutation.isPending ? t.login.pending : t.login.submit}
         </Button>
       </form>
 
       <p className="mt-4 flex flex-col gap-1 text-sm">
         <Link to="/register" className="text-accent hover:underline">
-          Don&apos;t have an account? Register
+          {t.login.noAccount}
         </Link>
         <Link to="/forgot-password" className="text-accent hover:underline">
-          Forgot your password?
+          {t.login.forgot}
         </Link>
       </p>
     </section>

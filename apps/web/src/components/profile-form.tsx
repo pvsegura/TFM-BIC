@@ -5,17 +5,19 @@ import { useRef } from "react";
 import { Controller, useForm } from "react-hook-form";
 
 import { useUpdateProfile } from "../hooks/use-update-profile.js";
-import { ApiError } from "../services/api-error.js";
+import { ApiError, errorMessage } from "../services/api-error.js";
 import {
   profileFormSchema,
   toFormValues,
   type ProfileFormRequest,
   type ProfileFormValues,
 } from "./profile-form-schema.js";
+import { m } from "../i18n/index.js";
 
 const ROLE_LABELS: Record<ProfileResponse["role"], string> = {
-  STUDENT: "Student",
-  TEACHER: "Teacher",
+  STUDENT: m.account.profile.roles.STUDENT,
+  TEACHER: m.account.profile.roles.TEACHER,
+  ADMIN: m.account.profile.roles.ADMIN,
 };
 
 const FORM_FIELDS = ["firstName", "lastName", "nickname", "avatarId"] as const;
@@ -29,12 +31,12 @@ function isFormField(key: string): key is (typeof FORM_FIELDS)[number] {
  * from an unexpected error is ever shown — only fixed wording. */
 function saveErrorMessage(error: unknown): string {
   if (error instanceof ApiError) {
-    return error.fieldErrors ? "Please fix the highlighted fields." : error.message;
+    return error.fieldErrors ? m.account.profile.fixFields : errorMessage(error);
   }
   if (error instanceof TypeError) {
-    return "We couldn't reach the server. Check your connection and try again.";
+    return m.account.profile.unreachable;
   }
-  return "Something went wrong while saving. Please try again.";
+  return m.account.profile.saveError;
 }
 
 export interface ProfileFormProps {
@@ -101,16 +103,16 @@ export function ProfileForm({ profile }: ProfileFormProps) {
         />
         <div>
           <h2 id="account-heading" className="text-lg font-semibold">
-            Account
+            {m.account.profile.accountHeading}
           </h2>
           <dl className="mt-2 grid grid-cols-[auto_1fr] gap-x-4 gap-y-1 text-sm">
-            <dt className="text-primary/70 dark:text-surface/70">Email</dt>
+            <dt className="text-primary/70 dark:text-surface/70">{m.account.profile.email}</dt>
             <dd className="break-all">{profile.email}</dd>
-            <dt className="text-primary/70 dark:text-surface/70">Role</dt>
+            <dt className="text-primary/70 dark:text-surface/70">{m.account.profile.role}</dt>
             <dd>{ROLE_LABELS[profile.role]}</dd>
           </dl>
           <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">
-            Your email is how you sign in and can&apos;t be changed here.
+            {m.account.profile.emailNote}
           </p>
         </div>
       </section>
@@ -124,23 +126,23 @@ export function ProfileForm({ profile }: ProfileFormProps) {
         }}
       >
         <h2 id="personal-details-heading" className="text-lg font-semibold">
-          Personal details
+          {m.account.profile.personalHeading}
         </h2>
 
         <TextField
-          label="First name"
+          label={m.account.profile.firstName}
           autoComplete="given-name"
           error={errors.firstName?.message}
           {...register("firstName")}
         />
         <TextField
-          label="Last name"
+          label={m.account.profile.lastName}
           autoComplete="family-name"
           error={errors.lastName?.message}
           {...register("lastName")}
         />
         <TextField
-          label="Nickname"
+          label={m.account.profile.nickname}
           autoComplete="nickname"
           error={errors.nickname?.message}
           {...register("nickname")}
@@ -151,7 +153,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
           name="avatarId"
           render={({ field }) => (
             <AvatarPicker
-              legend="Choose your avatar"
+              legend={m.account.profile.avatar}
               avatars={AVATAR_CATALOG}
               value={field.value}
               onChange={field.onChange}
@@ -169,7 +171,7 @@ export function ProfileForm({ profile }: ProfileFormProps) {
 
         <div className="flex items-center gap-4">
           <Button type="submit" disabled={updateProfile.isPending || !isDirty}>
-            {updateProfile.isPending ? "Saving…" : "Save changes"}
+            {updateProfile.isPending ? m.account.profile.saving : m.account.profile.save}
           </Button>
           <p role="status" className="text-sm text-green-700 dark:text-green-400">
             {showSaved ? (

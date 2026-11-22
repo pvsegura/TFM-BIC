@@ -2,6 +2,7 @@ import type { LessonProgressResponse, RewardsResponse } from "@verbysia/contract
 import { Button } from "@verbysia/ui";
 
 import { RewardNotice } from "./reward-notice.js";
+import { m } from "../i18n/index.js";
 
 export interface LessonCompletionProps {
   status: LessonProgressResponse["status"];
@@ -38,7 +39,7 @@ export function LessonCompletion({
       className="mt-8 border-t border-primary/20 pt-6 dark:border-surface/20"
     >
       <h2 id="lesson-completion-heading" className="text-lg font-semibold">
-        Finished this lesson?
+        {m.learn.lessons.finishedQuestion}
       </h2>
       <div role="status" className="mt-2">
         {completed ? (
@@ -50,7 +51,7 @@ export function LessonCompletion({
             >
               ✓
             </span>
-            Lesson completed. You can read it again any time.
+            {m.learn.lessons.completedNote}
           </p>
         ) : null}
         {completed && rewards ? <RewardNotice rewards={rewards} /> : null}
@@ -59,11 +60,11 @@ export function LessonCompletion({
         <>
           {hasError ? (
             <p role="alert" className="mt-2 text-sm text-red-700 dark:text-red-300">
-              We couldn&apos;t save your progress. Please try again.
+              {m.learn.lessons.completeError}
             </p>
           ) : null}
           <Button className="mt-3" onClick={onComplete} disabled={isSubmitting}>
-            {isSubmitting ? "Completing…" : "Complete lesson"}
+            {isSubmitting ? m.learn.lessons.completing : m.learn.lessons.complete}
           </Button>
         </>
       )}

@@ -1,6 +1,7 @@
 import { useLessonExercises } from "../hooks/use-exercises.js";
 import { LoadError } from "./catalog-notices.js";
 import { ExerciseList } from "./exercise-list.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 
@@ -17,14 +18,11 @@ export function LessonExercises({ lessonId }: { lessonId: string }) {
   const query = useLessonExercises(lessonId);
 
   if (query.isPending) {
-    return <p role="status">Loading exercises…</p>;
+    return <p role="status">{m.learn.lessons.loadingExercises}</p>;
   }
   if (query.isError) {
     return (
-      <LoadError
-        message="We couldn't load the exercises. Please try again."
-        onRetry={() => void query.refetch()}
-      />
+      <LoadError message={m.learn.lessons.exercisesError} onRetry={() => void query.refetch()} />
     );
   }
 
@@ -36,13 +34,13 @@ export function LessonExercises({ lessonId }: { lessonId: string }) {
   return (
     <section aria-labelledby="lesson-practice-heading" className="mt-8">
       <h2 id="lesson-practice-heading" className="text-lg font-semibold">
-        Practice
+        {m.learn.lessons.practiceHeading}
       </h2>
       <p className="mt-1 text-sm text-primary/70 dark:text-surface/70">
         {progress.answered} of {progress.total} exercises answered
       </p>
       {progress.total > 0 && progress.answered === progress.total ? (
-        <p className="mt-1 text-sm font-medium">You have answered every exercise.</p>
+        <p className="mt-1 text-sm font-medium">{m.learn.lessons.allAnswered}</p>
       ) : null}
       <div className="mt-3">
         <ExerciseList

@@ -3,6 +3,7 @@ import { Link } from "./app-link.js";
 import { useVocabulary } from "../hooks/use-vocabulary.js";
 import { useMediaIndex } from "../hooks/use-media.js";
 import { WordAudioButton } from "./word-audio-button.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 
@@ -19,7 +20,7 @@ export function LessonWords({ languageId, ids }: { languageId: string; ids: stri
   return (
     <section aria-labelledby="lesson-words" className="mt-8">
       <h2 id="lesson-words" className="text-lg font-semibold">
-        Words in this lesson
+        {m.learn.lessons.wordsHeading}
       </h2>
       <ul className="mt-3 grid gap-2 sm:grid-cols-2">
         {words.map((word) => (

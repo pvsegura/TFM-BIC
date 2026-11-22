@@ -4,6 +4,7 @@ import type { Ref } from "react";
 import { AskCoachLink } from "./ask-coach-link.js";
 import type { LearningLanguage } from "./content-blocks.js";
 import { RewardNotice } from "./reward-notice.js";
+import { m } from "../i18n/index.js";
 
 export interface ExerciseResultProps {
   /** The server's verdict on the submitted answer, once there is one. */
@@ -50,14 +51,14 @@ export function ExerciseResult({
   languageCode,
 }: ExerciseResultProps) {
   return (
-    <section aria-label="Result" className="mt-6">
+    <section aria-label={m.learn.exercises.resultLabel} className="mt-6">
       <div
         ref={statusRef}
         role="status"
         tabIndex={-1}
         className="outline-none focus-visible:outline"
       >
-        {isChecking ? <p>Checking your answer…</p> : null}
+        {isChecking ? <p>{m.learn.exercises.checking}</p> : null}
         {evaluation ? (
           <div
             data-correct={evaluation.correct}
@@ -71,7 +72,7 @@ export function ExerciseResult({
               >
                 {evaluation.correct ? "✓" : "✗"}
               </span>
-              {evaluation.correct ? "Correct" : "Not quite"}
+              {evaluation.correct ? m.learn.exercises.correct : m.learn.exercises.notQuite}
             </h2>
             {correctAnswerText === null ? null : (
               <p className="mt-2">
@@ -106,13 +107,15 @@ export function ExerciseResult({
           <AskCoachLink
             context={{ type: "exercise", exerciseId }}
             languageCode={languageCode}
-            label={evaluation.correct ? "Ask why this is right" : "Explain my answer"}
+            label={
+              evaluation.correct ? m.learn.exercises.askWhyRight : m.learn.exercises.explainMine
+            }
           />
         </p>
       ) : null}
       {failed ? (
         <p role="alert" className="mt-2 text-sm text-red-700 dark:text-red-300">
-          We couldn&apos;t check your answer. Please try again.
+          {m.learn.exercises.checkError}
         </p>
       ) : null}
     </section>

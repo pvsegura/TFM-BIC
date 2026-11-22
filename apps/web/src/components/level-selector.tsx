@@ -1,5 +1,6 @@
 import type { LevelResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
+import { m } from "../i18n/index.js";
 
 export interface LevelSelectorProps {
   /** The levels one language declares, with their availability, from the API. */
@@ -19,7 +20,7 @@ const BASE = "inline-flex items-center gap-2 rounded-lg border-2 px-4 py-2 text-
  */
 export function LevelSelector({ levels, selectedId, getHref }: LevelSelectorProps) {
   return (
-    <nav aria-label="Levels">
+    <nav aria-label={m.learn.catalog.levelsNav}>
       <ul className="flex flex-wrap gap-3">
         {levels.map((level) => {
           if (level.status !== "available") {
@@ -29,7 +30,7 @@ export function LevelSelector({ levels, selectedId, getHref }: LevelSelectorProp
                 className={`${BASE} border-dashed border-primary/30 text-primary/60 dark:border-surface/30 dark:text-surface/60`}
               >
                 <span>{level.label}</span>
-                <span className="text-xs font-normal">Coming soon</span>
+                <span className="text-xs font-normal">{m.learn.catalog.comingSoon}</span>
               </li>
             );
           }

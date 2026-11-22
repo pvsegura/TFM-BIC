@@ -1,5 +1,6 @@
 import type { ContentSummaryResponse } from "@verbysia/contracts";
 import { Link } from "./app-link.js";
+import { m } from "../i18n/index.js";
 
 export interface ContentListProps {
   /** Already in display order — the API sorts by explicit `order`. */
@@ -10,8 +11,8 @@ export interface ContentListProps {
 }
 
 const TYPE_LABELS: Record<ContentSummaryResponse["type"], string> = {
-  lesson: "Lesson",
-  explanation: "Explanation",
+  lesson: m.learn.catalog.contentTypes.lesson ?? "",
+  explanation: m.learn.catalog.contentTypes.explanation ?? "",
 };
 
 /**
@@ -19,7 +20,11 @@ const TYPE_LABELS: Record<ContentSummaryResponse["type"], string> = {
  * each a link with its kind in words. Titles and descriptions are plain text
  * (React escapes them), so nothing in the data can become markup.
  */
-export function ContentList({ items, getHref, label = "Content" }: ContentListProps) {
+export function ContentList({
+  items,
+  getHref,
+  label = m.learn.catalog.contentLabel,
+}: ContentListProps) {
   return (
     <ol aria-label={label} className="grid gap-3">
       {items.map((item) => (

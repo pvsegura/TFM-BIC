@@ -4,6 +4,7 @@ import { Link } from "../components/app-link.js";
 
 import { useConfirmNewsletterSubscription } from "../hooks/use-email-preferences.js";
 import { errorMessage } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 /**
  * Double opt-in step 2 (M14), opened from the confirmation email. Public — the token is the
@@ -19,24 +20,24 @@ export function NewsletterConfirmPage() {
   if (!token) {
     content = (
       <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-        This confirmation link is invalid.
+        {m.account.newsletter.confirmInvalid}
       </p>
     );
   } else if (confirm.isSuccess) {
     content = (
       <>
-        <p role="status">Thank you — your newsletter subscription is confirmed.</p>
+        <p role="status">{m.account.newsletter.confirmDone}</p>
         <Link to="/profile" className="mt-4 inline-block text-sm text-accent hover:underline">
-          Manage your email preferences
+          {m.account.newsletter.manage}
         </Link>
       </>
     );
   } else {
     content = (
       <>
-        <p>Please confirm that you want to receive our newsletter by email.</p>
+        <p>{m.account.newsletter.confirmPrompt}</p>
         <Button className="mt-4" disabled={confirm.isPending} onClick={() => confirm.mutate(token)}>
-          Confirm subscription
+          {m.account.newsletter.confirm}
         </Button>
         {confirm.isError ? (
           <p role="alert" className="mt-4 text-sm text-red-600 dark:text-red-400">
@@ -50,7 +51,7 @@ export function NewsletterConfirmPage() {
   return (
     <section aria-labelledby="newsletter-confirm-heading" className="mx-auto max-w-md py-12">
       <h1 id="newsletter-confirm-heading" className="text-2xl font-semibold">
-        Newsletter subscription
+        {m.account.newsletter.confirmHeading}
       </h1>
       <div className="mt-6">{content}</div>
     </section>

@@ -3,6 +3,7 @@ import { Link } from "./app-link.js";
 
 import { exerciseTypeLabel } from "./exercise-view-registry.js";
 import { ExerciseStatusBadge } from "./exercise-status-badge.js";
+import { m } from "../i18n/index.js";
 
 export interface ExerciseListProps {
   /** Already in display order — the API sorts by explicit `order`. */
@@ -15,11 +16,14 @@ function actionFor(status: ExerciseSummaryResponse["result"]["status"], position
   const n = String(position);
   switch (status) {
     case "unanswered":
-      return { text: "Start", name: `Start exercise ${n}` };
+      return { text: m.learn.exercises.start, name: m.learn.exercises.startName(n) };
     case "incorrect":
-      return { text: "Try again", name: `Try again: exercise ${n}` };
+      return { text: m.learn.exercises.tryAgain, name: m.learn.exercises.tryAgainName(n) };
     case "correct":
-      return { text: "Practise again", name: `Practise again: exercise ${n}` };
+      return {
+        text: m.learn.exercises.practiseAgain,
+        name: m.learn.exercises.practiseAgainName(n),
+      };
   }
 }
 
@@ -33,7 +37,7 @@ function actionFor(status: ExerciseSummaryResponse["result"]["status"], position
  */
 export function ExerciseList({ exercises, getHref }: ExerciseListProps) {
   return (
-    <ol aria-label="Exercises" className="grid gap-3">
+    <ol aria-label={m.learn.exercises.listLabel} className="grid gap-3">
       {exercises.map((exercise, index) => {
         const position = index + 1;
         const action = actionFor(exercise.result.status, position);

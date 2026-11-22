@@ -2,8 +2,12 @@ import { Link } from "../components/app-link.js";
 
 import { LoadError } from "../components/catalog-notices.js";
 import { ContinueLearning } from "../components/continue-learning.js";
+import { MemoryAndAccess } from "../components/memory-and-access.js";
 import { PointsSummary } from "../components/points-summary.js";
 import { useGamificationSummary } from "../hooks/use-gamification.js";
+import { m } from "../i18n/index.js";
+
+const t = m.learn.dashboard;
 
 /**
  * The student's dashboard. For now it carries one thing — their points and achievements, from
@@ -17,7 +21,7 @@ export function DashboardPage() {
   return (
     <section aria-labelledby="dashboard-heading" className="mx-auto max-w-3xl py-8">
       <h1 id="dashboard-heading" className="text-2xl font-semibold">
-        Dashboard
+        {t.title}
       </h1>
 
       {/* M21: the dashboard leads into the learning flow first; points follow. */}
@@ -27,26 +31,33 @@ export function DashboardPage() {
 
       <div className="mt-6">
         {summaryQuery.isPending ? (
-          <p role="status">Loading your progress…</p>
+          <p role="status">{t.loadingProgress}</p>
         ) : summaryQuery.isError ? (
-          <LoadError
-            message="We couldn't load your progress. Please try again."
-            onRetry={() => void summaryQuery.refetch()}
-          />
+          <LoadError message={t.loadError} onRetry={() => void summaryQuery.refetch()} />
         ) : (
           <PointsSummary summary={summaryQuery.data} />
         )}
       </div>
 
+      <div className="mt-6">
+        <MemoryAndAccess />
+      </div>
+
       <p className="mt-6 flex flex-wrap gap-x-5 gap-y-1">
-        <Link to="/learn/lessons" className="underline underline-offset-2">
-          Go to lessons
+        <Link to="/wyzwanie-7-dni" className="underline underline-offset-2">
+          {t.goChallenge}
         </Link>
-        <Link to="/learn/videos" className="underline underline-offset-2">
-          Browse the videos
+        <Link to="/learn/lessons" className="underline underline-offset-2">
+          {t.goLessons}
+        </Link>
+        <Link to="/learn/memory" className="underline underline-offset-2">
+          {t.goMemory}
         </Link>
         <Link to="/learn/vocabulary" className="underline underline-offset-2">
-          Vocabulary
+          {t.goVocabulary}
+        </Link>
+        <Link to="/learn/videos" className="underline underline-offset-2">
+          {t.goVideos}
         </Link>
       </p>
     </section>

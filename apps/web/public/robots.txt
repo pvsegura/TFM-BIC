@@ -1,6 +1,5 @@
-# M20A. Public pages may be crawled; signed-in areas and pages reached through e-mailed tokens
-# are not useful to a search engine. Whether the staging demo should be indexed at all is a
-# pending decision (docs/m20a-homepage-audit.md).
+# Verbysia. Public pages (home, method, course, challenge, pricing, FAQ) may be crawled; signed-in
+# areas and pages reached through e-mailed tokens are not useful to a search engine.
 User-agent: *
 Allow: /
 Disallow: /dashboard
@@ -9,12 +8,17 @@ Disallow: /settings
 Disallow: /progress
 Disallow: /achievements
 Disallow: /teacher
+Disallow: /admin
 Disallow: /learn/lessons
 Disallow: /learn/exercises
 Disallow: /learn/vocabulary
 Disallow: /learn/phonetics
 Disallow: /learn/videos
+Disallow: /learn/memory
+Disallow: /learn/coach
 Disallow: /verify-email
 Disallow: /reset-password
 Disallow: /newsletter/
 Disallow: /account-deleted
+
+Sitemap: https://www.verbysia.com/sitemap.xml

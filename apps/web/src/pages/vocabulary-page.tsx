@@ -11,6 +11,7 @@ import {
 import { VocabularyList } from "../components/vocabulary-list.js";
 import { useVocabulary, useVocabularyCategories } from "../hooks/use-vocabulary.js";
 import { useSearchParamFilters } from "../hooks/use-search-param-filters.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 
@@ -34,7 +35,7 @@ function VocabularySection({ languageCode }: { languageCode: string }) {
       {categoriesQuery.data && categoriesQuery.data.categories.length > 0 ? (
         <section aria-labelledby="vocabulary-categories-heading" className="mt-6">
           <h2 id="vocabulary-categories-heading" className="mb-3 text-lg font-semibold">
-            Categories
+            {m.vocabulary.categories}
           </h2>
           <VocabularyCategoryList
             categories={categoriesQuery.data.categories}
@@ -52,24 +53,21 @@ function VocabularySection({ languageCode }: { languageCode: string }) {
 
       <section aria-labelledby="vocabulary-words-heading" className="mt-4">
         <h2 id="vocabulary-words-heading" className="sr-only">
-          Words
+          {m.vocabulary.words}
         </h2>
         {vocabularyQuery.isPending ? (
           <p role="status" className="mt-4">
-            Loading vocabulary…
+            {m.vocabulary.loading}
           </p>
         ) : vocabularyQuery.isError ? (
-          <LoadError
-            message="We couldn't load the vocabulary. Please try again."
-            onRetry={() => void vocabularyQuery.refetch()}
-          />
+          <LoadError message={m.vocabulary.error} onRetry={() => void vocabularyQuery.refetch()} />
         ) : vocabularyQuery.data.items.length === 0 ? (
-          <p className="mt-4">No vocabulary matches these filters yet.</p>
+          <p className="mt-4">{m.vocabulary.noMatches}</p>
         ) : (
           <VocabularyList
             items={vocabularyQuery.data.items}
             getHref={(item) => `/learn/vocabulary/${enc(item.id)}`}
-            label="Vocabulary"
+            label={m.vocabulary.listLabel}
           />
         )}
       </section>
@@ -91,10 +89,10 @@ export function VocabularyPage() {
     <section aria-labelledby="vocabulary-page-heading" className="mx-auto max-w-3xl py-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 id="vocabulary-page-heading" className="text-2xl font-semibold">
-          Vocabulary
+          {m.vocabulary.title}
         </h1>
         <Link to="/learn/vocabulary/mine" className="text-sm underline underline-offset-2">
-          My Vocabulary
+          {m.vocabulary.mine}
         </Link>
       </div>
       <LanguagePickerSection

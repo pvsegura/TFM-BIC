@@ -4,20 +4,16 @@ import { AchievementList } from "../components/achievement-list.js";
 import { LoadError } from "../components/catalog-notices.js";
 import { PointHistoryList } from "../components/point-history-list.js";
 import { useAchievements, usePointHistory } from "../hooks/use-gamification.js";
+import { m } from "../i18n/index.js";
 
 function AchievementsSection() {
   const query = useAchievements();
 
   if (query.isPending) {
-    return <p role="status">Loading achievements…</p>;
+    return <p role="status">{m.learn.achievements.loading}</p>;
   }
   if (query.isError) {
-    return (
-      <LoadError
-        message="We couldn't load your achievements. Please try again."
-        onRetry={() => void query.refetch()}
-      />
-    );
+    return <LoadError message={m.learn.achievements.error} onRetry={() => void query.refetch()} />;
   }
 
   const { achievements, unlockedCount, totalCount } = query.data;
@@ -37,24 +33,17 @@ function HistorySection() {
   const query = usePointHistory();
 
   if (query.isPending) {
-    return <p role="status">Loading points history…</p>;
+    return <p role="status">{m.learn.achievements.loadingHistory}</p>;
   }
   if (query.isError) {
     return (
-      <LoadError
-        message="We couldn't load your points history. Please try again."
-        onRetry={() => void query.refetch()}
-      />
+      <LoadError message={m.learn.achievements.historyError} onRetry={() => void query.refetch()} />
     );
   }
 
   const transactions = query.data.pages.flatMap((page) => page.transactions);
   if (transactions.length === 0) {
-    return (
-      <p className="text-primary/80 dark:text-surface/80">
-        No points yet. Complete an exercise or a lesson to earn your first points.
-      </p>
-    );
+    return <p className="text-primary/80 dark:text-surface/80">{m.learn.points.none}</p>;
   }
 
   return (
@@ -67,7 +56,7 @@ function HistorySection() {
           onClick={() => void query.fetchNextPage()}
           disabled={query.isFetchingNextPage}
         >
-          {query.isFetchingNextPage ? "Loading…" : "Show more"}
+          {query.isFetchingNextPage ? m.common.loading : m.common.showMore}
         </Button>
       ) : null}
     </>
@@ -84,16 +73,16 @@ function HistorySection() {
 export function AchievementsPage() {
   return (
     <div className="mx-auto max-w-3xl py-8">
-      <h1 className="text-2xl font-semibold">Achievements</h1>
+      <h1 className="text-2xl font-semibold">{m.learn.achievements.title}</h1>
       <section aria-labelledby="achievements-heading" className="mt-4">
         <h2 id="achievements-heading" className="sr-only">
-          Your achievements
+          {m.learn.achievements.yours}
         </h2>
         <AchievementsSection />
       </section>
       <section aria-labelledby="history-heading" className="mt-10">
         <h2 id="history-heading" className="text-lg font-semibold">
-          Points history
+          {m.learn.achievements.history}
         </h2>
         <div className="mt-3">
           <HistorySection />

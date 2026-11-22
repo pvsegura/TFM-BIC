@@ -1,4 +1,5 @@
 import type { PointTransactionResponse } from "@verbysia/contracts";
+import { m } from "../i18n/index.js";
 
 /**
  * What a student reads for each reason points can be earned. The reasons themselves are stable,
@@ -7,9 +8,9 @@ import type { PointTransactionResponse } from "@verbysia/contracts";
  * reason cannot be added without a label).
  */
 const REASON_LABELS: Record<PointTransactionResponse["reason"], string> = {
-  "exercise-completed": "Exercise completed",
-  "lesson-completed": "Lesson completed",
-  "achievement-unlocked": "Achievement unlocked",
+  "exercise-completed": m.learn.rewards.reasons["exercise-completed"] ?? "",
+  "lesson-completed": m.learn.rewards.reasons["lesson-completed"] ?? "",
+  "achievement-unlocked": m.learn.rewards.reasons["achievement-unlocked"] ?? "",
 };
 
 export function rewardReasonLabel(reason: PointTransactionResponse["reason"]): string {

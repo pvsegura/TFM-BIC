@@ -1,6 +1,7 @@
 import { Link } from "../components/app-link.js";
 
 import { PRIVACY_NOTICE, type PrivacyNoticeSection } from "../legal/privacy-notice.js";
+import { m } from "../i18n/index.js";
 
 const DATE_FORMAT = new Intl.DateTimeFormat("en-GB", { dateStyle: "long", timeZone: "UTC" });
 
@@ -44,7 +45,7 @@ export function PrivacyPage() {
   return (
     <article aria-labelledby="privacy-heading" className="mx-auto max-w-3xl py-8">
       <h1 id="privacy-heading" className="text-2xl font-semibold">
-        Privacy notice
+        {m.account.privacy.title}
       </h1>
       <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">
         {`Version ${PRIVACY_NOTICE.version} · ${DATE_FORMAT.format(new Date(PRIVACY_NOTICE.date))}`}

@@ -1,6 +1,7 @@
 import type { LessonSummaryResponse } from "@verbysia/contracts";
 
 import { LessonCard } from "./lesson-card.js";
+import { m } from "../i18n/index.js";
 
 export interface LessonListProps {
   /** Already in display order — the API sorts by explicit `order`. */
@@ -15,7 +16,7 @@ export interface LessonListProps {
  */
 export function LessonList({ lessons, getHref }: LessonListProps) {
   return (
-    <ol aria-label="Lessons" className="grid gap-3">
+    <ol aria-label={m.learn.lessons.listLabel} className="grid gap-3">
       {lessons.map((lesson, index) => (
         <LessonCard key={lesson.id} lesson={lesson} position={index + 1} href={getHref(lesson)} />
       ))}

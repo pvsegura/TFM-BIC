@@ -4,6 +4,9 @@ import { useLanguageLevels, useLanguages } from "../hooks/use-catalog.js";
 import { useLessons } from "../hooks/use-lessons.js";
 import { useMediaIndex } from "../hooks/use-media.js";
 import { formatDuration } from "./format-duration.js";
+import { m } from "../i18n/index.js";
+
+const t = m.learn.continue;
 
 const enc = encodeURIComponent;
 
@@ -24,7 +27,7 @@ export function ContinueLearning() {
         <ContinueLanguage
           key={language.code}
           languageCode={language.code}
-          languageName={language.name}
+          languageName={m.learn.languageNames[language.code] ?? language.name}
         />
       ))}
     </div>
@@ -41,7 +44,7 @@ function ContinueLanguage({
   const levels = useLanguageLevels(languageCode);
   const available = (levels.data?.levels ?? [])
     .filter((l) => l.status === "available")
-    .map((l) => ({ id: l.id, label: l.label }));
+    .map((l) => ({ id: l.id, label: l.id.toUpperCase() }));
   if (available.length === 0) return null;
   return (
     <ContinueLevel
@@ -90,16 +93,14 @@ function ContinueLevel({
   if (!next) {
     return (
       <div className="rounded-xl border border-primary/15 p-5 dark:border-surface/15">
-        <h2 className="text-lg font-semibold">You've completed every lesson here</h2>
-        <p className="mt-1 text-sm text-primary/75 dark:text-surface/75">
-          Keep the words fresh with their videos, or review a lesson.
-        </p>
+        <h2 className="text-lg font-semibold">{t.allDoneTitle}</h2>
+        <p className="mt-1 text-sm text-primary/75 dark:text-surface/75">{t.allDoneBody}</p>
         <p className="mt-3 flex flex-wrap gap-x-5 text-sm">
-          <Link to="/learn/vocabulary/mine" className="underline underline-offset-2">
-            Review your words
+          <Link to="/learn/memory" className="underline underline-offset-2">
+            {t.reviewWords}
           </Link>
           <Link to="/learn/videos" className="underline underline-offset-2">
-            Watch the videos
+            {t.watchVideos}
           </Link>
         </p>
       </div>
@@ -107,7 +108,7 @@ function ContinueLevel({
   }
 
   const entry = media.data?.get(`lesson:${next.id}`);
-  const verb = next.progress.status === "in_progress" ? "Continue" : "Start";
+  const verb = next.progress.status === "in_progress" ? t.continueVerb : t.startVerb;
   return (
     <div className="overflow-hidden rounded-xl border border-primary/15 dark:border-surface/15 sm:grid sm:grid-cols-[minmax(0,16rem)_1fr]">
       <div className="relative aspect-video bg-paper-shade sm:aspect-auto dark:bg-night-paper">
@@ -115,13 +116,13 @@ function ContinueLevel({
           <img src={entry.posterUrl} alt="" loading="lazy" className="h-full w-full object-cover" />
         ) : (
           <span className="absolute inset-0 grid place-items-center text-sm text-primary/60 dark:text-surface/60">
-            Video coming soon
+            {t.videoSoon}
           </span>
         )}
       </div>
       <div className="p-5">
         <p className="text-xs font-medium uppercase tracking-wide text-accent-ink dark:text-accent">
-          {languageName} {level.label} · {verb} learning · {done} of {lessons.length} lessons done
+          {t.eyebrow(languageName, level.label, verb, done, lessons.length)}
         </p>
         <h2 className="mt-1 text-xl font-semibold">{next.title}</h2>
         <p className="mt-1 text-sm text-primary/75 dark:text-surface/75">{next.description}</p>
@@ -130,8 +131,8 @@ function ContinueLevel({
           className="mt-4 inline-flex items-center rounded-md bg-accent px-4 py-2 text-sm font-medium text-primary hover:opacity-90 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent"
         >
           {entry?.hasVideo
-            ? `${verb}: watch the video (${formatDuration(entry.durationSeconds ?? 0)})`
-            : `${verb} the lesson`}
+            ? t.watchVideo(verb, formatDuration(entry.durationSeconds ?? 0))
+            : t.openLesson(verb)}
         </Link>
       </div>
     </div>

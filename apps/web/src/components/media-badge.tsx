@@ -1,5 +1,6 @@
 import { useMediaIndex } from "../hooks/use-media.js";
 import { formatDuration } from "./format-duration.js";
+import { m } from "../i18n/index.js";
 
 /**
  * Says whether a lesson or word has its explainer video (and pronunciation audio) yet (M21). One
@@ -20,7 +21,7 @@ export function MediaBadge({
   if (!entry?.hasVideo) {
     return (
       <span className="inline-flex items-center rounded-full border border-dashed border-primary/30 px-2 py-0.5 text-xs text-primary/70 dark:border-surface/30 dark:text-surface/70">
-        Video coming soon
+        {m.learn.catalog.videoSoon}
       </span>
     );
   }
@@ -30,7 +31,7 @@ export function MediaBadge({
         <path d="M2 1.5v9l8-4.5z" />
       </svg>
       Video{entry.durationSeconds ? ` ${formatDuration(entry.durationSeconds)}` : ""}
-      {entry.hasAudio ? <span className="font-normal">· audio</span> : null}
+      {entry.hasAudio ? <span className="font-normal">{m.learn.catalog.audio}</span> : null}
     </span>
   );
 }

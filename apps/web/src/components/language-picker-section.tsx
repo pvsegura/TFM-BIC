@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { useLanguages } from "../hooks/use-catalog.js";
 import { LoadError } from "./catalog-notices.js";
 import { LanguageSelector } from "./language-selector.js";
+import { m } from "../i18n/index.js";
 
 export interface LanguagePickerSectionProps {
   /** The heading's id, unique on the page (the section is labelled by it). */
@@ -23,16 +24,16 @@ export function LanguagePickerSection({
 
   let body: ReactNode;
   if (languagesQuery.isPending) {
-    body = <p role="status">Loading languages…</p>;
+    body = <p role="status">{m.learn.catalog.loadingLanguages}</p>;
   } else if (languagesQuery.isError) {
     body = (
       <LoadError
-        message="We couldn't load the languages. Please try again."
+        message={m.learn.catalog.languagesError}
         onRetry={() => void languagesQuery.refetch()}
       />
     );
   } else if (languagesQuery.data.languages.length === 0) {
-    body = <p>No languages are available yet.</p>;
+    body = <p>{m.learn.catalog.noLanguages}</p>;
   } else {
     body = (
       <LanguageSelector
@@ -46,7 +47,7 @@ export function LanguagePickerSection({
   return (
     <section aria-labelledby={headingId} className="mt-6">
       <h2 id={headingId} className="mb-3 text-lg font-semibold">
-        Language
+        {m.learn.catalog.languageHeading}
       </h2>
       {body}
     </section>

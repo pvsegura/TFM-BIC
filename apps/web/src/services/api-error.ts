@@ -1,3 +1,5 @@
+import { m } from "../i18n/index.js";
+
 /** Thrown by the services in this folder for any non-2xx API response — the
  * message is already the safe, generic text the API returned (see
  * apps/api/src/routes/auth-error.mapper.ts), safe to show directly.
@@ -21,9 +23,14 @@ export function isNotFoundError(error: unknown): boolean {
 }
 
 /** What a person is told when the API gave no message of its own (network failure, bad body). */
-export const GENERIC_ERROR_MESSAGE = "Something went wrong. Please try again.";
+export const GENERIC_ERROR_MESSAGE = m.common.genericError;
 
 /** The message to show for a failed request: the API's own fixed text, or the generic one. */
+/**
+ * A Polish message for a failed request. Server error texts are English and technical, so the
+ * interface never shows them: the status decides the message.
+ */
 export function errorMessage(error: unknown): string {
-  return error instanceof ApiError ? error.message : GENERIC_ERROR_MESSAGE;
+  if (!(error instanceof ApiError)) return m.errors.network;
+  return m.errors.byStatus[error.status] ?? GENERIC_ERROR_MESSAGE;
 }

@@ -1,13 +1,14 @@
 import type { LessonProgressResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
+import { m } from "../i18n/index.js";
 
 type LessonStatus = LessonProgressResponse["status"];
 
 const LABELS: Record<LessonStatus, string> = {
-  not_started: "Not started",
-  in_progress: "In progress",
-  completed: "Completed",
+  not_started: m.learn.lessons.statuses.not_started,
+  in_progress: m.learn.lessons.statuses.in_progress,
+  completed: m.learn.lessons.statuses.completed,
 };
 
 const TONES: Record<LessonStatus, StatusTone> = {

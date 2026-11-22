@@ -3,6 +3,7 @@ import { Link } from "./app-link.js";
 
 import { LessonStatusBadge } from "./lesson-status-badge.js";
 import { MediaBadge } from "./media-badge.js";
+import { m } from "../i18n/index.js";
 
 export interface LessonCardProps {
   lesson: LessonSummaryResponse;
@@ -12,9 +13,9 @@ export interface LessonCardProps {
 }
 
 const ACTION_LABELS: Record<LessonSummaryResponse["progress"]["status"], string> = {
-  not_started: "Start lesson",
-  in_progress: "Continue lesson",
-  completed: "Review lesson",
+  not_started: m.learn.lessons.actions.not_started,
+  in_progress: m.learn.lessons.actions.in_progress,
+  completed: m.learn.lessons.actions.completed,
 };
 
 /**

@@ -18,6 +18,7 @@ import {
 } from "../hooks/use-lessons.js";
 import { useLessonMedia } from "../hooks/use-media.js";
 import { isNotFoundError } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 const LESSONS_HREF = "/learn/lessons";
@@ -48,22 +49,19 @@ export function LessonPage() {
   if (lessonQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading lesson…
+        {m.learn.lessons.loadingLesson}
       </p>
     );
   } else if (lessonQuery.isError) {
     body = isNotFoundError(lessonQuery.error) ? (
       <NotFoundNotice
-        title="Lesson not found"
-        message="That lesson is not available."
+        title={m.learn.lessons.notFoundTitle}
+        message={m.learn.lessons.notFoundBody}
         backTo={LESSONS_HREF}
-        backLabel="Back to lessons"
+        backLabel={m.learn.lessons.backToLessons}
       />
     ) : (
-      <LoadError
-        message="We couldn't load this lesson. Please try again."
-        onRetry={() => void lessonQuery.refetch()}
-      />
+      <LoadError message={m.learn.lessons.lessonError} onRetry={() => void lessonQuery.refetch()} />
     );
   } else {
     const lesson = lessonQuery.data;
@@ -100,12 +98,12 @@ export function LessonPage() {
               afterVideo={
                 <>
                   <p className="flex flex-wrap gap-x-5 gap-y-1">
-                    <span className="font-medium">Next:</span>
+                    <span className="font-medium">{m.learn.lessons.next}</span>
                     <a href="#lesson-content" className="underline underline-offset-2">
-                      Read the examples
+                      {m.learn.lessons.readExamples}
                     </a>
                     <a href="#practice" className="underline underline-offset-2">
-                      Practise with the exercises
+                      {m.learn.lessons.practise}
                     </a>
                   </p>
                   {/* M23: two entry points, because they are different questions — one about the
@@ -115,13 +113,13 @@ export function LessonPage() {
                       <AskCoachLink
                         context={{ type: "video", lessonId: lesson.id }}
                         languageCode={lesson.languageId}
-                        label="Ask about this video"
+                        label={m.learn.lessons.askVideo}
                       />
                     ) : null}
                     <AskCoachLink
                       context={{ type: "lesson", lessonId: lesson.id }}
                       languageCode={lesson.languageId}
-                      label="Ask about this lesson"
+                      label={m.learn.lessons.askLesson}
                     />
                   </p>
                 </>
@@ -130,10 +128,10 @@ export function LessonPage() {
           }
           nextSteps={
             <nav
-              aria-label="What's next"
+              aria-label={m.learn.lessons.whatsNext}
               className="mt-8 rounded-lg border border-primary/15 p-4 dark:border-surface/15"
             >
-              <h2 className="text-lg font-semibold">What's next</h2>
+              <h2 className="text-lg font-semibold">{m.learn.lessons.whatsNext}</h2>
               <ul className="mt-2 space-y-1.5 text-sm">
                 {next ? (
                   <li>
@@ -147,7 +145,7 @@ export function LessonPage() {
                 ) : null}
                 <li>
                   <Link to={vocabularyHref} className="underline underline-offset-2">
-                    Learn the words with their videos
+                    {m.learn.lessons.learnWords}
                   </Link>
                 </li>
               </ul>
@@ -171,7 +169,7 @@ export function LessonPage() {
   // No lesson to show: still a page with a level-one heading.
   return (
     <div className="mx-auto max-w-3xl py-8">
-      <h1 className="text-2xl font-semibold">Lesson</h1>
+      <h1 className="text-2xl font-semibold">{m.learn.lessons.lessonHeading}</h1>
       {body}
     </div>
   );

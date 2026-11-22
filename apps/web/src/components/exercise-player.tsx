@@ -8,6 +8,7 @@ import { ExerciseRenderer } from "./exercise-renderer.js";
 import { ExerciseResult } from "./exercise-result.js";
 import { describeCorrectAnswer, exerciseTypeLabel } from "./exercise-view-registry.js";
 import type { SubmittedAnswer } from "./exercise-view-types.js";
+import { m } from "../i18n/index.js";
 
 export interface ExercisePlayerProps {
   exercise: ExerciseResponse;
@@ -93,7 +94,7 @@ export function ExercisePlayer({
   const heading =
     position !== null && total !== null
       ? `Exercise ${String(position)} of ${String(total)}`
-      : "Exercise";
+      : m.learn.exercises.typeFallback;
   const last = exercise.result;
   const showsLastAttempt = last.status !== "unanswered" && !evaluation;
   const backIsTheWayOn = evaluation !== undefined && nextHref === null;
@@ -140,15 +141,15 @@ export function ExercisePlayer({
       {evaluation ? (
         <div className="mt-4">
           {lessonFinished ? (
-            <p className="mb-3 font-medium">You have answered every exercise in this lesson.</p>
+            <p className="mb-3 font-medium">{m.learn.exercises.allAnswered}</p>
           ) : null}
           <div className="flex flex-wrap items-center gap-3">
             <Button variant="secondary" onClick={handleRetry}>
-              Try again
+              {m.learn.exercises.tryAgain}
             </Button>
             {nextHref ? (
               <Link to={nextHref} className={PRIMARY_LINK}>
-                Next exercise
+                {m.learn.exercises.nextExercise}
               </Link>
             ) : null}
           </div>
@@ -157,7 +158,7 @@ export function ExercisePlayer({
 
       <p className="mt-6">
         <Link to={lessonHref} className={backIsTheWayOn ? PRIMARY_LINK : PLAIN_LINK}>
-          Back to lesson
+          {m.learn.exercises.backToLesson}
         </Link>
       </p>
     </div>

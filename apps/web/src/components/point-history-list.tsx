@@ -1,6 +1,7 @@
 import type { PointTransactionResponse } from "@verbysia/contracts";
 
 import { formatDate, formatPointsEarned, rewardReasonLabel } from "./reward-labels.js";
+import { m } from "../i18n/index.js";
 
 /** The reason in words; an achievement's own title follows it when the server gave one. */
 function describe(transaction: PointTransactionResponse): string {
@@ -20,7 +21,10 @@ export function PointHistoryList({
   transactions: readonly PointTransactionResponse[];
 }) {
   return (
-    <ol aria-label="Points history" className="divide-y divide-primary/10 dark:divide-surface/10">
+    <ol
+      aria-label={m.learn.rewards.historyLabel}
+      className="divide-y divide-primary/10 dark:divide-surface/10"
+    >
       {transactions.map((transaction) => (
         <li
           key={transaction.id}

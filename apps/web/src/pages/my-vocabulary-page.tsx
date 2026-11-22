@@ -10,6 +10,7 @@ import {
 import { VocabularyList } from "../components/vocabulary-list.js";
 import { useUserVocabulary, useVocabularyCategories } from "../hooks/use-vocabulary.js";
 import { useSearchParamFilters } from "../hooks/use-search-param-filters.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 
@@ -39,24 +40,21 @@ function MyVocabularySection({ languageCode }: { languageCode: string }) {
 
       <section aria-labelledby="my-vocabulary-words-heading" className="mt-4">
         <h2 id="my-vocabulary-words-heading" className="sr-only">
-          Your words
+          {m.vocabulary.yourWords}
         </h2>
         {mineQuery.isPending ? (
           <p role="status" className="mt-4">
-            Loading your vocabulary…
+            {m.vocabulary.loadingMine}
           </p>
         ) : mineQuery.isError ? (
-          <LoadError
-            message="We couldn't load your vocabulary. Please try again."
-            onRetry={() => void mineQuery.refetch()}
-          />
+          <LoadError message={m.vocabulary.errorMine} onRetry={() => void mineQuery.refetch()} />
         ) : mineQuery.data.items.length === 0 ? (
-          <p className="mt-4">No vocabulary saved yet.</p>
+          <p className="mt-4">{m.vocabulary.noneSaved}</p>
         ) : (
           <VocabularyList
             items={mineQuery.data.items}
             getHref={(item) => `/learn/vocabulary/${enc(item.id)}`}
-            label="Your vocabulary"
+            label={m.vocabulary.yourVocabularyLabel}
           />
         )}
       </section>
@@ -77,10 +75,10 @@ export function MyVocabularyPage() {
     <section aria-labelledby="my-vocabulary-page-heading" className="mx-auto max-w-3xl py-8">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <h1 id="my-vocabulary-page-heading" className="text-2xl font-semibold">
-          My Vocabulary
+          {m.vocabulary.mine}
         </h1>
         <Link to="/learn/vocabulary" className="text-sm underline underline-offset-2">
-          Browse vocabulary
+          {m.vocabulary.browse}
         </Link>
       </div>
       <LanguagePickerSection

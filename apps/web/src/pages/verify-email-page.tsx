@@ -3,7 +3,10 @@ import { useSearchParams } from "react-router";
 import { Link } from "../components/app-link.js";
 
 import { useVerifyEmail } from "../hooks/use-verify-email.js";
-import { errorMessage } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
+import { ApiError, errorMessage } from "../services/api-error.js";
+
+const t = m.auth.verify;
 
 export function VerifyEmailPage() {
   const [searchParams] = useSearchParams();
@@ -24,26 +27,29 @@ export function VerifyEmailPage() {
   return (
     <section aria-labelledby="verify-email-heading" className="mx-auto max-w-md py-12">
       <h1 id="verify-email-heading" className="text-2xl font-semibold">
-        Email verification
+        {t.title}
       </h1>
 
       <div className="mt-6">
         {!token ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            This verification link is invalid.
+            {t.invalidLink}
           </p>
         ) : verifyEmailMutation.isPending ? (
-          <p role="status">Verifying your email…</p>
+          <p role="status">{t.pending}</p>
         ) : verifyEmailMutation.isSuccess ? (
           <>
-            <p>{verifyEmailMutation.data.message}</p>
+            <p>{t.successBody}</p>
             <Link to="/login" className="mt-4 inline-block text-sm text-accent hover:underline">
-              Continue to log in
+              {t.continue}
             </Link>
           </>
         ) : verifyEmailMutation.isError ? (
           <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-            {errorMessage(verifyEmailMutation.error)}
+            {verifyEmailMutation.error instanceof ApiError &&
+            verifyEmailMutation.error.status === 400
+              ? t.expiredLink
+              : errorMessage(verifyEmailMutation.error)}
           </p>
         ) : null}
       </div>

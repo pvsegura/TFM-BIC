@@ -1,11 +1,14 @@
 import { zodResolver } from "@hookform/resolvers/zod";
-import { passwordResetRequestSchema, type PasswordResetRequest } from "@verbysia/contracts";
 import { Button, TextField } from "@verbysia/ui";
 import { useForm } from "react-hook-form";
-import { Link } from "../components/app-link.js";
 
+import { Link } from "../components/app-link.js";
+import { forgotFormSchema, type ForgotForm } from "../components/auth-form-schemas.js";
 import { useRequestPasswordReset } from "../hooks/use-request-password-reset.js";
+import { m } from "../i18n/index.js";
 import { errorMessage } from "../services/api-error.js";
+
+const t = m.auth;
 
 export function ForgotPasswordPage() {
   const requestReset = useRequestPasswordReset();
@@ -13,17 +16,17 @@ export function ForgotPasswordPage() {
     register: registerField,
     handleSubmit,
     formState: { errors },
-  } = useForm<PasswordResetRequest>({ resolver: zodResolver(passwordResetRequestSchema) });
+  } = useForm<ForgotForm>({ resolver: zodResolver(forgotFormSchema) });
 
   if (requestReset.isSuccess) {
     return (
       <section aria-labelledby="forgot-password-heading" className="mx-auto max-w-md py-12">
         <h1 id="forgot-password-heading" className="text-2xl font-semibold">
-          Check your email
+          {t.forgot.successTitle}
         </h1>
-        <p className="mt-4">{requestReset.data.message}</p>
+        <p className="mt-4">{t.forgot.successBody}</p>
         <Link to="/login" className="mt-6 inline-block text-sm text-accent hover:underline">
-          Back to log in
+          {t.backToLogin}
         </Link>
       </section>
     );
@@ -32,11 +35,9 @@ export function ForgotPasswordPage() {
   return (
     <section aria-labelledby="forgot-password-heading" className="mx-auto max-w-md py-12">
       <h1 id="forgot-password-heading" className="text-2xl font-semibold">
-        Forgot your password?
+        {t.forgot.title}
       </h1>
-      <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">
-        Enter your email and we&apos;ll send you a link to reset your password.
-      </p>
+      <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">{t.forgot.lead}</p>
 
       <form
         className="mt-6 flex flex-col gap-4"
@@ -46,7 +47,7 @@ export function ForgotPasswordPage() {
         }}
       >
         <TextField
-          label="Email"
+          label={t.email}
           type="email"
           autoComplete="email"
           error={errors.email?.message}
@@ -60,12 +61,12 @@ export function ForgotPasswordPage() {
         ) : null}
 
         <Button type="submit" disabled={requestReset.isPending}>
-          {requestReset.isPending ? "Sending…" : "Send reset link"}
+          {requestReset.isPending ? t.forgot.pending : t.forgot.submit}
         </Button>
       </form>
 
       <Link to="/login" className="mt-4 inline-block text-sm text-accent hover:underline">
-        Back to log in
+        {t.backToLogin}
       </Link>
     </section>
   );

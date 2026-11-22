@@ -3,55 +3,15 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Outlet, useLocation, useMatches } from "react-router";
 import { Link } from "../components/app-link.js";
 
+import { LanguageSwitcher } from "../components/language-switcher.js";
 import { useCurrentUser } from "../hooks/use-current-user.js";
 import { useLogout } from "../hooks/use-logout.js";
+import { m } from "../i18n/index.js";
 import { useThemeStore } from "../state/theme-store.js";
 
-const NAV_LINKS = [
-  { to: "/", label: "Home" },
-  { to: "/learn", label: "Learn" },
-];
-
-/**
- * Signed-in navigation, in the order a learner uses it: their start page, the course (languages,
- * lessons, videos), reference material (vocabulary, grammar, phonetics), the coach, then progress.
- */
-const SIGNED_IN_LINKS = [
-  { to: "/dashboard", label: "Dashboard" },
-  { to: "/learn", label: "Learn" },
-  { to: "/learn/lessons", label: "Lessons" },
-  { to: "/learn/videos", label: "Videos" },
-  { to: "/learn/vocabulary", label: "Vocabulary" },
-  { to: "/learn/grammar", label: "Grammar" },
-  { to: "/learn/phonetics", label: "Phonetics" },
-  { to: "/learn/coach", label: "AI Coach" },
-  { to: "/achievements", label: "Achievements" },
-] as const;
+const t = m.layout;
 
 const NAV_LIST_ID = "primary-nav-links";
-
-/** Footer groups: only pages that exist; privacy links jump to the matching notice section. */
-const FOOTER_GROUPS = [
-  {
-    title: "Learn",
-    links: [{ to: "/learn", label: "Languages and levels" }],
-  },
-  {
-    title: "Privacy and data",
-    links: [
-      { to: "/privacy", label: "Privacy notice" },
-      { to: "/privacy#privacy-what", label: "Data we store" },
-      { to: "/privacy#privacy-browser", label: "Cookies and browser storage" },
-      { to: "/privacy#privacy-why", label: "How your data is used" },
-      { to: "/privacy#privacy-rights", label: "Your rights" },
-      { to: "/profile#data-management-heading", label: "Download or delete your data" },
-    ],
-  },
-  {
-    title: "Contact",
-    links: [{ to: "/privacy#privacy-who", label: "Who is responsible" }],
-  },
-] as const;
 
 const supportsViewTransitions =
   typeof document !== "undefined" && "startViewTransition" in document;
@@ -109,7 +69,7 @@ export function RootLayout() {
         href="#main-content"
         className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-md focus:bg-accent focus:px-4 focus:py-2 focus:text-primary"
       >
-        Skip to main content
+        {t.skipToContent}
       </a>
 
       <header
@@ -123,11 +83,11 @@ export function RootLayout() {
             to="/"
             className="font-display text-lg font-bold tracking-tight underline decoration-accent decoration-2 underline-offset-[6px]"
           >
-            VerbySia
+            {t.brand}
           </Link>
 
           <nav
-            aria-label="Primary"
+            aria-label={t.primaryNavLabel}
             className="flex grow flex-wrap items-center justify-end gap-x-4 gap-y-2 xl:grow-0"
           >
             <button
@@ -138,7 +98,7 @@ export function RootLayout() {
               aria-controls={NAV_LIST_ID}
               onClick={() => setMenuOpenedOn(menuOpen ? null : pathname)}
             >
-              Menu
+              {t.menu}
             </button>
 
             <ul
@@ -149,7 +109,7 @@ export function RootLayout() {
             >
               {currentUser ? (
                 <>
-                  {SIGNED_IN_LINKS.map((link) => (
+                  {t.signedInLinks.map((link) => (
                     <li key={link.to}>
                       <Link to={link.to} className="text-sm hover:underline">
                         {link.label}
@@ -159,14 +119,21 @@ export function RootLayout() {
                   {currentUser.role === "TEACHER" ? (
                     <li>
                       <Link to="/teacher" className="text-sm hover:underline">
-                        Teaching
+                        {t.teaching}
+                      </Link>
+                    </li>
+                  ) : null}
+                  {currentUser.role === "ADMIN" ? (
+                    <li>
+                      <Link to="/admin" className="text-sm hover:underline">
+                        {t.admin}
                       </Link>
                     </li>
                   ) : null}
                   {/* Account items sit apart from the learning links on wide screens. */}
                   <li className="xl:border-l xl:border-primary/20 xl:pl-4 dark:xl:border-surface/20">
                     <Link to="/profile" className="text-sm hover:underline">
-                      Profile
+                      {t.profile}
                     </Link>
                   </li>
                   <li
@@ -181,13 +148,13 @@ export function RootLayout() {
                       onClick={() => logoutMutation.mutate()}
                       disabled={logoutMutation.isPending}
                     >
-                      Log out
+                      {t.logout}
                     </Button>
                   </li>
                 </>
               ) : (
                 <>
-                  {NAV_LINKS.map((link) => (
+                  {t.publicLinks.map((link) => (
                     <li key={link.to}>
                       <Link to={link.to} className="text-sm hover:underline">
                         {link.label}
@@ -196,25 +163,27 @@ export function RootLayout() {
                   ))}
                   <li>
                     <Link to="/login" className="text-sm hover:underline">
-                      Log in
+                      {t.login}
                     </Link>
                   </li>
                   <li>
                     <Link to="/register" className="text-sm hover:underline">
-                      Register
+                      {t.register}
                     </Link>
                   </li>
                 </>
               )}
             </ul>
 
+            <LanguageSwitcher />
+
             <Button
               variant="secondary"
               onClick={toggleTheme}
               aria-pressed={theme === "dark"}
-              aria-label="Toggle dark mode"
+              aria-label={t.themeToggleLabel}
             >
-              {theme === "dark" ? "Dark" : "Light"} mode
+              {theme === "dark" ? t.themeDark : t.themeLight}
             </Button>
           </nav>
         </div>
@@ -236,8 +205,8 @@ export function RootLayout() {
         className={`border-t border-primary/10 bg-paper-shade/40 dark:border-surface/10 dark:bg-night-paper/40 ${fullBleed ? "" : "mt-12"}`}
       >
         <div className={`mx-auto ${frameWidth} px-4 py-8 font-display text-[0.95rem]`}>
-          <nav aria-label="Footer" className="grid gap-6 sm:grid-cols-3">
-            {FOOTER_GROUPS.map((group) => (
+          <nav aria-label={t.footerNavLabel} className="grid gap-6 sm:grid-cols-3">
+            {t.footerGroups.map((group) => (
               <div key={group.title}>
                 <h2 className="text-base font-bold tracking-tight text-accent-ink dark:text-accent">
                   {group.title}
@@ -255,8 +224,7 @@ export function RootLayout() {
             ))}
           </nav>
           <p className="mt-6 border-t border-primary/10 pt-4 text-sm text-primary/70 dark:border-surface/10 dark:text-surface/70">
-            © 2026 pvsegura · VerbySia · A study project; contact details and legal review are
-            pending.
+            {t.copyright}
           </p>
         </div>
       </footer>

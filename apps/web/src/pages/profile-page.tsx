@@ -5,6 +5,7 @@ import { DataManagementSection } from "../components/data-management-section.js"
 import { EmailPreferencesSection } from "../components/email-preferences-section.js";
 import { ProfileForm } from "../components/profile-form.js";
 import { useCurrentProfile } from "../hooks/use-current-profile.js";
+import { m } from "../i18n/index.js";
 
 /**
  * Loads the signed-in student's profile and renders the form once it is
@@ -18,17 +19,17 @@ export function ProfilePage() {
   if (profileQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading your profile…
+        {m.account.profile.loading}
       </p>
     );
   } else if (profileQuery.isError) {
     body = (
       <div className="mt-6">
         <p role="alert" className="text-sm text-red-600 dark:text-red-400">
-          We couldn&apos;t load your profile. Please try again.
+          {m.account.profile.error}
         </p>
         <Button className="mt-4" onClick={() => void profileQuery.refetch()}>
-          Try again
+          {m.account.profile.tryAgain}
         </Button>
       </div>
     );
@@ -39,7 +40,7 @@ export function ProfilePage() {
   return (
     <section aria-labelledby="profile-heading" className="mx-auto max-w-2xl py-8">
       <h1 id="profile-heading" className="text-2xl font-semibold">
-        Your profile
+        {m.account.profile.title}
       </h1>
       {body}
       <EmailPreferencesSection />

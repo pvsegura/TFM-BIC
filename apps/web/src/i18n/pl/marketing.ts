@@ -1,0 +1,324 @@
+/** Public pages. Honest by rule: no fluency promises, no invented prices, discounts or reviews. */
+export const marketing = {
+  home: {
+    metaTitle: "Verbysia — nauka hiszpańskiego od podstaw dla Polaków",
+    metaDescription:
+      "Hiszpański dla Polaków metodą PUENTE: darmowe wyzwanie 7 dni, kurs A1 online, trener pamięci z powtórkami i wyjaśnienia po polsku.",
+    eyebrow: "Hiszpański dla Polaków",
+    title: "Od myślenia po polsku do mówienia po hiszpańsku",
+    lead: "Verbysia to kurs hiszpańskiego online przygotowany od początku z myślą o Polakach. Uczysz się sam, we własnym tempie, z wyjaśnieniami po polsku — bez lektora i bez grafiku zajęć.",
+    primaryCta: "Zacznij darmowe wyzwanie 7 dni",
+    secondaryCta: "Poznaj metodę PUENTE",
+    trust: "Bez karty płatniczej · Wyjaśnienia po polsku · Nauka w Twoim tempie",
+    whyTitle: "Dlaczego kurs tylko dla Polaków?",
+    whyLead:
+      "Polak uczący się hiszpańskiego potyka się w innych miejscach niż Niemiec czy Anglik. Dlatego od pierwszej lekcji uprzedzamy błędy, które wynikają z polskiego.",
+    whyPoints: [
+      {
+        title: "Ser czy estar?",
+        body: "Po polsku mamy jedno „być”, po hiszpańsku dwa. Uczymy różnicy na prostych skojarzeniach i parach przykładów.",
+      },
+      {
+        title: "Rodzajniki, których nie znamy",
+        body: "Polski nie ma rodzajników. U nas każde słowo od początku poznajesz razem z el/la i z kolorem rodzaju.",
+      },
+      {
+        title: "Wymowa bez polskiego akcentu",
+        body: "Krótkie, czyste samogłoski, j jak polskie h, ll jak j. Słuchasz, nagrywasz się i porównujesz z wzorem.",
+      },
+    ],
+    phasesTitle: "Sześć kroków metody PUENTE",
+    phasesLead:
+      "Każda lekcja prowadzi Cię tą samą drogą — od pierwszego kontaktu z językiem do samodzielnej wypowiedzi.",
+    howTitle: "Jak to działa",
+    howSteps: [
+      { title: "Załóż darmowe konto", body: "Wystarczy e-mail i hasło. Bez karty płatniczej." },
+      {
+        title: "Przejdź wyzwanie 7 dni",
+        body: "Codziennie około 20–30 minut: lekcja, ćwiczenia, powtórka i mała misja.",
+      },
+      {
+        title: "Powtarzaj z trenerem pamięci",
+        body: "System sam przypomina Ci słowa wtedy, gdy zaczynasz je zapominać.",
+      },
+      {
+        title: "Kontynuuj kurs A1",
+        body: "Rozwijasz każdy temat z wyzwania i budujesz coraz dłuższe zdania.",
+      },
+    ],
+    challengeTitle: "Darmowe wyzwanie: 7 dni, żeby zacząć mówić po hiszpańsku",
+    challengeBody:
+      "W tydzień poznasz podstawy, z których zbudujesz pierwsze rozmowy: powitania, ser i estar, pytania, zamawianie w kawiarni i mówienie o sobie. Na koniec przeprowadzisz prostą, prowadzoną rozmowę. Nie obiecujemy płynności w tydzień — obiecujemy dobry start.",
+    challengeCta: "Zobacz program wyzwania",
+    coursesTitle: "Kursy",
+    exampleTitle: "Tak wygląda ćwiczenie",
+    exampleQuestion: "Jak powiesz: Jestem zmęczony?",
+    exampleOptions: ["Soy cansado.", "Estoy cansado.", "Tengo cansado."],
+    exampleAnswer: "Estoy cansado — zmęczenie to stan w tej chwili, więc używamy estar.",
+    exampleReveal: "Pokaż odpowiedź",
+    pricingTitle: "Zacznij za darmo, zdecyduj później",
+    pricingBody:
+      "Wyzwanie 7 dni i pierwsze materiały są bezpłatne. Kurs A1 i plan Premium opisujemy przejrzyście w cenniku.",
+    pricingCta: "Zobacz cennik",
+    finalTitle: "Pierwsze hiszpańskie zdanie powiesz jeszcze dziś",
+    finalCta: "Załóż darmowe konto",
+  },
+  phases: [
+    {
+      letter: "P",
+      name: "Percibir",
+      pl: "Postrzegaj",
+      body: "Słuchasz i oswajasz się z brzmieniem języka. Trzy odsłuchy: bez tekstu, ze słowami-kluczami, z tekstem.",
+    },
+    {
+      letter: "U",
+      name: "Unir",
+      pl: "Łącz",
+      body: "Łączysz nowe słowa z obrazami i skojarzeniami, żeby łatwiej je zapamiętać.",
+    },
+    {
+      letter: "E",
+      name: "Estructurar",
+      pl: "Buduj",
+      body: "Poznajesz wzory zdań i wymieniasz w nich elementy — z kilku wzorów powstają dziesiątki zdań.",
+    },
+    {
+      letter: "N",
+      name: "Nutrir la memoria",
+      pl: "Utrwalaj",
+      body: "Powtarzasz w odpowiednich odstępach czasu i przypominasz sobie słowa bez patrzenia na tłumaczenie.",
+    },
+    {
+      letter: "T",
+      name: "Transformar",
+      pl: "Przekształcaj",
+      body: "Przechodzisz od rozumienia do tworzenia: uzupełniasz, przekształcasz i układasz własne zdania.",
+    },
+    {
+      letter: "E",
+      name: "Expresar",
+      pl: "Mów",
+      body: "Używasz hiszpańskiego w sytuacjach z życia: dialogi, odgrywanie ról, nagrania i misje komunikacyjne.",
+    },
+  ],
+  method: {
+    metaTitle: "Metoda PUENTE — jak uczymy hiszpańskiego | Verbysia",
+    metaDescription:
+      "Metoda PUENTE łączy powtórki w odstępach, aktywne przypominanie, skojarzenia i praktykę mówienia. Poznaj sześć kroków i to, na czym się opieramy.",
+    title: "Metoda PUENTE",
+    lead: "Puente po hiszpańsku znaczy „most”. Metoda prowadzi Cię mostem od polskiego do hiszpańskiego — krok po kroku, z wyjaśnieniami po polsku i z uprzedzaniem typowych błędów Polaków.",
+    evidenceTitle: "Na czym się opieramy",
+    evidenceLead:
+      "Mówimy uczciwie, które elementy mają mocne podstawy w badaniach, a które są pomocniczymi technikami.",
+    evidenceStrongTitle: "Techniki z dobrym potwierdzeniem w badaniach",
+    evidenceStrong: [
+      "Aktywne przypominanie: przypominanie sobie odpowiedzi utrwala wiedzę lepiej niż ponowne czytanie.",
+      "Powtórki w odstępach: powtarzanie w rosnących odstępach czasu działa lepiej niż nauka „na raz”.",
+      "Przeplatanie: mieszanie podobnych zagadnień (np. ser i estar) uczy je rozróżniać.",
+      "Mówienie i pisanie od początku: tworzenie własnych zdań pokazuje, czego jeszcze nie umiesz.",
+      "Natychmiastowa informacja zwrotna: każde ćwiczenie wyjaśnia po polsku, dlaczego odpowiedź jest dobra lub zła.",
+    ],
+    evidenceSupportTitle: "Techniki pomocnicze",
+    evidenceSupport: [
+      "Wyobrażenia i absurdalne skojarzenia pomagają zapamiętać znaczenie słowa — zawsze sprawdzasz też wymowę w nagraniu.",
+      "Ćwiczenia wyobraźni i wyznaczanie celów mogą zmniejszyć stres przed mówieniem, ale nie przedstawiamy ich jako metody o udowodnionej skuteczności.",
+      "Nie dopasowujemy nauki do „stylów uczenia się” (wzrokowiec, słuchowiec) — badania nie potwierdzają, że to pomaga.",
+    ],
+    polishTitle: "Zaprojektowane dla Polaków",
+    polishLead: "Oto kilka trudności, które uprzedzamy od pierwszych lekcji:",
+    polishPoints: [
+      "ser i estar — jedno polskie „być”, dwa hiszpańskie czasowniki",
+      "rodzajniki el, la, un, una — których w polskim nie ma",
+      "rodzaj rzeczowników: la leche, ale „mleko” jest nijakie",
+      "me gusta / me gustan — konstrukcja odwrotna do „lubię”",
+      "wiek „się ma”: tengo treinta años, nie soy treinta años",
+      "wymowa: krótkie samogłoski, j, ll, ñ, z oraz akcent wyrazowy",
+      "fałszywi przyjaciele, np. embarazada to „w ciąży”, a nie „zażenowana”",
+    ],
+    cta: "Wypróbuj metodę w darmowym wyzwaniu",
+    nameNote: "Nazwa „Metoda PUENTE” jest nazwą roboczą.",
+  },
+  challenge: {
+    metaTitle: "Darmowe wyzwanie: 7 dni, żeby zacząć mówić po hiszpańsku | Verbysia",
+    metaDescription:
+      "Darmowy, 7-dniowy program dla początkujących: powitania, ser i estar, pytania, kawiarnia, mówienie o sobie, słuchanie i pierwsza rozmowa. Wyjaśnienia po polsku.",
+    title: "7 dni, żeby zacząć mówić po hiszpańsku",
+    lead: "Darmowy program dla osób zaczynających od zera. Codziennie jedna lekcja, trzy ćwiczenia, powtórka słówek w trenerze pamięci i mała misja do wykonania na głos.",
+    honest:
+      "Po tygodniu nie będziesz mówić płynnie — nikt uczciwy tego nie obieca. Będziesz za to w stanie przeprowadzić prostą, prowadzoną rozmowę i będziesz wiedzieć, jak uczyć się dalej.",
+    daysTitle: "Program dzień po dniu",
+    days: [
+      {
+        day: 1,
+        lessonId: "es-day-1-greetings",
+        title: "Pierwszy kontakt",
+        body: "Powitania, przedstawianie się, zaimki i pierwsze hiszpańskie dźwięki.",
+      },
+      {
+        day: 2,
+        lessonId: "es-day-2-building-sentences",
+        title: "Budujesz zdania",
+        body: "Ser, estar, tener i querer — cztery czasowniki na dziesiątki zdań.",
+      },
+      {
+        day: 3,
+        lessonId: "es-day-3-questions",
+        title: "Pytasz i odpowiadasz",
+        body: "Qué, quién, dónde, cuándo, cuánto i szybkie odpowiedzi.",
+      },
+      {
+        day: 4,
+        lessonId: "es-day-4-cafe-and-shop",
+        title: "Prawdziwe sytuacje",
+        body: "Kawiarnia, restauracja, sklep: zamawiasz, pytasz o cenę, płacisz.",
+      },
+      {
+        day: 5,
+        lessonId: "es-day-5-about-me",
+        title: "Mówisz o sobie",
+        body: "Rodzina, praca, upodobania i Twój zwykły dzień.",
+      },
+      {
+        day: 6,
+        lessonId: "es-day-6-listening",
+        title: "Rozumiesz ze słuchu",
+        body: "Słowa-klucze, łączenie wyrazów i technika trzech odsłuchów.",
+      },
+      {
+        day: 7,
+        lessonId: "es-day-7-first-conversation",
+        title: "Pierwsza rozmowa",
+        body: "Cała rozmowa krok po kroku i przegląd błędów z tygodnia.",
+      },
+    ],
+    eachDayTitle: "Co zawiera każdy dzień",
+    eachDay: [
+      "lekcję z przykładami i dialogiem",
+      "skojarzenia, które pomagają zapamiętać słowa",
+      "trzy ćwiczenia z wyjaśnieniem po polsku",
+      "powtórkę słówek w trenerze pamięci",
+      "misję: kilka zdań do powiedzenia lub nagrania",
+    ],
+    startCta: "Zacznij dzień 1",
+    registerCta: "Załóż darmowe konto i zacznij",
+    progressLabel: "Twój postęp w wyzwaniu",
+    daysDone: (n: number) => `${String(n)} / 7 dni`,
+    dayDone: "Ukończony",
+    dayOpen: "Otwórz",
+    dayLabel: "Dzień",
+  },
+  courseA1: {
+    metaTitle: "Kurs hiszpańskiego A1 online dla Polaków | Verbysia",
+    metaDescription:
+      "Hiszpański A1 od podstaw metodą PUENTE: lekcje z wyjaśnieniami po polsku, ćwiczenia, trener pamięci i nagrania. Zacznij od darmowego wyzwania 7 dni.",
+    title: "Kurs hiszpańskiego A1",
+    lead: "Poziom A1 według Europejskiego Systemu Opisu Kształcenia Językowego: rozumiesz i używasz prostych, codziennych wyrażeń, przedstawiasz się, pytasz o podstawowe rzeczy i radzisz sobie w prostych sytuacjach.",
+    statusNow:
+      "Teraz dostępne: wyzwanie 7 dni (bezpłatnie). Kolejne jednostki A1 są w przygotowaniu i będą dodawane stopniowo.",
+    unitsTitle: "Plan kursu A1",
+    units: [
+      "¡Hola! Me llamo… — przedstawianie się, alfabet, narodowości",
+      "Mi familia y yo — rodzina, wiek, zaimki dzierżawcze",
+      "¿Dónde está? — miejsca w mieście, hay czy está",
+      "W barze i restauracji — zamawianie, płacenie, preferencje",
+      "Mi día — codzienne czynności i godziny",
+      "¿Qué te gusta? — upodobania, también i tampoco",
+      "Zakupy — ubrania, kolory, liczby, ceny",
+      "Mi casa — mieszkanie i opisywanie",
+      "Pogoda i pory roku — plany z ir a + bezokolicznik",
+      "Poruszanie się po mieście — transport i wskazówki",
+      "Zdrowie — u lekarza i w aptece",
+      "Powtórka i sprawdzian A1",
+    ],
+    levelsTitle: "Kolejne poziomy",
+    levelsBody:
+      "A2, B1 i B2 są w przygotowaniu. Nie sprzedajemy poziomów, które jeszcze nie istnieją.",
+    cta: "Zacznij od wyzwania 7 dni",
+  },
+  pricing: {
+    metaTitle: "Cennik — Verbysia",
+    metaDescription:
+      "Plan darmowy, Verbysia Premium miesięcznie i rocznie oraz kurs A1 z jednorazową płatnością. Przejrzyste warunki odnowienia i anulowania.",
+    title: "Cennik",
+    lead: "Zacznij za darmo. Gdy będziesz gotowy, wybierz plan — bez ukrytych kosztów i bez wymyślonych „promocji”.",
+    paymentsNotice:
+      "Płatności online uruchomimy wkrótce. Do tego czasu zakup nie jest możliwy — możesz korzystać z planu darmowego i wyzwania 7 dni.",
+    freeName: "Verbysia Free",
+    freePrice: "0 zł",
+    freeFeatures: [
+      "darmowe wyzwanie 7 dni",
+      "trener pamięci ze słownictwem z wyzwania",
+      "ćwiczenia z wyjaśnieniami po polsku",
+      "podgląd metody PUENTE",
+    ],
+    freeCta: "Załóż darmowe konto",
+    perMonth: "/ miesiąc",
+    perYear: "/ rok",
+    oneOff: "jednorazowo",
+    indefinite: "dostęp bezterminowy",
+    renewsMonthly:
+      "Odnawia się co miesiąc. Możesz anulować w dowolnym momencie — dostęp trwa do końca opłaconego okresu.",
+    renewsYearly:
+      "Płatne z góry za 12 miesięcy. Odnawia się co rok; możesz anulować w dowolnym momencie.",
+    yearlySaving: (saving: string) =>
+      `Oszczędzasz ${saving} w porównaniu z 12 miesiącami planu miesięcznego.`,
+    buy: "Kup",
+    buySoon: "Płatności wkrótce",
+    comingSoon: "Wkrótce",
+    comingSoonBody: "W przygotowaniu — nie można go jeszcze kupić.",
+    premiumFeatures: [
+      "wszystkie dostępne kursy (dziś A1, kolejne poziomy po ich publikacji)",
+      "pełny trener pamięci",
+      "wszystkie ćwiczenia i nagrania",
+      "statystyki i plan powtórek",
+    ],
+    vatNote: "Ceny brutto w złotych (zawierają VAT).",
+    legalNote:
+      "Regulamin sprzedaży, zasady odstąpienia od umowy dla treści cyfrowych i dane sprzedawcy opublikujemy przed uruchomieniem płatności.",
+    tableTitle: "Porównanie planów",
+  },
+  faq: {
+    metaTitle: "Najczęstsze pytania — Verbysia",
+    metaDescription:
+      "Odpowiedzi na pytania o naukę hiszpańskiego w Verbysii: dla kogo jest kurs, ile czasu potrzeba, ile kosztuje i jak działa trener pamięci.",
+    title: "Najczęstsze pytania",
+    items: [
+      {
+        q: "Dla kogo jest Verbysia?",
+        a: "Dla dorosłych Polaków, którzy chcą nauczyć się hiszpańskiego od podstaw — na wyjazd, do pracy, do życia w Hiszpanii albo z ciekawości. Także dla tych, którzy kiedyś się uczyli, ale nie potrafią mówić.",
+      },
+      {
+        q: "Czy muszę znać jakikolwiek hiszpański?",
+        a: "Nie. Wyzwanie 7 dni i kurs A1 zaczynają od zera, a wszystkie wyjaśnienia są po polsku.",
+      },
+      {
+        q: "Czy po 7 dniach będę mówić płynnie?",
+        a: "Nie. Po tygodniu przeprowadzisz prostą, prowadzoną rozmowę i poznasz podstawy, na których zbudujesz dalszą naukę. Płynność wymaga miesięcy regularnej praktyki.",
+      },
+      {
+        q: "Ile czasu dziennie potrzebuję?",
+        a: "W wyzwaniu około 20–30 minut dziennie. Później zalecamy krótką, ale codzienną naukę i powtórki w trenerze pamięci.",
+      },
+      {
+        q: "Czy są zajęcia na żywo albo lektor?",
+        a: "Nie. Verbysia to kurs do samodzielnej nauki: uczysz się, kiedy chcesz i jak długo chcesz.",
+      },
+      {
+        q: "Jak działa trener pamięci?",
+        a: "Po każdej odpowiedzi oceniasz, jak łatwo było Ci przypomnieć sobie słowo. System (algorytm SM-2) planuje kolejną powtórkę: trudne słowa wracają szybciej, łatwe rzadziej.",
+      },
+      {
+        q: "Czy mogę ocenić swoją wymowę?",
+        a: "Możesz się nagrać i porównać nagranie z wzorem. Nie wystawiamy automatycznych „ocen wymowy” — takie oceny nie zastępują opinii nauczyciela.",
+      },
+      {
+        q: "Ile to kosztuje?",
+        a: "Wyzwanie 7 dni i plan darmowy są bezpłatne. Ceny kursu A1 i planu Premium znajdziesz w cenniku. Płatności online uruchomimy wkrótce.",
+      },
+      {
+        q: "Co z moimi danymi?",
+        a: "Przechowujemy tylko to, co potrzebne do nauki. Możesz w każdej chwili pobrać lub usunąć swoje dane w profilu. Szczegóły w polityce prywatności.",
+      },
+    ],
+  },
+} as const;

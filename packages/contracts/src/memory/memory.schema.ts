@@ -66,3 +66,7 @@ export type MemorySessionResponse = z.infer<typeof memorySessionResponseSchema>;
 export type MemoryReviewRequest = z.infer<typeof memoryReviewRequestSchema>;
 export type MemoryReviewResponse = z.infer<typeof memoryReviewResponseSchema>;
 export type MemoryStatsResponse = z.infer<typeof memoryStatsResponseSchema>;
+
+/** The four answer buttons, in display order (re-exported so the web never imports the domain). */
+export const MEMORY_GRADES = RECALL_GRADES;
+export type MemoryGrade = (typeof MEMORY_GRADES)[number];

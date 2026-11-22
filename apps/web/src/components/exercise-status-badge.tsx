@@ -1,11 +1,12 @@
 import type { ExerciseResultResponse } from "@verbysia/contracts";
+import { m } from "../i18n/index.js";
 
 type ResultStatus = ExerciseResultResponse["status"];
 
 const LABELS: Record<ResultStatus, string> = {
-  unanswered: "Not answered",
-  correct: "Correct",
-  incorrect: "Not correct",
+  unanswered: m.learn.exercises.statuses.unanswered,
+  correct: m.learn.exercises.statuses.correct,
+  incorrect: m.learn.exercises.statuses.incorrect,
 };
 
 /** Told apart by their words (always shown), a mark and the border or fill style — never by

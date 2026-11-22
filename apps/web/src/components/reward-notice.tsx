@@ -2,6 +2,7 @@ import type { RewardsResponse } from "@verbysia/contracts";
 
 import { AchievementIcon } from "./achievement-icon.js";
 import { formatPointsEarned } from "./reward-labels.js";
+import { m } from "../i18n/index.js";
 
 /**
  * What an action just earned, exactly as the server reported it: the points, and each
@@ -23,7 +24,7 @@ export function RewardNotice({ rewards }: { rewards: RewardsResponse }) {
     <div data-testid="reward-notice" className="mt-3 rounded-lg border-2 border-accent px-4 py-3">
       <p className="font-semibold">{formatPointsEarned(rewards.pointsAwarded)}</p>
       {rewards.achievementsUnlocked.length === 0 ? null : (
-        <ul aria-label="Achievements unlocked" className="mt-2 space-y-2">
+        <ul aria-label={m.learn.rewards.unlockedLabel} className="mt-2 space-y-2">
           {rewards.achievementsUnlocked.map((achievement) => (
             <li key={achievement.key} className="flex items-start gap-3">
               <AchievementIcon iconId={achievement.iconId} />

@@ -3,6 +3,7 @@ import { Button, TextField } from "@verbysia/ui";
 import { useState, type FormEvent } from "react";
 
 import type { ExerciseViewProps } from "./exercise-view-types.js";
+import { m } from "../i18n/index.js";
 
 type TextAnswer = Extract<ExerciseResponse, { type: "text-answer" }>;
 
@@ -31,7 +32,7 @@ export function TextAnswerExerciseView({
   function handleSubmit(event: FormEvent) {
     event.preventDefault();
     if (value.trim().length === 0) {
-      setError("Enter an answer.");
+      setError(m.learn.exercises.enterAnswer);
       return;
     }
     onSubmit(value);
@@ -59,7 +60,7 @@ export function TextAnswerExerciseView({
         />
       </div>
       <Button type="submit" className="mt-4" disabled={disabled}>
-        Check answer
+        {m.learn.exercises.check}
       </Button>
     </form>
   );

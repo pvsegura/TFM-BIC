@@ -1,4 +1,5 @@
 import type { VocabularyCategoriesResponse } from "@verbysia/contracts";
+import { m } from "../i18n/index.js";
 
 export interface VocabularyCategoryListProps {
   categories: readonly VocabularyCategoriesResponse["categories"][number][];
@@ -14,7 +15,7 @@ export function VocabularyCategoryList({
   onSelect,
 }: VocabularyCategoryListProps) {
   return (
-    <nav aria-label="Vocabulary categories">
+    <nav aria-label={m.vocabulary.categoriesNav}>
       <ul className="grid gap-3 sm:grid-cols-2">
         {categories.map((category) => {
           const selected = category.id === selectedId;

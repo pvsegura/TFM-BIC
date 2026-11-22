@@ -13,6 +13,7 @@ import { WordAudioButton } from "../components/word-audio-button.js";
 import { useVocabularyMedia } from "../hooks/use-media.js";
 import { useVocabulary, useVocabularyItem } from "../hooks/use-vocabulary.js";
 import { isNotFoundError } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 const VOCABULARY_HREF = "/learn/vocabulary";
 const enc = encodeURIComponent;
@@ -53,22 +54,19 @@ export function VocabularyDetailPage() {
   if (itemQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading word…
+        {m.vocabulary.loadingWord}
       </p>
     );
   } else if (itemQuery.isError) {
     body = isNotFoundError(itemQuery.error) ? (
       <NotFoundNotice
-        title="Vocabulary item not found"
-        message="That word is not available."
+        title={m.vocabulary.wordNotFound}
+        message={m.vocabulary.wordNotAvailable}
         backTo={VOCABULARY_HREF}
-        backLabel="Back to vocabulary"
+        backLabel={m.vocabulary.backToVocabulary}
       />
     ) : (
-      <LoadError
-        message="We couldn't load this word. Please try again."
-        onRetry={() => void itemQuery.refetch()}
-      />
+      <LoadError message={m.vocabulary.wordError} onRetry={() => void itemQuery.refetch()} />
     );
   } else {
     const item = itemQuery.data;
@@ -86,7 +84,7 @@ export function VocabularyDetailPage() {
       </Link>
     ) : (
       <Link to={`${VOCABULARY_HREF}/mine`} className="font-medium underline underline-offset-2">
-        Review your saved words →
+        {m.vocabulary.reviewSaved}
       </Link>
     );
     return (
@@ -126,12 +124,22 @@ export function VocabularyDetailPage() {
         </div>
 
         <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          <Fact label="Category">{item.category.title}</Fact>
-          {item.levelId ? <Fact label="Level">{item.levelId.toUpperCase()}</Fact> : null}
-          {item.partOfSpeech ? <Fact label="Part of speech">{item.partOfSpeech}</Fact> : null}
-          {item.gender ? <Fact label="Gender">{item.gender}</Fact> : null}
+          <Fact label={m.vocabulary.facts.category}>{item.category.title}</Fact>
+          {item.levelId ? (
+            <Fact label={m.vocabulary.facts.level}>{item.levelId.toUpperCase()}</Fact>
+          ) : null}
+          {item.partOfSpeech ? (
+            <Fact label={m.vocabulary.facts.partOfSpeech}>
+              {m.vocabulary.partsOfSpeech[item.partOfSpeech] ?? item.partOfSpeech}
+            </Fact>
+          ) : null}
+          {item.gender ? (
+            <Fact label={m.vocabulary.facts.gender}>
+              {m.vocabulary.genders[item.gender] ?? item.gender}
+            </Fact>
+          ) : null}
           {item.plural ? (
-            <Fact label="Plural">
+            <Fact label={m.vocabulary.facts.plural}>
               <span lang={item.languageId}>{item.plural}</span>
             </Fact>
           ) : null}
@@ -153,7 +161,7 @@ export function VocabularyDetailPage() {
         </div>
 
         <nav
-          aria-label="Keep going"
+          aria-label={m.vocabulary.keepGoing}
           className="mt-8 flex flex-wrap items-center gap-x-6 gap-y-2 border-t border-primary/10 pt-4 text-sm dark:border-surface/10"
         >
           {nextStep}
@@ -162,14 +170,14 @@ export function VocabularyDetailPage() {
             to={`/learn/phonetics?language=${enc(item.languageId)}`}
             className="underline underline-offset-2"
           >
-            View pronunciation guide
+            {m.vocabulary.pronunciationGuide}
           </Link>
           {/* M23: practise this word with the AI Coach. Only the entry's id travels; the backend
               re-authorises it through the same use case this page used. */}
           <AskCoachLink
             context={{ type: "vocabulary", vocabularyItemId: item.id }}
             languageCode={item.languageId}
-            label="Practise this word"
+            label={m.vocabulary.practiseWord}
           />
         </nav>
       </div>
@@ -178,7 +186,7 @@ export function VocabularyDetailPage() {
 
   return (
     <div className="mx-auto max-w-2xl py-8">
-      <h1 className="text-2xl font-semibold">Vocabulary</h1>
+      <h1 className="text-2xl font-semibold">{m.vocabulary.title}</h1>
       {body}
     </div>
   );

@@ -9,6 +9,7 @@ import type {
   ExerciseViewProps,
   SubmittedAnswer,
 } from "./exercise-view-types.js";
+import { m } from "../i18n/index.js";
 
 /** One registered view with its exercise type erased, so the registry can hold them all in one map. */
 export interface RegisteredView {
@@ -54,22 +55,26 @@ function registerView<TExercise extends ExerciseResponse>(
  */
 const VIEWS: ReadonlyMap<string, RegisteredView> = new Map([
   registerView("multiple-choice", {
-    typeLabel: "Multiple choice",
+    typeLabel: m.learn.exercises.types["multiple-choice"] ?? "",
     View: MultipleChoiceExerciseView,
     // The correct answer arrives as an option id; the student is shown that option's text.
     describeAnswer: (exercise, answer) =>
       exercise.options.find((option) => option.id === answer)?.text ?? null,
   }),
   registerView("text-answer", {
-    typeLabel: "Text answer",
+    typeLabel: m.learn.exercises.types["text-answer"] ?? "",
     View: TextAnswerExerciseView,
     describeAnswer: (_exercise, answer) => (typeof answer === "string" ? answer : null),
   }),
   registerView("true-false", {
-    typeLabel: "True or false",
+    typeLabel: m.learn.exercises.types["true-false"] ?? "",
     View: TrueFalseExerciseView,
     describeAnswer: (_exercise, answer) =>
-      typeof answer === "boolean" ? (answer ? "True" : "False") : null,
+      typeof answer === "boolean"
+        ? answer
+          ? m.learn.exercises.trueLabel
+          : m.learn.exercises.falseLabel
+        : null,
   }),
 ]);
 
@@ -80,7 +85,7 @@ export function viewFor(type: string): RegisteredView | undefined {
 
 /** A short name for a kind of exercise, for lists and headings. */
 export function exerciseTypeLabel(type: string): string {
-  return VIEWS.get(type)?.typeLabel ?? "Exercise";
+  return VIEWS.get(type)?.typeLabel ?? m.learn.exercises.typeFallback;
 }
 
 /**

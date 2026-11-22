@@ -1,4 +1,5 @@
 import { useRef, useState } from "react";
+import { m } from "../i18n/index.js";
 
 /**
  * A small play button for a word's recorded pronunciation (M22: words get audio, not video). Plays
@@ -43,10 +44,8 @@ export function WordAudioButton({
     <button
       type="button"
       onClick={play}
-      aria-label={
-        failed ? `Could not play “${word}”. Try again` : `Play the pronunciation of ${word}`
-      }
-      title={failed ? "Could not play — try again" : "Play the pronunciation"}
+      aria-label={failed ? m.learn.audio.failed(word) : m.learn.audio.play(word)}
+      title={failed ? m.learn.audio.failedTitle : m.learn.audio.playTitle}
       className={`inline-grid h-9 w-9 shrink-0 place-items-center rounded-full border-2 transition-colors focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-accent ${
         playing
           ? "border-accent bg-accent text-primary"

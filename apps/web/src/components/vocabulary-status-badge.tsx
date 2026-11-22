@@ -1,14 +1,15 @@
 import type { VocabularyUserStateResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
+import { m } from "../i18n/index.js";
 
 type VocabularyStatus = VocabularyUserStateResponse["status"];
 
 const LABELS: Record<VocabularyStatus, string> = {
-  new: "Not saved",
-  saved: "Saved",
-  learning: "Learning",
-  learned: "Learned",
+  new: m.vocabulary.statuses.new,
+  saved: m.vocabulary.statuses.saved,
+  learning: m.vocabulary.statuses.learning,
+  learned: m.vocabulary.statuses.learned,
 };
 
 const TONES: Record<VocabularyStatus, StatusTone> = {

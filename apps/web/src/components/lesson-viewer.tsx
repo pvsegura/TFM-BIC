@@ -5,6 +5,7 @@ import { Link } from "./app-link.js";
 import { ContentBlocks, type LearningLanguage } from "./content-blocks.js";
 import { LessonCompletion } from "./lesson-completion.js";
 import { LessonStatusBadge } from "./lesson-status-badge.js";
+import { m } from "../i18n/index.js";
 
 export interface LessonViewerProps {
   lesson: LessonResponse;
@@ -64,7 +65,7 @@ export function LessonViewer({
       {hero ? <div className="mt-6">{hero}</div> : null}
 
       <div id="lesson-content" className="mt-8 scroll-mt-4">
-        <h2 className="sr-only">Explanation and examples</h2>
+        <h2 className="sr-only">{m.learn.lessons.explanationHeading}</h2>
         <ContentBlocks
           blocks={lesson.blocks}
           language={language}
@@ -92,7 +93,7 @@ export function LessonViewer({
 
       <p className="mt-6">
         <Link to={backHref} className="text-sm underline underline-offset-2">
-          Back to lessons
+          {m.learn.lessons.backToLessons}
         </Link>
       </p>
     </article>

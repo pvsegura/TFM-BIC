@@ -3,6 +3,7 @@ import { useEffect, useId, useRef, useState, type FormEvent } from "react";
 
 import { useDeleteAccount, useExportPersonalData } from "../hooks/use-data-management.js";
 import { errorMessage } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 /**
  * "Your data" (M15, ADR-026): download a copy of what is stored about the account, and delete the
@@ -15,7 +16,7 @@ export function DataManagementSection() {
   return (
     <section aria-labelledby="data-management-heading" className="mt-10">
       <h2 id="data-management-heading" className="text-xl font-semibold">
-        Your data
+        {m.account.data.heading}
       </h2>
       <ExportPersonalData />
       <DeleteAccount />
@@ -28,14 +29,10 @@ function ExportPersonalData() {
 
   return (
     <div className="mt-4 rounded-md border border-primary/20 p-4 dark:border-surface/20">
-      <h3 className="font-medium">Download your data</h3>
-      <p className="mt-2 text-sm">
-        Get a copy of the information stored about your account — account details, profile, lesson
-        and exercise history, points and achievements, vocabulary, phonetics, video requests and
-        email preferences — as a machine-readable JSON file.
-      </p>
+      <h3 className="font-medium">{m.account.data.downloadHeading}</h3>
+      <p className="mt-2 text-sm">{m.account.data.downloadBody}</p>
       <p className="mt-2 text-sm text-primary/70 dark:text-surface/70">
-        The file never includes your password or other security credentials.
+        {m.account.data.downloadNote}
       </p>
       <Button
         className="mt-3"
@@ -44,11 +41,11 @@ function ExportPersonalData() {
           exportData.mutate();
         }}
       >
-        {exportData.isPending ? "Preparing your download…" : "Download my data"}
+        {exportData.isPending ? m.account.data.preparing : m.account.data.download}
       </Button>
       {exportData.isSuccess ? (
         <p role="status" className="mt-3 text-sm">
-          {`Your data was downloaded as ${exportData.data}.`}
+          {m.account.data.downloaded(exportData.data)}
         </p>
       ) : null}
       {exportData.isError ? (
@@ -75,7 +72,7 @@ function DeleteAccount() {
 
   return (
     <div className="mt-4 rounded-md border border-primary/20 p-4 dark:border-surface/20">
-      <h3 className="font-medium">Delete your account</h3>
+      <h3 className="font-medium">{m.account.data.deleteHeading}</h3>
       {open ? (
         <DeleteAccountConfirmation
           onCancel={() => {
@@ -84,9 +81,7 @@ function DeleteAccount() {
         />
       ) : (
         <div ref={openerRef}>
-          <p className="mt-2 text-sm">
-            Permanently delete your account and everything stored about it.
-          </p>
+          <p className="mt-2 text-sm">{m.account.data.deleteIntro}</p>
           <Button
             className="mt-3"
             variant="secondary"
@@ -94,7 +89,7 @@ function DeleteAccount() {
               setOpen(true);
             }}
           >
-            Delete my account…
+            {m.account.data.deleteOpen}
           </Button>
         </div>
       )}
@@ -118,10 +113,10 @@ function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
     event.preventDefault();
     const found: typeof errors = {};
     if (password === "") {
-      found.password = "Enter your current password.";
+      found.password = m.account.data.passwordRequired;
     }
     if (!acknowledged) {
-      found.acknowledgement = "Tick the box to confirm that you understand.";
+      found.acknowledgement = m.account.data.ackRequired;
     }
     setErrors(found);
     if (found.password !== undefined || found.acknowledgement !== undefined) {
@@ -138,30 +133,23 @@ function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
         tabIndex={-1}
         className="text-lg font-semibold focus:outline-none"
       >
-        Delete your account?
+        {m.account.data.confirmHeading}
       </h4>
       <p className="mt-2 text-sm">
-        Your account is deleted immediately and permanently. <strong>This cannot be undone.</strong>{" "}
-        The following is deleted with it:
+        {m.account.data.confirmBodyBefore} <strong>{m.account.data.confirmCannotUndo}</strong>{" "}
+        {m.account.data.confirmListIntro}
       </p>
       <ul className="mt-2 list-disc pl-6 text-sm">
-        <li>your sign-in details and profile;</li>
-        <li>your lesson progress, exercise answers, points and achievements;</li>
-        <li>your saved vocabulary, phonetics progress and video requests;</li>
-        <li>your newsletter subscription;</li>
-        <li>any link that lets a teacher see your progress.</li>
+        {m.account.data.confirmList.map((item) => (
+          <li key={item}>{item}</li>
+        ))}
       </ul>
-      <p className="mt-2 text-sm">
-        You will be signed out everywhere. If you want a copy of your data, download it first.
-      </p>
-      <p className="mt-2 text-sm">
-        If you only want to stop the newsletter, unsubscribe in your email preferences instead —
-        that keeps your account.
-      </p>
+      <p className="mt-2 text-sm">{m.account.data.signedOutEverywhere}</p>
+      <p className="mt-2 text-sm">{m.account.data.newsletterOnly}</p>
 
       <form noValidate onSubmit={onSubmit} className="mt-4 flex flex-col gap-3">
         <TextField
-          label="Current password"
+          label={m.account.data.currentPassword}
           type="password"
           autoComplete="current-password"
           value={password}
@@ -204,10 +192,10 @@ function DeleteAccountConfirmation({ onCancel }: { onCancel: () => void }) {
         ) : null}
         <div className="flex flex-wrap gap-3">
           <Button type="submit" disabled={deletion.isPending}>
-            {deletion.isPending ? "Deleting your account…" : "Delete my account permanently"}
+            {deletion.isPending ? m.account.data.deleting : m.account.data.deleteForever}
           </Button>
           <Button variant="secondary" disabled={deletion.isPending} onClick={onCancel}>
-            Cancel
+            {m.account.data.cancel}
           </Button>
         </div>
       </form>

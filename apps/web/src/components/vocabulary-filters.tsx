@@ -1,5 +1,6 @@
 import { TextField } from "@verbysia/ui";
 import type { VocabularyCategoriesResponse } from "@verbysia/contracts";
+import { m } from "../i18n/index.js";
 
 export interface VocabularyFiltersValue {
   category: string;
@@ -16,11 +17,11 @@ export interface VocabularyFiltersProps {
 }
 
 const STATUS_OPTIONS: { value: string; label: string }[] = [
-  { value: "", label: "Any status" },
-  { value: "new", label: "Not saved" },
-  { value: "saved", label: "Saved" },
-  { value: "learning", label: "Learning" },
-  { value: "learned", label: "Learned" },
+  { value: "", label: m.vocabulary.anyStatus },
+  { value: "new", label: m.vocabulary.statuses.new },
+  { value: "saved", label: m.vocabulary.statuses.saved },
+  { value: "learning", label: m.vocabulary.statuses.learning },
+  { value: "learned", label: m.vocabulary.statuses.learned },
 ];
 
 /** Category, status and search — the filters both the browse and My Vocabulary lists share.
@@ -38,21 +39,21 @@ export function VocabularyFilters({
   return (
     <form
       role="search"
-      aria-label="Filter vocabulary"
+      aria-label={m.vocabulary.filterLabel}
       className="mt-4 flex flex-wrap items-end gap-3"
       onSubmit={(event) => event.preventDefault()}
     >
       <TextField
-        label="Search"
+        label={m.vocabulary.search}
         type="search"
         value={value.q}
         onChange={(event) => onChange({ ...value, q: event.target.value })}
-        placeholder="Search a word or its meaning"
+        placeholder={m.vocabulary.searchPlaceholder}
       />
 
       <div className="flex flex-col gap-1">
         <label htmlFor="vocabulary-category" className="text-sm font-medium">
-          Category
+          {m.vocabulary.category}
         </label>
         <select
           id="vocabulary-category"
@@ -60,7 +61,7 @@ export function VocabularyFilters({
           onChange={(event) => onChange({ ...value, category: event.target.value })}
           className="rounded-md border border-primary/20 bg-surface px-3 py-2 text-sm text-primary dark:border-surface/20 dark:bg-surface-dark dark:text-surface"
         >
-          <option value="">Every category</option>
+          <option value="">{m.vocabulary.everyCategory}</option>
           {categories.map((category) => (
             <option key={category.id} value={category.id}>
               {category.title}
@@ -71,7 +72,7 @@ export function VocabularyFilters({
 
       <div className="flex flex-col gap-1">
         <label htmlFor="vocabulary-status" className="text-sm font-medium">
-          Status
+          {m.vocabulary.status}
         </label>
         <select
           id="vocabulary-status"

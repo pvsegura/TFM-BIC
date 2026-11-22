@@ -5,6 +5,7 @@ import { LoadError } from "../components/catalog-notices.js";
 import { LanguageLevelPicker } from "../components/language-level-picker.js";
 import { LessonList } from "../components/lesson-list.js";
 import { useLessons } from "../hooks/use-lessons.js";
+import { m } from "../i18n/index.js";
 
 const enc = encodeURIComponent;
 
@@ -16,16 +17,13 @@ function LessonsSection({ languageCode, levelId }: { languageCode: string; level
 
   let body: ReactNode;
   if (lessonsQuery.isPending) {
-    body = <p role="status">Loading lessons…</p>;
+    body = <p role="status">{m.learn.lessons.loading}</p>;
   } else if (lessonsQuery.isError) {
     body = (
-      <LoadError
-        message="We couldn't load the lessons. Please try again."
-        onRetry={() => void lessonsQuery.refetch()}
-      />
+      <LoadError message={m.learn.lessons.error} onRetry={() => void lessonsQuery.refetch()} />
     );
   } else if (lessonsQuery.data.lessons.length === 0) {
-    body = <p>No lessons are available for this level yet.</p>;
+    body = <p>{m.learn.lessons.empty}</p>;
   } else {
     body = (
       <LessonList
@@ -38,7 +36,7 @@ function LessonsSection({ languageCode, levelId }: { languageCode: string; level
   return (
     <section aria-labelledby="lessons-heading" className="mt-6">
       <h2 id="lessons-heading" className="mb-3 text-lg font-semibold">
-        Lessons
+        {m.learn.lessons.title}
       </h2>
       {body}
     </section>
@@ -56,13 +54,14 @@ function LessonsSection({ languageCode, levelId }: { languageCode: string; level
  */
 export function LessonsPage() {
   const [searchParams] = useSearchParams();
-  const languageCode = searchParams.get("language") ?? undefined;
-  const levelId = searchParams.get("level") ?? undefined;
+  // Verbysia teaches one course today: open Spanish A1 when nothing is chosen.
+  const languageCode = searchParams.get("language") ?? "es";
+  const levelId = searchParams.get("level") ?? (searchParams.get("language") ? undefined : "a1");
 
   return (
     <section aria-labelledby="lessons-page-heading" className="mx-auto max-w-3xl py-8">
       <h1 id="lessons-page-heading" className="text-2xl font-semibold">
-        Lessons
+        {m.learn.lessons.title}
       </h1>
       <LanguageLevelPicker
         languageCode={languageCode}

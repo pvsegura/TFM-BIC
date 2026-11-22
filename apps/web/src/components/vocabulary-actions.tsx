@@ -7,6 +7,7 @@ import {
   useUnsaveVocabularyItem,
 } from "../hooks/use-vocabulary.js";
 import { GENERIC_ERROR_MESSAGE } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
 
 export interface VocabularyActionsProps {
   vocabularyId: string;
@@ -36,20 +37,20 @@ export function VocabularyActions({ vocabularyId, status }: VocabularyActionsPro
           disabled={busy}
           onClick={() => {
             unsaveMutation.mutate(vocabularyId);
-            setFeedback("Removed from your list.");
+            setFeedback(m.vocabulary.removed);
           }}
         >
-          Remove from list
+          {m.vocabulary.remove}
         </Button>
       ) : (
         <Button
           disabled={busy}
           onClick={() => {
             saveMutation.mutate(vocabularyId);
-            setFeedback("Saved to your list.");
+            setFeedback(m.vocabulary.saved);
           }}
         >
-          Save word
+          {m.vocabulary.save}
         </Button>
       )}
 
@@ -59,10 +60,10 @@ export function VocabularyActions({ vocabularyId, status }: VocabularyActionsPro
           disabled={busy}
           onClick={() => {
             learnedMutation.mutate(vocabularyId);
-            setFeedback("Marked as learned.");
+            setFeedback(m.vocabulary.markedLearned);
           }}
         >
-          Mark as learned
+          {m.vocabulary.markLearned}
         </Button>
       )}
 
