@@ -34,7 +34,7 @@ describe("ListeningTestPage", () => {
         <ListeningTestPage />
       </MemoryRouter>,
     );
-    expect(screen.getByText(t.noSpeech)).toBeInTheDocument();
+    expect(document.querySelector("audio")).toHaveAttribute("src", "/audio/listening/airport.mp3");
 
     LISTENING_TEST.forEach((situation, index) => {
       situation.questions.forEach((question) => {

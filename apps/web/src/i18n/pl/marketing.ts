@@ -8,8 +8,7 @@ export const marketing = {
     title: "Test rozumienia ze słuchu",
     lead: "Cztery sytuacje z życia: lotnisko, kawiarnia, restauracja i sklep z odzieżą. Posłuchaj rozmowy i odpowiedz na 10 pytań do każdej. Na koniec zobaczysz wynik w procentach i orientacyjny poziom.",
     disclaimer: "To nie jest egzamin ani certyfikat ESOKJ — wynik ma charakter orientacyjny.",
-    voiceNote:
-      "Nagrania czyta hiszpański głos syntetyczny Twojej przeglądarki; jakość zależy od urządzenia.",
+    voiceNote: "Nagrania czyta hiszpański głos syntetyczny (zawsze ta sama lektorka).",
     noSpeech:
       "Twoja przeglądarka nie obsługuje odczytu na głos. Możesz rozwiązać test, czytając transkrypcję.",
     play: "Odtwórz rozmowę",

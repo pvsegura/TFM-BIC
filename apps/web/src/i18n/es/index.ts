@@ -139,7 +139,7 @@ export const es: Messages = {
       lead: "Cuatro situaciones cotidianas: el aeropuerto, una cafetería, un restaurante y una tienda de ropa. Escucha cada conversación y responde a 10 preguntas. Al final verás el porcentaje y un nivel orientativo.",
       disclaimer: "No es un examen ni un certificado del MCER: el resultado es orientativo.",
       voiceNote:
-        "Las grabaciones las lee la voz sintética en español de tu navegador; la calidad depende del dispositivo.",
+        "Las grabaciones las lee una voz sintética en español (siempre la misma locutora).",
       noSpeech:
         "Tu navegador no puede leer el texto en voz alta. Puedes hacer el test leyendo la transcripción.",
       play: "Escuchar la conversación",

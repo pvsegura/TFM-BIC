@@ -220,6 +220,44 @@ function SituationPanel({
 
 /** Reads the dialogue line by line with the device's Spanish voice; two pitches tell the speakers apart. */
 function Player({ situation }: { situation: ListeningSituation }) {
+  return situation.audioUrl ? (
+    <RecordingPlayer src={situation.audioUrl} />
+  ) : (
+    <SpeechPlayer situation={situation} />
+  );
+}
+
+/** The pre-generated recording (always the same narrator), with a slower-speed option. */
+function RecordingPlayer({ src }: { src: string }) {
+  const audio = useRef<HTMLAudioElement>(null);
+  const [rate, setRate] = useState(1);
+  return (
+    <div className="mt-4 flex flex-wrap items-center gap-3">
+      <audio ref={audio} controls preload="none" src={src} className="max-w-full" />
+      <span className="text-sm">{t.speed}:</span>
+      {[
+        { value: 0.8, label: t.slow },
+        { value: 1, label: t.normal },
+      ].map((option) => (
+        <button
+          key={option.value}
+          type="button"
+          aria-pressed={rate === option.value}
+          onClick={() => {
+            setRate(option.value);
+            if (audio.current) audio.current.playbackRate = option.value;
+          }}
+          className={`rounded-full px-3 py-1 text-sm ${rate === option.value ? "bg-accent font-bold text-primary" : "border border-primary/30 dark:border-surface/30"}`}
+        >
+          {option.label}
+        </button>
+      ))}
+    </div>
+  );
+}
+
+/** Fallback when a recording is missing: the device's Spanish voice reads the lines. */
+function SpeechPlayer({ situation }: { situation: ListeningSituation }) {
   const [playing, setPlaying] = useState(false);
   const [rate, setRate] = useState(0.9);
   const cancelled = useRef(false);

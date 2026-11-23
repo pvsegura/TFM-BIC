@@ -1,8 +1,9 @@
 /**
  * The public listening test (Verbysia, phase D): four everyday situations written for Verbysia,
  * spoken in Spanish, with ten questions each in Polish (the learners' language). This is course
- * content, not interface text, so it is not in the i18n catalogs. `audioUrl` is reserved for
- * pre-generated recordings; until then the browser's Spanish speech synthesis reads the lines.
+ * content, not interface text, so it is not in the i18n catalogs. `audioUrl` points at the
+ * recording generated offline with Piper (infrastructure/tts); the browser's Spanish speech
+ * synthesis is only a fallback when a recording is missing.
  */
 export interface DialogueLine {
   speaker: string;
@@ -26,6 +27,7 @@ export interface ListeningSituation {
 export const LISTENING_TEST: readonly ListeningSituation[] = [
   {
     id: "airport",
+    audioUrl: "/audio/listening/airport.mp3",
     title: "Na lotnisku",
     lines: [
       { speaker: "Empleada", text: "Buenos días. ¿Su pasaporte, por favor?" },
@@ -87,6 +89,7 @@ export const LISTENING_TEST: readonly ListeningSituation[] = [
   },
   {
     id: "cafe",
+    audioUrl: "/audio/listening/cafe.mp3",
     title: "W kawiarni",
     lines: [
       { speaker: "Camarero", text: "Hola, buenos días. ¿Qué le pongo?" },
@@ -144,6 +147,7 @@ export const LISTENING_TEST: readonly ListeningSituation[] = [
   },
   {
     id: "restaurant",
+    audioUrl: "/audio/listening/restaurant.mp3",
     title: "W restauracji",
     lines: [
       { speaker: "Camarera", text: "Buenas noches. ¿Tienen reserva?" },
@@ -214,6 +218,7 @@ export const LISTENING_TEST: readonly ListeningSituation[] = [
   },
   {
     id: "clothes-shop",
+    audioUrl: "/audio/listening/clothes-shop.mp3",
     title: "W sklepie z odzieżą",
     lines: [
       { speaker: "Dependienta", text: "Hola, ¿le puedo ayudar?" },

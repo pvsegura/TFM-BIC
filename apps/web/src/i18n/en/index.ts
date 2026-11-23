@@ -137,7 +137,7 @@ export const en: Messages = {
       lead: "Four everyday situations: the airport, a café, a restaurant and a clothes shop. Listen to each conversation and answer 10 questions. At the end you'll see a percentage and an approximate level.",
       disclaimer: "This is not a CEFR exam or certificate — the result is only a guide.",
       voiceNote:
-        "The recordings are read by your browser's Spanish synthetic voice; quality depends on your device.",
+        "The recordings are read by a Spanish synthetic voice (always the same narrator, a young female voice).",
       noSpeech:
         "Your browser can't read text aloud. You can still take the test by reading the transcript.",
       play: "Play the conversation",
