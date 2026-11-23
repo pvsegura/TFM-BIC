@@ -87,6 +87,7 @@ export const es: Messages = {
           { to: "/metoda-puente", label: "Método PUENTE" },
           { to: "/kurs-a1", label: "Curso de español A1" },
           { to: "/wyzwanie-7-dni", label: "Reto gratuito de 7 días" },
+          { to: "/test-sluchu", label: "Test de comprensión auditiva" },
           { to: "/cennik", label: "Precios" },
           { to: "/faq", label: "Preguntas frecuentes" },
         ],
@@ -129,6 +130,50 @@ export const es: Messages = {
     fixFields: "Corrige los campos marcados.",
   },
   marketing: {
+    listening: {
+      navLabel: "Test de comprensión",
+      metaTitle: "Test gratuito de comprensión auditiva de español | Verbysia",
+      metaDescription:
+        "Comprueba cuánto entiendes de oído: 4 situaciones cotidianas, 40 preguntas y un nivel orientativo. Sin cuenta.",
+      title: "Test de comprensión auditiva",
+      lead: "Cuatro situaciones cotidianas: el aeropuerto, una cafetería, un restaurante y una tienda de ropa. Escucha cada conversación y responde a 10 preguntas. Al final verás el porcentaje y un nivel orientativo.",
+      disclaimer: "No es un examen ni un certificado del MCER: el resultado es orientativo.",
+      voiceNote:
+        "Las grabaciones las lee la voz sintética en español de tu navegador; la calidad depende del dispositivo.",
+      noSpeech:
+        "Tu navegador no puede leer el texto en voz alta. Puedes hacer el test leyendo la transcripción.",
+      play: "Escuchar la conversación",
+      stop: "Detener",
+      speed: "Velocidad",
+      slow: "Más despacio",
+      normal: "Normal",
+      showTranscript: "Ver la transcripción",
+      hideTranscript: "Ocultar la transcripción",
+      questions: "Preguntas",
+      check: "Comprobar respuestas",
+      answerAll: "Responde a todas las preguntas.",
+      situationScore: (score: number, total: number) =>
+        `Resultado: ${String(score)} de ${String(total)}.`,
+      next: "Siguiente situación",
+      finish: "Ver el resultado final",
+      situationLabel: (index: number, total: number) =>
+        `Situación ${String(index)} de ${String(total)}`,
+      resultTitle: "Tu resultado",
+      resultPercent: (percent: number) =>
+        `Entiendes aproximadamente el ${String(percent)} % de las conversaciones.`,
+      bands: {
+        start:
+          "Estás empezando. Comienza con el reto gratuito de 7 días para construir la base y entender conversaciones sencillas.",
+        a1: "Entiendes conversaciones cotidianas sencillas en muchos lugares (aprox. nivel A1). El reto de 7 días y el curso A1 te ayudarán a consolidarlo.",
+        a1plus:
+          "Entiendes muy bien conversaciones sencillas (aprox. A1+/A2). El curso A1 te ayudará a empezar a responder con soltura.",
+      },
+      cta: "Empieza el reto gratuito de 7 días",
+      restart: "Repetir el test",
+      homeTitle: "Comprueba cuánto entiendes de oído.",
+      homeLead: "Test gratuito: 4 conversaciones, 40 preguntas y un nivel orientativo. Sin cuenta.",
+      homeCta: "Hacer el test de comprensión",
+    },
     contact: {
       title: "Contacto",
       metaDescription:

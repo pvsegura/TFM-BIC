@@ -42,6 +42,7 @@ export const layout = {
         { to: "/metoda-puente", label: "Metoda PUENTE" },
         { to: "/kurs-a1", label: "Kurs hiszpańskiego A1" },
         { to: "/wyzwanie-7-dni", label: "Darmowe wyzwanie 7 dni" },
+        { to: "/test-sluchu", label: "Test słuchu" },
         { to: "/cennik", label: "Cennik" },
         { to: "/faq", label: "Najczęstsze pytania" },
       ],

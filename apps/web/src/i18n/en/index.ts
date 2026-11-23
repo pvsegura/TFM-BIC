@@ -86,6 +86,7 @@ export const en: Messages = {
           { to: "/metoda-puente", label: "PUENTE method" },
           { to: "/kurs-a1", label: "A1 Spanish course" },
           { to: "/wyzwanie-7-dni", label: "Free 7-day challenge" },
+          { to: "/test-sluchu", label: "Listening test" },
           { to: "/cennik", label: "Pricing" },
           { to: "/faq", label: "Frequently asked questions" },
         ],
@@ -127,6 +128,50 @@ export const en: Messages = {
     fixFields: "Please fix the highlighted fields.",
   },
   marketing: {
+    listening: {
+      navLabel: "Listening test",
+      metaTitle: "Free Spanish listening test | Verbysia",
+      metaDescription:
+        "Check how much Spanish you understand by ear: 4 everyday situations, 40 questions and an approximate level. No account.",
+      title: "Listening comprehension test",
+      lead: "Four everyday situations: the airport, a café, a restaurant and a clothes shop. Listen to each conversation and answer 10 questions. At the end you'll see a percentage and an approximate level.",
+      disclaimer: "This is not a CEFR exam or certificate — the result is only a guide.",
+      voiceNote:
+        "The recordings are read by your browser's Spanish synthetic voice; quality depends on your device.",
+      noSpeech:
+        "Your browser can't read text aloud. You can still take the test by reading the transcript.",
+      play: "Play the conversation",
+      stop: "Stop",
+      speed: "Speed",
+      slow: "Slower",
+      normal: "Normal",
+      showTranscript: "Show transcript",
+      hideTranscript: "Hide transcript",
+      questions: "Questions",
+      check: "Check answers",
+      answerAll: "Answer every question.",
+      situationScore: (score: number, total: number) =>
+        `Score: ${String(score)} of ${String(total)}.`,
+      next: "Next situation",
+      finish: "See the final result",
+      situationLabel: (index: number, total: number) =>
+        `Situation ${String(index)} of ${String(total)}`,
+      resultTitle: "Your result",
+      resultPercent: (percent: number) =>
+        `You understand about ${String(percent)}% of the conversations.`,
+      bands: {
+        start:
+          "You're at the start of the road. Begin with the free 7-day challenge to build the basics for understanding simple conversations.",
+        a1: "You understand simple everyday conversations in many places (roughly A1). The 7-day challenge and the A1 course will help consolidate it.",
+        a1plus:
+          "You understand simple conversations very well (roughly A1+/A2). The A1 course will help you start answering confidently.",
+      },
+      cta: "Start the free 7-day challenge",
+      restart: "Take the test again",
+      homeTitle: "Check how much you understand by ear.",
+      homeLead: "A free test: 4 conversations, 40 questions, an approximate level. No account.",
+      homeCta: "Take the listening test",
+    },
     contact: {
       title: "Contact",
       metaDescription:

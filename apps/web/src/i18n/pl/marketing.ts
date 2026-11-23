@@ -1,5 +1,47 @@
 /** Public pages. Honest by rule: no fluency promises, no invented prices, discounts or reviews. */
 export const marketing = {
+  listening: {
+    navLabel: "Test słuchu",
+    metaTitle: "Darmowy test rozumienia ze słuchu — hiszpański | Verbysia",
+    metaDescription:
+      "Sprawdź, ile rozumiesz ze słuchu po hiszpańsku: 4 sytuacje z życia, 40 pytań po polsku i orientacyjny poziom. Bez konta.",
+    title: "Test rozumienia ze słuchu",
+    lead: "Cztery sytuacje z życia: lotnisko, kawiarnia, restauracja i sklep z odzieżą. Posłuchaj rozmowy i odpowiedz na 10 pytań do każdej. Na koniec zobaczysz wynik w procentach i orientacyjny poziom.",
+    disclaimer: "To nie jest egzamin ani certyfikat ESOKJ — wynik ma charakter orientacyjny.",
+    voiceNote:
+      "Nagrania czyta hiszpański głos syntetyczny Twojej przeglądarki; jakość zależy od urządzenia.",
+    noSpeech:
+      "Twoja przeglądarka nie obsługuje odczytu na głos. Możesz rozwiązać test, czytając transkrypcję.",
+    play: "Odtwórz rozmowę",
+    stop: "Zatrzymaj",
+    speed: "Tempo",
+    slow: "Wolniej",
+    normal: "Normalnie",
+    showTranscript: "Pokaż transkrypcję",
+    hideTranscript: "Ukryj transkrypcję",
+    questions: "Pytania",
+    check: "Sprawdź odpowiedzi",
+    answerAll: "Odpowiedz na wszystkie pytania.",
+    situationScore: (score: number, total: number) => `Wynik: ${String(score)} z ${String(total)}.`,
+    next: "Następna sytuacja",
+    finish: "Zobacz wynik końcowy",
+    situationLabel: (index: number, total: number) =>
+      `Sytuacja ${String(index)} z ${String(total)}`,
+    resultTitle: "Twój wynik",
+    resultPercent: (percent: number) => `Rozumiesz około ${String(percent)}% rozmów.`,
+    bands: {
+      start:
+        "Jesteś na początku drogi. Zacznij od darmowego wyzwania 7 dni — zbudujesz podstawy do rozumienia prostych rozmów.",
+      a1: "Rozumiesz proste, codzienne rozmowy w wielu miejscach (orientacyjnie poziom A1). Wyzwanie 7 dni i kurs A1 pomogą Ci to utrwalić.",
+      a1plus:
+        "Bardzo dobrze rozumiesz proste rozmowy (orientacyjnie A1+/A2). Kurs A1 pomoże Ci zacząć swobodnie odpowiadać.",
+    },
+    cta: "Zacznij darmowe wyzwanie 7 dni",
+    restart: "Rozwiąż test od nowa",
+    homeTitle: "Sprawdź, ile rozumiesz ze słuchu.",
+    homeLead: "Darmowy test: 4 rozmowy, 40 pytań po polsku, orientacyjny poziom. Bez konta.",
+    homeCta: "Rozwiąż test słuchu",
+  },
   contact: {
     title: "Kontakt",
     metaDescription:

@@ -78,6 +78,14 @@ export function VerbysiaHomePage() {
         <DemoQuiz ctaTo={startTo} />
       </Section>
 
+      <Section
+        id="home-listening"
+        title={m.marketing.listening.homeTitle}
+        lead={m.marketing.listening.homeLead}
+      >
+        <PrimaryLink to="/test-sluchu">{m.marketing.listening.homeCta}</PrimaryLink>
+      </Section>
+
       <Section id="home-why" title={t.whyTitle} lead={t.whyLead}>
         <div className="grid gap-4 sm:grid-cols-3">
           {t.whyPoints.map((point) => (

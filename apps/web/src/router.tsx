@@ -96,6 +96,13 @@ const MARKETING_ROUTES: RouteObject[] = [
       })),
   },
   {
+    path: "test-sluchu",
+    lazy: () =>
+      import("./pages/public/listening-test-page.js").then(({ ListeningTestPage }) => ({
+        Component: ListeningTestPage,
+      })),
+  },
+  {
     path: "kontakt",
     lazy: () =>
       import("./pages/public/contact-page.js").then(({ ContactPage }) => ({
