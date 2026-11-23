@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-letters-count",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Ile liter ma hiszpański alfabet?",
+  "explanation": "27 liter — z ñ.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "26"
+      },
+      {
+        "id": "b",
+        "text": "27"
+      },
+      {
+        "id": "c",
+        "text": "32"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

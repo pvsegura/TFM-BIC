@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-aprendo",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy aprendo español?",
+  "explanation": "Aprender — uczyć się.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Uczę (kogoś) hiszpańskiego."
+      },
+      {
+        "id": "b",
+        "text": "Uczę się hiszpańskiego."
+      },
+      {
+        "id": "c",
+        "text": "Rozumiem hiszpański."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

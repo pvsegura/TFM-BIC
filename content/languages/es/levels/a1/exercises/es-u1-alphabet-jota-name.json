@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-jota-name",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Jak nazywa się litera j?",
+  "explanation": "J — jota.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "ye"
+      },
+      {
+        "id": "b",
+        "text": "jota"
+      },
+      {
+        "id": "c",
+        "text": "hache"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

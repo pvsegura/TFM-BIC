@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-repeat",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Może Pan powtórzyć, proszę?",
+  "explanation": "¿Puede repetir, por favor?",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Puede repetir, por favor?",
+      "Puede repetir, por favor",
+      "Puede repetir, por favor.",
+      "Puede repetir por favor",
+      "Puede repetir por favor."
+    ],
+    "caseSensitive": false
+  }
+}

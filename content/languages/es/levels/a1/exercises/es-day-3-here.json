@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-here",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Jak krótko odpowiesz „tutaj” na ¿Dónde?",
+  "explanation": "Aquí — tutaj; allí — tam.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Allí."
+      },
+      {
+        "id": "b",
+        "text": "Aquí."
+      },
+      {
+        "id": "c",
+        "text": "Ahora."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

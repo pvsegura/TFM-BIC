@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-fix-gusta",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw błąd: Me gusta las películas.",
+  "explanation": "Las películas → gustan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me gustan las películas."
+      },
+      {
+        "id": "b",
+        "text": "Me gusto las películas."
+      },
+      {
+        "id": "c",
+        "text": "Me gustas las películas."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

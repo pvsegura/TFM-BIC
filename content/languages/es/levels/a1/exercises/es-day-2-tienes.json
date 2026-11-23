@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-tienes",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi tener dla ty?",
+  "explanation": "Tener: tengo, tienes, tiene… — e zmienia się w ie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "tenes"
+      },
+      {
+        "id": "b",
+        "text": "tienes"
+      },
+      {
+        "id": "c",
+        "text": "tiene"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

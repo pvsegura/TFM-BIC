@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-fix-age",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw błąd: Soy treinta años.",
+  "explanation": "Wiek → tener.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Estoy treinta años."
+      },
+      {
+        "id": "b",
+        "text": "Tengo treinta años."
+      },
+      {
+        "id": "c",
+        "text": "Hay treinta años."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

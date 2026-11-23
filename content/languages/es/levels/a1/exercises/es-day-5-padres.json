@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-padres",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy mis padres?",
+  "explanation": "Los padres — rodzice.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Moi ojcowie."
+      },
+      {
+        "id": "b",
+        "text": "Moi rodzice."
+      },
+      {
+        "id": "c",
+        "text": "Moi bracia."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

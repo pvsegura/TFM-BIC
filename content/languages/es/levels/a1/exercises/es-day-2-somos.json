@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-somos",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Nosotros ___ de Polonia.",
+  "explanation": "Ser dla my: somos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "estamos"
+      },
+      {
+        "id": "b",
+        "text": "somos"
+      },
+      {
+        "id": "c",
+        "text": "son"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

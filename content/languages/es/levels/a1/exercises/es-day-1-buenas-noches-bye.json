@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-buenas-noches-bye",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Buenas noches można powiedzieć także na pożegnanie wieczorem.",
+  "explanation": "Buenas noches służy wieczorem i na powitanie, i na pożegnanie.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

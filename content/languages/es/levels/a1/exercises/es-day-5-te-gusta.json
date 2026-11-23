@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-te-gusta",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Lubisz muzykę?",
+  "explanation": "¿Te gusta la música? — z rodzajnikiem la.",
+  "configuration": {
+    "acceptedAnswers": ["¿Te gusta la música?", "Te gusta la música", "Te gusta la música."],
+    "caseSensitive": false
+  }
+}

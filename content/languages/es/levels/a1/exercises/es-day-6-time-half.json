@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-time-half",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Son las cuatro y media to:",
+  "explanation": "Y media — i pół: 4:30.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "4:15"
+      },
+      {
+        "id": "b",
+        "text": "4:30"
+      },
+      {
+        "id": "c",
+        "text": "3:30"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

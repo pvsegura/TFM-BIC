@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-card-pay",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Zdanie ¿Puedo pagar con tarjeta? znaczy: Czy mogę zapłacić gotówką?",
+  "explanation": "Con tarjeta — kartą; gotówką to en efectivo.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

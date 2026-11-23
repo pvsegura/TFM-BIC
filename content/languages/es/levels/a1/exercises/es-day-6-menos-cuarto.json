@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-menos-cuarto",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Son las cinco menos cuarto to:",
+  "explanation": "Menos cuarto — za kwadrans: 4:45.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "5:15"
+      },
+      {
+        "id": "b",
+        "text": "4:45"
+      },
+      {
+        "id": "c",
+        "text": "5:45"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

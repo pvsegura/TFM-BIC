@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-teacher",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Ella ___ profesora.",
+  "explanation": "Zawód → ser: es profesora.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "está"
+      },
+      {
+        "id": "b",
+        "text": "es"
+      },
+      {
+        "id": "c",
+        "text": "tiene"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

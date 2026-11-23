@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-porque",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy porque?",
+  "explanation": "Porque — bo, ponieważ (w pytaniu: ¿por qué?).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Dlaczego? / bo"
+      },
+      {
+        "id": "b",
+        "text": "Gdzie"
+      },
+      {
+        "id": "c",
+        "text": "Ale"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

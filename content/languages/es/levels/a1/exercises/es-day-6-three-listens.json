@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-three-listens",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Co robisz przy pierwszym odsłuchu techniką trzech odsłuchów?",
+  "explanation": "Najpierw ogólny sens, potem słowa-klucze, na końcu tekst.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Czytasz transkrypcję."
+      },
+      {
+        "id": "b",
+        "text": "Słuchasz bez tekstu i łapiesz ogólny sens."
+      },
+      {
+        "id": "c",
+        "text": "Tłumaczysz każde słowo."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

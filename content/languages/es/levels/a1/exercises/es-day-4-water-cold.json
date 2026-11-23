@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-water-cold",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Kelner pyta ¿Fría o natural? Co znaczy natural?",
+  "explanation": "Natural — nie z lodówki, w temperaturze pokojowej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Gazowana."
+      },
+      {
+        "id": "b",
+        "text": "W temperaturze pokojowej."
+      },
+      {
+        "id": "c",
+        "text": "Z cytryną."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

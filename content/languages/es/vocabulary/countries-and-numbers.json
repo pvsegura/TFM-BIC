@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "id": "countries-and-numbers",
+  "languageId": "es",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "access": "free",
+  "title": "Kraje, narodowości i liczby",
+  "description": "Słowa z jednostki 1: skąd jesteś, jakie znasz języki, liczby do dwudziestu.",
+  "items": [
+    {
+      "id": "es-polonia",
+      "status": "published",
+      "order": 10,
+      "lemma": "Polonia",
+      "translation": "Polska",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-espana",
+      "status": "published",
+      "order": 20,
+      "lemma": "España",
+      "translation": "Hiszpania",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-polaco",
+      "status": "published",
+      "order": 30,
+      "lemma": "polaco / polaca",
+      "translation": "Polak / Polka; polski; język polski",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Narodowości piszemy małą literą."
+    },
+    {
+      "id": "es-espanol",
+      "status": "published",
+      "order": 40,
+      "lemma": "español / española",
+      "translation": "Hiszpan / Hiszpanka; hiszpański; język hiszpański",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-idioma",
+      "status": "published",
+      "order": 50,
+      "lemma": "el idioma",
+      "translation": "język (mowa)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los idiomas",
+      "note": "Męski, choć kończy się na -a (jak el problema)."
+    },
+    {
+      "id": "es-pais",
+      "status": "published",
+      "order": 60,
+      "lemma": "el país",
+      "translation": "kraj",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los países"
+    },
+    {
+      "id": "es-ciudad",
+      "status": "published",
+      "order": 70,
+      "lemma": "la ciudad",
+      "translation": "miasto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las ciudades"
+    },
+    {
+      "id": "es-numero",
+      "status": "published",
+      "order": 80,
+      "lemma": "el número",
+      "translation": "numer; liczba",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los números"
+    },
+    {
+      "id": "es-telefono",
+      "status": "published",
+      "order": 90,
+      "lemma": "el teléfono",
+      "translation": "telefon",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los teléfonos"
+    },
+    {
+      "id": "es-anos",
+      "status": "published",
+      "order": 100,
+      "lemma": "los años",
+      "translation": "lata (wiek)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Tengo veinte años — mam dwadzieścia lat."
+    },
+    {
+      "id": "es-once",
+      "status": "published",
+      "order": 110,
+      "lemma": "once",
+      "translation": "jedenaście",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "es-quince",
+      "status": "published",
+      "order": 120,
+      "lemma": "quince",
+      "translation": "piętnaście",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "es-veinte",
+      "status": "published",
+      "order": 130,
+      "lemma": "veinte",
+      "translation": "dwadzieścia",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "es-escribir",
+      "status": "published",
+      "order": 140,
+      "lemma": "escribir",
+      "translation": "pisać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "example": { "text": "¿Cómo se escribe?", "translation": "Jak to się pisze?" }
+    },
+    {
+      "id": "es-repetir",
+      "status": "published",
+      "order": 150,
+      "lemma": "repetir",
+      "translation": "powtarzać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "example": { "text": "¿Puede repetir, por favor?", "translation": "Może Pan/Pani powtórzyć?" }
+    }
+  ]
+}

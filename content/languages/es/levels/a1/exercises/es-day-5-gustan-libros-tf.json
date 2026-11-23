@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-gustan-libros-tf",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "Me gusta los libros jest poprawne.",
+  "explanation": "Los libros (liczba mnoga) → me gustan los libros.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

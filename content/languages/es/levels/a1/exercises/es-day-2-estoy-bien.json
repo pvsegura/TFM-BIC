@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-estoy-bien",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Czuję się dobrze. (Jestem dobrze)",
+  "explanation": "Samopoczucie to stan → estoy bien.",
+  "configuration": {
+    "acceptedAnswers": ["Estoy bien", "Estoy bien."],
+    "caseSensitive": false
+  }
+}

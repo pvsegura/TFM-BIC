@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-acuesto",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Kładę się spać późno.",
+  "explanation": "Acostarse → me acuesto (o → ue).",
+  "configuration": {
+    "acceptedAnswers": ["Me acuesto tarde", "Me acuesto tarde."],
+    "caseSensitive": false
+  }
+}

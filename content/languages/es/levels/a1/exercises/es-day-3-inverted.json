@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-inverted",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Po hiszpańsku pytanie zaczyna się od odwróconego znaku zapytania ¿.",
+  "explanation": "Piszemy ¿…? — znak na początku i na końcu.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

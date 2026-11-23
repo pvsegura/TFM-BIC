@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n11",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 11?",
+  "explanation": "Once — 11.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "once"
+      },
+      {
+        "id": "b",
+        "text": "onze"
+      },
+      {
+        "id": "c",
+        "text": "diez y uno"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

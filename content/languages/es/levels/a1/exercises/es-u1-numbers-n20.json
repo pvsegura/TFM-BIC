@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n20",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 20?",
+  "explanation": "Veinte — 20.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "veinte"
+      },
+      {
+        "id": "b",
+        "text": "viente"
+      },
+      {
+        "id": "c",
+        "text": "doce"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

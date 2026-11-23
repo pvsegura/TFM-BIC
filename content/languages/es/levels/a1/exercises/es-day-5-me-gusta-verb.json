@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-me-gusta-verb",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ viajar.",
+  "explanation": "Z bezokolicznikiem zawsze gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gustan"
+      },
+      {
+        "id": "b",
+        "text": "gusta"
+      },
+      {
+        "id": "c",
+        "text": "gustas"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-fix-cansado",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw zdanie: Soy cansado. (stan teraz)",
+  "explanation": "Stan → estoy cansado.",
+  "configuration": {
+    "acceptedAnswers": ["Estoy cansado", "Estoy cansado."],
+    "caseSensitive": false
+  }
+}

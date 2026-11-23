@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-espanola",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Żeńska forma español to:",
+  "explanation": "Español → española (bez akcentu).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "españala"
+      },
+      {
+        "id": "b",
+        "text": "española"
+      },
+      {
+        "id": "c",
+        "text": "españa"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

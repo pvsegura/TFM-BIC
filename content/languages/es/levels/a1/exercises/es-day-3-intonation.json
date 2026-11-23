@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-intonation",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Pytanie bez słowa pytającego tworzymy, zmieniając szyk zdania.",
+  "explanation": "Szyk zostaje taki sam — zmienia się tylko intonacja: ¿Tienes tiempo?",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

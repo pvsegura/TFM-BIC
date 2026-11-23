@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-no-tengo",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Nie mam czasu.",
+  "explanation": "Przeczenie: no przed czasownikiem.",
+  "configuration": {
+    "acceptedAnswers": ["No tengo tiempo", "No tengo tiempo."],
+    "caseSensitive": false
+  }
+}

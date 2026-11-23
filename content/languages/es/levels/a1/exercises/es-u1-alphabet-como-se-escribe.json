@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-como-se-escribe",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jak to się pisze?",
+  "explanation": "¿Cómo se escribe?",
+  "configuration": {
+    "acceptedAnswers": ["¿Cómo se escribe?", "Cómo se escribe", "Cómo se escribe."],
+    "caseSensitive": false
+  }
+}

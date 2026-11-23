@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n14",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Catorce to:",
+  "explanation": "Catorce — 14.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "4"
+      },
+      {
+        "id": "b",
+        "text": "14"
+      },
+      {
+        "id": "c",
+        "text": "40"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

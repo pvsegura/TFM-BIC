@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-polaca",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jak powie Polka „jestem Polką”?",
+  "explanation": "Kobieta → polaca.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy polaco."
+      },
+      {
+        "id": "b",
+        "text": "Soy polaca."
+      },
+      {
+        "id": "c",
+        "text": "Soy Polonia."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

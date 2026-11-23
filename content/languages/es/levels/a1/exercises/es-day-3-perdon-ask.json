@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-perdon-ask",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku, jak zaczepisz kogoś na ulicy: Przepraszam…",
+  "explanation": "Perdón (lub grzeczniej perdone, disculpe).",
+  "configuration": {
+    "acceptedAnswers": ["Perdón", "Perdón.", "Perdone", "Perdone.", "Disculpe", "Disculpe."],
+    "caseSensitive": false
+  }
+}

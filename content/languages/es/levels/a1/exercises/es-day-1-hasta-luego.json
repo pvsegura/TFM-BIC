@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-hasta-luego",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy hasta luego?",
+  "explanation": "Hasta luego to bardzo częste pożegnanie, nawet gdy nie planujesz spotkania.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Dzień dobry."
+      },
+      {
+        "id": "b",
+        "text": "Na razie / do zobaczenia."
+      },
+      {
+        "id": "c",
+        "text": "Dziękuję."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

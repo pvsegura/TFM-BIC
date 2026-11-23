@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-breakfast-time",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "W dialogu z recepcji: w jakich godzinach jest śniadanie?",
+  "explanation": "De siete a diez — od 7 do 10.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Od 6 do 9."
+      },
+      {
+        "id": "b",
+        "text": "Od 7 do 10."
+      },
+      {
+        "id": "c",
+        "text": "Od 8 do 11."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

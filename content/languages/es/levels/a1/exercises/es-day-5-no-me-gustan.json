@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-no-me-gustan",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Nie lubię pomidorów.",
+  "explanation": "Liczba mnoga → no me gustan los tomates.",
+  "configuration": {
+    "acceptedAnswers": ["No me gustan los tomates", "No me gustan los tomates."],
+    "caseSensitive": false
+  }
+}

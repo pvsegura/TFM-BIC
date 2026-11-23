@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-every-word",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Żeby zrozumieć rozmowę, trzeba zrozumieć każde słowo.",
+  "explanation": "Wystarczą słowa-klucze i kontekst.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

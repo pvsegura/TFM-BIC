@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-y-name",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Jak nazywa się litera y?",
+  "explanation": "Y — ye (dawniej i griega).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "i"
+      },
+      {
+        "id": "b",
+        "text": "ye"
+      },
+      {
+        "id": "c",
+        "text": "uve"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

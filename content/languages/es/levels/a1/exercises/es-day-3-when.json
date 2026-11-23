@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-when",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Którym słowem zapytasz o czas?",
+  "explanation": "¿Cuándo? — kiedy?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Cuándo?"
+      },
+      {
+        "id": "b",
+        "text": "¿Cuánto?"
+      },
+      {
+        "id": "c",
+        "text": "¿Cómo?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

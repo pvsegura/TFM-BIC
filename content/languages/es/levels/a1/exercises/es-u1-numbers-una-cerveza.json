@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-una-cerveza",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ cerveza.",
+  "explanation": "Przed żeńskim → una.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Un"
+      },
+      {
+        "id": "b",
+        "text": "Uno"
+      },
+      {
+        "id": "c",
+        "text": "Una"
+      }
+    ],
+    "correctOptionId": "c"
+  }
+}

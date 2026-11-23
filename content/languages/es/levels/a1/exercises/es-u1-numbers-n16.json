@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n16",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz słownie po hiszpańsku: 16",
+  "explanation": "Dieciséis — razem, z akcentem.",
+  "configuration": {
+    "acceptedAnswers": ["dieciséis", "dieciséis."],
+    "caseSensitive": false
+  }
+}

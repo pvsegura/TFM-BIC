@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-age-a",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mam dwadzieścia lat.",
+  "explanation": "Tengo veinte años.",
+  "configuration": {
+    "acceptedAnswers": ["Tengo veinte años", "Tengo veinte años."],
+    "caseSensitive": false
+  }
+}

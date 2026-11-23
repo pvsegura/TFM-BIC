@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-age-q",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Ile masz lat?",
+  "explanation": "¿Cuántos años tienes?",
+  "configuration": {
+    "acceptedAnswers": ["¿Cuántos años tienes?", "Cuántos años tienes", "Cuántos años tienes."],
+    "caseSensitive": false
+  }
+}

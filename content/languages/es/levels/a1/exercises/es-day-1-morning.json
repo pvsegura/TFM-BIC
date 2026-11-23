@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-morning",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Jest 9:00 rano. Jak grzecznie powiesz „dzień dobry”?",
+  "explanation": "Rano mówimy buenos días.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Buenas noches."
+      },
+      {
+        "id": "b",
+        "text": "Buenos días."
+      },
+      {
+        "id": "c",
+        "text": "Buenas tardes."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

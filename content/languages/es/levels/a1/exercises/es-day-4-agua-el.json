@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-agua-el",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Mówimy el agua, choć agua jest rzeczownikiem żeńskim.",
+  "explanation": "El agua — wyjątek ze względu na akcentowane a- na początku.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

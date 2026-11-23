@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-linking",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi płynnie ¿Qué es esto?",
+  "explanation": "Samogłoski na styku słów łączą się.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Każde słowo osobno."
+      },
+      {
+        "id": "b",
+        "text": "[kesesto] — słowa się łączą."
+      },
+      {
+        "id": "c",
+        "text": "[ke-es-es-to] z przerwami."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

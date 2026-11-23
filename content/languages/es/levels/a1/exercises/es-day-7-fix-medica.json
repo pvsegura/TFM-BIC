@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-fix-medica",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw błąd: Es una médica.",
+  "explanation": "Zawód bez rodzajnika: es médica.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Está médica."
+      },
+      {
+        "id": "b",
+        "text": "Es médica."
+      },
+      {
+        "id": "c",
+        "text": "Es la médica."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-ll-name",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi ll w llave (klucz) w większości Hiszpanii?",
+  "explanation": "Ll ≈ j: [jabe].",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "[l]"
+      },
+      {
+        "id": "b",
+        "text": "[j]"
+      },
+      {
+        "id": "c",
+        "text": "[ł]"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

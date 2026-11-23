@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-que-bien",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Co wyraża ¡Qué bien!?",
+  "explanation": "¡Qué bien! — jak dobrze, super.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Zdziwienie złą wiadomością."
+      },
+      {
+        "id": "b",
+        "text": "Radość: „super!”, „jak fajnie!”."
+      },
+      {
+        "id": "c",
+        "text": "Pytanie o samopoczucie."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

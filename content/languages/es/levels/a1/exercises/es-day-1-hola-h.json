@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-hola-h",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "W słowie hola wymawiamy literę h.",
+  "explanation": "Litery h nie wymawiamy: [ola].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

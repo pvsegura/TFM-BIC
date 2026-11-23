@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-ch",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi ch w chocolate?",
+  "explanation": "Ch to polskie cz.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jak polskie ch."
+      },
+      {
+        "id": "b",
+        "text": "Jak polskie cz."
+      },
+      {
+        "id": "c",
+        "text": "Jak k."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

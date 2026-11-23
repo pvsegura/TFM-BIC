@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-how-much-is",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Przy płaceniu pytasz „ile płacę?”:",
+  "explanation": "¿Cuánto es? — ile to razem?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Cuánto es?"
+      },
+      {
+        "id": "b",
+        "text": "¿Qué es?"
+      },
+      {
+        "id": "c",
+        "text": "¿Cuándo es?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

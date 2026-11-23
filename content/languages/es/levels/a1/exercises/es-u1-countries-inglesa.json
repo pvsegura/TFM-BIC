@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-inglesa",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Żeńska forma inglés to:",
+  "explanation": "Inglés → inglesa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "inglesa"
+      },
+      {
+        "id": "b",
+        "text": "inglésa"
+      },
+      {
+        "id": "c",
+        "text": "ingla"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

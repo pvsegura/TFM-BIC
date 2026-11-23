@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-usted",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Jak zwracamy się grzecznie do nieznajomej starszej osoby?",
+  "explanation": "Usted to forma grzecznościowa (Pan/Pani).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "tú"
+      },
+      {
+        "id": "b",
+        "text": "usted"
+      },
+      {
+        "id": "c",
+        "text": "vosotros"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

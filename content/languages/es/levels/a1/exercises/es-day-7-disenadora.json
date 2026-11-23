@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-disenadora",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Agnieszka mówi: Soy diseñadora. Kim jest?",
+  "explanation": "Diseñadora — projektantka.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Nauczycielką."
+      },
+      {
+        "id": "b",
+        "text": "Projektantką."
+      },
+      {
+        "id": "c",
+        "text": "Lekarką."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-tomar-algo",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Napijesz się czegoś?",
+  "explanation": "¿Quieres tomar algo?",
+  "configuration": {
+    "acceptedAnswers": ["¿Quieres tomar algo?", "Quieres tomar algo", "Quieres tomar algo."],
+    "caseSensitive": false
+  }
+}

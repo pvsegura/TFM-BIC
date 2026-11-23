@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-just-looking",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "W sklepie sprzedawca pyta, czy pomóc. Chcesz tylko się rozejrzeć:",
+  "explanation": "Solo estoy mirando — tylko się rozglądam.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Solo estoy mirando, gracias."
+      },
+      {
+        "id": "b",
+        "text": "La cuenta, gracias."
+      },
+      {
+        "id": "c",
+        "text": "Quería una mesa."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

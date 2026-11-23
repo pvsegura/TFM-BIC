@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-estar-tired-tf",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Zdanie Soy cansado jest poprawne, gdy mówisz o zmęczeniu teraz.",
+  "explanation": "Zmęczenie to stan → estoy cansado.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-pero",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Co sygnalizuje słowo pero?",
+  "explanation": "Pero — ale.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Przyczynę."
+      },
+      {
+        "id": "b",
+        "text": "Kontrast („ale”)."
+      },
+      {
+        "id": "c",
+        "text": "Czas."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

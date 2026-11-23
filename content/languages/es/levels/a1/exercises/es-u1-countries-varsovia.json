@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-varsovia",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Jak po hiszpańsku nazywa się Warszawa?",
+  "explanation": "Varsovia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Varsovia"
+      },
+      {
+        "id": "b",
+        "text": "Varsava"
+      },
+      {
+        "id": "c",
+        "text": "Warszawa"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

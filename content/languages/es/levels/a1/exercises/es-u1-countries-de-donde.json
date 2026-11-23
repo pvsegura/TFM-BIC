@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-de-donde",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Skąd jesteś?",
+  "explanation": "¿De dónde eres?",
+  "configuration": {
+    "acceptedAnswers": ["¿De dónde eres?", "De dónde eres", "De dónde eres."],
+    "caseSensitive": false
+  }
+}

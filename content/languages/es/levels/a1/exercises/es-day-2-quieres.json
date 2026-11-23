@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-quieres",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ¿___ un café? (Chcesz kawę?)",
+  "explanation": "Querer: quiero, quieres, quiere… — e zmienia się w ie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Quieres"
+      },
+      {
+        "id": "b",
+        "text": "Queres"
+      },
+      {
+        "id": "c",
+        "text": "Quiere"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

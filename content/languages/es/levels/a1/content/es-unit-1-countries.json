@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "access": "free",
+  "title": "Jednostka 1. Kraje, narodowości i języki",
+  "description": "Mówisz, skąd jesteś, jakiej jesteś narodowości i jakimi językami mówisz.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Skąd jesteś? — ¿De dónde eres? Odpowiadasz na dwa sposoby: Soy de Polonia (jestem z Polski) albo podając narodowość: Soy polaco / Soy polaca (jestem Polakiem / Polką). Narodowości piszemy małą literą — inaczej niż w polskim."
+    },
+    {
+      "type": "example",
+      "text": "Soy polaca. Soy de Varsovia.",
+      "translation": "Jestem Polką. Jestem z Warszawy."
+    },
+    {
+      "type": "explanation",
+      "text": "Rodzaj narodowości: forma męska na -o zmienia się na -a (polaco → polaca, italiano → italiana). Forma męska na spółgłoskę dostaje -a (español → española, alemán → alemana, inglés → inglesa, francés → francesa) — i znika akcent graficzny. Niektóre formy są takie same dla obu rodzajów: estadounidense, belga."
+    },
+    {
+      "type": "example",
+      "text": "Mi marido es español y yo soy polaca.",
+      "translation": "Mój mąż jest Hiszpanem, a ja jestem Polką."
+    },
+    {
+      "type": "example",
+      "text": "Hablo polaco, inglés y un poco de español.",
+      "translation": "Mówię po polsku, po angielsku i trochę po hiszpańsku.",
+      "note": "Nazwa języka to zwykle męska forma narodowości: el polaco, el español, el inglés."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — kraj i rodzaj: Polonia, España, Alemania, Francia, Italia kończą się na -a — wyobraź sobie je jako czerwone (żeńskie) wyspy na mapie. Mówimy jednak: Polonia es bonita (Polska jest ładna) — przymiotnik zgadza się z krajem."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Laura",
+          "text": "¿De dónde eres, Marta?",
+          "translation": "Skąd jesteś, Marto?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Soy polaca, de Wrocław. ¿Y tú?",
+          "translation": "Jestem Polką, z Wrocławia. A ty?"
+        },
+        {
+          "speaker": "Laura",
+          "text": "Soy española, de Bilbao. ¿Qué idiomas hablas?",
+          "translation": "Jestem Hiszpanką, z Bilbao. Jakimi językami mówisz?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Hablo polaco, inglés y alemán. Y ahora aprendo español.",
+          "translation": "Mówię po polsku, angielsku i niemiecku. A teraz uczę się hiszpańskiego."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: powiedz trzy zdania: skąd jesteś (miasto i kraj), jakiej jesteś narodowości i jakimi językami mówisz."
+    }
+  ]
+}

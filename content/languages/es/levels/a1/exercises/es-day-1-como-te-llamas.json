@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-como-te-llamas",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Jak zapytać kolegę o imię?",
+  "explanation": "¿Cómo te llamas? — Jak masz na imię?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Cómo te llamas?"
+      },
+      {
+        "id": "b",
+        "text": "¿Cómo estás?"
+      },
+      {
+        "id": "c",
+        "text": "¿De dónde eres?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

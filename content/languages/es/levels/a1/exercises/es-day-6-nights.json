@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-nights",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Na ile nocy była rezerwacja Marka?",
+  "explanation": "Para tres noches — na trzy noce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Dwie."
+      },
+      {
+        "id": "b",
+        "text": "Trzy."
+      },
+      {
+        "id": "c",
+        "text": "Cztery."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

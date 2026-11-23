@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-alemania",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Jak po hiszpańsku nazywa się Niemcy?",
+  "explanation": "Alemania — kraj; alemán — narodowość.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Alemania"
+      },
+      {
+        "id": "b",
+        "text": "Germania"
+      },
+      {
+        "id": "c",
+        "text": "Alemán"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

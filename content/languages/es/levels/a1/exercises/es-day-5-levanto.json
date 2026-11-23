@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-levanto",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ levanto a las siete.",
+  "explanation": "Ja → me levanto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Te"
+      },
+      {
+        "id": "b",
+        "text": "Me"
+      },
+      {
+        "id": "c",
+        "text": "Se"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

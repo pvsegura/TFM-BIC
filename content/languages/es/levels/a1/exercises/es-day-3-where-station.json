@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-where-station",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Gdzie jest dworzec?",
+  "explanation": "Położenie → dónde + está.",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Dónde está la estación?",
+      "Dónde está la estación",
+      "Dónde está la estación."
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-desayuno",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy desayuno?",
+  "explanation": "Desayunar — jeść śniadanie; comer — obiad; cenar — kolację.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jem obiad."
+      },
+      {
+        "id": "b",
+        "text": "Jem śniadanie."
+      },
+      {
+        "id": "c",
+        "text": "Jem kolację."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

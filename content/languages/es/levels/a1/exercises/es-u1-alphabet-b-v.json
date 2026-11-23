@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-b-v",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Litery b i v wymawiamy po hiszpańsku tak samo.",
+  "explanation": "Tak: vino i bino brzmiałyby identycznie.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

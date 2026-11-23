@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-how-much-plural",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Pytasz o cenę kilku rzeczy. Co mówisz?",
+  "explanation": "Kilka rzeczy → cuestan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Cuánto cuesta?"
+      },
+      {
+        "id": "b",
+        "text": "¿Cuánto cuestan?"
+      },
+      {
+        "id": "c",
+        "text": "¿Cuándo cuestan?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

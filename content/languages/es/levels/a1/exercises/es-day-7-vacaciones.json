@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-vacaciones",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jak zapytasz, czy ktoś jest na wakacjach?",
+  "explanation": "Estar de vacaciones — być na wakacjach.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Eres de vacaciones?"
+      },
+      {
+        "id": "b",
+        "text": "¿Estás de vacaciones?"
+      },
+      {
+        "id": "c",
+        "text": "¿Tienes de vacaciones?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

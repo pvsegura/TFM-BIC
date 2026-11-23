@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-soup-cold",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Zupa jest teraz zimna. Jak to powiesz?",
+  "explanation": "Stan w tej chwili → estar: la sopa está fría.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "La sopa es fría."
+      },
+      {
+        "id": "b",
+        "text": "La sopa está fría."
+      },
+      {
+        "id": "c",
+        "text": "La sopa tiene fría."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

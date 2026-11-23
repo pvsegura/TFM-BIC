@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-intro-full",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jestem Ewa. Jestem z Polski.",
+  "explanation": "Soy Ewa. Soy de Polonia.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Soy Ewa. Soy de Polonia.",
+      "Soy Ewa Soy de Polonia",
+      "Me llamo Ewa. Soy de Polonia.",
+      "Me llamo Ewa Soy de Polonia",
+      "Soy Ewa, soy de Polonia.",
+      "Soy Ewa, soy de Polonia"
+    ],
+    "caseSensitive": false
+  }
+}

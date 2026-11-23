@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n0",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 0?",
+  "explanation": "Cero — 0.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "cero"
+      },
+      {
+        "id": "b",
+        "text": "nada"
+      },
+      {
+        "id": "c",
+        "text": "zero"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

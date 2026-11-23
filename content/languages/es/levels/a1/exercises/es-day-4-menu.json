@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-menu",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Chcesz zobaczyć menu. Co mówisz?",
+  "explanation": "La carta to karta dań.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "La cuenta, por favor."
+      },
+      {
+        "id": "b",
+        "text": "La carta, por favor."
+      },
+      {
+        "id": "c",
+        "text": "La tarjeta, por favor."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

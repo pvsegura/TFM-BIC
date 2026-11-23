@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-un-poco",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mówię trochę po hiszpańsku.",
+  "explanation": "Hablo un poco de español.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Hablo un poco de español",
+      "Hablo un poco de español.",
+      "Hablo un poco español",
+      "Hablo un poco español."
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-hablo",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mówię po polsku.",
+  "explanation": "Hablar + język: hablo polaco.",
+  "configuration": {
+    "acceptedAnswers": ["Hablo polaco", "Hablo polaco."],
+    "caseSensitive": false
+  }
+}

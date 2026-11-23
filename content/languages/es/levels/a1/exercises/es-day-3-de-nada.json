@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-de-nada",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Ktoś mówi Muchas gracias. Co odpowiesz?",
+  "explanation": "De nada — nie ma za co.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "De nada."
+      },
+      {
+        "id": "b",
+        "text": "Hasta luego."
+      },
+      {
+        "id": "c",
+        "text": "Perdón."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

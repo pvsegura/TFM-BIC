@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "access": "free",
+  "title": "Jednostka 1. Liczby 0–20, wiek i numer telefonu",
+  "description": "Liczysz do dwudziestu, podajesz swój wiek i numer telefonu.",
+  "blocks": [
+    {
+      "type": "example",
+      "text": "cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez",
+      "translation": "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
+    },
+    {
+      "type": "example",
+      "text": "once, doce, trece, catorce, quince, dieciséis, diecisiete, dieciocho, diecinueve, veinte",
+      "translation": "11, 12, 13, 14, 15, 16, 17, 18, 19, 20",
+      "note": "Od 16 do 19 liczby to „dziesięć i…”: dieci + seis, siete, ocho, nueve — pisane razem."
+    },
+    {
+      "type": "explanation",
+      "text": "Uno przed rzeczownikiem męskim skraca się do un, a przed żeńskim zmienia się w una: un café, una cerveza. Pozostałe liczby się nie zmieniają: dos cafés, dos cervezas."
+    },
+    {
+      "type": "explanation",
+      "text": "Wiek: pamiętaj, że po hiszpańsku wiek się „ma” — tener: ¿Cuántos años tienes? — Tengo veinte años. Numer telefonu zwykle podaje się cyfra po cyfrze albo parami: seis, cero, cero… lub sesenta, cero…"
+    },
+    {
+      "type": "example",
+      "text": "¿Cuál es tu número de teléfono? — Es el seis, uno, dos, tres, cuatro, cinco, seis, siete, ocho.",
+      "translation": "Jaki jest Twój numer telefonu? — 612 345 678.",
+      "note": "Pytamy ¿Cuál es…?, a nie ¿Qué es…?, gdy chodzi o konkretną informację z wielu możliwych."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenia do trudnych liczb: once (11): drużyna piłkarska ma jedenastu graczy — wyobraź sobie, że na koszulce każdego z nich jest napis ONCE. Quince (15) zaczyna się jak „kin”: piętnaście osób w kinie. Siete (7) — „siedem” i „siete” zaczynają się podobnie."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Profesora",
+          "text": "¿Cuántos años tienes, Kuba?",
+          "translation": "Ile masz lat, Kuba?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Tengo diecinueve años.",
+          "translation": "Mam dziewiętnaście lat."
+        },
+        {
+          "speaker": "Profesora",
+          "text": "¿Y cuál es tu número de teléfono?",
+          "translation": "A jaki jest Twój numer telefonu?"
+        },
+        {
+          "speaker": "Kuba",
+          "text": "Es el cinco, cero, uno, dos, dos, tres, siete, ocho, nueve.",
+          "translation": "501 223 789."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: powiedz na głos swój wiek i swój numer telefonu po hiszpańsku, cyfra po cyfrze."
+    }
+  ]
+}

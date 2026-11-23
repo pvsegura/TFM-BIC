@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-tomorrow",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy mañana w odpowiedzi na ¿Cuándo?",
+  "explanation": "Mañana — jutro (także: rano).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Dzisiaj."
+      },
+      {
+        "id": "b",
+        "text": "Jutro."
+      },
+      {
+        "id": "c",
+        "text": "Teraz."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

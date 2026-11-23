@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-qu",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi qu w queso?",
+  "explanation": "Qu przed e/i to [k]: [keso].",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "[kw]"
+      },
+      {
+        "id": "b",
+        "text": "[k]"
+      },
+      {
+        "id": "c",
+        "text": "[ku]"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-expand",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Które zdanie jest najdłuższą poprawną rozbudową „Quiero”?",
+  "explanation": "Szyk: quiero + un café + con leche + por favor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Quiero café con leche por favor un."
+      },
+      {
+        "id": "b",
+        "text": "Quiero un café con leche, por favor."
+      },
+      {
+        "id": "c",
+        "text": "Quiero un con leche café, por favor."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

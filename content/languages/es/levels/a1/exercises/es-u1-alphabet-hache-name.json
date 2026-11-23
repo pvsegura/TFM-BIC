@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-hache-name",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Jak nazywa się litera h?",
+  "explanation": "H — hache.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "hache"
+      },
+      {
+        "id": "b",
+        "text": "jota"
+      },
+      {
+        "id": "c",
+        "text": "eme"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

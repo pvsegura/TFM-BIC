@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-soy-de-city",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jestem z Krakowa.",
+  "explanation": "Kraków po hiszpańsku to Cracovia.",
+  "configuration": {
+    "acceptedAnswers": ["Soy de Cracovia", "Soy de Cracovia."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-who",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Którym słowem zapytasz o osobę?",
+  "explanation": "¿Quién? — kto?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Qué?"
+      },
+      {
+        "id": "b",
+        "text": "¿Quién?"
+      },
+      {
+        "id": "c",
+        "text": "¿Dónde?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

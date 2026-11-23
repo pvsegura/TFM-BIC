@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-un-una",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ cerveza, por favor.",
+  "explanation": "Cerveza jest rodzaju żeńskiego → una cerveza.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Un"
+      },
+      {
+        "id": "b",
+        "text": "Una"
+      },
+      {
+        "id": "c",
+        "text": "El"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

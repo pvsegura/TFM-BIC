@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-tampoco",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy tampoco?",
+  "explanation": "También — też; tampoco — też nie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Też."
+      },
+      {
+        "id": "b",
+        "text": "Też nie."
+      },
+      {
+        "id": "c",
+        "text": "Już."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

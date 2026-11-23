@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-j-sound",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Jak brzmi j w słowie jamón?",
+  "explanation": "Hiszpańskie j brzmi jak twarde polskie h: [hamon].",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jak polskie j."
+      },
+      {
+        "id": "b",
+        "text": "Jak twarde polskie h/ch."
+      },
+      {
+        "id": "c",
+        "text": "Jak polskie ż."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

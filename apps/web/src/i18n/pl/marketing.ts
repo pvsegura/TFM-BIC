@@ -296,7 +296,7 @@ export const marketing = {
     title: "Kurs hiszpańskiego A1",
     lead: "Poziom A1 według Europejskiego Systemu Opisu Kształcenia Językowego: rozumiesz i używasz prostych, codziennych wyrażeń, przedstawiasz się, pytasz o podstawowe rzeczy i radzisz sobie w prostych sytuacjach.",
     statusNow:
-      "Teraz dostępne: wyzwanie 7 dni (bezpłatnie). Kolejne jednostki A1 są w przygotowaniu i będą dodawane stopniowo.",
+      "Teraz dostępne bezpłatnie: wyzwanie 7 dni i trzy pierwsze tematy jednostki 1 (alfabet, kraje i narodowości, liczby) — razem 10 tematów i 160 ćwiczeń. Kolejne jednostki A1 są w przygotowaniu i będą dodawane stopniowo.",
     unitsTitle: "Plan kursu A1",
     units: [
       "¡Hola! Me llamo… — przedstawianie się, alfabet, narodowości",

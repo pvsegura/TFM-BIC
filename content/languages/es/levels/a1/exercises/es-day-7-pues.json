@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-pues",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Javier mówi: Pues hablas muy bien. Co znaczy pues w tym zdaniu?",
+  "explanation": "Pues na początku zdania często znaczy „no to”.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Ponieważ."
+      },
+      {
+        "id": "b",
+        "text": "No to / w takim razie."
+      },
+      {
+        "id": "c",
+        "text": "Ale."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

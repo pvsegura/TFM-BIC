@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-phone-q",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Jak zapytasz o numer telefonu?",
+  "explanation": "O konkretną informację pytamy ¿Cuál es…?, nie ¿Qué es…?.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Qué es tu teléfono?"
+      },
+      {
+        "id": "b",
+        "text": "¿Cuál es tu número de teléfono?"
+      },
+      {
+        "id": "c",
+        "text": "¿Cuánto es tu teléfono?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

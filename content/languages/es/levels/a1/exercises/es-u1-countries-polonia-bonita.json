@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-polonia-bonita",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Polonia es ___.",
+  "explanation": "Polonia jest rodzaju żeńskiego → bonita.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "bonito"
+      },
+      {
+        "id": "b",
+        "text": "bonita"
+      },
+      {
+        "id": "c",
+        "text": "bonitos"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

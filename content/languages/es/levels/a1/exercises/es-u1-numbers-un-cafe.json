@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-un-cafe",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ café, por favor.",
+  "explanation": "Przed rzeczownikiem męskim uno → un.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Uno"
+      },
+      {
+        "id": "b",
+        "text": "Un"
+      },
+      {
+        "id": "c",
+        "text": "Una"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

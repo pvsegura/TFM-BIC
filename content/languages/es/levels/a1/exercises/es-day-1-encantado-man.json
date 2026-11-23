@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-encantado-man",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Mężczyzna poznaje kobietę. Co mówi?",
+  "explanation": "Forma zależy od osoby mówiącej: mężczyzna mówi encantado.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Encantada."
+      },
+      {
+        "id": "b",
+        "text": "Encantado."
+      },
+      {
+        "id": "c",
+        "text": "Encantados."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

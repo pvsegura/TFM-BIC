@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-querer-travel",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Chcę podróżować.",
+  "explanation": "Quiero + bezokolicznik: quiero viajar.",
+  "configuration": {
+    "acceptedAnswers": ["Quiero viajar", "Quiero viajar."],
+    "caseSensitive": false
+  }
+}

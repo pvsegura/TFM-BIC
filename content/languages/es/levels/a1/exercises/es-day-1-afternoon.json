@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-afternoon",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jest 17:00. Które powitanie pasuje?",
+  "explanation": "Od obiadu do zmroku: buenas tardes.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Buenos días."
+      },
+      {
+        "id": "b",
+        "text": "Buenas tardes."
+      },
+      {
+        "id": "c",
+        "text": "Buenas noches."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

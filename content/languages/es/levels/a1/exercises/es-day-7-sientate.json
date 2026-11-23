@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-sientate",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy Siéntate?",
+  "explanation": "Siéntate — usiądź (do osoby na ty).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Wstań."
+      },
+      {
+        "id": "b",
+        "text": "Usiądź."
+      },
+      {
+        "id": "c",
+        "text": "Poczekaj."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-dedicas",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy ¿A qué te dedicas?",
+  "explanation": "¿A qué te dedicas? — pytanie o zawód.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Gdzie mieszkasz?"
+      },
+      {
+        "id": "b",
+        "text": "Czym się zajmujesz?"
+      },
+      {
+        "id": "c",
+        "text": "Co lubisz?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

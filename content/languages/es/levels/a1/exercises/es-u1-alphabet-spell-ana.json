@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-spell-ana",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Ktoś literuje: a, ene, a. Jakie to imię?",
+  "explanation": "A-n-a — Ana.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Ana"
+      },
+      {
+        "id": "b",
+        "text": "Ania"
+      },
+      {
+        "id": "c",
+        "text": "Anna"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

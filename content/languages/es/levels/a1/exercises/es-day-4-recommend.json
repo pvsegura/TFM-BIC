@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-recommend",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Co mi Pan poleca?",
+  "explanation": "¿Qué me recomienda? — forma usted.",
+  "configuration": {
+    "acceptedAnswers": ["¿Qué me recomienda?", "Qué me recomienda", "Qué me recomienda."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-me-pone",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Co dosłownie znaczy ¿Me pone un café?",
+  "explanation": "Me pone… — bardzo naturalny sposób zamawiania w barze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Postawi mi Pan kawę?"
+      },
+      {
+        "id": "b",
+        "text": "Ile kosztuje kawa?"
+      },
+      {
+        "id": "c",
+        "text": "Czy jest kawa?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-7-libre",
+  "lessonId": "es-day-7-first-conversation",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy ¿Está libre esta silla?",
+  "explanation": "Libre — wolny.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Czy to krzesło jest wolne?"
+      },
+      {
+        "id": "b",
+        "text": "Czy to krzesło jest tanie?"
+      },
+      {
+        "id": "c",
+        "text": "Gdzie jest krzesło?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

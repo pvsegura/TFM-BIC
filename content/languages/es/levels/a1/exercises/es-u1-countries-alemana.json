@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-alemana",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Żeńska forma alemán to:",
+  "explanation": "Alemán → alemana — akcent znika.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "alemána"
+      },
+      {
+        "id": "b",
+        "text": "alemana"
+      },
+      {
+        "id": "c",
+        "text": "alemanesa"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

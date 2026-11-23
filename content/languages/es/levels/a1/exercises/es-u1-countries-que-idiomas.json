@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-que-idiomas",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy ¿Qué idiomas hablas?",
+  "explanation": "Idiomas — języki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Skąd jesteś?"
+      },
+      {
+        "id": "b",
+        "text": "Jakimi językami mówisz?"
+      },
+      {
+        "id": "c",
+        "text": "Gdzie mieszkasz?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

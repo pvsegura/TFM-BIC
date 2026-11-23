@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "access": "free",
+  "title": "Jednostka 1. Alfabet i literowanie",
+  "description": "Hiszpański alfabet, litery, których nie ma w polskim, i jak przeliterować swoje imię.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Hiszpański alfabet ma 27 liter. W porównaniu z polskim dochodzi ñ, a nie ma liter z ogonkami ani kreskami (ą, ę, ł, ś, ż…). Nazwy liter warto znać, bo w urzędzie, hotelu czy w pracy często usłyszysz pytanie: ¿Cómo se escribe? — Jak to się pisze?"
+    },
+    {
+      "type": "example",
+      "text": "a, be, ce, de, e, efe, ge, hache, i, jota, ka, ele, eme, ene, eñe, o, pe, cu, erre, ese, te, u, uve, uve doble, equis, ye, zeta",
+      "translation": "Nazwy liter od A do Z.",
+      "note": "Ye to litera y; uve doble to w — występuje prawie tylko w słowach obcych."
+    },
+    {
+      "type": "explanation",
+      "text": "Litery, na które Polak musi uważać: h się nie wymawia (hola [ola]); j to twarde h (jota); ñ to polskie ń (España); ll brzmi jak j (llamar); ch to polskie cz (chocolate [czokolate]); c przed e/i oraz z — w większości Hiszpanii jak angielskie th; qu przed e/i to [k] (queso [keso]); v i b brzmią tak samo."
+    },
+    {
+      "type": "example",
+      "text": "¿Cómo se escribe tu apellido? — Ka, o, uve, a, ele, ese, ka, i.",
+      "translation": "Jak się pisze Twoje nazwisko? — K, o, w, a, l, s, k, i.",
+      "note": "Kowalski: w polskim nazwisku literę w Hiszpan nazwie uve doble, ale często usłyszysz po prostu uve."
+    },
+    {
+      "type": "example",
+      "text": "¿Puede repetir, por favor? ¿Más despacio?",
+      "translation": "Czy może Pan/Pani powtórzyć? Wolniej?"
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: ñ to n z „falą” na głowie. Wyobraź sobie, że litera n kąpie się w morzu w Hiszpanii (España) i fala wylewa się na nią — wtedy zaczyna brzmieć jak miękkie polskie ń."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Recepcionista",
+          "text": "¿Su nombre, por favor?",
+          "translation": "Pana nazwisko, proszę?"
+        },
+        { "speaker": "Paweł", "text": "Paweł Wójcik.", "translation": "Paweł Wójcik." },
+        {
+          "speaker": "Recepcionista",
+          "text": "¿Cómo se escribe Wójcik?",
+          "translation": "Jak się pisze Wójcik?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Uve doble, o, jota, ce, i, ka.",
+          "translation": "W, o, j, c, i, k."
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Perfecto, gracias.",
+          "translation": "Świetnie, dziękuję."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: przeliteruj na głos po hiszpańsku swoje imię i nazwisko. Jeśli masz w nazwisku polską literę (ł, ś, ż…), powiedz ją bez znaku, a potem dodaj na przykład: con acento (z kreską)."
+    }
+  ]
+}

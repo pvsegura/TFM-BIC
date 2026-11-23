@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-el-vino",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Jaki rodzajnik ma vino?",
+  "explanation": "Vino (na -o) jest męskie → el vino.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "la"
+      },
+      {
+        "id": "b",
+        "text": "el"
+      },
+      {
+        "id": "c",
+        "text": "una"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

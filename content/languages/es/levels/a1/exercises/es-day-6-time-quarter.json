@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-6-time-quarter",
+  "lessonId": "es-day-6-listening",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Son las dos y cuarto to:",
+  "explanation": "Y cuarto — i kwadrans: 2:15.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "2:15"
+      },
+      {
+        "id": "b",
+        "text": "2:45"
+      },
+      {
+        "id": "c",
+        "text": "1:45"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

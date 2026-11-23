@@ -426,7 +426,7 @@ export const es: Messages = {
       title: "Curso de español A1",
       lead: "Nivel A1 del Marco Común Europeo de Referencia: entiendes y usas expresiones cotidianas sencillas, te presentas, haces preguntas básicas y te desenvuelves en situaciones simples.",
       statusNow:
-        "Disponible ahora: el reto de 7 días (gratis). Las demás unidades de A1 están en preparación y se irán añadiendo.",
+        "Disponible ahora gratis: el reto de 7 días y los tres primeros temas de la unidad 1 (alfabeto, países y nacionalidades, números): 10 temas y 160 ejercicios en total. Las demás unidades de A1 están en preparación y se irán añadiendo.",
       unitsTitle: "Plan del curso A1",
       units: [
         "¡Hola! Me llamo… — presentarse, el alfabeto, nacionalidades",

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-3-how-are-you",
+  "lessonId": "es-day-3-questions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Ktoś pyta ¿Cómo estás? Co odpowiesz?",
+  "explanation": "¿Cómo estás? — Jak się masz? → Bien, gracias.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me llamo Ana."
+      },
+      {
+        "id": "b",
+        "text": "Bien, gracias. ¿Y tú?"
+      },
+      {
+        "id": "c",
+        "text": "Soy de Polonia."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

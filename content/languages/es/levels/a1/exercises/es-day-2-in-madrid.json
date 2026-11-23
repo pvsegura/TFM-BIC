@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-2-in-madrid",
+  "lessonId": "es-day-2-building-sentences",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ en Madrid. (jestem — teraz, w tym miejscu)",
+  "explanation": "Położenie → estar: estoy en Madrid.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy"
+      },
+      {
+        "id": "b",
+        "text": "Estoy"
+      },
+      {
+        "id": "c",
+        "text": "Tengo"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

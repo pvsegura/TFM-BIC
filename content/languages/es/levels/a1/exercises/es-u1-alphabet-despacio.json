@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-despacio",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy más despacio?",
+  "explanation": "Despacio — powoli.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Głośniej."
+      },
+      {
+        "id": "b",
+        "text": "Wolniej."
+      },
+      {
+        "id": "c",
+        "text": "Szybciej."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

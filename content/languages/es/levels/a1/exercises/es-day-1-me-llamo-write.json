@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-me-llamo-write",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mam na imię Piotr.",
+  "explanation": "Me llamo Piotr albo Soy Piotr.",
+  "configuration": {
+    "acceptedAnswers": ["Me llamo Piotr", "Me llamo Piotr.", "Soy Piotr", "Soy Piotr."],
+    "caseSensitive": false
+  }
+}

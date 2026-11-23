@@ -422,7 +422,7 @@ export const en: Messages = {
       title: "A1 Spanish course",
       lead: "Level A1 of the Common European Framework of Reference: you understand and use simple everyday expressions, introduce yourself, ask basic questions and get by in simple situations.",
       statusNow:
-        "Available now: the 7-day challenge (free). Further A1 units are being prepared and will be added gradually.",
+        "Available now for free: the 7-day challenge and the first three topics of unit 1 (alphabet, countries and nationalities, numbers) — 10 topics and 160 exercises in all. Further A1 units are being prepared and will be added gradually.",
       unitsTitle: "A1 course plan",
       units: [
         "¡Hola! Me llamo… — introductions, the alphabet, nationalities",

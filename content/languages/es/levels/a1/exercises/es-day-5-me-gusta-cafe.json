@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-5-me-gusta-cafe",
+  "lessonId": "es-day-5-about-me",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ el café.",
+  "explanation": "Jedna rzecz → gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gusta"
+      },
+      {
+        "id": "b",
+        "text": "gustan"
+      },
+      {
+        "id": "c",
+        "text": "gusto"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

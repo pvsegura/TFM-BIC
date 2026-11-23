@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-1-ll-sound",
+  "lessonId": "es-day-1-greetings",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Jak w większości Hiszpanii wymawia się ll w me llamo?",
+  "explanation": "Ll brzmi w większości Hiszpanii podobnie do polskiego j: [me jamo].",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jak l."
+      },
+      {
+        "id": "b",
+        "text": "Jak polskie j."
+      },
+      {
+        "id": "c",
+        "text": "Jak polskie ł."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

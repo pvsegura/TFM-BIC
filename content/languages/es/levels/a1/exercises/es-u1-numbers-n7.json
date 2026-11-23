@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-n7",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 7 po hiszpańsku?",
+  "explanation": "Siete — 7.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "seis"
+      },
+      {
+        "id": "b",
+        "text": "siete"
+      },
+      {
+        "id": "c",
+        "text": "sete"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

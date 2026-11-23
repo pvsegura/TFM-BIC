@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-dieci",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Liczby 16–19 piszemy osobno: diez y seis.",
+  "explanation": "Piszemy razem: dieciséis, diecisiete…",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

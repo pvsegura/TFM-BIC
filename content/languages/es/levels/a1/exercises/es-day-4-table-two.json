@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day-4-table-two",
+  "lessonId": "es-day-4-cafe-and-shop",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Chciałbym stolik dla dwóch osób.",
+  "explanation": "Quería una mesa para dos — grzeczniej z quería.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Quería una mesa para dos",
+      "Quería una mesa para dos.",
+      "Quiero una mesa para dos",
+      "Quiero una mesa para dos."
+    ],
+    "caseSensitive": false
+  }
+}
