@@ -89,6 +89,13 @@ const MARKETING_ROUTES: RouteObject[] = [
       })),
   },
   {
+    path: "kontakt",
+    lazy: () =>
+      import("./pages/public/contact-page.js").then(({ ContactPage }) => ({
+        Component: ContactPage,
+      })),
+  },
+  {
     path: "faq",
     lazy: () =>
       import("./pages/public/faq-page.js").then(({ FaqPage }) => ({ Component: FaqPage })),

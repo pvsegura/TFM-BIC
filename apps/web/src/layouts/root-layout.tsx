@@ -3,6 +3,7 @@ import { useEffect, useRef, useState, type KeyboardEvent } from "react";
 import { Outlet, useLocation, useMatches } from "react-router";
 import { Link } from "../components/app-link.js";
 
+import { ContactButtons, FloatingWhatsApp } from "../components/contact-links.js";
 import { LanguageSwitcher } from "../components/language-switcher.js";
 import { useCurrentUser } from "../hooks/use-current-user.js";
 import { useLogout } from "../hooks/use-logout.js";
@@ -223,11 +224,15 @@ export function RootLayout() {
               </div>
             ))}
           </nav>
+          <div className="mt-6">
+            <ContactButtons compact />
+          </div>
           <p className="mt-6 border-t border-primary/10 pt-4 text-sm text-primary/70 dark:border-surface/10 dark:text-surface/70">
             {t.copyright}
           </p>
         </div>
       </footer>
+      <FloatingWhatsApp />
     </div>
   );
 }

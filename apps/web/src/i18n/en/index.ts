@@ -56,6 +56,7 @@ export const en: Messages = {
       { to: "/cennik", label: "Pricing" },
       { to: "/faq", label: "FAQ" },
       { to: "/inne-kursy", label: "Other courses" },
+      { to: "/kontakt", label: "Contact" },
     ],
     login: "Log in",
     register: "Start for free",
@@ -101,7 +102,10 @@ export const en: Messages = {
       },
       {
         title: "Contact",
-        links: [{ to: "/privacy#privacy-who", label: "Who is responsible for your data" }],
+        links: [
+          { to: "/kontakt", label: "Contact" },
+          { to: "/privacy#privacy-who", label: "Who is responsible for your data" },
+        ],
       },
     ],
     copyright:
@@ -123,6 +127,17 @@ export const en: Messages = {
     fixFields: "Please fix the highlighted fields.",
   },
   marketing: {
+    contact: {
+      title: "Contact",
+      metaDescription:
+        "Message us on WhatsApp or by email. We answer questions about the course, prices and access.",
+      lead: "Questions about the course, your level or access? Message us on WhatsApp or by email.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      pending: "Our contact details will be published soon.",
+      groupTitle: "Write to us",
+      floatingLabel: "Message us on WhatsApp",
+    },
     home: {
       metaTitle: "Verbysia — Spanish from scratch for Polish speakers",
       metaDescription:
@@ -185,6 +200,63 @@ export const en: Messages = {
       pricingCta: "See pricing",
       finalTitle: "You'll say your first Spanish sentence today",
       finalCta: "Create a free account",
+      heroPricesLabel: "Prices",
+      heroPriceA1: "A1 course",
+      heroPricePremium: "Premium",
+      useTitle: "Use only what you need.",
+      useLead: "Each part works on its own. No annual commitment.",
+      useCards: [
+        {
+          title: "Free 7-day challenge",
+          body: "Start from zero: 7 lessons, exercises and reviews. No credit card.",
+          to: "/wyzwanie-7-dni",
+          cta: "See the programme",
+        },
+        {
+          title: "Self-study A1 course",
+          body: "Units explained in Polish, with exercises and dialogues — at your own pace.",
+          to: "/kurs-a1",
+          cta: "Course plan",
+        },
+        {
+          title: "Memory trainer",
+          body: "Spaced repetition (SM-2): words come back just as you start to forget them.",
+          to: "/learn/memory",
+          cta: "How it works",
+        },
+      ],
+      productsTitle: "Plans and products.",
+      productsCta: "Full pricing",
+      demoTitle: "Try it now — no account needed.",
+      demoLead: "Three questions from the 7-day challenge. Every answer is explained in Polish.",
+      demoQuestions: [
+        {
+          q: "How do you say: I am tired?",
+          options: ["Soy cansado.", "Estoy cansado.", "Tengo cansado."],
+          correct: 1,
+          explain: "Tiredness is a state right now, so estar: estoy cansado.",
+        },
+        {
+          q: "How do you say: I am thirty years old?",
+          options: ["Soy treinta años.", "Estoy treinta años.", "Tengo treinta años."],
+          correct: 2,
+          explain: "In Spanish you “have” your age: tengo treinta años.",
+        },
+        {
+          q: "Complete: Me ___ los libros.",
+          options: ["gusta", "gustan", "gusto"],
+          correct: 1,
+          explain: "The verb agrees with the thing you like. Los libros is plural → gustan.",
+        },
+      ],
+      demoCorrect: "Correct!",
+      demoWrong: "Not this time.",
+      demoNext: "Next question",
+      demoScore: (score: number, total: number) => `Score: ${String(score)} of ${String(total)}.`,
+      demoCta: "Continue in the free challenge",
+      demoRestart: "Start again",
+      programTitle: "A1 course programme.",
+      programCta: "See the A1 course",
     },
     phases: [
       {

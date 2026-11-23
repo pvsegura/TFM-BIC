@@ -12,6 +12,7 @@ export const layout = {
     { to: "/cennik", label: "Cennik" },
     { to: "/faq", label: "FAQ" },
     { to: "/inne-kursy", label: "Inne kursy" },
+    { to: "/kontakt", label: "Kontakt" },
   ],
   login: "Zaloguj się",
   register: "Zacznij za darmo",
@@ -57,7 +58,10 @@ export const layout = {
     },
     {
       title: "Kontakt",
-      links: [{ to: "/privacy#privacy-who", label: "Kto odpowiada za dane" }],
+      links: [
+        { to: "/kontakt", label: "Kontakt" },
+        { to: "/privacy#privacy-who", label: "Kto odpowiada za dane" },
+      ],
     },
   ],
   copyright:

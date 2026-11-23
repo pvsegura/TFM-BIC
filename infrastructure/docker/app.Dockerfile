@@ -31,6 +31,12 @@ RUN --mount=type=cache,id=pnpm-store,target=/root/.local/share/pnpm/store \
     pnpm install --frozen-lockfile
 
 # Content is validated with the same loader the API runs at start-up, then both apps are built.
+# Public contact channels baked into the web build (Render passes service env vars as build args).
+# Empty = the contact buttons lead to /kontakt.
+ARG VITE_CONTACT_WHATSAPP=""
+ARG VITE_CONTACT_EMAIL=""
+ENV VITE_CONTACT_WHATSAPP=${VITE_CONTACT_WHATSAPP} \
+    VITE_CONTACT_EMAIL=${VITE_CONTACT_EMAIL}
 RUN pnpm content:validate \
  && pnpm --filter @verbysia/web build \
  && pnpm --filter @verbysia/api build

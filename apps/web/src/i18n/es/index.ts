@@ -57,6 +57,7 @@ export const es: Messages = {
       { to: "/cennik", label: "Precios" },
       { to: "/faq", label: "Preguntas frecuentes" },
       { to: "/inne-kursy", label: "Otros cursos" },
+      { to: "/kontakt", label: "Contacto" },
     ],
     login: "Iniciar sesión",
     register: "Empieza gratis",
@@ -102,7 +103,10 @@ export const es: Messages = {
       },
       {
         title: "Contacto",
-        links: [{ to: "/privacy#privacy-who", label: "Responsable de los datos" }],
+        links: [
+          { to: "/kontakt", label: "Contacto" },
+          { to: "/privacy#privacy-who", label: "Responsable de los datos" },
+        ],
       },
     ],
     copyright:
@@ -125,6 +129,17 @@ export const es: Messages = {
     fixFields: "Corrige los campos marcados.",
   },
   marketing: {
+    contact: {
+      title: "Contacto",
+      metaDescription:
+        "Escríbenos por WhatsApp o por email. Respondemos dudas sobre el curso, los precios y el acceso.",
+      lead: "¿Dudas sobre el curso, tu nivel o el acceso? Escríbenos por WhatsApp o por email.",
+      whatsapp: "WhatsApp",
+      email: "Email",
+      pending: "Publicaremos los datos de contacto muy pronto.",
+      groupTitle: "Escríbenos",
+      floatingLabel: "Escríbenos por WhatsApp",
+    },
     home: {
       metaTitle: "Verbysia — español desde cero para polacos",
       metaDescription:
@@ -188,6 +203,64 @@ export const es: Messages = {
       pricingCta: "Ver precios",
       finalTitle: "Hoy mismo dirás tu primera frase en español",
       finalCta: "Crea una cuenta gratuita",
+      heroPricesLabel: "Precios",
+      heroPriceA1: "Curso A1",
+      heroPricePremium: "Premium",
+      useTitle: "Usa solo lo que necesites.",
+      useLead: "Cada parte funciona por separado. Sin permanencia anual.",
+      useCards: [
+        {
+          title: "Reto gratuito de 7 días",
+          body: "Empieza desde cero: 7 lecciones, ejercicios y repasos. Sin tarjeta.",
+          to: "/wyzwanie-7-dni",
+          cta: "Ver el programa",
+        },
+        {
+          title: "Curso A1 autónomo",
+          body: "Unidades explicadas en polaco, con ejercicios y diálogos, a tu ritmo.",
+          to: "/kurs-a1",
+          cta: "Plan del curso",
+        },
+        {
+          title: "Entrenador de memoria",
+          body: "Repetición espaciada (SM-2): las palabras vuelven justo cuando empiezas a olvidarlas.",
+          to: "/learn/memory",
+          cta: "Cómo funciona",
+        },
+      ],
+      productsTitle: "Planes y productos.",
+      productsCta: "Todos los precios",
+      demoTitle: "Pruébalo ahora, sin cuenta.",
+      demoLead: "Tres preguntas del reto de 7 días. Cada respuesta se explica en polaco.",
+      demoQuestions: [
+        {
+          q: "¿Cómo se dice: Jestem zmęczony?",
+          options: ["Soy cansado.", "Estoy cansado.", "Tengo cansado."],
+          correct: 1,
+          explain: "El cansancio es un estado en este momento, por eso estar: estoy cansado.",
+        },
+        {
+          q: "¿Cómo se dice: Mam trzydzieści lat?",
+          options: ["Soy treinta años.", "Estoy treinta años.", "Tengo treinta años."],
+          correct: 2,
+          explain: "En español la edad «se tiene»: tengo treinta años.",
+        },
+        {
+          q: "Completa: Me ___ los libros.",
+          options: ["gusta", "gustan", "gusto"],
+          correct: 1,
+          explain: "El verbo concuerda con lo que te gusta. Los libros es plural → gustan.",
+        },
+      ],
+      demoCorrect: "¡Correcto!",
+      demoWrong: "Esta vez no.",
+      demoNext: "Siguiente pregunta",
+      demoScore: (score: number, total: number) =>
+        `Resultado: ${String(score)} de ${String(total)}.`,
+      demoCta: "Sigue con el reto gratuito",
+      demoRestart: "Empezar de nuevo",
+      programTitle: "Programa del curso A1.",
+      programCta: "Ver el curso A1",
     },
     phases: [
       {

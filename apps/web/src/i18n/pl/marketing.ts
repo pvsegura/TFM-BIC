@@ -1,5 +1,16 @@
 /** Public pages. Honest by rule: no fluency promises, no invented prices, discounts or reviews. */
 export const marketing = {
+  contact: {
+    title: "Kontakt",
+    metaDescription:
+      "Napisz do nas przez WhatsApp lub e-mail. Odpowiadamy na pytania o kurs, ceny i dostęp.",
+    lead: "Masz pytanie o kurs, poziom albo dostęp? Napisz do nas przez WhatsApp lub e-mail.",
+    whatsapp: "WhatsApp",
+    email: "E-mail",
+    pending: "Dane kontaktowe opublikujemy wkrótce.",
+    groupTitle: "Napisz do nas",
+    floatingLabel: "Napisz na WhatsApp",
+  },
   home: {
     metaTitle: "Verbysia — nauka hiszpańskiego od podstaw dla Polaków",
     metaDescription:
@@ -62,6 +73,64 @@ export const marketing = {
     pricingCta: "Zobacz cennik",
     finalTitle: "Pierwsze hiszpańskie zdanie powiesz jeszcze dziś",
     finalCta: "Załóż darmowe konto",
+    heroPricesLabel: "Ceny",
+    heroPriceA1: "Kurs A1",
+    heroPricePremium: "Premium",
+    useTitle: "Korzystaj tylko z tego, czego potrzebujesz.",
+    useLead: "Każdy element działa samodzielnie. Bez rocznych zobowiązań.",
+    useCards: [
+      {
+        title: "Darmowe wyzwanie 7 dni",
+        body: "Zacznij od zera: 7 lekcji, ćwiczenia i powtórki. Bez karty płatniczej.",
+        to: "/wyzwanie-7-dni",
+        cta: "Zobacz program",
+      },
+      {
+        title: "Kurs A1 do samodzielnej nauki",
+        body: "Jednostki z wyjaśnieniami po polsku, ćwiczeniami i dialogami — we własnym tempie.",
+        to: "/kurs-a1",
+        cta: "Plan kursu",
+      },
+      {
+        title: "Trener pamięci",
+        body: "Powtórki w odstępach (SM-2): słowa wracają wtedy, gdy zaczynasz je zapominać.",
+        to: "/learn/memory",
+        cta: "Jak to działa",
+      },
+    ],
+    productsTitle: "Plany i produkty.",
+    productsCta: "Pełny cennik",
+    demoTitle: "Wypróbuj teraz — bez konta.",
+    demoLead: "Trzy pytania z wyzwania 7 dni. Każda odpowiedź ma wyjaśnienie po polsku.",
+    demoQuestions: [
+      {
+        q: "Jak powiesz: Jestem zmęczony?",
+        options: ["Soy cansado.", "Estoy cansado.", "Tengo cansado."],
+        correct: 1,
+        explain: "Zmęczenie to stan w tej chwili, dlatego estar: estoy cansado.",
+      },
+      {
+        q: "Jak powiesz: Mam trzydzieści lat?",
+        options: ["Soy treinta años.", "Estoy treinta años.", "Tengo treinta años."],
+        correct: 2,
+        explain: "Po hiszpańsku wiek się „ma”: tengo treinta años.",
+      },
+      {
+        q: "Uzupełnij: Me ___ los libros.",
+        options: ["gusta", "gustan", "gusto"],
+        correct: 1,
+        explain:
+          "Czasownik zgadza się z rzeczą, którą lubisz. Los libros to liczba mnoga → gustan.",
+      },
+    ],
+    demoCorrect: "Dobrze!",
+    demoWrong: "Nie tym razem.",
+    demoNext: "Następne pytanie",
+    demoScore: (score: number, total: number) => `Wynik: ${String(score)} z ${String(total)}.`,
+    demoCta: "Kontynuuj w darmowym wyzwaniu",
+    demoRestart: "Zacznij od nowa",
+    programTitle: "Program kursu A1.",
+    programCta: "Zobacz kurs A1",
   },
   phases: [
     {
