@@ -42,6 +42,10 @@ const PUBLIC_ROUTES = new Set([
   "GET /grammar/:topicId",
   // Verbysia: the price list — public like a shop window; nothing personal, nothing purchasable here.
   "GET /products",
+  // Verbysia free demo: free lessons only (licence gate), answers evaluated but never stored.
+  "GET /public/lessons/:lessonId/exercises",
+  "GET /public/exercises/:exerciseId",
+  "POST /public/exercises/:exerciseId/answer",
 ]);
 
 /** ADMIN only (`requireRole`), in addition to a session; writes are audited. */

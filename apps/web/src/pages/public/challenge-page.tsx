@@ -3,7 +3,8 @@ import { useDocumentMeta } from "../../homepage/use-document-meta.js";
 import { m } from "../../i18n/index.js";
 import { useCurrentUser } from "../../hooks/use-current-user.js";
 import { useLessons } from "../../hooks/use-lessons.js";
-import { Card, CheckList, PageHero, PrimaryLink, Section } from "./public-parts.js";
+import { DEMO_DAYS } from "./demo-lesson-page.js";
+import { Card, CheckList, PageHero, PrimaryLink, SecondaryLink, Section } from "./public-parts.js";
 
 const t = m.marketing.challenge;
 
@@ -30,7 +31,12 @@ export function ChallengePage() {
             {`${t.dayLabel} ${String(nextDay.day)}: ${nextDay.title}`}
           </PrimaryLink>
         ) : (
-          <PrimaryLink to="/register">{t.registerCta}</PrimaryLink>
+          <>
+            <PrimaryLink to="/register">{t.registerCta}</PrimaryLink>
+            <SecondaryLink to={`/wyzwanie-7-dni/demo/${firstDay?.lessonId ?? ""}`}>
+              {t.tryDemo}
+            </SecondaryLink>
+          </>
         )}
       </PageHero>
 
@@ -58,12 +64,19 @@ export function ChallengePage() {
                   </p>
                   <h3 className="mt-1 font-display text-lg font-bold">{day.title}</h3>
                   <p className="mt-1 text-primary/80 dark:text-surface/80">{day.body}</p>
-                  {user && nextDay ? (
+                  {user ? (
                     <Link
                       to={`/learn/lessons/${day.lessonId}`}
                       className="mt-3 inline-block font-bold underline underline-offset-2"
                     >
                       {t.dayOpen}
+                    </Link>
+                  ) : day.day <= DEMO_DAYS ? (
+                    <Link
+                      to={`/wyzwanie-7-dni/demo/${day.lessonId}`}
+                      className="mt-3 inline-block rounded-full bg-accent px-4 py-2 font-bold text-primary"
+                    >
+                      {t.tryDemo}
                     </Link>
                   ) : null}
                 </Card>

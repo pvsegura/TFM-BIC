@@ -8,6 +8,7 @@ import type {
   ResolveSessionUseCase,
   SubmitExerciseAnswerWithRewardsResult,
 } from "@verbysia/application";
+import { ANONYMOUS_LEARNER, NO_REWARDS_VIEW } from "@verbysia/application";
 import type { AppEnv } from "@verbysia/config";
 import {
   exerciseAnswerRequestSchema,
@@ -198,4 +199,73 @@ export function registerExerciseRoutes(
       });
     },
   );
+
+  // Verbysia free demo (no account): free lessons only — the licence gate runs without a session, so
+  // a paid lesson or exercise answers 403. Answers are evaluated by the same rules and never stored.
+  if (deps.contentGate) {
+    const demo = useCases.demo;
+    const demoAnswerConfig = { rateLimit: exerciseAnswerRateLimit(env) };
+
+    app.get(
+      "/public/lessons/:lessonId/exercises",
+      { config: readConfig, preHandler: [...gate("content", "lessonId")] },
+      async (request, reply) => {
+        const params = lessonIdParamSchema.safeParse(request.params);
+        if (!params.success) {
+          return reply.code(400).send(INVALID_REQUEST);
+        }
+        return privateResponse(reply, mapExerciseError, async () =>
+          toListResponse(
+            await demo.listLessonExercises.execute({
+              userId: ANONYMOUS_LEARNER,
+              lessonId: params.data.lessonId,
+            }),
+          ),
+        );
+      },
+    );
+
+    app.get(
+      "/public/exercises/:exerciseId",
+      { config: readConfig, preHandler: [...gate("exercise", "exerciseId")] },
+      async (request, reply) => {
+        const params = exerciseIdParamSchema.safeParse(request.params);
+        if (!params.success) {
+          return reply.code(400).send(INVALID_REQUEST);
+        }
+        return privateResponse(reply, mapExerciseError, async () =>
+          toExerciseResponse(
+            await demo.getExercise.execute({
+              userId: ANONYMOUS_LEARNER,
+              exerciseId: params.data.exerciseId,
+            }),
+          ),
+        );
+      },
+    );
+
+    app.post(
+      "/public/exercises/:exerciseId/answer",
+      {
+        config: demoAnswerConfig,
+        bodyLimit: ANSWER_BODY_LIMIT_BYTES,
+        preHandler: [verifyOrigin, ...gate("exercise", "exerciseId")],
+      },
+      async (request, reply) => {
+        const params = exerciseIdParamSchema.safeParse(request.params);
+        const body = exerciseAnswerRequestSchema.safeParse(request.body);
+        if (!params.success || !body.success) {
+          return reply.code(400).send(INVALID_REQUEST);
+        }
+        return privateResponse(reply, mapExerciseError, async () => {
+          const outcome = await demo.submitAnswer.execute({
+            userId: ANONYMOUS_LEARNER,
+            exerciseId: params.data.exerciseId,
+            answer: body.data.answer,
+          });
+          return toAnswerResponse({ ...outcome, rewards: NO_REWARDS_VIEW });
+        });
+      },
+    );
+  }
 }

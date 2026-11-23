@@ -68,6 +68,13 @@ const MARKETING_ROUTES: RouteObject[] = [
       })),
   },
   {
+    path: "wyzwanie-7-dni/demo/:lessonId",
+    lazy: () =>
+      import("./pages/public/demo-lesson-page.js").then(({ DemoLessonPage }) => ({
+        Component: DemoLessonPage,
+      })),
+  },
+  {
     path: "kurs-a1",
     lazy: () =>
       import("./pages/public/course-a1-page.js").then(({ CourseA1Page }) => ({

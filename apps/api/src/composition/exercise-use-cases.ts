@@ -1,4 +1,5 @@
 import {
+  AnonymousExerciseAttempts,
   GetExerciseUseCase,
   ListLessonExercisesUseCase,
   SubmitExerciseAnswerUseCase,
@@ -15,6 +16,12 @@ export interface ExerciseUseCases {
   getExercise: GetExerciseUseCase;
   /** M7's submit-answer flow, followed by the M8 reward for a correct answer. */
   submitAnswer: SubmitExerciseAnswerWithRewardsUseCase;
+  /** Verbysia free demo: the same use cases over attempts that are evaluated but never stored. */
+  demo: {
+    listLessonExercises: ListLessonExercisesUseCase;
+    getExercise: GetExerciseUseCase;
+    submitAnswer: SubmitExerciseAnswerUseCase;
+  };
 }
 
 /**
@@ -33,7 +40,28 @@ export function createExerciseUseCases(
 ): ExerciseUseCases {
   const { exerciseRepository } = contentDeps;
   const { exerciseAttemptRepository: attempts, clock, typeRegistry } = deps;
+  const anonymous = new AnonymousExerciseAttempts();
   return {
+    demo: {
+      listLessonExercises: new ListLessonExercisesUseCase(
+        content.getContent,
+        exerciseRepository,
+        anonymous,
+      ),
+      getExercise: new GetExerciseUseCase(
+        content.getContent,
+        exerciseRepository,
+        anonymous,
+        typeRegistry,
+      ),
+      submitAnswer: new SubmitExerciseAnswerUseCase(
+        content.getContent,
+        exerciseRepository,
+        anonymous,
+        typeRegistry,
+        clock,
+      ),
+    },
     listLessonExercises: new ListLessonExercisesUseCase(
       content.getContent,
       exerciseRepository,

@@ -4,6 +4,7 @@ import { LoadError } from "../components/catalog-notices.js";
 import { ContinueLearning } from "../components/continue-learning.js";
 import { MemoryAndAccess } from "../components/memory-and-access.js";
 import { PointsSummary } from "../components/points-summary.js";
+import { useDemoProgressSync } from "../hooks/use-demo-progress-sync.js";
 import { useGamificationSummary } from "../hooks/use-gamification.js";
 import { m } from "../i18n/index.js";
 
@@ -17,12 +18,19 @@ const t = m.learn.dashboard;
  */
 export function DashboardPage() {
   const summaryQuery = useGamificationSummary();
+  const demoSynced = useDemoProgressSync();
 
   return (
     <section aria-labelledby="dashboard-heading" className="mx-auto max-w-3xl py-8">
       <h1 id="dashboard-heading" className="text-2xl font-semibold">
         {t.title}
       </h1>
+
+      {demoSynced ? (
+        <p role="status" className="mt-4 rounded-xl bg-success/15 px-4 py-3">
+          {m.marketing.challenge.demoSynced}
+        </p>
+      ) : null}
 
       {/* M21: the dashboard leads into the learning flow first; points follow. */}
       <div className="mt-6">
