@@ -86,6 +86,8 @@ export const admin = {
     cancelled: "anulowana",
     expired: "wygasła",
   },
+  paymentsReady:
+    "Płatności Stripe są włączone. Po zmianie ceny lub statusu produktu użyj „Utwórz ceny w Stripe”, aby nowy produkt dostał cenę.",
   paymentsPending:
     "Operator płatności nie jest jeszcze skonfigurowany: zakupy i subskrypcje pojawią się tu po jego uruchomieniu. Licencje można już przyznawać ręcznie.",
   couponsNote:

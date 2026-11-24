@@ -150,6 +150,7 @@ export function registerCommerceRoutes(
 
   app.get("/admin/products", adminRead, async (_request, reply) =>
     privateResponse(reply, mapCommerceError, async () => ({
+      paymentsEnabled: useCases.paymentsEnabled,
       products: (await useCases.admin.listProducts()).map((p) => adminProductSchema.parse(iso(p))),
     })),
   );

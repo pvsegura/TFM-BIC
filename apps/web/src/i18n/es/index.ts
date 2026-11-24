@@ -754,6 +754,8 @@ export const es: Messages = {
       cancelled: "cancelada",
       expired: "caducada",
     },
+    paymentsReady:
+      "Los pagos con Stripe están activos. Al activar un producto, usa «Crear precios en Stripe» para que tenga precio.",
     paymentsPending:
       "Todavía no hay proveedor de pagos configurado: las compras y suscripciones aparecerán aquí cuando lo haya. Las licencias ya se pueden conceder manualmente.",
     couponsNote:

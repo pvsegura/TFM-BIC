@@ -754,6 +754,8 @@ export const en: Messages = {
       cancelled: "cancelled",
       expired: "expired",
     },
+    paymentsReady:
+      "Stripe payments are enabled. After activating a product, use “Create prices in Stripe” so it gets a price.",
     paymentsPending:
       "No payment provider is configured yet: purchases and subscriptions will appear here once it is. Licences can already be granted manually.",
     couponsNote:

@@ -44,8 +44,8 @@ export async function revokeLicence(licenceId: string) {
 
 export async function fetchAdminProducts() {
   return z
-    .object({ products: z.array(adminProductSchema) })
-    .parse(await requestJson("/admin/products")).products;
+    .object({ paymentsEnabled: z.boolean(), products: z.array(adminProductSchema) })
+    .parse(await requestJson("/admin/products"));
 }
 
 export async function updateProduct(productId: string, body: AdminUpdateProductRequest) {

@@ -31,9 +31,7 @@ export function AdminPage() {
       <h1 id="admin-heading" className="font-display text-3xl font-bold">
         {t.title}
       </h1>
-      <p className="mt-2 max-w-3xl rounded-xl bg-accent/15 px-4 py-3 text-sm">
-        {t.paymentsPending}
-      </p>
+      <PaymentsBanner />
       <div role="tablist" aria-label={t.title} className="mt-6 flex flex-wrap gap-2">
         {(Object.keys(t.tabs) as Tab[]).map((key) => (
           <button
@@ -318,6 +316,17 @@ function CommerceHistory({ detail }: { detail: AdminUserDetailResponse }) {
   );
 }
 
+/** Whether the server has a payment provider configured (Stripe keys present). */
+function PaymentsBanner() {
+  const products = useQuery({ queryKey: ["admin", "products"], queryFn: fetchAdminProducts });
+  if (!products.data) return null;
+  return (
+    <p className="mt-2 max-w-3xl rounded-xl bg-accent/15 px-4 py-3 text-sm">
+      {products.data.paymentsEnabled ? t.paymentsReady : t.paymentsPending}
+    </p>
+  );
+}
+
 function ProductsTab() {
   const queryClient = useQueryClient();
   const products = useQuery({ queryKey: ["admin", "products"], queryFn: fetchAdminProducts });
@@ -349,8 +358,11 @@ function ProductsTab() {
           </p>
         ) : null}
       </div>
-      {products.data.map((product) => (
-        <ProductEditor key={product.id} product={product} />
+      {products.data.products.map((product) => (
+        <ProductEditor
+          key={`${product.id}:${product.updatedAt}:${product.providerPriceId ?? ""}`}
+          product={product}
+        />
       ))}
       <p className="text-sm text-primary/70 dark:text-surface/70">{t.couponsNote}</p>
     </div>
