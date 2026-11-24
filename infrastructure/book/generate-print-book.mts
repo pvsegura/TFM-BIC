@@ -92,6 +92,25 @@ h1, h2, h3 { font-family: "Segoe UI", Arial, sans-serif; color: #111; }
 .dialogue { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; break-inside: avoid; font-size: 10pt; }
 .dialogue th { text-align: left; vertical-align: top; padding: 1.2mm 2.5mm 1.2mm 0; width: 20mm; font-family: "Segoe UI", Arial, sans-serif; }
 .dialogue td { padding: 1.2mm 0; border-bottom: .5pt solid #999; }
+.section { margin: 6mm 0 3mm; font-size: 13pt; border-bottom: .75pt solid #111; padding-bottom: 1mm; break-after: avoid; }
+.section .phase { display: block; font-size: 8pt; letter-spacing: .12em; text-transform: uppercase; color: #444; }
+.label { font: 700 8pt "Segoe UI", Arial, sans-serif; letter-spacing: .12em; text-transform: uppercase; margin: 0 0 1mm; }
+.reading, .culture, .mission, .summary, .pitfall, .comparison { margin: 0 0 3mm; padding: 2.5mm 3mm; break-inside: avoid; }
+.reading { border: .75pt solid #111; }
+.reading h4, .culture h4, .mission h4 { margin: 0 0 1.5mm; }
+.reading p, .culture p { margin: 0 0 1.5mm; text-align: justify; }
+.culture { background: #eee; }
+.pitfall { border-left: 3pt solid #111; background: #f3f3f3; }
+.pitfall p, .comparison p { margin: 0 0 1mm; }
+.comparison { border: .5pt dashed #555; display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 4mm; }
+.comparison .note { grid-column: 1 / -1; }
+.grid { border-collapse: collapse; width: 100%; margin: 0 0 3mm; font-size: 9.5pt; break-inside: avoid; }
+.grid caption { text-align: left; font-size: 8.5pt; color: #444; }
+.grid th, .grid td { border: .5pt solid #777; padding: 1mm 2mm; text-align: left; }
+.grid th { background: #e6e6e6; }
+.mission { border: 1.5pt solid #111; }
+.summary { background: #f3f3f3; }
+.summary ul { margin: 0 0 2mm; padding-left: 0; list-style: none; }
 .app { margin-top: 4mm; padding: 2.5mm 3mm; border: .75pt solid #111; font-size: 9pt; break-inside: avoid; }
 `;
 

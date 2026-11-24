@@ -80,6 +80,36 @@ function toBlock(block: ContentBlock) {
           translation: line.translation,
         })),
       };
+    case "section":
+      return { type: block.type, phase: block.phase, title: block.title };
+    case "reading":
+    case "culture":
+      return { type: block.type, title: block.title, text: block.paragraphs.join(" ") };
+    case "pitfall":
+      return {
+        type: block.type,
+        wrong: block.wrong,
+        right: block.right,
+        explanation: block.explanation,
+      };
+    case "comparison":
+      return {
+        type: block.type,
+        source: block.source,
+        target: block.target,
+        note: block.note ?? null,
+      };
+    case "table":
+      return {
+        type: block.type,
+        caption: block.caption ?? null,
+        columns: block.columns,
+        rows: block.rows.slice(0, MAX_GRAMMAR_ROWS),
+      };
+    case "mission":
+      return { type: block.type, title: block.title, steps: block.steps };
+    case "summary":
+      return { type: block.type, phrases: block.phrases, canDo: block.canDo };
   }
 }
 

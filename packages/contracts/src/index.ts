@@ -24,7 +24,11 @@ export { messageResponseSchema, type MessageResponse } from "./auth/message-resp
 
 // Languages & Content (M5): the on-disk content file format and the public discovery API shapes.
 export { languageIdSchema, levelIdSchema, contentIdSchema } from "./content/identifiers.schema.js";
-export { contentBlockSchema, plainText } from "./content/content-block.schema.js";
+export {
+  contentBlockSchema,
+  plainText,
+  UNIT_SECTION_PHASE_VALUES,
+} from "./content/content-block.schema.js";
 export {
   CONTENT_SCHEMA_VERSION,
   languageFileSchema,

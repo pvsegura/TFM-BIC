@@ -4,6 +4,7 @@ import { existsSync } from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 
+import type { ContentBlock, UnitSectionPhase } from "../../packages/domain/src/index.js";
 import { loadContentCatalog } from "../../packages/data/src/content/load-content-catalog.js";
 
 export const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
@@ -30,26 +31,69 @@ export function lessonUrl(id: string): string {
   return DEMO_LESSONS.has(id) ? `${SITE}/wyzwanie-7-dni/demo/${id}` : `${SITE}/learn/lessons/${id}`;
 }
 
-export type Block =
-  | { type: "explanation"; text: string }
-  | { type: "example"; text: string; translation?: string; note?: string }
-  | { type: "dialogue"; lines: { speaker: string; text: string; translation?: string }[] };
+export type Block = ContentBlock;
 
+/** Section labels printed in the books (the books are written for Polish speakers). */
+export const PHASE_LABELS: Record<UnitSectionPhase, string> = {
+  perceive: "P · Słuchaj i rozumiej",
+  connect: "U · Łącz i zapamiętuj",
+  structure: "E · Buduj zdania",
+  sound: "Wymowa i pisownia",
+  culture: "Czytanie i kultura",
+  transform: "T · Przekształcaj",
+  express: "E · Mów i pisz",
+  review: "N · Utrwalaj",
+};
+
+const e = escapeHtml;
+const paras = (items: string[], lang?: string) =>
+  items.map((p) => `<p${lang ? ` lang="${lang}"` : ""}>${e(p)}</p>`).join("");
+
+/** Print HTML for one content block. Every string is escaped; class names are styled per book. */
 export function renderBlock(block: Block): string {
-  if (block.type === "explanation") return `<p class="explanation">${escapeHtml(block.text)}</p>`;
-  if (block.type === "example") {
-    return `<div class="example"><p class="es" lang="es">${escapeHtml(block.text)}</p>${
-      block.translation ? `<p class="pl">${escapeHtml(block.translation)}</p>` : ""
-    }${block.note ? `<p class="note">${escapeHtml(block.note)}</p>` : ""}</div>`;
+  switch (block.type) {
+    case "explanation":
+      return `<p class="explanation">${e(block.text)}</p>`;
+    case "example":
+      return `<div class="example"><p class="es" lang="es">${e(block.text)}</p><p class="pl">${e(block.translation)}</p>${
+        block.note ? `<p class="note">${e(block.note)}</p>` : ""
+      }</div>`;
+    case "dialogue":
+      return `<table class="dialogue">${block.lines
+        .map(
+          (line) =>
+            `<tr><th>${e(line.speaker)}</th><td><span lang="es">${e(line.text)}</span><br><span class="pl">${e(line.translation)}</span></td></tr>`,
+        )
+        .join("")}</table>`;
+    case "section":
+      return `<h3 class="section"><span class="phase">${e(PHASE_LABELS[block.phase])}</span>${e(block.title)}</h3>`;
+    case "reading":
+      return `<div class="reading"><p class="label">Czytanie</p><h4 lang="es">${e(block.title)}</h4>${paras(block.paragraphs, "es")}</div>`;
+    case "culture":
+      return `<div class="culture"><p class="label">Kultura</p><h4>${e(block.title)}</h4>${paras(block.paragraphs)}</div>`;
+    case "pitfall":
+      return `<div class="pitfall"><p class="label">Pułapka</p><p>✗ <s lang="es">${e(block.wrong)}</s> &nbsp; ✓ <strong lang="es">${e(block.right)}</strong></p><p class="pl">${e(block.explanation)}</p></div>`;
+    case "comparison":
+      return `<div class="comparison"><p>${e(block.source)}</p><p lang="es"><strong>${e(block.target)}</strong></p>${
+        block.note ? `<p class="note">${e(block.note)}</p>` : ""
+      }</div>`;
+    case "table":
+      return `<table class="grid">${block.caption ? `<caption>${e(block.caption)}</caption>` : ""}<thead><tr>${block.columns
+        .map((c) => `<th>${e(c)}</th>`)
+        .join("")}</tr></thead><tbody>${block.rows
+        .map((row) => `<tr>${row.map((cell) => `<td>${e(cell)}</td>`).join("")}</tr>`)
+        .join("")}</tbody></table>`;
+    case "mission":
+      return `<div class="mission"><p class="label">Misja</p><h4>${e(block.title)}</h4><ol>${block.steps
+        .map((step) => `<li>${e(step)}</li>`)
+        .join("")}</ol></div>`;
+    case "summary":
+      return `<div class="summary"><p class="label">Ściąga</p><ul class="phrases">${block.phrases
+        .map((p) => `<li><strong lang="es">${e(p.text)}</strong> — ${e(p.translation)}</li>`)
+        .join("")}</ul><p class="label">Potrafię…</p><ul class="cando">${block.canDo
+        .map((c) => `<li>☐ ${e(c)}</li>`)
+        .join("")}</ul></div>`;
   }
-  return `<table class="dialogue">${block.lines
-    .map(
-      (line) =>
-        `<tr><th>${escapeHtml(line.speaker)}</th><td><span lang="es">${escapeHtml(line.text)}</span>${
-          line.translation ? `<br><span class="pl">${escapeHtml(line.translation)}</span>` : ""
-        }</td></tr>`,
-    )
-    .join("")}</table>`;
 }
 
 /** The published A1 lessons in course order, and how many exercises each has in the app. */

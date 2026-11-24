@@ -42,14 +42,24 @@ export {
   type ContentId,
 } from "./content/content-id.js";
 export { compareContentItems, sortContentItems } from "./content/content-ordering.js";
-export type {
-  ContentBlock,
-  ContentBlockType,
-  ContentItem,
-  DialogueBlock,
-  DialogueLine,
-  ExampleBlock,
-  ExplanationBlock,
+export {
+  UNIT_SECTION_PHASES,
+  type ComparisonBlock,
+  type ContentBlock,
+  type ContentBlockType,
+  type ContentItem,
+  type CultureBlock,
+  type DialogueBlock,
+  type DialogueLine,
+  type ExampleBlock,
+  type ExplanationBlock,
+  type MissionBlock,
+  type PitfallBlock,
+  type ReadingBlock,
+  type SectionBlock,
+  type SummaryBlock,
+  type TableBlock,
+  type UnitSectionPhase,
 } from "./content/content-item.js";
 export {
   validateContentCatalog,

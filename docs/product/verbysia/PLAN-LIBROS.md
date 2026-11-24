@@ -1,6 +1,6 @@
 # Plan de la colección de libros Verbysia (A1–C2) en consonancia con la web
 
-Estado: **propuesta** (2026-11-24). Sustituye la idea de un único libro corto por nivel: el libro A1
+Estado: **aprobado** (2026-11-24). Sustituye la idea de un único libro corto por nivel: el libro A1
 actual (48 páginas) es un resumen de las lecciones, no un manual de curso.
 
 ## 1. Qué vamos a producir
@@ -186,15 +186,18 @@ comprobación de derechos de imágenes y textos. Recomendado obligatorio para C1
 Las unidades de la web se publican a medida que se terminan; los libros de un nivel salen cuando el
 nivel está completo.
 
-## 11. Decisiones que necesito de ti
+## 11. Decisiones (tomadas el 2026-11-24)
 
-1. **Formato:** A4 en blanco y negro con portada en color (recomendado).
-2. **Imágenes:** de dónde salen (ver punto 7.5).
-3. **Qué incluye comprar el libro** (propuesta del punto 6).
-4. **ISBN:** propios (Biblioteca Nacional de Polonia, como editor) o los gratuitos de KDP (solo valen para
-   Amazon). Con 12 libros y venta en varias tiendas, los propios son más coherentes.
-5. **Revisores nativos:** quién revisa cada nivel, sobre todo C1–C2.
-6. **Precios** de cada libro y de los packs (dependen del coste de impresión de Lulu en A4).
+1. **Formato:** A4, interior en blanco y negro, portada en color.
+2. **Imágenes:** mezcla de ilustraciones encargadas, imágenes generadas con IA (revisando la licencia de la
+   herramienta) e iconos de bancos libres con licencia permisiva; cada imagen registra su origen y
+   licencia, y los créditos se imprimen en la página de créditos.
+3. **Compradores del libro:** audios y transcripciones gratis para cualquier lector; ejercicios
+   interactivos, entrenador de memoria y asistente IA en el curso de pago; descuento o pack para quien
+   compra en verbysia.com.
+4. **ISBN propios** (Biblioteca Nacional de Polonia, como editor).
+5. **Revisión nativa:** la hace el propietario del proyecto, unidad a unidad.
+6. **Precios:** se fijan cuando se conozca el coste de impresión de Lulu en A4.
 
 ## 12. Riesgos
 
