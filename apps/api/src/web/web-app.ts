@@ -40,6 +40,8 @@ const CONTENT_TYPES: Readonly<Record<string, string>> = {
   ".txt": "text/plain; charset=utf-8",
   // Verbysia: the sitemap for search engines (public/sitemap.xml).
   ".xml": "application/xml; charset=utf-8",
+  // Verbysia: the free book sample (public/ksiazka/*.pdf).
+  ".pdf": "application/pdf",
   ".svg": "image/svg+xml",
   ".png": "image/png",
   ".jpg": "image/jpeg",

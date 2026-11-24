@@ -52,6 +52,7 @@ export const en: Messages = {
       { to: "/", label: "Home" },
       { to: "/metoda-puente", label: "PUENTE method" },
       { to: "/kurs-a1", label: "A1 course" },
+      { to: "/ksiazka", label: "Book" },
       { to: "/wyzwanie-7-dni", label: "7-day challenge" },
       { to: "/cennik", label: "Pricing" },
       { to: "/faq", label: "FAQ" },
@@ -85,6 +86,7 @@ export const en: Messages = {
         links: [
           { to: "/metoda-puente", label: "PUENTE method" },
           { to: "/kurs-a1", label: "A1 Spanish course" },
+          { to: "/ksiazka", label: "Book" },
           { to: "/wyzwanie-7-dni", label: "Free 7-day challenge" },
           { to: "/test-sluchu", label: "Listening test" },
           { to: "/cennik", label: "Pricing" },
@@ -128,6 +130,27 @@ export const en: Messages = {
     fixFields: "Please fix the highlighted fields.",
   },
   marketing: {
+    book: {
+      nav: "Book",
+      metaTitle: "Book “Spanish with the PUENTE method · A1” with QR codes | Verbysia",
+      metaDescription:
+        "A digital A1 Spanish book explained in Polish. Each chapter has a QR code that opens the lesson and its exercises in the app. Download a free sample.",
+      title: "Book: Spanish with the PUENTE method · A1",
+      lead: "The book and the app work together. You read a chapter explained in Polish, and the QR code next to the title opens the same lesson in the app — with exercises, recordings and memory-trainer reviews.",
+      howTitle: "How it works",
+      how: [
+        "Each chapter is one lesson: explanations, examples and a dialogue.",
+        "Scan the QR code with your phone — the lesson and its exercises open.",
+        "The chapter's words go into the memory trainer and come back for review.",
+      ],
+      sampleTitle: "Free sample",
+      sampleBody: "Download the first chapters (PDF) and see what the book looks like.",
+      sampleCta: "Download the sample (PDF)",
+      fullTitle: "Full edition",
+      fullBody:
+        "We'll publish the full A1 edition once the A1 course is complete. We don't sell a book that doesn't exist yet.",
+      digitalNote: "Digital version (PDF) only for now.",
+    },
     listening: {
       navLabel: "Listening test",
       metaTitle: "Free Spanish listening test | Verbysia",

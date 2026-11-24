@@ -1,5 +1,26 @@
 /** Public pages. Honest by rule: no fluency promises, no invented prices, discounts or reviews. */
 export const marketing = {
+  book: {
+    nav: "Książka",
+    metaTitle: "Książka „Hiszpański metodą PUENTE · A1” z kodami QR | Verbysia",
+    metaDescription:
+      "Cyfrowa książka do hiszpańskiego A1 z wyjaśnieniami po polsku. Każdy rozdział ma kod QR, który otwiera lekcję i ćwiczenia w aplikacji. Pobierz bezpłatną próbkę.",
+    title: "Książka: Hiszpański metodą PUENTE · A1",
+    lead: "Książka i aplikacja działają razem. Czytasz rozdział z wyjaśnieniami po polsku, a kod QR obok tytułu otwiera tę samą lekcję w aplikacji — z ćwiczeniami, nagraniami i powtórkami w trenerze pamięci.",
+    howTitle: "Jak to działa",
+    how: [
+      "Każdy rozdział to jedna lekcja: wyjaśnienia, przykłady i dialog.",
+      "Zeskanuj kod QR telefonem — otworzy się lekcja i jej ćwiczenia.",
+      "Słowa z rozdziału trafiają do trenera pamięci i wracają na powtórki.",
+    ],
+    sampleTitle: "Bezpłatna próbka",
+    sampleBody: "Pobierz pierwsze rozdziały (PDF) i sprawdź, jak wygląda książka.",
+    sampleCta: "Pobierz próbkę (PDF)",
+    fullTitle: "Pełna wersja",
+    fullBody:
+      "Pełne wydanie A1 przygotujemy, gdy kurs A1 będzie kompletny. Nie sprzedajemy książki, która jeszcze nie istnieje.",
+    digitalNote: "Na razie tylko wersja cyfrowa (PDF).",
+  },
   listening: {
     navLabel: "Test słuchu",
     metaTitle: "Darmowy test rozumienia ze słuchu — hiszpański | Verbysia",

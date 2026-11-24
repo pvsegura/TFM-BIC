@@ -53,6 +53,7 @@ export const es: Messages = {
       { to: "/", label: "Inicio" },
       { to: "/metoda-puente", label: "Método PUENTE" },
       { to: "/kurs-a1", label: "Curso A1" },
+      { to: "/ksiazka", label: "Libro" },
       { to: "/wyzwanie-7-dni", label: "Reto de 7 días" },
       { to: "/cennik", label: "Precios" },
       { to: "/faq", label: "Preguntas frecuentes" },
@@ -86,6 +87,7 @@ export const es: Messages = {
         links: [
           { to: "/metoda-puente", label: "Método PUENTE" },
           { to: "/kurs-a1", label: "Curso de español A1" },
+          { to: "/ksiazka", label: "Libro" },
           { to: "/wyzwanie-7-dni", label: "Reto gratuito de 7 días" },
           { to: "/test-sluchu", label: "Test de comprensión auditiva" },
           { to: "/cennik", label: "Precios" },
@@ -130,6 +132,27 @@ export const es: Messages = {
     fixFields: "Corrige los campos marcados.",
   },
   marketing: {
+    book: {
+      nav: "Libro",
+      metaTitle: "Libro «Español con el método PUENTE · A1» con códigos QR | Verbysia",
+      metaDescription:
+        "Libro digital de español A1 explicado en polaco. Cada capítulo tiene un código QR que abre la lección y sus ejercicios en la aplicación. Descarga una muestra gratuita.",
+      title: "Libro: Español con el método PUENTE · A1",
+      lead: "El libro y la aplicación funcionan juntos. Lees un capítulo explicado en polaco y el código QR junto al título abre la misma lección en la aplicación, con ejercicios, grabaciones y repasos en el entrenador de memoria.",
+      howTitle: "Cómo funciona",
+      how: [
+        "Cada capítulo es una lección: explicaciones, ejemplos y un diálogo.",
+        "Escanea el código QR con el móvil y se abrirán la lección y sus ejercicios.",
+        "Las palabras del capítulo pasan al entrenador de memoria y vuelven en los repasos.",
+      ],
+      sampleTitle: "Muestra gratuita",
+      sampleBody: "Descarga los primeros capítulos (PDF) y mira cómo es el libro.",
+      sampleCta: "Descargar la muestra (PDF)",
+      fullTitle: "Edición completa",
+      fullBody:
+        "Publicaremos la edición completa de A1 cuando el curso A1 esté terminado. No vendemos un libro que todavía no existe.",
+      digitalNote: "Por ahora solo en versión digital (PDF).",
+    },
     listening: {
       navLabel: "Test de comprensión",
       metaTitle: "Test gratuito de comprensión auditiva de español | Verbysia",

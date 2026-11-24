@@ -103,6 +103,11 @@ const MARKETING_ROUTES: RouteObject[] = [
       })),
   },
   {
+    path: "ksiazka",
+    lazy: () =>
+      import("./pages/public/book-page.js").then(({ BookPage }) => ({ Component: BookPage })),
+  },
+  {
     path: "kontakt",
     lazy: () =>
       import("./pages/public/contact-page.js").then(({ ContactPage }) => ({

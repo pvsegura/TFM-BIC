@@ -41,3 +41,6 @@ Thumbs.db
 # M21 media pipeline scratch space (render projects, draft renders, auditions). Published media is
 # committed under content/media/; the Gemini key lives only in the git-ignored .env.media.local.
 .media-build/
+
+# Verbysia book builds (the full book is a paid product: never committed)
+infrastructure/book/out/
