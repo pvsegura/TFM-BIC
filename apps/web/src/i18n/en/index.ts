@@ -94,8 +94,10 @@ export const en: Messages = {
         ],
       },
       {
-        title: "Privacy and data",
+        title: "Terms and privacy",
         links: [
+          { to: "/regulamin", label: "Terms of sale" },
+          { to: "/regulamin#terms-withdrawal", label: "Right of withdrawal" },
           { to: "/privacy", label: "Privacy policy" },
           { to: "/privacy#privacy-what", label: "What data we store" },
           { to: "/privacy#privacy-browser", label: "Cookies and browser storage" },
@@ -112,7 +114,13 @@ export const en: Messages = {
       },
     ],
     copyright:
-      "© 2026 Verbysia · Spanish for Polish speakers with the PUENTE method · Contact details and terms are being prepared (pending legal review).",
+      "© 2026 Verbysia · Spanish for Polish speakers with the PUENTE method · The terms of sale and privacy notice are drafts pending legal review.",
+  },
+  legal: {
+    version: (version: string, date: string) => `Version ${version} · ${date}`,
+    profileLinkBefore: "These controls are on your ",
+    profileLink: "profile page",
+    profileLinkAfter: ".",
   },
   errors: {
     network: "We couldn't reach the server. Check your connection and try again.",
@@ -131,6 +139,14 @@ export const en: Messages = {
   },
   marketing: {
     payments: {
+      consentTitle: "Before you go to payment",
+      consentTermsBefore: "I accept the ",
+      consentTermsLink: "Terms of sale",
+      consentTermsAfter: " and I have read the Privacy notice.",
+      consentDelivery:
+        "I ask for the digital content to be made available straight away, before the 14-day withdrawal period ends, and I acknowledge that I lose my right of withdrawal once it is made available.",
+      consentContinue: "Continue to payment",
+      consentCancel: "Cancel",
       redirecting: "Redirecting to payment…",
       alreadyOwned: "You already have this access — it's on your dashboard.",
       unavailable: "Payments are temporarily unavailable. Please try later.",

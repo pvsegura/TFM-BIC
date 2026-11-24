@@ -2,6 +2,14 @@
 export const marketing = {
   payments: {
     redirecting: "Przekierowanie do płatności…",
+    consentTitle: "Zanim przejdziesz do płatności",
+    consentTermsBefore: "Akceptuję ",
+    consentTermsLink: "Regulamin",
+    consentTermsAfter: " i zapoznałem(-am) się z Polityką prywatności.",
+    consentDelivery:
+      "Żądam udostępnienia treści cyfrowych od razu, przed upływem 14 dni na odstąpienie od umowy, i przyjmuję do wiadomości, że z chwilą udostępnienia tracę prawo odstąpienia od umowy.",
+    consentContinue: "Przechodzę do płatności",
+    consentCancel: "Anuluj",
     alreadyOwned: "Masz już ten dostęp — znajdziesz go w swoim panelu.",
     unavailable: "Płatności są chwilowo niedostępne. Spróbuj później.",
     loginFirst: "Aby kupić, załóż darmowe konto lub zaloguj się.",

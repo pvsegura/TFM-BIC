@@ -95,8 +95,10 @@ export const es: Messages = {
         ],
       },
       {
-        title: "Privacidad y datos",
+        title: "Condiciones y privacidad",
         links: [
+          { to: "/regulamin", label: "Reglamento (condiciones de venta)" },
+          { to: "/regulamin#terms-withdrawal", label: "Derecho de desistimiento" },
           { to: "/privacy", label: "Política de privacidad" },
           { to: "/privacy#privacy-what", label: "Qué datos guardamos" },
           { to: "/privacy#privacy-browser", label: "Cookies y almacenamiento del navegador" },
@@ -113,7 +115,13 @@ export const es: Messages = {
       },
     ],
     copyright:
-      "© 2026 Verbysia · Español para polacos con el método PUENTE · Datos de contacto y condiciones en preparación (pendientes de revisión legal).",
+      "© 2026 Verbysia · Español para polacos con el método PUENTE · El reglamento y la política de privacidad son borradores pendientes de revisión legal.",
+  },
+  legal: {
+    version: (version: string, date: string) => `Versión ${version} · ${date}`,
+    profileLinkBefore: "Estas opciones están en tu ",
+    profileLink: "página de perfil",
+    profileLinkAfter: ".",
   },
   errors: {
     network:
@@ -133,6 +141,14 @@ export const es: Messages = {
   },
   marketing: {
     payments: {
+      consentTitle: "Antes de ir al pago",
+      consentTermsBefore: "Acepto el ",
+      consentTermsLink: "Reglamento",
+      consentTermsAfter: " y he leído la Política de privacidad.",
+      consentDelivery:
+        "Solicito que el contenido digital se ponga a mi disposición de inmediato, antes de que terminen los 14 días de desistimiento, y acepto que al ponerse a mi disposición pierdo el derecho de desistimiento.",
+      consentContinue: "Ir al pago",
+      consentCancel: "Cancelar",
       redirecting: "Redirigiendo al pago…",
       alreadyOwned: "Ya tienes este acceso: lo encontrarás en tu panel.",
       unavailable: "Los pagos no están disponibles en este momento. Inténtalo más tarde.",

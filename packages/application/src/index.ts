@@ -410,6 +410,7 @@ export {
   type RenderedEmail,
 } from "./email/templates/render-email.js";
 export { TransactionalIdentityEmailService } from "./email/transactional-identity-email.service.js";
+export { EmailPaymentNotifier, PAYMENT_EMAIL_PATHS } from "./email/email-payment-notifier.js";
 
 // Newsletter (M14, ADR-025): double opt-in, unsubscribe, and the issue-sending boundary.
 export type {
@@ -636,6 +637,8 @@ export {
   type CheckoutRequest,
   type PaymentEvent,
   type PaymentLedger,
+  type PaymentNotice,
+  type PaymentNotifier,
   type PaymentProvider,
 } from "./commerce/payments.js";
 export {

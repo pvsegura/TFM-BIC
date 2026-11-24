@@ -168,12 +168,22 @@ export type AdminUserDetailResponse = z.infer<typeof adminUserDetailResponseSche
 export type AdminUpdateProductRequest = z.infer<typeof adminUpdateProductRequestSchema>;
 export type AdminGrantLicenceRequest = z.infer<typeof adminGrantLicenceRequestSchema>;
 
-/** POST /checkout — the product to buy; the user is always the session's. */
+/** The terms of sale the checkout consent refers to; bump with every published wording. */
+export const CURRENT_TERMS_VERSION = "regulamin-v1";
+
+/**
+ * POST /checkout — the product to buy; the user is always the session's. Both consents must be
+ * given explicitly before the payment page opens: the terms of sale, and the request to start
+ * delivering the digital content at once with the acknowledgement that the 14-day right of
+ * withdrawal is then lost (Polish consumer law, digital content). Draft pending legal review.
+ */
 export const checkoutRequestSchema = z.strictObject({
   productId: z
     .string()
     .regex(/^[a-z][a-z0-9]*(-[a-z0-9]+)*$/)
     .max(64),
+  acceptTerms: z.literal(true),
+  startDeliveryNow: z.literal(true),
 });
 /** POST /checkout and POST /billing/portal answer with where to send the browser. */
 export const redirectResponseSchema = z.object({ url: z.url() });

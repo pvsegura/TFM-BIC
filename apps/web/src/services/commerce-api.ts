@@ -27,7 +27,9 @@ const postJson = (body?: unknown): RequestInit => ({
 
 /** Starts a Stripe checkout for the session's user; returns where to send the browser. */
 export async function startCheckout(productId: string): Promise<string> {
-  return redirectResponseSchema.parse(await requestJson("/checkout", postJson({ productId }))).url;
+  // Only called after the learner ticked both consent boxes in the buy dialog.
+  const body = { productId, acceptTerms: true, startDeliveryNow: true };
+  return redirectResponseSchema.parse(await requestJson("/checkout", postJson(body))).url;
 }
 
 /** The Stripe customer portal for the session's user. */

@@ -43,7 +43,7 @@ import { registerCommerceRoutes } from "./routes/commerce.route.js";
 import { registerMemoryRoutes } from "./routes/memory.route.js";
 import { registerPaymentRoutes } from "./routes/payments.route.js";
 import { createCommerceUseCases } from "./composition/verbysia-dependencies.js";
-import { AccessPolicy, ContentGate } from "@verbysia/application";
+import { AccessPolicy, ContentGate, EmailPaymentNotifier } from "@verbysia/application";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
 import {
@@ -276,7 +276,20 @@ export function buildServer(
 
     // Verbysia: prices, own licences, the admin panel API and the PUENTE memory trainer. Access to
     // paid material is decided here on the server from licences, never by the client.
-    const commerceUseCases = createCommerceUseCases(contentDeps, commerceDeps, env);
+    // Receipts and payment notices go out in Polish as transactional email, after the event is
+    // recorded; a failed send is logged (kind only, no address) and never blocks access.
+    const paymentNotifier = new EmailPaymentNotifier(
+      authDeps.userRepository,
+      emailUseCases.transactional,
+      env.APP_BASE_URL,
+      (_error, notice) => app.log.warn({ notice }, "payment.notice_failed"),
+    );
+    const commerceUseCases = createCommerceUseCases(
+      contentDeps,
+      commerceDeps,
+      env,
+      paymentNotifier,
+    );
     registerCommerceRoutes(app, {
       useCases: commerceUseCases,
       resolveSession: authUseCases.resolveSession,

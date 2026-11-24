@@ -3,7 +3,7 @@
  *
  * - `transactional` — account, security and service messages the user needs regardless of any
  *   marketing choice (verification, password reset, the newsletter's own double opt-in
- *   confirmation). Never gated on marketing consent, never "unsubscribable".
+ *   confirmation, purchase receipts and payment notices). Never gated on marketing consent, never "unsubscribable".
  * - `marketing` — the newsletter. Sent only to a confirmed subscription and always carries an
  *   unsubscribe link.
  *
@@ -17,6 +17,10 @@ export const TRANSACTIONAL_TEMPLATE_IDS = [
   "email-verification",
   "password-reset",
   "newsletter-confirmation",
+  // Commerce (Verbysia): sent from the verified payment webhook, never from the browser.
+  "purchase-confirmation",
+  "payment-failed",
+  "subscription-ended",
 ] as const;
 export type TransactionalTemplateId = (typeof TRANSACTIONAL_TEMPLATE_IDS)[number];
 

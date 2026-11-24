@@ -12,6 +12,7 @@ import {
   type EmailDeliveryObserver,
   type EmailSenderConfig,
   type EmailService,
+  type TransactionalEmailSender,
 } from "@verbysia/application";
 import type { AppEnv } from "@verbysia/config";
 
@@ -20,6 +21,8 @@ import type { EmailDependencies } from "./email-dependencies.js";
 export interface EmailUseCases {
   /** M3's identity email port, now backed by the transactional sender. */
   identityEmailService: EmailService;
+  /** Account and service email (commerce notices use it). Never marketing. */
+  transactional: TransactionalEmailSender;
   getPreferences: GetEmailPreferencesUseCase;
   requestSubscription: RequestNewsletterSubscriptionUseCase;
   confirmSubscription: ConfirmNewsletterSubscriptionUseCase;
@@ -55,6 +58,7 @@ export function createEmailUseCases(
 
   return {
     identityEmailService: new TransactionalIdentityEmailService(transactional),
+    transactional,
     getPreferences: new GetEmailPreferencesUseCase(repository),
     requestSubscription: new RequestNewsletterSubscriptionUseCase(
       repository,

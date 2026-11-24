@@ -115,6 +115,11 @@ const MARKETING_ROUTES: RouteObject[] = [
       })),
   },
   {
+    path: "regulamin",
+    lazy: () =>
+      import("./pages/public/terms-page.js").then(({ TermsPage }) => ({ Component: TermsPage })),
+  },
+  {
     path: "faq",
     lazy: () =>
       import("./pages/public/faq-page.js").then(({ FaqPage }) => ({ Component: FaqPage })),

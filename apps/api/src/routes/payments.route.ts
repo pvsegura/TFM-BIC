@@ -6,7 +6,7 @@ import {
   type ResolveSessionUseCase,
 } from "@verbysia/application";
 import type { AppEnv } from "@verbysia/config";
-import { checkoutRequestSchema } from "@verbysia/contracts";
+import { checkoutRequestSchema, CURRENT_TERMS_VERSION } from "@verbysia/contracts";
 import type { FastifyInstance } from "fastify";
 
 import type { CommerceUseCases } from "../composition/verbysia-dependencies.js";
@@ -62,6 +62,8 @@ export function registerPaymentRoutes(
           userId: sessionUserId(request),
           email: user?.email ?? "",
           productId: body.data.productId,
+          // The schema only accepts both consents as `true`; the version says which wording.
+          termsVersion: CURRENT_TERMS_VERSION,
         }),
       );
     },

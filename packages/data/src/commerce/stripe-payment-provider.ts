@@ -38,6 +38,8 @@ export class StripePaymentProvider implements PaymentProvider {
       ).id;
     const subscription = product.billing !== "one_off";
     const metadata = { userId: request.userId, productId: product.id };
+    // Evidence of the consents given on our site before checkout (terms + immediate delivery).
+    const consent = { termsVersion: request.termsVersion, immediateDeliveryConsent: "accepted" };
     const session = await this.stripe.checkout.sessions.create({
       mode: subscription ? "subscription" : "payment",
       customer: customerRef,
@@ -46,12 +48,12 @@ export class StripePaymentProvider implements PaymentProvider {
       locale: "pl",
       success_url: `${request.successUrl}?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: request.cancelUrl,
-      metadata,
+      metadata: { ...metadata, ...consent },
       ...(subscription
         ? { subscription_data: { metadata } }
         : { payment_intent_data: { metadata } }),
-      // TODO(legal): once the terms of sale exist and their URL is set in the Stripe dashboard, add
-      // consent_collection: { terms_of_service: "required" } (Stripe refuses it without that URL).
+      // Consent is collected on our own buy dialog (terms + immediate delivery). Stripe's own
+      // consent_collection would also need the terms URL set in the Stripe dashboard.
     });
     if (!session.url) throw new Error("Stripe returned a checkout session without a URL.");
     return { url: session.url, customerRef };

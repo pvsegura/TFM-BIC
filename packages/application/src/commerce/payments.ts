@@ -10,6 +10,8 @@ export interface CheckoutRequest {
   userId: string;
   email: string;
   customerRef: string | null;
+  /** Recorded with the payment as evidence of the consents given before checkout. */
+  termsVersion: string;
   successUrl: string;
   cancelUrl: string;
 }
@@ -42,6 +44,26 @@ export type PaymentEvent =
     }
   | { kind: "refunded"; eventId: string; paymentRef: string }
   | { kind: "ignored"; eventId: string; type: string };
+
+/** What the learner is told after a verified payment event (email today). */
+export type PaymentNotice =
+  | {
+      kind: "purchase_confirmed";
+      userId: string;
+      productName: string;
+      amountMinor: number;
+      currency: string;
+    }
+  | { kind: "payment_failed"; userId: string; productName: string }
+  | { kind: "subscription_ended"; userId: string; productName: string };
+
+/**
+ * Best effort: a notice that cannot be delivered never undoes or blocks the access change, and
+ * the webhook is not retried because of it.
+ */
+export interface PaymentNotifier {
+  notify(notice: PaymentNotice): Promise<void>;
+}
 
 export class InvalidWebhookError extends Error {
   constructor() {

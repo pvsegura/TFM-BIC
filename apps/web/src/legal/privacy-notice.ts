@@ -11,14 +11,9 @@
  * (docs/privacy/PROCESSING-REGISTER.md), and it is not the same thing as newsletter consent.
  */
 
-export interface PrivacyNoticeSection {
-  readonly id: string;
-  readonly heading: string;
-  readonly paragraphs: readonly string[];
-  readonly items?: readonly string[];
-  /** Adds a sentence pointing to the profile page's controls. */
-  readonly linkToProfile?: boolean;
-}
+import type { LegalDocument, LegalSection } from "./legal-document.js";
+
+export type PrivacyNoticeSection = LegalSection;
 
 export interface PrivacyNoticeVersion {
   readonly version: string;
@@ -33,12 +28,19 @@ export const PRIVACY_NOTICE_VERSIONS: readonly PrivacyNoticeVersion[] = [
     date: "2026-09-26",
     summary: "First draft, describing the application as built up to milestone M15.",
   },
+  {
+    version: "privacy-policy-v2",
+    date: "2026-11-24",
+    summary:
+      "Adds purchases, licences and subscriptions (Stripe), the memory trainer, purchase emails and the hosting providers; reference-language version added.",
+  },
 ];
 
 export const PRIVACY_NOTICE = {
-  version: "privacy-policy-v1",
-  date: "2026-09-26",
+  version: "privacy-policy-v2",
+  date: "2026-11-24",
   status: "draft-pending-legal-review",
+  title: "Privacy notice",
   reviewNote:
     "This notice is a draft pending legal review. It describes what the application currently does, but it has not been reviewed by a legal professional yet, and some of the information below is still pending that review.",
   sections: [
@@ -57,6 +59,8 @@ export const PRIVACY_NOTICE = {
         "Account: your email address, your password (only as a one-way hash that cannot be read back), your role (student or teacher), whether your email address is verified, and when the account was created and last changed.",
         "Profile, if you fill it in: first name, last name, nickname and the avatar you picked.",
         "Learning activity: the lessons you started or completed, every exercise answer you submit and whether it was correct, your points and achievements, the vocabulary you saved and its status, your phonetics progress, and your video generation requests.",
+        "Purchases: which product you bought, the amount, currency and date, the payment provider's references for the payment, customer and subscription, your subscription's status and renewal date, and the access (licences) they give you. Card details never reach us — they are handled by the payment provider.",
+        "Memory trainer: the words you review, how well you remembered them and when each is due again.",
         "Email preferences: whether you subscribed to the newsletter, which version of the consent text you agreed to, and when you subscribed, confirmed or unsubscribed.",
         "Security: your sign-in sessions and the one-time links for email verification and password reset, stored only as hashes.",
         "Teacher links: if an operator linked your account to a teacher, that link and when it was created.",
@@ -67,7 +71,7 @@ export const PRIVACY_NOTICE = {
       id: "browser",
       heading: "What is stored in your browser",
       paragraphs: [
-        "A session cookie that keeps you signed in (it expires after 7 days or when you log out), and your light or dark mode choice in local storage. The application uses no analytics, advertising or tracking technologies and loads no third-party scripts.",
+        "A session cookie that keeps you signed in (it expires after 7 days or when you log out), and, in local storage, your light or dark mode choice, your interface language and — only if you try the free demo without an account — your demo progress, which stays on your device. The application uses no analytics, advertising or tracking technologies and loads no third-party scripts.",
       ],
     },
     {
@@ -77,7 +81,8 @@ export const PRIVACY_NOTICE = {
       items: [
         "create your account, sign you in and keep it secure;",
         "run lessons and exercises and show your progress, points and achievements;",
-        "send essential account emails, such as email verification and password resets;",
+        "send essential account emails, such as email verification and password resets, purchase confirmations and payment notices;",
+        "take payments, grant the access you paid for and keep the records the law requires for sales;",
         "send the newsletter — only if you subscribed and confirmed by email;",
         "let a teacher linked to your account follow your learning progress.",
       ],
@@ -100,10 +105,12 @@ export const PRIVACY_NOTICE = {
       id: "services",
       heading: "External services",
       items: [
-        "Email: no external email provider is connected yet, so no email about you is handed to a third party. When one is chosen, it will receive your email address and the content of the emails sent to you, and this notice will be updated.",
+        "Payments: Stripe (Stripe Payments Europe Ltd.) processes payments. When you buy, it receives your email address and account identifier from us and collects your payment details directly on its own page.",
+        "Email: when an email provider is switched on (Resend), it receives your email address and the content of the emails sent to you.",
         "Speech audio: if the operator enables it, the text of a vocabulary word or example is sent to Google's Gemini API to generate audio. Nothing about you — no name, email address or account identifier — is sent. It is switched off by default.",
+        "AI coach: if the operator enables it, the messages you write to the coach and a short summary of your learning progress (no name, email address or account identifier) are sent to Google's Gemini API to generate the reply. The conversation is not stored by the application.",
         "Video rendering: videos are rendered on the application's own server; nothing about you is sent anywhere.",
-        "Hosting and database: the hosting provider has not been chosen yet; this notice will name it.",
+        "Hosting and database: the application runs on Render and its database on Neon (PostgreSQL). [Data locations and transfer safeguards pending legal review.]",
       ],
       paragraphs: [],
     },
@@ -111,7 +118,7 @@ export const PRIVACY_NOTICE = {
       id: "retention",
       heading: "How long it is kept",
       paragraphs: [
-        "Your data is kept until you delete your account; deleting it removes everything listed above from the application's database at once. Server logs are not part of that database and are not removed by account deletion; how long they are kept depends on the hosting provider, which has not been chosen yet. No other retention periods have been defined yet — they are pending legal review.",
+        "Your data is kept until you delete your account; deleting it removes your account data from the application's database. Records of sales may have to be kept for the periods tax and accounting law require, and the payment provider keeps its own records. Server logs are not removed by account deletion; how long they are kept depends on the hosting provider. Other retention periods are pending legal review.",
       ],
     },
     {
@@ -137,8 +144,8 @@ export const PRIVACY_NOTICE = {
       id: "changes",
       heading: "Changes to this notice",
       paragraphs: [
-        "Each version of this notice has its own identifier, and earlier versions stay identifiable. This is version privacy-policy-v1.",
+        "Each version of this notice has its own identifier, and earlier versions stay identifiable. This is version privacy-policy-v2.",
       ],
     },
-  ] satisfies readonly PrivacyNoticeSection[],
-} as const;
+  ],
+} as const satisfies LegalDocument;

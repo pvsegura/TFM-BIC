@@ -1,8 +1,14 @@
-import { isLicenceActive, isPurchasable, type Product } from "@verbysia/domain";
+import { isLicenceActive, isPurchasable, type Product, type Subscription } from "@verbysia/domain";
 
 import type { Clock } from "../ports/clock.js";
 import { CommerceNotFoundError, InvalidCommerceInputError } from "./commerce-use-cases.js";
-import type { PaymentEvent, PaymentLedger, PaymentProvider } from "./payments.js";
+import type {
+  PaymentEvent,
+  PaymentLedger,
+  PaymentNotice,
+  PaymentNotifier,
+  PaymentProvider,
+} from "./payments.js";
 import type { AdminAuditLog, LicenceRepository, ProductRepository } from "./ports.js";
 
 /** Days of access kept after a subscription period ends, so a slow renewal never locks anyone out. */
@@ -31,6 +37,8 @@ export interface PaymentDeps {
   audit: AdminAuditLog;
   clock: Clock;
   appBaseUrl: string;
+  /** Tells the learner about purchases and payment problems; optional (nothing is sent without it). */
+  notifier?: PaymentNotifier;
 }
 
 function requireProvider(deps: PaymentDeps): PaymentProvider {
@@ -46,6 +54,8 @@ export class StartCheckoutUseCase {
     userId: string;
     email: string;
     productId: string;
+    /** The terms the learner accepted (with the immediate-delivery consent) before paying. */
+    termsVersion: string;
   }): Promise<{ url: string }> {
     const provider = requireProvider(this.deps);
     const product = await this.deps.products.findById(input.productId);
@@ -70,6 +80,7 @@ export class StartCheckoutUseCase {
       userId: input.userId,
       email: input.email,
       customerRef,
+      termsVersion: input.termsVersion,
       successUrl: `${base}/zakup/sukces`,
       cancelUrl: `${base}/cennik`,
     });
@@ -133,12 +144,13 @@ export class HandlePaymentEventUseCase {
     if (await ledger.hasEvent(provider.name, event.eventId)) return { handled: false };
 
     const now = this.deps.clock.now();
+    let notice: PaymentNotice | null = null;
     switch (event.kind) {
       case "checkout_completed":
-        await this.checkoutCompleted(provider.name, event, now);
+        notice = await this.checkoutCompleted(provider.name, event, now);
         break;
       case "subscription_changed":
-        await this.subscriptionChanged(provider.name, event, now);
+        notice = await this.subscriptionChanged(provider.name, event, now);
         break;
       case "refunded":
         await this.refunded(provider.name, event.paymentRef, now);
@@ -152,6 +164,10 @@ export class HandlePaymentEventUseCase {
       event.kind === "ignored" ? event.type : event.kind,
       now,
     );
+    // Only after the event is recorded, so a redelivery never sends the same email twice.
+    if (notice && this.deps.notifier) {
+      await this.deps.notifier.notify(notice).catch(() => undefined);
+    }
     return { handled: event.kind !== "ignored" };
   }
 
@@ -166,9 +182,16 @@ export class HandlePaymentEventUseCase {
     providerName: string,
     event: Extract<PaymentEvent, { kind: "checkout_completed" }>,
     now: Date,
-  ) {
+  ): Promise<PaymentNotice | null> {
     const { ledger, licences } = this.deps;
     const product = await this.product(event.productId);
+    const confirmed: PaymentNotice = {
+      kind: "purchase_confirmed",
+      userId: event.userId,
+      productName: product.namePl,
+      amountMinor: event.amountMinor,
+      currency: event.currency,
+    };
     await ledger.saveCustomerRef(event.userId, providerName, event.customerRef, now);
 
     if (event.subscription) {
@@ -191,6 +214,7 @@ export class HandlePaymentEventUseCase {
       const existing = await ledger.findLicenceBySource("subscription", subscription.id);
       if (existing) {
         await ledger.setLicenceEnd(existing.id, endsAt);
+        return null;
       } else {
         await licences.grant({
           userId: event.userId,
@@ -203,11 +227,12 @@ export class HandlePaymentEventUseCase {
           createdAt: now,
         });
       }
-      return;
+      return confirmed;
     }
 
+    const known = await ledger.findPurchaseByRef(providerName, event.paymentRef);
     const purchase =
-      (await ledger.findPurchaseByRef(providerName, event.paymentRef)) ??
+      known ??
       (await ledger.createPaidPurchase({
         userId: event.userId,
         productId: product.id,
@@ -233,18 +258,21 @@ export class HandlePaymentEventUseCase {
         createdAt: now,
       });
     }
+    return known ? null : confirmed;
   }
 
   private async subscriptionChanged(
     providerName: string,
     event: Extract<PaymentEvent, { kind: "subscription_changed" }>,
     now: Date,
-  ) {
+  ): Promise<PaymentNotice | null> {
     const { ledger } = this.deps;
     const known = await ledger.findSubscriptionByRef(providerName, event.subscriptionRef);
     // A change for a subscription we never saw being bought (e.g. created by hand in the
     // provider's dashboard) has no learner to attach to: recorded and otherwise ignored.
-    if (!known) return;
+    if (!known) return null;
+    // Read before the upsert: a repository may hand back the same object it then updates.
+    const previousStatus = known.status;
     const subscription = await ledger.upsertSubscription(
       {
         userId: known.userId,
@@ -259,12 +287,33 @@ export class HandlePaymentEventUseCase {
       now,
     );
     const licence = await ledger.findLicenceBySource("subscription", subscription.id);
-    if (!licence) return;
+    if (!licence) return null;
     const ended = event.status === "cancelled" || event.status === "expired";
     await ledger.setLicenceEnd(
       licence.id,
       ended ? now : new Date(event.currentPeriodEnd.getTime() + SUBSCRIPTION_GRACE_DAYS * DAY_MS),
     );
+    return this.statusNotice(previousStatus, event.status, known.userId, known.productId);
+  }
+
+  /** A notice only when the status actually changes into a state the learner must hear about. */
+  private async statusNotice(
+    before: Subscription["status"],
+    after: Subscription["status"],
+    userId: string,
+    productId: string,
+  ): Promise<PaymentNotice | null> {
+    if (before === after) return null;
+    const wasEnded = before === "cancelled" || before === "expired";
+    const kind =
+      after === "past_due"
+        ? "payment_failed"
+        : (after === "cancelled" || after === "expired") && !wasEnded
+          ? "subscription_ended"
+          : null;
+    if (!kind) return null;
+    const product = await this.product(productId);
+    return { kind, userId, productName: product.namePl };
   }
 
   private async refunded(providerName: string, paymentRef: string, now: Date) {

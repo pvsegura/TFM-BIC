@@ -167,6 +167,6 @@ describe("renderEmail — layout", () => {
 
     expect(email.html.startsWith("<!doctype html>")).toBe(true);
     expect(email.html).toContain('<html lang="en">');
-    expect(email.html).toContain("VerbySia");
+    expect(email.html).toContain("Verbysia");
   });
 });

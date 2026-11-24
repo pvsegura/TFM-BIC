@@ -17,6 +17,12 @@ export type EmailTemplateRequest =
   | { template: "password-reset"; variables: { resetUrl: string } }
   | { template: "newsletter-confirmation"; variables: { confirmationUrl: string } }
   | {
+      template: "purchase-confirmation";
+      variables: { productName: string; amountMinor: number; currency: string; courseUrl: string };
+    }
+  | { template: "payment-failed"; variables: { productName: string; billingUrl: string } }
+  | { template: "subscription-ended"; variables: { productName: string; pricingUrl: string } }
+  | {
       template: "newsletter-issue";
       variables: NewsletterIssueContent & { unsubscribeUrl: string };
     };
@@ -120,16 +126,34 @@ function layout(input: LayoutInput): string {
   ].join("\n");
 }
 
+interface ActionEmailCopy {
+  readonly subject: string;
+  readonly heading: string;
+  readonly body: string;
+  readonly action: string;
+  readonly note: string;
+}
+
+/** One labelled fact shown under the body, e.g. the amount paid. */
+interface Detail {
+  readonly label: string;
+  readonly value: string;
+}
+
 function actionEmail(
   context: EmailRenderContext,
   template: EmailTemplateId,
-  copy: EmailMessages["emailVerification"],
+  copy: ActionEmailCopy,
   url: string,
+  detail?: Detail,
 ): RenderedEmail {
   const messages = EMAIL_MESSAGES[context.locale];
   const href = escapeHtml(url);
   const bodyHtml = [
     `<p>${escapeHtml(copy.body)}</p>`,
+    ...(detail
+      ? [`<p><strong>${escapeHtml(detail.label)}:</strong> ${escapeHtml(detail.value)}</p>`]
+      : []),
     `<p><a href="${href}" style="display:inline-block;padding:10px 16px;background:#c2410c;color:#ffffff;text-decoration:none;border-radius:6px">${escapeHtml(copy.action)}</a></p>`,
     `<p style="font-size:13px">${escapeHtml(messages.linkFallback)}<br><a href="${href}">${href}</a></p>`,
     `<p style="font-size:13px">${escapeHtml(copy.note)}</p>`,
@@ -149,6 +173,7 @@ function actionEmail(
       copy.heading,
       "",
       copy.body,
+      ...(detail ? ["", `${detail.label}: ${detail.value}`] : []),
       "",
       `${copy.action}: ${url}`,
       "",
@@ -158,6 +183,77 @@ function actionEmail(
       messages.footerTransactional,
     ].join("\n"),
   };
+}
+
+const MAX_PRODUCT_NAME_LENGTH = 150;
+const LOCALE_TAGS: Record<EmailLocale, string> = { pl: "pl-PL", en: "en-GB" };
+
+/** Fills `{product}`/`{amount}` placeholders. Values are plain text; layout escapes them later. */
+function fill(copy: ActionEmailCopy, values: Record<string, string>): ActionEmailCopy {
+  const apply = (text: string) =>
+    text.replace(/\{(\w+)\}/g, (whole, key: string) => values[key] ?? whole);
+  return {
+    subject: apply(copy.subject),
+    heading: apply(copy.heading),
+    body: apply(copy.body),
+    action: apply(copy.action),
+    note: apply(copy.note),
+  };
+}
+
+function formatAmount(amountMinor: number, currency: string, locale: EmailLocale): string {
+  if (!Number.isInteger(amountMinor) || amountMinor < 0 || !/^[A-Za-z]{3}$/.test(currency)) {
+    throw new EmailTemplateError(
+      "the amount must be a non-negative integer in a 3-letter currency",
+    );
+  }
+  return new Intl.NumberFormat(LOCALE_TAGS[locale], {
+    style: "currency",
+    currency: currency.toUpperCase(),
+  }).format(amountMinor / 100);
+}
+
+function commerceEmail(
+  request: Extract<
+    EmailTemplateRequest,
+    { template: "purchase-confirmation" | "payment-failed" | "subscription-ended" }
+  >,
+  context: EmailRenderContext,
+): RenderedEmail {
+  const messages = EMAIL_MESSAGES[context.locale];
+  const product = assertLine(
+    request.variables.productName,
+    "the product name",
+    MAX_PRODUCT_NAME_LENGTH,
+  );
+  switch (request.template) {
+    case "purchase-confirmation": {
+      const { amountMinor, currency, courseUrl } = request.variables;
+      const amount = formatAmount(amountMinor, currency, context.locale);
+      const copy = messages.purchaseConfirmation;
+      return actionEmail(
+        context,
+        request.template,
+        fill(copy, { product, amount }),
+        assertAppLink(courseUrl, context.appBaseUrl, "the course link"),
+        { label: copy.amountLabel, value: amount },
+      );
+    }
+    case "payment-failed":
+      return actionEmail(
+        context,
+        request.template,
+        fill(messages.paymentFailed, { product }),
+        assertAppLink(request.variables.billingUrl, context.appBaseUrl, "the billing link"),
+      );
+    case "subscription-ended":
+      return actionEmail(
+        context,
+        request.template,
+        fill(messages.subscriptionEnded, { product }),
+        assertAppLink(request.variables.pricingUrl, context.appBaseUrl, "the pricing link"),
+      );
+  }
 }
 
 function newsletterIssue(
@@ -234,6 +330,10 @@ export function renderEmail(
           "the confirmation link",
         ),
       );
+    case "purchase-confirmation":
+    case "payment-failed":
+    case "subscription-ended":
+      return commerceEmail(request, context);
     case "newsletter-issue":
       return newsletterIssue(context, request.variables);
   }

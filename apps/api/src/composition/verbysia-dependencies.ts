@@ -14,6 +14,7 @@ import {
   type MemoryCardRepository,
   type PaymentDeps,
   type PaymentLedger,
+  type PaymentNotifier,
   type PaymentProvider,
 } from "@verbysia/application";
 import type { AppEnv } from "@verbysia/config";
@@ -81,6 +82,7 @@ export function createCommerceUseCases(
   content: ContentDependencies,
   deps: CommerceDependencies,
   env: Pick<AppEnv, "APP_BASE_URL">,
+  notifier?: PaymentNotifier,
 ) {
   const { repositories: repos, memoryCards, clock } = deps;
   const accessPolicy = new AccessPolicy(repos.licences, clock);
@@ -99,6 +101,7 @@ export function createCommerceUseCases(
     audit: repos.audit,
     clock,
     appBaseUrl: env.APP_BASE_URL ?? "http://localhost:5173",
+    ...(notifier ? { notifier } : {}),
   };
   return {
     clock,

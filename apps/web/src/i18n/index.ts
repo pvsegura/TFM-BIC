@@ -9,6 +9,7 @@
  * speakers) comes from the content files and is not affected by this choice.
  */
 import { en } from "./en/index.js";
+import { LEGAL_DOCUMENTS, type LegalDocuments } from "./legal/index.js";
 import { es } from "./es/index.js";
 import { pl, type Messages } from "./pl/index.js";
 
@@ -45,6 +46,9 @@ export const HTML_LANG: string = LANGUAGE;
 
 /** The active catalog. */
 export const m: Messages = CATALOGS[LANGUAGE];
+
+/** The legal texts (terms of sale, privacy) in the active language. */
+export const legal: LegalDocuments = LEGAL_DOCUMENTS[LANGUAGE];
 
 if (typeof document !== "undefined") {
   document.documentElement.lang = HTML_LANG;

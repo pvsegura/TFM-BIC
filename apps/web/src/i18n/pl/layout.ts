@@ -50,8 +50,10 @@ export const layout = {
       ],
     },
     {
-      title: "Prywatność i dane",
+      title: "Regulamin i prywatność",
       links: [
+        { to: "/regulamin", label: "Regulamin" },
+        { to: "/regulamin#terms-withdrawal", label: "Odstąpienie od umowy" },
         { to: "/privacy", label: "Polityka prywatności" },
         { to: "/privacy#privacy-what", label: "Jakie dane przechowujemy" },
         { to: "/privacy#privacy-browser", label: "Pliki cookie i pamięć przeglądarki" },
@@ -68,5 +70,5 @@ export const layout = {
     },
   ],
   copyright:
-    "© 2026 Verbysia · Hiszpański dla Polaków metodą PUENTE · Dane kontaktowe i regulamin w przygotowaniu (wymagają weryfikacji prawnej).",
+    "© 2026 Verbysia · Hiszpański dla Polaków metodą PUENTE · Regulamin i polityka prywatności są projektami w trakcie weryfikacji prawnej.",
 } as const;

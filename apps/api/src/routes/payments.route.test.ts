@@ -81,7 +81,7 @@ describe("checkout", () => {
       url: "/checkout",
       headers: { origin: APP_BASE_URL },
       cookies,
-      payload: { productId: "course-a1" },
+      payload: { productId: "course-a1", acceptTerms: true, startDeliveryNow: true },
     });
 
     expect(response.statusCode).toBe(200);
@@ -91,6 +91,41 @@ describe("checkout", () => {
       email: "buyer@example.com",
     });
     expect(built.paymentProvider.checkouts[0]?.successUrl).toBe(`${APP_BASE_URL}/zakup/sukces`);
+  });
+
+  it("refuses a checkout without both consents (terms and immediate delivery)", async () => {
+    const built = build();
+    const { cookies } = await signIn(built);
+    const send = (payload: Record<string, unknown>) =>
+      built.app.inject({
+        method: "POST",
+        url: "/checkout",
+        headers: { origin: APP_BASE_URL },
+        cookies,
+        payload,
+      });
+
+    expect((await send({ productId: "course-a1" })).statusCode).toBe(400);
+    expect((await send({ productId: "course-a1", acceptTerms: true })).statusCode).toBe(400);
+    expect(
+      (await send({ productId: "course-a1", acceptTerms: true, startDeliveryNow: false }))
+        .statusCode,
+    ).toBe(400);
+    expect(built.paymentProvider.checkouts).toHaveLength(0);
+  });
+
+  it("records which terms version was accepted with the checkout", async () => {
+    const built = build();
+    const { cookies } = await signIn(built);
+    await built.app.inject({
+      method: "POST",
+      url: "/checkout",
+      headers: { origin: APP_BASE_URL },
+      cookies,
+      payload: { productId: "course-a1", acceptTerms: true, startDeliveryNow: true },
+    });
+
+    expect(built.paymentProvider.checkouts[0]?.termsVersion).toBe("regulamin-v1");
   });
 
   it("refuses anonymous callers, other origins and products already owned", async () => {
@@ -112,7 +147,7 @@ describe("checkout", () => {
         url: "/checkout",
         headers,
         ...(withCookies ? { cookies } : {}),
-        payload: { productId: "course-a1" },
+        payload: { productId: "course-a1", acceptTerms: true, startDeliveryNow: true },
       });
 
     expect((await send({ origin: APP_BASE_URL }, false)).statusCode).toBe(401);

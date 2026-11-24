@@ -5,6 +5,7 @@ import { common } from "./common.js";
 import { errors } from "./errors.js";
 import { layout } from "./layout.js";
 import { learn } from "./learn.js";
+import { legal } from "./legal.js";
 import { marketing } from "./marketing.js";
 import { memory } from "./memory.js";
 import { vocabulary } from "./vocabulary.js";
@@ -31,6 +32,7 @@ const catalog = {
   learn,
   account,
   vocabulary,
+  legal,
 };
 
 /** The shape every interface language must match (the compiler lists any missing text). */
