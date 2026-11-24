@@ -46,6 +46,8 @@ const PUBLIC_ROUTES = new Set([
   "GET /public/lessons/:lessonId/exercises",
   "GET /public/exercises/:exerciseId",
   "POST /public/exercises/:exerciseId/answer",
+  // Verbysia payments: Stripe calls it (no session, no Origin); the signature is the credential.
+  "POST /webhooks/stripe",
 ]);
 
 /** ADMIN only (`requireRole`), in addition to a session; writes are audited. */
@@ -59,10 +61,15 @@ const ADMIN_ROUTES = new Set([
   "GET /admin/purchases",
   "GET /admin/subscriptions",
   "GET /admin/audit",
+  "POST /admin/products/sync-provider",
 ]);
 
 /** Authorized by an HMAC token in the link; RFC 8058 mail clients send no Origin (ADR-025). */
-const ORIGIN_CHECK_EXCEPTIONS = new Set(["POST /email-preferences/newsletter/unsubscribe"]);
+const ORIGIN_CHECK_EXCEPTIONS = new Set([
+  "POST /email-preferences/newsletter/unsubscribe",
+  // Signed by Stripe; servers send no Origin header.
+  "POST /webhooks/stripe",
+]);
 
 /** TEACHER only (`requireRole`), in addition to a session. */
 const TEACHER_ROUTES = new Set([

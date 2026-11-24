@@ -257,6 +257,14 @@ const APP_ROUTES = [
   { path: "progress", element: <Navigate to="/dashboard" replace /> },
   { path: "achievements", element: <AchievementsPage /> },
   { path: "profile", element: <ProfilePage /> },
+  // Stripe returns the buyer here; the page only watches /me/access (it grants nothing).
+  {
+    path: "zakup/sukces",
+    lazy: () =>
+      import("./pages/purchase-success-page.js").then(({ PurchaseSuccessPage }) => ({
+        Component: PurchaseSuccessPage,
+      })),
+  },
   { path: "settings", element: <Navigate to="/profile" replace /> },
 ];
 

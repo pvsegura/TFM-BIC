@@ -47,7 +47,8 @@
     "@verbysia/domain": "workspace:*",
     "argon2": "0.45.1",
     "drizzle-orm": "0.45.2",
-    "pg": "8.23.0"
+    "pg": "8.23.0",
+    "stripe": "23.2.0"
   },
   "devDependencies": {
     "@electric-sql/pglite": "0.5.8",

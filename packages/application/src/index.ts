@@ -631,3 +631,20 @@ export {
 } from "./memory/memory-use-cases.js";
 export { ContentGate, type GateDecision } from "./commerce/content-gate.js";
 export { AnonymousExerciseAttempts, ANONYMOUS_LEARNER } from "./exercise/anonymous-attempts.js";
+export {
+  InvalidWebhookError,
+  type CheckoutRequest,
+  type PaymentEvent,
+  type PaymentLedger,
+  type PaymentProvider,
+} from "./commerce/payments.js";
+export {
+  AlreadyOwnedError,
+  HandlePaymentEventUseCase,
+  OpenBillingPortalUseCase,
+  PaymentsDisabledError,
+  StartCheckoutUseCase,
+  SUBSCRIPTION_GRACE_DAYS,
+  SyncProductsWithProviderUseCase,
+  type PaymentDeps,
+} from "./commerce/payment-use-cases.js";

@@ -61,7 +61,7 @@ export async function createAppDependencies(
     email: createEmailDependencies(databaseUrl, env),
     privacy: createPrivacyDependencies(databaseUrl),
     coach: createCoachDependencies(env, databaseUrl),
-    commerce: createCommerceDependencies(databaseUrl),
+    commerce: createCommerceDependencies(env, databaseUrl),
   };
 }
 

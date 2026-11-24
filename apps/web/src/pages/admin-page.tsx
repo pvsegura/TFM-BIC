@@ -15,6 +15,7 @@ import {
   revokeLicence,
   updateProduct,
 } from "../services/admin-api.js";
+import { syncProductsWithProvider } from "../services/commerce-api.js";
 
 const t = m.admin;
 type Tab = keyof typeof t.tabs;
@@ -318,11 +319,36 @@ function CommerceHistory({ detail }: { detail: AdminUserDetailResponse }) {
 }
 
 function ProductsTab() {
+  const queryClient = useQueryClient();
   const products = useQuery({ queryKey: ["admin", "products"], queryFn: fetchAdminProducts });
+  const sync = useMutation({
+    mutationFn: syncProductsWithProvider,
+    onSuccess: () => queryClient.invalidateQueries({ queryKey: ["admin"] }),
+  });
   if (products.isError) return <p role="alert">{errorMessage(products.error)}</p>;
   if (!products.data) return <p>{m.common.loading}</p>;
   return (
     <div className="space-y-4">
+      <div className="flex flex-wrap items-center gap-3">
+        <button
+          type="button"
+          disabled={sync.isPending}
+          onClick={() => sync.mutate()}
+          className="rounded-lg bg-primary px-4 py-2 text-sm font-bold text-surface dark:bg-surface dark:text-primary"
+        >
+          {m.marketing.payments.syncCta}
+        </button>
+        {sync.isSuccess ? (
+          <p role="status" className="text-sm">
+            {m.marketing.payments.syncDone(sync.data.length)}
+          </p>
+        ) : null}
+        {sync.isError ? (
+          <p role="alert" className="text-sm">
+            {errorMessage(sync.error)}
+          </p>
+        ) : null}
+      </div>
       {products.data.map((product) => (
         <ProductEditor key={product.id} product={product} />
       ))}

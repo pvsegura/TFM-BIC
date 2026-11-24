@@ -1,5 +1,23 @@
 /** Public pages. Honest by rule: no fluency promises, no invented prices, discounts or reviews. */
 export const marketing = {
+  payments: {
+    redirecting: "Przekierowanie do płatności…",
+    alreadyOwned: "Masz już ten dostęp — znajdziesz go w swoim panelu.",
+    unavailable: "Płatności są chwilowo niedostępne. Spróbuj później.",
+    loginFirst: "Aby kupić, załóż darmowe konto lub zaloguj się.",
+    successTitle: "Dziękujemy za zakup!",
+    successChecking: "Potwierdzamy płatność… To zwykle trwa kilka sekund.",
+    successReady: "Gotowe — Twój dostęp jest aktywny.",
+    successSlow:
+      "Płatność jest jeszcze przetwarzana. Dostęp pojawi się automatycznie w ciągu kilku minut — możesz odświeżyć stronę lub wrócić później.",
+    successCta: "Przejdź do swojego panelu",
+    manageTitle: "Płatności i subskrypcja",
+    manageBody: "Zmień kartę, pobierz faktury lub anuluj subskrypcję w bezpiecznym panelu Stripe.",
+    manageCta: "Zarządzaj płatnościami",
+    manageNone: "Nie masz jeszcze żadnych płatności.",
+    syncCta: "Utwórz ceny w Stripe",
+    syncDone: (n: number) => `Zsynchronizowano produkty: ${String(n)}.`,
+  },
   book: {
     nav: "Książka",
     metaTitle: "Książka „Hiszpański metodą PUENTE · A1” z kodami QR | Verbysia",

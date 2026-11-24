@@ -167,3 +167,14 @@ export type AdminAuditEntryResponse = z.infer<typeof adminAuditEntrySchema>;
 export type AdminUserDetailResponse = z.infer<typeof adminUserDetailResponseSchema>;
 export type AdminUpdateProductRequest = z.infer<typeof adminUpdateProductRequestSchema>;
 export type AdminGrantLicenceRequest = z.infer<typeof adminGrantLicenceRequestSchema>;
+
+/** POST /checkout — the product to buy; the user is always the session's. */
+export const checkoutRequestSchema = z.strictObject({
+  productId: z
+    .string()
+    .regex(/^[a-z][a-z0-9]*(-[a-z0-9]+)*$/)
+    .max(64),
+});
+/** POST /checkout and POST /billing/portal answer with where to send the browser. */
+export const redirectResponseSchema = z.object({ url: z.url() });
+export const syncProvidersResponseSchema = z.object({ synced: z.array(z.string()) });

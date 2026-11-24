@@ -132,6 +132,25 @@ export const es: Messages = {
     fixFields: "Corrige los campos marcados.",
   },
   marketing: {
+    payments: {
+      redirecting: "Redirigiendo al pago…",
+      alreadyOwned: "Ya tienes este acceso: lo encontrarás en tu panel.",
+      unavailable: "Los pagos no están disponibles en este momento. Inténtalo más tarde.",
+      loginFirst: "Para comprar, crea una cuenta gratuita o inicia sesión.",
+      successTitle: "¡Gracias por tu compra!",
+      successChecking: "Confirmando el pago… Suele tardar unos segundos.",
+      successReady: "Listo: tu acceso está activo.",
+      successSlow:
+        "El pago todavía se está procesando. El acceso aparecerá automáticamente en unos minutos: puedes recargar la página o volver más tarde.",
+      successCta: "Ir a tu panel",
+      manageTitle: "Pagos y suscripción",
+      manageBody:
+        "Cambia la tarjeta, descarga facturas o cancela la suscripción en el portal seguro de Stripe.",
+      manageCta: "Gestionar pagos",
+      manageNone: "Todavía no tienes pagos.",
+      syncCta: "Crear precios en Stripe",
+      syncDone: (n: number) => `Productos sincronizados: ${String(n)}.`,
+    },
     book: {
       nav: "Libro",
       metaTitle: "Libro «Español con el método PUENTE · A1» con códigos QR | Verbysia",

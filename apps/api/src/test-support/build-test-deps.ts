@@ -33,6 +33,8 @@ import {
   FakeLearnerInsightsReadModel,
   FakeCommerce,
   FakeMemoryCardRepository,
+  FakePaymentLedger,
+  FakePaymentProvider,
   FixedClock,
   makeSampleCatalog,
 } from "@verbysia/application/testing";
@@ -135,9 +137,13 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
   // Verbysia commerce and memory trainer: in-memory ports with the Drizzle repositories behaviour.
   const commerce = new FakeCommerce();
   const memoryCards = new FakeMemoryCardRepository();
+  const paymentLedger = new FakePaymentLedger(commerce);
+  const paymentProvider = new FakePaymentProvider();
   const commerceDeps: CommerceDependencies = {
     repositories: commerce,
     memoryCards,
+    paymentLedger,
+    paymentProvider,
     clock,
     close: () => Promise.resolve(),
   };
@@ -252,6 +258,8 @@ export function buildTestDeps(now = new Date("2026-01-01T00:00:00.000Z")) {
     vocabularyDeps,
     commerce,
     memoryCards,
+    paymentLedger,
+    paymentProvider,
     phoneticsDeps,
     audioDeps,
     teachingDeps,

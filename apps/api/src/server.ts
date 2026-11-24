@@ -41,6 +41,7 @@ import { registerTestEmailRoutes } from "./routes/test-email.route.js";
 import { registerVocabularyRoutes } from "./routes/vocabulary.route.js";
 import { registerCommerceRoutes } from "./routes/commerce.route.js";
 import { registerMemoryRoutes } from "./routes/memory.route.js";
+import { registerPaymentRoutes } from "./routes/payments.route.js";
 import { createCommerceUseCases } from "./composition/verbysia-dependencies.js";
 import { AccessPolicy, ContentGate } from "@verbysia/application";
 import { createLoggerOptions } from "./logging/logger-options.js";
@@ -275,13 +276,18 @@ export function buildServer(
 
     // Verbysia: prices, own licences, the admin panel API and the PUENTE memory trainer. Access to
     // paid material is decided here on the server from licences, never by the client.
-    const commerceUseCases = createCommerceUseCases(contentDeps, commerceDeps);
+    const commerceUseCases = createCommerceUseCases(contentDeps, commerceDeps, env);
     registerCommerceRoutes(app, {
       useCases: commerceUseCases,
       resolveSession: authUseCases.resolveSession,
       env,
     });
     registerMemoryRoutes(app, {
+      useCases: commerceUseCases,
+      resolveSession: authUseCases.resolveSession,
+      env,
+    });
+    registerPaymentRoutes(app, {
       useCases: commerceUseCases,
       resolveSession: authUseCases.resolveSession,
       env,

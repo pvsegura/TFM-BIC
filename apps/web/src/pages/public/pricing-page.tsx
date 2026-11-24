@@ -1,6 +1,7 @@
 import type { PublicProduct } from "@verbysia/contracts";
 import { useQuery } from "@tanstack/react-query";
 
+import { BuyButton } from "../../components/buy-button.js";
 import { useDocumentMeta } from "../../homepage/use-document-meta.js";
 import { formatPrice, m } from "../../i18n/index.js";
 import { errorMessage } from "../../services/api-error.js";
@@ -96,13 +97,12 @@ export function PricingPage() {
               ) : (
                 <div className="grow" />
               )}
-              <button
-                type="button"
+              <BuyButton
+                productId={product.id}
                 disabled={!product.purchasable}
+                label={comingSoon ? t.comingSoon : product.purchasable ? t.buy : t.buySoon}
                 className="mt-5 rounded-full bg-primary px-5 py-3 font-display font-bold text-surface disabled:cursor-not-allowed disabled:opacity-50 dark:bg-surface dark:text-primary"
-              >
-                {comingSoon ? t.comingSoon : product.purchasable ? t.buy : t.buySoon}
-              </button>
+              />
               {comingSoon ? <p className="mt-2 text-sm">{t.comingSoonBody}</p> : null}
             </Card>
           );

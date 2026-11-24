@@ -50,7 +50,11 @@ export interface PublicProductView {
 
 /** The public price list: active products and drafts as "coming soon"; archived ones hidden. */
 export class ListPublicProductsUseCase {
-  constructor(private readonly products: ProductRepository) {}
+  constructor(
+    private readonly products: ProductRepository,
+    /** False while no payment provider is configured: nothing is purchasable then. */
+    private readonly paymentsEnabled = true,
+  ) {}
 
   async execute(): Promise<PublicProductView[]> {
     const all = await this.products.list();
@@ -66,7 +70,7 @@ export class ListPublicProductsUseCase {
         priceMinor: product.priceMinor,
         currency: product.currency,
         accessDays: product.accessDays,
-        purchasable: isPurchasable(product),
+        purchasable: this.paymentsEnabled && isPurchasable(product),
       }));
   }
 }

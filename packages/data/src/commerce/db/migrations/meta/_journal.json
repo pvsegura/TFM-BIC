@@ -15,6 +15,13 @@
       "when": 1795279694812,
       "tag": "0001_seed_products",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "7",
+      "when": 1795530168867,
+      "tag": "0002_payment_customers",
+      "breakpoints": true
     }
   ]
 }

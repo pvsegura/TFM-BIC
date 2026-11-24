@@ -207,6 +207,20 @@ const envSchema = z
     LOG_LEVEL: z.enum(["error", "warn", "info", "debug"]).default("info"),
     // Bearer token for GET /internal/metrics. Unset = the endpoint does not exist. Secret.
     METRICS_TOKEN: z.string().min(32).optional(),
+    // Verbysia payments (Stripe). Both or neither; unset = checkout disabled (the pricing page says
+    // "payments soon"). Secret. A live key is only accepted with NODE_ENV=production.
+    STRIPE_SECRET_KEY: z
+      .string()
+      .regex(/^(sk|rk)_(test|live)_[A-Za-z0-9]+$/, {
+        message: "must be a Stripe secret key (sk_test_… or sk_live_…)",
+      })
+      .optional(),
+    STRIPE_WEBHOOK_SECRET: z
+      .string()
+      .regex(/^whsec_[A-Za-z0-9]+$/, {
+        message: "must be a Stripe webhook signing secret (whsec_…)",
+      })
+      .optional(),
   })
   .check((ctx) => {
     const { NODE_ENV, DATABASE_URL, AUTH_SESSION_SECRET, EMAIL_LINK_SECRET, APP_BASE_URL } =
@@ -340,6 +354,26 @@ const envSchema = z
         path: ["EMAIL_LINK_SECRET"],
         message: `EMAIL_LINK_SECRET (at least 32 characters) is required when NODE_ENV is "production" or "staging" (see docs/adr/adr-025-email-newsletter.md).`,
       });
+    }
+
+    const { STRIPE_SECRET_KEY, STRIPE_WEBHOOK_SECRET } = ctx.value;
+    if (Boolean(STRIPE_SECRET_KEY) !== Boolean(STRIPE_WEBHOOK_SECRET)) {
+      issue(
+        "STRIPE_WEBHOOK_SECRET",
+        "STRIPE_SECRET_KEY and STRIPE_WEBHOOK_SECRET must be set together.",
+      );
+    }
+    if (STRIPE_SECRET_KEY && NODE_ENV === "test") {
+      issue(
+        "STRIPE_SECRET_KEY",
+        'Stripe keys are not allowed when NODE_ENV is "test": automated runs never reach Stripe.',
+      );
+    }
+    if (STRIPE_SECRET_KEY?.includes("_live_") && NODE_ENV !== "production") {
+      issue(
+        "STRIPE_SECRET_KEY",
+        'A live Stripe key is only allowed when NODE_ENV is "production".',
+      );
     }
 
     if (ctx.value.AUDIO_GENERATION_PROVIDER === "gemini") {

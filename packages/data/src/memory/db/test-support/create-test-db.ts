@@ -15,6 +15,8 @@ export function createVerbysiaTestDb(): Promise<PgliteTestDb> {
     truncate: [
       "memory_reviews",
       "memory_cards",
+      "payment_events",
+      "payment_customers",
       "licences",
       "purchases",
       "subscriptions",

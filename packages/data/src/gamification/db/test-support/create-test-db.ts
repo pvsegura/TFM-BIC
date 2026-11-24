@@ -94,6 +94,8 @@ export async function createGamificationTestDb(): Promise<GamificationTestDbHand
     truncate: [
       "memory_reviews",
       "memory_cards",
+      "payment_events",
+      "payment_customers",
       "licences",
       "purchases",
       "subscriptions",

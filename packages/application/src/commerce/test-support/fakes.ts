@@ -4,9 +4,18 @@ import {
   type AdminAuditEntry,
   type LicenceRecord,
   type Product,
+  type Purchase,
+  type Subscription,
 } from "@verbysia/domain";
 
 import type { MemoryCard, MemoryCardRepository, MemoryReviewLog } from "../../memory/ports.js";
+import {
+  InvalidWebhookError,
+  type CheckoutRequest,
+  type PaymentEvent,
+  type PaymentLedger,
+  type PaymentProvider,
+} from "../payments.js";
 import type {
   AdminAuditLog,
   AdminUserDirectory,
@@ -163,5 +172,111 @@ export class FakeMemoryCardRepository implements MemoryCardRepository {
     return Promise.resolve(
       this.reviews.filter((r) => r.userId === userId && r.reviewedAt >= since),
     );
+  }
+}
+
+/** In-memory PaymentLedger with the Postgres one's idempotency (keys: provider + reference). */
+export class FakePaymentLedger implements PaymentLedger {
+  readonly events = new Set<string>();
+  readonly customers = new Map<string, string>();
+  readonly purchaseRows: Purchase[] = [];
+  readonly subscriptionRows: Subscription[] = [];
+
+  constructor(private readonly commerce: FakeCommerce) {}
+
+  hasEvent(provider: string, eventId: string) {
+    return Promise.resolve(this.events.has(`${provider}/${eventId}`));
+  }
+  recordEvent(provider: string, eventId: string) {
+    this.events.add(`${provider}/${eventId}`);
+    return Promise.resolve();
+  }
+  findCustomerRef(userId: string, provider: string) {
+    return Promise.resolve(this.customers.get(`${provider}/${userId}`) ?? null);
+  }
+  saveCustomerRef(userId: string, provider: string, customerRef: string) {
+    if (!this.customers.has(`${provider}/${userId}`))
+      this.customers.set(`${provider}/${userId}`, customerRef);
+    return Promise.resolve();
+  }
+  findPurchaseByRef(provider: string, providerRef: string) {
+    return Promise.resolve(
+      this.purchaseRows.find((p) => p.provider === provider && p.providerRef === providerRef) ??
+        null,
+    );
+  }
+  createPaidPurchase(input: Omit<Purchase, "id" | "refundedAt" | "status">) {
+    const purchase: Purchase = { id: fakeUuid(), status: "paid", refundedAt: null, ...input };
+    this.purchaseRows.push(purchase);
+    return Promise.resolve(purchase);
+  }
+  markPurchaseRefunded(purchaseId: string, at: Date) {
+    const purchase = this.purchaseRows.find((p) => p.id === purchaseId);
+    if (purchase) {
+      purchase.status = "refunded";
+      purchase.refundedAt = at;
+    }
+    return Promise.resolve();
+  }
+  upsertSubscription(input: Omit<Subscription, "id" | "createdAt">, at: Date) {
+    const existing = this.subscriptionRows.find(
+      (s) => s.provider === input.provider && s.providerRef === input.providerRef,
+    );
+    if (existing) {
+      Object.assign(existing, input);
+      return Promise.resolve(existing);
+    }
+    const subscription: Subscription = { id: fakeUuid(), createdAt: at, ...input };
+    this.subscriptionRows.push(subscription);
+    return Promise.resolve(subscription);
+  }
+  findSubscriptionByRef(provider: string, providerRef: string) {
+    return Promise.resolve(
+      this.subscriptionRows.find((s) => s.provider === provider && s.providerRef === providerRef) ??
+        null,
+    );
+  }
+  findLicenceBySource(source: "purchase" | "subscription", sourceId: string) {
+    const licence = this.commerce.licenceRows.find(
+      (l) => l.source === source && l.sourceId === sourceId,
+    );
+    return Promise.resolve(licence ? { id: licence.id } : null);
+  }
+  setLicenceEnd(licenceId: string, endsAt: Date | null) {
+    const licence = this.commerce.licenceRows.find((l) => l.id === licenceId);
+    if (licence) licence.endsAt = endsAt;
+    return Promise.resolve();
+  }
+}
+
+/**
+ * A scriptable payment provider: `nextEvent` is what the next webhook "verifies" to; a body of
+ * "bad-signature" is refused like a forged request.
+ */
+export class FakePaymentProvider implements PaymentProvider {
+  readonly name = "stripe";
+  readonly checkouts: CheckoutRequest[] = [];
+  readonly pricedProducts: string[] = [];
+  nextEvent: PaymentEvent | null = null;
+
+  createCheckout(request: CheckoutRequest) {
+    this.checkouts.push(request);
+    return Promise.resolve({
+      url: `https://checkout.example/${request.product.id}`,
+      customerRef: request.customerRef ?? "cus_fake",
+    });
+  }
+  createPortal(customerRef: string) {
+    return Promise.resolve(`https://billing.example/${customerRef}`);
+  }
+  ensurePrice(product: Product) {
+    this.pricedProducts.push(product.id);
+    return Promise.resolve(`price_${product.id}`);
+  }
+  parseWebhook(rawBody: Uint8Array) {
+    if (String.fromCharCode(...rawBody) === "bad-signature" || !this.nextEvent) {
+      return Promise.reject(new InvalidWebhookError());
+    }
+    return Promise.resolve(this.nextEvent);
   }
 }

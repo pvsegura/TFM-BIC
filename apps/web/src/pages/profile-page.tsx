@@ -1,6 +1,7 @@
 import { Button } from "@verbysia/ui";
 import type { ReactNode } from "react";
 
+import { BillingSection } from "../components/billing-section.js";
 import { DataManagementSection } from "../components/data-management-section.js";
 import { EmailPreferencesSection } from "../components/email-preferences-section.js";
 import { ProfileForm } from "../components/profile-form.js";
@@ -44,6 +45,7 @@ export function ProfilePage() {
       </h1>
       {body}
       <EmailPreferencesSection />
+      <BillingSection />
       <DataManagementSection />
     </section>
   );

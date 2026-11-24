@@ -175,3 +175,21 @@ export const adminAuditLog = pgTable(
   },
   (t) => [index("admin_audit_log_created_idx").on(t.createdAt)],
 );
+
+/** The payment provider's customer for each learner (one per provider), so renewals and the
+ * billing portal find the same customer. */
+export const paymentCustomers = pgTable(
+  "payment_customers",
+  {
+    userId: uuid("user_id")
+      .notNull()
+      .references(() => users.id, { onDelete: "cascade" }),
+    provider: text("provider").notNull(),
+    customerRef: text("customer_ref").notNull(),
+    createdAt: timestamp("created_at", { withTimezone: true }).notNull(),
+  },
+  (t) => [
+    primaryKey({ name: "payment_customers_pk", columns: [t.userId, t.provider] }),
+    uniqueIndex("payment_customers_ref_unique").on(t.provider, t.customerRef),
+  ],
+);

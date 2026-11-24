@@ -130,6 +130,25 @@ export const en: Messages = {
     fixFields: "Please fix the highlighted fields.",
   },
   marketing: {
+    payments: {
+      redirecting: "Redirecting to payment…",
+      alreadyOwned: "You already have this access — it's on your dashboard.",
+      unavailable: "Payments are temporarily unavailable. Please try later.",
+      loginFirst: "To buy, create a free account or log in.",
+      successTitle: "Thank you for your purchase!",
+      successChecking: "Confirming your payment… This usually takes a few seconds.",
+      successReady: "Done — your access is active.",
+      successSlow:
+        "Your payment is still being processed. Access will appear automatically within a few minutes — you can refresh the page or come back later.",
+      successCta: "Go to your dashboard",
+      manageTitle: "Payments and subscription",
+      manageBody:
+        "Change your card, download invoices or cancel your subscription in Stripe's secure portal.",
+      manageCta: "Manage payments",
+      manageNone: "You don't have any payments yet.",
+      syncCta: "Create prices in Stripe",
+      syncDone: (n: number) => `Products synchronised: ${String(n)}.`,
+    },
     book: {
       nav: "Book",
       metaTitle: "Book “Spanish with the PUENTE method · A1” with QR codes | Verbysia",
