@@ -3,6 +3,9 @@ import { useState } from "react";
 
 import { useCompletePhonetic, useRecordPhoneticPractice } from "../hooks/use-phonetics.js";
 import { GENERIC_ERROR_MESSAGE } from "../services/api-error.js";
+import { m } from "../i18n/index.js";
+
+const t = m.study.phonetics;
 
 export interface PhoneticActionsProps {
   phoneticId: string;
@@ -38,20 +41,20 @@ export function PhoneticActions({ phoneticId, status }: PhoneticActionsProps) {
         disabled={busy}
         onClick={() => {
           practiceMutation.mutate(phoneticId);
-          setFeedback("Marked as practiced.");
+          setFeedback(t.practicedFeedback);
         }}
       >
-        Practice
+        {t.practice}
       </Button>
 
       <Button
         disabled={busy}
         onClick={() => {
           completeMutation.mutate(phoneticId);
-          setFeedback("Marked as completed.");
+          setFeedback(t.completedFeedback);
         }}
       >
-        Mark as completed
+        {t.complete}
       </Button>
 
       <p role="status" className="sr-only" aria-live="polite">

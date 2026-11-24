@@ -1,4 +1,5 @@
 import type { Messages } from "../pl/index.js";
+import { study } from "./study.js";
 
 /** English interface. Same shape as the Polish reference catalog. */
 export const en: Messages = {
@@ -1211,4 +1212,5 @@ export const en: Messages = {
     },
     genders: { masculine: "masculine", feminine: "feminine", neuter: "neuter", common: "common" },
   },
+  study,
 };

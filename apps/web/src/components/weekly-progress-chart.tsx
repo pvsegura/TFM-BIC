@@ -2,6 +2,8 @@ import type { TeacherStudentDetailResponse } from "@verbysia/contracts";
 
 import { formatNumber } from "./reward-labels.js";
 import { formatPercent, formatWeek } from "./teacher-labels.js";
+import { m } from "../i18n/index.js";
+const t = m.study.teacher;
 
 type Week = TeacherStudentDetailResponse["weekly"][number];
 
@@ -43,11 +45,11 @@ export function WeeklyProgressChart({ weeks }: { weeks: readonly Week[] }) {
         </div>
         <p className="mt-2 flex gap-4 text-xs">
           <span className="inline-flex items-center gap-1">
-            <span className="inline-block h-2 w-3 bg-accent" /> Correct attempts
+            <span className="inline-block h-2 w-3 bg-accent" /> {t.legendCorrect}
           </span>
           <span className="inline-flex items-center gap-1">
-            <span className="inline-block h-2 w-3 bg-primary/25 dark:bg-surface/30" /> Incorrect
-            attempts
+            <span className="inline-block h-2 w-3 bg-primary/25 dark:bg-surface/30" />{" "}
+            {t.legendIncorrect}
           </span>
         </p>
       </div>
@@ -55,24 +57,24 @@ export function WeeklyProgressChart({ weeks }: { weeks: readonly Week[] }) {
       <div className="mt-4 overflow-x-auto">
         <table className="w-full border-collapse text-left text-sm">
           <caption className="mb-1 text-left text-xs text-primary/70 dark:text-surface/70">
-            Weekly activity (weeks start on Monday, UTC)
+            {t.weeklyCaption}
           </caption>
           <thead>
             <tr className="border-b border-primary/20 dark:border-surface/20">
               <th scope="col" className="py-1.5 pr-3 font-semibold">
-                Week of
+                {t.weekOf}
               </th>
               <th scope="col" className="py-1.5 pr-3 font-semibold">
-                Lessons completed
+                {t.colLessons}
               </th>
               <th scope="col" className="py-1.5 pr-3 font-semibold">
-                Exercise attempts
+                {t.colAttempts}
               </th>
               <th scope="col" className="py-1.5 pr-3 font-semibold">
-                Accuracy
+                {t.colAccuracy}
               </th>
               <th scope="col" className="py-1.5 font-semibold">
-                Points
+                {t.colPoints}
               </th>
             </tr>
           </thead>

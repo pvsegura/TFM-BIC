@@ -7,9 +7,11 @@ import { WordAudioButton } from "../components/word-audio-button.js";
 import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { useGrammarTopic } from "../hooks/use-grammar.js";
 import { useGrammarMedia } from "../hooks/use-media.js";
+import { m } from "../i18n/index.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const enc = encodeURIComponent;
+const t = m.study.grammar;
 
 type Section = GrammarTopicResponse["sections"][number];
 
@@ -87,7 +89,7 @@ function TopicBody({ topic }: { topic: GrammarTopicResponse }) {
   return (
     <>
       <p className="text-sm font-medium uppercase tracking-wide text-accent-ink dark:text-accent">
-        Grammar reference{topic.levelId ? ` · from ${topic.levelId.toUpperCase()}` : ""}
+        {t.eyebrow(topic.levelId ? topic.levelId.toUpperCase() : null)}
       </p>
       <h1 className="mt-1 font-display text-3xl font-bold tracking-tight">{topic.title}</h1>
       <p className="mt-2 max-w-2xl text-primary/75 dark:text-surface/75">{topic.description}</p>
@@ -141,22 +143,19 @@ export function GrammarTopicPage() {
   if (topicQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading…
+        {t.loadingTopic}
       </p>
     );
   } else if (topicQuery.isError) {
     body = isNotFoundError(topicQuery.error) ? (
       <NotFoundNotice
-        title="Grammar topic not found"
-        message="That reference topic is not available."
+        title={t.notFoundTitle}
+        message={t.notFoundMessage}
         backTo="/learn/grammar"
-        backLabel="Back to the grammar reference"
+        backLabel={t.back}
       />
     ) : (
-      <LoadError
-        message="We couldn't load this topic. Please try again."
-        onRetry={() => void topicQuery.refetch()}
-      />
+      <LoadError message={t.topicLoadError} onRetry={() => void topicQuery.refetch()} />
     );
   } else {
     body = <TopicBody topic={topicQuery.data} />;
@@ -165,7 +164,7 @@ export function GrammarTopicPage() {
   return (
     <div className="mx-auto max-w-5xl py-8">
       <Link to={backTo} className="text-sm underline underline-offset-2">
-        ← All grammar topics
+        {t.allTopics}
       </Link>
       <div className="mt-4">{body}</div>
     </div>

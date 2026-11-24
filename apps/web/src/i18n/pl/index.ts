@@ -8,6 +8,7 @@ import { learn } from "./learn.js";
 import { legal } from "./legal.js";
 import { marketing } from "./marketing.js";
 import { memory } from "./memory.js";
+import { study } from "./study.js";
 import { vocabulary } from "./vocabulary.js";
 
 /** Literal string types widened to `string`, so other languages can fill the same shape. */
@@ -33,6 +34,7 @@ const catalog = {
   account,
   vocabulary,
   legal,
+  study,
 };
 
 /** The shape every interface language must match (the compiler lists any missing text). */

@@ -1,4 +1,7 @@
 import type { PhoneticTopicsResponse } from "@verbysia/contracts";
+import { m } from "../i18n/index.js";
+
+const t = m.study.phonetics;
 
 export interface PhoneticTopicListProps {
   topics: readonly PhoneticTopicsResponse["topics"][number][];
@@ -10,7 +13,7 @@ export interface PhoneticTopicListProps {
  * has viewed/practiced/completed — a quick sense of progress before picking one to filter by. */
 export function PhoneticTopicList({ topics, selectedId, onSelect }: PhoneticTopicListProps) {
   return (
-    <nav aria-label="Phonetics topics">
+    <nav aria-label={t.topicsNav}>
       <ul className="grid gap-3 sm:grid-cols-2">
         {topics.map((topic) => {
           const selected = topic.id === selectedId;
@@ -32,7 +35,10 @@ export function PhoneticTopicList({ topics, selectedId, onSelect }: PhoneticTopi
               >
                 <span className="font-medium">{topic.title}</span>
                 <span className="text-sm text-primary/70 dark:text-surface/70">
-                  {topic.progress.completed} of {topic.progress.representationCount} completed
+                  {t.topicProgress(
+                    String(topic.progress.completed),
+                    String(topic.progress.representationCount),
+                  )}
                 </span>
               </button>
             </li>

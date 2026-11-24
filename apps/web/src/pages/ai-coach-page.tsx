@@ -13,6 +13,7 @@ import { CoachConversation } from "../components/coach-conversation.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import { useCoachConversation, useCoachStatus } from "../hooks/use-coach.js";
 import type { CoachMode } from "../services/coach-api.js";
+import { m } from "../i18n/index.js";
 
 /**
  * The AI Coach (M23, ADR-034).
@@ -83,24 +84,11 @@ function modeFor(context: CoachContextRef | undefined): CoachMode {
 }
 
 /** Starter questions. Each is a real question in the learner's words, not a hidden command. */
-const QUICK_ACTIONS: { label: string; message: string; mode: CoachMode }[] = [
-  { label: "What should I study next?", message: "What should I study next?", mode: "explain" },
-  {
-    label: "Practise what I get wrong",
-    message: "Give me practice on the things I keep getting wrong.",
-    mode: "practice",
-  },
-  {
-    label: "Explain my last mistake",
-    message: "Explain the last exercise I got wrong.",
-    mode: "explain",
-  },
-  {
-    label: "Let's have a conversation",
-    message: "Let's practise a short conversation.",
-    mode: "conversation",
-  },
-];
+const t = m.study.coach;
+const QUICK_MODES: readonly CoachMode[] = ["explain", "practice", "explain", "conversation"];
+const QUICK_ACTIONS: { label: string; message: string; mode: CoachMode }[] = t.quickActions.map(
+  (action, i) => ({ ...action, mode: QUICK_MODES[i] ?? "explain" }),
+);
 
 function ContextPanel({
   learner,
@@ -111,22 +99,16 @@ function ContextPanel({
 }) {
   const rows: { label: string; value: string }[] = [];
   if (learner) {
-    rows.push({ label: "Learning", value: learner.languageName });
+    rows.push({ label: t.learning, value: learner.languageName });
     rows.push({
-      label: "Level",
+      label: t.level,
       // Said in words when unknown: the coach is told the same, and must not guess.
-      value: learner.cefrLevel ?? "Not set yet",
+      value: learner.cefrLevel ?? t.levelUnset,
     });
   }
   if (context) {
-    const described: Record<CoachContextRef["type"], string> = {
-      lesson: "Your current lesson",
-      exercise: "An exercise you answered",
-      "vocabulary-item": "A vocabulary entry",
-      video: "A lesson video",
-      phonetic: "A pronunciation entry",
-    };
-    rows.push({ label: "In context", value: described[context.type] });
+    const described: Record<CoachContextRef["type"], string> = t.contextTypes;
+    rows.push({ label: t.inContext, value: described[context.type] });
   }
   if (rows.length === 0) return null;
 
@@ -136,7 +118,7 @@ function ContextPanel({
       className="rounded-lg border border-primary/15 bg-surface p-4 dark:border-surface/15 dark:bg-surface-dark"
     >
       <h2 id="coach-context-heading" className="text-sm font-semibold uppercase tracking-wide">
-        What your coach knows
+        {t.contextTitle}
       </h2>
       <dl className="mt-2 space-y-1 text-sm">
         {rows.map((row) => (
@@ -146,10 +128,7 @@ function ContextPanel({
           </div>
         ))}
       </dl>
-      <p className="mt-3 text-xs opacity-70">
-        Your level comes from the lessons you have worked on. The coach reads your progress,
-        lessons, vocabulary and exercise answers — nothing else, and never another learner's.
-      </p>
+      <p className="mt-3 text-xs opacity-70">{t.contextNote}</p>
     </aside>
   );
 }
@@ -177,12 +156,9 @@ export function AiCoachPage() {
   return (
     <section aria-labelledby="coach-heading" className="mx-auto max-w-3xl">
       <h1 id="coach-heading" className="text-2xl font-semibold">
-        AI Coach
+        {t.title}
       </h1>
-      <p className="mt-2 opacity-80">
-        Ask about a mistake, practise what you find hard, or have a short conversation. Your coach
-        can see your progress in this application.
-      </p>
+      <p className="mt-2 opacity-80">{t.intro}</p>
 
       <div className="mt-4 grid gap-4 sm:grid-cols-[1fr_auto] sm:items-start">
         <div className="sm:order-2 sm:w-64">
@@ -190,20 +166,24 @@ export function AiCoachPage() {
         </div>
 
         <div className="sm:order-1">
-          {statusQuery.isPending ? <p role="status">Checking the AI Coach…</p> : null}
+          {statusQuery.isPending ? <p role="status">{t.checking}</p> : null}
 
           {failedToLoad ? (
             <p role="status" className="rounded-lg border border-primary/20 p-4">
-              We couldn&apos;t reach the AI Coach just now. Your{" "}
-              <Link to="/learn/lessons">lessons</Link> and exercises work normally.
+              {t.failedBefore}
+              <Link to="/learn/lessons">{t.lessonsLink}</Link>
+              {t.failedAfter}
             </p>
           ) : null}
 
           {unavailable ? (
             <p role="status" className="rounded-lg border border-primary/20 p-4">
-              The AI Coach is not switched on here yet. Everything else — your{" "}
-              <Link to="/learn/lessons">lessons</Link>, <Link to="/learn/exercises">exercises</Link>{" "}
-              and <Link to="/learn/vocabulary">vocabulary</Link> — works normally.
+              {t.unavailableBefore}
+              <Link to="/learn/lessons">{t.lessonsLink}</Link>,{" "}
+              <Link to="/learn/exercises">{t.exercisesLink}</Link>
+              {t.and}
+              <Link to="/learn/vocabulary">{t.vocabularyLink}</Link>
+              {t.unavailableAfter}
             </p>
           ) : null}
 
@@ -214,7 +194,7 @@ export function AiCoachPage() {
                 isSending={conversation.isSending}
                 emptyState={
                   <div>
-                    <h2 className="text-base font-semibold">What would you like to do?</h2>
+                    <h2 className="text-base font-semibold">{t.quickTitle}</h2>
                     <ul className="mt-3 flex flex-wrap gap-2">
                       {QUICK_ACTIONS.map((action) => (
                         <li key={action.label}>
@@ -244,7 +224,7 @@ export function AiCoachPage() {
                       className="mt-2 min-h-11 rounded border border-primary px-3 py-1 font-medium"
                       onClick={conversation.retry}
                     >
-                      Try again
+                      {t.tryAgain}
                     </button>
                   ) : null}
                 </div>
@@ -260,10 +240,8 @@ export function AiCoachPage() {
               />
 
               <p className="mt-4 text-xs opacity-70">
-                This conversation is not saved — it disappears when you leave the page. Answers are
-                generated by an AI model and can be wrong; your lesson results, points and progress
-                are decided by the application, never by the coach.{" "}
-                <Link to="/privacy">How your data is handled</Link>
+                {t.footerBefore}
+                <Link to="/privacy">{t.footerLink}</Link>
               </p>
             </>
           ) : null}

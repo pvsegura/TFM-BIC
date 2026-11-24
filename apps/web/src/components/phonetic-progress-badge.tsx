@@ -1,15 +1,11 @@
 import type { PhoneticUserProgressResponse } from "@verbysia/contracts";
 
 import { StatusBadge, type StatusTone } from "./status-badge.js";
+import { m } from "../i18n/index.js";
 
 type PhoneticProgressStatus = PhoneticUserProgressResponse["status"];
 
-const LABELS: Record<PhoneticProgressStatus, string> = {
-  not_started: "Not started",
-  viewed: "Viewed",
-  practiced: "Practiced",
-  completed: "Completed",
-};
+const LABELS: Record<PhoneticProgressStatus, string> = m.study.phonetics.status;
 
 const TONES: Record<PhoneticProgressStatus, StatusTone> = {
   not_started: "untouched",

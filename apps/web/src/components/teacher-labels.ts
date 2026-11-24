@@ -1,12 +1,15 @@
 import { ApiError } from "../services/api-error.js";
-import { formatDate, formatNumber } from "./reward-labels.js";
+import { LOCALE, m, plural as pluralOf } from "../i18n/index.js";
+import { formatDate } from "./reward-labels.js";
+
+const t = m.study.teacher;
 
 /**
  * Words for the teacher pages. Every number shown is the API's; these only format them. `null`
  * always means "no data" and is said in words — never shown as 0 or 0%.
  */
 
-export const UNNAMED_STUDENT = "Unnamed student";
+export const UNNAMED_STUDENT = t.unnamed;
 
 export function studentName(displayName: string | null): string {
   return displayName ?? UNNAMED_STUDENT;
@@ -17,14 +20,16 @@ export function formatPercent(value: number | null): string {
 }
 
 export function formatLastActivity(iso: string | null): string {
-  return iso === null ? "No activity yet" : formatDate(iso);
+  return iso === null ? t.noActivity : formatDate(iso);
 }
 
-export function plural(count: number, singular: string, pluralForm = `${singular}s`): string {
-  return `${formatNumber(count)} ${count === 1 ? singular : pluralForm}`;
+/** A count with the noun in the right form, e.g. `plural(3, "lesson")`. */
+export function plural(count: number, noun: keyof typeof t.forms): string {
+  const [one = "", few = one, many = few] = t.forms[noun];
+  return pluralOf(count, [one, few, many]);
 }
 
-export const FORBIDDEN_MESSAGE = "Your account does not have access to the teacher dashboard.";
+export const FORBIDDEN_MESSAGE = t.forbidden;
 
 /** A refused (403) request says so; anything else is a retryable load failure. */
 export function isForbidden(error: unknown): boolean {
@@ -33,7 +38,7 @@ export function isForbidden(error: unknown): boolean {
 
 /** A week's Monday, shown in UTC — the API buckets weeks in UTC, so a local zone would shift it. */
 export function formatWeek(iso: string): string {
-  return new Date(iso).toLocaleDateString("en", {
+  return new Date(iso).toLocaleDateString(LOCALE, {
     month: "short",
     day: "numeric",
     timeZone: "UTC",

@@ -6,9 +6,11 @@ import { LoadError, NotFoundNotice } from "../components/catalog-notices.js";
 import { PhoneticActions } from "../components/phonetic-actions.js";
 import { PhoneticProgressBadge } from "../components/phonetic-progress-badge.js";
 import { usePhonetic, useRecordPhoneticViewOnOpen } from "../hooks/use-phonetics.js";
+import { m } from "../i18n/index.js";
 import { isNotFoundError } from "../services/api-error.js";
 
 const PHONETICS_HREF = "/learn/phonetics";
+const t = m.study.phonetics;
 
 /** One labelled fact, shown only when the representation actually has it — a sound never sees an
  * empty "Level:". */
@@ -42,22 +44,19 @@ export function PhoneticDetailPage() {
   if (phoneticQuery.isPending) {
     body = (
       <p role="status" className="mt-6">
-        Loading sound…
+        {t.loadingSound}
       </p>
     );
   } else if (phoneticQuery.isError) {
     body = isNotFoundError(phoneticQuery.error) ? (
       <NotFoundNotice
-        title="Phonetic representation not found"
-        message="That sound is not available."
+        title={t.notFoundTitle}
+        message={t.notFoundMessage}
         backTo={PHONETICS_HREF}
-        backLabel="Back to phonetics"
+        backLabel={t.back}
       />
     ) : (
-      <LoadError
-        message="We couldn't load this sound. Please try again."
-        onRetry={() => void phoneticQuery.refetch()}
-      />
+      <LoadError message={t.soundLoadError} onRetry={() => void phoneticQuery.refetch()} />
     );
   } else {
     const representation = phoneticQuery.data;
@@ -68,7 +67,7 @@ export function PhoneticDetailPage() {
             <p
               className="text-4xl font-semibold"
               lang={representation.languageId}
-              aria-label={`IPA symbol ${representation.ipa}`}
+              aria-label={t.ipaLabel(representation.ipa)}
             >
               {representation.ipa}
             </p>
@@ -80,9 +79,9 @@ export function PhoneticDetailPage() {
         </div>
 
         <dl className="mt-6 grid grid-cols-2 gap-4 sm:grid-cols-3">
-          {representation.topic ? <Fact label="Topic">{representation.topic.title}</Fact> : null}
+          {representation.topic ? <Fact label={t.topic}>{representation.topic.title}</Fact> : null}
           {representation.levelId ? (
-            <Fact label="Level">{representation.levelId.toUpperCase()}</Fact>
+            <Fact label={t.level}>{representation.levelId.toUpperCase()}</Fact>
           ) : null}
         </dl>
 
@@ -91,7 +90,7 @@ export function PhoneticDetailPage() {
         ) : null}
 
         {representation.exampleWords && representation.exampleWords.length > 0 ? (
-          <ul aria-label="Example words" className="mt-6 grid gap-2">
+          <ul aria-label={t.examples} className="mt-6 grid gap-2">
             {representation.exampleWords.map((example) => (
               <li
                 key={example.word}
@@ -117,7 +116,7 @@ export function PhoneticDetailPage() {
           <AskCoachLink
             context={{ type: "phonetic", phoneticId: representation.id }}
             languageCode={representation.languageId}
-            label="Ask about this sound"
+            label={t.askCoach}
           />
         </p>
       </div>
@@ -126,7 +125,7 @@ export function PhoneticDetailPage() {
 
   return (
     <div className="mx-auto max-w-2xl py-8">
-      <h1 className="text-2xl font-semibold">Phonetics</h1>
+      <h1 className="text-2xl font-semibold">{t.title}</h1>
       {body}
     </div>
   );

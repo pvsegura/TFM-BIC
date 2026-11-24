@@ -6,6 +6,9 @@ import { PhoneticList } from "../components/phonetic-list.js";
 import { PhoneticTopicList } from "../components/phonetic-topic-list.js";
 import { usePhonetics, usePhoneticTopics } from "../hooks/use-phonetics.js";
 import { useSearchParamFilters } from "../hooks/use-search-param-filters.js";
+import { m } from "../i18n/index.js";
+
+const t = m.study.phonetics;
 
 const enc = encodeURIComponent;
 
@@ -25,7 +28,7 @@ function PhoneticsSection({ languageCode }: { languageCode: string }) {
       {topicsQuery.data && topicsQuery.data.topics.length > 0 ? (
         <section aria-labelledby="phonetics-topics-heading" className="mt-6">
           <h2 id="phonetics-topics-heading" className="mb-3 text-lg font-semibold">
-            Topics
+            {t.topics}
           </h2>
           <PhoneticTopicList
             topics={topicsQuery.data.topics}
@@ -37,24 +40,21 @@ function PhoneticsSection({ languageCode }: { languageCode: string }) {
 
       <section aria-labelledby="phonetics-sounds-heading" className="mt-6">
         <h2 id="phonetics-sounds-heading" className="sr-only">
-          Sounds
+          {t.sounds}
         </h2>
         {phoneticsQuery.isPending ? (
           <p role="status" className="mt-4">
-            Loading phonetics…
+            {t.loading}
           </p>
         ) : phoneticsQuery.isError ? (
-          <LoadError
-            message="We couldn't load the phonetics. Please try again."
-            onRetry={() => void phoneticsQuery.refetch()}
-          />
+          <LoadError message={t.loadError} onRetry={() => void phoneticsQuery.refetch()} />
         ) : phoneticsQuery.data.items.length === 0 ? (
-          <p className="mt-4">No sounds match these filters yet.</p>
+          <p className="mt-4">{t.empty}</p>
         ) : (
           <PhoneticList
             items={phoneticsQuery.data.items}
             getHref={(representation) => `/learn/phonetics/${enc(representation.id)}`}
-            label="Phonetics"
+            label={t.listLabel}
           />
         )}
       </section>
@@ -75,7 +75,7 @@ export function PhoneticsPage() {
   return (
     <section aria-labelledby="phonetics-page-heading" className="mx-auto max-w-3xl py-8">
       <h1 id="phonetics-page-heading" className="text-2xl font-semibold">
-        Phonetics
+        {t.title}
       </h1>
       <LanguagePickerSection
         headingId="phonetics-language-heading"

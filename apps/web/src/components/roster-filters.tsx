@@ -2,14 +2,10 @@ import { Button } from "@verbysia/ui";
 import { useState, type FormEvent } from "react";
 
 import type { StudentListParams } from "../services/teacher-dashboard-api.js";
+import { m } from "../i18n/index.js";
+const t = m.study.teacher;
 
-const SORT_LABELS: Record<NonNullable<StudentListParams["sort"]>, string> = {
-  name: "Name",
-  lastActivity: "Last activity",
-  points: "Points",
-  lessonsCompleted: "Lessons completed",
-  accuracy: "Accuracy",
-};
+const SORT_LABELS: Record<NonNullable<StudentListParams["sort"]>, string> = t.sort;
 
 type FilterKey = "q" | "activity" | "sort" | "direction";
 
@@ -40,7 +36,7 @@ export function RosterFilters({
       <form role="search" onSubmit={submit} className="flex items-end gap-2">
         <div>
           <label htmlFor="roster-search" className="text-sm font-medium">
-            Search students
+            {t.searchLabel}
           </label>
           <input
             id="roster-search"
@@ -52,13 +48,13 @@ export function RosterFilters({
           />
         </div>
         <Button type="submit" variant="secondary">
-          Search
+          {t.searchButton}
         </Button>
       </form>
 
       <div>
         <label htmlFor="roster-activity" className="text-sm font-medium">
-          Activity
+          {t.activity}
         </label>
         <select
           id="roster-activity"
@@ -66,15 +62,15 @@ export function RosterFilters({
           onChange={(event) => onChange("activity", event.target.value)}
           className={SELECT_CLASSES}
         >
-          <option value="">All students</option>
-          <option value="active">Active</option>
-          <option value="inactive">Inactive</option>
+          <option value="">{t.allStudents}</option>
+          <option value="active">{t.active}</option>
+          <option value="inactive">{t.inactive}</option>
         </select>
       </div>
 
       <div>
         <label htmlFor="roster-sort" className="text-sm font-medium">
-          Sort by
+          {t.sortBy}
         </label>
         <select
           id="roster-sort"
@@ -92,7 +88,7 @@ export function RosterFilters({
 
       <div>
         <label htmlFor="roster-direction" className="text-sm font-medium">
-          Order
+          {t.order}
         </label>
         <select
           id="roster-direction"
@@ -100,9 +96,9 @@ export function RosterFilters({
           onChange={(event) => onChange("direction", event.target.value)}
           className={SELECT_CLASSES}
         >
-          <option value="">Default</option>
-          <option value="asc">Ascending</option>
-          <option value="desc">Descending</option>
+          <option value="">{t.orderDefault}</option>
+          <option value="asc">{t.orderAsc}</option>
+          <option value="desc">{t.orderDesc}</option>
         </select>
       </div>
     </div>

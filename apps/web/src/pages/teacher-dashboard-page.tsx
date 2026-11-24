@@ -9,6 +9,8 @@ import { StudentRoster } from "../components/student-roster.js";
 import { FORBIDDEN_MESSAGE, isForbidden, plural } from "../components/teacher-labels.js";
 import { useTeacherOverview, useTeacherStudents } from "../hooks/use-teacher-dashboard.js";
 import { studentListSearch } from "../services/teacher-dashboard-api.js";
+import { m } from "../i18n/index.js";
+const t = m.study.teacher;
 
 function Forbidden() {
   return (
@@ -22,16 +24,13 @@ function OverviewSection() {
   const query = useTeacherOverview();
 
   if (query.isPending) {
-    return <p role="status">Loading overview…</p>;
+    return <p role="status">{t.loadingOverview}</p>;
   }
   if (query.isError) {
     return isForbidden(query.error) ? (
       <Forbidden />
     ) : (
-      <LoadError
-        message="We couldn't load the overview. Please try again."
-        onRetry={() => void query.refetch()}
-      />
+      <LoadError message={t.overviewError} onRetry={() => void query.refetch()} />
     );
   }
 
@@ -39,24 +38,23 @@ function OverviewSection() {
   return (
     <>
       <dl className="grid grid-cols-2 gap-3 sm:grid-cols-3 lg:grid-cols-6">
-        <StatCard label="Students" value={formatNumber(o.totalStudents)} />
+        <StatCard label={t.statStudents} value={formatNumber(o.totalStudents)} />
         <StatCard
-          label="Active"
+          label={t.statActive}
           value={formatNumber(o.activeStudents)}
-          hint={`${formatNumber(o.inactiveStudents)} inactive`}
+          hint={t.inactiveHint(formatNumber(o.inactiveStudents))}
         />
-        <StatCard label="Lessons completed" value={formatNumber(o.lessonsCompleted)} />
-        <StatCard label="Exercise attempts" value={formatNumber(o.exerciseAttempts)} />
+        <StatCard label={t.statLessons} value={formatNumber(o.lessonsCompleted)} />
+        <StatCard label={t.statAttempts} value={formatNumber(o.exerciseAttempts)} />
         <StatCard
-          label="Accuracy"
+          label={t.statAccuracy}
           value={o.accuracyPercent === null ? "—" : `${String(o.accuracyPercent)}%`}
-          {...(o.accuracyPercent === null ? { hint: "No attempts yet" } : {})}
+          {...(o.accuracyPercent === null ? { hint: t.noAttempts } : {})}
         />
-        <StatCard label="Points earned" value={formatNumber(o.points)} />
+        <StatCard label={t.statPoints} value={formatNumber(o.points)} />
       </dl>
       <p className="mt-3 text-xs text-primary/70 dark:text-surface/70">
-        Active means at least one lesson or exercise in the last {o.activeWindowDays} days. Accuracy
-        is correct answers out of all exercise attempts, retries included.
+        {t.overviewNote(String(o.activeWindowDays))}
       </p>
     </>
   );
@@ -94,22 +92,17 @@ function StudentsSection() {
 
   let body;
   if (query.isPending) {
-    body = <p role="status">Loading students…</p>;
+    body = <p role="status">{t.loadingStudents}</p>;
   } else if (query.isError) {
     body = isForbidden(query.error) ? (
       <Forbidden />
     ) : (
-      <LoadError
-        message="We couldn't load your students. Please try again."
-        onRetry={() => void query.refetch()}
-      />
+      <LoadError message={t.studentsError} onRetry={() => void query.refetch()} />
     );
   } else if (query.data.total === 0) {
     body = (
       <p className="mt-4 text-primary/80 dark:text-surface/80">
-        {filtered
-          ? "No students match these filters."
-          : "No students are linked to you yet. An administrator links students to your account."}
+        {filtered ? t.noMatch : t.noStudents}
       </p>
     );
   } else {
@@ -119,19 +112,19 @@ function StudentsSection() {
         <div className="mt-4">
           <StudentRoster students={query.data.students} />
         </div>
-        <nav aria-label="Student pages" className="mt-4 flex flex-wrap items-center gap-3">
+        <nav aria-label={t.pagesNav} className="mt-4 flex flex-wrap items-center gap-3">
           <Button variant="secondary" disabled={page <= 1} onClick={() => goToPage(page - 1)}>
-            Previous page
+            {t.previous}
           </Button>
           <p className="text-sm" aria-live="polite">
-            Page {page} of {Math.max(totalPages, 1)} · {plural(total, "student")}
+            {t.page(String(page), String(Math.max(totalPages, 1)))} · {plural(total, "student")}
           </p>
           <Button
             variant="secondary"
             disabled={page >= totalPages}
             onClick={() => goToPage(page + 1)}
           >
-            Next page
+            {t.next}
           </Button>
         </nav>
       </>
@@ -155,16 +148,16 @@ function StudentsSection() {
 export function TeacherDashboardPage() {
   return (
     <div className="py-8">
-      <h1 className="text-2xl font-semibold">Teacher dashboard</h1>
+      <h1 className="text-2xl font-semibold">{t.title}</h1>
       <section aria-labelledby="teacher-overview-heading" className="mt-6">
         <h2 id="teacher-overview-heading" className="mb-3 text-lg font-semibold">
-          Overview
+          {t.overview}
         </h2>
         <OverviewSection />
       </section>
       <section aria-labelledby="teacher-students-heading" className="mt-10">
         <h2 id="teacher-students-heading" className="mb-3 text-lg font-semibold">
-          Students
+          {t.students}
         </h2>
         <StudentsSection />
       </section>

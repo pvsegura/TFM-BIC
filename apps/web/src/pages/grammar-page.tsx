@@ -6,21 +6,14 @@ import { Link } from "../components/app-link.js";
 import { LoadError } from "../components/catalog-notices.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import { useGrammarTopics } from "../hooks/use-grammar.js";
+import { m } from "../i18n/index.js";
+
+const t = m.study.grammar;
 
 const enc = encodeURIComponent;
 
 /** Shelf names for the reference's categories (the API sends them in display order). */
-const CATEGORY_LABELS: Record<GrammarTopicSummaryResponse["category"], string> = {
-  verbs: "Verbs and conjugation",
-  pronouns: "Pronouns and question words",
-  nouns: "Nouns, cases and articles",
-  adjectives: "Adjectives",
-  adverbs: "Adverbs",
-  prepositions: "Prepositions",
-  numbers: "Numbers",
-  connectors: "Connectors",
-  "word-formation": "Word formation",
-};
+const CATEGORY_LABELS: Record<GrammarTopicSummaryResponse["category"], string> = t.categories;
 
 /** Accent-insensitive matching, so "conjugacion" finds "conjugación". */
 function normalise(text: string): string {
@@ -46,15 +39,15 @@ export function GrammarPage() {
 
   const needle = normalise(filter.trim());
   const topics = (topicsQuery.data?.topics ?? []).filter(
-    (t) => needle === "" || normalise(`${t.title} ${t.description}`).includes(needle),
+    (topic) => needle === "" || normalise(`${topic.title} ${topic.description}`).includes(needle),
   );
   const shelves = Object.keys(CATEGORY_LABELS) as GrammarTopicSummaryResponse["category"][];
 
   return (
     <div className="mx-auto max-w-5xl py-8">
-      <h1 className="font-display text-3xl font-bold tracking-tight">Grammar</h1>
+      <h1 className="font-display text-3xl font-bold tracking-tight">{t.title}</h1>
       {languages.length > 1 ? (
-        <nav aria-label="Language" className="mt-3 flex flex-wrap gap-2">
+        <nav aria-label={t.languageNav} className="mt-3 flex flex-wrap gap-2">
           {languages.map((l) => (
             <Link
               key={l.code}
@@ -72,44 +65,36 @@ export function GrammarPage() {
         </nav>
       ) : null}
       <p className="mt-2 max-w-2xl text-primary/75 dark:text-surface/75">
-        Quick reference tables{language ? ` for ${language.name}` : ""}: conjugations, pronouns,
-        adverbs, cases, numbers and word formation. Look something up while you learn.
+        {t.intro(language?.name ?? null)}
       </p>
 
       <label className="mt-5 block max-w-md">
-        <span className="text-sm font-medium">Search the reference</span>
+        <span className="text-sm font-medium">{t.search}</span>
         <input
           type="search"
           value={filter}
           onChange={(event) => {
             setFilter(event.target.value);
           }}
-          placeholder="e.g. past tense, pronouns, adverbs"
+          placeholder={t.searchPlaceholder}
           className="mt-1 w-full rounded-md border border-primary/25 bg-surface px-3 py-2 text-sm dark:border-surface/25 dark:bg-night-paper"
         />
       </label>
 
       {topicsQuery.isPending ? (
         <p role="status" className="mt-6">
-          Loading the reference…
+          {t.loading}
         </p>
       ) : null}
       {topicsQuery.isError ? (
-        <LoadError
-          message="We couldn't load the grammar reference. Please try again."
-          onRetry={() => void topicsQuery.refetch()}
-        />
+        <LoadError message={t.loadError} onRetry={() => void topicsQuery.refetch()} />
       ) : null}
       {topicsQuery.isSuccess && topics.length === 0 ? (
-        <p className="mt-6">
-          {needle === ""
-            ? "No reference topics for this language yet."
-            : "No topic matches that search."}
-        </p>
+        <p className="mt-6">{needle === "" ? t.emptyLanguage : t.emptySearch}</p>
       ) : null}
 
       {shelves.map((shelf) => {
-        const inShelf = topics.filter((t) => t.category === shelf);
+        const inShelf = topics.filter((topic) => topic.category === shelf);
         if (inShelf.length === 0) return null;
         return (
           <section key={shelf} aria-labelledby={`grammar-${shelf}`} className="mt-8">

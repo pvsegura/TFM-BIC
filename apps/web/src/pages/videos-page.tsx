@@ -6,9 +6,11 @@ import { Link } from "../components/app-link.js";
 import { formatDuration } from "../components/format-duration.js";
 import { useLanguageLevels, useLanguages } from "../hooks/use-catalog.js";
 import { useMediaIndex } from "../hooks/use-media.js";
+import { m } from "../i18n/index.js";
 import { fetchContentList } from "../services/catalog-api.js";
 
 const enc = encodeURIComponent;
+const t = m.study.videos;
 
 function contentHref(item: ContentSummaryResponse): string {
   // Lessons open in the lesson player (progress, practice); explanations in the reading view.
@@ -63,9 +65,9 @@ export function VideosPage() {
 
   return (
     <div className="mx-auto max-w-5xl py-8">
-      <h1 className="font-display text-3xl font-bold tracking-tight">Videos</h1>
+      <h1 className="font-display text-3xl font-bold tracking-tight">{t.title}</h1>
       {languages.length > 1 ? (
-        <nav aria-label="Language" className="mt-3 flex flex-wrap gap-2">
+        <nav aria-label={t.languageNav} className="mt-3 flex flex-wrap gap-2">
           {languages.map((l) => (
             <Link
               key={l.code}
@@ -83,25 +85,23 @@ export function VideosPage() {
         </nav>
       ) : null}
       <p className="mt-2 max-w-2xl text-primary/75 dark:text-surface/75">
-        Short explainer lessons made from the course itself{language ? ` — ${language.name}` : ""}.
-        Watch one, then practise what it explains.
+        {t.intro(language?.name ?? null)}
       </p>
       {media.isSuccess && !loading ? (
         <p className="mt-1 text-sm text-primary/65 dark:text-surface/65">
-          {withVideo} of {lessons.length} lessons have a video so far. Words have recorded
-          pronunciation on their cards.
+          {t.coverage(String(withVideo), String(lessons.length))}
         </p>
       ) : null}
 
       {loading ? (
         <p role="status" className="mt-6">
-          Loading videos…
+          {t.loading}
         </p>
       ) : null}
 
       <section aria-labelledby="videos-lessons" className="mt-8">
         <h2 id="videos-lessons" className="text-xl font-semibold">
-          Lessons
+          {t.lessons}
         </h2>
         <ul className="mt-3 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {lessons.map((lesson) => {
@@ -127,14 +127,14 @@ export function VideosPage() {
                       </>
                     ) : (
                       <span className="absolute inset-0 grid place-items-center text-sm text-primary/60 dark:text-surface/60">
-                        Video coming soon
+                        {t.comingSoon}
                       </span>
                     )}
                   </div>
                   <div className="p-3">
                     <p className="text-xs uppercase tracking-wide text-primary/65 dark:text-surface/65">
                       {lesson.levelId.toUpperCase()} ·{" "}
-                      {lesson.type === "lesson" ? "Lesson" : "Explanation"}
+                      {lesson.type === "lesson" ? t.lesson : t.explanation}
                       {entry?.durationSeconds ? ` · ${formatDuration(entry.durationSeconds)}` : ""}
                     </p>
                     <p className="mt-0.5 font-semibold" lang={lesson.instructionLanguage}>
@@ -142,7 +142,7 @@ export function VideosPage() {
                     </p>
                     {entry?.narrator ? (
                       <p className="text-xs text-primary/65 dark:text-surface/65">
-                        Narrated by {entry.narrator}
+                        {t.narratedBy(entry.narrator)}
                       </p>
                     ) : null}
                   </div>

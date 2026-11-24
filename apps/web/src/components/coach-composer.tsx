@@ -1,6 +1,7 @@
 import { useId, useRef, useState } from "react";
 
 import type { CoachMode } from "../services/coach-api.js";
+import { m } from "../i18n/index.js";
 
 /**
  * The mode picker and the message box (M23, ADR-034).
@@ -9,11 +10,12 @@ import type { CoachMode } from "../services/coach-api.js";
  * "Conversation" are different kinds of help, and the backend gives each mode its own instructions
  * and its own tools. The labels are the product's words; the values are the domain's.
  */
+const t = m.study.coach;
 const MODE_LABELS: { value: CoachMode; label: string; hint: string }[] = [
-  { value: "explain", label: "Explain", hint: "Ask about a mistake, a word or a rule" },
-  { value: "practice", label: "Practise", hint: "Get a short activity from your own weak points" },
-  { value: "conversation", label: "Conversation", hint: "Talk in the language you are learning" },
-  { value: "pronunciation", label: "Pronunciation", hint: "How a sound or word is said" },
+  { value: "explain", ...t.modes.explain },
+  { value: "practice", ...t.modes.practice },
+  { value: "conversation", ...t.modes.conversation },
+  { value: "pronunciation", ...t.modes.pronunciation },
 ];
 
 export function CoachComposer({
@@ -56,7 +58,7 @@ export function CoachComposer({
       }}
     >
       <fieldset className="mb-3" disabled={disabled}>
-        <legend className="mb-2 text-sm font-semibold">What kind of help?</legend>
+        <legend className="mb-2 text-sm font-semibold">{t.modeLegend}</legend>
         <div className="flex flex-wrap gap-2">
           {MODE_LABELS.map((option) => (
             <label
@@ -84,7 +86,7 @@ export function CoachComposer({
       </fieldset>
 
       <label htmlFor={inputId} className="block text-sm font-semibold">
-        Your message
+        {t.messageLabel}
       </label>
       <textarea
         id={inputId}
@@ -104,14 +106,12 @@ export function CoachComposer({
         maxLength={maxLength}
         disabled={disabled || isSending}
         aria-describedby={counterId}
-        placeholder="e.g. Why was my answer wrong?"
+        placeholder={t.messagePlaceholder}
         className="mt-1 w-full rounded-lg border border-primary/30 bg-surface p-3 dark:border-surface/30 dark:bg-surface-dark"
       />
       <div className="mt-2 flex items-center justify-between gap-3">
         <p id={counterId} className="text-xs opacity-70">
-          {remaining < 100
-            ? `${String(remaining)} characters left`
-            : "Enter sends, Shift+Enter adds a line"}
+          {remaining < 100 ? t.charactersLeft(String(remaining)) : t.sendHint}
         </p>
         <button
           type="submit"
@@ -120,7 +120,7 @@ export function CoachComposer({
           disabled={disabled || isSending || text.trim() === ""}
           className="min-h-11 rounded-lg bg-accent px-5 py-2 font-medium text-primary hover:opacity-90 disabled:opacity-50"
         >
-          {isSending ? "Sending…" : "Send"}
+          {isSending ? t.sending : t.send}
         </button>
       </div>
     </form>

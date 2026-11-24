@@ -10,6 +10,7 @@ import {
   type CoachTurn,
 } from "../services/coach-api.js";
 import { endingSessionOnUnauthorized, endSessionIfUnauthorized } from "./session-cache.js";
+import { m } from "../i18n/index.js";
 
 /**
  * Query-key root for the AI Coach. The status is per deployment, but the route is authenticated,
@@ -62,11 +63,11 @@ export interface UseCoachConversation {
 function messageFor(error: unknown): string {
   if (error instanceof ApiError) {
     if (error.status === 429) {
-      return "You've reached the AI Coach limit for now. Please try again later — your lessons and exercises are unaffected.";
+      return m.study.coach.limitReached;
     }
     return error.message;
   }
-  return "Something went wrong talking to the AI Coach. Please try again.";
+  return m.study.coach.genericError;
 }
 
 /**

@@ -1,5 +1,6 @@
 import type { CoachPracticeResponse } from "@verbysia/contracts";
 import { useState } from "react";
+import { m } from "../i18n/index.js";
 
 /**
  * A practice activity the coach generated, rendered as plain text in fixed components (M23,
@@ -26,10 +27,7 @@ export function CoachPractice({ practice }: { practice: CoachPracticeResponse })
       <h3 id="coach-practice-heading" className="text-base font-semibold">
         {practice.title}
       </h3>
-      <p className="mt-1 text-sm opacity-80">
-        Practice from your AI Coach. Nothing here is saved or scored — your lesson results are
-        unaffected.
-      </p>
+      <p className="mt-1 text-sm opacity-80">{m.study.coach.practiceIntro}</p>
 
       <ol className="mt-4 space-y-5">
         {practice.items.map((item, itemIndex) => {
@@ -63,8 +61,8 @@ export function CoachPractice({ practice }: { practice: CoachPracticeResponse })
                 <p className="mt-2 text-sm" role="status">
                   {/* The verdict is said in words, never by colour alone (M6 convention). */}
                   <strong>
-                    {pick === item.answerIndex ? "Correct. " : "Not quite. "}
-                    {`The answer is "${item.options[item.answerIndex] ?? ""}". `}
+                    {pick === item.answerIndex ? m.study.coach.correct : m.study.coach.notQuite}
+                    {m.study.coach.answerIs(item.options[item.answerIndex] ?? "")}
                   </strong>
                   {item.explanation}
                 </p>
@@ -74,7 +72,7 @@ export function CoachPractice({ practice }: { practice: CoachPracticeResponse })
                   className="mt-2 rounded border border-primary px-3 py-1 text-sm font-medium text-primary hover:bg-primary/5 dark:border-surface dark:text-surface dark:hover:bg-surface/10"
                   onClick={() => setRevealed((current) => [...current, itemIndex])}
                 >
-                  Check answer
+                  {m.study.coach.checkAnswer}
                 </button>
               )}
             </li>

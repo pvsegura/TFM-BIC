@@ -4,6 +4,8 @@ import { Link } from "./app-link.js";
 
 import { formatNumber } from "./reward-labels.js";
 import { formatLastActivity, formatPercent, plural, studentName } from "./teacher-labels.js";
+import { m } from "../i18n/index.js";
+const t = m.study.teacher;
 
 /** Columns that give way on small screens; their facts move into a summary line under the name. */
 const WIDE_ONLY = "hidden md:table-cell";
@@ -11,8 +13,8 @@ const WIDE_ONLY = "hidden md:table-cell";
 function mobileSummary(student: RosterStudentResponse): string {
   const accuracy =
     student.accuracyPercent === null
-      ? "no attempts yet"
-      : `${String(student.accuracyPercent)}% accuracy`;
+      ? t.noAttemptsYet
+      : t.accuracySummary(String(student.accuracyPercent));
   return `${plural(student.lessonsCompleted, "lesson")} · ${plural(student.points, "point")} · ${accuracy}`;
 }
 
@@ -23,7 +25,7 @@ function ActivityStatus({ active }: { active: boolean }) {
         aria-hidden="true"
         className={`inline-block h-2 w-2 rounded-full ${active ? "bg-green-600" : "bg-primary/30 dark:bg-surface/30"}`}
       />
-      {active ? "Active" : "Inactive"}
+      {active ? t.active : t.inactive}
     </span>
   );
 }
@@ -37,26 +39,26 @@ export function StudentRoster({ students }: { students: readonly RosterStudentRe
   return (
     <div className="overflow-x-auto">
       <table className="w-full border-collapse text-left text-sm">
-        <caption className="sr-only">Your students</caption>
+        <caption className="sr-only">{t.rosterCaption}</caption>
         <thead>
           <tr className="border-b border-primary/20 dark:border-surface/20">
             <th scope="col" className="py-2 pr-3 font-semibold">
-              Student
+              {t.colStudent}
             </th>
             <th scope="col" className="py-2 pr-3 font-semibold">
-              Status
+              {t.colStatus}
             </th>
             <th scope="col" className={`${WIDE_ONLY} py-2 pr-3 font-semibold`}>
-              Lessons completed
+              {t.colLessons}
             </th>
             <th scope="col" className={`${WIDE_ONLY} py-2 pr-3 font-semibold`}>
-              Accuracy
+              {t.colAccuracy}
             </th>
             <th scope="col" className={`${WIDE_ONLY} py-2 pr-3 font-semibold`}>
-              Points
+              {t.colPoints}
             </th>
             <th scope="col" className="hidden py-2 font-semibold sm:table-cell">
-              Last activity
+              {t.colLastActivity}
             </th>
           </tr>
         </thead>
