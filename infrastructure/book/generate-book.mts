@@ -9,59 +9,23 @@
  * The sample (first chapters) goes to apps/web/public/ksiazka/ (public download); the full book to
  * infrastructure/book/out/ (not committed, never public — it is a paid product once A1 is complete).
  */
-import { execFileSync } from "node:child_process";
-import { existsSync, mkdirSync, writeFileSync } from "node:fs";
+import { mkdirSync, writeFileSync } from "node:fs";
 import path from "node:path";
-import { fileURLToPath } from "node:url";
 
 import QRCode from "qrcode";
 
-import { loadContentCatalog } from "../../packages/data/src/content/load-content-catalog.js";
+import {
+  escapeHtml,
+  htmlToPdf,
+  lessonUrl,
+  loadA1,
+  renderBlock,
+  repoRoot,
+  type Block,
+} from "./book-shared.mts";
 
-const SITE = "https://www.verbysia.com";
 const SAMPLE_CHAPTERS = 3;
-/** Challenge days a visitor can open without an account (keep in sync with the web demo). */
-const DEMO_LESSONS = new Set(["es-day-1-greetings", "es-day-2-building-sentences"]);
-
-const repoRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "../..");
 const full = process.argv.includes("--full");
-
-const BROWSERS = [
-  "C:/Program Files/Google/Chrome/Application/chrome.exe",
-  "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
-  "/usr/bin/google-chrome",
-  "/usr/bin/chromium",
-];
-
-function escapeHtml(text: string): string {
-  return text.replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" })[c] ?? c);
-}
-
-function lessonUrl(id: string): string {
-  return DEMO_LESSONS.has(id) ? `${SITE}/wyzwanie-7-dni/demo/${id}` : `${SITE}/learn/lessons/${id}`;
-}
-
-type Block =
-  | { type: "explanation"; text: string }
-  | { type: "example"; text: string; translation?: string; note?: string }
-  | { type: "dialogue"; lines: { speaker: string; text: string; translation?: string }[] };
-
-function renderBlock(block: Block): string {
-  if (block.type === "explanation") return `<p class="explanation">${escapeHtml(block.text)}</p>`;
-  if (block.type === "example") {
-    return `<div class="example"><p class="es" lang="es">${escapeHtml(block.text)}</p>${
-      block.translation ? `<p class="pl">${escapeHtml(block.translation)}</p>` : ""
-    }${block.note ? `<p class="note">${escapeHtml(block.note)}</p>` : ""}</div>`;
-  }
-  return `<table class="dialogue">${block.lines
-    .map(
-      (line) =>
-        `<tr><th>${escapeHtml(line.speaker)}</th><td><span lang="es">${escapeHtml(line.text)}</span>${
-          line.translation ? `<br><span class="pl">${escapeHtml(line.translation)}</span>` : ""
-        }</td></tr>`,
-    )
-    .join("")}</table>`;
-}
 
 const STYLE = `
 @page { size: A4; margin: 18mm 16mm; }
@@ -92,17 +56,8 @@ footer.sample { page-break-before: always; text-align: center; padding-top: 80mm
 `;
 
 async function main() {
-  const result = await loadContentCatalog(path.join(repoRoot, "content"));
-  if (!result.ok) throw new Error("Content is invalid: run pnpm content:validate");
-  const { catalog } = result;
-  const lessons = catalog.content
-    .filter((c) => c.languageId === "es" && c.levelId === "a1" && c.type === "lesson" && c.status === "published")
-    .sort((a, b) => a.order - b.order);
+  const { lessons, exerciseCount } = await loadA1();
   const chapters = full ? lessons : lessons.slice(0, SAMPLE_CHAPTERS);
-  const exerciseCount = new Map<string, number>();
-  for (const exercise of catalog.exercises) {
-    exerciseCount.set(exercise.lessonId, (exerciseCount.get(exercise.lessonId) ?? 0) + 1);
-  }
 
   const chapterHtml = await Promise.all(
     chapters.map(async (lesson, index) => {
@@ -133,23 +88,20 @@ ${chapterHtml.join("\n")}
 ${full ? "" : `<footer class="sample"><h2>To koniec próbki</h2><p>Kolejne rozdziały, ćwiczenia i trener pamięci znajdziesz na www.verbysia.com.</p></footer>`}
 </body></html>`;
 
-  const outDir = full ? path.join(repoRoot, "infrastructure/book/out") : path.join(repoRoot, "apps/web/public/ksiazka");
+  const outDir = full
+    ? path.join(repoRoot, "infrastructure/book/out")
+    : path.join(repoRoot, "apps/web/public/ksiazka");
   mkdirSync(outDir, { recursive: true });
   const base = full ? "verbysia-hiszpanski-a1" : "verbysia-hiszpanski-a1-probka";
-  const htmlFile = path.join(full ? outDir : path.join(repoRoot, "infrastructure/book/out"), `${base}.html`);
+  const htmlFile = path.join(
+    full ? outDir : path.join(repoRoot, "infrastructure/book/out"),
+    `${base}.html`,
+  );
   mkdirSync(path.dirname(htmlFile), { recursive: true });
   writeFileSync(htmlFile, html, "utf8");
 
-  const browser = BROWSERS.find((candidate) => existsSync(candidate));
-  if (!browser) throw new Error("No Chrome/Edge found to render the PDF.");
   const pdf = path.join(outDir, `${base}.pdf`);
-  execFileSync(browser, [
-    "--headless=new",
-    "--disable-gpu",
-    "--no-pdf-header-footer",
-    `--print-to-pdf=${pdf}`,
-    `file:///${htmlFile.replace(/\\/g, "/")}`,
-  ]);
+  htmlToPdf(htmlFile, pdf);
   console.log(`wrote ${path.relative(repoRoot, pdf)} (${String(chapters.length)} chapters)`);
 }
 
