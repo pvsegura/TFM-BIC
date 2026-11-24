@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-nos-gusta",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Lubimy tańczyć.",
+  "explanation": "My → nos gusta + bezokolicznik.",
+  "configuration": {
+    "acceptedAnswers": ["Nos gusta bailar"],
+    "caseSensitive": false
+  }
+}

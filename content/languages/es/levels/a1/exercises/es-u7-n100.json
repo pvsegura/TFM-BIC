@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-n100",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 100?",
+  "explanation": "Sama setka: cien.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "ciento"
+      },
+      {
+        "id": "b",
+        "text": "cien"
+      },
+      {
+        "id": "c",
+        "text": "cientos"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

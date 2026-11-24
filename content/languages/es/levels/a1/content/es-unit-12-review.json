@@ -1,0 +1,86 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 210,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 12. Powtórka i sprawdzian A1",
+  "description": "Zadanie końcowe: planujesz weekend w Hiszpanii i sprawdzasz wszystko, czego nauczyłeś się na poziomie A1.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Gratulacje — to ostatnia jednostka poziomu A1. Zadanie końcowe (EXPRESAR): zaplanuj weekend w Walencji. Musisz się przedstawić, zapytać o drogę, zamówić w restauracji, kupić coś, powiedzieć, co lubisz, i poradzić sobie, gdy coś cię boli. Wszystkie te elementy znasz z poprzednich jednostek."
+    },
+    {
+      "type": "explanation",
+      "text": "Mapa A1 — najważniejsze struktury: ser/estar (kim jesteś vs. stan i miejsce), tener (wiek, objawy), hay/está (istnienie vs. położenie), gustar/doler (zgoda z rzeczą), czasowniki zwrotne (me levanto), ir a + bezokolicznik (plany), porównania (más… que), tryb rozkazujący na co dzień (gira, sigue)."
+    },
+    {
+      "type": "example",
+      "text": "Soy Marta, soy de Polonia y estoy de vacaciones en Valencia.",
+      "translation": "Jestem Marta, jestem z Polski i jestem na wakacjach w Walencji.",
+      "note": "ser — pochodzenie; estar — sytuacja w tej chwili."
+    },
+    {
+      "type": "example",
+      "text": "¿Hay un restaurante típico por aquí? ¿Dónde está?",
+      "translation": "Czy jest tu jakaś typowa restauracja? Gdzie jest?"
+    },
+    {
+      "type": "example",
+      "text": "Me encanta la paella, pero no me gustan los mariscos.",
+      "translation": "Uwielbiam paellę, ale nie lubię owoców morza."
+    },
+    {
+      "type": "example",
+      "text": "Mañana voy a visitar la Ciudad de las Artes y las Ciencias.",
+      "translation": "Jutro zwiedzę Miasto Sztuki i Nauki."
+    },
+    {
+      "type": "explanation",
+      "text": "Najczęstsze błędy Polaków na A1 — sprawdź się: soy cansado → estoy cansado; soy treinta años → tengo treinta años; hay la farmacia → hay una farmacia / la farmacia está; me gusta los libros → me gustan los libros; me duele mi cabeza → me duele la cabeza; hace frío ✓, ale tengo frío (nie estoy frío)."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Recepcionista",
+          "text": "Bienvenida a Valencia. ¿Qué va a hacer este fin de semana?",
+          "translation": "Witamy w Walencji. Co będzie Pani robić w ten weekend?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Voy a ver el centro y la playa. ¿Cómo llego a la playa?",
+          "translation": "Zobaczę centrum i plażę. Jak dojadę na plażę?"
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Tome el autobús diecinueve. La parada está enfrente del hotel.",
+          "translation": "Proszę wsiąść do autobusu dziewiętnaście. Przystanek jest naprzeciwko hotelu."
+        },
+        {
+          "speaker": "Marta",
+          "text": "¿Y hay un buen restaurante cerca de la playa?",
+          "translation": "A czy jest jakaś dobra restauracja blisko plaży?"
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Sí, hay muchos. Le recomiendo La Pepica: la paella es mejor que en el centro.",
+          "translation": "Tak, jest ich wiele. Polecam La Pepica: paella jest lepsza niż w centrum."
+        },
+        {
+          "speaker": "Marta",
+          "text": "¡Perfecto, muchas gracias!",
+          "translation": "Świetnie, bardzo dziękuję!"
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Zadanie: nagraj dwuminutową wypowiedź: przedstaw się, opisz plan weekendu (voy a…), zamów obiad, zapytaj o drogę i powiedz, co lubisz. Potem rozwiąż sprawdzian poniżej — obejmuje wszystkie jednostki A1."
+    }
+  ]
+}

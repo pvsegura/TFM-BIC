@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-vamos-a",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Pojedziemy na plażę.",
+  "explanation": "Vamos a + ir + a la playa.",
+  "configuration": {
+    "acceptedAnswers": ["Vamos a ir a la playa"],
+    "caseSensitive": false
+  }
+}

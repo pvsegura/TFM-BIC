@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-hay-two",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: W mieście są dwa muzea.",
+  "explanation": "Hay + liczba + rzeczownik.",
+  "configuration": {
+    "acceptedAnswers": ["En la ciudad hay dos museos", "Hay dos museos en la ciudad"],
+    "caseSensitive": false
+  }
+}

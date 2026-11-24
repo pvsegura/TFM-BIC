@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-tampoco",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "— No me gusta el café. — Ty też nie lubisz. Co mówisz?",
+  "explanation": "Zgoda z przeczeniem → tampoco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "A mí también."
+      },
+      {
+        "id": "b",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "c",
+        "text": "A mí sí."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

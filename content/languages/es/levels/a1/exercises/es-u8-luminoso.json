@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-luminoso",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy luminoso?",
+  "explanation": "Luminoso — jasny.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Ciemny"
+      },
+      {
+        "id": "b",
+        "text": "Jasny, dobrze nasłoneczniony"
+      },
+      {
+        "id": "c",
+        "text": "Głośny"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -36,7 +36,7 @@ export const marketing = {
     sampleCta: "Pobierz próbkę (PDF)",
     fullTitle: "Pełna wersja",
     fullBody:
-      "Pełne wydanie A1 przygotujemy, gdy kurs A1 będzie kompletny. Nie sprzedajemy książki, która jeszcze nie istnieje.",
+      "Pełne wydanie A1 (21 rozdziałów z kodami QR) jest gotowe. Wkrótce udostępnimy je do pobrania kursantom A1 i Premium w ich panelu.",
     digitalNote: "Na razie tylko wersja cyfrowa (PDF).",
   },
   listening: {
@@ -376,7 +376,7 @@ export const marketing = {
     title: "Kurs hiszpańskiego A1",
     lead: "Poziom A1 według Europejskiego Systemu Opisu Kształcenia Językowego: rozumiesz i używasz prostych, codziennych wyrażeń, przedstawiasz się, pytasz o podstawowe rzeczy i radzisz sobie w prostych sytuacjach.",
     statusNow:
-      "Teraz dostępne bezpłatnie: wyzwanie 7 dni i trzy pierwsze tematy jednostki 1 (alfabet, kraje i narodowości, liczby) — razem 10 tematów i 160 ćwiczeń. Kolejne jednostki A1 są w przygotowaniu i będą dodawane stopniowo.",
+      "Kurs A1 jest kompletny: wyzwanie 7 dni, jednostka 1 i jednostki 2–12 ze sprawdzianem końcowym. Bezpłatnie: wyzwanie i jednostka 1 (10 tematów, 160 ćwiczeń). Jednostki 2–12 są w kursie A1 i w planie Premium.",
     unitsTitle: "Plan kursu A1",
     units: [
       "¡Hola! Me llamo… — przedstawianie się, alfabet, narodowości",

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-n31",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 31?",
+  "explanation": "Od 31 osobno z y: treinta y uno.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "treintiuno"
+      },
+      {
+        "id": "b",
+        "text": "treinta y uno"
+      },
+      {
+        "id": "c",
+        "text": "treinta uno"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

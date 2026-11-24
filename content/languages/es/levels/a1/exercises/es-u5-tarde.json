@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-tarde",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Por la tarde to:",
+  "explanation": "Por la tarde — po południu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Rano"
+      },
+      {
+        "id": "b",
+        "text": "Po południu"
+      },
+      {
+        "id": "c",
+        "text": "W nocy"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

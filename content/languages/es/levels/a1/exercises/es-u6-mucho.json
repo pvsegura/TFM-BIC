@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-mucho",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Me encanta mucho el chocolate to naturalne zdanie.",
+  "explanation": "Encantar jest już mocne — bez mucho.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

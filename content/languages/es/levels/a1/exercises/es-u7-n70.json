@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-n70",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 70?",
+  "explanation": "70 — setenta (bez „ie”).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "sietenta"
+      },
+      {
+        "id": "b",
+        "text": "setenta"
+      },
+      {
+        "id": "c",
+        "text": "sesenta"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "town",
+  "languageId": "es",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "title": "Miasto",
+  "description": "Miejsca w mieście i słowa do opisywania położenia.",
+  "items": [
+    {
+      "id": "es-banco",
+      "status": "published",
+      "order": 10,
+      "lemma": "el banco",
+      "translation": "bank; ławka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los bancos"
+    },
+    {
+      "id": "es-farmacia",
+      "status": "published",
+      "order": 20,
+      "lemma": "la farmacia",
+      "translation": "apteka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las farmacias"
+    },
+    {
+      "id": "es-estacion",
+      "status": "published",
+      "order": 30,
+      "lemma": "la estación",
+      "translation": "dworzec; stacja",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las estaciones"
+    },
+    {
+      "id": "es-plaza",
+      "status": "published",
+      "order": 40,
+      "lemma": "la plaza",
+      "translation": "plac",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las plazas"
+    },
+    {
+      "id": "es-calle",
+      "status": "published",
+      "order": 50,
+      "lemma": "la calle",
+      "translation": "ulica",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las calles"
+    },
+    {
+      "id": "es-parada",
+      "status": "published",
+      "order": 60,
+      "lemma": "la parada",
+      "translation": "przystanek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las paradas"
+    },
+    {
+      "id": "es-cerca",
+      "status": "published",
+      "order": 70,
+      "lemma": "cerca de",
+      "translation": "blisko",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-lejos",
+      "status": "published",
+      "order": 80,
+      "lemma": "lejos de",
+      "translation": "daleko od",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-al-lado",
+      "status": "published",
+      "order": 90,
+      "lemma": "al lado de",
+      "translation": "obok",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-enfrente",
+      "status": "published",
+      "order": 100,
+      "lemma": "enfrente de",
+      "translation": "naprzeciwko",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

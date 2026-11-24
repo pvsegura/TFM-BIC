@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-pequena",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: una cocina ___",
+  "explanation": "Cocina (ż.) → pequeña.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "pequeño"
+      },
+      {
+        "id": "b",
+        "text": "pequeña"
+      },
+      {
+        "id": "c",
+        "text": "pequeños"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

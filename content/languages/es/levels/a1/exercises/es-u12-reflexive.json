@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-reflexive",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Nosotros ___ levantamos a las ocho.",
+  "explanation": "My → nos levantamos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "se"
+      },
+      {
+        "id": "b",
+        "text": "nos"
+      },
+      {
+        "id": "c",
+        "text": "os"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-busco",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Szukam sukienki.",
+  "explanation": "Buscar — szukać: busco un vestido.",
+  "configuration": {
+    "acceptedAnswers": ["Busco un vestido"],
+    "caseSensitive": false
+  }
+}

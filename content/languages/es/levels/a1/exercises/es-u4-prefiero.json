@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-prefiero",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Yo ___ el pescado. (wolę)",
+  "explanation": "Preferir: prefiero — e → ie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "prefero"
+      },
+      {
+        "id": "b",
+        "text": "prefiero"
+      },
+      {
+        "id": "c",
+        "text": "prefiere"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

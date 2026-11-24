@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-a-mi-si",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "— No me gustan las películas de terror. — Ty lubisz. Co mówisz?",
+  "explanation": "Niezgoda z przeczeniem → a mí sí.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "b",
+        "text": "A mí sí."
+      },
+      {
+        "id": "c",
+        "text": "A mí también."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

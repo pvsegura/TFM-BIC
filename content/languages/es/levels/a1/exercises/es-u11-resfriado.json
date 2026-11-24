@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-resfriado",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Tengo un resfriado znaczy:",
+  "explanation": "Un resfriado — przeziębienie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jestem przeziębiony"
+      },
+      {
+        "id": "b",
+        "text": "Mam złamaną nogę"
+      },
+      {
+        "id": "c",
+        "text": "Jestem zmęczony"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

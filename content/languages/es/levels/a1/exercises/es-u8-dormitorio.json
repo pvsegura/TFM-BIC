@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-dormitorio",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Gdzie zwykle śpisz?",
+  "explanation": "El dormitorio — sypialnia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "En la cocina"
+      },
+      {
+        "id": "b",
+        "text": "En el dormitorio"
+      },
+      {
+        "id": "c",
+        "text": "En el baño"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

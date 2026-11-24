@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-enfrente",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy enfrente de?",
+  "explanation": "Enfrente de — naprzeciwko.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Za"
+      },
+      {
+        "id": "b",
+        "text": "Naprzeciwko"
+      },
+      {
+        "id": "c",
+        "text": "Obok"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

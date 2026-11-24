@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-menos",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: To mieszkanie jest mniej drogie niż tamto.",
+  "explanation": "Menos + przymiotnik + que.",
+  "configuration": {
+    "acceptedAnswers": ["Este piso es menos caro que ese", "Este piso es menos caro que aquel"],
+    "caseSensitive": false
+  }
+}

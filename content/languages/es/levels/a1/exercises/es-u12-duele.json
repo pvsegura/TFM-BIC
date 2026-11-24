@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-duele",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw błąd: Me duele mi cabeza.",
+  "explanation": "Z rodzajnikiem: me duele la cabeza.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me duelen la cabeza."
+      },
+      {
+        "id": "b",
+        "text": "Me duele la cabeza."
+      },
+      {
+        "id": "c",
+        "text": "Me duele cabeza."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

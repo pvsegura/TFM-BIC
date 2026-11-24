@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-estos",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me llevo ___ pantalones.",
+  "explanation": "Pantalones (m., mn.) → estos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "este"
+      },
+      {
+        "id": "b",
+        "text": "estos"
+      },
+      {
+        "id": "c",
+        "text": "esta"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

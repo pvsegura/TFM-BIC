@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-final",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Está al final de la calle znaczy:",
+  "explanation": "Al final de — na końcu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jest na początku ulicy"
+      },
+      {
+        "id": "b",
+        "text": "Jest na końcu ulicy"
+      },
+      {
+        "id": "c",
+        "text": "Jest za ulicą"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

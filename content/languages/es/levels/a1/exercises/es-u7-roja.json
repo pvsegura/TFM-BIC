@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-roja",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: una falda ___",
+  "explanation": "Falda (ż.) → roja.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "rojo"
+      },
+      {
+        "id": "b",
+        "text": "roja"
+      },
+      {
+        "id": "c",
+        "text": "rojos"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

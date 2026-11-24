@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-tambien",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "— Me gusta viajar. — Ty też lubisz. Co mówisz?",
+  "explanation": "Zgoda z twierdzeniem → también.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "A mí también."
+      },
+      {
+        "id": "b",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "c",
+        "text": "A mí no."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

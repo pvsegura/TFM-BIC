@@ -8,6 +8,7 @@ Spanish for Polish speakers — Verbysia's main course. Every item is explained 
 - `levels/a1/content/es-day-*` — the free 7-day challenge "7 dni, żeby zacząć mówić po hiszpańsku".
 - `levels/a1/content/es-unit-1-*` — the first three topics of A1 unit 1 (alphabet, countries, numbers), free.
 - `levels/a1/exercises/` — 16 exercises per free topic: 10 topics, 160 exercises (the free block).
+- `levels/a1/content/es-unit-{2..12}-*` — the paid A1 units (no `access` field = course licence), 12 exercises each (16 in the final review) and one vocabulary category each.
 - `vocabulary/` — challenge vocabulary (greetings, core verbs, café and shop, people and family); it feeds the
   memory trainer.
 

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-esta",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Wskazujesz koszulę, którą trzymasz: ¿Cuánto cuesta ___ camisa?",
+  "explanation": "Blisko ciebie → esta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "esta"
+      },
+      {
+        "id": "b",
+        "text": "aquella"
+      },
+      {
+        "id": "c",
+        "text": "ese"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

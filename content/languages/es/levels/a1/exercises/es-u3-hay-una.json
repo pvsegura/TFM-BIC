@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-hay-una",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ¿___ una farmacia cerca?",
+  "explanation": "Pytamy, czy w ogóle istnieje → hay.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Está"
+      },
+      {
+        "id": "b",
+        "text": "Hay"
+      },
+      {
+        "id": "c",
+        "text": "Es"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

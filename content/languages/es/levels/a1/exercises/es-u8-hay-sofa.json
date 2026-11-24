@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-hay-sofa",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: W salonie jest kanapa.",
+  "explanation": "Hay + un sofá.",
+  "configuration": {
+    "acceptedAnswers": ["En el salón hay un sofá", "Hay un sofá en el salón"],
+    "caseSensitive": false
+  }
+}

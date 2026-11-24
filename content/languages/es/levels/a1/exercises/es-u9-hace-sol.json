@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-hace-sol",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Hoy ___ sol.",
+  "explanation": "Hace sol.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "está"
+      },
+      {
+        "id": "b",
+        "text": "hace"
+      },
+      {
+        "id": "c",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

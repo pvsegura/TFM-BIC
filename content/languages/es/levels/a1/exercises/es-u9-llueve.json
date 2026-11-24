@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-llueve",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy llueve?",
+  "explanation": "Llover → llueve.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Pada śnieg"
+      },
+      {
+        "id": "b",
+        "text": "Pada deszcz"
+      },
+      {
+        "id": "c",
+        "text": "Wieje wiatr"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

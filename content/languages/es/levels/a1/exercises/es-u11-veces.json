@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-veces",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy tres veces al día?",
+  "explanation": "Vez/veces — raz/razy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Przez trzy dni"
+      },
+      {
+        "id": "b",
+        "text": "Trzy razy dziennie"
+      },
+      {
+        "id": "c",
+        "text": "Co trzy godziny"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

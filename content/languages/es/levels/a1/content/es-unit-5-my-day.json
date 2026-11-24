@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 5. Mi día — codzienne czynności i godziny",
+  "description": "Opowiadasz o swoim dniu: czasowniki zwrotne, godziny i to, jak często coś robisz.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Czasowniki zwrotne mają na końcu -se: levantarse (wstawać), ducharse (brać prysznic), vestirse (ubierać się), acostarse (kłaść się spać). Zaimek zmienia się z osobą i stoi przed czasownikiem: me levanto, te levantas, se levanta, nos levantamos, os levantáis, se levantan."
+    },
+    {
+      "type": "example",
+      "text": "Me levanto a las siete y me ducho.",
+      "translation": "Wstaję o siódmej i biorę prysznic."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga na zmiany samogłoski: acostarse → me acuesto (o → ue), vestirse → me visto (e → i), despertarse → me despierto (e → ie)."
+    },
+    {
+      "type": "explanation",
+      "text": "Godziny: ¿Qué hora es? — Es la una. Son las dos. Son las tres y diez. Son las cuatro y media. Son las cinco menos cuarto. O której? — ¿A qué hora…? — A las ocho. Pory dnia: por la mañana (rano), por la tarde (po południu), por la noche (wieczorem/w nocy)."
+    },
+    {
+      "type": "example",
+      "text": "¿A qué hora empiezas a trabajar? — A las nueve.",
+      "translation": "O której zaczynasz pracę? — O dziewiątej."
+    },
+    {
+      "type": "explanation",
+      "text": "Jak często: siempre (zawsze), normalmente (zwykle), a menudo (często), a veces (czasami), nunca (nigdy). Nunca może stać przed czasownikiem bez no: Nunca desayuno. Albo z no po: No desayuno nunca."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: ACOSTARSE — wyobraź sobie, że kładziesz się spać na „kości” (acuesto) — twarde łóżko wieczorem. LEVANTARSE kojarz z „lewitować” — rano lewitujesz z łóżka."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "text": "¿Cómo es un día normal para ti?",
+          "translation": "Jak wygląda twój zwykły dzień?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Me levanto a las seis y media, desayuno y voy al trabajo en metro.",
+          "translation": "Wstaję o wpół do siódmej, jem śniadanie i jadę metrem do pracy."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Y a qué hora terminas?",
+          "translation": "A o której kończysz?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "A las cuatro. Por la tarde, a veces voy al gimnasio.",
+          "translation": "O czwartej. Po południu czasami chodzę na siłownię."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Y te acuestas pronto?",
+          "translation": "A kładziesz się wcześnie?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Normalmente sí, a las once.",
+          "translation": "Zwykle tak, o jedenastej."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: opowiedz swój dzień w sześciu zdaniach, z godzinami i jednym słowem częstotliwości (siempre, a veces, nunca)."
+    }
+  ]
+}

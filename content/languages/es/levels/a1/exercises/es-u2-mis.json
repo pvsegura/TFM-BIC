@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-mis",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ hermanos viven en Madrid.",
+  "explanation": "Liczba mnoga → mis hermanos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Mi"
+      },
+      {
+        "id": "b",
+        "text": "Mis"
+      },
+      {
+        "id": "c",
+        "text": "Mío"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-possessive",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ___ padres viven en Polonia.",
+  "explanation": "Liczba mnoga → mis padres.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Mi"
+      },
+      {
+        "id": "b",
+        "text": "Mis"
+      },
+      {
+        "id": "c",
+        "text": "Me"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

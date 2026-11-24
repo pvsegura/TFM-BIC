@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-en-metro",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Voy al trabajo ___ metro.",
+  "explanation": "Środek transportu → en metro.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "a"
+      },
+      {
+        "id": "b",
+        "text": "en"
+      },
+      {
+        "id": "c",
+        "text": "por"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

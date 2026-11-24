@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-nunca",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Nunca przed czasownikiem — bez no.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Nunca no desayuno."
+      },
+      {
+        "id": "b",
+        "text": "Nunca desayuno."
+      },
+      {
+        "id": "c",
+        "text": "No nunca desayuno."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

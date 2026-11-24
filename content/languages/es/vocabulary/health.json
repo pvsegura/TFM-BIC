@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "id": "health",
+  "languageId": "es",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "title": "Zdrowie",
+  "description": "Części ciała, objawy i zwroty w aptece.",
+  "items": [
+    {
+      "id": "es-cabeza",
+      "status": "published",
+      "order": 10,
+      "lemma": "la cabeza",
+      "translation": "głowa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las cabezas"
+    },
+    {
+      "id": "es-garganta",
+      "status": "published",
+      "order": 20,
+      "lemma": "la garganta",
+      "translation": "gardło",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las gargantas"
+    },
+    {
+      "id": "es-espalda",
+      "status": "published",
+      "order": 30,
+      "lemma": "la espalda",
+      "translation": "plecy",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las espaldas"
+    },
+    {
+      "id": "es-estomago",
+      "status": "published",
+      "order": 40,
+      "lemma": "el estómago",
+      "translation": "żołądek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los estómagos"
+    },
+    {
+      "id": "es-doler",
+      "status": "published",
+      "order": 50,
+      "lemma": "doler",
+      "translation": "boleć",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me duele / me duelen — jak gustar."
+    },
+    {
+      "id": "es-fiebre",
+      "status": "published",
+      "order": 60,
+      "lemma": "la fiebre",
+      "translation": "gorączka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-tos",
+      "status": "published",
+      "order": 70,
+      "lemma": "la tos",
+      "translation": "kaszel",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-enfermo",
+      "status": "published",
+      "order": 80,
+      "lemma": "enfermo / enferma",
+      "translation": "chory / chora",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Estoy enfermo."
+    },
+    {
+      "id": "es-pastilla",
+      "status": "published",
+      "order": 90,
+      "lemma": "la pastilla",
+      "translation": "tabletka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las pastillas"
+    },
+    {
+      "id": "es-medico",
+      "status": "published",
+      "order": 100,
+      "lemma": "el médico / la médica",
+      "translation": "lekarz / lekarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los médicos"
+    }
+  ]
+}

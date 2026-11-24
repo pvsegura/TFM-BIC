@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-garganta",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Co to jest la garganta?",
+  "explanation": "La garganta — gardło.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Gardło"
+      },
+      {
+        "id": "b",
+        "text": "Głowa"
+      },
+      {
+        "id": "c",
+        "text": "Brzuch"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

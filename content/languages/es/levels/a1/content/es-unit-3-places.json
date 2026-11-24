@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 3. ¿Dónde está? — miejsca w mieście",
+  "description": "Pytasz o drogę i opisujesz położenie: hay czy está, cerca de, al lado de, enfrente de.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Miejsca w mieście: el banco (bank), la farmacia (apteka), el supermercado, la estación (dworzec), el hospital, la plaza (plac), la parada de autobús (przystanek), el museo, el parque, la calle (ulica)."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — hay czy está? To jedna z trudności dla Polaków. Hay (jest/są — „istnieje”) mówi, ŻE coś gdzieś jest, i łączy się z un/una albo bez rodzajnika: Hay una farmacia aquí. Hay dos bancos. Está/están mówi, GDZIE jest konkretna, znana rzecz — z el/la: La farmacia está en la plaza."
+    },
+    {
+      "type": "example",
+      "text": "¿Hay un supermercado cerca?",
+      "translation": "Czy jest tu w pobliżu supermarket?",
+      "note": "Pytamy, czy w ogóle istnieje → hay."
+    },
+    {
+      "type": "example",
+      "text": "¿Dónde está el supermercado Día?",
+      "translation": "Gdzie jest supermarket Día?",
+      "note": "Pytamy o konkretny → está."
+    },
+    {
+      "type": "explanation",
+      "text": "Położenie: cerca de (blisko), lejos de (daleko od), al lado de (obok), enfrente de (naprzeciwko), entre (między), a la derecha / a la izquierda (po prawej / po lewej). Pamiętaj: de + el = del → al lado del banco."
+    },
+    {
+      "type": "example",
+      "text": "La farmacia está al lado del banco, enfrente de la plaza.",
+      "translation": "Apteka jest obok banku, naprzeciwko placu."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: HAY wymawiasz [aj] — jak okrzyk „aj!”, gdy nagle odkrywasz, że coś istnieje: Aj, hay una farmacia! A ESTÁ łącz z mapą: palec stoi (está) na konkretnym punkcie."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Turista",
+          "text": "Perdone, ¿hay una farmacia por aquí?",
+          "translation": "Przepraszam, czy jest tu gdzieś apteka?"
+        },
+        {
+          "speaker": "Vecino",
+          "text": "Sí, hay una en la calle Mayor.",
+          "translation": "Tak, jest jedna na ulicy Mayor."
+        },
+        {
+          "speaker": "Turista",
+          "text": "¿Y está lejos?",
+          "translation": "A daleko?"
+        },
+        {
+          "speaker": "Vecino",
+          "text": "No, está muy cerca, al lado del banco, a unos cinco minutos.",
+          "translation": "Nie, bardzo blisko, obok banku, jakieś pięć minut stąd."
+        },
+        {
+          "speaker": "Turista",
+          "text": "Muchas gracias.",
+          "translation": "Bardzo dziękuję."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: opisz trzy miejsca w swojej okolicy: Cerca de mi casa hay… El supermercado está…"
+    }
+  ]
+}

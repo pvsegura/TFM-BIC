@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-direction",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jak dojadę na plażę?",
+  "explanation": "¿Cómo llego a…?",
+  "configuration": {
+    "acceptedAnswers": ["¿Cómo llego a la playa?", "Cómo llego a la playa"],
+    "caseSensitive": false
+  }
+}

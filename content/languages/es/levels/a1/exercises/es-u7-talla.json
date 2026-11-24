@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-talla",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy ¿Qué talla usa?",
+  "explanation": "La talla — rozmiar (ubrania).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jaki kolor Pan woli?"
+      },
+      {
+        "id": "b",
+        "text": "Jaki rozmiar Pan nosi?"
+      },
+      {
+        "id": "c",
+        "text": "Ile to kosztuje?"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 2. Mi familia y yo — rodzina i wiek",
+  "description": "Przedstawiasz rodzinę, mówisz, ile kto ma lat, i używasz zaimków dzierżawczych mi, tu, su.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "PERCIBIR — posłuchaj, jak Hiszpanie mówią o rodzinie. Najważniejsze słowa: el padre (ojciec), la madre (matka), los padres (rodzice), el hermano / la hermana (brat / siostra), el hijo / la hija (syn / córka), el abuelo / la abuela (dziadek / babcia), el marido / la mujer (mąż / żona)."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — zaimki dzierżawcze stoją przed rzeczownikiem i zmieniają się tylko w liczbie: mi hermano → mis hermanos (mój brat → moi bracia), tu madre → tus padres, su hijo → sus hijos. Su znaczy jego, jej, ich albo Pana/Pani — z kontekstu wiadomo, o kogo chodzi."
+    },
+    {
+      "type": "example",
+      "text": "Mi hermana tiene veinticinco años.",
+      "translation": "Moja siostra ma dwadzieścia pięć lat."
+    },
+    {
+      "type": "example",
+      "text": "¿Cómo se llaman tus padres?",
+      "translation": "Jak mają na imię twoi rodzice?"
+    },
+    {
+      "type": "example",
+      "text": "Su marido es médico.",
+      "translation": "Jej mąż jest lekarzem.",
+      "note": "Zawód po ser bez rodzajnika."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga, Polacy: los padres to zarówno „ojcowie”, jak i „rodzice”; los hermanos — „bracia” albo „rodzeństwo”; los hijos — „synowie” albo „dzieci”. Forma męska w liczbie mnogiej obejmuje też kobiety."
+    },
+    {
+      "type": "explanation",
+      "text": "Liczby 21–30: veintiuno, veintidós, veintitrés, veinticuatro, veinticinco, veintiséis, veintisiete, veintiocho, veintinueve, treinta. Od 31 piszemy osobno: treinta y uno, cuarenta y dos."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: abuelo brzmi jak „a-buelo”: wyobraź sobie dziadka, który mówi „a buelo, buelo” i kołysze wnuka. Hija zaczyna się od niemego h — jak cicha córka, która wchodzi do domu bez słowa."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Elena",
+          "text": "¿Tienes hermanos?",
+          "translation": "Masz rodzeństwo?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Sí, tengo un hermano y una hermana. Mi hermano se llama Kuba.",
+          "translation": "Tak, mam brata i siostrę. Mój brat ma na imię Kuba."
+        },
+        {
+          "speaker": "Elena",
+          "text": "¿Y cuántos años tiene?",
+          "translation": "A ile ma lat?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Tiene veintiocho años. Está casado y tiene dos hijos.",
+          "translation": "Ma dwadzieścia osiem lat. Jest żonaty i ma dwoje dzieci."
+        },
+        {
+          "speaker": "Elena",
+          "text": "¡Qué bien! Entonces eres tío.",
+          "translation": "Super! To jesteś wujkiem."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: pokaż zdjęcie rodziny (albo wyobraź sobie) i powiedz po hiszpańsku pięć zdań: kto to jest, jak ma na imię i ile ma lat."
+    }
+  ]
+}

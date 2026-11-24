@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-hay-esta",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Konkretna rzecz → está.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Hay la farmacia en la plaza."
+      },
+      {
+        "id": "b",
+        "text": "La farmacia está en la plaza."
+      },
+      {
+        "id": "c",
+        "text": "La farmacia hay en la plaza."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

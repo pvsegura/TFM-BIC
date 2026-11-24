@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-entre",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "La farmacia está ___ el banco y el museo.",
+  "explanation": "Entre — między.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "entre"
+      },
+      {
+        "id": "b",
+        "text": "enfrente"
+      },
+      {
+        "id": "c",
+        "text": "lejos"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

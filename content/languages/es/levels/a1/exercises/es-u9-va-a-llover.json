@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-va-a-llover",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Będzie padać.",
+  "explanation": "Ir a + llover: va a llover.",
+  "configuration": {
+    "acceptedAnswers": ["Va a llover"],
+    "caseSensitive": false
+  }
+}

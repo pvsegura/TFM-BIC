@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-desde",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Odpowiedź na ¿Desde cuándo? to np.:",
+  "explanation": "Desde — od (kiedy).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Desde ayer."
+      },
+      {
+        "id": "b",
+        "text": "Hasta mañana."
+      },
+      {
+        "id": "c",
+        "text": "A las ocho."
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-likes-react",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "prompt": "— No me gusta madrugar. — Ty też nie lubisz:",
+  "explanation": "Zgoda z przeczeniem → tampoco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "A mí también."
+      },
+      {
+        "id": "b",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "c",
+        "text": "A mí sí."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

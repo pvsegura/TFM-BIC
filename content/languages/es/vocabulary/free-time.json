@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "id": "free-time",
+  "languageId": "es",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "title": "Czas wolny",
+  "description": "Upodobania, hobby i reakcje.",
+  "items": [
+    {
+      "id": "es-encantar",
+      "status": "published",
+      "order": 10,
+      "lemma": "encantar",
+      "translation": "uwielbiać (podobać się bardzo)",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me encanta / me encantan."
+    },
+    {
+      "id": "es-bailar",
+      "status": "published",
+      "order": 20,
+      "lemma": "bailar",
+      "translation": "tańczyć",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-viajar",
+      "status": "published",
+      "order": 30,
+      "lemma": "viajar",
+      "translation": "podróżować",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-leer",
+      "status": "published",
+      "order": 40,
+      "lemma": "leer",
+      "translation": "czytać",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-quedar",
+      "status": "published",
+      "order": 50,
+      "lemma": "quedar con",
+      "translation": "spotykać się z",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-deporte",
+      "status": "published",
+      "order": 60,
+      "lemma": "el deporte",
+      "translation": "sport",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los deportes"
+    },
+    {
+      "id": "es-pelicula",
+      "status": "published",
+      "order": 70,
+      "lemma": "la película",
+      "translation": "film",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las películas"
+    },
+    {
+      "id": "es-tambien",
+      "status": "published",
+      "order": 80,
+      "lemma": "también",
+      "translation": "też",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "es-tampoco",
+      "status": "published",
+      "order": 90,
+      "lemma": "tampoco",
+      "translation": "też nie",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "es-tiempo-libre",
+      "status": "published",
+      "order": 100,
+      "lemma": "el tiempo libre",
+      "translation": "czas wolny",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

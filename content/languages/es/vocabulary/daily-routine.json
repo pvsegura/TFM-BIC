@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "id": "daily-routine",
+  "languageId": "es",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "title": "Codzienność",
+  "description": "Czasowniki zwrotne, pory dnia i częstotliwość.",
+  "items": [
+    {
+      "id": "es-levantarse",
+      "status": "published",
+      "order": 10,
+      "lemma": "levantarse",
+      "translation": "wstawać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me levanto."
+    },
+    {
+      "id": "es-ducharse",
+      "status": "published",
+      "order": 20,
+      "lemma": "ducharse",
+      "translation": "brać prysznic",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me ducho."
+    },
+    {
+      "id": "es-vestirse",
+      "status": "published",
+      "order": 30,
+      "lemma": "vestirse",
+      "translation": "ubierać się",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me visto (e → i)."
+    },
+    {
+      "id": "es-acostarse",
+      "status": "published",
+      "order": 40,
+      "lemma": "acostarse",
+      "translation": "kłaść się spać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Me acuesto (o → ue)."
+    },
+    {
+      "id": "es-desayunar",
+      "status": "published",
+      "order": 50,
+      "lemma": "desayunar",
+      "translation": "jeść śniadanie",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-cenar",
+      "status": "published",
+      "order": 60,
+      "lemma": "cenar",
+      "translation": "jeść kolację",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-siempre",
+      "status": "published",
+      "order": 70,
+      "lemma": "siempre",
+      "translation": "zawsze",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "es-a-veces",
+      "status": "published",
+      "order": 80,
+      "lemma": "a veces",
+      "translation": "czasami",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-nunca",
+      "status": "published",
+      "order": 90,
+      "lemma": "nunca",
+      "translation": "nigdy",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "es-por-la-manana",
+      "status": "published",
+      "order": 100,
+      "lemma": "por la mañana",
+      "translation": "rano",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

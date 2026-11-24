@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-tus",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jak mają na imię twoje dzieci?",
+  "explanation": "Tus hijos — twoje dzieci.",
+  "configuration": {
+    "acceptedAnswers": ["¿Cómo se llaman tus hijos?", "Cómo se llaman tus hijos"],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "id": "transport",
+  "languageId": "es",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "title": "Transport i wskazówki",
+  "description": "Środki transportu, bilety i wskazówki drogowe.",
+  "items": [
+    {
+      "id": "es-autobus",
+      "status": "published",
+      "order": 10,
+      "lemma": "el autobús",
+      "translation": "autobus",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los autobuses"
+    },
+    {
+      "id": "es-tren",
+      "status": "published",
+      "order": 20,
+      "lemma": "el tren",
+      "translation": "pociąg",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los trenes"
+    },
+    {
+      "id": "es-billete",
+      "status": "published",
+      "order": 30,
+      "lemma": "el billete",
+      "translation": "bilet",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los billetes"
+    },
+    {
+      "id": "es-a-pie",
+      "status": "published",
+      "order": 40,
+      "lemma": "a pie",
+      "translation": "pieszo",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-recto",
+      "status": "published",
+      "order": 50,
+      "lemma": "todo recto",
+      "translation": "prosto",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-girar",
+      "status": "published",
+      "order": 60,
+      "lemma": "girar",
+      "translation": "skręcać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "¡Gira! (tú) / ¡Gire! (usted)"
+    },
+    {
+      "id": "es-seguir",
+      "status": "published",
+      "order": 70,
+      "lemma": "seguir",
+      "translation": "iść dalej; kontynuować",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "¡Sigue recto!"
+    },
+    {
+      "id": "es-cruzar",
+      "status": "published",
+      "order": 80,
+      "lemma": "cruzar",
+      "translation": "przechodzić (na drugą stronę)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-llegar",
+      "status": "published",
+      "order": 90,
+      "lemma": "llegar",
+      "translation": "docierać, przyjeżdżać",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-salir",
+      "status": "published",
+      "order": 100,
+      "lemma": "salir",
+      "translation": "wychodzić; odjeżdżać",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Salgo (ja)."
+    }
+  ]
+}

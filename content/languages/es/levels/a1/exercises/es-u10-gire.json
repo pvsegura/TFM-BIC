@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-gire",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Nieznajomy mówi do ciebie grzecznie (usted): „___ a la derecha.”",
+  "explanation": "Usted → gire.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Gira"
+      },
+      {
+        "id": "b",
+        "text": "Gire"
+      },
+      {
+        "id": "c",
+        "text": "Giras"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

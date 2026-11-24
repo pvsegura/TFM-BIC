@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "weather",
+  "languageId": "es",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "title": "Pogoda i pory roku",
+  "description": "Pogoda, pory roku i plany.",
+  "items": [
+    {
+      "id": "es-calor",
+      "status": "published",
+      "order": 10,
+      "lemma": "el calor",
+      "translation": "upał, ciepło",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Hace calor / tengo calor."
+    },
+    {
+      "id": "es-frio",
+      "status": "published",
+      "order": 20,
+      "lemma": "el frío",
+      "translation": "zimno",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Hace frío / tengo frío."
+    },
+    {
+      "id": "es-llover",
+      "status": "published",
+      "order": 30,
+      "lemma": "llover",
+      "translation": "padać (deszcz)",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Llueve."
+    },
+    {
+      "id": "es-nevar",
+      "status": "published",
+      "order": 40,
+      "lemma": "nevar",
+      "translation": "padać (śnieg)",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Nieva."
+    },
+    {
+      "id": "es-nublado",
+      "status": "published",
+      "order": 50,
+      "lemma": "nublado",
+      "translation": "pochmurny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Está nublado."
+    },
+    {
+      "id": "es-verano",
+      "status": "published",
+      "order": 60,
+      "lemma": "el verano",
+      "translation": "lato",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los veranos"
+    },
+    {
+      "id": "es-invierno",
+      "status": "published",
+      "order": 70,
+      "lemma": "el invierno",
+      "translation": "zima",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los inviernos"
+    },
+    {
+      "id": "es-primavera",
+      "status": "published",
+      "order": 80,
+      "lemma": "la primavera",
+      "translation": "wiosna",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las primaveras"
+    },
+    {
+      "id": "es-otono",
+      "status": "published",
+      "order": 90,
+      "lemma": "el otoño",
+      "translation": "jesień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los otoños"
+    },
+    {
+      "id": "es-fin-de-semana",
+      "status": "published",
+      "order": 100,
+      "lemma": "el fin de semana",
+      "translation": "weekend",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

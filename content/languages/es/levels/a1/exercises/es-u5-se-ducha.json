@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-se-ducha",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Ella ___ ducha por la mañana.",
+  "explanation": "Ona → se ducha.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "me"
+      },
+      {
+        "id": "b",
+        "text": "se"
+      },
+      {
+        "id": "c",
+        "text": "nos"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

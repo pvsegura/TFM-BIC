@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-me-levanto",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Yo ___ levanto a las siete.",
+  "explanation": "Ja → me levanto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "se"
+      },
+      {
+        "id": "b",
+        "text": "me"
+      },
+      {
+        "id": "c",
+        "text": "te"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

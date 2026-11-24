@@ -167,7 +167,7 @@ export const en: Messages = {
       sampleCta: "Download the sample (PDF)",
       fullTitle: "Full edition",
       fullBody:
-        "We'll publish the full A1 edition once the A1 course is complete. We don't sell a book that doesn't exist yet.",
+        "The full A1 edition (21 chapters with QR codes) is ready. It will soon be available to download for A1 and Premium learners in their dashboard.",
       digitalNote: "Digital version (PDF) only for now.",
     },
     listening: {
@@ -509,7 +509,7 @@ export const en: Messages = {
       title: "A1 Spanish course",
       lead: "Level A1 of the Common European Framework of Reference: you understand and use simple everyday expressions, introduce yourself, ask basic questions and get by in simple situations.",
       statusNow:
-        "Available now for free: the 7-day challenge and the first three topics of unit 1 (alphabet, countries and nationalities, numbers) — 10 topics and 160 exercises in all. Further A1 units are being prepared and will be added gradually.",
+        "The A1 course is complete: the 7-day challenge, unit 1 and units 2–12 with a final test. Free: the challenge and unit 1 (10 topics, 160 exercises). Units 2–12 are part of the A1 course and the Premium plan.",
       unitsTitle: "A1 course plan",
       units: [
         "¡Hola! Me llamo… — introductions, the alphabet, nationalities",

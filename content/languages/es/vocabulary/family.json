@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "family",
+  "languageId": "es",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "title": "Rodzina",
+  "description": "Członkowie rodziny i słowa do opisywania bliskich.",
+  "items": [
+    {
+      "id": "es-abuelo",
+      "status": "published",
+      "order": 10,
+      "lemma": "el abuelo / la abuela",
+      "translation": "dziadek / babcia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los abuelos"
+    },
+    {
+      "id": "es-tio",
+      "status": "published",
+      "order": 20,
+      "lemma": "el tío / la tía",
+      "translation": "wujek / ciocia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los tíos"
+    },
+    {
+      "id": "es-primo",
+      "status": "published",
+      "order": 30,
+      "lemma": "el primo / la prima",
+      "translation": "kuzyn / kuzynka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los primos"
+    },
+    {
+      "id": "es-marido",
+      "status": "published",
+      "order": 40,
+      "lemma": "el marido",
+      "translation": "mąż",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los maridos"
+    },
+    {
+      "id": "es-mujer",
+      "status": "published",
+      "order": 50,
+      "lemma": "la mujer",
+      "translation": "kobieta; żona",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las mujeres"
+    },
+    {
+      "id": "es-novio",
+      "status": "published",
+      "order": 60,
+      "lemma": "el novio / la novia",
+      "translation": "chłopak / dziewczyna (para)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los novios"
+    },
+    {
+      "id": "es-casado",
+      "status": "published",
+      "order": 70,
+      "lemma": "casado / casada",
+      "translation": "żonaty / zamężna",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Estoy casado — z estar."
+    },
+    {
+      "id": "es-soltero",
+      "status": "published",
+      "order": 80,
+      "lemma": "soltero / soltera",
+      "translation": "kawaler / panna",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-mayor",
+      "status": "published",
+      "order": 90,
+      "lemma": "mayor",
+      "translation": "starszy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Mi hermano mayor — mój starszy brat."
+    },
+    {
+      "id": "es-menor",
+      "status": "published",
+      "order": 100,
+      "lemma": "menor",
+      "translation": "młodszy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Mi hermana menor — moja młodsza siostra."
+    }
+  ]
+}

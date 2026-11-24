@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-parada",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Gdzie czekasz na autobus?",
+  "explanation": "La parada de autobús — przystanek.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "En la parada"
+      },
+      {
+        "id": "b",
+        "text": "En la plaza"
+      },
+      {
+        "id": "c",
+        "text": "En el parque"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

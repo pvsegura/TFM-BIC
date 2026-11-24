@@ -24,6 +24,9 @@ export interface ListeningSituation {
   questions: readonly ListeningQuestion[];
 }
 
+/** The language the conversations are spoken in. */
+export const LISTENING_LOCALE = "es-ES";
+
 export const LISTENING_TEST: readonly ListeningSituation[] = [
   {
     id: "airport",

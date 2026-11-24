@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "id": "clothes",
+  "languageId": "es",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "title": "Ubrania i kolory",
+  "description": "Ubrania, kolory i zakupy.",
+  "items": [
+    {
+      "id": "es-camiseta",
+      "status": "published",
+      "order": 10,
+      "lemma": "la camiseta",
+      "translation": "koszulka, T-shirt",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las camisetas"
+    },
+    {
+      "id": "es-pantalones",
+      "status": "published",
+      "order": 20,
+      "lemma": "los pantalones",
+      "translation": "spodnie",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Zwykle w liczbie mnogiej."
+    },
+    {
+      "id": "es-vestido",
+      "status": "published",
+      "order": 30,
+      "lemma": "el vestido",
+      "translation": "sukienka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los vestidos"
+    },
+    {
+      "id": "es-zapatos",
+      "status": "published",
+      "order": 40,
+      "lemma": "los zapatos",
+      "translation": "buty",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-chaqueta",
+      "status": "published",
+      "order": 50,
+      "lemma": "la chaqueta",
+      "translation": "kurtka; marynarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las chaquetas"
+    },
+    {
+      "id": "es-talla",
+      "status": "published",
+      "order": 60,
+      "lemma": "la talla",
+      "translation": "rozmiar (ubrania)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las tallas"
+    },
+    {
+      "id": "es-rojo",
+      "status": "published",
+      "order": 70,
+      "lemma": "rojo / roja",
+      "translation": "czerwony",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-negro",
+      "status": "published",
+      "order": 80,
+      "lemma": "negro / negra",
+      "translation": "czarny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-azul",
+      "status": "published",
+      "order": 90,
+      "lemma": "azul",
+      "translation": "niebieski",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Jedna forma: un abrigo azul, una falda azul."
+    },
+    {
+      "id": "es-buscar",
+      "status": "published",
+      "order": 100,
+      "lemma": "buscar",
+      "translation": "szukać",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    }
+  ]
+}

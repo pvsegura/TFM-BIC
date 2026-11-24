@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-cruza",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy cruza la calle?",
+  "explanation": "Cruzar — przechodzić na drugą stronę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Przejdź przez ulicę"
+      },
+      {
+        "id": "b",
+        "text": "Idź wzdłuż ulicy"
+      },
+      {
+        "id": "c",
+        "text": "Zatrzymaj się na ulicy"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

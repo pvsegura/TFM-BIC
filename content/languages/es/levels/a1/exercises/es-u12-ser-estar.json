@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-ser-estar",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Estar de vacaciones — sytuacja w tej chwili.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy de vacaciones en Valencia."
+      },
+      {
+        "id": "b",
+        "text": "Estoy de vacaciones en Valencia."
+      },
+      {
+        "id": "c",
+        "text": "Tengo de vacaciones en Valencia."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

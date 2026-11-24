@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-fiebre",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mam gorączkę.",
+  "explanation": "Tener fiebre.",
+  "configuration": {
+    "acceptedAnswers": ["Tengo fiebre"],
+    "caseSensitive": false
+  }
+}

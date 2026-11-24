@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-sin-gas",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Woda niegazowana to:",
+  "explanation": "Sin gas — bez gazu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "agua con gas"
+      },
+      {
+        "id": "b",
+        "text": "agua sin gas"
+      },
+      {
+        "id": "c",
+        "text": "agua natural gas"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

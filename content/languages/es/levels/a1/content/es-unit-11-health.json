@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 200,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 11. La salud — u lekarza i w aptece",
+  "description": "Mówisz, co cię boli, opisujesz objawy i radzisz sobie w aptece.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Części ciała: la cabeza (głowa), la garganta (gardło), el estómago (żołądek), la espalda (plecy), el brazo (ręka/ramię), la pierna (noga), el pie (stopa), los ojos (oczy), los oídos (uszy — wewnątrz)."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — doler działa jak gustar: zgadza się z tym, co boli. Me duele la cabeza (boli mnie głowa), me duelen los pies (bolą mnie stopy). Z rodzajnikiem, nie z „mi”: me duele la espalda, nie „me duele mi espalda”."
+    },
+    {
+      "type": "example",
+      "text": "Me duele mucho la garganta y tengo fiebre.",
+      "translation": "Bardzo boli mnie gardło i mam gorączkę."
+    },
+    {
+      "type": "explanation",
+      "text": "Objawy z tener: tengo fiebre (mam gorączkę), tengo tos (mam kaszel), tengo gripe (mam grypę), tengo un resfriado (jestem przeziębiony). Ze estar: estoy enfermo/enferma (jestem chory/chora), estoy mareado (kręci mi się w głowie)."
+    },
+    {
+      "type": "explanation",
+      "text": "W aptece: ¿Tiene algo para el dolor de cabeza? (Ma Pan coś na ból głowy?), ¿Cada cuántas horas? (Co ile godzin?), Tres veces al día (trzy razy dziennie). Numer alarmowy w Hiszpanii i w całej UE: 112."
+    },
+    {
+      "type": "example",
+      "text": "Tome una pastilla cada ocho horas.",
+      "translation": "Proszę brać jedną tabletkę co osiem godzin."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: DUELE — „duel”, pojedynek: ktoś cię uderzył i boli. GARGANTA — „gargantuiczne” gardło, przez które przechodzi całe jedzenie."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Farmacéutica",
+          "text": "Buenos días, ¿qué le pasa?",
+          "translation": "Dzień dobry, co Panu dolega?"
+        },
+        {
+          "speaker": "Adam",
+          "text": "Me duele la garganta y tengo un poco de fiebre.",
+          "translation": "Boli mnie gardło i mam lekką gorączkę."
+        },
+        {
+          "speaker": "Farmacéutica",
+          "text": "¿Desde cuándo?",
+          "translation": "Od kiedy?"
+        },
+        {
+          "speaker": "Adam",
+          "text": "Desde ayer.",
+          "translation": "Od wczoraj."
+        },
+        {
+          "speaker": "Farmacéutica",
+          "text": "Tome estas pastillas tres veces al día. Si no mejora, vaya al médico.",
+          "translation": "Proszę brać te tabletki trzy razy dziennie. Jeśli się nie poprawi, proszę iść do lekarza."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: powiedz farmaceucie, co cię boli i od kiedy, i zapytaj, jak często brać lekarstwo."
+    }
+  ]
+}

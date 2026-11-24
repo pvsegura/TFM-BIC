@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-numbers",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 140,
+  "instructionLanguage": "pl",
+  "prompt": "Noventa y cinco to:",
+  "explanation": "Noventa (90) + cinco (5) = 95.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "59"
+      },
+      {
+        "id": "b",
+        "text": "95"
+      },
+      {
+        "id": "c",
+        "text": "85"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

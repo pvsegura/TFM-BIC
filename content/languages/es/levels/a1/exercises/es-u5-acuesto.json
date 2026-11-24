@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-acuesto",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „kładę się spać”?",
+  "explanation": "Acostarse: o → ue → me acuesto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me acosto"
+      },
+      {
+        "id": "b",
+        "text": "Me acuesto"
+      },
+      {
+        "id": "c",
+        "text": "Me acuesta"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-abuela",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „babcia”?",
+  "explanation": "La abuela — babcia; el abuelo — dziadek.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "la tía"
+      },
+      {
+        "id": "b",
+        "text": "la abuela"
+      },
+      {
+        "id": "c",
+        "text": "la sobrina"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-que-le-pasa",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Lekarz pyta ¿Qué le pasa? Co znaczy?",
+  "explanation": "¿Qué le pasa? — co się dzieje/dolega.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Co Panu dolega?"
+      },
+      {
+        "id": "b",
+        "text": "Ile ma Pan lat?"
+      },
+      {
+        "id": "c",
+        "text": "Gdzie Pan mieszka?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

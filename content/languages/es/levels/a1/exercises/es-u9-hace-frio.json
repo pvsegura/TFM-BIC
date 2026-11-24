@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-hace-frio",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „jest zimno” (pogoda)?",
+  "explanation": "Pogoda → hace frío.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Está frío."
+      },
+      {
+        "id": "b",
+        "text": "Hace frío."
+      },
+      {
+        "id": "c",
+        "text": "Es frío."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

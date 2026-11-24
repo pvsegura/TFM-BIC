@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-ir-a",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Jutro zwiedzę muzeum.",
+  "explanation": "Ir a + bezokolicznik.",
+  "configuration": {
+    "acceptedAnswers": ["Mañana voy a visitar el museo", "Mañana voy a ver el museo"],
+    "caseSensitive": false
+  }
+}

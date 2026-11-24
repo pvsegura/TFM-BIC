@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 170,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 8. Mi casa — mieszkanie i porównania",
+  "description": "Opisujesz mieszkanie: pokoje, meble, hay i proste porównania más… que, menos… que.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Mieszkanie: el piso (mieszkanie), la casa (dom), el salón (salon), la cocina (kuchnia), el dormitorio (sypialnia), el baño (łazienka), la terraza (taras), el balcón. Meble: la cama (łóżko), la mesa (stół), la silla (krzesło), el sofá, el armario (szafa)."
+    },
+    {
+      "type": "example",
+      "text": "Mi piso tiene dos dormitorios, un salón y una cocina pequeña.",
+      "translation": "Moje mieszkanie ma dwie sypialnie, salon i małą kuchnię."
+    },
+    {
+      "type": "explanation",
+      "text": "Opisywanie: grande (duży), pequeño (mały), luminoso (jasny), tranquilo (cichy), moderno, antiguo (stary, zabytkowy), caro (drogi), barato (tani). Położenie w mieszkaniu: en el salón hay un sofá; la cama está al lado de la ventana."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — porównania: más + przymiotnik + que (bardziej… niż), menos + przymiotnik + que (mniej… niż), tan + przymiotnik + como (tak… jak). Nieregularne: mejor (lepszy), peor (gorszy), mayor (starszy), menor (młodszy)."
+    },
+    {
+      "type": "example",
+      "text": "Mi piso es más pequeño que tu casa, pero es más luminoso.",
+      "translation": "Moje mieszkanie jest mniejsze niż twój dom, ale jaśniejsze."
+    },
+    {
+      "type": "example",
+      "text": "Este barrio es tan tranquilo como el centro.",
+      "translation": "Ta dzielnica jest tak samo cicha jak centrum."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga, Polacy: nie mówimy „más bueno”, tylko mejor; nie „más malo”, tylko peor (w znaczeniu jakości)."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: el piso brzmi jak „piso — piętro”: mieszkanie w Hiszpanii to zwykle jedno piętro w bloku. Armario — „armia” ubrań w szafie."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Inés",
+          "text": "¿Cómo es tu nuevo piso?",
+          "translation": "Jakie jest twoje nowe mieszkanie?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Es pequeño, pero muy luminoso. Tiene un dormitorio y una terraza.",
+          "translation": "Jest małe, ale bardzo jasne. Ma jedną sypialnię i taras."
+        },
+        {
+          "speaker": "Inés",
+          "text": "¿Es más caro que el anterior?",
+          "translation": "Jest droższe niż poprzednie?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Sí, un poco más caro, pero está mejor situado.",
+          "translation": "Tak, trochę droższe, ale lepiej położone."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: opisz swoje mieszkanie w pięciu zdaniach i porównaj je z mieszkaniem kogoś z rodziny (más… que, menos… que)."
+    }
+  ]
+}

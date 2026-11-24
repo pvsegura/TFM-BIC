@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-fin-semana",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy este fin de semana?",
+  "explanation": "El fin de semana — weekend.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Ten tydzień"
+      },
+      {
+        "id": "b",
+        "text": "Ten weekend"
+      },
+      {
+        "id": "c",
+        "text": "Koniec miesiąca"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

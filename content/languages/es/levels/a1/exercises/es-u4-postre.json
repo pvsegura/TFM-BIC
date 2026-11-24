@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-postre",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Jak zapytasz, co jest na deser?",
+  "explanation": "Postre — deser; pytamy: ¿Qué hay de…?",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "¿Qué hay de postre?"
+      },
+      {
+        "id": "b",
+        "text": "¿Qué hay de primero?"
+      },
+      {
+        "id": "c",
+        "text": "¿Dónde está el postre?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-n45",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz słownie po hiszpańsku: 45",
+  "explanation": "Od 31: dziesiątki + y + jedności.",
+  "configuration": {
+    "acceptedAnswers": ["cuarenta y cinco"],
+    "caseSensitive": false
+  }
+}

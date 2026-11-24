@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-casado",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy está casado?",
+  "explanation": "Estar casado/casada — być w związku małżeńskim.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Jest rozwiedziony"
+      },
+      {
+        "id": "b",
+        "text": "Jest żonaty"
+      },
+      {
+        "id": "c",
+        "text": "Jest kawalerem"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

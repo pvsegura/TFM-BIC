@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-quedar",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy quedar con amigos?",
+  "explanation": "Quedar con alguien — umawiać się, spotykać.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Zostawać w domu"
+      },
+      {
+        "id": "b",
+        "text": "Spotykać się z przyjaciółmi"
+      },
+      {
+        "id": "c",
+        "text": "Dzwonić do przyjaciół"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

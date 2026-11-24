@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-tio",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Brat twojego ojca to po hiszpańsku:",
+  "explanation": "El tío — wujek / stryj.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "el primo"
+      },
+      {
+        "id": "b",
+        "text": "el tío"
+      },
+      {
+        "id": "c",
+        "text": "el abuelo"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

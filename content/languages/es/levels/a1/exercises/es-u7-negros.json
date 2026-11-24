@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-negros",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: unos zapatos ___",
+  "explanation": "Zapatos (m., mn.) → negros.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "negro"
+      },
+      {
+        "id": "b",
+        "text": "negros"
+      },
+      {
+        "id": "c",
+        "text": "negras"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

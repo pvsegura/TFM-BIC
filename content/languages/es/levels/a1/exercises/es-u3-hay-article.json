@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-hay-article",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Po hay zwykle używamy rodzajnika el/la: Hay la farmacia.",
+  "explanation": "Po hay: un/una albo bez rodzajnika — hay una farmacia.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

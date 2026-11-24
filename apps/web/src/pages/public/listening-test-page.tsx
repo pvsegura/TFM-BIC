@@ -4,6 +4,7 @@ import { useDocumentMeta } from "../../homepage/use-document-meta.js";
 import { m } from "../../i18n/index.js";
 import {
   bandFor,
+  LISTENING_LOCALE,
   LISTENING_TEST,
   type ListeningSituation,
 } from "../../listening-test/listening-test-data.js";
@@ -15,10 +16,11 @@ function speechAvailable(): boolean {
   return typeof window !== "undefined" && "speechSynthesis" in window;
 }
 
-/** A Spanish voice if the device has one (Spain first), otherwise the browser default with lang es-ES. */
-function spanishVoice(): SpeechSynthesisVoice | undefined {
+/** A device voice for the test's locale (exact region first, then the same language). */
+function voiceFor(locale: string): SpeechSynthesisVoice | undefined {
   const voices = window.speechSynthesis.getVoices();
-  return voices.find((v) => v.lang === "es-ES") ?? voices.find((v) => v.lang.startsWith("es"));
+  const language = locale.split("-")[0] ?? locale;
+  return voices.find((v) => v.lang === locale) ?? voices.find((v) => v.lang.startsWith(language));
 }
 
 /**
@@ -278,11 +280,11 @@ function SpeechPlayer({ situation }: { situation: ListeningSituation }) {
     synth.cancel();
     cancelled.current = false;
     const speakers = [...new Set(situation.lines.map((l) => l.speaker))];
-    const voice = spanishVoice();
+    const voice = voiceFor(LISTENING_LOCALE);
     setPlaying(true);
     situation.lines.forEach((line, i) => {
       const utterance = new SpeechSynthesisUtterance(line.text);
-      utterance.lang = "es-ES";
+      utterance.lang = LISTENING_LOCALE;
       if (voice) utterance.voice = voice;
       utterance.rate = rate;
       utterance.pitch = speakers.indexOf(line.speaker) % 2 === 0 ? 1.1 : 0.85;

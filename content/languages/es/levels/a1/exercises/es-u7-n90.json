@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7-n90",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 90?",
+  "explanation": "90 — noventa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "nueventa"
+      },
+      {
+        "id": "b",
+        "text": "noventa"
+      },
+      {
+        "id": "c",
+        "text": "nuevanta"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

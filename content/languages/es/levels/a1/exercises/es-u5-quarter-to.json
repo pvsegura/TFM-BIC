@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-quarter-to",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Son las seis menos cuarto to:",
+  "explanation": "Menos cuarto — za kwadrans: 5:45.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "6:15"
+      },
+      {
+        "id": "b",
+        "text": "5:45"
+      },
+      {
+        "id": "c",
+        "text": "6:45"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

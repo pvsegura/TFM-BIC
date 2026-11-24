@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 160,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 7. De compras — ubrania, kolory, ceny",
+  "description": "Kupujesz ubrania: kolory, rozmiary, liczby do stu i zaimki este, ese, aquel.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Ubrania: la camiseta (koszulka), la camisa (koszula), los pantalones (spodnie), la falda (spódnica), el vestido (sukienka), la chaqueta (kurtka/marynarka), los zapatos (buty), el abrigo (płaszcz)."
+    },
+    {
+      "type": "explanation",
+      "text": "Kolory to przymiotniki — zgadzają się z rzeczownikiem: un vestido rojo, una falda roja, unos zapatos negros. Kolory na -e lub spółgłoskę mają jedną formę dla obu rodzajów: verde, azul, gris (liczba mnoga: verdes, azules, grises)."
+    },
+    {
+      "type": "example",
+      "text": "Busco una chaqueta negra, talla M.",
+      "translation": "Szukam czarnej kurtki, rozmiar M."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — este/esta (ten/ta — blisko mnie), ese/esa (ten/ta — blisko ciebie), aquel/aquella (tamten — daleko). Liczba mnoga: estos/estas, esos/esas. Esto/eso — gdy nie nazywasz rzeczy: ¿Qué es esto?"
+    },
+    {
+      "type": "example",
+      "text": "¿Cuánto cuesta esta camisa? — Veinticinco euros.",
+      "translation": "Ile kosztuje ta koszula? — Dwadzieścia pięć euro."
+    },
+    {
+      "type": "example",
+      "text": "Me llevo estos pantalones.",
+      "translation": "Biorę te spodnie."
+    },
+    {
+      "type": "explanation",
+      "text": "Liczby do 100: cuarenta (40), cincuenta (50), sesenta (60), setenta (70), ochenta (80), noventa (90), cien (100). 45 = cuarenta y cinco, 99 = noventa y nueve. Uwaga: siete → setenta (bez „sie”), nueve → noventa."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: ESTE — „jest tu” (blisko); ESE — „sięgasz” po coś koło rozmówcy; AQUEL — „a hen”, daleko."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Dependiente",
+          "text": "Buenas tardes, ¿qué busca?",
+          "translation": "Dzień dobry, czego Pan szuka?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Busco unos pantalones. ¿Tienen estos en azul?",
+          "translation": "Szukam spodni. Czy macie te w kolorze niebieskim?"
+        },
+        {
+          "speaker": "Dependiente",
+          "text": "Sí. ¿Qué talla usa?",
+          "translation": "Tak. Jaki rozmiar Pan nosi?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "La cuarenta y dos. ¿Cuánto cuestan?",
+          "translation": "Czterdzieści dwa. Ile kosztują?"
+        },
+        {
+          "speaker": "Dependiente",
+          "text": "Cincuenta y nueve euros.",
+          "translation": "Pięćdziesiąt dziewięć euro."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Vale, me los llevo.",
+          "translation": "Dobrze, biorę je."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: opisz, w co jesteś dziś ubrany/ubrana, z kolorami (Llevo una camiseta blanca y…) i zapytaj o cenę dwóch rzeczy."
+    }
+  ]
+}

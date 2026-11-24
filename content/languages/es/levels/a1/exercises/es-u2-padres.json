@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-padres",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Mis padres znaczy tylko „moi ojcowie”.",
+  "explanation": "Los padres to przede wszystkim „rodzice”.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-les",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: A mis padres ___ gusta el teatro.",
+  "explanation": "Im → les gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "les"
+      },
+      {
+        "id": "b",
+        "text": "le"
+      },
+      {
+        "id": "c",
+        "text": "nos"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

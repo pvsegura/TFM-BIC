@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-barato",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Przeciwieństwo caro to:",
+  "explanation": "Caro — drogi; barato — tani.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "barato"
+      },
+      {
+        "id": "b",
+        "text": "antiguo"
+      },
+      {
+        "id": "c",
+        "text": "grande"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-mejor",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „lepszy niż”?",
+  "explanation": "Bueno → mejor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "más bueno que"
+      },
+      {
+        "id": "b",
+        "text": "mejor que"
+      },
+      {
+        "id": "c",
+        "text": "más mejor que"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

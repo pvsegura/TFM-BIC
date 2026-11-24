@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-que-van",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Kelner pyta ¿Qué van a tomar? Co znaczy?",
+  "explanation": "Tomar — tu: zamówić/zjeść/wypić.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Co Państwo zamawiają?"
+      },
+      {
+        "id": "b",
+        "text": "Ile Państwo płacą?"
+      },
+      {
+        "id": "c",
+        "text": "Gdzie Państwo siedzą?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

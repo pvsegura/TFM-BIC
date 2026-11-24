@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-del",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: El hotel está al lado ___ museo.",
+  "explanation": "De + el łączy się w del.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "de el"
+      },
+      {
+        "id": "b",
+        "text": "del"
+      },
+      {
+        "id": "c",
+        "text": "al"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-a-pie",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „pieszo”?",
+  "explanation": "A pie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "en pie"
+      },
+      {
+        "id": "b",
+        "text": "a pie"
+      },
+      {
+        "id": "c",
+        "text": "con pie"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

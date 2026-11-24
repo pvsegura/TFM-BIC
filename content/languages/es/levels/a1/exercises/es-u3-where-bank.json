@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-where-bank",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Gdzie jest bank?",
+  "explanation": "Konkretny bank → dónde está el banco.",
+  "configuration": {
+    "acceptedAnswers": ["¿Dónde está el banco?", "Dónde está el banco"],
+    "caseSensitive": false
+  }
+}

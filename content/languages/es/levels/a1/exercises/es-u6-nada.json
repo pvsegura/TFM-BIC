@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-nada",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: W ogóle nie lubię piłki nożnej.",
+  "explanation": "No me gusta nada… — wcale nie lubię.",
+  "configuration": {
+    "acceptedAnswers": ["No me gusta nada el fútbol"],
+    "caseSensitive": false
+  }
+}

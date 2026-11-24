@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-encantan",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ los perros.",
+  "explanation": "Los perros (mn.) → encantan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "encanta"
+      },
+      {
+        "id": "b",
+        "text": "encantan"
+      },
+      {
+        "id": "c",
+        "text": "encanto"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

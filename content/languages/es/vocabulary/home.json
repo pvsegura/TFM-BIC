@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "id": "home",
+  "languageId": "es",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "title": "Mieszkanie",
+  "description": "Pokoje, meble i przymiotniki do opisu mieszkania.",
+  "items": [
+    {
+      "id": "es-piso",
+      "status": "published",
+      "order": 10,
+      "lemma": "el piso",
+      "translation": "mieszkanie; piętro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los pisos"
+    },
+    {
+      "id": "es-cocina",
+      "status": "published",
+      "order": 20,
+      "lemma": "la cocina",
+      "translation": "kuchnia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las cocinas"
+    },
+    {
+      "id": "es-dormitorio",
+      "status": "published",
+      "order": 30,
+      "lemma": "el dormitorio",
+      "translation": "sypialnia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los dormitorios"
+    },
+    {
+      "id": "es-salon",
+      "status": "published",
+      "order": 40,
+      "lemma": "el salón",
+      "translation": "salon, pokój dzienny",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los salones"
+    },
+    {
+      "id": "es-bano",
+      "status": "published",
+      "order": 50,
+      "lemma": "el baño",
+      "translation": "łazienka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los baños"
+    },
+    {
+      "id": "es-cama",
+      "status": "published",
+      "order": 60,
+      "lemma": "la cama",
+      "translation": "łóżko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las camas"
+    },
+    {
+      "id": "es-silla",
+      "status": "published",
+      "order": 70,
+      "lemma": "la silla",
+      "translation": "krzesło",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las sillas"
+    },
+    {
+      "id": "es-armario",
+      "status": "published",
+      "order": 80,
+      "lemma": "el armario",
+      "translation": "szafa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los armarios"
+    },
+    {
+      "id": "es-grande",
+      "status": "published",
+      "order": 90,
+      "lemma": "grande",
+      "translation": "duży",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-mejor",
+      "status": "published",
+      "order": 100,
+      "lemma": "mejor",
+      "translation": "lepszy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective",
+      "note": "Nie mówimy „más bueno”."
+    }
+  ]
+}

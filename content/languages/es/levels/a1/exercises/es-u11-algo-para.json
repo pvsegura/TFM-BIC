@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-algo-para",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Ma Pan coś na ból głowy?",
+  "explanation": "¿Tiene algo para…?",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Tiene algo para el dolor de cabeza?",
+      "Tiene algo para el dolor de cabeza"
+    ],
+    "caseSensitive": false
+  }
+}

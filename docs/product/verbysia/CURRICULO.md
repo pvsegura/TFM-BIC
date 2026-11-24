@@ -2,7 +2,7 @@
 
 Basado en los descriptores del MCER. Cada unidad sigue la estructura del [Método PUENTE](METODO-PUENTE.md#5-estructura-de-una-unidad)
 y, cuando aplica, trabaja una fila de la matriz de dificultades del hablante polaco.
-Estado: **A1 en producción** (reto de 7 días publicado; unidades 1–12 por escribir). A2–B2 están `planned` en el
+Estado: **A1 completo** (2026-11-25): reto de 7 días y unidad 1 gratuitos (10 temas, 160 ejercicios); unidades 2–12 de pago (licencia COURSE_A1 o Premium), cada una con lección, 12 ejercicios (16 en la 12) y una categoría de vocabulario. A2–B2 están `planned` en el
 catálogo y **no se venden** hasta que existan.
 
 ## Reto «7 dni, żeby zacząć mówić po hiszpańsku» (gratuito)

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-vegetariana",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Kobieta, która nie je mięsa, mówi:",
+  "explanation": "Kobieta → vegetariana; cecha → ser.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy vegetariano."
+      },
+      {
+        "id": "b",
+        "text": "Soy vegetariana."
+      },
+      {
+        "id": "c",
+        "text": "Estoy vegetariana."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-traer",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 90,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Przyniesie mi Pan wodę?",
+  "explanation": "¿Me trae…? — grzeczna prośba.",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Me trae agua?",
+      "Me trae agua",
+      "¿Me trae un agua?",
+      "Me trae un agua",
+      "¿Me trae agua, por favor?",
+      "Me trae agua, por favor"
+    ],
+    "caseSensitive": false
+  }
+}

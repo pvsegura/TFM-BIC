@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-tengo-frio",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Jak powiesz „jest mi zimno”?",
+  "explanation": "O sobie → tengo frío.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Estoy frío."
+      },
+      {
+        "id": "b",
+        "text": "Tengo frío."
+      },
+      {
+        "id": "c",
+        "text": "Hace frío yo."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

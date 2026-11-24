@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-mujer",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 120,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy mi mujer w zdaniu „Mi mujer es polaca”?",
+  "explanation": "La mujer — kobieta, a także żona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Moja córka"
+      },
+      {
+        "id": "b",
+        "text": "Moja żona"
+      },
+      {
+        "id": "c",
+        "text": "Moja siostra"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

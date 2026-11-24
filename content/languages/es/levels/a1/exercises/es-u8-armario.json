@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-armario",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Gdzie trzymasz ubrania?",
+  "explanation": "El armario — szafa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "En el armario"
+      },
+      {
+        "id": "b",
+        "text": "En la mesa"
+      },
+      {
+        "id": "c",
+        "text": "En la silla"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

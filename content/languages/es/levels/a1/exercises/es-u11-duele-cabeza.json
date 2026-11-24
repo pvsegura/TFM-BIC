@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-duele-cabeza",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ la cabeza.",
+  "explanation": "Jedna rzecz → duele.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "duelen"
+      },
+      {
+        "id": "b",
+        "text": "duele"
+      },
+      {
+        "id": "c",
+        "text": "dolor"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

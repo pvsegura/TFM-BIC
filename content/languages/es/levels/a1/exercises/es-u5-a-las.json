@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-a-las",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: O ósmej.",
+  "explanation": "Godzina „o której”: a las…",
+  "configuration": {
+    "acceptedAnswers": ["A las ocho"],
+    "caseSensitive": false
+  }
+}

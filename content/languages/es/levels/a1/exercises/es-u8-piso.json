@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-piso",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy piso w zdaniu „Vivo en un piso”?",
+  "explanation": "Piso — mieszkanie; także piętro.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Podłoga"
+      },
+      {
+        "id": "b",
+        "text": "Mieszkanie (w bloku)"
+      },
+      {
+        "id": "c",
+        "text": "Dom jednorodzinny"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

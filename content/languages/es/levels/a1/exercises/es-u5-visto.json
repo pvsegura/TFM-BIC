@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-visto",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „ubieram się”?",
+  "explanation": "Vestirse: e → i → me visto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Me vesto"
+      },
+      {
+        "id": "b",
+        "text": "Me visto"
+      },
+      {
+        "id": "c",
+        "text": "Me viste"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

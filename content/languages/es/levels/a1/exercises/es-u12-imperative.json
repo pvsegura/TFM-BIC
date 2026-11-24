@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-imperative",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 100,
+  "instructionLanguage": "pl",
+  "prompt": "Recepcjonistka mówi do ciebie (usted): „___ el autobús diecinueve.”",
+  "explanation": "Usted → tome.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Toma"
+      },
+      {
+        "id": "b",
+        "text": "Tome"
+      },
+      {
+        "id": "c",
+        "text": "Tomas"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 190,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 10. Moverse por la ciudad — transport i wskazówki",
+  "description": "Pytasz o drogę, rozumiesz wskazówki i kupujesz bilet: tryb rozkazujący na co dzień.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Transport: el autobús, el metro, el tren, el taxi, la bicicleta, a pie (pieszo). Uwaga na przyimki: en autobús, en metro, en tren (środek transportu), ale a pie (pieszo)."
+    },
+    {
+      "type": "example",
+      "text": "Voy al trabajo en metro, pero vuelvo a pie.",
+      "translation": "Jeżdżę do pracy metrem, ale wracam pieszo."
+    },
+    {
+      "type": "explanation",
+      "text": "Wskazówki: sigue todo recto (idź prosto), gira a la derecha / a la izquierda (skręć w prawo / w lewo), toma la segunda calle (weź drugą ulicę), cruza la plaza (przejdź przez plac), está al final de la calle (jest na końcu ulicy)."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — tryb rozkazujący dla tú to zwykle forma 3. osoby czasu teraźniejszego: tú tomas → ¡toma!, sigues → ¡sigue!, giras → ¡gira!, cruzas → ¡cruza! Dla usted forma się zmienia: tome, siga, gire, cruce — usłyszysz ją od nieznajomych i w informacjach."
+    },
+    {
+      "type": "example",
+      "text": "Perdone, ¿cómo llego a la catedral? — Siga todo recto y gire la segunda a la izquierda.",
+      "translation": "Przepraszam, jak dojść do katedry? — Proszę iść prosto i skręcić w drugą w lewo."
+    },
+    {
+      "type": "explanation",
+      "text": "Bilety: un billete sencillo (bilet w jedną stronę), de ida y vuelta (w obie strony), un abono (bilet okresowy). ¿Cuánto cuesta un billete a Toledo? ¿A qué hora sale el próximo tren?"
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: GIRA — „żyroskop”, coś się obraca: skręcasz. SIGUE — „sygnał”, który każe iść dalej prosto."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Turista",
+          "text": "Perdone, ¿la estación de tren está lejos?",
+          "translation": "Przepraszam, czy dworzec kolejowy jest daleko?"
+        },
+        {
+          "speaker": "Señor",
+          "text": "No mucho. Siga recto hasta la plaza, cruce la plaza y gire a la derecha.",
+          "translation": "Niezbyt. Proszę iść prosto do placu, przejść przez plac i skręcić w prawo."
+        },
+        {
+          "speaker": "Turista",
+          "text": "¿Puedo ir a pie?",
+          "translation": "Mogę iść pieszo?"
+        },
+        {
+          "speaker": "Señor",
+          "text": "Sí, son diez minutos. O puede tomar el autobús número cinco.",
+          "translation": "Tak, to dziesięć minut. Albo może Pan wsiąść do autobusu numer pięć."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: wytłumacz po hiszpańsku drogę od swojego domu do najbliższego sklepu (sigue, gira, cruza…)."
+    }
+  ]
+}

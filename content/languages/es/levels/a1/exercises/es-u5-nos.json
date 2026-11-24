@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5-nos",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Wstajemy wcześnie.",
+  "explanation": "My → nos levantamos.",
+  "configuration": {
+    "acceptedAnswers": ["Nos levantamos pronto", "Nos levantamos temprano"],
+    "caseSensitive": false
+  }
+}

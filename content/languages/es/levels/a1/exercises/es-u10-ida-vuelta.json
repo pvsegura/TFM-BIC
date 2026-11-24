@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-ida-vuelta",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy billete de ida y vuelta?",
+  "explanation": "Ida y vuelta — tam i z powrotem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Bilet w jedną stronę"
+      },
+      {
+        "id": "b",
+        "text": "Bilet w obie strony"
+      },
+      {
+        "id": "c",
+        "text": "Bilet miesięczny"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

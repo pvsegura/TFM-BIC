@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-verano",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest „lato”?",
+  "explanation": "El verano — lato.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "el invierno"
+      },
+      {
+        "id": "b",
+        "text": "el verano"
+      },
+      {
+        "id": "c",
+        "text": "el otoño"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

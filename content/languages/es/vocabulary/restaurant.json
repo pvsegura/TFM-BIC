@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "id": "restaurant",
+  "languageId": "es",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "title": "Restauracja",
+  "description": "Dania, napoje i zwroty przy stole.",
+  "items": [
+    {
+      "id": "es-primero",
+      "status": "published",
+      "order": 10,
+      "lemma": "de primero",
+      "translation": "na pierwsze danie",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-segundo",
+      "status": "published",
+      "order": 20,
+      "lemma": "de segundo",
+      "translation": "na drugie danie",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-postre",
+      "status": "published",
+      "order": 30,
+      "lemma": "el postre",
+      "translation": "deser",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los postres"
+    },
+    {
+      "id": "es-pescado",
+      "status": "published",
+      "order": 40,
+      "lemma": "el pescado",
+      "translation": "ryba (jako danie)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los pescados",
+      "note": "Żywa ryba to el pez."
+    },
+    {
+      "id": "es-carne",
+      "status": "published",
+      "order": 50,
+      "lemma": "la carne",
+      "translation": "mięso",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las carnes"
+    },
+    {
+      "id": "es-pollo",
+      "status": "published",
+      "order": 60,
+      "lemma": "el pollo",
+      "translation": "kurczak",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los pollos"
+    },
+    {
+      "id": "es-ensalada",
+      "status": "published",
+      "order": 70,
+      "lemma": "la ensalada",
+      "translation": "sałatka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "plural": "las ensaladas"
+    },
+    {
+      "id": "es-pan",
+      "status": "published",
+      "order": 80,
+      "lemma": "el pan",
+      "translation": "chleb",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "plural": "los panes"
+    },
+    {
+      "id": "es-preferir",
+      "status": "published",
+      "order": 90,
+      "lemma": "preferir",
+      "translation": "woleć",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Prefiero — e → ie."
+    },
+    {
+      "id": "es-traer",
+      "status": "published",
+      "order": 100,
+      "lemma": "traer",
+      "translation": "przynosić",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "¿Me trae…? — przyniesie mi Pan…?"
+    }
+  ]
+}

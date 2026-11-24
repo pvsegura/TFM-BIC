@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-izquierda",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy a la izquierda?",
+  "explanation": "Izquierda — lewa strona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Po prawej"
+      },
+      {
+        "id": "b",
+        "text": "Po lewej"
+      },
+      {
+        "id": "c",
+        "text": "Prosto"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

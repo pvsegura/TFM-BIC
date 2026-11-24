@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-duelen-pies",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Me ___ los pies.",
+  "explanation": "Liczba mnoga → duelen.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "duele"
+      },
+      {
+        "id": "b",
+        "text": "duelen"
+      },
+      {
+        "id": "c",
+        "text": "duelo"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

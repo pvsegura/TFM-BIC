@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-comparative",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: La paella aquí es ___ que en el centro.",
+  "explanation": "Bueno → mejor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "más buena"
+      },
+      {
+        "id": "b",
+        "text": "mejor"
+      },
+      {
+        "id": "c",
+        "text": "más mejor"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

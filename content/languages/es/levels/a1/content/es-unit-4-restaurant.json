@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 130,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 4. En el restaurante — zamawianie i płacenie",
+  "description": "Zamawiasz menu dnia, wybierasz pierwsze i drugie danie, prosisz o rachunek i wyrażasz preferencje.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "W Hiszpanii w dni powszednie wiele restauracji proponuje el menú del día: de primero (pierwsze danie), de segundo (drugie danie), de postre (deser), z napojem i chlebem w stałej cenie."
+    },
+    {
+      "type": "example",
+      "text": "De primero, una ensalada; de segundo, pescado.",
+      "translation": "Na pierwsze sałatka, na drugie ryba."
+    },
+    {
+      "type": "example",
+      "text": "¿Qué hay de postre?",
+      "translation": "Co jest na deser?"
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — uprzejme prośby: Quería… (chciałbym/chciałabym), Me gustaría… (chciałbym), Para mí… (dla mnie…), ¿Me trae…? (przyniesie mi Pan…?). Wszystkie są naturalne i grzeczne."
+    },
+    {
+      "type": "example",
+      "text": "Para mí, el pollo, por favor.",
+      "translation": "Dla mnie kurczak, poproszę."
+    },
+    {
+      "type": "example",
+      "text": "¿Me trae un poco más de pan?",
+      "translation": "Przyniesie mi Pan trochę więcej chleba?"
+    },
+    {
+      "type": "explanation",
+      "text": "Preferencje: Prefiero el pescado (wolę rybę). Soy vegetariano/vegetariana (jestem wegetarianinem/wegetarianką). Sin gluten (bez glutenu). ¿Lleva carne? (czy jest w tym mięso?)."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: POSTRE brzmi jak „po-stół” — deser przychodzi PO głównym stole. PRIMERO jak „premiera” — pierwsze danie otwiera posiłek."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "text": "¿Qué van a tomar?",
+          "translation": "Co Państwo zamawiają?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Yo quería el menú del día. De primero, gazpacho, y de segundo, pollo asado.",
+          "translation": "Ja poproszę menu dnia. Na pierwsze gazpacho, a na drugie pieczonego kurczaka."
+        },
+        {
+          "speaker": "Camarero",
+          "text": "¿Y para usted?",
+          "translation": "A dla Pana?"
+        },
+        {
+          "speaker": "Michał",
+          "text": "Para mí, ensalada y pescado. ¿El pescado lleva salsa?",
+          "translation": "Dla mnie sałatka i ryba. Czy ryba jest z sosem?"
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Sí, una salsa de limón. ¿Y para beber?",
+          "translation": "Tak, z sosem cytrynowym. A do picia?"
+        },
+        {
+          "speaker": "Michał",
+          "text": "Agua sin gas, por favor.",
+          "translation": "Woda niegazowana, poproszę."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: zamów na głos pełne menu dnia — pierwsze danie, drugie, deser i napój — a na końcu poproś o rachunek."
+    }
+  ]
+}

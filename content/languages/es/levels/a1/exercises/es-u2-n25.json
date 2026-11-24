@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-n25",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Jak jest 25?",
+  "explanation": "21–29 piszemy razem: veinticinco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "veinte y cinco"
+      },
+      {
+        "id": "b",
+        "text": "veinticinco"
+      },
+      {
+        "id": "c",
+        "text": "veintecinco"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

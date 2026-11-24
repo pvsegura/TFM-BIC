@@ -169,7 +169,7 @@ export const es: Messages = {
       sampleCta: "Descargar la muestra (PDF)",
       fullTitle: "Edición completa",
       fullBody:
-        "Publicaremos la edición completa de A1 cuando el curso A1 esté terminado. No vendemos un libro que todavía no existe.",
+        "La edición completa de A1 (21 capítulos con códigos QR) está lista. Pronto se podrá descargar desde el panel para los alumnos de A1 y Premium.",
       digitalNote: "Por ahora solo en versión digital (PDF).",
     },
     listening: {
@@ -513,7 +513,7 @@ export const es: Messages = {
       title: "Curso de español A1",
       lead: "Nivel A1 del Marco Común Europeo de Referencia: entiendes y usas expresiones cotidianas sencillas, te presentas, haces preguntas básicas y te desenvuelves en situaciones simples.",
       statusNow:
-        "Disponible ahora gratis: el reto de 7 días y los tres primeros temas de la unidad 1 (alfabeto, países y nacionalidades, números): 10 temas y 160 ejercicios en total. Las demás unidades de A1 están en preparación y se irán añadiendo.",
+        "El curso A1 está completo: el reto de 7 días, la unidad 1 y las unidades 2–12 con evaluación final. Gratis: el reto y la unidad 1 (10 temas, 160 ejercicios). Las unidades 2–12 forman parte del curso A1 y del plan Premium.",
       unitsTitle: "Plan del curso A1",
       units: [
         "¡Hola! Me llamo… — presentarse, el alfabeto, nacionalidades",

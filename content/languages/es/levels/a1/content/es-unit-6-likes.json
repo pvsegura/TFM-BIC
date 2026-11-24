@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 6. ¿Qué te gusta? — upodobania i czas wolny",
+  "description": "Mówisz, co lubisz, a czego nie, i reagujesz na upodobania innych: también, tampoco, a mí sí, a mí no.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Przypomnienie: gustar zgadza się z rzeczą, którą lubisz. Me gusta el cine (jedna rzecz), me gustan las películas (wiele), me gusta leer (czynność). Osoby: me, te, le (jemu/jej/Panu), nos, os, les."
+    },
+    {
+      "type": "example",
+      "text": "A mi madre le gusta mucho cocinar.",
+      "translation": "Moja mama bardzo lubi gotować.",
+      "note": "A mi madre… le gusta — podwójne wskazanie osoby to norma po hiszpańsku."
+    },
+    {
+      "type": "explanation",
+      "text": "Encantar działa tak samo, ale znaczy „uwielbiać”: Me encanta el chocolate. Me encantan los perros. Nie mówimy „me encanta mucho” — encantar już jest bardzo mocne."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — reakcje: jeśli ktoś mówi Me gusta el fútbol, a ty też lubisz → A mí también. Jeśli nie lubisz → A mí no. Jeśli ktoś mówi No me gusta el café, a ty też nie → A mí tampoco. Jeśli ty lubisz → A mí sí."
+    },
+    {
+      "type": "example",
+      "text": "— No me gusta madrugar. — A mí tampoco.",
+      "translation": "— Nie lubię wcześnie wstawać. — Ja też nie."
+    },
+    {
+      "type": "example",
+      "text": "— Me encanta la playa. — ¿Sí? A mí no.",
+      "translation": "— Uwielbiam plażę. — Tak? A ja nie."
+    },
+    {
+      "type": "explanation",
+      "text": "Czas wolny: leer (czytać), bailar (tańczyć), viajar (podróżować), hacer deporte (uprawiać sport), ir al cine (chodzić do kina), quedar con amigos (spotykać się z przyjaciółmi), escuchar música (słuchać muzyki)."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: TAMPOCO — „tam też nie”: wyobraź sobie, że wskazujesz miejsce i kręcisz głową. TAMBIÉN — „tam bien”: tam też jest dobrze, kiwasz głową."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Sofía",
+          "text": "¿Qué haces en tu tiempo libre?",
+          "translation": "Co robisz w wolnym czasie?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Me encanta bailar y me gusta mucho viajar.",
+          "translation": "Uwielbiam tańczyć i bardzo lubię podróżować."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "¡A mí también! ¿Te gusta el fútbol?",
+          "translation": "Ja też! Lubisz piłkę nożną?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "No, no me gusta nada.",
+          "translation": "Nie, w ogóle nie lubię."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "A mí tampoco. Prefiero el baloncesto.",
+          "translation": "Ja też nie. Wolę koszykówkę."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: powiedz trzy rzeczy, które lubisz, jedną, którą uwielbiasz, i jedną, której nie lubisz. Poproś kogoś, żeby zareagował: también / tampoco / sí / no."
+    }
+  ]
+}

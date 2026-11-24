@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-gustan",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: No me ___ los mariscos.",
+  "explanation": "Liczba mnoga → gustan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "gusta"
+      },
+      {
+        "id": "b",
+        "text": "gustan"
+      },
+      {
+        "id": "c",
+        "text": "gusto"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

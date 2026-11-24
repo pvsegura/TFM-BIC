@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-clothes",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 150,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Busco una camisa ___",
+  "explanation": "Camisa (ż.) → blanca.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "blanco"
+      },
+      {
+        "id": "b",
+        "text": "blanca"
+      },
+      {
+        "id": "c",
+        "text": "blancos"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

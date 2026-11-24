@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-lejos",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Przeciwieństwo cerca to:",
+  "explanation": "Cerca — blisko; lejos — daleko.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "lejos"
+      },
+      {
+        "id": "b",
+        "text": "entre"
+      },
+      {
+        "id": "c",
+        "text": "aquí"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

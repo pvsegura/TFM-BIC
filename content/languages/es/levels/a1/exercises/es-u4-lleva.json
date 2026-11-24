@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-lleva",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy ¿Lleva carne?",
+  "explanation": "Llevar — tu: zawierać.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Czy jest w tym mięso?"
+      },
+      {
+        "id": "b",
+        "text": "Czy mięso jest drogie?"
+      },
+      {
+        "id": "c",
+        "text": "Czy jest mięso na deser?"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

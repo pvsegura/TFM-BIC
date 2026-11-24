@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4-primero",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy de primero?",
+  "explanation": "De primero — pierwsze danie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Na deser"
+      },
+      {
+        "id": "b",
+        "text": "Na pierwsze danie"
+      },
+      {
+        "id": "c",
+        "text": "Do picia"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

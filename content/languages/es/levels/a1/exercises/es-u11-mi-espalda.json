@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-mi-espalda",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Me duele mi espalda to naturalne zdanie.",
+  "explanation": "Z rodzajnikiem: me duele la espalda.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

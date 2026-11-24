@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-primavera",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Która pora roku to la primavera?",
+  "explanation": "La primavera — wiosna.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Wiosna"
+      },
+      {
+        "id": "b",
+        "text": "Jesień"
+      },
+      {
+        "id": "c",
+        "text": "Zima"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

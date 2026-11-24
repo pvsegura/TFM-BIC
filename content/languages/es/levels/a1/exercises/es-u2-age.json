@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-age",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Mój brat ma trzydzieści lat.",
+  "explanation": "Wiek → tener: mi hermano tiene treinta años.",
+  "configuration": {
+    "acceptedAnswers": ["Mi hermano tiene treinta años"],
+    "caseSensitive": false
+  }
+}

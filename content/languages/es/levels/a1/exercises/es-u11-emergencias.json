@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-emergencias",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Jaki jest numer alarmowy w Hiszpanii?",
+  "explanation": "112 działa w całej UE.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "997"
+      },
+      {
+        "id": "b",
+        "text": "112"
+      },
+      {
+        "id": "c",
+        "text": "911"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

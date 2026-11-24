@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-proximo",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 80,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: O której odjeżdża następny pociąg?",
+  "explanation": "Salir — odjeżdżać: sale el próximo tren.",
+  "configuration": {
+    "acceptedAnswers": ["¿A qué hora sale el próximo tren?", "A qué hora sale el próximo tren"],
+    "caseSensitive": false
+  }
+}

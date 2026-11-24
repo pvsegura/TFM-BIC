@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u11-enfermo",
+  "lessonId": "es-unit-11-health",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 50,
+  "instructionLanguage": "pl",
+  "prompt": "Jak powie kobieta „jestem chora”?",
+  "explanation": "Stan → estoy enferma.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Soy enferma."
+      },
+      {
+        "id": "b",
+        "text": "Estoy enferma."
+      },
+      {
+        "id": "c",
+        "text": "Tengo enferma."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-su",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Co może znaczyć su madre?",
+  "explanation": "Su ma wiele znaczeń; wyjaśnia je kontekst.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Tylko „jego matka”"
+      },
+      {
+        "id": "b",
+        "text": "Jego, jej, ich albo Pana/Pani matka"
+      },
+      {
+        "id": "c",
+        "text": "Moja matka"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

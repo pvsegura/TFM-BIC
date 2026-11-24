@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-recto",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 30,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy sigue todo recto?",
+  "explanation": "Seguir recto — iść prosto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Skręć w prawo"
+      },
+      {
+        "id": "b",
+        "text": "Idź prosto"
+      },
+      {
+        "id": "c",
+        "text": "Zawróć"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

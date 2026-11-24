@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3-esta-la",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: ¿Dónde ___ la estación?",
+  "explanation": "Konkretna rzecz z la → está.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "hay"
+      },
+      {
+        "id": "b",
+        "text": "está"
+      },
+      {
+        "id": "c",
+        "text": "es"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

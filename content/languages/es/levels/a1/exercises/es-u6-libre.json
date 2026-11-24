@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-libre",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Co znaczy tiempo libre?",
+  "explanation": "Tiempo libre — czas wolny.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Wolny czas"
+      },
+      {
+        "id": "b",
+        "text": "Zły czas"
+      },
+      {
+        "id": "c",
+        "text": "Pogoda"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

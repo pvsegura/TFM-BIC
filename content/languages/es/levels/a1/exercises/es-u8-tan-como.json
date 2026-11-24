@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8-tan-como",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 60,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Mi barrio es ___ tranquilo ___ el tuyo.",
+  "explanation": "Równość: tan + przymiotnik + como.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "más / como"
+      },
+      {
+        "id": "b",
+        "text": "tan / como"
+      },
+      {
+        "id": "c",
+        "text": "tan / que"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-polite-order",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 110,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku: Chciałabym paellę, poproszę.",
+  "explanation": "Quería… / me gustaría… — grzeczna prośba.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Quería una paella, por favor",
+      "Quería la paella, por favor",
+      "Me gustaría una paella, por favor"
+    ],
+    "caseSensitive": false
+  }
+}

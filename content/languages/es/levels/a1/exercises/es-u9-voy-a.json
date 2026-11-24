@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9-voy-a",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 70,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: Mañana ___ a estudiar.",
+  "explanation": "Ir a + bezokolicznik: voy a estudiar (a już jest w zdaniu).",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "voy"
+      },
+      {
+        "id": "b",
+        "text": "vas a"
+      },
+      {
+        "id": "c",
+        "text": "voy a"
+      }
+    ],
+    "correctOptionId": "a"
+  }
+}

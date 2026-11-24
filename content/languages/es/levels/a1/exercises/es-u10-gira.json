@@ -1,0 +1,17 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u10-gira",
+  "lessonId": "es-unit-10-getting-around",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 40,
+  "instructionLanguage": "pl",
+  "prompt": "Napisz po hiszpańsku (do kolegi): Skręć w lewo.",
+  "explanation": "Tú → gira a la izquierda.",
+  "configuration": {
+    "acceptedAnswers": ["Gira a la izquierda"],
+    "caseSensitive": false
+  }
+}

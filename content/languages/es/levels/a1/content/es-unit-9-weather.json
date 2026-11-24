@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 180,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 9. El tiempo — pogoda, pory roku i plany",
+  "description": "Mówisz o pogodzie i porach roku oraz o planach z ir a + bezokolicznik.",
+  "blocks": [
+    {
+      "type": "explanation",
+      "text": "Pogoda po hiszpańsku używa kilku czasowników: hace calor / frío / sol / viento (jest gorąco / zimno / słonecznie / wietrznie), hace buen / mal tiempo (jest ładna / brzydka pogoda), llueve (pada deszcz), nieva (pada śnieg), está nublado (jest pochmurno), hay niebla (jest mgła)."
+    },
+    {
+      "type": "example",
+      "text": "Hoy hace mucho calor: estamos a treinta y cinco grados.",
+      "translation": "Dziś jest bardzo gorąco: mamy trzydzieści pięć stopni."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga, Polacy: po polsku „jest zimno”, po hiszpańsku „robi zimno” — hace frío. A o sobie: tengo frío (jest mi zimno), tengo calor (jest mi gorąco). Nigdy: estoy frío."
+    },
+    {
+      "type": "explanation",
+      "text": "Pory roku: la primavera (wiosna), el verano (lato), el otoño (jesień), el invierno (zima). Miesiące piszemy małą literą: enero, febrero, marzo… diciembre."
+    },
+    {
+      "type": "explanation",
+      "text": "ESTRUCTURAR — plany: ir a + bezokolicznik. Voy a viajar (będę podróżować / zamierzam podróżować), vas a…, va a…, vamos a…, vais a…, van a… Z określeniem czasu: mañana, este fin de semana, el próximo mes, en verano."
+    },
+    {
+      "type": "example",
+      "text": "Este fin de semana vamos a ir a la playa porque va a hacer sol.",
+      "translation": "W ten weekend pojedziemy na plażę, bo będzie słonecznie."
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — skojarzenie: LLUEVE — „luje”! Wyobraź sobie, że z nieba leje się woda. NIEVA — niebo (nie-va) sypie śniegiem."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Carmen",
+          "text": "¿Qué tiempo hace en Polonia en invierno?",
+          "translation": "Jaka jest pogoda w Polsce zimą?"
+        },
+        {
+          "speaker": "Tomasz",
+          "text": "Hace mucho frío y a veces nieva.",
+          "translation": "Jest bardzo zimno i czasami pada śnieg."
+        },
+        {
+          "speaker": "Carmen",
+          "text": "¿Y qué vas a hacer en Navidad?",
+          "translation": "A co będziesz robić na święta?"
+        },
+        {
+          "speaker": "Tomasz",
+          "text": "Voy a ir a Varsovia a ver a mi familia.",
+          "translation": "Pojadę do Warszawy, do rodziny."
+        }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Misja: opisz dzisiejszą pogodę i powiedz trzy rzeczy, które zrobisz w ten weekend (voy a…)."
+    }
+  ]
+}

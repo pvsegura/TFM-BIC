@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6-le-gusta",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10,
+  "instructionLanguage": "pl",
+  "prompt": "Uzupełnij: A mi hermano ___ gusta el fútbol.",
+  "explanation": "Jemu → le gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "me"
+      },
+      {
+        "id": "b",
+        "text": "le"
+      },
+      {
+        "id": "c",
+        "text": "te"
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}

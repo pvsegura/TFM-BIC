@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u12-tener-age",
+  "lessonId": "es-unit-12-review",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 20,
+  "instructionLanguage": "pl",
+  "prompt": "Popraw błąd: Soy veinte años.",
+  "explanation": "Wiek → tener.",
+  "configuration": {
+    "options": [
+      {
+        "id": "a",
+        "text": "Estoy veinte años."
+      },
+      {
+        "id": "b",
+        "text": "Tengo veinte años."
+      },
+      {
+        "id": "c",
+        "text": "Hay veinte años."
+      }
+    ],
+    "correctOptionId": "b"
+  }
+}
