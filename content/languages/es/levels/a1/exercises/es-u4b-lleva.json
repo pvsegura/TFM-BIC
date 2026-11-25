@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-lleva",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Jak zapytasz, czy w daniu jest mięso?",
+  "explanation": "O skład pytamy czasownikiem llevar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Lleva carne?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Es carne?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Hay carne en ti?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

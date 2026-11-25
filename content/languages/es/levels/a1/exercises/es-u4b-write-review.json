@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-write-review",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 46,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Napisz krótką opinię o restauracji, w której jesz dziś obiad (5–6 zdań): co zamawiasz, jak smakuje, cena i czy polecasz.",
+  "explanation": "Sprawdź de primero/de segundo, estar bueno o smaku i liczby przy cenie.",
+  "configuration": {
+    "modelAnswer": "Hoy como en un restaurante pequeño del centro. De primero tomo una ensalada y de segundo, pescado a la plancha. El pescado está muy bueno y el postre es casero. El menú cuesta catorce euros. Lo recomiendo.",
+    "checklist": [
+      "co zamówiłeś (de primero / de segundo)",
+      "opinia o smaku",
+      "cena",
+      "rekomendacja"
+    ],
+    "minWords": 25,
+    "maxWords": 100
+  }
+}

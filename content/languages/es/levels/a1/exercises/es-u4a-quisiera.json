@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-quisiera",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "Co znaczy przy zamawianiu „Quería un vino”?",
+  "explanation": "Quería działa jak polskie „chciałbym” — łagodzi prośbę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Chciałbym wino."
+      },
+      {
+        "id": "opt-b",
+        "text": "Chciałem wino (wczoraj)."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mam wino."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

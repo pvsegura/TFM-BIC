@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-reading-price",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: ile kosztuje zwykle menu dnia?",
+  "explanation": "Cuesta entre doce y dieciocho euros.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "12–18 €"
+      },
+      {
+        "id": "opt-b",
+        "text": "5–8 €"
+      },
+      {
+        "id": "opt-c",
+        "text": "25–35 €"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

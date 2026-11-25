@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-listen-drinks",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog w barze: co pije Lucía?",
+  "explanation": "Para mí, una caña — małe piwo z beczki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Małe piwo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Czerwone wino."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kawę z mlekiem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

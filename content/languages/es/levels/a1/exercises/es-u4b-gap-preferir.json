@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-gap-preferir",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formy preferir.",
+  "explanation": "Prefiero, preferimos (nosotros bez zmiany samogłoski).",
+  "configuration": {
+    "text": "Yo ___ la carne y nosotros ___ el pescado.",
+    "gaps": [
+      {
+        "accepted": ["prefiero"]
+      },
+      {
+        "accepted": ["preferimos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

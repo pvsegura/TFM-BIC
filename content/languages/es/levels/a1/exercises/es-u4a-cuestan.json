@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-cuestan",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: ¿Cuánto ___ las croquetas?",
+  "explanation": "Wiele rzeczy → cuestan.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "cuestan"
+      },
+      {
+        "id": "opt-b",
+        "text": "cuesta"
+      },
+      {
+        "id": "opt-c",
+        "text": "cuestas"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

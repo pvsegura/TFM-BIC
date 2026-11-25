@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-gap-querer",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 14,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formy querer.",
+  "explanation": "Querer: e → ie poza nosotros/vosotros.",
+  "configuration": {
+    "text": "Yo ___ un café y vosotros ___ agua.",
+    "gaps": [
+      {
+        "accepted": ["quiero"]
+      },
+      {
+        "accepted": ["queréis"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

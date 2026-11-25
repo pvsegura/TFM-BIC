@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-write-bar",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 45,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz krótki dialog w barze (6–8 replik): zamówienie dla dwóch osób, pytanie o tapa, cena i płatność.",
+  "explanation": "Sprawdź grzeczne formy (quería, ¿me pones…?) i cuesta/cuestan.",
+  "configuration": {
+    "modelAnswer": "—Hola, ¿qué os pongo? —Para mí, un cortado. —Y yo quería un zumo de naranja. —¿Algo para comer? —¿Qué son las bravas? —Son patatas con salsa picante. —Una ración, por favor. ¿Cuánto es? —Son ocho euros. —Con tarjeta, por favor.",
+    "checklist": [
+      "zamówienie dla dwóch osób",
+      "pytanie ¿Qué es / son…?",
+      "pytanie o cenę",
+      "sposób płatności"
+    ],
+    "minWords": 30,
+    "maxWords": 110
+  }
+}

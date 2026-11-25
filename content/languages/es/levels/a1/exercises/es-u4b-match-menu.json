@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-match-menu",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 12,
+    "phase": "connect"
+  },
+  "prompt": "Połącz części menu z przykładem.",
+  "explanation": "Primero — zupa/sałatka, segundo — mięso/ryba, postre — deser.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "de primero",
+        "right": "ensalada mixta"
+      },
+      {
+        "left": "de segundo",
+        "right": "pollo asado"
+      },
+      {
+        "left": "de postre",
+        "right": "flan"
+      },
+      {
+        "left": "de beber",
+        "right": "agua sin gas"
+      }
+    ]
+  }
+}

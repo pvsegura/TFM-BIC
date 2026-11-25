@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-reading-sobremesa",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: sobremesa to deser podawany po obiedzie.",
+  "explanation": "La sobremesa to rozmowy przy stole po posiłku.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

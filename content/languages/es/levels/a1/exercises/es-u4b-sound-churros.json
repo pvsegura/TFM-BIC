@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-sound-churros",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 32,
+    "phase": "sound"
+  },
+  "prompt": "W słowie churros ch wymawiamy jak polskie cz.",
+  "explanation": "Tak: [czuros]; rr mocne.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

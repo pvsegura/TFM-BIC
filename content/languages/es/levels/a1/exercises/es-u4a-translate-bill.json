@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-translate-bill",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 38,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Rachunek, proszę.",
+  "explanation": "La cuenta, por favor.",
+  "configuration": {
+    "acceptedAnswers": ["La cuenta, por favor.", "La cuenta por favor"],
+    "caseSensitive": false
+  }
+}

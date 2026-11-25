@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-listen-sauce",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: o co Tomás prosi kelnera?",
+  "explanation": "¿Puede ser sin salsa? — rybę bez sosu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "O rybę bez sosu."
+      },
+      {
+        "id": "opt-b",
+        "text": "O dodatkowy chleb."
+      },
+      {
+        "id": "opt-c",
+        "text": "O inny stolik."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-alergico",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Soy alérgica ___ marisco.",
+  "explanation": "Alérgico a + el = al.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "al"
+      },
+      {
+        "id": "opt-b",
+        "text": "del"
+      },
+      {
+        "id": "opt-c",
+        "text": "de"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

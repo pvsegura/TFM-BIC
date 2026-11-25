@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-sound-cana",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 31,
+    "phase": "sound"
+  },
+  "prompt": "Caña wymawia się [kania], a cana [kana] to inne słowo.",
+  "explanation": "Tak — ñ to polskie ń; la cana znaczy „siwy włos”.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

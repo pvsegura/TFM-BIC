@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-translate-order",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Na pierwsze zupa, a na drugie ryba z grilla.",
+  "explanation": "De primero…, y de segundo… a la plancha.",
+  "configuration": {
+    "acceptedAnswers": [
+      "De primero, sopa, y de segundo, pescado a la plancha.",
+      "De primero sopa y de segundo pescado a la plancha."
+    ],
+    "caseSensitive": false
+  }
+}

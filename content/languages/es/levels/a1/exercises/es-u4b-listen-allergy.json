@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-listen-allergy",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Tomás ma alergię na orzechy.",
+  "explanation": "Soy alérgico a la lactosa — na laktozę.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

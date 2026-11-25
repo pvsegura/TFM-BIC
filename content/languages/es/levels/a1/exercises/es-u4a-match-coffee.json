@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-match-coffee",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Połącz rodzaje kawy z opisem.",
+  "explanation": "Solo = espresso; cortado = z odrobiną mleka; con leche = z dużą ilością mleka.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "un café solo",
+        "right": "espresso"
+      },
+      {
+        "left": "un cortado",
+        "right": "espresso z odrobiną mleka"
+      },
+      {
+        "left": "un café con leche",
+        "right": "kawa z dużą ilością mleka"
+      },
+      {
+        "left": "un descafeinado",
+        "right": "kawa bezkofeinowa"
+      }
+    ]
+  }
+}

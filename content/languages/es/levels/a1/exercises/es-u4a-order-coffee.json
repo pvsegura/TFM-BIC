@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-order-coffee",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 17,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż prośbę: Poda mi Pan kawę z mlekiem?",
+  "explanation": "W barze naturalne jest ¿Me pone(s)…?",
+  "configuration": {
+    "items": ["¿Me", "pone", "un", "café", "con", "leche?"],
+    "joiner": " "
+  }
+}

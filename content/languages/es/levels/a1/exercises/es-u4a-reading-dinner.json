@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-reading-dinner",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 34,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: Hiszpanie jedzą kolację zwykle po 21:00.",
+  "explanation": "La cena, después de las nueve de la noche.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

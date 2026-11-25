@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-carta-menu",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "Co znaczy la carta w restauracji?",
+  "explanation": "La carta to karta dań; el menú to zestaw w stałej cenie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Karta dań (menu)."
+      },
+      {
+        "id": "opt-b",
+        "text": "Zestaw dnia."
+      },
+      {
+        "id": "opt-c",
+        "text": "Rachunek."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

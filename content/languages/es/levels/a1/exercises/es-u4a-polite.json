@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-polite",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 13,
+    "phase": "structure"
+  },
+  "prompt": "Która prośba jest najgrzeczniejsza?",
+  "explanation": "Me gustaría… brzmi najuprzejmiej; dame bez por favor — szorstko.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me gustaría probar la tortilla."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dame la tortilla."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tortilla."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

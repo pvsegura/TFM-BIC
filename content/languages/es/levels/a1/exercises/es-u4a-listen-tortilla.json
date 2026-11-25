@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-listen-tortilla",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: z czego jest tortilla de patatas?",
+  "explanation": "Es una tortilla con huevos, patata y cebolla.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Z jajek, ziemniaków i cebuli."
+      },
+      {
+        "id": "opt-b",
+        "text": "Z mąki kukurydzianej."
+      },
+      {
+        "id": "opt-c",
+        "text": "Z sera i szynki."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

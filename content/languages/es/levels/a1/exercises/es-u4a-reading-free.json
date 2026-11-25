@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-reading-free",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 33,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: w jakich miastach tapa jest często gratis do napoju?",
+  "explanation": "En algunas ciudades, como Granada o León, con cada bebida el bar te pone una tapa gratis.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W Granadzie i Leónie."
+      },
+      {
+        "id": "opt-b",
+        "text": "W Madrycie i Barcelonie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tylko na wybrzeżu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

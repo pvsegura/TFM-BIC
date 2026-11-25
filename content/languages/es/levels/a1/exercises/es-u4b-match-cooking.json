@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-match-cooking",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Połącz sposób przygotowania z tłumaczeniem.",
+  "explanation": "A la plancha = z grilla; frito = smażony; crudo = surowy.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "a la plancha",
+        "right": "z grilla"
+      },
+      {
+        "left": "frito",
+        "right": "smażony"
+      },
+      {
+        "left": "al horno",
+        "right": "z piekarnika"
+      },
+      {
+        "left": "crudo",
+        "right": "surowy"
+      },
+      {
+        "left": "picante",
+        "right": "ostry"
+      }
+    ]
+  }
+}

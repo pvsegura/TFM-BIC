@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-order-table",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 29,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż prośbę: Stolik dla czterech osób, proszę.",
+  "explanation": "Una mesa para + liczba.",
+  "configuration": {
+    "items": ["Una", "mesa", "para", "cuatro,", "por", "favor."],
+    "joiner": " "
+  }
+}

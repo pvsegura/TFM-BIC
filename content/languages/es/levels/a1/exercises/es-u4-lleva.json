@@ -8,7 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
-  "book": { "unit": 4, "number": 6, "phase": "structure" },
+  "book": { "unit": 4, "number": 21, "phase": "structure" },
   "prompt": "Co znaczy ¿Lleva carne?",
   "explanation": "Llevar — tu: zawierać.",
   "configuration": {

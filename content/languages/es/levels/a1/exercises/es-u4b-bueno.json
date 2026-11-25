@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4b-bueno",
+  "lessonId": "es-unit-4-restaurant",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 30,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: ¡Qué rica la sopa! ___ muy buena.",
+  "explanation": "Smak w danej chwili → estar: está buena.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Está"
+      },
+      {
+        "id": "opt-b",
+        "text": "Es"
+      },
+      {
+        "id": "opt-c",
+        "text": "Hay"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

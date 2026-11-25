@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u4a-match-tapas",
+  "lessonId": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 4,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Połącz słowa z baru z tłumaczeniem.",
+  "explanation": "Una caña = małe piwo; una ración = duża porcja do dzielenia.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "una caña",
+        "right": "małe piwo z beczki"
+      },
+      {
+        "left": "una ración",
+        "right": "duża porcja do dzielenia"
+      },
+      {
+        "left": "las aceitunas",
+        "right": "oliwki"
+      },
+      {
+        "left": "la cuenta",
+        "right": "rachunek"
+      },
+      {
+        "left": "en efectivo",
+        "right": "gotówką"
+      }
+    ]
+  }
+}
