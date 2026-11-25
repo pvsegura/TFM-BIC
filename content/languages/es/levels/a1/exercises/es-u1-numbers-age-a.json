@@ -8,7 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 48, "phase": "transform", "lines": 1 },
+  "book": { "unit": 1, "number": 73, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mam dwadzieścia lat.",
   "explanation": "Tengo veinte años.",
   "configuration": {

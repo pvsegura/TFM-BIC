@@ -8,7 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 31, "phase": "structure" },
+  "book": { "unit": 1, "number": 44, "phase": "structure" },
   "prompt": "Jak jest 15?",
   "explanation": "Quince — 15.",
   "configuration": {

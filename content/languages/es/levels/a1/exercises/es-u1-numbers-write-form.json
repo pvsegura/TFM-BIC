@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-write-form",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 200,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 78,
+    "phase": "express",
+    "lines": 4
+  },
+  "prompt": "Wypełnij formularz pełnymi zdaniami: jak się nazywasz, ile masz lat i jaki jest Twój numer telefonu (słownie).",
+  "explanation": "Wiek z tener (Tengo… años), numer po ¿Cuál es…? — Es el…",
+  "configuration": {
+    "modelAnswer": "Me llamo Ola Wiśniewska. Tengo veintinueve años. Mi número de teléfono es el seis, cero, cero, doce, treinta y cuatro, cincuenta y seis.",
+    "checklist": ["Me llamo…", "Tengo… años", "numer telefonu słownie"],
+    "minWords": 10,
+    "maxWords": 50
+  }
+}

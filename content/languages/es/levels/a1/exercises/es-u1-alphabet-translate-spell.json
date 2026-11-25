@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-translate-spell",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 260,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jak się pisze Pana nazwisko?",
+  "explanation": "Forma usted: su apellido (Pana/Pani nazwisko).",
+  "configuration": {
+    "acceptedAnswers": ["¿Cómo se escribe su apellido?", "Cómo se escribe su apellido"],
+    "caseSensitive": false
+  }
+}

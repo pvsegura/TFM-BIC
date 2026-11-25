@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-listen-marta",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 220,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Marta mówi po polsku, po niemiecku i trochę po hiszpańsku.",
+  "explanation": "Yo hablo polaco, alemán y también un poco de español.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

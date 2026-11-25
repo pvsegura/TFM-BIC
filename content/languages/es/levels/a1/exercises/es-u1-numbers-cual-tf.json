@@ -8,7 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 7, "phase": "perceive" },
+  "book": { "unit": 1, "number": 11, "phase": "perceive" },
   "prompt": "O konkretną informację (numer, adres) pytamy zwykle ¿Cuál es…?",
   "explanation": "¿Cuál es tu dirección? ¿Cuál es tu número?",
   "configuration": {

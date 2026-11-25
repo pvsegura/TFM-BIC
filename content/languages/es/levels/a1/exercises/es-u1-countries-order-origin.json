@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-order-origin",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 180,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "Ułóż zdanie: Jestem z Krakowa, w Polsce.",
+  "explanation": "Miejsce pochodzenia: ser de + miasto/kraj.",
+  "configuration": {
+    "items": ["Soy", "de", "Cracovia,", "en", "Polonia."],
+    "joiner": " "
+  }
+}

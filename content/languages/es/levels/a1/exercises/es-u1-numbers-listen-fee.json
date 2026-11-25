@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-listen-fee",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 220,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 14,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: miesięczna opłata na siłowni wynosi 55 euro.",
+  "explanation": "La cuota es de cuarenta y cinco euros al mes — 45 euro.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

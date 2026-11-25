@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-order-age",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 180,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 53,
+    "phase": "structure"
+  },
+  "prompt": "Ułóż pytanie: Ile masz lat?",
+  "explanation": "Wiek wyrażamy czasownikiem tener: ¿Cuántos años tienes?",
+  "configuration": {
+    "items": ["¿Cuántos", "años", "tienes?"],
+    "joiner": " "
+  }
+}

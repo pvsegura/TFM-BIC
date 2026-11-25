@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-listen-luca",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 210,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog na pierwszych zajęciach: skąd jest Luca?",
+  "explanation": "Soy italiano, de Turín.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Z Turynu, we Włoszech."
+      },
+      {
+        "id": "opt-b",
+        "text": "Z Walencji, w Hiszpanii."
+      },
+      {
+        "id": "opt-c",
+        "text": "Z Wrocławia, w Polsce."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

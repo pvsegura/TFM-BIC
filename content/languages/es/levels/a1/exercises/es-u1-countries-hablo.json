@@ -8,7 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 44, "phase": "transform", "lines": 1 },
+  "book": { "unit": 1, "number": 67, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mówię po polsku.",
   "explanation": "Hablar + język: hablo polaco.",
   "configuration": {

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-reading-married",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 240,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: w Hiszpanii kobieta po ślubie przyjmuje nazwisko męża.",
+  "explanation": "Las mujeres casadas no cambian de apellido.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

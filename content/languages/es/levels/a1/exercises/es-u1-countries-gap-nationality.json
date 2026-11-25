@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-gap-nationality",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 190,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 41,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Luca jest Włochem i mówi po włosku i po angielsku.",
+  "explanation": "Narodowość małą literą (italiano); przed i- spójnik y zmienia się w e.",
+  "configuration": {
+    "text": "Luca es ___ y habla italiano ___ inglés.",
+    "gaps": [
+      {
+        "accepted": ["italiano"]
+      },
+      {
+        "accepted": ["e"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

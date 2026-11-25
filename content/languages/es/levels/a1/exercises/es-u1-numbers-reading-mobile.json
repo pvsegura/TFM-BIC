@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-reading-mobile",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 230,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 59,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: od jakiej cyfry zaczynają się hiszpańskie numery komórkowe?",
+  "explanation": "Los móviles empiezan por seis o por siete.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Od 6 albo 7."
+      },
+      {
+        "id": "opt-b",
+        "text": "Od 9."
+      },
+      {
+        "id": "opt-c",
+        "text": "Od 0."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

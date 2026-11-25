@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-match-tricky",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 170,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "Połącz liczbę z jej nazwą.",
+  "explanation": "seSenta (60) ma S jak „sześć”, seTenta (70) — T jak siete.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "11",
+        "right": "once"
+      },
+      {
+        "left": "15",
+        "right": "quince"
+      },
+      {
+        "left": "16",
+        "right": "dieciséis"
+      },
+      {
+        "left": "60",
+        "right": "sesenta"
+      },
+      {
+        "left": "70",
+        "right": "setenta"
+      }
+    ]
+  }
+}

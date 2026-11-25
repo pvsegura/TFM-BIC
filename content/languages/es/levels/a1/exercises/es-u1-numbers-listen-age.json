@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-listen-age",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 210,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 13,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog na siłowni: ile lat ma Marta?",
+  "explanation": "Tengo treinta y cuatro años.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "34"
+      },
+      {
+        "id": "opt-b",
+        "text": "44"
+      },
+      {
+        "id": "opt-c",
+        "text": "24"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

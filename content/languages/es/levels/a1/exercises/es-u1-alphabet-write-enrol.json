@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-write-enrol",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 200,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 76,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Napisz krótką wiadomość do szkoły językowej: przywitaj się, przedstaw się, przeliteruj nazwisko i podaj adres e-mail.",
+  "explanation": "Sprawdź, czy przy literowaniu użyłeś nazw liter (uve doble, ka…), a w adresie słów arroba i punto.",
+  "configuration": {
+    "modelAnswer": "Hola, buenos días. Me llamo Anna Nowak. Mi apellido se escribe ene, o, uve doble, a, ka. Mi correo es anna punto nowak arroba correo punto pl. Gracias.",
+    "checklist": [
+      "przywitanie odpowiednie do pory dnia",
+      "Me llamo… albo Soy…",
+      "przeliterowane nazwisko",
+      "adres e-mail z arroba i punto"
+    ],
+    "minWords": 15,
+    "maxWords": 60
+  }
+}

@@ -8,7 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 37, "phase": "structure" },
+  "book": { "unit": 1, "number": 50, "phase": "structure" },
   "prompt": "Jak zapytasz o numer telefonu?",
   "explanation": "O konkretną informację pytamy ¿Cuál es…?, nie ¿Qué es…?.",
   "configuration": {

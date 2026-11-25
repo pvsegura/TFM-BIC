@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-reading-surnames",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 230,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: dlaczego syn Lucíi nazywa się Adam Nowak García?",
+  "explanation": "Pierwsze nazwisko zwykle po ojcu (Nowak), drugie po matce (García).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ma nazwisko ojca i nazwisko matki."
+      },
+      {
+        "id": "opt-b",
+        "text": "García to jego drugie imię."
+      },
+      {
+        "id": "opt-c",
+        "text": "Lucía zmieniła nazwisko po ślubie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

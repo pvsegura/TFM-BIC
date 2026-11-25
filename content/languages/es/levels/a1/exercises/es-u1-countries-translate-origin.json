@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-translate-origin",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 250,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 69,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jestem Polką, z Gdańska.",
+  "explanation": "Narodowość bez przyimka i małą literą (polaca), miasto z de.",
+  "configuration": {
+    "acceptedAnswers": ["Soy polaca, de Gdańsk.", "Soy polaca de Gdańsk."],
+    "caseSensitive": false
+  }
+}

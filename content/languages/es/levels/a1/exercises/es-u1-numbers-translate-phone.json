@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-translate-phone",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 260,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 75,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jaki jest twój numer telefonu?",
+  "explanation": "O konkretną informację pytamy ¿Cuál es…?",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Cuál es tu número de teléfono?",
+      "Cuál es tu número de teléfono",
+      "¿Cuál es tu número?"
+    ],
+    "caseSensitive": false
+  }
+}

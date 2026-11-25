@@ -8,7 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 43, "phase": "transform", "lines": 1 },
+  "book": { "unit": 1, "number": 66, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jestem z Krakowa.",
   "explanation": "Kraków po hiszpańsku to Cracovia.",
   "configuration": {

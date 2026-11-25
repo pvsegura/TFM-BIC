@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-listen-course",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 210,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog na recepcji: po co Paweł przychodzi do szkoły?",
+  "explanation": "Quiero apuntarme al curso de español — chcę zapisać się na kurs.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Chce zapisać się na kurs hiszpańskiego."
+      },
+      {
+        "id": "opt-b",
+        "text": "Szuka pracy jako nauczyciel."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pyta o drogę do hotelu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

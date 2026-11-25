@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-listen-usted",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 220,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog na recepcji: recepcjonistka zwraca się do Pawła na „ty”.",
+  "explanation": "Mówi ¿Cómo se llama usted? i ¿su apellido? — to forma grzecznościowa usted.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

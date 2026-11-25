@@ -8,7 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 24, "phase": "structure" },
+  "book": { "unit": 1, "number": 35, "phase": "structure" },
   "prompt": "Jak po hiszpańsku nazywa się Warszawa?",
   "explanation": "Varsovia.",
   "configuration": {

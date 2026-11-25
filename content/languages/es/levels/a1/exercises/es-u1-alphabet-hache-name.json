@@ -8,7 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 14, "phase": "structure" },
+  "book": { "unit": 1, "number": 23, "phase": "structure" },
   "prompt": "Jak nazywa się litera h?",
   "explanation": "H — hache.",
   "configuration": {

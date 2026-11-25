@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-match-feminine",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 170,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Połącz kraj z narodowością kobiety.",
+  "explanation": "Forma żeńska: -o → -a (italiana), spółgłoska + -a (española, alemana, francesa).",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "Polonia",
+        "right": "polaca"
+      },
+      {
+        "left": "Alemania",
+        "right": "alemana"
+      },
+      {
+        "left": "Francia",
+        "right": "francesa"
+      },
+      {
+        "left": "Italia",
+        "right": "italiana"
+      },
+      {
+        "left": "España",
+        "right": "española"
+      }
+    ]
+  }
+}

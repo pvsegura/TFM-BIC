@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-match-greetings",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 170,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Połącz zwroty z tłumaczeniem.",
+  "explanation": "Encantada mówi kobieta; mężczyzna powie encantado.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "¡Hola!",
+        "right": "Cześć!"
+      },
+      {
+        "left": "Buenas noches.",
+        "right": "Dobry wieczór."
+      },
+      {
+        "left": "Encantada.",
+        "right": "Miło mi."
+      },
+      {
+        "left": "¿Cómo se escribe?",
+        "right": "Jak to się pisze?"
+      },
+      {
+        "left": "el apellido",
+        "right": "nazwisko"
+      }
+    ]
+  }
+}

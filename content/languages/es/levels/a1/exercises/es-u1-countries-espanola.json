@@ -8,7 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
-  "book": { "unit": 1, "number": 21, "phase": "structure" },
+  "book": { "unit": 1, "number": 32, "phase": "structure" },
   "prompt": "Żeńska forma español to:",
   "explanation": "Español → española (bez akcentu).",
   "configuration": {

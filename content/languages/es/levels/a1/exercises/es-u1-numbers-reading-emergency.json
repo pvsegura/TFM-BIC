@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-numbers-reading-emergency",
+  "lessonId": "es-unit-1-numbers",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 240,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 60,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: numer alarmowy 112 jest płatny i działa tylko w Hiszpanii.",
+  "explanation": "Es gratis y funciona en toda Europa.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

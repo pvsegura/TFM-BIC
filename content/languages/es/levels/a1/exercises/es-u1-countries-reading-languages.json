@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-countries-reading-languages",
+  "lessonId": "es-unit-1-countries",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 230,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 57,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: który język NIE jest wymieniony jako język urzędowy w Hiszpanii?",
+  "explanation": "W Hiszpanii urzędowe są też catalán, gallego i euskera; portugalski — nie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "el portugués"
+      },
+      {
+        "id": "opt-b",
+        "text": "el catalán"
+      },
+      {
+        "id": "opt-c",
+        "text": "el gallego"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

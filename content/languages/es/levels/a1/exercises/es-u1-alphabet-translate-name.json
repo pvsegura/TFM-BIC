@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-translate-name",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 250,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Nazywam się Ewa. Miło mi. (mówi kobieta)",
+  "explanation": "Kobieta mówi encantada; zamiast Me llamo możesz napisać Soy Ewa.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Me llamo Ewa. Encantada.",
+      "Me llamo Ewa, encantada.",
+      "Soy Ewa. Encantada.",
+      "Soy Ewa, encantada."
+    ],
+    "caseSensitive": false
+  }
+}

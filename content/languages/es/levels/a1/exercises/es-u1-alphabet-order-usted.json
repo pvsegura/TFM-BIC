@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u1-alphabet-order-usted",
+  "lessonId": "es-unit-1-alphabet",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 180,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 1,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Ułóż pytanie: Jak się Pan nazywa?",
+  "explanation": "Do Pana/Pani: zaimek se i czasownik w trzeciej osobie (llama).",
+  "configuration": {
+    "items": ["¿Cómo", "se", "llama", "usted?"],
+    "joiner": " "
+  }
+}
