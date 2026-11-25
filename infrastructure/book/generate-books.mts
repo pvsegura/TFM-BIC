@@ -44,7 +44,14 @@ const LANGUAGE = arg("language", "es");
 const LEVEL = arg("level", "a1");
 const BOOK = arg("book", "all");
 const FORMAT = arg("format", "print") as "print" | "digital";
-const COURSE = `${LANGUAGE}-${LEVEL}`;
+/** For a language with several courses: the instruction language of the course to print. */
+const REQUESTED_INSTRUCTION = process.argv.includes("--instruction") ? arg("instruction", "") : "";
+const COURSE = REQUESTED_INSTRUCTION
+  ? `${LANGUAGE}-${REQUESTED_INSTRUCTION}-${LEVEL}`
+  : `${LANGUAGE}-${LEVEL}`;
+/** Content of this course only (all of the language when no instruction language is given). */
+const inCourse = (item: { instructionLanguage: string }) =>
+  !REQUESTED_INSTRUCTION || item.instructionLanguage === REQUESTED_INSTRUCTION;
 const LEVEL_LABEL = LEVEL.toUpperCase();
 
 // --- geometry (inches) and series design ---------------------------------------------------------
@@ -123,6 +130,7 @@ function unitsOf(catalog: ContentCatalog): Unit[] {
     .filter(
       (c) =>
         c.languageId === LANGUAGE &&
+        inCourse(c) &&
         c.levelId === LEVEL &&
         c.type === "lesson" &&
         c.status === "published" &&
@@ -259,8 +267,7 @@ function frontMatter(book: BookKey, units: Unit[], tocExtra: { href: string; lab
     })),
     ...tocExtra,
   ];
-  return `<p class="book-name">${e(name)}</p>
-<section class="front"><div class="title-page">
+  return `<section class="front"><div class="title-page"><p class="book-name">${e(name)}</p>
   <p class="brand">Verbysia</p>
   <h1>${e(methodTitle())}</h1>
   <p class="level">${LEVEL_LABEL}</p>
@@ -281,7 +288,7 @@ function frontMatter(book: BookKey, units: Unit[], tocExtra: { href: string; lab
 // --- Podręcznik ---------------------------------------------------------------------------------
 function thematicVocabularyHtml(catalog: ContentCatalog): string {
   return catalog.vocabularyCategories
-    .filter((c) => c.languageId === LANGUAGE && c.status === "published")
+    .filter((c) => c.languageId === LANGUAGE && c.status === "published" && inCourse(c))
     .sort((a, b) => a.order - b.order)
     .map((c) => {
       const items = catalog.vocabulary
@@ -363,7 +370,7 @@ async function textbookHtml(
 function unitCrossword(unit: Unit, catalog: ContentCatalog): Crossword | null {
   const text = JSON.stringify(unit.lessons.map((l) => l.blocks)).toLowerCase();
   const words = catalog.vocabulary
-    .filter((v) => v.languageId === LANGUAGE && v.status === "published")
+    .filter((v) => v.languageId === LANGUAGE && v.status === "published" && inCourse(v))
     .map((v) => ({ answer: v.lemma.replace(/^(el|la|los|las) /, ""), clue: v.translation }))
     .filter((w) => /^[\p{L}]+$/u.test(w.answer))
     .filter((w) =>
@@ -442,6 +449,7 @@ function glossaryHtml(catalog: ContentCatalog): string {
     .filter(
       (v) =>
         v.languageId === LANGUAGE &&
+        inCourse(v) &&
         v.status === "published" &&
         (!v.levelId || v.levelId === LEVEL),
     )
@@ -455,7 +463,10 @@ function glossaryHtml(catalog: ContentCatalog): string {
 
 function grammarHtml(topics: GrammarTopic[]): string {
   return topics
-    .filter((t) => t.languageId === LANGUAGE && t.status === "published" && t.levelId === LEVEL)
+    .filter(
+      (t) =>
+        t.languageId === LANGUAGE && t.status === "published" && t.levelId === LEVEL && inCourse(t),
+    )
     .map(
       (t) =>
         `<h3>${e(t.title)}</h3><p>${e(t.description)}</p>${t.sections
@@ -580,7 +591,7 @@ async function main() {
   const grammar = await loadGrammarReference(path.join(repoRoot, "content"), loaded.catalog);
   const topics = grammar.ok ? grammar.topics : [];
   const firstLesson = loaded.catalog.content.find(
-    (c) => c.languageId === LANGUAGE && c.levelId === LEVEL && c.type === "lesson",
+    (c) => c.languageId === LANGUAGE && c.levelId === LEVEL && c.type === "lesson" && inCourse(c),
   );
   INSTRUCTION = firstLesson?.instructionLanguage ?? "pl";
   T = bookTextFor(INSTRUCTION);

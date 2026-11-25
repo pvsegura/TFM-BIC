@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-listen-formal",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1020,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: la recepcionista tutea a Javier.",
+  "explanation": "Le dice Jak się pan nazywa? — trato formal (pan).",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

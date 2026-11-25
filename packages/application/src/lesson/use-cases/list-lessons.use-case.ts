@@ -12,6 +12,8 @@ export interface ListLessonsInput {
   userId: string;
   languageId: LanguageId;
   levelId: LevelId;
+  /** The learner's language; selects the course when the language offers several. */
+  instructionLanguage?: string | undefined;
 }
 
 /** What a lesson card needs: list metadata plus this student's progress. No blocks, no status. */
@@ -33,6 +35,9 @@ export class ListLessonsUseCase {
 
   async execute(input: ListLessonsInput): Promise<LessonSummary[]> {
     const items = await this.listContent.execute({
+      ...(input.instructionLanguage === undefined
+        ? {}
+        : { instructionLanguage: input.instructionLanguage }),
       languageId: input.languageId,
       levelId: input.levelId,
     });

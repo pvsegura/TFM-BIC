@@ -35,7 +35,11 @@ import { loadContentCatalog } from "./load-content-catalog.js";
 const PL = createLanguageId("pl");
 const A1 = createLevelId("a1");
 /** The language each course explains itself in: English for the (hidden) Polish course, Spanish for the (hidden) English course, Polish for the Spanish course. */
-const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es", es: "pl" };
+const INSTRUCTION_LANGUAGES: Record<string, string[]> = {
+  pl: ["en", "es"],
+  en: ["es"],
+  es: ["pl"],
+};
 const registry = createDefaultExerciseTypeRegistry();
 
 let catalog: ContentCatalog;
@@ -100,7 +104,8 @@ describe("the shipped exercises", () => {
   it("are a small representative set for every Polish level, not an exercise bank", () => {
     for (const level of CEFR_LEVELS) {
       const inLevel = catalog.exercises.filter(
-        (e) => e.languageId === PL && e.levelId === level.id,
+        // The original English-explained course stays a small sample; the Spanish-explained course is a full course.
+        (e) => e.languageId === PL && e.levelId === level.id && e.instructionLanguage === "en",
       );
 
       expect(inLevel.length, level.id).toBeGreaterThanOrEqual(6);
@@ -152,8 +157,8 @@ describe("the shipped exercises", () => {
     for (const exercise of catalog.exercises) {
       expect(exercise.prompt.length, exercise.id).toBeGreaterThan(0);
       expect(exercise.explanation?.length ?? 0, exercise.id).toBeGreaterThan(0);
-      expect(exercise.instructionLanguage, exercise.id).toBe(
-        INSTRUCTION_LANGUAGE[exercise.languageId],
+      expect(INSTRUCTION_LANGUAGES[exercise.languageId], exercise.id).toContain(
+        exercise.instructionLanguage,
       );
     }
   });

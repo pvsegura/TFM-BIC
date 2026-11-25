@@ -391,6 +391,7 @@ async function loadLanguage(
         locale: file.locale,
         direction: file.direction,
         isActive: file.isActive,
+        ...(file.courses ? { courses: file.courses } : {}),
       });
       for (const level of file.levels) {
         catalog.languageLevels.push({

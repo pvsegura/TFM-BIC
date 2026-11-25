@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-order-name",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 1110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 11,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Me llamo Javier y soy de España.",
+  "explanation": "Mam na imię…; jestem z + país.",
+  "configuration": {
+    "items": ["Mam", "na", "imię", "Javier", "i", "jestem", "z", "Hiszpanii."],
+    "joiner": " "
+  }
+}

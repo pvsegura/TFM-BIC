@@ -13,7 +13,7 @@ const bookPagesSchema = z.object({
   index: z.record(z.string().regex(INDEX_KEY), z.number().int().min(1).max(2000)),
 });
 
-export const COURSE_PATTERN = /^[a-z]{2,3}-[a-z][0-9]$/;
+export const COURSE_PATTERN = /^[a-z]{2,3}(?:-[a-z]{2,3})?-[a-z][0-9]$/;
 
 export const bookIndexSchema = z.object({
   course: z.string().regex(COURSE_PATTERN),

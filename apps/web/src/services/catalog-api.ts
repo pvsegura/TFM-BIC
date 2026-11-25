@@ -10,6 +10,7 @@ import {
 } from "@verbysia/contracts";
 
 import { requestPublicJson } from "./api-request.js";
+import { LANGUAGE } from "../i18n/index.js";
 
 /**
  * Language and content discovery is public and read-only, so — unlike the
@@ -37,7 +38,9 @@ export async function fetchContentList(
   levelId: string,
 ): Promise<ContentListResponse> {
   return contentListResponseSchema.parse(
-    await getJson(`/content?language=${enc(languageCode)}&level=${enc(levelId)}`),
+    await getJson(
+      `/content?language=${enc(languageCode)}&level=${enc(levelId)}&instruction=${enc(LANGUAGE)}`,
+    ),
   );
 }
 

@@ -5,7 +5,9 @@
 // Helpers to author A1 exercises as files and renumber a unit's workbook numbers by PUENTE phase.
 import fs from "node:fs";
 
-const ROOT = "c:/Users/usuario/TFM-BIC/content/languages/es/levels/a1/";
+const ROOT_OF = (language, level) =>
+  `c:/Users/usuario/TFM-BIC/content/languages/${language}/levels/${level}/`;
+const ROOT = ROOT_OF("es", "a1");
 const PH = [
   "perceive",
   "connect",
@@ -17,7 +19,12 @@ const PH = [
   "review",
 ];
 
-export function kit(unit, lessonId, startOrder = 300) {
+/** options.language / options.instruction / options.level: defaults es / pl / a1 (Spanish for Polish speakers). */
+export function kit(unit, lessonId, startOrder = 300, options = {}) {
+  const language = options.language ?? "es";
+  const instruction = options.instruction ?? "pl";
+  const level = options.level ?? "a1";
+  const root = ROOT_OF(language, level);
   let order = startOrder;
   const list = [];
   const add = (id, phase, type, prompt, explanation, configuration, lines) => {
@@ -26,12 +33,12 @@ export function kit(unit, lessonId, startOrder = 300) {
       schemaVersion: 1,
       id,
       lessonId,
-      languageId: "es",
-      levelId: "a1",
+      languageId: language,
+      levelId: level,
       type,
       status: "published",
       order,
-      instructionLanguage: "pl",
+      instructionLanguage: instruction,
       book: { unit, number: 150, phase, ...(lines ? { lines } : {}) },
       prompt,
       explanation,
@@ -91,7 +98,7 @@ export function kit(unit, lessonId, startOrder = 300) {
     save() {
       for (const exercise of list) {
         fs.writeFileSync(
-          `${ROOT}exercises/${exercise.id}.json`,
+          `${root}exercises/${exercise.id}.json`,
           `${JSON.stringify(exercise, null, 2)}\n`,
         );
       }
@@ -101,7 +108,9 @@ export function kit(unit, lessonId, startOrder = 300) {
 }
 
 /** Gives a unit's exercises consecutive workbook numbers in PUENTE phase order. */
-export function renumber(unit) {
+export function renumber(unit, options = {}) {
+  const instruction = options.instruction ?? "pl";
+  const ROOT = ROOT_OF(options.language ?? "es", options.level ?? "a1");
   const lessons = {};
   for (const f of fs.readdirSync(ROOT + "content")) {
     const j = JSON.parse(fs.readFileSync(ROOT + "content/" + f, "utf8"));
@@ -110,7 +119,7 @@ export function renumber(unit) {
   const ex = fs
     .readdirSync(ROOT + "exercises")
     .map((f) => ({ f, j: JSON.parse(fs.readFileSync(ROOT + "exercises/" + f, "utf8")) }))
-    .filter((x) => x.j.book?.unit === unit);
+    .filter((x) => x.j.book?.unit === unit && x.j.instructionLanguage === instruction);
   ex.sort(
     (a, b) =>
       PH.indexOf(a.j.book.phase) - PH.indexOf(b.j.book.phase) ||

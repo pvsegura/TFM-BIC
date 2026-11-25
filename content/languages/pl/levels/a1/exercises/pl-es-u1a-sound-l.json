@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-sound-l",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 12,
+    "phase": "sound"
+  },
+  "prompt": "La letra ł se pronuncia como la l española.",
+  "explanation": "No: ł suena como la w inglesa de «water» — ładny [uadny].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-sound-stress",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 13,
+    "phase": "sound"
+  },
+  "prompt": "¿Dónde cae el acento en Warszawa?",
+  "explanation": "En polaco el acento cae casi siempre en la penúltima sílaba: War-SZA-wa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En la penúltima sílaba: War-SZA-wa."
+      },
+      {
+        "id": "opt-b",
+        "text": "En la última: War-sza-WA."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la primera: WAR-sza-wa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

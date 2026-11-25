@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-listen-why",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1010,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo en la recepción: ¿para qué va Javier a la escuela?",
+  "explanation": "Chcę zapisać się na kurs polskiego — quiero apuntarme al curso de polaco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Para apuntarse a un curso de polaco."
+      },
+      {
+        "id": "opt-b",
+        "text": "Para buscar trabajo de profesor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Para preguntar por un hotel."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

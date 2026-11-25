@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-match-sounds",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 14,
+    "phase": "sound"
+  },
+  "prompt": "Une cada grafía con su sonido aproximado.",
+  "explanation": "Cz = ch española; sz = sh; ch = j española; c = ts.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "cz",
+        "right": "ch española (czas)"
+      },
+      {
+        "left": "sz",
+        "right": "sh inglesa (szkoła)"
+      },
+      {
+        "left": "ch",
+        "right": "j española (chleb)"
+      },
+      {
+        "left": "c",
+        "right": "ts (co)"
+      }
+    ]
+  }
+}

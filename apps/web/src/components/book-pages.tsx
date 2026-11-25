@@ -9,12 +9,14 @@ export function BookPagesNote({
   languageId,
   levelId,
   lessonId,
+  instructionLanguage,
 }: {
   languageId: string;
   levelId: string;
   lessonId: string;
+  instructionLanguage: string;
 }) {
-  const { data } = useBookIndex(languageId, levelId);
+  const { data } = useBookIndex(languageId, levelId, instructionLanguage);
   const textbook = data?.podrecznik?.index[`lesson:${lessonId}`];
   const workbook = data?.zeszyt?.index[`lesson:${lessonId}`];
   if (textbook === undefined && workbook === undefined) return null;

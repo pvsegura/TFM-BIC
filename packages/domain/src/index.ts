@@ -5,6 +5,7 @@ export { InvalidLanguageIdError } from "./language/invalid-language-id.error.js"
 export {
   isValidLocaleForLanguage,
   isValidTextDirection,
+  resolveCourse,
   TEXT_DIRECTIONS,
   type Language,
   type TextDirection,

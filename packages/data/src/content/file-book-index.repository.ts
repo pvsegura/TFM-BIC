@@ -14,8 +14,16 @@ export class FileBookIndexRepository implements BookIndexRepository {
 
   constructor(private readonly booksDir: string) {}
 
+  /** Exact course first; a {language}-{instruction}-{level} code falls back to {language}-{level}. */
   async find(course: string): Promise<BookIndex | null> {
     if (!COURSE_PATTERN.test(course)) return null;
+    const exact = await this.load(course);
+    if (exact) return exact;
+    const parts = course.split("-");
+    return parts.length === 3 ? this.load(`${parts[0] ?? ""}-${parts[2] ?? ""}`) : null;
+  }
+
+  private async load(course: string): Promise<BookIndex | null> {
     const cached = this.cache.get(course);
     if (cached !== undefined) return cached;
     let index: BookIndex | null;

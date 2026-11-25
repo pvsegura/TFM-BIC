@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-translate-name",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 17,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Me llamo Ana. Encantada.",
+  "explanation": "Mam na imię…; miło mi es igual para hombre y mujer.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Mam na imię Ana. Miło mi.",
+      "Mam na imię Ana, miło mi.",
+      "Nazywam się Ana. Miło mi."
+    ],
+    "caseSensitive": false
+  }
+}

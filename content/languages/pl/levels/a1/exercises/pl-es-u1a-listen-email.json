@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-listen-email",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1030,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué significa małpa en el correo de Javier?",
+  "explanation": "En polaco la arroba se llama małpa («mona»).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La arroba (@)."
+      },
+      {
+        "id": "opt-b",
+        "text": "El punto."
+      },
+      {
+        "id": "opt-c",
+        "text": "El guion."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -79,7 +79,14 @@ export function validateContentCatalog(catalog: ContentCatalog): CatalogIssue[] 
   const orders = new Set<string>();
   const publishedPerLevel = new Set<string>();
 
+  const coursesOf = new Map(catalog.languages.map((l) => [l.code as string, l.courses]));
   for (const item of catalog.content) {
+    const courses = coursesOf.get(item.languageId);
+    if (courses && !courses.includes(item.instructionLanguage)) {
+      issues.push(
+        `Content "${item.id}" is explained in "${item.instructionLanguage}", which is not one of the courses of "${item.languageId}".`,
+      );
+    }
     if (contentIds.has(item.id)) {
       issues.push(`Duplicate content id "${item.id}".`);
     }
@@ -175,7 +182,8 @@ function validateExercises(catalog: ContentCatalog, index: CatalogIndex, issues:
 
     // The workbook number ("ćw. 3.14") is printed on paper and shown on the web: one per level.
     if (exercise.book) {
-      const key = `${languageId}/${levelId}/${String(exercise.book.unit)}.${String(exercise.book.number)}`;
+      // One numbering per course: a language with several courses has one workbook per course.
+      const key = `${languageId}/${exercise.instructionLanguage}/${levelId}/${String(exercise.book.unit)}.${String(exercise.book.number)}`;
       const holder = bookNumbers.get(key);
       if (holder) {
         issues.push(

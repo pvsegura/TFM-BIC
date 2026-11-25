@@ -121,6 +121,7 @@ export function registerLessonRoutes(
 
     return privateResponse(reply, mapLessonError, async () => {
       const lessons = await useCases.listLessons.execute({
+        ...(query.data.instruction ? { instructionLanguage: query.data.instruction } : {}),
         userId: sessionUserId(request),
         languageId: query.data.language,
         levelId: query.data.level,

@@ -16,6 +16,7 @@ export const languageResponseSchema = z.object({
   nativeName: z.string(),
   locale: z.string(),
   direction: z.enum(TEXT_DIRECTIONS),
+  courses: z.array(languageIdSchema).optional(),
 });
 export type LanguageResponse = z.infer<typeof languageResponseSchema>;
 
@@ -65,6 +66,8 @@ export type CatalogErrorResponse = z.infer<typeof catalogErrorResponseSchema>;
 export const contentListQuerySchema = z.object({
   language: languageIdSchema,
   level: levelIdSchema,
+  /** The learner's language: picks the course when the language offers several (see Language.courses). */
+  instruction: languageIdSchema.optional(),
 });
 export type ContentListQuery = z.infer<typeof contentListQuerySchema>;
 

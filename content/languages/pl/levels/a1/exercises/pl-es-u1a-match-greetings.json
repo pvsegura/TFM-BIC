@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-match-greetings",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1040,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 4,
+    "phase": "connect"
+  },
+  "prompt": "Une cada expresión con su traducción.",
+  "explanation": "Cześć sirve para saludar y despedirse entre amigos; Dobranoc solo al irse a dormir.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "Cześć!",
+        "right": "¡Hola! / ¡Adiós!"
+      },
+      {
+        "left": "Dzień dobry.",
+        "right": "Buenos días."
+      },
+      {
+        "left": "Do widzenia.",
+        "right": "Adiós (formal)."
+      },
+      {
+        "left": "Dobranoc.",
+        "right": "Buenas noches (al dormir)."
+      },
+      {
+        "left": "Dziękuję.",
+        "right": "Gracias."
+      }
+    ]
+  }
+}

@@ -3,6 +3,7 @@ import {
   isPublished,
   LanguageNotFoundError,
   LevelNotAvailableError,
+  resolveCourse,
   sortContentItems,
   type ContentItem,
   type LanguageId,
@@ -14,6 +15,8 @@ import type { ContentRepository } from "../ports/content-repository.js";
 export interface ListContentInput {
   languageId: LanguageId;
   levelId: LevelId;
+  /** The learner's language; selects the course when the language offers several. */
+  instructionLanguage?: string | undefined;
 }
 
 /** The discovery view of an item: enough to list it, none of the body. Fields
@@ -50,8 +53,13 @@ export class ListContentUseCase {
       throw new LevelNotAvailableError(input.languageId, input.levelId);
     }
 
+    const course = resolveCourse(language, input.instructionLanguage);
     const items = await this.contentRepository.listContent(input.languageId, input.levelId);
-    return sortContentItems(items.filter(isPublished)).map((item) => ({
+    return sortContentItems(
+      items
+        .filter(isPublished)
+        .filter((item) => course === null || item.instructionLanguage === course),
+    ).map((item) => ({
       id: item.id,
       languageId: item.languageId,
       levelId: item.levelId,

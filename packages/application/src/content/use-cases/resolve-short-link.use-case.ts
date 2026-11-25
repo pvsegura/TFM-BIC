@@ -30,7 +30,8 @@ export interface ShortLinkInput {
   target?: string | undefined;
 }
 
-const COURSE = /^([a-z]{2,3})-([a-z][0-9])$/;
+/** {language}-{level}, or {language}-{instruction}-{level} for a language with several courses. */
+const COURSE = /^([a-z]{2,3})(?:-([a-z]{2,3}))?-([a-z][0-9])$/;
 const UNIT = /^\d{1,2}$/;
 const EXERCISE_NUMBER = /^\d{1,3}$/;
 
@@ -47,14 +48,17 @@ export class ResolveShortLinkUseCase {
   async execute(input: ShortLinkInput): Promise<string | null> {
     const course = COURSE.exec(input.course);
     if (!course || !UNIT.test(input.unit)) return null;
-    const [, language = "", level = ""] = course;
+    const [, language = "", instruction, level = ""] = course;
     if (!isValidLanguageId(language) || !isValidLevelId(level)) return null;
     const unit = Number(input.unit);
 
     const lessons = sortContentItems(
       (await this.content.listContent(createLanguageId(language), createLevelId(level))).filter(
         (item: ContentItem) =>
-          item.type === "lesson" && item.status === "published" && item.unit === unit,
+          item.type === "lesson" &&
+          item.status === "published" &&
+          item.unit === unit &&
+          (instruction === undefined || item.instructionLanguage === instruction),
       ),
     );
     const first = lessons[0];

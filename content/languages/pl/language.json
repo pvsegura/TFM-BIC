@@ -6,6 +6,7 @@
   "locale": "pl-PL",
   "direction": "ltr",
   "isActive": true,
+  "courses": ["en", "es"],
   "levels": [
     {
       "id": "a1",

@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1080,
+  "unit": 1,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 1A. Cześć! Mam na imię… — saludar, presentarse y el alfabeto polaco",
+  "description": "Saludas, dices cómo te llamas, preguntas el nombre de forma informal y formal (Pan / Pani) y deletreas tu nombre en polaco.",
+  "blocks": [
+    {
+      "type": "section",
+      "phase": "perceive",
+      "title": "En la recepción de una escuela de idiomas"
+    },
+    {
+      "type": "explanation",
+      "text": "Escucha el diálogo tres veces. La primera, sin texto: intenta reconocer quién habla y dónde están. La segunda, busca las palabras clave: imię (nombre), nazwisko (apellido), jak się pisze? (¿cómo se escribe?). La tercera, lee el texto mientras escuchas. No traduzcas palabra por palabra: en esta fase basta con entender la idea general."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u1-reception.png",
+      "alt": "Un chico con mochila en la recepción de una escuela de idiomas; la recepcionista apunta sus datos."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        { "speaker": "Recepcjonistka", "text": "Dzień dobry!", "translation": "¡Buenos días!" },
+        {
+          "speaker": "Javier",
+          "text": "Dzień dobry. Chcę zapisać się na kurs polskiego.",
+          "translation": "Buenos días. Quiero apuntarme al curso de polaco."
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Bardzo dobrze. Jak się pan nazywa?",
+          "translation": "Muy bien. ¿Cómo se llama usted?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Nazywam się Javier Martínez.",
+          "translation": "Me llamo Javier Martínez."
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Przepraszam, jak się pisze pana imię?",
+          "translation": "Perdone, ¿cómo se escribe su nombre?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jot, a, fał, i, e, er.",
+          "translation": "J, a, v, i, e, r."
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Dziękuję. A pana e-mail?",
+          "translation": "Gracias. ¿Y su correo electrónico?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "javier kropka martinez małpa poczta kropka es.",
+          "translation": "javier.martinez@poczta.es"
+        },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Świetnie. Miło mi, jestem Magda.",
+          "translation": "Perfecto. Encantada, soy Magda."
+        },
+        { "speaker": "Javier", "text": "Bardzo mi miło.", "translation": "Mucho gusto." }
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Fíjate: la recepcionista trata a Javier de pan (usted, a un hombre). En polaco el trato formal es mucho más frecuente que en España: con desconocidos, en tiendas, oficinas y en el trabajo se usa pan (señor) y pani (señora) hasta que alguien propone tutearse. Si no sabes qué forma elegir, empieza siempre con pan / pani."
+    },
+    { "type": "section", "phase": "connect", "title": "Palabras para empezar" },
+    {
+      "type": "table",
+      "caption": "Saludos, despedidas y primeras preguntas",
+      "columns": ["Polaco", "Español", "¿Cuándo?"],
+      "rows": [
+        ["Cześć!", "¡Hola! / ¡Adiós!", "entre amigos, sirve para saludar y despedirse"],
+        ["Dzień dobry.", "Buenos días. / Buenas tardes.", "durante todo el día, formal"],
+        ["Dobry wieczór.", "Buenas tardes / noches.", "al llegar por la tarde-noche"],
+        ["Do widzenia.", "Adiós.", "formal"],
+        ["Na razie. / Pa!", "Hasta luego. / ¡Chao!", "informal"],
+        ["Dobranoc.", "Buenas noches.", "solo al despedirse antes de dormir"],
+        ["Jak masz na imię?", "¿Cómo te llamas?", "de tú"],
+        ["Jak się pan / pani nazywa?", "¿Cómo se llama usted?", "formal"],
+        ["Mam na imię… / Nazywam się…", "Me llamo…", "respuesta"],
+        ["imię", "nombre", "Moje imię to Ana."],
+        ["nazwisko", "apellido", "Moje nazwisko to García."],
+        ["Miło mi. / Bardzo mi miło.", "Encantado/a. / Mucho gusto.", "igual para hombre y mujer"],
+        ["Przepraszam.", "Perdón. / Disculpe.", "para preguntar o pedir perdón"],
+        ["Dziękuję. / Proszę.", "Gracias. / Por favor; de nada.", "proszę tiene muchos usos"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — técnica de asociación. Dziękuję [ʥeŋkuje] suena a «yen-cuye»: imagina que das las gracias a alguien que te devuelve un yen. Cześć se parece a «chesh-ch»: el sonido de abrir una lata — ¡hola, abro una bebida para ti! Miło mi lleva dentro «mil»: «mil gracias por conocerte». Cuanto más absurda la imagen, mejor se recuerda; la pronunciación, siempre con el audio."
+    },
+    { "type": "section", "phase": "structure", "title": "Być, mieć na imię y los pronombres" },
+    {
+      "type": "explanation",
+      "text": "Para decir tu nombre, los polacos usan sobre todo mam na imię… (literalmente «tengo por nombre…») o nazywam się… (me llamo; se usa más con el apellido o en situaciones formales). Como en español, el pronombre personal (ja, ty…) suele omitirse, porque la terminación del verbo ya dice quién habla: mam (yo tengo), masz (tú tienes)."
+    },
+    {
+      "type": "table",
+      "caption": "Być — ser y estar a la vez (presente)",
+      "columns": ["Persona", "Polaco", "Español"],
+      "rows": [
+        ["ja", "jestem", "soy / estoy"],
+        ["ty", "jesteś", "eres / estás"],
+        ["on / ona / ono; pan / pani", "jest", "es / está; usted es"],
+        ["my", "jesteśmy", "somos / estamos"],
+        ["wy", "jesteście", "sois / estáis"],
+        ["oni / one; państwo", "są", "son / están; ustedes son"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Soy Ana y estoy en Varsovia.",
+      "target": "Jestem Ana i jestem w Warszawie.",
+      "note": "¡Buena noticia! En polaco no hay que elegir entre ser y estar: un solo verbo, być."
+    },
+    {
+      "type": "table",
+      "caption": "Mieć — tener (presente): mam na imię…",
+      "columns": ["Persona", "Polaco", "Ejemplo"],
+      "rows": [
+        ["ja", "mam", "Mam na imię Ana."],
+        ["ty", "masz", "Jak masz na imię?"],
+        ["on / ona; pan / pani", "ma", "Jak pani ma na imię?"],
+        ["my", "mamy", "Mamy lekcję."],
+        ["wy", "macie", "Jak macie na imię?"],
+        ["oni / one; państwo", "mają", "Jak mają na imię?"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jak masz na imię, pan Kowalski?",
+      "right": "Jak pan ma na imię? / Jak się pan nazywa?",
+      "explanation": "Pan y pani funcionan como usted: el verbo va en tercera persona (ma, nazywa się). La forma masz es de tú. Al dirigirse a alguien, el apellido cambia de forma (panie Kowalski), así que al principio es más seguro no usarlo."
+    },
+    {
+      "type": "explanation",
+      "text": "Pronombres personales: ja (yo), ty (tú), on (él), ona (ella), ono (ello, para sustantivos neutros), my (nosotros), wy (vosotros), oni (ellos, si en el grupo hay al menos un hombre), one (ellas, o grupos sin hombres: mujeres, niños, cosas). Formales: pan (usted, hombre), pani (usted, mujer), państwo (ustedes, grupo mixto)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Ja jestem Javier. Ja jestem z Hiszpanii.",
+      "right": "Jestem Javier. Jestem z Hiszpanii.",
+      "explanation": "Como en español, repetir el pronombre suena insistente. Usa ja solo para contrastar: Ja jestem z Hiszpanii, a ty? (Yo soy de España, ¿y tú?)."
+    },
+    {
+      "type": "example",
+      "text": "—Jak masz na imię? —Mam na imię Lucía, a ty? —Ja jestem Tomek.",
+      "translation": "—¿Cómo te llamas? —Me llamo Lucía, ¿y tú? —Yo soy Tomek.",
+      "note": "A ty? = ¿y tú? Aquí ja sirve para contrastar."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "El alfabeto y los sonidos que no existen en español"
+    },
+    {
+      "type": "explanation",
+      "text": "El alfabeto polaco tiene 32 letras. Faltan q, v y x (solo aparecen en palabras extranjeras) y hay nueve letras con signos: ą, ć, ę, ł, ń, ó, ś, ź, ż. La buena noticia: el acento cae casi siempre en la penúltima sílaba (War-SZA-wa, dzię-KU-ję), así que no hacen falta tildes de acento como en español."
+    },
+    {
+      "type": "table",
+      "caption": "Letras y grupos que un hispanohablante debe practicar",
+      "columns": ["Letra / grupo", "Cómo suena (aprox.)", "Ejemplo"],
+      "rows": [
+        ["ł", "como la w inglesa de «water»", "ładny [uadny] — bonito"],
+        ["w", "como la v francesa (con los dientes en el labio)", "woda [vɔda] — agua"],
+        ["ą, ę", "vocales nasales: «on», «en» por la nariz", "są, dziękuję"],
+        ["y", "una «i» oscura, entre i y e", "my [mɨ] — nosotros"],
+        ["sz", "como «sh» en «show»", "szkoła — escuela"],
+        ["cz", "como la «ch» española", "czas — tiempo"],
+        ["rz / ż", "como la j francesa de «je» (o «sh» con voz)", "rzeka, żaba"],
+        ["ś, ć, ź, ń", "versiones suaves de s, ch, z, ñ", "cześć, ń = ñ"],
+        ["ch / h", "como la j española", "chleb [xlɛp] — pan"],
+        ["c", "como «ts»", "co [tsɔ] — qué"],
+        ["j", "como la «y» de «yo»", "jestem [jɛstɛm]"],
+        ["dz, dż, dź", "«ds», «dy» fuerte, «dy» suave", "dzień dobry"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "[lad-ny], [ka-sia] con s española",
+      "right": "[uad-ny], [ka-śa] con ś suave",
+      "explanation": "Los errores más frecuentes de los hispanohablantes: pronunciar ł como l y no distinguir s / sz / ś. Recuerda: ł = w inglesa; sz = «sh» duro; ś = «sh» suave, con la lengua más arriba."
+    },
+    {
+      "type": "explanation",
+      "text": "Para deletrear: las letras se llaman a, be, ce, de, e, ef, gie, ha, i, jot, ka, el, em, en, o, pe, er, es, te, u, wu, igrek (y), zet. Las letras con signo se nombran así: a z ogonkiem (ą), ł (eł), ó (o z kreską, u kreskowane), ż (żet), ź (ziet). La v se llama fał y la x, iks. En un correo: @ es małpa (literalmente «mona»), el punto es kropka."
+    },
+    {
+      "type": "example",
+      "text": "Jak się pisze Martínez? — Em, a, er, te, i, en, e, zet.",
+      "translation": "¿Cómo se escribe Martínez? — M, a, r, t, i, n, e, z.",
+      "note": "La tilde española se puede omitir o decir: i z akcentem."
+    },
+    { "type": "section", "phase": "culture", "title": "Nombres, diminutivos y trato formal" },
+    {
+      "type": "reading",
+      "title": "Mam na imię Katarzyna",
+      "paragraphs": [
+        "Cześć! Mam na imię Katarzyna, ale wszyscy mówią do mnie Kasia. Jestem z Krakowa. Mój brat ma na imię Tomasz, ale w domu jest Tomek.",
+        "W pracy jestem pani Kasia albo pani Katarzyna. Moi koledzy mówią do mnie po imieniu.",
+        "W Polsce ważne są imieniny. Moje imieniny są dwudziestego piątego listopada."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Casi todos los nombres polacos tienen diminutivos que se usan a diario: Katarzyna → Kasia, Tomasz → Tomek, Małgorzata → Gosia, Aleksander → Olek. En una presentación informal te dirán directamente la forma corta.",
+        "Los polacos celebran los imieniny (el día del santo) a veces tanto como el cumpleaños: en el trabajo es habitual felicitar a la persona y llevar algo dulce. Es una diferencia grande con España, donde el santo se celebra poco.",
+        "El trato formal (pan / pani) es muy común, también entre compañeros de trabajo mayores. Pasar al «tú» (przejść na ty) suele proponerlo la persona mayor o de mayor rango. Al saludar se da la mano; los dos besos españoles no son habituales al conocer a alguien."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: apúntate al curso" },
+    {
+      "type": "mission",
+      "title": "Te apuntas a un curso de polaco en Cracovia",
+      "steps": [
+        "Saluda de forma formal: Dzień dobry.",
+        "Di que quieres apuntarte al curso: Chcę zapisać się na kurs polskiego.",
+        "Di tu nombre y tu apellido y deletrea el apellido en polaco.",
+        "Da tu correo electrónico con małpa y kropka.",
+        "Preséntate a un compañero de clase de tú y pregúntale cómo se llama.",
+        "Grábate en la aplicación y compara: ¿suena bien la ł y la diferencia entre s, sz y ś?"
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Cześć! / Dzień dobry.", "translation": "¡Hola! / Buenos días." },
+        { "text": "Jak masz na imię?", "translation": "¿Cómo te llamas?" },
+        { "text": "Jak się pan / pani nazywa?", "translation": "¿Cómo se llama usted?" },
+        { "text": "Mam na imię… / Nazywam się…", "translation": "Me llamo…" },
+        { "text": "Jak się pisze?", "translation": "¿Cómo se escribe?" },
+        { "text": "Miło mi.", "translation": "Encantado/a." },
+        { "text": "Przepraszam, może pan powtórzyć?", "translation": "Perdone, ¿puede repetir?" },
+        { "text": "małpa, kropka", "translation": "@, punto" }
+      ],
+      "canDo": [
+        "saludar y despedirme de forma formal e informal",
+        "presentarme y preguntar el nombre de tú y de usted (pan / pani)",
+        "conjugar być y mieć en presente",
+        "deletrear mi nombre, mi apellido y mi correo",
+        "pronunciar ł, w, sz, cz, ś y las vocales nasales"
+      ]
+    }
+  ]
+}

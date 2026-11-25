@@ -21,6 +21,8 @@ export const languageFileSchema = z
     locale: z.string().min(2).max(35),
     direction: z.enum(TEXT_DIRECTIONS),
     isActive: z.boolean(),
+    /** Instruction languages of the courses offered (first = default); omit for a single course. */
+    courses: z.array(languageIdSchema).min(2).max(5).optional(),
     levels: z
       .array(z.strictObject({ id: levelIdSchema, status: z.enum(LEVEL_STATUSES) }))
       .min(1)

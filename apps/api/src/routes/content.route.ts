@@ -58,6 +58,7 @@ export function registerContentRoutes(
 
     try {
       const items = await useCases.listContent.execute({
+        ...(query.data.instruction ? { instructionLanguage: query.data.instruction } : {}),
         languageId: query.data.language,
         levelId: query.data.level,
       });

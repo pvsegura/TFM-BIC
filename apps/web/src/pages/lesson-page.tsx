@@ -87,6 +87,7 @@ export function LessonPage() {
               languageId={lesson.languageId}
               levelId={lesson.levelId}
               lessonId={lesson.id}
+              instructionLanguage={lesson.instructionLanguage}
             />
           }
           words={

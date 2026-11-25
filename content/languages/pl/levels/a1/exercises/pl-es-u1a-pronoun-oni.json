@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-pronoun-oni",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1090,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 9,
+    "phase": "structure"
+  },
+  "prompt": "Hablas de Ana y Tomek (una mujer y un hombre). ¿Qué pronombre usas?",
+  "explanation": "Oni: grupo con al menos un hombre; one: sin hombres.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "oni"
+      },
+      {
+        "id": "opt-b",
+        "text": "one"
+      },
+      {
+        "id": "opt-c",
+        "text": "ono"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

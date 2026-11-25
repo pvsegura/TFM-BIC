@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-match-words",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1050,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 5,
+    "phase": "connect"
+  },
+  "prompt": "Une las palabras.",
+  "explanation": "Imię = nombre; nazwisko = apellido.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "imię",
+        "right": "nombre"
+      },
+      {
+        "left": "nazwisko",
+        "right": "apellido"
+      },
+      {
+        "left": "Przepraszam.",
+        "right": "Perdón."
+      },
+      {
+        "left": "Miło mi.",
+        "right": "Encantado/a."
+      }
+    ]
+  }
+}

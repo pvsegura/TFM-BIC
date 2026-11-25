@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-sa",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1100,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 10,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Oni ___ z Hiszpanii.",
+  "explanation": "Być, tercera persona del plural: są.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "są"
+      },
+      {
+        "id": "opt-b",
+        "text": "jest"
+      },
+      {
+        "id": "opt-c",
+        "text": "jesteście"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

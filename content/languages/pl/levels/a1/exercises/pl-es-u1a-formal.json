@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1a-formal",
+  "lessonId": "pl-es-unit-1-hello",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1080,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 8,
+    "phase": "structure"
+  },
+  "prompt": "Preguntas el nombre a una señora mayor. ¿Qué dices?",
+  "explanation": "Trato formal: pani + verbo en tercera persona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jak się pani nazywa?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak masz na imię?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Jak się nazywasz?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

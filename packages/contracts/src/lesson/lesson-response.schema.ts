@@ -63,6 +63,7 @@ export type LessonResponse = z.infer<typeof lessonResponseSchema>;
 export const lessonListQuerySchema = z.object({
   language: languageIdSchema,
   level: levelIdSchema,
+  instruction: languageIdSchema.optional(),
 });
 export type LessonListQuery = z.infer<typeof lessonListQuerySchema>;
 

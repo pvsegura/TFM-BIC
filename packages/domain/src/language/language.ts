@@ -25,6 +25,26 @@ export interface Language {
   locale: string;
   direction: TextDirection;
   isActive: boolean;
+  /**
+   * The courses offered for this language, as the instruction languages they are explained in
+   * (first = default), e.g. Polish explained in English and in Spanish. Absent: one course, whatever
+   * language its content is explained in.
+   */
+  courses?: readonly LanguageId[] | undefined;
+}
+
+/**
+ * Which course (instruction language) a list should show: the requested one when the language
+ * offers it, otherwise the language's default course; `null` when the language has a single course
+ * and nothing needs filtering.
+ */
+export function resolveCourse(
+  language: Pick<Language, "courses">,
+  requested: string | undefined,
+): LanguageId | null {
+  const courses = language.courses ?? [];
+  if (courses.length < 2) return null;
+  return courses.find((course) => course === requested) ?? courses[0] ?? null;
 }
 
 /**

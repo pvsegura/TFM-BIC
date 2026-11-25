@@ -28,7 +28,12 @@ const PL = createLanguageId("pl");
 const ES = createLanguageId("es");
 const A1 = createLevelId("a1");
 /** The language each course explains itself in: English for the (hidden) Polish course, Spanish for the (hidden) English course, Polish for the Spanish course. */
-const INSTRUCTION_LANGUAGE: Record<string, string> = { pl: "en", en: "es", es: "pl" };
+/** The instruction languages of each language's courses (Polish has two: explained in English and in Spanish). */
+const INSTRUCTION_LANGUAGES: Record<string, string[]> = {
+  pl: ["en", "es"],
+  en: ["es"],
+  es: ["pl"],
+};
 
 let catalog: ContentCatalog;
 
@@ -55,6 +60,7 @@ describe("the shipped content catalog", () => {
       locale: "pl-PL",
       direction: "ltr",
       isActive: true,
+      courses: ["en", "es"],
     });
   });
 
@@ -114,8 +120,9 @@ describe("the shipped content catalog", () => {
 
     expect(a1.length).toBeGreaterThanOrEqual(4);
     expect(new Set(a1.map((c) => c.type))).toEqual(new Set(["lesson", "explanation"]));
-    const blockTypes = new Set(a1.flatMap((c) => c.blocks.map((b) => b.type)));
-    expect(blockTypes).toEqual(new Set(["explanation", "example", "dialogue"]));
+    const blockTypes = new Set<string>(a1.flatMap((c) => c.blocks.map((b) => b.type)));
+    for (const kind of ["explanation", "example", "dialogue"])
+      expect(blockTypes.has(kind)).toBe(true);
   });
 
   it("has explicit, unique, ascending order for Polish A1", () => {
@@ -131,7 +138,7 @@ describe("the shipped content catalog", () => {
       expect(item.title.length).toBeGreaterThan(0);
       expect(item.description.length).toBeGreaterThan(0);
       expect(item.blocks.length).toBeGreaterThan(0);
-      expect(item.instructionLanguage, item.id).toBe(INSTRUCTION_LANGUAGE[item.languageId]);
+      expect(INSTRUCTION_LANGUAGES[item.languageId], item.id).toContain(item.instructionLanguage);
     }
   });
 
