@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 6, "phase": "perceive" },
   "prompt": "Estadounidense ma taką samą formę dla kobiety i mężczyzny.",
   "explanation": "Tak: él/ella es estadounidense.",
   "configuration": {

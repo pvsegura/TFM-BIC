@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 63, "phase": "structure" },
   "prompt": "Uzupełnij: ___ levanto a las siete.",
   "explanation": "Ja → me levanto.",
   "configuration": {

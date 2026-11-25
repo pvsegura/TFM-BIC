@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 19, "phase": "perceive" },
   "prompt": "W hiszpańskim litery b i v wymawia się tak samo.",
   "explanation": "Tak — vamos i bamos brzmiałyby identycznie.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 98, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Gdzie jest dworzec?",
   "explanation": "Położenie → dónde + está.",
   "configuration": {

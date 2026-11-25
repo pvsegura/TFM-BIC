@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 15, "phase": "perceive" },
   "prompt": "Zdanie ¿Puedo pagar con tarjeta? znaczy: Czy mogę zapłacić gotówką?",
   "explanation": "Con tarjeta — kartą; gotówką to en efectivo.",
   "configuration": {

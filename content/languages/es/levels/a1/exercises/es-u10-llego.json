@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 8, "phase": "structure" },
   "prompt": "Co znaczy ¿Cómo llego a la plaza?",
   "explanation": "Llegar a — dotrzeć do.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 50, "phase": "structure" },
   "prompt": "Chcesz poprosić o rachunek. Co mówisz?",
   "explanation": "La cuenta to rachunek; la carta to karta dań.",
   "configuration": {

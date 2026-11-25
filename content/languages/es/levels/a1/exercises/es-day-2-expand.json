@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 40, "phase": "structure" },
   "prompt": "Które zdanie jest najdłuższą poprawną rozbudową „Quiero”?",
   "explanation": "Szyk: quiero + un café + con leche + por favor.",
   "configuration": {

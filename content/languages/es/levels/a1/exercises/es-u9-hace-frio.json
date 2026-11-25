@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 9, "number": 2, "phase": "structure" },
   "prompt": "Jak jest „jest zimno” (pogoda)?",
   "explanation": "Pogoda → hace frío.",
   "configuration": {

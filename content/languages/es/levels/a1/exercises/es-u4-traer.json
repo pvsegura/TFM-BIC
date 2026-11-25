@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 11, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Przyniesie mi Pan wodę?",
   "explanation": "¿Me trae…? — grzeczna prośba.",
   "configuration": {

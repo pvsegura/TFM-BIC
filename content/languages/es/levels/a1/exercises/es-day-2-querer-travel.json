@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 94, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Chcę podróżować.",
   "explanation": "Quiero + bezokolicznik: quiero viajar.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 3, "phase": "structure" },
   "prompt": "Które zdanie jest poprawne?",
   "explanation": "Konkretna rzecz → está.",
   "configuration": {

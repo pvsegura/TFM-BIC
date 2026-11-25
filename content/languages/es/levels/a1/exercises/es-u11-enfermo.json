@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 4, "phase": "structure" },
   "prompt": "Jak powie kobieta „jestem chora”?",
   "explanation": "Stan → estoy enferma.",
   "configuration": {

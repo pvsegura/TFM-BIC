@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 45, "phase": "structure" },
   "prompt": "Ktoś pyta ¿Cómo estás? Co odpowiesz?",
   "explanation": "¿Cómo estás? — Jak się masz? → Bien, gracias.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 38, "phase": "structure" },
   "prompt": "Uzupełnij: ¿___ un café? (Chcesz kawę?)",
   "explanation": "Querer: quiero, quieres, quiere… — e zmienia się w ie.",
   "configuration": {

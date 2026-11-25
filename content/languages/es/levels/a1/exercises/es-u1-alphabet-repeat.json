@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 41, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Może Pan powtórzyć, proszę?",
   "explanation": "¿Puede repetir, por favor?",
   "configuration": {

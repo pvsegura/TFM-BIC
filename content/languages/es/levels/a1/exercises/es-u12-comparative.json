@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 7, "phase": "structure" },
   "prompt": "Uzupełnij: La paella aquí es ___ que en el centro.",
   "explanation": "Bueno → mejor.",
   "configuration": {

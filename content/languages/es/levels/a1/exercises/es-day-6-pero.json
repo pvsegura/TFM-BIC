@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 70, "phase": "structure" },
   "prompt": "Co sygnalizuje słowo pero?",
   "explanation": "Pero — ale.",
   "configuration": {

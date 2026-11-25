@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 3, "phase": "structure" },
   "prompt": "Co znaczy de primero?",
   "explanation": "De primero — pierwsze danie.",
   "configuration": {

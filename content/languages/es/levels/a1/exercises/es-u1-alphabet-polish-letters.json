@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 3, "phase": "perceive" },
   "prompt": "Hiszpański alfabet zawiera literę ł.",
   "explanation": "Polskich liter z kreskami i ogonkami nie ma.",
   "configuration": {

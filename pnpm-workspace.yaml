@@ -11,3 +11,7 @@ allowBuilds:
   # hashing (ADR-006). Official Node.js bindings for the reference Argon2
   # implementation, actively maintained.
   argon2: true
+  # pagedjs (book generator, dev only) pulls these in; their postinstall scripts only print
+  # messages and are not needed.
+  core-js: false
+  es5-ext: false

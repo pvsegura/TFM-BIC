@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 9, "phase": "perceive" },
   "prompt": "Po hiszpańsku pytanie zaczyna się od odwróconego znaku zapytania ¿.",
   "explanation": "Piszemy ¿…? — znak na początku i na końcu.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 1, "phase": "perceive" },
   "prompt": "Mówimy son las una.",
   "explanation": "Pierwsza w liczbie pojedynczej: es la una / a la una.",
   "configuration": {

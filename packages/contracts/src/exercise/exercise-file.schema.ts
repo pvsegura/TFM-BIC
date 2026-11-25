@@ -35,7 +35,7 @@ const commonFields = {
   book: z
     .strictObject({
       unit: z.number().int().min(0).max(30),
-      number: z.number().int().min(1).max(99),
+      number: z.number().int().min(1).max(150),
       phase: z.enum(UNIT_SECTION_PHASE_VALUES),
       lines: z.number().int().min(1).max(20).optional(),
     })

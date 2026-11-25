@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 57, "phase": "structure" },
   "prompt": "Co dosłownie znaczy ¿Me pone un café?",
   "explanation": "Me pone… — bardzo naturalny sposób zamawiania w barze.",
   "configuration": {

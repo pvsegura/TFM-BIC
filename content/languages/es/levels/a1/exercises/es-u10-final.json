@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 10, "phase": "structure" },
   "prompt": "Está al final de la calle znaczy:",
   "explanation": "Al final de — na końcu.",
   "configuration": {

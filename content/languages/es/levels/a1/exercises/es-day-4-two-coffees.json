@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 103, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Dwie kawy, proszę.",
   "explanation": "Dos cafés, por favor — liczba mnoga: cafés.",
   "configuration": {

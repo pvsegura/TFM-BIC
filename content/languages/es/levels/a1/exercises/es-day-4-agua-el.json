@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 14, "phase": "perceive" },
   "prompt": "Mówimy el agua, choć agua jest rzeczownikiem żeńskim.",
   "explanation": "El agua — wyjątek ze względu na akcentowane a- na początku.",
   "configuration": {

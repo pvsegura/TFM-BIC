@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 11, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mam gorączkę.",
   "explanation": "Tener fiebre.",
   "configuration": {

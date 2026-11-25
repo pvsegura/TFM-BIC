@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 8, "number": 5, "phase": "structure" },
   "prompt": "Uzupełnij: Mi barrio es ___ tranquilo ___ el tuyo.",
   "explanation": "Równość: tan + przymiotnik + como.",
   "configuration": {

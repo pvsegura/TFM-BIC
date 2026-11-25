@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 26, "phase": "structure" },
   "prompt": "Co znaczy ¿Qué idiomas hablas?",
   "explanation": "Idiomas — języki.",
   "configuration": {

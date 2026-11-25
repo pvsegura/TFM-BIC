@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 5, "phase": "structure" },
   "prompt": "Kobieta, która nie je mięsa, mówi:",
   "explanation": "Kobieta → vegetariana; cecha → ser.",
   "configuration": {

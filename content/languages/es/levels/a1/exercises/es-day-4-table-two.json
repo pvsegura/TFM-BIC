@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 102, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Chciałbym stolik dla dwóch osób.",
   "explanation": "Quería una mesa para dos — grzeczniej z quería.",
   "configuration": {

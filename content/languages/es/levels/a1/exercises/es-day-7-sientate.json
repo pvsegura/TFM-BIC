@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 87, "phase": "structure" },
   "prompt": "Co znaczy Siéntate?",
   "explanation": "Siéntate — usiądź (do osoby na ty).",
   "configuration": {

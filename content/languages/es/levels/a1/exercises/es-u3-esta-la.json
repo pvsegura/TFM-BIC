@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 3, "number": 4, "phase": "structure" },
   "prompt": "Uzupełnij: ¿Dónde ___ la estación?",
   "explanation": "Konkretna rzecz z la → está.",
   "configuration": {

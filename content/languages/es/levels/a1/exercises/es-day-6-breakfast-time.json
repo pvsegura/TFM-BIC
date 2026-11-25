@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 76, "phase": "structure" },
   "prompt": "W dialogu z recepcji: w jakich godzinach jest śniadanie?",
   "explanation": "De siete a diez — od 7 do 10.",
   "configuration": {

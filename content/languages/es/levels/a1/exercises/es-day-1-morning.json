@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 25, "phase": "structure" },
   "prompt": "Jest 9:00 rano. Jak grzecznie powiesz „dzień dobry”?",
   "explanation": "Rano mówimy buenos días.",
   "configuration": {

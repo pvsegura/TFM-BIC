@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 62, "phase": "structure" },
   "prompt": "Co znaczy mis padres?",
   "explanation": "Los padres — rodzice.",
   "configuration": {

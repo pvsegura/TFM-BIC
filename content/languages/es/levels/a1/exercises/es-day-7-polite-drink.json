@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 79, "phase": "structure" },
   "prompt": "Javier pyta: ¿Quieres tomar algo? Co to znaczy?",
   "explanation": "Tomar algo to „napić się/zjeść coś”, zwykle w barze.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 2, "number": 9, "phase": "structure" },
   "prompt": "Brat twojego ojca to po hiszpańsku:",
   "explanation": "El tío — wujek / stryj.",
   "configuration": {

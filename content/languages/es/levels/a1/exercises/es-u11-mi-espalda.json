@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 1, "phase": "perceive" },
   "prompt": "Me duele mi espalda to naturalne zdanie.",
   "explanation": "Z rodzajnikiem: me duele la espalda.",
   "configuration": {

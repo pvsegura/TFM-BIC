@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 6, "phase": "structure" },
   "prompt": "— No me gustan las películas de terror. — Ty lubisz. Co mówisz?",
   "explanation": "Niezgoda z przeczeniem → a mí sí.",
   "configuration": {

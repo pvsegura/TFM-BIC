@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 8, "number": 1, "phase": "perceive" },
   "prompt": "Más malo que to najczęstsza forma „gorszy (jakościowo)”.",
   "explanation": "Używamy peor: peor que.",
   "configuration": {

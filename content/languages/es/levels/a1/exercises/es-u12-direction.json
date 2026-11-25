@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 16, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jak dojadę na plażę?",
   "explanation": "¿Cómo llego a…?",
   "configuration": {

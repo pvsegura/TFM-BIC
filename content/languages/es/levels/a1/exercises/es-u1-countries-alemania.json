@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 25, "phase": "structure" },
   "prompt": "Jak po hiszpańsku nazywa się Niemcy?",
   "explanation": "Alemania — kraj; alemán — narodowość.",
   "configuration": {

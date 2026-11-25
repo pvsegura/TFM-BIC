@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 108, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Kładę się spać późno.",
   "explanation": "Acostarse → me acuesto (o → ue).",
   "configuration": {

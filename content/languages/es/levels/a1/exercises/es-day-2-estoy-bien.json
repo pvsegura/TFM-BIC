@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 96, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Czuję się dobrze. (Jestem dobrze)",
   "explanation": "Samopoczucie to stan → estoy bien.",
   "configuration": {

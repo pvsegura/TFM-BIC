@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 35, "phase": "structure" },
   "prompt": "Uzupełnij: Ella ___ profesora.",
   "explanation": "Zawód → ser: es profesora.",
   "configuration": {

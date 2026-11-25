@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 5, "phase": "structure" },
   "prompt": "— Me gusta viajar. — Ty też lubisz. Co mówisz?",
   "explanation": "Zgoda z twierdzeniem → también.",
   "configuration": {

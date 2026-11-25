@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 7, "phase": "structure" },
   "prompt": "Lekarz pyta ¿Qué le pasa? Co znaczy?",
   "explanation": "¿Qué le pasa? — co się dzieje/dolega.",
   "configuration": {

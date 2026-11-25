@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 106, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Nie lubię pomidorów.",
   "explanation": "Liczba mnoga → no me gustan los tomates.",
   "configuration": {

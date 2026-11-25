@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 12, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Ma Pan coś na ból głowy?",
   "explanation": "¿Tiene algo para…?",
   "configuration": {

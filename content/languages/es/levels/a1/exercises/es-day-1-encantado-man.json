@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 29, "phase": "structure" },
   "prompt": "Mężczyzna poznaje kobietę. Co mówi?",
   "explanation": "Forma zależy od osoby mówiącej: mężczyzna mówi encantado.",
   "configuration": {

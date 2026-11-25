@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 1, "phase": "perceive" },
   "prompt": "Quería un café brzmi uprzejmiej niż Quiero un café.",
   "explanation": "Quería działa jak „chciałbym”.",
   "configuration": {

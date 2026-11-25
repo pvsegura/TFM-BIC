@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 105, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Lubisz muzykę?",
   "explanation": "¿Te gusta la música? — z rodzajnikiem la.",
   "configuration": {

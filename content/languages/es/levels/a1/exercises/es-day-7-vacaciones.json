@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 81, "phase": "structure" },
   "prompt": "Jak zapytasz, czy ktoś jest na wakacjach?",
   "explanation": "Estar de vacaciones — być na wakacjach.",
   "configuration": {

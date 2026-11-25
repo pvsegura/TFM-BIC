@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 35, "phase": "structure" },
   "prompt": "Uzupełnij: ___ café, por favor.",
   "explanation": "Przed rzeczownikiem męskim uno → un.",
   "configuration": {

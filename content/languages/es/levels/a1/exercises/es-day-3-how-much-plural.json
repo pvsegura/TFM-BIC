@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 46, "phase": "structure" },
   "prompt": "Pytasz o cenę kilku rzeczy. Co mówisz?",
   "explanation": "Kilka rzeczy → cuestan.",
   "configuration": {

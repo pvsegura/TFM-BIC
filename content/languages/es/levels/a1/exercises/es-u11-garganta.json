@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 5, "phase": "structure" },
   "prompt": "Co to jest la garganta?",
   "explanation": "La garganta — gardło.",
   "configuration": {

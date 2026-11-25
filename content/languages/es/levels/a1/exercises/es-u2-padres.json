@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 2, "number": 1, "phase": "perceive" },
   "prompt": "Mis padres znaczy tylko „moi ojcowie”.",
   "explanation": "Los padres to przede wszystkim „rodzice”.",
   "configuration": {

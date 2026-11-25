@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 2, "phase": "perceive" },
   "prompt": "Litery b i v wymawiamy po hiszpańsku tak samo.",
   "explanation": "Tak: vino i bino brzmiałyby identycznie.",
   "configuration": {

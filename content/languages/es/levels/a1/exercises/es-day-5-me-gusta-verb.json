@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 60, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ viajar.",
   "explanation": "Z bezokolicznikiem zawsze gusta.",
   "configuration": {

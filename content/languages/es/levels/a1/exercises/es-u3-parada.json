@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 3, "number": 9, "phase": "structure" },
   "prompt": "Gdzie czekasz na autobus?",
   "explanation": "La parada de autobús — przystanek.",
   "configuration": {

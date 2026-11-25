@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 13, "phase": "structure" },
   "prompt": "— No me gusta madrugar. — Ty też nie lubisz:",
   "explanation": "Zgoda z przeczeniem → tampoco.",
   "configuration": {

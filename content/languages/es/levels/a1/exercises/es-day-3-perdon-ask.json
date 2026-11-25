@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 99, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku, jak zaczepisz kogoś na ulicy: Przepraszam…",
   "explanation": "Perdón (lub grzeczniej perdone, disculpe).",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 2, "number": 8, "phase": "structure" },
   "prompt": "Co znaczy está casado?",
   "explanation": "Estar casado/casada — być w związku małżeńskim.",
   "configuration": {

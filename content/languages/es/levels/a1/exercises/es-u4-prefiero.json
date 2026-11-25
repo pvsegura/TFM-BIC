@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 8, "phase": "structure" },
   "prompt": "Uzupełnij: Yo ___ el pescado. (wolę)",
   "explanation": "Preferir: prefiero — e → ie.",
   "configuration": {

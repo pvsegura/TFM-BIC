@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 7, "phase": "structure" },
   "prompt": "Woda niegazowana to:",
   "explanation": "Sin gas — bez gazu.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 68, "phase": "structure" },
   "prompt": "Co robisz przy pierwszym odsłuchu techniką trzech odsłuchów?",
   "explanation": "Najpierw ogólny sens, potem słowa-klucze, na końcu tekst.",
   "configuration": {

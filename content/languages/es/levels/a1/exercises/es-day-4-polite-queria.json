@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 12, "phase": "perceive" },
   "prompt": "Quería una mesa para dos brzmi uprzejmiej niż Quiero una mesa para dos.",
   "explanation": "Quería działa jak polskie „chciałbym/chciałabym” — jest grzeczniejsze.",
   "configuration": {

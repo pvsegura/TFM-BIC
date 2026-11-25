@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 65, "phase": "structure" },
   "prompt": "Co znaczy desayuno?",
   "explanation": "Desayunar — jeść śniadanie; comer — obiad; cenar — kolację.",
   "configuration": {

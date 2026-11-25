@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 2, "phase": "perceive" },
   "prompt": "W słowie hola wymawiamy literę h.",
   "explanation": "Litery h nie wymawiamy: [ola].",
   "configuration": {

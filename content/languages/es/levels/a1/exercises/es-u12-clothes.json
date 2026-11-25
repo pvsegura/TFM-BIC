@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 12, "phase": "structure" },
   "prompt": "Uzupełnij: Busco una camisa ___",
   "explanation": "Camisa (ż.) → blanca.",
   "configuration": {

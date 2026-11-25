@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 111, "phase": "transform", "lines": 1 },
   "prompt": "Popraw zdanie: Soy cansado. (stan teraz)",
   "explanation": "Stan → estoy cansado.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 9, "phase": "structure" },
   "prompt": "Ile liter ma hiszpański alfabet?",
   "explanation": "27 liter — z ñ.",
   "configuration": {

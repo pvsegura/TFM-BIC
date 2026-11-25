@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 42, "phase": "structure" },
   "prompt": "Uzupełnij: ¿Dónde ___ el baño?",
   "explanation": "Pytając o położenie konkretnej rzeczy, używamy estar: ¿Dónde está el baño?",
   "configuration": {

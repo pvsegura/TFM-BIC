@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 3, "phase": "structure" },
   "prompt": "Jak jest „pieszo”?",
   "explanation": "A pie.",
   "configuration": {

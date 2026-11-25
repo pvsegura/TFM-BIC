@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 59, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ el café.",
   "explanation": "Jedna rzecz → gusta.",
   "configuration": {

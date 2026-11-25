@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 28, "phase": "structure" },
   "prompt": "Jak zapytać kolegę o imię?",
   "explanation": "¿Cómo te llamas? — Jak masz na imię?",
   "configuration": {

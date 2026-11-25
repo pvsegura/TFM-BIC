@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 77, "phase": "structure" },
   "prompt": "Na ile nocy była rezerwacja Marka?",
   "explanation": "Para tres noches — na trzy noce.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 22, "phase": "perceive" },
   "prompt": "Przy trudnym fragmencie warto zwolnić nagranie, a potem wrócić do normalnej prędkości.",
   "explanation": "Tak: najpierw wolniej, potem w naturalnym tempie.",
   "configuration": {

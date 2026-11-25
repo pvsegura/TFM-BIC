@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 92, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Chcę kawę.",
   "explanation": "Quiero + rzeczownik. Najbardziej naturalnie: quiero un café.",
   "configuration": {

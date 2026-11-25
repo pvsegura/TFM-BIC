@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 10, "phase": "perceive" },
   "prompt": "Pytanie bez słowa pytającego tworzymy, zmieniając szyk zdania.",
   "explanation": "Szyk zostaje taki sam — zmienia się tylko intonacja: ¿Tienes tiempo?",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 3, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ los perros.",
   "explanation": "Los perros (mn.) → encantan.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 9, "phase": "structure" },
   "prompt": "Co znaczy tiempo libre?",
   "explanation": "Tiempo libre — czas wolny.",
   "configuration": {

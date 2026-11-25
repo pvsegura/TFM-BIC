@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 51, "phase": "structure" },
   "prompt": "Chcesz zobaczyć menu. Co mówisz?",
   "explanation": "La carta to karta dań.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 10, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Lubimy tańczyć.",
   "explanation": "My → nos gusta + bezokolicznik.",
   "configuration": {

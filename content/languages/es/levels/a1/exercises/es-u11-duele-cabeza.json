@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 2, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ la cabeza.",
   "explanation": "Jedna rzecz → duele.",
   "configuration": {

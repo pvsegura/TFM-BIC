@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 73, "phase": "structure" },
   "prompt": "Son las cuatro y media to:",
   "explanation": "Y media — i pół: 4:30.",
   "configuration": {

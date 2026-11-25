@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 11, "phase": "structure" },
   "prompt": "Noventa y cinco to:",
   "explanation": "Noventa (90) + cinco (5) = 95.",
   "configuration": {

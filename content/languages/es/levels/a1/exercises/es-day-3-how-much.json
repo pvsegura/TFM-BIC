@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 41, "phase": "structure" },
   "prompt": "Jesteś na targu i chcesz zapytać o cenę. Co mówisz?",
   "explanation": "¿Cuánto cuesta? znaczy: ile to kosztuje?",
   "configuration": {

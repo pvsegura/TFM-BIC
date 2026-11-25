@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 72, "phase": "structure" },
   "prompt": "Co znaczy tampoco?",
   "explanation": "También — też; tampoco — też nie.",
   "configuration": {

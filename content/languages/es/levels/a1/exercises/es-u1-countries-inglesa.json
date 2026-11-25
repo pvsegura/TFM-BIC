@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 23, "phase": "structure" },
   "prompt": "Żeńska forma inglés to:",
   "explanation": "Inglés → inglesa.",
   "configuration": {

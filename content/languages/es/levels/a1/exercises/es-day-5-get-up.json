@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 104, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Wstaję o siódmej.",
   "explanation": "Levantarse jest zwrotne: me levanto. Godzina: a las siete.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 89, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mam na imię Anna.",
   "explanation": "Me llamo Anna albo Soy Anna — obie formy są naturalne.",
   "configuration": {

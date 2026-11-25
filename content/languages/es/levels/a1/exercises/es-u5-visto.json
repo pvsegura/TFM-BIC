@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 5, "phase": "structure" },
   "prompt": "Jak jest „ubieram się”?",
   "explanation": "Vestirse: e → i → me visto.",
   "configuration": {

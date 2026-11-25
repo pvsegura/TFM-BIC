@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 8, "number": 6, "phase": "structure" },
   "prompt": "Gdzie trzymasz ubrania?",
   "explanation": "El armario — szafa.",
   "configuration": {

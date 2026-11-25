@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 32, "phase": "structure" },
   "prompt": "Jak w większości Hiszpanii wymawia się ll w me llamo?",
   "explanation": "Ll brzmi w większości Hiszpanii podobnie do polskiego j: [me jamo].",
   "configuration": {

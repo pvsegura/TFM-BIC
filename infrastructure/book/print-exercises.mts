@@ -100,7 +100,7 @@ export const EXERCISE_STYLE = `
 .exercise { margin: 0 0 4mm; break-inside: avoid; }
 .exercise .prompt { margin: 0 0 1.5mm; }
 .exercise .num { display: inline-block; min-width: 9mm; font: 700 9.5pt "Segoe UI", Arial, sans-serif; border: .75pt solid #111; border-radius: 1mm; text-align: center; margin-right: 1.5mm; }
-.choices { list-style: none; padding-left: 10mm; margin: 0; columns: 2; }
+.choices { list-style: none; padding-left: 10mm; margin: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(52mm, 1fr)); gap: .5mm 4mm; }
 .tf { padding-left: 10mm; margin: 0; }
 .tiles { padding-left: 10mm; margin: 0 0 1mm; }
 .tile { display: inline-block; border: .5pt solid #555; padding: .5mm 2mm; margin: .5mm; }

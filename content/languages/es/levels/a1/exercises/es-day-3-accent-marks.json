@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 8, "phase": "perceive" },
   "prompt": "Słowa pytające (qué, dónde, cuándo) w pytaniach piszemy z akcentem graficznym.",
   "explanation": "Tak: qué, quién, dónde, cuándo, cuánto, cómo zawsze mają akcent w pytaniach.",
   "configuration": {

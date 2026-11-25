@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 18, "phase": "perceive" },
   "prompt": "Me gusta los libros jest poprawne.",
   "explanation": "Los libros (liczba mnoga) → me gustan los libros.",
   "configuration": {

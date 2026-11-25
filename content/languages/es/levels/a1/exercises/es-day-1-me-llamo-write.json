@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 91, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mam na imię Piotr.",
   "explanation": "Me llamo Piotr albo Soy Piotr.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 82, "phase": "structure" },
   "prompt": "Agnieszka mówi: Soy diseñadora. Kim jest?",
   "explanation": "Diseñadora — projektantka.",
   "configuration": {

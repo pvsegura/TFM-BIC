@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 3, "number": 2, "phase": "perceive" },
   "prompt": "La calle znaczy „ulica”.",
   "explanation": "Tak: vivo en la calle Mayor.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 34, "phase": "structure" },
   "prompt": "Uzupełnij: ___ en Madrid. (jestem — teraz, w tym miejscu)",
   "explanation": "Położenie → estar: estoy en Madrid.",
   "configuration": {

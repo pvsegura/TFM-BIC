@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 9, "number": 6, "phase": "structure" },
   "prompt": "Jak jest „lato”?",
   "explanation": "El verano — lato.",
   "configuration": {

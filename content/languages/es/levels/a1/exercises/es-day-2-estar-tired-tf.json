@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 6, "phase": "perceive" },
   "prompt": "Zdanie Soy cansado jest poprawne, gdy mówisz o zmęczeniu teraz.",
   "explanation": "Zmęczenie to stan → estoy cansado.",
   "configuration": {

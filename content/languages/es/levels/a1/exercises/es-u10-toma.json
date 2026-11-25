@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 6, "phase": "structure" },
   "prompt": "Jak powiesz koledze „weź drugą ulicę”?",
   "explanation": "Tú → toma.",
   "configuration": {

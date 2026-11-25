@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 15, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Chciałabym paellę, poproszę.",
   "explanation": "Quería… / me gustaría… — grzeczna prośba.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 56, "phase": "structure" },
   "prompt": "Kelner pyta ¿Fría o natural? Co znaczy natural?",
   "explanation": "Natural — nie z lodówki, w temperaturze pokojowej.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 6, "phase": "structure" },
   "prompt": "Co znaczy tres veces al día?",
   "explanation": "Vez/veces — raz/razy.",
   "configuration": {

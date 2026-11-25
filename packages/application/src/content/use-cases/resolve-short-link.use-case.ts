@@ -32,7 +32,7 @@ export interface ShortLinkInput {
 
 const COURSE = /^([a-z]{2,3})-([a-z][0-9])$/;
 const UNIT = /^\d{1,2}$/;
-const EXERCISE_NUMBER = /^\d{1,2}$/;
+const EXERCISE_NUMBER = /^\d{1,3}$/;
 
 function isPhase(value: string): value is UnitSectionPhase {
   return (UNIT_SECTION_PHASES as readonly string[]).includes(value);

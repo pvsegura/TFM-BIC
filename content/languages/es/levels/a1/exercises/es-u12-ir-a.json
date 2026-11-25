@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 14, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jutro zwiedzę muzeum.",
   "explanation": "Ir a + bezokolicznik.",
   "configuration": {

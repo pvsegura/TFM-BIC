@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 54, "phase": "structure" },
   "prompt": "W sklepie sprzedawca pyta, czy pomóc. Chcesz tylko się rozejrzeć:",
   "explanation": "Solo estoy mirando — tylko się rozglądam.",
   "configuration": {

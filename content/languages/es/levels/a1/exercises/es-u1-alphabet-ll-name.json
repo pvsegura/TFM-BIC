@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 17, "phase": "structure" },
   "prompt": "Jak brzmi ll w llave (klucz) w większości Hiszpanii?",
   "explanation": "Ll ≈ j: [jabe].",
   "configuration": {

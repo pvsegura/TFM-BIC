@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 78, "phase": "structure" },
   "prompt": "Które zdanie jest poprawne?",
   "explanation": "Estoy cansada — stan → estar. Pozostałe: me gustan los libros, tengo treinta años, es médica.",
   "configuration": {

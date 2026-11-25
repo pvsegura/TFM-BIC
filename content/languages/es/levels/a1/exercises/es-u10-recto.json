@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 4, "phase": "structure" },
   "prompt": "Co znaczy sigue todo recto?",
   "explanation": "Seguir recto — iść prosto.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 23, "phase": "perceive" },
   "prompt": "Ćwiczenie wyobraźni przed rozmową ma naukowo udowodnioną skuteczność.",
   "explanation": "To technika pomocnicza — wielu osobom pomaga, ale nie ma mocnych dowodów.",
   "configuration": {

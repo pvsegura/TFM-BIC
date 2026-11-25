@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 10, "phase": "structure" },
   "prompt": "Uzupełnij: ___ padres viven en Polonia.",
   "explanation": "Liczba mnoga → mis padres.",
   "configuration": {

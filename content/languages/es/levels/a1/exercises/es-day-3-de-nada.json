@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 49, "phase": "structure" },
   "prompt": "Ktoś mówi Muchas gracias. Co odpowiesz?",
   "explanation": "De nada — nie ma za co.",
   "configuration": {

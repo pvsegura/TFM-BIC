@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 7, "phase": "structure" },
   "prompt": "Co znaczy billete de ida y vuelta?",
   "explanation": "Ida y vuelta — tam i z powrotem.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 7, "phase": "perceive" },
   "prompt": "Wiek po hiszpańsku wyrażamy czasownikiem tener.",
   "explanation": "Tengo treinta años — wiek się „ma”.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 61, "phase": "structure" },
   "prompt": "Co znaczy tengo dos hijos (syn i córka)?",
   "explanation": "Los hijos to także „dzieci” w sensie mieszanym.",
   "configuration": {

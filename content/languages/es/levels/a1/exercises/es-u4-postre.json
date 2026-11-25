@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 4, "phase": "structure" },
   "prompt": "Jak zapytasz, co jest na deser?",
   "explanation": "Postre — deser; pytamy: ¿Qué hay de…?",
   "configuration": {

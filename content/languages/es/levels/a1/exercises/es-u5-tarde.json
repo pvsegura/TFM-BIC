@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 8, "phase": "structure" },
   "prompt": "Por la tarde to:",
   "explanation": "Por la tarde — po południu.",
   "configuration": {

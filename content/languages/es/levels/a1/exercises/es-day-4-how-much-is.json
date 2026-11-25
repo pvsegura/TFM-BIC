@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 55, "phase": "structure" },
   "prompt": "Przy płaceniu pytasz „ile płacę?”:",
   "explanation": "¿Cuánto es? — ile to razem?",
   "configuration": {

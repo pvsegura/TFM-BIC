@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 58, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ los libros.",
   "explanation": "Czasownik zgadza się z rzeczą, którą lubisz. Los libros to liczba mnoga → me gustan.",
   "configuration": {

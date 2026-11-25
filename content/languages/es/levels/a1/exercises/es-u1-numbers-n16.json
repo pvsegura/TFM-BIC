@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 46, "phase": "transform", "lines": 1 },
   "prompt": "Napisz słownie po hiszpańsku: 16",
   "explanation": "Dieciséis — razem, z akcentem.",
   "configuration": {

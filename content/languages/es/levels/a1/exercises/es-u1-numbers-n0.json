@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 38, "phase": "structure" },
   "prompt": "Jak jest 0?",
   "explanation": "Cero — 0.",
   "configuration": {

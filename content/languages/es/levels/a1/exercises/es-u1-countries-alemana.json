@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 22, "phase": "structure" },
   "prompt": "Żeńska forma alemán to:",
   "explanation": "Alemán → alemana — akcent znika.",
   "configuration": {

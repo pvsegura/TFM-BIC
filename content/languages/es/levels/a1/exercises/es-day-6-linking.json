@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 69, "phase": "structure" },
   "prompt": "Jak brzmi płynnie ¿Qué es esto?",
   "explanation": "Samogłoski na styku słów łączą się.",
   "configuration": {

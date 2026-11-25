@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 9, "number": 1, "phase": "perceive" },
   "prompt": "Nazwy miesięcy piszemy wielką literą: Enero.",
   "explanation": "Małą literą: enero, febrero…",
   "configuration": {

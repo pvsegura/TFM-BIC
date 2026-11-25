@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 13, "phase": "perceive" },
   "prompt": "Día kończy się na -a, więc jest rodzaju żeńskiego.",
   "explanation": "Wyjątek: el día jest męski.",
   "configuration": {

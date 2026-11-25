@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 93, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mam brata.",
   "explanation": "Tener + rzeczownik z rodzajnikiem: tengo un hermano.",
   "configuration": {

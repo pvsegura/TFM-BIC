@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 52, "phase": "structure" },
   "prompt": "Uzupełnij: ___ cerveza, por favor.",
   "explanation": "Cerveza jest rodzaju żeńskiego → una cerveza.",
   "configuration": {

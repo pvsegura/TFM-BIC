@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 9, "phase": "structure" },
   "prompt": "Son las seis menos cuarto to:",
   "explanation": "Menos cuarto — za kwadrans: 5:45.",
   "configuration": {

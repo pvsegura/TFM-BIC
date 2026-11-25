@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 43, "phase": "structure" },
   "prompt": "Którym słowem zapytasz o osobę?",
   "explanation": "¿Quién? — kto?",
   "configuration": {

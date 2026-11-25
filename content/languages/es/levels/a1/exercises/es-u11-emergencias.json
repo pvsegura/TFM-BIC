@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 9, "phase": "structure" },
   "prompt": "Jaki jest numer alarmowy w Hiszpanii?",
   "explanation": "112 działa w całej UE.",
   "configuration": {

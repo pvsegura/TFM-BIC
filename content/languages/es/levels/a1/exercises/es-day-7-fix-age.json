@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 83, "phase": "structure" },
   "prompt": "Popraw błąd: Soy treinta años.",
   "explanation": "Wiek → tener.",
   "configuration": {

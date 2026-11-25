@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 8, "phase": "perceive" },
   "prompt": "Liczby 16–19 piszemy osobno: diez y seis.",
   "explanation": "Piszemy razem: dieciséis, diecisiete…",
   "configuration": {

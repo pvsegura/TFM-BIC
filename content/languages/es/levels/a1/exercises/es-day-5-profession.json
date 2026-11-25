@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 16, "phase": "perceive" },
   "prompt": "Zdanie Soy una enfermera jest poprawne.",
   "explanation": "Po ser przed zawodem nie stawiamy rodzajnika: soy enfermera.",
   "configuration": {

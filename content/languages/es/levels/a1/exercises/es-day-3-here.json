@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 47, "phase": "structure" },
   "prompt": "Jak krótko odpowiesz „tutaj” na ¿Dónde?",
   "explanation": "Aquí — tutaj; allí — tam.",
   "configuration": {

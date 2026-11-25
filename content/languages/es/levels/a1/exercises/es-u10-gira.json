@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 11, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku (do kolegi): Skręć w lewo.",
   "explanation": "Tú → gira a la izquierda.",
   "configuration": {

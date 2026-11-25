@@ -8,6 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 101, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Co mi Pan poleca?",
   "explanation": "¿Qué me recomienda? — forma usted.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 10, "phase": "structure" },
   "prompt": "Jak brzmi ñ w España?",
   "explanation": "Ñ to polskie ń.",
   "configuration": {

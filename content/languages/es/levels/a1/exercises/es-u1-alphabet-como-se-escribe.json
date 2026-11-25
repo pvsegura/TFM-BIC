@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 40, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jak to się pisze?",
   "explanation": "¿Cómo se escribe?",
   "configuration": {

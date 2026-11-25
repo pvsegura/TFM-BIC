@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 30, "phase": "structure" },
   "prompt": "Jak zwracamy się grzecznie do nieznajomej starszej osoby?",
   "explanation": "Usted to forma grzecznościowa (Pan/Pani).",
   "configuration": {

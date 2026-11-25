@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 74, "phase": "structure" },
   "prompt": "Son las dos y cuarto to:",
   "explanation": "Y cuarto — i kwadrans: 2:15.",
   "configuration": {

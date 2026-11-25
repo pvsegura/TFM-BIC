@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 1, "phase": "perceive" },
   "prompt": "Billete sencillo to bilet w jedną stronę.",
   "explanation": "Tak: sencillo — w jedną stronę.",
   "configuration": {

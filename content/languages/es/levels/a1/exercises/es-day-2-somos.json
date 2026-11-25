@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 39, "phase": "structure" },
   "prompt": "Uzupełnij: Nosotros ___ de Polonia.",
   "explanation": "Ser dla my: somos.",
   "configuration": {

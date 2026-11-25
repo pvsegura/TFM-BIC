@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 26, "phase": "structure" },
   "prompt": "Jest 17:00. Które powitanie pasuje?",
   "explanation": "Od obiadu do zmroku: buenas tardes.",
   "configuration": {

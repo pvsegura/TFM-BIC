@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 5, "phase": "structure" },
   "prompt": "Popraw błąd: Me duele mi cabeza.",
   "explanation": "Z rodzajnikiem: me duele la cabeza.",
   "configuration": {

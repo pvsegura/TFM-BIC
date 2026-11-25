@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 109, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jestem z Polski.",
   "explanation": "Pochodzenie → ser + de: soy de Polonia.",
   "configuration": {

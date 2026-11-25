@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 5, "phase": "structure" },
   "prompt": "Nieznajomy mówi do ciebie grzecznie (usted): „___ a la derecha.”",
   "explanation": "Usted → gire.",
   "configuration": {

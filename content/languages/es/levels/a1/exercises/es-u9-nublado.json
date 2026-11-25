@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 9, "number": 5, "phase": "structure" },
   "prompt": "Jak jest „jest pochmurno”?",
   "explanation": "Zachmurzenie to stan nieba w tej chwili → estar.",
   "configuration": {

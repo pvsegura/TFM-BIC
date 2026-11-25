@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 1, "phase": "perceive" },
   "prompt": "W słowie hotel wymawiamy h.",
   "explanation": "H jest nieme: [otel].",
   "configuration": {

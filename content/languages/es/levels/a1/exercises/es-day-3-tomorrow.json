@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 48, "phase": "structure" },
   "prompt": "Co znaczy mañana w odpowiedzi na ¿Cuándo?",
   "explanation": "Mañana — jutro (także: rano).",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 7, "number": 7, "phase": "structure" },
   "prompt": "Jak jest 90?",
   "explanation": "90 — noventa.",
   "configuration": {

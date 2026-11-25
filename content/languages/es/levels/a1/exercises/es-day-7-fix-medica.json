@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 85, "phase": "structure" },
   "prompt": "Popraw błąd: Es una médica.",
   "explanation": "Zawód bez rodzajnika: es médica.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 37, "phase": "structure" },
   "prompt": "Jak brzmi tener dla ty?",
   "explanation": "Tener: tengo, tienes, tiene… — e zmienia się w ie.",
   "configuration": {

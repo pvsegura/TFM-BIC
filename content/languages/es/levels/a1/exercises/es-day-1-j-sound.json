@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 31, "phase": "structure" },
   "prompt": "Jak brzmi j w słowie jamón?",
   "explanation": "Hiszpańskie j brzmi jak twarde polskie h: [hamon].",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
+  "book": { "unit": 4, "number": 9, "phase": "structure" },
   "prompt": "Kelner pyta ¿Qué van a tomar? Co znaczy?",
   "explanation": "Tomar — tu: zamówić/zjeść/wypić.",
   "configuration": {

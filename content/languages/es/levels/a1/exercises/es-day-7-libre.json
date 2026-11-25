@@ -8,6 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 80, "phase": "structure" },
   "prompt": "Co znaczy ¿Está libre esta silla?",
   "explanation": "Libre — wolny.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 2, "number": 2, "phase": "perceive" },
   "prompt": "W słowie hija wymawiamy literę h.",
   "explanation": "H jest nieme: [iha].",
   "configuration": {

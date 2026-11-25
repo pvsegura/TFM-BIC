@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 3, "phase": "perceive" },
   "prompt": "Po hiszpańsku zwykle pomijamy zaimek: mówimy Soy Ana, a nie zawsze Yo soy Ana.",
   "explanation": "Forma czasownika pokazuje osobę, więc zaimek dodajemy tylko dla podkreślenia.",
   "configuration": {

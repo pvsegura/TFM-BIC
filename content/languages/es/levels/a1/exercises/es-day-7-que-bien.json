@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 88, "phase": "structure" },
   "prompt": "Co wyraża ¡Qué bien!?",
   "explanation": "¡Qué bien! — jak dobrze, super.",
   "configuration": {

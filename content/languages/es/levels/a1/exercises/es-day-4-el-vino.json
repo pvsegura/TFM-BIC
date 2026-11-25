@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 53, "phase": "structure" },
   "prompt": "Jaki rodzajnik ma vino?",
   "explanation": "Vino (na -o) jest męskie → el vino.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 140,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 17, "phase": "perceive" },
   "prompt": "Zdanie Soy enfermera jest poprawne (bez rodzajnika).",
   "explanation": "Zawód po ser bez rodzajnika: soy enfermera.",
   "configuration": {

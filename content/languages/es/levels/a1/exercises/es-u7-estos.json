@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 7, "number": 5, "phase": "structure" },
   "prompt": "Uzupełnij: Me llevo ___ pantalones.",
   "explanation": "Pantalones (m., mn.) → estos.",
   "configuration": {

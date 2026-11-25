@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 8, "number": 10, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mój dom jest większy niż twój.",
   "explanation": "Más + przymiotnik + que.",
   "configuration": {

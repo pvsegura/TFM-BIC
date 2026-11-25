@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 1, "phase": "structure" },
   "prompt": "Które zdanie jest poprawne?",
   "explanation": "Estar de vacaciones — sytuacja w tej chwili.",
   "configuration": {

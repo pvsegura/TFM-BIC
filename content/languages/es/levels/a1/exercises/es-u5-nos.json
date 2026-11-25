@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 12, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Wstajemy wcześnie.",
   "explanation": "My → nos levantamos.",
   "configuration": {

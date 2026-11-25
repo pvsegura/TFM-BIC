@@ -8,6 +8,7 @@
   "status": "published",
   "order": 130,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 64, "phase": "structure" },
   "prompt": "Co znaczy ¿A qué te dedicas?",
   "explanation": "¿A qué te dedicas? — pytanie o zawód.",
   "configuration": {

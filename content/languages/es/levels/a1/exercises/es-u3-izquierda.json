@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 3, "number": 8, "phase": "structure" },
   "prompt": "Co znaczy a la izquierda?",
   "explanation": "Izquierda — lewa strona.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 100, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Czy mogę zapłacić kartą?",
   "explanation": "¿Puedo pagar con tarjeta? — puedo (mogę) + pagar (zapłacić) + con tarjeta (kartą).",
   "configuration": {

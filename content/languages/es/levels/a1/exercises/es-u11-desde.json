@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 8, "phase": "structure" },
   "prompt": "Odpowiedź na ¿Desde cuándo? to np.:",
   "explanation": "Desde — od (kiedy).",
   "configuration": {

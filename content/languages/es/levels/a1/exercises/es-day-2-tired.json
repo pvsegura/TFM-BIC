@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 33, "phase": "structure" },
   "prompt": "Jak powiesz: Jestem zmęczony?",
   "explanation": "Zmęczenie to stan w tej chwili, dlatego używamy estar: estoy cansado.",
   "configuration": {

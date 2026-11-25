@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 2, "number": 3, "phase": "structure" },
   "prompt": "Uzupełnij: ___ hermanos viven en Madrid.",
   "explanation": "Liczba mnoga → mis hermanos.",
   "configuration": {

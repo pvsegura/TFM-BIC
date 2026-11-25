@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 6, "number": 2, "phase": "structure" },
   "prompt": "Uzupełnij: A mi hermano ___ gusta el fútbol.",
   "explanation": "Jemu → le gusta.",
   "configuration": {

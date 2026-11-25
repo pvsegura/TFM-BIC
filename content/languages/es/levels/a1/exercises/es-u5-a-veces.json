@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 5, "number": 7, "phase": "structure" },
   "prompt": "Co znaczy a veces?",
   "explanation": "A veces — czasami.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 66, "phase": "structure" },
   "prompt": "Co znaczy: Son las tres y media?",
   "explanation": "Las tres y media to 3:30, czyli po polsku „wpół do czwartej”.",
   "configuration": {

@@ -8,6 +8,7 @@
   "status": "published",
   "order": 160,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 11, "phase": "perceive" },
   "prompt": "W pytaniu ¿Que es esto? brakuje akcentu graficznego.",
   "explanation": "W pytaniach piszemy qué z akcentem: ¿Qué es esto?",
   "configuration": {

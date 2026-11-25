@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 1, "phase": "perceive" },
   "prompt": "Kobieta, która poznaje mężczyznę, mówi: Encantado.",
   "explanation": "Forma zależy od osoby, która mówi: kobieta mówi encantada, mężczyzna encantado.",
   "configuration": {

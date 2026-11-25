@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 7, "number": 2, "phase": "structure" },
   "prompt": "Uzupełnij: una falda ___",
   "explanation": "Falda (ż.) → roja.",
   "configuration": {

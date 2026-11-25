@@ -8,6 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 27, "phase": "structure" },
   "prompt": "Co znaczy hasta luego?",
   "explanation": "Hasta luego to bardzo częste pożegnanie, nawet gdy nie planujesz spotkania.",
   "configuration": {

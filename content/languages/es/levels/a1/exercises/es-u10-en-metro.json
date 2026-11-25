@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 10, "number": 2, "phase": "structure" },
   "prompt": "Uzupełnij: Voy al trabajo ___ metro.",
   "explanation": "Środek transportu → en metro.",
   "configuration": {

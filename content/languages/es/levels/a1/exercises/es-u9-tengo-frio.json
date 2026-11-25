@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 9, "number": 3, "phase": "structure" },
   "prompt": "Jak powiesz „jest mi zimno”?",
   "explanation": "O sobie → tengo frío.",
   "configuration": {

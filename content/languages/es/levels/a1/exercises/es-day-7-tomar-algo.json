@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 110, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Napijesz się czegoś?",
   "explanation": "¿Quieres tomar algo?",
   "configuration": {

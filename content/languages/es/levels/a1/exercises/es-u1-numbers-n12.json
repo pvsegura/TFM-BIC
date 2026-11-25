@@ -8,6 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
+  "book": { "unit": 1, "number": 33, "phase": "structure" },
   "prompt": "Doce to:",
   "explanation": "Doce — 12.",
   "configuration": {

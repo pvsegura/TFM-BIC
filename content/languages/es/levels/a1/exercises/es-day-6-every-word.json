@@ -8,6 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 20, "phase": "perceive" },
   "prompt": "Żeby zrozumieć rozmowę, trzeba zrozumieć każde słowo.",
   "explanation": "Wystarczą słowa-klucze i kontekst.",
   "configuration": {

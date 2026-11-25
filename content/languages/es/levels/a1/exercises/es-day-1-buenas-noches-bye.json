@@ -8,6 +8,7 @@
   "status": "published",
   "order": 150,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 4, "phase": "perceive" },
   "prompt": "Buenas noches można powiedzieć także na pożegnanie wieczorem.",
   "explanation": "Buenas noches służy wieczorem i na powitanie, i na pożegnanie.",
   "configuration": {

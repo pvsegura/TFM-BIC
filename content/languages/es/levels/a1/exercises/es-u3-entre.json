@@ -8,6 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
+  "book": { "unit": 3, "number": 10, "phase": "structure" },
   "prompt": "La farmacia está ___ el banco y el museo.",
   "explanation": "Entre — między.",
   "configuration": {

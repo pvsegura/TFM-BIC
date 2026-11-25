@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 11, "number": 3, "phase": "structure" },
   "prompt": "Uzupełnij: Me ___ los pies.",
   "explanation": "Liczba mnoga → duelen.",
   "configuration": {

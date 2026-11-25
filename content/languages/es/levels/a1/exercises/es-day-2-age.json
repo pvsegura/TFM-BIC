@@ -8,6 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 5, "phase": "perceive" },
   "prompt": "Mam trzydzieści lat to po hiszpańsku: Soy treinta años.",
   "explanation": "Wiek się „ma”: tengo treinta años.",
   "configuration": {

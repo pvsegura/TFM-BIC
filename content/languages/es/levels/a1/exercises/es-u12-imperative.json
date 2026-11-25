@@ -8,6 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
+  "book": { "unit": 12, "number": 9, "phase": "structure" },
   "prompt": "Recepcjonistka mówi do ciebie (usted): „___ el autobús diecinueve.”",
   "explanation": "Usted → tome.",
   "configuration": {

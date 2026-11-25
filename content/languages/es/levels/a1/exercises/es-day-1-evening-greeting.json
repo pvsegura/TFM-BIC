@@ -8,6 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 24, "phase": "structure" },
   "prompt": "Jest 21:00, wchodzisz do restauracji. Jak się witasz?",
   "explanation": "Buenas noches mówi się wieczorem — na powitanie i na pożegnanie.",
   "configuration": {

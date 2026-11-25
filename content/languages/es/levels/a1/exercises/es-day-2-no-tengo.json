@@ -8,6 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 95, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Nie mam czasu.",
   "explanation": "Przeczenie: no przed czasownikiem.",
   "configuration": {

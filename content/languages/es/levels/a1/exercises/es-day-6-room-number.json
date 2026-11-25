@@ -8,6 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
+  "book": { "unit": 0, "number": 67, "phase": "structure" },
   "prompt": "W dialogu z recepcji: jaki numer ma pokój Marka?",
   "explanation": "Doscientos cuatro to 204.",
   "configuration": {
