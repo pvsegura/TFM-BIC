@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-order-address",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 32,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż adres w hiszpańskiej kolejności.",
+  "explanation": "Ulica, numer, piętro i drzwi.",
+  "configuration": {
+    "items": ["Calle", "Mayor,", "8,", "2.º", "A"],
+    "joiner": " "
+  }
+}

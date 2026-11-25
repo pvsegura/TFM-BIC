@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-reading-portal",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 38,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: wejście do budynku Carlosa jest naprzeciwko baru z dużym ogródkiem.",
+  "explanation": "El portal está enfrente de un bar con una terraza grande.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

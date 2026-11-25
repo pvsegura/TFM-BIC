@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-listen-pharmacy",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: gdzie jest apteka?",
+  "explanation": "Está muy cerca, al lado del banco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Obok banku."
+      },
+      {
+        "id": "opt-b",
+        "text": "Naprzeciwko kościoła."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na dworcu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

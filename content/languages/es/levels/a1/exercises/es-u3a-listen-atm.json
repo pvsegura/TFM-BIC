@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-listen-atm",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: w okolicy jest tylko jeden bankomat.",
+  "explanation": "Hay uno en el banco y otro enfrente del museo — są dwa.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

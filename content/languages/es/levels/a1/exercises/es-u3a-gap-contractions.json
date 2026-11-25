@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-gap-contractions",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: obok banku i naprzeciwko apteki.",
+  "explanation": "De + el = del; z la bez zmian: de la.",
+  "configuration": {
+    "text": "al lado ___ banco y enfrente ___ farmacia",
+    "gaps": [
+      {
+        "accepted": ["del"]
+      },
+      {
+        "accepted": ["de la"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

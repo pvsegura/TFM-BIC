@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-order-question",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 24,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Czy jest tu gdzieś przystanek autobusowy?",
+  "explanation": "Pytanie o istnienie z hay; por aquí = gdzieś tutaj.",
+  "configuration": {
+    "items": ["¿Hay", "una", "parada", "de", "autobús", "por", "aquí?"],
+    "joiner": " "
+  }
+}

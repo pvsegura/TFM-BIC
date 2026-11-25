@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-listen-way",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jak Ania ma dojść do domu?",
+  "explanation": "Sigues todo recto y tomas la segunda a la izquierda.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Prosto, potem w drugą w lewo."
+      },
+      {
+        "id": "opt-b",
+        "text": "W prawo, potem prosto do końca."
+      },
+      {
+        "id": "opt-c",
+        "text": "Przez plac i w pierwszą w prawo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

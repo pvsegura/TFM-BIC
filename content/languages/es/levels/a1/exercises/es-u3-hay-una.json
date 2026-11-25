@@ -8,7 +8,7 @@
   "status": "published",
   "order": 10,
   "instructionLanguage": "pl",
-  "book": { "unit": 3, "number": 3, "phase": "structure" },
+  "book": { "unit": 3, "number": 13, "phase": "structure" },
   "prompt": "Uzupełnij: ¿___ una farmacia cerca?",
   "explanation": "Pytamy, czy w ogóle istnieje → hay.",
   "configuration": {

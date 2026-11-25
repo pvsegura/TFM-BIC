@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-sound-plaza",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 33,
+    "phase": "sound"
+  },
+  "prompt": "W większości Hiszpanii plaza wymawia się [plaθa], a w Ameryce Łacińskiej [plasa].",
+  "explanation": "Tak — obie wymowy są poprawne; nigdy jak polskie [plaza].",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

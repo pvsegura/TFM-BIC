@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-gap-way",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 30,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij wskazówki: Idziesz prosto i skręcasz w prawo.",
+  "explanation": "Czas teraźniejszy, 2. osoba: sigues, giras.",
+  "configuration": {
+    "text": "___ todo recto y ___ a la derecha.",
+    "gaps": [
+      {
+        "accepted": ["sigues"]
+      },
+      {
+        "accepted": ["giras"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

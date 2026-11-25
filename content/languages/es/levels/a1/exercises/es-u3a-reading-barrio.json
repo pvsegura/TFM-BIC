@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-reading-barrio",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: jaki jest barrio del Carmen?",
+  "explanation": "Es un barrio antiguo, con calles estrechas y muchas plazas pequeñas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Stary, z wąskimi uliczkami i małymi placami."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nowoczesny, z szerokimi alejami."
+      },
+      {
+        "id": "opt-c",
+        "text": "Daleko od centrum, przy plaży."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

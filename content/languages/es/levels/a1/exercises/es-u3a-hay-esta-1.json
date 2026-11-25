@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-hay-esta-1",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: En mi calle ___ dos panaderías.",
+  "explanation": "Mówimy, że coś istnieje (dwie piekarnie) → hay.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "hay"
+      },
+      {
+        "id": "opt-b",
+        "text": "están"
+      },
+      {
+        "id": "opt-c",
+        "text": "es"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

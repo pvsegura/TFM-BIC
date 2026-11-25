@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-ser-estar-city",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Sevilla ___ una ciudad muy bonita.",
+  "explanation": "Stała cecha miejsca → ser.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "es"
+      },
+      {
+        "id": "opt-b",
+        "text": "está"
+      },
+      {
+        "id": "opt-c",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

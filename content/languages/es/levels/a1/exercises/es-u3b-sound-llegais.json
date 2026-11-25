@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-sound-llegais",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 34,
+    "phase": "sound"
+  },
+  "prompt": "W formie llegáis akcent pada na przedostatnią sylabę, jak w llegas.",
+  "explanation": "Forma vosotros ma akcent na końcówce: lle-GÁIS.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-listen-where",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: gdzie jest Ania, gdy dzwoni do Carlosa?",
+  "explanation": "Estoy en la salida del metro, en la plaza de Lavapiés.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Przy wyjściu z metra na placu Lavapiés."
+      },
+      {
+        "id": "opt-b",
+        "text": "Na lotnisku."
+      },
+      {
+        "id": "opt-c",
+        "text": "Przed domem Carlosa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

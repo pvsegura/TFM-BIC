@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-ordinal-fem",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Tomas la ___ calle a la derecha.",
+  "explanation": "Liczebnik zgadza się z rzeczownikiem żeńskim: la segunda.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "segunda"
+      },
+      {
+        "id": "opt-b",
+        "text": "segundo"
+      },
+      {
+        "id": "opt-c",
+        "text": "dos"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

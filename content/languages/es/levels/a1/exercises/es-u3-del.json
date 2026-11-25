@@ -8,7 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
-  "book": { "unit": 3, "number": 5, "phase": "structure" },
+  "book": { "unit": 3, "number": 15, "phase": "structure" },
   "prompt": "Uzupełnij: El hotel está al lado ___ museo.",
   "explanation": "De + el łączy się w del.",
   "configuration": {

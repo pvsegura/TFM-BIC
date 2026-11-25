@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-match-directions",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Połącz wskazówki z tłumaczeniem.",
+  "explanation": "Cruzar = przechodzić przez; el semáforo = światła.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "sigues todo recto",
+        "right": "idziesz prosto"
+      },
+      {
+        "left": "giras a la izquierda",
+        "right": "skręcasz w lewo"
+      },
+      {
+        "left": "cruzas la plaza",
+        "right": "przechodzisz przez plac"
+      },
+      {
+        "left": "en el semáforo",
+        "right": "na światłach"
+      },
+      {
+        "left": "al final de la calle",
+        "right": "na końcu ulicy"
+      }
+    ]
+  }
+}

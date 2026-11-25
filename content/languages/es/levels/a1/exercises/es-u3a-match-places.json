@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-match-places",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Połącz miejsca z tłumaczeniem.",
+  "explanation": "Ayuntamiento = ratusz; librería = księgarnia (biblioteka to biblioteca).",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el ayuntamiento",
+        "right": "ratusz"
+      },
+      {
+        "left": "la librería",
+        "right": "księgarnia"
+      },
+      {
+        "left": "la biblioteca",
+        "right": "biblioteka"
+      },
+      {
+        "left": "correos",
+        "right": "poczta"
+      },
+      {
+        "left": "el cajero automático",
+        "right": "bankomat"
+      }
+    ]
+  }
+}

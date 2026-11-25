@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-match-position",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Połącz wyrażenia położenia.",
+  "explanation": "Detrás de = za; delante de = przed; en la esquina = na rogu.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "detrás de",
+        "right": "za"
+      },
+      {
+        "left": "delante de",
+        "right": "przed"
+      },
+      {
+        "left": "en la esquina",
+        "right": "na rogu"
+      },
+      {
+        "left": "lejos de",
+        "right": "daleko od"
+      }
+    ]
+  }
+}

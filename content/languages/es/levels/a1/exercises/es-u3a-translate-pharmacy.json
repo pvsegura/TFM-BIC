@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-translate-pharmacy",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 41,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Apteka jest naprzeciwko kościoła.",
+  "explanation": "Konkretna apteka → está; naprzeciwko = enfrente de.",
+  "configuration": {
+    "acceptedAnswers": ["La farmacia está enfrente de la iglesia."],
+    "caseSensitive": false
+  }
+}

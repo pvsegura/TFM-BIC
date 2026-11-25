@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-write-way",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 46,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz wiadomość do znajomego: jak dojść od stacji metra do twojego domu (adres, 4–5 kroków, punkty orientacyjne).",
+  "explanation": "Sprawdź liczebniki porządkowe (primer, segunda) i formy sigues/giras/cruzas.",
+  "configuration": {
+    "modelAnswer": "¡Hola! Mi dirección es calle de la Paz, 12, 1.º A. Sales del metro y giras a la derecha. Sigues todo recto hasta el semáforo. Cruzas la calle y tomas la primera a la izquierda. Mi portal está enfrente de una farmacia. Está a cinco minutos a pie.",
+    "checklist": [
+      "adres z piętrem i drzwiami",
+      "co najmniej trzy kroki drogi",
+      "punkt orientacyjny",
+      "czas pieszo"
+    ],
+    "minWords": 25,
+    "maxWords": 100
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-listen-museum",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: gdzie jest muzeum?",
+  "explanation": "En la plaza, entre el ayuntamiento y la iglesia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na placu, między ratuszem a kościołem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Na ulicy Mayor, obok apteki."
+      },
+      {
+        "id": "opt-c",
+        "text": "Daleko, za parkiem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

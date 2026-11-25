@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-order-how",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 31,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Jak dojdę do dworca?",
+  "explanation": "¿Cómo llego a…? a + la estación.",
+  "configuration": {
+    "items": ["¿Cómo", "llego", "a", "la", "estación?"],
+    "joiner": " "
+  }
+}

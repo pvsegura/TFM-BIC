@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-hay-esta-2",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: La panadería ___ en la esquina.",
+  "explanation": "Konkretna, znana piekarnia (la) → está.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "está"
+      },
+      {
+        "id": "opt-b",
+        "text": "hay"
+      },
+      {
+        "id": "opt-c",
+        "text": "es"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

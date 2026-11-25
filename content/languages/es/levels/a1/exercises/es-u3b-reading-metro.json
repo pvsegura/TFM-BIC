@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-reading-metro",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 37,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: na jakiej linii metra wsiada się na lotnisku?",
+  "explanation": "Tomas la línea 8 del metro hasta Nuevos Ministerios.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na linii 8."
+      },
+      {
+        "id": "opt-b",
+        "text": "Na linii 3."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na linii 10."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-write-barrio",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 45,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Opisz swoją okolicę w 5–6 zdaniach: co w niej jest i gdzie dokładnie się znajduje.",
+  "explanation": "Sprawdź: hay dla rzeczy nowych, está dla konkretnych; al/del.",
+  "configuration": {
+    "modelAnswer": "Vivo en un barrio tranquilo cerca del centro. En mi calle hay una panadería y un supermercado. El supermercado está al lado de mi casa. Hay un parque grande enfrente del colegio. La parada de autobús está en la esquina.",
+    "checklist": [
+      "co najmniej dwa zdania z hay",
+      "co najmniej dwa zdania z está",
+      "wyrażenia położenia",
+      "del / al tam, gdzie trzeba"
+    ],
+    "minWords": 25,
+    "maxWords": 90
+  }
+}

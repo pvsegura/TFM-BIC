@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-estar-form",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: —¿Dónde ___? —Estamos en la plaza.",
+  "explanation": "Pytanie do was (vosotros): estáis.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "estáis"
+      },
+      {
+        "id": "opt-b",
+        "text": "están"
+      },
+      {
+        "id": "opt-c",
+        "text": "estamos"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

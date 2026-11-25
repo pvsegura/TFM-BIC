@@ -8,7 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
-  "book": { "unit": 3, "number": 6, "phase": "structure" },
+  "book": { "unit": 3, "number": 16, "phase": "structure" },
   "prompt": "Co znaczy enfrente de?",
   "explanation": "Enfrente de — naprzeciwko.",
   "configuration": {

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-match-building",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 12,
+    "phase": "connect"
+  },
+  "prompt": "Połącz słowa związane z budynkiem.",
+  "explanation": "Portal = wejście do budynku; el bajo = parter.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el portal",
+        "right": "wejście do budynku"
+      },
+      {
+        "left": "el bajo",
+        "right": "parter"
+      },
+      {
+        "left": "el timbre",
+        "right": "dzwonek"
+      },
+      {
+        "left": "la dirección",
+        "right": "adres"
+      }
+    ]
+  }
+}

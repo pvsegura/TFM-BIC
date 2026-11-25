@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-ordinal",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Vivo en el ___ piso.",
+  "explanation": "Przed rzeczownikiem męskim tercero → tercer.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "tercer"
+      },
+      {
+        "id": "opt-b",
+        "text": "tercero"
+      },
+      {
+        "id": "opt-c",
+        "text": "tercera"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

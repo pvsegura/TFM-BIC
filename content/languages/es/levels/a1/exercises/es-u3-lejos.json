@@ -8,7 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
-  "book": { "unit": 3, "number": 7, "phase": "structure" },
+  "book": { "unit": 3, "number": 17, "phase": "structure" },
   "prompt": "Przeciwieństwo cerca to:",
   "explanation": "Cerca — blisko; lejos — daleko.",
   "configuration": {

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-translate-far",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Czy muzeum jest daleko?",
+  "explanation": "Położenie → estar: ¿Está lejos el museo?",
+  "configuration": {
+    "acceptedAnswers": ["¿Está lejos el museo?", "¿El museo está lejos?", "Está lejos el museo"],
+    "caseSensitive": false
+  }
+}

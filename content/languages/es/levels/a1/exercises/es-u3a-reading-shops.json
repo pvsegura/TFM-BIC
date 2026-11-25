@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3a-reading-shops",
+  "lessonId": "es-unit-3-places",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: sklepy w dzielnicy Lucíi są otwarte bez przerwy od rana do wieczora.",
+  "explanation": "Las tiendas cierran a mediodía y abren otra vez por la tarde.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

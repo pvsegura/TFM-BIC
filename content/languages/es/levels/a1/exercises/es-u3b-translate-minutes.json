@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u3b-translate-minutes",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: To dziesięć minut pieszo.",
+  "explanation": "Odległość w minutach: está a… minutos a pie.",
+  "configuration": {
+    "acceptedAnswers": ["Está a diez minutos a pie."],
+    "caseSensitive": false
+  }
+}

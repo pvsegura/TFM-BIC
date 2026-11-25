@@ -8,7 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
-  "book": { "unit": 3, "number": 11, "phase": "transform", "lines": 1 },
+  "book": { "unit": 3, "number": 39, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: W mieście są dwa muzea.",
   "explanation": "Hay + liczba + rzeczownik.",
   "configuration": {
