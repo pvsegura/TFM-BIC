@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 145,
+  "unit": 5,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 5B. ¿Qué haces el fin de semana? — tydzień, obowiązki i wolny czas",
+  "description": "Mówisz o dniach tygodnia, pracy i obowiązkach (tener que), używasz czasowników nieregularnych w 1. osobie i opisujesz weekend.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Plan tygodnia" },
+    {
+      "type": "explanation",
+      "text": "Dwoje współlokatorów, Ola i Javier, ustala, kto i kiedy robi zakupy i sprząta. Za pierwszym razem posłuchaj, jakie dni tygodnia padają. Za drugim zapisz, co każde z nich musi zrobić (tener que). Za trzecim sprawdź, co robią w weekend."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u5-roommates.png",
+      "alt": "Dwoje współlokatorów w kuchni planuje tydzień przy kalendarzu na lodówce."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "Javier, ¿quién hace la compra esta semana?",
+          "translation": "Javier, kto robi zakupy w tym tygodniu?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Yo la hago el martes, porque los lunes salgo tarde del trabajo.",
+          "translation": "Ja je zrobię we wtorek, bo w poniedziałki późno wychodzę z pracy."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Vale. Y yo limpio la cocina el jueves.",
+          "translation": "Dobrze. A ja sprzątam kuchnię w czwartek."
+        },
+        {
+          "speaker": "Javier",
+          "text": "¿El jueves no tienes clase de inglés?",
+          "translation": "W czwartek nie masz angielskiego?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Sí, pero la clase termina a las siete. Tengo tiempo.",
+          "translation": "Mam, ale zajęcia kończą się o siódmej. Mam czas."
+        },
+        {
+          "speaker": "Javier",
+          "text": "¿Y qué haces el fin de semana?",
+          "translation": "A co robisz w weekend?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "El sábado por la mañana voy al mercado y por la tarde quedo con unas amigas.",
+          "translation": "W sobotę rano idę na targ, a po południu umawiam się z koleżankami."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Yo el domingo siempre hago deporte. Salgo a correr al parque del Retiro.",
+          "translation": "Ja w niedzielę zawsze uprawiam sport. Wychodzę biegać do parku Retiro."
+        },
+        {
+          "speaker": "Ola",
+          "text": "¡Qué energía! Yo los domingos duermo hasta las diez.",
+          "translation": "Ale masz energię! Ja w niedziele śpię do dziesiątej."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Dni tygodnia i obowiązki domowe" },
+    {
+      "type": "table",
+      "caption": "Dni tygodnia (małą literą, rodzaju męskiego)",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["el lunes", "poniedziałek", "el viernes", "piątek"],
+        ["el martes", "wtorek", "el sábado", "sobota"],
+        ["el miércoles", "środa", "el domingo", "niedziela"],
+        ["el jueves", "czwartek", "el fin de semana", "weekend"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Obowiązki i wolny czas",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["hacer la compra", "robić zakupy", "quedar con amigos", "spotykać się z przyjaciółmi"],
+        ["limpiar la casa", "sprzątać dom", "salir a correr", "wychodzić biegać"],
+        ["poner la lavadora", "nastawić pranie", "ir al cine", "iść do kina"],
+        ["fregar los platos", "zmywać naczynia", "pasear", "spacerować"],
+        ["hacer la cama", "ścielić łóżko", "descansar", "odpoczywać"],
+        ["sacar la basura", "wynosić śmieci", "dormir hasta tarde", "spać do późna"],
+        ["cocinar", "gotować", "ver series", "oglądać seriale"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — nazwy dni pochodzą od planet i bogów, tak jak w wielu językach: lunes od Księżyca (luna), martes od Marsa, miércoles od Merkurego, jueves od Jowisza, viernes od Wenus. Sábado i domingo to „szabat” i „dzień Pański” (Dominus). Wyobraź sobie, że w poniedziałek (lunes) budzisz się pod Księżycem, a w piątek (viernes) idziesz na randkę z Wenus."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Dni tygodnia z rodzajnikiem, tener que i nieregularne „yo”"
+    },
+    {
+      "type": "explanation",
+      "text": "Dni tygodnia łączą się z rodzajnikiem, bez przyimka: el lunes (w poniedziałek — ten najbliższy), los lunes (w poniedziałki — co tydzień). Nie mówimy „en lunes”. Pory dnia dodajemy z por: el sábado por la mañana (w sobotę rano)."
+    },
+    {
+      "type": "comparison",
+      "source": "W poniedziałki pracuję do późna, ale w tę sobotę odpoczywam.",
+      "target": "Los lunes trabajo hasta tarde, pero este sábado descanso.",
+      "note": "Los lunes — co tydzień; el lunes / este sábado — jeden konkretny dzień."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "En lunes voy al gimnasio.",
+      "right": "Los lunes voy al gimnasio. / El lunes voy al gimnasio.",
+      "explanation": "Przed dniem tygodnia nie stawiamy przyimka en. Zamiast niego używamy rodzajnika: el (jeden raz) albo los (regularnie)."
+    },
+    {
+      "type": "explanation",
+      "text": "Obowiązek wyrażamy konstrukcją tener que + bezokolicznik (musieć): Tengo que trabajar el sábado. To bardzo częsta i prosta konstrukcja: odmieniasz tylko tener. Brak obowiązku: No tengo que… (nie muszę)."
+    },
+    {
+      "type": "table",
+      "caption": "Czasowniki nieregularne tylko w 1. osobie (yo)",
+      "columns": ["Bezokolicznik", "yo", "tú / él", "Przykład"],
+      "rows": [
+        ["hacer — robić", "hago", "haces / hace", "Hago la compra los martes."],
+        ["salir — wychodzić", "salgo", "sales / sale", "Salgo de casa a las ocho."],
+        ["poner — kłaść, nastawiać", "pongo", "pones / pone", "Pongo la lavadora."],
+        ["traer — przynosić", "traigo", "traes / trae", "Traigo el pan."],
+        ["ver — widzieć, oglądać", "veo", "ves / ve", "Veo series por la noche."],
+        ["dar — dawać", "doy", "das / da", "Doy un paseo."],
+        ["saber — wiedzieć, umieć", "sé", "sabes / sabe", "No sé cocinar."],
+        ["conocer — znać", "conozco", "conoces / conoce", "Conozco un bar muy bueno."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Yo hace la compra. / Yo salo a las ocho.",
+      "right": "Yo hago la compra. / Yo salgo a las ocho.",
+      "explanation": "Te czasowniki mają nieregularną tylko formę yo — pozostałe osoby odmieniają się regularnie (haces, hace, salimos). Warto nauczyć się „hago, salgo, pongo” jako jednej rymowanki."
+    },
+    {
+      "type": "explanation",
+      "text": "Dwa ważne czasowniki z wymianą samogłoski w tej lekcji: dormir (o → ue): duermo, duermes, duerme, dormimos, dormís, duermen; jugar (u → ue): juego, juegas, juega, jugamos, jugáis, juegan. Jugar al fútbol / al tenis — grać w piłkę / w tenisa (z al)."
+    },
+    {
+      "type": "example",
+      "text": "—¿Tienes que trabajar el sábado? —No, este sábado no tengo que trabajar. Duermo hasta las once.",
+      "translation": "—Musisz pracować w sobotę? —Nie, w tę sobotę nie muszę pracować. Śpię do jedenastej."
+    },
+    { "type": "section", "phase": "sound", "title": "B i v brzmią tak samo" },
+    {
+      "type": "explanation",
+      "text": "W hiszpańskim b i v wymawia się identycznie. Na początku zdania i po m, n brzmią jak polskie b: vale [bale], un vino [umbino]. Między samogłoskami — miękko, bez pełnego zamknięcia ust: la vida, sábado, la lavadora. Hiszpanie przy literowaniu mówią więc be de Barcelona albo uve de Valencia, żeby było jasne, o którą literę chodzi."
+    },
+    { "type": "section", "phase": "culture", "title": "Weekend, święta i „mosty”" },
+    {
+      "type": "reading",
+      "title": "El fin de semana de Javier",
+      "paragraphs": [
+        "Javier trabaja de lunes a viernes en una empresa de informática. Los viernes por la tarde no trabaja: en verano muchas empresas tienen jornada intensiva.",
+        "Los sábados por la mañana va al mercado de su barrio y compra fruta y pescado. Por la noche sale con sus amigos a cenar a un restaurante o a tomar algo.",
+        "Los domingos hace deporte en el parque, come en casa de sus padres y por la tarde descansa y ve una serie. El domingo por la noche prepara la semana."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpanie bardzo lubią „mosty” (los puentes): jeśli święto wypada we wtorek lub w czwartek, wiele osób bierze wolny poniedziałek lub piątek i ma długi weekend. Najsłynniejszy jest el puente de diciembre (6 i 8 grudnia — Dzień Konstytucji i Niepokalane Poczęcie).",
+        "Oprócz świąt państwowych każdy region i każde miasto ma własne dni wolne, na przykład święto patrona. Dlatego w jednym mieście sklepy mogą być zamknięte, a w sąsiednim otwarte.",
+        "Weekend to czas spotkań: Hiszpanie częściej umawiają się na mieście (quedar) niż zapraszają do domu. Spotkanie „na kawę” w sobotę po południu może zamienić się w kolację."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: twój tydzień" },
+    {
+      "type": "mission",
+      "title": "Uzgodnij plan tygodnia ze współlokatorem",
+      "steps": [
+        "Powiedz, co robisz regularnie w trzy dni tygodnia (los lunes…).",
+        "Powiedz, co musisz zrobić w tym tygodniu: Tengo que…",
+        "Podziel się obowiązkami: Yo hago…, tú sacas…",
+        "Opowiedz o weekendzie, używając co najmniej trzech czasowników z „yo” nieregularnym (hago, salgo, veo…).",
+        "Nagraj się i sprawdź wymowę b/v w sábado, vale i la lavadora."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Los lunes trabajo hasta tarde.",
+          "translation": "W poniedziałki pracuję do późna."
+        },
+        {
+          "text": "El sábado por la mañana voy al mercado.",
+          "translation": "W sobotę rano idę na targ."
+        },
+        { "text": "Tengo que hacer la compra.", "translation": "Muszę zrobić zakupy." },
+        { "text": "¿Qué haces el fin de semana?", "translation": "Co robisz w weekend?" },
+        { "text": "Salgo con mis amigos.", "translation": "Wychodzę z przyjaciółmi." },
+        {
+          "text": "Los domingos duermo hasta las diez.",
+          "translation": "W niedziele śpię do dziesiątej."
+        },
+        { "text": "No sé cocinar.", "translation": "Nie umiem gotować." }
+      ],
+      "canDo": [
+        "nazwać dni tygodnia i użyć el / los zamiast przyimka",
+        "wyrazić obowiązek z tener que",
+        "odmienić hacer, salir, poner, ver, saber, conocer w 1. osobie",
+        "użyć dormir i jugar ze zmianą samogłoski",
+        "opowiedzieć o weekendzie i obowiązkach domowych",
+        "wymówić b i v po hiszpańsku"
+      ]
+    }
+  ]
+}

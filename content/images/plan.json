@@ -46,5 +46,13 @@
   {
     "asset": "a1-u4-tapas.png",
     "prompt": "top view of a wooden table with several small plates of Spanish tapas: potato omelette slices, croquettes, olives, fried potatoes, bread and two glasses of wine"
+  },
+  {
+    "asset": "a1-u5-morning.png",
+    "prompt": "a man in a small kitchen in the morning drinking coffee and looking at his wristwatch, an alarm clock and toast on the table, sunlight through the window"
+  },
+  {
+    "asset": "a1-u5-roommates.png",
+    "prompt": "two young roommates in a shared kitchen planning the week next to a blank wall calendar on the fridge, one holds a shopping bag, the other a mop"
   }
 ]

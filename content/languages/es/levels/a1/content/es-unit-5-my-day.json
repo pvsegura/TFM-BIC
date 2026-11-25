@@ -8,38 +8,18 @@
   "order": 140,
   "unit": 5,
   "instructionLanguage": "pl",
-  "title": "Jednostka 5. Mi día — codzienne czynności i godziny",
-  "description": "Opowiadasz o swoim dniu: czasowniki zwrotne, godziny i to, jak często coś robisz.",
+  "title": "Jednostka 5A. Mi día — codzienna rutyna i godziny",
+  "description": "Opowiadasz o swoim dniu: czasowniki zwrotne, godziny, kolejność czynności i to, jak często coś robisz.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Zwykły dzień" },
     {
       "type": "explanation",
-      "text": "Czasowniki zwrotne mają na końcu -se: levantarse (wstawać), ducharse (brać prysznic), vestirse (ubierać się), acostarse (kłaść się spać). Zaimek zmienia się z osobą i stoi przed czasownikiem: me levanto, te levantas, se levanta, nos levantamos, os levantáis, se levantan."
+      "text": "Lucía przeprowadza wywiad do szkolnej gazetki z Pawłem, Polakiem, który pracuje w Madrycie. Za pierwszym razem posłuchaj, o której Paweł wstaje i kończy pracę. Za drugim zapisz wszystkie czynności w kolejności. Za trzecim zwróć uwagę na słowa częstotliwości: siempre, a veces, nunca."
     },
     {
-      "type": "example",
-      "text": "Me levanto a las siete y me ducho.",
-      "translation": "Wstaję o siódmej i biorę prysznic."
-    },
-    {
-      "type": "explanation",
-      "text": "Uwaga na zmiany samogłoski: acostarse → me acuesto (o → ue), vestirse → me visto (e → i), despertarse → me despierto (e → ie)."
-    },
-    {
-      "type": "explanation",
-      "text": "Godziny: ¿Qué hora es? — Es la una. Son las dos. Son las tres y diez. Son las cuatro y media. Son las cinco menos cuarto. O której? — ¿A qué hora…? — A las ocho. Pory dnia: por la mañana (rano), por la tarde (po południu), por la noche (wieczorem/w nocy)."
-    },
-    {
-      "type": "example",
-      "text": "¿A qué hora empiezas a trabajar? — A las nueve.",
-      "translation": "O której zaczynasz pracę? — O dziewiątej."
-    },
-    {
-      "type": "explanation",
-      "text": "Jak często: siempre (zawsze), normalmente (zwykle), a menudo (często), a veces (czasami), nunca (nigdy). Nunca może stać przed czasownikiem bez no: Nunca desayuno. Albo z no po: No desayuno nunca."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: ACOSTARSE — wyobraź sobie, że kładziesz się spać na „kości” (acuesto) — twarde łóżko wieczorem. LEVANTARSE kojarz z „lewitować” — rano lewitujesz z łóżka."
+      "type": "image",
+      "asset": "a1-u5-morning.png",
+      "alt": "Mężczyzna rano w kuchni pije kawę i patrzy na zegarek, obok budzik."
     },
     {
       "type": "dialogue",
@@ -51,34 +31,206 @@
         },
         {
           "speaker": "Paweł",
-          "text": "Me levanto a las seis y media, desayuno y voy al trabajo en metro.",
-          "translation": "Wstaję o wpół do siódmej, jem śniadanie i jadę metrem do pracy."
+          "text": "Me levanto a las seis y media, me ducho y desayuno un café con una tostada.",
+          "translation": "Wstaję o wpół do siódmej, biorę prysznic i jem na śniadanie kawę z tostem."
         },
         {
           "speaker": "Lucía",
-          "text": "¿Y a qué hora terminas?",
-          "translation": "A o której kończysz?"
+          "text": "¿A qué hora empiezas a trabajar?",
+          "translation": "O której zaczynasz pracę?"
         },
         {
           "speaker": "Paweł",
-          "text": "A las cuatro. Por la tarde, a veces voy al gimnasio.",
-          "translation": "O czwartej. Po południu czasami chodzę na siłownię."
+          "text": "A las ocho. Voy al trabajo en metro; son veinte minutos.",
+          "translation": "O ósmej. Jadę do pracy metrem; to dwadzieścia minut."
+        },
+        { "speaker": "Lucía", "text": "¿Y dónde comes?", "translation": "A gdzie jesz obiad?" },
+        {
+          "speaker": "Paweł",
+          "text": "Normalmente como en la oficina con mis compañeros, a las dos.",
+          "translation": "Zwykle jem w biurze z kolegami, o drugiej."
+        },
+        { "speaker": "Lucía", "text": "¿Y por la tarde?", "translation": "A po południu?" },
+        {
+          "speaker": "Paweł",
+          "text": "Termino a las cinco. A veces voy al gimnasio y luego vuelvo a casa.",
+          "translation": "Kończę o piątej. Czasami chodzę na siłownię, a potem wracam do domu."
         },
         {
           "speaker": "Lucía",
-          "text": "¿Y te acuestas pronto?",
-          "translation": "A kładziesz się wcześnie?"
+          "text": "¿A qué hora cenas?",
+          "translation": "O której jesz kolację?"
         },
         {
           "speaker": "Paweł",
-          "text": "Normalmente sí, a las once.",
-          "translation": "Zwykle tak, o jedenastej."
+          "text": "A las nueve, como los españoles. Y me acuesto a las once. ¡Nunca veo la tele!",
+          "translation": "O dziewiątej, jak Hiszpanie. I kładę się o jedenastej. Nigdy nie oglądam telewizji!"
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Czynności dnia" },
+    {
+      "type": "table",
+      "caption": "Od rana do wieczora",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["despertarse", "budzić się", "comer", "jeść obiad"],
+        ["levantarse", "wstawać", "terminar de trabajar", "kończyć pracę"],
+        ["ducharse", "brać prysznic", "volver a casa", "wracać do domu"],
+        ["lavarse los dientes", "myć zęby", "hacer la compra", "robić zakupy"],
+        ["vestirse", "ubierać się", "hacer deporte", "uprawiać sport"],
+        ["desayunar", "jeść śniadanie", "cenar", "jeść kolację"],
+        ["salir de casa", "wychodzić z domu", "ver la tele", "oglądać telewizję"],
+        ["ir al trabajo", "iść / jechać do pracy", "acostarse", "kłaść się spać"],
+        ["empezar a trabajar", "zaczynać pracę", "dormir", "spać"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: opowiedz swój dzień w sześciu zdaniach, z godzinami i jednym słowem częstotliwości (siempre, a veces, nunca)."
+      "text": "Łącz i zapamiętuj — LEVANTARSE kojarz z „lewitować”: rano lewitujesz z łóżka. ACOSTARSE — wieczorem kładziesz się na „kości” (me acuesto) zmęczony po całym dniu. Zwróć uwagę, że posiłki to po hiszpańsku czasowniki: desayunar (jeść śniadanie), comer (jeść obiad), cenar (jeść kolację) — nie trzeba mówić „jeść śniadanie”, wystarczy desayuno."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Czasowniki zwrotne, godziny i częstotliwość"
+    },
+    {
+      "type": "explanation",
+      "text": "Czasowniki zwrotne mają w bezokoliczniku -se: levantarse, ducharse. Zaimek zmienia się z osobą i stoi przed czasownikiem: me levanto, te levantas, se levanta, nos levantamos, os levantáis, se levantan. Niektóre z nich zmieniają też samogłoskę: despertarse → me despierto (e → ie), acostarse → me acuesto (o → ue), vestirse → me visto (e → i)."
+    },
+    {
+      "type": "table",
+      "caption": "Trzy czasowniki zwrotne z rutyny",
+      "columns": ["Osoba", "levantarse", "acostarse (o → ue)", "vestirse (e → i)"],
+      "rows": [
+        ["yo", "me levanto", "me acuesto", "me visto"],
+        ["tú", "te levantas", "te acuestas", "te vistes"],
+        ["él / ella / usted", "se levanta", "se acuesta", "se viste"],
+        ["nosotros / nosotras", "nos levantamos", "nos acostamos", "nos vestimos"],
+        ["vosotros / vosotras", "os levantáis", "os acostáis", "os vestís"],
+        ["ellos / ellas / ustedes", "se levantan", "se acuestan", "se visten"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Levanto a las siete. / Me levanto me a las siete.",
+      "right": "Me levanto a las siete.",
+      "explanation": "Bez zaimka levanto znaczy „podnoszę (coś)”. Zaimek stoi raz, przed odmienionym czasownikiem. W bezokoliczniku dołączamy go na końcu: Tengo que levantarme pronto."
+    },
+    {
+      "type": "table",
+      "caption": "Która godzina? O której?",
+      "columns": ["Godzina", "¿Qué hora es?", "¿A qué hora…?"],
+      "rows": [
+        ["1:00", "Es la una.", "a la una"],
+        ["2:00", "Son las dos.", "a las dos"],
+        ["7:10", "Son las siete y diez.", "a las siete y diez"],
+        ["7:15", "Son las siete y cuarto.", "a las siete y cuarto"],
+        ["7:30", "Son las siete y media.", "a las siete y media"],
+        ["7:45", "Son las ocho menos cuarto.", "a las ocho menos cuarto"],
+        ["7:50", "Son las ocho menos diez.", "a las ocho menos diez"],
+        ["12:00", "Es mediodía. / Son las doce.", "a mediodía"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Jest za piętnaście ósma. Wstaję za kwadrans ósma.",
+      "target": "Son las ocho menos cuarto. Me levanto a las ocho menos cuarto.",
+      "note": "Po trzydziestej minucie liczymy do następnej godziny z menos (minus). W rozmowie Hiszpanie nie używają zegara 24-godzinnego — dodają de la mañana / de la tarde / de la noche."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Es las tres. / A tres.",
+      "right": "Son las tres. / A las tres.",
+      "explanation": "Godzinę pierwszą wyrażamy w liczbie pojedynczej (Es la una), wszystkie inne w mnogiej (Son las dos…). „O której” zawsze z a las."
+    },
+    {
+      "type": "table",
+      "caption": "Jak często? (od najczęściej do nigdy)",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["siempre", "zawsze"],
+        ["normalmente", "zwykle"],
+        ["a menudo / muchas veces", "często"],
+        ["a veces", "czasami"],
+        ["pocas veces", "rzadko"],
+        ["nunca", "nigdy"],
+        ["todos los días", "codziennie"],
+        ["dos veces a la semana", "dwa razy w tygodniu"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Nunca może stać przed czasownikiem bez no (Nunca veo la tele) albo po nim — wtedy z no przed czasownikiem (No veo nunca la tele). To podwójne przeczenie, jak w polskim „nigdy nie oglądam”. Kolejność czynności opisujemy słowami: primero (najpierw), luego / después (potem), más tarde (później), al final (na koniec)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nunca no veo la tele.",
+      "right": "Nunca veo la tele. / No veo nunca la tele.",
+      "explanation": "Gdy nunca stoi przed czasownikiem, no już nie dodajemy — inaczej niż w polskim „nigdy nie”."
+    },
+    { "type": "section", "phase": "sound", "title": "Dyftongi: ie, ue" },
+    {
+      "type": "explanation",
+      "text": "W formach z wymianą samogłoski pojawiają się dyftongi — dwie samogłoski w jednej sylabie: me des-PIER-to, me a-CUES-to, em-PIE-zo, VUEL-vo. Wymawiaj je szybko i płynnie, jako jedną sylabę: [despjerto], [akwesto]. Nie rozdzielaj ich jak w polskim „pi-er-wszy”."
+    },
+    { "type": "section", "phase": "culture", "title": "Hiszpański rytm dnia" },
+    {
+      "type": "reading",
+      "title": "Un día de Carmen",
+      "paragraphs": [
+        "Carmen es enfermera en un hospital de Madrid. Esta semana trabaja por la mañana: se levanta a las seis, toma un café y sale de casa a las seis y media.",
+        "Trabaja de siete a tres. A las tres y media come con su hija, que vuelve del colegio. Por la tarde descansa un poco, hace la compra o pasea por el parque.",
+        "Cena a las nueve y media con su familia. Normalmente se acuesta a las once, pero los viernes sale con sus amigas y vuelve muy tarde."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpański dzień jest „przesunięty” w porównaniu z polskim: obiad między 14:00 a 16:00, kolacja po 21:00, a programy w telewizji w porze największej oglądalności zaczynają się około 22:00. Jedną z przyczyn jest strefa czasowa — Hiszpania żyje według czasu środkowoeuropejskiego, choć geograficznie leży bardziej na zachodzie.",
+        "Wiele firm pracuje w systemie jornada partida (np. 9:00–14:00 i 16:00–19:00 z długą przerwą na obiad), a inne w jornada continua (np. 8:00–15:00). Latem wiele urzędów i firm przechodzi na jornada intensiva i kończy pracę wcześniej.",
+        "Siesta to raczej mit niż codzienność: w dużych miastach mało kto śpi po obiedzie w dni robocze. Popołudniowa przerwa w małych sklepach jednak wciąż jest częsta."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: twój dzień" },
+    {
+      "type": "mission",
+      "title": "Opowiedz o swoim zwykłym dniu",
+      "steps": [
+        "Powiedz, o której wstajesz i co robisz rano (co najmniej trzy czasowniki zwrotne).",
+        "Powiedz, o której zaczynasz i kończysz pracę lub naukę i jak tam dojeżdżasz.",
+        "Opisz popołudnie i wieczór, używając primero, luego, después, al final.",
+        "Dodaj trzy słowa częstotliwości: siempre, a veces, nunca.",
+        "Porównaj jedną godzinę z hiszpańskim rytmem dnia: En Polonia… pero en España…",
+        "Nagraj się i sprawdź wymowę dyftongów w me despierto i me acuesto."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Me levanto a las siete.", "translation": "Wstaję o siódmej." },
+        {
+          "text": "¿Qué hora es? — Son las ocho y media.",
+          "translation": "Która godzina? — Wpół do dziewiątej."
+        },
+        { "text": "¿A qué hora empiezas a trabajar?", "translation": "O której zaczynasz pracę?" },
+        { "text": "Normalmente como a las dos.", "translation": "Zwykle jem obiad o drugiej." },
+        { "text": "A veces voy al gimnasio.", "translation": "Czasami chodzę na siłownię." },
+        { "text": "Nunca veo la tele.", "translation": "Nigdy nie oglądam telewizji." },
+        {
+          "text": "Primero desayuno y luego me ducho.",
+          "translation": "Najpierw jem śniadanie, a potem biorę prysznic."
+        }
+      ],
+      "canDo": [
+        "opowiedzieć o swojej codziennej rutynie",
+        "odmienić czasowniki zwrotne, także ze zmianą samogłoski",
+        "powiedzieć, która jest godzina i o której coś robię",
+        "użyć słów częstotliwości, także nunca bez no",
+        "opisać kolejność czynności",
+        "porównać polski i hiszpański rytm dnia"
+      ]
     }
   ]
 }
