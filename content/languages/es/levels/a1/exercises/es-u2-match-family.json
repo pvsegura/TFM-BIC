@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-match-family",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Połącz członków rodziny z tłumaczeniem.",
+  "explanation": "Primo/prima to kuzyn/kuzynka, nieto/nieta — wnuk/wnuczka.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el primo",
+        "right": "kuzyn"
+      },
+      {
+        "left": "la nieta",
+        "right": "wnuczka"
+      },
+      {
+        "left": "la suegra",
+        "right": "teściowa"
+      },
+      {
+        "left": "el tío",
+        "right": "wujek"
+      },
+      {
+        "left": "los abuelos",
+        "right": "dziadkowie"
+      }
+    ]
+  }
+}

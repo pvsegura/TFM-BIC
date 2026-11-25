@@ -8,7 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 11, "phase": "transform", "lines": 1 },
+  "book": { "unit": 2, "number": 37, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Mój brat ma trzydzieści lat.",
   "explanation": "Wiek → tener: mi hermano tiene treinta años.",
   "configuration": {

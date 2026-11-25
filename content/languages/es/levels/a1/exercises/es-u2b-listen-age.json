@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-listen-age",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: ile lat kończy tata Marty?",
+  "explanation": "Sesenta — sześćdziesiąt.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "60"
+      },
+      {
+        "id": "opt-b",
+        "text": "70"
+      },
+      {
+        "id": "opt-c",
+        "text": "50"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

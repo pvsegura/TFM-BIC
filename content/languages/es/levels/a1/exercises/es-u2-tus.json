@@ -8,7 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 12, "phase": "transform", "lines": 1 },
+  "book": { "unit": 2, "number": 38, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Jak mają na imię twoje dzieci?",
   "explanation": "Tus hijos — twoje dzieci.",
   "configuration": {

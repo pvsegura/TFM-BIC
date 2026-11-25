@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-match-looks",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Połącz opis z tłumaczeniem.",
+  "explanation": "Pelo rizado = kręcone włosy; lleva gafas = nosi okulary.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el pelo rizado",
+        "right": "kręcone włosy"
+      },
+      {
+        "left": "los ojos marrones",
+        "right": "brązowe oczy"
+      },
+      {
+        "left": "lleva gafas",
+        "right": "nosi okulary"
+      },
+      {
+        "left": "es calvo",
+        "right": "jest łysy"
+      }
+    ]
+  }
+}

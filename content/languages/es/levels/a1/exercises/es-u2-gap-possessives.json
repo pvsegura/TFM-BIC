@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-gap-possessives",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij zaimki dzierżawcze: moi rodzice, twoja siostra, nasze babcie.",
+  "explanation": "Mi/tu zmieniają się tylko w liczbie (mis); nuestro także w rodzaju (nuestras).",
+  "configuration": {
+    "text": "___ padres, ___ hermana y ___ abuelas",
+    "gaps": [
+      {
+        "accepted": ["mis"]
+      },
+      {
+        "accepted": ["tu"]
+      },
+      {
+        "accepted": ["nuestras"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

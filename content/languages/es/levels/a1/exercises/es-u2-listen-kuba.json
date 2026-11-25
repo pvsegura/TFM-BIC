@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-listen-kuba",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: kim z zawodu jest Kuba, brat Bartka?",
+  "explanation": "Es mi hermano Kuba. Tiene veintiocho años y es ingeniero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Inżynierem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Lekarzem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nauczycielem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

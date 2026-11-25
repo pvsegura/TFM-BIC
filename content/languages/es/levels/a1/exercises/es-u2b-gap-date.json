@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-gap-date",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Napisz datę słownie: 12 marca.",
+  "explanation": "Data: el + liczba główna + de + miesiąc (małą literą).",
+  "configuration": {
+    "text": "Mi cumpleaños es el ___ de ___.",
+    "gaps": [
+      {
+        "accepted": ["doce"]
+      },
+      {
+        "accepted": ["marzo"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

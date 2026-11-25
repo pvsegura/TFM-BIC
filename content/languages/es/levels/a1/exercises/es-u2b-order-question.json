@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-order-question",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 30,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Kiedy są urodziny twojej siostry?",
+  "explanation": "Pytanie z cuándo: ¿Cuándo es el cumpleaños de…?",
+  "configuration": {
+    "items": ["¿Cuándo", "es", "el", "cumpleaños", "de", "tu", "hermana?"],
+    "joiner": " "
+  }
+}

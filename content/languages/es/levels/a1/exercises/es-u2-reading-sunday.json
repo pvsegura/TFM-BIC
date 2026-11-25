@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-reading-sunday",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 33,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: co robi rodzina Lucíi w niedzielę?",
+  "explanation": "Los domingos comemos todos juntos en casa de mis abuelos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Je razem obiad u dziadków."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ogląda mecz na stadionie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jedzie nad morze."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

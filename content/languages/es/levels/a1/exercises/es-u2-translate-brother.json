@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-translate-brother",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 39,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Mój brat jest wysoki i bardzo sympatyczny.",
+  "explanation": "Przymiotniki po rzeczowniku i w formie męskiej: alto, simpático.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Mi hermano es alto y muy simpático.",
+      "Mi hermano es muy simpático y alto."
+    ],
+    "caseSensitive": false
+  }
+}

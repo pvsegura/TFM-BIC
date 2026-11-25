@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-write-person",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 45,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Opisz członka rodziny albo przyjaciela: wygląd (ser, tener, llevar), charakter i datę urodzin.",
+  "explanation": "Sprawdź, czy używasz ser dla całej osoby, tener dla włosów i oczu oraz czy data ma liczbę główną.",
+  "configuration": {
+    "modelAnswer": "Mi mejor amiga se llama Kasia. Es alta y delgada. Tiene el pelo rizado y los ojos azules. Lleva gafas. Es muy trabajadora y divertida. Su cumpleaños es el tres de octubre.",
+    "checklist": [
+      "ser + cecha całej osoby",
+      "tener + el pelo / los ojos",
+      "co najmniej jeden przymiotnik charakteru",
+      "data urodzin z el + liczba + de + miesiąc"
+    ],
+    "minWords": 20,
+    "maxWords": 80
+  }
+}

@@ -8,7 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 4, "phase": "structure" },
+  "book": { "unit": 2, "number": 13, "phase": "structure" },
   "prompt": "Co może znaczyć su madre?",
   "explanation": "Su ma wiele znaczeń; wyjaśnia je kontekst.",
   "configuration": {

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-listen-date",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: kiedy jest przyjęcie?",
+  "explanation": "El sábado veinte de mayo a las dos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W sobotę 20 maja o 14:00."
+      },
+      {
+        "id": "opt-b",
+        "text": "W niedzielę 12 maja o 20:00."
+      },
+      {
+        "id": "opt-c",
+        "text": "W sobotę 2 marca o 12:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-write-family",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 44,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Opisz swoją rodzinę w 5–7 zdaniach: kto to jest, ile ma lat, czym się zajmuje i jaki jest.",
+  "explanation": "Sprawdź rodzajniki, zgodę przymiotników i zawody bez un/una.",
+  "configuration": {
+    "modelAnswer": "Mi familia no es muy grande. Mi padre se llama Marek, tiene cincuenta y siete años y es mecánico. Mi madre es profesora y es muy alegre. Tengo una hermana, Ola. Es estudiante, es alta y un poco tímida. Mis abuelos están jubilados y viven en Lublin.",
+    "checklist": [
+      "imiona i relacje (mi padre, mi hermana…)",
+      "wiek z tener",
+      "zawody bez rodzajnika",
+      "co najmniej dwa przymiotniki w dobrej formie"
+    ],
+    "minWords": 25,
+    "maxWords": 90
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-agreement-alta",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Wybierz poprawne zdanie.",
+  "explanation": "Przymiotnik zgadza się z rzeczownikiem w rodzaju i liczbie: hermanas — altas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mis hermanas son altas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mis hermanas son altos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mis hermanas es alta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

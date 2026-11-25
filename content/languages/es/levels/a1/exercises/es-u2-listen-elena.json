@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-listen-elena",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Elena ma brata i siostrę.",
+  "explanation": "No, soy hija única — jest jedynaczką, ale ma dużo kuzynów.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

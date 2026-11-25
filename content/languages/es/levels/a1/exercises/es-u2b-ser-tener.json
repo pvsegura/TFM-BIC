@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-ser-tener",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Mi hermano ___ alto y ___ los ojos azules.",
+  "explanation": "Ser — cecha całej osoby (alto); tener — części ciała (los ojos).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "es / tiene"
+      },
+      {
+        "id": "opt-b",
+        "text": "tiene / es"
+      },
+      {
+        "id": "opt-c",
+        "text": "está / tiene"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

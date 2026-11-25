@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-translate-retired",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 41,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Moi dziadkowie są na emeryturze.",
+  "explanation": "Estar jubilado; dziadkowie = los abuelos, z zaimkiem mis.",
+  "configuration": {
+    "acceptedAnswers": ["Mis abuelos están jubilados."],
+    "caseSensitive": false
+  }
+}

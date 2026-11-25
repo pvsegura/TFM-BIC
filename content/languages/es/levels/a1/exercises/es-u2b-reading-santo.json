@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-reading-santo",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: co w Hiszpanii świętuje się przede wszystkim?",
+  "explanation": "En España las personas celebran sobre todo el cumpleaños.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Urodziny."
+      },
+      {
+        "id": "opt-b",
+        "text": "Imieniny."
+      },
+      {
+        "id": "opt-c",
+        "text": "Rocznicę ślubu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-sound-hija",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 31,
+    "phase": "sound"
+  },
+  "prompt": "W słowie hija wymawiamy zarówno h, jak i j jak polskie j.",
+  "explanation": "H jest nieme, a j brzmi jak polskie h: [iha].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

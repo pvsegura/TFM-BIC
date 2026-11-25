@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-reading-marta",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 34,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: Marta, siostra Lucíi, mieszka z rodzicami.",
+  "explanation": "Marta tiene diecinueve años y es estudiante. Vive con mis padres.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

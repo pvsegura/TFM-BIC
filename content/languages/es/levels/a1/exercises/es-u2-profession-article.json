@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-profession-article",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Która forma jest poprawna: Moja mama jest nauczycielką?",
+  "explanation": "Zawód po ser bez rodzajnika.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mi madre es profesora."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mi madre es una profesora."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mi madre está profesora."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

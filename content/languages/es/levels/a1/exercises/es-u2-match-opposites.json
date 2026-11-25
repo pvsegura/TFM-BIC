@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-match-opposites",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Połącz przymiotniki o przeciwnym znaczeniu.",
+  "explanation": "Alto ↔ bajo, joven ↔ mayor, alegre ↔ serio, rubio ↔ moreno.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "alto",
+        "right": "bajo"
+      },
+      {
+        "left": "joven",
+        "right": "mayor"
+      },
+      {
+        "left": "alegre",
+        "right": "serio"
+      },
+      {
+        "left": "rubio",
+        "right": "moreno"
+      }
+    ]
+  }
+}

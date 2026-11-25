@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-translate-glasses",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Mój tata nosi okulary i ma siwe włosy.",
+  "explanation": "Llevar gafas; tener el pelo canoso.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Mi padre lleva gafas y tiene el pelo canoso.",
+      "Mi padre tiene el pelo canoso y lleva gafas."
+    ],
+    "caseSensitive": false
+  }
+}

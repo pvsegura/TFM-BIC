@@ -8,7 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 10, "phase": "structure" },
+  "book": { "unit": 2, "number": 18, "phase": "structure" },
   "prompt": "Co znaczy mi mujer w zdaniu „Mi mujer es polaca”?",
   "explanation": "La mujer — kobieta, a także żona.",
   "configuration": {

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-translate-children",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 40,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Masz dzieci?",
+  "explanation": "Hijos w liczbie mnogiej znaczy też „dzieci” (synowie i córki).",
+  "configuration": {
+    "acceptedAnswers": ["¿Tienes hijos?", "Tienes hijos"],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-match-months",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Połącz miesiące z tłumaczeniem.",
+  "explanation": "Junio to czerwiec, julio — lipiec; enero — styczeń.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "enero",
+        "right": "styczeń"
+      },
+      {
+        "left": "junio",
+        "right": "czerwiec"
+      },
+      {
+        "left": "julio",
+        "right": "lipiec"
+      },
+      {
+        "left": "octubre",
+        "right": "październik"
+      },
+      {
+        "left": "diciembre",
+        "right": "grudzień"
+      }
+    ]
+  }
+}

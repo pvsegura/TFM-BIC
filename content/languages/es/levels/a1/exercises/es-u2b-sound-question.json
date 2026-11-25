@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-sound-question",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 32,
+    "phase": "sound"
+  },
+  "prompt": "W pytaniu tak/nie (¿Tienes hermanos?) głos na końcu idzie w górę.",
+  "explanation": "Tak — samo podniesienie głosu zamienia zdanie w pytanie.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

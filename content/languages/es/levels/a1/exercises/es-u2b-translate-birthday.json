@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-translate-birthday",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 42,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Kiedy masz urodziny?",
+  "explanation": "Pytanie z cuándo i rzeczownikiem cumpleaños.",
+  "configuration": {
+    "acceptedAnswers": ["¿Cuándo es tu cumpleaños?", "Cuándo es tu cumpleaños"],
+    "caseSensitive": false
+  }
+}

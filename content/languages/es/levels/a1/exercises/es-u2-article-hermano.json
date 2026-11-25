@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-article-hermano",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Tengo ___ hermano y ___ hermana.",
+  "explanation": "Coś nowego wprowadzamy rodzajnikiem nieokreślonym: un (męski), una (żeński).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "un / una"
+      },
+      {
+        "id": "opt-b",
+        "text": "el / la"
+      },
+      {
+        "id": "opt-c",
+        "text": "— / —"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

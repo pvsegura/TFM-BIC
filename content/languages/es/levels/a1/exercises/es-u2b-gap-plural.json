@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-gap-plural",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Utwórz liczbę mnogą: el profesor joven → los ___ ___.",
+  "explanation": "Spółgłoska + es; joven → jóvenes z kreską.",
+  "configuration": {
+    "text": "los ___ ___",
+    "gaps": [
+      {
+        "accepted": ["profesores"]
+      },
+      {
+        "accepted": ["jóvenes"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

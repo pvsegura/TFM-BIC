@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-pelo",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Wybierz poprawne zdanie: Ona ma długie włosy.",
+  "explanation": "El pelo w liczbie pojedynczej, z rodzajnikiem, przymiotnik po rzeczowniku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tiene el pelo largo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tiene largos pelos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Es pelo largo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

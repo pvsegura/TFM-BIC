@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-reading-reyes",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: kiedy dzieci dostają prezenty od Trzech Króli?",
+  "explanation": "De los Reyes Magos, el seis de enero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "6 stycznia."
+      },
+      {
+        "id": "opt-b",
+        "text": "24 grudnia."
+      },
+      {
+        "id": "opt-c",
+        "text": "19 marca."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

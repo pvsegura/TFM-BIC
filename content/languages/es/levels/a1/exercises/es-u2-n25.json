@@ -8,7 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 6, "phase": "structure" },
+  "book": { "unit": 2, "number": 15, "phase": "structure" },
   "prompt": "Jak jest 25?",
   "explanation": "21–29 piszemy razem: veinticinco.",
   "configuration": {

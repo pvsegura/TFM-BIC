@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2-order-de",
+  "lessonId": "es-unit-2-family",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 23,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż zdanie: Rodzice Marty mieszkają w Gdyni.",
+  "explanation": "Przynależność: los padres de Marta.",
+  "configuration": {
+    "items": ["Los", "padres", "de", "Marta", "viven", "en", "Gdynia."],
+    "joiner": " "
+  }
+}

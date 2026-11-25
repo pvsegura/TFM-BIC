@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-cumplir",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Mañana mi abuela ___ ochenta años.",
+  "explanation": "Kończyć lata = cumplir (ella cumple).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "cumple"
+      },
+      {
+        "id": "opt-b",
+        "text": "tiene"
+      },
+      {
+        "id": "opt-c",
+        "text": "es"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -6,26 +6,30 @@
   "levelId": "a1",
   "type": "multiple-choice",
   "status": "published",
-  "order": 80,
+  "order": 400,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 8, "phase": "structure" },
-  "prompt": "Co znaczy está casado?",
-  "explanation": "Estar casado/casada — być w związku małżeńskim.",
+  "book": {
+    "unit": 2,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Mi hermano ___ casado y tiene dos hijos.",
+  "explanation": "Stan cywilny zwykle z estar: está casado.",
   "configuration": {
     "options": [
       {
-        "id": "a",
-        "text": "Jest rozwiedziony"
+        "id": "opt-a",
+        "text": "está"
       },
       {
-        "id": "b",
-        "text": "Jest żonaty"
+        "id": "opt-b",
+        "text": "es"
       },
       {
-        "id": "c",
-        "text": "Jest kawalerem"
+        "id": "opt-c",
+        "text": "tiene"
       }
     ],
-    "correctOptionId": "b"
+    "correctOptionId": "opt-a"
   }
 }

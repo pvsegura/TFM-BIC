@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u2b-listen-ines",
+  "lessonId": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 2,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Inés ma krótkie, jasne włosy i niebieskie oczy.",
+  "explanation": "Es morena, tiene el pelo largo y los ojos verdes.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

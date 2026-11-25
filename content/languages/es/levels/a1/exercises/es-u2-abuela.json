@@ -8,7 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
-  "book": { "unit": 2, "number": 5, "phase": "structure" },
+  "book": { "unit": 2, "number": 14, "phase": "structure" },
   "prompt": "Jak jest „babcia”?",
   "explanation": "La abuela — babcia; el abuelo — dziadek.",
   "configuration": {
