@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-date",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 720,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 58,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Napisz datę: 1 stycznia.",
+  "explanation": "W Hiszpanii zwykle el uno (rzadziej el primero) de enero.",
+  "configuration": {
+    "text": "el ___ de ___",
+    "gaps": [
+      {
+        "accepted": ["uno", "primero"]
+      },
+      {
+        "accepted": ["enero"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-article",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 680,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 54,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Uzupełnij: Tengo ___ hermana y ___ primos.",
+  "explanation": "Coś nowego: una (żeński), unos (męski mn.).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "una / unos"
+      },
+      {
+        "id": "opt-b",
+        "text": "la / los"
+      },
+      {
+        "id": "opt-c",
+        "text": "un / unas"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

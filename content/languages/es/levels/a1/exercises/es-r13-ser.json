@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-ser",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 49,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Uzupełnij formami ser.",
+  "explanation": "Yo soy, ella es, nosotros somos.",
+  "configuration": {
+    "text": "Yo ___ polaca, ella ___ española y nosotros ___ amigos.",
+    "gaps": [
+      {
+        "accepted": ["soy"]
+      },
+      {
+        "accepted": ["es"]
+      },
+      {
+        "accepted": ["somos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

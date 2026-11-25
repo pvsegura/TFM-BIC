@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-translate-where",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 780,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 64,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 1–3. Napisz po hiszpańsku: Gdzie jest dworzec?",
+  "explanation": "Konkretne miejsce → está.",
+  "configuration": {
+    "acceptedAnswers": ["¿Dónde está la estación?", "Dónde está la estación"],
+    "caseSensitive": false
+  }
+}

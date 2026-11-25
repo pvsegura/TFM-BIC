@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-cual",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 660,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 52,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Uzupełnij: ¿___ es tu dirección?",
+  "explanation": "O konkretną informację pytamy ¿Cuál es…?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Cuál"
+      },
+      {
+        "id": "opt-b",
+        "text": "Qué"
+      },
+      {
+        "id": "opt-c",
+        "text": "Cómo"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

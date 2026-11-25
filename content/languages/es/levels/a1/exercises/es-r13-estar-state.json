@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-estar-state",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 760,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 62,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Uzupełnij: Es tarde y el museo ya ___ cerrado.",
+  "explanation": "Stan chwilowy → estar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "está"
+      },
+      {
+        "id": "opt-b",
+        "text": "es"
+      },
+      {
+        "id": "opt-c",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

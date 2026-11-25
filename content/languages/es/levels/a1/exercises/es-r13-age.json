@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-age",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 650,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 51,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 1–3. Napisz po hiszpańsku słownie: Mam 33 lata.",
+  "explanation": "Tener + años; 33 = treinta y tres.",
+  "configuration": {
+    "acceptedAnswers": ["Tengo treinta y tres años."],
+    "caseSensitive": false
+  }
+}

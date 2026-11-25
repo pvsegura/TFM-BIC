@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-greeting",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 610,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 47,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Jest 21:00. Jak się przywitasz?",
+  "explanation": "Wieczorem: buenas noches.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Buenas noches."
+      },
+      {
+        "id": "opt-b",
+        "text": "Buenos días."
+      },
+      {
+        "id": "opt-c",
+        "text": "Buenas tardes."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

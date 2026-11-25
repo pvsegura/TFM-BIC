@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-del",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 740,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 60,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Uzupełnij: La parada está enfrente ___ hospital.",
+  "explanation": "De + el = del.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "del"
+      },
+      {
+        "id": "opt-b",
+        "text": "de el"
+      },
+      {
+        "id": "opt-c",
+        "text": "de la"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

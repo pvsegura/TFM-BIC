@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r13-usted",
+  "lessonId": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 3,
+    "number": 48,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 1–3. Pytasz starszą panią o imię. Co powiesz?",
+  "explanation": "Forma usted: ¿Cómo se llama (usted)?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Cómo se llama usted?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Cómo te llamas?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Cómo se llaman?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
