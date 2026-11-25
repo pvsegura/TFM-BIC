@@ -7,6 +7,10 @@ import type { ExerciseType } from "./exercise-type.js";
 import { multipleChoiceEvaluator, multipleChoicePresenter } from "./types/multiple-choice.js";
 import { textAnswerEvaluator, textAnswerPresenter } from "./types/text-answer.js";
 import { trueFalseEvaluator, trueFalsePresenter } from "./types/true-false.js";
+import { gapFillEvaluator, gapFillPresenter } from "./types/gap-fill.js";
+import { matchingEvaluator, matchingPresenter } from "./types/matching.js";
+import { openWritingEvaluator, openWritingPresenter } from "./types/open-writing.js";
+import { orderingEvaluator, orderingPresenter } from "./types/ordering.js";
 
 /** A judged answer: the validated answer (what an attempt stores) and the verdict. */
 export interface EvaluatedAnswer {
@@ -111,5 +115,9 @@ export function createDefaultExerciseTypeRegistry(): ExerciseTypeRegistry {
     }),
     registerExerciseType({ evaluator: textAnswerEvaluator, presenter: textAnswerPresenter }),
     registerExerciseType({ evaluator: trueFalseEvaluator, presenter: trueFalsePresenter }),
+    registerExerciseType({ evaluator: orderingEvaluator, presenter: orderingPresenter }),
+    registerExerciseType({ evaluator: matchingEvaluator, presenter: matchingPresenter }),
+    registerExerciseType({ evaluator: gapFillEvaluator, presenter: gapFillPresenter }),
+    registerExerciseType({ evaluator: openWritingEvaluator, presenter: openWritingPresenter }),
   ]);
 }

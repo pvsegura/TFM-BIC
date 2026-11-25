@@ -57,7 +57,7 @@ export interface PersonalDataExport {
     }[];
     exerciseAttempts: {
       exerciseId: string;
-      submittedAnswer: string | boolean;
+      submittedAnswer: string | boolean | readonly string[];
       correct: boolean;
       answeredAt: Iso;
     }[];

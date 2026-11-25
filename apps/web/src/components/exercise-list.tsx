@@ -48,7 +48,13 @@ export function ExerciseList({ exercises, getHref }: ExerciseListProps) {
           >
             <div className="flex flex-wrap items-center justify-between gap-x-3 gap-y-1">
               <p className="text-xs font-medium uppercase tracking-wide text-primary/70 dark:text-surface/70">
-                Exercise {position} · <span>{exerciseTypeLabel(exercise.type)}</span>
+                {exercise.book
+                  ? m.learn.exercises.bookNumber(
+                      String(exercise.book.unit),
+                      String(exercise.book.number),
+                    )
+                  : m.learn.exercises.position(String(position))}{" "}
+                · <span>{exerciseTypeLabel(exercise.type)}</span>
               </p>
               <ExerciseStatusBadge status={exercise.result.status} />
             </div>

@@ -91,7 +91,7 @@ describe("registry safety", () => {
     expect(() => onlyMultipleChoice.present(trueFalse)).toThrow(UnsupportedExerciseTypeError);
   });
 
-  it.each(["__proto__", "constructor", "toString", "hasOwnProperty", "", "matching"])(
+  it.each(["__proto__", "constructor", "toString", "hasOwnProperty", "", "drag-and-drop"])(
     "never resolves %j to an evaluator",
     (type) => {
       const forged = { ...trueFalse, type } as unknown as Exercise;

@@ -1,4 +1,9 @@
-import { EXERCISE_RESULT_STATUSES, EXERCISE_TYPES, MAX_TEXT_ANSWER_LENGTH } from "@verbysia/domain";
+import {
+  EXERCISE_RESULT_STATUSES,
+  EXERCISE_TYPES,
+  MAX_OPEN_WRITING_LENGTH,
+  MAX_TEXT_ANSWER_LENGTH,
+} from "@verbysia/domain";
 import { z } from "zod";
 
 import { rewardsResponseSchema } from "../gamification/gamification-response.schema.js";
@@ -11,6 +16,12 @@ import {
 import { multipleChoicePresentedSchema } from "./types/multiple-choice.schema.js";
 import { textAnswerPresentedSchema } from "./types/text-answer.schema.js";
 import { trueFalsePresentedSchema } from "./types/true-false.schema.js";
+import {
+  gapFillPresentedSchema,
+  matchingPresentedSchema,
+  openWritingPresentedSchema,
+  orderingPresentedSchema,
+} from "./types/book-exercise-types.schema.js";
 
 /**
  * Student-facing exercise shapes (M7). Like the lesson shapes they are
@@ -45,6 +56,10 @@ export const exerciseResponseSchema = z.discriminatedUnion("type", [
   multipleChoicePresentedSchema.extend(withResult),
   textAnswerPresentedSchema.extend(withResult),
   trueFalsePresentedSchema.extend(withResult),
+  orderingPresentedSchema.extend(withResult),
+  matchingPresentedSchema.extend(withResult),
+  gapFillPresentedSchema.extend(withResult),
+  openWritingPresentedSchema.extend(withResult),
 ]);
 export type ExerciseResponse = z.infer<typeof exerciseResponseSchema>;
 
@@ -58,6 +73,7 @@ export const exerciseSummaryResponseSchema = z.object({
   order: z.number().int(),
   prompt: z.string(),
   instructionLanguage: languageIdSchema,
+  book: z.object({ unit: z.number().int(), number: z.number().int() }).optional(),
   result: exerciseResultResponseSchema,
 });
 export type ExerciseSummaryResponse = z.infer<typeof exerciseSummaryResponseSchema>;
@@ -84,7 +100,12 @@ export const exerciseIdParamSchema = z.object({ exerciseId: exerciseIdSchema });
  * exercise's own evaluator.
  */
 export const exerciseAnswerRequestSchema = z.strictObject({
-  answer: z.union([z.string().max(MAX_TEXT_ANSWER_LENGTH), z.boolean()]),
+  answer: z.union([
+    z.string().max(MAX_OPEN_WRITING_LENGTH),
+    z.boolean(),
+    // Ordering, matching and gap-fill: one string per item, bounded so a stored attempt stays small.
+    z.array(z.string().max(200)).min(1).max(10),
+  ]),
 });
 export type ExerciseAnswerRequest = z.infer<typeof exerciseAnswerRequestSchema>;
 

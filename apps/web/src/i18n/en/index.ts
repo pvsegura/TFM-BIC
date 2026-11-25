@@ -1015,6 +1015,10 @@ export const en: Messages = {
         "multiple-choice": "Multiple choice",
         "text-answer": "Written answer",
         "true-false": "True or false",
+        ordering: "Put in order",
+        matching: "Match the pairs",
+        "gap-fill": "Fill the gaps",
+        "open-writing": "Writing task",
       },
       typeFallback: "Exercise",
       trueLabel: "True",
@@ -1022,6 +1026,22 @@ export const en: Messages = {
       chooseAnswer: "Choose an answer.",
       enterAnswer: "Enter an answer.",
       check: "Check",
+      position: (n) => `Exercise ${n}`,
+      bookNumber: (unit, number) => `ex. ${unit}.${number}`,
+      ordering: {
+        hint: "Put the items in the right order with the ↑ and ↓ buttons.",
+        moveUp: (item) => `Move up: ${item}`,
+        moveDown: (item) => `Move down: ${item}`,
+      },
+      matching: { choose: "Choose…", completeAll: "Match every item." },
+      gapFill: { gap: (n) => `Gap ${n}`, fillAll: "Fill in every gap." },
+      openWriting: {
+        label: "Your text",
+        words: (n, min, max) => `Words: ${n} (required ${min}–${max})`,
+        checklist: "Check that your text:",
+        modelAnswer: "Model answer",
+        tooShort: (min, max) => `Write between ${min} and ${max} words.`,
+      },
     },
     rewards: {
       reasons: {

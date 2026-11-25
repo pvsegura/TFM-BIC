@@ -30,6 +30,8 @@ export interface ExerciseSummary {
   order: number;
   prompt: string;
   instructionLanguage: LanguageId;
+  /** Workbook number ("ćw. 3.14"), when the exercise is also printed. */
+  book?: { unit: number; number: number } | undefined;
   result: ExerciseResultView;
 }
 
@@ -75,6 +77,9 @@ export class ListLessonExercisesUseCase {
       order: exercise.order,
       prompt: exercise.prompt,
       instructionLanguage: exercise.instructionLanguage,
+      ...(exercise.book
+        ? { book: { unit: exercise.book.unit, number: exercise.book.number } }
+        : {}),
       result: toResultView(summaryByExercise.get(exercise.id) ?? null),
     }));
 

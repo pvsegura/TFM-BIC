@@ -594,8 +594,8 @@ describe("POST /exercises/:exerciseId/answer", () => {
       ["a null answer", { answer: null }],
       ["a numeric answer", { answer: 1 }],
       ["an object answer", { answer: { optionId: "opt-a" } }],
-      ["an array answer", { answer: ["opt-a"] }],
-      ["an over-long answer", { answer: "a".repeat(501) }],
+      ["an array with a non-string item", { answer: ["opt-a", 1] }],
+      ["an over-long answer", { answer: "a".repeat(1501) }],
     ])("rejects %s with 400 'Invalid request.' and records nothing", async (_name, payload) => {
       const built = build();
       const { cookie } = await signIn(built, "ana@example.com");
@@ -604,6 +604,16 @@ describe("POST /exercises/:exerciseId/answer", () => {
 
       expect(response.statusCode).toBe(400);
       expect(response.json()).toEqual({ error: "Invalid request." });
+      expect(built.exerciseAttemptRepository.writeCalls).toBe(0);
+    });
+
+    it("rejects an answer shaped for another exercise type (a list for a choice) and records nothing", async () => {
+      const built = build();
+      const { cookie } = await signIn(built, "ana@example.com");
+
+      const response = await answer(built, cookie, "pl-first-mc", { answer: ["opt-a"] });
+
+      expect(response.statusCode).toBe(400);
       expect(built.exerciseAttemptRepository.writeCalls).toBe(0);
     });
 

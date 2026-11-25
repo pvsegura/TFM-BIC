@@ -1017,6 +1017,10 @@ export const es: Messages = {
         "multiple-choice": "Opción múltiple",
         "text-answer": "Respuesta escrita",
         "true-false": "Verdadero o falso",
+        ordering: "Ordena",
+        matching: "Relaciona",
+        "gap-fill": "Completa los huecos",
+        "open-writing": "Expresión escrita",
       },
       typeFallback: "Ejercicio",
       trueLabel: "Verdadero",
@@ -1024,6 +1028,22 @@ export const es: Messages = {
       chooseAnswer: "Elige una respuesta.",
       enterAnswer: "Escribe una respuesta.",
       check: "Comprobar",
+      position: (n) => `Ejercicio ${n}`,
+      bookNumber: (unit, number) => `ej. ${unit}.${number}`,
+      ordering: {
+        hint: "Pon los elementos en el orden correcto con los botones ↑ y ↓.",
+        moveUp: (item) => `Subir: ${item}`,
+        moveDown: (item) => `Bajar: ${item}`,
+      },
+      matching: { choose: "Elige…", completeAll: "Relaciona todos los elementos." },
+      gapFill: { gap: (n) => `Hueco ${n}`, fillAll: "Completa todos los huecos." },
+      openWriting: {
+        label: "Tu texto",
+        words: (n, min, max) => `Palabras: ${n} (entre ${min} y ${max})`,
+        checklist: "Comprueba que tu texto:",
+        modelAnswer: "Respuesta modelo",
+        tooShort: (min, max) => `Escribe entre ${min} y ${max} palabras.`,
+      },
     },
     rewards: {
       reasons: {

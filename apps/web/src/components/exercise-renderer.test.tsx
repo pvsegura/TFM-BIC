@@ -85,7 +85,7 @@ describe("ExerciseRenderer", () => {
     const future = {
       ...BASE,
       id: "pl-a-future",
-      type: "matching",
+      type: "drag-and-drop",
       prompt: "Match <b>these</b>",
       secret: "do not show",
     } as unknown as ExerciseResponse;
@@ -109,7 +109,7 @@ describe("exerciseTypeLabel", () => {
   });
 
   it("falls back to a generic word for a type it does not know", () => {
-    expect(exerciseTypeLabel("matching")).toBe("Exercise");
+    expect(exerciseTypeLabel("drag-and-drop")).toBe("Exercise");
     expect(exerciseTypeLabel("__proto__")).toBe("Exercise");
   });
 });
@@ -137,7 +137,11 @@ describe("describeCorrectAnswer", () => {
   });
 
   it("returns null for a type it does not know", () => {
-    const future = { ...BASE, id: "pl-a-future", type: "matching" } as unknown as ExerciseResponse;
+    const future = {
+      ...BASE,
+      id: "pl-a-future",
+      type: "drag-and-drop",
+    } as unknown as ExerciseResponse;
 
     expect(describeCorrectAnswer(future, "x")).toBeNull();
   });

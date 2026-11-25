@@ -116,7 +116,7 @@ describe("exerciseResponseSchema — what a student sees before answering", () =
   );
 
   it.each([
-    ["an unknown type", { ...presentedBase, type: "matching" }],
+    ["an unknown type", { ...presentedBase, type: "drag-and-drop" }],
     ["a multiple-choice exercise without options", { ...presentedBase, type: "multiple-choice" }],
     ["a missing result", { ...presentedMultipleChoice, result: undefined }],
     ["an invalid id", { ...presentedMultipleChoice, id: "../etc/passwd" }],
@@ -161,7 +161,7 @@ describe("exerciseListResponseSchema", () => {
   it.each([
     { exercises: [summary], progress: { total: -1, answered: 0 } },
     { exercises: [summary], progress: { total: 1 } },
-    { exercises: [{ ...summary, type: "matching" }], progress: { total: 1, answered: 0 } },
+    { exercises: [{ ...summary, type: "drag-and-drop" }], progress: { total: 1, answered: 0 } },
   ])("rejects %j", (body) => {
     expect(exerciseListResponseSchema.safeParse(body).success).toBe(false);
   });
@@ -189,8 +189,10 @@ describe("exerciseAnswerRequestSchema — the only thing a client may send", () 
     ["a null answer", { answer: null }],
     ["a number answer", { answer: 1 }],
     ["an object answer", { answer: { optionId: "a" } }],
-    ["an array answer", { answer: ["a"] }],
-    ["an over-long text", { answer: "a".repeat(501) }],
+    ["an array with a non-string item", { answer: ["a", 1] }],
+    ["an empty array answer", { answer: [] }],
+    ["an array with too many items", { answer: Array.from({ length: 11 }, () => "a") }],
+    ["an over-long text", { answer: "a".repeat(1501) }],
     ["a bare string", "opt-a"],
     ["null", null],
     ["an array", []],

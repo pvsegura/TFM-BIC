@@ -4,6 +4,12 @@ import { createElement, type ReactElement } from "react";
 import { MultipleChoiceExerciseView } from "./multiple-choice-exercise-view.js";
 import { TextAnswerExerciseView } from "./text-answer-exercise-view.js";
 import { TrueFalseExerciseView } from "./true-false-exercise-view.js";
+import {
+  GapFillExerciseView,
+  MatchingExerciseView,
+  OpenWritingExerciseView,
+  OrderingExerciseView,
+} from "./book-exercise-views.js";
 import type {
   ExerciseViewDefinition,
   ExerciseViewProps,
@@ -75,6 +81,29 @@ const VIEWS: ReadonlyMap<string, RegisteredView> = new Map([
           ? m.learn.exercises.trueLabel
           : m.learn.exercises.falseLabel
         : null,
+  }),
+  // For these types the server sends the correct answer as ready-to-show text.
+  registerView("ordering", {
+    typeLabel: m.learn.exercises.types.ordering ?? "",
+    View: OrderingExerciseView,
+    describeAnswer: (_exercise, answer) => (typeof answer === "string" ? answer : null),
+  }),
+  registerView("matching", {
+    typeLabel: m.learn.exercises.types.matching ?? "",
+    View: MatchingExerciseView,
+    describeAnswer: (_exercise, answer) => (typeof answer === "string" ? answer : null),
+  }),
+  registerView("gap-fill", {
+    typeLabel: m.learn.exercises.types["gap-fill"] ?? "",
+    View: GapFillExerciseView,
+    describeAnswer: (_exercise, answer) => (typeof answer === "string" ? answer : null),
+  }),
+  registerView("open-writing", {
+    typeLabel: m.learn.exercises.types["open-writing"] ?? "",
+    View: OpenWritingExerciseView,
+    // Not a "correct answer": a model to compare with.
+    describeAnswer: (_exercise, answer) =>
+      typeof answer === "string" ? `${m.learn.exercises.openWriting.modelAnswer}: ${answer}` : null,
   }),
 ]);
 

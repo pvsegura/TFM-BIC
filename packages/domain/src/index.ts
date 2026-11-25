@@ -153,6 +153,7 @@ export type { ExerciseAnswerValue } from "./exercise/exercise-answer.js";
 export type { EvaluationResult } from "./exercise/evaluation-result.js";
 export type {
   ExerciseBase,
+  ExerciseBookPlacement,
   ExerciseOfType,
   PresentedExerciseBase,
 } from "./exercise/exercise-base.js";
@@ -197,6 +198,46 @@ export {
   type TrueFalseConfiguration,
   type TrueFalseExercise,
 } from "./exercise/types/true-false.js";
+export {
+  MAX_ORDERING_ITEMS,
+  MIN_ORDERING_ITEMS,
+  orderingEvaluator,
+  orderingPresenter,
+  type OrderingConfiguration,
+  type OrderingExercise,
+  type PresentedOrdering,
+} from "./exercise/types/ordering.js";
+export {
+  MAX_MATCHING_PAIRS,
+  MIN_MATCHING_PAIRS,
+  matchingEvaluator,
+  matchingPresenter,
+  type MatchingConfiguration,
+  type MatchingExercise,
+  type MatchingPair,
+  type PresentedMatching,
+} from "./exercise/types/matching.js";
+export {
+  GAP_MARKER,
+  gapFillEvaluator,
+  gapFillPresenter,
+  gapSegments,
+  MAX_GAP_ANSWER_LENGTH,
+  MAX_GAPS,
+  type GapFillConfiguration,
+  type GapFillExercise,
+  type PresentedGapFill,
+} from "./exercise/types/gap-fill.js";
+export {
+  countWords,
+  MAX_OPEN_WRITING_LENGTH,
+  openWritingEvaluator,
+  openWritingPresenter,
+  type OpenWritingConfiguration,
+  type OpenWritingExercise,
+  type PresentedOpenWriting,
+} from "./exercise/types/open-writing.js";
+export { seededShuffle } from "./exercise/types/seeded-shuffle.js";
 export {
   EXERCISE_RESULT_STATUSES,
   resultStatusOf,

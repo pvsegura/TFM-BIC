@@ -1,9 +1,22 @@
+import type { UnitSectionPhase } from "../content/content-item.js";
 import type { ContentStatus } from "../content/content-status.js";
 import type { LanguageId } from "../language/language-id.js";
 import type { LevelId } from "../language/level-id.js";
 import type { LessonId } from "../lesson/lesson.js";
 import type { ExerciseId } from "./exercise-id.js";
 import type { ExerciseType } from "./exercise-type.js";
+
+/**
+ * Where an exercise sits in the course books, shared by the web and the printed workbook so both
+ * show the same number ("ćw. 3.14" = unit 3, exercise 14). Optional: older exercises have none.
+ */
+export interface ExerciseBookPlacement {
+  unit: number;
+  number: number;
+  phase: UnitSectionPhase;
+  /** Lines of writing space in the printed workbook (open answers). */
+  lines?: number | undefined;
+}
 
 /**
  * What every exercise has, whatever its type. An exercise is content, like a
@@ -29,6 +42,7 @@ export interface ExerciseBase {
   prompt: string;
   /** Static feedback shown after an answer, whether right or wrong. Never shown before. */
   explanation?: string | undefined;
+  book?: ExerciseBookPlacement | undefined;
 }
 
 /** A specific exercise: the common fields, its type and that type's configuration. */
@@ -50,6 +64,8 @@ export interface PresentedExerciseBase {
   order: number;
   instructionLanguage: LanguageId;
   prompt: string;
+  /** The workbook number, when the exercise has one. */
+  book?: { unit: number; number: number; phase: UnitSectionPhase } | undefined;
 }
 
 export function presentBase(exercise: ExerciseBase): PresentedExerciseBase {
@@ -61,5 +77,14 @@ export function presentBase(exercise: ExerciseBase): PresentedExerciseBase {
     order: exercise.order,
     instructionLanguage: exercise.instructionLanguage,
     prompt: exercise.prompt,
+    ...(exercise.book
+      ? {
+          book: {
+            unit: exercise.book.unit,
+            number: exercise.book.number,
+            phase: exercise.book.phase,
+          },
+        }
+      : {}),
   };
 }

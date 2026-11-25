@@ -164,6 +164,7 @@ function validateExercises(catalog: ContentCatalog, index: CatalogIndex, issues:
   const exerciseIds = new Set<string>();
   const lessonOrders = new Set<string>();
 
+  const bookNumbers = new Map<string, string>();
   for (const exercise of catalog.exercises) {
     const { id, languageId, levelId, lessonId } = exercise;
 
@@ -171,6 +172,19 @@ function validateExercises(catalog: ContentCatalog, index: CatalogIndex, issues:
       issues.push(`Duplicate exercise id "${id}".`);
     }
     exerciseIds.add(id);
+
+    // The workbook number ("ćw. 3.14") is printed on paper and shown on the web: one per level.
+    if (exercise.book) {
+      const key = `${languageId}/${levelId}/${String(exercise.book.unit)}.${String(exercise.book.number)}`;
+      const holder = bookNumbers.get(key);
+      if (holder) {
+        issues.push(
+          `Exercises "${holder}" and "${id}" share workbook number ${String(exercise.book.unit)}.${String(exercise.book.number)} in ${languageId}/${levelId}.`,
+        );
+      } else {
+        bookNumbers.set(key, id);
+      }
+    }
     if (index.contentIds.has(id)) {
       issues.push(`Exercise id "${id}" is also the id of a content item.`);
     }

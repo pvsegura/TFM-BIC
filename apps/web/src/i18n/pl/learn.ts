@@ -171,6 +171,10 @@ export const learn = {
       "multiple-choice": "Wybór odpowiedzi",
       "text-answer": "Odpowiedź pisemna",
       "true-false": "Prawda czy fałsz",
+      ordering: "Ułóż w kolejności",
+      matching: "Połącz w pary",
+      "gap-fill": "Uzupełnij luki",
+      "open-writing": "Wypowiedź pisemna",
     } as Record<string, string>,
     typeFallback: "Ćwiczenie",
     trueLabel: "Prawda",
@@ -178,6 +182,22 @@ export const learn = {
     chooseAnswer: "Wybierz odpowiedź.",
     enterAnswer: "Wpisz odpowiedź.",
     check: "Sprawdź",
+    position: (n: string) => `Ćwiczenie ${n}`,
+    bookNumber: (unit: string, number: string) => `ćw. ${unit}.${number}`,
+    ordering: {
+      hint: "Ustaw elementy we właściwej kolejności przyciskami ↑ i ↓.",
+      moveUp: (item: string) => `Przesuń w górę: ${item}`,
+      moveDown: (item: string) => `Przesuń w dół: ${item}`,
+    },
+    matching: { choose: "Wybierz…", completeAll: "Połącz wszystkie elementy." },
+    gapFill: { gap: (n: string) => `Luka ${n}`, fillAll: "Uzupełnij wszystkie luki." },
+    openWriting: {
+      label: "Twój tekst",
+      words: (n: string, min: string, max: string) => `Słowa: ${n} (wymagane ${min}–${max})`,
+      checklist: "Sprawdź, czy Twój tekst:",
+      modelAnswer: "Przykładowa odpowiedź",
+      tooShort: (min: string, max: string) => `Napisz od ${min} do ${max} słów.`,
+    },
   },
   rewards: {
     reasons: {

@@ -104,6 +104,9 @@ export function ExercisePlayer({
       <header>
         <h1 className="text-2xl font-semibold">{heading}</h1>
         <p className="mt-1 text-sm text-primary/70 dark:text-surface/70">
+          {exercise.book
+            ? `${m.learn.exercises.bookNumber(String(exercise.book.unit), String(exercise.book.number))} · `
+            : ""}
           {exerciseTypeLabel(exercise.type)}
         </p>
         {showsLastAttempt ? (

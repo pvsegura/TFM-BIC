@@ -56,6 +56,14 @@ function correctAnswerOf(exercise: Exercise): ExerciseAnswerValue {
       return exercise.configuration.acceptedAnswers[0] ?? "";
     case "true-false":
       return exercise.configuration.correctAnswer;
+    case "ordering":
+      return exercise.configuration.items;
+    case "matching":
+      return exercise.configuration.pairs.map((pair) => pair.right);
+    case "gap-fill":
+      return exercise.configuration.gaps.map((gap) => gap.accepted[0] ?? "");
+    case "open-writing":
+      return exercise.configuration.modelAnswer;
   }
 }
 
@@ -72,6 +80,14 @@ function wrongAnswerOf(exercise: Exercise): ExerciseAnswerValue {
       return "zzz-not-an-answer";
     case "true-false":
       return !exercise.configuration.correctAnswer;
+    case "ordering":
+      return [...exercise.configuration.items].reverse();
+    case "matching":
+      return [...exercise.configuration.pairs].reverse().map((pair) => pair.right);
+    case "gap-fill":
+      return exercise.configuration.gaps.map(() => "zzz-not-an-answer");
+    case "open-writing":
+      return "zzz";
   }
 }
 

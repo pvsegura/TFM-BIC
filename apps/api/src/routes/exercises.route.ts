@@ -53,6 +53,7 @@ function toSummaryResponse(exercise: ExerciseSummary) {
     order: exercise.order,
     prompt: exercise.prompt,
     instructionLanguage: exercise.instructionLanguage,
+    ...(exercise.book ? { book: exercise.book } : {}),
     result: toResultResponse(exercise.result),
   };
 }

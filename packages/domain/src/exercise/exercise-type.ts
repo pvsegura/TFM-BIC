@@ -8,7 +8,15 @@
  * `apps/web`, and tests. No language, lesson, profile or authentication code
  * changes, and no other type's evaluator is touched.
  */
-export const EXERCISE_TYPES = ["multiple-choice", "text-answer", "true-false"] as const;
+export const EXERCISE_TYPES = [
+  "multiple-choice",
+  "text-answer",
+  "true-false",
+  "ordering",
+  "matching",
+  "gap-fill",
+  "open-writing",
+] as const;
 export type ExerciseType = (typeof EXERCISE_TYPES)[number];
 
 export function isValidExerciseType(value: string): value is ExerciseType {

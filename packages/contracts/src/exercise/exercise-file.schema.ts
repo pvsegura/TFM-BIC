@@ -1,7 +1,7 @@
 import { CONTENT_STATUSES, type ExerciseType } from "@verbysia/domain";
 import { z } from "zod";
 
-import { plainText } from "../content/content-block.schema.js";
+import { plainText, UNIT_SECTION_PHASE_VALUES } from "../content/content-block.schema.js";
 import {
   contentIdSchema,
   exerciseIdSchema,
@@ -12,6 +12,12 @@ import { CONTENT_SCHEMA_VERSION } from "../content/language-file.schema.js";
 import { multipleChoiceConfigurationSchema } from "./types/multiple-choice.schema.js";
 import { textAnswerConfigurationSchema } from "./types/text-answer.schema.js";
 import { trueFalseConfigurationSchema } from "./types/true-false.schema.js";
+import {
+  gapFillConfigurationSchema,
+  matchingConfigurationSchema,
+  openWritingConfigurationSchema,
+  orderingConfigurationSchema,
+} from "./types/book-exercise-types.schema.js";
 
 /** What every exercise file has, whatever its type. */
 const commonFields = {
@@ -25,6 +31,15 @@ const commonFields = {
   instructionLanguage: languageIdSchema,
   prompt: plainText(300),
   explanation: plainText(500).optional(),
+  /** Workbook placement: "ćw. {unit}.{number}", shown the same on the web and on paper. */
+  book: z
+    .strictObject({
+      unit: z.number().int().min(0).max(30),
+      number: z.number().int().min(1).max(99),
+      phase: z.enum(UNIT_SECTION_PHASE_VALUES),
+      lines: z.number().int().min(1).max(20).optional(),
+    })
+    .optional(),
 };
 
 /** One exercise type's file: the common fields, its `type` and its own configuration schema. */
@@ -50,6 +65,10 @@ export const exerciseFileSchema = z.discriminatedUnion("type", [
   exerciseFileOf("multiple-choice", multipleChoiceConfigurationSchema),
   exerciseFileOf("text-answer", textAnswerConfigurationSchema),
   exerciseFileOf("true-false", trueFalseConfigurationSchema),
+  exerciseFileOf("ordering", orderingConfigurationSchema),
+  exerciseFileOf("matching", matchingConfigurationSchema),
+  exerciseFileOf("gap-fill", gapFillConfigurationSchema),
+  exerciseFileOf("open-writing", openWritingConfigurationSchema),
 ]);
 
 export type ExerciseFile = z.infer<typeof exerciseFileSchema>;

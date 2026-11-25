@@ -46,7 +46,7 @@ export const personalDataExportSchema = z.object({
     exerciseAttempts: z.array(
       z.object({
         exerciseId: z.string(),
-        submittedAnswer: z.union([z.string(), z.boolean()]),
+        submittedAnswer: z.union([z.string(), z.boolean(), z.array(z.string())]),
         correct: z.boolean(),
         answeredAt: iso,
       }),

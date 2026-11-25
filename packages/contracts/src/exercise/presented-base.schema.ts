@@ -1,5 +1,7 @@
 import { z } from "zod";
 
+import { UNIT_SECTION_PHASE_VALUES } from "../content/content-block.schema.js";
+
 import {
   contentIdSchema,
   exerciseIdSchema,
@@ -21,4 +23,11 @@ export const presentedExerciseBaseFields = {
   order: z.number().int(),
   instructionLanguage: languageIdSchema,
   prompt: z.string(),
+  book: z
+    .object({
+      unit: z.number().int(),
+      number: z.number().int(),
+      phase: z.enum(UNIT_SECTION_PHASE_VALUES),
+    })
+    .optional(),
 };
