@@ -1,0 +1,263 @@
+{
+  "schemaVersion": 1,
+  "id": "professions",
+  "languageId": "es",
+  "status": "published",
+  "order": 180,
+  "instructionLanguage": "pl",
+  "title": "Zawody",
+  "description": "Zawody i praca: kto czym się zajmuje.",
+  "items": [
+    {
+      "id": "es-profesor-la-profesora",
+      "status": "published",
+      "order": 10,
+      "lemma": "el profesor / la profesora",
+      "translation": "nauczyciel / nauczycielka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-medico-la-medica",
+      "status": "published",
+      "order": 20,
+      "lemma": "el médico / la médica",
+      "translation": "lekarz / lekarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-enfermero-la-enfermera",
+      "status": "published",
+      "order": 30,
+      "lemma": "el enfermero / la enfermera",
+      "translation": "pielęgniarz / pielęgniarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-camarero-la-camarera",
+      "status": "published",
+      "order": 40,
+      "lemma": "el camarero / la camarera",
+      "translation": "kelner / kelnerka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-cocinero-la-cocinera",
+      "status": "published",
+      "order": 50,
+      "lemma": "el cocinero / la cocinera",
+      "translation": "kucharz / kucharka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-ingeniero-la-ingeniera",
+      "status": "published",
+      "order": 60,
+      "lemma": "el ingeniero / la ingeniera",
+      "translation": "inżynier / inżynierka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-abogado-la-abogada",
+      "status": "published",
+      "order": 70,
+      "lemma": "el abogado / la abogada",
+      "translation": "prawnik / prawniczka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-dependiente-la-dependienta",
+      "status": "published",
+      "order": 80,
+      "lemma": "el dependiente / la dependienta",
+      "translation": "sprzedawca / sprzedawczyni",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-conductor-la-conductora",
+      "status": "published",
+      "order": 90,
+      "lemma": "el conductor / la conductora",
+      "translation": "kierowca",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-informatico-la-informatica",
+      "status": "published",
+      "order": 100,
+      "lemma": "el informático / la informática",
+      "translation": "informatyk / informatyczka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-peluquero-la-peluquera",
+      "status": "published",
+      "order": 110,
+      "lemma": "el peluquero / la peluquera",
+      "translation": "fryzjer / fryzjerka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-panadero-la-panadera",
+      "status": "published",
+      "order": 120,
+      "lemma": "el panadero / la panadera",
+      "translation": "piekarz / piekarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-mecanico-la-mecanica",
+      "status": "published",
+      "order": 130,
+      "lemma": "el mecánico / la mecánica",
+      "translation": "mechanik",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-arquitecto-la-arquitecta",
+      "status": "published",
+      "order": 140,
+      "lemma": "el arquitecto / la arquitecta",
+      "translation": "architekt / architektka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-funcionario-la-funcionaria",
+      "status": "published",
+      "order": 150,
+      "lemma": "el funcionario / la funcionaria",
+      "translation": "urzędnik / urzędniczka",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-empresario-la-empresaria",
+      "status": "published",
+      "order": 160,
+      "lemma": "el empresario / la empresaria",
+      "translation": "przedsiębiorca",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "es-la-periodista",
+      "status": "published",
+      "order": 170,
+      "lemma": "el / la periodista",
+      "translation": "dziennikarz / dziennikarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "common"
+    },
+    {
+      "id": "es-la-estudiante",
+      "status": "published",
+      "order": 180,
+      "lemma": "el / la estudiante",
+      "translation": "student / studentka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "common"
+    },
+    {
+      "id": "es-la-policia",
+      "status": "published",
+      "order": 190,
+      "lemma": "el / la policía",
+      "translation": "policjant / policjantka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "common",
+      "note": "La policía znaczy też „policja”."
+    },
+    {
+      "id": "es-la-dentista",
+      "status": "published",
+      "order": 200,
+      "lemma": "el / la dentista",
+      "translation": "dentysta / dentystka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "common"
+    },
+    {
+      "id": "es-la-taxista",
+      "status": "published",
+      "order": 210,
+      "lemma": "el / la taxista",
+      "translation": "taksówkarz / taksówkarka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "common"
+    },
+    {
+      "id": "es-empresa",
+      "status": "published",
+      "order": 220,
+      "lemma": "la empresa",
+      "translation": "firma",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-oficina",
+      "status": "published",
+      "order": 230,
+      "lemma": "la oficina",
+      "translation": "biuro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-trabajar-en",
+      "status": "published",
+      "order": 240,
+      "lemma": "trabajar en…",
+      "translation": "pracować w…",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-estar-en-paro",
+      "status": "published",
+      "order": 250,
+      "lemma": "estar en paro",
+      "translation": "być bezrobotnym",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-estar-jubilado",
+      "status": "published",
+      "order": 260,
+      "lemma": "estar jubilado",
+      "translation": "być na emeryturze",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-a-que-te-dedicas",
+      "status": "published",
+      "order": 270,
+      "lemma": "¿A qué te dedicas?",
+      "translation": "Czym się zajmujesz?",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

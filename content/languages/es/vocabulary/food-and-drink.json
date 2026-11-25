@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "id": "food-and-drink",
+  "languageId": "es",
+  "status": "published",
+  "order": 190,
+  "instructionLanguage": "pl",
+  "title": "Jedzenie i napoje",
+  "description": "Produkty spożywcze i posiłki.",
+  "items": [
+    {
+      "id": "es-food-and-drink-pan",
+      "status": "published",
+      "order": 10,
+      "lemma": "el pan",
+      "translation": "chleb",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-leche",
+      "status": "published",
+      "order": 20,
+      "lemma": "la leche",
+      "translation": "mleko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-food-and-drink-agua",
+      "status": "published",
+      "order": 30,
+      "lemma": "el agua",
+      "translation": "woda",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "Rodzaj żeński, ale el agua (agua fría)."
+    },
+    {
+      "id": "es-zumo",
+      "status": "published",
+      "order": 40,
+      "lemma": "el zumo",
+      "translation": "sok",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-te",
+      "status": "published",
+      "order": 50,
+      "lemma": "el té",
+      "translation": "herbata",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-food-and-drink-cerveza",
+      "status": "published",
+      "order": 60,
+      "lemma": "la cerveza",
+      "translation": "piwo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-vino",
+      "status": "published",
+      "order": 70,
+      "lemma": "el vino",
+      "translation": "wino",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-queso",
+      "status": "published",
+      "order": 80,
+      "lemma": "el queso",
+      "translation": "ser",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-jamon",
+      "status": "published",
+      "order": 90,
+      "lemma": "el jamón",
+      "translation": "szynka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-huevo",
+      "status": "published",
+      "order": 100,
+      "lemma": "el huevo",
+      "translation": "jajko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-food-and-drink-carne",
+      "status": "published",
+      "order": 110,
+      "lemma": "la carne",
+      "translation": "mięso",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-food-and-drink-pollo",
+      "status": "published",
+      "order": 120,
+      "lemma": "el pollo",
+      "translation": "kurczak",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-fruta",
+      "status": "published",
+      "order": 130,
+      "lemma": "la fruta",
+      "translation": "owoce",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-manzana",
+      "status": "published",
+      "order": 140,
+      "lemma": "la manzana",
+      "translation": "jabłko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-naranja",
+      "status": "published",
+      "order": 150,
+      "lemma": "la naranja",
+      "translation": "pomarańcza",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-platano",
+      "status": "published",
+      "order": 160,
+      "lemma": "el plátano",
+      "translation": "banan",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-verdura",
+      "status": "published",
+      "order": 170,
+      "lemma": "la verdura",
+      "translation": "warzywa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-patata",
+      "status": "published",
+      "order": 180,
+      "lemma": "la patata",
+      "translation": "ziemniak",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "W Ameryce Łacińskiej: la papa."
+    },
+    {
+      "id": "es-tomate",
+      "status": "published",
+      "order": 190,
+      "lemma": "el tomate",
+      "translation": "pomidor",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-cebolla",
+      "status": "published",
+      "order": 200,
+      "lemma": "la cebolla",
+      "translation": "cebula",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-arroz",
+      "status": "published",
+      "order": 210,
+      "lemma": "el arroz",
+      "translation": "ryż",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-pasta",
+      "status": "published",
+      "order": 220,
+      "lemma": "la pasta",
+      "translation": "makaron",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-aceite-de-oliva",
+      "status": "published",
+      "order": 230,
+      "lemma": "el aceite de oliva",
+      "translation": "oliwa z oliwek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-sal",
+      "status": "published",
+      "order": 240,
+      "lemma": "la sal",
+      "translation": "sól",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-azucar",
+      "status": "published",
+      "order": 250,
+      "lemma": "el azúcar",
+      "translation": "cukier",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-comida",
+      "status": "published",
+      "order": 260,
+      "lemma": "la comida",
+      "translation": "jedzenie; obiad",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-cena",
+      "status": "published",
+      "order": 270,
+      "lemma": "la cena",
+      "translation": "kolacja",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-tener-hambre",
+      "status": "published",
+      "order": 280,
+      "lemma": "tener hambre",
+      "translation": "być głodnym",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-tener-sed",
+      "status": "published",
+      "order": 290,
+      "lemma": "tener sed",
+      "translation": "chcieć pić",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

@@ -1,0 +1,282 @@
+{
+  "schemaVersion": 1,
+  "id": "adjectives",
+  "languageId": "es",
+  "status": "published",
+  "order": 220,
+  "instructionLanguage": "pl",
+  "title": "Najczęstsze przymiotniki",
+  "description": "Pary przymiotników do opisu rzeczy i ludzi.",
+  "items": [
+    {
+      "id": "es-adjectives-grande",
+      "status": "published",
+      "order": 10,
+      "lemma": "grande",
+      "translation": "duży",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-pequeno",
+      "status": "published",
+      "order": 20,
+      "lemma": "pequeño",
+      "translation": "mały",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-nuevo",
+      "status": "published",
+      "order": 30,
+      "lemma": "nuevo",
+      "translation": "nowy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-viejo",
+      "status": "published",
+      "order": 40,
+      "lemma": "viejo",
+      "translation": "stary",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-bueno",
+      "status": "published",
+      "order": 50,
+      "lemma": "bueno",
+      "translation": "dobry",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-malo",
+      "status": "published",
+      "order": 60,
+      "lemma": "malo",
+      "translation": "zły",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-caro",
+      "status": "published",
+      "order": 70,
+      "lemma": "caro",
+      "translation": "drogi",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-barato",
+      "status": "published",
+      "order": 80,
+      "lemma": "barato",
+      "translation": "tani",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-facil",
+      "status": "published",
+      "order": 90,
+      "lemma": "fácil",
+      "translation": "łatwy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-dificil",
+      "status": "published",
+      "order": 100,
+      "lemma": "difícil",
+      "translation": "trudny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-bonito",
+      "status": "published",
+      "order": 110,
+      "lemma": "bonito",
+      "translation": "ładny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-feo",
+      "status": "published",
+      "order": 120,
+      "lemma": "feo",
+      "translation": "brzydki",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-rapido",
+      "status": "published",
+      "order": 130,
+      "lemma": "rápido",
+      "translation": "szybki",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-lento",
+      "status": "published",
+      "order": 140,
+      "lemma": "lento",
+      "translation": "wolny, powolny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-limpio",
+      "status": "published",
+      "order": 150,
+      "lemma": "limpio",
+      "translation": "czysty",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-sucio",
+      "status": "published",
+      "order": 160,
+      "lemma": "sucio",
+      "translation": "brudny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-abierto",
+      "status": "published",
+      "order": 170,
+      "lemma": "abierto",
+      "translation": "otwarty",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-cerrado",
+      "status": "published",
+      "order": 180,
+      "lemma": "cerrado",
+      "translation": "zamknięty",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-lleno",
+      "status": "published",
+      "order": 190,
+      "lemma": "lleno",
+      "translation": "pełny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-vacio",
+      "status": "published",
+      "order": 200,
+      "lemma": "vacío",
+      "translation": "pusty",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-caliente",
+      "status": "published",
+      "order": 210,
+      "lemma": "caliente",
+      "translation": "gorący",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-adjectives-frio",
+      "status": "published",
+      "order": 220,
+      "lemma": "frío",
+      "translation": "zimny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-interesante",
+      "status": "published",
+      "order": 230,
+      "lemma": "interesante",
+      "translation": "ciekawy",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-aburrido",
+      "status": "published",
+      "order": 240,
+      "lemma": "aburrido",
+      "translation": "nudny; znudzony",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-importante",
+      "status": "published",
+      "order": 250,
+      "lemma": "importante",
+      "translation": "ważny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-cansado",
+      "status": "published",
+      "order": 260,
+      "lemma": "cansado",
+      "translation": "zmęczony",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-contento",
+      "status": "published",
+      "order": 270,
+      "lemma": "contento",
+      "translation": "zadowolony",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-triste",
+      "status": "published",
+      "order": 280,
+      "lemma": "triste",
+      "translation": "smutny",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-ocupado",
+      "status": "published",
+      "order": 290,
+      "lemma": "ocupado",
+      "translation": "zajęty",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "es-libre",
+      "status": "published",
+      "order": 300,
+      "lemma": "libre",
+      "translation": "wolny (niezajęty)",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    }
+  ]
+}

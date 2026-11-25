@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "id": "calendar",
+  "languageId": "es",
+  "status": "published",
+  "order": 210,
+  "instructionLanguage": "pl",
+  "title": "Czas i kalendarz",
+  "description": "Dni tygodnia, miesiące i pory roku.",
+  "items": [
+    {
+      "id": "es-lunes",
+      "status": "published",
+      "order": 10,
+      "lemma": "el lunes",
+      "translation": "poniedziałek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-martes",
+      "status": "published",
+      "order": 20,
+      "lemma": "el martes",
+      "translation": "wtorek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-miercoles",
+      "status": "published",
+      "order": 30,
+      "lemma": "el miércoles",
+      "translation": "środa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-jueves",
+      "status": "published",
+      "order": 40,
+      "lemma": "el jueves",
+      "translation": "czwartek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-viernes",
+      "status": "published",
+      "order": 50,
+      "lemma": "el viernes",
+      "translation": "piątek",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-sabado",
+      "status": "published",
+      "order": 60,
+      "lemma": "el sábado",
+      "translation": "sobota",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-domingo",
+      "status": "published",
+      "order": 70,
+      "lemma": "el domingo",
+      "translation": "niedziela",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-enero",
+      "status": "published",
+      "order": 80,
+      "lemma": "enero",
+      "translation": "styczeń",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-febrero",
+      "status": "published",
+      "order": 90,
+      "lemma": "febrero",
+      "translation": "luty",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-marzo",
+      "status": "published",
+      "order": 100,
+      "lemma": "marzo",
+      "translation": "marzec",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-abril",
+      "status": "published",
+      "order": 110,
+      "lemma": "abril",
+      "translation": "kwiecień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-mayo",
+      "status": "published",
+      "order": 120,
+      "lemma": "mayo",
+      "translation": "maj",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-junio",
+      "status": "published",
+      "order": 130,
+      "lemma": "junio",
+      "translation": "czerwiec",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-julio",
+      "status": "published",
+      "order": 140,
+      "lemma": "julio",
+      "translation": "lipiec",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-agosto",
+      "status": "published",
+      "order": 150,
+      "lemma": "agosto",
+      "translation": "sierpień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-septiembre",
+      "status": "published",
+      "order": 160,
+      "lemma": "septiembre",
+      "translation": "wrzesień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-octubre",
+      "status": "published",
+      "order": 170,
+      "lemma": "octubre",
+      "translation": "październik",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-noviembre",
+      "status": "published",
+      "order": 180,
+      "lemma": "noviembre",
+      "translation": "listopad",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-diciembre",
+      "status": "published",
+      "order": 190,
+      "lemma": "diciembre",
+      "translation": "grudzień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-calendar-primavera",
+      "status": "published",
+      "order": 200,
+      "lemma": "la primavera",
+      "translation": "wiosna",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-calendar-verano",
+      "status": "published",
+      "order": 210,
+      "lemma": "el verano",
+      "translation": "lato",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-calendar-otono",
+      "status": "published",
+      "order": 220,
+      "lemma": "el otoño",
+      "translation": "jesień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-calendar-invierno",
+      "status": "published",
+      "order": 230,
+      "lemma": "el invierno",
+      "translation": "zima",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-semana",
+      "status": "published",
+      "order": 240,
+      "lemma": "la semana",
+      "translation": "tydzień",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-calendar-fin-de-semana",
+      "status": "published",
+      "order": 250,
+      "lemma": "el fin de semana",
+      "translation": "weekend",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-mes",
+      "status": "published",
+      "order": 260,
+      "lemma": "el mes",
+      "translation": "miesiąc",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-ano",
+      "status": "published",
+      "order": 270,
+      "lemma": "el año",
+      "translation": "rok",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-hora",
+      "status": "published",
+      "order": 280,
+      "lemma": "la hora",
+      "translation": "godzina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-minuto",
+      "status": "published",
+      "order": 290,
+      "lemma": "el minuto",
+      "translation": "minuta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    }
+  ]
+}

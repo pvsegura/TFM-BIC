@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "id": "body",
+  "languageId": "es",
+  "status": "published",
+  "order": 200,
+  "instructionLanguage": "pl",
+  "title": "Ciało",
+  "description": "Części ciała.",
+  "items": [
+    {
+      "id": "es-body-cabeza",
+      "status": "published",
+      "order": 10,
+      "lemma": "la cabeza",
+      "translation": "głowa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-cara",
+      "status": "published",
+      "order": 20,
+      "lemma": "la cara",
+      "translation": "twarz",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-ojo",
+      "status": "published",
+      "order": 30,
+      "lemma": "el ojo",
+      "translation": "oko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-nariz",
+      "status": "published",
+      "order": 40,
+      "lemma": "la nariz",
+      "translation": "nos",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-boca",
+      "status": "published",
+      "order": 50,
+      "lemma": "la boca",
+      "translation": "usta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-diente",
+      "status": "published",
+      "order": 60,
+      "lemma": "el diente",
+      "translation": "ząb",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-oreja",
+      "status": "published",
+      "order": 70,
+      "lemma": "la oreja",
+      "translation": "ucho",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-cuello",
+      "status": "published",
+      "order": 80,
+      "lemma": "el cuello",
+      "translation": "szyja",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-body-espalda",
+      "status": "published",
+      "order": 90,
+      "lemma": "la espalda",
+      "translation": "plecy",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-brazo",
+      "status": "published",
+      "order": 100,
+      "lemma": "el brazo",
+      "translation": "ramię, ręka (cała)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-mano",
+      "status": "published",
+      "order": 110,
+      "lemma": "la mano",
+      "translation": "dłoń, ręka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "Rodzaj żeński mimo -o: la mano."
+    },
+    {
+      "id": "es-dedo",
+      "status": "published",
+      "order": 120,
+      "lemma": "el dedo",
+      "translation": "palec",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-body-estomago",
+      "status": "published",
+      "order": 130,
+      "lemma": "el estómago",
+      "translation": "żołądek, brzuch",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-pierna",
+      "status": "published",
+      "order": 140,
+      "lemma": "la pierna",
+      "translation": "noga",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-rodilla",
+      "status": "published",
+      "order": 150,
+      "lemma": "la rodilla",
+      "translation": "kolano",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-pie",
+      "status": "published",
+      "order": 160,
+      "lemma": "el pie",
+      "translation": "stopa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-corazon",
+      "status": "published",
+      "order": 170,
+      "lemma": "el corazón",
+      "translation": "serce",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-body-garganta",
+      "status": "published",
+      "order": 180,
+      "lemma": "la garganta",
+      "translation": "gardło",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

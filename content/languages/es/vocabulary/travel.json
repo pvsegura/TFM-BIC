@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "id": "travel",
+  "languageId": "es",
+  "status": "published",
+  "order": 170,
+  "instructionLanguage": "pl",
+  "title": "Podróże",
+  "description": "Lotnisko, dworzec, bilety i wakacje.",
+  "items": [
+    {
+      "id": "es-viaje",
+      "status": "published",
+      "order": 10,
+      "lemma": "el viaje",
+      "translation": "podróż",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-travel-viajar",
+      "status": "published",
+      "order": 20,
+      "lemma": "viajar",
+      "translation": "podróżować",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-vacaciones",
+      "status": "published",
+      "order": 30,
+      "lemma": "las vacaciones",
+      "translation": "wakacje, urlop",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-pasaporte",
+      "status": "published",
+      "order": 40,
+      "lemma": "el pasaporte",
+      "translation": "paszport",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-travel-billete",
+      "status": "published",
+      "order": 50,
+      "lemma": "el billete",
+      "translation": "bilet",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-billete-de-ida-y-vuelta",
+      "status": "published",
+      "order": 60,
+      "lemma": "el billete de ida y vuelta",
+      "translation": "bilet w obie strony",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-aeropuerto",
+      "status": "published",
+      "order": 70,
+      "lemma": "el aeropuerto",
+      "translation": "lotnisko",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-avion",
+      "status": "published",
+      "order": 80,
+      "lemma": "el avión",
+      "translation": "samolot",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-vuelo",
+      "status": "published",
+      "order": 90,
+      "lemma": "el vuelo",
+      "translation": "lot",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-puerta-de-embarque",
+      "status": "published",
+      "order": 100,
+      "lemma": "la puerta de embarque",
+      "translation": "wyjście do samolotu",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-facturar-la-maleta",
+      "status": "published",
+      "order": 110,
+      "lemma": "facturar la maleta",
+      "translation": "nadać bagaż",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-estacion-de-tren",
+      "status": "published",
+      "order": 120,
+      "lemma": "la estación de tren",
+      "translation": "dworzec kolejowy",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-anden",
+      "status": "published",
+      "order": 130,
+      "lemma": "el andén",
+      "translation": "peron",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-horario",
+      "status": "published",
+      "order": 140,
+      "lemma": "el horario",
+      "translation": "rozkład jazdy",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-travel-llegar",
+      "status": "published",
+      "order": 150,
+      "lemma": "llegar",
+      "translation": "przyjeżdżać, przylatywać",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-travel-salir",
+      "status": "published",
+      "order": 160,
+      "lemma": "salir",
+      "translation": "odjeżdżać, wylatywać",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "es-retraso",
+      "status": "published",
+      "order": 170,
+      "lemma": "el retraso",
+      "translation": "opóźnienie",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "es-playa",
+      "status": "published",
+      "order": 180,
+      "lemma": "la playa",
+      "translation": "plaża",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-montana",
+      "status": "published",
+      "order": 190,
+      "lemma": "la montaña",
+      "translation": "góry",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-turista",
+      "status": "published",
+      "order": 200,
+      "lemma": "el turista",
+      "translation": "turysta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Kobieta: la turista."
+    },
+    {
+      "id": "es-oficina-de-turismo",
+      "status": "published",
+      "order": 210,
+      "lemma": "la oficina de turismo",
+      "translation": "informacja turystyczna",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-mapa",
+      "status": "published",
+      "order": 220,
+      "lemma": "el mapa",
+      "translation": "mapa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Rodzaj męski mimo końcówki -a."
+    },
+    {
+      "id": "es-excursion",
+      "status": "published",
+      "order": 230,
+      "lemma": "la excursión",
+      "translation": "wycieczka",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-hacer-la-maleta",
+      "status": "published",
+      "order": 240,
+      "lemma": "hacer la maleta",
+      "translation": "pakować walizkę",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-en-el-extranjero",
+      "status": "published",
+      "order": 250,
+      "lemma": "en el extranjero",
+      "translation": "za granicą",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-frontera",
+      "status": "published",
+      "order": 260,
+      "lemma": "la frontera",
+      "translation": "granica",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "es-alquilar-un-coche",
+      "status": "published",
+      "order": 270,
+      "lemma": "alquilar un coche",
+      "translation": "wynająć samochód",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "es-buen-viaje",
+      "status": "published",
+      "order": 280,
+      "lemma": "¡Buen viaje!",
+      "translation": "Szczęśliwej podróży!",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}
