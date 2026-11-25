@@ -265,7 +265,7 @@ async function textbookHtml(units: Unit[], glossary: string, grammar: string): P
                 : renderBlock(b),
             )
             .join("\n");
-          return `${unit.lessons.length > 1 ? `<h3 class="lesson-title">${e(lesson.title)}</h3><p class="lesson-desc">${e(lesson.description)}</p>` : ""}${blocks}`;
+          return `<div data-index="lesson:${lesson.id}"></div>${unit.lessons.length > 1 ? `<h3 class="lesson-title">${e(lesson.title)}</h3><p class="lesson-desc">${e(lesson.description)}</p>` : ""}${blocks}`;
         })
         .join("\n");
       return `<section class="unit-opener" id="unit-${String(unit.number)}" data-index="unit:${String(unit.number)}">
@@ -294,6 +294,7 @@ async function workbookHtml(units: Unit[]): Promise<string> {
   const body = await Promise.all(
     units.map(async (unit) => {
       let lastPhase: UnitSectionPhase | undefined;
+      const lessonsSeen = new Set<string>();
       const exercises = unit.exercises
         .map((x) => {
           const phase = x.book?.phase;
@@ -302,7 +303,10 @@ async function workbookHtml(units: Unit[]): Promise<string> {
               ? `<h3 class="phase-head">${e(PHASE_LABELS[phase])}</h3>`
               : "";
           lastPhase = phase ?? lastPhase;
-          return `${head}<div data-index="exercise:${e(exerciseLabel(x))}"></div>${renderExercise(x)}`;
+          const lessonMark = lessonsSeen.has(x.lessonId)
+            ? ""
+            : (lessonsSeen.add(x.lessonId), `<div data-index="lesson:${x.lessonId}"></div>`);
+          return `${head}${lessonMark}<div data-index="exercise:${e(exerciseLabel(x))}"></div>${renderExercise(x)}`;
         })
         .join("\n");
       const url = shortUrl(unit.number);

@@ -1,5 +1,9 @@
 /** The learner area: dashboard, lessons, exercises, progress and rewards. */
 export const learn = {
+  books: {
+    textbookPage: (page: string) => `Podręcznik s. ${page}`,
+    workbookPage: (page: string) => `Zeszyt ćwiczeń s. ${page}`,
+  },
   otherCourses: {
     title: "Inne kursy",
     lead: "Poza hiszpańskim dla Polaków udostępniamy dwa wcześniejsze kursy. Są bezpłatne i rozwijamy je niezależnie od kursu głównego.",

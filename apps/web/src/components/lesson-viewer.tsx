@@ -25,6 +25,8 @@ export interface LessonViewerProps {
   nextSteps?: ReactNode;
   /** The words the lesson teaches (M22), between the explanation and the practice. */
   words?: ReactNode;
+  /** A line under the description, e.g. where the lesson is in the printed books. */
+  meta?: ReactNode;
 }
 
 /**
@@ -51,12 +53,14 @@ export function LessonViewer({
   hero,
   nextSteps,
   words,
+  meta,
 }: LessonViewerProps) {
   return (
     <article lang={lesson.instructionLanguage} className="mt-4">
       <header>
         <h1 className="text-2xl font-semibold">{lesson.title}</h1>
         <p className="mt-1 text-primary/70 dark:text-surface/70">{lesson.description}</p>
+        {meta}
         <div className="mt-3">
           <LessonStatusBadge status={lesson.progress.status} />
         </div>

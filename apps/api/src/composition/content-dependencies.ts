@@ -1,4 +1,5 @@
 import type {
+  BookIndexRepository,
   ContentRepository,
   ExerciseRepository,
   GrammarReferenceRepository,
@@ -9,6 +10,7 @@ import path from "node:path";
 
 import {
   DEFAULT_CONTENT_ROOT,
+  FileBookIndexRepository,
   FileContentMediaCatalog,
   loadContentRepositories,
 } from "@verbysia/data";
@@ -33,6 +35,8 @@ export interface ContentDependencies {
   mediaCatalog?: FileContentMediaCatalog;
   /** The grammar reference (M23). Optional for hand-built fixtures; absent means "no topics". */
   grammarRepository?: GrammarReferenceRepository;
+  /** Page numbers of the printed books (content/books). Optional for hand-built fixtures. */
+  bookIndexRepository?: BookIndexRepository;
 }
 
 /**
@@ -47,5 +51,8 @@ export async function createContentDependencies(contentDir?: string): Promise<Co
   const mediaCatalog = new FileContentMediaCatalog(
     path.join(contentDir ?? DEFAULT_CONTENT_ROOT, "media"),
   );
-  return { ...repositories, mediaCatalog };
+  const bookIndexRepository = new FileBookIndexRepository(
+    path.join(contentDir ?? DEFAULT_CONTENT_ROOT, "books"),
+  );
+  return { ...repositories, mediaCatalog, bookIndexRepository };
 }

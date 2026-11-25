@@ -655,3 +655,8 @@ export {
   SyncProductsWithProviderUseCase,
   type PaymentDeps,
 } from "./commerce/payment-use-cases.js";
+export type {
+  BookIndex,
+  BookIndexRepository,
+  BookPages,
+} from "./content/ports/book-index-repository.js";

@@ -42,6 +42,8 @@ const PUBLIC_ROUTES = new Set([
   "GET /grammar/:topicId",
   // The books' QR short links: a redirect to a page that applies its own access rules.
   "GET /k/:course/:unit",
+  // Page numbers of the printed books — not personal, no paid content.
+  "GET /books/:course",
   "GET /k/:course/:unit/:target",
   // Verbysia: the price list — public like a shop window; nothing personal, nothing purchasable here.
   "GET /products",

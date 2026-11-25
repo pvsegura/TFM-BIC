@@ -34,6 +34,7 @@ import { registerLessonRoutes } from "./routes/lessons.route.js";
 import { registerGrammarRoutes } from "./routes/grammar.route.js";
 import { registerMediaRoutes } from "./routes/media.route.js";
 import { registerShortLinkRoutes } from "./routes/short-links.route.js";
+import { registerBookRoutes } from "./routes/books.route.js";
 import { registerPhoneticsRoutes } from "./routes/phonetics.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route.js";
@@ -228,6 +229,11 @@ export function buildServer(
     // here can reach a video or audio provider.
     registerMediaRoutes(app, { content: contentDeps, useCases: contentUseCases, env });
     // The books' QR codes: /k/{course}/{unit}[/{section|exercise}] → where it lives today.
+    // Hand-built content fixtures may have no book index: the route then answers 404.
+    registerBookRoutes(app, {
+      books: contentDeps.bookIndexRepository ?? { find: () => Promise.resolve(null) },
+      env,
+    });
     registerShortLinkRoutes(app, {
       resolve: new ResolveShortLinkUseCase(
         contentDeps.contentRepository,

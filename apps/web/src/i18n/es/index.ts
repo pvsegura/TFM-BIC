@@ -846,6 +846,10 @@ export const es: Messages = {
     },
   },
   learn: {
+    books: {
+      textbookPage: (page) => `Libro del alumno p. ${page}`,
+      workbookPage: (page) => `Cuaderno p. ${page}`,
+    },
     otherCourses: {
       title: "Otros cursos",
       lead: "Además del español para polacos, ofrecemos dos cursos anteriores. Son gratuitos y se desarrollan aparte del curso principal.",

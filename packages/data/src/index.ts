@@ -178,3 +178,4 @@ export { createMemoryDb, type MemoryDb, type MemoryDbHandle } from "./memory/db/
 export { DrizzleMemoryCardRepository } from "./memory/memory-card.repository.js";
 export { createPaymentLedger } from "./commerce/payment-ledger.repository.js";
 export { StripePaymentProvider } from "./commerce/stripe-payment-provider.js";
+export { FileBookIndexRepository } from "./content/file-book-index.repository.js";

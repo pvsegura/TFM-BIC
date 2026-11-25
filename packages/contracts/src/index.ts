@@ -317,3 +317,9 @@ export {
 // Verbysia — memory trainer, public price list, own access and admin panel shapes.
 export * from "./memory/memory.schema.js";
 export * from "./commerce/commerce.schema.js";
+export {
+  bookCourseParamSchema,
+  bookIndexSchema,
+  COURSE_PATTERN,
+  type BookIndexResponse,
+} from "./content/book-index.schema.js";

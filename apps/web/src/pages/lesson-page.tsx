@@ -9,6 +9,7 @@ import { EducationalVideo } from "../components/educational-video.js";
 import { LessonExercises } from "../components/lesson-exercises.js";
 import { LessonWords } from "../components/lesson-words.js";
 import { LessonViewer } from "../components/lesson-viewer.js";
+import { BookPagesNote } from "../components/book-pages.js";
 import { useLanguages } from "../hooks/use-catalog.js";
 import {
   useCompleteLesson,
@@ -81,6 +82,13 @@ export function LessonPage() {
     return (
       <div className="mx-auto max-w-3xl py-8">
         <LessonViewer
+          meta={
+            <BookPagesNote
+              languageId={lesson.languageId}
+              levelId={lesson.levelId}
+              lessonId={lesson.id}
+            />
+          }
           words={
             <LessonWords
               languageId={lesson.languageId}

@@ -9,6 +9,7 @@ import { ExerciseResult } from "./exercise-result.js";
 import { describeCorrectAnswer, exerciseTypeLabel } from "./exercise-view-registry.js";
 import type { SubmittedAnswer } from "./exercise-view-types.js";
 import { m } from "../i18n/index.js";
+import { useWorkbookPage } from "../hooks/use-book-index.js";
 
 export interface ExercisePlayerProps {
   exercise: ExerciseResponse;
@@ -63,6 +64,7 @@ export function ExercisePlayer({
   onSubmit,
   onRetry,
 }: ExercisePlayerProps) {
+  const workbookPage = useWorkbookPage(exercise);
   const [attempt, setAttempt] = useState(0);
   const statusRef = useRef<HTMLDivElement>(null);
   const viewRef = useRef<HTMLDivElement>(null);
@@ -105,7 +107,11 @@ export function ExercisePlayer({
         <h1 className="text-2xl font-semibold">{heading}</h1>
         <p className="mt-1 text-sm text-primary/70 dark:text-surface/70">
           {exercise.book
-            ? `${m.learn.exercises.bookNumber(String(exercise.book.unit), String(exercise.book.number))} · `
+            ? `${m.learn.exercises.bookNumber(String(exercise.book.unit), String(exercise.book.number))}${
+                workbookPage === undefined
+                  ? ""
+                  : ` (${m.learn.books.workbookPage(String(workbookPage))})`
+              } · `
             : ""}
           {exerciseTypeLabel(exercise.type)}
         </p>

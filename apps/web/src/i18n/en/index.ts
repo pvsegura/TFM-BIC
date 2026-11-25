@@ -845,6 +845,10 @@ export const en: Messages = {
     },
   },
   learn: {
+    books: {
+      textbookPage: (page) => `Textbook p. ${page}`,
+      workbookPage: (page) => `Workbook p. ${page}`,
+    },
     otherCourses: {
       title: "Other courses",
       lead: "Besides Spanish for Polish speakers, we offer two earlier courses. They are free and developed separately from the main course.",
