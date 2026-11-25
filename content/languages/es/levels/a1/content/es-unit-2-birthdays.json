@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-2-birthdays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 115,
+  "unit": 2,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 2B. ¿Cuándo es tu cumpleaños? — wygląd, daty i święta rodzinne",
+  "description": "Opisujesz włosy i oczy, mówisz, kiedy masz urodziny, podajesz daty i porównujesz polskie i hiszpańskie święta rodzinne.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Przyjęcie urodzinowe" },
+    {
+      "type": "explanation",
+      "text": "Marta przygotowuje przyjęcie urodzinowe dla swojego taty i rozmawia przez telefon z kuzynem Javierem. Za pierwszym razem posłuchaj, o jakiej uroczystości mówią. Za drugim zapisz datę i godzinę. Za trzecim sprawdź, jak Javier opisuje swoją nową dziewczynę."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u2-birthday.png",
+      "alt": "Rodzinne przyjęcie urodzinowe: starszy pan zdmuchuje świeczki na torcie, rodzina klaszcze."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Marta",
+          "text": "Hola, Javier. El sábado es el cumpleaños de mi padre.",
+          "translation": "Cześć, Javier. W sobotę są urodziny mojego taty."
+        },
+        {
+          "speaker": "Javier",
+          "text": "¡Es verdad! ¿Cuántos años cumple?",
+          "translation": "Rzeczywiście! Ile kończy lat?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Sesenta. Hacemos una fiesta en casa, el sábado veinte de mayo a las dos.",
+          "translation": "Sześćdziesiąt. Robimy przyjęcie w domu, w sobotę dwudziestego maja o drugiej."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Perfecto. ¿Puedo ir con mi novia?",
+          "translation": "Świetnie. Mogę przyjść z dziewczyną?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "¡Claro! ¿Cómo es? No la conozco.",
+          "translation": "Jasne! Jaka ona jest? Nie znam jej."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Se llama Inés. Es morena, tiene el pelo largo y los ojos verdes.",
+          "translation": "Ma na imię Inés. Jest brunetką, ma długie włosy i zielone oczy."
+        },
+        {
+          "speaker": "Marta",
+          "text": "¿Y cómo es de carácter?",
+          "translation": "A jaki ma charakter?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Es muy divertida y un poco tímida al principio.",
+          "translation": "Jest bardzo zabawna i na początku trochę nieśmiała."
+        },
+        {
+          "speaker": "Marta",
+          "text": "Genial. ¡Hasta el sábado!",
+          "translation": "Super. Do soboty!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Włosy, oczy i miesiące" },
+    {
+      "type": "table",
+      "caption": "Tener + el pelo / los ojos (cechy, które się „ma”)",
+      "columns": ["Hiszpański", "Po polsku"],
+      "rows": [
+        ["Tiene el pelo largo / corto.", "Ma długie / krótkie włosy."],
+        ["Tiene el pelo rizado / liso.", "Ma kręcone / proste włosy."],
+        [
+          "Tiene el pelo rubio / castaño / negro / canoso.",
+          "Ma jasne / kasztanowe / czarne / siwe włosy."
+        ],
+        ["Tiene los ojos azules / verdes / marrones.", "Ma niebieskie / zielone / brązowe oczy."],
+        ["Lleva gafas. / Lleva barba.", "Nosi okulary. / Ma brodę."],
+        ["Es calvo.", "Jest łysy."]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Miesiące (małą literą, wszystkie rodzaju męskiego)",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["enero", "styczeń", "julio", "lipiec"],
+        ["febrero", "luty", "agosto", "sierpień"],
+        ["marzo", "marzec", "septiembre", "wrzesień"],
+        ["abril", "kwiecień", "octubre", "październik"],
+        ["mayo", "maj", "noviembre", "listopad"],
+        ["junio", "czerwiec", "diciembre", "grudzień"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — miesiące to w większości „bracia” polskich nazw łacińskich, których w polskim nie używamy, ale znasz je z angielskiego lub z nazw ulic. Najtrudniejsze dla Polaków są enero (styczeń) i junio/julio (czerwiec/lipiec). Junio ma n jak „nieco wcześniej” — przychodzi przed julio z l jak „lato w pełni”. Zapisz w trenerze pamięci pary junio–czerwiec i julio–lipiec osobno, bo najłatwiej je pomylić."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Ser czy tener w opisie, daty i liczba mnoga"
+    },
+    {
+      "type": "explanation",
+      "text": "W opisie osoby używamy dwóch czasowników. Ser — dla cech „całej osoby”: Es alta, es morena, es simpática. Tener — dla części ciała i ich cech: Tiene el pelo largo, tiene los ojos verdes. Przed częścią ciała stoi rodzajnik określony (el pelo, los ojos), nie zaimek dzierżawczy jak w polskim „ma swoje włosy”."
+    },
+    {
+      "type": "comparison",
+      "source": "Ma długie włosy i zielone oczy.",
+      "target": "Tiene el pelo largo y los ojos verdes.",
+      "note": "Po hiszpańsku: rodzajnik + rzeczownik + przymiotnik. Przymiotnik po rzeczowniku i zgodny w rodzaju i liczbie."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Es pelo largo. / Tiene largos pelos.",
+      "right": "Tiene el pelo largo.",
+      "explanation": "Włosy to po hiszpańsku zwykle jedno słowo w liczbie pojedynczej: el pelo. Pelos w liczbie mnogiej to pojedyncze włoski — na przykład w zupie."
+    },
+    {
+      "type": "explanation",
+      "text": "Data: el + liczba główna + de + miesiąc: el veinte de mayo, el uno de enero (w Hiszpanii częściej uno niż primero). Rok czytamy jak liczbę: en dos mil veintiséis. Pytanie o urodziny: ¿Cuándo es tu cumpleaños? — Es el doce de marzo. Wiek, który ktoś kończy: cumplir — Mi padre cumple sesenta años."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "El vigésimo de mayo.",
+      "right": "El veinte de mayo.",
+      "explanation": "W polskich datach używamy liczebników porządkowych (dwudziesty), po hiszpańsku — zwykłych liczb (veinte). Porządkowy primero spotkasz najwyżej przy pierwszym dniu miesiąca."
+    },
+    {
+      "type": "table",
+      "caption": "Liczba mnoga rzeczowników i przymiotników",
+      "columns": ["Zakończenie", "Reguła", "Przykład"],
+      "rows": [
+        ["samogłoska", "+ s", "el hermano → los hermanos; alta → altas"],
+        ["spółgłoska", "+ es", "el profesor → los profesores; joven → jóvenes"],
+        ["-z", "z → ces", "el lápiz → los lápices; feliz → felices"],
+        ["-s (nieakcentowane)", "bez zmian", "el lunes → los lunes; la crisis → las crisis"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga na akcent przy liczbie mnogiej: joven → jóvenes (dochodzi kreska, bo słowo staje się „esdrújula”), a francés → franceses, alemán → alemanes (kreska znika). To ta sama reguła akcentu, którą poznałeś w jednostce 1B."
+    },
+    {
+      "type": "example",
+      "text": "—¿Cuándo es el cumpleaños de tu hermana? —Es el tres de agosto. Cumple veinte años.",
+      "translation": "—Kiedy są urodziny twojej siostry? —Trzeciego sierpnia. Kończy dwadzieścia lat."
+    },
+    { "type": "section", "phase": "sound", "title": "Intonacja pytań" },
+    {
+      "type": "explanation",
+      "text": "Pytanie ogólne (tak/nie) różni się od zdania oznajmującego tylko intonacją: na końcu głos idzie w górę. Tienes hermanos. (stwierdzenie) — ¿Tienes hermanos? ↗ (pytanie). W pytaniach z zaimkiem pytającym (¿Cuándo…?, ¿Cómo…?, ¿Cuántos…?) głos na końcu zwykle opada. Zwróć uwagę na pisownię: pytajnik stoi też na początku, odwrócony: ¿…?"
+    },
+    { "type": "section", "phase": "culture", "title": "Urodziny, imieniny i święta rodzinne" },
+    {
+      "type": "reading",
+      "title": "Cumpleaños y santos",
+      "paragraphs": [
+        "En España las personas celebran sobre todo el cumpleaños. Normalmente hay una tarta con velas y la familia canta «Cumpleaños feliz».",
+        "Algunas familias, especialmente en los pueblos, también celebran el santo, el día del nombre. Por ejemplo, el día de San José es el diecinueve de marzo.",
+        "En Navidad la familia se reúne para la cena de Nochebuena, el veinticuatro de diciembre. Los niños reciben regalos de Papá Noel o de los Reyes Magos, el seis de enero."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Polska i Hiszpania — co jest inaczej?",
+      "paragraphs": [
+        "W Polsce wiele osób obchodzi imieniny równie hucznie jak urodziny. W Hiszpanii el santo jest dziś dużo mniej popularne — świętuje się głównie urodziny. Jeśli powiesz hiszpańskim znajomym o swoich imieninach, mogą być zaskoczeni.",
+        "Najważniejszy dzień prezentów dla dzieci to w Hiszpanii tradycyjnie 6 stycznia — Día de Reyes (Trzech Króli). Wieczorem 5 stycznia w wielu miastach odbywa się barwny pochód, la cabalgata, a na śniadanie je się roscón de Reyes, ciasto z niespodzianką w środku.",
+        "Wigilia (la Nochebuena) to w Hiszpanii przede wszystkim uroczysta kolacja z rodziną, ale bez polskiego postu i opłatka; na stole często są owoce morza, jagnięcina i turrón — słodycz z migdałów."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: zaproszenie" },
+    {
+      "type": "mission",
+      "title": "Zaproś kogoś na przyjęcie urodzinowe w rodzinie",
+      "steps": [
+        "Powiedz, czyje to urodziny i ile ta osoba kończy lat (cumple…).",
+        "Podaj dzień tygodnia, datę i godzinę: el sábado veinte de mayo a las dos.",
+        "Zapytaj, czy rozmówca może przyjść: ¿Puedes venir?",
+        "Opisz osobę, której rozmówca nie zna: wygląd z ser i tener, charakter.",
+        "Nagraj się i sprawdź, czy w pytaniach tak/nie głos idzie w górę."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "¿Cuándo es tu cumpleaños?", "translation": "Kiedy masz urodziny?" },
+        { "text": "Es el doce de marzo.", "translation": "Dwunastego marca." },
+        {
+          "text": "Mi padre cumple sesenta años.",
+          "translation": "Mój tata kończy sześćdziesiąt lat."
+        },
+        {
+          "text": "Tiene el pelo largo y los ojos verdes.",
+          "translation": "Ma długie włosy i zielone oczy."
+        },
+        { "text": "Lleva gafas.", "translation": "Nosi okulary." },
+        { "text": "¡Feliz cumpleaños!", "translation": "Wszystkiego najlepszego z okazji urodzin!" }
+      ],
+      "canDo": [
+        "opisać wygląd osoby z ser, tener i llevar",
+        "nazwać miesiące i podać datę",
+        "zapytać o urodziny i powiedzieć, ile ktoś kończy lat",
+        "utworzyć liczbę mnogą rzeczowników i przymiotników",
+        "zadać pytanie tak/nie samą intonacją",
+        "opowiedzieć o różnicach między polskimi i hiszpańskimi świętami rodzinnymi"
+      ]
+    }
+  ]
+}

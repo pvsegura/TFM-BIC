@@ -10,5 +10,17 @@
   {
     "asset": "a1-u1-gym.png",
     "prompt": "a woman signing up at a gym reception, an employee types her phone number into a computer, sports equipment in the background"
+  },
+  {
+    "asset": "a1-u2-family-photo.png",
+    "prompt": "two young colleagues in an office kitchen looking together at family photos on a smartphone, smiling"
+  },
+  {
+    "asset": "a1-u2-sunday-lunch.png",
+    "prompt": "a big Spanish family of three generations having a long Sunday lunch around a table with a paella pan, grandparents, parents and children laughing"
+  },
+  {
+    "asset": "a1-u2-birthday.png",
+    "prompt": "a family birthday party at home: a smiling grandfather blows out candles on a cake, family members around him clap, balloons, no text on the cake"
   }
 ]

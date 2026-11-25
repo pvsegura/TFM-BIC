@@ -8,78 +8,302 @@
   "order": 110,
   "unit": 2,
   "instructionLanguage": "pl",
-  "title": "Jednostka 2. Mi familia y yo — rodzina i wiek",
-  "description": "Przedstawiasz rodzinę, mówisz, ile kto ma lat, i używasz zaimków dzierżawczych mi, tu, su.",
+  "title": "Jednostka 2. Mi familia y yo — rodzina, wiek i opis osób",
+  "description": "Przedstawiasz rodzinę, mówisz, kto ile ma lat i czym się zajmuje, opisujesz wygląd i charakter.",
   "blocks": [
     {
-      "type": "explanation",
-      "text": "Słuchaj i rozumiej — posłuchaj, jak Hiszpanie mówią o rodzinie. Najważniejsze słowa: el padre (ojciec), la madre (matka), los padres (rodzice), el hermano / la hermana (brat / siostra), el hijo / la hija (syn / córka), el abuelo / la abuela (dziadek / babcia), el marido / la mujer (mąż / żona)."
+      "type": "section",
+      "phase": "perceive",
+      "title": "Zdjęcia z rodziną"
     },
     {
       "type": "explanation",
-      "text": "Buduj zdania — zaimki dzierżawcze stoją przed rzeczownikiem i zmieniają się tylko w liczbie: mi hermano → mis hermanos (mój brat → moi bracia), tu madre → tus padres, su hijo → sus hijos. Su znaczy jego, jej, ich albo Pana/Pani — z kontekstu wiadomo, o kogo chodzi."
+      "text": "Bartek pokazuje koleżance z pracy, Elenie, zdjęcia rodziny w telefonie. Za pierwszym razem posłuchaj, ile osób pojawia się w rozmowie. Za drugim zapisz, kto jest kim (brat, siostra, rodzice) i ile ma lat. Za trzecim czytaj tekst razem z nagraniem i zaznacz słowa, które opisują wygląd i charakter."
     },
     {
-      "type": "example",
-      "text": "Mi hermana tiene veinticinco años.",
-      "translation": "Moja siostra ma dwadzieścia pięć lat."
-    },
-    {
-      "type": "example",
-      "text": "¿Cómo se llaman tus padres?",
-      "translation": "Jak mają na imię twoi rodzice?"
-    },
-    {
-      "type": "example",
-      "text": "Su marido es médico.",
-      "translation": "Jej mąż jest lekarzem.",
-      "note": "Zawód po ser bez rodzajnika."
-    },
-    {
-      "type": "explanation",
-      "text": "Uwaga, Polacy: los padres to zarówno „ojcowie”, jak i „rodzice”; los hermanos — „bracia” albo „rodzeństwo”; los hijos — „synowie” albo „dzieci”. Forma męska w liczbie mnogiej obejmuje też kobiety."
-    },
-    {
-      "type": "explanation",
-      "text": "Liczby 21–30: veintiuno, veintidós, veintitrés, veinticuatro, veinticinco, veintiséis, veintisiete, veintiocho, veintinueve, treinta. Od 31 piszemy osobno: treinta y uno, cuarenta y dos."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: abuelo brzmi jak „a-buelo”: wyobraź sobie dziadka, który mówi „a buelo, buelo” i kołysze wnuka. Hija zaczyna się od niemego h — jak cicha córka, która wchodzi do domu bez słowa."
+      "type": "image",
+      "asset": "a1-u2-family-photo.png",
+      "alt": "Dwoje kolegów z pracy ogląda zdjęcia rodzinne w telefonie."
     },
     {
       "type": "dialogue",
       "lines": [
         {
           "speaker": "Elena",
-          "text": "¿Tienes hermanos?",
-          "translation": "Masz rodzeństwo?"
+          "text": "¿Quién es este chico?",
+          "translation": "Kim jest ten chłopak?"
         },
         {
           "speaker": "Bartek",
-          "text": "Sí, tengo un hermano y una hermana. Mi hermano se llama Kuba.",
-          "translation": "Tak, mam brata i siostrę. Mój brat ma na imię Kuba."
+          "text": "Es mi hermano Kuba. Tiene veintiocho años y es ingeniero.",
+          "translation": "To mój brat Kuba. Ma dwadzieścia osiem lat i jest inżynierem."
         },
         {
           "speaker": "Elena",
-          "text": "¿Y cuántos años tiene?",
-          "translation": "A ile ma lat?"
+          "text": "Es muy alto. ¿Y esta chica rubia?",
+          "translation": "Jest bardzo wysoki. A ta blondynka?"
         },
         {
           "speaker": "Bartek",
-          "text": "Tiene veintiocho años. Está casado y tiene dos hijos.",
-          "translation": "Ma dwadzieścia osiem lat. Jest żonaty i ma dwoje dzieci."
+          "text": "Es mi hermana Ola. Es estudiante de Medicina en Cracovia.",
+          "translation": "To moja siostra Ola. Studiuje medycynę w Krakowie."
         },
         {
           "speaker": "Elena",
-          "text": "¡Qué bien! Entonces eres tío.",
-          "translation": "Super! To jesteś wujkiem."
+          "text": "¿Y estos señores son tus padres?",
+          "translation": "A ci państwo to twoi rodzice?"
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Sí. Mi madre es profesora y mi padre está jubilado.",
+          "translation": "Tak. Moja mama jest nauczycielką, a tata jest na emeryturze."
+        },
+        {
+          "speaker": "Elena",
+          "text": "Tu madre parece muy simpática.",
+          "translation": "Twoja mama wygląda na bardzo sympatyczną."
+        },
+        {
+          "speaker": "Bartek",
+          "text": "Sí, es muy alegre. ¿Y tú tienes hermanos?",
+          "translation": "Tak, jest bardzo wesoła. A ty masz rodzeństwo?"
+        },
+        {
+          "speaker": "Elena",
+          "text": "No, soy hija única. Pero tengo muchos primos.",
+          "translation": "Nie, jestem jedynaczką. Ale mam dużo kuzynów."
         }
       ]
     },
     {
+      "type": "section",
+      "phase": "connect",
+      "title": "Rodzina"
+    },
+    {
+      "type": "table",
+      "caption": "Najbliższa rodzina (rodzajnik + rzeczownik — zapamiętuj zawsze razem)",
+      "columns": ["Mężczyzna", "Kobieta", "Liczba mnoga", "Po polsku"],
+      "rows": [
+        ["el padre", "la madre", "los padres", "ojciec / matka / rodzice"],
+        ["el hermano", "la hermana", "los hermanos", "brat / siostra / rodzeństwo"],
+        ["el hijo", "la hija", "los hijos", "syn / córka / dzieci"],
+        ["el abuelo", "la abuela", "los abuelos", "dziadek / babcia / dziadkowie"],
+        ["el nieto", "la nieta", "los nietos", "wnuk / wnuczka / wnuki"],
+        ["el tío", "la tía", "los tíos", "wujek / ciocia / wujostwo"],
+        ["el primo", "la prima", "los primos", "kuzyn / kuzynka / kuzyni"],
+        ["el marido", "la mujer", "—", "mąż / żona"],
+        ["el novio", "la novia", "los novios", "chłopak / dziewczyna (para)"],
+        ["el suegro", "la suegra", "los suegros", "teść / teściowa / teściowie"]
+      ]
+    },
+    {
       "type": "explanation",
-      "text": "Misja: pokaż zdjęcie rodziny (albo wyobraź sobie) i powiedz po hiszpańsku pięć zdań: kto to jest, jak ma na imię i ile ma lat."
+      "text": "Łącz i zapamiętuj — rodzina „na K”: w polskim mamy kuzyna i kuzynkę, po hiszpańsku primo i prima — wyobraź sobie kuzyna, który zawsze chce być „prima”, pierwszy przy stole. Abuelo zapamiętasz jako dziadka, który kołysze wnuka i nuci „a-bue-lo, a-bue-lo”. Hija zaczyna się od niemej litery h: to cicha córka, która wchodzi do domu bez słowa."
+    },
+    {
+      "type": "table",
+      "caption": "Wygląd i charakter (forma męska / żeńska)",
+      "columns": ["Wygląd", "Po polsku", "Charakter", "Po polsku"],
+      "rows": [
+        ["alto / alta", "wysoki / wysoka", "simpático / simpática", "sympatyczny / sympatyczna"],
+        ["bajo / baja", "niski / niska", "alegre", "wesoły / wesoła"],
+        ["delgado / delgada", "szczupły / szczupła", "serio / seria", "poważny / poważna"],
+        ["rubio / rubia", "blondyn / blondynka", "tímido / tímida", "nieśmiały / nieśmiała"],
+        [
+          "moreno / morena",
+          "brunet / brunetka",
+          "trabajador / trabajadora",
+          "pracowity / pracowita"
+        ],
+        ["joven", "młody / młoda", "inteligente", "inteligentny / inteligentna"],
+        ["mayor", "starszy / starsza", "divertido / divertida", "zabawny / zabawna"]
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Rodzajniki, zaimki dzierżawcze i zgoda przymiotnika"
+    },
+    {
+      "type": "explanation",
+      "text": "W polskim nie ma rodzajników, a po hiszpańsku stoją przed prawie każdym rzeczownikiem. Rodzajnik określony (el, la, los, las) mówi o osobie lub rzeczy znanej: el hermano de Bartek — (ten) brat Bartka. Nieokreślony (un, una, unos, unas) wprowadza coś nowego: Tengo un hermano — Mam (jakiegoś) brata. Dzięki rodzajnikowi od razu widać rodzaj rzeczownika — dlatego zapisuj słówka zawsze z nim."
+    },
+    {
+      "type": "table",
+      "caption": "Rodzajniki",
+      "columns": ["Rodzajnik", "Męski", "Żeński", "Męski mn.", "Żeński mn."],
+      "rows": [
+        ["określony", "el", "la", "los", "las"],
+        ["nieokreślony", "un", "una", "unos", "unas"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Tengo hermano. Hermano se llama Kuba.",
+      "right": "Tengo un hermano. Mi hermano se llama Kuba.",
+      "explanation": "Polak łatwo pomija rodzajnik, bo w polskim go nie ma. Policzalny rzeczownik w liczbie pojedynczej prawie nigdy nie stoi sam: potrzebuje rodzajnika albo zaimka (mi, tu, su)."
+    },
+    {
+      "type": "explanation",
+      "text": "Zaimki dzierżawcze mi, tu, su stoją przed rzeczownikiem i zmieniają się tylko w liczbie: mi hermano → mis hermanos, tu madre → tus padres, su hijo → sus hijos. Nuestro i vuestro zmieniają się też w rodzaju: nuestra madre, nuestros abuelos. Su znaczy jego, jej, ich albo Pana/Pani — z kontekstu wiadomo, o kogo chodzi."
+    },
+    {
+      "type": "table",
+      "caption": "Zaimki dzierżawcze przed rzeczownikiem",
+      "columns": ["Osoba", "Liczba poj.", "Liczba mn.", "Przykład"],
+      "rows": [
+        ["yo", "mi", "mis", "mi padre, mis padres"],
+        ["tú", "tu", "tus", "tu hermana, tus hermanas"],
+        ["él / ella / usted", "su", "sus", "su hijo, sus hijos"],
+        [
+          "nosotros / nosotras",
+          "nuestro / nuestra",
+          "nuestros / nuestras",
+          "nuestra casa, nuestros tíos"
+        ],
+        ["vosotros / vosotras", "vuestro / vuestra", "vuestros / vuestras", "vuestra familia"],
+        ["ellos / ellas / ustedes", "su", "sus", "su abuela, sus abuelos"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Rodzice Marty mieszkają w Gdyni.",
+      "target": "Los padres de Marta viven en Gdynia.",
+      "note": "Dopełniacz („Marty”) tworzymy przyimkiem de: los padres de Marta, la casa de mi abuela."
+    },
+    {
+      "type": "explanation",
+      "text": "Przymiotnik zgadza się z rzeczownikiem w rodzaju i liczbie i zwykle stoi po nim: un chico alto, una chica alta, unos chicos altos, unas chicas altas. Przymiotniki na -e i na spółgłoskę mają jedną formę dla obu rodzajów: un hombre joven, una mujer joven; liczbę mnogą tworzą przez -s lub -es: alegres, jóvenes."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mi hermana es alto.",
+      "right": "Mi hermana es alta.",
+      "explanation": "Przymiotnik musi mieć ten sam rodzaj co osoba. Pomaga mówienie na głos całej pary: hermana — alta, hermano — alto."
+    },
+    {
+      "type": "explanation",
+      "text": "Zawód po czasowniku ser podajemy bez rodzajnika: Mi madre es profesora. Mi hermano es ingeniero. Rodzajnik pojawia się dopiero, gdy dodajemy opis: Es una profesora muy buena. Stan cywilny wyrażamy zwykle czasownikiem estar: estar casado/casada (być żonatym/zamężną), estar divorciado (być rozwiedzionym), estar jubilado (być na emeryturze); mówimy też ser soltero (być stanu wolnego)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mi padre es un médico.",
+      "right": "Mi padre es médico.",
+      "explanation": "Kalka z angielskiego („a doctor”). Po hiszpańsku sam zawód po ser stoi bez un/una."
+    },
+    {
+      "type": "example",
+      "text": "—¿Tienes hijos? —Sí, tengo dos: un niño de cinco años y una niña de tres.",
+      "translation": "—Masz dzieci? —Tak, dwoje: chłopca w wieku pięciu lat i dziewczynkę w wieku trzech.",
+      "note": "Wiek po rzeczowniku: un niño de cinco años — pięcioletni chłopiec."
+    },
+    {
+      "type": "example",
+      "text": "Mis abuelos son mayores, pero muy activos.",
+      "translation": "Moi dziadkowie są starsi, ale bardzo aktywni.",
+      "note": "Mayor (starszy) jest grzeczniejsze niż viejo (stary) w odniesieniu do ludzi."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "J, g i niema h w słowach rodzinnych"
+    },
+    {
+      "type": "explanation",
+      "text": "Hijo, hija, mujer, joven, jubilado: litera j to zawsze twarde h, jakbyś chuchał na zimną szybę — [iho], [muher], [hoben]. G przed e lub i brzmi tak samo: gente [hente]. Litera h na początku słowa jest niema: hermano [ermano], hija [iha]. W słowie hijo mamy więc obie pułapki naraz: niemą h i wymawiane j — [iho]."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "[chijo], [hermano]",
+      "right": "[iho], [ermano]",
+      "explanation": "Najczęstszy błąd: wymawianie h jak w polskim „herbata” i j jak polskie j. W hiszpańskim jest odwrotnie: h milczy, a j brzmi jak polskie h."
+    },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Rodzina po hiszpańsku"
+    },
+    {
+      "type": "image",
+      "asset": "a1-u2-sunday-lunch.png",
+      "alt": "Wielopokoleniowa hiszpańska rodzina je razem niedzielny obiad z paellą."
+    },
+    {
+      "type": "reading",
+      "title": "La familia de Lucía",
+      "paragraphs": [
+        "Me llamo Lucía y vivo en Sevilla. Mi familia es grande. Mis padres se llaman Antonio y Carmen. Mi padre es mecánico y mi madre es enfermera.",
+        "Tengo dos hermanos: Pablo tiene treinta años y está casado; Marta tiene diecinueve años y es estudiante. Vive con mis padres.",
+        "Los domingos comemos todos juntos en casa de mis abuelos. Mi abuela cocina una paella muy buena y mi abuelo habla de fútbol. Es un día muy divertido."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Rodzina jest w Hiszpanii bardzo ważna. Niedzielny obiad u dziadków (la comida del domingo) to dla wielu rodzin stały punkt tygodnia — trwa długo, często do późnego popołudnia.",
+        "Młodzi Hiszpanie wyprowadzają się z domu rodzinnego późno, średnio około trzydziestki. Powodem są głównie wysokie ceny mieszkań, ale też bliskie relacje z rodzicami.",
+        "Dziadkowie często opiekują się wnukami, gdy rodzice pracują. Zwracając się do starszych członków rodziny, Hiszpanie zwykle mówią na „ty” — usted w rodzinie brzmi dziś bardzo staroświecko."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misja: twoja rodzina"
+    },
+    {
+      "type": "mission",
+      "title": "Pokaż zdjęcie rodziny nowemu znajomemu",
+      "steps": [
+        "Wybierz zdjęcie (prawdziwe albo wymyślone) z co najmniej czterema osobami.",
+        "Powiedz, kto jest kim: Este es mi padre… Esta es mi hermana…",
+        "Dla każdej osoby dodaj wiek i zawód: Tiene… años. Es…",
+        "Opisz dwie osoby: wygląd i charakter, pilnując zgody przymiotnika.",
+        "Zapytaj rozmówcę: ¿Tienes hermanos? ¿Cómo se llaman tus padres?",
+        "Nagraj się w aplikacji i sprawdź, czy wymawiasz hijo i hermano bez h."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Tienes hermanos?",
+          "translation": "Masz rodzeństwo?"
+        },
+        {
+          "text": "Tengo un hermano y una hermana.",
+          "translation": "Mam brata i siostrę."
+        },
+        {
+          "text": "Mi madre es profesora.",
+          "translation": "Moja mama jest nauczycielką."
+        },
+        {
+          "text": "Mi padre está jubilado.",
+          "translation": "Mój tata jest na emeryturze."
+        },
+        {
+          "text": "Es alto y muy simpático.",
+          "translation": "Jest wysoki i bardzo sympatyczny."
+        },
+        {
+          "text": "los padres de Marta",
+          "translation": "rodzice Marty"
+        },
+        {
+          "text": "Soy hijo único. / Soy hija única.",
+          "translation": "Jestem jedynakiem. / Jestem jedynaczką."
+        }
+      ],
+      "canDo": [
+        "nazwać członków rodziny z rodzajnikiem",
+        "użyć mi, tu, su, nuestro w liczbie pojedynczej i mnogiej",
+        "opisać wygląd i charakter z poprawną zgodą przymiotnika",
+        "podać zawód bez rodzajnika i stan cywilny z estar",
+        "wyrazić przynależność przez de (los padres de Marta)",
+        "wymówić hijo, mujer i joven z hiszpańskim j i niemym h"
+      ]
     }
   ]
 }
