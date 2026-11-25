@@ -206,6 +206,8 @@ h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
 .culture, .summary { background: #eee; }
 .pitfall { border-left: 3pt solid #111; background: #f3f3f3; }
 .comparison { border: .5pt dashed #555; display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 4mm; }
+.comparison p, .pitfall p, .culture p, .reading p, .summary p { margin: 0 0 1mm; }
+.comparison .note { grid-column: 1 / -1; color: #333; font-size: 9.5pt; }
 .grid { border-collapse: collapse; width: 100%; margin: 0 0 3mm; font-size: 9.5pt; break-inside: avoid; }
 .grid caption { text-align: left; font-size: 8.5pt; color: #444; }
 .grid th, .grid td { border: .5pt solid #777; padding: 1mm 2mm; text-align: left; }

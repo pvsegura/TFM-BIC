@@ -16,6 +16,7 @@ import {
   type ContentCatalog,
   type Exercise,
   type ExerciseAnswerValue,
+  EXERCISE_TYPES,
 } from "@verbysia/domain";
 import { beforeAll, describe, expect, it } from "vitest";
 
@@ -109,9 +110,7 @@ describe("the shipped exercises", () => {
   });
 
   it("show every exercise type the engine supports", () => {
-    expect(new Set(catalog.exercises.map((e) => e.type))).toEqual(
-      new Set(["multiple-choice", "text-answer", "true-false"]),
-    );
+    expect(new Set(catalog.exercises.map((e) => e.type))).toEqual(new Set(EXERCISE_TYPES));
   });
 
   it("belong to lessons that exist, are lessons, and are published, in the same language and level", () => {

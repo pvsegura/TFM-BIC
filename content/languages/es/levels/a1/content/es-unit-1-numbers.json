@@ -9,66 +9,251 @@
   "unit": 1,
   "instructionLanguage": "pl",
   "access": "free",
-  "title": "Jednostka 1. Liczby 0–20, wiek i numer telefonu",
-  "description": "Liczysz do dwudziestu, podajesz swój wiek i numer telefonu.",
+  "title": "Jednostka 1C. Números — liczby do 100, wiek i telefon",
+  "description": "Liczysz do stu, mówisz, ile masz lat, podajesz i zapisujesz numer telefonu.",
   "blocks": [
     {
-      "type": "example",
-      "text": "cero, uno, dos, tres, cuatro, cinco, seis, siete, ocho, nueve, diez",
-      "translation": "0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10"
-    },
-    {
-      "type": "example",
-      "text": "once, doce, trece, catorce, quince, dieciséis, diecisiete, dieciocho, diecinueve, veinte",
-      "translation": "11, 12, 13, 14, 15, 16, 17, 18, 19, 20",
-      "note": "Od 16 do 19 liczby to „dziesięć i…”: dieci + seis, siete, ocho, nueve — pisane razem."
+      "type": "section",
+      "phase": "perceive",
+      "title": "Zapisy na siłownię"
     },
     {
       "type": "explanation",
-      "text": "Uno przed rzeczownikiem męskim skraca się do un, a przed żeńskim zmienia się w una: un café, una cerveza. Pozostałe liczby się nie zmieniają: dos cafés, dos cervezas."
-    },
-    {
-      "type": "explanation",
-      "text": "Wiek: pamiętaj, że po hiszpańsku wiek się „ma” — tener: ¿Cuántos años tienes? — Tengo veinte años. Numer telefonu zwykle podaje się cyfra po cyfrze albo parami: seis, cero, cero… lub sesenta, cero…"
-    },
-    {
-      "type": "example",
-      "text": "¿Cuál es tu número de teléfono? — Es el seis, uno, dos, tres, cuatro, cinco, seis, siete, ocho.",
-      "translation": "Jaki jest Twój numer telefonu? — 612 345 678.",
-      "note": "Pytamy ¿Cuál es…?, a nie ¿Qué es…?, gdy chodzi o konkretną informację z wielu możliwych."
-    },
-    {
-      "type": "explanation",
-      "text": "UNIR — skojarzenia do trudnych liczb: once (11): drużyna piłkarska ma jedenastu graczy — wyobraź sobie, że na koszulce każdego z nich jest napis ONCE. Quince (15) zaczyna się jak „kin”: piętnaście osób w kinie. Siete (7) — „siedem” i „siete” zaczynają się podobnie."
+      "text": "Marta zapisuje się na siłownię w Barcelonie. Pracownik wypełnia formularz. Posłuchaj: za pierwszym razem zapisz tylko liczby, które usłyszysz; za drugim sprawdź, ile lat ma Marta i jaki jest jej numer telefonu; za trzecim czytaj tekst razem z nagraniem."
     },
     {
       "type": "dialogue",
       "lines": [
         {
-          "speaker": "Profesora",
-          "text": "¿Cuántos años tienes, Kuba?",
-          "translation": "Ile masz lat, Kuba?"
+          "speaker": "Empleado",
+          "text": "Buenas tardes. ¿Nombre y apellidos?",
+          "translation": "Dzień dobry. Imię i nazwisko?"
         },
         {
-          "speaker": "Kuba",
-          "text": "Tengo diecinueve años.",
-          "translation": "Mam dziewiętnaście lat."
+          "speaker": "Marta",
+          "text": "Marta Zielińska.",
+          "translation": "Marta Zielińska."
         },
         {
-          "speaker": "Profesora",
-          "text": "¿Y cuál es tu número de teléfono?",
-          "translation": "A jaki jest Twój numer telefonu?"
+          "speaker": "Empleado",
+          "text": "¿Cuántos años tienes, Marta?",
+          "translation": "Ile masz lat, Marto?"
         },
         {
-          "speaker": "Kuba",
-          "text": "Es el cinco, cero, uno, dos, dos, tres, siete, ocho, nueve.",
-          "translation": "501 223 789."
+          "speaker": "Marta",
+          "text": "Tengo treinta y cuatro años.",
+          "translation": "Mam trzydzieści cztery lata."
+        },
+        {
+          "speaker": "Empleado",
+          "text": "¿Y tu número de teléfono?",
+          "translation": "A twój numer telefonu?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Es el seis, cuatro, siete, veintidós, treinta y uno, noventa.",
+          "translation": "647 22 31 90."
+        },
+        {
+          "speaker": "Empleado",
+          "text": "Perdona, ¿puedes repetir más despacio?",
+          "translation": "Przepraszam, możesz powtórzyć wolniej?"
+        },
+        {
+          "speaker": "Marta",
+          "text": "Sí, claro: seis, cuatro, siete… dos, dos… tres, uno… nueve, cero.",
+          "translation": "Tak, oczywiście: sześć, cztery, siedem… dwa, dwa… trzy, jeden… dziewięć, zero."
+        },
+        {
+          "speaker": "Empleado",
+          "text": "Muy bien. La cuota es de cuarenta y cinco euros al mes.",
+          "translation": "Dobrze. Opłata wynosi czterdzieści pięć euro miesięcznie."
         }
       ]
     },
     {
+      "type": "section",
+      "phase": "connect",
+      "title": "Liczby od 0 do 100"
+    },
+    {
+      "type": "table",
+      "caption": "Od 0 do 19 — trzeba nauczyć się na pamięć",
+      "columns": ["0–4", "5–9", "10–14", "15–19"],
+      "rows": [
+        ["0 cero", "5 cinco", "10 diez", "15 quince"],
+        ["1 uno", "6 seis", "11 once", "16 dieciséis"],
+        ["2 dos", "7 siete", "12 doce", "17 diecisiete"],
+        ["3 tres", "8 ocho", "13 trece", "18 dieciocho"],
+        ["4 cuatro", "9 nueve", "14 catorce", "19 diecinueve"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Dziesiątki i liczby do 100",
+      "columns": ["Liczba", "Po hiszpańsku", "Uwaga"],
+      "rows": [
+        ["20", "veinte", "—"],
+        [
+          "21–29",
+          "veintiuno, veintidós, veintitrés… veintinueve",
+          "pisane razem; 22, 23, 26 z kreską"
+        ],
+        ["30", "treinta", "31 = treinta y uno (osobno, z y)"],
+        ["40", "cuarenta", "45 = cuarenta y cinco"],
+        ["50", "cincuenta", "—"],
+        ["60", "sesenta", "nie mylić z 70"],
+        ["70", "setenta", "nie mylić z 60"],
+        ["80", "ochenta", "—"],
+        ["90", "noventa", "99 = noventa y nueve"],
+        ["100", "cien", "101 = ciento uno"]
+      ]
+    },
+    {
       "type": "explanation",
-      "text": "Misja: powiedz na głos swój wiek i swój numer telefonu po hiszpańsku, cyfra po cyfrze."
+      "text": "UNIR — skojarzenia do trudnych liczb. Once (11): drużyna piłkarska ma jedenastu zawodników — wyobraź sobie napis ONCE na każdej koszulce. Quince (15) zaczyna się jak „kin…”: piętnaście osób w kinie. Sesenta i setenta (60 i 70) łatwo pomylić: seSenta ma S jak „sześć”, seTenta ma T jak „siedem” (siete). Zapisz w trenerze pamięci najpierw liczby od 11 do 15 — to one sprawiają najwięcej kłopotów."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Uno, un, una; wiek z tener"
+    },
+    {
+      "type": "explanation",
+      "text": "Uno przed rzeczownikiem męskim skraca się do un, a przed żeńskim zmienia się w una: un café, una cerveza. To samo dzieje się w liczbach złożonych: veintiún años, treinta y una personas. Pozostałe liczby się nie zmieniają: dos cafés, dos cervezas."
+    },
+    {
+      "type": "explanation",
+      "text": "Po hiszpańsku wiek się „ma”, tak jak w polskim „mam 30 lat”. Używamy czasownika tener (mieć), który jest nieregularny. Pytanie brzmi ¿Cuántos años tienes? (na „ty”) albo ¿Cuántos años tiene usted? (na „Pan/Pani”)."
+    },
+    {
+      "type": "table",
+      "caption": "Tener — mieć (czas teraźniejszy)",
+      "columns": ["Osoba", "Hiszpański", "Polski"],
+      "rows": [
+        ["yo", "tengo", "mam"],
+        ["tú", "tienes", "masz"],
+        ["él / ella / usted", "tiene", "ma"],
+        ["nosotros / nosotras", "tenemos", "mamy"],
+        ["vosotros / vosotras", "tenéis", "macie"],
+        ["ellos / ellas / ustedes", "tienen", "mają"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Mam trzydzieści lat.",
+      "target": "Tengo treinta años.",
+      "note": "Tu polski i hiszpański myślą tak samo — korzystaj z tego."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Soy treinta años. / Tengo treinta.",
+      "right": "Tengo treinta años.",
+      "explanation": "Wieku nie wyrażamy czasownikiem ser (to błąd kalkowany z angielskiego „I am 30”). Słowa años nie opuszczamy w pełnej odpowiedzi; samo Tengo treinta usłyszysz tylko w szybkiej rozmowie, gdy pytanie padło przed chwilą."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "¿Qué es tu número de teléfono?",
+      "right": "¿Cuál es tu número de teléfono?",
+      "explanation": "Gdy pytamy o konkretną informację (numer, adres, imię), używamy ¿Cuál es…?. ¿Qué es…? pyta o definicję: ¿Qué es un DNI? — Co to jest DNI?"
+    },
+    {
+      "type": "example",
+      "text": "Es el seis, uno, dos, treinta y cuatro, cincuenta y seis, setenta y ocho.",
+      "translation": "612 34 56 78.",
+      "note": "Numer telefonu podaje się cyfra po cyfrze albo w parach; przed numerem zwykle mówi się el."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "R i rr, c i z w liczbach"
+    },
+    {
+      "type": "explanation",
+      "text": "Pojedyncze r w środku słowa wymawiamy jednym krótkim uderzeniem języka: cero, tres, cuatro, ochenta — prawie jak polskie r. Na początku słowa i jako podwójne rr — kilkoma mocnymi uderzeniami: rojo, perro. Para pero (ale) i perro (pies) różni się tylko tym dźwiękiem, więc warto ją ćwiczyć z nagraniem."
+    },
+    {
+      "type": "explanation",
+      "text": "Cero, once, doce, trece, catorce, quince, cinco, cincuenta, cien: w każdej z tych liczb jest c przed e lub i. W większości Hiszpanii wymawia się je jak angielskie th w słowie „think” ([θero], [θinko]); w Andaluzji, na Wyspach Kanaryjskich i w całej Ameryce Łacińskiej — jak s ([sero], [sinko]). Obie wymowy są poprawne; wybierz jedną i trzymaj się jej."
+    },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Numery w Hiszpanii"
+    },
+    {
+      "type": "reading",
+      "title": "Números útiles",
+      "paragraphs": [
+        "En España los números de teléfono tienen nueve cifras. Los móviles empiezan por seis o por siete, y los fijos normalmente empiezan por nueve.",
+        "El número de emergencias es el ciento doce: es gratis y funciona en toda Europa. Desde Polonia, para llamar a España, marcas primero el cero, cero, treinta y cuatro.",
+        "Muchas personas dicen los números de dos en dos: seis, cuarenta y siete, veintidós, treinta y uno, noventa."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "W Hiszpanii przy zapisie na siłownię, do lekarza czy w urzędzie prawie zawsze poprosi Cię się o numer telefonu i dokument tożsamości. Hiszpanie mają DNI (dowód osobisty), a cudzoziemcy z Unii Europejskiej mieszkający w Hiszpanii — numer NIE (Número de Identidad de Extranjero).",
+        "Ceny podaje się z przecinkiem: 4,50 € czytamy cuatro euros con cincuenta (céntimos) albo po prostu cuatro cincuenta. Kropka oddziela tysiące, jak w polskich cenach w sklepie.",
+        "Numer alarmowy 112 działa w całej Unii Europejskiej, także w Polsce. Dyspozytorzy w Hiszpanii często mówią też po angielsku."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misja: formularz"
+    },
+    {
+      "type": "mission",
+      "title": "Zapisujesz się na siłownię albo do biblioteki",
+      "steps": [
+        "Podaj imię i nazwisko, a potem przeliteruj nazwisko.",
+        "Powiedz, ile masz lat: Tengo… años.",
+        "Podaj numer telefonu cyfra po cyfrze, a potem parami.",
+        "Zapytaj o cenę: ¿Cuánto es al mes? i powtórz kwotę, którą usłyszysz.",
+        "Nagraj się w aplikacji i sprawdź, czy dobrze wymawiasz r w liczbach cero, tres i cuatro."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Cuántos años tienes?",
+          "translation": "Ile masz lat?"
+        },
+        {
+          "text": "Tengo veintiocho años.",
+          "translation": "Mam dwadzieścia osiem lat."
+        },
+        {
+          "text": "¿Cuál es tu número de teléfono?",
+          "translation": "Jaki jest twój numer telefonu?"
+        },
+        {
+          "text": "Es el seis, cuatro, siete…",
+          "translation": "To sześć, cztery, siedem…"
+        },
+        {
+          "text": "¿Puedes repetir más despacio?",
+          "translation": "Możesz powtórzyć wolniej?"
+        },
+        {
+          "text": "¿Cuánto es?",
+          "translation": "Ile to kosztuje? / Ile płacę?"
+        },
+        {
+          "text": "un café, una cerveza, veintiún años",
+          "translation": "jedna kawa, jedno piwo, dwadzieścia jeden lat"
+        }
+      ],
+      "canDo": [
+        "liczyć od 0 do 100",
+        "zapytać o wiek i podać swój wiek z tener",
+        "podać i zapisać numer telefonu",
+        "użyć un / una przed rzeczownikiem",
+        "zapytać ¿Cuál es…? o konkretną informację"
+      ]
     }
   ]
 }

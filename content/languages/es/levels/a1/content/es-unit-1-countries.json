@@ -9,65 +9,233 @@
   "unit": 1,
   "instructionLanguage": "pl",
   "access": "free",
-  "title": "Jednostka 1. Kraje, narodowości i języki",
-  "description": "Mówisz, skąd jesteś, jakiej jesteś narodowości i jakimi językami mówisz.",
+  "title": "Jednostka 1B. ¿De dónde eres? — kraje, narodowości i języki",
+  "description": "Mówisz, skąd jesteś, jakiej jesteś narodowości i jakimi językami mówisz; pytasz o to innych.",
   "blocks": [
     {
-      "type": "explanation",
-      "text": "Skąd jesteś? — ¿De dónde eres? Odpowiadasz na dwa sposoby: Soy de Polonia (jestem z Polski) albo podając narodowość: Soy polaco / Soy polaca (jestem Polakiem / Polką). Narodowości piszemy małą literą — inaczej niż w polskim."
-    },
-    {
-      "type": "example",
-      "text": "Soy polaca. Soy de Varsovia.",
-      "translation": "Jestem Polką. Jestem z Warszawy."
+      "type": "section",
+      "phase": "perceive",
+      "title": "Pierwszy dzień kursu"
     },
     {
       "type": "explanation",
-      "text": "Rodzaj narodowości: forma męska na -o zmienia się na -a (polaco → polaca, italiano → italiana). Forma męska na spółgłoskę dostaje -a (español → española, alemán → alemana, inglés → inglesa, francés → francesa) — i znika akcent graficzny. Niektóre formy są takie same dla obu rodzajów: estadounidense, belga."
-    },
-    {
-      "type": "example",
-      "text": "Mi marido es español y yo soy polaca.",
-      "translation": "Mój mąż jest Hiszpanem, a ja jestem Polką."
-    },
-    {
-      "type": "example",
-      "text": "Hablo polaco, inglés y un poco de español.",
-      "translation": "Mówię po polsku, po angielsku i trochę po hiszpańsku.",
-      "note": "Nazwa języka to zwykle męska forma narodowości: el polaco, el español, el inglés."
-    },
-    {
-      "type": "explanation",
-      "text": "UNIR — kraj i rodzaj: Polonia, España, Alemania, Francia, Italia kończą się na -a — wyobraź sobie je jako czerwone (żeńskie) wyspy na mapie. Mówimy jednak: Polonia es bonita (Polska jest ładna) — przymiotnik zgadza się z krajem."
+      "text": "Pierwsze zajęcia w szkole językowej w Walencji. Uczniowie się poznają. Posłuchaj dialogu: najpierw sprawdź tylko, ile osób rozmawia i z jakich są krajów; potem wyłap wszystkie nazwy języków; na koniec przeczytaj tekst razem z nagraniem."
     },
     {
       "type": "dialogue",
       "lines": [
         {
-          "speaker": "Laura",
-          "text": "¿De dónde eres, Marta?",
-          "translation": "Skąd jesteś, Marto?"
+          "speaker": "Profesora",
+          "text": "Hola a todos. Yo soy Carmen, la profesora. ¿Y tú?",
+          "translation": "Cześć wszystkim. Jestem Carmen, nauczycielka. A ty?"
         },
         {
           "speaker": "Marta",
-          "text": "Soy polaca, de Wrocław. ¿Y tú?",
-          "translation": "Jestem Polką, z Wrocławia. A ty?"
+          "text": "Hola, soy Marta. Soy polaca, de Wrocław.",
+          "translation": "Cześć, jestem Marta. Jestem Polką, z Wrocławia."
         },
         {
-          "speaker": "Laura",
-          "text": "Soy española, de Bilbao. ¿Qué idiomas hablas?",
-          "translation": "Jestem Hiszpanką, z Bilbao. Jakimi językami mówisz?"
+          "speaker": "Profesora",
+          "text": "¡Qué bien! ¿Y tú, de dónde eres?",
+          "translation": "Świetnie! A ty, skąd jesteś?"
+        },
+        {
+          "speaker": "Luca",
+          "text": "Me llamo Luca y soy italiano, de Turín.",
+          "translation": "Nazywam się Luca i jestem Włochem, z Turynu."
+        },
+        {
+          "speaker": "Profesora",
+          "text": "¿Qué lenguas hablas, Luca?",
+          "translation": "Jakimi językami mówisz, Luca?"
+        },
+        {
+          "speaker": "Luca",
+          "text": "Hablo italiano, inglés y un poco de español.",
+          "translation": "Mówię po włosku, po angielsku i trochę po hiszpańsku."
         },
         {
           "speaker": "Marta",
-          "text": "Hablo polaco, inglés y alemán. Y ahora aprendo español.",
-          "translation": "Mówię po polsku, angielsku i niemiecku. A teraz uczę się hiszpańskiego."
+          "text": "Yo hablo polaco, alemán y también un poco de español.",
+          "translation": "Ja mówię po polsku, po niemiecku i też trochę po hiszpańsku."
+        },
+        {
+          "speaker": "Profesora",
+          "text": "Perfecto. Aquí todos somos estudiantes de español.",
+          "translation": "Doskonale. Tutaj wszyscy jesteśmy uczniami hiszpańskiego."
         }
       ]
     },
     {
+      "type": "section",
+      "phase": "connect",
+      "title": "Kraje, narodowości i języki"
+    },
+    {
+      "type": "table",
+      "caption": "Kraj — narodowość (on / ona) — język",
+      "columns": ["Kraj", "On", "Ona", "Język"],
+      "rows": [
+        ["Polonia", "polaco", "polaca", "el polaco"],
+        ["España", "español", "española", "el español / el castellano"],
+        ["México", "mexicano", "mexicana", "el español"],
+        ["Argentina", "argentino", "argentina", "el español"],
+        ["Alemania", "alemán", "alemana", "el alemán"],
+        ["Francia", "francés", "francesa", "el francés"],
+        ["Italia", "italiano", "italiana", "el italiano"],
+        ["Portugal", "portugués", "portuguesa", "el portugués"],
+        ["Inglaterra / Reino Unido", "inglés / británico", "inglesa / británica", "el inglés"],
+        ["Estados Unidos", "estadounidense", "estadounidense", "el inglés"],
+        ["Ucrania", "ucraniano", "ucraniana", "el ucraniano"],
+        ["China", "chino", "china", "el chino"],
+        ["Marruecos", "marroquí", "marroquí", "el árabe"]
+      ]
+    },
+    {
       "type": "explanation",
-      "text": "Misja: powiedz trzy zdania: skąd jesteś (miasto i kraj), jakiej jesteś narodowości i jakimi językami mówisz."
+      "text": "UNIR — skojarzenia. Polonia brzmi jak „Polonia” w polskim (Polonia to Polacy za granicą) — łatwo. Alemania wyobraź sobie jako „ale mania na Niemcy”: ktoś ma manię na punkcie niemieckich samochodów. Narodowości na -és (francés, inglés, portugués) noszą na é „kapelusz”: kobieta zdejmuje go przy wejściu i zostaje francesa, inglesa, portuguesa. Im zabawniejszy obraz, tym lepiej. Zapisz w trenerze pamięci narodowości zawsze w parze: polaco / polaca."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Ser de…, narodowości i język"
+    },
+    {
+      "type": "explanation",
+      "text": "Pytanie o pochodzenie to ¿De dónde eres? (na „ty”) albo ¿De dónde es usted? (na „Pan/Pani”). Odpowiadasz na dwa sposoby: kraj lub miasto z przyimkiem de — Soy de Polonia, Soy de Cracovia — albo narodowość bez przyimka — Soy polaco, Soy polaca."
+    },
+    {
+      "type": "table",
+      "caption": "Jak tworzy się formę żeńską narodowości",
+      "columns": ["Forma męska", "Reguła", "Forma żeńska"],
+      "rows": [
+        ["polaco, italiano", "-o → -a", "polaca, italiana"],
+        [
+          "español, alemán, francés",
+          "spółgłoska + -a (akcent znika)",
+          "española, alemana, francesa"
+        ],
+        ["estadounidense, belga", "-e / -a: bez zmian", "estadounidense, belga"],
+        ["marroquí, iraní", "-í: bez zmian", "marroquí, iraní"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Soy Polaca. Hablo Polaco.",
+      "right": "Soy polaca. Hablo polaco.",
+      "explanation": "Po hiszpańsku narodowości i nazwy języków piszemy małą literą. Wielką literą piszemy tylko nazwy krajów i miast: Polonia, Cracovia."
+    },
+    {
+      "type": "comparison",
+      "source": "Mówię po polsku i po angielsku.",
+      "target": "Hablo polaco e inglés.",
+      "note": "Nie ma odpowiednika „po”: język to po prostu rzeczownik. Przed słowem zaczynającym się od i- spójnik y zmienia się w e."
+    },
+    {
+      "type": "table",
+      "caption": "Hablar — mówić (czasownik regularny na -ar)",
+      "columns": ["Osoba", "Hiszpański", "Polski"],
+      "rows": [
+        ["yo", "hablo", "mówię"],
+        ["tú", "hablas", "mówisz"],
+        ["él / ella / usted", "habla", "mówi"],
+        ["nosotros / nosotras", "hablamos", "mówimy"],
+        ["vosotros / vosotras", "habláis", "mówicie"],
+        ["ellos / ellas / ustedes", "hablan", "mówią"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Hablar to pierwszy regularny czasownik, jaki poznajesz. Według tego samego wzoru odmienia się setki czasowników na -ar: estudiar (uczyć się), trabajar (pracować), escuchar (słuchać). Odetnij -ar i dodaj końcówki: -o, -as, -a, -amos, -áis, -an. Czasowniki na -er i -ir mają własne wzory — poznasz je w jednostce 5."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Soy de polaco. / Soy Polonia.",
+      "right": "Soy de Polonia. / Soy polaco.",
+      "explanation": "De łączy się z nazwą miejsca (kraju, miasta), a narodowość stoi bez przyimka. Nie mieszaj obu konstrukcji."
+    },
+    {
+      "type": "example",
+      "text": "—¿De dónde es usted? —Soy de Gdańsk, en el norte de Polonia.",
+      "translation": "—Skąd Pan/Pani jest? —Jestem z Gdańska, na północy Polski.",
+      "note": "Wiele polskich miast ma po hiszpańsku własne nazwy: Varsovia, Cracovia; inne zostają po polsku."
+    },
+    {
+      "type": "example",
+      "text": "Mi marido es español y yo soy polaca. En casa hablamos español y polaco.",
+      "translation": "Mój mąż jest Hiszpanem, a ja Polką. W domu mówimy po hiszpańsku i po polsku."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Akcent w słowie i tilde"
+    },
+    {
+      "type": "explanation",
+      "text": "W polskim akcent pada prawie zawsze na przedostatnią sylabę. W hiszpańskim miejsce akcentu bywa różne, ale reguła jest prosta. Słowa zakończone na samogłoskę, -n lub -s akcentujemy na przedostatniej sylabie: ha-BLA-mos, ita-LIA-no. Słowa zakończone na inną spółgłoskę — na ostatniej: espa-ÑOL, ha-BLAR. Gdy słowo łamie tę regułę, akcent pokazuje kreska (tilde): ale-MÁN, fran-CÉS, MÉ-xico."
+    },
+    {
+      "type": "explanation",
+      "text": "Dlatego kreska znika w formie żeńskiej: alemán → alemana. Nowe słowo kończy się na samogłoskę, więc akcent na przedostatniej sylabie (ale-MA-na) jest „zgodny z regułą” i nie trzeba go zaznaczać. Ta sama zasada działa w liczbie mnogiej: francés → franceses."
+    },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Hiszpański na świecie"
+    },
+    {
+      "type": "reading",
+      "title": "El español en el mundo",
+      "paragraphs": [
+        "El español es una lengua muy importante. Es la lengua oficial de España y de muchos países de América: México, Colombia, Argentina, Perú, Chile, Cuba y otros. También se habla en Guinea Ecuatorial, en África.",
+        "En Estados Unidos muchas personas hablan español en casa. En España hay también otras lenguas oficiales: el catalán, el gallego y el euskera.",
+        "El español de México y el español de España son un poco diferentes, como el polaco de Cracovia y el polaco de Poznań, pero las personas se entienden muy bien."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Español czy castellano?",
+      "paragraphs": [
+        "Hiszpański ma dwie nazwy: español i castellano (kastylijski). W wielu krajach Ameryki Łacińskiej i w hiszpańskich regionach z własnym językiem (Katalonia, Galicja, Kraj Basków) częściej mówi się castellano, żeby podkreślić, że to jeden z kilku języków Hiszpanii. Obie nazwy są poprawne.",
+        "Hiszpańskim posługuje się jako językiem ojczystym blisko 500 milionów ludzi — to drugi język na świecie pod względem liczby rodzimych użytkowników. Uczysz się więc języka, który przyda Ci się na kilku kontynentach.",
+        "W tym kursie uczysz się hiszpańskiego z Hiszpanii (np. vosotros, c i z wymawiane jak th), ale zaznaczamy najważniejsze różnice z Ameryką Łacińską, gdzie zamiast vosotros mówi się ustedes."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misja: kim jesteś?"
+    },
+    {
+      "type": "mission",
+      "title": "Przedstaw się grupie na pierwszych zajęciach",
+      "steps": [
+        "Powiedz, jak się nazywasz i skąd jesteś (miasto i kraj).",
+        "Podaj swoją narodowość w poprawnej formie męskiej lub żeńskiej.",
+        "Powiedz, jakimi językami mówisz, i dodaj un poco de… dla języka, który znasz słabo.",
+        "Zapytaj kolegę: ¿De dónde eres? ¿Qué lenguas hablas?",
+        "Przedstaw kolegę grupie: Este es Luca. Es italiano, de Turín. Habla…"
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "¿De dónde eres?", "translation": "Skąd jesteś?" },
+        { "text": "Soy de Polonia, de Poznań.", "translation": "Jestem z Polski, z Poznania." },
+        { "text": "Soy polaco. / Soy polaca.", "translation": "Jestem Polakiem. / Jestem Polką." },
+        { "text": "¿Qué lenguas hablas?", "translation": "Jakimi językami mówisz?" },
+        { "text": "Hablo polaco e inglés.", "translation": "Mówię po polsku i po angielsku." },
+        { "text": "un poco de español", "translation": "trochę po hiszpańsku" },
+        { "text": "Este es… / Esta es…", "translation": "To jest… (on / ona)" }
+      ],
+      "canDo": [
+        "powiedzieć, skąd jestem, i zapytać o to innych",
+        "podać narodowość w formie męskiej i żeńskiej",
+        "powiedzieć, jakimi językami mówię",
+        "odmienić czasownik hablar",
+        "przedstawić kogoś innego",
+        "wyjaśnić, kiedy w słowie pisze się kreskę (tilde)"
+      ]
     }
   ]
 }

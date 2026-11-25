@@ -9,67 +9,302 @@
   "unit": 1,
   "instructionLanguage": "pl",
   "access": "free",
-  "title": "Jednostka 1. Alfabet i literowanie",
-  "description": "Hiszpański alfabet, litery, których nie ma w polskim, i jak przeliterować swoje imię.",
+  "title": "Jednostka 1A. ¡Hola! Me llamo… — przedstawianie się i alfabet",
+  "description": "Witasz się, mówisz, jak się nazywasz, pytasz o imię, literujesz nazwisko i adres e-mail.",
   "blocks": [
     {
-      "type": "explanation",
-      "text": "Hiszpański alfabet ma 27 liter. W porównaniu z polskim dochodzi ñ, a nie ma liter z ogonkami ani kreskami (ą, ę, ł, ś, ż…). Nazwy liter warto znać, bo w urzędzie, hotelu czy w pracy często usłyszysz pytanie: ¿Cómo se escribe? — Jak to się pisze?"
-    },
-    {
-      "type": "example",
-      "text": "a, be, ce, de, e, efe, ge, hache, i, jota, ka, ele, eme, ene, eñe, o, pe, cu, erre, ese, te, u, uve, uve doble, equis, ye, zeta",
-      "translation": "Nazwy liter od A do Z.",
-      "note": "Ye to litera y; uve doble to w — występuje prawie tylko w słowach obcych."
+      "type": "section",
+      "phase": "perceive",
+      "title": "Na recepcji szkoły językowej"
     },
     {
       "type": "explanation",
-      "text": "Litery, na które Polak musi uważać: h się nie wymawia (hola [ola]); j to twarde h (jota); ñ to polskie ń (España); ll brzmi jak j (llamar); ch to polskie cz (chocolate [czokolate]); c przed e/i oraz z — w większości Hiszpanii jak angielskie th; qu przed e/i to [k] (queso [keso]); v i b brzmią tak samo."
-    },
-    {
-      "type": "example",
-      "text": "¿Cómo se escribe tu apellido? — Ka, o, uve, a, ele, ese, ka, i.",
-      "translation": "Jak się pisze Twoje nazwisko? — K, o, w, a, l, s, k, i.",
-      "note": "Kowalski: w polskim nazwisku literę w Hiszpan nazwie uve doble, ale często usłyszysz po prostu uve."
-    },
-    {
-      "type": "example",
-      "text": "¿Puede repetir, por favor? ¿Más despacio?",
-      "translation": "Czy może Pan/Pani powtórzyć? Wolniej?"
-    },
-    {
-      "type": "explanation",
-      "text": "UNIR — skojarzenie: ñ to n z „falą” na głowie. Wyobraź sobie, że litera n kąpie się w morzu w Hiszpanii (España) i fala wylewa się na nią — wtedy zaczyna brzmieć jak miękkie polskie ń."
+      "text": "Posłuchaj dialogu trzy razy. Za pierwszym razem bez tekstu: spróbuj tylko rozpoznać, kto mówi i gdzie są. Za drugim razem wyłap słowa-klucze: nombre (imię), apellido (nazwisko), ¿cómo se escribe? (jak się pisze?). Za trzecim razem czytaj tekst i słuchaj równocześnie. Nie tłumacz w myślach każdego słowa — na tym etapie wystarczy, że rozumiesz sens."
     },
     {
       "type": "dialogue",
       "lines": [
         {
           "speaker": "Recepcionista",
-          "text": "¿Su nombre, por favor?",
-          "translation": "Pana nazwisko, proszę?"
-        },
-        { "speaker": "Paweł", "text": "Paweł Wójcik.", "translation": "Paweł Wójcik." },
-        {
-          "speaker": "Recepcionista",
-          "text": "¿Cómo se escribe Wójcik?",
-          "translation": "Jak się pisze Wójcik?"
+          "text": "¡Hola, buenos días!",
+          "translation": "Dzień dobry!"
         },
         {
           "speaker": "Paweł",
-          "text": "Uve doble, o, jota, ce, i, ka.",
-          "translation": "W, o, j, c, i, k."
+          "text": "Buenos días. Quiero apuntarme al curso de español.",
+          "translation": "Dzień dobry. Chcę zapisać się na kurs hiszpańskiego."
         },
         {
           "speaker": "Recepcionista",
-          "text": "Perfecto, gracias.",
-          "translation": "Świetnie, dziękuję."
+          "text": "Muy bien. ¿Cómo se llama usted?",
+          "translation": "Bardzo dobrze. Jak się Pan nazywa?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Me llamo Paweł. Paweł Wójcik.",
+          "translation": "Nazywam się Paweł. Paweł Wójcik."
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Perdone, ¿cómo se escribe su apellido?",
+          "translation": "Przepraszam, jak się pisze Pana nazwisko?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Uve doble, o con acento, jota, ce, i, ka.",
+          "translation": "W, o z kreską, j, c, i, k."
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Gracias. ¿Y su correo electrónico?",
+          "translation": "Dziękuję. A Pana adres e-mail?"
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Pawel punto wojcik arroba correo punto pl.",
+          "translation": "pawel.wojcik@correo.pl"
+        },
+        {
+          "speaker": "Recepcionista",
+          "text": "Perfecto. Encantada, Paweł. Yo soy Elena.",
+          "translation": "Świetnie. Miło mi, Pawle. Ja jestem Elena."
+        },
+        {
+          "speaker": "Paweł",
+          "text": "Mucho gusto, Elena.",
+          "translation": "Bardzo mi miło, Eleno."
         }
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: przeliteruj na głos po hiszpańsku swoje imię i nazwisko. Jeśli masz w nazwisku polską literę (ł, ś, ż…), powiedz ją bez znaku, a potem dodaj na przykład: con acento (z kreską)."
+      "text": "Zwróć uwagę: recepcjonistka mówi do Pawła usted (Pan) — to forma grzecznościowa, jak polskie „Pan/Pani”. W Hiszpanii między rówieśnikami, w szkole czy w pracy szybko przechodzi się na tú (ty). Kiedy nie wiesz, którą formę wybrać, zacznij od usted; rozmówca sam zaproponuje tú."
+    },
+    {
+      "type": "section",
+      "phase": "connect",
+      "title": "Słowa na start"
+    },
+    {
+      "type": "table",
+      "caption": "Powitania, pożegnania i pierwsze pytania",
+      "columns": ["Po hiszpańsku", "Po polsku", "Kiedy?"],
+      "rows": [
+        ["¡Hola!", "Cześć! / Dzień dobry!", "zawsze, swobodnie"],
+        ["Buenos días.", "Dzień dobry.", "rano, mniej więcej do obiadu"],
+        ["Buenas tardes.", "Dzień dobry.", "po obiedzie, do zmroku"],
+        ["Buenas noches.", "Dobry wieczór. / Dobranoc.", "wieczorem i w nocy"],
+        ["¿Cómo te llamas?", "Jak masz na imię?", "do osoby na „ty”"],
+        ["¿Cómo se llama usted?", "Jak się Pan/Pani nazywa?", "formalnie"],
+        ["Me llamo… / Soy…", "Nazywam się… / Jestem…", "odpowiedź"],
+        ["el nombre", "imię", "Mi nombre es Ana."],
+        ["el apellido", "nazwisko", "Mi apellido es Nowak."],
+        ["Encantado. / Encantada.", "Miło mi.", "mówi mężczyzna / kobieta"],
+        ["Mucho gusto.", "Bardzo mi miło.", "mówi każdy"],
+        ["¿Cómo se escribe?", "Jak to się pisze?", "prosisz o literowanie"],
+        ["¿Puede repetir, por favor?", "Czy może Pan/Pani powtórzyć?", "gdy nie zrozumiesz"],
+        ["Adiós. / Hasta luego.", "Do widzenia. / Na razie.", "pożegnanie"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "UNIR — technika skojarzeń. Llamarse brzmi jak [jamarse]: wyobraź sobie, że wołasz swoje imię w głąb wielkiej jamy, a echo odpowiada: „me llamo… me llamo…”. Apellido zapamiętasz przez polskie „apel”: na apelu w szkole wyczytuje się nazwiska. Im dziwniejszy obraz, tym łatwiej go przywołać — znaczenie z obrazu, wymowa zawsze z nagrania."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Llamarse, ser i zaimki osobowe"
+    },
+    {
+      "type": "explanation",
+      "text": "Hiszpańskie „nazywam się” to dosłownie „nazywam siebie”: me llamo. Czasownik llamarse ma przy sobie zaimek (me, te, se…), dokładnie tak jak polskie „się” — tylko że zaimek zmienia się razem z osobą i stoi przed czasownikiem."
+    },
+    {
+      "type": "table",
+      "caption": "Llamarse — nazywać się (czas teraźniejszy)",
+      "columns": ["Osoba", "Hiszpański", "Polski"],
+      "rows": [
+        ["yo", "me llamo", "nazywam się"],
+        ["tú", "te llamas", "nazywasz się"],
+        ["él / ella / usted", "se llama", "on/ona nazywa się; Pan/Pani się nazywa"],
+        ["nosotros / nosotras", "nos llamamos", "nazywamy się"],
+        ["vosotros / vosotras", "os llamáis", "nazywacie się"],
+        ["ellos / ellas / ustedes", "se llaman", "oni/one nazywają się; Państwo się nazywają"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Nazywam się Ania.",
+      "target": "Me llamo Ania.",
+      "note": "Polskie „się” = hiszpańskie me, ale stoi przed czasownikiem."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Yo llamo Ania.",
+      "right": "Me llamo Ania.",
+      "explanation": "Bez zaimka me zdanie znaczy „ja wołam/dzwonię Ania”. Zaimek osobowy yo zwykle pomijamy, bo końcówka czasownika już mówi, kto działa — za to me jest obowiązkowe."
+    },
+    {
+      "type": "explanation",
+      "text": "Drugi sposób na przedstawienie się to czasownik ser (być): Soy Ania — Jestem Ania. To najważniejszy czasownik w języku i jest nieregularny: każdą formę trzeba zapamiętać osobno. W tej jednostce używasz go do imienia, narodowości i zawodu."
+    },
+    {
+      "type": "table",
+      "caption": "Ser — być (czas teraźniejszy)",
+      "columns": ["Osoba", "Hiszpański", "Polski"],
+      "rows": [
+        ["yo", "soy", "jestem"],
+        ["tú", "eres", "jesteś"],
+        ["él / ella / usted", "es", "jest; Pan/Pani jest"],
+        ["nosotros / nosotras", "somos", "jesteśmy"],
+        ["vosotros / vosotras", "sois", "jesteście"],
+        ["ellos / ellas / ustedes", "son", "są; Państwo są"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Zaimki osobowe: yo (ja), tú (ty), él (on), ella (ona), usted (Pan/Pani), nosotros/nosotras (my), vosotros/vosotras (wy), ellos/ellas (oni/one), ustedes (Państwo). Formy z -as (nosotras, vosotras, ellas) dotyczą wyłącznie kobiet; jeśli w grupie jest choć jeden mężczyzna, używamy formy męskiej. Usted i ustedes łączą się z czasownikiem w trzeciej osobie — tak jak w polskim „Pan jest”, a nie „Pan jesteś”."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "¿Cómo te llamas, señor García?",
+      "right": "¿Cómo se llama, señor García?",
+      "explanation": "Do pana Garcíi zwracamy się formą usted, więc czasownik i zaimek są w trzeciej osobie: se llama. Te llamas to forma na „ty”."
+    },
+    {
+      "type": "comparison",
+      "source": "Jestem Paweł, a to jest Marta.",
+      "target": "Soy Paweł y esta es Marta.",
+      "note": "Przedstawiając kogoś, mówimy este es (mężczyzna) albo esta es (kobieta)."
+    },
+    {
+      "type": "example",
+      "text": "—¿Cómo te llamas? —Me llamo Kasia, ¿y tú? —Yo soy Javier.",
+      "translation": "—Jak masz na imię? —Mam na imię Kasia, a ty? —Ja jestem Javier.",
+      "note": "Yo dodajemy tu dla kontrastu: „a ja jestem…”."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Alfabet, literowanie i dźwięki, na które trzeba uważać"
+    },
+    {
+      "type": "explanation",
+      "text": "Hiszpański alfabet ma 27 liter. W porównaniu z polskim dochodzi ñ, nie ma natomiast liter z ogonkami i kreskami (ą, ę, ł, ś, ż…). Ch i ll to dwuznaki, a nie osobne litery (tak ustaliła Real Academia Española w 2010 roku). Nazwy liter warto umieć, bo w urzędzie, hotelu czy przychodni na pewno usłyszysz: ¿Cómo se escribe?"
+    },
+    {
+      "type": "table",
+      "caption": "Alfabet: litera — nazwa — jak brzmi",
+      "columns": ["Litera", "Nazwa", "Wymowa (w przybliżeniu)"],
+      "rows": [
+        ["a, e, i, o, u", "a, e, i, o, u", "krótkie i czyste, jak w polskim"],
+        ["b", "be", "jak b; brzmi tak samo jak v"],
+        ["c", "ce", "przed e, i jak angielskie th (w Ameryce s); poza tym k"],
+        ["d", "de", "między samogłoskami miękko, prawie jak th w „this”"],
+        ["f", "efe", "f"],
+        ["g", "ge", "przed e, i jak polskie h/ch; poza tym g"],
+        ["h", "hache", "nie wymawia się: hola [ola]"],
+        ["j", "jota", "jak polskie twarde h/ch: jamón [hamon]"],
+        ["k", "ka", "k (prawie tylko w słowach obcych)"],
+        ["l", "ele", "l"],
+        ["m, n", "eme, ene", "m, n"],
+        ["ñ", "eñe", "jak polskie ń: España"],
+        ["p", "pe", "p"],
+        ["q", "cu", "zawsze w qu = k: queso [keso]"],
+        ["r", "erre", "na początku słowa i jako rr — mocno, wibrująco"],
+        ["s", "ese", "s, nigdy jak polskie z"],
+        ["t", "te", "t"],
+        ["v", "uve", "jak b: vino [bino]"],
+        ["w", "uve doble", "w słowach obcych: web"],
+        ["x", "equis", "ks: taxi"],
+        ["y", "ye", "jak polskie j: yo"],
+        ["z", "zeta", "jak angielskie th (w Ameryce s): zapato"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Dwuznaki: ch czytamy jak polskie cz (chocolate [czokolate]), ll w większości Hiszpanii i Ameryki brzmi jak polskie j (llamar [jamar]), gu przed e, i to [g] (guitarra [gitara]), a qu przed e, i to [k]. Samogłoski są zawsze pełne — nie ma polskiego y ani nosowych ą, ę: Ana to [ana], nigdy [any]."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "[hola], [hotel]",
+      "right": "[ola], [otel]",
+      "explanation": "Litera h jest w hiszpańskim zawsze niema. Polakom „ucieka” ona szczególnie w słowach, które znają z polskiego: hotel, historia, hospital."
+    },
+    {
+      "type": "explanation",
+      "text": "Literowanie polskiego nazwiska: litery bez znaków mówisz normalnie, a przy literze z kreską lub ogonkiem dodajesz con acento (z kreską) albo con tilde, np. ó — o con acento. Przy ł możesz powiedzieć ele con raya (l z kreską). Literę w Hiszpanie nazywają uve doble, choć często usłyszysz też doble uve. Adres e-mail: @ to arroba, kropka to punto, myślnik to guion, podkreślnik to guion bajo."
+    },
+    {
+      "type": "example",
+      "text": "¿Cómo se escribe Kowalska? — Ka, o, uve doble, a, ele, ese, ka, a.",
+      "translation": "Jak się pisze Kowalska? — K, o, w, a, l, s, k, a."
+    },
+    {
+      "type": "example",
+      "text": "Mi correo es anna punto nowak arroba correo punto pl.",
+      "translation": "Mój e-mail to anna.nowak@correo.pl."
+    },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Imiona, dwa nazwiska i powitania po hiszpańsku"
+    },
+    {
+      "type": "reading",
+      "title": "Me llamo Lucía García López",
+      "paragraphs": [
+        "Hola, me llamo Lucía. Mi nombre completo es Lucía García López. García es el apellido de mi padre y López es el apellido de mi madre. En España todas las personas tienen dos apellidos.",
+        "Mi marido se llama Tomasz Nowak. Él es polaco y yo soy española. Estoy casada, pero mis apellidos son los mismos: en España las mujeres casadas no cambian de apellido. Nuestro hijo se llama Adam Nowak García.",
+        "En el trabajo mis compañeros me llaman Lucía. Mis amigos me llaman Lu."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "W Hiszpanii każdy ma dwa nazwiska: pierwsze zwykle po ojcu, drugie po matce. Od 2017 roku rodzice mogą wybrać kolejność. W codziennych sytuacjach często używa się tylko pierwszego nazwiska, ale w dokumentach, w urzędzie czy u lekarza podaje się oba.",
+        "Kobiety po ślubie nie zmieniają nazwiska. Formę señora de… (pani …, żona …) spotkasz już raczej w starszych tekstach.",
+        "Przy powitaniu w Hiszpanii znajomi i nowo poznane osoby w sytuacjach towarzyskich całują się zwykle w oba policzki (dos besos). Mężczyźni między sobą raczej podają rękę. W pracy i w sytuacjach oficjalnych wystarczy uścisk dłoni.",
+        "Forma tú jest w Hiszpanii używana znacznie częściej niż polskie „ty”: do kolegów z pracy, kelnera w barze czy sprzedawcy w młodym wieku. Usted zostaw dla osób starszych, urzędów i sytuacji formalnych."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misja: zapisz się na kurs"
+    },
+    {
+      "type": "mission",
+      "title": "Zapisujesz się na kurs w szkole językowej w Madrycie",
+      "steps": [
+        "Przywitaj się odpowiednio do pory dnia.",
+        "Powiedz, że chcesz zapisać się na kurs: Quiero apuntarme al curso de español.",
+        "Podaj imię i nazwisko, a potem przeliteruj nazwisko.",
+        "Podaj swój adres e-mail, używając słów arroba i punto.",
+        "Przedstaw się nowemu koledze z grupy na „ty” i zapytaj, jak ma na imię.",
+        "Nagraj się w aplikacji i porównaj nagranie z wzorem."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "¡Hola! Buenos días.", "translation": "Cześć! Dzień dobry." },
+        { "text": "¿Cómo te llamas?", "translation": "Jak masz na imię?" },
+        { "text": "¿Cómo se llama usted?", "translation": "Jak się Pan/Pani nazywa?" },
+        { "text": "Me llamo… / Soy…", "translation": "Nazywam się… / Jestem…" },
+        { "text": "¿Cómo se escribe?", "translation": "Jak to się pisze?" },
+        { "text": "Encantado. / Encantada.", "translation": "Miło mi." },
+        { "text": "¿Puede repetir, por favor?", "translation": "Czy może Pan/Pani powtórzyć?" },
+        { "text": "arroba, punto", "translation": "@, kropka" }
+      ],
+      "canDo": [
+        "przywitać się i pożegnać o różnych porach dnia",
+        "przedstawić się i zapytać o imię na „ty” i na „Pan/Pani”",
+        "odmienić llamarse i ser w czasie teraźniejszym",
+        "przeliterować swoje imię, nazwisko i adres e-mail",
+        "wymówić h, j, ll, ñ, qu i z tak jak Hiszpan"
+      ]
     }
   ]
 }
