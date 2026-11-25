@@ -33,6 +33,7 @@ import type {
 import { bookTextFor, type BookText, type RenderContext } from "./book-i18n.mts";
 import { escapeHtml as e, icon, PHASE_ICONS, renderBlock, repoRoot, SITE } from "./book-shared.mts";
 import { answerKey, EXERCISE_STYLE, exerciseLabel, renderExercise } from "./print-exercises.mts";
+import { buildCrossword, CROSSWORD_STYLE, renderCrossword, type Crossword } from "./crossword.mts";
 
 // --- options ------------------------------------------------------------------------------------
 function arg(name: string, fallback: string): string {
@@ -241,6 +242,11 @@ h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
 .figure figcaption { font-size: 8.5pt; color: #444; margin-top: 1mm; }
 .unit-opener .opener-head { display: flex; justify-content: space-between; align-items: flex-start; }
 ${EXERCISE_STYLE}
+${CROSSWORD_STYLE}
+.vocab-cat { break-inside: avoid; margin-bottom: 4mm; }
+.vocab-cat h3 { font-size: 11pt; margin: 3mm 0 1mm; }
+.vocab-cols { columns: 2; column-gap: 8mm; font-size: 9.5pt; }
+.vocab-cols p { margin: 0 0 .8mm; break-inside: avoid; }
 `;
 
 // --- shared front matter ------------------------------------------------------------------------
@@ -273,7 +279,35 @@ function frontMatter(book: BookKey, units: Unit[], tocExtra: { href: string; lab
 }
 
 // --- Podręcznik ---------------------------------------------------------------------------------
-async function textbookHtml(units: Unit[], glossary: string, grammar: string): Promise<string> {
+function thematicVocabularyHtml(catalog: ContentCatalog): string {
+  return catalog.vocabularyCategories
+    .filter((c) => c.languageId === LANGUAGE && c.status === "published")
+    .sort((a, b) => a.order - b.order)
+    .map((c) => {
+      const items = catalog.vocabulary
+        .filter(
+          (v) =>
+            v.categoryId === c.id &&
+            v.status === "published" &&
+            (!v.levelId || v.levelId === LEVEL),
+        )
+        .sort((a, b) => a.order - b.order);
+      if (items.length === 0) return "";
+      return `<div class="vocab-cat"><h3>${e(c.title)}</h3><div class="vocab-cols">${items
+        .map(
+          (v) => `<p><strong lang="${LANGUAGE}">${e(v.lemma)}</strong> — ${e(v.translation)}</p>`,
+        )
+        .join("")}</div></div>`;
+    })
+    .join("");
+}
+
+async function textbookHtml(
+  units: Unit[],
+  glossary: string,
+  grammar: string,
+  thematic: string,
+): Promise<string> {
   const phaseList = Object.entries(T.phases)
     .map(([phase, text]) => `${icon(PHASE_ICONS[phase as UnitSectionPhase], 4)} ${e(text)}`)
     .join("<br>");
@@ -316,14 +350,30 @@ async function textbookHtml(units: Unit[], glossary: string, grammar: string): P
   );
   return `${frontMatter("podrecznik", units, [
     { href: "#grammar", label: T.grammarTables },
+    { href: "#thematic", label: T.thematicVocabulary },
     { href: "#glossary", label: T.glossary(T.languageName[LANGUAGE] ?? LANGUAGE) },
   ])}${how}${body.join("\n")}
 <section class="appendix" id="grammar"><h2>${e(T.grammarTables)}</h2>${grammar}</section>
+<section class="appendix" id="thematic"><h2>${e(T.thematicVocabulary)}</h2>${thematic}</section>
 <section class="appendix" id="glossary"><h2>${e(T.glossary(T.languageName[LANGUAGE] ?? LANGUAGE))}</h2><div class="glossary">${glossary}</div></section>`;
 }
 
 // --- Zeszyt ćwiczeń -----------------------------------------------------------------------------
-async function workbookHtml(units: Unit[]): Promise<string> {
+/** Vocabulary words that appear in the unit's own lessons — the unit's crossword material. */
+function unitCrossword(unit: Unit, catalog: ContentCatalog): Crossword | null {
+  const text = JSON.stringify(unit.lessons.map((l) => l.blocks)).toLowerCase();
+  const words = catalog.vocabulary
+    .filter((v) => v.languageId === LANGUAGE && v.status === "published")
+    .map((v) => ({ answer: v.lemma.replace(/^(el|la|los|las) /, ""), clue: v.translation }))
+    .filter((w) => /^[\p{L}]+$/u.test(w.answer))
+    .filter((w) =>
+      new RegExp(`(^|[^\\p{L}])${w.answer.toLowerCase()}([^\\p{L}]|$)`, "u").test(text),
+    );
+  return buildCrossword(words);
+}
+
+async function workbookHtml(units: Unit[], catalog: ContentCatalog): Promise<string> {
+  const crosswords = new Map(units.map((u) => [u.number, unitCrossword(u, catalog)]));
   const how = `<section class="front how"><h2>${e(T.howWorkbookTitle)}</h2>
   ${T.howWorkbook.map((p) => `<p>${e(p)}</p>`).join("")}</section>`;
   const body = await Promise.all(
@@ -349,6 +399,10 @@ async function workbookHtml(units: Unit[]): Promise<string> {
   <header class="unit-head" id="unit-${String(unit.number)}" data-index="unit:${String(unit.number)}"><div><p class="num">${String(unit.number)}</p><h2>${e(unit.title)}</h2></div>
   <div class="qr-small">${await qr(url)}<div>${e(printedUrl(url))}</div></div></header>
   ${exercises}
+  ${(() => {
+    const cw = crosswords.get(unit.number);
+    return cw ? renderCrossword(cw, T.crossword) : "";
+  })()}
 </section>`;
     }),
   );
@@ -357,7 +411,14 @@ async function workbookHtml(units: Unit[]): Promise<string> {
       (u) =>
         `<h3>${e(T.unit(u.number))}</h3>${u.exercises
           .map((x) => `<p><strong>${e(exerciseLabel(x))}</strong> ${e(answerKey(x, CTX))}</p>`)
-          .join("")}`,
+          .join("")}${(() => {
+          const cw = crosswords.get(u.number);
+          if (!cw) return "";
+          return `<p><strong>${e(T.crossword.key)}:</strong> ${cw.placed
+            .sort((a, b) => a.number - b.number || Number(b.across) - Number(a.across))
+            .map((p) => `${String(p.number)}${p.across ? "→" : "↓"} ${p.word}`)
+            .join(", ")}</p>`;
+        })()}`,
     )
     .join("");
   const transcripts = units
@@ -542,8 +603,13 @@ async function main() {
     for (const book of wanted) {
       const inner =
         book === "podrecznik"
-          ? await textbookHtml(units, glossaryHtml(loaded.catalog), grammarHtml(topics))
-          : await workbookHtml(units);
+          ? await textbookHtml(
+              units,
+              glossaryHtml(loaded.catalog),
+              grammarHtml(topics),
+              thematicVocabularyHtml(loaded.catalog),
+            )
+          : await workbookHtml(units, loaded.catalog);
       const base = `verbysia-${COURSE}-${BOOKS[book].file}-${FORMAT}`;
       const result = await renderBook(
         browser,

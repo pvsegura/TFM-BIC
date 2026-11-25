@@ -36,6 +36,8 @@ export interface BookText {
   howWorkbookTitle: string;
   howWorkbook: string[];
   grammarTables: string;
+  thematicVocabulary: string;
+  crossword: { title: string; across: string; down: string; hint: string; key: string };
   glossary: (target: string) => string;
   answerKey: string;
   transcripts: string;
@@ -101,6 +103,14 @@ const PL: BookText = {
     "Kod QR przy jednostce otwiera jej ćwiczenia w aplikacji. Rozwiązania i transkrypcje nagrań są na końcu zeszytu.",
   ],
   grammarTables: "Tabele gramatyczne",
+  thematicVocabulary: "Słownictwo tematyczne",
+  crossword: {
+    title: "Krzyżówka",
+    across: "Poziomo",
+    down: "Pionowo",
+    hint: "Wpisz hiszpańskie słowa z tej jednostki, wielkimi literami i bez akcentów (ñ zostaje).",
+    key: "Krzyżówka",
+  },
   glossary: (target) => `Słowniczek: ${target.toLowerCase()} — polski`,
   answerKey: "Rozwiązania",
   transcripts: "Transkrypcje nagrań",
@@ -168,6 +178,14 @@ const ES: BookText = {
     "El código QR de cada unidad abre sus ejercicios en la aplicación. Las soluciones y las transcripciones están al final del cuaderno.",
   ],
   grammarTables: "Tablas gramaticales",
+  thematicVocabulary: "Vocabulario por temas",
+  crossword: {
+    title: "Autodefinido",
+    across: "Horizontales",
+    down: "Verticales",
+    hint: "Escribe las palabras de esta unidad en mayúsculas y sin tildes.",
+    key: "Autodefinido",
+  },
   glossary: (target) => `Glosario: ${target.toLowerCase()} — español`,
   answerKey: "Soluciones",
   transcripts: "Transcripciones de los audios",
@@ -236,6 +254,14 @@ const EN: BookText = {
     "The QR code next to each unit opens its exercises in the app. Answers and transcripts are at the end.",
   ],
   grammarTables: "Grammar tables",
+  thematicVocabulary: "Vocabulary by topic",
+  crossword: {
+    title: "Crossword",
+    across: "Across",
+    down: "Down",
+    hint: "Write the words from this unit in capitals, without accents.",
+    key: "Crossword",
+  },
   glossary: (target) => `Glossary: ${target} — English`,
   answerKey: "Answer key",
   transcripts: "Audio transcripts",
