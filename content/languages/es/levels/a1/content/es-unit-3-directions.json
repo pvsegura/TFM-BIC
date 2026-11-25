@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-3-directions",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 125,
+  "unit": 3,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 3B. ¿Cómo llego? — droga, adres i piętra",
+  "description": "Pytasz o drogę i ją wyjaśniasz, podajesz adres z numerem i piętrem, opisujesz miasto przymiotnikami z ser i estar.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Jak dojść do mieszkania?" },
+    {
+      "type": "explanation",
+      "text": "Ania przyjeżdża do Madrytu i dzwoni do Carlosa, u którego wynajmuje pokój. Za pierwszym razem posłuchaj, gdzie jest Ania i dokąd idzie. Za drugim zapisz drogę krok po kroku. Za trzecim sprawdź adres: ulica, numer, piętro i drzwi."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u3-building.png",
+      "alt": "Kobieta z walizką przed wejściem do kamienicy dzwoni domofonem."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        { "speaker": "Carlos", "text": "¿Dígame?", "translation": "Słucham?" },
+        {
+          "speaker": "Ania",
+          "text": "Hola, Carlos, soy Ania. Estoy en la salida del metro, en la plaza de Lavapiés.",
+          "translation": "Cześć, Carlos, tu Ania. Jestem przy wyjściu z metra, na placu Lavapiés."
+        },
+        {
+          "speaker": "Carlos",
+          "text": "¡Perfecto! Estás muy cerca. ¿Ves una farmacia?",
+          "translation": "Świetnie! Jesteś bardzo blisko. Widzisz aptekę?"
+        },
+        { "speaker": "Ania", "text": "Sí, a la derecha.", "translation": "Tak, po prawej." },
+        {
+          "speaker": "Carlos",
+          "text": "Pues sigues todo recto por esa calle y tomas la segunda a la izquierda.",
+          "translation": "No to idziesz prosto tą ulicą i skręcasz w drugą w lewo."
+        },
+        { "speaker": "Ania", "text": "Vale. ¿Y luego?", "translation": "Dobrze. A potem?" },
+        {
+          "speaker": "Carlos",
+          "text": "Es la calle del Olivar. Mi casa es el número quince, enfrente de un bar.",
+          "translation": "To ulica del Olivar. Mój dom ma numer piętnaście, naprzeciwko baru."
+        },
+        { "speaker": "Ania", "text": "¿Qué piso es?", "translation": "Które piętro?" },
+        {
+          "speaker": "Carlos",
+          "text": "Tercero B. Llama al timbre y te abro.",
+          "translation": "Trzecie piętro, drzwi B. Zadzwoń domofonem, to ci otworzę."
+        },
+        {
+          "speaker": "Ania",
+          "text": "Genial, llego en cinco minutos.",
+          "translation": "Super, będę za pięć minut."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "W drodze" },
+    {
+      "type": "table",
+      "caption": "Jak wskazać drogę (czas teraźniejszy — tak mówi się najczęściej)",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["sigues todo recto", "idziesz prosto"],
+        ["giras a la derecha / a la izquierda", "skręcasz w prawo / w lewo"],
+        ["tomas la primera / la segunda calle", "skręcasz w pierwszą / drugą ulicę"],
+        ["cruzas la calle / la plaza", "przechodzisz przez ulicę / plac"],
+        ["al final de la calle", "na końcu ulicy"],
+        ["en el semáforo", "na światłach"],
+        ["en la rotonda", "na rondzie"],
+        ["está a cinco minutos a pie", "to pięć minut pieszo"],
+        ["está a dos calles", "to dwie ulice stąd"],
+        ["llegas a una plaza", "dochodzisz do placu"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Adres i budynek",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["la dirección", "adres"],
+        ["la calle / la avenida / el paseo", "ulica / aleja / promenada"],
+        ["el número", "numer"],
+        ["el portal", "wejście do budynku, klatka"],
+        ["el piso / la planta", "piętro; piso to też mieszkanie"],
+        ["la puerta", "drzwi (numer lub litera mieszkania)"],
+        ["el bajo / la planta baja", "parter"],
+        ["el timbre / el portero automático", "dzwonek / domofon"],
+        ["el código postal", "kod pocztowy"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — giras brzmi jak „żyrandol”, który się obraca: girar = obracać się, skręcać. Recto zapamiętasz przez „rektor”, który idzie prosto środkiem auli. Derecha i izquierda łatwo pomylić: deRecha ma R jak „pRawa”, a izquierda jest dłuższa i „krzywa” jak pismo lewą ręką u praworęcznych. Zapisz w trenerze pamięci parę a la derecha — po prawej."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Pytanie o drogę, liczebniki porządkowe, ser i estar z przymiotnikiem"
+    },
+    {
+      "type": "table",
+      "caption": "Jak zapytać o drogę",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["¿Cómo llego a la estación?", "Jak dojdę/dojadę na dworzec?"],
+        ["¿Por dónde se va al centro?", "Którędy do centrum?"],
+        ["¿Está lejos el museo?", "Czy muzeum jest daleko?"],
+        ["¿Hay un banco por aquí?", "Czy jest tu gdzieś bank?"],
+        ["¿Me lo puede indicar en el mapa?", "Może mi Pan/Pani pokazać na mapie?"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Wskazując drogę na co dzień, Hiszpanie najczęściej używają czasu teraźniejszego w 2. osobie: sigues, giras, tomas (dosłownie „idziesz, skręcasz”). Możesz też powiedzieć tienes que + bezokolicznik: Tienes que girar a la derecha (musisz skręcić w prawo). Tryb rozkazujący (sigue, gira) poznasz w jednostce 10."
+    },
+    {
+      "type": "table",
+      "caption": "Liczebniki porządkowe (piętra, ulice)",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["primero / primer piso", "pierwszy / pierwsze piętro", "sexto", "szósty"],
+        ["segundo", "drugi", "séptimo", "siódmy"],
+        ["tercero / tercer piso", "trzeci / trzecie piętro", "octavo", "ósmy"],
+        ["cuarto", "czwarty", "noveno", "dziewiąty"],
+        ["quinto", "piąty", "décimo", "dziesiąty"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Liczebniki porządkowe zgadzają się w rodzaju z rzeczownikiem: la segunda calle, el segundo piso. Primero i tercero tracą końcowe -o przed rzeczownikiem męskim: el primer piso, el tercer día. W adresie zapisuje się je skrótem: 3.º B (tercero B), 1.ª (primera). Powyżej dziesiątego piętra używamy zwykłych liczb: el piso doce."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "el primero piso, el tercero día",
+      "right": "el primer piso, el tercer día",
+      "explanation": "Przed rzeczownikiem męskim w liczbie pojedynczej primero → primer, tercero → tercer. Gdy liczebnik stoi sam, końcówka zostaje: Vivo en el tercero."
+    },
+    {
+      "type": "explanation",
+      "text": "Opisując miasto, łączymy przymiotniki z dwoma czasownikami. Ser opisuje stałą cechę miejsca: Madrid es grande, el barrio es tranquilo, la plaza es bonita. Estar opisuje stan w danej chwili lub położenie: La tienda está cerrada (sklep jest teraz zamknięty), la calle está llena de gente (ulica jest pełna ludzi), el museo está en el centro."
+    },
+    {
+      "type": "comparison",
+      "source": "Ulica jest wąska, ale dziś jest bardzo zatłoczona.",
+      "target": "La calle es estrecha, pero hoy está muy llena.",
+      "note": "Ser — jaka jest zawsze; estar — jaka jest teraz."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "La farmacia es cerrada. / El museo es en la plaza.",
+      "right": "La farmacia está cerrada. / El museo está en la plaza.",
+      "explanation": "Stan chwilowy (otwarte, zamknięte, pełne) i położenie zawsze z estar. Wyjątek do zapamiętania: wydarzenie (koncert, impreza) „odbywa się” z ser — El concierto es en la plaza."
+    },
+    {
+      "type": "example",
+      "text": "—¿Cómo llego al mercado? —Sigues recto, cruzas la plaza y está a la izquierda, a dos minutos.",
+      "translation": "—Jak dojdę do targu? —Idziesz prosto, przechodzisz przez plac i jest po lewej, dwie minuty stąd."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Akcent w czasownikach: llego, llegas, llegamos"
+    },
+    {
+      "type": "explanation",
+      "text": "W odmianie czasownika akcent zwykle pada na przedostatnią sylabę: LLE-go, LLE-gas, lle-GA-mos, LLE-gan. Wyjątek to forma vosotros, zakończona na -áis, -éis, -ís z kreską: lle-GÁIS, gi-RÁIS. Wymawiaj ll jak polskie j: [jego], [jegamos]."
+    },
+    { "type": "section", "phase": "culture", "title": "Hiszpańskie adresy i piętra" },
+    {
+      "type": "reading",
+      "title": "Un mensaje de Carlos",
+      "paragraphs": [
+        "¡Hola, Ania! Mi dirección es calle del Olivar, 15, 3.º B. El código postal es 28012. El portal está enfrente de un bar con una terraza grande.",
+        "Para llegar desde el aeropuerto, tomas la línea 8 del metro hasta Nuevos Ministerios. Allí cambias a la línea 10 y después a la línea 3 hasta Lavapiés. Son unos cuarenta minutos.",
+        "Si el metro está cerrado, hay un autobús nocturno. Llámame desde la plaza. ¡Hasta luego!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpański adres zapisuje się w kolejności: ulica, numer, piętro i drzwi, np. Calle del Olivar, 15, 3.º B. Bez numeru piętra listonosz może nie trafić, bo w kamienicach jest wiele mieszkań na każdym piętrze.",
+        "Uwaga na piętra: parter to el bajo albo la planta baja. W starszych budynkach nad parterem bywa jeszcze el entresuelo (półpiętro) i el principal, więc el primer piso może być fizycznie trzecim poziomem budynku. Patrz na przyciski w windzie.",
+        "Hiszpanie często podają drogę przez punkty orientacyjne: bar, apteka, kościół. Odległość mierzy się w minutach pieszo (a cinco minutos) albo w przecznicach (a dos calles), rzadko w metrach."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: wskaż drogę" },
+    {
+      "type": "mission",
+      "title": "Wytłumacz koledze drogę od stacji do swojego domu",
+      "steps": [
+        "Podaj swój adres z numerem, piętrem i drzwiami.",
+        "Wyjaśnij drogę w 4–5 krokach: sigues recto, giras…, cruzas…",
+        "Dodaj dwa punkty orientacyjne: enfrente de…, al lado de…",
+        "Powiedz, ile to minut pieszo.",
+        "Zadaj pytanie kontrolne: ¿Está claro? i nagraj całe wyjaśnienie."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "¿Cómo llego a la estación?", "translation": "Jak dojdę na dworzec?" },
+        { "text": "Sigues todo recto.", "translation": "Idziesz prosto." },
+        { "text": "Giras a la derecha.", "translation": "Skręcasz w prawo." },
+        { "text": "Tomas la segunda a la izquierda.", "translation": "Skręcasz w drugą w lewo." },
+        { "text": "Está a cinco minutos a pie.", "translation": "To pięć minut pieszo." },
+        { "text": "Vivo en el tercero B.", "translation": "Mieszkam na trzecim piętrze, drzwi B." },
+        { "text": "La tienda está cerrada.", "translation": "Sklep jest zamknięty." }
+      ],
+      "canDo": [
+        "zapytać o drogę na kilka sposobów",
+        "wyjaśnić drogę w czasie teraźniejszym",
+        "podać adres z piętrem i drzwiami",
+        "użyć liczebników porządkowych (primer, tercer piso)",
+        "opisać miejsce przymiotnikami z ser i estar",
+        "zrozumieć hiszpański system pięter"
+      ]
+    }
+  ]
+}

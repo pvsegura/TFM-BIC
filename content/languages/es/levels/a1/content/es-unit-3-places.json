@@ -8,41 +8,18 @@
   "order": 120,
   "unit": 3,
   "instructionLanguage": "pl",
-  "title": "Jednostka 3. ¿Dónde está? — miejsca w mieście",
-  "description": "Pytasz o drogę i opisujesz położenie: hay czy está, cerca de, al lado de, enfrente de.",
+  "title": "Jednostka 3A. ¿Dónde está? — miejsca w mieście",
+  "description": "Nazywasz miejsca w mieście, pytasz, czy coś jest w pobliżu, i opisujesz, gdzie się znajduje: hay czy está, cerca de, al lado de.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Gdzie jest apteka?" },
     {
       "type": "explanation",
-      "text": "Miejsca w mieście: el banco (bank), la farmacia (apteka), el supermercado, la estación (dworzec), el hospital, la plaza (plac), la parada de autobús (przystanek), el museo, el parque, la calle (ulica)."
+      "text": "Turystka w Walencji szuka apteki i bankomatu. Za pierwszym razem posłuchaj, czego szuka. Za drugim zapisz, gdzie są te miejsca (ulica, obok czego). Za trzecim czytaj tekst z nagraniem i zaznacz wszystkie wyrażenia położenia: al lado de, enfrente de, cerca…"
     },
     {
-      "type": "explanation",
-      "text": "Buduj zdania — hay czy está? To jedna z trudności dla Polaków. Hay (jest/są — „istnieje”) mówi, ŻE coś gdzieś jest, i łączy się z un/una albo bez rodzajnika: Hay una farmacia aquí. Hay dos bancos. Está/están mówi, GDZIE jest konkretna, znana rzecz — z el/la: La farmacia está en la plaza."
-    },
-    {
-      "type": "example",
-      "text": "¿Hay un supermercado cerca?",
-      "translation": "Czy jest tu w pobliżu supermarket?",
-      "note": "Pytamy, czy w ogóle istnieje → hay."
-    },
-    {
-      "type": "example",
-      "text": "¿Dónde está el supermercado Día?",
-      "translation": "Gdzie jest supermarket Día?",
-      "note": "Pytamy o konkretny → está."
-    },
-    {
-      "type": "explanation",
-      "text": "Położenie: cerca de (blisko), lejos de (daleko od), al lado de (obok), enfrente de (naprzeciwko), entre (między), a la derecha / a la izquierda (po prawej / po lewej). Pamiętaj: de + el = del → al lado del banco."
-    },
-    {
-      "type": "example",
-      "text": "La farmacia está al lado del banco, enfrente de la plaza.",
-      "translation": "Apteka jest obok banku, naprzeciwko placu."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: HAY wymawiasz [aj] — jak okrzyk „aj!”, gdy nagle odkrywasz, że coś istnieje: Aj, hay una farmacia! A ESTÁ łącz z mapą: palec stoi (está) na konkretnym punkcie."
+      "type": "image",
+      "asset": "a1-u3-street-ask.png",
+      "alt": "Turystka z plecakiem pyta mieszkańca o drogę na ulicy pełnej sklepów i kawiarni."
     },
     {
       "type": "dialogue",
@@ -57,11 +34,7 @@
           "text": "Sí, hay una en la calle Mayor.",
           "translation": "Tak, jest jedna na ulicy Mayor."
         },
-        {
-          "speaker": "Turista",
-          "text": "¿Y está lejos?",
-          "translation": "A daleko?"
-        },
+        { "speaker": "Turista", "text": "¿Y está lejos?", "translation": "A daleko?" },
         {
           "speaker": "Vecino",
           "text": "No, está muy cerca, al lado del banco, a unos cinco minutos.",
@@ -69,14 +42,202 @@
         },
         {
           "speaker": "Turista",
-          "text": "Muchas gracias.",
-          "translation": "Bardzo dziękuję."
+          "text": "¿Y hay un cajero automático cerca?",
+          "translation": "A czy jest w pobliżu bankomat?"
+        },
+        {
+          "speaker": "Vecino",
+          "text": "Hay uno en el banco y otro enfrente del museo.",
+          "translation": "Jest jeden w banku i drugi naprzeciwko muzeum."
+        },
+        {
+          "speaker": "Turista",
+          "text": "¿Dónde está el museo?",
+          "translation": "Gdzie jest muzeum?"
+        },
+        {
+          "speaker": "Vecino",
+          "text": "En la plaza, entre el ayuntamiento y la iglesia.",
+          "translation": "Na placu, między ratuszem a kościołem."
+        },
+        {
+          "speaker": "Turista",
+          "text": "Muchas gracias, muy amable.",
+          "translation": "Bardzo dziękuję, to bardzo miło z Pana strony."
+        },
+        {
+          "speaker": "Vecino",
+          "text": "De nada. ¡Que vaya bien!",
+          "translation": "Nie ma za co. Powodzenia!"
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Miasto" },
+    {
+      "type": "table",
+      "caption": "Miejsca w mieście",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la calle", "ulica", "el banco", "bank"],
+        ["la plaza", "plac", "el cajero automático", "bankomat"],
+        ["el barrio", "dzielnica, okolica", "la farmacia", "apteka"],
+        ["el centro", "centrum", "el supermercado", "supermarket"],
+        ["el ayuntamiento", "ratusz, urząd miasta", "el mercado", "targ, hala targowa"],
+        ["la iglesia", "kościół", "la tienda", "sklep"],
+        ["el museo", "muzeum", "la panadería", "piekarnia"],
+        ["el parque", "park", "el hospital", "szpital"],
+        ["la estación", "dworzec", "el centro de salud", "przychodnia"],
+        ["la parada de autobús", "przystanek autobusowy", "correos", "poczta"],
+        ["la estación de metro", "stacja metra", "el colegio", "szkoła (podstawowa)"],
+        ["el cine", "kino", "la biblioteca", "biblioteka"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: opisz trzy miejsca w swojej okolicy: Cerca de mi casa hay… El supermercado está…"
+      "text": "Łącz i zapamiętuj — HAY wymawiasz [aj], jak okrzyk „aj!”, gdy nagle odkrywasz, że coś istnieje: Aj, hay una farmacia! ESTÁ połącz z palcem na mapie: palec „stoi” (está) na konkretnym punkcie. Ayuntamiento zapamiętasz przez „aj, untamiento” — urzędnik, który wzdycha nad papierami. Uwaga na fałszywego przyjaciela: la librería to księgarnia, a biblioteka to la biblioteca."
+    },
+    { "type": "section", "phase": "structure", "title": "Hay czy está? Położenie i al / del" },
+    {
+      "type": "explanation",
+      "text": "To jedna z największych trudności dla Polaków, bo po polsku w obu przypadkach mówimy „jest”. Hay (forma stała: jest, są, istnieje) mówi, ŻE coś gdzieś jest — o rzeczy nowej, nieznanej. Łączy się z un/una, liczbą, słowami mucho/poco albo z rzeczownikiem bez rodzajnika. Está / están mówi, GDZIE jest rzecz konkretna, znana — łączy się z el/la/los/las, z nazwą własną albo z zaimkiem dzierżawczym."
+    },
+    {
+      "type": "table",
+      "caption": "Hay czy está?",
+      "columns": ["Hay (istnieje coś)", "Está / están (gdzie jest coś znanego)"],
+      "rows": [
+        ["Hay una farmacia en la plaza.", "La farmacia está en la plaza."],
+        ["Hay dos bancos en mi calle.", "Los bancos están en la calle Mayor."],
+        ["¿Hay un supermercado cerca?", "¿Dónde está el supermercado Día?"],
+        ["En mi barrio hay muchos parques.", "Mi casa está cerca del parque."],
+        ["No hay metro en mi ciudad.", "El metro está a cinco minutos."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Hay la farmacia en la plaza. / La farmacia hay en la plaza.",
+      "right": "Hay una farmacia en la plaza. / La farmacia está en la plaza.",
+      "explanation": "Po hay nie stawiamy rodzajnika określonego el/la. Jeśli mówisz o konkretnej, znanej aptece, potrzebujesz está."
+    },
+    {
+      "type": "table",
+      "caption": "Estar — gdzie ktoś lub coś jest",
+      "columns": ["Osoba", "estar", "Przykład"],
+      "rows": [
+        ["yo", "estoy", "Estoy en casa."],
+        ["tú", "estás", "¿Dónde estás?"],
+        ["él / ella / usted", "está", "El museo está en el centro."],
+        ["nosotros / nosotras", "estamos", "Estamos en la plaza."],
+        ["vosotros / vosotras", "estáis", "¿Estáis en el hotel?"],
+        ["ellos / ellas / ustedes", "están", "Las tiendas están en la calle Mayor."]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Położenie",
+      "columns": ["Hiszpański", "Polski", "Przykład"],
+      "rows": [
+        ["cerca de / lejos de", "blisko / daleko od", "Está cerca de la estación."],
+        ["al lado de", "obok", "al lado del banco"],
+        ["enfrente de", "naprzeciwko", "enfrente de la iglesia"],
+        ["delante de / detrás de", "przed / za", "detrás del ayuntamiento"],
+        ["entre … y …", "między … a …", "entre el cine y el parque"],
+        [
+          "a la derecha de / a la izquierda de",
+          "po prawej / po lewej stronie",
+          "a la derecha de la farmacia"
+        ],
+        ["en la esquina", "na rogu", "en la esquina de la calle"],
+        ["en el centro de", "w środku, w centrum", "en el centro de la plaza"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Przyimek de łączy się z rodzajnikiem el w jedno słowo: de + el = del (al lado del banco). Tak samo a + el = al (Voy al museo). Z la, los, las nic się nie łączy: al lado de la farmacia, cerca de los bancos. Nazw własnych z rodzajnikiem w nazwie też nie łączymy: Voy a El Corte Inglés."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "al lado de el banco",
+      "right": "al lado del banco",
+      "explanation": "De + el zawsze piszemy i mówimy razem: del. To samo z a + el = al."
+    },
+    {
+      "type": "comparison",
+      "source": "Apteka jest obok banku, naprzeciwko kościoła.",
+      "target": "La farmacia está al lado del banco, enfrente de la iglesia.",
+      "note": "Polski dopełniacz (banku, kościoła) to po hiszpańsku de / del."
+    },
+    {
+      "type": "example",
+      "text": "—¿Hay una parada de autobús por aquí? —Sí, está en la esquina, enfrente del supermercado.",
+      "translation": "—Czy jest tu gdzieś przystanek autobusowy? —Tak, na rogu, naprzeciwko supermarketu."
+    },
+    { "type": "section", "phase": "sound", "title": "Z, ce, ci — i dlaczego plaza to nie „plasa”" },
+    {
+      "type": "explanation",
+      "text": "W większości Hiszpanii litery z oraz c przed e, i wymawia się jak angielskie th w „think”: plaza [plaθa], cerveza [θerbeθa], centro [θentro], cine [θine]. To nie jest wada wymowy, tylko norma w centralnej i północnej Hiszpanii. W Andaluzji, na Kanarach i w Ameryce Łacińskiej te same słowa wymawia się przez s: [plasa], [sentro]. Polakom łatwiej jest zwykle wymawiać s — obie wersje są poprawne, ważne, żeby nie mówić polskiego z: plaza to nigdy [plaza]."
+    },
+    { "type": "section", "phase": "culture", "title": "Hiszpańskie miasto" },
+    {
+      "type": "reading",
+      "title": "Mi barrio",
+      "paragraphs": [
+        "Vivo en el barrio del Carmen, en el centro histórico de Valencia. Es un barrio antiguo, con calles estrechas y muchas plazas pequeñas.",
+        "En mi calle hay una panadería, una farmacia y dos bares. El mercado central está a diez minutos a pie. Al lado de mi casa hay una librería muy bonita.",
+        "Por la mañana el barrio es tranquilo, pero por la noche hay mucha gente en las terrazas. Las tiendas cierran a mediodía y abren otra vez por la tarde."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Serce wielu hiszpańskich miast to la plaza mayor — główny plac z arkadami, kawiarnianymi ogródkami (terrazas) i ratuszem. To miejsce spotkań, koncertów i świąt.",
+        "Małe sklepy często zamykają się w porze obiadu, mniej więcej między 14:00 a 17:00, i są otwarte do 20:00–21:00. Supermarkety i duże centra handlowe pracują zwykle bez przerwy. W niedzielę większość sklepów jest zamknięta, choć w dużych miastach i miejscowościach turystycznych bywa różnie.",
+        "Jeśli pytasz o drogę, zacznij od Perdone (formalnie) albo Perdona (na „ty”). Hiszpanie chętnie pomagają i często dodają ¡Que vaya bien! albo ¡Suerte! — powodzenia."
+      ]
+    },
+    {
+      "type": "image",
+      "asset": "a1-u3-plaza.png",
+      "alt": "Główny plac hiszpańskiego miasta z arkadami, ogródkami kawiarni i ratuszem."
+    },
+    { "type": "section", "phase": "express", "title": "Misja: twoja okolica" },
+    {
+      "type": "mission",
+      "title": "Opisz swoją okolicę nowemu sąsiadowi",
+      "steps": [
+        "Powiedz, w jakiej dzielnicy mieszkasz i jaka ona jest.",
+        "Wymień trzy rzeczy, które są w okolicy: En mi barrio hay…",
+        "Powiedz, gdzie dokładnie są dwa z tych miejsc: El supermercado está…",
+        "Zapytaj sąsiada: ¿Hay un gimnasio cerca? ¿Dónde está la parada de autobús?",
+        "Nagraj się i sprawdź, czy dobrze wymawiasz plaza i centro."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Perdone, ¿hay una farmacia por aquí?",
+          "translation": "Przepraszam, czy jest tu gdzieś apteka?"
+        },
+        { "text": "¿Dónde está el museo?", "translation": "Gdzie jest muzeum?" },
+        { "text": "Está cerca, al lado del banco.", "translation": "Jest blisko, obok banku." },
+        { "text": "Está enfrente de la iglesia.", "translation": "Jest naprzeciwko kościoła." },
+        { "text": "entre el cine y el parque", "translation": "między kinem a parkiem" },
+        {
+          "text": "En mi barrio hay muchos bares.",
+          "translation": "W mojej dzielnicy jest dużo barów."
+        },
+        { "text": "Muchas gracias, muy amable.", "translation": "Dziękuję bardzo, to bardzo miłe." }
+      ],
+      "canDo": [
+        "nazwać najważniejsze miejsca w mieście",
+        "wybrać między hay a está",
+        "opisać położenie: cerca de, al lado de, enfrente de, entre",
+        "użyć al i del",
+        "zapytać grzecznie o miejsce i podziękować",
+        "wymówić z i c przed e, i po hiszpańsku"
+      ]
     }
   ]
 }

@@ -22,5 +22,17 @@
   {
     "asset": "a1-u2-birthday.png",
     "prompt": "a family birthday party at home: a smiling grandfather blows out candles on a cake, family members around him clap, balloons, no text on the cake"
+  },
+  {
+    "asset": "a1-u3-street-ask.png",
+    "prompt": "a young female tourist with a backpack asks an older local man for directions on a sunny old-town street with small shops, café tables and balconies, no signs"
+  },
+  {
+    "asset": "a1-u3-plaza.png",
+    "prompt": "the main square of a Spanish town with arcades, café terraces with umbrellas, a town hall building with a clock tower and people walking, no signs"
+  },
+  {
+    "asset": "a1-u3-building.png",
+    "prompt": "a woman with a suitcase standing at the entrance door of an old apartment building, pressing an intercom with plain buttons, balconies above"
   }
 ]
