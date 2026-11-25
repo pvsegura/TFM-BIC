@@ -74,6 +74,10 @@ export {
   GetContentUseCase,
   type GetContentInput,
 } from "./content/use-cases/get-content.use-case.js";
+export {
+  ResolveShortLinkUseCase,
+  type ShortLinkInput,
+} from "./content/use-cases/resolve-short-link.use-case.js";
 
 // Lessons (M6) port — implemented in packages/data — and use cases. Lesson content comes
 // from the content port above; only the student's progress has its own port.

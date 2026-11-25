@@ -40,6 +40,9 @@ const PUBLIC_ROUTES = new Set([
   // M23: the grammar reference — public, read-only lookup tables (no progress, no user data).
   "GET /grammar",
   "GET /grammar/:topicId",
+  // The books' QR short links: a redirect to a page that applies its own access rules.
+  "GET /k/:course/:unit",
+  "GET /k/:course/:unit/:target",
   // Verbysia: the price list — public like a shop window; nothing personal, nothing purchasable here.
   "GET /products",
   // Verbysia free demo: free lessons only (licence gate), answers evaluated but never stored.

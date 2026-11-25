@@ -23,6 +23,8 @@ export const contentFileSchema = z.strictObject({
   instructionLanguage: languageIdSchema,
   /** Who may open it: `free` for everyone signed in; `course` (the default) needs a licence for its level. */
   access: z.enum(CONTENT_ACCESS_LEVELS).optional(),
+  /** Course unit (0 = starter challenge), as numbered in the books and in short links. */
+  unit: z.number().int().min(0).max(30).optional(),
   title: plainText(120),
   description: plainText(300),
   blocks: z.array(contentBlockSchema).min(1).max(MAX_BLOCKS_PER_ITEM),

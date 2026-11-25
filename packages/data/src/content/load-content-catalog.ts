@@ -172,6 +172,7 @@ async function loadContentFile(
     order: file.order,
     instructionLanguage: file.instructionLanguage,
     ...(file.access === undefined ? {} : { access: file.access }),
+    ...(file.unit === undefined ? {} : { unit: file.unit }),
     title: file.title,
     description: file.description,
     blocks: file.blocks,

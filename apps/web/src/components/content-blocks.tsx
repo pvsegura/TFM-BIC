@@ -1,5 +1,5 @@
 import type { ContentResponse } from "@verbysia/contracts";
-import type { ReactNode } from "react";
+import { useEffect, useRef, type ReactNode } from "react";
 import { m } from "../i18n/index.js";
 
 type ContentBlock = ContentResponse["blocks"][number];
@@ -96,9 +96,18 @@ function DialogueView({
 
 const b = m.learn.blocks;
 
+/**
+ * A section heading. Its id (`section-{phase}`) is what the books' short links point at; the page
+ * content loads after navigation, so the heading scrolls itself into view when the URL names it.
+ */
 function SectionView({ block }: BlockProps<Extract<ContentBlock, { type: "section" }>>) {
+  const id = `section-${block.phase}`;
+  const ref = useRef<HTMLDivElement | null>(null);
+  useEffect(() => {
+    if (globalThis.location?.hash === `#${id}`) ref.current?.scrollIntoView?.({ block: "start" });
+  }, [id]);
   return (
-    <div className="mt-4 border-b-2 border-accent pb-1">
+    <div ref={ref} id={id} className="mt-4 scroll-mt-20 border-b-2 border-accent pb-1">
       <p className="text-xs font-semibold uppercase tracking-wide text-accent-ink dark:text-accent">
         {b.phases[block.phase]}
       </p>

@@ -33,6 +33,7 @@ import { registerLanguageRoutes } from "./routes/languages.route.js";
 import { registerLessonRoutes } from "./routes/lessons.route.js";
 import { registerGrammarRoutes } from "./routes/grammar.route.js";
 import { registerMediaRoutes } from "./routes/media.route.js";
+import { registerShortLinkRoutes } from "./routes/short-links.route.js";
 import { registerPhoneticsRoutes } from "./routes/phonetics.route.js";
 import { registerProfileRoutes } from "./routes/profile.route.js";
 import { registerTeacherDashboardRoutes } from "./routes/teacher-dashboard.route.js";
@@ -43,7 +44,12 @@ import { registerCommerceRoutes } from "./routes/commerce.route.js";
 import { registerMemoryRoutes } from "./routes/memory.route.js";
 import { registerPaymentRoutes } from "./routes/payments.route.js";
 import { createCommerceUseCases } from "./composition/verbysia-dependencies.js";
-import { AccessPolicy, ContentGate, EmailPaymentNotifier } from "@verbysia/application";
+import {
+  AccessPolicy,
+  ContentGate,
+  EmailPaymentNotifier,
+  ResolveShortLinkUseCase,
+} from "@verbysia/application";
 import { createLoggerOptions } from "./logging/logger-options.js";
 import { registerHttpObservability } from "./observability/http-observability.js";
 import {
@@ -221,6 +227,14 @@ export function buildServer(
     // Published educational media (M21, ADR-031): public, read-only, generated offline — no request
     // here can reach a video or audio provider.
     registerMediaRoutes(app, { content: contentDeps, useCases: contentUseCases, env });
+    // The books' QR codes: /k/{course}/{unit}[/{section|exercise}] → where it lives today.
+    registerShortLinkRoutes(app, {
+      resolve: new ResolveShortLinkUseCase(
+        contentDeps.contentRepository,
+        contentDeps.exerciseRepository,
+      ),
+      env,
+    });
     // Grammar reference (M23): public, read-only lookup tables — no session, no user data.
     registerGrammarRoutes(app, { useCases: contentUseCases, env });
 

@@ -149,6 +149,8 @@ export interface ContentItem {
   instructionLanguage: LanguageId;
   /** Absent means `course`: a licence for this level is required (see commerce/entitlement.ts). */
   access?: ContentAccessLevel | undefined;
+  /** The course unit it belongs to (0 = the starter challenge); shared with the books and short links. */
+  unit?: number | undefined;
   title: string;
   /** One-sentence summary shown in lists. */
   description: string;

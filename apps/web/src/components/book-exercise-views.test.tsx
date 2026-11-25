@@ -31,12 +31,12 @@ type Of<T extends ExerciseResponse["type"]> = Extract<ExerciseResponse, { type: 
 describe("OrderingExerciseView", () => {
   it("reorders with the arrow buttons and submits the chosen order", async () => {
     const onSubmit = vi.fn();
-    const exercise: Of<"ordering"> = {
+    const exercise = {
       ...base,
       type: "ordering",
       items: ["banco", "El", "cerca"],
       joiner: " ",
-    };
+    } as unknown as Of<"ordering">;
     renderWithProviders(
       <OrderingExerciseView
         exercise={exercise}
@@ -56,12 +56,12 @@ describe("OrderingExerciseView", () => {
 describe("MatchingExerciseView", () => {
   it("asks for every pair before submitting, then sends one choice per left item", async () => {
     const onSubmit = vi.fn();
-    const exercise: Of<"matching"> = {
+    const exercise = {
       ...base,
       type: "matching",
       left: ["el banco", "la farmacia"],
       right: ["apteka", "bank"],
-    };
+    } as unknown as Of<"matching">;
     renderWithProviders(
       <MatchingExerciseView
         exercise={exercise}
@@ -85,11 +85,11 @@ describe("MatchingExerciseView", () => {
 describe("GapFillExerciseView", () => {
   it("renders one labelled input per gap and submits them in order", async () => {
     const onSubmit = vi.fn();
-    const exercise: Of<"gap-fill"> = {
+    const exercise = {
       ...base,
       type: "gap-fill",
       segments: ["El museo ", " en el centro y ", " grande."],
-    };
+    } as unknown as Of<"gap-fill">;
     renderWithProviders(
       <GapFillExerciseView
         exercise={exercise}
@@ -112,13 +112,13 @@ describe("GapFillExerciseView", () => {
 describe("OpenWritingExerciseView", () => {
   it("shows the checklist and refuses a text outside the word limits", async () => {
     const onSubmit = vi.fn();
-    const exercise: Of<"open-writing"> = {
+    const exercise = {
       ...base,
       type: "open-writing",
       checklist: ["używasz hay"],
       minWords: 3,
       maxWords: 10,
-    };
+    } as unknown as Of<"open-writing">;
     renderWithProviders(
       <OpenWritingExerciseView
         exercise={exercise}
