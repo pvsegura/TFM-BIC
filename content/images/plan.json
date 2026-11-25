@@ -34,5 +34,17 @@
   {
     "asset": "a1-u3-building.png",
     "prompt": "a woman with a suitcase standing at the entrance door of an old apartment building, pressing an intercom with plain buttons, balconies above"
+  },
+  {
+    "asset": "a1-u4-bar.png",
+    "prompt": "a lively Spanish tapas bar: a waiter behind the counter serves a small beer and a glass of wine with little plates of tapas to two friends, hams hanging, no signs or chalkboards"
+  },
+  {
+    "asset": "a1-u4-restaurant.png",
+    "prompt": "a waiter with a notepad takes the order of two friends sitting at a table with a tablecloth in a small family restaurant, bread basket and water bottle on the table, no menus with writing"
+  },
+  {
+    "asset": "a1-u4-tapas.png",
+    "prompt": "top view of a wooden table with several small plates of Spanish tapas: potato omelette slices, croquettes, olives, fried potatoes, bread and two glasses of wine"
   }
 ]

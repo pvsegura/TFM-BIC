@@ -43,5 +43,20 @@
     "source": "ai",
     "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
     "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-u4-bar.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-u4-restaurant.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-u4-tapas.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
   }
 }

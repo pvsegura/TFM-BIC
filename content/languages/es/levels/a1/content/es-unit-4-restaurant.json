@@ -8,83 +8,246 @@
   "order": 130,
   "unit": 4,
   "instructionLanguage": "pl",
-  "title": "Jednostka 4. En el restaurante — zamawianie i płacenie",
-  "description": "Zamawiasz menu dnia, wybierasz pierwsze i drugie danie, prosisz o rachunek i wyrażasz preferencje.",
+  "title": "Jednostka 4B. En el restaurante — menu dnia, preferencje i alergie",
+  "description": "Zamawiasz menu dnia, pytasz o skład potraw, mówisz o preferencjach i alergiach, prosisz o rachunek.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Menu dnia" },
     {
       "type": "explanation",
-      "text": "W Hiszpanii w dni powszednie wiele restauracji proponuje el menú del día: de primero (pierwsze danie), de segundo (drugie danie), de postre (deser), z napojem i chlebem w stałej cenie."
+      "text": "Wtorek, 14:30, mała restauracja w Salamance. Anna i jej kolega Tomás zamawiają menu dnia. Za pierwszym razem posłuchaj, co zamawia każde z nich. Za drugim zapisz, o co pytają kelnera. Za trzecim zwróć uwagę, jak Tomás mówi o swojej alergii."
     },
     {
-      "type": "example",
-      "text": "De primero, una ensalada; de segundo, pescado.",
-      "translation": "Na pierwsze sałatka, na drugie ryba."
-    },
-    {
-      "type": "example",
-      "text": "¿Qué hay de postre?",
-      "translation": "Co jest na deser?"
-    },
-    {
-      "type": "explanation",
-      "text": "Buduj zdania — uprzejme prośby: Quería… (chciałbym/chciałabym), Me gustaría… (chciałbym), Para mí… (dla mnie…), ¿Me trae…? (przyniesie mi Pan…?). Wszystkie są naturalne i grzeczne."
-    },
-    {
-      "type": "example",
-      "text": "Para mí, el pollo, por favor.",
-      "translation": "Dla mnie kurczak, poproszę."
-    },
-    {
-      "type": "example",
-      "text": "¿Me trae un poco más de pan?",
-      "translation": "Przyniesie mi Pan trochę więcej chleba?"
-    },
-    {
-      "type": "explanation",
-      "text": "Preferencje: Prefiero el pescado (wolę rybę). Soy vegetariano/vegetariana (jestem wegetarianinem/wegetarianką). Sin gluten (bez glutenu). ¿Lleva carne? (czy jest w tym mięso?)."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: POSTRE brzmi jak „po-stół” — deser przychodzi PO głównym stole. PRIMERO jak „premiera” — pierwsze danie otwiera posiłek."
+      "type": "image",
+      "asset": "a1-u4-restaurant.png",
+      "alt": "Kelner przyjmuje zamówienie od dwojga gości przy stoliku w restauracji."
     },
     {
       "type": "dialogue",
       "lines": [
         {
           "speaker": "Camarero",
-          "text": "¿Qué van a tomar?",
-          "translation": "Co Państwo zamawiają?"
+          "text": "Buenas tardes. ¿Qué van a tomar?",
+          "translation": "Dzień dobry. Co Państwo zamawiają?"
         },
         {
           "speaker": "Anna",
-          "text": "Yo quería el menú del día. De primero, gazpacho, y de segundo, pollo asado.",
-          "translation": "Ja poproszę menu dnia. Na pierwsze gazpacho, a na drugie pieczonego kurczaka."
+          "text": "Yo quería el menú del día. ¿Qué hay de primero?",
+          "translation": "Poproszę menu dnia. Co jest na pierwsze danie?"
         },
         {
           "speaker": "Camarero",
-          "text": "¿Y para usted?",
-          "translation": "A dla Pana?"
+          "text": "Hay gazpacho, ensalada mixta o lentejas.",
+          "translation": "Jest gazpacho, sałatka mieszana albo soczewica."
         },
         {
-          "speaker": "Michał",
-          "text": "Para mí, ensalada y pescado. ¿El pescado lleva salsa?",
-          "translation": "Dla mnie sałatka i ryba. Czy ryba jest z sosem?"
+          "speaker": "Anna",
+          "text": "De primero, gazpacho, y de segundo, pollo asado.",
+          "translation": "Na pierwsze gazpacho, a na drugie pieczony kurczak."
+        },
+        {
+          "speaker": "Tomás",
+          "text": "Para mí, la ensalada. ¿El pescado lleva salsa?",
+          "translation": "Dla mnie sałatka. Czy ryba jest z sosem?"
         },
         {
           "speaker": "Camarero",
-          "text": "Sí, una salsa de limón. ¿Y para beber?",
-          "translation": "Tak, z sosem cytrynowym. A do picia?"
+          "text": "Sí, lleva una salsa de mantequilla y nata.",
+          "translation": "Tak, z sosem z masła i śmietany."
         },
         {
-          "speaker": "Michał",
-          "text": "Agua sin gas, por favor.",
-          "translation": "Woda niegazowana, poproszę."
+          "speaker": "Tomás",
+          "text": "Es que soy alérgico a la lactosa. ¿Puede ser sin salsa?",
+          "translation": "Bo mam alergię na laktozę. Może być bez sosu?"
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Claro, sin problema. ¿Y de beber?",
+          "translation": "Oczywiście, nie ma problemu. A do picia?"
+        },
+        {
+          "speaker": "Anna",
+          "text": "Agua sin gas para los dos, por favor.",
+          "translation": "Woda niegazowana dla nas obojga, poproszę."
+        },
+        {
+          "speaker": "Camarero",
+          "text": "¿Qué quieren de postre? Hay flan, fruta o arroz con leche.",
+          "translation": "Co Państwo chcą na deser? Jest flan, owoce albo ryż na mleku."
+        },
+        {
+          "speaker": "Tomás",
+          "text": "Fruta, por favor. Y la cuenta cuando pueda.",
+          "translation": "Owoce, poproszę. I rachunek, kiedy Pan będzie mógł."
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Dania i sposoby przygotowania" },
+    {
+      "type": "table",
+      "caption": "Menu dnia (el menú del día)",
+      "columns": ["Część", "Przykłady", "Po polsku"],
+      "rows": [
+        [
+          "de primero",
+          "ensalada mixta, sopa, gazpacho, lentejas, paella",
+          "sałatka, zupa, chłodnik, soczewica, paella"
+        ],
+        [
+          "de segundo",
+          "pollo asado, pescado a la plancha, filete, albóndigas",
+          "pieczony kurczak, ryba z grilla, stek, pulpety"
+        ],
+        [
+          "de postre",
+          "flan, fruta, helado, arroz con leche",
+          "krem karmelowy, owoce, lody, ryż na mleku"
+        ],
+        ["bebida", "agua, vino, cerveza, refresco", "woda, wino, piwo, napój"],
+        ["incluido", "pan y bebida", "chleb i napój w cenie"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Jak przygotowane?",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["a la plancha", "z grilla (płyty)"],
+        ["asado / al horno", "pieczony / z piekarnika"],
+        ["frito", "smażony"],
+        ["cocido", "gotowany"],
+        ["crudo", "surowy"],
+        ["muy hecho / poco hecho", "dobrze wysmażony / krwisty"],
+        ["picante", "ostry"],
+        ["casero", "domowy"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: zamów na głos pełne menu dnia — pierwsze danie, drugie, deser i napój — a na końcu poproś o rachunek."
+      "text": "Łącz i zapamiętuj — POSTRE brzmi jak „po-stół”: deser przychodzi PO głównym stole. PRIMERO jak „premiera” — pierwsze danie otwiera posiłek. A LA PLANCHA wyobraź sobie jako płaską blachę (plancha), na której skwierczy ryba. Uwaga, fałszywy przyjaciel: la carta to karta dań (menu), a el menú to zestaw w stałej cenie."
+    },
+    { "type": "section", "phase": "structure", "title": "Preferir, llevar i grzeczne prośby" },
+    {
+      "type": "table",
+      "caption": "Preferir — woleć (e → ie)",
+      "columns": ["Osoba", "preferir", "Przykład"],
+      "rows": [
+        ["yo", "prefiero", "Prefiero el pescado."],
+        ["tú", "prefieres", "¿Prefieres vino o cerveza?"],
+        ["él / ella / usted", "prefiere", "Prefiere comer en casa."],
+        ["nosotros / nosotras", "preferimos", "Preferimos una mesa en la terraza."],
+        ["vosotros / vosotras", "preferís", "¿Qué preferís de postre?"],
+        ["ellos / ellas / ustedes", "prefieren", "Prefieren la carne poco hecha."]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "O skład potrawy pytamy czasownikiem llevar (dosłownie „nieść, zawierać”): ¿Lleva carne? (czy jest w tym mięso?), La paella lleva marisco (paella jest z owocami morza). Diety i alergie: Soy vegetariano / vegetariana, Soy vegano, Soy alérgico / alérgica a…, No como carne, sin gluten, sin lactosa."
+    },
+    {
+      "type": "comparison",
+      "source": "Czy w tym jest mięso? Mam alergię na orzechy.",
+      "target": "¿Lleva carne? Soy alérgico a los frutos secos.",
+      "note": "Alergię wyrażamy przez ser alérgico a + rodzajnik: a la lactosa, al marisco."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Tengo alergia del gluten. / ¿Tiene carne?",
+      "right": "Soy alérgico al gluten / Tengo alergia al gluten. ¿Lleva carne?",
+      "explanation": "Po alergia i alérgico przyimek a (nie de). O skład dania pytamy ¿Lleva…?; ¿Tiene…? też zrozumieją, ale brzmi mniej naturalnie."
+    },
+    {
+      "type": "table",
+      "caption": "Przydatne prośby w restauracji",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["Una mesa para dos, por favor.", "Stolik dla dwóch osób, poproszę."],
+        ["¿Me trae la carta, por favor?", "Przyniesie mi Pan/Pani kartę?"],
+        ["¿Qué me recomienda?", "Co mi Pan/Pani poleca?"],
+        ["¿Me trae un poco más de pan?", "Przyniesie mi Pan/Pani jeszcze trochę chleba?"],
+        ["Falta un cuchillo.", "Brakuje noża."],
+        ["La sopa está fría.", "Zupa jest zimna."],
+        ["La cuenta, cuando pueda.", "Rachunek, kiedy Pan/Pani będzie mógł."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "De primero ensalada, de segundo es pollo.",
+      "right": "De primero, ensalada, y de segundo, pollo.",
+      "explanation": "Zamawiając, nie potrzebujesz czasownika: wystarczy de primero / de segundo / de postre + danie. Ser tu nie pasuje."
+    },
+    {
+      "type": "example",
+      "text": "—¿Qué me recomienda? —El pescado del día está muy bueno, es fresco.",
+      "translation": "—Co mi Pan poleca? —Ryba dnia jest bardzo dobra, jest świeża.",
+      "note": "Está bueno — smakuje dobrze (stan), es bueno — jest dobry (cecha)."
+    },
+    { "type": "section", "phase": "sound", "title": "Ch i y: churros, yogur, mayonesa" },
+    {
+      "type": "explanation",
+      "text": "Ch zawsze brzmi jak polskie cz: churros [czuros], chorizo [czoriθo], leche [lecze]. Y przed samogłoską to polskie j: yogur [jogur], mayonesa [majonesa]; sama y (spójnik „i”) to [i]. Uwaga na rr: arroz [aroθ] — mocne, wibrujące r."
+    },
+    { "type": "section", "phase": "culture", "title": "Jeść po hiszpańsku" },
+    {
+      "type": "reading",
+      "title": "El menú del día",
+      "paragraphs": [
+        "De lunes a viernes, muchos restaurantes ofrecen el menú del día. Cuesta entre doce y dieciocho euros e incluye primero, segundo, postre, pan y bebida.",
+        "Los trabajadores de las oficinas cercanas comen allí todos los días. Es una comida casera, rápida y barata.",
+        "Después de comer, muchas familias se quedan en la mesa para hablar: es la sobremesa. A veces dura más que la comida."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Obiad (la comida) jest w Hiszpanii głównym posiłkiem dnia i jada się go zwykle między 14:00 a 16:00. Kolacja (la cena) jest lżejsza i późna — w restauracjach rzadko zaczyna się przed 20:30–21:00.",
+        "La sobremesa, czyli długie rozmowy przy stole po posiłku, to ważna część kultury: kelner nie poda rachunku, dopóki goście go nie poproszą.",
+        "Kuchnia regionalna jest bardzo różnorodna: paella pochodzi z Walencji, gazpacho i salmorejo z Andaluzji, pulpo a la gallega z Galicji, a pintxos z Kraju Basków. W regionie warto pytać o lokalne specjały: ¿Cuál es el plato típico de aquí?"
+      ]
+    },
+    {
+      "type": "image",
+      "asset": "a1-u4-tapas.png",
+      "alt": "Stół z kilkoma talerzami tapas: tortilla, krokiety, oliwki, chleb i kieliszki wina."
+    },
+    { "type": "section", "phase": "express", "title": "Misja: obiad w restauracji" },
+    {
+      "type": "mission",
+      "title": "Zamów menu dnia dla siebie i osoby z alergią",
+      "steps": [
+        "Poproś o stolik i kartę albo menu dnia.",
+        "Zapytaj, co jest na pierwsze i drugie danie, i zamów.",
+        "Zapytaj o skład jednej potrawy (¿Lleva…?) i powiedz o alergii lub diecie.",
+        "Zamów napój i deser, wyraź preferencję z prefiero.",
+        "Zgłoś jeden drobny problem (Falta…, Está frío) i poproś o rachunek.",
+        "Odegraj scenę z kimś albo nagraj obie role."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Una mesa para dos, por favor.",
+          "translation": "Stolik dla dwóch osób, poproszę."
+        },
+        { "text": "¿Qué hay de primero?", "translation": "Co jest na pierwsze danie?" },
+        {
+          "text": "De primero, sopa, y de segundo, pescado.",
+          "translation": "Na pierwsze zupa, a na drugie ryba."
+        },
+        { "text": "¿Lleva carne?", "translation": "Czy jest w tym mięso?" },
+        { "text": "Soy alérgica a los frutos secos.", "translation": "Mam alergię na orzechy." },
+        { "text": "¿Qué me recomienda?", "translation": "Co mi Pan/Pani poleca?" },
+        { "text": "Prefiero el pescado a la plancha.", "translation": "Wolę rybę z grilla." }
+      ],
+      "canDo": [
+        "zamówić menu dnia: pierwsze, drugie danie, deser i napój",
+        "zapytać o skład potrawy z llevar",
+        "powiedzieć o alergii, diecie i preferencjach (preferir)",
+        "poprosić o rzeczy przy stole i zgłosić prosty problem",
+        "zrozumieć hiszpańskie pory posiłków i sobremesa",
+        "wymówić ch, y i rr w nazwach potraw"
+      ]
     }
   ]
 }

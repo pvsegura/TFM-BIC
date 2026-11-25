@@ -1,0 +1,258 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-4-bar",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 128,
+  "unit": 4,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 4A. En el bar — kawa, tapas i rachunek",
+  "description": "Zamawiasz kawę, napoje i tapas, pytasz o cenę i płacisz kartą albo gotówką.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Przy barze" },
+    {
+      "type": "explanation",
+      "text": "Sobota, godzina 13:00. Marek i jego hiszpańska koleżanka Lucía wchodzą do baru na przekąskę przed obiadem. Za pierwszym razem posłuchaj, co zamawiają do picia. Za drugim zapisz tapas i ceny. Za trzecim zwróć uwagę, jak grzecznie zamawiać i jak prosić o rachunek."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u4-bar.png",
+      "alt": "Kelner za barem podaje dwojgu klientom napoje i talerzyki z tapas."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Camarero",
+          "text": "Hola, buenas. ¿Qué os pongo?",
+          "translation": "Dzień dobry. Co podać?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Para mí, una caña, por favor.",
+          "translation": "Dla mnie małe piwo, poproszę."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Y yo quería un vino tinto.",
+          "translation": "A ja poproszę czerwone wino."
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Muy bien. ¿Algo para comer?",
+          "translation": "Dobrze. Coś do jedzenia?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Sí. ¿Nos pone una ración de patatas bravas y unas croquetas?",
+          "translation": "Tak. Poprosimy porcję patatas bravas i krokiety."
+        },
+        {
+          "speaker": "Marek",
+          "text": "¿Qué es la tortilla de patatas?",
+          "translation": "Co to jest tortilla de patatas?"
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Es una tortilla con huevos, patata y cebolla. Está muy buena.",
+          "translation": "To omlet z jajek, ziemniaków i cebuli. Jest bardzo dobra."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Entonces, un pincho de tortilla también.",
+          "translation": "W takim razie też kawałek tortilli."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Nos cobras, por favor? ¿Cuánto es?",
+          "translation": "Możemy zapłacić? Ile płacimy?"
+        },
+        {
+          "speaker": "Camarero",
+          "text": "Son quince euros con cincuenta. ¿Con tarjeta o en efectivo?",
+          "translation": "Piętnaście euro pięćdziesiąt. Kartą czy gotówką?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Con tarjeta. Y quédate con el cambio… ¡ah, no, que pago con tarjeta!",
+          "translation": "Kartą. I proszę zatrzymać resztę… a nie, przecież kartą!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Kawa, napoje i tapas" },
+    {
+      "type": "table",
+      "caption": "Kawa po hiszpańsku",
+      "columns": ["Hiszpański", "Co to jest?"],
+      "rows": [
+        ["un café solo", "espresso"],
+        ["un cortado", "espresso z odrobiną mleka"],
+        ["un café con leche", "kawa z dużą ilością mleka (na śniadanie)"],
+        ["un café americano", "espresso rozcieńczone wodą"],
+        ["un descafeinado", "kawa bezkofeinowa"],
+        ["un té / una infusión", "herbata / napar ziołowy"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Napoje i tapas",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["una caña", "małe piwo z beczki", "una tapa", "mała przekąska do napoju"],
+        ["una cerveza", "piwo", "una ración", "duża porcja do dzielenia"],
+        [
+          "un vino tinto / blanco",
+          "wino czerwone / białe",
+          "un pincho",
+          "kawałek, przekąska na kromce"
+        ],
+        [
+          "un agua con gas / sin gas",
+          "woda gazowana / niegazowana",
+          "las patatas bravas",
+          "ziemniaki z ostrym sosem"
+        ],
+        ["un zumo de naranja", "sok pomarańczowy", "las croquetas", "krokiety"],
+        ["un refresco", "napój gazowany", "la tortilla de patatas", "omlet z ziemniakami"],
+        ["un vermú", "wermut", "las aceitunas", "oliwki"],
+        ["la cuenta", "rachunek", "el jamón serrano", "szynka dojrzewająca"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — caña to dosłownie „trzcina”: wyobraź sobie wysoką, smukłą szklankę piwa jak łodyga trzciny. Cortado znaczy „pocięty”: espresso „pocięte” kroplą mleka. Tortilla w Hiszpanii to nie meksykański placek, tylko gruby omlet z ziemniakami — zapamiętaj ją jako „tortę z jajek”."
+    },
+    { "type": "section", "phase": "structure", "title": "Jak grzecznie zamówić i zapłacić" },
+    {
+      "type": "table",
+      "caption": "Zamawianie: od najbardziej swobodnego do najgrzeczniejszego",
+      "columns": ["Hiszpański", "Polski", "Uwaga"],
+      "rows": [
+        ["Una caña, por favor.", "Piwo, poproszę.", "zawsze dobrze"],
+        [
+          "¿Me pones un café? / ¿Me pone un café?",
+          "Poda mi Pan/Pani kawę?",
+          "w barze bardzo naturalne"
+        ],
+        ["Para mí, un zumo.", "Dla mnie sok.", "gdy zamawia kilka osób"],
+        ["Quería un vino tinto.", "Chciałbym czerwone wino.", "grzecznie, choć to czas przeszły"],
+        ["Me gustaría probar la tortilla.", "Chciałbym spróbować tortilli.", "bardzo grzecznie"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Quería to forma czasu przeszłego czasownika querer (chcieć), ale przy zamawianiu działa jak polskie „chciałbym” — łagodzi prośbę. Samo Quiero un café nie jest niegrzeczne, jeśli dodasz por favor, ale brzmi bardziej stanowczo. W barach Hiszpanie zwracają się do kelnera zwykle na „ty”: ¿Me pones…?"
+    },
+    {
+      "type": "table",
+      "caption": "Querer — chcieć (czas teraźniejszy, e → ie)",
+      "columns": ["Osoba", "querer", "Przykład"],
+      "rows": [
+        ["yo", "quiero", "Quiero un café."],
+        ["tú", "quieres", "¿Quieres una tapa?"],
+        ["él / ella / usted", "quiere", "¿Qué quiere tomar?"],
+        ["nosotros / nosotras", "queremos", "Queremos la cuenta."],
+        ["vosotros / vosotras", "queréis", "¿Queréis algo más?"],
+        ["ellos / ellas / ustedes", "quieren", "Quieren agua sin gas."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Quiero kawa. / Dame un café.",
+      "right": "Un café, por favor. / ¿Me pones un café?",
+      "explanation": "Bezpośrednie Dame (daj mi) bez por favor brzmi szorstko. Najbezpieczniej: nazwa napoju + por favor albo pytanie ¿Me pones…?"
+    },
+    {
+      "type": "table",
+      "caption": "Ceny i płacenie",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["¿Cuánto es? / ¿Cuánto cuesta?", "Ile płacę? / Ile kosztuje?"],
+        ["Son quince euros con cincuenta.", "Piętnaście euro pięćdziesiąt."],
+        ["¿Me cobras? / La cuenta, por favor.", "Mogę zapłacić? / Rachunek, proszę."],
+        ["¿Puedo pagar con tarjeta?", "Mogę zapłacić kartą?"],
+        ["en efectivo", "gotówką"],
+        ["Quédese con el cambio.", "Proszę zatrzymać resztę."],
+        ["Invito yo.", "Ja stawiam."]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Ile kosztuje kawa? — Półtora euro.",
+      "target": "¿Cuánto cuesta el café? — Un euro con cincuenta.",
+      "note": "Cuesta (jedna rzecz) / cuestan (wiele rzeczy): ¿Cuánto cuestan las croquetas?"
+    },
+    {
+      "type": "pitfall",
+      "wrong": "¿Cuánto cuesta las croquetas?",
+      "right": "¿Cuánto cuestan las croquetas?",
+      "explanation": "Czasownik zgadza się z tym, co kosztuje: jedna rzecz — cuesta, wiele rzeczy — cuestan (costar, o → ue)."
+    },
+    {
+      "type": "example",
+      "text": "—¿Queréis algo más? —No, gracias. ¿Nos cobras?",
+      "translation": "—Chcecie coś jeszcze? —Nie, dziękujemy. Możemy zapłacić?"
+    },
+    { "type": "section", "phase": "sound", "title": "Ll i ñ: paella, tortilla, caña" },
+    {
+      "type": "explanation",
+      "text": "W słowach paella, tortilla, cebolla ll brzmi w większości Hiszpanii jak polskie j: [paeja], [tortija], [θeboja]. Ñ to polskie ń: caña [kania], España [espania], mañana [maniana]. Nie wymawiaj tortilla przez polskie l ani caña jako [kana] — w hiszpańskim to inne słowo (la cana to siwy włos)."
+    },
+    { "type": "section", "phase": "culture", "title": "Bar w Hiszpanii" },
+    {
+      "type": "reading",
+      "title": "El bar de la esquina",
+      "paragraphs": [
+        "En España hay bares en todas las calles. Por la mañana la gente toma un café con leche y una tostada antes de trabajar. A mediodía muchas personas toman una caña con una tapa.",
+        "En algunas ciudades, como Granada o León, con cada bebida el bar te pone una tapa gratis. En otras ciudades las tapas se pagan, pero son baratas.",
+        "Los españoles comen tarde: la comida es entre las dos y las cuatro, y la cena, después de las nueve de la noche. Por eso el aperitivo antes de comer es muy popular."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Napiwki (la propina) w Hiszpanii nie są obowiązkowe. W barze często zostawia się drobne z reszty, a w restauracji — jeśli obsługa była dobra — kilka procent rachunku. Nikt nie oczekuje polskich 10% jako reguły.",
+        "W wielu barach płaci się na końcu, a nie przy zamawianiu. Rachunek zwykle trzeba zawołać: ¿Me cobras? albo La cuenta, por favor. Kelner nie przyniesie go sam, bo uznałby to za poganianie gości.",
+        "Grupa znajomych często płaci wspólnie albo na zmianę: dziś stawiasz ty, następnym razem ja. Dzielenie rachunku co do grosza (pagar a escote) też jest normalne, ale robi się to między sobą, nie z kelnerem."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: runda w barze" },
+    {
+      "type": "mission",
+      "title": "Zamów dla siebie i przyjaciela w hiszpańskim barze",
+      "steps": [
+        "Przywitaj się i zamów dwa różne napoje, używając Para mí… i Quería….",
+        "Zapytaj, co to jest jedna z tapas: ¿Qué es…?",
+        "Zamów jedną rację do podziału i jeden pincho.",
+        "Poproś o rachunek, zapytaj o cenę i powiedz, jak płacisz.",
+        "Nagraj się i sprawdź wymowę caña, tortilla i paella."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Me pones un café con leche?",
+          "translation": "Poda mi Pan/Pani kawę z mlekiem?"
+        },
+        { "text": "Para mí, una caña.", "translation": "Dla mnie małe piwo." },
+        { "text": "Quería un vino tinto.", "translation": "Chciałbym czerwone wino." },
+        { "text": "¿Qué es…?", "translation": "Co to jest…?" },
+        { "text": "¿Cuánto es?", "translation": "Ile płacę?" },
+        { "text": "¿Puedo pagar con tarjeta?", "translation": "Mogę zapłacić kartą?" },
+        { "text": "La cuenta, por favor.", "translation": "Rachunek, proszę." }
+      ],
+      "canDo": [
+        "zamówić kawę, napój i tapas w barze",
+        "użyć grzecznych form: quería, me gustaría, ¿me pones…?",
+        "odmienić querer w czasie teraźniejszym",
+        "zapytać o cenę z cuesta / cuestan",
+        "poprosić o rachunek i zapłacić kartą lub gotówką",
+        "wymówić ll i ñ w nazwach potraw"
+      ]
+    }
+  ]
+}
