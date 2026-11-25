@@ -49,15 +49,23 @@ describe("ExerciseId", () => {
 });
 
 describe("ExerciseType", () => {
-  it("starts with the three M7 types", () => {
-    expect(EXERCISE_TYPES).toEqual(["multiple-choice", "text-answer", "true-false"]);
+  it("has the three M7 types and the four workbook types", () => {
+    expect(EXERCISE_TYPES).toEqual([
+      "multiple-choice",
+      "text-answer",
+      "true-false",
+      "ordering",
+      "matching",
+      "gap-fill",
+      "open-writing",
+    ]);
   });
 
   it.each(["multiple-choice", "text-answer", "true-false"])("accepts %s", (type) => {
     expect(isValidExerciseType(type)).toBe(true);
   });
 
-  it.each(["", "Multiple-Choice", "matching", "text", "__proto__", "constructor", "toString"])(
+  it.each(["", "Multiple-Choice", "drag-and-drop", "text", "__proto__", "constructor", "toString"])(
     "rejects %j",
     (type) => {
       expect(isValidExerciseType(type)).toBe(false);

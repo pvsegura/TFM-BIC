@@ -72,7 +72,7 @@ describe("contentFileSchema (content item file)", () => {
     ["no blocks", { blocks: [] }],
     [
       "too many blocks",
-      { blocks: Array.from({ length: 51 }, () => ({ type: "explanation", text: "x" })) },
+      { blocks: Array.from({ length: 151 }, () => ({ type: "explanation", text: "x" })) },
     ],
     ["an unknown block type", { blocks: [{ type: "video", src: "x" }] }],
     ["an unexpected top-level key", { html: "<b>x</b>" }],

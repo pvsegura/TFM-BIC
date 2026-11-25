@@ -89,7 +89,7 @@ describe("fetchLessonExercises", () => {
 
   it("refuses a response that does not match the contract", async () => {
     stub(200, {
-      exercises: [{ ...SUMMARY, type: "matching" }],
+      exercises: [{ ...SUMMARY, type: "drag-and-drop" }],
       progress: { total: 1, answered: 0 },
     });
 
