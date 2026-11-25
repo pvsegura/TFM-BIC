@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-translate-must",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Muszę pracować w sobotę.",
+  "explanation": "Tener que + trabajar; el sábado.",
+  "configuration": {
+    "acceptedAnswers": ["Tengo que trabajar el sábado.", "El sábado tengo que trabajar."],
+    "caseSensitive": false
+  }
+}

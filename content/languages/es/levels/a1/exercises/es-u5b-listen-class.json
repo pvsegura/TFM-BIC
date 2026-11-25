@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-listen-class",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: zajęcia z angielskiego Oli kończą się o siódmej.",
+  "explanation": "La clase termina a las siete.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

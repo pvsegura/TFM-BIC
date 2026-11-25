@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-write-day",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 45,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Opisz swój zwykły dzień w 6–8 zdaniach: godziny, czasowniki zwrotne, kolejność i częstotliwość.",
+  "explanation": "Sprawdź zaimki zwrotne, a las + godzina i miejsce nunca.",
+  "configuration": {
+    "modelAnswer": "Me despierto a las siete menos cuarto y me levanto a las siete. Primero me ducho y luego desayuno. Salgo de casa a las ocho y voy a la oficina en autobús. Como a las dos. Termino de trabajar a las cinco. Normalmente ceno a las ocho y me acuesto a las once. Nunca trabajo los domingos.",
+    "checklist": [
+      "co najmniej trzy czasowniki zwrotne",
+      "godziny z a las",
+      "primero / luego / después",
+      "słowo częstotliwości"
+    ],
+    "minWords": 35,
+    "maxWords": 120
+  }
+}

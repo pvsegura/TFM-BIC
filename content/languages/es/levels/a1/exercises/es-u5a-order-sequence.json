@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-order-sequence",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 24,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż zdanie: Najpierw jem śniadanie, a potem biorę prysznic.",
+  "explanation": "Primero…, luego…; ducharse: me ducho.",
+  "configuration": {
+    "items": ["Primero", "desayuno", "y", "luego", "me", "ducho."],
+    "joiner": " "
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-match-time",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Połącz godziny.",
+  "explanation": "Menos cuarto = za piętnaście; y media = wpół do następnej.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "Son las siete y media.",
+        "right": "7:30"
+      },
+      {
+        "left": "Son las ocho menos cuarto.",
+        "right": "7:45"
+      },
+      {
+        "left": "Es la una y diez.",
+        "right": "1:10"
+      },
+      {
+        "left": "Son las tres y cuarto.",
+        "right": "3:15"
+      }
+    ]
+  }
+}

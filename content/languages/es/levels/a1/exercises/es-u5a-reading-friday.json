@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-reading-friday",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: w piątki Carmen wychodzi z koleżankami i wraca późno.",
+  "explanation": "Los viernes sale con sus amigas y vuelve muy tarde.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

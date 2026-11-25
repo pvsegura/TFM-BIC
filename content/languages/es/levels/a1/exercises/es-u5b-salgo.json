@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-salgo",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Los viernes ___ con mis amigos.",
+  "explanation": "Salir: yo salgo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "salgo"
+      },
+      {
+        "id": "opt-b",
+        "text": "salo"
+      },
+      {
+        "id": "opt-c",
+        "text": "sale"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

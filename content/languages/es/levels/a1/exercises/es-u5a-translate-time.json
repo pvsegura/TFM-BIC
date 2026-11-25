@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-translate-time",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 41,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: O której wstajesz?",
+  "explanation": "¿A qué hora…? + te levantas.",
+  "configuration": {
+    "acceptedAnswers": ["¿A qué hora te levantas?", "A qué hora te levantas"],
+    "caseSensitive": false
+  }
+}

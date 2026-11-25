@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-listen-lunch",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Wywiad: Paweł zwykle je obiad w domu.",
+  "explanation": "Normalmente como en la oficina con mis compañeros.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -8,7 +8,7 @@
   "status": "published",
   "order": 50,
   "instructionLanguage": "pl",
-  "book": { "unit": 5, "number": 10, "phase": "transform", "lines": 1 },
+  "book": { "unit": 5, "number": 38, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: O której wstajesz?",
   "explanation": "¿A qué hora…? + te levantas.",
   "configuration": {

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-reading-puente",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 37,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka i kultura: „puente” to dodatkowy dzień wolny między świętem a weekendem.",
+  "explanation": "Los puentes — długie weekendy.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

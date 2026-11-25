@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-listen-sunday",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co Javier robi w niedzielę?",
+  "explanation": "El domingo siempre hago deporte. Salgo a correr al parque.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Biega w parku."
+      },
+      {
+        "id": "opt-b",
+        "text": "Śpi do dziesiątej."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idzie na targ."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

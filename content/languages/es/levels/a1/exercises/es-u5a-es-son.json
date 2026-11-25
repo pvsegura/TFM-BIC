@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-es-son",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Która godzina? 1:20",
+  "explanation": "Pierwsza godzina w liczbie pojedynczej: Es la una y veinte.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Es la una y veinte."
+      },
+      {
+        "id": "opt-b",
+        "text": "Son la una y veinte."
+      },
+      {
+        "id": "opt-c",
+        "text": "Son las uno y veinte."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

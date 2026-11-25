@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-gap-tener-que",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Musimy sprzątać dom w sobotę.",
+  "explanation": "Tener que + bezokolicznik: nosotros tenemos que limpiar.",
+  "configuration": {
+    "text": "___ que ___ la casa el sábado.",
+    "gaps": [
+      {
+        "accepted": ["tenemos"]
+      },
+      {
+        "accepted": ["limpiar"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

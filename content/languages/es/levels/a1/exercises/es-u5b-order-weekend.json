@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-order-weekend",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 31,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Co robisz w weekend?",
+  "explanation": "¿Qué haces + el fin de semana?",
+  "configuration": {
+    "items": ["¿Qué", "haces", "el", "fin", "de", "semana?"],
+    "joiner": " "
+  }
+}

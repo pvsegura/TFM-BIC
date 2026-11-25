@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-reading-carmen",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 34,
+    "phase": "culture"
+  },
+  "prompt": "Czytanka: do której pracuje Carmen w tym tygodniu?",
+  "explanation": "Trabaja de siete a tres.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Do 15:00."
+      },
+      {
+        "id": "opt-b",
+        "text": "Do 19:00."
+      },
+      {
+        "id": "opt-c",
+        "text": "Do 22:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

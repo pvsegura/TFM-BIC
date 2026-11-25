@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-match-chores",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Połącz obowiązki domowe.",
+  "explanation": "Fregar los platos = zmywać; sacar la basura = wynosić śmieci.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "fregar los platos",
+        "right": "zmywać naczynia"
+      },
+      {
+        "left": "sacar la basura",
+        "right": "wynosić śmieci"
+      },
+      {
+        "left": "poner la lavadora",
+        "right": "nastawić pranie"
+      },
+      {
+        "left": "hacer la cama",
+        "right": "ścielić łóżko"
+      }
+    ]
+  }
+}

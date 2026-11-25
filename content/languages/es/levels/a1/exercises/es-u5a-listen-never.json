@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-listen-never",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Wywiad: czego Paweł nigdy nie robi?",
+  "explanation": "¡Nunca veo la tele!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie ogląda telewizji."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie je kolacji."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie chodzi na siłownię."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

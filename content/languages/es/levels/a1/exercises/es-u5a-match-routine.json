@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-match-routine",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Połącz czynności z tłumaczeniem.",
+  "explanation": "Despertarse = budzić się; acostarse = kłaść się spać.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "despertarse",
+        "right": "budzić się"
+      },
+      {
+        "left": "vestirse",
+        "right": "ubierać się"
+      },
+      {
+        "left": "volver a casa",
+        "right": "wracać do domu"
+      },
+      {
+        "left": "acostarse",
+        "right": "kłaść się spać"
+      },
+      {
+        "left": "cenar",
+        "right": "jeść kolację"
+      }
+    ]
+  }
+}

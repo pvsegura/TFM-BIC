@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-hago",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Yo ___ la compra los martes.",
+  "explanation": "Hacer: yo hago.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "hago"
+      },
+      {
+        "id": "opt-b",
+        "text": "hace"
+      },
+      {
+        "id": "opt-c",
+        "text": "haco"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

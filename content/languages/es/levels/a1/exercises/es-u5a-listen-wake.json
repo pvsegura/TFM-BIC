@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-listen-wake",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Wywiad: o której wstaje Paweł?",
+  "explanation": "Me levanto a las seis y media.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "O 6:30."
+      },
+      {
+        "id": "opt-b",
+        "text": "O 7:30."
+      },
+      {
+        "id": "opt-c",
+        "text": "O 6:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

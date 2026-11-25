@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-translate-gym",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 42,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Czasami chodzę na siłownię.",
+  "explanation": "A veces + ir al gimnasio.",
+  "configuration": {
+    "acceptedAnswers": ["A veces voy al gimnasio.", "Voy al gimnasio a veces."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-nunca",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Wybierz poprawne zdanie: Nigdy nie piję kawy.",
+  "explanation": "Nunca przed czasownikiem — bez no; po czasowniku — z no.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nunca bebo café."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nunca no bebo café."
+      },
+      {
+        "id": "opt-c",
+        "text": "Bebo nunca café."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

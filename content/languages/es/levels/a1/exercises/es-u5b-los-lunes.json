@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-los-lunes",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: ___ lunes voy a clase de yoga (co tydzień).",
+  "explanation": "Regularnie: los lunes, bez przyimka.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Los"
+      },
+      {
+        "id": "opt-b",
+        "text": "En"
+      },
+      {
+        "id": "opt-c",
+        "text": "El en"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

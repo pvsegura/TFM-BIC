@@ -8,7 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
-  "book": { "unit": 5, "number": 6, "phase": "structure" },
+  "book": { "unit": 5, "number": 16, "phase": "structure" },
   "prompt": "Które zdanie jest poprawne?",
   "explanation": "Nunca przed czasownikiem — bez no.",
   "configuration": {

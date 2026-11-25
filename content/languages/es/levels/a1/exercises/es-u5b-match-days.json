@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-match-days",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Połącz dni tygodnia.",
+  "explanation": "Miércoles = środa, jueves = czwartek, viernes = piątek.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el miércoles",
+        "right": "środa"
+      },
+      {
+        "left": "el jueves",
+        "right": "czwartek"
+      },
+      {
+        "left": "el viernes",
+        "right": "piątek"
+      },
+      {
+        "left": "el martes",
+        "right": "wtorek"
+      },
+      {
+        "left": "el domingo",
+        "right": "niedziela"
+      }
+    ]
+  }
+}

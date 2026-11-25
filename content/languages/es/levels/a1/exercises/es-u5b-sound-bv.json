@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-sound-bv",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 33,
+    "phase": "sound"
+  },
+  "prompt": "W hiszpańskim b i v wymawia się tak samo.",
+  "explanation": "Tak — dlatego mówi się be de Barcelona / uve de Valencia.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

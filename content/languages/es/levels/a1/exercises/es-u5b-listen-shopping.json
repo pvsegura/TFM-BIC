@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-listen-shopping",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: kiedy Javier robi zakupy?",
+  "explanation": "Yo la hago el martes.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "We wtorek."
+      },
+      {
+        "id": "opt-b",
+        "text": "W poniedziałek."
+      },
+      {
+        "id": "opt-c",
+        "text": "W czwartek."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

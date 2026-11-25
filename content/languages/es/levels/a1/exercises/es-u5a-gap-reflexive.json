@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-gap-reflexive",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij zaimki zwrotne.",
+  "explanation": "Yo me levanto, tú te duchas, nosotros nos acostamos.",
+  "configuration": {
+    "text": "Yo ___ levanto, tú ___ duchas y nosotros ___ acostamos tarde.",
+    "gaps": [
+      {
+        "accepted": ["me"]
+      },
+      {
+        "accepted": ["te"]
+      },
+      {
+        "accepted": ["nos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

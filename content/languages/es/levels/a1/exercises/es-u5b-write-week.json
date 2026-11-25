@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-write-week",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 46,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz wiadomość do nowego współlokatora: twój tydzień, obowiązki domowe i plany na weekend.",
+  "explanation": "Sprawdź los + dzień, tener que i formy hago/salgo/pongo.",
+  "configuration": {
+    "modelAnswer": "Hola, Marta. Los lunes y los miércoles trabajo hasta las siete. Los martes hago la compra y los jueves pongo la lavadora. Tú tienes que sacar la basura y fregar los platos. El sábado salgo con mis amigos y el domingo duermo hasta tarde.",
+    "checklist": [
+      "dni tygodnia z los / el",
+      "tener que",
+      "co najmniej dwa czasowniki z nieregularnym yo",
+      "plan na weekend"
+    ],
+    "minWords": 30,
+    "maxWords": 110
+  }
+}

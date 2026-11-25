@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-saber",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: No ___ cocinar muy bien.",
+  "explanation": "Saber: yo sé (z kreską).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "sé"
+      },
+      {
+        "id": "opt-b",
+        "text": "sabo"
+      },
+      {
+        "id": "opt-c",
+        "text": "se"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

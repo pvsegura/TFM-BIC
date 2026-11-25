@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5a-sound-diphthong",
+  "lessonId": "es-unit-5-my-day",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 32,
+    "phase": "sound"
+  },
+  "prompt": "W me despierto „ie” wymawiamy jako dwie osobne sylaby: [des-pi-er-to].",
+  "explanation": "Ie to dyftong — jedna sylaba: [des-PJER-to].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

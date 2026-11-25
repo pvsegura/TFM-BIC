@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u5b-translate-sundays",
+  "lessonId": "es-unit-5-week",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 5,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: W niedziele śpię do dziesiątej.",
+  "explanation": "Los domingos + duermo.",
+  "configuration": {
+    "acceptedAnswers": ["Los domingos duermo hasta las diez."],
+    "caseSensitive": false
+  }
+}
