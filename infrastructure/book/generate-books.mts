@@ -30,7 +30,8 @@ import type {
   GrammarTopic,
   UnitSectionPhase,
 } from "../../packages/domain/src/index.js";
-import { escapeHtml as e, PHASE_LABELS, renderBlock, repoRoot, SITE } from "./book-shared.mts";
+import { bookTextFor, type BookText, type RenderContext } from "./book-i18n.mts";
+import { escapeHtml as e, icon, PHASE_ICONS, renderBlock, repoRoot, SITE } from "./book-shared.mts";
 import { answerKey, EXERCISE_STYLE, exerciseLabel, renderExercise } from "./print-exercises.mts";
 
 // --- options ------------------------------------------------------------------------------------
@@ -76,12 +77,27 @@ const BROWSERS = [
 const PAGED_JS = path.join(repoRoot, "node_modules/pagedjs/dist/paged.polyfill.js");
 const OUT_DIR = path.join(repoRoot, "infrastructure/book/out", LEVEL);
 const INDEX_FILE = path.join(repoRoot, "content/books", `${COURSE}.json`);
+/** Book-only design choices per course (unit illustrations from the icon bank). */
+const DESIGN_FILE = path.join(repoRoot, "content/books", `${COURSE}.design.json`);
+const DESIGN = existsSync(DESIGN_FILE)
+  ? (JSON.parse(readFileSync(DESIGN_FILE, "utf8")) as {
+      unitIcons?: Record<string, string>;
+      unitTitles?: Record<string, string>;
+    })
+  : {};
 
 const BOOKS = {
-  podrecznik: { title: "Podręcznik", file: "podrecznik" },
-  zeszyt: { title: "Zeszyt ćwiczeń", file: "zeszyt-cwiczen" },
+  podrecznik: { file: "podrecznik" },
+  zeszyt: { file: "zeszyt-cwiczen" },
 } as const;
 type BookKey = keyof typeof BOOKS;
+
+/** Texts in the learner's language; set in main() from the course's instruction language. */
+let INSTRUCTION = "pl";
+let T: BookText = bookTextFor(INSTRUCTION);
+let CTX: RenderContext = { t: T, target: LANGUAGE };
+const bookName = (book: BookKey) => T.books[book];
+const methodTitle = () => T.methodTitle(T.languageName[LANGUAGE] ?? LANGUAGE.toUpperCase());
 
 // --- content ------------------------------------------------------------------------------------
 interface Unit {
@@ -92,13 +108,13 @@ interface Unit {
 }
 
 function unitTitle(number: number, lessons: ContentItem[]): string {
-  if (number === 0) return "Wyzwanie: 7 dni, żeby zacząć mówić";
+  const designed = DESIGN.unitTitles?.[String(number)];
+  if (designed) return designed;
+  if (number === 0) return T.starterUnit;
   // The big unit number is printed next to the title, so "Jednostka 3." is not repeated.
   if (lessons.length === 1)
-    return (
-      (lessons[0]?.title ?? "").replace(/^Jednostka \d+\.\s*/, "") || `Jednostka ${String(number)}`
-    );
-  return `Jednostka ${String(number)}`;
+    return (lessons[0]?.title ?? "").replace(T.unitTitlePrefix, "") || T.unit(number);
+  return T.unit(number);
 }
 
 function unitsOf(catalog: ContentCatalog): Unit[] {
@@ -151,6 +167,11 @@ const BASE_STYLE = `
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { font-family: Georgia, "Times New Roman", serif; font-size: 10.5pt; line-height: 1.45; color: #111; }
 h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
+.ico { vertical-align: -0.18em; flex: none; }
+.section { display: flex; gap: 2.5mm; align-items: center; }
+.section .ico { width: 7mm; height: 7mm; }
+.phase-list { line-height: 1.9; }
+.label .ico, .phase-head .ico { margin-right: 1mm; }
 .book-name { string-set: book content(text); display: none; }
 .front { page: front; break-after: page; }
 .title-page { height: 9.6in; display: flex; flex-direction: column; justify-content: center; text-align: center; }
@@ -213,12 +234,17 @@ h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
 .grid th, .grid td { border: .5pt solid #777; padding: 1mm 2mm; text-align: left; }
 .grid th { background: #e6e6e6; }
 .mission { border: 1.5pt solid #111; }
+/* Interior is black & white: illustrations are printed in grey tones. */
+.figure { margin: 3mm auto; text-align: center; break-inside: avoid; }
+.figure img { max-width: 70%; max-height: 70mm; filter: grayscale(1); }
+.figure figcaption { font-size: 8.5pt; color: #444; margin-top: 1mm; }
+.unit-opener .opener-head { display: flex; justify-content: space-between; align-items: flex-start; }
 ${EXERCISE_STYLE}
 `;
 
 // --- shared front matter ------------------------------------------------------------------------
 function frontMatter(book: BookKey, units: Unit[], tocExtra: { href: string; label: string }[]) {
-  const name = BOOKS[book].title;
+  const name = bookName(book);
   const toc = [
     ...units.map((u) => ({
       href: `#unit-${String(u.number)}`,
@@ -229,28 +255,35 @@ function frontMatter(book: BookKey, units: Unit[], tocExtra: { href: string; lab
   return `<p class="book-name">${e(name)}</p>
 <section class="front"><div class="title-page">
   <p class="brand">Verbysia</p>
-  <h1>Hiszpański metodą PUENTE</h1>
+  <h1>${e(methodTitle())}</h1>
   <p class="level">${LEVEL_LABEL}</p>
   <p class="kind">${e(name)}</p>
 </div></section>
 <section class="front"><div class="imprint">
-  <p><strong>Verbysia · Hiszpański metodą PUENTE · ${LEVEL_LABEL} · ${e(name)}</strong></p>
-  <p>Wydanie 1 · 2026 · © Verbysia. Wszelkie prawa zastrzeżone.</p>
-  <p>Książka i kurs w aplikacji ${printedUrl(SITE)} to jeden kurs: te same jednostki, te same numery ćwiczeń i nagrań.</p>
-  <p>Ilustracje i ikony: [ŹRÓDŁA I LICENCJE DO UZUPEŁNIENIA].</p>
-  <p>[DANE WYDAWCY I ISBN DO UZUPEŁNIENIA]</p>
+  <p><strong>Verbysia · ${e(methodTitle())} · ${LEVEL_LABEL} · ${e(name)}</strong></p>
+  <p>${e(T.edition)}</p>
+  <p>${e(T.sameCourse(printedUrl(SITE)))}</p>
+  <p>${e(T.creditsPlaceholder)}</p>
+  <p>${e(T.publisherPlaceholder)}</p>
 </div></section>
-<section class="front toc"><h2>Spis treści</h2><ol>${toc
+<section class="front toc"><h2>${e(T.contents)}</h2><ol>${toc
     .map((t) => `<li><a href="${t.href}">${e(t.label)}<span class="dots"></span></a></li>`)
     .join("")}</ol></section>`;
 }
 
 // --- Podręcznik ---------------------------------------------------------------------------------
 async function textbookHtml(units: Unit[], glossary: string, grammar: string): Promise<string> {
-  const how = `<section class="front how"><h2>Jak korzystać z podręcznika</h2>
-  <p>Każda jednostka prowadzi przez fazy metody PUENTE: ${Object.values(PHASE_LABELS).map(e).join(" · ")}.</p>
-  <p>Kod QR na początku jednostki otwiera ją w aplikacji: nagrania, ćwiczenia z natychmiastową korektą, trener pamięci i asystent AI. Ćwiczenia do tej jednostki znajdziesz w Zeszycie ćwiczeń pod tym samym numerem.</p>
-  <p>Na końcu: tabele gramatyczne i słowniczek hiszpańsko-polski.</p></section>`;
+  const phaseList = Object.entries(T.phases)
+    .map(([phase, text]) => `${icon(PHASE_ICONS[phase as UnitSectionPhase], 4)} ${e(text)}`)
+    .join("<br>");
+  const how = `<section class="front how"><h2>${e(T.howTextbookTitle)}</h2>
+  ${T.howTextbook("")
+    .map((p, i) =>
+      i === 0
+        ? `<p>${e(p.replace(/: \.$/, ":"))}</p><p class="phase-list">${phaseList}</p>`
+        : `<p>${e(p)}</p>`,
+    )
+    .join("")}</section>`;
   const body = await Promise.all(
     units.map(async (unit) => {
       const goals = unit.lessons.flatMap((l) =>
@@ -263,36 +296,35 @@ async function textbookHtml(units: Unit[], glossary: string, grammar: string): P
           const blocks = lesson.blocks
             .map((b) =>
               b.type === "section"
-                ? `<div data-index="section:${String(unit.number)}/${b.phase}"></div>${renderBlock(b)}`
-                : renderBlock(b),
+                ? `<div data-index="section:${String(unit.number)}/${b.phase}"></div>${renderBlock(b, CTX)}`
+                : renderBlock(b, CTX),
             )
             .join("\n");
           return `<div data-index="lesson:${lesson.id}"></div>${unit.lessons.length > 1 ? `<h3 class="lesson-title">${e(lesson.title)}</h3><p class="lesson-desc">${e(lesson.description)}</p>` : ""}${blocks}`;
         })
         .join("\n");
       return `<section class="unit-opener" id="unit-${String(unit.number)}" data-index="unit:${String(unit.number)}">
-  <p class="big">${String(unit.number)}</p>
+  <div class="opener-head"><p class="big">${String(unit.number)}</p>${DESIGN.unitIcons?.[String(unit.number)] ? icon(DESIGN.unitIcons[String(unit.number)] ?? "", 30, 1.1) : ""}</div>
   <h2>${e(unit.title)}</h2>
-  <p><strong>Po tej jednostce potrafisz:</strong></p>
+  <p><strong>${e(T.goals)}</strong></p>
   <ul class="goals">${goalList.map((g) => `<li>${e(g)}</li>`).join("")}</ul>
-  <div class="qr-box">${await qr(url)}<div><strong>Ta jednostka w aplikacji</strong><br>nagrania, ćwiczenia, trener pamięci<br>${e(printedUrl(url))}</div></div>
+  <div class="qr-box">${await qr(url)}<div>${icon("device-mobile", 5)} <strong>${e(T.qrUnitTitle)}</strong><br>${e(T.qrUnitText)}<br>${e(printedUrl(url))}</div></div>
 </section>
 <section class="unit-body">${lessons}</section>`;
     }),
   );
   return `${frontMatter("podrecznik", units, [
-    { href: "#grammar", label: "Tabele gramatyczne" },
-    { href: "#glossary", label: "Słowniczek hiszpańsko-polski" },
+    { href: "#grammar", label: T.grammarTables },
+    { href: "#glossary", label: T.glossary(T.languageName[LANGUAGE] ?? LANGUAGE) },
   ])}${how}${body.join("\n")}
-<section class="appendix" id="grammar"><h2>Tabele gramatyczne</h2>${grammar}</section>
-<section class="appendix" id="glossary"><h2>Słowniczek hiszpańsko-polski</h2><div class="glossary">${glossary}</div></section>`;
+<section class="appendix" id="grammar"><h2>${e(T.grammarTables)}</h2>${grammar}</section>
+<section class="appendix" id="glossary"><h2>${e(T.glossary(T.languageName[LANGUAGE] ?? LANGUAGE))}</h2><div class="glossary">${glossary}</div></section>`;
 }
 
 // --- Zeszyt ćwiczeń -----------------------------------------------------------------------------
 async function workbookHtml(units: Unit[]): Promise<string> {
-  const how = `<section class="front how"><h2>Jak korzystać z zeszytu</h2>
-  <p>Ćwiczenia mają te same numery co w aplikacji (np. 3.14 = jednostka 3, ćwiczenie 14). Możesz je rozwiązać tutaj albo w aplikacji, gdzie odpowiedź sprawdzi się od razu.</p>
-  <p>Kod QR przy jednostce otwiera jej ćwiczenia w aplikacji. Rozwiązania i transkrypcje nagrań są na końcu zeszytu.</p></section>`;
+  const how = `<section class="front how"><h2>${e(T.howWorkbookTitle)}</h2>
+  ${T.howWorkbook.map((p) => `<p>${e(p)}</p>`).join("")}</section>`;
   const body = await Promise.all(
     units.map(async (unit) => {
       let lastPhase: UnitSectionPhase | undefined;
@@ -302,13 +334,13 @@ async function workbookHtml(units: Unit[]): Promise<string> {
           const phase = x.book?.phase;
           const head =
             phase && phase !== lastPhase
-              ? `<h3 class="phase-head">${e(PHASE_LABELS[phase])}</h3>`
+              ? `<h3 class="phase-head">${icon(PHASE_ICONS[phase], 5)} ${e(T.phases[phase])}</h3>`
               : "";
           lastPhase = phase ?? lastPhase;
           const lessonMark = lessonsSeen.has(x.lessonId)
             ? ""
             : (lessonsSeen.add(x.lessonId), `<div data-index="lesson:${x.lessonId}"></div>`);
-          return `${head}${lessonMark}<div data-index="exercise:${e(exerciseLabel(x))}"></div>${renderExercise(x)}`;
+          return `${head}${lessonMark}<div data-index="exercise:${e(exerciseLabel(x))}"></div>${renderExercise(x, CTX)}`;
         })
         .join("\n");
       const url = shortUrl(unit.number);
@@ -322,8 +354,8 @@ async function workbookHtml(units: Unit[]): Promise<string> {
   const key = units
     .map(
       (u) =>
-        `<h3>Jednostka ${String(u.number)}</h3>${u.exercises
-          .map((x) => `<p><strong>${e(exerciseLabel(x))}</strong> ${e(answerKey(x))}</p>`)
+        `<h3>${e(T.unit(u.number))}</h3>${u.exercises
+          .map((x) => `<p><strong>${e(exerciseLabel(x))}</strong> ${e(answerKey(x, CTX))}</p>`)
           .join("")}`,
     )
     .join("");
@@ -331,15 +363,15 @@ async function workbookHtml(units: Unit[]): Promise<string> {
     .map((u) => {
       const dialogues = u.lessons.flatMap((l) => l.blocks.filter((b) => b.type === "dialogue"));
       if (dialogues.length === 0) return "";
-      return `<h3>Jednostka ${String(u.number)}</h3>${dialogues.map(renderBlock).join("")}`;
+      return `<h3>${e(T.unit(u.number))}</h3>${dialogues.map((d) => renderBlock(d, CTX)).join("")}`;
     })
     .join("");
   return `${frontMatter("zeszyt", units, [
-    { href: "#key", label: "Rozwiązania" },
-    { href: "#transcripts", label: "Transkrypcje nagrań" },
+    { href: "#key", label: T.answerKey },
+    { href: "#transcripts", label: T.transcripts },
   ])}${how}${body.join("\n")}
-<section class="appendix" id="key"><h2>Rozwiązania</h2><div class="key">${key}</div></section>
-<section class="appendix transcript" id="transcripts"><h2>Transkrypcje nagrań</h2>${transcripts}</section>`;
+<section class="appendix" id="key"><h2>${e(T.answerKey)}</h2><div class="key">${key}</div></section>
+<section class="appendix transcript" id="transcripts"><h2>${e(T.transcripts)}</h2>${transcripts}</section>`;
 }
 
 // --- appendices ---------------------------------------------------------------------------------
@@ -369,12 +401,15 @@ function grammarHtml(topics: GrammarTopic[]): string {
             (s) =>
               `${s.heading ? `<h4>${e(s.heading)}</h4>` : ""}${s.text ? `<p>${e(s.text)}</p>` : ""}${
                 s.table
-                  ? renderBlock({
-                      type: "table",
-                      caption: s.table.caption,
-                      columns: s.table.columns,
-                      rows: s.table.rows,
-                    })
+                  ? renderBlock(
+                      {
+                        type: "table",
+                        caption: s.table.caption,
+                        columns: s.table.columns,
+                        rows: s.table.rows,
+                      },
+                      CTX,
+                    )
                   : ""
               }`,
           )
@@ -396,7 +431,7 @@ async function renderBook(
   pdfFile: string,
 ): Promise<Rendered> {
   const render = async (padding: boolean): Promise<Rendered> => {
-    const html = `<!doctype html><html lang="pl"><head><meta charset="utf-8"><title>Verbysia</title>
+    const html = `<!doctype html><html lang="${INSTRUCTION}"><head><meta charset="utf-8"><title>Verbysia</title>
 <style>${BASE_STYLE}</style>
 <script>window.PagedConfig = { auto: true, after: () => { window.__pagedDone = true; } };</script>
 <script src="${pathToFileURL(PAGED_JS).href}"></script></head>
@@ -430,9 +465,10 @@ async function renderCover(browser: Browser, book: BookKey, pages: number, file:
   const height = A4_H + 2 * BLEED;
   const panel = A4_W + BLEED;
   const pad = BLEED + COVER_SAFETY + 0.2;
-  const name = BOOKS[book].title;
+  const name = bookName(book);
+  const other = bookName(book === "podrecznik" ? "zeszyt" : "podrecznik");
   const siteQr = await qr(`${SITE}/k/${COURSE}/1`);
-  const html = `<!doctype html><html lang="pl"><head><meta charset="utf-8"><style>
+  const html = `<!doctype html><html lang="${INSTRUCTION}"><head><meta charset="utf-8"><style>
 @page { size: ${inch(width)} ${inch(height)}; margin: 0; }
 html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 body { margin: 0; width: ${inch(width)}; height: ${inch(height)}; display: flex; font-family: "Segoe UI", Arial, sans-serif; overflow: hidden; }
@@ -453,23 +489,19 @@ body { margin: 0; width: ${inch(width)}; height: ${inch(height)}; display: flex;
 .back .qr svg { width: 1.1in; height: 1.1in; background: #fff; padding: .06in; }
 </style></head><body>
 <div class="panel back">
-  <h2>${book === "podrecznik" ? "Hiszpański od podstaw — po polsku" : "Ćwiczenia do każdej jednostki"}</h2>
-  <p>${
-    book === "podrecznik"
-      ? "Podręcznik kursu Verbysia: dialogi, słownictwo, gramatyka z porównaniem do polskiego, typowe błędy Polaków, czytanki i zadania do mówienia."
-      : "Zeszyt ćwiczeń kursu Verbysia: ćwiczenia ponumerowane tak samo jak w aplikacji, powtórki, rozwiązania i transkrypcje nagrań."
-  }</p>
-  <ul><li>poziom ${LEVEL_LABEL} według ESOKJ</li><li>kody QR do nagrań i ćwiczeń w aplikacji</li><li>razem z ${book === "podrecznik" ? "Zeszytem ćwiczeń" : "Podręcznikiem"} tworzy pełny kurs</li></ul>
+  <h2>${e(book === "podrecznik" ? T.cover.textbookHeadline : T.cover.workbookHeadline)}</h2>
+  <p>${e(book === "podrecznik" ? T.cover.textbookBlurb : T.cover.workbookBlurb)}</p>
+  <ul><li>${e(T.cover.levelLine(LEVEL_LABEL))}</li><li>${e(T.cover.qrLine)}</li><li>${e(T.cover.pairLine(other))}</li></ul>
   <div class="qr">${siteQr}<span>${e(printedUrl(SITE))}</span></div>
 </div>
-<div class="spine">${spine >= 0.25 ? `<span>VERBYSIA · HISZPAŃSKI ${LEVEL_LABEL} · ${e(name.toUpperCase())}</span>` : ""}</div>
+<div class="spine">${spine >= 0.25 ? `<span>VERBYSIA · ${e((T.languageName[LANGUAGE] ?? LANGUAGE).toUpperCase())} ${LEVEL_LABEL} · ${e(name.toUpperCase())}</span>` : ""}</div>
 <div class="panel front">
   <div class="band"></div>
   <p class="brand">Verbysia</p>
-  <h1>Hiszpański<br>metodą PUENTE</h1>
+  <h1>${e(methodTitle()).replace(" ", "<br>")}</h1>
   <p class="level">${LEVEL_LABEL}</p>
   <p class="kind">${e(name)}</p>
-  <p class="foot">Wyjaśnienia po polsku · kody QR do lekcji i ćwiczeń</p>
+  <p class="foot">${e(T.cover.foot)}</p>
 </div></body></html>`;
   writeFileSync(file.replace(/\.pdf$/, ".html"), html, "utf8");
   const page = await browser.newPage();
@@ -485,6 +517,12 @@ async function main() {
   if (!loaded.ok) throw new Error("Content is invalid: run pnpm content:validate");
   const grammar = await loadGrammarReference(path.join(repoRoot, "content"), loaded.catalog);
   const topics = grammar.ok ? grammar.topics : [];
+  const firstLesson = loaded.catalog.content.find(
+    (c) => c.languageId === LANGUAGE && c.levelId === LEVEL && c.type === "lesson",
+  );
+  INSTRUCTION = firstLesson?.instructionLanguage ?? "pl";
+  T = bookTextFor(INSTRUCTION);
+  CTX = { t: T, target: LANGUAGE };
   const units = unitsOf(loaded.catalog);
   if (units.length === 0) throw new Error(`No published units for ${COURSE}.`);
 

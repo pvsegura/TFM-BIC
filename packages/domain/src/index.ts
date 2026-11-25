@@ -53,6 +53,7 @@ export {
   type DialogueLine,
   type ExampleBlock,
   type ExplanationBlock,
+  type ImageBlock,
   type MissionBlock,
   type PitfallBlock,
   type ReadingBlock,

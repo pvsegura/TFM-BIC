@@ -69,7 +69,7 @@ async function main() {
     <div><h2>${escapeHtml(lesson.title)}</h2><p class="desc">${escapeHtml(lesson.description)}</p></div>
     <div class="qr">${qr}<div>Zeskanuj: lekcja i ćwiczenia</div></div>
   </header>
-  ${(lesson.blocks as Block[]).map(renderBlock).join("\n  ")}
+  ${(lesson.blocks as Block[]).map((b) => renderBlock(b)).join("\n  ")}
   <p class="app">W aplikacji: ${String(exercises)} ćwiczeń z wyjaśnieniami po polsku i powtórki słówek w trenerze pamięci. Link: ${escapeHtml(url)}</p>
 </section>`;
     }),

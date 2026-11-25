@@ -7,6 +7,7 @@ import {
   createDefaultExerciseTypeRegistry,
   type Exercise,
 } from "../../packages/domain/src/index.js";
+import { DEFAULT_CONTEXT, type RenderContext } from "./book-i18n.mts";
 import { escapeHtml as e } from "./book-shared.mts";
 
 const registry = createDefaultExerciseTypeRegistry();
@@ -23,32 +24,34 @@ function writingLines(count: number): string {
   return `<div class="lines">${'<div class="line"></div>'.repeat(count)}</div>`;
 }
 
-function body(exercise: Exercise): string {
+function body(exercise: Exercise, ctx: RenderContext): string {
+  const { t, target: lang } = ctx;
   const presented = registry.present(exercise);
   switch (presented.type) {
     case "multiple-choice":
       return `<ol class="choices">${presented.options
         .map(
-          (option, i) => `<li>☐ ${LETTERS[i] ?? ""}) <span lang="es">${e(option.text)}</span></li>`,
+          (option, i) =>
+            `<li>☐ ${LETTERS[i] ?? ""}) <span lang="${lang}">${e(option.text)}</span></li>`,
         )
         .join("")}</ol>`;
     case "true-false":
-      return `<p class="tf">☐ Prawda &nbsp;&nbsp; ☐ Fałsz</p>`;
+      return `<p class="tf">☐ ${e(t.trueLabel)} &nbsp;&nbsp; ☐ ${e(t.falseLabel)}</p>`;
     case "text-answer":
       return writingLines(exercise.book?.lines ?? 1);
     case "ordering":
-      return `<p class="tiles" lang="es">${presented.items
+      return `<p class="tiles" lang="${lang}">${presented.items
         .map((item) => `<span class="tile">${e(item)}</span>`)
         .join(" ")}</p>${writingLines(exercise.book?.lines ?? 1)}`;
     case "matching":
       return `<table class="match"><tbody>${presented.left
         .map(
           (left, i) =>
-            `<tr><td>${String(i + 1)}. <span lang="es">${e(left)}</span></td><td class="box">___</td><td>${LETTERS[i] ?? ""}) ${e(presented.right[i] ?? "")}</td></tr>`,
+            `<tr><td>${String(i + 1)}. <span lang="${lang}">${e(left)}</span></td><td class="box">___</td><td>${LETTERS[i] ?? ""}) ${e(presented.right[i] ?? "")}</td></tr>`,
         )
         .join("")}</tbody></table>`;
     case "gap-fill":
-      return `<p class="gaps" lang="es">${presented.segments
+      return `<p class="gaps" lang="${lang}">${presented.segments
         .map(
           (segment, i) =>
             e(segment) + (i < presented.segments.length - 1 ? '<span class="gap"></span>' : ""),
@@ -62,12 +65,13 @@ function body(exercise: Exercise): string {
 }
 
 /** One exercise as it appears in the workbook. */
-export function renderExercise(exercise: Exercise): string {
-  return `<div class="exercise" id="ex-${e(exerciseLabel(exercise))}"><p class="prompt"><span class="num">${e(exerciseLabel(exercise))}</span> ${e(exercise.prompt)}</p>${body(exercise)}</div>`;
+export function renderExercise(exercise: Exercise, ctx: RenderContext = DEFAULT_CONTEXT): string {
+  return `<div class="exercise" id="ex-${e(exerciseLabel(exercise))}"><p class="prompt"><span class="num">${e(exerciseLabel(exercise))}</span> ${e(exercise.prompt)}</p>${body(exercise, ctx)}</div>`;
 }
 
 /** The answer-key line for an exercise (the "Rozwiązania" pages at the end of the workbook). */
-export function answerKey(exercise: Exercise): string {
+export function answerKey(exercise: Exercise, ctx: RenderContext = DEFAULT_CONTEXT): string {
+  const { t } = ctx;
   switch (exercise.type) {
     case "multiple-choice": {
       const presented = registry.present(exercise);
@@ -76,7 +80,7 @@ export function answerKey(exercise: Exercise): string {
       return `${LETTERS[index] ?? "?"}) ${options[index]?.text ?? ""}`;
     }
     case "true-false":
-      return exercise.configuration.correctAnswer ? "Prawda" : "Fałsz";
+      return exercise.configuration.correctAnswer ? t.trueLabel : t.falseLabel;
     case "text-answer":
       return exercise.configuration.acceptedAnswers.join(" / ");
     case "ordering":
@@ -91,7 +95,7 @@ export function answerKey(exercise: Exercise): string {
     case "gap-fill":
       return exercise.configuration.gaps.map((gap) => gap.accepted.join(" / ")).join("; ");
     case "open-writing":
-      return `Przykład: ${exercise.configuration.modelAnswer}`;
+      return `${t.modelAnswer}: ${exercise.configuration.modelAnswer}`;
   }
 }
 

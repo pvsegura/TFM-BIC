@@ -110,6 +110,8 @@ function toBlock(block: ContentBlock) {
       return { type: block.type, title: block.title, steps: block.steps };
     case "summary":
       return { type: block.type, phrases: block.phrases, canDo: block.canDo };
+    case "image":
+      return { type: block.type, description: block.alt, caption: block.caption ?? null };
   }
 }
 

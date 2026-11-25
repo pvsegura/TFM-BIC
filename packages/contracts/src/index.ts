@@ -26,6 +26,8 @@ export { messageResponseSchema, type MessageResponse } from "./auth/message-resp
 export { languageIdSchema, levelIdSchema, contentIdSchema } from "./content/identifiers.schema.js";
 export {
   contentBlockSchema,
+  IMAGE_ASSET_PATTERN,
+  imageCreditsSchema,
   plainText,
   UNIT_SECTION_PHASE_VALUES,
 } from "./content/content-block.schema.js";

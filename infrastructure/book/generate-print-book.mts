@@ -228,7 +228,7 @@ async function main() {
     <div><p class="num">Rozdział ${String(index + 1)}</p><h2>${escapeHtml(lesson.title)}</h2><p class="desc">${escapeHtml(lesson.description)}</p></div>
     <div class="qr">${qr}<div>lekcja i ćwiczenia</div></div>
   </header>
-  ${(lesson.blocks as Block[]).map(renderBlock).join("\n  ")}
+  ${(lesson.blocks as Block[]).map((b) => renderBlock(b)).join("\n  ")}
   <p class="app">W aplikacji: ${String(exerciseCount.get(lesson.id) ?? 0)} ćwiczeń z wyjaśnieniami po polsku, nagrania i powtórki słówek. ${escapeHtml(url.replace("https://", ""))}</p>
 </section>`;
     }),

@@ -115,7 +115,20 @@ export interface SummaryBlock {
   canDo: string[];
 }
 
+/**
+ * An illustration from content/images (file name with extension). Its source and licence are in
+ * content/images/credits.json — the content validator refuses an image without credits.
+ */
+export interface ImageBlock {
+  type: "image";
+  asset: string;
+  /** Describes the image for screen readers, in the instruction language. */
+  alt: string;
+  caption?: string | undefined;
+}
+
 export type ContentBlock =
+  | ImageBlock
   | ExplanationBlock
   | ExampleBlock
   | DialogueBlock

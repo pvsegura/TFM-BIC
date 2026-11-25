@@ -4,6 +4,7 @@ import path from "node:path";
 import {
   contentFileSchema,
   exerciseFileSchema,
+  imageCreditsSchema,
   languageFileSchema,
   phoneticFileSchema,
   vocabularyFileSchema,
@@ -449,6 +450,48 @@ async function loadLanguage(
  *   content/languages/<languageId>/vocabulary/<categoryId>.json
  *   content/languages/<languageId>/phonetics/<topicId>.json
  */
+/**
+ * Every image a content item uses must exist in content/images and have an entry in
+ * content/images/credits.json (where it comes from and under which licence) — the books print
+ * those credits, and nothing without a known licence is published.
+ */
+async function checkImageCredits(
+  contentRoot: string,
+  content: readonly ContentItem[],
+  issues: ContentIssue[],
+): Promise<void> {
+  const used = new Map<string, string>();
+  for (const item of content) {
+    for (const block of item.blocks) {
+      if (block.type === "image" && !used.has(block.asset)) used.set(block.asset, item.id);
+    }
+  }
+  if (used.size === 0) return;
+  const imagesDir = path.join(contentRoot, "images");
+  const files = new Set(((await readDirectory(imagesDir)) ?? []).map((entry) => entry.name));
+  const credits = files.has("credits.json")
+    ? await readParsedJson(
+        imageCreditsSchema,
+        path.join(imagesDir, "credits.json"),
+        "images/credits.json",
+        issues,
+      )
+    : undefined;
+  for (const [asset, itemId] of used) {
+    if (!files.has(asset)) {
+      issues.push({
+        location: `content ${itemId}`,
+        message: `image "${asset}" is not in content/images.`,
+      });
+    } else if (!credits?.[asset]) {
+      issues.push({
+        location: "images/credits.json",
+        message: `image "${asset}" has no source/licence entry.`,
+      });
+    }
+  }
+}
+
 export async function loadContentCatalog(contentRoot: string): Promise<LoadContentResult> {
   const languagesDir = path.join(contentRoot, "languages");
   const languageFolders = await readDirectory(languagesDir);
@@ -473,6 +516,8 @@ export async function loadContentCatalog(contentRoot: string): Promise<LoadConte
       await loadLanguage(languagesDir, folder.name, catalog, issues);
     }
   }
+
+  await checkImageCredits(contentRoot, catalog.content, issues);
 
   if (issues.length === 0) {
     for (const issue of validateContentCatalog(catalog)) {

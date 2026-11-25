@@ -1,0 +1,20 @@
+{
+  "unitIcons": {
+    "0": "rocket",
+    "1": "id-badge-2",
+    "2": "users",
+    "3": "map-pin",
+    "4": "tools-kitchen-2",
+    "5": "clock",
+    "6": "heart",
+    "7": "shopping-bag",
+    "8": "home",
+    "9": "umbrella",
+    "10": "bus",
+    "11": "stethoscope",
+    "12": "trophy"
+  },
+  "unitTitles": {
+    "1": "¡Hola! Me llamo… — pierwsze kroki"
+  }
+}

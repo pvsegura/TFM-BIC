@@ -123,6 +123,16 @@ const summaryBlockSchema = z.strictObject({
   canDo: z.array(plainText(200)).min(1).max(10),
 });
 
+/** content/images/{asset}: lowercase slug + image extension; never a path. */
+export const IMAGE_ASSET_PATTERN = /^[a-z0-9]+(?:-[a-z0-9]+)*\.(?:png|jpg|webp|svg)$/;
+
+const imageBlockSchema = z.strictObject({
+  type: z.literal("image"),
+  asset: z.string().max(80).regex(IMAGE_ASSET_PATTERN),
+  alt: plainText(300),
+  caption: plainText(200).optional(),
+});
+
 /** The one definition of a content body block, shared by the on-disk format
  * and the API. A `type` not listed here is invalid — never rendered. */
 export const contentBlockSchema = z.discriminatedUnion("type", [
@@ -137,7 +147,23 @@ export const contentBlockSchema = z.discriminatedUnion("type", [
   tableBlockSchema,
   missionBlockSchema,
   summaryBlockSchema,
+  imageBlockSchema,
 ]);
 
 /** A full unit (all PUENTE sections) fits; anything longer should be split into lessons. */
 export const MAX_BLOCKS_PER_ITEM = 150;
+
+/**
+ * content/images/credits.json — where each illustration comes from (PLAN-LIBROS.md §11.2):
+ * commissioned illustration, AI-generated, an icon bank or our own drawing, with its licence.
+ */
+export const imageCreditsSchema = z.record(
+  z.string().regex(IMAGE_ASSET_PATTERN),
+  z.strictObject({
+    source: z.enum(["illustration", "ai", "icon-bank", "own"]),
+    licence: plainText(200),
+    author: plainText(200).optional(),
+    tool: plainText(200).optional(),
+    url: z.url().optional(),
+  }),
+);

@@ -44,3 +44,4 @@ Thumbs.db
 
 # Verbysia book builds (the full book is a paid product: never committed)
 infrastructure/book/out/
+apps/web/public/content-images/

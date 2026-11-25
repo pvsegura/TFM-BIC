@@ -276,6 +276,26 @@ function SummaryView({
   );
 }
 
+/** An illustration; the files are copied from content/images into the web's public folder at build. */
+function ImageView({
+  block,
+  instructionLanguage,
+}: BlockProps<Extract<ContentBlock, { type: "image" }>>) {
+  return (
+    <figure lang={instructionLanguage} className="mx-auto max-w-md">
+      <img
+        src={`/content-images/${encodeURIComponent(block.asset)}`}
+        alt={block.alt}
+        loading="lazy"
+        className="w-full rounded-lg"
+      />
+      {block.caption ? (
+        <figcaption className="mt-1 text-center text-sm opacity-75">{block.caption}</figcaption>
+      ) : null}
+    </figure>
+  );
+}
+
 function UnsupportedView() {
   return (
     <p className="rounded-lg border border-dashed border-primary/30 px-4 py-3 text-sm dark:border-surface/30">
@@ -320,6 +340,8 @@ export function ContentBlocks({ blocks, language, instructionLanguage }: Content
             return <MissionView key={key} block={block} {...common} />;
           case "summary":
             return <SummaryView key={key} block={block} {...common} />;
+          case "image":
+            return <ImageView key={key} block={block} {...common} />;
           default:
             return <UnsupportedView key={key} />;
         }
