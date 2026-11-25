@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-present-regular",
+  "languageId": "es",
+  "status": "published",
+  "order": 10,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Czas teraźniejszy: czasowniki regularne",
+  "description": "Trzy wzory odmiany: -ar, -er, -ir.",
+  "sections": [
+    {
+      "text": "Hiszpańskie czasowniki dzielą się na trzy grupy według końcówki bezokolicznika: -ar, -er, -ir. W czasownikach regularnych odcinasz końcówkę i dodajesz końcówki osobowe. Zaimek osobowy zwykle pomijamy, bo końcówka pokazuje, kto działa.",
+      "table": {
+        "columns": ["Osoba", "hablar (mówić)", "comer (jeść)", "vivir (mieszkać)"],
+        "rows": [
+          ["yo", "hablo", "como", "vivo"],
+          ["tú", "hablas", "comes", "vives"],
+          ["él / ella / usted", "habla", "come", "vive"],
+          ["nosotros / nosotras", "hablamos", "comemos", "vivimos"],
+          ["vosotros / vosotras", "habláis", "coméis", "vivís"],
+          ["ellos / ellas / ustedes", "hablan", "comen", "viven"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Hablo polaco y un poco de español.",
+          "translation": "Mówię po polsku i trochę po hiszpańsku."
+        },
+        {
+          "text": "¿Dónde vivís?",
+          "translation": "Gdzie mieszkacie?"
+        }
+      ]
+    },
+    {
+      "heading": "Częste czasowniki regularne",
+      "table": {
+        "columns": ["-ar", "-er", "-ir"],
+        "rows": [
+          ["trabajar — pracować", "beber — pić", "escribir — pisać"],
+          ["estudiar — uczyć się", "leer — czytać", "abrir — otwierać"],
+          ["escuchar — słuchać", "aprender — uczyć się (czegoś)", "subir — wchodzić"],
+          ["comprar — kupować", "comprender — rozumieć", "recibir — otrzymywać"],
+          ["llegar — przybywać", "correr — biegać", "compartir — dzielić się"],
+          ["necesitar — potrzebować", "vender — sprzedawać", "decidir — decydować"],
+          ["cocinar — gotować", "deber — musieć, być winnym", "asistir — uczęszczać"]
+        ]
+      }
+    }
+  ]
+}

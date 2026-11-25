@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-key-irregulars",
+  "languageId": "es",
+  "status": "published",
+  "order": 20,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Ser, estar, tener, ir",
+  "description": "Cztery najważniejsze czasowniki nieregularne.",
+  "sections": [
+    {
+      "text": "Te cztery czasowniki są nieregularne i występują w prawie każdej rozmowie. Ser i estar to dwa odpowiedniki polskiego „być”: ser — kim/czym ktoś jest (tożsamość, pochodzenie, zawód, cechy), estar — gdzie jest i w jakim stanie się znajduje.",
+      "table": {
+        "columns": ["Osoba", "ser (być)", "estar (być)", "tener (mieć)", "ir (iść, jechać)"],
+        "rows": [
+          ["yo", "soy", "estoy", "tengo", "voy"],
+          ["tú", "eres", "estás", "tienes", "vas"],
+          ["él / ella / usted", "es", "está", "tiene", "va"],
+          ["nosotros / nosotras", "somos", "estamos", "tenemos", "vamos"],
+          ["vosotros / vosotras", "sois", "estáis", "tenéis", "vais"],
+          ["ellos / ellas / ustedes", "son", "están", "tienen", "van"]
+        ]
+      }
+    },
+    {
+      "heading": "Ser czy estar?",
+      "table": {
+        "columns": ["ser", "estar"],
+        "rows": [
+          ["tożsamość: Soy Ana.", "miejsce: Estoy en casa."],
+          ["pochodzenie: Es de Polonia.", "stan: Está cansada."],
+          ["zawód: Es médico.", "samopoczucie: ¿Cómo estás? — Bien."],
+          ["cechy: La casa es grande.", "stan cywilny (zwykle): Está casado."],
+          ["godzina, data: Son las tres.", "wynik działania: La puerta está abierta."]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Marta es simpática, pero hoy está nerviosa.",
+          "translation": "Marta jest sympatyczna, ale dziś jest zdenerwowana."
+        }
+      ]
+    }
+  ]
+}

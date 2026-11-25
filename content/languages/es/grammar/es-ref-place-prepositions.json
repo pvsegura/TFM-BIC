@@ -1,0 +1,53 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-place-prepositions",
+  "languageId": "es",
+  "status": "published",
+  "order": 140,
+  "category": "prepositions",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Przysłówki miejsca i przyimki",
+  "description": "Aquí, allí, cerca de, al lado de, a, en, de, con, para.",
+  "sections": [
+    {
+      "heading": "Gdzie?",
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+        "rows": [
+          ["aquí", "tutaj", "allí / ahí", "tam"],
+          ["cerca (de)", "blisko", "lejos (de)", "daleko"],
+          ["al lado (de)", "obok", "enfrente (de)", "naprzeciwko"],
+          ["delante (de)", "przed", "detrás (de)", "za"],
+          ["encima (de)", "na, nad", "debajo (de)", "pod"],
+          ["dentro (de)", "wewnątrz", "fuera (de)", "na zewnątrz"],
+          ["a la derecha (de)", "na prawo", "a la izquierda (de)", "na lewo"],
+          ["entre", "między", "todo recto", "prosto"]
+        ]
+      }
+    },
+    {
+      "heading": "Najważniejsze przyimki",
+      "table": {
+        "columns": ["Przyimek", "Użycie", "Przykład"],
+        "rows": [
+          ["a", "kierunek, godzina", "Voy a Madrid. A las tres."],
+          ["en", "miejsce, środek transportu", "Estoy en casa. Voy en tren."],
+          ["de", "pochodzenie, przynależność, materiał", "Soy de Polonia. El libro de Ana."],
+          ["con", "z (kim, czym)", "Café con leche. Vivo con mi novia."],
+          ["sin", "bez", "Agua sin gas."],
+          ["para", "dla, aby (cel)", "Es para ti. Estudio para trabajar en España."],
+          ["por", "przez, z powodu, po (pora dnia)", "Por la mañana. Gracias por todo."],
+          ["desde … hasta", "od … do", "Desde las nueve hasta las cinco."]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Voy en autobús, pero vuelvo a pie.",
+          "translation": "Jadę autobusem, a wracam pieszo.",
+          "note": "Środek transportu z en; ale a pie (pieszo)."
+        }
+      ]
+    }
+  ]
+}

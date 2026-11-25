@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-adjectives",
+  "languageId": "es",
+  "status": "published",
+  "order": 110,
+  "category": "adjectives",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Przymiotniki: zgoda, miejsce, kolory",
+  "description": "Jak przymiotnik zmienia się z rzeczownikiem.",
+  "sections": [
+    {
+      "text": "Przymiotnik zgadza się z rzeczownikiem w rodzaju i liczbie i zwykle stoi po nim: un coche rojo, una casa roja, unos coches rojos, unas casas rojas. Przymiotniki na -e i na spółgłoskę mają jedną formę dla obu rodzajów (grande, azul, joven).",
+      "table": {
+        "columns": ["Forma podstawowa", "Męski", "Żeński", "Męski mn.", "Żeński mn."],
+        "rows": [
+          ["-o", "alto", "alta", "altos", "altas"],
+          ["-e", "grande", "grande", "grandes", "grandes"],
+          ["spółgłoska", "azul", "azul", "azules", "azules"],
+          ["-or (narodowości, -dor)", "trabajador", "trabajadora", "trabajadores", "trabajadoras"]
+        ]
+      }
+    },
+    {
+      "heading": "Kolory",
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+        "rows": [
+          ["blanco/a", "biały", "rojo/a", "czerwony"],
+          ["negro/a", "czarny", "amarillo/a", "żółty"],
+          ["gris", "szary", "verde", "zielony"],
+          ["azul", "niebieski", "naranja", "pomarańczowy"],
+          ["marrón", "brązowy", "rosa", "różowy"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Hoy es un buen día.",
+          "translation": "Dziś jest dobry dzień.",
+          "note": "Bueno → buen, malo → mal przed rzeczownikiem męskim."
+        },
+        {
+          "text": "Madrid es una gran ciudad.",
+          "translation": "Madryt to wielkie miasto.",
+          "note": "Grande → gran przed rzeczownikiem znaczy „wielki”."
+        }
+      ]
+    }
+  ]
+}

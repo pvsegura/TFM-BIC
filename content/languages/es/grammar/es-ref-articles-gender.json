@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-articles-gender",
+  "languageId": "es",
+  "status": "published",
+  "order": 100,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Rodzajniki, rodzaj i liczba mnoga",
+  "description": "El, la, un, una i reguły rodzaju rzeczowników.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Rodzajnik", "męski", "żeński", "męski mn.", "żeński mn."],
+        "rows": [
+          ["określony", "el", "la", "los", "las"],
+          ["nieokreślony", "un", "una", "unos", "unas"]
+        ]
+      },
+      "text": "Po a i de rodzajnik el łączy się z przyimkiem: a + el = al, de + el = del (Voy al cine. Vengo del trabajo)."
+    },
+    {
+      "heading": "Reguły rodzaju",
+      "table": {
+        "columns": ["Zwykle męskie", "Zwykle żeńskie", "Wyjątki do zapamiętania"],
+        "rows": [
+          ["-o: el libro", "-a: la casa", "el día, el mapa, el sofá"],
+          ["-or: el color", "-ción, -sión: la canción", "la mano, la foto, la moto"],
+          ["-aje: el viaje", "-dad, -tad: la ciudad", "el problema, el idioma, el tema"],
+          ["dni, miesiące, języki", "-umbre: la costumbre", "la radio, la flor"]
+        ]
+      }
+    },
+    {
+      "heading": "Liczba mnoga",
+      "table": {
+        "columns": ["Zakończenie", "Reguła", "Przykład"],
+        "rows": [
+          ["samogłoska", "+ s", "la casa → las casas"],
+          ["spółgłoska", "+ es", "la ciudad → las ciudades"],
+          ["-z", "z → ces", "el lápiz → los lápices"],
+          ["-s bez akcentu", "bez zmian", "el lunes → los lunes"]
+        ]
+      }
+    }
+  ]
+}

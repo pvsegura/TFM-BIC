@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-word-formation",
+  "languageId": "es",
+  "status": "published",
+  "order": 170,
+  "category": "word-formation",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Słowotwórstwo: końcówki, które warto znać",
+  "description": "-ción, -dad, -mente, -ero, -ito i przedrostki.",
+  "sections": [
+    {
+      "text": "Wiele hiszpańskich słów rozpoznasz dzięki typowym końcówkom — często odpowiadają polskim.",
+      "table": {
+        "columns": ["Końcówka", "Znaczenie", "Przykłady", "Polski odpowiednik"],
+        "rows": [
+          [
+            "-ción",
+            "czynność, wynik (ż.)",
+            "la información, la estación",
+            "-cja: informacja, stacja"
+          ],
+          [
+            "-dad / -tad",
+            "cecha, stan (ż.)",
+            "la ciudad, la libertad, la universidad",
+            "-ość: wolność"
+          ],
+          ["-mente", "przysłówek", "rápidamente, normalmente", "-nie / -wo"],
+          [
+            "-ero / -era",
+            "zawód, pojemnik",
+            "el panadero, la cocinera, el azucarero",
+            "-arz: piekarz"
+          ],
+          ["-ista", "zawód, zwolennik", "el / la dentista, el / la taxista", "-ista: dentysta"],
+          ["-ería", "sklep, miejsce", "la panadería, la librería", "-arnia: piekarnia"],
+          ["-ito / -ita", "zdrobnienie", "un momentito, la casita", "-ek / -ka: chwileczka"],
+          ["-ísimo", "bardzo", "carísimo, buenísimo", "bardzo drogi, świetny"]
+        ]
+      }
+    },
+    {
+      "heading": "Przedrostki",
+      "table": {
+        "columns": ["Przedrostek", "Znaczenie", "Przykład"],
+        "rows": [
+          ["des-", "przeciwieństwo", "hacer → deshacer, conocido → desconocido"],
+          ["in- / im-", "nie-", "posible → imposible, útil → inútil"],
+          ["re-", "ponownie", "leer → releer, hacer → rehacer"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "La librería no es una biblioteca.",
+          "translation": "Librería to księgarnia, a nie biblioteka.",
+          "note": "Fałszywy przyjaciel: biblioteka = la biblioteca."
+        }
+      ]
+    }
+  ]
+}

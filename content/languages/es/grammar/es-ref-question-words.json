@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-question-words",
+  "languageId": "es",
+  "status": "published",
+  "order": 90,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Słowa pytające",
+  "description": "Qué, quién, dónde, cuándo, cuánto, cómo, cuál, por qué.",
+  "sections": [
+    {
+      "text": "Słowa pytające zawsze mają kreskę (tilde) i stoją na początku pytania, po odwróconym pytajniku ¿.",
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Przykład"],
+        "rows": [
+          ["¿Qué?", "Co? Jaki?", "¿Qué quieres tomar?"],
+          ["¿Quién? / ¿Quiénes?", "Kto?", "¿Quién es ese chico?"],
+          ["¿Dónde? / ¿Adónde?", "Gdzie? / Dokąd?", "¿Dónde vives? ¿Adónde vas?"],
+          ["¿De dónde?", "Skąd?", "¿De dónde eres?"],
+          ["¿Cuándo?", "Kiedy?", "¿Cuándo es tu cumpleaños?"],
+          ["¿Cuánto / Cuánta / Cuántos / Cuántas?", "Ile?", "¿Cuántos años tienes?"],
+          ["¿Cómo?", "Jak?", "¿Cómo te llamas?"],
+          ["¿Cuál? / ¿Cuáles?", "Który? Jaki?", "¿Cuál es tu número?"],
+          ["¿Por qué?", "Dlaczego?", "¿Por qué estudias español?"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "¿Por qué estudias español? — Porque me gusta España.",
+          "translation": "Dlaczego uczysz się hiszpańskiego? — Bo lubię Hiszpanię.",
+          "note": "¿Por qué? (pytanie) — porque (odpowiedź), razem i bez kreski."
+        }
+      ]
+    }
+  ]
+}

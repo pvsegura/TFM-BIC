@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-gustar",
+  "languageId": "es",
+  "status": "published",
+  "order": 50,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Gustar, encantar, doler",
+  "description": "Czasowniki, w których podmiotem jest rzecz, która się podoba lub boli.",
+  "sections": [
+    {
+      "text": "W zdaniu Me gusta el café podmiotem jest kawa: to ona „podoba się mnie”. Dlatego czasownik ma formę gusta (jedna rzecz, czasownik w bezokoliczniku) albo gustan (wiele rzeczy). Osobę wskazuje zaimek przed czasownikiem: me, te, le, nos, os, les.",
+      "table": {
+        "columns": ["Komu?", "Zaimek", "jedna rzecz / czynność", "wiele rzeczy"],
+        "rows": [
+          ["(a mí)", "me", "me gusta el té", "me gustan los gatos"],
+          ["(a ti)", "te", "te gusta bailar", "te gustan las películas"],
+          ["(a él / ella / usted)", "le", "le gusta la música", "le gustan los deportes"],
+          ["(a nosotros)", "nos", "nos gusta viajar", "nos gustan las playas"],
+          ["(a vosotros)", "os", "os gusta el fútbol", "os gustan los conciertos"],
+          ["(a ellos / ustedes)", "les", "les gusta cocinar", "les gustan los libros"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Me encanta el chocolate.",
+          "translation": "Uwielbiam czekoladę."
+        },
+        {
+          "text": "Me duelen los pies.",
+          "translation": "Bolą mnie stopy.",
+          "note": "Doler działa tak samo: me duele la cabeza / me duelen los pies."
+        },
+        {
+          "text": "—No me gusta el café. —A mí tampoco.",
+          "translation": "—Nie lubię kawy. —Ja też nie."
+        }
+      ]
+    }
+  ]
+}

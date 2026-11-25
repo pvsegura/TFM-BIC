@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-time-adverbs",
+  "languageId": "es",
+  "status": "published",
+  "order": 120,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Przysłówki i wyrażenia czasu",
+  "description": "Kiedy i jak często: hoy, siempre, a veces, todavía…",
+  "sections": [
+    {
+      "heading": "Kiedy?",
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+        "rows": [
+          ["hoy", "dziś", "ahora", "teraz"],
+          ["mañana", "jutro", "luego / después", "potem"],
+          ["ayer", "wczoraj", "antes", "wcześniej, przedtem"],
+          ["pasado mañana", "pojutrze", "pronto", "wkrótce"],
+          ["anteayer", "przedwczoraj", "temprano", "wcześnie"],
+          ["esta semana", "w tym tygodniu", "tarde", "późno"],
+          ["el lunes", "w poniedziałek", "ya", "już"],
+          ["los lunes", "w poniedziałki", "todavía", "jeszcze, wciąż"]
+        ]
+      }
+    },
+    {
+      "heading": "Jak często?",
+      "table": {
+        "columns": ["Hiszpański", "Polski"],
+        "rows": [
+          ["siempre", "zawsze"],
+          ["casi siempre", "prawie zawsze"],
+          ["normalmente / generalmente", "zwykle"],
+          ["a menudo / muchas veces", "często"],
+          ["a veces", "czasami"],
+          ["pocas veces", "rzadko"],
+          ["casi nunca", "prawie nigdy"],
+          ["nunca", "nigdy"],
+          ["todos los días / cada día", "codziennie"],
+          ["una vez a la semana", "raz w tygodniu"],
+          ["dos veces al mes", "dwa razy w miesiącu"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Nunca bebo café por la noche.",
+          "translation": "Nigdy nie piję kawy wieczorem.",
+          "note": "Nunca przed czasownikiem bez no; po czasowniku z no: No bebo nunca café."
+        },
+        {
+          "text": "Mañana por la mañana tengo clase.",
+          "translation": "Jutro rano mam zajęcia.",
+          "note": "Mañana = jutro; la mañana = ranek."
+        }
+      ]
+    }
+  ]
+}

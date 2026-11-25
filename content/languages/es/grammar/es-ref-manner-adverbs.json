@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-manner-adverbs",
+  "languageId": "es",
+  "status": "published",
+  "order": 130,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Przysłówki sposobu i ilości",
+  "description": "Bien, mal, despacio i przysłówki na -mente.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+        "rows": [
+          ["bien", "dobrze", "mal", "źle"],
+          ["mejor", "lepiej", "peor", "gorzej"],
+          ["despacio", "wolno", "rápido", "szybko"],
+          ["así", "tak, w ten sposób", "regular", "tak sobie"],
+          ["muy", "bardzo (+ przymiotnik)", "mucho", "dużo, bardzo (+ czasownik)"],
+          ["poco", "mało", "bastante", "dość"],
+          ["demasiado", "za bardzo, za dużo", "casi", "prawie"]
+        ]
+      }
+    },
+    {
+      "heading": "Przysłówki na -mente",
+      "text": "Wiele przysłówków tworzymy od żeńskiej formy przymiotnika + -mente (jak polskie -nie, -wie): rápida → rápidamente. Przymiotniki z jedną formą dostają -mente bez zmian: fácil → fácilmente, normal → normalmente. Kreska zostaje tam, gdzie była w przymiotniku.",
+      "table": {
+        "columns": ["Przymiotnik", "Przysłówek", "Polski"],
+        "rows": [
+          ["rápido/a", "rápidamente", "szybko"],
+          ["tranquilo/a", "tranquilamente", "spokojnie"],
+          ["fácil", "fácilmente", "łatwo"],
+          ["normal", "normalmente", "zwykle, normalnie"],
+          ["general", "generalmente", "ogólnie, zazwyczaj"],
+          ["perfecto/a", "perfectamente", "doskonale"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Hablas muy bien español.",
+          "translation": "Bardzo dobrze mówisz po hiszpańsku.",
+          "note": "Muy przed przymiotnikiem/przysłówkiem, mucho po czasowniku: Trabajo mucho."
+        }
+      ]
+    }
+  ]
+}

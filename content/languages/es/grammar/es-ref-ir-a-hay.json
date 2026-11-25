@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-ir-a-hay",
+  "languageId": "es",
+  "status": "published",
+  "order": 60,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Ir a + bezokolicznik; hay czy está",
+  "description": "Plany na przyszłość i mówienie o tym, co gdzie jest.",
+  "sections": [
+    {
+      "heading": "Ir a + bezokolicznik",
+      "text": "Plany i zamiary wyrażamy konstrukcją ir (w odpowiedniej osobie) + a + bezokolicznik — jak polskie „zamierzam”, „będę robić”.",
+      "examples": [
+        {
+          "text": "Este verano voy a viajar a Andalucía.",
+          "translation": "Tego lata pojadę do Andaluzji."
+        },
+        {
+          "text": "¿Qué vais a hacer el sábado?",
+          "translation": "Co będziecie robić w sobotę?"
+        }
+      ]
+    },
+    {
+      "heading": "Hay czy está?",
+      "text": "Hay (jest, są — forma stała) mówi, że coś istnieje, i łączy się z un/una, liczbami lub rzeczownikiem bez rodzajnika. Está / están mówi, gdzie znajduje się rzecz znana, i łączy się z el/la/los/las lub imieniem.",
+      "table": {
+        "columns": ["hay", "está / están"],
+        "rows": [
+          ["Hay una farmacia cerca.", "La farmacia está cerca."],
+          ["Hay dos bancos en la calle.", "Los bancos están en la calle Mayor."],
+          ["¿Hay leche?", "¿Dónde está la leche?"]
+        ]
+      }
+    }
+  ]
+}

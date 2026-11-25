@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-pronouns",
+  "languageId": "es",
+  "status": "published",
+  "order": 80,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Zaimki osobowe, zwrotne i dzierżawcze",
+  "description": "Wszystkie zaimki potrzebne na poziomie A1 w jednym miejscu.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Podmiot", "Zwrotny", "Po przyimku", "Dzierżawczy (przed rzeczownikiem)"],
+        "rows": [
+          ["yo — ja", "me", "mí (conmigo)", "mi, mis"],
+          ["tú — ty", "te", "ti (contigo)", "tu, tus"],
+          ["él / ella — on / ona", "se", "él / ella", "su, sus"],
+          ["usted — Pan / Pani", "se", "usted", "su, sus"],
+          ["nosotros / nosotras — my", "nos", "nosotros / nosotras", "nuestro/a, nuestros/as"],
+          ["vosotros / vosotras — wy", "os", "vosotros / vosotras", "vuestro/a, vuestros/as"],
+          ["ellos / ellas — oni / one", "se", "ellos / ellas", "su, sus"],
+          ["ustedes — Państwo", "se", "ustedes", "su, sus"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "¿Vienes conmigo?",
+          "translation": "Pójdziesz ze mną?",
+          "note": "Con + mí / ti = conmigo, contigo."
+        },
+        {
+          "text": "Este regalo es para ti.",
+          "translation": "Ten prezent jest dla ciebie.",
+          "note": "Po przyimku: mí z kreską (ja), mi bez kreski znaczy „mój”."
+        }
+      ]
+    },
+    {
+      "heading": "Kiedy dodajemy zaimek podmiotu?",
+      "text": "Zaimek podmiotu (yo, tú…) zwykle pomijamy, bo osobę pokazuje końcówka czasownika. Dodajemy go dla kontrastu (Yo soy de Polonia, ¿y tú?), dla podkreślenia albo gdy forma czasownika mogłaby być niejasna (él / ella / usted mają tę samą formę)."
+    }
+  ]
+}

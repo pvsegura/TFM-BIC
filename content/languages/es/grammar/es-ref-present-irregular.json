@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-present-irregular",
+  "languageId": "es",
+  "status": "published",
+  "order": 30,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Czas teraźniejszy: czasowniki nieregularne",
+  "description": "Zmiany samogłoski w temacie i nieregularna 1. osoba.",
+  "sections": [
+    {
+      "text": "W wielu częstych czasownikach samogłoska tematu zmienia się, gdy pada na nią akcent: e → ie, o → ue, e → i. Zmiana nie dotyczy form nosotros i vosotros — w tabeli tworzą one „podeszwę buta”, dlatego mówimy o czasownikach „bota”.",
+      "table": {
+        "columns": [
+          "Osoba",
+          "querer (e → ie)",
+          "poder (o → ue)",
+          "pedir (e → i)",
+          "jugar (u → ue)"
+        ],
+        "rows": [
+          ["yo", "quiero", "puedo", "pido", "juego"],
+          ["tú", "quieres", "puedes", "pides", "juegas"],
+          ["él / ella / usted", "quiere", "puede", "pide", "juega"],
+          ["nosotros / nosotras", "queremos", "podemos", "pedimos", "jugamos"],
+          ["vosotros / vosotras", "queréis", "podéis", "pedís", "jugáis"],
+          ["ellos / ellas / ustedes", "quieren", "pueden", "piden", "juegan"]
+        ]
+      }
+    },
+    {
+      "heading": "Inne czasowniki z tymi zmianami",
+      "table": {
+        "columns": ["e → ie", "o → ue", "e → i"],
+        "rows": [
+          ["empezar — zaczynać", "dormir — spać", "repetir — powtarzać"],
+          ["preferir — woleć", "volver — wracać", "servir — podawać"],
+          ["pensar — myśleć", "encontrar — znajdować", "seguir — kontynuować"],
+          ["entender — rozumieć", "costar — kosztować", "vestirse — ubierać się"],
+          ["cerrar — zamykać", "acostarse — kłaść się spać", "elegir — wybierać"]
+        ]
+      }
+    },
+    {
+      "heading": "Nieregularna tylko 1. osoba (yo)",
+      "table": {
+        "columns": ["Bezokolicznik", "yo", "pozostałe osoby"],
+        "rows": [
+          ["hacer — robić", "hago", "haces, hace, hacemos…"],
+          ["poner — kłaść", "pongo", "pones, pone…"],
+          ["salir — wychodzić", "salgo", "sales, sale…"],
+          ["traer — przynosić", "traigo", "traes, trae…"],
+          ["conocer — znać", "conozco", "conoces, conoce…"],
+          ["saber — wiedzieć", "sé", "sabes, sabe…"],
+          ["dar — dawać", "doy", "das, da…"],
+          ["ver — widzieć", "veo", "ves, ve…"]
+        ]
+      }
+    },
+    {
+      "heading": "Całkowicie nieregularne",
+      "table": {
+        "columns": ["Osoba", "venir (przychodzić)", "decir (mówić)", "oír (słyszeć)"],
+        "rows": [
+          ["yo", "vengo", "digo", "oigo"],
+          ["tú", "vienes", "dices", "oyes"],
+          ["él / ella / usted", "viene", "dice", "oye"],
+          ["nosotros / nosotras", "venimos", "decimos", "oímos"],
+          ["vosotros / vosotras", "venís", "decís", "oís"],
+          ["ellos / ellas / ustedes", "vienen", "dicen", "oyen"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "¿Puedes repetir, por favor?",
+          "translation": "Możesz powtórzyć?"
+        },
+        {
+          "text": "Salgo de casa a las ocho.",
+          "translation": "Wychodzę z domu o ósmej."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-imperative",
+  "languageId": "es",
+  "status": "published",
+  "order": 70,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Tryb rozkazujący (tú, usted)",
+  "description": "Wskazówki, prośby i instrukcje.",
+  "sections": [
+    {
+      "text": "Twierdzący tryb rozkazujący dla tú ma zwykle formę 3. osoby czasu teraźniejszego (habla, come, escribe). Dla usted zamieniamy samogłoskę końcówki: -ar → -e, -er/-ir → -a (hable, coma, escriba). Zaimki dołączamy na końcu: siéntate, dígame.",
+      "table": {
+        "columns": ["Bezokolicznik", "tú", "usted"],
+        "rows": [
+          ["girar — skręcać", "gira", "gire"],
+          ["tomar — brać", "toma", "tome"],
+          ["seguir — iść dalej", "sigue", "siga"],
+          ["cruzar — przechodzić przez", "cruza", "cruce"],
+          ["venir — przyjść", "ven", "venga"],
+          ["ir — iść", "ve", "vaya"],
+          ["hacer — robić", "haz", "haga"],
+          ["poner — kłaść", "pon", "ponga"],
+          ["salir — wyjść", "sal", "salga"],
+          ["decir — powiedzieć", "di", "diga"],
+          ["tener — mieć", "ten", "tenga"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Siga todo recto y gire a la derecha.",
+          "translation": "Proszę iść prosto i skręcić w prawo."
+        }
+      ]
+    }
+  ]
+}

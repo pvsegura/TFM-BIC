@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-reflexive",
+  "languageId": "es",
+  "status": "published",
+  "order": 40,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Czasowniki zwrotne",
+  "description": "Llamarse, levantarse, ducharse: zaimek przed czasownikiem.",
+  "sections": [
+    {
+      "text": "Czasowniki zwrotne mają w bezokoliczniku końcówkę -se (llamarse, levantarse). W odmianie zaimek zwrotny stoi przed czasownikiem i zmienia się z osobą — tak jak polskie „się”, ale nie zawsze w tych samych czasownikach.",
+      "table": {
+        "columns": ["Osoba", "Zaimek", "levantarse (wstawać)", "acostarse (kłaść się, o → ue)"],
+        "rows": [
+          ["yo", "me", "me levanto", "me acuesto"],
+          ["tú", "te", "te levantas", "te acuestas"],
+          ["él / ella / usted", "se", "se levanta", "se acuesta"],
+          ["nosotros / nosotras", "nos", "nos levantamos", "nos acostamos"],
+          ["vosotros / vosotras", "os", "os levantáis", "os acostáis"],
+          ["ellos / ellas / ustedes", "se", "se levantan", "se acuestan"]
+        ]
+      }
+    },
+    {
+      "heading": "Codzienna rutyna",
+      "table": {
+        "columns": ["Hiszpański", "Polski"],
+        "rows": [
+          ["despertarse (e → ie)", "budzić się"],
+          ["ducharse", "brać prysznic"],
+          ["lavarse los dientes", "myć zęby"],
+          ["vestirse (e → i)", "ubierać się"],
+          ["peinarse", "czesać się"],
+          ["quedarse", "zostawać"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Me levanto a las siete y me ducho.",
+          "translation": "Wstaję o siódmej i biorę prysznic."
+        }
+      ]
+    }
+  ]
+}

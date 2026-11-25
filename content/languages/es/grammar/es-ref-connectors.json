@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-connectors",
+  "languageId": "es",
+  "status": "published",
+  "order": 160,
+  "category": "connectors",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Spójniki i słowa łączące",
+  "description": "Y, o, pero, porque, también, tampoco, primero, luego…",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Hiszpański", "Polski", "Uwaga"],
+        "rows": [
+          ["y (e przed i-, hi-)", "i", "padres e hijos"],
+          ["o (u przed o-, ho-)", "lub", "siete u ocho"],
+          ["pero", "ale", "Es caro, pero bueno."],
+          ["porque", "ponieważ, bo", "Estudio porque me gusta."],
+          ["también", "też (w zdaniu twierdzącym)", "Yo también."],
+          ["tampoco", "też nie", "Yo tampoco."],
+          ["entonces", "więc, w takim razie", "Entonces, ¿vamos?"],
+          [
+            "primero … luego … después … al final",
+            "najpierw … potem … następnie … na końcu",
+            "do opisu kolejności"
+          ],
+          ["por eso", "dlatego", "Llueve, por eso no salgo."]
+        ]
+      },
+      "examples": [
+        {
+          "text": "—Me gusta el cine. —A mí también. —No me gusta el fútbol. —A mí tampoco.",
+          "translation": "—Lubię kino. —Ja też. —Nie lubię piłki nożnej. —Ja też nie."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "es-ref-numbers",
+  "languageId": "es",
+  "status": "published",
+  "order": 150,
+  "category": "numbers",
+  "levelId": "a1",
+  "instructionLanguage": "pl",
+  "title": "Liczebniki, godziny i daty",
+  "description": "Od 0 do 1000, liczebniki porządkowe, godzina i data.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["0–9", "10–19", "20–29", "dziesiątki"],
+        "rows": [
+          ["0 cero", "10 diez", "20 veinte", "30 treinta"],
+          ["1 uno", "11 once", "21 veintiuno", "40 cuarenta"],
+          ["2 dos", "12 doce", "22 veintidós", "50 cincuenta"],
+          ["3 tres", "13 trece", "23 veintitrés", "60 sesenta"],
+          ["4 cuatro", "14 catorce", "24 veinticuatro", "70 setenta"],
+          ["5 cinco", "15 quince", "25 veinticinco", "80 ochenta"],
+          ["6 seis", "16 dieciséis", "26 veintiséis", "90 noventa"],
+          ["7 siete", "17 diecisiete", "27 veintisiete", "100 cien"],
+          ["8 ocho", "18 dieciocho", "28 veintiocho", "101 ciento uno"],
+          ["9 nueve", "19 diecinueve", "29 veintinueve", "31 treinta y uno"]
+        ]
+      }
+    },
+    {
+      "heading": "Setki i tysiące",
+      "table": {
+        "columns": ["Liczba", "Hiszpański", "Liczba", "Hiszpański"],
+        "rows": [
+          ["200", "doscientos/as", "600", "seiscientos/as"],
+          ["300", "trescientos/as", "700", "setecientos/as"],
+          ["400", "cuatrocientos/as", "800", "ochocientos/as"],
+          ["500", "quinientos/as", "900", "novecientos/as"],
+          ["1000", "mil", "2026", "dos mil veintiséis"]
+        ]
+      },
+      "text": "Setki zgadzają się w rodzaju: doscientas personas, quinientos euros."
+    },
+    {
+      "heading": "Liczebniki porządkowe",
+      "table": {
+        "columns": ["1.", "2.", "3.", "4.", "5."],
+        "rows": [
+          ["primero", "segundo", "tercero", "cuarto", "quinto"],
+          ["6. sexto", "7. séptimo", "8. octavo", "9. noveno", "10. décimo"]
+        ]
+      },
+      "text": "Primero i tercero tracą -o przed rzeczownikiem męskim: el primer piso, el tercer día."
+    },
+    {
+      "heading": "Godzina",
+      "table": {
+        "columns": ["Godzina", "Po hiszpańsku"],
+        "rows": [
+          ["1:00", "Es la una."],
+          ["3:00", "Son las tres."],
+          ["3:15", "Son las tres y cuarto."],
+          ["3:30", "Son las tres y media."],
+          ["3:45", "Son las cuatro menos cuarto."],
+          ["3:50", "Son las cuatro menos diez."]
+        ]
+      },
+      "examples": [
+        {
+          "text": "¿A qué hora empieza la clase? — A las nueve y media.",
+          "translation": "O której zaczynają się zajęcia? — O wpół do dziesiątej."
+        }
+      ]
+    }
+  ]
+}
