@@ -58,13 +58,33 @@ try {
       const raw = path.join(work, `${situation.id}-${String(index)}.wav`);
       const clean = path.join(work, `${situation.id}-${String(index)}-clean.wav`);
       synthesise(line.text, raw);
-      execFileSync("ffmpeg", ["-y", "-loglevel", "error", "-i", raw, "-af", CLEANUP, "-ar", "22050", "-ac", "1", clean]);
+      execFileSync("ffmpeg", [
+        "-y",
+        "-loglevel",
+        "error",
+        "-i",
+        raw,
+        "-af",
+        CLEANUP,
+        "-ar",
+        "22050",
+        "-ac",
+        "1",
+        clean,
+      ]);
       cleaned.push(clean);
     });
 
     // line, gap, line, gap, … joined in one pass.
     const inputs = cleaned.flatMap((file) => ["-i", file]);
-    const gapInputs = ["-f", "lavfi", "-t", String(LINE_GAP_SECONDS), "-i", "anullsrc=r=22050:cl=mono"];
+    const gapInputs = [
+      "-f",
+      "lavfi",
+      "-t",
+      String(LINE_GAP_SECONDS),
+      "-i",
+      "anullsrc=r=22050:cl=mono",
+    ];
     const gapIndex = cleaned.length;
     const chain = cleaned.map((_, i) => `[${String(i)}:a][${String(gapIndex)}:a]`).join("");
     const filter = `${chain}concat=n=${String(cleaned.length * 2)}:v=0:a=1[out]`;

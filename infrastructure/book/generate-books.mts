@@ -216,7 +216,8 @@ h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
 .example { border-left: 2pt solid #111; padding: .5mm 0 .5mm 3mm; margin: 0 0 2.5mm; break-inside: avoid; }
 .example .es { font-family: "Segoe UI", Arial, sans-serif; font-weight: 700; margin: 0; }
 .example .pl, .example .note, .pl { color: #333; font-size: 9.5pt; margin: 0; }
-.dialogue { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; break-inside: avoid; }
+.dialogue { border-collapse: collapse; width: 100%; margin: 2mm 0 3mm; }
+.dialogue tr, .grid tr { break-inside: avoid; }
 .dialogue th { text-align: left; vertical-align: top; padding: 1.2mm 3mm 1.2mm 0; width: 26mm; font-family: "Segoe UI", Arial, sans-serif; }
 .dialogue td { padding: 1.2mm 0; border-bottom: .5pt solid #999; }
 .section { margin: 6mm 0 3mm; font-size: 13pt; border-bottom: .75pt solid #111; padding-bottom: 1mm; break-after: avoid; }
@@ -229,14 +230,14 @@ h1, h2, h3, h4 { font-family: "Segoe UI", Arial, sans-serif; }
 .comparison { border: .5pt dashed #555; display: grid; grid-template-columns: 1fr 1fr; gap: 1mm 4mm; }
 .comparison p, .pitfall p, .culture p, .reading p, .summary p { margin: 0 0 1mm; }
 .comparison .note { grid-column: 1 / -1; color: #333; font-size: 9.5pt; }
-.grid { border-collapse: collapse; width: 100%; margin: 0 0 3mm; font-size: 9.5pt; break-inside: avoid; }
+.grid { border-collapse: collapse; width: 100%; margin: 0 0 3mm; font-size: 9.5pt; }
 .grid caption { text-align: left; font-size: 8.5pt; color: #444; }
 .grid th, .grid td { border: .5pt solid #777; padding: 1mm 2mm; text-align: left; }
 .grid th { background: #e6e6e6; }
 .mission { border: 1.5pt solid #111; }
 /* Interior is black & white: illustrations are printed in grey tones. */
 .figure { margin: 3mm auto; text-align: center; break-inside: avoid; }
-.figure img { max-width: 70%; max-height: 70mm; filter: grayscale(1); }
+.figure img { max-width: 65%; max-height: 62mm; filter: grayscale(1); }
 .figure figcaption { font-size: 8.5pt; color: #444; margin-top: 1mm; }
 .unit-opener .opener-head { display: flex; justify-content: space-between; align-items: flex-start; }
 ${EXERCISE_STYLE}

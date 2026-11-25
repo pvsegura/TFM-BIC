@@ -1,1 +1,17 @@
-{}
+{
+  "a1-u1-reception.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-u1-classroom.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-u1-gym.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  }
+}

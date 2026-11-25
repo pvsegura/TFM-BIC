@@ -22,6 +22,11 @@
       "text": "Posłuchaj dialogu trzy razy. Za pierwszym razem bez tekstu: spróbuj tylko rozpoznać, kto mówi i gdzie są. Za drugim razem wyłap słowa-klucze: nombre (imię), apellido (nazwisko), ¿cómo se escribe? (jak się pisze?). Za trzecim razem czytaj tekst i słuchaj równocześnie. Nie tłumacz w myślach każdego słowa — na tym etapie wystarczy, że rozumiesz sens."
     },
     {
+      "type": "image",
+      "asset": "a1-u1-reception.png",
+      "alt": "Paweł przy recepcji szkoły językowej; recepcjonistka zapisuje jego dane w zeszycie."
+    },
+    {
       "type": "dialogue",
       "lines": [
         {
@@ -289,14 +294,38 @@
     {
       "type": "summary",
       "phrases": [
-        { "text": "¡Hola! Buenos días.", "translation": "Cześć! Dzień dobry." },
-        { "text": "¿Cómo te llamas?", "translation": "Jak masz na imię?" },
-        { "text": "¿Cómo se llama usted?", "translation": "Jak się Pan/Pani nazywa?" },
-        { "text": "Me llamo… / Soy…", "translation": "Nazywam się… / Jestem…" },
-        { "text": "¿Cómo se escribe?", "translation": "Jak to się pisze?" },
-        { "text": "Encantado. / Encantada.", "translation": "Miło mi." },
-        { "text": "¿Puede repetir, por favor?", "translation": "Czy może Pan/Pani powtórzyć?" },
-        { "text": "arroba, punto", "translation": "@, kropka" }
+        {
+          "text": "¡Hola! Buenos días.",
+          "translation": "Cześć! Dzień dobry."
+        },
+        {
+          "text": "¿Cómo te llamas?",
+          "translation": "Jak masz na imię?"
+        },
+        {
+          "text": "¿Cómo se llama usted?",
+          "translation": "Jak się Pan/Pani nazywa?"
+        },
+        {
+          "text": "Me llamo… / Soy…",
+          "translation": "Nazywam się… / Jestem…"
+        },
+        {
+          "text": "¿Cómo se escribe?",
+          "translation": "Jak to się pisze?"
+        },
+        {
+          "text": "Encantado. / Encantada.",
+          "translation": "Miło mi."
+        },
+        {
+          "text": "¿Puede repetir, por favor?",
+          "translation": "Czy może Pan/Pani powtórzyć?"
+        },
+        {
+          "text": "arroba, punto",
+          "translation": "@, kropka"
+        }
       ],
       "canDo": [
         "przywitać się i pożegnać o różnych porach dnia",

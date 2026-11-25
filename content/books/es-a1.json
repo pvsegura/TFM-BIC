@@ -14,7 +14,7 @@
       "unit:1": 17,
       "lesson:es-unit-1-alphabet": 18,
       "section:1/perceive": 18,
-      "section:1/connect": 18,
+      "section:1/connect": 19,
       "section:1/structure": 19,
       "section:1/sound": 20,
       "section:1/culture": 22,
@@ -46,7 +46,7 @@
     }
   },
   "zeszyt": {
-    "pages": 60,
+    "pages": 58,
     "index": {
       "unit:0": 7,
       "lesson:es-day-1-greetings": 7,

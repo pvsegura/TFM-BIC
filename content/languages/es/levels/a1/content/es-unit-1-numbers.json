@@ -22,6 +22,11 @@
       "text": "Marta zapisuje się na siłownię w Barcelonie. Pracownik wypełnia formularz. Posłuchaj: za pierwszym razem zapisz tylko liczby, które usłyszysz; za drugim sprawdź, ile lat ma Marta i jaki jest jej numer telefonu; za trzecim czytaj tekst razem z nagraniem."
     },
     {
+      "type": "image",
+      "asset": "a1-u1-gym.png",
+      "alt": "Recepcja siłowni: pracownik wpisuje dane do komputera, klientka wypełnia formularz."
+    },
+    {
       "type": "dialogue",
       "lines": [
         {

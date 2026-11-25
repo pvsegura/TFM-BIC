@@ -22,6 +22,11 @@
       "text": "Pierwsze zajęcia w szkole językowej w Walencji. Uczniowie się poznają. Posłuchaj dialogu: najpierw sprawdź tylko, ile osób rozmawia i z jakich są krajów; potem wyłap wszystkie nazwy języków; na koniec przeczytaj tekst razem z nagraniem."
     },
     {
+      "type": "image",
+      "asset": "a1-u1-classroom.png",
+      "alt": "Pierwsze zajęcia: uczniowie z różnych krajów siedzą w kręgu, nauczycielka stoi przy tablicy."
+    },
+    {
       "type": "dialogue",
       "lines": [
         {
@@ -220,13 +225,34 @@
     {
       "type": "summary",
       "phrases": [
-        { "text": "¿De dónde eres?", "translation": "Skąd jesteś?" },
-        { "text": "Soy de Polonia, de Poznań.", "translation": "Jestem z Polski, z Poznania." },
-        { "text": "Soy polaco. / Soy polaca.", "translation": "Jestem Polakiem. / Jestem Polką." },
-        { "text": "¿Qué lenguas hablas?", "translation": "Jakimi językami mówisz?" },
-        { "text": "Hablo polaco e inglés.", "translation": "Mówię po polsku i po angielsku." },
-        { "text": "un poco de español", "translation": "trochę po hiszpańsku" },
-        { "text": "Este es… / Esta es…", "translation": "To jest… (on / ona)" }
+        {
+          "text": "¿De dónde eres?",
+          "translation": "Skąd jesteś?"
+        },
+        {
+          "text": "Soy de Polonia, de Poznań.",
+          "translation": "Jestem z Polski, z Poznania."
+        },
+        {
+          "text": "Soy polaco. / Soy polaca.",
+          "translation": "Jestem Polakiem. / Jestem Polką."
+        },
+        {
+          "text": "¿Qué lenguas hablas?",
+          "translation": "Jakimi językami mówisz?"
+        },
+        {
+          "text": "Hablo polaco e inglés.",
+          "translation": "Mówię po polsku i po angielsku."
+        },
+        {
+          "text": "un poco de español",
+          "translation": "trochę po hiszpańsku"
+        },
+        {
+          "text": "Este es… / Esta es…",
+          "translation": "To jest… (on / ona)"
+        }
       ],
       "canDo": [
         "powiedzieć, skąd jestem, i zapytać o to innych",
