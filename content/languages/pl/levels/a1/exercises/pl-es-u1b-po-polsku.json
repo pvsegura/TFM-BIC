@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-po-polsku",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1470,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcta?",
+  "explanation": "Con mówić: po polsku. Polski es el adjetivo (język polski).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mówię trochę po polsku."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mówię trochę polski."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mówię trochę polsku."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

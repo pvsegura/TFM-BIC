@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-we-wroclawiu",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Moja siostra mieszka ___ (en Breslavia).",
+  "explanation": "Delante de w + consonante se dice we para poder pronunciarlo: we Wrocławiu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "we Wrocławiu"
+      },
+      {
+        "id": "opt-b",
+        "text": "w Wrocławiu"
+      },
+      {
+        "id": "opt-c",
+        "text": "z Wrocławia"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

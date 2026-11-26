@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-match-countries",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Une cada país con su nombre en polaco.",
+  "explanation": "Niemcy = Alemania; Włochy = Italia: dos nombres que no se parecen al español.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "Alemania",
+        "right": "Niemcy"
+      },
+      {
+        "left": "Italia",
+        "right": "Włochy"
+      },
+      {
+        "left": "México",
+        "right": "Meksyk"
+      },
+      {
+        "left": "Polonia",
+        "right": "Polska"
+      },
+      {
+        "left": "Estados Unidos",
+        "right": "Stany Zjednoczone"
+      }
+    ]
+  }
+}

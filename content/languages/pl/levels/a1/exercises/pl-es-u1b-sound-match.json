@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-sound-match",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 38,
+    "phase": "sound"
+  },
+  "prompt": "Une cada número con su pronunciación aproximada.",
+  "explanation": "Sz = sh; ś, si = sh suave; dzi = «y» enfática.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "sześć",
+        "right": "[sheśch]"
+      },
+      {
+        "left": "siedem",
+        "right": "[śedem]"
+      },
+      {
+        "left": "dziewięć",
+        "right": "[dźevieñch]"
+      },
+      {
+        "left": "czternaście",
+        "right": "[chternaśche]"
+      }
+    ]
+  }
+}

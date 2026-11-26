@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-sound-mowia",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 39,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena la ą final en mówią (hablan)?",
+  "explanation": "Al final de palabra ą suena como una o nasal: [mówiõ].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Como una o nasal: [mówiõ]."
+      },
+      {
+        "id": "opt-b",
+        "text": "Como una a: [mówia]."
+      },
+      {
+        "id": "opt-c",
+        "text": "No se pronuncia: [mówi]."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

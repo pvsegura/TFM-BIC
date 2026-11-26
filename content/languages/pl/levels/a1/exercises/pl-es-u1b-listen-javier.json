@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-listen-javier",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿de dónde es Javier?",
+  "explanation": "Jestem z Hiszpanii, z Madrytu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "De España, de Madrid."
+      },
+      {
+        "id": "opt-b",
+        "text": "De Argentina, de Buenos Aires."
+      },
+      {
+        "id": "opt-c",
+        "text": "De México, de Guadalajara."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

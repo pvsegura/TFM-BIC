@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-write-intro",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 1650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 55,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe en polaco tu presentación para el primer día de curso: nombre, de dónde eres, dónde vives, qué idiomas hablas, tu edad y una pregunta con czy para un compañero.",
+  "explanation": "Revisa: z + país, w + ciudad, po + idioma, lat / lata, czy al principio de la pregunta.",
+  "configuration": {
+    "modelAnswer": "Cześć! Mam na imię Lucía. Jestem z Hiszpanii, z Sewilli, ale teraz mieszkam w Warszawie. Mówię po hiszpańsku, po angielsku i trochę po polsku. Mam dwadzieścia cztery lata. A ty? Czy mówisz po hiszpańsku?",
+    "checklist": [
+      "nombre",
+      "z + país / ciudad",
+      "mieszkam w…",
+      "po + idiomas",
+      "edad",
+      "pregunta con czy"
+    ],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-hiszpanka",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1480,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Una mujer de España dice: Jestem ___.",
+  "explanation": "Tras jestem la nacionalidad femenina cambia -a por -ą: Hiszpanka → Hiszpanką.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Hiszpanką"
+      },
+      {
+        "id": "opt-b",
+        "text": "Hiszpanka"
+      },
+      {
+        "id": "opt-c",
+        "text": "hiszpanką"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

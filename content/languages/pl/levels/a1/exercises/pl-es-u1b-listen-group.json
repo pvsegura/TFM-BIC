@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-listen-group",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuántas personas hay en el grupo?",
+  "explanation": "Jest nas dwanaście osób — doce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Doce."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Veinte."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

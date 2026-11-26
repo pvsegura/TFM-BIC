@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-match-numbers",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 14,
+    "phase": "connect"
+  },
+  "prompt": "Une cada número con su nombre.",
+  "explanation": "Del 11 al 19 terminan en -naście.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "6",
+        "right": "sześć"
+      },
+      {
+        "left": "9",
+        "right": "dziewięć"
+      },
+      {
+        "left": "12",
+        "right": "dwanaście"
+      },
+      {
+        "left": "15",
+        "right": "piętnaście"
+      },
+      {
+        "left": "20",
+        "right": "dwadzieścia"
+      }
+    ]
+  }
+}

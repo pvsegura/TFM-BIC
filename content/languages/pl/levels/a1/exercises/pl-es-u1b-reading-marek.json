@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-reading-marek",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 42,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿dónde vive Marek Nowak ahora?",
+  "explanation": "Teraz mieszkam w Hiszpanii, w Walencji.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En Valencia."
+      },
+      {
+        "id": "opt-b",
+        "text": "En Gdańsk."
+      },
+      {
+        "id": "opt-c",
+        "text": "En Sevilla."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

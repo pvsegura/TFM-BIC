@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-translate-age",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1630,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 52,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Tengo diecinueve años.",
+  "explanation": "19 → lat.",
+  "configuration": {
+    "acceptedAnswers": ["Mam dziewiętnaście lat."],
+    "caseSensitive": false
+  }
+}

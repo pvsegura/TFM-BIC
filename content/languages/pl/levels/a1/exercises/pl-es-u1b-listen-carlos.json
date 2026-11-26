@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-listen-carlos",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Carlos es de España.",
+  "explanation": "Nie, nie jestem z Hiszpanii. Jestem Meksykaninem — es mexicano.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

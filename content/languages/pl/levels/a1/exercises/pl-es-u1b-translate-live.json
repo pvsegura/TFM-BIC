@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-translate-live",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 51,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Dónde vive usted? (a una mujer)",
+  "explanation": "Pani + tercera persona: mieszka.",
+  "configuration": {
+    "acceptedAnswers": ["Gdzie pani mieszka?"],
+    "caseSensitive": false
+  }
+}

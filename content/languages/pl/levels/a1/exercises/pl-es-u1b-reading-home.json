@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-reading-home",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 43,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: en casa, la familia habla polaco y español.",
+  "explanation": "W domu mówimy po polsku i po hiszpańsku.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

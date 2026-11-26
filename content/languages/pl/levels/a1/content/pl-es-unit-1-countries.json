@@ -1,0 +1,351 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1085,
+  "unit": 1,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 1B. Skąd jesteś? — países, idiomas, ciudades y números del 0 al 20",
+  "description": "Dices de dónde eres, dónde vives y qué idiomas hablas, preguntas con czy, cuentas hasta veinte y dices tu edad y tu número de teléfono.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "La primera clase" },
+    {
+      "type": "explanation",
+      "text": "Javier empieza su curso de polaco en Cracovia. La profesora, Ewa, pregunta a cada alumno de dónde es. Primera escucha: ¿de qué países son Javier, Valentina y Carlos? Segunda: ¿dónde vive cada uno? Tercera: fíjate en cómo empiezan las preguntas de sí o no — con la palabra czy."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u1-classroom.png",
+      "alt": "Una profesora delante de una pizarra en blanco y tres alumnos adultos sentados en un aula pequeña."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ewa",
+          "text": "Dzień dobry wszystkim! Jestem Ewa. Na kursie mówimy sobie na ty, dobrze?",
+          "translation": "¡Buenos días a todos! Soy Ewa. En el curso nos tuteamos, ¿vale?"
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Jestem z Polski, z Krakowa. Javier, a ty? Skąd jesteś?",
+          "translation": "Soy de Polonia, de Cracovia. Javier, ¿y tú? ¿De dónde eres?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jestem z Hiszpanii, z Madrytu.",
+          "translation": "Soy de España, de Madrid."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "A gdzie teraz mieszkasz?",
+          "translation": "¿Y dónde vives ahora?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Teraz mieszkam w Krakowie, ale moja rodzina mieszka w Madrycie.",
+          "translation": "Ahora vivo en Cracovia, pero mi familia vive en Madrid."
+        },
+        {
+          "speaker": "Valentina",
+          "text": "Mam na imię Valentina. Jestem z Argentyny, z Buenos Aires.",
+          "translation": "Me llamo Valentina. Soy de Argentina, de Buenos Aires."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Czy mówisz po angielsku?",
+          "translation": "¿Hablas inglés?"
+        },
+        {
+          "speaker": "Valentina",
+          "text": "Tak. Mówię po hiszpańsku, po angielsku i trochę po włosku.",
+          "translation": "Sí. Hablo español, inglés y un poco de italiano."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Carlos, czy ty też jesteś z Hiszpanii?",
+          "translation": "Carlos, ¿tú también eres de España?"
+        },
+        {
+          "speaker": "Carlos",
+          "text": "Nie, nie jestem z Hiszpanii. Jestem Meksykaninem, z Guadalajary. Mieszkam w Krakowie i pracuję tutaj.",
+          "translation": "No, no soy de España. Soy mexicano, de Guadalajara. Vivo en Cracovia y trabajo aquí."
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Czy mówisz trochę po polsku?",
+          "translation": "¿Hablas un poco de polaco?"
+        },
+        {
+          "speaker": "Carlos",
+          "text": "Trochę. Polski jest bardzo trudny!",
+          "translation": "Un poco. ¡El polaco es muy difícil!"
+        },
+        {
+          "speaker": "Ewa",
+          "text": "Trudny, ale piękny! Dobrze, liczymy: jeden, dwa, trzy… Jest nas dwanaście osób.",
+          "translation": "¡Difícil, pero precioso! Bueno, contamos: uno, dos, tres… Somos doce personas."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Países, nacionalidades e idiomas" },
+    {
+      "type": "table",
+      "caption": "Países: Jestem z… (soy de…) y la nacionalidad (él / ella)",
+      "columns": ["País (español)", "País (polaco)", "Jestem z…", "Nacionalidad (él / ella)"],
+      "rows": [
+        ["España", "Hiszpania", "z Hiszpanii", "Hiszpan / Hiszpanka"],
+        ["Polonia", "Polska", "z Polski", "Polak / Polka"],
+        ["México", "Meksyk", "z Meksyku", "Meksykanin / Meksykanka"],
+        ["Argentina", "Argentyna", "z Argentyny", "Argentyńczyk / Argentynka"],
+        ["Colombia", "Kolumbia", "z Kolumbii", "Kolumbijczyk / Kolumbijka"],
+        ["Chile", "Chile", "z Chile", "Chilijczyk / Chilijka"],
+        ["Perú", "Peru", "z Peru", "Peruwiańczyk / Peruwianka"],
+        ["Venezuela", "Wenezuela", "z Wenezueli", "Wenezuelczyk / Wenezuelka"],
+        ["Cuba", "Kuba", "z Kuby", "Kubańczyk / Kubanka"],
+        ["Alemania", "Niemcy", "z Niemiec", "Niemiec / Niemka"],
+        ["Francia", "Francja", "z Francji", "Francuz / Francuzka"],
+        ["Inglaterra", "Anglia", "z Anglii", "Anglik / Angielka"],
+        ["Italia", "Włochy", "z Włoch", "Włoch / Włoszka"],
+        ["Ucrania", "Ukraina", "z Ukrainy", "Ukrainiec / Ukrainka"],
+        [
+          "Estados Unidos",
+          "Stany Zjednoczone",
+          "ze Stanów Zjednoczonych",
+          "Amerykanin / Amerykanka"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Idiomas: Mówię po… (hablo…)",
+      "columns": ["Español", "Mówię…", "Español", "Mówię…"],
+      "rows": [
+        ["español", "po hiszpańsku", "alemán", "po niemiecku"],
+        ["polaco", "po polsku", "francés", "po francusku"],
+        ["inglés", "po angielsku", "italiano", "po włosku"],
+        ["portugués", "po portugalsku", "ucraniano", "po ukraińsku"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — Niemcy (Alemania) viene de niemy, «mudo»: para los antiguos eslavos, los vecinos germanos eran «los que no hablan» (nuestra lengua). Włochy (Italia) viene de la misma raíz germánica que «galés» y «valón»: así llamaban a los pueblos romanizados del oeste. Mówię po polsku es literalmente «hablo a lo polaco»: por eso po + -sku / -cku, como en español «a la española». Y Hiszpania es España con Hi delante, la s escrita sz y la ñ escrita ni."
+    },
+    {
+      "type": "table",
+      "caption": "Ciudades: ¿de dónde? (z…) y ¿dónde vives? (w…)",
+      "columns": ["Ciudad", "Jestem z…", "Mieszkam w…"],
+      "rows": [
+        ["Warszawa (Varsovia)", "z Warszawy", "w Warszawie"],
+        ["Kraków (Cracovia)", "z Krakowa", "w Krakowie"],
+        ["Wrocław (Breslavia)", "z Wrocławia", "we Wrocławiu"],
+        ["Gdańsk", "z Gdańska", "w Gdańsku"],
+        ["Poznań", "z Poznania", "w Poznaniu"],
+        ["Madryt (Madrid)", "z Madrytu", "w Madrycie"],
+        ["Barcelona", "z Barcelony", "w Barcelonie"],
+        ["Sewilla (Sevilla)", "z Sewilli", "w Sewilli"],
+        ["Walencja (Valencia)", "z Walencji", "w Walencji"],
+        ["Bogota (Bogotá)", "z Bogoty", "w Bogocie"],
+        ["Lima", "z Limy", "w Limie"],
+        ["Buenos Aires", "z Buenos Aires", "w Buenos Aires"]
+      ]
+    },
+    { "type": "section", "phase": "structure", "title": "Skąd, gdzie, czy: preguntar y responder" },
+    {
+      "type": "explanation",
+      "text": "En polaco el sustantivo cambia de terminación según su función: son los casos. Por ahora no hace falta saber las reglas. Aprende las respuestas como bloques: Jestem z Polski (soy de Polonia) y Mieszkam w Krakowie (vivo en Cracovia). Fíjate en que Polska → z Polski y Kraków → w Krakowie: después de z y de w el nombre cambia. Delante de algunos grupos de consonantes se dice ze y we para poder pronunciarlo: ze Stanów Zjednoczonych, we Wrocławiu. Los nombres que no parecen polacos (Chile, Peru, Buenos Aires) no cambian."
+    },
+    {
+      "type": "table",
+      "caption": "Mówić (hablar), mieszkać (vivir) y pracować (trabajar): tres modelos de presente",
+      "columns": ["Persona", "mówić", "mieszkać", "pracować"],
+      "rows": [
+        ["ja", "mówię", "mieszkam", "pracuję"],
+        ["ty", "mówisz", "mieszkasz", "pracujesz"],
+        ["on / ona / pan / pani", "mówi", "mieszka", "pracuje"],
+        ["my", "mówimy", "mieszkamy", "pracujemy"],
+        ["wy", "mówicie", "mieszkacie", "pracujecie"],
+        ["oni / one / państwo", "mówią", "mieszkają", "pracują"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Como en español, el pronombre casi nunca hace falta: la terminación ya dice quién habla (mówię = hablo). Hay tres modelos frecuentes: -ę / -isz (mówię, mówisz), -am / -asz (mieszkam, mieszkasz) y -uję / -ujesz (pracuję, pracujesz). Con pan y pani el verbo va en tercera persona, como con usted: Gdzie pan mieszka? (¿Dónde vive usted?)."
+    },
+    {
+      "type": "comparison",
+      "source": "¿Hablas inglés? — Sí, un poco. / No, no hablo inglés.",
+      "target": "Czy mówisz po angielsku? — Tak, trochę. / Nie, nie mówię po angielsku.",
+      "note": "Las preguntas de sí o no suelen empezar por czy, que no se traduce: solo anuncia «esto es una pregunta». La negación nie va delante del verbo, como el «no» español. Y fíjate: Nie, nie mówię — el primer nie es «no» (respuesta), el segundo niega el verbo."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mówię polski. / Mówię polaco.",
+      "right": "Mówię po polsku.",
+      "explanation": "Con mówić (hablar) el idioma va con po: po polsku, po hiszpańsku. Polski es el adjetivo: język polski (la lengua polaca), Polski jest trudny (el polaco es difícil)."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir la nacionalidad tienes tres opciones. La más segura: Jestem z Hiszpanii. Con to y el nombre, sin cambios: To jest Carlos. To Meksykanin. Y con jestem + nacionalidad, que exige otra terminación (el instrumental, que verás más adelante): un hombre añade -em (o -iem tras k), una mujer cambia la -a final por -ą. Apréndelo como bloque para tu propia nacionalidad."
+    },
+    {
+      "type": "table",
+      "caption": "Jestem… (soy + nacionalidad)",
+      "columns": ["Él", "Jestem… (hombre)", "Ella", "Jestem… (mujer)"],
+      "rows": [
+        ["Hiszpan", "Hiszpanem", "Hiszpanka", "Hiszpanką"],
+        ["Polak", "Polakiem", "Polka", "Polką"],
+        ["Meksykanin", "Meksykaninem", "Meksykanka", "Meksykanką"],
+        ["Argentyńczyk", "Argentyńczykiem", "Argentynka", "Argentynką"],
+        ["Kolumbijczyk", "Kolumbijczykiem", "Kolumbijka", "Kolumbijką"],
+        ["Chilijczyk", "Chilijczykiem", "Chilijka", "Chilijką"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jestem Hiszpan. / Jestem hiszpanem.",
+      "right": "Jestem Hiszpanem. / Jestem z Hiszpanii.",
+      "explanation": "Después de jestem la nacionalidad cambia de terminación. Y se escribe con mayúscula, al revés que en español: Hiszpan, Polka, Meksykanin. En cambio, los adjetivos y los idiomas van con minúscula: hiszpański, po polsku."
+    },
+    {
+      "type": "table",
+      "caption": "Los números del 0 al 20",
+      "columns": ["Nº", "Polaco", "Nº", "Polaco"],
+      "rows": [
+        ["0", "zero", "11", "jedenaście"],
+        ["1", "jeden", "12", "dwanaście"],
+        ["2", "dwa", "13", "trzynaście"],
+        ["3", "trzy", "14", "czternaście"],
+        ["4", "cztery", "15", "piętnaście"],
+        ["5", "pięć", "16", "szesnaście"],
+        ["6", "sześć", "17", "siedemnaście"],
+        ["7", "siedem", "18", "osiemnaście"],
+        ["8", "osiem", "19", "dziewiętnaście"],
+        ["9", "dziewięć", "20", "dwadzieścia"],
+        ["10", "dziesięć", "—", "—"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Del 11 al 19 los números terminan en -naście (de na dziesięć, «sobre diez»): trzy → trzynaście, siedem → siedemnaście. Cuidado con los que cambian un poco: cztery → czternaście, pięć → piętnaście, sześć → szesnaście, dziewięć → dziewiętnaście. Para la edad, polaco y español coinciden: se «tiene» años. Ile masz lat? (¿Cuántos años tienes?) — Mam dziewiętnaście lat. La palabra «años» cambia con el número: 1 → rok, 2, 3, 4 → lata, 5 a 21 → lat. Y desde 22 se repite: 22, 23, 24 → lata; 25 a 31 → lat."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mam dwadzieścia dwa lat. / Mam trzy lat.",
+      "right": "Mam dwadzieścia dwa lata. / Mam trzy lata.",
+      "explanation": "Con números que terminan en 2, 3 o 4 (excepto 12, 13 y 14) se dice lata; con los demás, lat: pięć lat, dwanaście lat, dwadzieścia pięć lat."
+    },
+    {
+      "type": "example",
+      "text": "Jaki jest twój numer telefonu? — Sześćset dwa, trzysta czterdzieści, pięćset sześćdziesiąt. / Sześć, zero, dwa…",
+      "translation": "¿Cuál es tu número de teléfono? — Seiscientos dos, trescientos cuarenta, quinientos sesenta. / Seis, cero, dos…",
+      "note": "Los móviles polacos tienen nueve cifras y se suelen decir en tres grupos de tres. Mientras no conozcas las centenas, dilo cifra a cifra: siempre te entenderán."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Las vocales nasales y los sonidos de los números"
+    },
+    {
+      "type": "explanation",
+      "text": "Los números polacos son un buen entrenamiento de pronunciación. Las letras ę y ą son vocales nasales, como en francés. Al final de palabra ę suena casi como una e normal: mówię [mówie]; ą suena como «on» nasal: mówią [mówiõ]. Ante t, d, c, ć se oye una n: pięć [pieñch], piętnaście [pientnaśche]. Las letras ś, ć y el grupo si, ci, dzi suenan suaves, con la lengua pegada al paladar; sz, cz, dz, más duros, con la lengua hacia atrás."
+    },
+    {
+      "type": "table",
+      "caption": "Números para practicar (pronunciación aproximada)",
+      "columns": ["Número", "Cómo suena", "Qué practicar"],
+      "rows": [
+        ["sześć (6)", "[sheśch]", "sz duro + ść suave"],
+        ["siedem (7)", "[śedem]", "si = ś suave"],
+        ["osiem (8)", "[ośem]", "si = ś suave"],
+        ["dziewięć (9)", "[dźevieñch]", "dzi como «y» enfática de «¡yo!»"],
+        ["dziesięć (10)", "[dźeśeñch]", "dzi + si + ę nasal"],
+        ["czternaście (14)", "[chternaśche]", "cz duro + ś suave"],
+        ["dwadzieścia (20)", "[dvadźeśća]", "w suena v"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "[pi-e-ce] para pięć, [ses] para sześć",
+      "right": "[pieñch], [sheśch]",
+      "explanation": "Ć no es una c española: es una «ch» muy suave. Y sz no es s, sino «sh». Exagera al principio: sześć tiene tres sonidos difíciles seguidos, y con práctica sale solo."
+    },
+    { "type": "section", "phase": "culture", "title": "Apellidos, ciudades y familias mixtas" },
+    {
+      "type": "reading",
+      "title": "Jesteśmy rodziną polsko-hiszpańską",
+      "paragraphs": [
+        "Nazywam się Marek Nowak. Jestem z Polski, z Gdańska, ale teraz mieszkam w Hiszpanii, w Walencji. Pracuję w hotelu.",
+        "Moja żona, Carmen, jest z Hiszpanii, z Sewilli. Jest nauczycielką. Mówi po hiszpańsku, po angielsku i trochę po polsku.",
+        "Mamy dwoje dzieci: Ania ma dziesięć lat, a Pablo ma siedem lat. W domu mówimy po polsku i po hiszpańsku. Dzieci mówią też po angielsku, w szkole.",
+        "Mój brat, Tomasz, mieszka w Krakowie. Jego żona, Katarzyna Nowak, jest z Poznania. Latem Ania i Pablo jadą do Polski, do Krakowa, i rozmawiają z kuzynami po polsku."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Muchos apellidos polacos cambian según el sexo: el señor Kowalski y la señora Kowalska, Jan Wiśniewski y Anna Wiśniewska. Los terminados en -ski, -cki y -dzki son adjetivos y concuerdan con la persona. Otros, como Nowak o Wójcik, no cambian: Marek Nowak, Katarzyna Nowak.",
+        "En Polonia no hay dos apellidos como en el mundo hispano: cada persona tiene normalmente uno, y al casarse muchas mujeres adoptan el del marido o unen los dos con guion (Carmen García-Nowak). Si tu ficha tiene un campo nazwisko, los funcionarios se sorprenderán al ver dos apellidos: escríbelos juntos o pregunta cómo hacerlo.",
+        "Las ciudades polacas tienen nombre tradicional en español: Varsovia, Cracovia, Breslavia (hoy se oye más Wrocław). En polaco también se adaptan los nombres españoles: Madryt, Sewilla, Walencja, Meksyk. Así que Valentina, de Buenos Aires, no cambia; pero Javier, de Madrid, es z Madrytu.",
+        "Un polaco te preguntará muchas veces Skąd jesteś? y luego, casi seguro, Dlaczego uczysz się polskiego? (¿Por qué aprendes polaco?). Aprender polaco despierta sorpresa y simpatía: ten preparada tu respuesta."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: preséntate en clase" },
+    {
+      "type": "mission",
+      "title": "Tu presentación el primer día de curso",
+      "steps": [
+        "Saluda y di tu nombre (Mam na imię… / Nazywam się…).",
+        "Di de dónde eres: país y ciudad (Jestem z…, z…).",
+        "Di dónde vives ahora (Mieszkam w…) y, si trabajas, dónde trabajas (Pracuję w…).",
+        "Di qué idiomas hablas y cuál un poco (Mówię po…, i trochę po…).",
+        "Di tu edad con lat o lata según el número y tu número de teléfono cifra a cifra.",
+        "Haz dos preguntas con czy y una con skąd a un compañero, y grábate leyendo los números del 5 al 10."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Skąd jesteś? — Jestem z Hiszpanii, z Madrytu.",
+          "translation": "¿De dónde eres? — Soy de España, de Madrid."
+        },
+        {
+          "text": "Gdzie mieszkasz? — Mieszkam w Krakowie.",
+          "translation": "¿Dónde vives? — Vivo en Cracovia."
+        },
+        {
+          "text": "Skąd pan jest? / Gdzie pani mieszka?",
+          "translation": "¿De dónde es usted? / ¿Dónde vive usted?"
+        },
+        {
+          "text": "Czy mówisz po polsku? — Tak, trochę.",
+          "translation": "¿Hablas polaco? — Sí, un poco."
+        },
+        { "text": "Nie, nie mówię po angielsku.", "translation": "No, no hablo inglés." },
+        {
+          "text": "Jestem Hiszpanem. / Jestem Hiszpanką.",
+          "translation": "Soy español. / Soy española."
+        },
+        {
+          "text": "Ile masz lat? — Mam dwadzieścia lat.",
+          "translation": "¿Cuántos años tienes? — Tengo veinte años."
+        },
+        { "text": "Mój numer telefonu to…", "translation": "Mi número de teléfono es…" }
+      ],
+      "canDo": [
+        "decir de dónde soy y dónde vivo (z…, w…)",
+        "decir qué idiomas hablo con po + -sku",
+        "conjugar mówić, mieszkać y pracować en presente",
+        "hacer preguntas de sí o no con czy y negar con nie",
+        "contar del 0 al 20 y decir mi edad con rok, lata o lat",
+        "pronunciar ę, ą, ś, ć y sz en los números"
+      ]
+    }
+  ]
+}

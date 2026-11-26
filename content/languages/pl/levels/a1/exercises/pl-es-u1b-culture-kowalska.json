@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-culture-kowalska",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 45,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: el señor se llama Jan Kowalski. ¿Cómo se apellida su mujer, si adopta su apellido?",
+  "explanation": "Los apellidos en -ski concuerdan con la persona: Kowalski → Kowalska.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kowalska"
+      },
+      {
+        "id": "opt-b",
+        "text": "Kowalski"
+      },
+      {
+        "id": "opt-c",
+        "text": "Kowalskiego"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

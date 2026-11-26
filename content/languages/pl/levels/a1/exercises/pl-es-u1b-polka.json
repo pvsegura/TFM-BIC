@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-polka",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 13,
+    "phase": "connect"
+  },
+  "prompt": "¿Cómo se dice «una polaca» (la nacionalidad, mujer)?",
+  "explanation": "Polak (él) / Polka (ella), con mayúscula.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Polka"
+      },
+      {
+        "id": "opt-b",
+        "text": "Polska"
+      },
+      {
+        "id": "opt-c",
+        "text": "polski"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

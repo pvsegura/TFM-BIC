@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-translate-from",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 50,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Soy de México, de Guadalajara.",
+  "explanation": "Jestem z + país, z + ciudad.",
+  "configuration": {
+    "acceptedAnswers": ["Jestem z Meksyku, z Guadalajary."],
+    "caseSensitive": false
+  }
+}

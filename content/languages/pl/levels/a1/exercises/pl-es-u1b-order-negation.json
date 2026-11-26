@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-order-negation",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 1520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 33,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: No, no soy de España, soy de Chile.",
+  "explanation": "Nie al principio (respuesta) y nie delante del verbo (negación).",
+  "configuration": {
+    "items": ["Nie,", "nie", "jestem", "z", "Hiszpanii,", "jestem z Chile."],
+    "joiner": " "
+  }
+}

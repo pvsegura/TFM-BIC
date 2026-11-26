@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-czy",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo preguntas «¿Hablas polaco?»?",
+  "explanation": "Las preguntas de sí o no empiezan por czy; el idioma va con po.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Czy mówisz po polsku?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Czy mówisz polski?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Skąd mówisz po polsku?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

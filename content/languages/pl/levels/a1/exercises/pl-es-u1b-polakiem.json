@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-polakiem",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1490,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 30,
+    "phase": "structure"
+  },
+  "prompt": "Un hombre polaco dice: Jestem ___.",
+  "explanation": "Tras k se añade -iem: Polak → Polakiem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Polakiem"
+      },
+      {
+        "id": "opt-b",
+        "text": "Polak"
+      },
+      {
+        "id": "opt-c",
+        "text": "Polakem"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-listen-valentina",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué idiomas habla Valentina?",
+  "explanation": "Mówię po hiszpańsku, po angielsku i trochę po włosku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Español, inglés y un poco de italiano."
+      },
+      {
+        "id": "opt-b",
+        "text": "Español y un poco de polaco."
+      },
+      {
+        "id": "opt-c",
+        "text": "Español, francés e inglés."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

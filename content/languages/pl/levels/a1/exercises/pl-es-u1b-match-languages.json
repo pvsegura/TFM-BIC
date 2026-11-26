@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-match-languages",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 12,
+    "phase": "connect"
+  },
+  "prompt": "Une cada idioma con su forma después de mówię.",
+  "explanation": "Po + -sku / -cku: po polsku, po niemiecku.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "español",
+        "right": "po hiszpańsku"
+      },
+      {
+        "left": "polaco",
+        "right": "po polsku"
+      },
+      {
+        "left": "alemán",
+        "right": "po niemiecku"
+      },
+      {
+        "left": "francés",
+        "right": "po francusku"
+      },
+      {
+        "left": "inglés",
+        "right": "po angielsku"
+      }
+    ]
+  }
+}

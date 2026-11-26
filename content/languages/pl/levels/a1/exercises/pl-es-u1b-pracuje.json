@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-pracuje",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Carlos ___ w Krakowie.",
+  "explanation": "Pracować: ja pracuję, on pracuje.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "pracuje"
+      },
+      {
+        "id": "opt-b",
+        "text": "pracuję"
+      },
+      {
+        "id": "opt-c",
+        "text": "pracujesz"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

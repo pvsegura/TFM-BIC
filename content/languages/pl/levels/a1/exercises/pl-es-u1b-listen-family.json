@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-listen-family",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: la familia de Javier también vive en Cracovia.",
+  "explanation": "Moja rodzina mieszka w Madrycie — su familia vive en Madrid.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

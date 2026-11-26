@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-sound-piec",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 1530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 37,
+    "phase": "sound"
+  },
+  "prompt": "En pięć se oye una n antes de la ć: [pieñch].",
+  "explanation": "Sí: la ę nasal delante de ć suena como en + n suave.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

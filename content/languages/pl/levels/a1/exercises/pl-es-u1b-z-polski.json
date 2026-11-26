@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-z-polski",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Ewa jest ___ (de Polonia).",
+  "explanation": "Después de z el nombre cambia: Polska → z Polski.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "z Polski"
+      },
+      {
+        "id": "opt-b",
+        "text": "z Polska"
+      },
+      {
+        "id": "opt-c",
+        "text": "w Polsce"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

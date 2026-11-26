@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u1b-reading-pablo",
+  "lessonId": "pl-es-unit-1-countries",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 1,
+    "number": 44,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuántos años tiene Pablo?",
+  "explanation": "Pablo ma siedem lat.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Siete."
+      },
+      {
+        "id": "opt-b",
+        "text": "Diez."
+      },
+      {
+        "id": "opt-c",
+        "text": "Diecisiete."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
