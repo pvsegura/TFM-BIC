@@ -166,11 +166,12 @@ k.ta(
 k.write(
   "pl-es-u1a-write-enrol",
   "express",
-  "Escribe un breve mensaje en polaco a una escuela de idiomas: saluda, preséntate, deletrea tu apellido y da tu correo.",
+  "Escribe un breve mensaje en polaco a la recepción de tu hotel en Cracovia: saluda, di que tienes una reserva, deletrea tu apellido y da tu correo.",
   "Revisa: Dzień dobry, nazywam się…, los nombres de las letras y małpa / kropka.",
-  "Dzień dobry. Nazywam się Ana García. Moje nazwisko pisze się: gie, a, er, ce, i, a. Mój e-mail to ana kropka garcia małpa poczta kropka es. Dziękuję.",
+  "Dzień dobry. Mam rezerwację. Nazywam się Ana García. Moje nazwisko pisze się: gie, a, er, ce, i, a. Mój e-mail to ana kropka garcia małpa poczta kropka es. Dziękuję.",
   [
     "saludo formal",
+    "mam rezerwację",
     "nazywam się / mam na imię",
     "apellido deletreado",
     "correo con małpa y kropka",

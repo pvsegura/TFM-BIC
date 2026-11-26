@@ -225,16 +225,16 @@
         "El trato formal (pan / pani) es muy común, también entre compañeros de trabajo mayores. Pasar al «tú» (przejść na ty) suele proponerlo la persona mayor o de mayor rango. Al saludar se da la mano; los dos besos españoles no son habituales al conocer a alguien."
       ]
     },
-    { "type": "section", "phase": "express", "title": "Misión: apúntate al curso" },
+    { "type": "section", "phase": "express", "title": "Misión: llegas a Cracovia" },
     {
       "type": "mission",
-      "title": "Te apuntas a un curso de polaco en Cracovia",
+      "title": "Te registras en un hotel de Cracovia",
       "steps": [
         "Saluda de forma formal: Dzień dobry.",
-        "Di que quieres apuntarte al curso: Chcę zapisać się na kurs polskiego.",
+        "Di que tienes una reserva: Mam rezerwację.",
         "Di tu nombre y tu apellido y deletrea el apellido en polaco.",
         "Da tu correo electrónico con małpa y kropka.",
-        "Preséntate a un compañero de clase de tú y pregúntale cómo se llama.",
+        "En el desayuno, preséntate de tú a otro huésped de tu edad y pregúntale cómo se llama.",
         "Grábate en la aplicación y compara: ¿suena bien la ł y la diferencia entre s, sz y ś?"
       ]
     },
