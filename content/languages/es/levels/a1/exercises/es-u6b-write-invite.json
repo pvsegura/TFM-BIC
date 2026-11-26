@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-write-invite",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 650,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 82,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Napisz wiadomość do kolegi lub koleżanki z pracy: zaproś na sport albo inny plan, zaproponuj dzień, godzinę i miejsce, i napisz, co trzeba zabrać.",
+  "explanation": "Sprawdź: ¿quieres / te apetece + bezokolicznik, jugar al / hacer, quedamos + kiedy + gdzie.",
+  "configuration": {
+    "modelAnswer": "¡Hola, Pablo! ¿Te apetece jugar al baloncesto el sábado por la mañana? Somos cinco y necesitamos una persona más. ¿Te va bien a las once? Quedamos en el polideportivo, al lado de la piscina. Tienes que llevar zapatillas de deporte y agua. Después tomamos algo en el bar. ¿Puedes?",
+    "checklist": ["zaproszenie", "dzień i godzina", "miejsce", "co zabrać", "pytanie na końcu"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

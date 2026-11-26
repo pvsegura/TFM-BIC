@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-sound-link",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 54,
+    "phase": "sound"
+  },
+  "prompt": "Jak Hiszpan wymawia los amigos?",
+  "explanation": "Końcowa spółgłoska łączy się z samogłoską następnego słowa: [lo-sa-mi-gos].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[lo-sa-mi-gos], bez przerwy."
+      },
+      {
+        "id": "opt-b",
+        "text": "[los] — przerwa — [amigos]."
+      },
+      {
+        "id": "opt-c",
+        "text": "[lo-a-mi-gos], bez s."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

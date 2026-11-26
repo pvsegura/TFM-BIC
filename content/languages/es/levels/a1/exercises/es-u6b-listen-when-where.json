@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-listen-when-where",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: kiedy i gdzie się umawiają?",
+  "explanation": "Quedamos el domingo a las diez en el polideportivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W niedzielę o 10:00 w ośrodku sportowym."
+      },
+      {
+        "id": "opt-b",
+        "text": "W sobotę o 10:00 w parku."
+      },
+      {
+        "id": "opt-c",
+        "text": "W niedzielę o 11:00 w biurze."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

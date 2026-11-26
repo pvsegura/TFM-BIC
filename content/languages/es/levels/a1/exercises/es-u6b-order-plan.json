@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-order-plan",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 49,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż zdanie: Spotykamy się w niedzielę o dziesiątej w ośrodku sportowym.",
+  "explanation": "Quedamos + kiedy + o której + gdzie.",
+  "configuration": {
+    "items": ["Quedamos", "el domingo", "a las diez", "en el polideportivo."],
+    "joiner": " "
+  }
+}

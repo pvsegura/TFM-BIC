@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-quedarse",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 46,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Estoy cansado. Hoy ___ en casa.",
+  "explanation": "Zostać to quedarse: me quedo. Bez się quedar znaczy „umówić się”.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "me quedo"
+      },
+      {
+        "id": "opt-b",
+        "text": "quedo"
+      },
+      {
+        "id": "opt-c",
+        "text": "quedamos"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

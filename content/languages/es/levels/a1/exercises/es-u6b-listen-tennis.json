@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-listen-tennis",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Marek umie grać w padla.",
+  "explanation": "Marek mówi no sé jugar — umie grać tylko w tenisa (solo juego al tenis).",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

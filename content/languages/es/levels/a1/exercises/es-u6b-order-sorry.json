@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-order-sorry",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 50,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż odmowę: Przykro mi, w sobotę nie mogę.",
+  "explanation": "Lo siento + el sábado + no puedo.",
+  "configuration": {
+    "items": ["Lo", "siento,", "el", "sábado", "no", "puedo."],
+    "joiner": " "
+  }
+}

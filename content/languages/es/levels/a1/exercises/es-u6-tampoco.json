@@ -8,7 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
-  "book": { "unit": 6, "number": 15, "phase": "structure" },
+  "book": { "unit": 6, "number": 25, "phase": "structure" },
   "prompt": "— No me gusta el café. — Ty też nie lubisz. Co mówisz?",
   "explanation": "Zgoda z przeczeniem → tampoco.",
   "configuration": {

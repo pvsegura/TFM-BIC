@@ -149,11 +149,12 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   - unidad 3 (lugares, direcciones);
   - unidad 4 (bar, restaurante);
   - unidad 5 (mi día, la semana);
-  - **unidad 6A «¿Qué te gusta?»** (`es-unit-6-likes`, order 150, 47 ejercicios en la unidad);
+  - **unidad 6A «¿Qué te gusta?»** (`es-unit-6-likes`, order 150);
+  - **unidad 6B «¿Quedamos?»** (`es-unit-6-plans`, order 155): deportes, invitar/aceptar/rechazar,
+    poder/querer/saber (no sé vs no puedo), quedar/quedarse, enlace entre palabras. Unidad 6: 83
+    ejercicios. `ir a + infinitivo` se dejó para la unidad 9, como dice el currículo;
   - repaso de las unidades 1–3.
 - **Pendientes:**
-  - **6B** (lección nueva, order 155; propuesta: deportes y planes: quedar, ¿quieres…?, preferir,
-    ir a + infinitivo);
   - unidades 7–12 (ahora son lecciones finas de unos 10 bloques que hay que reescribir: shopping,
     home, weather, getting-around, health…);
   - unidad 0;
@@ -161,7 +162,7 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   - examen final.
 - Hay apéndices de gramática (17 temas) y de vocabulario temático (hotel, viajes, profesiones,
   comida, cuerpo, calendario, adjetivos), además de crucigramas.
-- Libros A1: Podręcznik **114 páginas** y Zeszyt **88**. Objetivo: unas 170–190 y 160–180.
+- Libros A1: Podręcznik **120 páginas** y Zeszyt **94**. Objetivo: unas 170–190 y 160–180.
 
 ### Polaco para hispanohablantes (pl-es)
 
@@ -177,11 +178,12 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 
 ### Git
 
-- Hay 4 commits locales sin subir en `chore/rename-to-verbysia`:
+- Hay 5 commits locales sin subir en `chore/rename-to-verbysia`:
   - selector de cursos;
   - unidad 6A;
   - unidad 1B de polaco;
-  - misión de la 1A como hotel.
+  - misión de la 1A como hotel;
+  - unidad 6B.
 - Para verlos en la web: el usuario debe decir «sube con --no-verify». Después se hace
   fast-forward de `main` y se sube `main` para que Render despliegue.
 

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-reading-vermu",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 65,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: co znaczy ¡Invito yo!?",
+  "explanation": "Invitar = zapraszać, ale też stawiać: ¡Invito yo! — ja stawiam.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ja stawiam."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja zapraszam do domu."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ja też przyjdę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

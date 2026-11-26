@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-culture-summer",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 66,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: kiedy latem na południu Hiszpanii najlepiej uprawiać sport?",
+  "explanation": "W środku dnia jest za gorąco — sport rano albo późnym wieczorem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Wcześnie rano albo późnym wieczorem."
+      },
+      {
+        "id": "opt-b",
+        "text": "W samo południe."
+      },
+      {
+        "id": "opt-c",
+        "text": "Zaraz po obiedzie, o 15:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

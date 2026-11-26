@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-polite-no",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 47,
+    "phase": "structure"
+  },
+  "prompt": "— ¿Vamos al cine el viernes? Nie możesz. Która odpowiedź jest najgrzeczniejsza?",
+  "explanation": "Przeprosiny + powód + inny termin.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¡Qué pena! El viernes tengo que trabajar. ¿Otro día?"
+      },
+      {
+        "id": "opt-b",
+        "text": "No."
+      },
+      {
+        "id": "opt-c",
+        "text": "No quiero ir al cine contigo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

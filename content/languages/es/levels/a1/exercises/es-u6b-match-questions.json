@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-match-questions",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 48,
+    "phase": "structure"
+  },
+  "prompt": "Połącz pytanie z odpowiedzią.",
+  "explanation": "¿Cuándo? — dzień; ¿A qué hora? — godzina; ¿Dónde? — miejsce.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "¿Cuándo quedamos?",
+        "right": "El sábado por la tarde."
+      },
+      {
+        "left": "¿A qué hora quedamos?",
+        "right": "Sobre las seis."
+      },
+      {
+        "left": "¿Dónde quedamos?",
+        "right": "Delante del cine."
+      },
+      {
+        "left": "¿Con quién quedas?",
+        "right": "Con mis compañeros."
+      }
+    ]
+  }
+}

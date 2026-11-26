@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-listen-invite",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: do czego Lucía zaprasza Marka?",
+  "explanation": "¿Quieres jugar al pádel con nosotros?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Do gry w padla."
+      },
+      {
+        "id": "opt-b",
+        "text": "Do kina."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na basen."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

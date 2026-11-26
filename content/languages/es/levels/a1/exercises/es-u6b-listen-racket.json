@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-listen-racket",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Marek musi przynieść własną rakietę.",
+  "explanation": "Nie — Lucía ma dwie. Marek musi wziąć tylko wodę i buty sportowe.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

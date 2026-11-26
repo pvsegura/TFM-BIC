@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-translate-want",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 75,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Chcesz zagrać w tenisa w sobotę?",
+  "explanation": "¿Quieres + bezokolicznik? Jugar al tenis.",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Quieres jugar al tenis el sábado?",
+      "¿Quieres jugar al tenis este sábado?"
+    ],
+    "caseSensitive": false
+  }
+}

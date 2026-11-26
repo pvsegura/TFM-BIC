@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-listen-saturday",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: dlaczego Marek nie może w sobotę?",
+  "explanation": "Tengo que ayudar a mi hermano con la mudanza.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Musi pomóc bratu w przeprowadzce."
+      },
+      {
+        "id": "opt-b",
+        "text": "Musi pracować."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idzie na basen."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

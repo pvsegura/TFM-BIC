@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-gap-querer",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 41,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą czasownika querer.",
+  "explanation": "Querer: e → ie (quiero, quieres, quiere, queremos, queréis, quieren).",
+  "configuration": {
+    "text": "¿___ (tú) venir al cine? Mis amigos ___ jugar al fútbol, pero yo ___ nadar.",
+    "gaps": [
+      {
+        "accepted": ["Quieres"]
+      },
+      {
+        "accepted": ["quieren"]
+      },
+      {
+        "accepted": ["quiero"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

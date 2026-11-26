@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-sound-stop",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 55,
+    "phase": "sound"
+  },
+  "prompt": "Przed słowem zaczynającym się od samogłoski (np. ¿te apetece?) robimy krótkie zatrzymanie w gardle, jak po polsku.",
+  "explanation": "Nie — po hiszpańsku samogłoski na styku słów zlewają się: [tea-pe-te-se].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

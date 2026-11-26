@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-reading-carmen",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 63,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Carmen nie zagra, ale przyjdzie obejrzeć mecz.",
+  "explanation": "Me duele el brazo. ¿Puedo ir a ver el partido? — ¡Claro!",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

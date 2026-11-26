@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-write-decline",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 660,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 83,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Odpowiedz na zaproszenie: «¿Quieres venir a hacer senderismo el domingo? Salimos a las ocho.» Odmów grzecznie, podaj powód i zaproponuj inny plan.",
+  "explanation": "Lo siento / ¡qué pena! + no puedo + tengo que… + ¿por qué no…? / ¿otro día?",
+  "configuration": {
+    "modelAnswer": "¡Qué pena! El domingo no puedo: tengo que estudiar para un examen. Además, no sé si puedo andar tanto. ¿Por qué no vamos a nadar el sábado por la tarde? Quedamos a las seis en la piscina, ¿te va bien?",
+    "checklist": ["przeprosiny", "powód z tengo que", "inny plan", "godzina i miejsce"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

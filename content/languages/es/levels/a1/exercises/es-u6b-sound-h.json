@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-sound-h",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 56,
+    "phase": "sound"
+  },
+  "prompt": "Jak połączysz en el hotel?",
+  "explanation": "H jest nieme, więc łączymy przez nie: [e-ne-lo-tel].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[e-ne-lo-tel]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[en-el-ho-tel]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[e-nel-cho-tel]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

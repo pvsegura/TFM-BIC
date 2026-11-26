@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-ganar-perder",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 20,
+    "phase": "connect"
+  },
+  "prompt": "Uzupełnij: Mi equipo siempre ___, ¡nunca gana!",
+  "explanation": "Perder (e → ie) — przegrywać: pierde.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "pierde"
+      },
+      {
+        "id": "opt-b",
+        "text": "gana"
+      },
+      {
+        "id": "opt-c",
+        "text": "juega"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

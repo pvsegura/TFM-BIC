@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-reading-players",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 64,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: kogo Lucía zapyta, bo brakuje graczy?",
+  "explanation": "Voy a preguntar a mi hermana y a su novio.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Siostrę i jej chłopaka."
+      },
+      {
+        "id": "opt-b",
+        "text": "Andrésa i Carmen."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kolegów z pracy."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-gap-poder",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą czasownika poder.",
+  "explanation": "Poder: o → ue we wszystkich osobach poza nosotros i vosotros.",
+  "configuration": {
+    "text": "Yo no ___ el sábado. ¿Tú ___ el domingo? Nosotros ___ a las diez.",
+    "gaps": [
+      {
+        "accepted": ["puedo"]
+      },
+      {
+        "accepted": ["puedes"]
+      },
+      {
+        "accepted": ["podemos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

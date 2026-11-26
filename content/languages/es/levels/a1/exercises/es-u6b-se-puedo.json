@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-se-puedo",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 43,
+    "phase": "structure"
+  },
+  "prompt": "Nigdy nie uczyłeś się pływać. Co mówisz?",
+  "explanation": "Brak umiejętności: no sé + bezokolicznik.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "No sé nadar."
+      },
+      {
+        "id": "opt-b",
+        "text": "No puedo nadar."
+      },
+      {
+        "id": "opt-c",
+        "text": "No quiero nadar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-match-sports",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "Połącz sporty z tłumaczeniem.",
+  "explanation": "Baloncesto = balón + cesto (kosz); balonmano = balón + mano (ręka).",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "el baloncesto",
+        "right": "koszykówka"
+      },
+      {
+        "left": "el balonmano",
+        "right": "piłka ręczna"
+      },
+      {
+        "left": "el voleibol",
+        "right": "siatkówka"
+      },
+      {
+        "left": "el ajedrez",
+        "right": "szachy"
+      },
+      {
+        "left": "el senderismo",
+        "right": "turystyka górska"
+      },
+      {
+        "left": "el partido",
+        "right": "mecz"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-translate-ski",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 77,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Nie umiem jeździć na nartach.",
+  "explanation": "Umiejętność: no sé + esquiar.",
+  "configuration": {
+    "acceptedAnswers": ["No sé esquiar.", "Yo no sé esquiar."],
+    "caseSensitive": false
+  }
+}

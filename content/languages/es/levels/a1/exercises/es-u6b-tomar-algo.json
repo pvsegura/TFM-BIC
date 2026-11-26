@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-tomar-algo",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 21,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy tomar algo?",
+  "explanation": "Tomar algo = napić się czegoś (zwykle na mieście, w barze).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Napić się czegoś na mieście."
+      },
+      {
+        "id": "opt-b",
+        "text": "Wziąć coś ze sobą."
+      },
+      {
+        "id": "opt-c",
+        "text": "Zrobić zakupy."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

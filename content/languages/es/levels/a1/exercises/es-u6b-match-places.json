@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-match-places",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "Połącz miejsca i rzeczy z tłumaczeniem.",
+  "explanation": "La pista = kort; el polideportivo = ośrodek sportowy.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la piscina",
+        "right": "basen"
+      },
+      {
+        "left": "la pista",
+        "right": "kort"
+      },
+      {
+        "left": "el polideportivo",
+        "right": "ośrodek sportowy"
+      },
+      {
+        "left": "el equipo",
+        "right": "drużyna"
+      },
+      {
+        "left": "las zapatillas de deporte",
+        "right": "buty sportowe"
+      }
+    ]
+  }
+}

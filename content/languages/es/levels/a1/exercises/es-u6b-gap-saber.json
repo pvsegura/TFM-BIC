@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-gap-saber",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 42,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą czasownika saber.",
+  "explanation": "Saber jest nieregularne tylko w formie yo: sé.",
+  "configuration": {
+    "text": "Yo no ___ esquiar, pero mi hermana ___ esquiar muy bien. ¿Vosotros ___ patinar?",
+    "gaps": [
+      {
+        "accepted": ["sé"]
+      },
+      {
+        "accepted": ["sabe"]
+      },
+      {
+        "accepted": ["sabéis"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

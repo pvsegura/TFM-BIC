@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-apetece",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 45,
+    "phase": "structure"
+  },
+  "prompt": "Które zaproszenie jest poprawne?",
+  "explanation": "Apetecer działa jak gustar: ¿te apetece…?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Te apetece tomar un café?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Apeteces tomar un café?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Tú apetece tomar un café?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

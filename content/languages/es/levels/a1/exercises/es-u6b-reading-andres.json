@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6b-reading-andres",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 62,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: dlaczego Andrés nie może grać w niedzielę?",
+  "explanation": "El domingo tengo que trabajar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Musi pracować."
+      },
+      {
+        "id": "opt-b",
+        "text": "Boli go ręka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie umie grać."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

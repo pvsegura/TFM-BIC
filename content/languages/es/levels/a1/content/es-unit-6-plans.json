@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 155,
+  "unit": 6,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 6B. ¿Quedamos? — sport, zaproszenia i plany",
+  "description": "Zapraszasz, przyjmujesz zaproszenie albo grzecznie odmawiasz i umawiasz się na konkretny dzień, godzinę i miejsce: ¿quieres…?, ¿te apetece…?, poder, saber, quedar i nazwy sportów.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Zaproszenie na padla" },
+    {
+      "type": "explanation",
+      "text": "Marek, Polak, który pracuje w biurze w Madrycie, rozmawia przy ekspresie do kawy z koleżanką z pracy, Lucíą. Za pierwszym razem posłuchaj, do czego Lucía zaprasza Marka. Za drugim zaznacz, dlaczego Marek nie może w sobotę i na kiedy się w końcu umawiają. Za trzecim wyłap słowa, którymi się umawiają: ¿quieres…?, no puedo, ¿a qué hora quedamos?, ¿dónde quedamos?"
+    },
+    {
+      "type": "image",
+      "asset": "a1-u6-plans.png",
+      "alt": "Kobieta i mężczyzna rozmawiają przy ekspresie do kawy w jasnym biurze; kobieta ma na ramieniu torbę z rakietą."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "text": "Oye, Marek, ¿qué haces este sábado? ¿Quieres jugar al pádel con nosotros?",
+          "translation": "Słuchaj, Marek, co robisz w tę sobotę? Chcesz z nami zagrać w padla?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "¿Al pádel? Me apetece mucho, pero no sé jugar. Solo juego al tenis.",
+          "translation": "W padla? Bardzo mam ochotę, ale nie umiem grać. Gram tylko w tenisa."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "No pasa nada, es muy fácil. Si juegas al tenis, puedes jugar al pádel.",
+          "translation": "Nic nie szkodzi, to bardzo łatwe. Jeśli grasz w tenisa, możesz grać w padla."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Vale, pero el sábado no puedo. Tengo que ayudar a mi hermano con la mudanza.",
+          "translation": "Dobra, ale w sobotę nie mogę. Muszę pomóc bratu w przeprowadzce."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Qué pena! ¿Y el domingo? ¿Puedes el domingo por la mañana?",
+          "translation": "Szkoda! A w niedzielę? Możesz w niedzielę rano?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "El domingo sí. ¿A qué hora quedamos?",
+          "translation": "W niedzielę tak. O której się umawiamy?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Te va bien a las diez? Jugamos una hora y después tomamos algo.",
+          "translation": "Pasuje ci o dziesiątej? Gramy godzinę, a potem idziemy się czegoś napić."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Perfecto. ¿Y dónde quedamos?",
+          "translation": "Świetnie. A gdzie się spotykamy?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "En el polideportivo del barrio, al lado del parque. ¿Sabes dónde está?",
+          "translation": "W ośrodku sportowym na osiedlu, obok parku. Wiesz, gdzie to jest?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Sí, sí, voy allí a nadar los jueves. ¿Tengo que llevar raqueta?",
+          "translation": "Tak, tak, chodzę tam pływać w czwartki. Muszę wziąć rakietę?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "No, yo tengo dos. Solo tienes que llevar agua y zapatillas de deporte.",
+          "translation": "Nie, ja mam dwie. Musisz wziąć tylko wodę i buty sportowe."
+        },
+        {
+          "speaker": "Marek",
+          "text": "De acuerdo. Entonces quedamos el domingo a las diez en el polideportivo. ¡Hasta el domingo!",
+          "translation": "Zgoda. To umawiamy się w niedzielę o dziesiątej w ośrodku sportowym. Do niedzieli!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Sport i spotkania" },
+    {
+      "type": "table",
+      "caption": "Sporty: jugar, hacer albo osobny czasownik",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["jugar al fútbol", "grać w piłkę nożną", "hacer deporte", "uprawiać sport"],
+        ["jugar al baloncesto", "grać w koszykówkę", "hacer yoga", "ćwiczyć jogę"],
+        ["jugar al balonmano", "grać w piłkę ręczną", "hacer senderismo", "chodzić po górach"],
+        ["jugar al voleibol", "grać w siatkówkę", "hacer surf", "surfować"],
+        ["jugar al tenis", "grać w tenisa", "ir al gimnasio", "chodzić na siłownię"],
+        ["jugar al pádel", "grać w padla", "montar en bici", "jeździć na rowerze"],
+        ["jugar al ajedrez", "grać w szachy", "esquiar", "jeździć na nartach"],
+        ["nadar", "pływać", "patinar", "jeździć na łyżwach / rolkach"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Gdzie i z czym",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["el polideportivo", "ośrodek sportowy", "el partido", "mecz"],
+        ["la piscina", "basen", "el equipo", "drużyna"],
+        ["el gimnasio", "siłownia", "el entrenamiento", "trening"],
+        ["el campo de fútbol", "boisko", "ganar", "wygrywać"],
+        ["la pista (de tenis, de pádel)", "kort", "perder (e → ie)", "przegrywać"],
+        ["la raqueta", "rakieta", "el balón", "piłka (do nogi, do kosza)"],
+        [
+          "las zapatillas de deporte",
+          "buty sportowe",
+          "la pelota",
+          "piłeczka (tenisowa, do padla)"
+        ],
+        ["la mudanza", "przeprowadzka", "tomar algo", "napić się czegoś (na mieście)"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — BALONCESTO to dosłownie „piłka + kosz” (balón + cesto), tak jak polska koszykówka; BALONMANO to „piłka + ręka” (mano), czyli ręczna. POLIDEPORTIVO: poli- jak w „poliglota” (wiele) + deporte — miejsce na wiele sportów. PISCINA pochodzi od łacińskiego piscis, „ryba” — tak jak znak zodiaku Ryby (Pisces). PERDER kojarz z „przepaść”: kto przegrywa, ten przepada. A MUDANZA — kiedy się przeprowadzasz, wszystko się zmienia (mudar = zmieniać)."
+    },
+    { "type": "section", "phase": "structure", "title": "Zaprosić, odmówić, umówić się" },
+    {
+      "type": "explanation",
+      "text": "Najprostsze zaproszenie to ¿Quieres + bezokolicznik? — „Chcesz…?”: ¿Quieres jugar al pádel? Bardzo hiszpańskie i trochę cieplejsze jest ¿Te apetece + bezokolicznik albo rzecz? — „Masz ochotę…?”. Apetecer działa dokładnie jak gustar z jednostki 6A: me apetece, te apetece, nos apetece; ¿Te apetece un café? Proponując coś wspólnego, mówimy też ¿Vamos al cine? (Idziemy do kina?) albo ¿Por qué no jugamos el domingo? (Może zagramy w niedzielę?). O plany pytamy czasem teraźniejszym, tak jak po polsku: ¿Qué haces el sábado? — Co robisz w sobotę?"
+    },
+    {
+      "type": "table",
+      "caption": "Zaproponować, przyjąć, odmówić",
+      "columns": ["Proponujesz", "Przyjmujesz", "Odmawiasz grzecznie"],
+      "rows": [
+        ["¿Quieres jugar al tenis?", "¡Vale! / ¡Sí, claro!", "Lo siento, no puedo."],
+        ["¿Te apetece tomar algo?", "¡Me apetece mucho!", "Hoy no me apetece, la verdad."],
+        [
+          "¿Vamos al cine el viernes?",
+          "¡Genial! / ¡Qué buena idea!",
+          "El viernes no puedo. ¿Otro día?"
+        ],
+        [
+          "¿Por qué no quedamos el domingo?",
+          "De acuerdo. / Perfecto.",
+          "¡Qué pena! Tengo que trabajar."
+        ]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Trzy czasowniki, które stale pojawiają się w planach: poder (móc), querer (chcieć) i saber (wiedzieć, umieć). Po każdym z nich drugi czasownik stoi w bezokoliczniku, tak jak po polsku: puedo ir, quiero jugar, sé nadar. Poder zmienia o → ue, querer e → ie (znasz go z jednostki 4A), a saber ma nieregularną tylko formę yo: sé."
+    },
+    {
+      "type": "table",
+      "caption": "Poder, querer, saber — czas teraźniejszy",
+      "columns": ["Osoba", "poder (o → ue)", "querer (e → ie)", "saber (yo: sé)"],
+      "rows": [
+        ["yo", "puedo", "quiero", "sé"],
+        ["tú", "puedes", "quieres", "sabes"],
+        ["él / ella / usted", "puede", "quiere", "sabe"],
+        ["nosotros / nosotras", "podemos", "queremos", "sabemos"],
+        ["vosotros / vosotras", "podéis", "queréis", "sabéis"],
+        ["ellos / ellas / ustedes", "pueden", "quieren", "saben"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Nie umiem pływać. Dzisiaj nie mogę pływać, bo mam katar.",
+      "target": "No sé nadar. Hoy no puedo nadar porque estoy resfriado.",
+      "note": "Polskie „umieć” to po hiszpańsku saber + bezokolicznik (umiejętność, której się nauczyłeś). Poder to „móc”: masz czas, pozwolenie albo warunki. Rozróżnienie jest takie samo jak w polskim — tylko słowa są inne."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "No puedo jugar al ajedrez. (gdy chcesz powiedzieć: nie znam zasad)",
+      "right": "No sé jugar al ajedrez.",
+      "explanation": "No puedo znaczy „nie mogę” — teraz, dzisiaj, z jakiegoś powodu. Gdy brakuje ci umiejętności, mówisz no sé: No sé nadar, no sé esquiar. Marek w dialogu mówi właśnie no sé jugar — nigdy nie grał w padla."
+    },
+    {
+      "type": "explanation",
+      "text": "Quedar to podstawowy czasownik umawiania się: quedar con alguien — umówić się z kimś. Pytamy ¿Quedamos? (Umówimy się? / Spotkamy się?), ¿Cuándo quedamos?, ¿A qué hora quedamos?, ¿Dónde quedamos? — i odpowiadamy jednym zdaniem: Quedamos el domingo a las diez en el polideportivo. Uwaga: quedarse (z się) znaczy coś innego — „zostać”: Hoy me quedo en casa."
+    },
+    {
+      "type": "table",
+      "caption": "Umawianie się: kiedy, o której, gdzie",
+      "columns": ["Pytanie", "Odpowiedź", "Polski"],
+      "rows": [
+        ["¿Cuándo quedamos?", "El domingo por la mañana.", "W niedzielę rano."],
+        [
+          "¿A qué hora quedamos?",
+          "A las diez. / Sobre las diez.",
+          "O dziesiątej. / Około dziesiątej."
+        ],
+        [
+          "¿Dónde quedamos?",
+          "En el polideportivo. / Delante del cine.",
+          "W ośrodku sportowym. / Przed kinem."
+        ],
+        [
+          "¿Te va bien a las diez?",
+          "Sí, me va bien. / Mejor a las once.",
+          "Tak, pasuje mi. / Lepiej o jedenastej."
+        ],
+        ["¿Con quién quedas?", "Con unos compañeros de trabajo.", "Z kolegami z pracy."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "El domingo quedo en casa.",
+      "right": "El domingo me quedo en casa. / El domingo quedo con Lucía.",
+      "explanation": "Bez się quedar znaczy „umówić się”, z się — quedarse — „zostać”. Quedo en casa brzmi jak „umawiam się w domu”. Jeśli zostajesz w domu, potrzebujesz zaimka: me quedo, te quedas, se queda."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Juego yoga los martes. / Hago al tenis.",
+      "right": "Hago yoga los martes. / Juego al tenis.",
+      "explanation": "Jugar a + rodzajnik używamy w grach z piłką i zasadami (al fútbol, al pádel, al ajedrez). Hacer — przy zajęciach takich jak yoga, deporte, senderismo, surf. A wiele sportów ma własny czasownik: nadar, correr, esquiar, patinar."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "— ¿Quieres venir al cine? — No.",
+      "right": "— ¿Quieres venir al cine? — Lo siento, no puedo. Tengo que trabajar. ¿Otro día?",
+      "explanation": "Samo „no” brzmi po hiszpańsku bardzo sucho, nawet niegrzecznie. Odmawiając, przepraszamy (lo siento, ¡qué pena!), podajemy powód (tengo que…) i najlepiej proponujemy inny termin."
+    },
+    { "type": "section", "phase": "sound", "title": "Łączenie wyrazów: ¿quieres_ir_al cine?" },
+    {
+      "type": "explanation",
+      "text": "Hiszpanie mówią całymi grupami słów, bez przerw między wyrazami. Spółgłoska na końcu słowa łączy się z samogłoską na początku następnego: los_amigos brzmi [lo-sa-mi-gos], ¿quieres_ir_al cine? — [kie-re-si-ral-si-ne]. Dwie samogłoski na styku słów zlewają się w jedną sylabę: ¿te_apetece? [tea-pe-te-se], de_acuerdo [dea-kuer-do], para_ir [pa-rair]. Ponieważ h jest nieme, łączymy także przez nie: en_el_hotel [e-ne-lo-tel]. Polacy często robią przed słowem zaczynającym się od samogłoski krótkie zatrzymanie (zwarcie w gardle), jak w „na_[!]okno”. Po hiszpańsku tego zatrzymania nie ma — mów płynnie, jakby to było jedno długie słowo."
+    },
+    { "type": "section", "phase": "culture", "title": "Sport i plany po hiszpańsku" },
+    {
+      "type": "reading",
+      "title": "El grupo «Deporte y tapas»",
+      "paragraphs": [
+        "Lucía: ¡Hola a todos! ¿Quién quiere jugar al pádel el domingo a las diez? Necesitamos cuatro personas.",
+        "Marek: ¡Yo! Pero no tengo raqueta y no sé jugar muy bien.",
+        "Andrés: Yo no puedo, lo siento. El domingo tengo que trabajar. ¿Por qué no jugamos el sábado por la tarde?",
+        "Lucía: El sábado por la tarde hace mucho calor… Mejor el domingo por la mañana. ¿Y tú, Carmen?",
+        "Carmen: Me apetece mucho, pero me duele el brazo. ¿Puedo ir a ver el partido?",
+        "Lucía: ¡Claro! Entonces somos dos jugadores. Voy a preguntar a mi hermana y a su novio: juegan muy bien.",
+        "Andrés: Yo termino de trabajar a la una. ¿Tomamos el vermú todos juntos en el bar del polideportivo? ¡Invito yo!",
+        "Lucía: ¡Perfecto! Quedamos a las diez en la pista tres y a la una en el bar."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Prawie każda dzielnica w Hiszpanii ma swój polideportivo municipal — publiczny ośrodek sportowy z basenem, siłownią i kortami. Korty do padla czy tenisa rezerwuje się na godzinę, często przez aplikację, a karnet miesięczny (el abono) jest zwykle tańszy niż w prywatnych klubach.",
+        "Latem na południu Hiszpanii sport uprawia się wcześnie rano albo późnym wieczorem: w środku dnia jest za gorąco. Dlatego Lucía woli niedzielny poranek niż sobotnie popołudnie.",
+        "El vermú to niedzielny zwyczaj: około pierwszej, przed późnym obiadem, znajomi spotykają się w barze na kieliszek wermutu albo coś bezalkoholowego i małe przekąski. „¡Invito yo!” znaczy „ja stawiam”.",
+        "Hiszpanie rzadko odmawiają wprost. Zamiast suchego „no” mówią ¡qué pena!, podają powód i proponują inny termin: ¿Otro día? albo A ver si quedamos la semana que viene. Na spotkanie towarzyskie można się spóźnić kilka minut — ale nie na zarezerwowany kort, bo płaci się za pełną godzinę."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: umów się z kimś z pracy" },
+    {
+      "type": "mission",
+      "title": "Zaproś, odpowiedz na odmowę i ustal szczegóły",
+      "steps": [
+        "Wybierz sport albo plan (padel, basen, kino, spacer) i napisz zaproszenie do kolegi lub koleżanki z pracy: ¿Quieres…? albo ¿Te apetece…?",
+        "Wyobraź sobie, że ta osoba nie może w ten dzień. Napisz jej grzeczną odmowę: lo siento, no puedo + powód z tengo que…",
+        "Zaproponuj inny dzień: ¿Y el domingo? / ¿Por qué no quedamos…?",
+        "Ustal godzinę i miejsce: ¿A qué hora quedamos? ¿Dónde quedamos? ¿Te va bien…?",
+        "Powiedz, co trzeba zabrać i czego nie umiesz albo co umiesz: tienes que llevar…, no sé…, sé…",
+        "Podsumuj jednym zdaniem: Quedamos el … a las … en … — i przeczytaj je na głos płynnie, łącząc wyrazy."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Quieres jugar al pádel el sábado?",
+          "translation": "Chcesz zagrać w padla w sobotę?"
+        },
+        { "text": "¿Te apetece tomar algo?", "translation": "Masz ochotę się czegoś napić?" },
+        {
+          "text": "Lo siento, no puedo. Tengo que trabajar.",
+          "translation": "Przykro mi, nie mogę. Muszę pracować."
+        },
+        { "text": "No sé jugar al ajedrez.", "translation": "Nie umiem grać w szachy." },
+        { "text": "¿A qué hora quedamos?", "translation": "O której się umawiamy?" },
+        { "text": "¿Te va bien a las diez?", "translation": "Pasuje ci o dziesiątej?" },
+        {
+          "text": "Quedamos el domingo en el polideportivo.",
+          "translation": "Spotykamy się w niedzielę w ośrodku sportowym."
+        },
+        { "text": "Hoy me quedo en casa.", "translation": "Dzisiaj zostaję w domu." }
+      ],
+      "canDo": [
+        "zaprosić kogoś: ¿quieres…?, ¿te apetece…?, ¿vamos…?",
+        "przyjąć zaproszenie albo grzecznie odmówić z powodem",
+        "odmienić poder, querer i saber",
+        "odróżnić no sé (nie umiem) od no puedo (nie mogę)",
+        "umówić się na dzień, godzinę i miejsce z quedar",
+        "nazwać popularne sporty z jugar, hacer albo osobnym czasownikiem"
+      ]
+    }
+  ]
+}
