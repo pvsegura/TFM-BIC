@@ -89,7 +89,9 @@ describe("catalog API client", () => {
     const result = await fetchContentList("pl", "a1");
 
     expect(result.items).toHaveLength(1);
-    expect(vi.mocked(fetch).mock.calls[0]?.[0]).toBe("/content?language=pl&level=a1");
+    expect(vi.mocked(fetch).mock.calls[0]?.[0]).toBe(
+      "/content?language=pl&level=a1&instruction=pl",
+    );
   });
 
   it("fetchContent GETs one item with its blocks", async () => {
@@ -110,7 +112,7 @@ describe("catalog API client", () => {
 
     const urls = vi.mocked(fetch).mock.calls.map((call) => call[0]);
     expect(urls[0]).toBe("/languages/..%2Fx%3Fy%3Dz%23/levels");
-    expect(urls[1]).toBe("/content?language=a%26level%3Dc2&level=a1%23");
+    expect(urls[1]).toBe("/content?language=a%26level%3Dc2&level=a1%23&instruction=pl");
     expect(urls[2]).toBe("/content/a%2Fb");
   });
 

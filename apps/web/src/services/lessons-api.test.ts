@@ -55,7 +55,7 @@ describe("fetchLessons", () => {
 
     expect(result.lessons[0]?.id).toBe("pl-greetings");
     const { url, init } = lastCall();
-    expect(url).toBe("/lessons?language=pl&level=a1");
+    expect(url).toBe("/lessons?language=pl&level=a1&instruction=pl");
     expect(init.credentials).toBe("include");
     expect(init.headers).toMatchObject({ Accept: "application/json" });
     expect(init.method).toBeUndefined();
@@ -66,7 +66,7 @@ describe("fetchLessons", () => {
 
     await fetchLessons("pl&admin=1", "a1#x");
 
-    expect(lastCall().url).toBe("/lessons?language=pl%26admin%3D1&level=a1%23x");
+    expect(lastCall().url).toBe("/lessons?language=pl%26admin%3D1&level=a1%23x&instruction=pl");
   });
 
   it("rejects a response that does not match the contract", async () => {

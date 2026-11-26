@@ -10,7 +10,7 @@ import {
 } from "@verbysia/contracts";
 
 import { requestJson } from "./api-request.js";
-import { LANGUAGE } from "../i18n/index.js";
+import { instructionFor } from "./course-choice.js";
 
 /**
  * Lessons are per-student, so — unlike the public catalog client — every
@@ -30,7 +30,7 @@ export async function fetchLessons(
 ): Promise<LessonListResponse> {
   return lessonListResponseSchema.parse(
     await requestJson(
-      `/lessons?language=${enc(languageCode)}&level=${enc(levelId)}&instruction=${enc(LANGUAGE)}`,
+      `/lessons?language=${enc(languageCode)}&level=${enc(levelId)}&instruction=${enc(instructionFor(languageCode))}`,
     ),
   );
 }

@@ -6,6 +6,7 @@ import {
   fetchLanguageLevels,
   fetchLanguages,
 } from "../services/catalog-api.js";
+import { instructionFor } from "../services/course-choice.js";
 
 /**
  * Query-key root for the public language/content catalog. Unlike every other
@@ -48,7 +49,13 @@ export function useContentList(
   enabled: boolean,
 ) {
   return useQuery({
-    queryKey: [CATALOG_QUERY_KEY_ROOT, "content", languageCode, levelId],
+    queryKey: [
+      CATALOG_QUERY_KEY_ROOT,
+      "content",
+      languageCode,
+      levelId,
+      instructionFor(languageCode ?? ""),
+    ],
     queryFn:
       enabled && languageCode !== undefined && levelId !== undefined
         ? () => fetchContentList(languageCode, levelId)

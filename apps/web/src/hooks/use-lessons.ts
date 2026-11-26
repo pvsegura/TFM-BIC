@@ -3,6 +3,7 @@ import { useMutation, useQueryClient, type QueryClient } from "@tanstack/react-q
 import { useEffect, useRef } from "react";
 
 import { completeLesson, fetchLesson, fetchLessons, startLesson } from "../services/lessons-api.js";
+import { instructionFor } from "../services/course-choice.js";
 import { endSessionIfUnauthorized } from "./session-cache.js";
 import { useUserScopedQuery } from "./use-user-scoped-query.js";
 import { useSingleFlight } from "./use-single-flight.js";
@@ -27,7 +28,7 @@ const detailKey = (lessonId: string) => [LESSONS_QUERY_KEY_ROOT, "detail", lesso
  */
 export function useLessons(languageCode: string | undefined, levelId: string | undefined) {
   return useUserScopedQuery(
-    [LESSONS_QUERY_KEY_ROOT, "list", languageCode, levelId],
+    [LESSONS_QUERY_KEY_ROOT, "list", languageCode, levelId, instructionFor(languageCode ?? "")],
     languageCode === undefined || levelId === undefined
       ? undefined
       : () => fetchLessons(languageCode, levelId),
