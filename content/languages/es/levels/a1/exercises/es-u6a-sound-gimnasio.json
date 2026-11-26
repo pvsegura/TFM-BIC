@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-sound-gimnasio",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 32,
+    "phase": "sound"
+  },
+  "prompt": "Jak brzmi g w słowie gimnasio?",
+  "explanation": "Przed i: jak hiszpańska j — [chimnasio].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jak polskie ch: [chimnasio]."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak polskie g: [gimnasio]."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jak polskie dż: [dżimnasio]."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

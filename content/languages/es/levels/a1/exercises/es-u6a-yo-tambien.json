@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-yo-tambien",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "— Bailo salsa los jueves. — Ty też tańczysz. Co mówisz?",
+  "explanation": "Bailar to zwykły czasownik, więc odpowiadamy yo también.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Yo también."
+      },
+      {
+        "id": "opt-b",
+        "text": "A mí también."
+      },
+      {
+        "id": "opt-c",
+        "text": "Yo tampoco."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

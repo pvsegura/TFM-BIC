@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-a-ti",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "— Me encantan los gatos. — Ty też je uwielbiasz. Co mówisz?",
+  "explanation": "Przy gustar i encantar: a mí también.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¡A mí también!"
+      },
+      {
+        "id": "opt-b",
+        "text": "¡Yo también!"
+      },
+      {
+        "id": "opt-c",
+        "text": "¡A mí tampoco!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

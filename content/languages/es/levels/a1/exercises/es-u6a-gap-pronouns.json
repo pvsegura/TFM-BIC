@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-gap-pronouns",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij zaimkiem: me, te, le, nos, os, les.",
+  "explanation": "A ti → te; a nosotros → nos; a ellos → les.",
+  "configuration": {
+    "text": "¿A ti ___ gusta el jazz? A nosotros ___ encanta viajar. A ellos no ___ gusta madrugar.",
+    "gaps": [
+      {
+        "accepted": ["te"]
+      },
+      {
+        "accepted": ["nos"]
+      },
+      {
+        "accepted": ["les"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

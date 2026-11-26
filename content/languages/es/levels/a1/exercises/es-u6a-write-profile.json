@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-write-profile",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 46,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz swój profil na stronę wymiany językowej (intercambio): kim jesteś, co lubisz, co uwielbiasz, czego nie lubisz i czego szukasz.",
+  "explanation": "Sprawdź: gusta / gustan zgodnie z rzeczą, encanta bez mucho, rodzajniki przed rzeczownikami.",
+  "configuration": {
+    "modelAnswer": "¡Hola! Me llamo Kasia y soy de Gdańsk. Tengo veintiocho años. En mi tiempo libre me gusta leer, cocinar y pasear por la playa. Me encantan los perros y las series españolas. No me gusta nada madrugar los fines de semana. Busco un intercambio para hablar español los jueves por la tarde.",
+    "checklist": [
+      "przedstawienie się",
+      "trzy rzeczy, które lubisz",
+      "me encanta / me encantan",
+      "no me gusta nada",
+      "czego szukasz"
+    ],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

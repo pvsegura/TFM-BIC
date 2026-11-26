@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-write-reply",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 650,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 47,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Odpowiedz na wiadomość: «Me encanta el cine, pero no me gusta nada el fútbol. ¿Y a ti?» Zareaguj na obie rzeczy i dodaj dwie swoje.",
+  "explanation": "Użyj a mí también / a mí tampoco / a mí sí / a mí no i jednego pytania.",
+  "configuration": {
+    "modelAnswer": "¡Hola, Marta! A mí también me encanta el cine, sobre todo las películas de miedo. Pues a mí sí me gusta el fútbol: veo los partidos con mi hermano. También me gusta mucho nadar. ¿Te gusta la montaña?",
+    "checklist": ["reakcja na kino", "reakcja na piłkę", "dwie twoje rzeczy", "pytanie"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

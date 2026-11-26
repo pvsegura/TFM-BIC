@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-reading-sunday",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: co Javier robi w niedzielę po obiedzie?",
+  "explanation": "Su madre y él dan un paseo por el río; ojciec ogląda mecz.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Spaceruje z mamą nad rzeką."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ogląda mecz z ojcem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Gra w padla z bratem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

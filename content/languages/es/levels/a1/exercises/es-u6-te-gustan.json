@@ -8,7 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
-  "book": { "unit": 6, "number": 12, "phase": "transform", "lines": 1 },
+  "book": { "unit": 6, "number": 40, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Lubisz koty?",
   "explanation": "Los gatos (mn.) → te gustan.",
   "configuration": {

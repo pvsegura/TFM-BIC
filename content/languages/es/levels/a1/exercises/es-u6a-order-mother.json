@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-order-mother",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 28,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż zdanie: Moja mama bardzo lubi gotować.",
+  "explanation": "A + osoba + le gusta: podwójne wskazanie osoby jest normą.",
+  "configuration": {
+    "items": ["A", "mi", "madre", "le", "gusta", "mucho", "cocinar."],
+    "joiner": " "
+  }
+}

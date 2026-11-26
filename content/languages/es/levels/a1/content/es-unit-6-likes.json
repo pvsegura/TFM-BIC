@@ -8,78 +8,274 @@
   "order": 150,
   "unit": 6,
   "instructionLanguage": "pl",
-  "title": "Jednostka 6. ¿Qué te gusta? — upodobania i czas wolny",
-  "description": "Mówisz, co lubisz, a czego nie, i reagujesz na upodobania innych: también, tampoco, a mí sí, a mí no.",
+  "title": "Jednostka 6A. ¿Qué te gusta? — upodobania i czas wolny",
+  "description": "Mówisz, co lubisz, co uwielbiasz, a czego nie znosisz, i reagujesz na upodobania innych: gustar, encantar, también, tampoco, a mí sí, a mí no.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Wymiana językowa" },
     {
       "type": "explanation",
-      "text": "Przypomnienie: gustar zgadza się z rzeczą, którą lubisz. Me gusta el cine (jedna rzecz), me gustan las películas (wiele), me gusta leer (czynność). Osoby: me, te, le (jemu/jej/Panu), nos, os, les."
+      "text": "Ola, Polka, która mieszka w Walencji, spotyka się w kawiarni z Sofíą na intercambio — wymianie językowej: pół godziny po hiszpańsku, pół po polsku. Za pierwszym razem posłuchaj, co Ola robi w wolnym czasie. Za drugim zaznacz, w czym obie się zgadzają, a w czym nie. Za trzecim wyłap słowa, którymi reagują: también, tampoco, a mí sí, a mí no."
     },
     {
-      "type": "example",
-      "text": "A mi madre le gusta mucho cocinar.",
-      "translation": "Moja mama bardzo lubi gotować.",
-      "note": "A mi madre… le gusta — podwójne wskazanie osoby to norma po hiszpańsku."
-    },
-    {
-      "type": "explanation",
-      "text": "Encantar działa tak samo, ale znaczy „uwielbiać”: Me encanta el chocolate. Me encantan los perros. Nie mówimy „me encanta mucho” — encantar już jest bardzo mocne."
-    },
-    {
-      "type": "explanation",
-      "text": "Buduj zdania — reakcje: jeśli ktoś mówi Me gusta el fútbol, a ty też lubisz → A mí también. Jeśli nie lubisz → A mí no. Jeśli ktoś mówi No me gusta el café, a ty też nie → A mí tampoco. Jeśli ty lubisz → A mí sí."
-    },
-    {
-      "type": "example",
-      "text": "— No me gusta madrugar. — A mí tampoco.",
-      "translation": "— Nie lubię wcześnie wstawać. — Ja też nie."
-    },
-    {
-      "type": "example",
-      "text": "— Me encanta la playa. — ¿Sí? A mí no.",
-      "translation": "— Uwielbiam plażę. — Tak? A ja nie."
-    },
-    {
-      "type": "explanation",
-      "text": "Czas wolny: leer (czytać), bailar (tańczyć), viajar (podróżować), hacer deporte (uprawiać sport), ir al cine (chodzić do kina), quedar con amigos (spotykać się z przyjaciółmi), escuchar música (słuchać muzyki)."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: TAMPOCO — „tam też nie”: wyobraź sobie, że wskazujesz miejsce i kręcisz głową. TAMBIÉN — „tam bien”: tam też jest dobrze, kiwasz głową."
+      "type": "image",
+      "asset": "a1-u6-intercambio.png",
+      "alt": "Dwie młode kobiety rozmawiają przy stoliku w kawiarni, przed nimi kawa i otwarte zeszyty."
     },
     {
       "type": "dialogue",
       "lines": [
         {
           "speaker": "Sofía",
-          "text": "¿Qué haces en tu tiempo libre?",
-          "translation": "Co robisz w wolnym czasie?"
+          "text": "Bueno, Ola, ¿qué haces en tu tiempo libre?",
+          "translation": "No dobrze, Olu, co robisz w wolnym czasie?"
         },
         {
           "speaker": "Ola",
-          "text": "Me encanta bailar y me gusta mucho viajar.",
-          "translation": "Uwielbiam tańczyć i bardzo lubię podróżować."
+          "text": "Me encanta bailar. Voy a clases de salsa dos veces a la semana.",
+          "translation": "Uwielbiam tańczyć. Chodzę na lekcje salsy dwa razy w tygodniu."
         },
         {
           "speaker": "Sofía",
-          "text": "¡A mí también! ¿Te gusta el fútbol?",
-          "translation": "Ja też! Lubisz piłkę nożną?"
+          "text": "¡Qué bien! A mí también me gusta bailar, pero bailo fatal.",
+          "translation": "Super! Ja też lubię tańczyć, ale tańczę fatalnie."
         },
         {
           "speaker": "Ola",
-          "text": "No, no me gusta nada.",
-          "translation": "Nie, w ogóle nie lubię."
+          "text": "También me gusta mucho leer, sobre todo novelas policiacas.",
+          "translation": "Bardzo lubię też czytać, przede wszystkim kryminały."
         },
         {
           "speaker": "Sofía",
-          "text": "A mí tampoco. Prefiero el baloncesto.",
-          "translation": "Ja też nie. Wolę koszykówkę."
+          "text": "¿Sí? A mí no. Prefiero las series. ¿Te gustan las series españolas?",
+          "translation": "Tak? A ja nie. Wolę seriale. Lubisz hiszpańskie seriale?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Sí, me gustan mucho. Las veo con subtítulos en español.",
+          "translation": "Tak, bardzo je lubię. Oglądam je z hiszpańskimi napisami."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "¿Y el fútbol? Aquí en Valencia a todo el mundo le gusta el fútbol.",
+          "translation": "A piłka nożna? Tutaj w Walencji wszyscy lubią piłkę."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Pues a mí no me gusta nada. Es muy aburrido.",
+          "translation": "No to ja w ogóle jej nie lubię. Jest bardzo nudna."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "¡A mí tampoco! Mi novio, en cambio, ve todos los partidos.",
+          "translation": "Ja też nie! Za to mój chłopak ogląda wszystkie mecze."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Y no me gusta madrugar los fines de semana. Odio el despertador.",
+          "translation": "I nie lubię wcześnie wstawać w weekendy. Nienawidzę budzika."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "Pues a mí sí. Los sábados me levanto a las siete y voy a correr a la playa.",
+          "translation": "A ja lubię. W soboty wstaję o siódmej i idę biegać na plażę."
+        },
+        {
+          "speaker": "Ola",
+          "text": "¿A las siete? ¡Estás loca! Bueno, ¿nos cambiamos al polaco?",
+          "translation": "O siódmej? Zwariowałaś! No dobrze, przechodzimy na polski?"
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Czas wolny" },
+    {
+      "type": "table",
+      "caption": "Co robimy w wolnym czasie",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["leer", "czytać", "ir al cine", "chodzić do kina"],
+        ["bailar", "tańczyć", "ir a conciertos", "chodzić na koncerty"],
+        ["cantar", "śpiewać", "ver series", "oglądać seriale"],
+        ["cocinar", "gotować", "escuchar música", "słuchać muzyki"],
+        ["viajar", "podróżować", "tocar la guitarra", "grać na gitarze"],
+        ["pasear", "spacerować", "jugar a los videojuegos", "grać w gry wideo"],
+        ["correr", "biegać", "hacer deporte", "uprawiać sport"],
+        ["nadar", "pływać", "hacer fotos", "robić zdjęcia"],
+        ["dibujar", "rysować", "quedar con amigos", "spotykać się z przyjaciółmi"],
+        ["descansar", "odpoczywać", "salir de copas", "wychodzić na drinka"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Rzeczy, które się lubi (z rodzajnikiem!)",
+      "columns": ["Liczba pojedyncza", "Polski", "Liczba mnoga", "Polski"],
+      "rows": [
+        ["el fútbol", "piłka nożna", "los deportes", "sporty"],
+        ["el cine", "kino", "las películas de miedo", "horrory"],
+        ["la música clásica", "muzyka klasyczna", "las series", "seriale"],
+        ["el chocolate", "czekolada", "los perros", "psy"],
+        ["la playa", "plaża", "los gatos", "koty"],
+        ["la montaña", "góry", "los museos", "muzea"],
+        ["el verano", "lato", "las novelas", "powieści"],
+        ["el café", "kawa", "los videojuegos", "gry wideo"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: powiedz trzy rzeczy, które lubisz, jedną, którą uwielbiasz, i jedną, której nie lubisz. Poproś kogoś, żeby zareagował: también / tampoco / sí / no."
+      "text": "Łącz i zapamiętuj — wiele słów znasz już z polskiego: salsa, gitara (guitarra), koncert (concierto), muzeum (museo), seria / serial (serie). Inne skojarzenia: MADRUGAR ma w sobie madrugada — „wczesny ranek, gdy jest jeszcze ciemno”. JUGAR (grać w grę) kojarz z „żonglować” — w grze żonglujesz piłką; TOCAR (grać na instrumencie) to dosłownie „dotykać”: dotykasz strun gitary. Po polsku „grać” to jedno słowo, po hiszpańsku dwa: jugar al fútbol, ale tocar el piano."
+    },
+    { "type": "section", "phase": "structure", "title": "Gustar, encantar i reakcje" },
+    {
+      "type": "explanation",
+      "text": "Gustar działa jak polskie „podobać się”: podmiotem jest rzecz, która się podoba, a osoba, której się podoba, stoi w celowniku. Me gusta el cine = „podoba mi się kino”, czyli „lubię kino”. Dlatego czasownik ma tylko dwie formy: gusta (jedna rzecz albo czynność) i gustan (wiele rzeczy). Osobę wskazuje zaimek: me, te, le, nos, os, les."
+    },
+    {
+      "type": "table",
+      "caption": "Gustar — kto lubi i co lubi",
+      "columns": [
+        "Kto lubi (dla podkreślenia)",
+        "Zaimek",
+        "Jedna rzecz / czynność",
+        "Wiele rzeczy"
+      ],
+      "rows": [
+        ["(a mí)", "me", "me gusta el cine", "me gustan los gatos"],
+        ["(a ti)", "te", "te gusta bailar", "te gustan las series"],
+        ["(a él / a ella / a usted)", "le", "le gusta la playa", "le gustan los museos"],
+        ["(a nosotros / a nosotras)", "nos", "nos gusta viajar", "nos gustan los perros"],
+        ["(a vosotros / a vosotras)", "os", "os gusta el fútbol", "os gustan las novelas"],
+        ["(a ellos / a ellas / a ustedes)", "les", "les gusta cocinar", "les gustan los conciertos"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Podoba mi się ta piosenka. Podobają mi się te piosenki.",
+      "target": "Me gusta esta canción. Me gustan estas canciones.",
+      "note": "Ta sama logika co w polskim „podobać się”: czasownik zgadza się z rzeczą, nie z osobą. Gdy lubisz czynność — nawet kilka — zawsze gusta: Me gusta leer y cocinar."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Yo gusto el fútbol. / Me gusto el fútbol.",
+      "right": "Me gusta el fútbol. / A mí me gusta el fútbol.",
+      "explanation": "Yo gusto znaczyłoby „ja się (komuś) podobam”. Zacznij od zaimka (me), a czasownik dopasuj do rzeczy (gusta / gustan). A mí dodajemy tylko dla podkreślenia albo kontrastu."
+    },
+    {
+      "type": "explanation",
+      "text": "Le i les są wieloznaczne (jemu, jej, Panu, Pani; im, Państwu), dlatego często dodajemy a + osobę: A Marta le gusta el teatro. A mis padres les gusta pasear. To podwójne wskazanie osoby (a Marta… le) jest po hiszpańsku normą, a nie błędem. Pytamy: ¿Qué te gusta hacer? (Co lubisz robić?), ¿Te gusta el jazz? (Lubisz jazz?), ¿A quién le gusta…? (Kto lubi…?)."
+    },
+    {
+      "type": "table",
+      "caption": "Od „uwielbiam” do „nie znoszę”",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["Me encanta(n)…", "Uwielbiam…"],
+        ["Me gusta(n) mucho…", "Bardzo lubię…"],
+        ["Me gusta(n)…", "Lubię…"],
+        ["No me gusta(n) mucho…", "Niezbyt lubię…"],
+        ["No me gusta(n) nada…", "W ogóle nie lubię…"],
+        ["Odio… / No soporto…", "Nienawidzę… / Nie znoszę…"],
+        ["Prefiero…", "Wolę…"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Me encanta mucho el chocolate.",
+      "right": "Me encanta el chocolate. / Me gusta mucho el chocolate.",
+      "explanation": "Encantar już znaczy „bardzo lubić”, więc nie dodajemy mucho. Encantar odmieniamy jak gustar (me encanta / me encantan), ale odiar i preferir są zwykłymi czasownikami: odio, prefiero (e → ie), prefieres."
+    },
+    {
+      "type": "table",
+      "caption": "Jak reagować na cudze upodobania",
+      "columns": ["Ktoś mówi", "Ty myślisz tak samo", "Ty myślisz inaczej"],
+      "rows": [
+        ["Me gusta el café.", "A mí también.", "A mí no."],
+        ["No me gusta el café.", "A mí tampoco.", "A mí sí."],
+        ["Me encantan los gatos.", "¡A mí también!", "Pues a mí no."],
+        ["No me gustan los lunes.", "¡A mí tampoco!", "Pues a mí sí."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "— Me gusta el jazz. — Yo también.",
+      "right": "— Me gusta el jazz. — A mí también.",
+      "explanation": "Odpowiedź powtarza formę pytania: przy gustar i encantar mówimy a mí también / a mí tampoco. Yo también odpowiada na zwykłe czasowniki: — Bailo salsa. — Yo también. W mowie potocznej usłyszysz czasem yo también po gustar, ale poprawnie i bezpiecznie jest a mí."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "— No me gusta madrugar. — A mí también no.",
+      "right": "— No me gusta madrugar. — A mí tampoco.",
+      "explanation": "„Też nie” to jedno słowo: tampoco. A gdy nie zgadzasz się z przeczeniem, mówisz a mí sí — „a ja tak”."
+    },
+    { "type": "section", "phase": "sound", "title": "Litera g: gusta, guitarra, gente" },
+    {
+      "type": "explanation",
+      "text": "Przed a, o, u litera g brzmi jak polskie g: gato, gol, gusta. Przed e, i brzmi jak hiszpańska j — twarde, chrapliwe polskie „ch”: gente [chente], girar [chirar]. Żeby zachować dźwięk g przed e, i, piszemy gu, a u jest nieme: guitarra [gitara], guerra [gera]. Gdy u ma być słyszalne, dostaje dwie kropki: pingüino [pinguino], bilingüe [bilingue]. Między samogłoskami g wymawia się miękko, prawie bez zwarcia: me gusta, el lago."
+    },
+    { "type": "section", "phase": "culture", "title": "Wolny czas po hiszpańsku" },
+    {
+      "type": "reading",
+      "title": "Los fines de semana de Javier",
+      "paragraphs": [
+        "Javier tiene treinta y cuatro años y vive en Sevilla. Trabaja en un banco de lunes a viernes, así que los fines de semana son sagrados para él.",
+        "Los sábados por la mañana juega al pádel con dos compañeros de trabajo y su hermano. Después toman algo en un bar del barrio: una caña y unas tapas. A Javier le encantan las tapas de pescado, pero no le gustan nada las aceitunas.",
+        "Por la tarde descansa un poco y, por la noche, queda con sus amigos para cenar. En Sevilla la gente cena tarde y sale mucho a la calle, sobre todo en primavera.",
+        "Los domingos come con su familia en casa de sus padres. Después de comer, su padre ve el fútbol en la tele y su madre y él dan un paseo por el río. A Javier no le gusta mucho el fútbol, pero sí le gusta pasear y hablar con su madre."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpanie spędzają wolny czas głównie poza domem: na ulicy, w barach i na placach. Quedar (umówić się) to jeden z najczęstszych czasowników — ¿Quedamos el sábado? Spotkania rzadko odbywają się w mieszkaniach; częściej na mieście, przy tapas.",
+        "Pádel — coś między tenisem a squashem, grane w parach na małym korcie otoczonym ścianami — jest w Hiszpanii drugim najpopularniejszym sportem po piłce nożnej. Kortów do pádla jest w kraju tysiące.",
+        "Piłka nożna budzi wielkie emocje; mecz Realu Madryt z FC Barceloną nazywa się el clásico. Ale nie każdy Hiszpan jest kibicem — tak jak Sofía i Javier.",
+        "Intercambio, czyli wymiana językowa jak u Oli i Sofíi, to w hiszpańskich miastach bardzo popularny sposób na naukę języka i poznanie ludzi. Wiele barów organizuje wieczory intercambio raz w tygodniu."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: twój profil na intercambio" },
+    {
+      "type": "mission",
+      "title": "Przedstaw swoje upodobania",
+      "steps": [
+        "Napisz krótki profil na stronę wymiany językowej: imię, skąd jesteś i trzy rzeczy, które lubisz robić.",
+        "Dodaj jedną rzecz, którą uwielbiasz (me encanta / me encantan), i jedną, której w ogóle nie lubisz (no me gusta nada).",
+        "Powiedz, co lubi ktoś z twojej rodziny: A mi hermano le gusta…",
+        "Przeczytaj trzy zdania koleżanki lub kolegi (albo z dialogu) i zareaguj na każde: a mí también, a mí tampoco, a mí sí, a mí no.",
+        "Zapytaj o dwie rzeczy: ¿Te gusta…? ¿Qué te gusta hacer los fines de semana?",
+        "Nagraj się i sprawdź wymowę g w gusta, guitarra i gente."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Qué te gusta hacer en tu tiempo libre?",
+          "translation": "Co lubisz robić w wolnym czasie?"
+        },
+        {
+          "text": "Me gusta leer y me encanta bailar.",
+          "translation": "Lubię czytać i uwielbiam tańczyć."
+        },
+        { "text": "Me gustan mucho las series.", "translation": "Bardzo lubię seriale." },
+        { "text": "No me gusta nada el fútbol.", "translation": "W ogóle nie lubię piłki nożnej." },
+        { "text": "A mi madre le gusta cocinar.", "translation": "Moja mama lubi gotować." },
+        { "text": "— Me gusta el café. — A mí también.", "translation": "— Lubię kawę. — Ja też." },
+        {
+          "text": "— No me gusta madrugar. — A mí tampoco.",
+          "translation": "— Nie lubię wcześnie wstawać. — Ja też nie."
+        },
+        {
+          "text": "Juego al pádel y toco la guitarra.",
+          "translation": "Gram w padla i gram na gitarze."
+        }
+      ],
+      "canDo": [
+        "powiedzieć, co lubię, uwielbiam, a czego nie znoszę",
+        "użyć gusta i gustan zgodnie z tym, co lubię",
+        "powiedzieć, co lubią inne osoby (le, les, a + osoba)",
+        "zareagować: a mí también, a mí tampoco, a mí sí, a mí no",
+        "odróżnić jugar i tocar",
+        "wymówić g przed a, o, u i przed e, i"
+      ]
     }
   ]
 }

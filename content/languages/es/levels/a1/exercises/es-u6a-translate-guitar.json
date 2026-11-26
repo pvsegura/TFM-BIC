@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-translate-guitar",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Gram na gitarze, ale nie gram w piłkę.",
+  "explanation": "Tocar (instrument) i jugar a (gra): no juego al fútbol.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Toco la guitarra, pero no juego al fútbol.",
+      "Toco la guitarra pero no juego al fútbol."
+    ],
+    "caseSensitive": false
+  }
+}

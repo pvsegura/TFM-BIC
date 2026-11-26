@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-listen-football",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co Ola i Sofía myślą o piłce nożnej?",
+  "explanation": "Ola: no me gusta nada. Sofía: ¡A mí tampoco! Lubi ją tylko chłopak Sofíi.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Obie jej nie lubią."
+      },
+      {
+        "id": "opt-b",
+        "text": "Obie ją uwielbiają."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ola ją lubi, Sofía nie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

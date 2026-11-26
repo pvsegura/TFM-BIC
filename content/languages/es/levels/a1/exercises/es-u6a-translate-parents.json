@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-translate-parents",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 42,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Moi rodzice lubią spacerować.",
+  "explanation": "A + osoby + les gusta + bezokolicznik.",
+  "configuration": {
+    "acceptedAnswers": ["A mis padres les gusta pasear."],
+    "caseSensitive": false
+  }
+}

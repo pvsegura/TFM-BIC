@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-a-mi-no",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "— Me gusta mucho la playa. — Ty nie lubisz plaży. Co mówisz?",
+  "explanation": "Niezgoda z twierdzeniem: a mí no.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pues a mí no."
+      },
+      {
+        "id": "opt-b",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "opt-c",
+        "text": "A mí sí."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

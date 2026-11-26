@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-translate-love",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 41,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Uwielbiam czekoladę.",
+  "explanation": "Encantar bez mucho: me encanta + rzecz z rodzajnikiem.",
+  "configuration": {
+    "acceptedAnswers": ["Me encanta el chocolate.", "A mí me encanta el chocolate."],
+    "caseSensitive": false
+  }
+}

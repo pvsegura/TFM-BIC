@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-gap-gusta-gustan",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą gusta albo gustan.",
+  "explanation": "Gusta: jedna rzecz albo czynność (nawet kilka czynności). Gustan: wiele rzeczy.",
+  "configuration": {
+    "text": "Me ___ el cine, me ___ las películas de miedo y me ___ leer y cocinar.",
+    "gaps": [
+      {
+        "accepted": ["gusta"]
+      },
+      {
+        "accepted": ["gustan"]
+      },
+      {
+        "accepted": ["gusta"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

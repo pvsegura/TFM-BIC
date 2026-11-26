@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-listen-novels",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Sofía też lubi czytać kryminały.",
+  "explanation": "Sofía odpowiada ¿Sí? A mí no. Prefiero las series.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-match-hobbies",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Połącz czynności z tłumaczeniem.",
+  "explanation": "Pasear = spacerować; quedar con amigos = umawiać się / spotykać z przyjaciółmi.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "pasear",
+        "right": "spacerować"
+      },
+      {
+        "left": "nadar",
+        "right": "pływać"
+      },
+      {
+        "left": "dibujar",
+        "right": "rysować"
+      },
+      {
+        "left": "descansar",
+        "right": "odpoczywać"
+      },
+      {
+        "left": "hacer fotos",
+        "right": "robić zdjęcia"
+      },
+      {
+        "left": "ir a conciertos",
+        "right": "chodzić na koncerty"
+      }
+    ]
+  }
+}

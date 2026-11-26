@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-order-question",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 29,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Co lubicie robić w weekendy?",
+  "explanation": "Vosotros → os gusta.",
+  "configuration": {
+    "items": ["¿Qué", "os", "gusta", "hacer", "los", "fines", "de", "semana?"],
+    "joiner": " "
+  }
+}

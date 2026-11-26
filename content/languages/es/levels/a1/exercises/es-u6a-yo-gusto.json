@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-yo-gusto",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Zaczynamy od zaimka, a czasownik zgadza się z rzeczą: me gusta el fútbol.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me gusta el fútbol."
+      },
+      {
+        "id": "opt-b",
+        "text": "Yo gusto el fútbol."
+      },
+      {
+        "id": "opt-c",
+        "text": "Me gusto el fútbol."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

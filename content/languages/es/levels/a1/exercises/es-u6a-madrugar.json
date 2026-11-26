@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-madrugar",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy madrugar?",
+  "explanation": "Madrugar = wstawać bardzo wcześnie (od madrugada, wczesny ranek).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Wstawać bardzo wcześnie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kłaść się późno spać."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jeść śniadanie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

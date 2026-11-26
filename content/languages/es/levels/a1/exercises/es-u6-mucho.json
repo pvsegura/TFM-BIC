@@ -8,7 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
-  "book": { "unit": 6, "number": 1, "phase": "perceive" },
+  "book": { "unit": 6, "number": 14, "phase": "structure" },
   "prompt": "Me encanta mucho el chocolate to naturalne zdanie.",
   "explanation": "Encantar jest już mocne — bez mucho.",
   "configuration": {

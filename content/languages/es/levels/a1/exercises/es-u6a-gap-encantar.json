@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-gap-encantar",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą encantar.",
+  "explanation": "Encanta(n) zgadza się z rzeczą: el chocolate → encanta, las series → encantan.",
+  "configuration": {
+    "text": "A mi hermana le ___ el chocolate y a mí me ___ las series de misterio.",
+    "gaps": [
+      {
+        "accepted": ["encanta"]
+      },
+      {
+        "accepted": ["encantan"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

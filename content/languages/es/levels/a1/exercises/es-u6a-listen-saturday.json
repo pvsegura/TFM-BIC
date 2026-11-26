@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-listen-saturday",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co robi Sofía w soboty o siódmej rano?",
+  "explanation": "Los sábados me levanto a las siete y voy a correr a la playa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Biega na plaży."
+      },
+      {
+        "id": "opt-b",
+        "text": "Śpi do południa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idzie na lekcję salsy."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

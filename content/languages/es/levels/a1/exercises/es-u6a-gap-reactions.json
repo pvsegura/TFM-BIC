@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-gap-reactions",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij reakcje: también, tampoco, sí, no.",
+  "explanation": "Ola nie lubi piłki — Sofía też nie (tampoco). Ola nie lubi wczesnego wstawania — Sofía lubi (sí).",
+  "configuration": {
+    "text": "— No me gusta el fútbol. — A mí ___. — No me gusta madrugar. — Pues a mí ___.",
+    "gaps": [
+      {
+        "accepted": ["tampoco"]
+      },
+      {
+        "accepted": ["sí"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

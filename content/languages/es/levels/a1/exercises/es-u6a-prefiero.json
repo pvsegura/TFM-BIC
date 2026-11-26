@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-prefiero",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: — ¿Te gusta el té? — No mucho, ___ el café.",
+  "explanation": "Preferir to zwykły czasownik z wymianą e → ie: prefiero, prefieres, prefiere.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "prefiero"
+      },
+      {
+        "id": "opt-b",
+        "text": "me prefiere"
+      },
+      {
+        "id": "opt-c",
+        "text": "prefero"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-reading-padel",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 33,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: z kim Javier gra w padla w soboty?",
+  "explanation": "Juega al pádel con dos compañeros de trabajo y su hermano.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Z dwoma kolegami z pracy i bratem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Z rodzicami."
+      },
+      {
+        "id": "opt-c",
+        "text": "Sam, na plaży."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

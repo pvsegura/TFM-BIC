@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-sound-g",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 30,
+    "phase": "sound"
+  },
+  "prompt": "Połącz słowo z wymową litery g.",
+  "explanation": "G przed e, i brzmi jak hiszpańska j (polskie ch); gu przed e, i to [g] z niemym u.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "gente",
+        "right": "[ch] jak w „chata”"
+      },
+      {
+        "left": "guitarra",
+        "right": "[g], u jest nieme"
+      },
+      {
+        "left": "gato",
+        "right": "[g] jak w „gata”"
+      },
+      {
+        "left": "pingüino",
+        "right": "[gu], u słychać"
+      }
+    ]
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-culture-quedar",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: gdzie Hiszpanie najczęściej spotykają się ze znajomymi?",
+  "explanation": "Spotkania odbywają się zwykle na mieście — w barach, na placach, przy tapas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na mieście: w barach i na placach."
+      },
+      {
+        "id": "opt-b",
+        "text": "Prawie zawsze w domu."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tylko w weekendy w restauracjach hotelowych."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

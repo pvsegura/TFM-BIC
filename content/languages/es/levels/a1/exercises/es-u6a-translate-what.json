@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u6a-translate-what",
+  "lessonId": "es-unit-6-likes",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 45,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Co lubisz robić w wolnym czasie?",
+  "explanation": "¿Qué te gusta hacer…? + en tu tiempo libre.",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Qué te gusta hacer en tu tiempo libre?",
+      "¿Qué te gusta hacer en el tiempo libre?"
+    ],
+    "caseSensitive": false
+  }
+}
