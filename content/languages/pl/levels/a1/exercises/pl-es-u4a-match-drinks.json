@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-match-drinks",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Herbata = té; sok = zumo; woda niegazowana = agua sin gas.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "herbata",
+        "right": "el té"
+      },
+      {
+        "left": "sok",
+        "right": "el zumo"
+      },
+      {
+        "left": "woda niegazowana",
+        "right": "el agua sin gas"
+      },
+      {
+        "left": "cukier",
+        "right": "el azúcar"
+      },
+      {
+        "left": "sernik",
+        "right": "la tarta de queso"
+      },
+      {
+        "left": "kawałek",
+        "right": "un trozo"
+      }
+    ]
+  }
+}

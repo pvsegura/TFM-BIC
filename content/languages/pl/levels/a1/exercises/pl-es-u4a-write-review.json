@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-write-review",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 4470,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 37,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe una pequeña opinión sobre tu cafetería favorita: dónde está, qué tomas, qué tarta es buena y cuánto cuesta.",
+  "explanation": "Jest / są, poproszę o zamawiam + acusativo, precios con złoty / złote / złotych.",
+  "configuration": {
+    "modelAnswer": "Moja ulubiona kawiarnia jest w centrum, obok rynku. Zawsze zamawiam dużą kawę z mlekiem. Sernik jest tam bardzo dobry. Kawa kosztuje czternaście złotych, a kawałek sernika dwanaście złotych. Polecam!",
+    "checklist": ["dónde está", "qué tomas", "tarta", "precios"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

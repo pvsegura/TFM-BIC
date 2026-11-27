@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-listen-szarlotka",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier toma tarta de manzana.",
+  "explanation": "Szarlotki już nie ma — toma sernik (tarta de queso).",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

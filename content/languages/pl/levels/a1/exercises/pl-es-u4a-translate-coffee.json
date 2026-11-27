@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-translate-coffee",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 31,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Un café solo y un trozo de tarta de queso, por favor.",
+  "explanation": "Poproszę czarną kawę (acusativo) i kawałek sernika (genitivo).",
+  "configuration": {
+    "acceptedAnswers": [
+      "Poproszę czarną kawę i kawałek sernika.",
+      "Poproszę kawę czarną i kawałek sernika.",
+      "Czarną kawę i kawałek sernika, poproszę."
+    ],
+    "caseSensitive": false
+  }
+}

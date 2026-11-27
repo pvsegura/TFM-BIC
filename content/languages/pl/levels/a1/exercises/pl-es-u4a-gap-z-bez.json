@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-gap-z-bez",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "Completa con z o bez.",
+  "explanation": "Z + instrumental (con), bez + genitivo (sin).",
+  "configuration": {
+    "text": "Kawa ___ mlekiem, ale ___ cukru, i herbata ___ cytryną.",
+    "gaps": [
+      {
+        "accepted": ["z"]
+      },
+      {
+        "accepted": ["bez"]
+      },
+      {
+        "accepted": ["z"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

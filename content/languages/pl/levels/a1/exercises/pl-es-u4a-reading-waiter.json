@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-reading-waiter",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 26,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cómo se pide en un bar mleczny?",
+  "explanation": "Tutaj nie ma kelnera. Zamawiasz przy kasie, płacisz i czekasz.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En la caja: pides, pagas y esperas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Te atiende un camarero en la mesa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Por una aplicación."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

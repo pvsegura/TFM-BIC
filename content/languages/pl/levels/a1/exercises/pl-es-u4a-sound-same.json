@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-sound-same",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 24,
+    "phase": "sound"
+  },
+  "prompt": "Ć en cześć y ci en ciastko suenan igual.",
+  "explanation": "Sí: es el mismo sonido; solo cambia la escritura.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

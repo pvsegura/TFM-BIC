@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-listen-total",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuánto pagan en total?",
+  "explanation": "Razem czterdzieści sześć złotych.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "46 zł."
+      },
+      {
+        "id": "opt-b",
+        "text": "36 zł."
+      },
+      {
+        "id": "opt-c",
+        "text": "64 zł."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

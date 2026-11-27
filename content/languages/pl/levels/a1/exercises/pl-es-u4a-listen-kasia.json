@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-listen-kasia",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué bebe Kasia?",
+  "explanation": "Dla mnie duża kawa z mlekiem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Un café grande con leche."
+      },
+      {
+        "id": "opt-b",
+        "text": "Un té con limón."
+      },
+      {
+        "id": "opt-c",
+        "text": "Un zumo de naranja."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

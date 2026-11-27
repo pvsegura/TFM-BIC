@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-gap-zloty",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "Completa con złoty, złote o złotych.",
+  "explanation": "Mira la última cifra: 2 → złote; 5 → złotych; 22 → złote.",
+  "configuration": {
+    "text": "Woda kosztuje dwa ___, kawa piętnaście ___, a sernik dwadzieścia dwa ___.",
+    "gaps": [
+      {
+        "accepted": ["złote"]
+      },
+      {
+        "accepted": ["złotych"]
+      },
+      {
+        "accepted": ["złote"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

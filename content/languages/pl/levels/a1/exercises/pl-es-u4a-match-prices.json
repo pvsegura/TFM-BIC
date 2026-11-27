@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-match-prices",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "Une cada precio con cómo se dice.",
+  "explanation": "2, 3, 4 → złote; el resto → złotych (salvo 1 złoty).",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "1 zł",
+        "right": "jeden złoty"
+      },
+      {
+        "left": "3 zł",
+        "right": "trzy złote"
+      },
+      {
+        "left": "7 zł",
+        "right": "siedem złotych"
+      },
+      {
+        "left": "24 zł",
+        "right": "dwadzieścia cztery złote"
+      },
+      {
+        "left": "13 zł",
+        "right": "trzynaście złotych"
+      }
+    ]
+  }
+}

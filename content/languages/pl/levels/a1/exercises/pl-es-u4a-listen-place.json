@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-listen-place",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿se quedan en la cafetería o se lo llevan?",
+  "explanation": "Na miejscu — para tomar allí.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Se quedan."
+      },
+      {
+        "id": "opt-b",
+        "text": "Se lo llevan."
+      },
+      {
+        "id": "opt-c",
+        "text": "No lo dicen."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

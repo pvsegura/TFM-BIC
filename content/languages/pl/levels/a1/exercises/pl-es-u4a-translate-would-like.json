@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-translate-would-like",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 32,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco (habla una mujer): Querría agua sin gas.",
+  "explanation": "Chciałabym + wodę niegazowaną (acusativo).",
+  "configuration": {
+    "acceptedAnswers": ["Chciałabym wodę niegazowaną.", "Chciałabym wodę bez gazu."],
+    "caseSensitive": false
+  }
+}

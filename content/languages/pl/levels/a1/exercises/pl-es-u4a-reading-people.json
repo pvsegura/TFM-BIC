@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-reading-people",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: en el bar mleczny comen sobre todo turistas.",
+  "explanation": "Studenci, emeryci, turyści i ludzie z biura — gente de todo tipo.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

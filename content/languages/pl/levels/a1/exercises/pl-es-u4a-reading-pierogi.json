@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-reading-pierogi",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuánto cuestan los pierogi?",
+  "explanation": "Pierogi dwadzieścia dwa złote.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "22 zł."
+      },
+      {
+        "id": "opt-b",
+        "text": "8 zł."
+      },
+      {
+        "id": "opt-c",
+        "text": "4 zł."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

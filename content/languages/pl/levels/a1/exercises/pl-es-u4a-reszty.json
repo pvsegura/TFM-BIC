@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-reszty",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Quieres que el camarero se quede con el cambio. ¿Qué dices?",
+  "explanation": "Reszty nie trzeba = no hace falta el cambio.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Reszty nie trzeba."
+      },
+      {
+        "id": "opt-b",
+        "text": "Razem, proszę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na wynos, proszę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

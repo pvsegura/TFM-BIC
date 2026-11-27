@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-woda",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4210,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 11,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Woda (f) → wodę después de poproszę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Poproszę wodę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Poproszę woda."
+      },
+      {
+        "id": "opt-c",
+        "text": "Poproszę wody wodę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

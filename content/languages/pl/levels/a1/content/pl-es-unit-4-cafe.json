@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1110,
+  "unit": 4,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 4A. Poproszę kawę — en la cafetería, pedir y pagar",
+  "description": "Pides algo de beber y de comer, preguntas qué hay y cuánto cuesta, y pagas: poproszę + acusativo, chciałbym / chciałabym, z mlekiem, bez cukru, los números hasta mil y los złoty.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Una tarta de queso después del trabajo" },
+    {
+      "type": "explanation",
+      "text": "Después del trabajo, Kasia y Javier entran en una cafetería del centro. Primera escucha: ¿qué toma cada uno? ¿Qué tarta ya no queda? Segunda: ¿se quedan o se lo llevan? ¿Quién paga, cuánto y cómo? Tercera: fíjate en las palabras para pedir: poproszę, dla mnie, chciałbym."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u4-cafe.png",
+      "alt": "Una camarera toma nota a un hombre y una mujer sentados a una mesita de una cafetería acogedora con una vitrina de tartas."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kelnerka",
+          "text": "Dzień dobry! Co podać?",
+          "translation": "¡Buenas tardes! ¿Qué les pongo?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Dla mnie duża kawa z mlekiem, poproszę.",
+          "translation": "Para mí un café grande con leche, por favor."
+        },
+        { "speaker": "Kelnerka", "text": "A dla pana?", "translation": "¿Y para usted?" },
+        {
+          "speaker": "Javier",
+          "text": "Chciałbym herbatę z cytryną. I… czy jest szarlotka?",
+          "translation": "Querría un té con limón. Y… ¿hay tarta de manzana?"
+        },
+        {
+          "speaker": "Kelnerka",
+          "text": "Niestety, szarlotki już nie ma. Jest sernik i makowiec.",
+          "translation": "Lo siento, ya no queda tarta de manzana. Hay tarta de queso y bizcocho de amapola."
+        },
+        {
+          "speaker": "Javier",
+          "text": "To poproszę sernik.",
+          "translation": "Entonces, una tarta de queso, por favor."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "A ja nic do jedzenia, dziękuję. Albo nie… też poproszę kawałek sernika!",
+          "translation": "Y yo nada de comer, gracias. O no… ¡yo también quiero un trozo de tarta de queso!"
+        },
+        {
+          "speaker": "Kelnerka",
+          "text": "Na miejscu czy na wynos?",
+          "translation": "¿Para tomar aquí o para llevar?"
+        },
+        { "speaker": "Kasia", "text": "Na miejscu.", "translation": "Para tomar aquí." },
+        {
+          "speaker": "Javier",
+          "text": "Przepraszam, chcemy zapłacić. Ile płacimy?",
+          "translation": "Perdone, queremos pagar. ¿Cuánto es?"
+        },
+        {
+          "speaker": "Kelnerka",
+          "text": "Razem czy osobno?",
+          "translation": "¿Junto o por separado?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Razem. Ja zapraszam!",
+          "translation": "Junto. ¡Invito yo!"
+        },
+        {
+          "speaker": "Kelnerka",
+          "text": "Razem czterdzieści sześć złotych.",
+          "translation": "En total, cuarenta y seis złotys."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Mogę zapłacić kartą?",
+          "translation": "¿Puedo pagar con tarjeta?"
+        },
+        {
+          "speaker": "Kelnerka",
+          "text": "Oczywiście, proszę przyłożyć kartę. Dziękuję, smacznego!",
+          "translation": "Claro, acerque la tarjeta. Gracias, ¡que aproveche!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Bebidas, dulces y la cuenta" },
+    {
+      "type": "table",
+      "caption": "Para beber",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["kawa (czarna / z mlekiem)", "el café (solo / con leche)", "herbata", "el té"],
+        ["espresso", "el café expreso", "cappuccino / latte", "el capuchino / el café con leche"],
+        [
+          "woda (gazowana / niegazowana)",
+          "el agua (con / sin gas)",
+          "sok (pomarańczowy, jabłkowy)",
+          "el zumo (de naranja, de manzana)"
+        ],
+        ["mleko", "la leche", "gorąca czekolada", "el chocolate caliente"],
+        ["piwo", "la cerveza", "wino (czerwone / białe)", "el vino (tinto / blanco)"],
+        ["cukier", "el azúcar", "cytryna", "el limón"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Para comer",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["ciastko", "el pastel, la galleta", "ciasto", "la tarta, el bizcocho"],
+        ["sernik", "la tarta de queso", "szarlotka", "la tarta de manzana"],
+        [
+          "makowiec",
+          "el bizcocho de semillas de amapola",
+          "pączek",
+          "el buñuelo relleno (tipo berlina)"
+        ],
+        ["kanapka", "el bocadillo, el sándwich", "zapiekanka", "la baguette gratinada"],
+        ["kawałek", "un trozo", "lody", "el helado"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Pedir y pagar",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["Co podać?", "¿Qué le pongo?", "Poproszę…", "Por favor, me pone…"],
+        ["Dla mnie…", "Para mí…", "Chciałbym / Chciałabym…", "Querría… (hombre / mujer)"],
+        [
+          "Na miejscu czy na wynos?",
+          "¿Para tomar aquí o para llevar?",
+          "Razem czy osobno?",
+          "¿Junto o por separado?"
+        ],
+        ["Ile płacę?", "¿Cuánto le debo?", "Ile kosztuje…?", "¿Cuánto cuesta…?"],
+        [
+          "kartą / gotówką",
+          "con tarjeta / en efectivo",
+          "rachunek / paragon",
+          "la cuenta / el tique"
+        ],
+        ["napiwek", "la propina", "Reszty nie trzeba.", "Quédese con el cambio."]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — KAWA y HERBATA: café viene del árabe por el mismo camino en las dos lenguas; herbata viene del latín herba thea, «hierba de té»: piensa en una «hierba» que te tomas caliente. CUKIER se parece a «azúcar» quitando la a (el árabe as-sukkar). SERNIK lleva dentro ser, queso (pídelo como «ser-nik»: «el de queso»). PĄCZEK es un capullo de flor: un buñuelo redondo como una flor cerrada. Y SMACZNEGO viene de smak, sabor: «¡que tenga buen sabor!»."
+    },
+    { "type": "section", "phase": "structure", "title": "Poproszę, chciałbym y los precios" },
+    {
+      "type": "explanation",
+      "text": "Para pedir en un bar o una cafetería se dice poproszę (literalmente «pediré») + lo que quieres. Detrás va el acusativo, el caso del complemento directo que ya viste con mam brata. Con las cosas, la regla es sencilla: los femeninos en -a cambian a -ę (kawa → kawę, herbata → herbatę) y los masculinos y neutros de cosa no cambian (sok, sernik, piwo, ciastko). Recuerda que en la unidad 2 los masculinos de persona o animal sí cambiaban (brat → brata): las cosas no."
+    },
+    {
+      "type": "table",
+      "caption": "Poproszę + acusativo",
+      "columns": ["Nombre", "Poproszę…", "Nombre", "Poproszę…"],
+      "rows": [
+        ["kawa", "kawę", "sok", "sok"],
+        ["herbata", "herbatę", "sernik", "sernik"],
+        ["woda", "wodę", "pączek", "pączka (excepción coloquial)"],
+        ["szarlotka", "szarlotkę", "piwo", "piwo"],
+        ["kanapka", "kanapkę", "ciastko", "ciastko"],
+        ["duża kawa", "dużą kawę", "lody", "lody"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Poproszę kawa i herbata.",
+      "right": "Poproszę kawę i herbatę.",
+      "explanation": "Después de poproszę (y de chcę, chciałbym, mam) el femenino cambia -a por -ę, y su adjetivo cambia -a por -ą: dużą kawę, zieloną herbatę. Si no sabes el caso, señala y di poproszę to (esto, por favor): siempre funciona."
+    },
+    {
+      "type": "explanation",
+      "text": "Para pedir con más cortesía se usa el condicional de chcieć (querer): chciałbym si eres hombre y chciałabym si eres mujer, como el español «querría». Es la fórmula perfecta para restaurantes, hoteles y oficinas. El presente chcę (quiero) es correcto, pero más directo: suena bien entre amigos o con poproszę delante."
+    },
+    {
+      "type": "table",
+      "caption": "Chcieć: presente y condicional de cortesía",
+      "columns": ["Persona", "Presente (quiero…)", "Condicional, hombre", "Condicional, mujer"],
+      "rows": [
+        ["ja", "chcę", "chciałbym", "chciałabym"],
+        ["ty", "chcesz", "chciałbyś", "chciałabyś"],
+        ["on / ona / pan / pani", "chce", "chciałby (pan)", "chciałaby (pani)"],
+        ["my", "chcemy", "chcielibyśmy", "chciałybyśmy (solo mujeres)"],
+        ["oni / one", "chcą", "chcieliby", "chciałyby (solo mujeres)"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "(una mujer) Chciałbym wodę.",
+      "right": "Chciałabym wodę.",
+      "explanation": "En el condicional la forma cambia según el sexo de quien habla: -łbym para un hombre, -łabym para una mujer. Es lo primero que nota un polaco cuando una mujer se equivoca. El camarero también te lo aplicará: Czy pan chciałby…? / Czy pani chciałaby…?"
+    },
+    {
+      "type": "explanation",
+      "text": "Con un poco de algo se usa z + instrumental: kawa z mlekiem, herbata z cytryną, z cukrem. Sin algo, bez + genitivo: bez cukru, bez mleka, woda bez gazu. Y para pedir una parte: kawałek sernika (un trozo de tarta de queso), filiżanka kawy (una taza de café), butelka wody (una botella de agua): después de cantidades, genitivo."
+    },
+    {
+      "type": "table",
+      "caption": "Las centenas y el millar",
+      "columns": ["Nº", "Polaco", "Nº", "Polaco"],
+      "rows": [
+        ["100", "sto", "600", "sześćset"],
+        ["200", "dwieście", "700", "siedemset"],
+        ["300", "trzysta", "800", "osiemset"],
+        ["400", "czterysta", "900", "dziewięćset"],
+        ["500", "pięćset", "1000", "tysiąc"],
+        ["146", "sto czterdzieści sześć", "1250", "tysiąc dwieście pięćdziesiąt"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "La moneda polaca es el złoty (zł), que se divide en 100 groszy (gr). Y ¡buena noticia!: funciona exactamente como lat y lata. Con 1: jeden złoty. Con números acabados en 2, 3, 4 (salvo 12, 13, 14): złote. Con todos los demás: złotych. Lo mismo con grosz: jeden grosz, dwa grosze, pięć groszy. Los precios se dicen así: 12,50 zł = dwanaście złotych pięćdziesiąt (groszy)."
+    },
+    {
+      "type": "table",
+      "caption": "Złoty, złote o złotych",
+      "columns": ["Precio", "Se dice", "Precio", "Se dice"],
+      "rows": [
+        ["1 zł", "jeden złoty", "5 zł", "pięć złotych"],
+        ["2 zł", "dwa złote", "12 zł", "dwanaście złotych"],
+        ["3 zł", "trzy złote", "21 zł", "dwadzieścia jeden złotych"],
+        ["4 zł", "cztery złote", "22 zł", "dwadzieścia dwa złote"],
+        ["8,50 zł", "osiem złotych pięćdziesiąt", "100 zł", "sto złotych"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Dwa złotych. / Dwadzieścia cztery złotych.",
+      "right": "Dwa złote. / Dwadzieścia cztery złote.",
+      "explanation": "Fíjate solo en la última cifra, como con los años: 2, 3, 4 → złote; 5–9, 0, 1 (salvo el 1 solo) y 12–14 → złotych. Ile kosztuje? (una cosa) / Ile kosztują? (varias)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Proszę kawę. (sin más, al camarero)",
+      "right": "Poproszę kawę. / Proszę bardzo. (al dar algo)",
+      "explanation": "Proszę sirve para muchas cosas: «por favor», «tome» (al dar algo), «de nada», «adelante» y «¿cómo dice?» (Proszę?). Para pedir algo, lo más natural es poproszę. El camarero, al traértelo, dirá proszę: «aquí tiene»."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Sonidos suaves: ć = ci, ś = si, ź = zi, ń = ni"
+    },
+    {
+      "type": "explanation",
+      "text": "El polaco escribe los sonidos suaves de dos maneras. Con tilde, al final de sílaba o delante de consonante: cześć, ślub, źle, koń. Con i, delante de vocal: ciastko, siostra, ziemia, nie. Es el mismo sonido: ć y ci suenan igual, solo cambia la escritura. Ojo: esa i no se pronuncia como vocal aparte: ciastko suena [ćastko], no [ci-ast-ko]; nie suena [ńe]. Y dź / dzi sigue la misma regla: dźwięk, dziękuję."
+    },
+    {
+      "type": "table",
+      "caption": "Mismo sonido, dos escrituras (pronunciación aproximada)",
+      "columns": ["Sonido", "Con tilde", "Con i + vocal", "Cómo suena"],
+      "rows": [
+        ["ć", "cześć", "ciastko", "[ćastko]: «ch» muy suave"],
+        ["ś", "ś (śniadanie)", "siostra", "[śostra]: «s» con la lengua en el paladar"],
+        ["ź", "źle", "zimno", "[źimno]: como ś, pero con voz"],
+        ["ń", "koń", "nie", "[ńe]: como la ñ"],
+        ["dź", "dźwięk", "dziękuję", "[dźeŋkuje]: «y» enfática"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Cafeterías, tartas y bares de leche" },
+    {
+      "type": "reading",
+      "title": "W barze mlecznym",
+      "paragraphs": [
+        "Bar mleczny to tania restauracja z polskim jedzeniem. W PRL-u bary mleczne były bardzo popularne, a dzisiaj też jest ich dużo, zwłaszcza w dużych miastach.",
+        "Tutaj nie ma kelnera. Zamawiasz przy kasie, płacisz i czekasz. Kiedy jedzenie jest gotowe, pani z kuchni mówi głośno, co jest gotowe: „Pierogi ruskie!”.",
+        "Obiad w barze mlecznym kosztuje około trzydziestu złotych. Zupa kosztuje osiem złotych, a pierogi dwadzieścia dwa złote. Kompot kosztuje cztery złote.",
+        "Studenci, emeryci, turyści i ludzie z biura jedzą tu razem przy jednym stole. Jest szybko, smacznie i tanio."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "El bar mleczny («bar de leche») nació a finales del siglo XIX y se popularizó en la Polonia comunista (PRL) como comedor barato, primero con platos lácteos y sin carne. Muchos siguen abiertos: sopas, pierogi y platos caseros a precios muy bajos, con autoservicio.",
+        "Las tartas son una institución: sernik (de queso), szarlotka (de manzana) y makowiec (de semillas de amapola, típico en Navidad). El Tłusty Czwartek, el último jueves antes de Cuaresma, todo el país come pączki: hay colas en todas las pastelerías.",
+        "En Polonia se paga casi todo con tarjeta o con el móvil (BLIK), incluso cantidades pequeñas. La propina (napiwek) en cafeterías y restaurantes ronda el 10 % si estás contento con el servicio. Si dices dziękuję al entregar el dinero, el camarero puede entender que no quieres el cambio.",
+        "Antes de comer se dice smacznego («que aproveche»), y el camarero lo dirá al traerte el plato. Y si un polaco te invita, la fórmula es ja zapraszam (te invito yo); lo educado es devolver la invitación otro día."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: invita a un compañero a un café" },
+    {
+      "type": "mission",
+      "title": "Pide para dos en una cafetería polaca",
+      "steps": [
+        "Saluda al camarero y pide una bebida para ti con poproszę o chciałbym / chciałabym, usando z o bez (z mlekiem, bez cukru).",
+        "Pide algo de comer para ti y para tu compañero (dla mnie…, dla kolegi…) con el acusativo correcto.",
+        "Pregunta si tienen algo (czy jest…?) y reacciona si no hay: Szkoda, to poproszę…",
+        "Responde a na miejscu czy na wynos? y a razem czy osobno?",
+        "Pregunta cuánto es, di el precio en voz alta con złoty / złote / złotych y paga con tarjeta o en efectivo.",
+        "Invita a tu compañero (ja zapraszam), di smacznego y grábate leyendo ciastko, cześć, nie y dziękuję."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Poproszę kawę z mlekiem.", "translation": "Un café con leche, por favor." },
+        {
+          "text": "Chciałbym / Chciałabym herbatę bez cukru.",
+          "translation": "Querría un té sin azúcar."
+        },
+        { "text": "Czy jest szarlotka?", "translation": "¿Hay tarta de manzana?" },
+        { "text": "Na miejscu, poproszę.", "translation": "Para tomar aquí, por favor." },
+        {
+          "text": "Ile płacę? — Dwadzieścia dwa złote.",
+          "translation": "¿Cuánto es? — Veintidós złotys."
+        },
+        { "text": "Mogę zapłacić kartą?", "translation": "¿Puedo pagar con tarjeta?" },
+        { "text": "Ja zapraszam!", "translation": "¡Invito yo!" },
+        { "text": "Smacznego!", "translation": "¡Que aproveche!" }
+      ],
+      "canDo": [
+        "pedir bebidas y comida en una cafetería con poproszę",
+        "usar chciałbym o chciałabym según quien habla",
+        "poner el acusativo después de poproszę y chcę",
+        "decir con o sin algo: z + instrumental, bez + genitivo",
+        "entender y decir precios hasta mil con złoty, złote y złotych",
+        "leer bien ć / ci, ś / si, ź / zi y ń / ni"
+      ]
+    }
+  ]
+}

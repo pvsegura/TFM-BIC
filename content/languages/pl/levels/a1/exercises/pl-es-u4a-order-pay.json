@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-order-pay",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 4320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 22,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿Puedo pagar con tarjeta?",
+  "explanation": "Mogę + zapłacić + kartą?",
+  "configuration": {
+    "items": ["Mogę", "zapłacić", "kartą?"],
+    "joiner": " "
+  }
+}

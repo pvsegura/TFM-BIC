@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-write-dialogue",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 4460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 36,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Escribe un diálogo corto en una cafetería polaca: el camarero, tú y un amigo. Pedid bebida y algo de comer, preguntad por algo que no hay y pagad.",
+  "explanation": "Revisa: poproszę + acusativo, chciałbym / chciałabym, z / bez, czy jest…?, el precio con złote / złotych.",
+  "configuration": {
+    "modelAnswer": "Kelner: Dzień dobry, co podać? Ja: Chciałabym cappuccino bez cukru. Marek: A dla mnie herbata z cytryną. Czy jest szarlotka? Kelner: Niestety nie ma, ale jest sernik. Marek: To poproszę sernik. Ja: Ile płacimy? Kelner: Trzydzieści dwa złote. Ja: Kartą, poproszę.",
+    "checklist": ["pedido de bebida", "pedido de comida", "algo que no hay", "pagar"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

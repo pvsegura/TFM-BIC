@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-chcialbym",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4240,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 14,
+    "phase": "structure"
+  },
+  "prompt": "Eres hombre y quieres pedir con cortesía un agua. ¿Qué dices?",
+  "explanation": "Hombre: chciałbym.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Chciałbym wodę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Chciałabym wodę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Chcę bym wodę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

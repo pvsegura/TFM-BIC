@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-duza-kawe",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "El adjetivo femenino también cambia: duża → dużą.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Poproszę dużą kawę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Poproszę duża kawę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Poproszę dużą kawa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

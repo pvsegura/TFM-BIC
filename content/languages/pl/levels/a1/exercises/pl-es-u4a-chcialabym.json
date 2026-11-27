@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-chcialabym",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4230,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 13,
+    "phase": "structure"
+  },
+  "prompt": "Eres mujer y quieres pedir con cortesía un té. ¿Qué dices?",
+  "explanation": "Mujer: chciałabym.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Chciałabym herbatę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Chciałbym herbatę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Chciała herbatę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

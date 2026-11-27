@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-culture-paczki",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 29,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué se come en Polonia el Tłusty Czwartek?",
+  "explanation": "El último jueves antes de Cuaresma se comen pączki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pączki."
+      },
+      {
+        "id": "opt-b",
+        "text": "Sernik."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pierogi."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

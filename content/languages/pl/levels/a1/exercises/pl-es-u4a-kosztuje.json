@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-kosztuje",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Ile ___ lody?",
+  "explanation": "Lody es plural: kosztują.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "kosztują"
+      },
+      {
+        "id": "opt-b",
+        "text": "kosztuje"
+      },
+      {
+        "id": "opt-c",
+        "text": "kosztujesz"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-match-hundreds",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "Une cada número con su nombre.",
+  "explanation": "200 dwieście, 300 trzysta, 500 pięćset, 1000 tysiąc.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "200",
+        "right": "dwieście"
+      },
+      {
+        "left": "300",
+        "right": "trzysta"
+      },
+      {
+        "left": "500",
+        "right": "pięćset"
+      },
+      {
+        "left": "900",
+        "right": "dziewięćset"
+      },
+      {
+        "left": "1000",
+        "right": "tysiąc"
+      }
+    ]
+  }
+}

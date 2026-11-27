@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-order-order",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 4310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 21,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Para mí un té con limón, por favor.",
+  "explanation": "Dla mnie + herbata z cytryną + poproszę.",
+  "configuration": {
+    "items": ["Dla", "mnie", "herbata", "z", "cytryną,", "poproszę."],
+    "joiner": " "
+  }
+}

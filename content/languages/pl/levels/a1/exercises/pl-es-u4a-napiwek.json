@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-napiwek",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es el napiwek?",
+  "explanation": "Napiwek = la propina.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La propina."
+      },
+      {
+        "id": "opt-b",
+        "text": "La cuenta."
+      },
+      {
+        "id": "opt-c",
+        "text": "El cambio."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

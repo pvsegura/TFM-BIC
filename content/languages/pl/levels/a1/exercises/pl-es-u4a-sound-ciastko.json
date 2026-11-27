@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-sound-ciastko",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 23,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena ciastko?",
+  "explanation": "Ci + vocal = ć: [ćastko], sin una i aparte.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[ćastko]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[ci-ast-ko]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[siastko]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

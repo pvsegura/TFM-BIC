@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-culture-dziekuje",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 30,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: si dices dziękuję al dar el dinero, el camarero puede quedarse con el cambio.",
+  "explanation": "Sí: puede interpretarlo como «quédese con el cambio».",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

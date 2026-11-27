@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4a-match-phrases",
+  "lessonId": "pl-es-unit-4-cafe",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada frase del camarero con su significado.",
+  "explanation": "Co podać? = ¿qué le pongo?; na wynos = para llevar.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "Co podać?",
+        "right": "¿Qué le pongo?"
+      },
+      {
+        "left": "Na miejscu czy na wynos?",
+        "right": "¿Para tomar aquí o para llevar?"
+      },
+      {
+        "left": "Razem czy osobno?",
+        "right": "¿Junto o por separado?"
+      },
+      {
+        "left": "Smacznego!",
+        "right": "¡Que aproveche!"
+      }
+    ]
+  }
+}
