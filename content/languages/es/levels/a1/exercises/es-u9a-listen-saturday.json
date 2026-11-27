@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-listen-saturday",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jaka będzie pogoda w sobotę?",
+  "explanation": "El sábado va a llover.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Będzie padać."
+      },
+      {
+        "id": "opt-b",
+        "text": "Będzie słonecznie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Będzie padał śnieg."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

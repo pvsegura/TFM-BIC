@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-listen-plan",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co robią w niedzielę?",
+  "explanation": "El domingo vamos a la montaña a hacer senderismo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Idą w góry na wędrówkę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jadą na plażę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idą do muzeum."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

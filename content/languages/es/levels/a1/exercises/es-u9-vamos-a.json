@@ -8,7 +8,7 @@
   "status": "published",
   "order": 80,
   "instructionLanguage": "pl",
-  "book": { "unit": 9, "number": 11, "phase": "transform", "lines": 1 },
+  "book": { "unit": 9, "number": 38, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Pojedziemy na plażę.",
   "explanation": "Vamos a + ir + a la playa.",
   "configuration": {

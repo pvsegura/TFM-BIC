@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-gap-hace-esta-hay",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij hace, está albo hay.",
+  "explanation": "Hace + calor / sol; está + nublado; hay + niebla.",
+  "configuration": {
+    "text": "Hoy ___ calor, pero ___ nublado y por la mañana ___ niebla.",
+    "gaps": [
+      {
+        "accepted": ["hace"]
+      },
+      {
+        "accepted": ["está"]
+      },
+      {
+        "accepted": ["hay"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

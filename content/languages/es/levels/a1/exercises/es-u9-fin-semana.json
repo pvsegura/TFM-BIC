@@ -8,7 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
-  "book": { "unit": 9, "number": 10, "phase": "structure" },
+  "book": { "unit": 9, "number": 11, "phase": "connect" },
   "prompt": "Co znaczy este fin de semana?",
   "explanation": "El fin de semana — weekend.",
   "configuration": {

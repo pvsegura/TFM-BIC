@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-tengo-calor",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Jest ci gorąco w autobusie. Co mówisz?",
+  "explanation": "Osoba czuje: tengo calor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tengo calor."
+      },
+      {
+        "id": "opt-b",
+        "text": "Hace calor yo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Estoy caliente."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

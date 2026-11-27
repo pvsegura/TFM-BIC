@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-write-seasons",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 46,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Napisz do znajomego z Hiszpanii, jaka jest pogoda w Polsce w różnych porach roku i którą porę roku lubisz najbardziej.",
+  "explanation": "En invierno hace…, en verano…; prefiero…; me encanta…",
+  "configuration": {
+    "modelAnswer": "En Polonia en invierno hace mucho frío y a veces nieva. En primavera llueve y hace un poco de frío. En verano hace calor, pero no tanto como en España. En otoño hay niebla y hace viento. Prefiero el verano porque me encanta nadar en el lago.",
+    "checklist": ["cztery pory roku", "ulubiona pora roku"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

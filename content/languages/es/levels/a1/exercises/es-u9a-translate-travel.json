@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-translate-travel",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Tego lata pojadę do Hiszpanii.",
+  "explanation": "Este verano voy a viajar / ir a España.",
+  "configuration": {
+    "acceptedAnswers": ["Este verano voy a ir a España.", "Este verano voy a viajar a España."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-sound-madrid",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 33,
+    "phase": "sound"
+  },
+  "prompt": "Jak w Madrycie wymawia się z w słowie azul?",
+  "explanation": "Na północy i w centrum: jak angielskie th — [aθul].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jak angielskie th."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak polskie z."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jak polskie s."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

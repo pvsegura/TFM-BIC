@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-reading-canarias",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: na Wyspach Kanaryjskich będzie padać.",
+  "explanation": "Como siempre, va a hacer buen tiempo: veinticuatro grados y sol.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

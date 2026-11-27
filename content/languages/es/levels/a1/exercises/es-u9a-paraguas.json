@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-paraguas",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 13,
+    "phase": "connect"
+  },
+  "prompt": "Pada deszcz. Czego potrzebujesz?",
+  "explanation": "Paraguas = parasol od deszczu (para + aguas).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Un paraguas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una crema solar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Unas gafas de sol."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-culture-north",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 37,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: która część Hiszpanii jest deszczowa i zielona?",
+  "explanation": "Północ: Galicja, Asturia, Kraj Basków.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Północ (Galicja, Asturia)."
+      },
+      {
+        "id": "opt-b",
+        "text": "Andaluzja."
+      },
+      {
+        "id": "opt-c",
+        "text": "Wyspy Kanaryjskie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-listen-take",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co Ola ma zabrać w góry?",
+  "explanation": "Lleva un jersey y un chubasquero, por si acaso.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Sweter i kurtkę przeciwdeszczową."
+      },
+      {
+        "id": "opt-b",
+        "text": "Krem z filtrem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Rękawiczki i czapkę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

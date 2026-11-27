@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-translate-cold",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 40,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Dziś jest bardzo zimno.",
+  "explanation": "Hoy hace mucho frío.",
+  "configuration": {
+    "acceptedAnswers": ["Hoy hace mucho frío.", "Hace mucho frío hoy."],
+    "caseSensitive": false
+  }
+}

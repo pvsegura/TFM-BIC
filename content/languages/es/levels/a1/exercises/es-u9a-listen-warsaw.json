@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-listen-warsaw",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: w Warszawie jest dziś ciepło.",
+  "explanation": "En Varsovia hoy están a dos grados bajo cero y nieva.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

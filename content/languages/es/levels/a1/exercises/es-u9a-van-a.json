@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-van-a",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Mis padres ___ viajar a España en verano.",
+  "explanation": "Ellos → van a.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "van a"
+      },
+      {
+        "id": "opt-b",
+        "text": "va a"
+      },
+      {
+        "id": "opt-c",
+        "text": "van"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

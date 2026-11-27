@@ -8,67 +8,290 @@
   "order": 180,
   "unit": 9,
   "instructionLanguage": "pl",
-  "title": "Jednostka 9. El tiempo — pogoda, pory roku i plany",
-  "description": "Mówisz o pogodzie i porach roku oraz o planach z ir a + bezokolicznik.",
+  "title": "Jednostka 9A. ¿Qué tiempo va a hacer? — pogoda, temperatura i plany",
+  "description": "Mówisz o pogodzie i temperaturze, rozumiesz prognozę i planujesz weekend: hace calor, está nublado, hay niebla, llueve, estamos a veinte grados, tengo frío i ir a + bezokolicznik.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Plaża czy góry?" },
     {
       "type": "explanation",
-      "text": "Pogoda po hiszpańsku używa kilku czasowników: hace calor / frío / sol / viento (jest gorąco / zimno / słonecznie / wietrznie), hace buen / mal tiempo (jest ładna / brzydka pogoda), llueve (pada deszcz), nieva (pada śnieg), está nublado (jest pochmurno), hay niebla (jest mgła)."
+      "text": "Jest listopad w Walencji. Ola i Sofía planują weekend i patrzą na prognozę pogody. Za pierwszym razem posłuchaj, jaka będzie pogoda w sobotę, a jaka w niedzielę. Za drugim zaznacz, co postanawiają robić w każdy z tych dni. Za trzecim wyłap plany: vamos a ir, va a llover, voy a tener frío."
     },
     {
-      "type": "example",
-      "text": "Hoy hace mucho calor: estamos a treinta y cinco grados.",
-      "translation": "Dziś jest bardzo gorąco: mamy trzydzieści pięć stopni."
-    },
-    {
-      "type": "explanation",
-      "text": "Uwaga, Polacy: po polsku „jest zimno”, po hiszpańsku „robi zimno” — hace frío. A o sobie: tengo frío (jest mi zimno), tengo calor (jest mi gorąco). Nigdy: estoy frío."
-    },
-    {
-      "type": "explanation",
-      "text": "Pory roku: la primavera (wiosna), el verano (lato), el otoño (jesień), el invierno (zima). Miesiące piszemy małą literą: enero, febrero, marzo… diciembre."
-    },
-    {
-      "type": "explanation",
-      "text": "Buduj zdania — plany: ir a + bezokolicznik. Voy a viajar (będę podróżować / zamierzam podróżować), vas a…, va a…, vamos a…, vais a…, van a… Z określeniem czasu: mañana, este fin de semana, el próximo mes, en verano."
-    },
-    {
-      "type": "example",
-      "text": "Este fin de semana vamos a ir a la playa porque va a hacer sol.",
-      "translation": "W ten weekend pojedziemy na plażę, bo będzie słonecznie."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: LLUEVE — „luje”! Wyobraź sobie, że z nieba leje się woda. NIEVA — niebo (nie-va) sypie śniegiem."
+      "type": "image",
+      "asset": "a1-u9-forecast.png",
+      "alt": "Dwie młode kobiety siedzą na kanapie i patrzą na telefon; za oknem świeci słońce, a na stoliku leżą plecak i kurtka."
     },
     {
       "type": "dialogue",
       "lines": [
         {
-          "speaker": "Carmen",
-          "text": "¿Qué tiempo hace en Polonia en invierno?",
-          "translation": "Jaka jest pogoda w Polsce zimą?"
+          "speaker": "Sofía",
+          "text": "Ola, ¿qué vamos a hacer este fin de semana?",
+          "translation": "Ola, co robimy w ten weekend?"
         },
         {
-          "speaker": "Tomasz",
-          "text": "Hace mucho frío y a veces nieva.",
-          "translation": "Jest bardzo zimno i czasami pada śnieg."
+          "speaker": "Ola",
+          "text": "¡Vamos a ir a la playa! En Polonia ahora hace mucho frío y aquí hace sol.",
+          "translation": "Jedziemy na plażę! W Polsce jest teraz bardzo zimno, a tu świeci słońce."
         },
         {
-          "speaker": "Carmen",
-          "text": "¿Y qué vas a hacer en Navidad?",
-          "translation": "A co będziesz robić na święta?"
+          "speaker": "Sofía",
+          "text": "Uf, no sé. Mira el pronóstico: el sábado va a llover.",
+          "translation": "Uff, nie wiem. Zobacz prognozę: w sobotę będzie padać."
         },
         {
-          "speaker": "Tomasz",
-          "text": "Voy a ir a Varsovia a ver a mi familia.",
-          "translation": "Pojadę do Warszawy, do rodziny."
+          "speaker": "Ola",
+          "text": "¿En serio? ¿Y el domingo?",
+          "translation": "Naprawdę? A w niedzielę?"
+        },
+        {
+          "speaker": "Sofía",
+          "text": "El domingo va a hacer sol, pero también va a hacer viento. Vamos a estar a veinte grados.",
+          "translation": "W niedzielę będzie słonecznie, ale też wietrznie. Będzie dwadzieścia stopni."
+        },
+        {
+          "speaker": "Ola",
+          "text": "¿Veinte grados en noviembre? ¡Para mí eso es verano! En Varsovia hoy están a dos grados bajo cero y nieva.",
+          "translation": "Dwadzieścia stopni w listopadzie? Dla mnie to lato! W Warszawie dziś są dwa stopnie mrozu i pada śnieg."
+        },
+        {
+          "speaker": "Sofía",
+          "text": "Pues para mí veinte grados con viento es frío. En la playa voy a tener frío.",
+          "translation": "A dla mnie dwadzieścia stopni z wiatrem to zimno. Na plaży będzie mi zimno."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Entonces, ¿qué hacemos el sábado si llueve?",
+          "translation": "To co robimy w sobotę, jeśli będzie padać?"
+        },
+        {
+          "speaker": "Sofía",
+          "text": "Podemos ir al cine o a un museo. Y el domingo vamos a la montaña a hacer senderismo.",
+          "translation": "Możemy iść do kina albo do muzeum. A w niedzielę jedziemy w góry na wędrówkę."
+        },
+        {
+          "speaker": "Ola",
+          "text": "¡Buena idea! ¿Va a hacer frío en la montaña?",
+          "translation": "Dobry pomysł! W górach będzie zimno?"
+        },
+        {
+          "speaker": "Sofía",
+          "text": "Un poco. Lleva un jersey y un chubasquero, por si acaso.",
+          "translation": "Trochę. Weź sweter i kurtkę przeciwdeszczową, na wszelki wypadek."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Vale. Pero en diciembre vas a venir conmigo a Polonia. ¡Allí vas a saber qué es el frío de verdad!",
+          "translation": "Dobra. Ale w grudniu jedziesz ze mną do Polski. Tam się dowiesz, co to prawdziwe zimno!"
+        },
+        {
+          "speaker": "Sofía",
+          "text": "¿Va a nevar? ¡Me encanta la nieve, pero en Valencia casi nunca nieva!",
+          "translation": "Będzie padał śnieg? Uwielbiam śnieg, ale w Walencji prawie nigdy nie pada!"
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Pogoda i pory roku" },
+    {
+      "type": "table",
+      "caption": "Pogoda",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["hace sol", "świeci słońce", "hace calor", "jest gorąco"],
+        ["hace frío", "jest zimno", "hace viento", "wieje wiatr"],
+        ["hace buen tiempo", "jest ładna pogoda", "hace mal tiempo", "jest brzydka pogoda"],
+        ["está nublado", "jest pochmurno", "está despejado", "jest bezchmurnie"],
+        ["llueve / la lluvia", "pada deszcz / deszcz", "nieva / la nieve", "pada śnieg / śnieg"],
+        ["hay niebla", "jest mgła", "hay tormenta", "jest burza"],
+        ["el sol", "słońce", "la nube", "chmura"],
+        ["el pronóstico", "prognoza", "la temperatura", "temperatura"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Pory roku i kiedy?",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la primavera", "wiosna", "el verano", "lato"],
+        ["el otoño", "jesień", "el invierno", "zima"],
+        ["mañana", "jutro", "pasado mañana", "pojutrze"],
+        ["este fin de semana", "w ten weekend", "la semana que viene", "w przyszłym tygodniu"],
+        ["este verano", "tego lata", "el año que viene", "w przyszłym roku"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Na każdą pogodę",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        [
+          "el paraguas",
+          "parasol, parasolka (od deszczu)",
+          "el chubasquero",
+          "kurtka przeciwdeszczowa"
+        ],
+        ["las gafas de sol", "okulary przeciwsłoneczne", "la crema solar", "krem z filtrem"],
+        ["el gorro", "czapka", "los guantes", "rękawiczki"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: opisz dzisiejszą pogodę i powiedz trzy rzeczy, które zrobisz w ten weekend (voy a…)."
+      "text": "Łącz i zapamiętuj — LLUEVE: wyobraź sobie, że z nieba „leje” — ll brzmi jak lej. NIEVA: z nieba (nie-) sypie się nieve. PARAGUAS to „para + aguas”: przeciw wodzie (tak jak parasol to „przeciw słońcu”). Uwaga: polski parasol od deszczu to po hiszpańsku paraguas, a hiszpański parasol to parasol od słońca na plaży! CHUBASQUERO pochodzi od chubasco, ulewy: kurtka na ulewę."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Hace, está, hay; tengo frío; ir a + bezokolicznik"
+    },
+    {
+      "type": "explanation",
+      "text": "Po polsku pogoda „jest”: jest zimno, jest słonecznie. Po hiszpańsku używa się trzech konstrukcji. Hace + rzeczownik: hace calor, hace frío, hace sol, hace viento, hace buen tiempo (dosłownie „robi gorąco”). Está + przymiotnik: está nublado, está despejado. Hay + rzeczownik: hay niebla, hay tormenta, hay nubes. Opady to osobne czasowniki: llueve (llover, o → ue) i nieva (nevar, e → ie)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Es frío. / Está calor hoy. / Hace muy calor.",
+      "right": "Hace frío. / Hoy hace calor. / Hace mucho calor.",
+      "explanation": "Na temperaturę powietrza mówi się hace + rzeczownik (calor, frío). Skoro calor to rzeczownik, „bardzo” to mucho, nie muy: hace mucho calor, hace mucho frío, hace mucho viento."
+    },
+    {
+      "type": "explanation",
+      "text": "Uwaga na trzy różne „zimno”. Hace frío — zimno jest na dworze (pogoda). Tengo frío — jest mi zimno (osoba czuje). Está frío / fría — coś jest zimne w dotyku: la sopa está fría (zupa jest zimna). Tak samo z gorącem: hace calor, tengo calor, el café está caliente."
+    },
+    {
+      "type": "table",
+      "caption": "Trzy rodzaje „zimno”",
+      "columns": ["Hiszpański", "Polski", "Co jest zimne"],
+      "rows": [
+        ["Hace frío.", "Jest zimno.", "pogoda, powietrze"],
+        ["Tengo frío.", "Jest mi zimno.", "ja, moje ciało"],
+        ["La sopa está fría.", "Zupa jest zimna.", "rzecz w dotyku"],
+        ["Hace calor. / Tengo calor.", "Jest gorąco. / Jest mi gorąco.", "pogoda / ja"],
+        ["El café está caliente.", "Kawa jest gorąca.", "rzecz w dotyku"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Estoy frío. / Me es frío.",
+      "right": "Tengo frío.",
+      "explanation": "„Jest mi zimno” to po hiszpańsku „mam zimno”: tengo frío, tengo calor — tak jak tengo hambre (jestem głodny). Estoy frío znaczyłoby, że jesteś zimny w dotyku."
+    },
+    {
+      "type": "explanation",
+      "text": "Temperaturę podaje się na dwa sposoby: Estamos a veinte grados (dosłownie „jesteśmy przy dwudziestu stopniach”) albo Hay veinte grados. Poniżej zera: dos grados bajo cero. Pytasz: ¿A cuántos grados estamos? albo ¿Qué temperatura hace?"
+    },
+    {
+      "type": "explanation",
+      "text": "O planach i o tym, co się stanie, mówisz najczęściej konstrukcją ir a + bezokolicznik: Voy a viajar (pojadę, zamierzam pojechać), Va a llover (będzie padać). Odmieniasz tylko ir; bezokolicznik się nie zmienia. To odpowiednik polskiego „będę + …” albo czasownika dokonanego w czasie przyszłym."
+    },
+    {
+      "type": "table",
+      "caption": "Ir a + bezokolicznik",
+      "columns": ["Osoba", "ir", "a + bezokolicznik", "Polski"],
+      "rows": [
+        ["yo", "voy", "a viajar", "pojadę, będę podróżować"],
+        ["tú", "vas", "a venir", "przyjedziesz"],
+        ["él / ella / usted", "va", "a llover", "będzie padać"],
+        ["nosotros / nosotras", "vamos", "a ir a la playa", "pojedziemy na plażę"],
+        ["vosotros / vosotras", "vais", "a tener frío", "będzie wam zimno"],
+        ["ellos / ellas / ustedes", "van", "a hacer senderismo", "pójdą na wędrówkę"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Voy viajar a Polonia. / Mañana va llover.",
+      "right": "Voy a viajar a Polonia. / Mañana va a llover.",
+      "explanation": "Między ir a bezokolicznikiem zawsze stoi a. W mowie a często zlewa się z poprzednią samogłoską (va a llover brzmi prawie jak „valover”), ale piszesz je zawsze."
+    },
+    {
+      "type": "explanation",
+      "text": "O planach na blisko można też mówić zwykłym czasem teraźniejszym, jak po polsku: El domingo vamos a la montaña (w niedzielę jedziemy w góry). Ir a + bezokolicznik podkreśla zamiar albo przewidywanie: Va a llover (zbiera się na deszcz)."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Akcenty Hiszpanii: s i z na północy i południu"
+    },
+    {
+      "type": "explanation",
+      "text": "W tym kursie uczysz się wymowy środkowej i północnej Hiszpanii: z oraz c przed e, i wymawia się jak angielskie th (cielo [θjelo]), a s wyraźnie (más). Na południu (Andaluzja, Wyspy Kanaryjskie) i w Ameryce Łacińskiej z i c brzmią jak s (seseo: cielo [sjelo]), a s na końcu sylaby często słabnie do lekkiego wydechu albo znika: ¿Qué hora es? brzmi [ke ora eh], dos grados — [doh grao]. Nie musisz tak mówić, ale warto to rozpoznawać, np. słuchając prognozy pogody z Sewilli."
+    },
+    {
+      "type": "table",
+      "caption": "Ta sama fraza w dwóch akcentach",
+      "columns": ["Fraza", "Madryt", "Sewilla"],
+      "rows": [
+        ["hace sol", "[aθe sol]", "[ase sol]"],
+        ["dos grados", "[dos grados]", "[doh grao]"],
+        ["las nubes", "[las nubes]", "[lah nubeh]"],
+        ["¿Qué hora es?", "[ke ora es]", "[ke ora eh]"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Klimat Hiszpanii" },
+    {
+      "type": "reading",
+      "title": "El tiempo para el fin de semana",
+      "paragraphs": [
+        "Buenos días. Así va a estar el tiempo este fin de semana. En el norte, en Galicia y Asturias, va a llover mucho y las temperaturas van a bajar: vamos a estar a doce grados.",
+        "En el centro, en Madrid, va a hacer sol, pero también frío por la mañana: dos grados bajo cero a las siete. Por la tarde, quince grados.",
+        "En la costa mediterránea, en Valencia y Barcelona, el sábado va a estar nublado y va a llover por la tarde. El domingo va a hacer sol y viento, con veinte grados.",
+        "Y en las islas Canarias, como siempre, va a hacer buen tiempo: veinticuatro grados y sol. ¡Buen fin de semana!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpania to nie tylko słońce. Na północy (Galicja, Asturia, Kraj Basków) często pada i jest zielono jak w Polsce. W centrum, w Madrycie, lata są bardzo gorące, a zimy zimne. Na wybrzeżu Morza Śródziemnego zimy są łagodne, a na Wyspach Kanaryjskich przez cały rok jest wiosna.",
+        "Latem w Andaluzji i w centrum temperatura może przekraczać czterdzieści stopni. Dlatego w środku dnia ulice pustoszeją, a życie wraca wieczorem, kiedy robi się chłodniej.",
+        "W hiszpańskich domach na zimę często brakuje dobrego ogrzewania, więc Hiszpanie mówią, że najbardziej marzną… w domu. Polacy w Hiszpanii często się dziwią, że w styczniu w mieszkaniu jest im zimniej niż w Polsce.",
+        "Rozmowa o pogodzie to w Hiszpanii częsty temat małej rozmowy w windzie czy w kolejce: ¡Qué calor hace hoy! albo ¡Qué frío! wystarczy, żeby zacząć."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: zaplanuj weekend według pogody" },
+    {
+      "type": "mission",
+      "title": "Ułóż plan na weekend z kimś z Hiszpanii",
+      "steps": [
+        "Opisz dzisiejszą pogodę i temperaturę: Hoy hace…, está…, estamos a… grados.",
+        "Przeczytaj prognozę i powiedz, jaka będzie pogoda w sobotę i w niedzielę: va a llover, va a hacer sol…",
+        "Zaproponuj plan na każdy dzień z ir a + bezokolicznik.",
+        "Powiedz, co weźmiesz na każdą pogodę (paraguas, crema solar…) i czy będzie ci zimno albo gorąco (voy a tener frío).",
+        "Porównaj pogodę w Polsce i w Hiszpanii w tym samym miesiącu.",
+        "Posłuchaj prognozy z dwóch regionów (na przykład w internecie) i nagraj się, mówiąc hace sol i dos grados po madrycku."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Qué tiempo hace hoy? — Hace sol, pero hace frío.",
+          "translation": "Jaka jest dziś pogoda? — Świeci słońce, ale jest zimno."
+        },
+        { "text": "Está nublado y va a llover.", "translation": "Jest pochmurno i będzie padać." },
+        { "text": "Estamos a dos grados bajo cero.", "translation": "Są dwa stopnie mrozu." },
+        {
+          "text": "Tengo frío. ¿Cierras la ventana?",
+          "translation": "Jest mi zimno. Zamkniesz okno?"
+        },
+        { "text": "Hace mucho calor en verano.", "translation": "Latem jest bardzo gorąco." },
+        {
+          "text": "Este fin de semana vamos a ir a la montaña.",
+          "translation": "W ten weekend pojedziemy w góry."
+        },
+        { "text": "¿Va a nevar en diciembre?", "translation": "Będzie padał śnieg w grudniu?" },
+        {
+          "text": "Lleva un paraguas, por si acaso.",
+          "translation": "Weź parasol, na wszelki wypadek."
+        }
+      ],
+      "canDo": [
+        "opisać pogodę z hace, está, hay, llueve i nieva",
+        "podać temperaturę i zrozumieć prognozę",
+        "odróżnić hace frío, tengo frío i está frío",
+        "mówić o planach i przewidywaniach z ir a + bezokolicznik",
+        "nazwać pory roku i wyrażenia przyszłego czasu",
+        "rozpoznać wymowę z i s w różnych regionach Hiszpanii"
+      ]
     }
   ]
 }

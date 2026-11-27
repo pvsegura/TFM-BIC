@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-gap-ir-a",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą ir.",
+  "explanation": "Yo voy, tú vas, nosotros vamos, ellos van.",
+  "configuration": {
+    "text": "Mañana yo ___ a estudiar, tú ___ a trabajar y nosotros ___ a cenar juntos.",
+    "gaps": [
+      {
+        "accepted": ["voy"]
+      },
+      {
+        "accepted": ["vas"]
+      },
+      {
+        "accepted": ["vamos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

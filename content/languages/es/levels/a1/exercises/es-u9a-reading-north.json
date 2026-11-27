@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-reading-north",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 34,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: jaka będzie pogoda na północy (Galicja, Asturia)?",
+  "explanation": "Va a llover mucho; doce grados.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dużo deszczu i 12 stopni."
+      },
+      {
+        "id": "opt-b",
+        "text": "Słońce i 24 stopnie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Śnieg i mróz."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

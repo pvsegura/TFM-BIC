@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-gap-llover",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij llueve / nieva.",
+  "explanation": "Llover → llueve; nevar → nieva.",
+  "configuration": {
+    "text": "En Galicia ___ mucho y en los Pirineos en invierno ___.",
+    "gaps": [
+      {
+        "accepted": ["llueve"]
+      },
+      {
+        "accepted": ["nieva"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

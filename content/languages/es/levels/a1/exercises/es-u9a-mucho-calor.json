@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-mucho-calor",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Calor to rzeczownik: mucho calor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Hace mucho calor."
+      },
+      {
+        "id": "opt-b",
+        "text": "Hace muy calor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Es mucho calor."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

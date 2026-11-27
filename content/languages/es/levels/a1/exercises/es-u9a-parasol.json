@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-parasol",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 14,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy po hiszpańsku el parasol?",
+  "explanation": "Parasol (hiszp.) = parasol od słońca, np. na plaży; od deszczu: paraguas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Parasol od słońca."
+      },
+      {
+        "id": "opt-b",
+        "text": "Parasol od deszczu."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kurtka przeciwdeszczowa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

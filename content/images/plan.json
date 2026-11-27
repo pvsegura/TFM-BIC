@@ -142,5 +142,9 @@
   {
     "asset": "a1-pl-u8-moving.png",
     "prompt": "a young woman points and gives directions to two young men carrying cardboard boxes in an apartment, a floor lamp stands by the door and a framed painting leans against the wall, no text on the boxes, no signs"
+  },
+  {
+    "asset": "a1-u9-forecast.png",
+    "prompt": "two young women sitting on a sofa look together at a smartphone and plan a trip, sunshine through the window, a backpack and a rain jacket on the coffee table, no maps, no text on the phone"
   }
 ]

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-translate-snow",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 42,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jutro będzie padał śnieg.",
+  "explanation": "Mañana va a nevar.",
+  "configuration": {
+    "acceptedAnswers": ["Mañana va a nevar."],
+    "caseSensitive": false
+  }
+}

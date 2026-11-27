@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-write-forecast",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 45,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz prognozę pogody na weekend dla swojego miasta i krótki plan: co będziesz robić w sobotę i w niedzielę, zależnie od pogody.",
+  "explanation": "Sprawdź: hace / está / hay, va a + bezokolicznik, stopnie, mucho calor / frío.",
+  "configuration": {
+    "modelAnswer": "Este fin de semana en Cracovia va a hacer mucho frío. El sábado va a estar nublado y va a nevar por la tarde: vamos a estar a tres grados bajo cero. El domingo va a hacer sol. El sábado voy a ver una película en casa con mi hermana y el domingo vamos a pasear por el parque.",
+    "checklist": ["prognoza na sobotę", "prognoza na niedzielę", "temperatura", "plany z ir a"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

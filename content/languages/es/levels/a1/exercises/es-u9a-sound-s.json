@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-sound-s",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 32,
+    "phase": "sound"
+  },
+  "prompt": "W Andaluzji s na końcu sylaby często słabnie do lekkiego wydechu: [doh grao].",
+  "explanation": "Tak: to typowa cecha akcentu południowego.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-match-weather",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 12,
+    "phase": "connect"
+  },
+  "prompt": "Połącz wyrażenia z tłumaczeniem.",
+  "explanation": "Hay niebla = jest mgła; hay tormenta = jest burza; está despejado = bezchmurnie.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "hay niebla",
+        "right": "jest mgła"
+      },
+      {
+        "left": "hay tormenta",
+        "right": "jest burza"
+      },
+      {
+        "left": "está despejado",
+        "right": "jest bezchmurnie"
+      },
+      {
+        "left": "hace viento",
+        "right": "wieje wiatr"
+      },
+      {
+        "left": "nieva",
+        "right": "pada śnieg"
+      },
+      {
+        "left": "hace mal tiempo",
+        "right": "jest brzydka pogoda"
+      }
+    ]
+  }
+}

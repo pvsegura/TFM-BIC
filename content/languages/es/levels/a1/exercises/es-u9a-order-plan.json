@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-order-plan",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 29,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: W ten weekend pojedziemy w góry.",
+  "explanation": "Este fin de semana + vamos a ir + a la montaña.",
+  "configuration": {
+    "items": ["Este fin de semana", "vamos", "a ir", "a la montaña."],
+    "joiner": " "
+  }
+}

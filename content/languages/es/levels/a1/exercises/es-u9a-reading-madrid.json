@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-reading-madrid",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: jaka temperatura będzie w Madrycie o siódmej rano?",
+  "explanation": "Dos grados bajo cero a las siete.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "−2 stopnie."
+      },
+      {
+        "id": "opt-b",
+        "text": "15 stopni."
+      },
+      {
+        "id": "opt-c",
+        "text": "2 stopnie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

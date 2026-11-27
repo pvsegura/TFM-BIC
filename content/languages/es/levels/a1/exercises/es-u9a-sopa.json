@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-sopa",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: La sopa ___ fría.",
+  "explanation": "Rzecz w dotyku: estar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "está"
+      },
+      {
+        "id": "opt-b",
+        "text": "hace"
+      },
+      {
+        "id": "opt-c",
+        "text": "tiene"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

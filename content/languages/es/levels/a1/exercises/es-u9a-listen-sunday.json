@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-listen-sunday",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jaka będzie pogoda w niedzielę?",
+  "explanation": "Va a hacer sol, pero también va a hacer viento; veinte grados.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Słońce, wiatr i 20 stopni."
+      },
+      {
+        "id": "opt-b",
+        "text": "Deszcz i 12 stopni."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mgła i 5 stopni."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

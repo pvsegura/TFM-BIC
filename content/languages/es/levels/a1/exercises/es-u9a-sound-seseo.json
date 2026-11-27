@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-sound-seseo",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 31,
+    "phase": "sound"
+  },
+  "prompt": "Jak w Sewilli często brzmi hace sol?",
+  "explanation": "Seseo: c przed e jak s — [ase sol].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[ase sol]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[aθe sol]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[ake sol]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

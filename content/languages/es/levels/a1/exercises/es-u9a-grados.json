@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-grados",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Jak powiesz „Jest pięć stopni mrozu”?",
+  "explanation": "Estamos a / hay + grados bajo cero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Estamos a cinco grados bajo cero."
+      },
+      {
+        "id": "opt-b",
+        "text": "Hace cinco grados de frío bajo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Es cinco grados bajo cero."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

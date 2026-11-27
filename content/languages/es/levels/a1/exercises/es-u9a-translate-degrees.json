@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-translate-degrees",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 610,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jest dwadzieścia pięć stopni.",
+  "explanation": "Estamos a / hay veinticinco grados.",
+  "configuration": {
+    "acceptedAnswers": ["Estamos a veinticinco grados.", "Hay veinticinco grados."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9a-match-time",
+  "lessonId": "es-unit-9-weather",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Połącz wyrażenia czasu.",
+  "explanation": "Pasado mañana = pojutrze; la semana que viene = w przyszłym tygodniu.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "pasado mañana",
+        "right": "pojutrze"
+      },
+      {
+        "left": "la semana que viene",
+        "right": "w przyszłym tygodniu"
+      },
+      {
+        "left": "el año que viene",
+        "right": "w przyszłym roku"
+      },
+      {
+        "left": "este verano",
+        "right": "tego lata"
+      }
+    ]
+  }
+}
