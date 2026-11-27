@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-write-habit",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 9840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 68,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe adónde vas normalmente de vacaciones en España y qué haces allí cada año.",
+  "explanation": "Zwykle / każdego lata jeżdżę…; tam + gdzie (nad morzem, w górach…).",
+  "configuration": {
+    "modelAnswer": "Każdego lata jeżdżę z rodziną na wieś, do domu dziadków w Andaluzji. Tam jest bardzo gorąco, więc rano chodzimy na basen, a wieczorem jemy kolację na tarasie. Czasami jeździmy też nad morze, do Malagi.",
+    "checklist": ["adónde vas cada año", "qué haces allí"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

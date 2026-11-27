@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-na-tydzien",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «para una semana»?",
+  "explanation": "Duración prevista: na + acusativo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "na tydzień"
+      },
+      {
+        "id": "opt-b",
+        "text": "przez tygodnia"
+      },
+      {
+        "id": "opt-c",
+        "text": "w tydzień"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

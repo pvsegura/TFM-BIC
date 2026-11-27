@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-match-where",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 9610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 31,
+    "phase": "structure"
+  },
+  "prompt": "Une cada «adónde» con su «dónde».",
+  "explanation": "Nad morze → nad morzem; w góry → w górach; na wieś → na wsi.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "nad morze",
+        "right": "nad morzem"
+      },
+      {
+        "left": "w góry",
+        "right": "w górach"
+      },
+      {
+        "left": "na wieś",
+        "right": "na wsi"
+      },
+      {
+        "left": "za granicę",
+        "right": "za granicą"
+      },
+      {
+        "left": "na Mazury",
+        "right": "na Mazurach"
+      }
+    ]
+  }
+}

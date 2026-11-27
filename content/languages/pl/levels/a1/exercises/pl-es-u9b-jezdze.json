@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-jezdze",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Każdego lata ___ nad morze.",
+  "explanation": "Hábito: jeździć → jeżdżę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "jeżdżę"
+      },
+      {
+        "id": "opt-b",
+        "text": "jadę teraz"
+      },
+      {
+        "id": "opt-c",
+        "text": "pojadę"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

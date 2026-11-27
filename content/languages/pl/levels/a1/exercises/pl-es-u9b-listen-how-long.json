@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-listen-how-long",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿para cuánto tiempo se va Javier?",
+  "explanation": "Na dwa tygodnie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dos semanas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Un mes."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tres días."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

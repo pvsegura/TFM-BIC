@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-w-gory",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9630,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «voy a la montaña»?",
+  "explanation": "Adónde: w + acusativo (góry).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jadę w góry."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jadę do gór."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jadę w górach."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

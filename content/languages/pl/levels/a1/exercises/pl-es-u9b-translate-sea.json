@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-translate-sea",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 61,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Voy al mar para una semana.",
+  "explanation": "Jadę nad morze na tydzień.",
+  "configuration": {
+    "acceptedAnswers": ["Jadę nad morze na tydzień.", "Na tydzień jadę nad morze."],
+    "caseSensitive": false
+  }
+}

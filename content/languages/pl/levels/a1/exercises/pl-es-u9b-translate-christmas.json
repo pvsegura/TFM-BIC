@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-translate-christmas",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¡Feliz Navidad!",
+  "explanation": "Wesołych Świąt!",
+  "configuration": {
+    "acceptedAnswers": ["Wesołych Świąt!", "Wesołych Świąt"],
+    "caseSensitive": false
+  }
+}

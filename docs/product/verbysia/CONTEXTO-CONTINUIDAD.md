@@ -171,8 +171,10 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 - **Unidad 8B** «¿Qué estás haciendo?» (`es-unit-8-moving-in`, order 175): estar + gerundio, ser/estar,
   ¡Qué…! Unidad 8: 80 ejercicios.
 - **Unidad 9A** «¿Qué tiempo va a hacer?» (`es-unit-9-weather` reescrita, order 180): hace/está/hay,
-  tengo frío, ir a + infinitivo, acentos regionales. Unidad 9: 46 ejercicios. Falta la 9B (order 185).
-- Libros A1: Podręcznik **148 páginas** y Zeszyt **118**. Objetivo: unas 170–190 y 160–180.
+  tengo frío, ir a + infinitivo, acentos regionales.
+- **Unidad 9B** «¿Qué vas a hacer en vacaciones?» (`es-unit-9-holidays`, order 185): pensar / tener ganas de /
+  me gustaría, a / en / de en viajes, -ísimo. Unidad 9: 80 ejercicios.
+- Libros A1: Podręcznik **152 páginas** y Zeszyt **124**. Objetivo: unas 170–190 y 160–180.
 
 ### Polaco para hispanohablantes (pl-es)
 
@@ -191,15 +193,16 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   - 8A «Parapetówka» (1150: stoi/leży/wisi, nad/pod/między + instrumental, comparativos -szy,
     na drugim piętrze) y 8B «Przeprowadzka» (1155: imperativo ty/wy, postawić/położyć/powiesić,
     właśnie + presente); unidad 8: 70 ejercicios.
-  - 9A «Jaka będzie pogoda?» (1160: pogoda, jest mi zimno, będzie + infinitivo, gwara góralska); 34 ejercicios.
+  - 9A «Jaka będzie pogoda?» (1160: pogoda, jest mi zimno, będzie + infinitivo, gwara góralska) y 9B «Gdzie jedziesz
+    na wakacje?» (1165: nad morze / w góry, futuro perfectivo, na + duración, jechać/jeździć); unidad 9: 68.
   - Personajes fijos: Javier (español en una oficina de Cracovia), Kasia, Tomek, Ola, Lucía.
   - Ejercicios por unidad: 1 = 55, 2 = 76, 3 = 95 (con repaso), 4 = 73, 5 = 71, 6 = 72.
 - **Apéndices explicados en español:** vocabulario temático (15 categorías `es-*`, 389 entradas,
   `pl-es-vocabulary-a1.mjs`) y gramática (20 temas `pl-es-ref-*`, `pl-es-grammar-a1.mjs`).
   Los crucigramas de polaco mantienen Ą, Ę, Ł… (`CROSSWORD_KEEPS_LETTERS` en `book-i18n.mts`).
-- **Libros pl-es A1 (para Lulu):** Podręcznik **144 páginas** y Zeszyt **114**.
-- Alternancia: siguiente 9B de español (order 185), luego 9B de polaco (order 1165). Pendiente: repasos
-  de las unidades 4–6 y 7–9 en los dos cursos.
+- **Libros pl-es A1 (para Lulu):** Podręcznik **148 páginas** y Zeszyt **120**.
+- Siguiente: repasos de las unidades 4–6 y 7–9 en los dos cursos (fase review, como el de 1–3); luego
+  10A de español (reescribir `es-unit-10-getting-around`, order 190) y 10A de polaco (order 1170).
 - Después: unidades 8–12 en los dos cursos (en español hay que reescribir las lecciones finas),
   repasos tras las unidades 6, 9 y 12, unidad 0 y examen final.
 - Diálogos de la 1A (recepción de hotel) y la 1B (primer día en la oficina) ya están en contextos

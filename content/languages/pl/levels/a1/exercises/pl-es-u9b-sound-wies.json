@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-sound-wies",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 44,
+    "phase": "sound"
+  },
+  "prompt": "¿Qué significa wieś (con ś suave)?",
+  "explanation": "Wieś = el pueblo, el campo; wiesz (sz dura) = sabes.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El pueblo, el campo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Sabes."
+      },
+      {
+        "id": "opt-c",
+        "text": "Todo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

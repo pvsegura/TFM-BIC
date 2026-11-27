@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-translate-mountains",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Estamos en la montaña.",
+  "explanation": "Jesteśmy w górach.",
+  "configuration": {
+    "acceptedAnswers": ["Jesteśmy w górach."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-majowka",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es la majówka?",
+  "explanation": "El puente largo de principios de mayo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El puente de principios de mayo."
+      },
+      {
+        "id": "opt-b",
+        "text": "La Nochebuena."
+      },
+      {
+        "id": "opt-c",
+        "text": "Las vacaciones de verano."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -154,5 +154,9 @@
   {
     "asset": "a1-u9-holidays.png",
     "prompt": "a man and a woman eat lunch at a table in a bright office kitchen, the woman enthusiastically shows something on her phone, a closed travel guidebook without visible text lies on the table, no maps, no text"
+  },
+  {
+    "asset": "a1-pl-u9-lakes.png",
+    "prompt": "a small sailing boat on a calm lake surrounded by pine forest in summer, on the shore a tent and two young people sitting on a wooden jetty with their feet near the water, no text or signs"
   }
 ]

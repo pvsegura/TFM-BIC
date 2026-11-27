@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-match-words",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 9560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Jezioro = lago; namiot = tienda de campaña; żaglówka = velero.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "jezioro",
+        "right": "el lago"
+      },
+      {
+        "left": "namiot",
+        "right": "la tienda de campaña"
+      },
+      {
+        "left": "żaglówka",
+        "right": "el velero"
+      },
+      {
+        "left": "wieś",
+        "right": "el campo, el pueblo"
+      },
+      {
+        "left": "wycieczka",
+        "right": "la excursión"
+      },
+      {
+        "left": "walizka",
+        "right": "la maleta"
+      }
+    ]
+  }
+}

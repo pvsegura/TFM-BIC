@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-listen-summer",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué hace Kasia cada verano?",
+  "explanation": "Jeżdżę na Mazury, nad jezioro. Pływamy żaglówką i śpimy w namiocie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Va a los lagos, navega y duerme en tienda."
+      },
+      {
+        "id": "opt-b",
+        "text": "Va a España a la playa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Trabaja en Cracovia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

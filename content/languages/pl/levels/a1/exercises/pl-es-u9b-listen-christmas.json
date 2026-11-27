@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-listen-christmas",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿dónde pasará Javier la Navidad?",
+  "explanation": "Do Hiszpanii, do rodziców.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En España, con sus padres."
+      },
+      {
+        "id": "opt-b",
+        "text": "En Cracovia, con la abuela de Kasia."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la montaña."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

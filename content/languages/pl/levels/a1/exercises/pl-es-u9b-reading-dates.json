@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-reading-dates",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 51,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué se celebra el 1 y el 3 de mayo?",
+  "explanation": "Pierwszego maja Święto Pracy, trzeciego maja Święto Konstytucji.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El Día del Trabajo y el Día de la Constitución."
+      },
+      {
+        "id": "opt-b",
+        "text": "Navidad y Año Nuevo."
+      },
+      {
+        "id": "opt-c",
+        "text": "El santo de todos los polacos."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

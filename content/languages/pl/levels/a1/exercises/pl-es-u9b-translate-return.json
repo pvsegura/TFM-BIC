@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-translate-return",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 62,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Volveré en enero.",
+  "explanation": "Wrócę w styczniu.",
+  "configuration": {
+    "acceptedAnswers": ["Wrócę w styczniu."],
+    "caseSensitive": false
+  }
+}

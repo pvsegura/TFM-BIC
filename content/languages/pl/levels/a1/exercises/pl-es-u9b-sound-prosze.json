@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-sound-prosze",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "¿Cuál significa «por favor»?",
+  "explanation": "Proszę (sz dura); prosię (si suave) = cochinillo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "proszę"
+      },
+      {
+        "id": "opt-b",
+        "text": "prosię"
+      },
+      {
+        "id": "opt-c",
+        "text": "prosi"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

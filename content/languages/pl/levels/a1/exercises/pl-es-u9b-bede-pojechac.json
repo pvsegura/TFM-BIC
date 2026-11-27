@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-bede-pojechac",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 35,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "El perfectivo ya es futuro: pojadę, sin będę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pojadę do Gdańska."
+      },
+      {
+        "id": "opt-b",
+        "text": "Będę pojechać do Gdańska."
+      },
+      {
+        "id": "opt-c",
+        "text": "Będę pojadę do Gdańska."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

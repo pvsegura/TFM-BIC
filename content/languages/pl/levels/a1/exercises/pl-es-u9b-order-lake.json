@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-order-lake",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 9700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 40,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: En verano siempre voy a un lago.",
+  "explanation": "Latem zawsze jeżdżę nad jezioro.",
+  "configuration": {
+    "items": ["Latem", "zawsze", "jeżdżę", "nad", "jezioro."],
+    "joiner": " "
+  }
+}

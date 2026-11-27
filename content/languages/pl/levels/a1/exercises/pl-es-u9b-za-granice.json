@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-za-granice",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa jadę za granicę?",
+  "explanation": "Za granicę = al extranjero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Voy al extranjero."
+      },
+      {
+        "id": "opt-b",
+        "text": "Voy a la frontera a trabajar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Vuelvo a casa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-ochota",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9680,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «tengo ganas de ver Gdańsk»?",
+  "explanation": "Mam ochotę + infinitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mam ochotę zobaczyć Gdańsk."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mam ochota zobaczyć Gdańsk."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem ochotę zobaczyć Gdańsk."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

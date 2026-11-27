@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-translate-where",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 60,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Adónde vas de vacaciones?",
+  "explanation": "Gdzie jedziesz na wakacje? (o Dokąd jedziesz…)",
+  "configuration": {
+    "acceptedAnswers": ["Dokąd jedziesz na wakacje?", "Gdzie jedziesz na wakacje?"],
+    "caseSensitive": false
+  }
+}

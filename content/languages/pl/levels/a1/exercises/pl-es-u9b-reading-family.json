@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-reading-family",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 52,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué va a hacer el padre de Kasia en la majówka?",
+  "explanation": "Tata będzie łowić ryby.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pescar."
+      },
+      {
+        "id": "opt-b",
+        "text": "Leer."
+      },
+      {
+        "id": "opt-c",
+        "text": "Montar en bici."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

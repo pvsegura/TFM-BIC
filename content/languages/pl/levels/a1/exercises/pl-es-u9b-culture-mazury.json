@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-culture-mazury",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué son las Mazury?",
+  "explanation": "Una región del noreste de Polonia con miles de lagos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Una región de lagos."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una cordillera."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una playa del Báltico."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

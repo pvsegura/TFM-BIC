@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-listen-wigilia",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier va a pasar la Nochebuena en casa de la abuela de Kasia.",
+  "explanation": "Javier vuela a Madrid el 20 de diciembre: quizá el año que viene.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

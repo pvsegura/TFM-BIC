@@ -1,0 +1,273 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1165,
+  "unit": 9,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 9B. Gdzie jedziesz na wakacje? — vacaciones, viajes y planes",
+  "description": "Cuentas adónde vas de vacaciones, cuándo, cuánto tiempo y qué quieres hacer: nad morze / nad morzem, w góry / w górach, na Mazury, pojadę, polecę, wrócę, na dwa tygodnie, mam ochotę, zamierzam.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Navidad en Madrid, verano en los lagos" },
+    {
+      "type": "explanation",
+      "text": "Es diciembre. Kasia pregunta a Javier qué planes tiene para las fiestas, y acaban hablando también del verano. Primera escucha: ¿dónde pasará Javier la Navidad y cuánto tiempo? Segunda: ¿qué hace Kasia cada verano y qué planes hacen juntos? Tercera: fíjate en cómo se dice adónde se va: do Hiszpanii, na Mazury, nad jezioro, nad morze, w góry."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u9-lakes.png",
+      "alt": "Un velero en un lago rodeado de bosque en verano; en la orilla hay una tienda de campaña y dos personas sentadas en un embarcadero de madera."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Javier, gdzie jedziesz na święta?",
+          "translation": "Javier, ¿adónde vas en Navidad?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Do Hiszpanii, do rodziców. Polecę do Madrytu dwudziestego grudnia.",
+          "translation": "A España, a casa de mis padres. Volaré a Madrid el veinte de diciembre."
+        },
+        { "speaker": "Kasia", "text": "Na jak długo?", "translation": "¿Para cuánto tiempo?" },
+        {
+          "speaker": "Javier",
+          "text": "Na dwa tygodnie. Wrócę do Krakowa po Nowym Roku.",
+          "translation": "Para dos semanas. Volveré a Cracovia después de Año Nuevo."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Szkoda! Moja babcia zaprasza cię na Wigilię.",
+          "translation": "¡Qué pena! Mi abuela te invita a la Nochebuena."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dziękuję, może w przyszłym roku. A ty, co będziesz robić latem?",
+          "translation": "Gracias, quizá el año que viene. ¿Y tú, qué vas a hacer en verano?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Latem zawsze jeżdżę na Mazury, nad jezioro. Pływamy żaglówką i śpimy w namiocie.",
+          "translation": "En verano siempre voy a Masuria, a un lago. Navegamos en velero y dormimos en tienda de campaña."
+        },
+        {
+          "speaker": "Javier",
+          "text": "W namiocie? Ja wolę hotel! Ale bardzo chciałbym zobaczyć Mazury.",
+          "translation": "¿En tienda de campaña? ¡Yo prefiero un hotel! Pero me gustaría mucho ver Masuria."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "To pojedziesz z nami w lipcu! A potem możemy pojechać nad morze, do Gdańska.",
+          "translation": "¡Pues vendrás con nosotros en julio! Y luego podemos ir al mar, a Gdańsk."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Super, mam ochotę zobaczyć Gdańsk. A w góry? Zakopane już znam.",
+          "translation": "Genial, tengo ganas de ver Gdańsk. ¿Y la montaña? Zakopane ya lo conozco."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "W góry pojedziemy we wrześniu, kiedy nie ma turystów.",
+          "translation": "A la montaña iremos en septiembre, cuando no hay turistas."
+        },
+        {
+          "speaker": "Javier",
+          "text": "To będą najlepsze wakacje w moim życiu!",
+          "translation": "¡Van a ser las mejores vacaciones de mi vida!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Ale najpierw święta. Wesołych Świąt, Javier!",
+          "translation": "Pero primero, las fiestas. ¡Feliz Navidad, Javier!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Vacaciones y viajes" },
+    {
+      "type": "table",
+      "caption": "Vacaciones",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["wakacje", "las vacaciones (de verano)", "urlop", "las vacaciones (del trabajo)"],
+        ["święta", "las fiestas (Navidad, Pascua)", "Wigilia", "la Nochebuena"],
+        ["majówka", "el puente de mayo", "ferie", "las vacaciones escolares de invierno"],
+        ["podróż", "el viaje", "wycieczka", "la excursión"],
+        ["samolot / lecieć", "el avión / volar", "lotnisko", "el aeropuerto"],
+        ["walizka", "la maleta", "plecak", "la mochila"],
+        ["za granicę", "al extranjero", "za granicą", "en el extranjero"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Lugares y actividades",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["morze", "el mar", "jezioro", "el lago"],
+        ["góry", "la montaña", "wieś", "el campo, el pueblo"],
+        ["plaża", "la playa", "las", "el bosque"],
+        ["namiot", "la tienda de campaña", "żaglówka", "el velero"],
+        ["opalać się", "tomar el sol", "kąpać się", "bañarse"],
+        ["zwiedzać", "visitar, hacer turismo", "odpoczywać", "descansar"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — WAKACJE y el español «vacaciones» vienen del latín vacare, «estar libre»: los dos son siempre plural. ŻAGLÓWKA viene de żagiel, la vela: «la de vela». NAMIOT: piensa en «nido»: la tienda es tu nido para dormir junto al lago. Y ZA GRANICĘ es literalmente «detrás de la frontera» (granica): al extranjero."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Adónde y dónde, el futuro perfectivo y la duración"
+    },
+    {
+      "type": "explanation",
+      "text": "Para los destinos de vacaciones, el polaco usa preposiciones distintas según el lugar, y cada una cambia de caso entre «adónde» (acusativo) y «dónde» (locativo o instrumental). Al mar o a un lago se va «sobre» él: nad morze, nad jezioro (y se está nad morzem, nad jeziorem). A la montaña, w góry (y se está w górach). Al campo, na wieś (na wsi). A una región como Masuria, na Mazury (na Mazurach). A un país o una ciudad, do: do Hiszpanii, do Gdańska (w Hiszpanii, w Gdańsku)."
+    },
+    {
+      "type": "table",
+      "caption": "¿Adónde vas? frente a ¿dónde estás?",
+      "columns": ["Destino", "Dokąd? (adónde)", "Gdzie? (dónde)"],
+      "rows": [
+        ["el mar", "nad morze", "nad morzem"],
+        ["un lago", "nad jezioro", "nad jeziorem"],
+        ["la montaña", "w góry", "w górach"],
+        ["el campo", "na wieś", "na wsi"],
+        ["Masuria", "na Mazury", "na Mazurach"],
+        ["España", "do Hiszpanii", "w Hiszpanii"],
+        ["el extranjero", "za granicę", "za granicą"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jadę do morza. / Jestem nad morze. / Jadę do gór.",
+      "right": "Jadę nad morze. / Jestem nad morzem. / Jadę w góry.",
+      "explanation": "Para el mar y los lagos, nad; para la montaña, w. Adónde → acusativo (morze, góry); dónde → instrumental con nad (nad morzem) y locativo con w (w górach). Do se usa con países, ciudades y edificios: do Gdańska, do hotelu."
+    },
+    {
+      "type": "explanation",
+      "text": "Para hablar de una acción futura concreta y completa se usa el futuro de los verbos perfectivos, que tiene forma de presente: pojadę (iré en vehículo), polecę (volaré), wrócę (volveré), zobaczę (veré), odpocznę (descansaré). El futuro con będę + infinitivo (unidad 9A) sirve para actividades en curso o repetidas: będę odpoczywać (estaré descansando). Atención: los perfectivos nunca llevan będę."
+    },
+    {
+      "type": "table",
+      "caption": "Futuro de verbos perfectivos",
+      "columns": ["Persona", "pojechać (ir)", "polecieć (volar)", "wrócić (volver)"],
+      "rows": [
+        ["ja", "pojadę", "polecę", "wrócę"],
+        ["ty", "pojedziesz", "polecisz", "wrócisz"],
+        ["on / ona", "pojedzie", "poleci", "wróci"],
+        ["my", "pojedziemy", "polecimy", "wrócimy"],
+        ["wy", "pojedziecie", "polecicie", "wrócicie"],
+        ["oni / one", "pojadą", "polecą", "wrócą"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Będę pojechać do Hiszpanii. / Jutro jadę pojadę.",
+      "right": "Pojadę do Hiszpanii. / Jutro pojadę.",
+      "explanation": "El perfectivo ya es futuro por sí mismo: pojadę = iré. Będę + infinitivo solo funciona con imperfectivos: będę jechać (estaré viajando). Para planes concretos, lo más natural es el perfectivo."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir cuánto tiempo vas a estar se usa na + acusativo: na tydzień (para una semana), na dwa tygodnie, na miesiąc. Para las fechas, od… do… con genitivo: od dwudziestego grudnia do trzeciego stycznia. Y para preguntar: Na jak długo? (¿para cuánto tiempo?)."
+    },
+    {
+      "type": "explanation",
+      "text": "Para los planes y deseos tienes varias fórmulas: zamierzam + infinitivo (tengo la intención de), chcę (quiero), mam ochotę + infinitivo o na + acusativo (tengo ganas de), chciałbym / chciałabym (me gustaría, unidad 4). Kasia también usa jeżdżę (voy habitualmente, cada verano): jechać es «ir ahora o una vez»; jeździć, «ir a menudo»."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Każdego lata jadę na Mazury. (para un hábito)",
+      "right": "Każdego lata jeżdżę na Mazury.",
+      "explanation": "Para viajes repetidos o habituales se usa jeździć (jeżdżę, jeździsz…); para un viaje concreto, jechać (jadę teraz, w lipcu jadę) o el perfectivo pojechać (pojadę). Es un rasgo muy polaco: dos verbos para «ir en vehículo»."
+    },
+    { "type": "section", "phase": "sound", "title": "Sz frente a ś: wiesz y wieś, kasza y Kasia" },
+    {
+      "type": "explanation",
+      "text": "Sz y ś parecen la misma «sh» para un hispanohablante, pero para un polaco son sonidos distintos que cambian el significado. Sz es dura, con la lengua hacia atrás y los labios un poco redondeados: wiesz (sabes), kasza (gachas). Ś (o si delante de vocal) es suave, con la lengua plana contra el paladar, como si sonrieras: wieś (pueblo), Kasia. Practica los pares despacio, notando dónde está tu lengua."
+    },
+    {
+      "type": "table",
+      "caption": "Pares mínimos",
+      "columns": ["Con sz (dura)", "Significa", "Con ś / si (suave)", "Significa"],
+      "rows": [
+        ["wiesz", "sabes", "wieś", "el pueblo, el campo"],
+        ["kasza", "las gachas, el trigo sarraceno", "Kasia", "Kasia (nombre)"],
+        ["proszę", "por favor", "prosię", "el cochinillo"],
+        ["sześć", "seis: sz al principio…", "…y ść al final", "los dos sonidos en una palabra"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Vacaciones a la polaca" },
+    {
+      "type": "reading",
+      "title": "Majówka",
+      "paragraphs": [
+        "Majówka to długi weekend na początku maja. Pierwszego maja jest Święto Pracy, a trzeciego maja Święto Konstytucji. Wiele osób bierze jeden dzień urlopu i ma kilka dni wolnego.",
+        "Na majówkę Polacy jadą na wieś, nad jezioro albo w góry. Robią grilla, spacerują po lesie i odpoczywają. Pogoda bywa różna: czasem jest ciepło i słonecznie, a czasem zimno i pada deszcz.",
+        "W tym roku rodzina Kasi pojedzie na trzy dni do domku nad jeziorem. Tata będzie łowić ryby, mama będzie czytać, a Kasia z bratem pojadą na wycieczkę rowerową.",
+        "A po majówce? Wszyscy czekają na wakacje: w lipcu i w sierpniu dzieci nie chodzą do szkoły, a dorośli biorą urlop i jadą nad morze, na Mazury albo za granicę, na przykład do Hiszpanii."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Los tres grandes destinos de verano de los polacos son el mar Báltico (Sopot, Hel, Międzyzdroje), los lagos de Masuria (Mazury), con miles de lagos ideales para navegar a vela, y la montaña (Tatras, Bieszczady). El agua del Báltico rara vez supera los 20 °C.",
+        "La majówka, el puente de principios de mayo, es la primera gran escapada del año y el inicio de la temporada de barbacoas (grill). Las vacaciones escolares de verano van de finales de junio a finales de agosto, y en invierno hay ferie de dos semanas para esquiar.",
+        "Los trabajadores polacos tienen 20 o 26 días laborables de vacaciones al año, según su experiencia laboral. Muchos los reparten entre el verano y las fiestas.",
+        "España es uno de los destinos favoritos de los polacos para viajar al extranjero: Canarias, Costa del Sol, Barcelona… Si les dices que eres español, a menudo te contarán sus vacaciones en tu país."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: tus planes de vacaciones" },
+    {
+      "type": "mission",
+      "title": "Cuenta a un amigo polaco tus planes para las vacaciones",
+      "steps": [
+        "Di adónde vas en Navidad o en verano con la preposición correcta: do…, nad morze, w góry, na wieś…",
+        "Di cuándo sales y vuelves con perfectivos: polecę / pojadę… dwudziestego…, wrócę…",
+        "Di para cuánto tiempo vas (na … tygodnie / dni) y dónde dormirás (w hotelu, w namiocie…).",
+        "Di qué vas a hacer allí (będę + infinitivo) y qué tienes ganas de ver (mam ochotę…, chciałbym…).",
+        "Pregunta a tu amigo adónde va él y dónde estará: Gdzie jedziesz? Gdzie będziesz?",
+        "Grábate diciendo los pares wiesz / wieś y kasza / Kasia."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Gdzie jedziesz na wakacje?", "translation": "¿Adónde vas de vacaciones?" },
+        {
+          "text": "Jadę nad morze, a potem w góry.",
+          "translation": "Voy al mar y luego a la montaña."
+        },
+        {
+          "text": "Polecę do Madrytu dwudziestego grudnia.",
+          "translation": "Volaré a Madrid el veinte de diciembre."
+        },
+        {
+          "text": "Na jak długo? — Na dwa tygodnie.",
+          "translation": "¿Para cuánto tiempo? — Para dos semanas."
+        },
+        { "text": "Wrócę po Nowym Roku.", "translation": "Volveré después de Año Nuevo." },
+        {
+          "text": "Latem zawsze jeżdżę na Mazury.",
+          "translation": "En verano siempre voy a Masuria."
+        },
+        { "text": "Mam ochotę zobaczyć Gdańsk.", "translation": "Tengo ganas de ver Gdańsk." },
+        { "text": "Wesołych Świąt!", "translation": "¡Feliz Navidad!" }
+      ],
+      "canDo": [
+        "decir adónde voy y dónde estoy de vacaciones (nad morze / nad morzem, w góry / w górach…)",
+        "hablar de planes concretos con el futuro perfectivo (pojadę, polecę, wrócę)",
+        "decir cuánto tiempo voy con na + acusativo",
+        "expresar planes y deseos con zamierzam, mam ochotę y chciałbym",
+        "distinguir jechać y jeździć",
+        "distinguir sz y ś al pronunciar"
+      ]
+    }
+  ]
+}

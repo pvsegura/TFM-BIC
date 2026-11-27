@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-gap-dokad",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 9600,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 30,
+    "phase": "structure"
+  },
+  "prompt": "Completa adónde vas: nad, w, na o do.",
+  "explanation": "Nad morze, w góry, na wieś, do Hiszpanii.",
+  "configuration": {
+    "text": "Latem jadę ___ morze, zimą ___ góry, na majówkę ___ wieś, a na święta ___ Hiszpanii.",
+    "gaps": [
+      {
+        "accepted": ["nad"]
+      },
+      {
+        "accepted": ["w"]
+      },
+      {
+        "accepted": ["na"]
+      },
+      {
+        "accepted": ["do"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

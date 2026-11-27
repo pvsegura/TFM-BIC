@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-reading-summer",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 53,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: en julio y agosto los niños polacos van al colegio.",
+  "explanation": "W lipcu i w sierpniu dzieci nie chodzą do szkoły.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

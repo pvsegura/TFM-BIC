@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-order-fly",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 9690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 39,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Volaré a Madrid el veinte de diciembre.",
+  "explanation": "Polecę do Madrytu + dwudziestego grudnia.",
+  "configuration": {
+    "items": ["Polecę", "do", "Madrytu", "dwudziestego", "grudnia."],
+    "joiner": " "
+  }
+}

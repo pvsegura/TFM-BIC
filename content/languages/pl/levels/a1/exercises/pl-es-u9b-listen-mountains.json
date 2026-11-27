@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-listen-mountains",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuándo irán a la montaña?",
+  "explanation": "W góry pojedziemy we wrześniu, kiedy nie ma turystów.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En septiembre."
+      },
+      {
+        "id": "opt-b",
+        "text": "En julio."
+      },
+      {
+        "id": "opt-c",
+        "text": "En Navidad."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

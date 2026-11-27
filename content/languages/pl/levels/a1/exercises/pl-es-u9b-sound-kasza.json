@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-sound-kasza",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 45,
+    "phase": "sound"
+  },
+  "prompt": "Kasza y Kasia suenan igual.",
+  "explanation": "No: kasza lleva sz dura; Kasia, la si suave.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

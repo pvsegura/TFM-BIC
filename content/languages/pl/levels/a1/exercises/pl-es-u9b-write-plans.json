@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-write-plans",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 9830,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 67,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Escribe a un amigo polaco tus planes para las próximas vacaciones: adónde vas, cuándo sales y vuelves, para cuánto tiempo, dónde dormirás y qué tienes ganas de hacer.",
+  "explanation": "Revisa: nad / w / na / do + acusativo, perfectivos (pojadę, polecę, wrócę), na + duración, mam ochotę.",
+  "configuration": {
+    "modelAnswer": "Cześć, Piotrek! W sierpniu pojadę nad morze, do Sopotu. Polecę do Gdańska z Madrytu dziesiątego sierpnia i wrócę dwudziestego czwartego. Jadę na dwa tygodnie. Będę spać w małym hotelu blisko plaży. Mam ochotę pływać, chodzić po plaży i jeść ryby. A ty? Gdzie jedziesz na wakacje?",
+    "checklist": ["destino", "fechas", "duración", "alojamiento", "deseos"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

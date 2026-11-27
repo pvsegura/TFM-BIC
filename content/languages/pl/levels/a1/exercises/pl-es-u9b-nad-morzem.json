@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9b-nad-morzem",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 32,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Dónde: nad + instrumental (morzem).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jestem nad morzem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem nad morze."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem do morza."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
