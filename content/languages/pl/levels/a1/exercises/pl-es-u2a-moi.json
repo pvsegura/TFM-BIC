@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-moi",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "Completa: ___ rodzice mieszkają w Madrycie.",
+  "explanation": "Rodzice es un plural de personas con al menos un hombre: moi.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Moi"
+      },
+      {
+        "id": "opt-b",
+        "text": "Moje"
+      },
+      {
+        "id": "opt-c",
+        "text": "Mój"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

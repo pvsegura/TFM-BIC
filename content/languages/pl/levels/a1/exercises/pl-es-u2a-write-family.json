@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-write-family",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 2490,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 39,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Escribe en polaco un texto sobre tu familia para un compañero de trabajo polaco: presenta a tres personas, di dónde viven, describe a dos con un adjetivo y di qué familia no tienes.",
+  "explanation": "Revisa: mój / moja / moi según el género, mam + acusativo, nie mam + genitivo, adjetivos -y / -a.",
+  "configuration": {
+    "modelAnswer": "Moja rodzina mieszka w Hiszpanii. Moi rodzice mieszkają w Walencji. Mój tata jest wysoki i spokojny, a moja mama jest bardzo wesoła. Mam brata, Pabla. Jego żona jest z Polski, z Poznania. Nie mam siostry. Mam też babcię. Ona jest bardzo miła.",
+    "checklist": ["tres personas", "dónde viven", "dos adjetivos", "mam…", "nie mam…"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-write-questions",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 2500,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 40,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Kasia te escribe: «Masz rodzeństwo? Jak mają na imię twoi rodzice?». Contesta y hazle dos preguntas sobre su familia.",
+  "explanation": "Usa mam / nie mam, ma na imię y preguntas con czy, kto o jak.",
+  "configuration": {
+    "modelAnswer": "Mam jednego brata. Ma na imię Diego i mieszka w Madrycie. Moja mama ma na imię Rosa, a mój tata ma na imię Luis. A ty? Czy twój brat ma dzieci? Jak ma na imię twoja babcia?",
+    "checklist": ["rodzeństwo", "nombres de los padres", "dos preguntas"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

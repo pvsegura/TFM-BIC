@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-jej",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "Kasia ma brata. ¿Cómo dices «su hermano» (de Kasia)?",
+  "explanation": "El dueño es una mujer: jej, aunque brat sea masculino.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "jej brat"
+      },
+      {
+        "id": "opt-b",
+        "text": "jego brat"
+      },
+      {
+        "id": "opt-c",
+        "text": "ich brat"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-reading-filemon",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 31,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Filemon es el hermano pequeño de Zosia.",
+  "explanation": "Zosia ma kota, Filemona — Filemon es su gato.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

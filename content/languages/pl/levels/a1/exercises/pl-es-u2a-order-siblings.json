@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-order-siblings",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 2360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 26,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena la pregunta: ¿Tienes hermanos?",
+  "explanation": "Las preguntas de sí o no pueden empezar por czy.",
+  "configuration": {
+    "items": ["Czy", "masz", "rodzeństwo?"],
+    "joiner": " "
+  }
+}

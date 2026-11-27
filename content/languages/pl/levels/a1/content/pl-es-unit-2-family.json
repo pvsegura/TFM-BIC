@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1090,
+  "unit": 2,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 2A. To moja rodzina — la familia, el género y los posesivos",
+  "description": "Presentas a tu familia, preguntas por la de otros y describes a las personas: kto to jest?, mój / moja / moje, jego / jej, mam brata / siostrę, nie mam… y los adjetivos en masculino y femenino.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Fotos de una boda" },
+    {
+      "type": "explanation",
+      "text": "Javier trabaja en una oficina de Cracovia. En la pausa de la comida, su compañera Kasia le enseña en el móvil las fotos de una boda familiar. Primera escucha: ¿quiénes salen en las fotos? Segunda: ¿dónde vive el hermano de Kasia y qué familia tiene? ¿Y la hermana de Javier? Tercera: fíjate en las palabras que van delante de los familiares: mój, moja, twój, twoja, jego."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u2-photos.png",
+      "alt": "Una mujer joven enseña fotos en su móvil a un compañero de trabajo, sentados a una mesa en la cocina de una oficina."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "Kasiu, kto to jest na zdjęciu?",
+          "translation": "Kasia, ¿quién es el de la foto?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "To moja rodzina na weselu. To jest mój tata, a to moja mama.",
+          "translation": "Es mi familia en una boda. Este es mi padre, y esta, mi madre."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Twoja mama jest bardzo elegancka. A ten wysoki pan?",
+          "translation": "Tu madre es muy elegante. ¿Y ese señor alto?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "To mój wujek Adam, brat mamy. Obok jest jego żona, ciocia Ewa.",
+          "translation": "Es mi tío Adam, el hermano de mi madre. Al lado está su mujer, la tía Ewa."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A ten młody chłopak? To twój brat?",
+          "translation": "¿Y ese chico joven? ¿Es tu hermano?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Tak, to mój brat, Piotrek. Mieszka w Gdańsku. Ma żonę i małą córkę.",
+          "translation": "Sí, es mi hermano, Piotrek. Vive en Gdańsk. Tiene mujer y una hija pequeña."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jak ma na imię jego córka?",
+          "translation": "¿Cómo se llama su hija?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Zosia. Ma pięć lat i jest bardzo wesoła. A ty? Masz rodzeństwo?",
+          "translation": "Zosia. Tiene cinco años y es muy alegre. ¿Y tú? ¿Tienes hermanos?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Mam siostrę. Ma na imię Lucía. Nie mam brata.",
+          "translation": "Tengo una hermana. Se llama Lucía. No tengo hermanos varones."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Czy twoja siostra też mieszka w Polsce?",
+          "translation": "¿Tu hermana también vive en Polonia?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Nie, mieszka w Sewilli z mężem i synem. Moi rodzice mieszkają w Madrycie.",
+          "translation": "No, vive en Sevilla con su marido y su hijo. Mis padres viven en Madrid."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Masz zdjęcie? Chcę zobaczyć!",
+          "translation": "¿Tienes alguna foto? ¡Quiero verla!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jasne. To jest moja siostra, a to mój siostrzeniec, Hugo. Ma trzy lata.",
+          "translation": "Claro. Esta es mi hermana, y este, mi sobrino Hugo. Tiene tres años."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "La familia" },
+    {
+      "type": "table",
+      "caption": "La familia (m = masculino, f = femenino, n = neutro)",
+      "columns": ["Español", "Polaco", "Español", "Polaco"],
+      "rows": [
+        ["la madre", "mama / matka (f)", "el padre", "tata / ojciec (m)"],
+        ["los padres", "rodzice", "los hermanos", "rodzeństwo (n)"],
+        ["la hermana", "siostra (f)", "el hermano", "brat (m)"],
+        ["la hija", "córka (f)", "el hijo", "syn (m)"],
+        ["los hijos, los niños", "dzieci", "el niño, la niña (criatura)", "dziecko (n)"],
+        ["la mujer, la esposa", "żona (f)", "el marido", "mąż (m)"],
+        ["la abuela", "babcia (f)", "el abuelo", "dziadek (m)"],
+        ["los abuelos", "dziadkowie", "el nieto / la nieta", "wnuk (m) / wnuczka (f)"],
+        ["la tía", "ciocia (f)", "el tío", "wujek (m)"],
+        ["la prima", "kuzynka (f)", "el primo", "kuzyn (m)"],
+        ["la novia", "dziewczyna (f)", "el novio", "chłopak (m)"],
+        ["la boda", "wesele (n)", "la foto", "zdjęcie (n)"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Sobrinos: en polaco depende de si son hijos de tu hermana o de tu hermano",
+      "columns": ["Español", "Hijo/a de tu hermana", "Hijo/a de tu hermano"],
+      "rows": [
+        ["el sobrino", "siostrzeniec", "bratanek"],
+        ["la sobrina", "siostrzenica", "bratanica"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cómo es: adjetivos para describir a personas",
+      "columns": ["Español", "Él (-y / -i)", "Ella (-a)", "Español", "Él (-y / -i)", "Ella (-a)"],
+      "rows": [
+        ["alto/a", "wysoki", "wysoka", "bajo/a", "niski", "niska"],
+        ["joven", "młody", "młoda", "mayor, viejo/a", "stary", "stara"],
+        ["guapo/a", "przystojny", "ładna", "elegante", "elegancki", "elegancka"],
+        ["simpático/a", "sympatyczny", "sympatyczna", "amable", "miły", "miła"],
+        ["alegre", "wesoły", "wesoła", "serio/a", "poważny", "poważna"],
+        ["tranquilo/a", "spokojny", "spokojna", "pequeño/a", "mały", "mała"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — SYN (hijo) y BRAT (hermano) son primos lejanos del inglés son y brother; SIOSTRA, de sister. DZIADEK suena [dźadek]: piensa en el «yayo» español, que empieza casi igual. BABCIA es la «babushka» de los cuentos rusos. CIOCIA [ćoća] y WUJEK son palabras de niño, como «tita» y «tito»: así llama todo el mundo a sus tíos, incluso de adulto. Y SIOSTRZENIEC lleva dentro siostra, mientras que BRATANEK lleva brat: la palabra te dice de quién es hijo tu sobrino."
+    },
+    { "type": "section", "phase": "structure", "title": "Género, posesivos y mieć + acusativo" },
+    {
+      "type": "explanation",
+      "text": "Todo sustantivo polaco tiene uno de tres géneros, y casi siempre se ve en la última letra. Masculino: termina en consonante (brat, syn, dziadek, mąż). Femenino: termina en -a (mama, siostra, córka, babcia). Neutro: termina en -o, -e o -ę (dziecko, zdjęcie, wesele, imię). El género decide la forma de las palabras que lo acompañan: posesivos, adjetivos y demostrativos (ten pan, ta pani, to dziecko)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "moja tata, moja kolega",
+      "right": "mój tata, mój kolega",
+      "explanation": "Algunos sustantivos de hombre terminan en -a (tata, kolega, mężczyzna), pero son masculinos porque se refieren a un hombre: mój tata, mój kolega. Manda el sexo de la persona, no la letra."
+    },
+    {
+      "type": "table",
+      "caption": "Los posesivos: concuerdan con lo que se posee",
+      "columns": [
+        "Persona",
+        "Masculino",
+        "Femenino",
+        "Neutro",
+        "Plural (personas masc.)",
+        "Plural (resto)"
+      ],
+      "rows": [
+        ["mi", "mój", "moja", "moje", "moi", "moje"],
+        ["tu", "twój", "twoja", "twoje", "twoi", "twoje"],
+        ["nuestro", "nasz", "nasza", "nasze", "nasi", "nasze"],
+        ["vuestro", "wasz", "wasza", "wasze", "wasi", "wasze"],
+        ["su (de él)", "jego", "jego", "jego", "jego", "jego"],
+        ["su (de ella)", "jej", "jej", "jej", "jej", "jej"],
+        ["su (de ellos)", "ich", "ich", "ich", "ich", "ich"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Piotrek tiene una hija. Su hija se llama Zosia. Marta tiene un hijo. Su hijo se llama Kuba.",
+      "target": "Piotrek ma córkę. Jego córka ma na imię Zosia. Marta ma syna. Jej syn ma na imię Kuba.",
+      "note": "El «su» español es ambiguo: no dice si es de él, de ella o de ellos. El polaco sí lo dice: jego (de él), jej (de ella), ich (de ellos). Y estas tres formas no cambian nunca: jego córka, jego syn, jego dzieci."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Kasia i jego brat. / Piotrek i jej córka (hablando de la hija de Piotrek).",
+      "right": "Kasia i jej brat. / Piotrek i jego córka.",
+      "explanation": "Jego y jej dependen del dueño, no de la cosa poseída: el hermano de Kasia es jej brat aunque brat sea masculino. Es justo al revés que mój / moja, que concuerdan con la cosa poseída."
+    },
+    {
+      "type": "explanation",
+      "text": "Para presentar a alguien basta con to (esto, este, esta): To jest mój brat. / To moja siostra. Para preguntar por una persona se dice kto to jest? (¿quién es?) y para una cosa co to jest? (¿qué es?). Con mieć (tener) el sustantivo cambia: es el acusativo, el caso del complemento directo. Por ahora basta con tres reglas: el femenino cambia -a por -ę (siostra → siostrę), el masculino de persona o animal añade -a (brat → brata, syn → syna, kot → kota) y el neutro no cambia (dziecko → dziecko)."
+    },
+    {
+      "type": "table",
+      "caption": "Mam… (tengo…) y nie mam… (no tengo…)",
+      "columns": ["Quién / qué", "Mam… (acusativo)", "Nie mam… (genitivo)"],
+      "rows": [
+        ["siostra (f)", "Mam siostrę.", "Nie mam siostry."],
+        ["córka (f)", "Mam córkę.", "Nie mam córki."],
+        ["żona (f)", "Mam żonę.", "Nie mam żony."],
+        ["brat (m)", "Mam brata.", "Nie mam brata."],
+        ["syn (m)", "Mam syna.", "Nie mam syna."],
+        ["mąż (m)", "Mam męża.", "Nie mam męża."],
+        ["dziecko (n)", "Mam dziecko.", "Nie mam dziecka."],
+        ["rodzeństwo (n)", "Mam rodzeństwo.", "Nie mam rodzeństwa."],
+        ["dzieci (pl.)", "Mam dzieci.", "Nie mam dzieci."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nie mam siostrę. / Nie mam rodzeństwo.",
+      "right": "Nie mam siostry. / Nie mam rodzeństwa.",
+      "explanation": "Después de nie mam el sustantivo no va en acusativo sino en genitivo: el femenino termina en -y o -i (siostry, córki), el masculino y el neutro en -a (brata, dziecka, rodzeństwa). Apréndelo como bloque: es una de las reglas que más usarás."
+    },
+    {
+      "type": "explanation",
+      "text": "Los adjetivos también concuerdan: masculino en -y o -i (wysoki, młody), femenino en -a (wysoka, młoda), neutro en -e (małe dziecko). Con być (ser) van en su forma básica: Mój brat jest wysoki. Moja mama jest elegancka. Y delante del sustantivo, como en español «una hija pequeña»: Ma małą córkę — con mieć, el adjetivo femenino cambia también: mała → małą."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mój brat jest przystojna. / Moja babcia jest miły.",
+      "right": "Mój brat jest przystojny. / Moja babcia jest miła.",
+      "explanation": "El adjetivo copia el género de la persona: él → -y / -i, ella → -a. Fíjate también en que para un hombre guapo se dice przystojny, y para una mujer, ładna."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Mismos sonidos, letras distintas: ó y u, rz y ż, ch y h"
+    },
+    {
+      "type": "explanation",
+      "text": "El polaco tiene parejas de letras que suenan exactamente igual: ó y u suenan [u] (mój [muj], córka [tsurka], wujek); rz y ż suenan como la j francesa (rzeka, żona, mąż); ch y h suenan como la j española (chłopak, herbata). La diferencia es solo de ortografía e historia, así que al escribir hay que memorizar cada palabra. Otra regla útil: rz pierde la voz detrás de p, t, k, ch y suena como sz: przystojny [pszystojny], trzy [tszy], siostrzeniec [śostszeńets]. Y al final de palabra las consonantes sonoras se ensordecen: mąż [mąsz], Bóg [buk]."
+    },
+    {
+      "type": "table",
+      "caption": "Palabras de la familia para practicar (pronunciación aproximada)",
+      "columns": ["Palabra", "Cómo suena", "Qué practicar"],
+      "rows": [
+        ["mój", "[muj]", "ó = u"],
+        ["córka", "[tsurka]", "c = ts, ó = u"],
+        ["mąż", "[mąsz]", "ą nasal + ż sorda al final"],
+        ["żona", "[żona]", "ż como la j francesa"],
+        ["przystojny", "[pszystojny]", "prz = psz"],
+        ["siostrzeniec", "[śostszeńets]", "si suave + trz = tsz"],
+        ["rodzeństwo", "[rodzeństfo]", "dz + ń + w sorda tras s"],
+        ["chłopak", "[jwopak]", "ch = j española, ł = w inglesa"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "La familia polaca" },
+    {
+      "type": "reading",
+      "title": "Niedzielny obiad u babci",
+      "paragraphs": [
+        "Mam na imię Kasia i mieszkam w Krakowie. Moja rodzina nie jest duża: mam mamę, tatę i jednego brata, Piotrka.",
+        "Moi rodzice mieszkają w Tarnowie, niedaleko Krakowa. Mama jest bardzo energiczna i wesoła, a tata jest spokojny i trochę poważny.",
+        "Piotrek mieszka w Gdańsku z żoną, Martą, i z córką, Zosią. Marta jest z Gdyni. Zosia ma pięć lat i ma kota, Filemona.",
+        "Raz w miesiącu cała rodzina jedzie do babci Krysi na niedzielny obiad. Babcia gotuje rosół i pierogi. Dziadek nie gotuje, ale opowiada śmieszne historie. Uwielbiam te niedziele!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "El obiad, la comida principal, se toma en Polonia hacia las dos o las tres, y el domingo es el día de reunir a la familia, a menudo en casa de los abuelos. El primer plato casi obligatorio es una sopa: rosół (caldo de pollo con fideos) o pomidorowa (de tomate).",
+        "Los abuelos tienen sus propios días: el 21 de enero es Dzień Babci (Día de la Abuela) y el 22, Dzień Dziadka (Día del Abuelo). Los nietos les llevan flores, tarjetas o dibujos. El Día de la Madre (Dzień Matki) es el 26 de mayo y el del Padre (Dzień Ojca), el 23 de junio.",
+        "En casa nadie dice matka u ojciec: son palabras formales o literarias. Se dice mama y tata, y a los abuelos, babcia y dziadek (o babciu, dziadku, cuando se les llama). A los tíos se les llama ciocia y wujek, y muchos niños usan esas palabras también para amigos íntimos de sus padres.",
+        "Los nombres de la familia casi siempre se usan en diminutivo: Piotr es Piotrek, Katarzyna es Kasia, Zofia es Zosia. Ya lo viste en la unidad 1: en polaco el diminutivo es muestra de cariño y confianza, no de que la persona sea pequeña. Y fíjate en cómo empieza el diálogo: Javier dice Kasiu, no Kasia. Es el vocativo, la forma que se usa para llamar a alguien (como babciu o dziadku); lo verás con calma más adelante."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: presenta a tu familia" },
+    {
+      "type": "mission",
+      "title": "Enseña una foto de tu familia a un compañero de trabajo polaco",
+      "steps": [
+        "Elige una foto real o imaginaria de tu familia y presenta a tres personas con to jest mój… / to moja…",
+        "Di cómo se llama cada una y, si quieres, cuántos años tiene (ma na imię…, ma … lat).",
+        "Describe a dos personas con un adjetivo concordado: mój brat jest wysoki, moja babcia jest bardzo miła.",
+        "Di qué familia tienes y qué familia no tienes: mam siostrę…, nie mam brata…",
+        "Habla de alguien a través de otra persona usando jego, jej o ich: jego żona, jej syn.",
+        "Pregunta a tu compañero: Masz rodzeństwo? Kto to jest? Jak ma na imię twoja mama? — y grábate leyendo córka, mąż, przystojny y siostrzeniec."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Kto to jest? — To mój brat, a to moja siostra.",
+          "translation": "¿Quién es? — Este es mi hermano, y esta, mi hermana."
+        },
+        { "text": "Masz rodzeństwo?", "translation": "¿Tienes hermanos?" },
+        {
+          "text": "Mam siostrę. Nie mam brata.",
+          "translation": "Tengo una hermana. No tengo hermanos varones."
+        },
+        { "text": "Nie mam dzieci.", "translation": "No tengo hijos." },
+        {
+          "text": "Jak ma na imię twoja mama?",
+          "translation": "¿Cómo se llama tu madre?"
+        },
+        {
+          "text": "Piotrek i jego córka. Kasia i jej brat.",
+          "translation": "Piotrek y su hija. Kasia y su hermano."
+        },
+        {
+          "text": "Mój tata jest wysoki, a moja mama jest elegancka.",
+          "translation": "Mi padre es alto, y mi madre, elegante."
+        },
+        {
+          "text": "Moi rodzice mieszkają w Madrycie.",
+          "translation": "Mis padres viven en Madrid."
+        }
+      ],
+      "canDo": [
+        "nombrar a los miembros de mi familia",
+        "reconocer el género de un sustantivo por su terminación",
+        "usar mój, moja, moje, moi y elegir bien entre jego, jej e ich",
+        "decir qué familia tengo (mam + acusativo) y cuál no (nie mam + genitivo)",
+        "describir a una persona con adjetivos en masculino y femenino",
+        "leer bien ó, rz, ż, ch y h, y el grupo prz / trz"
+      ]
+    }
+  ]
+}

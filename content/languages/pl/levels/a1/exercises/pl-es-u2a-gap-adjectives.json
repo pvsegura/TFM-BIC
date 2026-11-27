@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-gap-adjectives",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 2320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Completa el adjetivo: -y / -i para él, -a para ella.",
+  "explanation": "Brat → wysoki; babcia → miła; mama → elegancka.",
+  "configuration": {
+    "text": "Mój brat jest wysok___, moja babcia jest mił___, a moja mama jest eleganck___.",
+    "gaps": [
+      {
+        "accepted": ["i"]
+      },
+      {
+        "accepted": ["a"]
+      },
+      {
+        "accepted": ["a"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

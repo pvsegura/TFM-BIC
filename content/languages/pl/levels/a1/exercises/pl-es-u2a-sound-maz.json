@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-sound-maz",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 29,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena mąż al final de la palabra?",
+  "explanation": "Al final, ż se ensordece y suena como sz: [mąsz].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[mąsz]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[mąż] con voz"
+      },
+      {
+        "id": "opt-c",
+        "text": "[mas]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

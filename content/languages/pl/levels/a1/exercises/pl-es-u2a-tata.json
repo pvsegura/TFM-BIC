@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-tata",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Tata acaba en -a pero es masculino: mój tata.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "mój tata"
+      },
+      {
+        "id": "opt-b",
+        "text": "moja tata"
+      },
+      {
+        "id": "opt-c",
+        "text": "moje tata"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

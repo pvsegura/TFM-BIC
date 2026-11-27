@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-sound-pairs",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 27,
+    "phase": "sound"
+  },
+  "prompt": "Une cada palabra con la letra que suena igual.",
+  "explanation": "Ó = u; rz = ż; ch = h.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "córka",
+        "right": "ó suena como u"
+      },
+      {
+        "left": "rzeka",
+        "right": "rz suena como ż"
+      },
+      {
+        "left": "chłopak",
+        "right": "ch suena como h"
+      }
+    ]
+  }
+}

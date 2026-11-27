@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-piotrek",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Piotrek, el hermano de Kasia, vive en Cracovia.",
+  "explanation": "Mieszka w Gdańsku — vive en Gdańsk.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

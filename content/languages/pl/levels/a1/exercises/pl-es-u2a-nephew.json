@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-nephew",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Tu hermano tiene un hijo. ¿Qué es para ti?",
+  "explanation": "El hijo de tu hermano (brat) es bratanek; el de tu hermana (siostra), siostrzeniec.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "bratanek"
+      },
+      {
+        "id": "opt-b",
+        "text": "siostrzeniec"
+      },
+      {
+        "id": "opt-c",
+        "text": "wnuk"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-translate-sister",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 35,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Tengo una hermana, pero no tengo hermanos varones.",
+  "explanation": "Mam siostrę (acusativo), ale nie mam brata (genitivo).",
+  "configuration": {
+    "acceptedAnswers": ["Mam siostrę, ale nie mam brata.", "Mam siostrę ale nie mam brata."],
+    "caseSensitive": false
+  }
+}

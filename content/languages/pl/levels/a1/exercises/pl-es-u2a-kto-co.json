@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-kto-co",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "Señalas a una persona en una foto. ¿Qué preguntas?",
+  "explanation": "Para personas kto, para cosas co.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kto to jest?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Co to jest?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Skąd to jest?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

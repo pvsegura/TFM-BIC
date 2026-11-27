@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-sound-przystojny",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 28,
+    "phase": "sound"
+  },
+  "prompt": "En przystojny, el grupo prz suena [pż], con voz.",
+  "explanation": "No: rz detrás de p pierde la voz y suena como sz: [pszystojny].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

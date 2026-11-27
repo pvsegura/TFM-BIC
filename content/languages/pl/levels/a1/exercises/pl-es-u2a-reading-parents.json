@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-reading-parents",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 30,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿dónde viven los padres de Kasia?",
+  "explanation": "Moi rodzice mieszkają w Tarnowie, niedaleko Krakowa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En Tarnów, cerca de Cracovia."
+      },
+      {
+        "id": "opt-b",
+        "text": "En Gdańsk."
+      },
+      {
+        "id": "opt-c",
+        "text": "En Gdynia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

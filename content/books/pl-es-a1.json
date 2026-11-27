@@ -1,7 +1,7 @@
 {
   "course": "pl-es-a1",
   "podrecznik": {
-    "pages": 24,
+    "pages": 32,
     "index": {
       "unit:1": 5,
       "lesson:pl-es-unit-1-hello": 6,
@@ -11,11 +11,19 @@
       "section:1/sound": 8,
       "section:1/culture": 9,
       "section:1/express": 10,
-      "lesson:pl-es-unit-1-countries": 10
+      "lesson:pl-es-unit-1-countries": 10,
+      "unit:2": 19,
+      "lesson:pl-es-unit-2-family": 20,
+      "section:2/perceive": 20,
+      "section:2/connect": 21,
+      "section:2/structure": 22,
+      "section:2/sound": 23,
+      "section:2/culture": 24,
+      "section:2/express": 24
     }
   },
   "zeszyt": {
-    "pages": 16,
+    "pages": 22,
     "index": {
       "unit:1": 7,
       "lesson:pl-es-unit-1-hello": 7,
@@ -74,7 +82,49 @@
       "exercise:1.52": 11,
       "exercise:1.53": 11,
       "exercise:1.54": 11,
-      "exercise:1.55": 12
+      "exercise:1.55": 12,
+      "unit:2": 13,
+      "lesson:pl-es-unit-2-family": 13,
+      "exercise:2.1": 13,
+      "exercise:2.2": 13,
+      "exercise:2.3": 13,
+      "exercise:2.4": 13,
+      "exercise:2.5": 13,
+      "exercise:2.6": 13,
+      "exercise:2.7": 13,
+      "exercise:2.8": 13,
+      "exercise:2.9": 13,
+      "exercise:2.10": 13,
+      "exercise:2.11": 14,
+      "exercise:2.12": 14,
+      "exercise:2.13": 14,
+      "exercise:2.14": 14,
+      "exercise:2.15": 14,
+      "exercise:2.16": 14,
+      "exercise:2.17": 14,
+      "exercise:2.18": 14,
+      "exercise:2.19": 14,
+      "exercise:2.20": 14,
+      "exercise:2.21": 14,
+      "exercise:2.22": 14,
+      "exercise:2.23": 15,
+      "exercise:2.24": 15,
+      "exercise:2.25": 15,
+      "exercise:2.26": 15,
+      "exercise:2.27": 15,
+      "exercise:2.28": 15,
+      "exercise:2.29": 15,
+      "exercise:2.30": 15,
+      "exercise:2.31": 15,
+      "exercise:2.32": 15,
+      "exercise:2.33": 15,
+      "exercise:2.34": 16,
+      "exercise:2.35": 16,
+      "exercise:2.36": 16,
+      "exercise:2.37": 16,
+      "exercise:2.38": 16,
+      "exercise:2.39": 16,
+      "exercise:2.40": 16
     }
   }
 }

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-culture-babcia",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2430,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 33,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué se celebra en Polonia el 21 de enero?",
+  "explanation": "El 21 de enero es Dzień Babci; el 22, Dzień Dziadka.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El Día de la Abuela."
+      },
+      {
+        "id": "opt-b",
+        "text": "El Día de la Madre."
+      },
+      {
+        "id": "opt-c",
+        "text": "El santo de todos los Piotr."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

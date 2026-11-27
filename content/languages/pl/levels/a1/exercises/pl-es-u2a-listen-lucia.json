@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-lucia",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier tiene una hermana y un hermano.",
+  "explanation": "Mam siostrę. Nie mam brata — solo tiene una hermana.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

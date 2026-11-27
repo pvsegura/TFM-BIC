@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-order-uncle",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 2350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 25,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Al lado está su mujer, la tía Ewa.",
+  "explanation": "Obok jest + jego żona + ciocia Ewa.",
+  "configuration": {
+    "items": ["Obok", "jest", "jego", "żona,", "ciocia", "Ewa."],
+    "joiner": " "
+  }
+}

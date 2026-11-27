@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-przystojny",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Quieres decir que tu hermano es guapo. ¿Qué dices?",
+  "explanation": "Para un hombre: przystojny; para una mujer: ładna.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mój brat jest przystojny."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mój brat jest ładna."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mój brat jest przystojna."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

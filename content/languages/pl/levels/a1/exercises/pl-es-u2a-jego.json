@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-jego",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "Piotrek ma córkę. ¿Cómo dices «su hija» (de Piotrek)?",
+  "explanation": "El dueño es un hombre: jego. Jego no cambia con el género de la hija.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "jego córka"
+      },
+      {
+        "id": "opt-b",
+        "text": "jej córka"
+      },
+      {
+        "id": "opt-c",
+        "text": "jega córka"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

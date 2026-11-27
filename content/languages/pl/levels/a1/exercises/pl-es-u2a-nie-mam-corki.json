@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-nie-mam-corki",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Después de nie mam: genitivo. Córka → córki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie mam córki."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie mam córkę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie mam córka."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

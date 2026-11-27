@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-zosia",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuántos años tiene Zosia, la hija de Piotrek?",
+  "explanation": "Ma pięć lat i jest bardzo wesoła.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Cinco."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tres."
+      },
+      {
+        "id": "opt-c",
+        "text": "Quince."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

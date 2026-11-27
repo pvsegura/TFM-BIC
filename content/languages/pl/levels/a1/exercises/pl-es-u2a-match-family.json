@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-match-family",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Mąż = marido; żona = mujer, esposa; rodzeństwo = hermanos.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "mąż",
+        "right": "el marido"
+      },
+      {
+        "left": "żona",
+        "right": "la esposa"
+      },
+      {
+        "left": "córka",
+        "right": "la hija"
+      },
+      {
+        "left": "dziadek",
+        "right": "el abuelo"
+      },
+      {
+        "left": "ciocia",
+        "right": "la tía"
+      },
+      {
+        "left": "rodzeństwo",
+        "right": "los hermanos"
+      }
+    ]
+  }
+}

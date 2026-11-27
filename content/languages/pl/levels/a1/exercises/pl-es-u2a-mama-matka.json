@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-mama-matka",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2200,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "¿Cómo llama normalmente un polaco adulto a su madre?",
+  "explanation": "En casa se dice mama; matka es formal o literario.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "mama"
+      },
+      {
+        "id": "opt-b",
+        "text": "matka"
+      },
+      {
+        "id": "opt-c",
+        "text": "pani"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

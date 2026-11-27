@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-match-gender",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "Une cada sustantivo con su género.",
+  "explanation": "Consonante = masculino; -a = femenino; -o, -e = neutro. Tata es masculino: es un hombre.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "syn",
+        "right": "masculino (consonante)"
+      },
+      {
+        "left": "tata",
+        "right": "masculino (aunque acabe en -a)"
+      },
+      {
+        "left": "babcia",
+        "right": "femenino"
+      },
+      {
+        "left": "zdjęcie",
+        "right": "neutro"
+      }
+    ]
+  }
+}

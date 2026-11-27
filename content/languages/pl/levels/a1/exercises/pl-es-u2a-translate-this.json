@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-translate-this",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2440,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 34,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Este es mi padre y esta es mi madre.",
+  "explanation": "To jest mój tata, a to (jest) moja mama. A une con contraste; i también vale.",
+  "configuration": {
+    "acceptedAnswers": [
+      "To jest mój tata, a to jest moja mama.",
+      "To jest mój tata, a to moja mama.",
+      "To jest mój tata i to jest moja mama.",
+      "To mój tata, a to moja mama."
+    ],
+    "caseSensitive": false
+  }
+}

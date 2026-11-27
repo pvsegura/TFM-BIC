@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-reading-grandpa",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 32,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué hace el abuelo en la comida del domingo?",
+  "explanation": "Dziadek nie gotuje, ale opowiada śmieszne historie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Cuenta historias divertidas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Cocina pierogi."
+      },
+      {
+        "id": "opt-c",
+        "text": "Prepara el rosół."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

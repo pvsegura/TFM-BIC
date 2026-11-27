@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-translate-children",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 36,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: No tengo hijos.",
+  "explanation": "Dzieci no cambia después de nie mam.",
+  "configuration": {
+    "acceptedAnswers": ["Nie mam dzieci."],
+    "caseSensitive": false
+  }
+}

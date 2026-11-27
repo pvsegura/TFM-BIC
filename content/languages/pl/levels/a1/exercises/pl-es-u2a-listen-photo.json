@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-photo",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué hay en la foto de Kasia?",
+  "explanation": "To moja rodzina na weselu — su familia en una boda.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Su familia en una boda."
+      },
+      {
+        "id": "opt-b",
+        "text": "Sus compañeros de trabajo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Sus amigos en la playa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

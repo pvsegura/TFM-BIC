@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-hugo",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿quién es Hugo?",
+  "explanation": "To mój siostrzeniec, Hugo — el hijo de la hermana de Javier.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El sobrino de Javier."
+      },
+      {
+        "id": "opt-b",
+        "text": "El hijo de Javier."
+      },
+      {
+        "id": "opt-c",
+        "text": "El hermano de Javier."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

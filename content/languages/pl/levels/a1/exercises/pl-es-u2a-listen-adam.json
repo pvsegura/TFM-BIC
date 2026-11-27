@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-listen-adam",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿quién es Adam?",
+  "explanation": "To mój wujek Adam, brat mamy — el tío de Kasia, hermano de su madre.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El tío de Kasia."
+      },
+      {
+        "id": "opt-b",
+        "text": "El hermano de Kasia."
+      },
+      {
+        "id": "opt-c",
+        "text": "El padre de Kasia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

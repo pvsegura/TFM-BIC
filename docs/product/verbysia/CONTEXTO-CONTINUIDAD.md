@@ -169,8 +169,11 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 - **Hechas:**
   - **1A** «Cześć! Mam na imię…» (`pl-es-unit-1-hello`, order 1080);
   - **1B** «Skąd jesteś?» (`pl-es-unit-1-countries`, order 1085). Unidad 1: 55 ejercicios.
-- Libros: Podręcznik 24 páginas y Zeszyt 16.
-- Siguiente: **2A**. Conviene que siga el paralelo temático de la unidad 2 de español (familia).
+  - **2A** «To moja rodzina» (`pl-es-unit-2-family`, order 1090): familia, género, posesivos
+    (jego/jej/ich), mam + acusativo, nie mam + genitivo, adjetivos; 40 ejercicios.
+- Libros: Podręcznik 32 páginas y Zeszyt 22.
+- Siguiente en polaco: **2B** (cumpleaños, números 20–100, fechas, como la 2B de español).
+- Siguiente en español: **7A** (unidad 7, compras: reescribir la lección fina).
 - **Decisión pendiente del usuario:** el diálogo de la 1A ocurre en la recepción de una escuela
   («Chcę zapisać się na kurs polskiego»), y un ejercicio de comprensión (`pl-es-u1a-listen-why`)
   pregunta por ello. La misión ya se cambió a registrarse en un hotel. Hay que preguntar si se pasa

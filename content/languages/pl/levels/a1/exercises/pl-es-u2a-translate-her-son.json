@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2a-translate-her-son",
+  "lessonId": "pl-es-unit-2-family",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2480,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 38,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Marta tiene un hijo. Su hijo es muy alegre.",
+  "explanation": "Ma syna (acusativo); jej syn (de Marta); wesoły (masculino).",
+  "configuration": {
+    "acceptedAnswers": [
+      "Marta ma syna. Jej syn jest bardzo wesoły.",
+      "Marta ma syna, jej syn jest bardzo wesoły."
+    ],
+    "caseSensitive": false
+  }
+}
