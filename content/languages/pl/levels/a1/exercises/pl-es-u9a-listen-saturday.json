@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-listen-saturday",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tiempo hará el sábado en Zakopane?",
+  "explanation": "W sobotę będzie padać śnieg i będzie minus osiem stopni.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nevará y estarán a −8 °C."
+      },
+      {
+        "id": "opt-b",
+        "text": "Hará sol y 12 °C."
+      },
+      {
+        "id": "opt-c",
+        "text": "Lloverá y hará viento."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

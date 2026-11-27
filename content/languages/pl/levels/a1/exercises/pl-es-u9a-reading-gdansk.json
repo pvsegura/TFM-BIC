@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-reading-gdansk",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 24,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué tiempo hará en Gdańsk?",
+  "explanation": "Będzie wiać silny wiatr i będzie padać deszcz; dwa stopnie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Viento fuerte y lluvia, 2 °C."
+      },
+      {
+        "id": "opt-b",
+        "text": "Sol y −8 °C."
+      },
+      {
+        "id": "opt-c",
+        "text": "Niebla y smog."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

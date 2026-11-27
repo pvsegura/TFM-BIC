@@ -1,0 +1,276 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1160,
+  "unit": 9,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 9A. Jaka będzie pogoda? — el tiempo, la temperatura y el futuro",
+  "description": "Hablas del tiempo y de la temperatura, entiendes una previsión y haces planes: pada śnieg, świeci słońce, jest zimno, jest mi zimno, minus pięć stopni, będzie padać y będziemy jeździć.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Un fin de semana en Zakopane" },
+    {
+      "type": "explanation",
+      "text": "Es diciembre. Kasia y Javier van a pasar el fin de semana en Zakopane, en los montes Tatras. Kasia mira la previsión en el móvil. Primera escucha: ¿qué tiempo hará el sábado y el domingo? Segunda: ¿qué van a hacer cada día? ¿Sabe esquiar Javier? Tercera: fíjate en cómo se habla del futuro: będzie padać, będzie słonecznie, będziemy jeździć."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u9-snow.png",
+      "alt": "Un hombre y una mujer jóvenes con gorro y bufanda caminan por una calle nevada de un pueblo de montaña con casas de madera; al fondo, montañas."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "Kasiu, jaka będzie pogoda w weekend? Jedziemy do Zakopanego!",
+          "translation": "Kasia, ¿qué tiempo hará el fin de semana? ¡Nos vamos a Zakopane!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Sprawdzam prognozę… W sobotę będzie padać śnieg i będzie minus osiem stopni.",
+          "translation": "Miro la previsión… El sábado nevará y estaremos a ocho bajo cero."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Minus osiem? To bardzo zimno! W Madrycie teraz jest dwanaście stopni i świeci słońce.",
+          "translation": "¿Ocho bajo cero? ¡Qué frío! En Madrid ahora hace doce grados y sol."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "W górach zimą zawsze jest zimno. Ale w niedzielę będzie słonecznie i nie będzie wiatru.",
+          "translation": "En la montaña en invierno siempre hace frío. Pero el domingo hará sol y no habrá viento."
+        },
+        {
+          "speaker": "Javier",
+          "text": "To super. Co będziemy robić?",
+          "translation": "Genial. ¿Qué vamos a hacer?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "W sobotę, jeśli będzie padać śnieg, pójdziemy do karczmy na herbatę z sokiem malinowym.",
+          "translation": "El sábado, si nieva, iremos a una taberna a tomar té con zumo de frambuesa."
+        },
+        { "speaker": "Javier", "text": "A w niedzielę?", "translation": "¿Y el domingo?" },
+        {
+          "speaker": "Kasia",
+          "text": "W niedzielę będziemy jeździć na nartach. Umiesz jeździć?",
+          "translation": "El domingo vamos a esquiar. ¿Sabes esquiar?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Nie umiem! Ale chcę spróbować.",
+          "translation": "¡No sé! Pero quiero probar."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Spokojnie, będziesz mieć instruktora. Weź ciepłą kurtkę, czapkę i rękawiczki. Bez nich będzie ci zimno!",
+          "translation": "Tranquilo, tendrás un monitor. Llévate la chaqueta de abrigo, el gorro y los guantes. ¡Sin ellos tendrás frío!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Już mam wszystko! Pamiętasz moją nową kurtkę?",
+          "translation": "¡Ya lo tengo todo! ¿Te acuerdas de mi chaqueta nueva?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Pamiętam. W tej kurtce zima ci niestraszna!",
+          "translation": "Me acuerdo. ¡Con esa chaqueta el invierno no te da miedo!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "El tiempo y las estaciones" },
+    {
+      "type": "table",
+      "caption": "Qué tiempo hace",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["świeci słońce", "hace sol", "pada deszcz", "llueve"],
+        ["pada śnieg", "nieva", "wieje wiatr", "hace viento"],
+        ["jest ciepło", "hace calor (agradable)", "jest gorąco", "hace mucho calor"],
+        ["jest chłodno", "hace fresco", "jest zimno", "hace frío"],
+        ["jest słonecznie", "está soleado", "jest pochmurno", "está nublado"],
+        ["jest mgła", "hay niebla", "jest burza", "hay tormenta"],
+        ["jest mróz", "hiela, hace mucho frío", "jest ślisko", "resbala (hay hielo)"],
+        ["prognoza pogody", "la previsión del tiempo", "stopień (stopnie)", "el grado"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Las estaciones: el nombre y «en…»",
+      "columns": ["Español", "La estación", "En… (instrumental)", "También"],
+      "rows": [
+        ["primavera", "wiosna", "wiosną", "na wiosnę"],
+        ["verano", "lato", "latem", "w lecie"],
+        ["otoño", "jesień", "jesienią", "na jesieni"],
+        ["invierno", "zima", "zimą", "w zimie"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Para cada tiempo",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["parasol", "el paraguas", "kurtka przeciwdeszczowa", "el chubasquero"],
+        ["okulary przeciwsłoneczne", "las gafas de sol", "krem z filtrem", "la crema solar"],
+        ["narty", "los esquís", "sanki", "el trineo"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — ¡cuidado con PARASOL! En polaco parasol es el paraguas para la lluvia, justo al revés que en español. MRÓZ (helada) es pariente del ruso moroz: el «Ded Moroz» de los cuentos es el abuelo Escarcha. ŚNIEG se parece al inglés snow y al alemán Schnee. Y LATO (verano) recuerda a «lata» de bebida fría: la que pides en verano."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "El tiempo, jest mi zimno y el futuro con będzie"
+    },
+    {
+      "type": "explanation",
+      "text": "En polaco el tiempo se expresa con verbos concretos (pada deszcz, «cae la lluvia»; świeci słońce, «brilla el sol»; wieje wiatr, «sopla el viento») o con jest + adverbio, sin sujeto: jest zimno, jest ciepło, jest słonecznie. Para la temperatura: jest pięć stopni, jest minus dziesięć (stopni). Recuerda la regla de los números: 1 stopień, 2–4 stopnie, 5 o más stopni."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Pada słońce. / Wieje śnieg. / Jest pięć stopnie.",
+      "right": "Świeci słońce. / Pada śnieg. / Jest pięć stopni.",
+      "explanation": "Cada fenómeno tiene su verbo: el sol świeci, la lluvia y la nieve padają, el viento wieje. Y detrás de 5 o más, el genitivo plural: pięć stopni, dziesięć stopni (pero dwa, trzy, cztery stopnie)."
+    },
+    {
+      "type": "explanation",
+      "text": "Hay tres formas de «frío», como en español. Jest zimno: hace frío (el tiempo). Jest mi zimno: tengo frío; la persona va en dativo (mi, ci, mu, jej, nam), como con podobać się. Zupa jest zimna: la sopa está fría, con un adjetivo que concuerda. Lo mismo con el calor: jest gorąco, jest mi gorąco, herbata jest gorąca."
+    },
+    {
+      "type": "table",
+      "caption": "Tres «fríos»",
+      "columns": ["Polaco", "Español", "¿Qué está frío?"],
+      "rows": [
+        ["Jest zimno.", "Hace frío.", "el tiempo"],
+        ["Jest mi zimno.", "Tengo frío.", "yo (dativo)"],
+        ["Zupa jest zimna.", "La sopa está fría.", "una cosa (adjetivo)"],
+        ["Jest gorąco. / Jest mi gorąco.", "Hace calor. / Tengo calor.", "el tiempo / yo"],
+        ["Herbata jest gorąca.", "El té está caliente.", "una cosa"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Ja jestem zimno. / Mam zimno.",
+      "right": "Jest mi zimno.",
+      "explanation": "En polaco no «tienes» frío (el «tengo frío» español) ni «eres» frío: el frío «es» para ti, en dativo. Jest ci zimno? (¿tienes frío?), Jest mu gorąco (él tiene calor)."
+    },
+    {
+      "type": "explanation",
+      "text": "Para el futuro de los verbos imperfectivos se usa el futuro de być + infinitivo: będę jeździć (esquiaré, voy a esquiar), będziemy robić (haremos). Para el tiempo, como no hay sujeto, se dice będzie: będzie padać (lloverá, nevará), będzie zimno (hará frío), będzie słonecznie. Y con la negación, nie będzie + genitivo: nie będzie wiatru (no hará viento)."
+    },
+    {
+      "type": "table",
+      "caption": "Być en futuro + infinitivo",
+      "columns": ["Persona", "być (futuro)", "Ejemplo", "Español"],
+      "rows": [
+        ["ja", "będę", "będę jeździć na nartach", "esquiaré"],
+        ["ty", "będziesz", "będziesz mieć instruktora", "tendrás monitor"],
+        ["on / ona / ono", "będzie", "będzie padać", "lloverá / nevará"],
+        ["my", "będziemy", "będziemy robić zdjęcia", "haremos fotos"],
+        ["wy", "będziecie", "będziecie odpoczywać", "descansaréis"],
+        ["oni / one", "będą", "będą pracować", "trabajarán"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jutro jest padać. / Jutro będzie pada. / Nie będzie wiatr.",
+      "right": "Jutro będzie padać. / Nie będzie wiatru.",
+      "explanation": "Futuro = będzie + infinitivo (en -ć). Y como siempre después de la negación, el sustantivo va en genitivo: nie będzie wiatru, nie będzie śniegu, nie będzie słońca."
+    },
+    {
+      "type": "explanation",
+      "text": "Los verbos perfectivos (los de una acción completa, que tienes en el apéndice de gramática) forman el futuro con su propio presente: pójdziemy do karczmy (iremos a una taberna), pojadę do Zakopanego (iré a Zakopane), zapłacę (pagaré). En este nivel basta con reconocerlos: tienen forma de presente, pero hablan del futuro."
+    },
+    { "type": "section", "phase": "sound", "title": "El acento de la montaña: la gwara góralska" },
+    {
+      "type": "explanation",
+      "text": "En Zakopane y en los pueblos de los Tatras oirás a los górale, los montañeses, que hablan con un acento muy marcado. Dos rasgos fáciles de reconocer: acentúan muchas palabras en la primera sílaba, no en la penúltima (PO-goda en vez de po-GO-da), y cambian cz, sz, ż por c, s, z, lo que se llama mazurzenie: cas por czas (tiempo), syćko por wszystko (todo). No tienes que imitarlo, pero si en la montaña algo te suena raro, puede ser la gwara. Los polacos lo encuentran simpático y muy auténtico."
+    },
+    {
+      "type": "table",
+      "caption": "Polaco estándar y gwara góralska (aproximado)",
+      "columns": ["Estándar", "Góralski", "Español"],
+      "rows": [
+        ["czas", "cas", "el tiempo (hora)"],
+        ["wszystko", "syćko", "todo"],
+        ["pogoda (po-GO-da)", "PO-goda", "el tiempo"],
+        ["dziewczyna", "dziewcyna / dziołcha", "la chica"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Cuatro estaciones de verdad" },
+    {
+      "type": "reading",
+      "title": "Prognoza pogody na weekend",
+      "paragraphs": [
+        "Dzień dobry, oto prognoza pogody na weekend. Na północy, nad morzem, w Gdańsku, będzie wiać silny wiatr i będzie padać deszcz. Temperatura: dwa stopnie.",
+        "W centrum Polski, w Warszawie i w Łodzi, będzie pochmurno, ale nie będzie padać. W nocy będzie mróz: minus pięć stopni.",
+        "Na południu, w Krakowie, rano będzie mgła. Uwaga: w dużych miastach jakość powietrza będzie zła, więc lepiej nie biegać na zewnątrz.",
+        "W górach, w Zakopanem, w sobotę będzie padać śnieg, a w niedzielę będzie słonecznie, minus osiem stopni. Idealna pogoda na narty! Życzymy miłego weekendu."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Polonia tiene cuatro estaciones muy claras. Los veranos son cálidos (25–30 °C, a veces más) y los inviernos fríos, con temperaturas bajo cero y, a menudo, nieve. Los polacos aman la złota polska jesień, el «dorado otoño polaco» de septiembre y octubre, con hojas amarillas y días soleados, y el babie lato, el veranillo de otoño.",
+        "En invierno, algunas ciudades del sur, como Cracovia, sufren smog por la calefacción y la geografía. Los polacos consultan en el móvil la calidad del aire (jakość powietrza) igual que la temperatura, y en los días malos evitan hacer deporte al aire libre.",
+        "Para el frío, la receta polaca es herbata z sokiem malinowym (té con zumo de frambuesa) o, en la montaña, grzaniec, vino caliente con especias. Zakopane es la capital del esquí y del invierno polaco.",
+        "Las conversaciones sobre el tiempo son un clásico: «Ale dzisiaj zimno!» (¡qué frío hace hoy!) es el principio perfecto para charlar en la parada del tranvía."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misión: planea el fin de semana según el tiempo"
+    },
+    {
+      "type": "mission",
+      "title": "Organiza una escapada en Polonia con un amigo polaco",
+      "steps": [
+        "Describe el tiempo de hoy y la temperatura: Dzisiaj świeci słońce / pada…, jest … stopni.",
+        "Lee una previsión y di qué tiempo hará el sábado y el domingo con będzie: będzie padać, będzie słonecznie…",
+        "Propón qué vais a hacer cada día con będziemy + infinitivo o con un perfectivo (pójdziemy, pojedziemy).",
+        "Di qué hay que llevar y quién tendrá frío o calor: weź…, będzie ci zimno.",
+        "Compara el clima de Polonia y de España en la misma estación: zimą w Polsce…, a w Hiszpanii…",
+        "Escucha la palabra pogoda dicha por un montañés (o imagínala) y grábate diciéndola en estándar: po-GO-da."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Jaka jest dzisiaj pogoda? — Świeci słońce, ale jest zimno.",
+          "translation": "¿Qué tiempo hace hoy? — Hace sol, pero hace frío."
+        },
+        {
+          "text": "Pada śnieg. Jest minus pięć stopni.",
+          "translation": "Nieva. Estamos a cinco bajo cero."
+        },
+        { "text": "Jest mi zimno.", "translation": "Tengo frío." },
+        { "text": "Jutro będzie padać deszcz.", "translation": "Mañana lloverá." },
+        { "text": "W niedzielę nie będzie wiatru.", "translation": "El domingo no hará viento." },
+        { "text": "Będziemy jeździć na nartach.", "translation": "Vamos a esquiar." },
+        { "text": "Zimą w Polsce jest mróz.", "translation": "En invierno en Polonia hiela." },
+        {
+          "text": "Weź parasol, będzie padać!",
+          "translation": "¡Llévate el paraguas, va a llover!"
+        }
+      ],
+      "canDo": [
+        "describir el tiempo con świeci, pada, wieje y jest + adverbio",
+        "decir la temperatura con stopień, stopnie y stopni",
+        "distinguir jest zimno, jest mi zimno y zimny",
+        "hablar del futuro con będę / będzie + infinitivo y nie będzie + genitivo",
+        "decir «en primavera, en invierno…» (wiosną, zimą)",
+        "reconocer el acento de los montañeses de los Tatras"
+      ]
+    }
+  ]
+}

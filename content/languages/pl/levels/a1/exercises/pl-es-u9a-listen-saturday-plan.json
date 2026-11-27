@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-listen-saturday-plan",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué harán el sábado si nieva?",
+  "explanation": "Pójdziemy do karczmy na herbatę z sokiem malinowym.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ir a una taberna a tomar té."
+      },
+      {
+        "id": "opt-b",
+        "text": "Esquiar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Quedarse en el hotel durmiendo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

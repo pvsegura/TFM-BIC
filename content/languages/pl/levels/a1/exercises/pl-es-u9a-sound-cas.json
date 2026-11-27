@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-sound-cas",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 21,
+    "phase": "sound"
+  },
+  "prompt": "Un montañés dice cas. ¿Qué palabra estándar es?",
+  "explanation": "Mazurzenie: cz → c: czas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "czas"
+      },
+      {
+        "id": "opt-b",
+        "text": "kasa"
+      },
+      {
+        "id": "opt-c",
+        "text": "cześć"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

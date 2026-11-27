@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-nie-bedzie",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «no habrá nieve»?",
+  "explanation": "Nie będzie + genitivo: śniegu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie będzie śniegu."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie będzie śnieg."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie jest śniegu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

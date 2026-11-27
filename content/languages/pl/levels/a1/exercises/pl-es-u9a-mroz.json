@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-mroz",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa jest mróz?",
+  "explanation": "Mróz = helada, frío bajo cero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Hiela, hace mucho frío."
+      },
+      {
+        "id": "opt-b",
+        "text": "Hace mucho calor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Hay tormenta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

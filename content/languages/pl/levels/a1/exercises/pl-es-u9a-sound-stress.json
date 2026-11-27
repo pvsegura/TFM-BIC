@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-sound-stress",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 22,
+    "phase": "sound"
+  },
+  "prompt": "En la gwara góralska muchas palabras llevan el acento en la primera sílaba: PO-goda.",
+  "explanation": "Sí; en el polaco estándar el acento va en la penúltima: po-GO-da.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

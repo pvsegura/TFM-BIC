@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-write-forecast",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 9430,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 33,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Escribe la previsión del tiempo del fin de semana para tu ciudad y lo que vas a hacer cada día según el tiempo.",
+  "explanation": "Revisa: będzie + infinitivo / adverbio, stopień / stopnie / stopni, nie będzie + genitivo.",
+  "configuration": {
+    "modelAnswer": "W sobotę w Krakowie będzie pochmurno i będzie padać deszcz. Będzie pięć stopni. W niedzielę nie będzie deszczu, będzie słonecznie, ale zimno: minus dwa stopnie. W sobotę będę czytać w domu, a w niedzielę pójdę na spacer do parku z przyjaciółmi.",
+    "checklist": ["sábado", "domingo", "temperatura", "planes"],
+    "minWords": 30,
+    "maxWords": 100
+  }
+}

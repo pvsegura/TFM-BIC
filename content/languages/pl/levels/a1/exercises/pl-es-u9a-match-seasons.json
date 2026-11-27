@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-match-seasons",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 9170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada estación con «en…».",
+  "explanation": "Wiosna → wiosną, lato → latem, jesień → jesienią, zima → zimą.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "wiosna",
+        "right": "wiosną"
+      },
+      {
+        "left": "lato",
+        "right": "latem"
+      },
+      {
+        "left": "jesień",
+        "right": "jesienią"
+      },
+      {
+        "left": "zima",
+        "right": "zimą"
+      }
+    ]
+  }
+}

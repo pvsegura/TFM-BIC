@@ -146,5 +146,9 @@
   {
     "asset": "a1-u9-forecast.png",
     "prompt": "two young women sitting on a sofa look together at a smartphone and plan a trip, sunshine through the window, a backpack and a rain jacket on the coffee table, no maps, no text on the phone"
+  },
+  {
+    "asset": "a1-pl-u9-snow.png",
+    "prompt": "a young man and a young woman in winter hats and scarves walk along a snowy street of a mountain village with wooden houses, snowy mountain peaks in the background, snowflakes falling, no signs or text"
   }
 ]

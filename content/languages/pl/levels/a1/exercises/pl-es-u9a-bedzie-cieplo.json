@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-bedzie-cieplo",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «mañana hará calor»?",
+  "explanation": "Będzie + adverbio, sin sujeto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jutro będzie ciepło."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jutro będzie ciepły."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jutro ma ciepło."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

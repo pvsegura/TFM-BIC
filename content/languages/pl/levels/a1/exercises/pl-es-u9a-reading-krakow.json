@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-reading-krakow",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 25,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué recomiendan en Cracovia?",
+  "explanation": "Jakość powietrza będzie zła, więc lepiej nie biegać na zewnątrz.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "No correr al aire libre."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ir a esquiar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Llevar crema solar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

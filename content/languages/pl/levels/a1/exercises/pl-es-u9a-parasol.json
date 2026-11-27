@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-parasol",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "En polaco, ¿qué es un parasol?",
+  "explanation": "Parasol (pl) = el paraguas para la lluvia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El paraguas para la lluvia."
+      },
+      {
+        "id": "opt-b",
+        "text": "La sombrilla de playa."
+      },
+      {
+        "id": "opt-c",
+        "text": "El chubasquero."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-translate-sun",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 28,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Hace sol, pero hace frío.",
+  "explanation": "Świeci słońce, ale jest zimno.",
+  "configuration": {
+    "acceptedAnswers": ["Świeci słońce, ale jest zimno.", "Świeci słońce ale jest zimno."],
+    "caseSensitive": false
+  }
+}

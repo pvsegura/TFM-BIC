@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-order-ski",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 9290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 19,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: El domingo vamos a esquiar.",
+  "explanation": "W niedzielę + będziemy jeździć + na nartach.",
+  "configuration": {
+    "items": ["W", "niedzielę", "będziemy", "jeździć", "na", "nartach."],
+    "joiner": " "
+  }
+}

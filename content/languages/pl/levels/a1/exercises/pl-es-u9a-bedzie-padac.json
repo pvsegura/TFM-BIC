@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-bedzie-padac",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Futuro: będzie + infinitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jutro będzie padać."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jutro jest padać."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jutro będzie pada."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-listen-madrid",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tiempo hace ahora en Madrid?",
+  "explanation": "W Madrycie teraz jest dwanaście stopni i świeci słońce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "12 °C y sol."
+      },
+      {
+        "id": "opt-b",
+        "text": "−8 °C y nieve."
+      },
+      {
+        "id": "opt-c",
+        "text": "2 °C y lluvia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

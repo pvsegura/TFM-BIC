@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-write-compare",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 9440,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 34,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe a un amigo polaco cómo es el tiempo en tu ciudad española en cada estación y en qué estación prefieres visitar Polonia.",
+  "explanation": "Wiosną, latem, jesienią, zimą + jest / pada / świeci.",
+  "configuration": {
+    "modelAnswer": "W moim mieście, w Sewilli, latem jest bardzo gorąco: czterdzieści stopni! Zimą jest ciepło, piętnaście stopni, i rzadko pada deszcz. Wiosną jest pięknie. Chcę przyjechać do Polski jesienią, bo podoba mi się złota polska jesień.",
+    "checklist": ["estaciones en tu ciudad", "cuándo visitar Polonia"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-translate-winter",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 32,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: En invierno nieva.",
+  "explanation": "Zimą pada śnieg.",
+  "configuration": {
+    "acceptedAnswers": ["Zimą pada śnieg.", "W zimie pada śnieg."],
+    "caseSensitive": false
+  }
+}

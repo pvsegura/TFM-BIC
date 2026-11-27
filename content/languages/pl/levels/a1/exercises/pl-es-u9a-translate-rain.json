@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-translate-rain",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 31,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Mañana lloverá.",
+  "explanation": "Jutro będzie padać (deszcz).",
+  "configuration": {
+    "acceptedAnswers": [
+      "Jutro będzie padać.",
+      "Jutro będzie padać deszcz.",
+      "Jutro będzie padał deszcz."
+    ],
+    "caseSensitive": false
+  }
+}

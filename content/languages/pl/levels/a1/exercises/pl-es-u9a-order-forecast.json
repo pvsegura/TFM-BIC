@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-order-forecast",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 9300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 20,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Mañana hará frío y nevará.",
+  "explanation": "Jutro będzie zimno i będzie padać śnieg.",
+  "configuration": {
+    "items": ["Jutro", "będzie zimno", "i", "będzie padać", "śnieg."],
+    "joiner": " "
+  }
+}

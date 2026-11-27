@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-mi-zimno",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «tengo frío»?",
+  "explanation": "Dativo: jest mi zimno.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jest mi zimno."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem zimno."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mam zimno."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

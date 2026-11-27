@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-zupa",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9230,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 13,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Herbata jest ___ (fría).",
+  "explanation": "Una cosa: adjetivo concordado (herbata, f → zimna).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "zimna"
+      },
+      {
+        "id": "opt-b",
+        "text": "zimno"
+      },
+      {
+        "id": "opt-c",
+        "text": "mi zimno"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

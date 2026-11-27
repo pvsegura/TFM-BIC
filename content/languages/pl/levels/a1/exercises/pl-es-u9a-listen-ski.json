@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-listen-ski",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier sabe esquiar.",
+  "explanation": "Nie umiem! Ale chcę spróbować.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

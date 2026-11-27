@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-perfective",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "Pójdziemy do karczmy significa…",
+  "explanation": "Pójdziemy es perfectivo: forma de presente con valor de futuro.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Iremos a una taberna."
+      },
+      {
+        "id": "opt-b",
+        "text": "Vamos ahora a una taberna."
+      },
+      {
+        "id": "opt-c",
+        "text": "Fuimos a una taberna."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

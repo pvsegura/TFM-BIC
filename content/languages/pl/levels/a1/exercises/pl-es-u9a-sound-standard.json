@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-sound-standard",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 23,
+    "phase": "sound"
+  },
+  "prompt": "¿Dónde va el acento en pogoda en polaco estándar?",
+  "explanation": "Penúltima sílaba: po-GO-da.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "po-GO-da"
+      },
+      {
+        "id": "opt-b",
+        "text": "PO-go-da"
+      },
+      {
+        "id": "opt-c",
+        "text": "po-go-DA"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

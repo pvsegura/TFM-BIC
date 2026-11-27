@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-translate-minus",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 9400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 30,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Estamos a diez bajo cero.",
+  "explanation": "Jest minus dziesięć stopni.",
+  "configuration": {
+    "acceptedAnswers": ["Jest minus dziesięć stopni.", "Jest minus dziesięć."],
+    "caseSensitive": false
+  }
+}

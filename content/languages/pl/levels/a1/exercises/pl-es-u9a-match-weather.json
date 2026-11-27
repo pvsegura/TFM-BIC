@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-match-weather",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 9160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada expresión con su traducción.",
+  "explanation": "Pada deszcz = llueve; wieje wiatr = hace viento; jest mgła = hay niebla.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "pada deszcz",
+        "right": "llueve"
+      },
+      {
+        "left": "pada śnieg",
+        "right": "nieva"
+      },
+      {
+        "left": "wieje wiatr",
+        "right": "hace viento"
+      },
+      {
+        "left": "świeci słońce",
+        "right": "hace sol"
+      },
+      {
+        "left": "jest mgła",
+        "right": "hay niebla"
+      },
+      {
+        "left": "jest pochmurno",
+        "right": "está nublado"
+      }
+    ]
+  }
+}

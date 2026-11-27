@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-culture-jesien",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué es la złota polska jesień?",
+  "explanation": "El otoño dorado polaco: hojas amarillas y días soleados en septiembre y octubre.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El otoño soleado de hojas doradas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una fiesta de Navidad."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una bebida caliente."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

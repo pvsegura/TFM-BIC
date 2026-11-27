@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-listen-wind",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: el domingo hará mucho viento.",
+  "explanation": "W niedzielę będzie słonecznie i nie będzie wiatru.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

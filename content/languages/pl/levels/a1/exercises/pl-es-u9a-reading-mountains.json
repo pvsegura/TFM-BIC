@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u9a-reading-mountains",
+  "lessonId": "pl-es-unit-9-weather",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 9360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 26,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: el domingo en Zakopane hará sol.",
+  "explanation": "W niedzielę będzie słonecznie, minus osiem stopni.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}
