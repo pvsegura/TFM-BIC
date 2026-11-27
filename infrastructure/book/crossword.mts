@@ -27,8 +27,12 @@ export interface Crossword {
 
 const SIZE = 17;
 
-/** Uppercase, no acute accents or diaeresis; ñ stays. */
-export function crosswordLetters(word: string): string {
+/**
+ * Uppercase, no acute accents or diaeresis; ñ stays. With keepLetters (languages whose letters
+ * with marks are letters of their own, such as ą or ż) the word is only uppercased.
+ */
+export function crosswordLetters(word: string, keepLetters = false): string {
+  if (keepLetters) return word.toUpperCase();
   return word
     .toUpperCase()
     .replace(/Ñ/g, "\u0000")
@@ -71,10 +75,14 @@ function canPlace(
   return crossings;
 }
 
-export function buildCrossword(words: CrosswordWord[], max = 10): Crossword | null {
+export function buildCrossword(
+  words: CrosswordWord[],
+  max = 10,
+  keepLetters = false,
+): Crossword | null {
   const candidates = words
-    .map((w) => ({ word: crosswordLetters(w.answer), clue: w.clue }))
-    .filter((w) => /^[A-ZÑ]{3,11}$/.test(w.word))
+    .map((w) => ({ word: crosswordLetters(w.answer, keepLetters), clue: w.clue }))
+    .filter((w) => /^\p{Lu}{3,11}$/u.test(w.word))
     .sort((a, b) => b.word.length - a.word.length || a.word.localeCompare(b.word));
   const unique = candidates.filter((w, i) => candidates.findIndex((x) => x.word === w.word) === i);
   if (unique.length < 4) return null;

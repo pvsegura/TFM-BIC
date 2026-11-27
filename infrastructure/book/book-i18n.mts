@@ -37,7 +37,14 @@ export interface BookText {
   howWorkbook: string[];
   grammarTables: string;
   thematicVocabulary: string;
-  crossword: { title: string; across: string; down: string; hint: string; key: string };
+  crossword: {
+    title: string;
+    across: string;
+    down: string;
+    hint: string;
+    hintKeepLetters: string;
+    key: string;
+  };
   glossary: (target: string) => string;
   answerKey: string;
   transcripts: string;
@@ -109,6 +116,7 @@ const PL: BookText = {
     across: "Poziomo",
     down: "Pionowo",
     hint: "Wpisz hiszpańskie słowa z tej jednostki, wielkimi literami i bez akcentów (ñ zostaje).",
+    hintKeepLetters: "Wpisz słowa z tej jednostki wielkimi literami, ze wszystkimi znakami.",
     key: "Krzyżówka",
   },
   glossary: (target) => `Słowniczek: ${target.toLowerCase()} — polski`,
@@ -184,6 +192,8 @@ const ES: BookText = {
     across: "Horizontales",
     down: "Verticales",
     hint: "Escribe las palabras de esta unidad en mayúsculas y sin tildes.",
+    hintKeepLetters:
+      "Escribe las palabras de esta unidad en mayúsculas y con todas sus letras: Ą, Ć, Ę, Ł, Ń, Ó, Ś, Ź y Ż ocupan una casilla.",
     key: "Autodefinido",
   },
   glossary: (target) => `Glosario: ${target.toLowerCase()} — español`,
@@ -260,6 +270,8 @@ const EN: BookText = {
     across: "Across",
     down: "Down",
     hint: "Write the words from this unit in capitals, without accents.",
+    hintKeepLetters:
+      "Write the words from this unit in capitals, keeping every letter with its marks.",
     key: "Crossword",
   },
   glossary: (target) => `Glossary: ${target} — English`,
@@ -283,6 +295,9 @@ const EN: BookText = {
 };
 
 export const BOOK_TEXTS: Record<string, BookText> = { pl: PL, es: ES, en: EN };
+
+/** Target languages whose letters with marks are letters of their own: kept in crosswords. */
+export const CROSSWORD_KEEPS_LETTERS: ReadonlySet<string> = new Set(["pl"]);
 
 export function bookTextFor(instructionLanguage: string): BookText {
   return BOOK_TEXTS[instructionLanguage] ?? EN;

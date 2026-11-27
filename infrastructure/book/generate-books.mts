@@ -30,7 +30,12 @@ import type {
   GrammarTopic,
   UnitSectionPhase,
 } from "../../packages/domain/src/index.js";
-import { bookTextFor, type BookText, type RenderContext } from "./book-i18n.mts";
+import {
+  bookTextFor,
+  CROSSWORD_KEEPS_LETTERS,
+  type BookText,
+  type RenderContext,
+} from "./book-i18n.mts";
 import { escapeHtml as e, icon, PHASE_ICONS, renderBlock, repoRoot, SITE } from "./book-shared.mts";
 import { answerKey, EXERCISE_STYLE, exerciseLabel, renderExercise } from "./print-exercises.mts";
 import { buildCrossword, CROSSWORD_STYLE, renderCrossword, type Crossword } from "./crossword.mts";
@@ -53,6 +58,8 @@ const COURSE = REQUESTED_INSTRUCTION
 const inCourse = (item: { instructionLanguage: string }) =>
   !REQUESTED_INSTRUCTION || item.instructionLanguage === REQUESTED_INSTRUCTION;
 const LEVEL_LABEL = LEVEL.toUpperCase();
+/** Crosswords keep the target language's own letters with marks (ą, ż…) instead of stripping them. */
+const KEEP_LETTERS = CROSSWORD_KEEPS_LETTERS.has(LANGUAGE);
 
 // --- geometry (inches) and series design ---------------------------------------------------------
 const A4_W = 8.27;
@@ -376,7 +383,7 @@ function unitCrossword(unit: Unit, catalog: ContentCatalog): Crossword | null {
     .filter((w) =>
       new RegExp(`(^|[^\\p{L}])${w.answer.toLowerCase()}([^\\p{L}]|$)`, "u").test(text),
     );
-  return buildCrossword(words);
+  return buildCrossword(words, 10, KEEP_LETTERS);
 }
 
 async function workbookHtml(units: Unit[], catalog: ContentCatalog): Promise<string> {
@@ -408,7 +415,12 @@ async function workbookHtml(units: Unit[], catalog: ContentCatalog): Promise<str
   ${exercises}
   ${(() => {
     const cw = crosswords.get(unit.number);
-    return cw ? renderCrossword(cw, T.crossword) : "";
+    return cw
+      ? renderCrossword(cw, {
+          ...T.crossword,
+          hint: KEEP_LETTERS ? T.crossword.hintKeepLetters : T.crossword.hint,
+        })
+      : "";
   })()}
 </section>`;
     }),
