@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-listen-bed",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué hora se acuesta Javier normalmente?",
+  "explanation": "Zwykle o północy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A medianoche."
+      },
+      {
+        "id": "opt-b",
+        "text": "A las diez."
+      },
+      {
+        "id": "opt-c",
+        "text": "A las diez y media."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

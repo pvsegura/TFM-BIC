@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-reading-job",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 26,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿en qué trabaja el señor Marek?",
+  "explanation": "Jest motorniczym: prowadzi tramwaj.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Conduce un tranvía."
+      },
+      {
+        "id": "opt-b",
+        "text": "Es panadero."
+      },
+      {
+        "id": "opt-c",
+        "text": "Trabaja en una oficina."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

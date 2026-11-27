@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-sound-chleb",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 22,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena chleb?",
+  "explanation": "B final se ensordece: [chlep].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[chlep]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[chleb] con b sonora"
+      },
+      {
+        "id": "opt-c",
+        "text": "[kleb]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

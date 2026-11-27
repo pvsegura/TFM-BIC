@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-listen-kasia-up",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué hora se levanta Kasia?",
+  "explanation": "Wstaję o wpół do ósmej = a las 7:30.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A las 7:30."
+      },
+      {
+        "id": "opt-b",
+        "text": "A las 8:30."
+      },
+      {
+        "id": "opt-c",
+        "text": "A las 6:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-culture-work",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿cuál es un horario laboral típico en Polonia?",
+  "explanation": "De 8:00 a 16:00, y el obiad al volver a casa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "De 8:00 a 16:00."
+      },
+      {
+        "id": "opt-b",
+        "text": "De 10:00 a 20:00 con pausa larga."
+      },
+      {
+        "id": "opt-c",
+        "text": "De 9:00 a 14:00 y de 17:00 a 20:00."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

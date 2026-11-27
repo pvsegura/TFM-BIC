@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-write-day",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 5450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 35,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Describe un día normal tuyo, de la mañana a la noche, con al menos seis horas y tres adverbios de frecuencia.",
+  "explanation": "Revisa: verbos con się, o + hora en locativo, nigdy nie + genitivo.",
+  "configuration": {
+    "modelAnswer": "Zwykle budzę się o siódmej. Wstaję, myję się i jem śniadanie. O ósmej jadę do pracy tramwajem. Pracuję od dziewiątej do siedemnastej. W pracy jem coś małego o dwunastej. Wracam do domu o wpół do szóstej i jem obiad. Czasami robię zakupy. Wieczorem odpoczywam, a o jedenastej kładę się spać. Nigdy nie oglądam telewizji.",
+    "checklist": ["mañana", "trabajo", "tarde", "noche", "seis horas", "frecuencia"],
+    "minWords": 40,
+    "maxWords": 110
+  }
+}

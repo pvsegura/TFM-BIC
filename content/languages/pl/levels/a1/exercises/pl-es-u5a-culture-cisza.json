@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-culture-cisza",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 29,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: la cisza nocna es el silencio nocturno en los edificios, de 22:00 a 6:00.",
+  "explanation": "Sí: en esas horas no se hace ruido en los bloques de pisos.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-reading-obiad",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: el señor Marek come con su familia a las tres de la tarde.",
+  "explanation": "Je obiad z rodziną o piętnastej.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

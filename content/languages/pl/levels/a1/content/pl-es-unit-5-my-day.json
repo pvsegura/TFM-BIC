@@ -1,0 +1,309 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1120,
+  "unit": 5,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 5A. Mój dzień — la rutina diaria y la hora",
+  "description": "Cuentas cómo es tu día, preguntas y dices la hora y a qué hora haces cada cosa, y con qué frecuencia: która jest godzina?, o której?, o ósmej, wpół do dziewiątej, verbos con się, zawsze, często, nigdy nie.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "¿Por qué estás tan cansado?" },
+    {
+      "type": "explanation",
+      "text": "Javier bosteza en la oficina. Kasia le pregunta qué le pasa y comparan sus rutinas: la española y la polaca. Primera escucha: ¿a qué hora se levanta y se acuesta cada uno? Segunda: ¿a qué hora comen? ¿Qué le sorprende a Javier? Tercera: fíjate en cómo se dice la hora: o szóstej, o wpół do ósmej, o północy."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u5-tired.png",
+      "alt": "En una oficina, un hombre joven bosteza con una taza de café en la mano mientras una compañera se ríe."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Javier, jesteś zmęczony?",
+          "translation": "Javier, ¿estás cansado?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Trochę. Codziennie wstaję o szóstej.",
+          "translation": "Un poco. Todos los días me levanto a las seis."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "O szóstej? Dlaczego tak wcześnie?",
+          "translation": "¿A las seis? ¿Por qué tan temprano?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Rano biegam w parku. Potem biorę prysznic, jem śniadanie i o ósmej jadę do pracy.",
+          "translation": "Por la mañana corro en el parque. Luego me ducho, desayuno y a las ocho voy al trabajo."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "A ja wstaję o wpół do ósmej i nigdy nie jem śniadania w domu. Kupuję kanapkę po drodze.",
+          "translation": "Pues yo me levanto a las siete y media y nunca desayuno en casa. Compro un bocadillo por el camino."
+        },
+        {
+          "speaker": "Javier",
+          "text": "W Hiszpanii jemy obiad o czternastej albo o piętnastej. O której jecie obiad tutaj?",
+          "translation": "En España comemos a las dos o a las tres. ¿A qué hora coméis aquí?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "W pracy zwykle jem coś małego o dwunastej. Prawdziwy obiad jem w domu, o piątej.",
+          "translation": "En el trabajo suelo comer algo pequeño a las doce. La comida de verdad la hago en casa, a las cinco."
+        },
+        {
+          "speaker": "Javier",
+          "text": "O piątej? Dla mnie to już podwieczorek!",
+          "translation": "¿A las cinco? ¡Para mí eso ya es la merienda!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "A o której kładziesz się spać?",
+          "translation": "¿Y a qué hora te acuestas?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Zwykle o północy. W Hiszpanii to normalne.",
+          "translation": "Normalmente a medianoche. En España es normal."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "No widzisz, dlatego jesteś zmęczony! Ja zawsze kładę się o dwudziestej drugiej trzydzieści.",
+          "translation": "¿Lo ves? ¡Por eso estás cansado! Yo siempre me acuesto a las diez y media de la noche."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Może masz rację. Od jutra: o dziesiątej do łóżka!",
+          "translation": "Quizá tengas razón. Desde mañana: ¡a las diez, a la cama!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Un día normal" },
+    {
+      "type": "table",
+      "caption": "De la mañana a la noche",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["budzić się", "despertarse", "wstawać", "levantarse"],
+        ["myć się", "lavarse", "brać prysznic", "ducharse"],
+        ["ubierać się", "vestirse", "jeść śniadanie", "desayunar"],
+        ["jechać / iść do pracy", "ir al trabajo", "pracować", "trabajar"],
+        ["jeść obiad", "comer (la comida principal)", "wracać do domu", "volver a casa"],
+        ["robić zakupy", "hacer la compra", "gotować", "cocinar"],
+        ["odpoczywać", "descansar", "oglądać telewizję", "ver la tele"],
+        ["jeść kolację", "cenar", "kłaść się spać", "acostarse"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Partes del día y comidas",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["rano", "por la mañana (temprano)", "przed południem", "antes del mediodía"],
+        ["w południe", "a mediodía", "po południu", "por la tarde"],
+        ["wieczorem", "por la noche (tarde-noche)", "w nocy", "de noche, de madrugada"],
+        ["śniadanie", "el desayuno", "drugie śniadanie", "el almuerzo de media mañana"],
+        ["obiad", "la comida principal", "podwieczorek", "la merienda"],
+        ["kolacja", "la cena", "północ", "la medianoche"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "¿Con qué frecuencia?",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["zawsze", "siempre", "zwykle", "normalmente"],
+        ["często", "a menudo", "codziennie", "todos los días"],
+        ["czasami", "a veces", "rzadko", "pocas veces"],
+        ["nigdy nie…", "nunca", "raz w tygodniu", "una vez a la semana"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — ŚNIADANIE suena un poco a «sin nada»: es lo que comes cuando el estómago está todavía sin nada. OBIAD lleva dentro la vieja raíz eslava de jeść (comer): es «la comida» por excelencia. KOLACJA es pariente de nuestra «colación», una comida ligera: ¡y la cena polaca es ligera! PODWIECZOREK es «lo de debajo de la tarde» (pod + wieczór): la merienda. Y PÓŁNOC es «media noche» (pół + noc), igual que en español; además significa «el norte», donde el sol está a medianoche."
+    },
+    { "type": "section", "phase": "structure", "title": "Verbos con się, la hora y la frecuencia" },
+    {
+      "type": "explanation",
+      "text": "Muchos verbos de la rutina llevan się, como los españoles llevan «se»: budzić się (despertarse), myć się (lavarse), ubierać się (vestirse), kłaść się (acostarse). La diferencia: się no cambia nunca con la persona. Budzę się (me despierto), budzisz się (te despiertas), budzimy się (nos despertamos). Y no puede ir al principio de la frase: Budzę się o szóstej, o O szóstej się budzę, pero nunca Się budzę."
+    },
+    {
+      "type": "table",
+      "caption": "Tres verbos de la rutina",
+      "columns": ["Persona", "budzić się", "wstawać", "kłaść się"],
+      "rows": [
+        ["ja", "budzę się", "wstaję", "kładę się"],
+        ["ty", "budzisz się", "wstajesz", "kładziesz się"],
+        ["on / ona", "budzi się", "wstaje", "kładzie się"],
+        ["my", "budzimy się", "wstajemy", "kładziemy się"],
+        ["wy", "budzicie się", "wstajecie", "kładziecie się"],
+        ["oni / one", "budzą się", "wstają", "kładą się"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Się budzę o szóstej. / Ja budzę mi o szóstej.",
+      "right": "Budzę się o szóstej. / O szóstej się budzę.",
+      "explanation": "Się es igual para todas las personas (no hay me, te, nos) y nunca abre la frase. Fíjate también en que wstawać (levantarse) no lleva się en polaco, y en que se conjuga wstaję, no wstawam."
+    },
+    {
+      "type": "explanation",
+      "text": "La hora se dice con ordinales en femenino, porque godzina (hora) es femenina. Która jest godzina? (¿qué hora es?) — Jest ósma (son las ocho), jest pierwsza (es la una). Para «a las…» se usa o + locativo: o ósmej, o pierwszej, o dwunastej. Los minutos se añaden detrás, como en un reloj digital: ósma piętnaście (8:15), o ósmej trzydzieści (a las 8:30). Para horarios, trenes y tiendas se usa el reloj de 24 horas: o dwudziestej (a las 20:00)."
+    },
+    {
+      "type": "table",
+      "caption": "La hora: ¿qué hora es? y ¿a qué hora?",
+      "columns": ["Hora", "Która jest godzina? (es / son…)", "O której? (a la / las…)"],
+      "rows": [
+        ["1:00", "pierwsza", "o pierwszej"],
+        ["2:00", "druga", "o drugiej"],
+        ["3:00", "trzecia", "o trzeciej"],
+        ["4:00", "czwarta", "o czwartej"],
+        ["5:00", "piąta", "o piątej"],
+        ["6:00", "szósta", "o szóstej"],
+        ["7:00", "siódma", "o siódmej"],
+        ["8:00", "ósma", "o ósmej"],
+        ["9:00", "dziewiąta", "o dziewiątej"],
+        ["10:00", "dziesiąta", "o dziesiątej"],
+        ["11:00", "jedenasta", "o jedenastej"],
+        ["12:00", "dwunasta", "o dwunastej"],
+        ["20:00", "dwudziesta", "o dwudziestej"],
+        ["0:00", "północ", "o północy"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "En la conversación también se usan fórmulas tradicionales: kwadrans po ósmej (las ocho y cuarto, «un cuarto después de la octava»), za kwadrans dziewiąta (las nueve menos cuarto, «dentro de un cuarto, la novena») y wpół do dziewiątej (las ocho y media). Esta última engaña a todos los hispanohablantes: significa «a mitad de camino hacia las nueve», es decir, las 8:30."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Wpół do dziewiątej = las nueve y media.",
+      "right": "Wpół do dziewiątej = las ocho y media (8:30).",
+      "explanation": "Wpół do… mira hacia la hora siguiente: «media hora para las nueve». Si te confunde, usa siempre la forma digital: ósma trzydzieści. Todo el mundo la entiende."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "O ósma. / O osiem.",
+      "right": "O ósmej.",
+      "explanation": "Detrás de o la hora va en locativo femenino, que termina en -ej: o ósmej, o drugiej, o dwunastej. Y nunca con el número cardinal (osiem): siempre el ordinal."
+    },
+    {
+      "type": "explanation",
+      "text": "Los adverbios de frecuencia suelen ir delante del verbo: zawsze wstaję o szóstej, często jem w pracy, czasami oglądam telewizję. Nigdy (nunca) exige siempre nie delante del verbo: la doble negación es obligatoria, como en «no… nunca» en español, aunque aquí va al revés: nigdy nie jem śniadania. Y como el verbo está en negativo, el complemento pasa al genitivo: śniadanie → śniadania."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nigdy jem śniadanie.",
+      "right": "Nigdy nie jem śniadania.",
+      "explanation": "Con nigdy, nikt (nadie) y nic (nada), el verbo lleva nie: nigdy nie jem, nikt nie wie, nic nie mam. Y recuerda la regla de la unidad 4: verbo negativo + genitivo."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Consonantes que pierden la voz: chleb, obiad, wpół"
+    },
+    {
+      "type": "explanation",
+      "text": "Al final de palabra, las consonantes sonoras polacas se pronuncian sordas: b suena p (chleb [chlep]), d suena t (obiad [obiat]), g suena k (róg [ruk]), w suena f (Kraków [krakuf]), z suena s (raz [ras]), ż / rz suenan sz (mąż [mąsz]). Lo mismo pasa dentro de la palabra delante de una consonante sorda: wpół [fpuw], wstaję [fstaje], wtorek [ftorek]. Así que las letras no siempre dicen lo que suenan: escucha y repite."
+    },
+    {
+      "type": "table",
+      "caption": "Se escribe… se dice…",
+      "columns": ["Palabra", "Cómo suena", "Qué pasa"],
+      "rows": [
+        ["chleb", "[chlep]", "b final → p"],
+        ["obiad", "[obiat]", "d final → t"],
+        ["raz", "[ras]", "z final → s"],
+        ["wpół", "[fpuw]", "w ante p → f"],
+        ["wstaję", "[fstaje]", "w ante s → f"],
+        ["prysznic", "[pryshńits]", "sz + n + c, sin vocales añadidas"],
+        ["codziennie", "[tsodźeńńe]", "c = ts, dzie suave, nn larga"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "El ritmo del día en Polonia" },
+    {
+      "type": "reading",
+      "title": "Dzień pana Marka, motorniczego",
+      "paragraphs": [
+        "Pan Marek jest motorniczym: prowadzi tramwaj w Krakowie. Jego dzień zaczyna się bardzo wcześnie. Budzi się o czwartej, myje się, ubiera się i pije mocną kawę.",
+        "O piątej jest już w zajezdni, a o wpół do szóstej jedzie pierwszym tramwajem. Rano w tramwaju jest dużo ludzi: jadą do pracy i do szkoły.",
+        "O dziesiątej je drugie śniadanie: kanapki z serem, które robi mu żona. Pracuje do trzynastej trzydzieści.",
+        "Po pracy wraca do domu, je obiad z rodziną o piętnastej i odpoczywa. Wieczorem czyta albo ogląda telewizję. Zawsze kładzie się spać o dwudziestej pierwszej, bo jutro znowu wstaje o czwartej."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "El día polaco empieza mucho antes que el español. La jornada laboral típica va de 8:00 a 16:00, y muchas tiendas, panaderías y oficinas abren a las 6:00 o a las 7:00. Las clases en el colegio empiezan a las 8:00.",
+        "El obiad, la comida principal y caliente, se toma tradicionalmente al volver del trabajo, hacia las 15:00–17:00. En el trabajo se come algo ligero a media mañana: el drugie śniadanie (segundo desayuno), a menudo unos bocadillos traídos de casa.",
+        "La cena (kolacja) es fría y ligera, hacia las 19:00: pan, embutido, queso, tomate. A las 22:00 muchos polacos ya están en la cama, sobre todo entre semana. Desde las 22:00 hasta las 6:00 rige la cisza nocna, el «silencio nocturno»: en los edificios de pisos no se hace ruido.",
+        "En verano amanece muy temprano (antes de las 4:30 en junio) y en invierno anochece hacia las 15:30. Por eso los horarios se adaptan a la luz: se aprovecha la mañana."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: tu día, paso a paso" },
+    {
+      "type": "mission",
+      "title": "Compara tu rutina con la de un compañero polaco",
+      "steps": [
+        "Cuenta tu mañana con tres verbos con się y wstawać: budzę się…, wstaję…, myję się…",
+        "Di a qué hora haces cinco cosas con o + hora en locativo: o siódmej, o wpół do ósmej…",
+        "Usa cuatro adverbios de frecuencia, incluido nigdy nie + genitivo.",
+        "Pregunta a un compañero polaco: Która jest godzina? O której wstajesz? O której jesz obiad?",
+        "Compara: W Hiszpanii jemy obiad o…, a w Polsce…",
+        "Grábate leyendo chleb, obiad, wpół y wstaję con las consonantes ensordecidas."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Która jest godzina? — Jest wpół do ósmej.",
+          "translation": "¿Qué hora es? — Son las siete y media."
+        },
+        {
+          "text": "O której wstajesz? — O szóstej.",
+          "translation": "¿A qué hora te levantas? — A las seis."
+        },
+        {
+          "text": "Budzę się, myję się i ubieram się.",
+          "translation": "Me despierto, me lavo y me visto."
+        },
+        {
+          "text": "Jem obiad o piętnastej.",
+          "translation": "Como a las tres de la tarde."
+        },
+        { "text": "Nigdy nie jem śniadania w domu.", "translation": "Nunca desayuno en casa." },
+        {
+          "text": "Zwykle kładę się spać o północy.",
+          "translation": "Normalmente me acuesto a medianoche."
+        },
+        {
+          "text": "Codziennie jadę do pracy o ósmej.",
+          "translation": "Todos los días voy al trabajo a las ocho."
+        },
+        {
+          "text": "Czasami oglądam telewizję wieczorem.",
+          "translation": "A veces veo la tele por la noche."
+        }
+      ],
+      "canDo": [
+        "contar mi rutina diaria con verbos con się",
+        "preguntar y decir la hora con ordinales femeninos",
+        "decir a qué hora hago algo con o + locativo",
+        "entender kwadrans po, za kwadrans y wpół do",
+        "usar adverbios de frecuencia y nigdy nie",
+        "pronunciar las consonantes ensordecidas al final y ante consonante sorda"
+      ]
+    }
+  ]
+}

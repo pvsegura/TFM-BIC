@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-match-meals",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Une cada comida con su traducción.",
+  "explanation": "Obiad = comida principal; kolacja = cena; podwieczorek = merienda.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "śniadanie",
+        "right": "el desayuno"
+      },
+      {
+        "left": "obiad",
+        "right": "la comida principal"
+      },
+      {
+        "left": "podwieczorek",
+        "right": "la merienda"
+      },
+      {
+        "left": "kolacja",
+        "right": "la cena"
+      }
+    ]
+  }
+}

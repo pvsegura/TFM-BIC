@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-translate-dinner",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 5430,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 33,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Ceno a las ocho.",
+  "explanation": "Jem kolację o ósmej (o dwudziestej).",
+  "configuration": {
+    "acceptedAnswers": [
+      "Jem kolację o ósmej.",
+      "Jem kolację o dwudziestej.",
+      "O ósmej jem kolację."
+    ],
+    "caseSensitive": false
+  }
+}

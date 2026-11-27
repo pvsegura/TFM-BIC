@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-listen-javier-up",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué hora se levanta Javier?",
+  "explanation": "Codziennie wstaję o szóstej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A las seis."
+      },
+      {
+        "id": "opt-b",
+        "text": "A las siete y media."
+      },
+      {
+        "id": "opt-c",
+        "text": "A las ocho."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

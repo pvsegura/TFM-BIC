@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-match-time",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5240,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 14,
+    "phase": "structure"
+  },
+  "prompt": "Une cada hora con su forma en polaco.",
+  "explanation": "Ordinal femenino: pierwsza, trzecia, ósma, dwunasta.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "1:00",
+        "right": "pierwsza"
+      },
+      {
+        "left": "3:00",
+        "right": "trzecia"
+      },
+      {
+        "left": "8:00",
+        "right": "ósma"
+      },
+      {
+        "left": "12:00",
+        "right": "dwunasta"
+      },
+      {
+        "left": "0:00",
+        "right": "północ"
+      }
+    ]
+  }
+}

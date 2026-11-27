@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-sound-obiad",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 24,
+    "phase": "sound"
+  },
+  "prompt": "La d final de obiad suena como una t.",
+  "explanation": "Sí: [obiat].",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

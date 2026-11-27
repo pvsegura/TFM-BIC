@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-kwadrans",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "¿Qué hora es kwadrans po ósmej?",
+  "explanation": "Kwadrans po = y cuarto: 8:15.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "8:15"
+      },
+      {
+        "id": "opt-b",
+        "text": "7:45"
+      },
+      {
+        "id": "opt-c",
+        "text": "8:45"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

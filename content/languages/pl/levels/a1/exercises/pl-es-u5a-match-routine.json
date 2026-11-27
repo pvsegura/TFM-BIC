@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-match-routine",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada actividad con su traducción.",
+  "explanation": "Budzić się = despertarse; wstawać = levantarse; kłaść się spać = acostarse.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "budzić się",
+        "right": "despertarse"
+      },
+      {
+        "left": "wstawać",
+        "right": "levantarse"
+      },
+      {
+        "left": "ubierać się",
+        "right": "vestirse"
+      },
+      {
+        "left": "wracać do domu",
+        "right": "volver a casa"
+      },
+      {
+        "left": "kłaść się spać",
+        "right": "acostarse"
+      },
+      {
+        "left": "robić zakupy",
+        "right": "hacer la compra"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-order-day",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 5300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 20,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Normalmente desayuno a las siete.",
+  "explanation": "Zwykle + jem śniadanie + o siódmej.",
+  "configuration": {
+    "items": ["Zwykle", "jem", "śniadanie", "o", "siódmej."],
+    "joiner": " "
+  }
+}

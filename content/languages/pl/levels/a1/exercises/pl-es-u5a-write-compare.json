@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-write-compare",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 5460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 36,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Compara el horario de un día en España y en Polonia: comidas, trabajo y hora de acostarse.",
+  "explanation": "W Hiszpanii… a w Polsce…; o + hora.",
+  "configuration": {
+    "modelAnswer": "W Hiszpanii jemy obiad o czternastej albo o piętnastej, a w Polsce o piętnastej albo o siedemnastej. Hiszpanie jedzą kolację o dwudziestej pierwszej, a Polacy o dziewiętnastej. W Polsce ludzie wstają wcześnie i kładą się spać wcześnie.",
+    "checklist": ["comidas", "trabajo o sueño", "comparación"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

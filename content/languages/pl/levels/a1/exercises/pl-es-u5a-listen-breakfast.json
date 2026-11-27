@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-listen-breakfast",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Kasia siempre desayuna en casa.",
+  "explanation": "Nigdy nie jem śniadania w domu — compra un bocadillo por el camino.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

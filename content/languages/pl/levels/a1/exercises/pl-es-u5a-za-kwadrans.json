@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-za-kwadrans",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "¿Qué hora es za kwadrans dziewiąta?",
+  "explanation": "Za kwadrans = menos cuarto: 8:45.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "8:45"
+      },
+      {
+        "id": "opt-b",
+        "text": "9:15"
+      },
+      {
+        "id": "opt-c",
+        "text": "9:45"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

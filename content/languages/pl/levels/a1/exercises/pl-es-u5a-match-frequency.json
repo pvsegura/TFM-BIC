@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-match-frequency",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5200,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Une cada adverbio con su traducción.",
+  "explanation": "Zawsze = siempre; rzadko = pocas veces; nigdy nie = nunca.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "zawsze",
+        "right": "siempre"
+      },
+      {
+        "left": "często",
+        "right": "a menudo"
+      },
+      {
+        "left": "czasami",
+        "right": "a veces"
+      },
+      {
+        "left": "rzadko",
+        "right": "pocas veces"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-translate-get-up",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 5410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 31,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Me levanto a las siete y me ducho.",
+  "explanation": "Wstaję o siódmej i biorę prysznic.",
+  "configuration": {
+    "acceptedAnswers": ["Wstaję o siódmej i biorę prysznic.", "Wstaję o siódmej i myję się."],
+    "caseSensitive": false
+  }
+}

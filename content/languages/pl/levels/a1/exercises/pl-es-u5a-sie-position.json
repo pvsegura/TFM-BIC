@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-sie-position",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Się no abre la frase y no cambia con la persona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Budzę się o szóstej."
+      },
+      {
+        "id": "opt-b",
+        "text": "Się budzę o szóstej."
+      },
+      {
+        "id": "opt-c",
+        "text": "Budzę mi o szóstej."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

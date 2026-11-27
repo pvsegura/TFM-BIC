@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-order-question",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 5310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 21,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿A qué hora te acuestas?",
+  "explanation": "O której + kładziesz się + spać?",
+  "configuration": {
+    "items": ["O", "której", "kładziesz", "się", "spać?"],
+    "joiner": " "
+  }
+}

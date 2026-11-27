@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-wpol",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "¿Qué hora es wpół do dziesiątej?",
+  "explanation": "Wpół do… = media hora antes: 9:30.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "9:30"
+      },
+      {
+        "id": "opt-b",
+        "text": "10:30"
+      },
+      {
+        "id": "opt-c",
+        "text": "10:00"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

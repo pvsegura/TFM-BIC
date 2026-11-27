@@ -90,5 +90,9 @@
   {
     "asset": "a1-pl-u4-restaurant.png",
     "prompt": "a waiter wearing an apron serves plates of dumplings to a man and a woman sitting at a restaurant table with a checked tablecloth, two bowls of red soup on the table, rustic wooden interior, no menus or signs"
+  },
+  {
+    "asset": "a1-pl-u5-tired.png",
+    "prompt": "in a bright office a young man yawns widely holding a coffee mug while a female coworker at the next desk laughs, laptops and plants on the desks, morning light, no clocks or screens visible"
   }
 ]

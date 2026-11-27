@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-wieczorem",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa wieczorem?",
+  "explanation": "Wieczorem = por la noche (antes de dormir); w nocy = de madrugada.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Por la noche, al final del día."
+      },
+      {
+        "id": "opt-b",
+        "text": "Por la mañana."
+      },
+      {
+        "id": "opt-c",
+        "text": "A mediodía."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

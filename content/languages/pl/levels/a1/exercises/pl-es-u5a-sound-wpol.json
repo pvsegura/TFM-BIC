@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-sound-wpol",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 23,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo empieza wpół?",
+  "explanation": "W ante p se ensordece: [fpuw].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[fp…]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[vp…]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[up…]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

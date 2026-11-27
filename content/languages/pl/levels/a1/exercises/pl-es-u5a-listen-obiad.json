@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5a-listen-obiad",
+  "lessonId": "pl-es-unit-5-my-day",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué hora hace Kasia la comida principal?",
+  "explanation": "Prawdziwy obiad jem w domu, o piątej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A las cinco, en casa."
+      },
+      {
+        "id": "opt-b",
+        "text": "A las doce, en el trabajo."
+      },
+      {
+        "id": "opt-c",
+        "text": "A las tres, en un restaurante."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
