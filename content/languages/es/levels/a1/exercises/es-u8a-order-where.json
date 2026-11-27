@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-order-where",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 28,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Łazienka jest na końcu korytarza.",
+  "explanation": "El baño está + al fondo del pasillo.",
+  "configuration": {
+    "items": ["El", "baño", "está", "al", "fondo", "del", "pasillo."],
+    "joiner": " "
+  }
+}

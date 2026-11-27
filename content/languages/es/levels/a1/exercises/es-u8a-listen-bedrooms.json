@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-listen-bedrooms",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jakie są sypialnie?",
+  "explanation": "Hay dos: una más grande y otra más pequeña pero más tranquila.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dwie: większa i mniejsza, ale cichsza."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jedna duża."
+      },
+      {
+        "id": "opt-c",
+        "text": "Trzy małe."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-primer",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: Vivo en el ___ piso (1).",
+  "explanation": "Primero przed rzeczownikiem męskim: primer.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "primer"
+      },
+      {
+        "id": "opt-b",
+        "text": "primero"
+      },
+      {
+        "id": "opt-c",
+        "text": "uno"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

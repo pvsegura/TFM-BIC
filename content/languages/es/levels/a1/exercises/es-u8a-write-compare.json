@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-write-compare",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 46,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Porównaj swoje mieszkanie z mieszkaniem kogoś z rodziny albo z mieszkaniem z dialogu.",
+  "explanation": "Más / menos… que, tan… como, mejor / peor, mayor.",
+  "configuration": {
+    "modelAnswer": "Mi piso es más pequeño que el piso de Marek, pero es más tranquilo. Su salón es más luminoso que mi salón, porque su piso es exterior. Mi cocina es tan moderna como la suya. Su piso es más caro, pero está mejor: está reformado.",
+    "checklist": ["trzy porównania", "mejor / peor albo tan… como"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

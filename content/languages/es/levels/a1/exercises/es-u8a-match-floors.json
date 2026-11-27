@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-match-floors",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Połącz piętra.",
+  "explanation": "Primero → primer piso; tercero → tercer piso; parter = planta baja.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "1.º",
+        "right": "primer piso"
+      },
+      {
+        "left": "3.º",
+        "right": "tercer piso"
+      },
+      {
+        "left": "4.º",
+        "right": "cuarto piso"
+      },
+      {
+        "left": "parter",
+        "right": "planta baja"
+      }
+    ]
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-match-furniture",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Połącz meble i sprzęty z tłumaczeniem.",
+  "explanation": "La lavadora = pralka; el horno = piekarnik; la estantería = regał.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la lavadora",
+        "right": "pralka"
+      },
+      {
+        "left": "el horno",
+        "right": "piekarnik"
+      },
+      {
+        "left": "la estantería",
+        "right": "regał"
+      },
+      {
+        "left": "el sillón",
+        "right": "fotel"
+      },
+      {
+        "left": "la bañera",
+        "right": "wanna"
+      },
+      {
+        "left": "el lavavajillas",
+        "right": "zmywarka"
+      }
+    ]
+  }
+}

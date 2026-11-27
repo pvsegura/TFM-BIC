@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-gap-comparison",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij porównanie: más / menos / tan / que / como.",
+  "explanation": "Más… que, tan… como.",
+  "configuration": {
+    "text": "Mi piso es ___ pequeño ___ el tuyo, pero es ___ luminoso ___ tu casa.",
+    "gaps": [
+      {
+        "accepted": ["más"]
+      },
+      {
+        "accepted": ["que"]
+      },
+      {
+        "accepted": ["tan"]
+      },
+      {
+        "accepted": ["como"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

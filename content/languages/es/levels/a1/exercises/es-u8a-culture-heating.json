@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-culture-heating",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: co często zaskakuje Polaków w hiszpańskich mieszkaniach zimą?",
+  "explanation": "Wiele starych mieszkań nie ma centralnego ogrzewania: w środku bywa chłodno.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Że w środku jest chłodno."
+      },
+      {
+        "id": "opt-b",
+        "text": "Że jest za gorąco."
+      },
+      {
+        "id": "opt-c",
+        "text": "Że nie ma okien."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

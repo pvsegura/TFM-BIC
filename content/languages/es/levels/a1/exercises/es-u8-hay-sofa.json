@@ -8,7 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 12, "phase": "transform", "lines": 1 },
+  "book": { "unit": 8, "number": 39, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: W salonie jest kanapa.",
   "explanation": "Hay + un sofá.",
   "configuration": {

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-listen-rent",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: ile wynosi czynsz i ile opłaty?",
+  "explanation": "Novecientos euros al mes; luz y agua aparte, unos sesenta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "900 € + około 60 € opłat."
+      },
+      {
+        "id": "opt-b",
+        "text": "600 € z opłatami."
+      },
+      {
+        "id": "opt-c",
+        "text": "960 € z opłatami."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

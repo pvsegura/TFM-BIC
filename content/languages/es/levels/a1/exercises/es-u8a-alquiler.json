@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-alquiler",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 14,
+    "phase": "connect"
+  },
+  "prompt": "Co to jest el alquiler?",
+  "explanation": "El alquiler = czynsz najmu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Czynsz najmu."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kaucja."
+      },
+      {
+        "id": "opt-c",
+        "text": "Agencja nieruchomości."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

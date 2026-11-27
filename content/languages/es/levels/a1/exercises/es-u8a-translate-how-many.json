@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-translate-how-many",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 40,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Ile pokoi (sypialni) ma mieszkanie?",
+  "explanation": "¿Cuántos dormitorios tiene el piso? / ¿Cuántos dormitorios hay?",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Cuántos dormitorios tiene el piso?",
+      "¿Cuántos dormitorios hay?",
+      "¿Cuántos dormitorios hay en el piso?"
+    ],
+    "caseSensitive": false
+  }
+}

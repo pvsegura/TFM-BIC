@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-mayor",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Jak powiesz „Mój brat jest starszy ode mnie”?",
+  "explanation": "Wiek: mayor que.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mi hermano es mayor que yo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mi hermano es más viejo de mí."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mi hermano es grande que yo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

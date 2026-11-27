@@ -126,5 +126,9 @@
   {
     "asset": "a1-pl-u7-market.png",
     "prompt": "a young man buys potatoes and tomatoes at an open-air vegetable stall in an old European market square, a smiling middle-aged saleswoman weighs tomatoes on a scale, crates of apples and cucumbers, no signs or price labels with text"
+  },
+  {
+    "asset": "a1-u8-flat.png",
+    "prompt": "a middle-aged woman shows a bright furnished living room to a young man, a sofa, a dining table with chairs, a tall window with a small balcony and sunlight, tiled floor, no text or signs"
   }
 ]

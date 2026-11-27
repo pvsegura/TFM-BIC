@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-sound-taxi",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 30,
+    "phase": "sound"
+  },
+  "prompt": "Jak brzmi x w słowie taxi?",
+  "explanation": "Między samogłoskami: [ks] — [taksi].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[ks]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[ch]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[s]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

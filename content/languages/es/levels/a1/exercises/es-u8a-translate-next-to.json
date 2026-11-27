@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-translate-next-to",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 41,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Kuchnia jest obok łazienki.",
+  "explanation": "La cocina está al lado del baño.",
+  "configuration": {
+    "acceptedAnswers": ["La cocina está al lado del baño."],
+    "caseSensitive": false
+  }
+}

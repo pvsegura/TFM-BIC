@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-translate-rent",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Ile wynosi czynsz?",
+  "explanation": "¿Cuánto es el alquiler?",
+  "configuration": {
+    "acceptedAnswers": ["¿Cuánto es el alquiler?", "¿Cuánto cuesta el alquiler?"],
+    "caseSensitive": false
+  }
+}

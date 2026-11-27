@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-translate-quieter",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 610,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Ta sypialnia jest cichsza niż tamta.",
+  "explanation": "Este dormitorio es más tranquilo que aquel.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Este dormitorio es más tranquilo que aquel.",
+      "Este dormitorio es más tranquilo que ese."
+    ],
+    "caseSensitive": false
+  }
+}

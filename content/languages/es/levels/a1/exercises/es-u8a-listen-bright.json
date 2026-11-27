@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-listen-bright",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: mieszkanie jest ciemne.",
+  "explanation": "¡Qué luminoso! — Sí, es exterior.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

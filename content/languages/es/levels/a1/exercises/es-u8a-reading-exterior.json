@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-reading-exterior",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 34,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: mieszkania z oknami na podwórze (interiores) są jaśniejsze.",
+  "explanation": "Los exteriores son más luminosos que los interiores.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

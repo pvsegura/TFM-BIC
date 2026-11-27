@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-exterior",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 13,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy piso exterior w ogłoszeniu?",
+  "explanation": "Exterior = okna wychodzą na ulicę (zwykle jaśniej).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mieszkanie z oknami na ulicę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dom za miastem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mieszkanie z ogrodem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

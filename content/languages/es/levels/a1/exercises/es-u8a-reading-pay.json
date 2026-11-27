@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-reading-pay",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 35,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: co trzeba zwykle zapłacić na początku?",
+  "explanation": "El primer mes y una fianza de uno o dos meses.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pierwszy miesiąc i kaucję."
+      },
+      {
+        "id": "opt-b",
+        "text": "Rok z góry."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nic."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

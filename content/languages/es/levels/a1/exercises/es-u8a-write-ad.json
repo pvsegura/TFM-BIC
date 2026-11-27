@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-write-ad",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 45,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz ogłoszenie o wynajmie swojego (prawdziwego albo wymyślonego) mieszkania: piętro, pokoje, meble, co jest w okolicy i cena.",
+  "explanation": "Sprawdź: hay / está, primer / tercer piso, al lado de, przymiotniki zgodne z rzeczownikiem.",
+  "configuration": {
+    "modelAnswer": "Se alquila piso exterior en el centro de Valencia. Está en un tercer piso con ascensor. Hay dos dormitorios, un salón amplio, una cocina con lavadora y horno, y un baño con ducha. El piso está amueblado y reformado. Al lado del edificio hay un supermercado y una parada de metro. Alquiler: ochocientos euros al mes.",
+    "checklist": ["piętro", "pokoje", "meble i sprzęty", "okolica", "cena"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

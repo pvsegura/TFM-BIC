@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-donde-esta",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Które pytanie jest poprawne?",
+  "explanation": "O konkretną, znaną rzecz pytasz z está.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Dónde está el baño?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Dónde hay el baño?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Dónde es el baño?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

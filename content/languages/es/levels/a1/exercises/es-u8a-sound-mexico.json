@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-sound-mexico",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 31,
+    "phase": "sound"
+  },
+  "prompt": "Jak wymawia się México?",
+  "explanation": "W tej nazwie x czyta się jak hiszpańskie j: [méjiko].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[méjiko], jak j."
+      },
+      {
+        "id": "opt-b",
+        "text": "[méksiko]."
+      },
+      {
+        "id": "opt-c",
+        "text": "[mésiko]."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-listen-floor",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: na którym piętrze jest mieszkanie?",
+  "explanation": "Está en un cuarto piso con ascensor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na czwartym, z windą."
+      },
+      {
+        "id": "opt-b",
+        "text": "Na parterze."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na drugim, bez windy."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-reading-share",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 33,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: co często robią młodzi w Madrycie?",
+  "explanation": "Muchas veces comparten piso.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Wynajmują wspólne mieszkanie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kupują dom za miastem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mieszkają w hotelu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

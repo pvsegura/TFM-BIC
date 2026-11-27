@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-translate-third",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 42,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Mieszkam na trzecim piętrze.",
+  "explanation": "Vivo en el tercer piso / en un tercero.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Vivo en el tercer piso.",
+      "Vivo en un tercer piso.",
+      "Vivo en el tercero."
+    ],
+    "caseSensitive": false
+  }
+}

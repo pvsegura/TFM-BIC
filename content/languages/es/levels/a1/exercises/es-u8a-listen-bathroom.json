@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-listen-bathroom",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: gdzie jest łazienka?",
+  "explanation": "El baño está entre los dos dormitorios.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Między dwiema sypialniami."
+      },
+      {
+        "id": "opt-b",
+        "text": "Obok kuchni."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na końcu korytarza."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

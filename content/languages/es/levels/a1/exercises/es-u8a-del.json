@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-del",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 22,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "De + el = del.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La cocina está al lado del salón."
+      },
+      {
+        "id": "opt-b",
+        "text": "La cocina está al lado de el salón."
+      },
+      {
+        "id": "opt-c",
+        "text": "La cocina está al lado salón."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

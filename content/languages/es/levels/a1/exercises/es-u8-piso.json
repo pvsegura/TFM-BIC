@@ -8,7 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 3, "phase": "structure" },
+  "book": { "unit": 8, "number": 7, "phase": "connect" },
   "prompt": "Co znaczy piso w zdaniu „Vivo en un piso”?",
   "explanation": "Piso — mieszkanie; także piętro.",
   "configuration": {

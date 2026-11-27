@@ -8,7 +8,7 @@
   "status": "published",
   "order": 70,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 11, "phase": "transform", "lines": 1 },
+  "book": { "unit": 8, "number": 38, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: To mieszkanie jest mniej drogie niż tamto.",
   "explanation": "Menos + przymiotnik + que.",
   "configuration": {

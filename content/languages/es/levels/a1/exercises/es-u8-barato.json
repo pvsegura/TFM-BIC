@@ -8,7 +8,7 @@
   "status": "published",
   "order": 120,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 9, "phase": "structure" },
+  "book": { "unit": 8, "number": 10, "phase": "connect" },
   "prompt": "Przeciwieństwo caro to:",
   "explanation": "Caro — drogi; barato — tani.",
   "configuration": {

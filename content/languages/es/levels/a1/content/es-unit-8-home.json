@@ -8,72 +8,303 @@
   "order": 170,
   "unit": 8,
   "instructionLanguage": "pl",
-  "title": "Jednostka 8. Mi casa — mieszkanie i porównania",
-  "description": "Opisujesz mieszkanie: pokoje, meble, hay i proste porównania más… que, menos… que.",
+  "title": "Jednostka 8A. Se alquila piso — mieszkanie, meble i porównania",
+  "description": "Oglądasz mieszkanie do wynajęcia: pytasz o pokoje, meble i cenę, mówisz, gdzie co jest, i porównujesz: hay i está, encima de, al lado de, entre, más… que, mejor, tan… como i piętra (primer piso, tercer piso).",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Oglądanie mieszkania" },
     {
       "type": "explanation",
-      "text": "Mieszkanie: el piso (mieszkanie), la casa (dom), el salón (salon), la cocina (kuchnia), el dormitorio (sypialnia), el baño (łazienka), la terraza (taras), el balcón. Meble: la cama (łóżko), la mesa (stół), la silla (krzesło), el sofá, el armario (szafa)."
+      "text": "Marek, Polak, który pracuje w Madrycie, szuka mieszkania. Ogląda jedno w dzielnicy Chamberí; pokazuje mu je właścicielka. Za pierwszym razem posłuchaj, jakie pokoje ma mieszkanie. Za drugim zaznacz, gdzie jest kuchnia i łazienka i co jest w kuchni. Za trzecim wyłap porównania i cenę: más grande, más tranquilo, más caro, mejor."
     },
     {
-      "type": "example",
-      "text": "Mi piso tiene dos dormitorios, un salón y una cocina pequeña.",
-      "translation": "Moje mieszkanie ma dwie sypialnie, salon i małą kuchnię."
-    },
-    {
-      "type": "explanation",
-      "text": "Opisywanie: grande (duży), pequeño (mały), luminoso (jasny), tranquilo (cichy), moderno, antiguo (stary, zabytkowy), caro (drogi), barato (tani). Położenie w mieszkaniu: en el salón hay un sofá; la cama está al lado de la ventana."
-    },
-    {
-      "type": "explanation",
-      "text": "Buduj zdania — porównania: más + przymiotnik + que (bardziej… niż), menos + przymiotnik + que (mniej… niż), tan + przymiotnik + como (tak… jak). Nieregularne: mejor (lepszy), peor (gorszy), mayor (starszy), menor (młodszy)."
-    },
-    {
-      "type": "example",
-      "text": "Mi piso es más pequeño que tu casa, pero es más luminoso.",
-      "translation": "Moje mieszkanie jest mniejsze niż twój dom, ale jaśniejsze."
-    },
-    {
-      "type": "example",
-      "text": "Este barrio es tan tranquilo como el centro.",
-      "translation": "Ta dzielnica jest tak samo cicha jak centrum."
-    },
-    {
-      "type": "explanation",
-      "text": "Uwaga, Polacy: nie mówimy „más bueno”, tylko mejor; nie „más malo”, tylko peor (w znaczeniu jakości)."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: el piso brzmi jak „piso — piętro”: mieszkanie w Hiszpanii to zwykle jedno piętro w bloku. Armario — „armia” ubrań w szafie."
+      "type": "image",
+      "asset": "a1-u8-flat.png",
+      "alt": "Kobieta w średnim wieku pokazuje młodemu mężczyźnie jasny salon z kanapą, stołem i dużym oknem z balkonem."
     },
     {
       "type": "dialogue",
       "lines": [
         {
-          "speaker": "Inés",
-          "text": "¿Cómo es tu nuevo piso?",
-          "translation": "Jakie jest twoje nowe mieszkanie?"
+          "speaker": "Dueña",
+          "text": "Hola, ¿eres Marek? Pasa, pasa. Este es el piso.",
+          "translation": "Cześć, ty jesteś Marek? Wejdź, wejdź. To jest to mieszkanie."
         },
         {
-          "speaker": "Kasia",
-          "text": "Es pequeño, pero muy luminoso. Tiene un dormitorio y una terraza.",
-          "translation": "Jest małe, ale bardzo jasne. Ma jedną sypialnię i taras."
+          "speaker": "Marek",
+          "text": "Hola, encantado. ¡Qué luminoso!",
+          "translation": "Dzień dobry, miło mi. Ale jasne!"
         },
         {
-          "speaker": "Inés",
-          "text": "¿Es más caro que el anterior?",
-          "translation": "Jest droższe niż poprzednie?"
+          "speaker": "Dueña",
+          "text": "Sí, es exterior y está en un cuarto piso con ascensor. Aquí está el salón, con el sofá y la mesa.",
+          "translation": "Tak, okna wychodzą na ulicę, a mieszkanie jest na czwartym piętrze z windą. Tu jest salon, z kanapą i stołem."
         },
         {
-          "speaker": "Kasia",
-          "text": "Sí, un poco más caro, pero está mejor situado.",
-          "translation": "Tak, trochę droższe, ale lepiej położone."
+          "speaker": "Marek",
+          "text": "¿Cuántos dormitorios hay?",
+          "translation": "Ile jest sypialni?"
+        },
+        {
+          "speaker": "Dueña",
+          "text": "Hay dos: este, que es más grande, y aquel, que es más pequeño pero más tranquilo.",
+          "translation": "Są dwie: ta, która jest większa, i tamta, mniejsza, ale cichsza."
+        },
+        { "speaker": "Marek", "text": "¿Y la cocina?", "translation": "A kuchnia?" },
+        {
+          "speaker": "Dueña",
+          "text": "Está al lado del salón. Tiene lavadora, frigorífico y horno. Y el baño está entre los dos dormitorios.",
+          "translation": "Jest obok salonu. Ma pralkę, lodówkę i piekarnik. A łazienka jest między dwiema sypialniami."
+        },
+        {
+          "speaker": "Marek",
+          "text": "¿Tiene calefacción? Soy polaco, pero en invierno siempre tengo frío.",
+          "translation": "Jest ogrzewanie? Jestem Polakiem, ale zimą zawsze mi zimno."
+        },
+        {
+          "speaker": "Dueña",
+          "text": "Sí, tiene calefacción y aire acondicionado. En verano en Madrid hace mucho calor.",
+          "translation": "Tak, jest ogrzewanie i klimatyzacja. Latem w Madrycie jest bardzo gorąco."
+        },
+        {
+          "speaker": "Marek",
+          "text": "¿Cuánto es el alquiler?",
+          "translation": "Ile wynosi czynsz?"
+        },
+        {
+          "speaker": "Dueña",
+          "text": "Novecientos euros al mes. Es un poco más caro que otros pisos del barrio, pero está mejor: está reformado.",
+          "translation": "Dziewięćset euro miesięcznie. Jest trochę droższe niż inne mieszkania w okolicy, ale jest w lepszym stanie: po remoncie."
+        },
+        { "speaker": "Marek", "text": "¿Y la luz y el agua?", "translation": "A prąd i woda?" },
+        {
+          "speaker": "Dueña",
+          "text": "Aparte, unos sesenta euros al mes.",
+          "translation": "Osobno, około sześćdziesięciu euro miesięcznie."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Me gusta mucho. ¿Puedo pensarlo hasta mañana?",
+          "translation": "Bardzo mi się podoba. Mogę się zastanowić do jutra?"
+        },
+        {
+          "speaker": "Dueña",
+          "text": "Claro, pero hay otras personas interesadas.",
+          "translation": "Jasne, ale są też inne zainteresowane osoby."
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Mieszkanie i meble" },
+    {
+      "type": "table",
+      "caption": "Pomieszczenia",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["el piso", "mieszkanie; piętro", "la casa", "dom; mieszkanie (moje)"],
+        ["el salón", "salon, pokój dzienny", "el dormitorio", "sypialnia"],
+        ["la cocina", "kuchnia", "el baño", "łazienka"],
+        ["el pasillo", "korytarz", "la entrada", "przedpokój"],
+        ["la terraza", "taras", "el balcón", "balkon"],
+        ["el ascensor", "winda", "la escalera", "schody"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Meble i sprzęty",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la cama", "łóżko", "el armario", "szafa"],
+        ["el sofá", "kanapa", "el sillón", "fotel"],
+        ["la mesa", "stół", "la silla", "krzesło"],
+        ["la estantería", "regał", "la lámpara", "lampa"],
+        ["el frigorífico / la nevera", "lodówka", "el horno", "piekarnik"],
+        ["la lavadora", "pralka", "el lavavajillas", "zmywarka"],
+        ["la ducha", "prysznic", "la bañera", "wanna"],
+        ["la calefacción", "ogrzewanie", "el aire acondicionado", "klimatyzacja"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Jakie jest mieszkanie",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["luminoso", "jasny, nasłoneczniony", "oscuro", "ciemny"],
+        ["exterior", "z oknami na ulicę", "interior", "z oknami na podwórze"],
+        ["amplio", "przestronny", "pequeño", "mały"],
+        ["tranquilo", "cichy, spokojny", "ruidoso", "głośny"],
+        ["reformado", "po remoncie", "amueblado", "umeblowany"],
+        ["el alquiler", "czynsz najmu", "los gastos", "opłaty (prąd, woda)"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: opisz swoje mieszkanie w pięciu zdaniach i porównaj je z mieszkaniem kogoś z rodziny (más… que, menos… que)."
+      "text": "Łącz i zapamiętuj — PISO to po hiszpańsku i mieszkanie, i piętro: w hiszpańskim bloku mieszkanie to jedno piętro. ARMARIO — „armia” ubrań w szafie. LAVADORA (pralka) i LAVAVAJILLAS (zmywarka) mają w sobie lavar, myć: „myjąca” i „myjąca naczynia”. FRIGORÍFICO ma w sobie łacińskie frigus, chłód — jak angielskie fridge. A ALQUILER kojarz z „al-kilo”: co miesiąc płacisz kilka „kilo” euro."
+    },
+    { "type": "section", "phase": "structure", "title": "Hay i está, gdzie co jest, porównania" },
+    {
+      "type": "explanation",
+      "text": "Znasz już z jednostki 3 różnicę: hay mówi, że coś istnieje (z un / una / liczebnikiem albo bez rodzajnika), a está mówi, gdzie jest konkretna, znana rzecz (z el / la). Hay un sofá en el salón (w salonie jest kanapa) — El sofá está en el salón (ta kanapa jest w salonie). Hay dos dormitorios. — ¿Dónde está el baño?"
+    },
+    {
+      "type": "pitfall",
+      "wrong": "En el salón hay el sofá. / ¿Dónde hay el baño?",
+      "right": "En el salón hay un sofá. / ¿Dónde está el baño?",
+      "explanation": "Hay nie łączy się z el / la. Gdy pytasz o konkretną rzecz, która na pewno jest (łazienka w mieszkaniu), używasz está / están: ¿Dónde están las llaves?"
+    },
+    {
+      "type": "table",
+      "caption": "Gdzie co jest",
+      "columns": ["Hiszpański", "Polski", "Przykład"],
+      "rows": [
+        ["encima de / sobre", "na, nad", "La lámpara está encima de la mesa."],
+        ["debajo de", "pod", "El gato está debajo de la cama."],
+        ["al lado de", "obok", "La cocina está al lado del salón."],
+        ["entre", "między", "El baño está entre los dos dormitorios."],
+        ["delante de / detrás de", "przed / za", "Hay un parque delante de la casa."],
+        ["dentro de / fuera de", "w środku / na zewnątrz", "La ropa está dentro del armario."],
+        [
+          "a la derecha / izquierda de",
+          "na prawo / lewo od",
+          "El sillón está a la izquierda del sofá."
+        ],
+        ["al fondo (de)", "w głębi", "El dormitorio está al fondo del pasillo."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Al lado de el salón. / Encima la mesa.",
+      "right": "Al lado del salón. / Encima de la mesa.",
+      "explanation": "Te wyrażenia kończą się na de, a de + el zlewa się w del: al lado del salón, delante del edificio. Z la, los, las nie ma zlewania: al lado de la cocina."
+    },
+    {
+      "type": "explanation",
+      "text": "Porównujesz tak: más + przymiotnik + que (bardziej… niż), menos + przymiotnik + que (mniej… niż), tan + przymiotnik + como (tak… jak). Przymiotnik zgadza się z rzeczownikiem: esta cocina es más pequeña que la otra. Cztery porównania są nieregularne: bueno → mejor (lepszy), malo → peor (gorszy), grande → mayor (starszy; dla rozmiaru zwykle más grande), pequeño → menor (młodszy)."
+    },
+    {
+      "type": "table",
+      "caption": "Porównania",
+      "columns": ["Wzór", "Przykład", "Polski"],
+      "rows": [
+        [
+          "más … que",
+          "Mi piso es más luminoso que el tuyo.",
+          "Moje mieszkanie jest jaśniejsze niż twoje."
+        ],
+        [
+          "menos … que",
+          "Este barrio es menos ruidoso que el centro.",
+          "Ta dzielnica jest mniej głośna niż centrum."
+        ],
+        [
+          "tan … como",
+          "El salón es tan grande como el dormitorio.",
+          "Salon jest tak duży jak sypialnia."
+        ],
+        [
+          "mejor / peor que",
+          "Este piso está mejor que aquel.",
+          "To mieszkanie jest w lepszym stanie niż tamto."
+        ],
+        ["mayor / menor que", "Mi hermana es mayor que yo.", "Moja siostra jest starsza ode mnie."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Este piso es más bueno que aquel. / Es más caro de mi piso.",
+      "right": "Este piso es mejor que aquel. / Es más caro que mi piso.",
+      "explanation": "Más bueno i más malo w znaczeniu jakości brzmią źle: mówi się mejor i peor. A „niż” to zawsze que, nie de: más caro que, más grande que."
+    },
+    {
+      "type": "explanation",
+      "text": "Piętra liczy się liczebnikami porządkowymi: primero, segundo, tercero, cuarto, quinto, sexto, séptimo, octavo, noveno, décimo. Przed rzeczownikiem męskim primero i tercero tracą -o: el primer piso, el tercer piso, ale el piso tercero. Parter to la planta baja. W adresie: Calle Goya 12, 4.º B = czwarte piętro, mieszkanie B."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Vivo en el primero piso. / Vivo en el cuatro piso.",
+      "right": "Vivo en el primer piso. / Vivo en el cuarto piso.",
+      "explanation": "Piętra mają liczebniki porządkowe (cuarto, nie cuatro), a primero i tercero skracają się przed rzeczownikiem męskim: primer piso, tercer piso."
+    },
+    { "type": "section", "phase": "sound", "title": "Litera x: exterior, taxi, México" },
+    {
+      "type": "explanation",
+      "text": "Litera x ma po hiszpańsku kilka wymów. Między samogłoskami i na końcu słowa brzmi [ks]: taxi [taksi], exacto [eksakto], examen. Przed spółgłoską w codziennej mowie często upraszcza się do [s]: exterior [esterior], extra [estra], explicar [esplikar]. W kilku nazwach historycznych x czyta się jak hiszpańskie j: México [méjiko], Oaxaca, Texas. Na początku słowa (to rzadkie) x brzmi [s]: xilófono [silófono]."
+    },
+    {
+      "type": "table",
+      "caption": "Jak czytać x",
+      "columns": ["Pozycja", "Przykład", "Wymowa"],
+      "rows": [
+        ["między samogłoskami", "taxi, exacto", "[ks]"],
+        ["przed spółgłoską", "exterior, explicar", "[s] albo [ks] w mowie staranniej"],
+        ["nazwy historyczne", "México, Texas", "jak j: [méjiko]"],
+        ["na początku słowa", "xilófono", "[s]"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Mieszkanie w Hiszpanii" },
+    {
+      "type": "reading",
+      "title": "Buscar piso en Madrid",
+      "paragraphs": [
+        "En Madrid, como en muchas ciudades españolas, la mayoría de la gente vive en pisos, no en casas. Los jóvenes muchas veces comparten piso: cada uno tiene su dormitorio y la cocina y el salón son de todos.",
+        "Para buscar piso, la gente mira anuncios en internet o va a una inmobiliaria. En los anuncios se lee: «Se alquila piso exterior, dos dormitorios, amueblado, cuarto con ascensor».",
+        "Los pisos exteriores, con ventanas a la calle, son más luminosos que los interiores, pero también más ruidosos y más caros. Un ascensor es muy importante en los edificios antiguos de cinco o seis plantas.",
+        "Normalmente hay que pagar el primer mes y una fianza de uno o dos meses. La luz, el agua y el gas se pagan aparte."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "W Hiszpanii większość ludzi mieszka w blokach i kamienicach w mieście. Własne mieszkanie jest bardzo ważne, ale w dużych miastach, takich jak Madryt czy Barcelona, wielu młodych ludzi wynajmuje pokój we wspólnym mieszkaniu (piso compartido).",
+        "W ogłoszeniach często zobaczysz skróty: 3.º izq. = trzecie piętro, mieszkanie po lewej; ext. = exterior; amueb. = amueblado. Wynajmując, płaci się zwykle kaucję (la fianza).",
+        "Wiele starych mieszkań w Hiszpanii nie ma centralnego ogrzewania, a zimą w środku bywa chłodno. Polacy często są zaskoczeni, że w Hiszpanii w domu jest im zimniej niż w Polsce. Za to prawie wszędzie jest klimatyzacja na upalne lato.",
+        "Typowe hiszpańskie mieszkanie ma podłogi z płytek, nie z parkietu, okiennice lub rolety (las persianas), które chronią przed słońcem, i balkon, na którym suszy się pranie."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: oglądasz mieszkanie" },
+    {
+      "type": "mission",
+      "title": "Zapytaj o mieszkanie i opisz swoje",
+      "steps": [
+        "Przeczytaj ogłoszenie i zapytaj właściciela o liczbę pokoi i piętro: ¿Cuántos dormitorios hay? ¿En qué piso está?",
+        "Zapytaj, gdzie są kuchnia i łazienka, i co jest w kuchni: ¿Dónde está…? ¿Hay lavadora?",
+        "Zapytaj o czynsz i opłaty: ¿Cuánto es el alquiler? ¿Los gastos están incluidos?",
+        "Opisz swoje obecne mieszkanie w pięciu zdaniach, używając hay, está i trzech wyrażeń miejsca (encima de, al lado de, entre…).",
+        "Porównaj oglądane mieszkanie ze swoim: más… que, menos… que, tan… como, mejor / peor.",
+        "Nagraj się, czytając exterior, taxi, explicar i México."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "¿Cuántos dormitorios hay?", "translation": "Ile jest sypialni?" },
+        { "text": "La cocina está al lado del salón.", "translation": "Kuchnia jest obok salonu." },
+        {
+          "text": "El baño está entre los dos dormitorios.",
+          "translation": "Łazienka jest między dwiema sypialniami."
+        },
+        {
+          "text": "Vivo en un tercer piso con ascensor.",
+          "translation": "Mieszkam na trzecim piętrze z windą."
+        },
+        {
+          "text": "Este piso es más luminoso que el mío.",
+          "translation": "To mieszkanie jest jaśniejsze niż moje."
+        },
+        {
+          "text": "Este barrio es mejor que el centro.",
+          "translation": "Ta dzielnica jest lepsza niż centrum."
+        },
+        { "text": "¿Cuánto es el alquiler?", "translation": "Ile wynosi czynsz?" },
+        { "text": "¿Puedo pensarlo hasta mañana?", "translation": "Mogę się zastanowić do jutra?" }
+      ],
+      "canDo": [
+        "nazwać pomieszczenia, meble i sprzęty",
+        "odróżnić hay i está, mówiąc o mieszkaniu",
+        "powiedzieć, gdzie co jest (encima de, al lado de, entre…)",
+        "porównać mieszkania z más / menos… que, tan… como, mejor i peor",
+        "powiedzieć, na którym piętrze mieszkam (primer, tercer piso)",
+        "przeczytać x w różnych pozycjach"
+      ]
     }
   ]
 }

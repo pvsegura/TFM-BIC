@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-match-adjectives",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 12,
+    "phase": "connect"
+  },
+  "prompt": "Połącz przeciwieństwa.",
+  "explanation": "Luminoso ↔ oscuro; tranquilo ↔ ruidoso; exterior ↔ interior.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "luminoso",
+        "right": "oscuro"
+      },
+      {
+        "left": "tranquilo",
+        "right": "ruidoso"
+      },
+      {
+        "left": "exterior",
+        "right": "interior"
+      },
+      {
+        "left": "amplio",
+        "right": "pequeño"
+      }
+    ]
+  }
+}

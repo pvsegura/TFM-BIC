@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8a-mejor",
+  "lessonId": "es-unit-8-home",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Bueno → mejor; „niż” = que.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Este piso es mejor que aquel."
+      },
+      {
+        "id": "opt-b",
+        "text": "Este piso es más bueno que aquel."
+      },
+      {
+        "id": "opt-c",
+        "text": "Este piso es mejor de aquel."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
