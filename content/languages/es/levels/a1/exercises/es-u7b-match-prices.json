@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-match-prices",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 49,
+    "phase": "structure"
+  },
+  "prompt": "Połącz cenę z wymową.",
+  "explanation": "Euro + centy: un euro cincuenta / un euro con cincuenta.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "0,50 €",
+        "right": "cincuenta céntimos"
+      },
+      {
+        "left": "1,50 €",
+        "right": "un euro con cincuenta"
+      },
+      {
+        "left": "2,99 €",
+        "right": "dos euros noventa y nueve"
+      },
+      {
+        "left": "12,05 €",
+        "right": "doce euros con cinco"
+      }
+    ]
+  }
+}

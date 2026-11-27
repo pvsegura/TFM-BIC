@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-reading-where",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 63,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: gdzie jest Mercado Central?",
+  "explanation": "Está en el centro de la ciudad, en un edificio modernista.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W centrum Walencji."
+      },
+      {
+        "id": "opt-b",
+        "text": "Przy plaży."
+      },
+      {
+        "id": "opt-c",
+        "text": "Poza miastem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

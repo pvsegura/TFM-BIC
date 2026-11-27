@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 165,
+  "unit": 7,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 7B. ¿Me pone un kilo? — na targu: owoce, warzywa i ilości",
+  "description": "Robisz zakupy na targu i w sklepie: prosisz o konkretną ilość, pytasz o cenę za kilo i płacisz: ¿me pone…?, un kilo de, medio kilo, una docena, ¿a cómo están…?, mucho / poco, otro i liczby z przecinkiem.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Zakupy na paellę" },
+    {
+      "type": "explanation",
+      "text": "Ola zaprasza w sobotę polskich znajomych na paellę i idzie rano na Mercado Central w Walencji. Kupuje warzywa i owoce u sprzedawczyni, którą zna. Za pierwszym razem posłuchaj, co kupuje. Za drugim zapisz ilości i cenę pomarańczy. Za trzecim policz: ile płaci razem i ile dostaje reszty?"
+    },
+    {
+      "type": "image",
+      "asset": "a1-u7-market.png",
+      "alt": "Młoda kobieta z koszykiem kupuje pomarańcze i pomidory na stoisku z owocami i warzywami na krytym targu."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Frutera",
+          "text": "¡Buenos días! ¿Qué le pongo?",
+          "translation": "Dzień dobry! Co podać?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Buenos días. ¿Me pone un kilo de tomates, por favor?",
+          "translation": "Dzień dobry. Poproszę kilo pomidorów."
+        },
+        {
+          "speaker": "Frutera",
+          "text": "¿Para ensalada o para salsa?",
+          "translation": "Do sałatki czy na sos?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Para ensalada. Y medio kilo de pimientos rojos.",
+          "translation": "Do sałatki. I pół kilo czerwonej papryki."
+        },
+        {
+          "speaker": "Frutera",
+          "text": "Aquí tiene. ¿Algo más?",
+          "translation": "Proszę. Coś jeszcze?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Sí. ¿A cómo están las naranjas?",
+          "translation": "Tak. Po ile są pomarańcze?"
+        },
+        {
+          "speaker": "Frutera",
+          "text": "A un euro cincuenta el kilo. Son de aquí, de Valencia, muy dulces.",
+          "translation": "Po półtora euro za kilo. Są stąd, z Walencji, bardzo słodkie."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Entonces, dos kilos. Y unos limones… ¿cuatro o cinco?",
+          "translation": "To dwa kilo. I trochę cytryn… cztery czy pięć?"
+        },
+        {
+          "speaker": "Frutera",
+          "text": "Le pongo cinco, para la paella siempre hace falta limón. ¿Algo más?",
+          "translation": "Dam pięć, do paelli zawsze potrzebna jest cytryna. Coś jeszcze?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "No, nada más, gracias. ¿Cuánto es todo?",
+          "translation": "Nie, to wszystko, dziękuję. Ile za wszystko?"
+        },
+        {
+          "speaker": "Frutera",
+          "text": "Son ocho euros con veinte.",
+          "translation": "Osiem euro dwadzieścia."
+        },
+        { "speaker": "Ola", "text": "Tome, diez euros.", "translation": "Proszę, dziesięć euro." },
+        {
+          "speaker": "Frutera",
+          "text": "Y un euro ochenta de vuelta. ¡Gracias, guapa! ¡Que salga muy rica la paella!",
+          "translation": "I euro osiemdziesiąt reszty. Dziękuję, kochana! Niech paella się uda!"
+        },
+        {
+          "speaker": "Ola",
+          "text": "¡Gracias! Hasta el sábado.",
+          "translation": "Dziękuję! Do soboty."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Owoce, warzywa i ilości" },
+    {
+      "type": "table",
+      "caption": "Owoce i warzywa",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la manzana", "jabłko", "el tomate", "pomidor"],
+        ["la naranja", "pomarańcza", "la patata", "ziemniak"],
+        ["el plátano", "banan", "la cebolla", "cebula"],
+        ["las fresas", "truskawki", "el ajo", "czosnek"],
+        ["el limón", "cytryna", "el pimiento", "papryka"],
+        ["la sandía", "arbuz", "la lechuga", "sałata"],
+        ["las uvas", "winogrona", "la zanahoria", "marchewka"],
+        ["el melocotón", "brzoskwinia", "el pepino", "ogórek"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Inne produkty",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["el pan", "chleb", "el arroz", "ryż"],
+        ["la leche", "mleko", "el aceite (de oliva)", "olej, oliwa"],
+        ["los huevos", "jajka", "el queso", "ser"],
+        ["el pollo", "kurczak", "el jamón", "szynka"],
+        ["el pescado", "ryba", "el agua", "woda"],
+        ["el azúcar", "cukier", "la sal", "sól"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Ilości i opakowania (zawsze z de)",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["un kilo de", "kilogram", "medio kilo de", "pół kilo"],
+        ["cien gramos de", "sto gramów", "un cuarto de kilo", "ćwierć kilo"],
+        ["un litro de", "litr", "una botella de", "butelka"],
+        ["una docena de", "tuzin", "media docena de", "pół tuzina"],
+        ["un paquete de", "paczka", "una lata de", "puszka"],
+        ["una barra de pan", "bagietka", "un trozo de", "kawałek"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — PATATA brzmi jak „pyra” z Poznania, a w Ameryce Łacińskiej mówi się papa. NARANJA i polska pomarańcza mają to samo arabskie źródło (nāranj); we Francji jest orange. SANDÍA (arbuz) — wyobraź sobie Sandrę, która je arbuza w upał. ZANAHORIA brzmi jak „sanna-horia”: pomarańczowa marchewka na sankach. A DOCENA to tuzin — jak „dycha” plus dwa: 12."
+    },
+    { "type": "section", "phase": "structure", "title": "Ilości, mucho / poco, otro i ceny" },
+    {
+      "type": "explanation",
+      "text": "Po każdej ilości i opakowaniu stoi de, a potem rzeczownik bez rodzajnika: un kilo de tomates, una botella de agua, cien gramos de jamón. W polskim w tym miejscu jest dopełniacz (kilo pomidorów); w hiszpańskim rzeczownik się nie zmienia, wystarczy de. Na targu prosisz: ¿Me pone…? (Poda mi pan / pani…?), Quería… (Chciałam / chciałem…) albo po prostu Un kilo de…, por favor."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Un kilo tomates. / Una botella del agua.",
+      "right": "Un kilo de tomates. / Una botella de agua.",
+      "explanation": "Między ilością a produktem zawsze stoi de, i to bez rodzajnika: de agua, de leche, de tomates. Del (de + el) pojawia się tylko, gdy mówisz o konkretnej rzeczy: el precio del pan."
+    },
+    {
+      "type": "comparison",
+      "source": "Kup jabłka. Nie ma jabłek. Kilo jabłek.",
+      "target": "Compra manzanas. No hay manzanas. Un kilo de manzanas.",
+      "note": "Po hiszpańsku rzeczownik nie zmienia końcówki: manzanas zawsze tak samo. Gdy mówisz ogólnie o ilości (kup jabłka, nie ma jabłek), nie używasz rodzajnika: Compra manzanas, no hay pan."
+    },
+    {
+      "type": "explanation",
+      "text": "Mucho (dużo), poco (mało), bastante (sporo, wystarczająco) i demasiado (za dużo) przed rzeczownikiem zgadzają się z nim jak przymiotniki: mucho pan, mucha leche, muchos tomates, muchas naranjas. Przed przymiotnikiem albo po czasowniku nie zmieniają się: muy caro, como mucho, está demasiado caro. „Trochę” to un poco de: un poco de queso."
+    },
+    {
+      "type": "table",
+      "caption": "Mucho, poco, demasiado",
+      "columns": ["Ilość", "Męski", "Żeński", "L. mn. męska", "L. mn. żeńska"],
+      "rows": [
+        ["dużo", "mucho pan", "mucha leche", "muchos huevos", "muchas fresas"],
+        ["mało", "poco arroz", "poca sal", "pocos limones", "pocas uvas"],
+        [
+          "za dużo",
+          "demasiado azúcar",
+          "demasiada gente",
+          "demasiados plátanos",
+          "demasiadas patatas"
+        ]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Hay mucho gente. / Como muchos.",
+      "right": "Hay mucha gente. / Como mucho.",
+      "explanation": "Przed rzeczownikiem mucho zgadza się z nim (gente jest rodzaju żeńskiego: mucha gente). Po czasowniku, gdy znaczy „dużo” albo „bardzo”, ma jedną formę: como mucho, trabajo mucho."
+    },
+    {
+      "type": "explanation",
+      "text": "„Jeszcze jeden, inny” to otro / otra / otros / otras — i nigdy nie stoi przed nim un: otro kilo (jeszcze kilo), otra botella (jeszcze jedna butelka), otro día (innym razem). Podobnie: ¿Algo más? (Coś jeszcze?) — Nada más (Nic więcej) albo Eso es todo (To wszystko)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Un otro kilo, por favor. / Quiero una otra botella.",
+      "right": "Otro kilo, por favor. / Quiero otra botella.",
+      "explanation": "Otro już zawiera w sobie „jeden”: un otro to jak „jeden inny jeden”. Mówisz po prostu otro / otra."
+    },
+    {
+      "type": "explanation",
+      "text": "Ceny z centami mówi się na trzy sposoby: un euro cincuenta, un euro con cincuenta albo, wolniej, un euro y cincuenta céntimos. O cenę za kilo pytasz ¿A cómo está el kilo? albo ¿A cómo están las naranjas? (Po ile są…?), a odpowiedź brzmi: A un euro cincuenta el kilo. Na koniec: ¿Cuánto es (todo)? — Son ocho euros con veinte."
+    },
+    {
+      "type": "table",
+      "caption": "Ceny na głos",
+      "columns": ["Cena", "Jak powiedzieć"],
+      "rows": [
+        ["0,50 €", "cincuenta céntimos"],
+        ["1,50 €", "un euro cincuenta / un euro con cincuenta"],
+        ["2,99 €", "dos euros noventa y nueve"],
+        ["8,20 €", "ocho euros con veinte"],
+        ["12,05 €", "doce euros con cinco"]
+      ]
+    },
+    { "type": "section", "phase": "sound", "title": "Rozziew: día, frutería, sandía" },
+    {
+      "type": "explanation",
+      "text": "Gdy i albo u stoją obok innej samogłoski, zwykle tworzą jedną sylabę (dyftong): tienda [tien-da], bueno [bue-no]. Gdy jednak na i lub u jest akcent graficzny, samogłoski się rozdzielają na dwie sylaby: día [dí-a], sandía [san-dí-a], frutería [fru-te-rí-a], frío [frí-o], país [pa-ís]. Ten akcent mówi: „wymów tu dwie sylaby i zaakcentuj i”. Wszystkie nazwy sklepów na -ería mają rozziew: panadería, carnicería, pescadería."
+    },
+    {
+      "type": "table",
+      "caption": "Dyftong czy rozziew?",
+      "columns": ["Dyftong (jedna sylaba)", "Sylaby", "Rozziew (dwie sylaby)", "Sylaby"],
+      "rows": [
+        ["tienda", "tien-da", "día", "dí-a"],
+        ["bueno", "bue-no", "frutería", "fru-te-rí-a"],
+        ["seis", "seis", "país", "pa-ís"],
+        ["agua", "a-gua", "frío", "frí-o"],
+        ["limpiar", "lim-piar", "sandía", "san-dí-a"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Targ, sklep i supermarket" },
+    {
+      "type": "reading",
+      "title": "El Mercado Central de Valencia",
+      "paragraphs": [
+        "El Mercado Central de Valencia es uno de los mercados cubiertos más grandes de Europa. Está en el centro de la ciudad, en un edificio modernista con una cúpula preciosa.",
+        "Hay más de trescientos puestos: frutas y verduras, carne, pescado, jamón, queso, especias y, claro, arroz para la paella. Abre de lunes a sábado por la mañana; los domingos está cerrado.",
+        "Mucha gente de Valencia compra aquí cada semana. Los vendedores conocen a sus clientes y les dan consejos: «Estas fresas son para hoy», «Este pescado es para la plancha».",
+        "Muchos turistas visitan el mercado para hacer fotos, pero lo mejor es comprar algo: un poco de jamón, unas naranjas o un zumo recién hecho."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "W prawie każdym hiszpańskim mieście jest mercado municipal — kryty targ z wieloma stoiskami. Wiele osób kupuje tam świeże produkty, a w supermarkecie resztę. Na stoisku ważne jest, kto jest ostatni w kolejce: wchodząc pytasz ¿Quién es el último? (Kto jest ostatni?).",
+        "W wielu sklepach mięsnych i rybnych bierze się numerek z automatu i czeka, aż wywołają twój numer. Sprzedawca zwykle podaje towar sam — nie dotyka się owoców na stoisku bez pytania.",
+        "Sprzedawcy na targu często mówią do klientów guapa, guapo, cariño czy reina. To zwykła, serdeczna forma, nie flirt.",
+        "Hiszpanie robią mniejsze zakupy, ale częściej, często codziennie w małych sklepach przy domu. Chleb kupuje się zwykle codziennie świeży, najczęściej w formie barra de pan, podobnej do bagietki."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: zakupy na kolację" },
+    {
+      "type": "mission",
+      "title": "Kup składniki na kolację dla czterech osób",
+      "steps": [
+        "Napisz listę zakupów z ilościami: un kilo de…, medio kilo de…, una botella de…, una docena de…",
+        "Na targu zapytaj, kto jest ostatni w kolejce: ¿Quién es el último?",
+        "Poproś o trzy produkty z ¿Me pone…? i zapytaj o cenę jednego: ¿A cómo están…?",
+        "Odpowiedz na ¿Algo más?: poproś o otro / otra albo powiedz Nada más, gracias.",
+        "Zapytaj ¿Cuánto es todo?, powtórz cenę z centami i policz resztę.",
+        "Nagraj się, mówiąc día, frutería, sandía i panadería z rozziewem."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Me pone un kilo de tomates, por favor?",
+          "translation": "Poproszę kilo pomidorów."
+        },
+        {
+          "text": "Medio kilo de pimientos y una docena de huevos.",
+          "translation": "Pół kilo papryki i tuzin jajek."
+        },
+        { "text": "¿A cómo están las naranjas?", "translation": "Po ile są pomarańcze?" },
+        { "text": "A un euro cincuenta el kilo.", "translation": "Po półtora euro za kilo." },
+        {
+          "text": "¿Algo más? — Nada más, gracias.",
+          "translation": "Coś jeszcze? — Nic więcej, dziękuję."
+        },
+        {
+          "text": "Otra botella de agua, por favor.",
+          "translation": "Jeszcze jedną butelkę wody poproszę."
+        },
+        {
+          "text": "¿Cuánto es todo? — Son ocho euros con veinte.",
+          "translation": "Ile za wszystko? — Osiem euro dwadzieścia."
+        },
+        { "text": "¿Quién es el último?", "translation": "Kto jest ostatni (w kolejce)?" }
+      ],
+      "canDo": [
+        "nazwać owoce, warzywa i podstawowe produkty",
+        "poprosić o konkretną ilość z de (un kilo de, una botella de)",
+        "użyć mucho, poco i demasiado zgodnie z rzeczownikiem",
+        "użyć otro / otra bez un",
+        "zapytać o cenę za kilo i zrozumieć ceny z centami",
+        "wymówić rozziew w día, frutería, sandía"
+      ]
+    }
+  ]
+}

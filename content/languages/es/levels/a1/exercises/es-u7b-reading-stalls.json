@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-reading-stalls",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 65,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ile stoisk ma targ?",
+  "explanation": "Hay más de trescientos puestos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ponad trzysta."
+      },
+      {
+        "id": "opt-b",
+        "text": "Około trzydziestu."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ponad trzy tysiące."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

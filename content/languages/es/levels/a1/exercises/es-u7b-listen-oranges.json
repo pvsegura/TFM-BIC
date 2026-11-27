@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-listen-oranges",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: po ile są pomarańcze?",
+  "explanation": "A un euro cincuenta el kilo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "1,50 € za kilo."
+      },
+      {
+        "id": "opt-b",
+        "text": "2 € za kilo."
+      },
+      {
+        "id": "opt-c",
+        "text": "0,50 € za kilo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

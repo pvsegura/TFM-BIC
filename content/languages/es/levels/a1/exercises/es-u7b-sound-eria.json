@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-sound-eria",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 58,
+    "phase": "sound"
+  },
+  "prompt": "Jak dzielisz na sylaby panadería?",
+  "explanation": "Sklepy na -ería mają rozziew: pa-na-de-rí-a.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "pa-na-de-rí-a"
+      },
+      {
+        "id": "opt-b",
+        "text": "pa-na-de-ria"
+      },
+      {
+        "id": "opt-c",
+        "text": "pan-a-der-ía"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-listen-change",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: ile reszty dostaje Ola?",
+  "explanation": "Son ocho euros con veinte; paga diez: un euro ochenta de vuelta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "1,80 €."
+      },
+      {
+        "id": "opt-b",
+        "text": "2,80 €."
+      },
+      {
+        "id": "opt-c",
+        "text": "1,20 €."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

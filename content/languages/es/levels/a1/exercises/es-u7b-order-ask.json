@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-order-ask",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 51,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Poproszę pół kilo marchewki.",
+  "explanation": "¿Me pone + medio kilo de + zanahorias?",
+  "configuration": {
+    "items": ["¿Me", "pone", "medio", "kilo", "de", "zanahorias?"],
+    "joiner": " "
+  }
+}

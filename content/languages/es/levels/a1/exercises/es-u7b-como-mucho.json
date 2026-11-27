@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-como-mucho",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 46,
+    "phase": "structure"
+  },
+  "prompt": "Jak powiesz „Dużo pracuję”?",
+  "explanation": "Po czasowniku mucho się nie zmienia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Trabajo mucho."
+      },
+      {
+        "id": "opt-b",
+        "text": "Trabajo mucha."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mucho trabajo yo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

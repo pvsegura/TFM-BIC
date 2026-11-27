@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-match-fruit",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "Połącz owoce i warzywa z tłumaczeniem.",
+  "explanation": "La sandía = arbuz; la zanahoria = marchewka; el ajo = czosnek.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la sandía",
+        "right": "arbuz"
+      },
+      {
+        "left": "la zanahoria",
+        "right": "marchewka"
+      },
+      {
+        "left": "el ajo",
+        "right": "czosnek"
+      },
+      {
+        "left": "el melocotón",
+        "right": "brzoskwinia"
+      },
+      {
+        "left": "la cebolla",
+        "right": "cebula"
+      },
+      {
+        "left": "las fresas",
+        "right": "truskawki"
+      }
+    ]
+  }
+}

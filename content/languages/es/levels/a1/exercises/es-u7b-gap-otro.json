@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-gap-otro",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 48,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij otro / otra / otros / otras.",
+  "explanation": "Kilo (m) otro; barra (f) otra; limones (m, l.mn.) otros.",
+  "configuration": {
+    "text": "¿Me pone ___ kilo de patatas, ___ barra de pan y ___ dos limones?",
+    "gaps": [
+      {
+        "accepted": ["otro"]
+      },
+      {
+        "accepted": ["otra"]
+      },
+      {
+        "accepted": ["otros"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

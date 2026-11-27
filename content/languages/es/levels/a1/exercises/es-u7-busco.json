@@ -8,7 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 41, "phase": "transform", "lines": 1 },
+  "book": { "unit": 7, "number": 68, "phase": "transform", "lines": 1 },
   "prompt": "Napisz po hiszpańsku: Szukam sukienki.",
   "explanation": "Buscar — szukać: busco un vestido.",
   "configuration": {

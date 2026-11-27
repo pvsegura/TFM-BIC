@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-translate-total",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 79,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz słownie po hiszpańsku cenę: 6,40 €",
+  "explanation": "Seis euros con cuarenta / seis euros cuarenta.",
+  "configuration": {
+    "acceptedAnswers": ["seis euros con cuarenta", "seis euros cuarenta"],
+    "caseSensitive": false
+  }
+}

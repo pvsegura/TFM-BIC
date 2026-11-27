@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-write-habits",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 83,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Opisz, gdzie i jak często robisz zakupy, co kupujesz zawsze, a czego nigdy nie kupujesz.",
+  "explanation": "Compro…, mucho / poco, a menudo, nunca.",
+  "configuration": {
+    "modelAnswer": "Normalmente hago la compra en el supermercado de mi barrio dos veces a la semana. Siempre compro mucha fruta, pan, leche y huevos. Los sábados voy al mercado: allí el pescado es muy fresco. Nunca compro refrescos porque tienen demasiado azúcar.",
+    "checklist": ["gdzie", "jak często", "co kupujesz", "czego nie kupujesz"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

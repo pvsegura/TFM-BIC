@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-listen-tomatoes",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: ile pomidorów kupuje Ola?",
+  "explanation": "¿Me pone un kilo de tomates?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kilo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Pół kilo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dwa kilo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

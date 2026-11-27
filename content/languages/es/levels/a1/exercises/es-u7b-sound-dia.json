@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-sound-dia",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 56,
+    "phase": "sound"
+  },
+  "prompt": "Ile sylab ma día?",
+  "explanation": "Akcent na i rozdziela samogłoski: dí-a — dwie sylaby.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dwie: dí-a."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jedną: dia."
+      },
+      {
+        "id": "opt-c",
+        "text": "Trzy: d-i-a."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

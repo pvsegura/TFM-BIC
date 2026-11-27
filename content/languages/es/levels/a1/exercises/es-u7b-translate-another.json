@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-translate-another",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 610,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 78,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Jeszcze jeden chleb, proszę.",
+  "explanation": "Otra barra de pan / otro pan, por favor.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Otra barra de pan, por favor.",
+      "Otro pan, por favor.",
+      "Otra barra, por favor."
+    ],
+    "caseSensitive": false
+  }
+}

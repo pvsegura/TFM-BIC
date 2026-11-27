@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-reading-sunday",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 64,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Mercado Central jest otwarty w niedziele.",
+  "explanation": "Los domingos está cerrado.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

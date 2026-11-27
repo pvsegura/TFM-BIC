@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-culture-guapa",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 66,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: sprzedawca mówi do ciebie guapa. Co to znaczy?",
+  "explanation": "To zwykła, serdeczna forma zwracania się do klientki, nie flirt.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "To serdeczna, zwyczajna forma."
+      },
+      {
+        "id": "opt-b",
+        "text": "Że cię podrywa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Że jesteś stałą klientką VIP."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

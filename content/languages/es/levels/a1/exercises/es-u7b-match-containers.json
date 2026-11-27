@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-match-containers",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "Połącz opakowania z produktami.",
+  "explanation": "Una botella de agua, una lata de atún, una barra de pan.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "una botella de",
+        "right": "agua"
+      },
+      {
+        "left": "una lata de",
+        "right": "atún"
+      },
+      {
+        "left": "una barra de",
+        "right": "pan"
+      },
+      {
+        "left": "una docena de",
+        "right": "huevos"
+      }
+    ]
+  }
+}

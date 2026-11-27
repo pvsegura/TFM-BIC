@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-ultimo",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 20,
+    "phase": "connect"
+  },
+  "prompt": "Podchodzisz do stoiska z kolejką. Co pytasz?",
+  "explanation": "¿Quién es el último? — kto jest ostatni w kolejce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Quién es el último?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Quién es el primero?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Dónde está la cola?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

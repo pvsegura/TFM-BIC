@@ -8,7 +8,7 @@
   "status": "published",
   "order": 20,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 13, "phase": "structure" },
+  "book": { "unit": 7, "number": 22, "phase": "structure" },
   "prompt": "Verde ma osobną formę żeńską: verda.",
   "explanation": "Verde ma jedną formę: un abrigo verde, una falda verde.",
   "configuration": {

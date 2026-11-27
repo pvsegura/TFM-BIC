@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-gente",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 45,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: En el mercado hay ___ gente.",
+  "explanation": "Gente jest rodzaju żeńskiego: mucha gente.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "mucha"
+      },
+      {
+        "id": "opt-b",
+        "text": "mucho"
+      },
+      {
+        "id": "opt-c",
+        "text": "muchos"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

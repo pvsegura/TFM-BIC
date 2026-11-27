@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-docena",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 19,
+    "phase": "connect"
+  },
+  "prompt": "Ile to jest una docena de huevos?",
+  "explanation": "Una docena = tuzin = 12.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "12 jajek."
+      },
+      {
+        "id": "opt-b",
+        "text": "10 jajek."
+      },
+      {
+        "id": "opt-c",
+        "text": "6 jajek."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

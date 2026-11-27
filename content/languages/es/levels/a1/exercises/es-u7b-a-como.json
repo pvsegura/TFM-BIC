@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-a-como",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 50,
+    "phase": "structure"
+  },
+  "prompt": "Jak zapytasz, po ile są truskawki?",
+  "explanation": "¿A cómo están + produkt?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿A cómo están las fresas?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Cómo están las fresas?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Cuánto son las fresas de kilo?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

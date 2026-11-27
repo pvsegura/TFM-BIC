@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-de-agua",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 43,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Ilość + de + rzeczownik bez rodzajnika.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Una botella de agua, por favor."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una botella del agua, por favor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una botella agua, por favor."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-listen-lemons",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: sprzedawca daje Oli cztery cytryny.",
+  "explanation": "Le pongo cinco — daje pięć.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

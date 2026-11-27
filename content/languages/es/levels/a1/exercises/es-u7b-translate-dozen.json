@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-translate-dozen",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 76,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: tuzin jajek i litr mleka",
+  "explanation": "Una docena de huevos y un litro de leche.",
+  "configuration": {
+    "acceptedAnswers": ["una docena de huevos y un litro de leche"],
+    "caseSensitive": false
+  }
+}

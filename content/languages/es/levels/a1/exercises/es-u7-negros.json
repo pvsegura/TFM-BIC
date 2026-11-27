@@ -8,7 +8,7 @@
   "status": "published",
   "order": 30,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 14, "phase": "structure" },
+  "book": { "unit": 7, "number": 23, "phase": "structure" },
   "prompt": "Uzupełnij: unos zapatos ___",
   "explanation": "Zapatos (m., mn.) → negros.",
   "configuration": {

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-listen-why",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: po co Ola robi zakupy?",
+  "explanation": "Zaprasza znajomych na paellę w sobotę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na paellę dla znajomych."
+      },
+      {
+        "id": "opt-b",
+        "text": "Na wesele."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na piknik na plaży."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

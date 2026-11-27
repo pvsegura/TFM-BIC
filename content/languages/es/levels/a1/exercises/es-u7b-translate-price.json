@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-translate-price",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 77,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Po ile są banany?",
+  "explanation": "¿A cómo están los plátanos?",
+  "configuration": {
+    "acceptedAnswers": ["¿A cómo están los plátanos?"],
+    "caseSensitive": false
+  }
+}

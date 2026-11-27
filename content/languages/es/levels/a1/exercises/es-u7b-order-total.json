@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-order-total",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 52,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Nic więcej, dziękuję. Ile za wszystko?",
+  "explanation": "Nada más, gracias. ¿Cuánto es todo?",
+  "configuration": {
+    "items": ["Nada", "más,", "gracias.", "¿Cuánto", "es", "todo?"],
+    "joiner": " "
+  }
+}

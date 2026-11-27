@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-gap-de",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 42,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: ilość + de.",
+  "explanation": "Po ilości zawsze de, bez rodzajnika.",
+  "configuration": {
+    "text": "Un kilo ___ naranjas, una botella ___ aceite y cien gramos ___ jamón.",
+    "gaps": [
+      {
+        "accepted": ["de"]
+      },
+      {
+        "accepted": ["de"]
+      },
+      {
+        "accepted": ["de"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

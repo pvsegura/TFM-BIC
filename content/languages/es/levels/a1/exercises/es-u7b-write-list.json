@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-write-list",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 82,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz listę zakupów na kolację dla czterech osób (co najmniej sześć produktów z ilościami), a potem krótki dialog ze sprzedawcą na targu.",
+  "explanation": "Sprawdź: ilość + de, ¿Me pone…?, ¿A cómo están…?, otro / otra, ¿Cuánto es todo?",
+  "configuration": {
+    "modelAnswer": "Lista: un kilo de patatas, medio kilo de cebollas, una docena de huevos, un litro de leche, una botella de aceite y una barra de pan. — Buenos días, ¿me pone un kilo de patatas y medio kilo de cebollas? — Aquí tiene. ¿Algo más? — ¿A cómo están los tomates? — A dos euros el kilo. — Pues otro kilo de tomates. ¿Cuánto es todo? — Son cinco euros con treinta.",
+    "checklist": ["lista z ilościami", "prośba", "pytanie o cenę", "otro / otra", "zapłata"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7b-otro",
+  "lessonId": "es-unit-7-market",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 47,
+    "phase": "structure"
+  },
+  "prompt": "Chcesz jeszcze jedną butelkę wody. Co mówisz?",
+  "explanation": "Otra bez un.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Otra botella de agua, por favor."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una otra botella de agua, por favor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Otro botella de agua, por favor."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

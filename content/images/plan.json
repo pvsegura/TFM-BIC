@@ -118,5 +118,9 @@
   {
     "asset": "a1-pl-u7-jacket.png",
     "prompt": "a young man tries on a winter jacket in front of a full-length mirror in a clothing store, a smiling female shop assistant holds another jacket on a hanger, racks of coats behind, no signs or price tags with text"
+  },
+  {
+    "asset": "a1-u7-market.png",
+    "prompt": "a young woman with a wicker basket buys oranges and tomatoes at a fruit and vegetable stall inside a large covered market hall with iron columns and a glass dome, a smiling middle-aged vendor weighs fruit, no signs or price labels with text"
   }
 ]

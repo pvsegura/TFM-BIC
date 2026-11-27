@@ -8,7 +8,7 @@
   "status": "published",
   "order": 40,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 15, "phase": "structure" },
+  "book": { "unit": 7, "number": 24, "phase": "structure" },
   "prompt": "Wskazujesz koszulę, którą trzymasz: ¿Cuánto cuesta ___ camisa?",
   "explanation": "Blisko ciebie → esta.",
   "configuration": {
