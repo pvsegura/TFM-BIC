@@ -256,7 +256,7 @@ k.ta(
   "transform",
   "Escribe en polaco: Vamos al parque andando.",
   "Idziemy do parku pieszo.",
-  ["Idziemy do parku pieszo.", "Idziemy pieszo do parku.", "Idziemy do parku na piechotę."],
+  ["Idziemy do parku na piechotę.", "Idziemy do parku pieszo.", "Idziemy pieszo do parku."],
 );
 k.ta(
   "pl-es-u3b-translate-second",

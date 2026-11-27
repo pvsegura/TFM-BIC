@@ -265,7 +265,7 @@ k.ta(
   "transform",
   "Escribe en polaco: Hoy es 20 de agosto.",
   "Nominativo: dwudziesty sierpnia.",
-  ["Dzisiaj jest dwudziesty sierpnia.", "Dziś jest dwudziesty sierpnia."],
+  ["Dziś jest dwudziesty sierpnia.", "Dzisiaj jest dwudziesty sierpnia."],
 );
 k.ta(
   "pl-es-u2b-translate-age",

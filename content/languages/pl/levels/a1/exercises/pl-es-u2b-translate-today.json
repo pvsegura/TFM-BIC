@@ -17,7 +17,7 @@
   "prompt": "Escribe en polaco: Hoy es 20 de agosto.",
   "explanation": "Nominativo: dwudziesty sierpnia.",
   "configuration": {
-    "acceptedAnswers": ["Dzisiaj jest dwudziesty sierpnia.", "Dziś jest dwudziesty sierpnia."],
+    "acceptedAnswers": ["Dziś jest dwudziesty sierpnia.", "Dzisiaj jest dwudziesty sierpnia."],
     "caseSensitive": false
   }
 }

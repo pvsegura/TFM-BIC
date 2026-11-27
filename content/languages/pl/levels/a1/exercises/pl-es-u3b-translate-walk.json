@@ -18,9 +18,9 @@
   "explanation": "Idziemy do parku pieszo.",
   "configuration": {
     "acceptedAnswers": [
+      "Idziemy do parku na piechotę.",
       "Idziemy do parku pieszo.",
-      "Idziemy pieszo do parku.",
-      "Idziemy do parku na piechotę."
+      "Idziemy pieszo do parku."
     ],
     "caseSensitive": false
   }
