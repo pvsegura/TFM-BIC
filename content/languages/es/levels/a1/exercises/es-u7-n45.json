@@ -8,7 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 10, "phase": "transform", "lines": 1 },
+  "book": { "unit": 7, "number": 40, "phase": "transform", "lines": 1 },
   "prompt": "Napisz słownie po hiszpańsku: 45",
   "explanation": "Od 31: dziesiątki + y + jedności.",
   "configuration": {

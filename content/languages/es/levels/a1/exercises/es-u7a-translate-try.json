@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-translate-try",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 44,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Mogę przymierzyć tę koszulę?",
+  "explanation": "¿Puedo probarme esta camisa?",
+  "configuration": {
+    "acceptedAnswers": ["¿Puedo probarme esta camisa?", "¿Me puedo probar esta camisa?"],
+    "caseSensitive": false
+  }
+}

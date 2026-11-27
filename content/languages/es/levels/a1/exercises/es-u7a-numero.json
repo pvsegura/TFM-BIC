@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-numero",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 10,
+    "phase": "connect"
+  },
+  "prompt": "Pytasz o rozmiar butów. Które słowo?",
+  "explanation": "Ubrania: la talla; buty: el número.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Qué número usas?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Qué talla de zapatos tienes?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Cuánto mide el zapato?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-match-hundreds",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 29,
+    "phase": "structure"
+  },
+  "prompt": "Połącz liczby z ich nazwą.",
+  "explanation": "Quinientos, setecientos i novecientos są nieregularne.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "101",
+        "right": "ciento uno"
+      },
+      {
+        "left": "500",
+        "right": "quinientos"
+      },
+      {
+        "left": "700",
+        "right": "setecientos"
+      },
+      {
+        "left": "900",
+        "right": "novecientos"
+      },
+      {
+        "left": "1000",
+        "right": "mil"
+      }
+    ]
+  }
+}

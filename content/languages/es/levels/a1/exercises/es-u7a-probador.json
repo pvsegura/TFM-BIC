@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-probador",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Gdzie przymierzasz ubrania?",
+  "explanation": "El probador = przymierzalnia (od probar, próbować).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En el probador."
+      },
+      {
+        "id": "opt-b",
+        "text": "En la caja."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la bolsa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

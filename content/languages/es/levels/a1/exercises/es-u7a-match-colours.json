@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-match-colours",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Połącz kolory z tłumaczeniem.",
+  "explanation": "Marrón = brązowy; gris = szary; amarillo = żółty.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "marrón",
+        "right": "brązowy"
+      },
+      {
+        "left": "gris",
+        "right": "szary"
+      },
+      {
+        "left": "amarillo",
+        "right": "żółty"
+      },
+      {
+        "left": "rosa",
+        "right": "różowy"
+      },
+      {
+        "left": "naranja",
+        "right": "pomarańczowy"
+      }
+    ]
+  }
+}

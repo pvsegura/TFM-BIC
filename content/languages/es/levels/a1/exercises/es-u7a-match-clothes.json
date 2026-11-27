@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-match-clothes",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Połącz ubrania z tłumaczeniem.",
+  "explanation": "La falda = spódnica; los vaqueros = dżinsy; el abrigo = płaszcz.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la falda",
+        "right": "spódnica"
+      },
+      {
+        "left": "los vaqueros",
+        "right": "dżinsy"
+      },
+      {
+        "left": "el abrigo",
+        "right": "płaszcz"
+      },
+      {
+        "left": "el jersey",
+        "right": "sweter"
+      },
+      {
+        "left": "los calcetines",
+        "right": "skarpetki"
+      },
+      {
+        "left": "la bufanda",
+        "right": "szalik"
+      }
+    ]
+  }
+}

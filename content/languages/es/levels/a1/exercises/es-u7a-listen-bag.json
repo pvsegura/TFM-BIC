@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-listen-bag",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Ola kupuje torbę za dziesięć centów.",
+  "explanation": "No, gracias, tengo una — ma swoją.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

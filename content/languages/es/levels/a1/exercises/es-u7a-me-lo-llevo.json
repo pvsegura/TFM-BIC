@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-me-lo-llevo",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 27,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Zaimek przed odmienionym czasownikiem: me lo llevo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me lo llevo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Me llevo lo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Lo me llevo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

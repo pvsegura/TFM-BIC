@@ -110,5 +110,9 @@
   {
     "asset": "a1-pl-u1-office.png",
     "prompt": "a friendly woman team leader standing at the head of a meeting table in a bright modern office, welcoming three new colleagues of different ages who sit with notebooks and coffee cups, no screens with text or signs"
+  },
+  {
+    "asset": "a1-u7-shop.png",
+    "prompt": "a young woman holding a dress on a hanger talks with a friendly shop assistant in a bright clothing store, clothes racks and shelves around, no signs, no price tags with text"
   }
 ]

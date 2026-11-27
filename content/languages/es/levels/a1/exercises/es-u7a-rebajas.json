@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-rebajas",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 11,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy las rebajas?",
+  "explanation": "Las rebajas = wyprzedaż.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Wyprzedaż."
+      },
+      {
+        "id": "opt-b",
+        "text": "Paragon."
+      },
+      {
+        "id": "opt-c",
+        "text": "Przymierzalnia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

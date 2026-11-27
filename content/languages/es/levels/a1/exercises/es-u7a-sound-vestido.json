@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-sound-vestido",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 33,
+    "phase": "sound"
+  },
+  "prompt": "Jak brzmi d w słowie vestido?",
+  "explanation": "Między samogłoskami: miękkie, jak th w angielskim „this”.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Miękko, jak th w „this”."
+      },
+      {
+        "id": "opt-b",
+        "text": "Twardo, jak w „dom”."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jak polskie t."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

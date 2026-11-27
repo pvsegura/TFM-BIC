@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-listen-size",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jaki rozmiar w końcu pasuje Oli?",
+  "explanation": "38 jest za duże; la treinta y seis — ¡Perfecto!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "36."
+      },
+      {
+        "id": "opt-b",
+        "text": "38."
+      },
+      {
+        "id": "opt-c",
+        "text": "40."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-write-dialogue",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 660,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 48,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz dialog w sklepie z ubraniami: szukasz rzeczy na konkretną okazję, pytasz o kolor i rozmiar, przymierzasz, mówisz, jak leży, i kupujesz.",
+  "explanation": "Sprawdź: este / ese / aquel, uzgodnienie koloru, quedar, lo / la, cena słownie.",
+  "configuration": {
+    "modelAnswer": "— Hola, ¿te puedo ayudar? — Sí, busco una chaqueta para el trabajo. — ¿De qué color? — Gris o azul oscuro. ¿Tienes aquella gris en la talla M? — Sí, aquí está. — ¿Qué tal te queda? — Me queda un poco grande. ¿Tienes la S? — Sí. — Ahora me queda bien. ¿Cuánto cuesta? — Ciento veinte euros. — Me la llevo.",
+    "checklist": ["okazja", "kolor i rozmiar", "jak leży", "cena", "decyzja"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

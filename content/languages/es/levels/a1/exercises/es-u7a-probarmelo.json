@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-probarmelo",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 28,
+    "phase": "structure"
+  },
+  "prompt": "Jak zapytasz, czy możesz przymierzyć sweter?",
+  "explanation": "Z bezokolicznikiem: probármelo (zaimki przyczepione) albo ¿Me lo puedo probar?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Puedo probármelo?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Puedo me lo probar?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Puedo probar me lo?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

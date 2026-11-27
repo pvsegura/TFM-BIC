@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-gap-demonstratives",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: este / esta / estos / estas (blisko mnie).",
+  "explanation": "Este vestido, esta falda, estos zapatos, estas botas.",
+  "configuration": {
+    "text": "Me gusta ___ vestido, ___ falda y ___ zapatos.",
+    "gaps": [
+      {
+        "accepted": ["este"]
+      },
+      {
+        "accepted": ["esta"]
+      },
+      {
+        "accepted": ["estos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-reading-when",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 36,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: kiedy tradycyjnie zaczynają się zimowe wyprzedaże w Hiszpanii?",
+  "explanation": "En invierno, desde el siete de enero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "7 stycznia."
+      },
+      {
+        "id": "opt-b",
+        "text": "1 lipca."
+      },
+      {
+        "id": "opt-c",
+        "text": "1 grudnia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

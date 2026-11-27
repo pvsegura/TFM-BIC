@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-write-wearing",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 670,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 49,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Opisz, w co jesteś dziś ubrany / ubrana (kolory!), i jaką rzecz chcesz kupić w tym sezonie.",
+  "explanation": "Llevo + ubranie + kolor (uzgodniony); quiero comprar…",
+  "configuration": {
+    "modelAnswer": "Hoy llevo unos vaqueros azules, una camiseta blanca, un jersey gris y unas zapatillas negras. Este invierno quiero comprar un abrigo marrón y una bufanda roja. En enero espero las rebajas.",
+    "checklist": ["ubrania z kolorami", "plan zakupu"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

@@ -8,7 +8,7 @@
   "status": "published",
   "order": 100,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 9, "phase": "structure" },
+  "book": { "unit": 7, "number": 6, "phase": "connect" },
   "prompt": "Co znaczy ¿Qué talla usa?",
   "explanation": "La talla — rozmiar (ubrania).",
   "configuration": {

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-sound-donde",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 35,
+    "phase": "sound"
+  },
+  "prompt": "W którym słowie d jest twarde, jak w „dom”?",
+  "explanation": "Po pauzie i po n, l: ¿Dónde? — twarde.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Dónde?"
+      },
+      {
+        "id": "opt-b",
+        "text": "todo"
+      },
+      {
+        "id": "opt-c",
+        "text": "Madrid"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

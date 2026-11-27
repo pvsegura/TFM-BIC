@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-sound-usted",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 34,
+    "phase": "sound"
+  },
+  "prompt": "W słowie usted końcowe d wymawia się mocno, jak polskie t.",
+  "explanation": "Nie: końcowe d jest bardzo słabe albo prawie nieme.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

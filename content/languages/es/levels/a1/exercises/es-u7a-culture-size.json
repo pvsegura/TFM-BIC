@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-culture-size",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 39,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: kobiecy rozmiar 38 w Hiszpanii to zwykle jaki rozmiar w Polsce?",
+  "explanation": "Hiszpańskie rozmiary są zwykle o jeden większe: 38 hiszpańskie ≈ 36 polskie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "36."
+      },
+      {
+        "id": "opt-b",
+        "text": "38."
+      },
+      {
+        "id": "opt-c",
+        "text": "40."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

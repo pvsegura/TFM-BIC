@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-order-colour",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 31,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż pytanie: Masz go w kolorze czarnym?",
+  "explanation": "¿Lo tienes en + kolor?",
+  "configuration": {
+    "items": ["¿Lo", "tienes", "en", "negro?"],
+    "joiner": " "
+  }
+}

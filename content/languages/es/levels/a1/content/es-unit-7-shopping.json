@@ -8,82 +8,322 @@
   "order": 160,
   "unit": 7,
   "instructionLanguage": "pl",
-  "title": "Jednostka 7. De compras — ubrania, kolory, ceny",
-  "description": "Kupujesz ubrania: kolory, rozmiary, liczby do stu i zaimki este, ese, aquel.",
+  "title": "Jednostka 7A. ¿Me lo pruebo? — ubrania, kolory, rozmiary i ceny",
+  "description": "Kupujesz ubrania: pytasz o kolor, rozmiar i cenę, przymierzasz i mówisz, jak leży: este, ese, aquel, kolory, me queda grande, lo / la / los / las i liczby do tysiąca.",
   "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Sukienka na wesele" },
     {
       "type": "explanation",
-      "text": "Ubrania: la camiseta (koszulka), la camisa (koszula), los pantalones (spodnie), la falda (spódnica), el vestido (sukienka), la chaqueta (kurtka/marynarka), los zapatos (buty), el abrigo (płaszcz)."
+      "text": "Ola, Polka mieszkająca w Walencji, idzie na wesele koleżanki z pracy i szuka sukienki. Wchodzi do sklepu z ubraniami. Za pierwszym razem posłuchaj, czego szuka i w jakim kolorze. Za drugim zaznacz, jaki rozmiar przymierza, jak leży sukienka i ile w końcu płaci. Za trzecim wyłap słowa, którymi pokazuje rzeczy: este, ese, aquel."
     },
     {
-      "type": "explanation",
-      "text": "Kolory to przymiotniki — zgadzają się z rzeczownikiem: un vestido rojo, una falda roja, unos zapatos negros. Kolory na -e lub spółgłoskę mają jedną formę dla obu rodzajów: verde, azul, gris (liczba mnoga: verdes, azules, grises)."
-    },
-    {
-      "type": "example",
-      "text": "Busco una chaqueta negra, talla M.",
-      "translation": "Szukam czarnej kurtki, rozmiar M."
-    },
-    {
-      "type": "explanation",
-      "text": "Buduj zdania — este/esta (ten/ta — blisko mnie), ese/esa (ten/ta — blisko ciebie), aquel/aquella (tamten — daleko). Liczba mnoga: estos/estas, esos/esas. Esto/eso — gdy nie nazywasz rzeczy: ¿Qué es esto?"
-    },
-    {
-      "type": "example",
-      "text": "¿Cuánto cuesta esta camisa? — Veinticinco euros.",
-      "translation": "Ile kosztuje ta koszula? — Dwadzieścia pięć euro."
-    },
-    {
-      "type": "example",
-      "text": "Me llevo estos pantalones.",
-      "translation": "Biorę te spodnie."
-    },
-    {
-      "type": "explanation",
-      "text": "Liczby do 100: cuarenta (40), cincuenta (50), sesenta (60), setenta (70), ochenta (80), noventa (90), cien (100). 45 = cuarenta y cinco, 99 = noventa y nueve. Uwaga: siete → setenta (bez „sie”), nueve → noventa."
-    },
-    {
-      "type": "explanation",
-      "text": "Łącz i zapamiętuj — skojarzenie: ESTE — „jest tu” (blisko); ESE — „sięgasz” po coś koło rozmówcy; AQUEL — „a hen”, daleko."
+      "type": "image",
+      "asset": "a1-u7-shop.png",
+      "alt": "Młoda kobieta trzyma sukienkę na wieszaku i rozmawia z ekspedientką w jasnym sklepie z ubraniami."
     },
     {
       "type": "dialogue",
       "lines": [
         {
-          "speaker": "Dependiente",
-          "text": "Buenas tardes, ¿qué busca?",
-          "translation": "Dzień dobry, czego Pan szuka?"
+          "speaker": "Dependienta",
+          "text": "Hola, buenas tardes. ¿Te puedo ayudar?",
+          "translation": "Dzień dobry. Mogę ci pomóc?"
         },
         {
-          "speaker": "Marek",
-          "text": "Busco unos pantalones. ¿Tienen estos en azul?",
-          "translation": "Szukam spodni. Czy macie te w kolorze niebieskim?"
+          "speaker": "Ola",
+          "text": "Sí, gracias. Busco un vestido para una boda.",
+          "translation": "Tak, dziękuję. Szukam sukienki na wesele."
         },
         {
-          "speaker": "Dependiente",
-          "text": "Sí. ¿Qué talla usa?",
-          "translation": "Tak. Jaki rozmiar Pan nosi?"
+          "speaker": "Dependienta",
+          "text": "¿De qué color lo buscas?",
+          "translation": "W jakim kolorze jej szukasz?"
         },
         {
-          "speaker": "Marek",
-          "text": "La cuarenta y dos. ¿Cuánto cuestan?",
-          "translation": "Czterdzieści dwa. Ile kosztują?"
+          "speaker": "Ola",
+          "text": "Azul o verde. Nada negro: es una boda de día.",
+          "translation": "Niebieskiej albo zielonej. Nic czarnego: to wesele w dzień."
         },
         {
-          "speaker": "Dependiente",
-          "text": "Cincuenta y nueve euros.",
-          "translation": "Pięćdziesiąt dziewięć euro."
+          "speaker": "Dependienta",
+          "text": "Mira, tenemos este vestido azul y aquel verde de allí, al lado de la ventana.",
+          "translation": "Zobacz, mamy tę niebieską sukienkę i tamtą zieloną, tam, obok okna."
         },
         {
-          "speaker": "Marek",
-          "text": "Vale, me los llevo.",
-          "translation": "Dobrze, biorę je."
+          "speaker": "Ola",
+          "text": "Me gusta mucho ese azul. ¿Lo tienes en la talla treinta y ocho?",
+          "translation": "Bardzo mi się podoba ta niebieska. Masz ją w rozmiarze trzydzieści osiem?"
+        },
+        {
+          "speaker": "Dependienta",
+          "text": "Sí, aquí está. Los probadores están al fondo.",
+          "translation": "Tak, proszę. Przymierzalnie są w głębi."
+        },
+        {
+          "speaker": "Dependienta",
+          "text": "¿Qué tal te queda?",
+          "translation": "Jak leży?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Me queda un poco grande. ¿Tienes una talla menos?",
+          "translation": "Jest trochę za duża. Masz rozmiar mniejszy?"
+        },
+        {
+          "speaker": "Dependienta",
+          "text": "Sí, la treinta y seis. Toma… ¿Y ahora?",
+          "translation": "Tak, trzydzieści sześć. Proszę… A teraz?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "¡Perfecto! Me queda muy bien. ¿Cuánto cuesta?",
+          "translation": "Idealnie! Leży bardzo dobrze. Ile kosztuje?"
+        },
+        {
+          "speaker": "Dependienta",
+          "text": "Ochenta euros, pero hoy tiene un veinte por ciento de descuento: sesenta y cuatro.",
+          "translation": "Osiemdziesiąt euro, ale dziś ma dwadzieścia procent zniżki: sześćdziesiąt cztery."
+        },
+        {
+          "speaker": "Ola",
+          "text": "¡Genial! Me lo llevo. ¿Puedo pagar con tarjeta?",
+          "translation": "Super! Biorę ją. Mogę zapłacić kartą?"
+        },
+        {
+          "speaker": "Dependienta",
+          "text": "Claro. ¿Quieres una bolsa? Cuesta diez céntimos.",
+          "translation": "Jasne. Chcesz torbę? Kosztuje dziesięć centów."
+        },
+        {
+          "speaker": "Ola",
+          "text": "No, gracias, tengo una.",
+          "translation": "Nie, dziękuję, mam swoją."
         }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Ubrania, kolory i sklep" },
+    {
+      "type": "table",
+      "caption": "Ubrania (z rodzajnikiem!)",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la camiseta", "koszulka, T-shirt", "la camisa", "koszula"],
+        ["el jersey", "sweter", "la chaqueta", "kurtka, marynarka"],
+        ["el abrigo", "płaszcz", "el vestido", "sukienka"],
+        ["la falda", "spódnica", "los pantalones", "spodnie"],
+        ["los vaqueros", "dżinsy", "el traje", "garnitur"],
+        ["los zapatos", "buty", "las zapatillas", "buty sportowe"],
+        ["las botas", "kozaki, botki", "los calcetines", "skarpetki"],
+        ["el bolso", "torebka", "la bufanda", "szalik"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Kolory: rodzaj męski / żeński",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["blanco / blanca", "biały", "negro / negra", "czarny"],
+        ["rojo / roja", "czerwony", "amarillo / amarilla", "żółty"],
+        ["verde", "zielony", "azul", "niebieski"],
+        ["gris", "szary", "marrón", "brązowy"],
+        ["rosa", "różowy", "naranja", "pomarańczowy"],
+        ["azul claro", "jasnoniebieski", "azul oscuro", "ciemnoniebieski"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "W sklepie",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la talla", "rozmiar (ubrania)", "el número", "rozmiar (buta)"],
+        ["el probador", "przymierzalnia", "probarse", "przymierzać"],
+        ["la caja", "kasa", "la bolsa", "torba, reklamówka"],
+        ["las rebajas", "wyprzedaż", "el descuento", "zniżka"],
+        ["barato / caro", "tani / drogi", "el tique", "paragon"],
+        ["cambiar", "wymienić", "devolver", "zwrócić"]
       ]
     },
     {
       "type": "explanation",
-      "text": "Misja: opisz, w co jesteś dziś ubrany/ubrana, z kolorami (Llevo una camiseta blanca y…) i zapytaj o cenę dwóch rzeczy."
+      "text": "Łącz i zapamiętuj — wiele słów zna Polak: jersey (dżersej), bluza i sweter po hiszpańsku to el jersey; los vaqueros to dosłownie „kowbojskie” spodnie (vaquero = kowboj). BOLSO (torebka) i BOLSA (torba) to jak „bolsa” — sakiewka z pieniędzmi; giełda też nazywa się la Bolsa. MARRÓN brzmi jak „marron” — kasztan, brązowy jak kasztan. A PROBADOR pochodzi od probar — próbować: tam „próbujesz” ubrania."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Este, ese, aquel; quedar; lo i la; liczby do 1000"
+    },
+    {
+      "type": "explanation",
+      "text": "Polski ma dwa stopnie wskazywania: ten i tamten. Hiszpański ma trzy. Este — blisko mnie, przy osobie mówiącej (tu: aquí). Ese — blisko ciebie albo niedaleko (tam, przy tobie: ahí). Aquel — daleko od nas obu (tam, dalej: allí). Wszystkie odmieniają się przez rodzaj i liczbę jak przymiotniki."
+    },
+    {
+      "type": "table",
+      "caption": "Zaimki wskazujące",
+      "columns": ["Odległość", "Męski", "Żeński", "L. mn. męska", "L. mn. żeńska", "Gdzie?"],
+      "rows": [
+        ["blisko mnie", "este", "esta", "estos", "estas", "aquí"],
+        ["blisko ciebie", "ese", "esa", "esos", "esas", "ahí"],
+        ["daleko", "aquel", "aquella", "aquellos", "aquellas", "allí"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Me gusta esto vestido. / ¿Cuánto cuesta este camisa?",
+      "right": "Me gusta este vestido. / ¿Cuánto cuesta esta camisa?",
+      "explanation": "Esto, eso i aquello (z -o) nigdy nie stoją przed rzeczownikiem: znaczą „to” w sensie „ta rzecz”, gdy jej nie nazywasz: ¿Qué es esto? Przed rzeczownikiem używasz este / esta / estos / estas, zgodnie z rodzajem: esta camisa, estos zapatos."
+    },
+    {
+      "type": "explanation",
+      "text": "Kolory to przymiotniki: stoją po rzeczowniku i zgadzają się z nim. Te na -o mają cztery formy (un vestido rojo, una falda roja, unos zapatos rojos, unas botas rojas); te na -e lub spółgłoskę mają dwie: verde / verdes, azul / azules, gris / grises, marrón / marrones. Rosa i naranja zwykle się nie zmieniają: unos calcetines rosa."
+    },
+    {
+      "type": "explanation",
+      "text": "Jak coś leży, mówi się czasownikiem quedar, który działa jak gustar: podmiotem jest ubranie, a osoba stoi w celowniku. Me queda bien (dobrze na mnie leży), te queda grande (jest na ciebie za duże), me quedan pequeños los zapatos (buty są na mnie za małe). To trzecie znaczenie quedar: znasz już quedar con alguien (umówić się) i quedarse (zostać)."
+    },
+    {
+      "type": "table",
+      "caption": "¿Qué tal te queda?",
+      "columns": ["Hiszpański", "Polski"],
+      "rows": [
+        ["Me queda bien / muy bien.", "Dobrze / bardzo dobrze leży."],
+        ["Me queda grande / pequeño.", "Jest za duży / za mały."],
+        ["Me queda largo / corto.", "Jest za długi / za krótki."],
+        ["Me quedan estrechos los pantalones.", "Spodnie są za ciasne."],
+        ["Te queda genial ese color.", "Świetnie ci w tym kolorze."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Yo quedo grande el vestido. / El vestido me queda grando.",
+      "right": "El vestido me queda grande. / Me queda grande.",
+      "explanation": "Jak przy gustar: ubranie jest podmiotem (queda / quedan), osoba to zaimek me, te, le. Przymiotnik zgadza się z ubraniem: el vestido me queda pequeño, la falda me queda pequeña."
+    },
+    {
+      "type": "explanation",
+      "text": "Żeby nie powtarzać rzeczownika, używasz zaimków lo, la, los, las — jak polskie go, ją, je. Lo zastępuje rzeczownik męski (el vestido → lo), la żeński (la falda → la), los i las liczbę mnogą. Stoją przed odmienionym czasownikiem: Me lo llevo (biorę go / ją). Z bezokolicznikiem przyczepiają się do końca: ¿Puedo probármelo? albo ¿Me lo puedo probar?"
+    },
+    {
+      "type": "table",
+      "caption": "Lo, la, los, las",
+      "columns": ["Rzecz", "Zaimek", "Przykład"],
+      "rows": [
+        ["el vestido", "lo", "¿Lo tienes en azul? — Sí, lo tengo."],
+        ["la camisa", "la", "La quiero en blanco."],
+        ["los zapatos", "los", "Me los pruebo."],
+        ["las botas", "las", "Las compro hoy."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Me llevo lo. / Llevo lo.",
+      "right": "Me lo llevo. / Lo llevo.",
+      "explanation": "Lo, la, los, las stoją przed odmienionym czasownikiem, a po me / te: me lo llevo, te la regalo. Za czasownikiem — tylko przyczepione do bezokolicznika (probarlo) albo do trybu rozkazującego, który poznasz później."
+    },
+    {
+      "type": "explanation",
+      "text": "Liczby do tysiąca. Sto to cien, ale gdy coś po nim następuje — ciento: ciento uno (101), ciento cincuenta (150). Setki od 200 odmieniają się przez rodzaj: doscientos euros, doscientas personas. Trzy setki są nieregularne: quinientos (500), setecientos (700), novecientos (900). Tysiąc to mil, bez un: mil euros, dos mil."
+    },
+    {
+      "type": "table",
+      "caption": "Setki i tysiąc",
+      "columns": ["Liczba", "Hiszpański", "Liczba", "Hiszpański"],
+      "rows": [
+        ["100", "cien", "600", "seiscientos / seiscientas"],
+        ["101", "ciento uno", "700", "setecientos"],
+        ["200", "doscientos / doscientas", "800", "ochocientos"],
+        ["300", "trescientos", "900", "novecientos"],
+        ["400", "cuatrocientos", "1000", "mil"],
+        ["500", "quinientos", "1250", "mil doscientos cincuenta"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "cien y cinco / cincocientos / un mil",
+      "right": "ciento cinco / quinientos / mil",
+      "explanation": "Między setkami a jednościami nie ma y (ciento cinco, doscientos tres) — y stoi tylko między dziesiątkami a jednościami: noventa y nueve. Zapamiętaj trzy nieregularne setki: quinientos, setecientos, novecientos."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Miękkie d: talla mediana, ¿de verdad?, usted"
+    },
+    {
+      "type": "explanation",
+      "text": "Hiszpańskie d brzmi jak polskie d tylko na początku po pauzie i po n lub l: ¿Dónde? Dar, el día. Między samogłoskami i po innych spółgłoskach jest miękkie i szczelinowe — język tylko lekko dotyka zębów, jak angielskie th w „this”: mediana, vestido, todo, ¿de verdad? Na końcu słowa d jest bardzo słabe albo prawie znika: usted, Madrid, verdad. Polacy wymawiają je zbyt twardo — rozluźnij język."
+    },
+    {
+      "type": "table",
+      "caption": "Trzy rodzaje d",
+      "columns": ["Pozycja", "Przykład", "Jak brzmi"],
+      "rows": [
+        ["po pauzie, po n, l", "¿Dónde?, cuando, el día", "twarde d jak w „dom”"],
+        ["między samogłoskami", "vestido, todo, mediana", "miękkie, jak th w „this”"],
+        ["na końcu słowa", "usted, Madrid, verdad", "bardzo słabe albo nieme"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Zakupy po hiszpańsku" },
+    {
+      "type": "reading",
+      "title": "Las rebajas de enero",
+      "paragraphs": [
+        "Tradicionalmente, en España hay dos temporadas de rebajas: en invierno, desde el siete de enero, y en verano, desde el uno de julio. Muchas tiendas bajan los precios un treinta, un cincuenta o incluso un setenta por ciento.",
+        "Lucía siempre espera las rebajas para comprar ropa. Este año compra un abrigo gris de doscientos euros por solo noventa y nueve, unas botas marrones y dos jerséis.",
+        "En las rebajas hay mucha gente y los probadores están llenos. Por eso Lucía va a las tiendas a las diez de la mañana, cuando abren.",
+        "Un consejo: guarda siempre el tique. Con el tique puedes cambiar la ropa o devolverla, normalmente en treinta días, si no te queda bien."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Hiszpańskie sieci odzieżowe znasz z każdej polskiej galerii handlowej — wiele z nich pochodzi właśnie z Hiszpanii. W Hiszpanii są też małe sklepy rodzinne w centrach miast i duże centra handlowe na obrzeżach.",
+        "Sklepy w Hiszpanii są zwykle otwarte od 10:00 do 21:00 lub 22:00. Małe sklepy często zamyka się w porze sjesty, mniej więcej od 14:00 do 17:00. W wielu regionach duże sklepy mogą być otwarte także w niektóre niedziele.",
+        "Hiszpańskie rozmiary ubrań różnią się od polskich: kobiecy rozmiar 38 w Hiszpanii to zwykle polskie 36. Rozmiary butów są takie same jak w Polsce (38, 42…). Zawsze warto przymierzyć: ¿Puedo probármelo?",
+        "W sklepach z ubraniami ekspedienci zwykle mówią klientom na ty, zwłaszcza młodszym. Za plastikową torbę się płaci, więc Hiszpanie często mają własną."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: kupujesz ubranie na ważną okazję" },
+    {
+      "type": "mission",
+      "title": "Kup jedną rzecz w hiszpańskim sklepie z ubraniami",
+      "steps": [
+        "Powiedz ekspedientowi, czego szukasz i na jaką okazję: Busco… para…",
+        "Opisz kolor i zapytaj o rozmiar: ¿Lo / La tienes en azul, en la talla…?",
+        "Wskaż trzy rzeczy w sklepie z este, ese i aquel, zgodnie z odległością.",
+        "Po przymierzeniu powiedz, jak leży, i poproś o inny rozmiar: Me queda grande. ¿Tienes una talla menos?",
+        "Zapytaj o cenę, zrozum zniżkę i powiedz cenę na głos (do tysiąca).",
+        "Zdecyduj: Me lo llevo / Me la llevo albo Me lo pienso, gracias — i nagraj się, wymawiając miękko vestido, todo, mediana i usted."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Busco un vestido para una boda.", "translation": "Szukam sukienki na wesele." },
+        { "text": "¿Lo tienes en azul?", "translation": "Masz to w kolorze niebieskim?" },
+        {
+          "text": "Me gusta esta camisa, pero prefiero aquella.",
+          "translation": "Podoba mi się ta koszula, ale wolę tamtą."
+        },
+        { "text": "¿Puedo probármelo?", "translation": "Mogę to przymierzyć?" },
+        {
+          "text": "Me queda grande. ¿Tienes una talla menos?",
+          "translation": "Jest za duże. Masz rozmiar mniejszy?"
+        },
+        { "text": "¿Cuánto cuestan estos zapatos?", "translation": "Ile kosztują te buty?" },
+        {
+          "text": "Cuestan ciento veinte euros.",
+          "translation": "Kosztują sto dwadzieścia euro."
+        },
+        { "text": "Me lo llevo.", "translation": "Biorę to." }
+      ],
+      "canDo": [
+        "nazwać ubrania i kolory, uzgadniając kolor z rzeczownikiem",
+        "wskazać rzeczy z este, ese, aquel",
+        "powiedzieć, jak leży ubranie, z quedar",
+        "zastąpić rzeczownik zaimkiem lo, la, los, las",
+        "zrozumieć i powiedzieć ceny do tysiąca",
+        "wymówić miękkie d między samogłoskami i na końcu słowa"
+      ]
     }
   ]
 }

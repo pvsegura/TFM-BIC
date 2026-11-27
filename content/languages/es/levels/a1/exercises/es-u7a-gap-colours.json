@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-gap-colours",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 23,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij kolor we właściwej formie.",
+  "explanation": "Una camisa blanca, unos zapatos negros, unas botas marrones.",
+  "configuration": {
+    "text": "Una camisa ___ (blanco), unos zapatos ___ (negro) y unas botas ___ (marrón).",
+    "gaps": [
+      {
+        "accepted": ["blanca"]
+      },
+      {
+        "accepted": ["negros"]
+      },
+      {
+        "accepted": ["marrones"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

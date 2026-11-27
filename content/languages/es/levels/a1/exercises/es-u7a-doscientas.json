@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-doscientas",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 30,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: En la tienda hay ___ camisetas (200).",
+  "explanation": "Setki zgadzają się z rodzajem: doscientas camisetas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "doscientas"
+      },
+      {
+        "id": "opt-b",
+        "text": "doscientos"
+      },
+      {
+        "id": "opt-c",
+        "text": "dos cientas"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-translate-looking",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 610,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 43,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Szukam czarnych butów.",
+  "explanation": "Busco unos zapatos negros.",
+  "configuration": {
+    "acceptedAnswers": ["Busco unos zapatos negros.", "Busco zapatos negros."],
+    "caseSensitive": false
+  }
+}

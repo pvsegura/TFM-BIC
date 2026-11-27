@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-gap-pronouns",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 26,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij zaimkiem: lo, la, los, las.",
+  "explanation": "El vestido → lo; la camisa → la; los zapatos → los.",
+  "configuration": {
+    "text": "— ¿Y el vestido? — Me ___ llevo. — ¿Y la camisa? — No ___ quiero. — ¿Y los zapatos? — Me ___ pruebo.",
+    "gaps": [
+      {
+        "accepted": ["lo"]
+      },
+      {
+        "accepted": ["la"]
+      },
+      {
+        "accepted": ["los"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

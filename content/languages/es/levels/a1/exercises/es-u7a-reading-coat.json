@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-reading-coat",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 37,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ile Lucía płaci za płaszcz?",
+  "explanation": "Un abrigo gris de doscientos euros por solo noventa y nueve.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "99 euro."
+      },
+      {
+        "id": "opt-b",
+        "text": "200 euro."
+      },
+      {
+        "id": "opt-c",
+        "text": "90 euro."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-translate-fits",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 45,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Te spodnie są na mnie za małe.",
+  "explanation": "Estos pantalones me quedan pequeños.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Estos pantalones me quedan pequeños.",
+      "Los pantalones me quedan pequeños."
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-gap-quedar",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 24,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: queda / quedan.",
+  "explanation": "Jedna rzecz: queda; wiele rzeczy: quedan.",
+  "configuration": {
+    "text": "El vestido me ___ bien, pero los zapatos me ___ pequeños.",
+    "gaps": [
+      {
+        "accepted": ["queda"]
+      },
+      {
+        "accepted": ["quedan"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

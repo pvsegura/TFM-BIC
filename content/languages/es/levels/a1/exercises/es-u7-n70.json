@@ -8,7 +8,7 @@
   "status": "published",
   "order": 60,
   "instructionLanguage": "pl",
-  "book": { "unit": 7, "number": 6, "phase": "structure" },
+  "book": { "unit": 7, "number": 17, "phase": "structure" },
   "prompt": "Jak jest 70?",
   "explanation": "70 — setenta (bez „ie”).",
   "configuration": {

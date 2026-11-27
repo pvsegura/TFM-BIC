@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-order-size",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 32,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż zdanie: Jest za duże. Masz rozmiar mniejszy?",
+  "explanation": "Me queda grande. ¿Tienes una talla menos?",
+  "configuration": {
+    "items": ["Me", "queda", "grande.", "¿Tienes", "una", "talla", "menos?"],
+    "joiner": " "
+  }
+}

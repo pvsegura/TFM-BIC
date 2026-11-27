@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-translate-price",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 650,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 47,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz słownie po hiszpańsku: 350 euro.",
+  "explanation": "Trescientos cincuenta euros.",
+  "configuration": {
+    "acceptedAnswers": ["trescientos cincuenta euros"],
+    "caseSensitive": false
+  }
+}

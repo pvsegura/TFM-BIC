@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-listen-black",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: Ola chce czarną sukienkę.",
+  "explanation": "Nada negro: es una boda de día — niebieską albo zieloną.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

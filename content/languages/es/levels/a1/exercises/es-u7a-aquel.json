@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-aquel",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Pokazujesz kurtkę na drugim końcu sklepu. Co mówisz?",
+  "explanation": "Daleko od nas obu: aquel / aquella.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me gusta aquella chaqueta."
+      },
+      {
+        "id": "opt-b",
+        "text": "Me gusta esta chaqueta."
+      },
+      {
+        "id": "opt-c",
+        "text": "Me gusta aquello chaqueta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

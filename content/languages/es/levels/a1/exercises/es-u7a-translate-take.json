@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-translate-take",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 46,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Odpowiedz po hiszpańsku, że bierzesz kurtkę (la chaqueta): Biorę ją.",
+  "explanation": "Żeński zaimek: me la llevo.",
+  "configuration": {
+    "acceptedAnswers": ["Me la llevo.", "Me la llevo, gracias."],
+    "caseSensitive": false
+  }
+}

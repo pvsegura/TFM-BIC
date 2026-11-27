@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u7a-queda-grande",
+  "lessonId": "es-unit-7-shopping",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 7,
+    "number": 25,
+    "phase": "structure"
+  },
+  "prompt": "Spódnica jest na ciebie za duża. Co mówisz?",
+  "explanation": "Quedar jak gustar; przymiotnik zgadza się z falda: grande.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La falda me queda grande."
+      },
+      {
+        "id": "opt-b",
+        "text": "Yo quedo grande la falda."
+      },
+      {
+        "id": "opt-c",
+        "text": "La falda me quedo grande."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
