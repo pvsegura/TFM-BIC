@@ -1,0 +1,232 @@
+{
+  "schemaVersion": 1,
+  "id": "es-numbers",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1030,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Números",
+  "description": "Cardinales del 0 al 1000.",
+  "items": [
+    {
+      "id": "pl-es-zero",
+      "status": "published",
+      "order": 10,
+      "lemma": "zero",
+      "translation": "cero",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-jeden",
+      "status": "published",
+      "order": 20,
+      "lemma": "jeden",
+      "translation": "uno",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dwa",
+      "status": "published",
+      "order": 30,
+      "lemma": "dwa",
+      "translation": "dos",
+      "levelId": "a1",
+      "partOfSpeech": "numeral",
+      "note": "Dwie con femeninos: dwie kawy."
+    },
+    {
+      "id": "pl-es-trzy",
+      "status": "published",
+      "order": 40,
+      "lemma": "trzy",
+      "translation": "tres",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-cztery",
+      "status": "published",
+      "order": 50,
+      "lemma": "cztery",
+      "translation": "cuatro",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-piec",
+      "status": "published",
+      "order": 60,
+      "lemma": "pięć",
+      "translation": "cinco",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-szesc",
+      "status": "published",
+      "order": 70,
+      "lemma": "sześć",
+      "translation": "seis",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-siedem",
+      "status": "published",
+      "order": 80,
+      "lemma": "siedem",
+      "translation": "siete",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-osiem",
+      "status": "published",
+      "order": 90,
+      "lemma": "osiem",
+      "translation": "ocho",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dziewiec",
+      "status": "published",
+      "order": 100,
+      "lemma": "dziewięć",
+      "translation": "nueve",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dziesiec",
+      "status": "published",
+      "order": 110,
+      "lemma": "dziesięć",
+      "translation": "diez",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-jedenascie",
+      "status": "published",
+      "order": 120,
+      "lemma": "jedenaście",
+      "translation": "once",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dwanascie",
+      "status": "published",
+      "order": 130,
+      "lemma": "dwanaście",
+      "translation": "doce",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-pietnascie",
+      "status": "published",
+      "order": 140,
+      "lemma": "piętnaście",
+      "translation": "quince",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dwadziescia",
+      "status": "published",
+      "order": 150,
+      "lemma": "dwadzieścia",
+      "translation": "veinte",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-trzydziesci",
+      "status": "published",
+      "order": 160,
+      "lemma": "trzydzieści",
+      "translation": "treinta",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-czterdziesci",
+      "status": "published",
+      "order": 170,
+      "lemma": "czterdzieści",
+      "translation": "cuarenta",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-piecdziesiat",
+      "status": "published",
+      "order": 180,
+      "lemma": "pięćdziesiąt",
+      "translation": "cincuenta",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-sto",
+      "status": "published",
+      "order": 190,
+      "lemma": "sto",
+      "translation": "cien",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-dwiescie",
+      "status": "published",
+      "order": 200,
+      "lemma": "dwieście",
+      "translation": "doscientos",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-piecset",
+      "status": "published",
+      "order": 210,
+      "lemma": "pięćset",
+      "translation": "quinientos",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-tysiac",
+      "status": "published",
+      "order": 220,
+      "lemma": "tysiąc",
+      "translation": "mil",
+      "levelId": "a1",
+      "partOfSpeech": "numeral"
+    },
+    {
+      "id": "pl-es-liczba",
+      "status": "published",
+      "order": 230,
+      "lemma": "liczba",
+      "translation": "el número (cantidad)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-numer",
+      "status": "published",
+      "order": 240,
+      "lemma": "numer",
+      "translation": "el número (de teléfono, de casa)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    }
+  ]
+}

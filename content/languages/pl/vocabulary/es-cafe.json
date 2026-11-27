@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "id": "es-cafe",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1090,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "En la cafetería",
+  "description": "Bebidas, dulces y pagar.",
+  "items": [
+    {
+      "id": "pl-es-kawa",
+      "status": "published",
+      "order": 10,
+      "lemma": "kawa",
+      "translation": "el café",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-herbata",
+      "status": "published",
+      "order": 20,
+      "lemma": "herbata",
+      "translation": "el té",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-woda",
+      "status": "published",
+      "order": 30,
+      "lemma": "woda",
+      "translation": "el agua",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-sok",
+      "status": "published",
+      "order": 40,
+      "lemma": "sok",
+      "translation": "el zumo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-mleko",
+      "status": "published",
+      "order": 50,
+      "lemma": "mleko",
+      "translation": "la leche",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-piwo",
+      "status": "published",
+      "order": 60,
+      "lemma": "piwo",
+      "translation": "la cerveza",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-wino",
+      "status": "published",
+      "order": 70,
+      "lemma": "wino",
+      "translation": "el vino",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-cukier",
+      "status": "published",
+      "order": 80,
+      "lemma": "cukier",
+      "translation": "el azúcar",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-cytryna",
+      "status": "published",
+      "order": 90,
+      "lemma": "cytryna",
+      "translation": "el limón",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-ciastko",
+      "status": "published",
+      "order": 100,
+      "lemma": "ciastko",
+      "translation": "el pastel; la galleta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-ciasto",
+      "status": "published",
+      "order": 110,
+      "lemma": "ciasto",
+      "translation": "la tarta, el bizcocho",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-sernik",
+      "status": "published",
+      "order": 120,
+      "lemma": "sernik",
+      "translation": "la tarta de queso",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-szarlotka",
+      "status": "published",
+      "order": 130,
+      "lemma": "szarlotka",
+      "translation": "la tarta de manzana",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-makowiec",
+      "status": "published",
+      "order": 140,
+      "lemma": "makowiec",
+      "translation": "el bizcocho de semillas de amapola",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-paczek",
+      "status": "published",
+      "order": 150,
+      "lemma": "pączek",
+      "translation": "el buñuelo relleno",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kanapka",
+      "status": "published",
+      "order": 160,
+      "lemma": "kanapka",
+      "translation": "el bocadillo, el sándwich",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kawalek",
+      "status": "published",
+      "order": 170,
+      "lemma": "kawałek",
+      "translation": "el trozo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-poprosze",
+      "status": "published",
+      "order": 180,
+      "lemma": "poproszę",
+      "translation": "me pone…, por favor (para pedir)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-rachunek",
+      "status": "published",
+      "order": 190,
+      "lemma": "rachunek",
+      "translation": "la cuenta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-napiwek",
+      "status": "published",
+      "order": 200,
+      "lemma": "napiwek",
+      "translation": "la propina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-reszta",
+      "status": "published",
+      "order": 210,
+      "lemma": "reszta",
+      "translation": "el cambio (dinero)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-zloty",
+      "status": "published",
+      "order": 220,
+      "lemma": "złoty",
+      "translation": "el złoty (moneda polaca)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-grosz",
+      "status": "published",
+      "order": 230,
+      "lemma": "grosz",
+      "translation": "el grosz (céntimo)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kosztowac",
+      "status": "published",
+      "order": 240,
+      "lemma": "kosztować",
+      "translation": "costar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-placic",
+      "status": "published",
+      "order": 250,
+      "lemma": "płacić",
+      "translation": "pagar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-karta",
+      "status": "published",
+      "order": 260,
+      "lemma": "kartą",
+      "translation": "con tarjeta",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-gotowka",
+      "status": "published",
+      "order": 270,
+      "lemma": "gotówką",
+      "translation": "en efectivo",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-na-wynos",
+      "status": "published",
+      "order": 280,
+      "lemma": "na wynos",
+      "translation": "para llevar",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-na-miejscu",
+      "status": "published",
+      "order": 290,
+      "lemma": "na miejscu",
+      "translation": "para tomar aquí",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    }
+  ]
+}

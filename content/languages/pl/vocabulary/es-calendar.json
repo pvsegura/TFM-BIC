@@ -1,0 +1,257 @@
+{
+  "schemaVersion": 1,
+  "id": "es-calendar",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1060,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Meses, fechas y celebraciones",
+  "description": "Los meses del año, cumpleaños y santos.",
+  "items": [
+    {
+      "id": "pl-es-styczen",
+      "status": "published",
+      "order": 10,
+      "lemma": "styczeń",
+      "translation": "enero",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-luty",
+      "status": "published",
+      "order": 20,
+      "lemma": "luty",
+      "translation": "febrero",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-marzec",
+      "status": "published",
+      "order": 30,
+      "lemma": "marzec",
+      "translation": "marzo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kwiecien",
+      "status": "published",
+      "order": 40,
+      "lemma": "kwiecień",
+      "translation": "abril",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-maj",
+      "status": "published",
+      "order": 50,
+      "lemma": "maj",
+      "translation": "mayo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-czerwiec",
+      "status": "published",
+      "order": 60,
+      "lemma": "czerwiec",
+      "translation": "junio",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-lipiec",
+      "status": "published",
+      "order": 70,
+      "lemma": "lipiec",
+      "translation": "julio",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sierpien",
+      "status": "published",
+      "order": 80,
+      "lemma": "sierpień",
+      "translation": "agosto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-wrzesien",
+      "status": "published",
+      "order": 90,
+      "lemma": "wrzesień",
+      "translation": "septiembre",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-pazdziernik",
+      "status": "published",
+      "order": 100,
+      "lemma": "październik",
+      "translation": "octubre",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-listopad",
+      "status": "published",
+      "order": 110,
+      "lemma": "listopad",
+      "translation": "noviembre",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-grudzien",
+      "status": "published",
+      "order": 120,
+      "lemma": "grudzień",
+      "translation": "diciembre",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-miesiac",
+      "status": "published",
+      "order": 130,
+      "lemma": "miesiąc",
+      "translation": "el mes",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-rok",
+      "status": "published",
+      "order": 140,
+      "lemma": "rok",
+      "translation": "el año",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-urodziny",
+      "status": "published",
+      "order": 150,
+      "lemma": "urodziny",
+      "translation": "el cumpleaños",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "note": "Siempre plural."
+    },
+    {
+      "id": "pl-es-imieniny",
+      "status": "published",
+      "order": 160,
+      "lemma": "imieniny",
+      "translation": "el santo, la onomástica",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "note": "Siempre plural."
+    },
+    {
+      "id": "pl-es-tort",
+      "status": "published",
+      "order": 170,
+      "lemma": "tort",
+      "translation": "la tarta (de cumpleaños)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-prezent",
+      "status": "published",
+      "order": 180,
+      "lemma": "prezent",
+      "translation": "el regalo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kwiaty",
+      "status": "published",
+      "order": 190,
+      "lemma": "kwiaty",
+      "translation": "las flores",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-zyczenia",
+      "status": "published",
+      "order": 200,
+      "lemma": "życzenia",
+      "translation": "las felicitaciones",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-impreza",
+      "status": "published",
+      "order": 210,
+      "lemma": "impreza",
+      "translation": "la fiesta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wszystkiego-najlepszego",
+      "status": "published",
+      "order": 220,
+      "lemma": "wszystkiego najlepszego!",
+      "translation": "¡felicidades!",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-sto-lat",
+      "status": "published",
+      "order": 230,
+      "lemma": "sto lat!",
+      "translation": "¡cumpleaños feliz! (canción)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-konczyc",
+      "status": "published",
+      "order": 240,
+      "lemma": "kończyć",
+      "translation": "cumplir (años); terminar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-zapraszac",
+      "status": "published",
+      "order": 250,
+      "lemma": "zapraszać",
+      "translation": "invitar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    }
+  ]
+}

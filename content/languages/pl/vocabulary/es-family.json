@@ -1,0 +1,303 @@
+{
+  "schemaVersion": 1,
+  "id": "es-family",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1040,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "La familia",
+  "description": "Miembros de la familia.",
+  "items": [
+    {
+      "id": "pl-es-rodzina",
+      "status": "published",
+      "order": 10,
+      "lemma": "rodzina",
+      "translation": "la familia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-mama",
+      "status": "published",
+      "order": 20,
+      "lemma": "mama",
+      "translation": "la mamá",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-tata",
+      "status": "published",
+      "order": 30,
+      "lemma": "tata",
+      "translation": "el papá",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Masculino aunque termine en -a."
+    },
+    {
+      "id": "pl-es-matka",
+      "status": "published",
+      "order": 40,
+      "lemma": "matka",
+      "translation": "la madre (formal)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-ojciec",
+      "status": "published",
+      "order": 50,
+      "lemma": "ojciec",
+      "translation": "el padre (formal)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-rodzice",
+      "status": "published",
+      "order": 60,
+      "lemma": "rodzice",
+      "translation": "los padres",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-brat",
+      "status": "published",
+      "order": 70,
+      "lemma": "brat",
+      "translation": "el hermano",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-siostra",
+      "status": "published",
+      "order": 80,
+      "lemma": "siostra",
+      "translation": "la hermana",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-rodzenstwo",
+      "status": "published",
+      "order": 90,
+      "lemma": "rodzeństwo",
+      "translation": "los hermanos (en conjunto)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-syn",
+      "status": "published",
+      "order": 100,
+      "lemma": "syn",
+      "translation": "el hijo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-corka",
+      "status": "published",
+      "order": 110,
+      "lemma": "córka",
+      "translation": "la hija",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-dziecko",
+      "status": "published",
+      "order": 120,
+      "lemma": "dziecko",
+      "translation": "el niño, la niña; el hijo, la hija",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter",
+      "note": "Plural: dzieci."
+    },
+    {
+      "id": "pl-es-maz",
+      "status": "published",
+      "order": 130,
+      "lemma": "mąż",
+      "translation": "el marido",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-zona",
+      "status": "published",
+      "order": 140,
+      "lemma": "żona",
+      "translation": "la mujer, la esposa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-dziadek",
+      "status": "published",
+      "order": 150,
+      "lemma": "dziadek",
+      "translation": "el abuelo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-babcia",
+      "status": "published",
+      "order": 160,
+      "lemma": "babcia",
+      "translation": "la abuela",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-dziadkowie",
+      "status": "published",
+      "order": 170,
+      "lemma": "dziadkowie",
+      "translation": "los abuelos",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-wnuk",
+      "status": "published",
+      "order": 180,
+      "lemma": "wnuk",
+      "translation": "el nieto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-wnuczka",
+      "status": "published",
+      "order": 190,
+      "lemma": "wnuczka",
+      "translation": "la nieta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wujek",
+      "status": "published",
+      "order": 200,
+      "lemma": "wujek",
+      "translation": "el tío",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-ciocia",
+      "status": "published",
+      "order": 210,
+      "lemma": "ciocia",
+      "translation": "la tía",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kuzyn",
+      "status": "published",
+      "order": 220,
+      "lemma": "kuzyn",
+      "translation": "el primo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kuzynka",
+      "status": "published",
+      "order": 230,
+      "lemma": "kuzynka",
+      "translation": "la prima",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-siostrzeniec",
+      "status": "published",
+      "order": 240,
+      "lemma": "siostrzeniec",
+      "translation": "el sobrino (hijo de tu hermana)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-bratanek",
+      "status": "published",
+      "order": 250,
+      "lemma": "bratanek",
+      "translation": "el sobrino (hijo de tu hermano)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-chlopak",
+      "status": "published",
+      "order": 260,
+      "lemma": "chłopak",
+      "translation": "el chico; el novio",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-dziewczyna",
+      "status": "published",
+      "order": 270,
+      "lemma": "dziewczyna",
+      "translation": "la chica; la novia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wesele",
+      "status": "published",
+      "order": 280,
+      "lemma": "wesele",
+      "translation": "la boda (la fiesta)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-zdjecie",
+      "status": "published",
+      "order": 290,
+      "lemma": "zdjęcie",
+      "translation": "la foto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    }
+  ]
+}

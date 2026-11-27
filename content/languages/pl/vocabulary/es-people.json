@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "id": "es-people",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1050,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Cómo son las personas",
+  "description": "Adjetivos para describir a personas.",
+  "items": [
+    {
+      "id": "pl-es-wysoki",
+      "status": "published",
+      "order": 10,
+      "lemma": "wysoki",
+      "translation": "alto",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-niski",
+      "status": "published",
+      "order": 20,
+      "lemma": "niski",
+      "translation": "bajo",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-mlody",
+      "status": "published",
+      "order": 30,
+      "lemma": "młody",
+      "translation": "joven",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-stary",
+      "status": "published",
+      "order": 40,
+      "lemma": "stary",
+      "translation": "viejo; mayor",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-przystojny",
+      "status": "published",
+      "order": 50,
+      "lemma": "przystojny",
+      "translation": "guapo (hombre)",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-ladny",
+      "status": "published",
+      "order": 60,
+      "lemma": "ładny",
+      "translation": "bonito; guapa",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-elegancki",
+      "status": "published",
+      "order": 70,
+      "lemma": "elegancki",
+      "translation": "elegante",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-sympatyczny",
+      "status": "published",
+      "order": 80,
+      "lemma": "sympatyczny",
+      "translation": "simpático",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-mily",
+      "status": "published",
+      "order": 90,
+      "lemma": "miły",
+      "translation": "amable, agradable",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-wesoly",
+      "status": "published",
+      "order": 100,
+      "lemma": "wesoły",
+      "translation": "alegre",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-powazny",
+      "status": "published",
+      "order": 110,
+      "lemma": "poważny",
+      "translation": "serio",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-spokojny",
+      "status": "published",
+      "order": 120,
+      "lemma": "spokojny",
+      "translation": "tranquilo",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-energiczny",
+      "status": "published",
+      "order": 130,
+      "lemma": "energiczny",
+      "translation": "enérgico",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-zmeczony",
+      "status": "published",
+      "order": 140,
+      "lemma": "zmęczony",
+      "translation": "cansado",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-maly",
+      "status": "published",
+      "order": 150,
+      "lemma": "mały",
+      "translation": "pequeño",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-duzy",
+      "status": "published",
+      "order": 160,
+      "lemma": "duży",
+      "translation": "grande",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    }
+  ]
+}

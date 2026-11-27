@@ -1,0 +1,353 @@
+{
+  "schemaVersion": 1,
+  "id": "es-free-time",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1130,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Tiempo libre y deporte",
+  "description": "Aficiones, deportes y planes.",
+  "items": [
+    {
+      "id": "pl-es-lubic",
+      "status": "published",
+      "order": 10,
+      "lemma": "lubić",
+      "translation": "gustar (algo, a alguien)",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Lubię kawę."
+    },
+    {
+      "id": "pl-es-uwielbiac",
+      "status": "published",
+      "order": 20,
+      "lemma": "uwielbiać",
+      "translation": "encantar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-wolec",
+      "status": "published",
+      "order": 30,
+      "lemma": "woleć",
+      "translation": "preferir",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-czytac",
+      "status": "published",
+      "order": 40,
+      "lemma": "czytać",
+      "translation": "leer",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-sluchac",
+      "status": "published",
+      "order": 50,
+      "lemma": "słuchać",
+      "translation": "escuchar",
+      "levelId": "a1",
+      "partOfSpeech": "verb",
+      "note": "Pide genitivo: słucham muzyki."
+    },
+    {
+      "id": "pl-es-muzyka",
+      "status": "published",
+      "order": 60,
+      "lemma": "muzyka",
+      "translation": "la música",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-film",
+      "status": "published",
+      "order": 70,
+      "lemma": "film",
+      "translation": "la película",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-serial",
+      "status": "published",
+      "order": 80,
+      "lemma": "serial",
+      "translation": "la serie",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-tanczyc",
+      "status": "published",
+      "order": 90,
+      "lemma": "tańczyć",
+      "translation": "bailar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-spiewac",
+      "status": "published",
+      "order": 100,
+      "lemma": "śpiewać",
+      "translation": "cantar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-podrozowac",
+      "status": "published",
+      "order": 110,
+      "lemma": "podróżować",
+      "translation": "viajar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-spacerowac",
+      "status": "published",
+      "order": 120,
+      "lemma": "spacerować",
+      "translation": "pasear",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-biegac",
+      "status": "published",
+      "order": 130,
+      "lemma": "biegać",
+      "translation": "correr",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-plywac",
+      "status": "published",
+      "order": 140,
+      "lemma": "pływać",
+      "translation": "nadar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-gory",
+      "status": "published",
+      "order": 150,
+      "lemma": "góry",
+      "translation": "la montaña",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-morze",
+      "status": "published",
+      "order": 160,
+      "lemma": "morze",
+      "translation": "el mar",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-las",
+      "status": "published",
+      "order": 170,
+      "lemma": "las",
+      "translation": "el bosque",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-grac",
+      "status": "published",
+      "order": 180,
+      "lemma": "grać",
+      "translation": "jugar; tocar (un instrumento)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-gitara",
+      "status": "published",
+      "order": 190,
+      "lemma": "gitara",
+      "translation": "la guitarra",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-pianino",
+      "status": "published",
+      "order": 200,
+      "lemma": "pianino",
+      "translation": "el piano",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-szachy",
+      "status": "published",
+      "order": 210,
+      "lemma": "szachy",
+      "translation": "el ajedrez",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-siatkowka",
+      "status": "published",
+      "order": 220,
+      "lemma": "siatkówka",
+      "translation": "el voleibol",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-koszykowka",
+      "status": "published",
+      "order": 230,
+      "lemma": "koszykówka",
+      "translation": "el baloncesto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-pilka-nozna",
+      "status": "published",
+      "order": 240,
+      "lemma": "piłka nożna",
+      "translation": "el fútbol",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-pilka",
+      "status": "published",
+      "order": 250,
+      "lemma": "piłka",
+      "translation": "el balón, la pelota",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-mecz",
+      "status": "published",
+      "order": 260,
+      "lemma": "mecz",
+      "translation": "el partido",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-druzyna",
+      "status": "published",
+      "order": 270,
+      "lemma": "drużyna",
+      "translation": "el equipo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-basen",
+      "status": "published",
+      "order": 280,
+      "lemma": "basen",
+      "translation": "la piscina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-silownia",
+      "status": "published",
+      "order": 290,
+      "lemma": "siłownia",
+      "translation": "el gimnasio",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-narty",
+      "status": "published",
+      "order": 300,
+      "lemma": "narty",
+      "translation": "los esquís",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-umiec",
+      "status": "published",
+      "order": 310,
+      "lemma": "umieć",
+      "translation": "saber (hacer algo)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-wiedziec",
+      "status": "published",
+      "order": 320,
+      "lemma": "wiedzieć",
+      "translation": "saber (un dato)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-znac",
+      "status": "published",
+      "order": 330,
+      "lemma": "znać",
+      "translation": "conocer",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-spotykac-sie",
+      "status": "published",
+      "order": 340,
+      "lemma": "spotykać się",
+      "translation": "quedar, verse",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-chetnie",
+      "status": "published",
+      "order": 350,
+      "lemma": "chętnie",
+      "translation": "con mucho gusto",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-niestety",
+      "status": "published",
+      "order": 360,
+      "lemma": "niestety",
+      "translation": "por desgracia",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

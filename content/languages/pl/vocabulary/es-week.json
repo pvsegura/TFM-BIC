@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "id": "es-week",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1120,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "La semana y la casa",
+  "description": "Los días de la semana y las tareas de casa.",
+  "items": [
+    {
+      "id": "pl-es-poniedzialek",
+      "status": "published",
+      "order": 10,
+      "lemma": "poniedziałek",
+      "translation": "el lunes",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-wtorek",
+      "status": "published",
+      "order": 20,
+      "lemma": "wtorek",
+      "translation": "el martes",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sroda",
+      "status": "published",
+      "order": 30,
+      "lemma": "środa",
+      "translation": "el miércoles",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-czwartek",
+      "status": "published",
+      "order": 40,
+      "lemma": "czwartek",
+      "translation": "el jueves",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-piatek",
+      "status": "published",
+      "order": 50,
+      "lemma": "piątek",
+      "translation": "el viernes",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sobota",
+      "status": "published",
+      "order": 60,
+      "lemma": "sobota",
+      "translation": "el sábado",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-niedziela",
+      "status": "published",
+      "order": 70,
+      "lemma": "niedziela",
+      "translation": "el domingo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-tydzien",
+      "status": "published",
+      "order": 80,
+      "lemma": "tydzień",
+      "translation": "la semana",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-weekend",
+      "status": "published",
+      "order": 90,
+      "lemma": "weekend",
+      "translation": "el fin de semana",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-dzisiaj",
+      "status": "published",
+      "order": 100,
+      "lemma": "dzisiaj",
+      "translation": "hoy",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-jutro",
+      "status": "published",
+      "order": 110,
+      "lemma": "jutro",
+      "translation": "mañana",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-wczoraj",
+      "status": "published",
+      "order": 120,
+      "lemma": "wczoraj",
+      "translation": "ayer",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-sprzatac",
+      "status": "published",
+      "order": 130,
+      "lemma": "sprzątać",
+      "translation": "limpiar, ordenar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-odkurzac",
+      "status": "published",
+      "order": 140,
+      "lemma": "odkurzać",
+      "translation": "pasar la aspiradora",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-zmywac",
+      "status": "published",
+      "order": 150,
+      "lemma": "zmywać",
+      "translation": "fregar (los platos)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-prac",
+      "status": "published",
+      "order": 160,
+      "lemma": "prać",
+      "translation": "lavar (la ropa)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-prasowac",
+      "status": "published",
+      "order": 170,
+      "lemma": "prasować",
+      "translation": "planchar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-gotowac",
+      "status": "published",
+      "order": 180,
+      "lemma": "gotować",
+      "translation": "cocinar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-smieci",
+      "status": "published",
+      "order": 190,
+      "lemma": "śmieci",
+      "translation": "la basura",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-naczynia",
+      "status": "published",
+      "order": 200,
+      "lemma": "naczynia",
+      "translation": "los platos (la vajilla)",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-kuchnia",
+      "status": "published",
+      "order": 210,
+      "lemma": "kuchnia",
+      "translation": "la cocina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-lazienka",
+      "status": "published",
+      "order": 220,
+      "lemma": "łazienka",
+      "translation": "el baño",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-mieszkanie",
+      "status": "published",
+      "order": 230,
+      "lemma": "mieszkanie",
+      "translation": "el piso",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-musiec",
+      "status": "published",
+      "order": 240,
+      "lemma": "musieć",
+      "translation": "tener que, deber",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-moc",
+      "status": "published",
+      "order": 250,
+      "lemma": "móc",
+      "translation": "poder",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-czas",
+      "status": "published",
+      "order": 260,
+      "lemma": "czas",
+      "translation": "el tiempo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Nie mam czasu."
+    }
+  ]
+}

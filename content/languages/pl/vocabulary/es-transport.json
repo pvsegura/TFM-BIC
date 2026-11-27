@@ -1,0 +1,255 @@
+{
+  "schemaVersion": 1,
+  "id": "es-transport",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1080,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Direcciones y transporte",
+  "description": "Preguntar el camino y moverse por la ciudad.",
+  "items": [
+    {
+      "id": "pl-es-prosto",
+      "status": "published",
+      "order": 10,
+      "lemma": "prosto",
+      "translation": "recto",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-w-prawo",
+      "status": "published",
+      "order": 20,
+      "lemma": "w prawo",
+      "translation": "a la derecha",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-w-lewo",
+      "status": "published",
+      "order": 30,
+      "lemma": "w lewo",
+      "translation": "a la izquierda",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-skrecic",
+      "status": "published",
+      "order": 40,
+      "lemma": "skręcić",
+      "translation": "girar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-skrzyzowanie",
+      "status": "published",
+      "order": 50,
+      "lemma": "skrzyżowanie",
+      "translation": "el cruce",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-swiatla",
+      "status": "published",
+      "order": 60,
+      "lemma": "światła",
+      "translation": "el semáforo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "note": "Literalmente «las luces»."
+    },
+    {
+      "id": "pl-es-rondo",
+      "status": "published",
+      "order": 70,
+      "lemma": "rondo",
+      "translation": "la rotonda",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-most",
+      "status": "published",
+      "order": 80,
+      "lemma": "most",
+      "translation": "el puente",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-przystanek",
+      "status": "published",
+      "order": 90,
+      "lemma": "przystanek",
+      "translation": "la parada",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Na przystanku."
+    },
+    {
+      "id": "pl-es-dworzec",
+      "status": "published",
+      "order": 100,
+      "lemma": "dworzec",
+      "translation": "la estación",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Na dworcu."
+    },
+    {
+      "id": "pl-es-tramwaj",
+      "status": "published",
+      "order": 110,
+      "lemma": "tramwaj",
+      "translation": "el tranvía",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-autobus",
+      "status": "published",
+      "order": 120,
+      "lemma": "autobus",
+      "translation": "el autobús",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-pociag",
+      "status": "published",
+      "order": 130,
+      "lemma": "pociąg",
+      "translation": "el tren",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-metro",
+      "status": "published",
+      "order": 140,
+      "lemma": "metro",
+      "translation": "el metro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-taksowka",
+      "status": "published",
+      "order": 150,
+      "lemma": "taksówka",
+      "translation": "el taxi",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-samochod",
+      "status": "published",
+      "order": 160,
+      "lemma": "samochód",
+      "translation": "el coche",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-rower",
+      "status": "published",
+      "order": 170,
+      "lemma": "rower",
+      "translation": "la bicicleta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-bilet",
+      "status": "published",
+      "order": 180,
+      "lemma": "bilet",
+      "translation": "el billete",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-skasowac-bilet",
+      "status": "published",
+      "order": 190,
+      "lemma": "skasować bilet",
+      "translation": "validar el billete",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-przesiadka",
+      "status": "published",
+      "order": 200,
+      "lemma": "przesiadka",
+      "translation": "el transbordo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wsiadac",
+      "status": "published",
+      "order": 210,
+      "lemma": "wsiadać",
+      "translation": "subir (a un vehículo)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-wysiadac",
+      "status": "published",
+      "order": 220,
+      "lemma": "wysiadać",
+      "translation": "bajar (de un vehículo)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-isc",
+      "status": "published",
+      "order": 230,
+      "lemma": "iść",
+      "translation": "ir (a pie)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-jechac",
+      "status": "published",
+      "order": 240,
+      "lemma": "jechać",
+      "translation": "ir (en vehículo)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-pieszo",
+      "status": "published",
+      "order": 250,
+      "lemma": "pieszo",
+      "translation": "a pie, andando",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

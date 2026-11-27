@@ -1,0 +1,214 @@
+{
+  "schemaVersion": 1,
+  "id": "es-hotel",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1140,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "El hotel",
+  "description": "Reservar y alojarse en un hotel.",
+  "items": [
+    {
+      "id": "pl-es-hotel",
+      "status": "published",
+      "order": 10,
+      "lemma": "hotel",
+      "translation": "el hotel",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-recepcja",
+      "status": "published",
+      "order": 20,
+      "lemma": "recepcja",
+      "translation": "la recepción",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-rezerwacja",
+      "status": "published",
+      "order": 30,
+      "lemma": "rezerwacja",
+      "translation": "la reserva",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-pokoj",
+      "status": "published",
+      "order": 40,
+      "lemma": "pokój",
+      "translation": "la habitación",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-pokoj-jednoosobowy",
+      "status": "published",
+      "order": 50,
+      "lemma": "pokój jednoosobowy",
+      "translation": "la habitación individual",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-pokoj-dwuosobowy",
+      "status": "published",
+      "order": 60,
+      "lemma": "pokój dwuosobowy",
+      "translation": "la habitación doble",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-klucz",
+      "status": "published",
+      "order": 70,
+      "lemma": "klucz",
+      "translation": "la llave",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-winda",
+      "status": "published",
+      "order": 80,
+      "lemma": "winda",
+      "translation": "el ascensor",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-schody",
+      "status": "published",
+      "order": 90,
+      "lemma": "schody",
+      "translation": "las escaleras",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-pietro",
+      "status": "published",
+      "order": 100,
+      "lemma": "piętro",
+      "translation": "el piso, la planta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-lozko",
+      "status": "published",
+      "order": 110,
+      "lemma": "łóżko",
+      "translation": "la cama",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-recznik",
+      "status": "published",
+      "order": 120,
+      "lemma": "ręcznik",
+      "translation": "la toalla",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-prysznic",
+      "status": "published",
+      "order": 130,
+      "lemma": "prysznic",
+      "translation": "la ducha",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sniadanie-w-cenie",
+      "status": "published",
+      "order": 140,
+      "lemma": "śniadanie w cenie",
+      "translation": "desayuno incluido",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-dowod-osobisty",
+      "status": "published",
+      "order": 150,
+      "lemma": "dowód osobisty",
+      "translation": "el documento de identidad",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-paszport",
+      "status": "published",
+      "order": 160,
+      "lemma": "paszport",
+      "translation": "el pasaporte",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-noc",
+      "status": "published",
+      "order": 170,
+      "lemma": "noc",
+      "translation": "la noche",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wolny",
+      "status": "published",
+      "order": 180,
+      "lemma": "wolny",
+      "translation": "libre",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-zajety",
+      "status": "published",
+      "order": 190,
+      "lemma": "zajęty",
+      "translation": "ocupado",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-zameldowac-sie",
+      "status": "published",
+      "order": 200,
+      "lemma": "zameldować się",
+      "translation": "registrarse (en el hotel)",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-wymeldowac-sie",
+      "status": "published",
+      "order": 210,
+      "lemma": "wymeldować się",
+      "translation": "dejar la habitación",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "schemaVersion": 1,
+  "id": "es-day",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1110,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "La rutina y la hora",
+  "description": "El día, la hora y la frecuencia.",
+  "items": [
+    {
+      "id": "pl-es-budzic-sie",
+      "status": "published",
+      "order": 10,
+      "lemma": "budzić się",
+      "translation": "despertarse",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-wstawac",
+      "status": "published",
+      "order": 20,
+      "lemma": "wstawać",
+      "translation": "levantarse",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-myc-sie",
+      "status": "published",
+      "order": 30,
+      "lemma": "myć się",
+      "translation": "lavarse",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-ubierac-sie",
+      "status": "published",
+      "order": 40,
+      "lemma": "ubierać się",
+      "translation": "vestirse",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-brac-prysznic",
+      "status": "published",
+      "order": 50,
+      "lemma": "brać prysznic",
+      "translation": "ducharse",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-wracac",
+      "status": "published",
+      "order": 60,
+      "lemma": "wracać",
+      "translation": "volver",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-odpoczywac",
+      "status": "published",
+      "order": 70,
+      "lemma": "odpoczywać",
+      "translation": "descansar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-ogladac",
+      "status": "published",
+      "order": 80,
+      "lemma": "oglądać",
+      "translation": "ver, mirar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-klasc-sie-spac",
+      "status": "published",
+      "order": 90,
+      "lemma": "kłaść się spać",
+      "translation": "acostarse",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-godzina",
+      "status": "published",
+      "order": 100,
+      "lemma": "godzina",
+      "translation": "la hora",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-minuta",
+      "status": "published",
+      "order": 110,
+      "lemma": "minuta",
+      "translation": "el minuto",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kwadrans",
+      "status": "published",
+      "order": 120,
+      "lemma": "kwadrans",
+      "translation": "el cuarto de hora",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-polnoc",
+      "status": "published",
+      "order": 130,
+      "lemma": "północ",
+      "translation": "la medianoche; el norte",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-poludnie",
+      "status": "published",
+      "order": 140,
+      "lemma": "południe",
+      "translation": "el mediodía; el sur",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-rano",
+      "status": "published",
+      "order": 150,
+      "lemma": "rano",
+      "translation": "por la mañana",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-wieczorem",
+      "status": "published",
+      "order": 160,
+      "lemma": "wieczorem",
+      "translation": "por la noche",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-zawsze",
+      "status": "published",
+      "order": 170,
+      "lemma": "zawsze",
+      "translation": "siempre",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-zwykle",
+      "status": "published",
+      "order": 180,
+      "lemma": "zwykle",
+      "translation": "normalmente",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-czesto",
+      "status": "published",
+      "order": 190,
+      "lemma": "często",
+      "translation": "a menudo",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-czasami",
+      "status": "published",
+      "order": 200,
+      "lemma": "czasami",
+      "translation": "a veces",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-rzadko",
+      "status": "published",
+      "order": 210,
+      "lemma": "rzadko",
+      "translation": "pocas veces",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-nigdy",
+      "status": "published",
+      "order": 220,
+      "lemma": "nigdy",
+      "translation": "nunca",
+      "levelId": "a1",
+      "partOfSpeech": "adverb",
+      "note": "Con nie: nigdy nie jem."
+    },
+    {
+      "id": "pl-es-codziennie",
+      "status": "published",
+      "order": 230,
+      "lemma": "codziennie",
+      "translation": "todos los días",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

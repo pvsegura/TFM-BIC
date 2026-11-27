@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "id": "es-countries",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1020,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Países, idiomas y nacionalidades",
+  "description": "De dónde eres y qué idiomas hablas.",
+  "items": [
+    {
+      "id": "pl-es-polska",
+      "status": "published",
+      "order": 10,
+      "lemma": "Polska",
+      "translation": "Polonia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-hiszpania",
+      "status": "published",
+      "order": 20,
+      "lemma": "Hiszpania",
+      "translation": "España",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-meksyk",
+      "status": "published",
+      "order": 30,
+      "lemma": "Meksyk",
+      "translation": "México",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-argentyna",
+      "status": "published",
+      "order": 40,
+      "lemma": "Argentyna",
+      "translation": "Argentina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kolumbia",
+      "status": "published",
+      "order": 50,
+      "lemma": "Kolumbia",
+      "translation": "Colombia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-niemcy",
+      "status": "published",
+      "order": 60,
+      "lemma": "Niemcy",
+      "translation": "Alemania",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "note": "Plural: z Niemiec."
+    },
+    {
+      "id": "pl-es-francja",
+      "status": "published",
+      "order": 70,
+      "lemma": "Francja",
+      "translation": "Francia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-wlochy",
+      "status": "published",
+      "order": 80,
+      "lemma": "Włochy",
+      "translation": "Italia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "note": "Plural: z Włoch."
+    },
+    {
+      "id": "pl-es-anglia",
+      "status": "published",
+      "order": 90,
+      "lemma": "Anglia",
+      "translation": "Inglaterra",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-polak",
+      "status": "published",
+      "order": 100,
+      "lemma": "Polak",
+      "translation": "el polaco (hombre)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-polka",
+      "status": "published",
+      "order": 110,
+      "lemma": "Polka",
+      "translation": "la polaca (mujer)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-hiszpan",
+      "status": "published",
+      "order": 120,
+      "lemma": "Hiszpan",
+      "translation": "el español (hombre)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-hiszpanka",
+      "status": "published",
+      "order": 130,
+      "lemma": "Hiszpanka",
+      "translation": "la española (mujer)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-jezyk",
+      "status": "published",
+      "order": 140,
+      "lemma": "język",
+      "translation": "el idioma; la lengua",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-po-polsku",
+      "status": "published",
+      "order": 150,
+      "lemma": "po polsku",
+      "translation": "en polaco",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-po-hiszpansku",
+      "status": "published",
+      "order": 160,
+      "lemma": "po hiszpańsku",
+      "translation": "en español",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-po-angielsku",
+      "status": "published",
+      "order": 170,
+      "lemma": "po angielsku",
+      "translation": "en inglés",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-mowic",
+      "status": "published",
+      "order": 180,
+      "lemma": "mówić",
+      "translation": "hablar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-mieszkac",
+      "status": "published",
+      "order": 190,
+      "lemma": "mieszkać",
+      "translation": "vivir",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-pracowac",
+      "status": "published",
+      "order": 200,
+      "lemma": "pracować",
+      "translation": "trabajar",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-miasto",
+      "status": "published",
+      "order": 210,
+      "lemma": "miasto",
+      "translation": "la ciudad",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-kraj",
+      "status": "published",
+      "order": 220,
+      "lemma": "kraj",
+      "translation": "el país",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-trudny",
+      "status": "published",
+      "order": 230,
+      "lemma": "trudny",
+      "translation": "difícil",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-latwy",
+      "status": "published",
+      "order": 240,
+      "lemma": "łatwy",
+      "translation": "fácil",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    }
+  ]
+}

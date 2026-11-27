@@ -1,0 +1,356 @@
+{
+  "schemaVersion": 1,
+  "id": "es-food",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1100,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "La comida",
+  "description": "Platos polacos, ingredientes y sabores.",
+  "items": [
+    {
+      "id": "pl-es-zupa",
+      "status": "published",
+      "order": 10,
+      "lemma": "zupa",
+      "translation": "la sopa",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-zurek",
+      "status": "published",
+      "order": 20,
+      "lemma": "żurek",
+      "translation": "la sopa agria de centeno",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-barszcz",
+      "status": "published",
+      "order": 30,
+      "lemma": "barszcz",
+      "translation": "el borsch (sopa de remolacha)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-rosol",
+      "status": "published",
+      "order": 40,
+      "lemma": "rosół",
+      "translation": "el caldo de pollo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-pierogi",
+      "status": "published",
+      "order": 50,
+      "lemma": "pierogi",
+      "translation": "los pierogi (empanadillas)",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-kotlet-schabowy",
+      "status": "published",
+      "order": 60,
+      "lemma": "kotlet schabowy",
+      "translation": "el filete empanado de cerdo",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-golabki",
+      "status": "published",
+      "order": 70,
+      "lemma": "gołąbki",
+      "translation": "las hojas de col rellenas",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-bigos",
+      "status": "published",
+      "order": 80,
+      "lemma": "bigos",
+      "translation": "el guiso de chucrut y carne",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-surowka",
+      "status": "published",
+      "order": 90,
+      "lemma": "surówka",
+      "translation": "la ensalada de verdura rallada",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kompot",
+      "status": "published",
+      "order": 100,
+      "lemma": "kompot",
+      "translation": "la bebida de fruta cocida",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-mieso",
+      "status": "published",
+      "order": 110,
+      "lemma": "mięso",
+      "translation": "la carne",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-ryba",
+      "status": "published",
+      "order": 120,
+      "lemma": "ryba",
+      "translation": "el pescado",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kurczak",
+      "status": "published",
+      "order": 130,
+      "lemma": "kurczak",
+      "translation": "el pollo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-ziemniaki",
+      "status": "published",
+      "order": 140,
+      "lemma": "ziemniaki",
+      "translation": "las patatas",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-kapusta",
+      "status": "published",
+      "order": 150,
+      "lemma": "kapusta",
+      "translation": "la col",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-ser",
+      "status": "published",
+      "order": 160,
+      "lemma": "ser",
+      "translation": "el queso",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-jajko",
+      "status": "published",
+      "order": 170,
+      "lemma": "jajko",
+      "translation": "el huevo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-grzyby",
+      "status": "published",
+      "order": 180,
+      "lemma": "grzyby",
+      "translation": "las setas",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-orzechy",
+      "status": "published",
+      "order": 190,
+      "lemma": "orzechy",
+      "translation": "los frutos secos, las nueces",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-chleb",
+      "status": "published",
+      "order": 200,
+      "lemma": "chleb",
+      "translation": "el pan",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-maslo",
+      "status": "published",
+      "order": 210,
+      "lemma": "masło",
+      "translation": "la mantequilla",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-warzywa",
+      "status": "published",
+      "order": 220,
+      "lemma": "warzywa",
+      "translation": "las verduras",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-owoce",
+      "status": "published",
+      "order": 230,
+      "lemma": "owoce",
+      "translation": "la fruta",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-smaczny",
+      "status": "published",
+      "order": 240,
+      "lemma": "smaczny",
+      "translation": "sabroso",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-pyszny",
+      "status": "published",
+      "order": 250,
+      "lemma": "pyszny",
+      "translation": "riquísimo",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-slony",
+      "status": "published",
+      "order": 260,
+      "lemma": "słony",
+      "translation": "salado",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-slodki",
+      "status": "published",
+      "order": 270,
+      "lemma": "słodki",
+      "translation": "dulce",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-ostry",
+      "status": "published",
+      "order": 280,
+      "lemma": "ostry",
+      "translation": "picante",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-jesc",
+      "status": "published",
+      "order": 290,
+      "lemma": "jeść",
+      "translation": "comer",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-pic",
+      "status": "published",
+      "order": 300,
+      "lemma": "pić",
+      "translation": "beber",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-smakowac",
+      "status": "published",
+      "order": 310,
+      "lemma": "smakować",
+      "translation": "gustar (la comida); saber",
+      "levelId": "a1",
+      "partOfSpeech": "verb"
+    },
+    {
+      "id": "pl-es-smacznego",
+      "status": "published",
+      "order": 320,
+      "lemma": "smacznego!",
+      "translation": "¡que aproveche!",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-obiad",
+      "status": "published",
+      "order": 330,
+      "lemma": "obiad",
+      "translation": "la comida principal",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sniadanie",
+      "status": "published",
+      "order": 340,
+      "lemma": "śniadanie",
+      "translation": "el desayuno",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-kolacja",
+      "status": "published",
+      "order": 350,
+      "lemma": "kolacja",
+      "translation": "la cena",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-alergia",
+      "status": "published",
+      "order": 360,
+      "lemma": "alergia",
+      "translation": "la alergia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}

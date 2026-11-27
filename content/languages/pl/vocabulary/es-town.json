@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "id": "es-town",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1070,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "La ciudad",
+  "description": "Tiendas, servicios y lugares de la ciudad.",
+  "items": [
+    {
+      "id": "pl-es-sklep",
+      "status": "published",
+      "order": 10,
+      "lemma": "sklep",
+      "translation": "la tienda",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-supermarket",
+      "status": "published",
+      "order": 20,
+      "lemma": "supermarket",
+      "translation": "el supermercado",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-piekarnia",
+      "status": "published",
+      "order": 30,
+      "lemma": "piekarnia",
+      "translation": "la panadería",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-apteka",
+      "status": "published",
+      "order": 40,
+      "lemma": "apteka",
+      "translation": "la farmacia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-bank",
+      "status": "published",
+      "order": 50,
+      "lemma": "bank",
+      "translation": "el banco",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-bankomat",
+      "status": "published",
+      "order": 60,
+      "lemma": "bankomat",
+      "translation": "el cajero automático",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-poczta",
+      "status": "published",
+      "order": 70,
+      "lemma": "poczta",
+      "translation": "la oficina de correos",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "Na poczcie."
+    },
+    {
+      "id": "pl-es-kantor",
+      "status": "published",
+      "order": 80,
+      "lemma": "kantor",
+      "translation": "la casa de cambio",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kawiarnia",
+      "status": "published",
+      "order": 90,
+      "lemma": "kawiarnia",
+      "translation": "la cafetería",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-restauracja",
+      "status": "published",
+      "order": 100,
+      "lemma": "restauracja",
+      "translation": "el restaurante",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-szpital",
+      "status": "published",
+      "order": 110,
+      "lemma": "szpital",
+      "translation": "el hospital",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-przychodnia",
+      "status": "published",
+      "order": 120,
+      "lemma": "przychodnia",
+      "translation": "el centro de salud",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kosciol",
+      "status": "published",
+      "order": 130,
+      "lemma": "kościół",
+      "translation": "la iglesia",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-muzeum",
+      "status": "published",
+      "order": 140,
+      "lemma": "muzeum",
+      "translation": "el museo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter",
+      "note": "No cambia en singular."
+    },
+    {
+      "id": "pl-es-kino",
+      "status": "published",
+      "order": 150,
+      "lemma": "kino",
+      "translation": "el cine",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-teatr",
+      "status": "published",
+      "order": 160,
+      "lemma": "teatr",
+      "translation": "el teatro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-biblioteka",
+      "status": "published",
+      "order": 170,
+      "lemma": "biblioteka",
+      "translation": "la biblioteca",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-park",
+      "status": "published",
+      "order": 180,
+      "lemma": "park",
+      "translation": "el parque",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-ulica",
+      "status": "published",
+      "order": 190,
+      "lemma": "ulica",
+      "translation": "la calle",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine",
+      "note": "Na ulicy."
+    },
+    {
+      "id": "pl-es-rynek",
+      "status": "published",
+      "order": 200,
+      "lemma": "rynek",
+      "translation": "la plaza mayor",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Na rynku."
+    },
+    {
+      "id": "pl-es-plac",
+      "status": "published",
+      "order": 210,
+      "lemma": "plac",
+      "translation": "la plaza",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-rog",
+      "status": "published",
+      "order": 220,
+      "lemma": "róg",
+      "translation": "la esquina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Na rogu."
+    },
+    {
+      "id": "pl-es-kamienica",
+      "status": "published",
+      "order": 230,
+      "lemma": "kamienica",
+      "translation": "el edificio antiguo de pisos",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-osiedle",
+      "status": "published",
+      "order": 240,
+      "lemma": "osiedle",
+      "translation": "la urbanización, el barrio de bloques",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-okolica",
+      "status": "published",
+      "order": 250,
+      "lemma": "okolica",
+      "translation": "la zona, los alrededores",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-centrum",
+      "status": "published",
+      "order": 260,
+      "lemma": "centrum",
+      "translation": "el centro",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-sasiad",
+      "status": "published",
+      "order": 270,
+      "lemma": "sąsiad",
+      "translation": "el vecino",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sasiadka",
+      "status": "published",
+      "order": 280,
+      "lemma": "sąsiadka",
+      "translation": "la vecina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-blisko",
+      "status": "published",
+      "order": 290,
+      "lemma": "blisko",
+      "translation": "cerca",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-daleko",
+      "status": "published",
+      "order": 300,
+      "lemma": "daleko",
+      "translation": "lejos",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-tani",
+      "status": "published",
+      "order": 310,
+      "lemma": "tani",
+      "translation": "barato",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    },
+    {
+      "id": "pl-es-drogi",
+      "status": "published",
+      "order": 320,
+      "lemma": "drogi",
+      "translation": "caro",
+      "levelId": "a1",
+      "partOfSpeech": "adjective"
+    }
+  ]
+}

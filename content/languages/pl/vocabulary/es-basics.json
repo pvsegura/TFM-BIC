@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "id": "es-basics",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1010,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Saludos y palabras básicas",
+  "description": "Saludar, despedirse, dar las gracias y presentarse.",
+  "items": [
+    {
+      "id": "pl-es-czesc",
+      "status": "published",
+      "order": 10,
+      "lemma": "cześć",
+      "translation": "hola; adiós (informal)",
+      "levelId": "a1",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "id": "pl-es-dzien-dobry",
+      "status": "published",
+      "order": 20,
+      "lemma": "dzień dobry",
+      "translation": "buenos días; buenas tardes",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-dobry-wieczor",
+      "status": "published",
+      "order": 30,
+      "lemma": "dobry wieczór",
+      "translation": "buenas noches (al llegar)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-dobranoc",
+      "status": "published",
+      "order": 40,
+      "lemma": "dobranoc",
+      "translation": "buenas noches (al acostarse)",
+      "levelId": "a1",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "id": "pl-es-do-widzenia",
+      "status": "published",
+      "order": 50,
+      "lemma": "do widzenia",
+      "translation": "adiós (formal)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-na-razie",
+      "status": "published",
+      "order": 60,
+      "lemma": "na razie",
+      "translation": "hasta luego (informal)",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-dziekuje",
+      "status": "published",
+      "order": 70,
+      "lemma": "dziękuję",
+      "translation": "gracias",
+      "levelId": "a1",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "id": "pl-es-prosze",
+      "status": "published",
+      "order": 80,
+      "lemma": "proszę",
+      "translation": "por favor; tome; de nada",
+      "levelId": "a1",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-es-przepraszam",
+      "status": "published",
+      "order": 90,
+      "lemma": "przepraszam",
+      "translation": "perdón; disculpe",
+      "levelId": "a1",
+      "partOfSpeech": "interjection"
+    },
+    {
+      "id": "pl-es-tak",
+      "status": "published",
+      "order": 100,
+      "lemma": "tak",
+      "translation": "sí",
+      "levelId": "a1",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-es-nie",
+      "status": "published",
+      "order": 110,
+      "lemma": "nie",
+      "translation": "no",
+      "levelId": "a1",
+      "partOfSpeech": "particle"
+    },
+    {
+      "id": "pl-es-dobrze",
+      "status": "published",
+      "order": 120,
+      "lemma": "dobrze",
+      "translation": "bien; vale",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-milo-mi",
+      "status": "published",
+      "order": 130,
+      "lemma": "miło mi",
+      "translation": "encantado, encantada",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-imie",
+      "status": "published",
+      "order": 140,
+      "lemma": "imię",
+      "translation": "el nombre (de pila)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-nazwisko",
+      "status": "published",
+      "order": 150,
+      "lemma": "nazwisko",
+      "translation": "el apellido",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-pan",
+      "status": "published",
+      "order": 160,
+      "lemma": "pan",
+      "translation": "el señor; usted (a un hombre)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-pani",
+      "status": "published",
+      "order": 170,
+      "lemma": "pani",
+      "translation": "la señora; usted (a una mujer)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-panstwo",
+      "status": "published",
+      "order": 180,
+      "lemma": "państwo",
+      "translation": "ustedes; los señores",
+      "levelId": "a1",
+      "partOfSpeech": "noun"
+    },
+    {
+      "id": "pl-es-jak-sie-masz",
+      "status": "published",
+      "order": 190,
+      "lemma": "jak się masz?",
+      "translation": "¿qué tal estás?",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-nie-ma-za-co",
+      "status": "published",
+      "order": 200,
+      "lemma": "nie ma za co",
+      "translation": "de nada",
+      "levelId": "a1",
+      "partOfSpeech": "phrase"
+    },
+    {
+      "id": "pl-es-troche",
+      "status": "published",
+      "order": 210,
+      "lemma": "trochę",
+      "translation": "un poco",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    },
+    {
+      "id": "pl-es-bardzo",
+      "status": "published",
+      "order": 220,
+      "lemma": "bardzo",
+      "translation": "muy; mucho",
+      "levelId": "a1",
+      "partOfSpeech": "adverb"
+    }
+  ]
+}

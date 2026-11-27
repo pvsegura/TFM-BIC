@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "id": "es-jobs",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1150,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Profesiones y trabajo",
+  "description": "Profesiones frecuentes y el lugar de trabajo.",
+  "items": [
+    {
+      "id": "pl-es-praca",
+      "status": "published",
+      "order": 10,
+      "lemma": "praca",
+      "translation": "el trabajo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-biuro",
+      "status": "published",
+      "order": 20,
+      "lemma": "biuro",
+      "translation": "la oficina",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "neuter"
+    },
+    {
+      "id": "pl-es-szef",
+      "status": "published",
+      "order": 30,
+      "lemma": "szef",
+      "translation": "el jefe",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kolega",
+      "status": "published",
+      "order": 40,
+      "lemma": "kolega",
+      "translation": "el compañero; el amigo",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine",
+      "note": "Masculino aunque termine en -a."
+    },
+    {
+      "id": "pl-es-kolezanka",
+      "status": "published",
+      "order": 50,
+      "lemma": "koleżanka",
+      "translation": "la compañera; la amiga",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-lekarz",
+      "status": "published",
+      "order": 60,
+      "lemma": "lekarz",
+      "translation": "el médico",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-lekarka",
+      "status": "published",
+      "order": 70,
+      "lemma": "lekarka",
+      "translation": "la médica",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-nauczyciel",
+      "status": "published",
+      "order": 80,
+      "lemma": "nauczyciel",
+      "translation": "el profesor (de colegio)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-nauczycielka",
+      "status": "published",
+      "order": 90,
+      "lemma": "nauczycielka",
+      "translation": "la profesora (de colegio)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kelner",
+      "status": "published",
+      "order": 100,
+      "lemma": "kelner",
+      "translation": "el camarero",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-kelnerka",
+      "status": "published",
+      "order": 110,
+      "lemma": "kelnerka",
+      "translation": "la camarera",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-kierowca",
+      "status": "published",
+      "order": 120,
+      "lemma": "kierowca",
+      "translation": "el conductor",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-motorniczy",
+      "status": "published",
+      "order": 130,
+      "lemma": "motorniczy",
+      "translation": "el conductor de tranvía",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sprzedawca",
+      "status": "published",
+      "order": 140,
+      "lemma": "sprzedawca",
+      "translation": "el vendedor, el dependiente",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-sprzedawczyni",
+      "status": "published",
+      "order": 150,
+      "lemma": "sprzedawczyni",
+      "translation": "la vendedora, la dependienta",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-inzynier",
+      "status": "published",
+      "order": 160,
+      "lemma": "inżynier",
+      "translation": "el ingeniero, la ingeniera",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-informatyk",
+      "status": "published",
+      "order": 170,
+      "lemma": "informatyk",
+      "translation": "el informático",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-student",
+      "status": "published",
+      "order": 180,
+      "lemma": "student",
+      "translation": "el estudiante (universitario)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-studentka",
+      "status": "published",
+      "order": 190,
+      "lemma": "studentka",
+      "translation": "la estudiante (universitaria)",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    },
+    {
+      "id": "pl-es-emeryt",
+      "status": "published",
+      "order": 200,
+      "lemma": "emeryt",
+      "translation": "el jubilado",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "masculine"
+    },
+    {
+      "id": "pl-es-emerytka",
+      "status": "published",
+      "order": 210,
+      "lemma": "emerytka",
+      "translation": "la jubilada",
+      "levelId": "a1",
+      "partOfSpeech": "noun",
+      "gender": "feminine"
+    }
+  ]
+}
