@@ -74,11 +74,6 @@
     "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
     "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
   },
-  "a1-pl-u1-classroom.png": {
-    "source": "ai",
-    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
-    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
-  },
   "a1-u6-plans.png": {
     "source": "ai",
     "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
@@ -130,6 +125,16 @@
     "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
   },
   "a1-pl-u6-volleyball.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-pl-u1-hotel.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-pl-u1-office.png": {
     "source": "ai",
     "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
     "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."

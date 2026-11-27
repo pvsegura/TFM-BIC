@@ -7,13 +7,9 @@ const k = kit(1, "pl-es-unit-1-hello", 1000, COURSE);
 k.mc(
   "pl-es-u1a-listen-why",
   "perceive",
-  "Diálogo en la recepción: ¿para qué va Javier a la escuela?",
-  "Chcę zapisać się na kurs polskiego — quiero apuntarme al curso de polaco.",
-  [
-    "Para apuntarse a un curso de polaco.",
-    "Para buscar trabajo de profesor.",
-    "Para preguntar por un hotel.",
-  ],
+  "Diálogo en la recepción: ¿qué tiene Javier en el hotel?",
+  "Mam rezerwację na trzy noce — tiene una reserva para tres noches.",
+  ["Una reserva para tres noches.", "Una entrevista de trabajo.", "Una mesa en el restaurante."],
 );
 k.tf(
   "pl-es-u1a-listen-formal",

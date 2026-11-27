@@ -40,8 +40,8 @@ k.tf(
 k.mc(
   "pl-es-u1b-listen-group",
   "perceive",
-  "Diálogo: ¿cuántas personas hay en el grupo?",
-  "Jest nas dwanaście osób — doce.",
+  "Diálogo: ¿cuántas personas hay ahora en el equipo?",
+  "Teraz jest nas dwanaście osób — doce.",
   ["Doce.", "Dos.", "Veinte."],
 );
 // CONECTAR
@@ -282,7 +282,7 @@ k.ta(
 k.write(
   "pl-es-u1b-write-intro",
   "express",
-  "Escribe en polaco tu presentación para el primer día de curso: nombre, de dónde eres, dónde vives, qué idiomas hablas, tu edad y una pregunta con czy para un compañero.",
+  "Escribe en polaco tu presentación para el primer día en un trabajo nuevo: nombre, de dónde eres, dónde vives, qué idiomas hablas, tu edad y una pregunta con czy para un compañero.",
   "Revisa: z + país, w + ciudad, po + idioma, lat / lata, czy al principio de la pregunta.",
   "Cześć! Mam na imię Lucía. Jestem z Hiszpanii, z Sewilli, ale teraz mieszkam w Warszawie. Mówię po hiszpańsku, po angielsku i trochę po polsku. Mam dwadzieścia cztery lata. A ty? Czy mówisz po hiszpańsku?",
   ["nombre", "z + país / ciudad", "mieszkam w…", "po + idiomas", "edad", "pregunta con czy"],
@@ -294,8 +294,8 @@ console.log("saved", k.save(), "unit 1 (pl-es) total", renumber(1, { ...COURSE }
 
 planImages([
   {
-    asset: "a1-pl-u1-classroom.png",
+    asset: "a1-pl-u1-office.png",
     prompt:
-      "a friendly female teacher standing next to a blank whiteboard in a small language classroom, three adult students of different ages sitting at desks with notebooks, one raising a hand",
+      "a friendly woman team leader standing at the head of a meeting table in a bright modern office, welcoming three new colleagues of different ages who sit with notebooks and coffee cups, no screens with text or signs",
   },
 ]);

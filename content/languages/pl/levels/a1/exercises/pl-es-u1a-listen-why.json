@@ -13,21 +13,21 @@
     "number": 1,
     "phase": "perceive"
   },
-  "prompt": "Diálogo en la recepción: ¿para qué va Javier a la escuela?",
-  "explanation": "Chcę zapisać się na kurs polskiego — quiero apuntarme al curso de polaco.",
+  "prompt": "Diálogo en la recepción: ¿qué tiene Javier en el hotel?",
+  "explanation": "Mam rezerwację na trzy noce — tiene una reserva para tres noches.",
   "configuration": {
     "options": [
       {
         "id": "opt-a",
-        "text": "Para apuntarse a un curso de polaco."
+        "text": "Una reserva para tres noches."
       },
       {
         "id": "opt-b",
-        "text": "Para buscar trabajo de profesor."
+        "text": "Una entrevista de trabajo."
       },
       {
         "id": "opt-c",
-        "text": "Para preguntar por un hotel."
+        "text": "Una mesa en el restaurante."
       }
     ],
     "correctOptionId": "opt-a"

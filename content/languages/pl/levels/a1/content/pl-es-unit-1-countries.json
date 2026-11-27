@@ -12,23 +12,27 @@
   "title": "Unidad 1B. Skąd jesteś? — países, idiomas, ciudades y números del 0 al 20",
   "description": "Dices de dónde eres, dónde vives y qué idiomas hablas, preguntas con czy, cuentas hasta veinte y dices tu edad y tu número de teléfono.",
   "blocks": [
-    { "type": "section", "phase": "perceive", "title": "La primera clase" },
+    {
+      "type": "section",
+      "phase": "perceive",
+      "title": "El primer día en la oficina"
+    },
     {
       "type": "explanation",
-      "text": "Javier empieza su curso de polaco en Cracovia. La profesora, Ewa, pregunta a cada alumno de dónde es. Primera escucha: ¿de qué países son Javier, Valentina y Carlos? Segunda: ¿dónde vive cada uno? Tercera: fíjate en cómo empiezan las preguntas de sí o no — con la palabra czy."
+      "text": "Javier empieza a trabajar en una empresa internacional de Cracovia. Ewa, la jefa del equipo, presenta a los compañeros nuevos y pregunta a cada uno de dónde es. Primera escucha: ¿de qué países son Javier, Valentina y Carlos? Segunda: ¿dónde vive cada uno? Tercera: fíjate en cómo empiezan las preguntas de sí o no — con la palabra czy."
     },
     {
       "type": "image",
-      "asset": "a1-pl-u1-classroom.png",
-      "alt": "Una profesora delante de una pizarra en blanco y tres alumnos adultos sentados en un aula pequeña."
+      "asset": "a1-pl-u1-office.png",
+      "alt": "Una mujer de pie da la bienvenida a tres compañeros nuevos sentados alrededor de una mesa de reuniones en una oficina luminosa."
     },
     {
       "type": "dialogue",
       "lines": [
         {
           "speaker": "Ewa",
-          "text": "Dzień dobry wszystkim! Jestem Ewa. Na kursie mówimy sobie na ty, dobrze?",
-          "translation": "¡Buenos días a todos! Soy Ewa. En el curso nos tuteamos, ¿vale?"
+          "text": "Dzień dobry wszystkim! Jestem Ewa, szefowa zespołu. W firmie mówimy sobie na ty, dobrze?",
+          "translation": "¡Buenos días a todos! Soy Ewa, la jefa del equipo. En la empresa nos tuteamos, ¿vale?"
         },
         {
           "speaker": "Ewa",
@@ -72,8 +76,8 @@
         },
         {
           "speaker": "Carlos",
-          "text": "Nie, nie jestem z Hiszpanii. Jestem Meksykaninem, z Guadalajary. Mieszkam w Krakowie i pracuję tutaj.",
-          "translation": "No, no soy de España. Soy mexicano, de Guadalajara. Vivo en Cracovia y trabajo aquí."
+          "text": "Nie, nie jestem z Hiszpanii. Jestem Meksykaninem, z Guadalajary. Mieszkam w Krakowie od roku.",
+          "translation": "No, no soy de España. Soy mexicano, de Guadalajara. Vivo en Cracovia desde hace un año."
         },
         {
           "speaker": "Ewa",
@@ -87,12 +91,16 @@
         },
         {
           "speaker": "Ewa",
-          "text": "Trudny, ale piękny! Dobrze, liczymy: jeden, dwa, trzy… Jest nas dwanaście osób.",
-          "translation": "¡Difícil, pero precioso! Bueno, contamos: uno, dos, tres… Somos doce personas."
+          "text": "Trudny, ale piękny! Witamy w zespole. Teraz jest nas dwanaście osób.",
+          "translation": "¡Difícil, pero precioso! Bienvenidos al equipo. Ahora somos doce personas."
         }
       ]
     },
-    { "type": "section", "phase": "connect", "title": "Países, nacionalidades e idiomas" },
+    {
+      "type": "section",
+      "phase": "connect",
+      "title": "Países, nacionalidades e idiomas"
+    },
     {
       "type": "table",
       "caption": "Países: Jestem z… (soy de…) y la nacionalidad (él / ella)",
@@ -154,7 +162,11 @@
         ["Buenos Aires", "z Buenos Aires", "w Buenos Aires"]
       ]
     },
-    { "type": "section", "phase": "structure", "title": "Skąd, gdzie, czy: preguntar y responder" },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Skąd, gdzie, czy: preguntar y responder"
+    },
     {
       "type": "explanation",
       "text": "En polaco el sustantivo cambia de terminación según su función: son los casos. Por ahora no hace falta saber las reglas. Aprende las respuestas como bloques: Jestem z Polski (soy de Polonia) y Mieszkam w Krakowie (vivo en Cracovia). Fíjate en que Polska → z Polski y Kraków → w Krakowie: después de z y de w el nombre cambia. Delante de algunos grupos de consonantes se dice ze y we para poder pronunciarlo: ze Stanów Zjednoczonych, we Wrocławiu. Los nombres que no parecen polacos (Chile, Peru, Buenos Aires) no cambian."
@@ -274,7 +286,11 @@
       "right": "[pieñch], [sheśch]",
       "explanation": "Ć no es una c española: es una «ch» muy suave. Y sz no es s, sino «sh». Exagera al principio: sześć tiene tres sonidos difíciles seguidos, y con práctica sale solo."
     },
-    { "type": "section", "phase": "culture", "title": "Apellidos, ciudades y familias mixtas" },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Apellidos, ciudades y familias mixtas"
+    },
     {
       "type": "reading",
       "title": "Jesteśmy rodziną polsko-hiszpańską",
@@ -295,10 +311,14 @@
         "Un polaco te preguntará muchas veces Skąd jesteś? y luego, casi seguro, Dlaczego uczysz się polskiego? (¿Por qué aprendes polaco?). Aprender polaco despierta sorpresa y simpatía: ten preparada tu respuesta."
       ]
     },
-    { "type": "section", "phase": "express", "title": "Misión: preséntate en clase" },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misión: preséntate al equipo"
+    },
     {
       "type": "mission",
-      "title": "Tu presentación el primer día de curso",
+      "title": "Tu presentación el primer día en un trabajo nuevo",
       "steps": [
         "Saluda y di tu nombre (Mam na imię… / Nazywam się…).",
         "Di de dónde eres: país y ciudad (Jestem z…, z…).",
@@ -327,7 +347,10 @@
           "text": "Czy mówisz po polsku? — Tak, trochę.",
           "translation": "¿Hablas polaco? — Sí, un poco."
         },
-        { "text": "Nie, nie mówię po angielsku.", "translation": "No, no hablo inglés." },
+        {
+          "text": "Nie, nie mówię po angielsku.",
+          "translation": "No, no hablo inglés."
+        },
         {
           "text": "Jestem Hiszpanem. / Jestem Hiszpanką.",
           "translation": "Soy español. / Soy española."
@@ -336,7 +359,10 @@
           "text": "Ile masz lat? — Mam dwadzieścia lat.",
           "translation": "¿Cuántos años tienes? — Tengo veinte años."
         },
-        { "text": "Mój numer telefonu to…", "translation": "Mi número de teléfono es…" }
+        {
+          "text": "Mój numer telefonu to…",
+          "translation": "Mi número de teléfono es…"
+        }
       ],
       "canDo": [
         "decir de dónde soy y dónde vivo (z…, w…)",

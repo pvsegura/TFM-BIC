@@ -15,7 +15,7 @@
     {
       "type": "section",
       "phase": "perceive",
-      "title": "En la recepción de una escuela de idiomas"
+      "title": "En la recepción del hotel"
     },
     {
       "type": "explanation",
@@ -23,17 +23,21 @@
     },
     {
       "type": "image",
-      "asset": "a1-u1-reception.png",
-      "alt": "Un chico con mochila en la recepción de una escuela de idiomas; la recepcionista apunta sus datos."
+      "asset": "a1-pl-u1-hotel.png",
+      "alt": "Un hombre joven con una maleta en la recepción de un hotel; la recepcionista le entrega una llave."
     },
     {
       "type": "dialogue",
       "lines": [
-        { "speaker": "Recepcjonistka", "text": "Dzień dobry!", "translation": "¡Buenos días!" },
+        {
+          "speaker": "Recepcjonistka",
+          "text": "Dzień dobry!",
+          "translation": "¡Buenos días!"
+        },
         {
           "speaker": "Javier",
-          "text": "Dzień dobry. Chcę zapisać się na kurs polskiego.",
-          "translation": "Buenos días. Quiero apuntarme al curso de polaco."
+          "text": "Dzień dobry. Mam rezerwację na trzy noce.",
+          "translation": "Buenos días. Tengo una reserva para tres noches."
         },
         {
           "speaker": "Recepcjonistka",
@@ -57,6 +61,16 @@
         },
         {
           "speaker": "Recepcjonistka",
+          "text": "Dziękuję. Jest rezerwacja. Poproszę paszport.",
+          "translation": "Gracias. Aquí está la reserva. El pasaporte, por favor."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Proszę, to mój paszport.",
+          "translation": "Tome, este es mi pasaporte."
+        },
+        {
+          "speaker": "Recepcjonistka",
           "text": "Dziękuję. A pana e-mail?",
           "translation": "Gracias. ¿Y su correo electrónico?"
         },
@@ -67,17 +81,25 @@
         },
         {
           "speaker": "Recepcjonistka",
-          "text": "Świetnie. Miło mi, jestem Magda.",
-          "translation": "Perfecto. Encantada, soy Magda."
+          "text": "Świetnie. To jest pana klucz. Miło mi, jestem Magda.",
+          "translation": "Perfecto. Esta es su llave. Encantada, soy Magda."
         },
-        { "speaker": "Javier", "text": "Bardzo mi miło.", "translation": "Mucho gusto." }
+        {
+          "speaker": "Javier",
+          "text": "Bardzo mi miło. Dziękuję!",
+          "translation": "Mucho gusto. ¡Gracias!"
+        }
       ]
     },
     {
       "type": "explanation",
       "text": "Fíjate: la recepcionista trata a Javier de pan (usted, a un hombre). En polaco el trato formal es mucho más frecuente que en España: con desconocidos, en tiendas, oficinas y en el trabajo se usa pan (señor) y pani (señora) hasta que alguien propone tutearse. Si no sabes qué forma elegir, empieza siempre con pan / pani."
     },
-    { "type": "section", "phase": "connect", "title": "Palabras para empezar" },
+    {
+      "type": "section",
+      "phase": "connect",
+      "title": "Palabras para empezar"
+    },
     {
       "type": "table",
       "caption": "Saludos, despedidas y primeras preguntas",
@@ -103,7 +125,11 @@
       "type": "explanation",
       "text": "Une y memoriza — técnica de asociación. Dziękuję [ʥeŋkuje] suena a «yen-cuye»: imagina que das las gracias a alguien que te devuelve un yen. Cześć se parece a «chesh-ch»: el sonido de abrir una lata — ¡hola, abro una bebida para ti! Miło mi lleva dentro «mil»: «mil gracias por conocerte». Cuanto más absurda la imagen, mejor se recuerda; la pronunciación, siempre con el audio."
     },
-    { "type": "section", "phase": "structure", "title": "Być, mieć na imię y los pronombres" },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Być, mieć na imię y los pronombres"
+    },
     {
       "type": "explanation",
       "text": "Para decir tu nombre, los polacos usan sobre todo mam na imię… (literalmente «tengo por nombre…») o nazywam się… (me llamo; se usa más con el apellido o en situaciones formales). Como en español, el pronombre personal (ja, ty…) suele omitirse, porque la terminación del verbo ya dice quién habla: mam (yo tengo), masz (tú tienes)."
@@ -206,7 +232,11 @@
       "translation": "¿Cómo se escribe Martínez? — M, a, r, t, i, n, e, z.",
       "note": "La tilde española se puede omitir o decir: i z akcentem."
     },
-    { "type": "section", "phase": "culture", "title": "Nombres, diminutivos y trato formal" },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Nombres, diminutivos y trato formal"
+    },
     {
       "type": "reading",
       "title": "Mam na imię Katarzyna",
@@ -225,7 +255,11 @@
         "El trato formal (pan / pani) es muy común, también entre compañeros de trabajo mayores. Pasar al «tú» (przejść na ty) suele proponerlo la persona mayor o de mayor rango. Al saludar se da la mano; los dos besos españoles no son habituales al conocer a alguien."
       ]
     },
-    { "type": "section", "phase": "express", "title": "Misión: llegas a Cracovia" },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misión: llegas a Cracovia"
+    },
     {
       "type": "mission",
       "title": "Te registras en un hotel de Cracovia",
@@ -241,14 +275,38 @@
     {
       "type": "summary",
       "phrases": [
-        { "text": "Cześć! / Dzień dobry.", "translation": "¡Hola! / Buenos días." },
-        { "text": "Jak masz na imię?", "translation": "¿Cómo te llamas?" },
-        { "text": "Jak się pan / pani nazywa?", "translation": "¿Cómo se llama usted?" },
-        { "text": "Mam na imię… / Nazywam się…", "translation": "Me llamo…" },
-        { "text": "Jak się pisze?", "translation": "¿Cómo se escribe?" },
-        { "text": "Miło mi.", "translation": "Encantado/a." },
-        { "text": "Przepraszam, może pan powtórzyć?", "translation": "Perdone, ¿puede repetir?" },
-        { "text": "małpa, kropka", "translation": "@, punto" }
+        {
+          "text": "Cześć! / Dzień dobry.",
+          "translation": "¡Hola! / Buenos días."
+        },
+        {
+          "text": "Jak masz na imię?",
+          "translation": "¿Cómo te llamas?"
+        },
+        {
+          "text": "Jak się pan / pani nazywa?",
+          "translation": "¿Cómo se llama usted?"
+        },
+        {
+          "text": "Mam na imię… / Nazywam się…",
+          "translation": "Me llamo…"
+        },
+        {
+          "text": "Jak się pisze?",
+          "translation": "¿Cómo se escribe?"
+        },
+        {
+          "text": "Miło mi.",
+          "translation": "Encantado/a."
+        },
+        {
+          "text": "Przepraszam, może pan powtórzyć?",
+          "translation": "Perdone, ¿puede repetir?"
+        },
+        {
+          "text": "małpa, kropka",
+          "translation": "@, punto"
+        }
       ],
       "canDo": [
         "saludar y despedirme de forma formal e informal",

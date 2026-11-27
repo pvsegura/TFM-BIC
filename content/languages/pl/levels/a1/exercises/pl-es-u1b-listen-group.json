@@ -13,8 +13,8 @@
     "number": 8,
     "phase": "perceive"
   },
-  "prompt": "Diálogo: ¿cuántas personas hay en el grupo?",
-  "explanation": "Jest nas dwanaście osób — doce.",
+  "prompt": "Diálogo: ¿cuántas personas hay ahora en el equipo?",
+  "explanation": "Teraz jest nas dwanaście osób — doce.",
   "configuration": {
     "options": [
       {
