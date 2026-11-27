@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-hay-esta",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1090,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 89,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Które pytanie jest poprawne?",
+  "explanation": "O konkretną rzecz: ¿Dónde está…?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Dónde está la cocina?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Dónde hay la cocina?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Dónde es la cocina?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

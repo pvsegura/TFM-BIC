@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-saber-poder",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1150,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 98,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Nigdy nie uczyłeś się jeździć na nartach. Co mówisz?",
+  "explanation": "Brak umiejętności: no sé.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "No sé esquiar."
+      },
+      {
+        "id": "opt-b",
+        "text": "No puedo esquiar."
+      },
+      {
+        "id": "opt-c",
+        "text": "No conozco esquiar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

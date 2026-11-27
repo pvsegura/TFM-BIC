@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-refuse",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1170,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 100,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. — ¿Quieres venir al cine? Nie możesz. Najgrzeczniejsza odpowiedź to…",
+  "explanation": "Przeprosiny + powód + inny termin.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Lo siento, no puedo, tengo que trabajar. ¿Otro día?"
+      },
+      {
+        "id": "opt-b",
+        "text": "No."
+      },
+      {
+        "id": "opt-c",
+        "text": "No quiero."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

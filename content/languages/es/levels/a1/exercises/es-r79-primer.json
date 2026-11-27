@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-primer",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1110,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 91,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: Vivo en el ___ piso (3).",
+  "explanation": "Tercero → tercer przed rzeczownikiem męskim.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "tercer"
+      },
+      {
+        "id": "opt-b",
+        "text": "tercero"
+      },
+      {
+        "id": "opt-c",
+        "text": "tres"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

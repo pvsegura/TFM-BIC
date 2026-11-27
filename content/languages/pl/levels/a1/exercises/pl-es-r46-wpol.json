@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-wpol",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7000,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 82,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Qué hora es wpół do ósmej?",
+  "explanation": "Media hora antes de las ocho: 7:30.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "7:30"
+      },
+      {
+        "id": "opt-b",
+        "text": "8:30"
+      },
+      {
+        "id": "opt-c",
+        "text": "8:00"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-translate-shop",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1200,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 100,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 7–9. Napisz po hiszpańsku: Mogę przymierzyć tę sukienkę?",
+  "explanation": "¿Puedo probarme este vestido?",
+  "configuration": {
+    "acceptedAnswers": ["¿Puedo probarme este vestido?", "¿Me puedo probar este vestido?"],
+    "caseSensitive": false
+  }
+}

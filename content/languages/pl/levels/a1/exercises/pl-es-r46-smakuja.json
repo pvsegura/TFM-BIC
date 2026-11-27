@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-smakuja",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6970,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 79,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cómo dices «me gustan los pierogi» (al comerlos)?",
+  "explanation": "Smakować como gustar: smakują mi.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Smakują mi pierogi."
+      },
+      {
+        "id": "opt-b",
+        "text": "Smakuję pierogi."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pierogi mi smakuje."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

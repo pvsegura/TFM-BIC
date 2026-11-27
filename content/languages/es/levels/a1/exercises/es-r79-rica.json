@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-rica",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1140,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 94,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Chwalisz smak paelli, którą jesz. Co mówisz?",
+  "explanation": "Smak teraz: está rica.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¡Está muy rica!"
+      },
+      {
+        "id": "opt-b",
+        "text": "¡Es muy rica!"
+      },
+      {
+        "id": "opt-c",
+        "text": "¡Hay muy rica!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

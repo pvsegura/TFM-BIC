@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-wiekszy",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10000,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 78,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «mi piso es más grande que el tuyo»?",
+  "explanation": "Duży → większy; niż + nominativo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Moje mieszkanie jest większe niż twoje."
+      },
+      {
+        "id": "opt-b",
+        "text": "Moje mieszkanie jest bardziej duże niż twoje."
+      },
+      {
+        "id": "opt-c",
+        "text": "Moje mieszkanie jest większe od twoje."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

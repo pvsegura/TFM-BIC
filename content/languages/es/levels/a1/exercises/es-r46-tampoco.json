@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-tampoco",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1130,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 96,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. — No me gusta el fútbol. Ty też nie. Co mówisz?",
+  "explanation": "Zgoda z przeczeniem: a mí tampoco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A mí tampoco."
+      },
+      {
+        "id": "opt-b",
+        "text": "A mí también."
+      },
+      {
+        "id": "opt-c",
+        "text": "Yo tampoco gusto."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

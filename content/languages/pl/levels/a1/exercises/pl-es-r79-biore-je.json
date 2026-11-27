@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-biore-je",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9940,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 72,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Te llevas los zapatos (buty). ¿Qué dices?",
+  "explanation": "Plural de cosas: je.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Biorę je."
+      },
+      {
+        "id": "opt-b",
+        "text": "Biorę ją."
+      },
+      {
+        "id": "opt-c",
+        "text": "Biorę go."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

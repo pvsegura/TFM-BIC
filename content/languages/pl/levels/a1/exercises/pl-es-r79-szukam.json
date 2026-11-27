@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-szukam",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 9910,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 69,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Completa en genitivo después de szukam.",
+  "explanation": "Kurtka → kurtki; sweter → swetra.",
+  "configuration": {
+    "text": "Szukam ciepłej ___ (kurtka) i nowego ___ (sweter).",
+    "gaps": [
+      {
+        "accepted": ["kurtki"]
+      },
+      {
+        "accepted": ["swetra"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

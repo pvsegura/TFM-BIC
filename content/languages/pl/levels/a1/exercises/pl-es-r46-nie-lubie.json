@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-nie-lubie",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7050,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 87,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cuál es correcto?",
+  "explanation": "Nie lubię + genitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie lubię piłki nożnej."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie lubię piłkę nożną."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie lubię piłka nożna."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

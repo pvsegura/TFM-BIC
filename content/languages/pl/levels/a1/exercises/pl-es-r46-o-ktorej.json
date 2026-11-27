@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-o-ktorej",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6990,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 81,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa: Wstaję o ___ (7).",
+  "explanation": "O + locativo femenino: o siódmej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "siódmej"
+      },
+      {
+        "id": "opt-b",
+        "text": "siedem"
+      },
+      {
+        "id": "opt-c",
+        "text": "siódma"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

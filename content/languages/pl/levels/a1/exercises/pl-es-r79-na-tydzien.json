@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-na-tydzien",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10090,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 87,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «voy para una semana»?",
+  "explanation": "Na + acusativo: na tydzień.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jadę na tydzień."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jadę przez tydzień."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jadę w tydzień."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

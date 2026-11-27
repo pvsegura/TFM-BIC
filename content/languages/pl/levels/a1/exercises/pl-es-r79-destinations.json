@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-destinations",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 10070,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 85,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Completa con nad, w, na o do.",
+  "explanation": "Nad morze, w góry, na wieś, do Hiszpanii.",
+  "configuration": {
+    "text": "Latem jadę ___ morze, potem ___ góry, a na święta ___ Hiszpanii.",
+    "gaps": [
+      {
+        "accepted": ["nad"]
+      },
+      {
+        "accepted": ["w"]
+      },
+      {
+        "accepted": ["do"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

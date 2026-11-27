@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-le-gusta",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1120,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 95,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Jak powiesz „Moja mama lubi czytać”?",
+  "explanation": "A + osoba + le gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A mi madre le gusta leer."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mi madre gusta leer."
+      },
+      {
+        "id": "opt-c",
+        "text": "A mi madre la gusta leer."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

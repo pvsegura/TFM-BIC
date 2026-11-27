@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-weather",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10040,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 82,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cuál es correcto?",
+  "explanation": "El sol świeci; la nieve pada.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Świeci słońce i pada śnieg."
+      },
+      {
+        "id": "opt-b",
+        "text": "Pada słońce i świeci śnieg."
+      },
+      {
+        "id": "opt-c",
+        "text": "Wieje słońce i pada śnieg."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

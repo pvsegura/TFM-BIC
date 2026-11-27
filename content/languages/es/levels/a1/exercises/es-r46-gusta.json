@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-gusta",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1110,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 94,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij gusta albo gustan.",
+  "explanation": "Jedna rzecz / czynność: gusta; wiele rzeczy: gustan.",
+  "configuration": {
+    "text": "Me ___ el cine y me ___ las series, pero no me ___ madrugar.",
+    "gaps": [
+      {
+        "accepted": ["gusta"]
+      },
+      {
+        "accepted": ["gustan"]
+      },
+      {
+        "accepted": ["gusta"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

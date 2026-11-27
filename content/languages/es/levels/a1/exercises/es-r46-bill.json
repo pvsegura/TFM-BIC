@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-bill",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1040,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 87,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Jak poprosisz o rachunek?",
+  "explanation": "La cuenta, por favor / ¿Nos trae la cuenta?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La cuenta, por favor."
+      },
+      {
+        "id": "opt-b",
+        "text": "El billete, por favor."
+      },
+      {
+        "id": "opt-c",
+        "text": "La factura de luz, por favor."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

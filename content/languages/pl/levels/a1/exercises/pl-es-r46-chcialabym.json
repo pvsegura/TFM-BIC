@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-chcialabym",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6920,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 74,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Eres mujer y pides con cortesía. ¿Qué dices?",
+  "explanation": "Mujer: chciałabym.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Chciałabym wodę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Chciałbym wodę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Chcę bym wodę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

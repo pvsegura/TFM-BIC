@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-nie-jem",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6960,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 78,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cómo dices «no como carne»?",
+  "explanation": "Negación + genitivo: mięsa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie jem mięsa."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie jem mięso."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie jem mięsem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

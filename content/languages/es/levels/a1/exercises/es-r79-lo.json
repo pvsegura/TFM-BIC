@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-lo",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1040,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 84,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. — ¿Y el abrigo? — Biorę go. Co mówisz?",
+  "explanation": "El abrigo → lo, przed czasownikiem: me lo llevo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me lo llevo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Me llevo lo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Me la llevo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

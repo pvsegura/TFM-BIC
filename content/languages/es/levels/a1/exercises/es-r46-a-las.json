@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-a-las",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1070,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 90,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij: Como ___ dos.",
+  "explanation": "O godzinie: a la una, a las dos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "a las"
+      },
+      {
+        "id": "opt-b",
+        "text": "en las"
+      },
+      {
+        "id": "opt-c",
+        "text": "a la"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

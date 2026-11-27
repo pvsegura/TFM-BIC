@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-preferir",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1030,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 86,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij: — ¿Carne o pescado? — ___ pescado.",
+  "explanation": "Preferir: prefiero (e → ie).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Prefiero"
+      },
+      {
+        "id": "opt-b",
+        "text": "Prefero"
+      },
+      {
+        "id": "opt-c",
+        "text": "Me prefiero"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

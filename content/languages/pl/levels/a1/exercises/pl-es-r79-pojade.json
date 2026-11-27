@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-pojade",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10080,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 86,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cuál es correcto?",
+  "explanation": "El perfectivo ya es futuro: pojadę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W lipcu pojadę na Mazury."
+      },
+      {
+        "id": "opt-b",
+        "text": "W lipcu będę pojechać na Mazury."
+      },
+      {
+        "id": "opt-c",
+        "text": "W lipcu pojadę do Mazury."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

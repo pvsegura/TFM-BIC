@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-position",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 9980,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 76,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Completa con stoi, leży o wisi.",
+  "explanation": "Cuadro → wisi; libro en la mesa → leży; sofá → stoi.",
+  "configuration": {
+    "text": "Nad kanapą ___ obraz, na stole ___ książka, a pod oknem ___ fotel.",
+    "gaps": [
+      {
+        "accepted": ["wisi"]
+      },
+      {
+        "accepted": ["leży"]
+      },
+      {
+        "accepted": ["stoi"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

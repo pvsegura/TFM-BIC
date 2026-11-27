@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-quantity",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 9950,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 73,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Completa con el genitivo.",
+  "explanation": "Kilo ziemniaków (pl.), litr mleka (sg.), dziesięć jajek (pl.).",
+  "configuration": {
+    "text": "Poproszę kilo ___ (ziemniak), litr ___ (mleko) i dziesięć ___ (jajko).",
+    "gaps": [
+      {
+        "accepted": ["ziemniaków"]
+      },
+      {
+        "accepted": ["mleka"]
+      },
+      {
+        "accepted": ["jajek"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

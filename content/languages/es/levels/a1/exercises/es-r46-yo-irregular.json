@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-yo-irregular",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1100,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 93,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Która forma yo jest poprawna?",
+  "explanation": "Hacer → hago; salir → salgo; poner → pongo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "hago, salgo, pongo"
+      },
+      {
+        "id": "opt-b",
+        "text": "hazo, salo, pono"
+      },
+      {
+        "id": "opt-c",
+        "text": "haco, sallo, poneo"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

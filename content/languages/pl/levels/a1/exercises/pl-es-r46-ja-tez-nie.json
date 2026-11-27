@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-ja-tez-nie",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7060,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 88,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. — Nie lubię zimy. Tú tampoco. ¿Qué dices?",
+  "explanation": "Coincides con una negación: ja też nie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ja też nie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja też."
+      },
+      {
+        "id": "opt-c",
+        "text": "A ja tak."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

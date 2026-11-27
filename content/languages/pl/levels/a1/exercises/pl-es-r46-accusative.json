@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-accusative",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 6910,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 73,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa con el acusativo después de poproszę.",
+  "explanation": "Kawa → kawę; herbata → herbatę; sok → sok.",
+  "configuration": {
+    "text": "Poproszę ___ (kawa), ___ (herbata) i ___ (sok).",
+    "gaps": [
+      {
+        "accepted": ["kawę"]
+      },
+      {
+        "accepted": ["herbatę"]
+      },
+      {
+        "accepted": ["sok"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

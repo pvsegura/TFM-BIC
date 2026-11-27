@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-querer",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1020,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 85,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij formami querer (e → ie).",
+  "explanation": "Quiero, quieres, queremos.",
+  "configuration": {
+    "text": "Yo ___ un té, ¿tú qué ___? Nosotros ___ la cuenta.",
+    "gaps": [
+      {
+        "accepted": ["quiero"]
+      },
+      {
+        "accepted": ["quieres"]
+      },
+      {
+        "accepted": ["queremos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

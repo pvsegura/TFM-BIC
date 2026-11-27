@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-gustaria",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1180,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 98,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Marzysz o podróży do Argentyny. Co mówisz?",
+  "explanation": "Marzenie: me gustaría.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me gustaría ir a Argentina."
+      },
+      {
+        "id": "opt-b",
+        "text": "Me gusta ir a Argentina."
+      },
+      {
+        "id": "opt-c",
+        "text": "Me gustaría a ir en Argentina."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

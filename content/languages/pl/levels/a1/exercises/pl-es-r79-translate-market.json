@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-translate-market",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 89,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 7–9. Escribe en polaco: Medio kilo de fresas, por favor.",
+  "explanation": "Poproszę pół kilo truskawek.",
+  "configuration": {
+    "acceptedAnswers": ["Poproszę pół kilo truskawek.", "Pół kilo truskawek, poproszę."],
+    "caseSensitive": false
+  }
+}

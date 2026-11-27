@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-translate-plan",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1230,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 103,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 7–9. Napisz po hiszpańsku: W sierpniu pojadę nad morze.",
+  "explanation": "En agosto voy a ir a la playa / al mar.",
+  "configuration": {
+    "acceptedAnswers": [
+      "En agosto voy a ir a la playa.",
+      "En agosto voy a ir al mar.",
+      "En agosto voy a la playa."
+    ],
+    "caseSensitive": false
+  }
+}

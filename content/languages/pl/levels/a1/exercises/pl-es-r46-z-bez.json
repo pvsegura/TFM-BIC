@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-z-bez",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6940,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 76,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cuál es correcto?",
+  "explanation": "Z + instrumental; bez + genitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kawa z mlekiem, bez cukru."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kawa z mleko, bez cukier."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kawa z mleka, bez cukrem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

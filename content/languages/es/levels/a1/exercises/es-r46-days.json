@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-days",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1080,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 91,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij: el / los przed dniem tygodnia.",
+  "explanation": "Jeden konkretny dzień: el lunes; co tydzień: los lunes.",
+  "configuration": {
+    "text": "___ lunes voy al gimnasio (co tydzień), pero ___ sábado que viene voy a la playa.",
+    "gaps": [
+      {
+        "accepted": ["los"]
+      },
+      {
+        "accepted": ["el"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

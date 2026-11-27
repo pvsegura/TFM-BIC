@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-ser-estar",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1130,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 93,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij es / está.",
+  "explanation": "Zawód, pochodzenie: es; miejsce, stan: está.",
+  "configuration": {
+    "text": "Ana ___ médica, ___ de Toledo y hoy ___ muy cansada.",
+    "gaps": [
+      {
+        "accepted": ["es"]
+      },
+      {
+        "accepted": ["es"]
+      },
+      {
+        "accepted": ["está"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

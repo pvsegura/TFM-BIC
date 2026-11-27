@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-jugar-tocar",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1140,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 97,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij: ___ al tenis y ___ el piano.",
+  "explanation": "Gra: jugar a; instrument: tocar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Juego / toco"
+      },
+      {
+        "id": "opt-b",
+        "text": "Toco / juego"
+      },
+      {
+        "id": "opt-c",
+        "text": "Juego / juego"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

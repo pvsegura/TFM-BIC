@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-mucha",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1080,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 88,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: Hay ___ gente en el mercado.",
+  "explanation": "Gente (ż): mucha.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "mucha"
+      },
+      {
+        "id": "opt-b",
+        "text": "mucho"
+      },
+      {
+        "id": "opt-c",
+        "text": "muy"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-translate-market",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1210,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 101,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 7–9. Napisz po hiszpańsku: Poproszę pół kilo truskawek.",
+  "explanation": "¿Me pone medio kilo de fresas? / Medio kilo de fresas, por favor.",
+  "configuration": {
+    "acceptedAnswers": [
+      "¿Me pone medio kilo de fresas?",
+      "Medio kilo de fresas, por favor.",
+      "¿Me pone medio kilo de fresas, por favor?"
+    ],
+    "caseSensitive": false
+  }
+}

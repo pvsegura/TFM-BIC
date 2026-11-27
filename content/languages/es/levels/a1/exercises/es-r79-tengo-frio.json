@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-tengo-frio",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1160,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 96,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Jest ci zimno. Co mówisz?",
+  "explanation": "Osoba: tengo frío.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tengo frío."
+      },
+      {
+        "id": "opt-b",
+        "text": "Estoy frío."
+      },
+      {
+        "id": "opt-c",
+        "text": "Hace frío yo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

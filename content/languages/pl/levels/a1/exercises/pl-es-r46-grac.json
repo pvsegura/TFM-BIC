@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-grac",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7070,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 89,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa: Gram ___ tenisa i ___ gitarze.",
+  "explanation": "Grać w + juego; grać na + instrumento.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "w / na"
+      },
+      {
+        "id": "opt-b",
+        "text": "na / w"
+      },
+      {
+        "id": "opt-c",
+        "text": "w / w"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

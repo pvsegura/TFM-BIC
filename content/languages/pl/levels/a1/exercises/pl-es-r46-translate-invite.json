@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-translate-invite",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 94,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 4–6. Escribe en polaco: ¿Te apetece jugar al voleibol el sábado?",
+  "explanation": "Masz ochotę zagrać w siatkówkę w sobotę?",
+  "configuration": {
+    "acceptedAnswers": [
+      "Masz ochotę zagrać w siatkówkę w sobotę?",
+      "Masz ochotę grać w siatkówkę w sobotę?",
+      "Masz ochotę w sobotę zagrać w siatkówkę?"
+    ],
+    "caseSensitive": false
+  }
+}

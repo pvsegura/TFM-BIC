@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-pietro",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10010,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 79,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «vivo en el segundo piso»?",
+  "explanation": "Na + locativo: na drugim piętrze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mieszkam na drugim piętrze."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mieszkam w drugie piętro."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mieszkam na dwa piętro."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

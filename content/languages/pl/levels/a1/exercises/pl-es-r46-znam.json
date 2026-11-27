@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-znam",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7090,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 91,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cómo dices «conozco Cracovia»?",
+  "explanation": "Lugares y personas: znać.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Znam Kraków."
+      },
+      {
+        "id": "opt-b",
+        "text": "Wiem Kraków."
+      },
+      {
+        "id": "opt-c",
+        "text": "Umiem Kraków."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

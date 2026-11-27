@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-translate-day",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1200,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 103,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 4–6. Napisz po hiszpańsku: Zawsze wstaję o siódmej.",
+  "explanation": "Siempre me levanto a las siete.",
+  "configuration": {
+    "acceptedAnswers": ["Siempre me levanto a las siete.", "Me levanto siempre a las siete."],
+    "caseSensitive": false
+  }
+}

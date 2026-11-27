@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-quantities",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1060,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 86,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: ilość + de.",
+  "explanation": "Un kilo de…, una docena de…, una botella de…",
+  "configuration": {
+    "text": "Un kilo ___ tomates, una docena ___ huevos y una botella ___ agua.",
+    "gaps": [
+      {
+        "accepted": ["de"]
+      },
+      {
+        "accepted": ["de"]
+      },
+      {
+        "accepted": ["de"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-quedar",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1160,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 99,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Jak zapytasz, o której się spotykacie?",
+  "explanation": "Quedar = umówić się; o godzinę pytasz ¿A qué hora…? (bez se, bo nie zostajesz w domu).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿A qué hora quedamos?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿A qué hora nos quedamos en casa?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Qué hora quedamos?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

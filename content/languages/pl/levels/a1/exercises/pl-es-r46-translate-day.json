@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-translate-day",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 93,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 4–6. Escribe en polaco: Nunca desayuno en casa.",
+  "explanation": "Nigdy nie jem śniadania w domu.",
+  "configuration": {
+    "acceptedAnswers": ["Nigdy nie jem śniadania w domu.", "W domu nigdy nie jem śniadania."],
+    "caseSensitive": false
+  }
+}

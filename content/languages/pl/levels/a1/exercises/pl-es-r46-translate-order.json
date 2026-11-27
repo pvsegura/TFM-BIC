@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-translate-order",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7100,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 92,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 4–6. Escribe en polaco: Un té con limón y una tarta de queso, por favor.",
+  "explanation": "Poproszę herbatę z cytryną i sernik.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Poproszę herbatę z cytryną i sernik.",
+      "Herbatę z cytryną i sernik, poproszę.",
+      "Poproszę herbatę z cytryną i kawałek sernika."
+    ],
+    "caseSensitive": false
+  }
+}

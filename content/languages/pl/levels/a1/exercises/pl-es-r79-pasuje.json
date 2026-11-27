@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-pasuje",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9930,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 71,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «estos pantalones me quedan bien»?",
+  "explanation": "Pasować concuerda con la prenda: te spodnie mi pasują.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Te spodnie mi pasują."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja pasuję te spodnie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Te spodnie mi pasuje."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -174,7 +174,7 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   tengo frío, ir a + infinitivo, acentos regionales.
 - **Unidad 9B** «¿Qué vas a hacer en vacaciones?» (`es-unit-9-holidays`, order 185): pensar / tener ganas de /
   me gustaría, a / en / de en viajes, -ísimo. Unidad 9: 80 ejercicios.
-- Libros A1: Podręcznik **152 páginas** y Zeszyt **124**. Objetivo: unas 170–190 y 160–180.
+- Libros A1: Podręcznik **152 páginas** y Zeszyt **128**. Objetivo: unas 170–190 y 160–180.
 
 ### Polaco para hispanohablantes (pl-es)
 
@@ -200,9 +200,11 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 - **Apéndices explicados en español:** vocabulario temático (15 categorías `es-*`, 389 entradas,
   `pl-es-vocabulary-a1.mjs`) y gramática (20 temas `pl-es-ref-*`, `pl-es-grammar-a1.mjs`).
   Los crucigramas de polaco mantienen Ą, Ę, Ł… (`CROSSWORD_KEEPS_LETTERS` en `book-i18n.mts`).
-- **Libros pl-es A1 (para Lulu):** Podręcznik **148 páginas** y Zeszyt **120**.
-- Siguiente: repasos de las unidades 4–6 y 7–9 en los dos cursos (fase review, como el de 1–3); luego
-  10A de español (reescribir `es-unit-10-getting-around`, order 190) y 10A de polaco (order 1170).
+- **Libros pl-es A1 (para Lulu):** Podręcznik **148 páginas** y Zeszyt **126**.
+- **Repasos hechos** en los dos cursos: 1–3, 4–6 (con la 6B) y 7–9 (con la 9B), fase review; scripts
+  `a1-review-*.mjs` y `pl-es-a1-review-*.mjs`. En español los repasos usan order desde 1000 para no chocar.
+  La explicación de un ejercicio no puede coincidir con el texto de una opción (test de presentación).
+- Siguiente: 10A de español (reescribir `es-unit-10-getting-around`, order 190) y 10A de polaco (order 1170).
 - Después: unidades 8–12 en los dos cursos (en español hay que reescribir las lecciones finas),
   repasos tras las unidades 6, 9 y 12, unidad 0 y examen final.
 - Diálogos de la 1A (recepción de hotel) y la 1B (primer día en la oficina) ya están en contextos

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-demonstratives",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1010,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 81,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: este / esa / aquellos.",
+  "explanation": "Blisko mnie: este; blisko ciebie: esa; daleko: aquellos.",
+  "configuration": {
+    "text": "Me gusta ___ jersey (blisko mnie), ___ falda (przy tobie) y ___ zapatos (tam daleko).",
+    "gaps": [
+      {
+        "accepted": ["este"]
+      },
+      {
+        "accepted": ["esa"]
+      },
+      {
+        "accepted": ["aquellos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

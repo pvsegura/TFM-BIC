@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-ir-a",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1170,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 97,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Które zdanie jest poprawne?",
+  "explanation": "Ir + a + bezokolicznik.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mañana va a llover."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mañana va llover."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mañana va a llueve."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

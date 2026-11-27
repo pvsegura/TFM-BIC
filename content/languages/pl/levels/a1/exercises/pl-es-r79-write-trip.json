@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-write-trip",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 10140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 92,
+    "phase": "review",
+    "lines": 9
+  },
+  "prompt": "Repaso 7–9. Escribe sobre una escapada de fin de semana: adónde y cómo vas, qué tiempo hará, cómo es el sitio donde dormirás, qué compras antes de salir y qué estás haciendo ahora para prepararte.",
+  "explanation": "Usa lo que sabes de las unidades 7–9: nad / w / do, perfectivos, będzie, stoi / leży, cantidades con genitivo, właśnie.",
+  "configuration": {
+    "modelAnswer": "W sobotę pojadę pociągiem w góry, do Zakopanego. Będzie padać śnieg i będzie minus pięć stopni. Będę spać w małym pokoju: pod oknem stoi łóżko, a nad łóżkiem wisi obraz. Przed wyjazdem kupię ciepłą czapkę, kilo jabłek i butelkę wody. Teraz właśnie pakuję walizkę.",
+    "checklist": ["destino y transporte", "tiempo", "alojamiento", "compras", "qué haces ahora"],
+    "minWords": 40,
+    "maxWords": 120
+  }
+}

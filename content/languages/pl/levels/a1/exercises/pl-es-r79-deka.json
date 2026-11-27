@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-deka",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9970,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 75,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cuánto es dwadzieścia deka sera?",
+  "explanation": "Deko = 10 g: 200 g.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "200 g de queso."
+      },
+      {
+        "id": "opt-b",
+        "text": "20 g de queso."
+      },
+      {
+        "id": "opt-c",
+        "text": "2 kg de queso."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

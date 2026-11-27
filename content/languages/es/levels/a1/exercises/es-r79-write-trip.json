@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-write-trip",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 1240,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 104,
+    "phase": "review",
+    "lines": 9
+  },
+  "prompt": "Powtórka 7–9. Napisz o weekendowym wyjeździe: dokąd i czym jedziesz, jaka będzie pogoda, gdzie będziesz spać (opisz pokój albo mieszkanie), co kupisz i co teraz robisz, żeby się przygotować.",
+  "explanation": "Użyj tego, co znasz z jednostek 7–9: ir a, hace / va a hacer, hay / está, estar + gerundio, kolory i ilości.",
+  "configuration": {
+    "modelAnswer": "Este fin de semana voy a ir a Granada en tren. Va a hacer sol, pero por la noche va a hacer frío. Voy a dormir en un apartamento pequeño: hay un dormitorio, una cocina y un baño, y está al lado de la Alhambra. Quiero comprar una chaqueta azul y un kilo de naranjas para el viaje. Ahora estoy haciendo la maleta y mi compañero de piso está buscando el billete.",
+    "checklist": ["dokąd i czym", "pogoda", "nocleg", "zakupy", "estar + gerundio"],
+    "minWords": 40,
+    "maxWords": 120
+  }
+}

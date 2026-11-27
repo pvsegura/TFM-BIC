@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-hundreds",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 1050,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 85,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Połącz liczby.",
+  "explanation": "Quinientos, setecientos, novecientos są nieregularne.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "150",
+        "right": "ciento cincuenta"
+      },
+      {
+        "left": "500",
+        "right": "quinientos"
+      },
+      {
+        "left": "700",
+        "right": "setecientos"
+      },
+      {
+        "left": "900",
+        "right": "novecientos"
+      }
+    ]
+  }
+}

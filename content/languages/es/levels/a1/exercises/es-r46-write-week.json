@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-write-week",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 1230,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 106,
+    "phase": "review",
+    "lines": 9
+  },
+  "prompt": "Powtórka 4–6. Napisz o swoim tygodniu: rutyna, obowiązki, co lubisz robić w wolnym czasie i jeden plan ze znajomym (gdzie i o której się umawiacie).",
+  "explanation": "Użyj tego, co znasz z jednostek 4–6: czasowniki zwrotne, godziny, tener que, gustar, quedar.",
+  "configuration": {
+    "modelAnswer": "De lunes a viernes me levanto a las siete y trabajo de nueve a cinco. Los martes tengo que hacer la compra y los sábados limpio la casa. En mi tiempo libre me encanta leer y me gusta mucho cocinar, pero no me gusta nada el fútbol. Este domingo quedo con Ana a las once en un bar del centro para tomar un café.",
+    "checklist": ["rutyna i godziny", "obowiązki", "upodobania", "plan ze znajomym"],
+    "minWords": 40,
+    "maxWords": 120
+  }
+}

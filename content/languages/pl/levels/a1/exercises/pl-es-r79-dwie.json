@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-dwie",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9960,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 74,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «dos cebollas»?",
+  "explanation": "Femenino: dwie + plural.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "dwie cebule"
+      },
+      {
+        "id": "opt-b",
+        "text": "dwa cebule"
+      },
+      {
+        "id": "opt-c",
+        "text": "dwie cebul"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

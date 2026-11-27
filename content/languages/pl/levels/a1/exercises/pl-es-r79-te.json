@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-te",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9920,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 70,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cuál es correcto?",
+  "explanation": "Acusativo femenino de ta: tę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Poproszę tę sukienkę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Poproszę ta sukienka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Poproszę ten sukienkę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

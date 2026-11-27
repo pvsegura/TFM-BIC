@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-sie",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 6980,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 80,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa con el verbo con się.",
+  "explanation": "Budzę się, myjesz się, ubiera się.",
+  "configuration": {
+    "text": "Ja ___ się o szóstej, ty ___ się szybko, a on ___ się elegancko.",
+    "gaps": [
+      {
+        "accepted": ["budzę"]
+      },
+      {
+        "accepted": ["myjesz"]
+      },
+      {
+        "accepted": ["ubiera"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

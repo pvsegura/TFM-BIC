@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-zloty",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 6930,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 75,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa con złoty, złote o złotych.",
+  "explanation": "1 złoty; 2–4 złote; 5+ złotych.",
+  "configuration": {
+    "text": "Woda kosztuje trzy ___, kawa dwanaście ___, a ciastko jeden ___.",
+    "gaps": [
+      {
+        "accepted": ["złote"]
+      },
+      {
+        "accepted": ["złotych"]
+      },
+      {
+        "accepted": ["złoty"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

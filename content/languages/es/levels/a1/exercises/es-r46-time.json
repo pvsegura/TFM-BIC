@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-time",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1060,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 89,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Jest 8:45. Jak to powiesz?",
+  "explanation": "Menos cuarto: son las nueve menos cuarto.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Son las nueve menos cuarto."
+      },
+      {
+        "id": "opt-b",
+        "text": "Son las ocho y cuarenta y cinco menos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Es la nueve menos cuarto."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-reflexive",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1050,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 88,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Uzupełnij zaimkiem zwrotnym.",
+  "explanation": "Me levanto, te duchas, se acuesta.",
+  "configuration": {
+    "text": "Yo ___ levanto a las siete, tú ___ duchas y mi hermano ___ acuesta tarde.",
+    "gaps": [
+      {
+        "accepted": ["me"]
+      },
+      {
+        "accepted": ["te"]
+      },
+      {
+        "accepted": ["se"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

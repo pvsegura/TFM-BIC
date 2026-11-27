@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-umiem",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7080,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 90,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Nunca has aprendido a nadar. ¿Qué dices?",
+  "explanation": "Falta de habilidad: nie umiem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie umiem pływać."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie mogę pływać."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie wiem pływać."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

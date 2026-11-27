@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-write-week",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 7130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 95,
+    "phase": "review",
+    "lines": 9
+  },
+  "prompt": "Repaso 4–6. Escribe sobre tu semana: tu rutina con horas, tus obligaciones, lo que te gusta hacer y un plan con un amigo (cuándo, a qué hora y dónde quedáis).",
+  "explanation": "Usa lo que sabes de las unidades 4–6: verbos con się, o + hora, musieć, lubić, umówić się / spotykać się.",
+  "configuration": {
+    "modelAnswer": "Od poniedziałku do piątku budzę się o siódmej i o ósmej jadę do pracy. W środę muszę robić zakupy, a w sobotę sprzątam mieszkanie. W wolnym czasie lubię czytać i gotować, ale nie lubię piłki nożnej. W niedzielę spotykam się z Kasią o jedenastej w kawiarni na rynku.",
+    "checklist": ["rutina y horas", "obligaciones", "gustos", "plan con un amigo"],
+    "minWords": 40,
+    "maxWords": 120
+  }
+}

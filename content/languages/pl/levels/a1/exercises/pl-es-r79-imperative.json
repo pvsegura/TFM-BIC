@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-imperative",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 10020,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 80,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. Completa con postaw, połóż o powieś.",
+  "explanation": "De pie → postaw; tumbado → połóż; colgado → powieś.",
+  "configuration": {
+    "text": "___ lampę w kącie, ___ klucze na stole i ___ obraz nad łóżkiem.",
+    "gaps": [
+      {
+        "accepted": ["Postaw"]
+      },
+      {
+        "accepted": ["Połóż"]
+      },
+      {
+        "accepted": ["Powieś"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

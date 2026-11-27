@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-translate-home",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 90,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 7–9. Escribe en polaco: El dormitorio está al lado del baño.",
+  "explanation": "Sypialnia jest obok łazienki.",
+  "configuration": {
+    "acceptedAnswers": ["Sypialnia jest obok łazienki."],
+    "caseSensitive": false
+  }
+}

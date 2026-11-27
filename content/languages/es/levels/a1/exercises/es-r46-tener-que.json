@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-tener-que",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1090,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 92,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Jak powiesz „Muszę sprzątać”?",
+  "explanation": "Tener que + bezokolicznik.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tengo que limpiar."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tengo limpiar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Debo de limpio."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

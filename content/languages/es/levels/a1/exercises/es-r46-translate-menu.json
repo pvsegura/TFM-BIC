@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-translate-menu",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1190,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 102,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 4–6. Napisz po hiszpańsku: Na pierwsze danie zupę, a na drugie rybę.",
+  "explanation": "De primero…, de segundo…",
+  "configuration": {
+    "acceptedAnswers": [
+      "De primero sopa y de segundo pescado.",
+      "De primero, sopa, y de segundo, pescado.",
+      "De primero quiero sopa y de segundo pescado."
+    ],
+    "caseSensitive": false
+  }
+}

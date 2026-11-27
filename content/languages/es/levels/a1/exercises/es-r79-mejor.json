@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-mejor",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1100,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 90,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: Este piso es ___ que el otro.",
+  "explanation": "Bueno → mejor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "mejor"
+      },
+      {
+        "id": "opt-b",
+        "text": "más bueno"
+      },
+      {
+        "id": "opt-c",
+        "text": "más mejor"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

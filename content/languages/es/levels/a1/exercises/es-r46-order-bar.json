@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r46-order-bar",
+  "lessonId": "es-unit-6-plans",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1010,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 6,
+    "number": 84,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 4–6. Zamawiasz grzecznie kawę z mlekiem w barze. Co mówisz?",
+  "explanation": "Grzecznie: ¿Me pone…? albo Quería…, por favor.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Me pone un café con leche, por favor?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Dame café con leche."
+      },
+      {
+        "id": "opt-c",
+        "text": "Yo quiero café con leche ahora."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

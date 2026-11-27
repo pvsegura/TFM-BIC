@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-gerund",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 1120,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 92,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij estar + gerundio.",
+  "explanation": "Estoy leyendo, está durmiendo, estamos comiendo.",
+  "configuration": {
+    "text": "Yo ___ leyendo, mi hermano ___ durmiendo y nosotros ___ comiendo.",
+    "gaps": [
+      {
+        "accepted": ["estoy"]
+      },
+      {
+        "accepted": ["está"]
+      },
+      {
+        "accepted": ["estamos"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

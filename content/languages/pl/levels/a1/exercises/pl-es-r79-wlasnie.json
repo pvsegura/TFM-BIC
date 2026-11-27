@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-wlasnie",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 10030,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 81,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cómo dices «estoy haciendo la cena»?",
+  "explanation": "Presente + właśnie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Właśnie robię kolację."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem robiąc kolację."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem robię kolację."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

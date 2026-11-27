@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-czasu",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7030,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 85,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cómo dices «no tengo tiempo»?",
+  "explanation": "Negación + genitivo: czasu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie mam czasu."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie mam czas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie jestem czas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

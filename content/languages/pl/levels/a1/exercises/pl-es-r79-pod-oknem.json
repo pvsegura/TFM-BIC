@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-pod-oknem",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 9990,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 77,
+    "phase": "review"
+  },
+  "prompt": "Repaso 7–9. ¿Cuál es correcto?",
+  "explanation": "Pod + instrumental: pod oknem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kanapa stoi pod oknem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kanapa stoi pod okno."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kanapa stoi pod okna."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

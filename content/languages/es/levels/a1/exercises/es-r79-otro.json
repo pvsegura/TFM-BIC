@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-otro",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1070,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 87,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Chcesz jeszcze jeden chleb. Co mówisz?",
+  "explanation": "Otra / otro bez un.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Otra barra de pan, por favor."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una otra barra de pan, por favor."
+      },
+      {
+        "id": "opt-c",
+        "text": "Un otro pan, por favor."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

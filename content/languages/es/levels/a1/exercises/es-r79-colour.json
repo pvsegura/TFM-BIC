@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-colour",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1020,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 82,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Uzupełnij: unas botas ___",
+  "explanation": "Kolor zgadza się z rzeczownikiem: botas (ż, l.mn.) → negras.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "negras"
+      },
+      {
+        "id": "opt-b",
+        "text": "negros"
+      },
+      {
+        "id": "opt-c",
+        "text": "negra"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

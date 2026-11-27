@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-lubie",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7040,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 86,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cómo dices «me gustan los gatos»?",
+  "explanation": "Lubić concuerda con la persona: lubię koty.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Lubię koty."
+      },
+      {
+        "id": "opt-b",
+        "text": "Lubią mi koty."
+      },
+      {
+        "id": "opt-c",
+        "text": "Koty mi lubię."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

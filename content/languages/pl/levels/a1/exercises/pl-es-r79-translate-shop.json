@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r79-translate-shop",
+  "lessonId": "pl-es-unit-9-holidays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 10100,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 9,
+    "number": 88,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Repaso 7–9. Escribe en polaco: ¿Puedo probármelo? (el jersey)",
+  "explanation": "Czy mogę go przymierzyć?",
+  "configuration": {
+    "acceptedAnswers": ["Czy mogę go przymierzyć?", "Mogę go przymierzyć?"],
+    "caseSensitive": false
+  }
+}

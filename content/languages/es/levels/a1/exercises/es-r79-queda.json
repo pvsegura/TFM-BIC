@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-queda",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 1030,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 83,
+    "phase": "review"
+  },
+  "prompt": "Powtórka 7–9. Spodnie są na ciebie za długie. Co mówisz?",
+  "explanation": "Quedar jak gustar: me quedan largos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Los pantalones me quedan largos."
+      },
+      {
+        "id": "opt-b",
+        "text": "Yo quedo largo los pantalones."
+      },
+      {
+        "id": "opt-c",
+        "text": "Los pantalones me queda larga."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-jesc-pic",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 6950,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 77,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. Completa con jem o piję.",
+  "explanation": "La sopa se come: jem; el café se bebe: piję.",
+  "configuration": {
+    "text": "Na obiad ___ zupę, a potem ___ kawę.",
+    "gaps": [
+      {
+        "accepted": ["jem"]
+      },
+      {
+        "accepted": ["piję"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

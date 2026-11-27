@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r46-musze",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7020,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 84,
+    "phase": "review"
+  },
+  "prompt": "Repaso 4–6. ¿Cuál es correcto?",
+  "explanation": "Muszę + infinitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Muszę sprzątać kuchnię."
+      },
+      {
+        "id": "opt-b",
+        "text": "Muszę sprzątam kuchnię."
+      },
+      {
+        "id": "opt-c",
+        "text": "Muszę do sprzątać kuchnię."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

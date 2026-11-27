@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-r79-translate-home",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 1220,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 102,
+    "phase": "review",
+    "lines": 1
+  },
+  "prompt": "Powtórka 7–9. Napisz po hiszpańsku: Łazienka jest obok sypialni.",
+  "explanation": "El baño está al lado del dormitorio.",
+  "configuration": {
+    "acceptedAnswers": ["El baño está al lado del dormitorio."],
+    "caseSensitive": false
+  }
+}
