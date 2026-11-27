@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-possessives",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1130,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Posesivos y demostrativos",
+  "description": "Mój, twój, jego, jej; ten, ta, to.",
+  "sections": [
+    {
+      "text": "Mój, twój, nasz y wasz concuerdan con lo que se posee, como los adjetivos. Jego (de él), jej (de ella) e ich (de ellos) no cambian nunca y dependen del poseedor: el «su» español queda claro en polaco.",
+      "table": {
+        "columns": [
+          "Persona",
+          "Masculino",
+          "Femenino",
+          "Neutro",
+          "Plural (personas masc.)",
+          "Plural (resto)"
+        ],
+        "rows": [
+          ["mi", "mój", "moja", "moje", "moi", "moje"],
+          ["tu", "twój", "twoja", "twoje", "twoi", "twoje"],
+          ["nuestro", "nasz", "nasza", "nasze", "nasi", "nasze"],
+          ["vuestro", "wasz", "wasza", "wasze", "wasi", "wasze"],
+          [
+            "su (de él / ella / ellos)",
+            "jego / jej / ich",
+            "jego / jej / ich",
+            "jego / jej / ich",
+            "jego / jej / ich",
+            "jego / jej / ich"
+          ]
+        ]
+      }
+    },
+    {
+      "heading": "Este, esta, esto",
+      "table": {
+        "columns": ["Masculino", "Femenino", "Neutro", "Plural"],
+        "rows": [["ten pan", "ta pani", "to dziecko", "te zdjęcia / ci panowie"]]
+      },
+      "examples": [
+        {
+          "text": "To jest mój brat, a to jego żona.",
+          "translation": "Este es mi hermano, y esta, su mujer."
+        },
+        {
+          "text": "Kasia i jej brat mieszkają w Krakowie.",
+          "translation": "Kasia y su hermano viven en Cracovia."
+        }
+      ]
+    }
+  ]
+}

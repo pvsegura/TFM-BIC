@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-prepositions",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1190,
+  "category": "prepositions",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Las preposiciones y su caso",
+  "description": "Cada preposición pide un caso.",
+  "sections": [
+    {
+      "text": "En polaco la preposición decide el caso del sustantivo. Algunas piden dos casos con significados distintos: w + locativo (dónde) y w + acusativo (días); z + genitivo (de dónde) y z + instrumental (con).",
+      "table": {
+        "columns": ["Preposición", "Caso", "Significado", "Ejemplo"],
+        "rows": [
+          ["w / we", "locativo", "en, dentro de", "w Krakowie, we Wrocławiu"],
+          ["w", "acusativo", "días de la semana", "w środę, we wtorek"],
+          ["na", "locativo", "en, sobre (lugares abiertos, eventos)", "na poczcie, na rynku"],
+          ["na", "acusativo", "a (dirección, actividades)", "idę na basen, na mecz"],
+          ["do", "genitivo", "a, hasta (dirección)", "do banku, do Krakowa"],
+          ["z / ze", "genitivo", "de (procedencia)", "z Hiszpanii, ze Stanów"],
+          ["z / ze", "instrumental", "con", "z mlekiem, z bratem"],
+          ["bez", "genitivo", "sin", "bez cukru"],
+          ["obok, koło, naprzeciwko", "genitivo", "al lado de, junto a, enfrente de", "obok parku"],
+          ["u", "genitivo", "en casa de", "u babci"],
+          ["dla", "genitivo", "para", "dla mnie"],
+          ["od … do …", "genitivo", "desde … hasta …", "od poniedziałku do piątku"],
+          ["przy", "locativo", "junto a", "przy przystanku"],
+          ["po", "locativo", "después de", "po obiedzie"],
+          ["o", "locativo", "a (la hora)", "o ósmej"],
+          ["przed, za", "instrumental", "delante de, detrás de", "przed kinem, za kościołem"]
+        ]
+      }
+    }
+  ]
+}

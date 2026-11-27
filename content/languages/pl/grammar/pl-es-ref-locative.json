@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-locative",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1100,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El locativo singular",
+  "description": "Dónde: w, na, przy y la hora con o.",
+  "sections": [
+    {
+      "text": "El locativo solo aparece detrás de preposiciones: w y na para decir dónde está algo, przy (junto a), po (después de) y o (la hora: o ósmej; hablar de algo). La terminación más frecuente es -e, que suele cambiar la consonante anterior (sklep → sklepie, Kraków → Krakowie, apteka → aptece). Detrás de k, g, ch y de consonantes blandas se usa -u o -i.",
+      "table": {
+        "columns": ["Nominativo", "Locativo", "Nominativo", "Locativo"],
+        "rows": [
+          ["sklep", "w sklepie", "apteka", "w aptece"],
+          ["Kraków", "w Krakowie", "Warszawa", "w Warszawie"],
+          ["kino", "w kinie", "poczta", "na poczcie"],
+          ["bank", "w banku", "kawiarnia", "w kawiarni"],
+          ["rynek", "na rynku", "ulica", "na ulicy"],
+          ["dworzec", "na dworcu", "restauracja", "w restauracji"],
+          ["dom", "w domu", "siostra", "o siostrze"]
+        ]
+      }
+    },
+    {
+      "heading": "¿W o na?",
+      "text": "W es «dentro de»; na, «sobre» o en lugares abiertos, eventos y algunos edificios que hay que memorizar: na ulicy, na rynku, na placu, na dworcu, na przystanku, na poczcie, na uniwersytecie, na basenie, na koncercie. Los adjetivos en locativo terminan en -ym / -im (m, n) y -ej (f): w małym sklepie, na ulicy Długiej."
+    }
+  ]
+}

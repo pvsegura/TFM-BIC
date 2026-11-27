@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-numbers",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1170,
+  "category": "numbers",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los números y lo que va detrás",
+  "description": "Cardinales, rok / lata / lat, złoty / złote / złotych.",
+  "sections": [
+    {
+      "table": {
+        "columns": ["Nº", "Polaco", "Nº", "Polaco", "Nº", "Polaco"],
+        "rows": [
+          ["1", "jeden", "11", "jedenaście", "20", "dwadzieścia"],
+          ["2", "dwa (dwie)", "12", "dwanaście", "30", "trzydzieści"],
+          ["3", "trzy", "13", "trzynaście", "40", "czterdzieści"],
+          ["4", "cztery", "14", "czternaście", "50", "pięćdziesiąt"],
+          ["5", "pięć", "15", "piętnaście", "60", "sześćdziesiąt"],
+          ["6", "sześć", "16", "szesnaście", "70", "siedemdziesiąt"],
+          ["7", "siedem", "17", "siedemnaście", "80", "osiemdziesiąt"],
+          ["8", "osiem", "18", "osiemnaście", "90", "dziewięćdziesiąt"],
+          ["9", "dziewięć", "19", "dziewiętnaście", "100", "sto"],
+          ["10", "dziesięć", "200", "dwieście", "1000", "tysiąc"]
+        ]
+      }
+    },
+    {
+      "heading": "El sustantivo después del número",
+      "text": "Con 1 va en singular (jeden rok, jeden złoty). Con 2, 3 y 4, y con los números terminados en 2, 3, 4 (salvo 12, 13, 14), en nominativo plural (dwa lata, trzy złote, dwadzieścia dwa lata). Con todos los demás, en genitivo plural (pięć lat, dwanaście złotych, dwadzieścia jeden lat). Con sustantivos femeninos, «dos» es dwie: dwie kawy, dwie siostry.",
+      "table": {
+        "columns": ["Número", "Años", "Dinero", "Café (f)"],
+        "rows": [
+          ["1", "rok", "złoty", "kawa"],
+          ["2, 3, 4, 22…", "lata", "złote", "kawy (dwie kawy)"],
+          ["5–21, 25…", "lat", "złotych", "kaw"]
+        ]
+      }
+    }
+  ]
+}

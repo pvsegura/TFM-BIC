@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-time-dates",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1180,
+  "category": "numbers",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "La hora y las fechas",
+  "description": "Ordinales para la hora y el día del mes.",
+  "sections": [
+    {
+      "text": "La hora se dice con ordinales en femenino (godzina es femenino) y la fecha con ordinales en masculino (dzień). Para «a las…» se usa o + locativo; para «el día…», el genitivo sin preposición. El mes va en genitivo.",
+      "table": {
+        "columns": [
+          "Nº",
+          "Es la… (hora)",
+          "A la… (o + locativo)",
+          "Hoy es… (fecha)",
+          "El día… (genitivo)"
+        ],
+        "rows": [
+          ["1", "pierwsza", "o pierwszej", "pierwszy maja", "pierwszego maja"],
+          ["2", "druga", "o drugiej", "drugi maja", "drugiego maja"],
+          ["3", "trzecia", "o trzeciej", "trzeci maja", "trzeciego maja"],
+          ["5", "piąta", "o piątej", "piąty maja", "piątego maja"],
+          ["8", "ósma", "o ósmej", "ósmy maja", "ósmego maja"],
+          ["12", "dwunasta", "o dwunastej", "dwunasty maja", "dwunastego maja"],
+          ["20", "dwudziesta", "o dwudziestej", "dwudziesty maja", "dwudziestego maja"]
+        ]
+      }
+    },
+    {
+      "heading": "Fórmulas de la hora",
+      "examples": [
+        {
+          "text": "ósma piętnaście / kwadrans po ósmej",
+          "translation": "las ocho y cuarto"
+        },
+        {
+          "text": "ósma trzydzieści / wpół do dziewiątej",
+          "translation": "las ocho y media",
+          "note": "Wpół do mira a la hora siguiente."
+        },
+        {
+          "text": "ósma czterdzieści pięć / za kwadrans dziewiąta",
+          "translation": "las nueve menos cuarto"
+        },
+        {
+          "text": "Mam urodziny dwudziestego marca.",
+          "translation": "Mi cumpleaños es el veinte de marzo."
+        }
+      ]
+    }
+  ]
+}

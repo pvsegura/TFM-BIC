@@ -1,0 +1,39 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-accusative",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1080,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El acusativo singular",
+  "description": "Mam, poproszę, lubię, chcę: el complemento directo.",
+  "sections": [
+    {
+      "text": "El acusativo marca el complemento directo, lo que se tiene, se pide, se quiere o se ve. Es el caso más fácil: solo cambian los femeninos en -a y los masculinos de persona o animal. Lo pide también la preposición w con los días (w środę) y na para la dirección (idę na basen).",
+      "table": {
+        "columns": ["Género", "Nominativo", "Acusativo", "Regla"],
+        "rows": [
+          ["femenino en -a", "kawa, siostra", "kawę, siostrę", "-a → -ę"],
+          ["femenino en -i", "pani", "panią", "-i → -ą"],
+          ["masculino de persona / animal", "brat, kot, Tomek", "brata, kota, Tomka", "+ -a"],
+          ["masculino de cosa", "sok, sernik, dom", "sok, sernik, dom", "no cambia"],
+          ["neutro", "piwo, dziecko", "piwo, dziecko", "no cambia"]
+        ]
+      }
+    },
+    {
+      "heading": "El adjetivo también cambia",
+      "table": {
+        "columns": ["Género", "Ejemplo en acusativo"],
+        "rows": [
+          ["femenino", "Poproszę dużą kawę. (-ą)"],
+          ["masculino de persona", "Mam starszego brata. (-ego)"],
+          ["masculino de cosa", "Lubię polski ser. (no cambia)"],
+          ["neutro", "Poproszę zimne piwo. (no cambia)"]
+        ]
+      }
+    }
+  ]
+}

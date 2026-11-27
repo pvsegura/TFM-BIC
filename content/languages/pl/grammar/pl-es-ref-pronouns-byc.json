@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-pronouns-byc",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1010,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los pronombres y el verbo być",
+  "description": "Ser y estar en un solo verbo.",
+  "sections": [
+    {
+      "text": "Być significa a la vez «ser» y «estar»: Jestem z Hiszpanii (soy de España), jestem w domu (estoy en casa), jestem zmęczony (estoy cansado). Los pronombres personales casi nunca hacen falta, porque la terminación del verbo indica la persona, como en español. Se usan para contrastar: Ja jestem z Madrytu, a ty?",
+      "table": {
+        "columns": ["Persona", "być"],
+        "rows": [
+          ["ja", "jestem"],
+          ["ty", "jesteś"],
+          ["on / ona / ono", "jest"],
+          ["my", "jesteśmy"],
+          ["wy", "jesteście"],
+          ["oni / one", "są"]
+        ]
+      }
+    },
+    {
+      "heading": "Usted: pan, pani, państwo",
+      "text": "El trato formal se hace con pan (a un hombre), pani (a una mujer) y państwo (a un grupo mixto o a una pareja), con el verbo en tercera persona, como «usted»: Skąd pan jest? (¿de dónde es usted?), Czy pani mówi po angielsku? Oni se usa para grupos con al menos un hombre; one, para grupos sin hombres, y también para cosas y animales.",
+      "examples": [
+        {
+          "text": "Jestem Javier. Jestem z Hiszpanii.",
+          "translation": "Soy Javier. Soy de España."
+        },
+        {
+          "text": "Gdzie pani mieszka?",
+          "translation": "¿Dónde vive usted? (a una mujer)"
+        },
+        {
+          "text": "Czy państwo są z Polski?",
+          "translation": "¿Son ustedes de Polonia?"
+        }
+      ]
+    }
+  ]
+}

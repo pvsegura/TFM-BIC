@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-irregular-verbs",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1030,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Verbos irregulares frecuentes",
+  "description": "Diez verbos que hay que saber de memoria.",
+  "sections": [
+    {
+      "text": "Estos verbos aparecen en casi todas las conversaciones del nivel A1. Fíjate en que muchos son irregulares solo en ja y oni (chcę, chcą; mogę, mogą) y regulares en el resto.",
+      "table": {
+        "caption": "Tener, querer, poder, tener que, saber",
+        "columns": ["Persona", "mieć", "chcieć", "móc", "musieć", "wiedzieć"],
+        "rows": [
+          ["ja", "mam", "chcę", "mogę", "muszę", "wiem"],
+          ["ty", "masz", "chcesz", "możesz", "musisz", "wiesz"],
+          ["on / ona / ono", "ma", "chce", "może", "musi", "wie"],
+          ["my", "mamy", "chcemy", "możemy", "musimy", "wiemy"],
+          ["wy", "macie", "chcecie", "możecie", "musicie", "wiecie"],
+          ["oni / one", "mają", "chcą", "mogą", "muszą", "wiedzą"]
+        ]
+      }
+    },
+    {
+      "table": {
+        "caption": "Comer, beber, ir a pie, ir en vehículo, saber hacer",
+        "columns": ["Persona", "jeść", "pić", "iść", "jechać", "umieć"],
+        "rows": [
+          ["ja", "jem", "piję", "idę", "jadę", "umiem"],
+          ["ty", "jesz", "pijesz", "idziesz", "jedziesz", "umiesz"],
+          ["on / ona / ono", "je", "pije", "idzie", "jedzie", "umie"],
+          ["my", "jemy", "pijemy", "idziemy", "jedziemy", "umiemy"],
+          ["wy", "jecie", "pijecie", "idziecie", "jedziecie", "umiecie"],
+          ["oni / one", "jedzą", "piją", "idą", "jadą", "umieją"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Jem zupę i piję kompot.",
+          "translation": "Como sopa y bebo compota.",
+          "note": "La sopa se come (jeść)."
+        },
+        {
+          "text": "Idę do pracy pieszo, ale jadę do Krakowa pociągiem.",
+          "translation": "Voy al trabajo andando, pero voy a Cracovia en tren."
+        },
+        {
+          "text": "Nie umiem pływać, ale wiem, gdzie jest basen.",
+          "translation": "No sé nadar, pero sé dónde está la piscina."
+        }
+      ]
+    }
+  ]
+}

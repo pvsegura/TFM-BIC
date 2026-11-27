@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-word-formation",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1200,
+  "category": "word-formation",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Diminutivos, apellidos y nacionalidades",
+  "description": "Cómo se forman algunas palabras.",
+  "sections": [
+    {
+      "heading": "Diminutivos de nombres",
+      "text": "Entre familia, amigos y compañeros se usan casi siempre los diminutivos. Al llamar a alguien se usa además el vocativo: Kasia → Kasiu!, Tomek → Tomku!, Piotr → Piotrze!",
+      "table": {
+        "columns": ["Nombre", "Diminutivo", "Nombre", "Diminutivo"],
+        "rows": [
+          ["Katarzyna", "Kasia", "Piotr", "Piotrek"],
+          ["Zofia", "Zosia", "Tomasz", "Tomek"],
+          ["Aleksandra", "Ola", "Krzysztof", "Krzysiek"],
+          ["Małgorzata", "Gosia", "Jakub", "Kuba"]
+        ]
+      }
+    },
+    {
+      "heading": "Sufijos útiles",
+      "table": {
+        "columns": ["Sufijo", "Valor", "Ejemplos"],
+        "rows": [
+          ["-ek, -ka, -ko", "diminutivo de cosas", "kot → kotek, kawa → kawka, piwo → piwko"],
+          [
+            "-ski / -ska, -cki / -cka",
+            "apellidos que concuerdan",
+            "Kowalski / Kowalska, Nowicki / Nowicka"
+          ],
+          ["-arnia", "tienda, lugar", "piekarnia, kawiarnia, księgarnia"],
+          [
+            "-ak, -anin / -anka, -czyk / -ka",
+            "nacionalidades",
+            "Polak / Polka, Meksykanin / Meksykanka, Argentyńczyk / Argentynka"
+          ],
+          ["po … -sku / -cku", "idiomas (adverbio)", "po polsku, po hiszpańsku, po niemiecku"]
+        ]
+      }
+    }
+  ]
+}

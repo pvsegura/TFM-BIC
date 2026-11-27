@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-adjectives",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1120,
+  "category": "adjectives",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los adjetivos: concordancia",
+  "description": "Terminaciones del adjetivo en los casos del A1.",
+  "sections": [
+    {
+      "text": "El adjetivo concuerda en género, número y caso con el sustantivo. En el diccionario aparece en masculino (-y o -i tras k, g). Puede ir delante del sustantivo, como lo más neutro en polaco (mała córka, polska kuchnia), o detrás de być (Mój brat jest wysoki).",
+      "table": {
+        "columns": ["Caso", "Masculino", "Femenino", "Neutro"],
+        "rows": [
+          ["nominativo", "duży, wysoki", "duża, wysoka", "duże, wysokie"],
+          ["genitivo", "dużego", "dużej", "dużego"],
+          ["acusativo", "duży (cosa) / dużego (persona)", "dużą", "duże"],
+          ["instrumental", "dużym", "dużą", "dużym"],
+          ["locativo", "dużym", "dużej", "dużym"]
+        ]
+      }
+    },
+    {
+      "heading": "Plural de personas masculinas",
+      "text": "En plural, los grupos con al menos un hombre tienen su propia forma: moi rodzice, nasi koledzy, ci panowie. Para el resto se usa la forma en -e: moje siostry, duże miasta. En el A1 basta con reconocerla en moi rodzice y Polacy."
+    }
+  ]
+}

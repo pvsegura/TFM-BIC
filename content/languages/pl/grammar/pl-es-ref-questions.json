@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-questions",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1160,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Las preguntas",
+  "description": "Czy y las palabras interrogativas.",
+  "sections": [
+    {
+      "text": "Las preguntas de sí o no empiezan a menudo por czy, que no se traduce, y suben al final. Las preguntas con palabra interrogativa la ponen al principio y bajan al final. El orden del resto de la frase no cambia.",
+      "table": {
+        "columns": ["Polaco", "Español", "Ejemplo"],
+        "rows": [
+          ["czy", "(pregunta de sí o no)", "Czy mówisz po polsku?"],
+          ["kto? / co?", "¿quién? / ¿qué?", "Kto to jest? Co to jest?"],
+          ["gdzie?", "¿dónde?", "Gdzie jest apteka?"],
+          ["dokąd?", "¿adónde?", "Dokąd idziesz?"],
+          ["skąd?", "¿de dónde?", "Skąd jesteś?"],
+          ["kiedy?", "¿cuándo?", "Kiedy masz urodziny?"],
+          ["o której?", "¿a qué hora?", "O której się spotykamy?"],
+          ["ile?", "¿cuánto? ¿cuántos?", "Ile kosztuje? Ile masz lat?"],
+          ["jak?", "¿cómo?", "Jak masz na imię?"],
+          ["który? / jaki?", "¿cuál? / ¿qué tipo de?", "Który tramwaj? Jaki masz rozmiar?"],
+          ["dlaczego?", "¿por qué?", "Dlaczego tak wcześnie?"]
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,45 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-gender",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1060,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El género de los sustantivos",
+  "description": "Masculino, femenino y neutro por la terminación.",
+  "sections": [
+    {
+      "text": "Todos los sustantivos tienen género, y casi siempre se reconoce por la última letra. El género decide la forma de los adjetivos, los posesivos y los demostrativos (ten pan, ta pani, to dziecko). No hay artículos: dom es «casa», «la casa» y «una casa».",
+      "table": {
+        "columns": ["Género", "Terminación típica", "Ejemplos"],
+        "rows": [
+          ["masculino", "consonante", "brat, syn, dom, sklep, tramwaj"],
+          ["femenino", "-a (y algunos en -i o consonante blanda)", "mama, kawa, ulica, pani, noc"],
+          ["neutro", "-o, -e, -ę, -um", "dziecko, piwo, zdjęcie, imię, muzeum"]
+        ]
+      }
+    },
+    {
+      "heading": "Excepciones que conviene recordar",
+      "examples": [
+        {
+          "text": "mój tata, mój kolega",
+          "translation": "mi padre, mi compañero",
+          "note": "Hombres terminados en -a: masculinos."
+        },
+        {
+          "text": "ta noc, ta rzecz",
+          "translation": "esta noche, esta cosa",
+          "note": "Femeninos terminados en consonante."
+        },
+        {
+          "text": "rodzice, urodziny, drzwi",
+          "translation": "los padres, el cumpleaños, la puerta",
+          "note": "Solo existen en plural."
+        }
+      ]
+    }
+  ]
+}

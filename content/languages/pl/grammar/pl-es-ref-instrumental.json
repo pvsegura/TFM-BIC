@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-instrumental",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1110,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El instrumental singular",
+  "description": "Con quién, con qué, en qué medio y qué eres.",
+  "sections": [
+    {
+      "text": "El instrumental responde a «¿con quién?» y «¿con qué?» (z bratem, kawa z mlekiem), al medio de transporte sin preposición (jadę tramwajem) y a lo que alguien es, detrás de być (jestem Hiszpanem, jest lekarką). Lo piden también przed (delante de) y za (detrás de) cuando indican lugar.",
+      "table": {
+        "columns": ["Género", "Nominativo", "Instrumental", "Regla"],
+        "rows": [
+          ["masculino y neutro", "brat, autobus, metro", "bratem, autobusem, metrem", "+ -em"],
+          ["tras k, g", "Polak, pociąg, mleko", "Polakiem, pociągiem, mlekiem", "+ -iem"],
+          ["femenino", "siostra, kawa, taksówka", "siostrą, kawą, taksówką", "-a → -ą"],
+          ["adjetivos", "dobry / dobra", "dobrym / dobrą", "-ym (m, n) / -ą (f)"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Jestem Hiszpanką, a mój mąż jest Polakiem.",
+          "translation": "Soy española y mi marido es polaco."
+        },
+        {
+          "text": "Herbata z cytryną i kawa z mlekiem.",
+          "translation": "Té con limón y café con leche."
+        },
+        {
+          "text": "Spotykamy się przed kinem.",
+          "translation": "Quedamos delante del cine."
+        }
+      ]
+    }
+  ]
+}

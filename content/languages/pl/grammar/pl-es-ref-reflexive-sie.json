@@ -1,0 +1,48 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-reflexive-sie",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1040,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los verbos con się",
+  "description": "Despertarse, lavarse, quedar: el pronombre invariable.",
+  "sections": [
+    {
+      "text": "Muchos verbos llevan się, como los españoles llevan «se»: budzić się (despertarse), myć się (lavarse), spotykać się (quedar, verse), podobać się (gustar). Się no cambia con la persona y no puede abrir la frase: Budzę się o szóstej o O szóstej się budzę, pero nunca Się budzę.",
+      "table": {
+        "columns": ["Persona", "budzić się", "myć się", "kłaść się"],
+        "rows": [
+          ["ja", "budzę się", "myję się", "kładę się"],
+          ["ty", "budzisz się", "myjesz się", "kładziesz się"],
+          ["on / ona / ono", "budzi się", "myje się", "kładzie się"],
+          ["my", "budzimy się", "myjemy się", "kładziemy się"],
+          ["wy", "budzicie się", "myjecie się", "kładziecie się"],
+          ["oni / one", "budzą się", "myją się", "kładą się"]
+        ]
+      }
+    },
+    {
+      "heading": "Con se en español, sin się en polaco (y al revés)",
+      "examples": [
+        {
+          "text": "Wstaję o siódmej.",
+          "translation": "Me levanto a las siete.",
+          "note": "Wstawać no lleva się."
+        },
+        {
+          "text": "Mam na imię Ola.",
+          "translation": "Me llamo Ola.",
+          "note": "También: Nazywam się Ola."
+        },
+        {
+          "text": "Uczę się polskiego.",
+          "translation": "Aprendo polaco.",
+          "note": "Uczyć się = aprender, estudiar."
+        }
+      ]
+    }
+  ]
+}

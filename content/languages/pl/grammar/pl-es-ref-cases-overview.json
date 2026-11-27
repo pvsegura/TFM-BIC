@@ -1,0 +1,54 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-cases-overview",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1070,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Los casos: para qué sirve cada uno",
+  "description": "Las siete terminaciones del sustantivo en el nivel A1.",
+  "sections": [
+    {
+      "text": "En polaco el sustantivo cambia de terminación según su función en la frase: son los casos. El español lo hace con preposiciones y con el orden de las palabras; el polaco, con terminaciones. En el A1 no hace falta dominarlos: basta con reconocer cada caso y aprender de memoria las expresiones más frecuentes.",
+      "table": {
+        "columns": ["Caso", "Preguntas", "Usos en las unidades 1–6", "Ejemplo"],
+        "rows": [
+          [
+            "nominativo",
+            "kto? co?",
+            "sujeto, forma del diccionario, después de to jest",
+            "To jest Kasia."
+          ],
+          [
+            "genitivo",
+            "kogo? czego?",
+            "nie ma, nie mam, verbo negativo, do, z (origen), bez, obok, cantidades",
+            "Nie mam brata."
+          ],
+          ["dativo", "komu? czemu?", "a quién gusta algo: mi, ci, panu", "Smakuje mi zupa."],
+          [
+            "acusativo",
+            "kogo? co?",
+            "complemento directo: mam, poproszę, lubię; w + día",
+            "Poproszę kawę."
+          ],
+          [
+            "instrumental",
+            "kim? czym?",
+            "z (con), jestem + profesión o nacionalidad, transporte",
+            "Jadę tramwajem."
+          ],
+          [
+            "locativo",
+            "o kim? o czym?",
+            "dónde: w, na, przy; la hora con o",
+            "Mieszkam w Krakowie."
+          ],
+          ["vocativo", "—", "llamar a alguien", "Kasiu! Panie Marku!"]
+        ]
+      }
+    }
+  ]
+}

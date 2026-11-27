@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-aspect",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1050,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El aspecto: primer contacto",
+  "description": "Por qué hay dos verbos para «pagar» o «jugar».",
+  "sections": [
+    {
+      "text": "Casi todos los verbos polacos tienen pareja: uno imperfectivo, para acciones en curso, repetidas o en general (płacić, grać, robić), y uno perfectivo, para una acción concreta y completa (zapłacić, zagrać, zrobić). En el nivel A1 basta con reconocerlos: el presente de un perfectivo tiene valor de futuro (zapłacę = pagaré), y detrás de chcieć, móc o musieć se oye a menudo el perfectivo para una acción única: Chcemy zapłacić. Mogę zapłacić kartą?",
+      "table": {
+        "columns": [
+          "Imperfectivo (en general, repetido)",
+          "Perfectivo (una vez, completo)",
+          "Español"
+        ],
+        "rows": [
+          ["płacić", "zapłacić", "pagar"],
+          ["grać", "zagrać", "jugar"],
+          ["robić", "zrobić", "hacer"],
+          ["kupować", "kupić", "comprar"],
+          ["jechać", "pojechać", "ir (en vehículo)"],
+          ["pić", "wypić", "beber"]
+        ]
+      },
+      "examples": [
+        {
+          "text": "Zawsze płacę kartą.",
+          "translation": "Siempre pago con tarjeta.",
+          "note": "Repetido: imperfectivo."
+        },
+        {
+          "text": "Mogę zapłacić kartą?",
+          "translation": "¿Puedo pagar con tarjeta?",
+          "note": "Una vez, ahora: perfectivo."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-genitive",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1090,
+  "category": "nouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El genitivo singular",
+  "description": "No hay, no tengo, de, sin, al lado de…",
+  "sections": [
+    {
+      "text": "El genitivo es el caso más frecuente después del nominativo. Lo piden: nie ma (no hay) y cualquier verbo en negativo (nie mam brata, nie lubię kawy, nie jem mięsa); las preposiciones do, od, z (procedencia), bez, obok, naprzeciwko, koło, u y dla; las cantidades (kawałek sernika, butelka wody); y la posesión (brat mamy, el hermano de mamá).",
+      "table": {
+        "columns": ["Género", "Nominativo", "Genitivo", "Regla"],
+        "rows": [
+          ["femenino", "kawa, poczta, siostra", "kawy, poczty, siostry", "-a → -y"],
+          [
+            "femenino tras k, g, l, j o blanda",
+            "apteka, córka, piekarnia, ulica",
+            "apteki, córki, piekarni, ulicy",
+            "-a → -i (-y tras c)"
+          ],
+          [
+            "masculino (personas, animales y muchas cosas)",
+            "brat, kot, szpital, kościół",
+            "brata, kota, szpitala, kościoła",
+            "+ -a"
+          ],
+          [
+            "masculino (muchas cosas)",
+            "bank, sklep, park, czas",
+            "banku, sklepu, parku, czasu",
+            "+ -u"
+          ],
+          ["neutro", "kino, mięso, dziecko", "kina, mięsa, dziecka", "-o / -e → -a"],
+          ["adjetivos", "duży / duża", "dużego / dużej", "-ego (m, n) / -ej (f)"]
+        ]
+      }
+    },
+    {
+      "examples": [
+        {
+          "text": "W okolicy nie ma apteki.",
+          "translation": "En la zona no hay farmacia."
+        },
+        {
+          "text": "Jestem z Polski, z Krakowa.",
+          "translation": "Soy de Polonia, de Cracovia."
+        },
+        {
+          "text": "Idę do banku, a potem do apteki.",
+          "translation": "Voy al banco y luego a la farmacia."
+        },
+        {
+          "text": "Kawa bez cukru, poproszę.",
+          "translation": "Un café sin azúcar, por favor."
+        }
+      ]
+    }
+  ]
+}

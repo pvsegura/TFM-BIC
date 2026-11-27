@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-present-tense",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1020,
+  "category": "verbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "El presente: los tres modelos",
+  "description": "Cómo se conjugan los verbos regulares.",
+  "sections": [
+    {
+      "text": "Casi todos los verbos polacos siguen uno de tres modelos en presente. Se reconocen por las formas de ja y ty, que conviene aprender siempre juntas: mieszkam / mieszkasz, mówię / mówisz, pracuję / pracujesz. Una vez conocidas, el resto de personas sale solo.",
+      "table": {
+        "caption": "Los tres modelos",
+        "columns": ["Persona", "mieszkać (-am)", "mówić (-ę / -isz)", "pracować (-uję)"],
+        "rows": [
+          ["ja", "mieszkam", "mówię", "pracuję"],
+          ["ty", "mieszkasz", "mówisz", "pracujesz"],
+          ["on / ona / ono", "mieszka", "mówi", "pracuje"],
+          ["my", "mieszkamy", "mówimy", "pracujemy"],
+          ["wy", "mieszkacie", "mówicie", "pracujecie"],
+          ["oni / one", "mieszkają", "mówią", "pracują"]
+        ]
+      }
+    },
+    {
+      "heading": "Qué verbos siguen cada modelo",
+      "table": {
+        "columns": ["Modelo", "Verbos de la unidad 1–6"],
+        "rows": [
+          [
+            "-am, -asz",
+            "mieszkać, czytać, mieć (mam), sprzątać, odkurzać, zmywać, oglądać, wracać, biegać"
+          ],
+          [
+            "-ę, -isz / -ysz",
+            "mówić, lubić, robić, płacić, kończyć (kończę), uczyć się (uczę się, uczysz się)"
+          ],
+          [
+            "-uję, -ujesz",
+            "pracować, gotować, prasować, podróżować, spacerować, kosztować, smakować"
+          ]
+        ]
+      },
+      "text": "Los verbos en -ować hacen casi siempre -uję: pracować → pracuję, gotować → gotuję. Los verbos en -ać suelen hacer -am: czytać → czytam. Los verbos en -ić / -yć suelen hacer -ę / -isz: lubić → lubię, lubisz."
+    }
+  ]
+}

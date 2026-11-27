@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-negation",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1150,
+  "category": "adverbs",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "La negación",
+  "description": "Nie, nigdy nie, nikt, nic y el genitivo.",
+  "sections": [
+    {
+      "text": "Nie va delante del verbo, como «no»: nie mówię po angielsku. Con nigdy (nunca), nikt (nadie) y nic (nada) el verbo lleva también nie: la doble negación es obligatoria. Y si el verbo negativo tiene complemento directo, este pasa al genitivo.",
+      "table": {
+        "columns": ["Afirmativo", "Negativo"],
+        "rows": [
+          ["Mam brata.", "Nie mam brata."],
+          ["Lubię kawę.", "Nie lubię kawy."],
+          ["Jem mięso.", "Nie jem mięsa."],
+          ["Jest tu bank.", "Nie ma tu banku."],
+          ["Zawsze jem śniadanie.", "Nigdy nie jem śniadania."],
+          ["Ktoś dzwoni.", "Nikt nie dzwoni."]
+        ]
+      }
+    }
+  ]
+}

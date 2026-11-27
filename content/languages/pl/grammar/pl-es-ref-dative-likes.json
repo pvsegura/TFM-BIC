@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-ref-dative-likes",
+  "languageId": "pl",
+  "status": "published",
+  "order": 1140,
+  "category": "pronouns",
+  "levelId": "a1",
+  "instructionLanguage": "es",
+  "title": "Gustos: lubić, podobać się, smakować",
+  "description": "Tres maneras de decir «me gusta».",
+  "sections": [
+    {
+      "text": "Lubić es un verbo normal (el sujeto es quien gusta) y pide acusativo o infinitivo: lubię jazz, lubię gotować. Podobać się (impresión, aspecto) y smakować (sabor de la comida) funcionan como «gustar»: lo que gusta es el sujeto y la persona va en dativo.",
+      "table": {
+        "columns": ["Persona", "Dativo", "Ejemplo"],
+        "rows": [
+          ["ja", "mi (mnie)", "Podoba mi się Kraków."],
+          ["ty", "ci (tobie)", "Smakuje ci zupa?"],
+          ["on", "mu (jemu)", "Podobają mu się zdjęcia."],
+          ["ona", "jej", "Smakują jej pierogi."],
+          ["my / wy / oni", "nam / wam / im", "Podoba nam się to miasto."],
+          ["pan / pani / państwo", "panu / pani / państwu", "Smakuje państwu?"]
+        ]
+      }
+    },
+    {
+      "examples": [
+        {
+          "text": "Lubię koty.",
+          "translation": "Me gustan los gatos.",
+          "note": "Lubić no cambia con el plural de lo que gusta."
+        },
+        {
+          "text": "Nie lubię piłki nożnej.",
+          "translation": "No me gusta el fútbol.",
+          "note": "Negación + genitivo."
+        },
+        {
+          "text": "Te zdjęcia bardzo mi się podobają.",
+          "translation": "Me gustan mucho estas fotos."
+        }
+      ]
+    }
+  ]
+}
