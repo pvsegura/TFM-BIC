@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-gap-ser-estar",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 42,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij ser albo estar (es / está).",
+  "explanation": "Pochodzenie i zawód: ser; położenie i stan: estar.",
+  "configuration": {
+    "text": "Pablo ___ de Granada, ___ enfermero y ahora ___ en la cocina. Hoy ___ cansado.",
+    "gaps": [
+      {
+        "accepted": ["es"]
+      },
+      {
+        "accepted": ["es"]
+      },
+      {
+        "accepted": ["está"]
+      },
+      {
+        "accepted": ["está"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

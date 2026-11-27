@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-translate-sleeping",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 73,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Pablo śpi.",
+  "explanation": "Pablo está durmiendo (o → u).",
+  "configuration": {
+    "acceptedAnswers": ["Pablo está durmiendo.", "Pablo duerme."],
+    "caseSensitive": false
+  }
+}

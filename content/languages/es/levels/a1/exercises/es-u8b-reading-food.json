@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-reading-food",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 61,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: wszystkie produkty kupują razem.",
+  "explanation": "Cada uno compra su comida; solo aceite, sal y papel higiénico son de los dos.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

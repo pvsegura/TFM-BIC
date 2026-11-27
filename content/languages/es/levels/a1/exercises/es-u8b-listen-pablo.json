@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-listen-pablo",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co robi Pablo?",
+  "explanation": "Está en la cocina. Está haciendo una tortilla.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Robi tortillę w kuchni."
+      },
+      {
+        "id": "opt-b",
+        "text": "Śpi w sypialni."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ogląda telewizję."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

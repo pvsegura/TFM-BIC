@@ -8,7 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 18, "phase": "structure" },
+  "book": { "unit": 8, "number": 26, "phase": "structure" },
   "prompt": "Uzupełnij: una cocina ___",
   "explanation": "Cocina (ż.) → pequeña.",
   "configuration": {

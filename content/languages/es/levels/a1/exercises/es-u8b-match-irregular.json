@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-match-irregular",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 39,
+    "phase": "structure"
+  },
+  "prompt": "Połącz bezokolicznik z nieregularnym gerundio.",
+  "explanation": "Leer → leyendo; dormir → durmiendo; pedir → pidiendo; decir → diciendo.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "leer",
+        "right": "leyendo"
+      },
+      {
+        "left": "dormir",
+        "right": "durmiendo"
+      },
+      {
+        "left": "pedir",
+        "right": "pidiendo"
+      },
+      {
+        "left": "decir",
+        "right": "diciendo"
+      }
+    ]
+  }
+}

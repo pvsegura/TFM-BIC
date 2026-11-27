@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-gap-estar",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą estar.",
+  "explanation": "Yo estoy, nosotros estamos, ellas están.",
+  "configuration": {
+    "text": "Yo ___ cocinando, nosotros ___ ordenando y las chicas ___ durmiendo.",
+    "gaps": [
+      {
+        "accepted": ["estoy"]
+      },
+      {
+        "accepted": ["estamos"]
+      },
+      {
+        "accepted": ["están"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

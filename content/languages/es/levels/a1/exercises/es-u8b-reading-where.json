@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-reading-where",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 60,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: gdzie wieszają zasady?",
+  "explanation": "Las cuelgan en la puerta de la nevera.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Na drzwiach lodówki."
+      },
+      {
+        "id": "opt-b",
+        "text": "W łazience."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na klatce schodowej."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

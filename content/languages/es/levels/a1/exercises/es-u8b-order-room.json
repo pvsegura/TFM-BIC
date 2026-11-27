@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-order-room",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 49,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Salon jest mały, ale teraz jest w bałaganie.",
+  "explanation": "Ser (cecha) + estar (stan).",
+  "configuration": {
+    "items": ["El", "salón", "es", "pequeño,", "pero", "ahora", "está", "desordenado."],
+    "joiner": " "
+  }
+}

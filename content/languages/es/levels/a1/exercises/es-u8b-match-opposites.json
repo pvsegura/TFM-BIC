@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-match-opposites",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 21,
+    "phase": "connect"
+  },
+  "prompt": "Połącz przeciwieństwa.",
+  "explanation": "Lleno ↔ vacío; limpio ↔ sucio; abierto ↔ cerrado.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "lleno",
+        "right": "vacío"
+      },
+      {
+        "left": "limpio",
+        "right": "sucio"
+      },
+      {
+        "left": "abierto",
+        "right": "cerrado"
+      },
+      {
+        "left": "ordenado",
+        "right": "desordenado"
+      }
+    ]
+  }
+}

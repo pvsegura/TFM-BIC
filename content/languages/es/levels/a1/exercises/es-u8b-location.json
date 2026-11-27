@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-location",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 44,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: El piso ___ en el centro.",
+  "explanation": "Położenie: estar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "está"
+      },
+      {
+        "id": "opt-b",
+        "text": "es"
+      },
+      {
+        "id": "opt-c",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

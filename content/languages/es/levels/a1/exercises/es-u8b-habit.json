@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-habit",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 41,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne (zwyczaj)?",
+  "explanation": "Zwyczaj: zwykły czas teraźniejszy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Normalmente ceno a las nueve."
+      },
+      {
+        "id": "opt-b",
+        "text": "Normalmente estoy cenando a las nueve."
+      },
+      {
+        "id": "opt-c",
+        "text": "Normalmente estoy cenar a las nueve."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-culture-comunidad",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 63,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: co to jest la comunidad de vecinos?",
+  "explanation": "Wspólnota mieszkaniowa w bloku, z prezesem i zebraniami.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Wspólnota mieszkaniowa."
+      },
+      {
+        "id": "opt-b",
+        "text": "Grupa przyjaciół z dzielnicy."
+      },
+      {
+        "id": "opt-c",
+        "text": "Agencja nieruchomości."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

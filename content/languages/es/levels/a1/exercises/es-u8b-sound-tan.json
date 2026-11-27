@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-sound-tan",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 55,
+    "phase": "sound"
+  },
+  "prompt": "Uzupełnij: ¡Qué piso ___ luminoso!",
+  "explanation": "¡Qué + rzeczownik + tan + przymiotnik!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "tan"
+      },
+      {
+        "id": "opt-b",
+        "text": "muy"
+      },
+      {
+        "id": "opt-c",
+        "text": "más"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

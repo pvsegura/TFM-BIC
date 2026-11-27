@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-sound-intonation",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 54,
+    "phase": "sound"
+  },
+  "prompt": "W ¡Qué suerte! głos wznosi się na suerte i opada na końcu.",
+  "explanation": "Tak: wykrzyknienia mają mocny wznoszący akcent na słowie po qué.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

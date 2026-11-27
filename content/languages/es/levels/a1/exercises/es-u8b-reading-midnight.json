@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-reading-midnight",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 62,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: dlaczego o północy w salonie ma być cicho?",
+  "explanation": "Pablo a veces trabaja de noche y está durmiendo por el día.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Bo Pablo czasem pracuje w nocy."
+      },
+      {
+        "id": "opt-b",
+        "text": "Bo sąsiedzi są starsi."
+      },
+      {
+        "id": "opt-c",
+        "text": "Bo tak mówi umowa najmu."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

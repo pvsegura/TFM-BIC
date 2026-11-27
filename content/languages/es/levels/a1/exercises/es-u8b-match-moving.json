@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-match-moving",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 20,
+    "phase": "connect"
+  },
+  "prompt": "Połącz słowa z tłumaczeniem.",
+  "explanation": "La mudanza = przeprowadzka; la caja = karton; montar = składać.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la mudanza",
+        "right": "przeprowadzka"
+      },
+      {
+        "left": "la caja",
+        "right": "karton"
+      },
+      {
+        "left": "montar",
+        "right": "składać, montować"
+      },
+      {
+        "left": "pintar",
+        "right": "malować"
+      },
+      {
+        "left": "colgar",
+        "right": "wieszać"
+      },
+      {
+        "left": "el compañero de piso",
+        "right": "współlokator"
+      }
+    ]
+  }
+}

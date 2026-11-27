@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-rica",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 46,
+    "phase": "structure"
+  },
+  "prompt": "Chcesz pochwalić smak tortilli, którą jesz. Co mówisz?",
+  "explanation": "Smak teraz: estar rico.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¡Está muy rica!"
+      },
+      {
+        "id": "opt-b",
+        "text": "¡Es muy rica!"
+      },
+      {
+        "id": "opt-c",
+        "text": "¡Hay muy rica!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

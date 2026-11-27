@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-listen-saturday",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co będą robić w sobotę?",
+  "explanation": "El sábado pintamos el salón. ¡Trae ropa vieja!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Malować salon."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kupować meble."
+      },
+      {
+        "id": "opt-c",
+        "text": "Robić parapetówkę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-sound-que",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 53,
+    "phase": "sound"
+  },
+  "prompt": "Jak poprawnie zapisać wykrzyknienie?",
+  "explanation": "Dwa wykrzykniki i akcent na qué.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¡Qué bonito!"
+      },
+      {
+        "id": "opt-b",
+        "text": "Que bonito!"
+      },
+      {
+        "id": "opt-c",
+        "text": "¡Que bonito!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

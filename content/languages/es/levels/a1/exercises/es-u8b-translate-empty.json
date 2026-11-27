@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-translate-empty",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 74,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Szafa jest pusta.",
+  "explanation": "Stan: el armario está vacío.",
+  "configuration": {
+    "acceptedAnswers": ["El armario está vacío."],
+    "caseSensitive": false
+  }
+}

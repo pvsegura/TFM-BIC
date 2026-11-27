@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-mudarse",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 22,
+    "phase": "connect"
+  },
+  "prompt": "Co znaczy mudarse?",
+  "explanation": "Mudarse = przeprowadzać się.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Przeprowadzać się."
+      },
+      {
+        "id": "opt-b",
+        "text": "Malować."
+      },
+      {
+        "id": "opt-c",
+        "text": "Zmywać."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

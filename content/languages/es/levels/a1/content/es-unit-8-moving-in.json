@@ -1,0 +1,293 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 175,
+  "unit": 8,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 8B. ¿Qué estás haciendo? — przeprowadzka, ser i estar",
+  "description": "Opowiadasz, co teraz robisz, opisujesz mieszkanie i współlokatora i mówisz, jak się czujesz: estar + gerundio, ser czy estar, przymiotniki, które zmieniają znaczenie, i wykrzyknienia ¡Qué…!",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Wideorozmowa z nowego mieszkania" },
+    {
+      "type": "explanation",
+      "text": "Marek wynajął mieszkanie z Pablem, współlokatorem z Grenady. Jest w trakcie przeprowadzki, gdy dzwoni do niego Lucía, koleżanka z pracy. Za pierwszym razem posłuchaj, co robią Marek i Pablo w tej chwili. Za drugim zaznacz, jakie jest mieszkanie, a jakie jest teraz. Za trzecim wyłap ser i estar: es pequeño, está desordenado, es simpático, está cansado."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u8-moving.png",
+      "alt": "Młody mężczyzna wśród kartonów składa regał i rozmawia przez telefon z kamerą; w głębi drugi mężczyzna gotuje w kuchni."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Lucía",
+          "text": "¡Hola, Marek! ¿Qué tal la mudanza? ¿Qué estás haciendo?",
+          "translation": "Cześć, Marek! Jak przeprowadzka? Co robisz?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "¡Hola! Estoy montando una estantería. ¡Es muy difícil!",
+          "translation": "Cześć! Skręcam regał. To bardzo trudne!"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Ja, ja! Enséñame el piso.",
+          "translation": "Ha, ha! Pokaż mi mieszkanie."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Mira, este es el salón. Es pequeño, pero es muy luminoso. Ahora está muy desordenado: hay cajas por todas partes.",
+          "translation": "Zobacz, to jest salon. Jest mały, ale bardzo jasny. Teraz jest straszny bałagan: wszędzie są kartony."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Qué bonito! ¿Y esa puerta?",
+          "translation": "Jak ładnie! A te drzwi?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Es mi dormitorio. La cama ya está montada, pero el armario todavía está vacío.",
+          "translation": "To moja sypialnia. Łóżko jest już złożone, ale szafa jest jeszcze pusta."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Y tu compañero de piso? ¿Está en casa?",
+          "translation": "A twój współlokator? Jest w domu?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Sí, Pablo está en la cocina. Está haciendo una tortilla para los dos.",
+          "translation": "Tak, Pablo jest w kuchni. Robi tortillę dla nas dwóch."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Qué suerte! ¿Cómo es Pablo?",
+          "translation": "Ale masz szczęście! Jaki jest Pablo?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Es muy simpático y muy ordenado. Es de Granada y es enfermero. Hoy está un poco cansado porque trabaja de noche.",
+          "translation": "Jest bardzo sympatyczny i bardzo porządny. Jest z Grenady i jest pielęgniarzem. Dziś jest trochę zmęczony, bo pracuje w nocy."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿Y tú cómo estás? ¿Contento?",
+          "translation": "A ty jak się czujesz? Zadowolony?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Estoy cansado, pero muy contento. El barrio es tranquilo y está cerca del trabajo.",
+          "translation": "Jestem zmęczony, ale bardzo zadowolony. Okolica jest spokojna i jest blisko pracy."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Genial! Oye, ¿necesitas ayuda el sábado?",
+          "translation": "Super! Słuchaj, potrzebujesz pomocy w sobotę?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "¡Sí, por favor! El sábado pintamos el salón. ¡Trae ropa vieja!",
+          "translation": "Tak, proszę! W sobotę malujemy salon. Przynieś stare ubranie!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Przeprowadzka i stany" },
+    {
+      "type": "table",
+      "caption": "Przeprowadzka",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["la mudanza", "przeprowadzka", "mudarse", "przeprowadzać się"],
+        ["la caja", "karton, pudło", "montar", "składać, montować"],
+        ["pintar", "malować", "colgar", "wieszać"],
+        ["ordenar", "sprzątać, porządkować", "limpiar", "czyścić, sprzątać"],
+        ["el compañero de piso", "współlokator", "el vecino / la vecina", "sąsiad / sąsiadka"],
+        ["la llave", "klucz", "el contrato", "umowa"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Jaki jest i jaki jest teraz",
+      "columns": ["Ser (jaki jest)", "Polski", "Estar (w jakim jest stanie)", "Polski"],
+      "rows": [
+        [
+          "ordenado / desordenado",
+          "porządny / bałaganiarz",
+          "ordenado / desordenado",
+          "posprzątany / w bałaganie"
+        ],
+        ["limpio", "czyścioch, schludny", "limpio / sucio", "czysty / brudny (teraz)"],
+        ["tranquilo", "spokojny (z natury)", "tranquilo", "spokojny (w tej chwili)"],
+        ["alegre", "wesoły (z charakteru)", "contento", "zadowolony"],
+        ["—", "—", "cansado", "zmęczony"],
+        ["—", "—", "lleno / vacío", "pełny / pusty"],
+        ["—", "—", "abierto / cerrado", "otwarty / zamknięty"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — MUDANZA ma w sobie mudar, „zmieniać”: przeprowadzka to zmiana wszystkiego (pamiętasz z jednostki 6B Marka i przeprowadzkę brata?). MONTAR to „montować”: montujesz regał. VACÍO brzmi jak „wakat” i angielskie vacant — pusty. LLENO — „pełno” jak w „pełen”: pomyśl o ll jako o dwóch rękach pełnych kartonów. A SUCIO (brudny) zapamiętaj w parze z przeciwieństwem: sucio ↔ limpio."
+    },
+    { "type": "section", "phase": "structure", "title": "Estar + gerundio, ser i estar" },
+    {
+      "type": "explanation",
+      "text": "Gdy mówisz, co dzieje się w tej chwili, hiszpański chętnie używa estar + gerundio: Estoy montando una estantería (właśnie skręcam regał), Pablo está haciendo una tortilla. Gerundio tworzysz z końcówką -ando dla czasowników na -ar (montar → montando) i -iendo dla -er / -ir (hacer → haciendo, escribir → escribiendo). Po polsku wystarczy czas teraźniejszy: Co robisz? — Skręcam regał."
+    },
+    {
+      "type": "table",
+      "caption": "Estar + gerundio",
+      "columns": ["Osoba", "estar", "Gerundio", "Polski"],
+      "rows": [
+        ["yo", "estoy", "trabajando", "(właśnie) pracuję"],
+        ["tú", "estás", "comiendo", "(właśnie) jesz"],
+        ["él / ella / usted", "está", "escribiendo", "(właśnie) pisze"],
+        ["nosotros / nosotras", "estamos", "pintando", "(właśnie) malujemy"],
+        ["vosotros / vosotras", "estáis", "leyendo", "(właśnie) czytacie"],
+        ["ellos / ellas / ustedes", "están", "durmiendo", "(właśnie) śpią"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Kilka form gerundio jest nieregularnych: leer → leyendo (i między samogłoskami zmienia się w y), oír → oyendo, dormir → durmiendo (o → u), pedir → pidiendo (e → i), decir → diciendo. Gerundio nigdy się nie odmienia: Pablo está cocinando, las chicas están cocinando."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Normalmente estoy comiendo a las dos. / Todos los días estoy trabajando en un banco.",
+      "right": "Normalmente como a las dos. / Trabajo en un banco.",
+      "explanation": "Estar + gerundio opisuje to, co dzieje się teraz albo w tym okresie. Na zwyczaje i stałe fakty używasz zwykłego czasu teraźniejszego: como a las dos, trabajo en un banco."
+    },
+    {
+      "type": "explanation",
+      "text": "Polskie „być” to po hiszpańsku dwa czasowniki. Ser mówi, czym albo jakie coś jest z natury: tożsamość, pochodzenie, zawód, charakter, cechy stałe, materiał, godzina. Estar mówi, gdzie coś jest i w jakim jest stanie teraz: położenie, samopoczucie, stan tymczasowy, wynik czynności (la cama está montada) i estar + gerundio."
+    },
+    {
+      "type": "table",
+      "caption": "Ser czy estar?",
+      "columns": ["Ser", "Przykład", "Estar", "Przykład"],
+      "rows": [
+        ["kto / co to jest", "Este es el salón.", "gdzie jest", "Pablo está en la cocina."],
+        ["skąd", "Es de Granada.", "jak się czuje", "Estoy cansado."],
+        ["zawód", "Es enfermero.", "stan teraz", "El salón está desordenado."],
+        ["charakter", "Es muy simpático.", "wynik czynności", "La cama está montada."],
+        ["cecha stała", "El piso es pequeño.", "czynność w toku", "Está haciendo una tortilla."],
+        [
+          "godzina, data",
+          "Son las ocho. Hoy es lunes.",
+          "położenie miejsca",
+          "El barrio está cerca del trabajo."
+        ]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Soy cansado. / Pablo está enfermero. / El piso es en el centro.",
+      "right": "Estoy cansado. / Pablo es enfermero. / El piso está en el centro.",
+      "explanation": "Samopoczucie i położenie: estar (estoy cansado, está en el centro). Zawód i cechy: ser (es enfermero). Uwaga na jeden wyjątek: wydarzenia „odbywają się” z ser: La fiesta es en mi casa."
+    },
+    {
+      "type": "explanation",
+      "text": "Niektóre przymiotniki zmieniają znaczenie zależnie od czasownika. Ser aburrido — być nudnym; estar aburrido — nudzić się. Ser listo — być bystrym; estar listo — być gotowym. Ser rico — być bogatym; estar rico — być smacznym (La tortilla está muy rica). Ser malo — być złym; estar malo — być chorym albo niesmacznym."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "La tortilla es muy rica. (chcesz pochwalić smak)",
+      "right": "La tortilla está muy rica.",
+      "explanation": "Smak potrawy, którą właśnie jesz, to stan: estar rico. Es rica brzmiałoby, jakby tortilla była bogata. Tak samo: Estoy aburrido = nudzę się; Soy aburrido = jestem nudny."
+    },
+    { "type": "section", "phase": "sound", "title": "Wykrzyknienia: ¡Qué bonito! ¡Qué desorden!" },
+    {
+      "type": "explanation",
+      "text": "Hiszpańskie wykrzyknienia zaczynają się od ¡Qué…! i mają mocną intonację: głos wznosi się wysoko na słowie po qué i opada na końcu. ¡Qué bonito! (Jak ładnie!), ¡Qué suerte! (Co za szczęście!), ¡Qué desorden! (Co za bałagan!). Z rzeczownikiem i przymiotnikiem: ¡Qué piso tan luminoso! Pisze się je z dwoma wykrzyknikami: odwróconym na początku i zwykłym na końcu, a qué ma zawsze akcent graficzny."
+    },
+    {
+      "type": "table",
+      "caption": "Wykrzyknienia z qué",
+      "columns": ["Wzór", "Przykład", "Polski"],
+      "rows": [
+        ["¡Qué + przymiotnik!", "¡Qué bonito!", "Jak ładnie!"],
+        [
+          "¡Qué + rzeczownik!",
+          "¡Qué suerte! / ¡Qué desorden!",
+          "Co za szczęście! / Co za bałagan!"
+        ],
+        ["¡Qué + rzecz. + tan + przym.!", "¡Qué piso tan luminoso!", "Jakie jasne mieszkanie!"],
+        ["¡Cuánto / cuánta…!", "¡Cuántas cajas!", "Ile kartonów!"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Wspólne mieszkanie i sąsiedzi" },
+    {
+      "type": "reading",
+      "title": "Las normas del piso",
+      "paragraphs": [
+        "Pablo y Marek están escribiendo las normas del piso. Las cuelgan en la puerta de la nevera.",
+        "Uno: la cocina siempre está limpia por la noche. Dos: cada uno compra su comida, pero el aceite, la sal y el papel higiénico son de los dos.",
+        "Tres: los fines de semana podemos invitar a amigos, pero a las doce de la noche el salón está tranquilo, porque Pablo a veces trabaja de noche y está durmiendo por el día.",
+        "Cuatro: los gastos de luz, agua e internet se pagan a medias. Cinco: si un vecino está enfadado por el ruido, pedimos perdón y bajamos la música."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Piso compartido to w hiszpańskich miastach bardzo częsty sposób mieszkania, nie tylko dla studentów: wiele osób po trzydziestce dzieli mieszkanie ze współlokatorami, bo czynsze są wysokie. Ustala się wtedy zasady (las normas) i dzieli opłaty.",
+        "Każdy blok ma wspólnotę mieszkaniową (la comunidad de vecinos) z prezesem wybieranym przez sąsiadów. Na zebraniach rozmawia się o remontach, windzie i hałasie.",
+        "Hiszpanie żyją głośniej i później niż Polacy: rozmowy na balkonie po 23:00 nie są rzadkością. Mimo to hałas w nocy może skończyć się skargą do wspólnoty, a w niektórych miastach nawet wezwaniem policji lokalnej.",
+        "Pranie suszy się najczęściej na sznurkach za oknem albo na balkonie (tender la ropa): w hiszpańskim klimacie schnie w godzinę."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: wideorozmowa z nowego mieszkania" },
+    {
+      "type": "mission",
+      "title": "Pokaż znajomemu mieszkanie w trakcie przeprowadzki",
+      "steps": [
+        "Odpowiedz na ¿Qué estás haciendo? trzema zdaniami z estar + gerundio (ty i inne osoby).",
+        "Opisz dwa pomieszczenia: jakie są (ser) i w jakim są teraz stanie (estar).",
+        "Przedstaw współlokatora albo członka rodziny: skąd jest, czym się zajmuje, jaki jest i jak się dziś czuje.",
+        "Powiedz, jak się czujesz po przeprowadzce: Estoy cansado / contenta…",
+        "Zareaguj na trzy rzeczy, które widzisz u znajomego, wykrzyknieniami z ¡Qué…!",
+        "Napisz pięć zasad wspólnego mieszkania i nagraj się, czytając je z ¡Qué…! na końcu."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Qué estás haciendo? — Estoy montando una estantería.",
+          "translation": "Co robisz? — Skręcam regał."
+        },
+        { "text": "Pablo está haciendo una tortilla.", "translation": "Pablo robi tortillę." },
+        {
+          "text": "El salón es pequeño, pero ahora está desordenado.",
+          "translation": "Salon jest mały, ale teraz jest w bałaganie."
+        },
+        {
+          "text": "Pablo es de Granada y es enfermero.",
+          "translation": "Pablo jest z Grenady i jest pielęgniarzem."
+        },
+        {
+          "text": "Estoy cansado, pero muy contento.",
+          "translation": "Jestem zmęczony, ale bardzo zadowolony."
+        },
+        {
+          "text": "El barrio está cerca del trabajo.",
+          "translation": "Okolica jest blisko pracy."
+        },
+        { "text": "La tortilla está muy rica.", "translation": "Tortilla jest bardzo smaczna." },
+        { "text": "¡Qué piso tan luminoso!", "translation": "Jakie jasne mieszkanie!" }
+      ],
+      "canDo": [
+        "powiedzieć, co dzieje się teraz, z estar + gerundio",
+        "utworzyć gerundio regularne i najczęstsze nieregularne",
+        "wybrać ser albo estar w opisach osób i miejsc",
+        "rozumieć przymiotniki, które zmieniają znaczenie z ser i estar",
+        "mówić o przeprowadzce i wspólnym mieszkaniu",
+        "wymówić i zapisać wykrzyknienia z ¡Qué…!"
+      ]
+    }
+  ]
+}

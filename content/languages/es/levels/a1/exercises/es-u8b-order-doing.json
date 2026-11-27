@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-order-doing",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 48,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Co teraz robisz?",
+  "explanation": "¿Qué estás haciendo ahora?",
+  "configuration": {
+    "items": ["¿Qué", "estás", "haciendo", "ahora?"],
+    "joiner": " "
+  }
+}

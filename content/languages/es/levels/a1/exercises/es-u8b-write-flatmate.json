@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-write-flatmate",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 80,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Opisz swojego idealnego współlokatora (albo prawdziwego): skąd jest, czym się zajmuje, jaki jest i co zwykle robi w domu.",
+  "explanation": "Ser na cechy i zawód; czas teraźniejszy na zwyczaje.",
+  "configuration": {
+    "modelAnswer": "Mi compañera de piso ideal es de Polonia, de Cracovia. Es médica y trabaja mucho. Es muy ordenada, tranquila y simpática. Cocina muy bien y los domingos hacemos la comida juntas. No es ruidosa y nunca está enfadada.",
+    "checklist": ["pochodzenie", "zawód", "charakter", "zwyczaje"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

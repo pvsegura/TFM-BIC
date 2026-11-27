@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-fiesta",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 45,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: La fiesta ___ en mi casa.",
+  "explanation": "Wydarzenia „odbywają się” z ser.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "es"
+      },
+      {
+        "id": "opt-b",
+        "text": "está"
+      },
+      {
+        "id": "opt-c",
+        "text": "hay"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

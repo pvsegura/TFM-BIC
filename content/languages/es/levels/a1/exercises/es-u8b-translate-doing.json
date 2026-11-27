@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-translate-doing",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 72,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: (Właśnie) maluję sypialnię.",
+  "explanation": "Estoy pintando el dormitorio.",
+  "configuration": {
+    "acceptedAnswers": ["Estoy pintando el dormitorio.", "Estoy pintando mi dormitorio."],
+    "caseSensitive": false
+  }
+}

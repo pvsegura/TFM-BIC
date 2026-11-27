@@ -134,5 +134,9 @@
   {
     "asset": "a1-pl-u8-housewarming.png",
     "prompt": "at the open door of an apartment a young woman hands a young man a round loaf of bread with a small salt cellar on top, both smiling, behind them a living room with a sofa under a window and a painting above it, no text or signs"
+  },
+  {
+    "asset": "a1-u8-moving.png",
+    "prompt": "a young man surrounded by cardboard boxes assembles a bookshelf while talking on a video call with a smiling young woman whose face is on a smartphone propped up on a box, in the background another young man cooks in an open kitchen, no text on boxes or screens"
   }
 ]

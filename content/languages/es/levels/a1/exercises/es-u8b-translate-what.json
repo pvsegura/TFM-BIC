@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-translate-what",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 76,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Co za bałagan!",
+  "explanation": "¡Qué desorden!",
+  "configuration": {
+    "acceptedAnswers": ["¡Qué desorden!"],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-write-call",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 79,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz wiadomość do przyjaciela w trakcie przeprowadzki: co teraz robisz ty i inni, jakie jest mieszkanie i w jakim jest stanie, i jak się czujesz.",
+  "explanation": "Sprawdź: estar + gerundio, ser (cechy) / estar (stan, miejsce), przymiotniki zgodne z rzeczownikiem.",
+  "configuration": {
+    "modelAnswer": "¡Hola, Ana! Estoy en mi piso nuevo. Ahora estoy colgando unos cuadros y mi hermano está montando la cama. El piso es pequeño, pero es muy bonito y está cerca del centro. Ahora la cocina está muy sucia y hay cajas por todas partes. Estoy cansada, pero muy contenta. ¡Ven el sábado!",
+    "checklist": [
+      "estar + gerundio",
+      "jakie jest mieszkanie",
+      "w jakim jest stanie",
+      "samopoczucie"
+    ],
+    "minWords": 35,
+    "maxWords": 100
+  }
+}

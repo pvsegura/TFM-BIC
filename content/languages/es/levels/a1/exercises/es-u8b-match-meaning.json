@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-match-meaning",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 47,
+    "phase": "structure"
+  },
+  "prompt": "Połącz wyrażenie ze znaczeniem.",
+  "explanation": "Ser listo = bystry; estar listo = gotowy; estar aburrido = nudzić się.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "ser listo",
+        "right": "być bystrym"
+      },
+      {
+        "left": "estar listo",
+        "right": "być gotowym"
+      },
+      {
+        "left": "ser aburrido",
+        "right": "być nudnym"
+      },
+      {
+        "left": "estar aburrido",
+        "right": "nudzić się"
+      }
+    ]
+  }
+}

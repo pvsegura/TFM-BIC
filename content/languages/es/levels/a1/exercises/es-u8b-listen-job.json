@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u8b-listen-job",
+  "lessonId": "es-unit-8-moving-in",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 8,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: kim z zawodu jest Pablo?",
+  "explanation": "Es de Granada y es enfermero.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pielęgniarzem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nauczycielem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kucharzem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

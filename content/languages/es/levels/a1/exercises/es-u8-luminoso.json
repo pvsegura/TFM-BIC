@@ -8,7 +8,7 @@
   "status": "published",
   "order": 90,
   "instructionLanguage": "pl",
-  "book": { "unit": 8, "number": 9, "phase": "connect" },
+  "book": { "unit": 8, "number": 14, "phase": "connect" },
   "prompt": "Co znaczy luminoso?",
   "explanation": "Luminoso — jasny.",
   "configuration": {
