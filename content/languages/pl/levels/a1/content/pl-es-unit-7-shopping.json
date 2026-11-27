@@ -1,0 +1,329 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1140,
+  "unit": 7,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 7A. Ile kosztuje ta kurtka? — ropa, colores, tallas y precios",
+  "description": "Compras ropa: dices qué buscas, pides otro color o talla, te lo pruebas y dices cómo te queda: szukam + genitivo, ten / ta / to y tę, los colores, za duży, pasuje mi y go / ją / je.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Un abrigo para el invierno polaco" },
+    {
+      "type": "explanation",
+      "text": "Llega noviembre y Javier se da cuenta de que su chaqueta de Madrid no sirve para el invierno de Cracovia. Va a una tienda de ropa. Primera escucha: ¿qué busca y de qué color la quiere? Segunda: ¿qué talla le queda bien, qué color se lleva al final y cuánto paga? Tercera: fíjate en cómo señala las cosas: ta, te, tamte, tę."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u7-jacket.png",
+      "alt": "Un hombre joven se prueba una chaqueta de invierno delante de un espejo mientras una dependienta le sostiene otra."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Dzień dobry, w czym mogę pomóc?",
+          "translation": "Buenos días, ¿en qué puedo ayudarle?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dzień dobry. Szukam ciepłej kurtki na zimę.",
+          "translation": "Buenos días. Busco una chaqueta de abrigo para el invierno."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Mamy te kurtki tutaj i tamte płaszcze przy oknie. Jaki rozmiar pan nosi?",
+          "translation": "Tenemos estas chaquetas de aquí y aquellos abrigos junto a la ventana. ¿Qué talla usa?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "M albo L. Podoba mi się ta niebieska kurtka. Czy mogę ją przymierzyć?",
+          "translation": "M o L. Me gusta esta chaqueta azul. ¿Puedo probármela?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Oczywiście. Przymierzalnia jest tam, po lewej.",
+          "translation": "Claro. El probador está allí, a la izquierda."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "I jak? Pasuje?",
+          "translation": "¿Y qué tal? ¿Le queda bien?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jest trochę za mała. Czy jest w rozmiarze L?",
+          "translation": "Me queda un poco pequeña. ¿La hay en la talla L?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Niestety niebieskiej w L już nie ma. Jest czarna albo zielona.",
+          "translation": "Lo siento, azul en L ya no queda. La hay negra o verde."
+        },
+        {
+          "speaker": "Javier",
+          "text": "To poproszę czarną.",
+          "translation": "Entonces, la negra, por favor."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Proszę. A teraz?",
+          "translation": "Tome. ¿Y ahora?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Teraz jest w sam raz. Ile kosztuje?",
+          "translation": "Ahora me queda perfecta. ¿Cuánto cuesta?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Pięćset złotych, ale dzisiaj jest dwadzieścia procent rabatu. Czyli czterysta.",
+          "translation": "Quinientos złotys, pero hoy tiene un veinte por ciento de descuento. O sea, cuatrocientos."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Świetnie, biorę ją. Mogę zapłacić kartą?",
+          "translation": "Estupendo, me la llevo. ¿Puedo pagar con tarjeta?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Tak, oczywiście. Proszę, paragon. W tej kurtce zima panu niestraszna!",
+          "translation": "Sí, claro. Tome el tique. ¡Con esta chaqueta el invierno no le da miedo!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Ropa, colores y la tienda" },
+    {
+      "type": "table",
+      "caption": "La ropa (m = masculino, f = femenino, n = neutro, pl = solo plural)",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["koszulka (f)", "la camiseta", "koszula (f)", "la camisa"],
+        ["sweter (m)", "el jersey", "bluza (f)", "la sudadera"],
+        ["kurtka (f)", "la chaqueta, la cazadora", "płaszcz (m)", "el abrigo"],
+        ["sukienka (f)", "el vestido", "spódnica (f)", "la falda"],
+        ["spodnie (pl)", "los pantalones", "dżinsy (pl)", "los vaqueros"],
+        ["buty (pl)", "los zapatos", "kozaki (pl)", "las botas altas"],
+        ["czapka (f)", "el gorro", "szalik (m)", "la bufanda"],
+        ["rękawiczki (pl)", "los guantes", "skarpetki (pl)", "los calcetines"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Los colores (masculino / femenino / neutro y plural)",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["biały / biała / białe", "blanco", "czarny / czarna / czarne", "negro"],
+        ["czerwony / czerwona / czerwone", "rojo", "zielony / zielona / zielone", "verde"],
+        [
+          "niebieski / niebieska / niebieskie",
+          "azul",
+          "granatowy / granatowa / granatowe",
+          "azul marino"
+        ],
+        ["żółty / żółta / żółte", "amarillo", "szary / szara / szare", "gris"],
+        ["brązowy / brązowa / brązowe", "marrón", "różowy / różowa / różowe", "rosa"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "En la tienda",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["rozmiar", "la talla, el número", "przymierzalnia", "el probador"],
+        ["przymierzyć", "probarse", "pasować", "quedar bien, sentar bien"],
+        ["kasa", "la caja", "paragon", "el tique"],
+        ["promocja / rabat", "la oferta / el descuento", "wyprzedaż", "las rebajas"],
+        ["wymienić", "cambiar", "zwrócić", "devolver"],
+        [
+          "za duży / za mały",
+          "demasiado grande / pequeño",
+          "w sam raz",
+          "perfecto, justo a la medida"
+        ]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — SWETER viene del inglés sweater («el que hace sudar»): ¡justo lo que necesitas en Polonia! PŁASZCZ: piensa en una «plaza» en pleno enero: nadie la cruza sin abrigo. CZAPKA es pariente del español «capa» y «chapeau»: lo que cubre la cabeza. RĘKAWICZKI lleva dentro ręka, la mano: «las de la mano». GRANATOWY (azul marino) suena a «granate», pero ojo: es azul oscuro, no rojo; un falso amigo. Y PASOWAĆ suena a «pasar»: si la talla pasa la prueba, te queda bien."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Szukam + genitivo, ten / ta / to, pasować y go / ją / je"
+    },
+    {
+      "type": "explanation",
+      "text": "Szukać (buscar) pide genitivo, igual que nie mam: szukam kurtki (kurtka), szukam swetra (sweter), szukam płaszcza (płaszcz). Con los plurales como spodnie o buty se usa el genitivo plural, que de momento aprenderás como bloque: szukam spodni, szukam butów. El adjetivo también va en genitivo: szukam ciepłej kurtki, szukam czarnego swetra."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Szukam kurtkę. / Szukam ciepła kurtka.",
+      "right": "Szukam kurtki. / Szukam ciepłej kurtki.",
+      "explanation": "A diferencia de «buscar» en español, szukać no lleva acusativo, sino genitivo. Femenino -a → -i / -y; masculino → -a (swetra, płaszcza, szalika); el adjetivo femenino → -ej, el masculino → -ego."
+    },
+    {
+      "type": "explanation",
+      "text": "Para señalar, el polaco tiene dos grados: ten (este, ese) y tamten (aquel, el de allí). Concuerdan con el sustantivo y cambian con el caso. Atención al acusativo femenino: ta kurtka → poproszę tę kurtkę. En la lengua hablada oirás muchas veces tą kurtkę, pero lo correcto es tę."
+    },
+    {
+      "type": "table",
+      "caption": "Ten y tamten",
+      "columns": ["Caso", "Masculino", "Femenino", "Neutro", "Plural"],
+      "rows": [
+        [
+          "nominativo (to jest…)",
+          "ten sweter",
+          "ta kurtka",
+          "to zdjęcie",
+          "te spodnie / ci panowie"
+        ],
+        [
+          "acusativo (poproszę…)",
+          "ten sweter / tego pana",
+          "tę kurtkę",
+          "to zdjęcie",
+          "te spodnie"
+        ],
+        ["genitivo (szukam…, nie ma…)", "tego swetra", "tej kurtki", "tego zdjęcia", "tych spodni"],
+        ["más lejos", "tamten sweter", "tamta kurtka", "tamto zdjęcie", "tamte spodnie"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Poproszę ta kurtka. / Ta spodnie są drogie.",
+      "right": "Poproszę tę kurtkę. / Te spodnie są drogie.",
+      "explanation": "Después de poproszę, biorę o chcę, el femenino va en acusativo: tę kurtkę, tę czarną sukienkę. Y spodnie, dżinsy, buty o okulary solo existen en plural: te spodnie, czarne spodnie, nunca «ta spodnia»."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir cómo te queda algo hay dos fórmulas. Con być y un adjetivo: kurtka jest za mała (es demasiado pequeña), spodnie są za długie, sukienka jest w sam raz. Y con pasować, que funciona como «quedar» o «gustar»: lo que se prueba es el sujeto y la persona va en dativo. Ta kurtka mi pasuje (esta chaqueta me queda bien), czy pasuje panu? (¿le queda bien?). Za + adjetivo significa «demasiado»: za duży, za drogi."
+    },
+    {
+      "type": "table",
+      "caption": "¿Qué tal le queda?",
+      "columns": ["Polaco", "Español"],
+      "rows": [
+        ["Pasuje mi. / Nie pasuje mi.", "Me queda bien. / No me queda bien."],
+        ["Jest za duża / za mała.", "Es demasiado grande / pequeña."],
+        ["Są za długie / za krótkie.", "Son demasiado largos / cortos."],
+        ["Jest w sam raz.", "Es perfecto, me queda justo."],
+        ["Dobrze pan wygląda w tym kolorze.", "Le sienta bien este color."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Ja pasuję ta kurtka. / Kurtka jest bardzo duży.",
+      "right": "Ta kurtka mi pasuje. / Kurtka jest za duża.",
+      "explanation": "Pasować concuerda con la prenda (pasuje / pasują) y la persona va en dativo (mi, ci, panu, pani). El adjetivo copia el género de la prenda: kurtka (f) → za duża; sweter (m) → za duży; spodnie (pl) → za duże."
+    },
+    {
+      "type": "explanation",
+      "text": "Para no repetir la prenda se usan los pronombres de acusativo, como lo, la y los en español: go (masculino y neutro: el sweter, el zdjęcie), ją (femenino: la kurtka) y je (plural de cosas: las spodnie, los buty). Biorę ją (me la llevo), czy mogę go przymierzyć? (¿puedo probármelo?). Suelen ir justo detrás del verbo (biorę ją, kupuję je) o delante del infinitivo (czy mogę ją przymierzyć?)."
+    },
+    {
+      "type": "table",
+      "caption": "Go, ją, je",
+      "columns": ["La prenda", "Pronombre", "Ejemplo"],
+      "rows": [
+        ["sweter (m), zdjęcie (n)", "go", "Podoba mi się ten sweter. Biorę go."],
+        ["kurtka (f)", "ją", "Czy mogę ją przymierzyć?"],
+        ["spodnie, buty (pl)", "je", "Te buty są ładne. Kupuję je."],
+        ["persona: brat (m)", "go", "Znasz mojego brata? — Tak, znam go."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Biorę ona. / Biorę to kurtkę.",
+      "right": "Biorę ją. / Biorę tę kurtkę.",
+      "explanation": "Ona es el sujeto (ella); como complemento directo se usa ją. Y si nombras la prenda, el demostrativo va en acusativo: tę kurtkę."
+    },
+    { "type": "section", "phase": "sound", "title": "Ł y l: biały, płaszcz, szalik" },
+    {
+      "type": "explanation",
+      "text": "La ł polaca no es una l: suena como la w inglesa de «water», con los labios redondeados y sin tocar el paladar con la lengua: biały [biawy], żółty [żuwty], płaszcz [pwaszcz]. La l, en cambio, es como la española, con la punta de la lengua en los alvéolos: szalik, lato, lewo, kolor. Confundirlas puede cambiar la palabra: laska (bastón) y łaska (gracia), lata (años) y łata (remiendo)."
+    },
+    {
+      "type": "table",
+      "caption": "Ł y l en esta lección (pronunciación aproximada)",
+      "columns": ["Palabra", "Cómo suena", "Qué practicar"],
+      "rows": [
+        ["biały", "[biawy]", "ł = w inglesa"],
+        ["płaszcz", "[pwaszcz]", "pł + szcz"],
+        ["żółty", "[żuwty]", "ż + ó + ł"],
+        ["szalik", "[szalik]", "l española"],
+        ["kolor", "[kolor]", "l española"],
+        ["ładny", "[wadny]", "ł al principio"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Vestirse para el clima polaco" },
+    {
+      "type": "reading",
+      "title": "Ubierz się na cebulkę!",
+      "paragraphs": [
+        "Zima w Polsce jest zimna: w styczniu często jest minus pięć albo minus dziesięć stopni. Dlatego Polacy mówią: „Ubierz się na cebulkę!” — jak cebula, która ma dużo warstw.",
+        "Na dole koszulka, potem sweter albo bluza, a na górze ciepła kurtka albo płaszcz. Do tego czapka, szalik i rękawiczki. W tramwaju albo w sklepie jest ciepło, więc zdejmujesz kurtkę i nie jest ci gorąco.",
+        "Ważne są też buty. Zimą na ulicy jest śnieg i lód, więc dobre kozaki to podstawa.",
+        "Kiedy wchodzisz do polskiego domu, zdejmujesz buty. Gospodarz często daje gościom kapcie. W butach nie chodzi się po mieszkaniu!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Ubierać się na cebulkę («vestirse como una cebolla», en capas) es el consejo que todo polaco da a un extranjero en invierno: dentro de casas, tiendas y transportes la calefacción es fuerte, y fuera puede hacer mucho frío.",
+        "En Polonia es casi una norma quitarse los zapatos al entrar en una casa. Los anfitriones suelen ofrecer zapatillas de casa (kapcie). Entrar con zapatos a un salón se considera poco educado, sobre todo en invierno, con nieve y barro.",
+        "Las tallas de ropa polacas siguen el sistema alemán: una talla 38 española de mujer suele corresponder a una 36 polaca. Los números de zapato son iguales que en España.",
+        "Las grandes galerías comerciales (galerie handlowe) están en todas las ciudades y, como el resto de las tiendas, cierran casi todos los domingos. Las rebajas fuertes son en enero y en julio."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: prepárate para el invierno" },
+    {
+      "type": "mission",
+      "title": "Compra ropa de invierno en una tienda polaca",
+      "steps": [
+        "Saluda y di qué buscas con szukam + genitivo: Szukam ciepłej kurtki / czapki / szalika.",
+        "Di tu talla y qué prenda te gusta señalándola con ten / ta / te o tamten / tamta.",
+        "Pregunta si puedes probártela (czy mogę ją / go przymierzyć?) y dónde está el probador.",
+        "Di cómo te queda (jest za duża, pasuje mi, jest w sam raz) y pide otra talla u otro color.",
+        "Pregunta el precio, entiende el descuento y di el precio final con złote / złotych.",
+        "Decide (biorę ją / go / je) y grábate diciendo biały, płaszcz, żółty y szalik con la ł y la l bien distintas."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Szukam ciepłej kurtki na zimę.",
+          "translation": "Busco una chaqueta de abrigo para el invierno."
+        },
+        {
+          "text": "Podoba mi się ta niebieska kurtka.",
+          "translation": "Me gusta esta chaqueta azul."
+        },
+        { "text": "Czy mogę ją przymierzyć?", "translation": "¿Puedo probármela?" },
+        {
+          "text": "Jest za mała. Czy jest w rozmiarze L?",
+          "translation": "Me queda pequeña. ¿La hay en la talla L?"
+        },
+        { "text": "Ta kurtka mi pasuje.", "translation": "Esta chaqueta me queda bien." },
+        { "text": "Poproszę tę czarną.", "translation": "La negra, por favor." },
+        { "text": "Ile kosztują te spodnie?", "translation": "¿Cuánto cuestan estos pantalones?" },
+        { "text": "Biorę ją.", "translation": "Me la llevo." }
+      ],
+      "canDo": [
+        "nombrar la ropa y los colores con la concordancia correcta",
+        "decir qué busco con szukam + genitivo",
+        "señalar prendas con ten / ta / to, tę y tamten",
+        "decir cómo me queda algo con za duży, w sam raz y pasować",
+        "sustituir la prenda por go, ją o je",
+        "distinguir la ł de la l al pronunciar"
+      ]
+    }
+  ]
+}

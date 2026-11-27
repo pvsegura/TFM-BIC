@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-w-sam-raz",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa jest w sam raz?",
+  "explanation": "W sam raz = justo, perfecto de talla.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me queda perfecto."
+      },
+      {
+        "id": "opt-b",
+        "text": "Es demasiado grande."
+      },
+      {
+        "id": "opt-c",
+        "text": "Está en rebajas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

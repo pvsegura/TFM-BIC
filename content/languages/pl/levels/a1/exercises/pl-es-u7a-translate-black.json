@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-translate-black",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 32,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: La negra, por favor. (la chaqueta)",
+  "explanation": "Poproszę + acusativo femenino: czarną.",
+  "configuration": {
+    "acceptedAnswers": ["Poproszę czarną.", "Poproszę czarną kurtkę.", "Czarną, poproszę."],
+    "caseSensitive": false
+  }
+}

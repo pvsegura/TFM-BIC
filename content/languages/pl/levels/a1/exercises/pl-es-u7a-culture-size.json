@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-culture-size",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: una talla 38 española de mujer suele ser en Polonia…",
+  "explanation": "Polonia sigue el sistema alemán: 38 española ≈ 36 polaca.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "36."
+      },
+      {
+        "id": "opt-b",
+        "text": "38."
+      },
+      {
+        "id": "opt-c",
+        "text": "40."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

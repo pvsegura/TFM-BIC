@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-biore-ja",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "Te llevas la chaqueta (kurtka). ¿Qué dices?",
+  "explanation": "Femenino en acusativo: ją.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Biorę ją."
+      },
+      {
+        "id": "opt-b",
+        "text": "Biorę ona."
+      },
+      {
+        "id": "opt-c",
+        "text": "Biorę jej."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

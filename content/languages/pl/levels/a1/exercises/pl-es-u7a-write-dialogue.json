@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-write-dialogue",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 7440,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 34,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Escribe un diálogo en una tienda de ropa polaca: buscas una prenda de invierno, pides talla y color, te la pruebas, dices cómo te queda y la compras.",
+  "explanation": "Revisa: szukam + genitivo, ten / ta / tę, za duży / pasuje mi, go / ją / je, el precio con złote / złotych.",
+  "configuration": {
+    "modelAnswer": "— Dzień dobry, w czym mogę pomóc? — Szukam ciepłego płaszcza. — Jaki rozmiar? — M. Podoba mi się tamten szary płaszcz. Czy mogę go przymierzyć? — Oczywiście. — Jest trochę za duży. Czy jest w rozmiarze S? — Tak, proszę. — Teraz jest w sam raz. Ile kosztuje? — Sześćset złotych. — Biorę go.",
+    "checklist": ["prenda que buscas", "talla y color", "cómo te queda", "precio", "decisión"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

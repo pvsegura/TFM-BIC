@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-translate-looking",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 29,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Busco un gorro y una bufanda.",
+  "explanation": "Szukam + genitivo: czapki i szalika.",
+  "configuration": {
+    "acceptedAnswers": ["Szukam czapki i szalika."],
+    "caseSensitive": false
+  }
+}

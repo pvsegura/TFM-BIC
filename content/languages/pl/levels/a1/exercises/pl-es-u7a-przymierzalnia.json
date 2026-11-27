@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-przymierzalnia",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "¿Dónde te pruebas la ropa?",
+  "explanation": "Przymierzalnia = el probador (przymierzyć = probarse).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W przymierzalni."
+      },
+      {
+        "id": "opt-b",
+        "text": "W kasie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Na paragonie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

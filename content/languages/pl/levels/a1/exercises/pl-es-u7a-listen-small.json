@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-listen-small",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 7130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: la primera chaqueta le queda grande.",
+  "explanation": "Jest trochę za mała — le queda pequeña.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

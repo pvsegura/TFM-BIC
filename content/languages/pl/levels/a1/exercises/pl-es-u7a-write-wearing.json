@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-write-wearing",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 7450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 35,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Describe qué llevas hoy (con colores) y qué ropa necesitas para un invierno polaco.",
+  "explanation": "Mam na sobie + acusativo (llevo puesto…), los colores concordados, potrzebuję + genitivo.",
+  "configuration": {
+    "modelAnswer": "Dzisiaj mam na sobie niebieskie dżinsy, białą koszulkę i szary sweter. Na zimę w Polsce potrzebuję ciepłej kurtki, czapki, szalika i rękawiczek. Muszę też kupić dobre kozaki.",
+    "checklist": ["ropa de hoy con colores", "ropa para el invierno"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

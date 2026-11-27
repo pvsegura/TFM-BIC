@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-reading-onion",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 25,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué significa ubierz się na cebulkę?",
+  "explanation": "Como una cebolla, con muchas capas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Vístete en capas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ponte ropa de color cebolla."
+      },
+      {
+        "id": "opt-c",
+        "text": "Compra ropa en rebajas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-gap-colours",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 7250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "Completa el color con la terminación correcta.",
+  "explanation": "Kurtka (f) czarna; sweter (m) biały; buty (pl) brązowe.",
+  "configuration": {
+    "text": "Mam czarn___ kurtkę, biał___ sweter i brązow___ buty.",
+    "gaps": [
+      {
+        "accepted": ["ą"]
+      },
+      {
+        "accepted": ["y"]
+      },
+      {
+        "accepted": ["e"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

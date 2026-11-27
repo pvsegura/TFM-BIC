@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-listen-price",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuánto paga con el descuento?",
+  "explanation": "Pięćset złotych… dwadzieścia procent rabatu. Czyli czterysta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "400 zł."
+      },
+      {
+        "id": "opt-b",
+        "text": "500 zł."
+      },
+      {
+        "id": "opt-c",
+        "text": "20 zł."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-gap-za",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 7270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "Completa el adjetivo con za.",
+  "explanation": "Spodnie (pl) za długie; kurtka (f) za mała; sweter (m) za duży.",
+  "configuration": {
+    "text": "Spodnie są za dług___, kurtka jest za mał___, a sweter jest za duż___.",
+    "gaps": [
+      {
+        "accepted": ["ie"]
+      },
+      {
+        "accepted": ["a"]
+      },
+      {
+        "accepted": ["y"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

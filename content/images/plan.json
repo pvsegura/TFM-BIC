@@ -114,5 +114,9 @@
   {
     "asset": "a1-u7-shop.png",
     "prompt": "a young woman holding a dress on a hanger talks with a friendly shop assistant in a bright clothing store, clothes racks and shelves around, no signs, no price tags with text"
+  },
+  {
+    "asset": "a1-pl-u7-jacket.png",
+    "prompt": "a young man tries on a winter jacket in front of a full-length mirror in a clothing store, a smiling female shop assistant holds another jacket on a hanger, racks of coats behind, no signs or price tags with text"
   }
 ]

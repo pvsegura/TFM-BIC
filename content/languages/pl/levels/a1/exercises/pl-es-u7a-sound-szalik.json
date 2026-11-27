@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-sound-szalik",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 7330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 23,
+    "phase": "sound"
+  },
+  "prompt": "En szalik, la l suena como una w inglesa.",
+  "explanation": "No: es una l normal, como la española. Solo ł suena como w.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

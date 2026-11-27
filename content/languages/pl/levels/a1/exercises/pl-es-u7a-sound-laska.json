@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-sound-laska",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 24,
+    "phase": "sound"
+  },
+  "prompt": "¿Qué significa łaska, con ł?",
+  "explanation": "Laska = bastón; łaska = gracia. La ł cambia la palabra.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Gracia."
+      },
+      {
+        "id": "opt-b",
+        "text": "Bastón."
+      },
+      {
+        "id": "opt-c",
+        "text": "Caja."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

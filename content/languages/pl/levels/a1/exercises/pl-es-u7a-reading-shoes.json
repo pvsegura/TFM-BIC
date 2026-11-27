@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-reading-shoes",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 7370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: en una casa polaca puedes andar con los zapatos de la calle.",
+  "explanation": "W butach nie chodzi się po mieszkaniu — te los quitas y te dan kapcie.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-listen-first",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué chaqueta le gusta primero?",
+  "explanation": "Podoba mi się ta niebieska kurtka.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La azul."
+      },
+      {
+        "id": "opt-b",
+        "text": "La negra."
+      },
+      {
+        "id": "opt-c",
+        "text": "La verde."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

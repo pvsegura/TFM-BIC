@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-gap-szukam",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 7200,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 10,
+    "phase": "structure"
+  },
+  "prompt": "Completa en genitivo después de szukam.",
+  "explanation": "Kurtka → kurtki; sweter → swetra; czapka → czapki.",
+  "configuration": {
+    "text": "Szukam ___ (kurtka), ___ (sweter) i ___ (czapka).",
+    "gaps": [
+      {
+        "accepted": ["kurtki"]
+      },
+      {
+        "accepted": ["swetra"]
+      },
+      {
+        "accepted": ["czapki"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

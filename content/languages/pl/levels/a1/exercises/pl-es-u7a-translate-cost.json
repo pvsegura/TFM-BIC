@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-translate-cost",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7430,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 33,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Cuánto cuestan estos zapatos?",
+  "explanation": "Ile kosztują te buty?",
+  "configuration": {
+    "acceptedAnswers": ["Ile kosztują te buty?"],
+    "caseSensitive": false
+  }
+}

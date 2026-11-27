@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-match-colours",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 7170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada color con su traducción.",
+  "explanation": "Granatowy = azul marino (¡no granate!); brązowy = marrón.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "granatowy",
+        "right": "azul marino"
+      },
+      {
+        "left": "brązowy",
+        "right": "marrón"
+      },
+      {
+        "left": "szary",
+        "right": "gris"
+      },
+      {
+        "left": "żółty",
+        "right": "amarillo"
+      },
+      {
+        "left": "różowy",
+        "right": "rosa"
+      }
+    ]
+  }
+}

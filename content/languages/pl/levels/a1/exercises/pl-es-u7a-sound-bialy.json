@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-sound-bialy",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 22,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena biały?",
+  "explanation": "Ł = w inglesa: [biawy].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[biawy]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[bialy]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[biaży]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-listen-what",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué busca Javier?",
+  "explanation": "Szukam ciepłej kurtki na zimę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Una chaqueta de abrigo para el invierno."
+      },
+      {
+        "id": "opt-b",
+        "text": "Unos zapatos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Un traje para una boda."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

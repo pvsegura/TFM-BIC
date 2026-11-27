@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-pasuje",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «esta chaqueta me queda bien»?",
+  "explanation": "Pasować como «quedar»: ta kurtka mi pasuje.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ta kurtka mi pasuje."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja pasuję ta kurtka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ta kurtka pasuję mi."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-match-clothes",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 7160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada prenda con su traducción.",
+  "explanation": "Płaszcz = abrigo; czapka = gorro; rękawiczki = guantes.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "płaszcz",
+        "right": "el abrigo"
+      },
+      {
+        "left": "czapka",
+        "right": "el gorro"
+      },
+      {
+        "left": "rękawiczki",
+        "right": "los guantes"
+      },
+      {
+        "left": "spódnica",
+        "right": "la falda"
+      },
+      {
+        "left": "szalik",
+        "right": "la bufanda"
+      },
+      {
+        "left": "sukienka",
+        "right": "el vestido"
+      }
+    ]
+  }
+}

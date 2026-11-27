@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-szukam-cieplej",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7210,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 11,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Szukać + genitivo, también el adjetivo: ciepłej kurtki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Szukam ciepłej kurtki."
+      },
+      {
+        "id": "opt-b",
+        "text": "Szukam ciepłą kurtkę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Szukam ciepła kurtka."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

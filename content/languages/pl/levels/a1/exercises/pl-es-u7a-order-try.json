@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-order-try",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 7300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 20,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿Puedo probarme este jersey?",
+  "explanation": "Czy mogę przymierzyć + ten sweter?",
+  "configuration": {
+    "items": ["Czy", "mogę", "przymierzyć", "ten", "sweter?"],
+    "joiner": " "
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-translate-try",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 30,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Puedo probármela? (la kurtka)",
+  "explanation": "Czy mogę ją przymierzyć?",
+  "configuration": {
+    "acceptedAnswers": ["Czy mogę ją przymierzyć?", "Mogę ją przymierzyć?"],
+    "caseSensitive": false
+  }
+}

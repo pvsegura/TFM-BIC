@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-reading-winter",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 26,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué temperatura hace a menudo en enero?",
+  "explanation": "Minus pięć albo minus dziesięć stopni.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Entre −5 y −10 grados."
+      },
+      {
+        "id": "opt-b",
+        "text": "Unos 5 grados."
+      },
+      {
+        "id": "opt-c",
+        "text": "Entre 10 y 15 grados."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

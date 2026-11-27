@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7a-order-size",
+  "lessonId": "pl-es-unit-7-shopping",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 7310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 21,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Es demasiado pequeña. ¿La hay en la talla L?",
+  "explanation": "Jest za mała. Czy jest w rozmiarze L?",
+  "configuration": {
+    "items": ["Jest", "za", "mała.", "Czy", "jest", "w", "rozmiarze", "L?"],
+    "joiner": " "
+  }
+}
