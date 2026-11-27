@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-match-transport",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 3570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Une cada vehículo con su forma en instrumental.",
+  "explanation": "Masculino y neutro -em; femenino -ą.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "autobus",
+        "right": "autobusem"
+      },
+      {
+        "left": "pociąg",
+        "right": "pociągiem"
+      },
+      {
+        "left": "taksówka",
+        "right": "taksówką"
+      },
+      {
+        "left": "metro",
+        "right": "metrem"
+      }
+    ]
+  }
+}

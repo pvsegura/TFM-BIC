@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-dokad",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4090,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 90,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. — Dokąd jedziesz? ¿Qué respondes?",
+  "explanation": "Dokąd? → do + genitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Do Krakowa."
+      },
+      {
+        "id": "opt-b",
+        "text": "W Krakowie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kraków."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

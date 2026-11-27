@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-possessives",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4000,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 81,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con mój, moja o moje.",
+  "explanation": "Brat (m) mój; córka (f) moja; zdjęcie (n) moje.",
+  "configuration": {
+    "text": "To jest ___ brat, ___ córka i ___ zdjęcie z wesela.",
+    "gaps": [
+      {
+        "accepted": ["mój"]
+      },
+      {
+        "accepted": ["moja"]
+      },
+      {
+        "accepted": ["moje"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

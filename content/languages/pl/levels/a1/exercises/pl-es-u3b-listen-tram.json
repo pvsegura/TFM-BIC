@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-listen-tram",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tranvías van al centro?",
+  "explanation": "Dwójka albo czwórka — el 2 o el 4.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El 2 o el 4."
+      },
+      {
+        "id": "opt-b",
+        "text": "El 5."
+      },
+      {
+        "id": "opt-c",
+        "text": "El 12."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

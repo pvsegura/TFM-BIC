@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-translate-left",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco (formal): Gire a la izquierda en el semáforo.",
+  "explanation": "Proszę skręcić w lewo + na światłach.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Proszę skręcić w lewo na światłach.",
+      "Na światłach proszę skręcić w lewo."
+    ],
+    "caseSensitive": false
+  }
+}

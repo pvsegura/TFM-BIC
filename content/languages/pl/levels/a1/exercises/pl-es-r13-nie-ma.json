@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-nie-ma",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4050,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 86,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa en genitivo después de nie ma.",
+  "explanation": "Apteka → apteki; sklep → sklepu.",
+  "configuration": {
+    "text": "W okolicy nie ma ___ (apteka) ani ___ (sklep).",
+    "gaps": [
+      {
+        "accepted": ["apteki"]
+      },
+      {
+        "accepted": ["sklepu"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

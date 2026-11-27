@@ -1,0 +1,315 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1105,
+  "unit": 3,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 3B. Jak dojść do…? — direcciones, ir a pie o en transporte",
+  "description": "Preguntas por el camino, entiendes indicaciones y explicas cómo llegar: jak dojść do…?, prosto, w prawo, w lewo, proszę skręcić, iść y jechać, do + genitivo y el transporte con tramwajem, autobusem.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Perdido en el centro" },
+    {
+      "type": "explanation",
+      "text": "Javier ha quedado con sus compañeros de trabajo en un restaurante de la calle Floriańska, en el centro de Cracovia, pero no sabe llegar. Para a un señor en la calle. Primera escucha: ¿está lejos? ¿Puede ir andando? Segunda: anota el camino: recto, izquierda, derecha… y en qué se equivoca Javier. Tercera: fíjate en cómo da instrucciones el señor: proszę iść, proszę skręcić."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u3-street.png",
+      "alt": "Un señor mayor con sombrero señala el final de una calle de casas antiguas a un hombre joven; al fondo pasa un tranvía."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "Przepraszam pana, jak dojść do ulicy Floriańskiej?",
+          "translation": "Perdone, señor, ¿cómo se llega a la calle Floriańska?"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Do Floriańskiej? To niedaleko. Proszę iść prosto do końca tej ulicy.",
+          "translation": "¿A la Floriańska? No está lejos. Siga recto hasta el final de esta calle."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Prosto do końca ulicy… I potem?",
+          "translation": "Recto hasta el final de la calle… ¿Y después?"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Potem na skrzyżowaniu proszę skręcić w lewo. Tam jest duży kościół.",
+          "translation": "Después, en el cruce, gire a la izquierda. Allí hay una iglesia grande."
+        },
+        {
+          "speaker": "Pan",
+          "text": "Za kościołem druga ulica w prawo — to już jest Floriańska.",
+          "translation": "Pasada la iglesia, la segunda calle a la derecha: esa ya es la Floriańska."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Czyli druga ulica w lewo?",
+          "translation": "O sea, ¿la segunda calle a la izquierda?"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Nie, nie: najpierw w lewo, przy kościele, a potem druga w prawo.",
+          "translation": "No, no: primero a la izquierda, junto a la iglesia, y luego la segunda a la derecha."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Rozumiem. A czy to daleko? Mogę iść pieszo?",
+          "translation": "Entiendo. ¿Y está lejos? ¿Puedo ir andando?"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Tak, pieszo to jakieś dziesięć minut. Ale jeśli pan się spieszy, może pan jechać tramwajem.",
+          "translation": "Sí, andando son unos diez minutos. Pero si tiene prisa, puede ir en tranvía."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A który tramwaj jedzie do centrum?",
+          "translation": "¿Y qué tranvía va al centro?"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Dwójka albo czwórka. Przystanek jest tam, naprzeciwko banku. Bilet kupuje pan w automacie.",
+          "translation": "El dos o el cuatro. La parada está allí, enfrente del banco. El billete lo compra en la máquina."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Bardzo panu dziękuję!",
+          "translation": "¡Muchas gracias, señor!"
+        },
+        {
+          "speaker": "Pan",
+          "text": "Proszę bardzo. Miłego wieczoru!",
+          "translation": "De nada. ¡Que pase una buena tarde!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "El camino y el transporte" },
+    {
+      "type": "table",
+      "caption": "Indicaciones",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["prosto", "recto", "do końca ulicy", "hasta el final de la calle"],
+        ["w prawo", "a la derecha", "w lewo", "a la izquierda"],
+        [
+          "skręcić w prawo",
+          "girar a la derecha",
+          "pierwsza / druga ulica",
+          "la primera / segunda calle"
+        ],
+        ["na skrzyżowaniu", "en el cruce", "na światłach", "en el semáforo"],
+        ["na rondzie", "en la rotonda", "za rogiem", "a la vuelta de la esquina"],
+        ["przez most", "por el puente, cruzando el puente", "przez park", "por el parque"],
+        [
+          "za kościołem",
+          "pasada la iglesia, detrás de la iglesia",
+          "przed bankiem",
+          "delante del banco"
+        ],
+        ["daleko / blisko", "lejos / cerca", "dziesięć minut stąd", "a diez minutos de aquí"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "¿Cómo vas? (instrumental: -em, -ą)",
+      "columns": ["El vehículo", "Jadę… (voy en…)", "El vehículo", "Jadę… (voy en…)"],
+      "rows": [
+        ["autobus", "autobusem", "tramwaj", "tramwajem"],
+        ["metro", "metrem", "pociąg", "pociągiem"],
+        ["samochód", "samochodem", "taksówka", "taksówką"],
+        ["rower", "rowerem", "hulajnoga", "hulajnogą (patinete)"],
+        ["—", "—", "a pie", "idę pieszo / na piechotę"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "En la parada y en el tranvía",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["bilet", "el billete", "automat (biletowy)", "la máquina de billetes"],
+        ["skasować bilet", "validar el billete", "przesiadka", "el transbordo"],
+        ["wysiadać", "bajarse", "wsiadać", "subirse"],
+        [
+          "następny przystanek",
+          "la próxima parada",
+          "dwójka, czwórka…",
+          "el (tranvía / bus) número dos, cuatro…"
+        ]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — PROSTO es «recto» y también «sencillo»: el camino recto es el camino simple. PRAWO (derecha) es la misma palabra que «derecho» (la ley): en polaco, como en español, lo derecho es lo justo. LEWO (izquierda) suena como «lejos… a la izquierda». SKRZYŻOWANIE contiene krzyż, la cruz: un cruce es una cruz de calles. Y ŚWIATŁA son «las luces»: en Polonia el semáforo se llama simplemente «las luces»."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Iść o jechać, do + genitivo y las instrucciones"
+    },
+    {
+      "type": "explanation",
+      "text": "El español tiene un solo verbo «ir». El polaco tiene dos y hay que elegir siempre: iść es ir a pie, andando; jechać es ir en un vehículo (coche, tranvía, tren, bici). Idę do pracy significa que vas a trabajar andando; jadę do pracy, que vas en tranvía o en coche. Ir de una ciudad a otra es casi siempre jechać: Jadę do Warszawy."
+    },
+    {
+      "type": "table",
+      "caption": "Iść (ir a pie) y jechać (ir en vehículo)",
+      "columns": ["Persona", "iść", "jechać"],
+      "rows": [
+        ["ja", "idę", "jadę"],
+        ["ty", "idziesz", "jedziesz"],
+        ["on / ona / pan / pani", "idzie", "jedzie"],
+        ["my", "idziemy", "jedziemy"],
+        ["wy", "idziecie", "jedziecie"],
+        ["oni / one / państwo", "idą", "jadą"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Idę do Gdańska pociągiem. / Idę do pracy autobusem.",
+      "right": "Jadę do Gdańska pociągiem. / Jadę do pracy autobusem.",
+      "explanation": "Si hay un vehículo, el verbo es jechać. Iść solo se usa cuando vas andando (o en expresiones fijas como idę spać, «me voy a dormir»). Y el vehículo va en instrumental, sin preposición: autobusem, tramwajem, pociągiem."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir adónde vas se usa do + genitivo: do centrum, do banku, do apteki, do kina, do Krakowa. Es el mismo genitivo que ya conoces de nie ma. Cambia la pregunta: Gdzie jesteś? — W banku (¿dónde estás? w + locativo) frente a Dokąd idziesz? — Do banku (¿adónde vas? do + genitivo). En la lengua hablada también oirás Gdzie idziesz?"
+    },
+    {
+      "type": "table",
+      "caption": "¿Dónde estás? frente a ¿adónde vas?",
+      "columns": ["Lugar", "Gdzie? (w / na + locativo)", "Dokąd? (do + genitivo)"],
+      "rows": [
+        ["bank", "w banku", "do banku"],
+        ["apteka", "w aptece", "do apteki"],
+        ["kino", "w kinie", "do kina"],
+        ["centrum", "w centrum", "do centrum"],
+        ["dworzec", "na dworcu", "na dworzec (na + acusativo)"],
+        ["Kraków", "w Krakowie", "do Krakowa"],
+        ["ulica Floriańska", "na ulicy Floriańskiej", "do ulicy Floriańskiej"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Idę do bank. / Jadę w Kraków.",
+      "right": "Idę do banku. / Jadę do Krakowa.",
+      "explanation": "Detrás de do el nombre siempre cambia al genitivo. Los lugares que en locativo llevan na suelen llevar na también para la dirección, pero con acusativo: jestem na poczcie → idę na pocztę; jestem na dworcu → jadę na dworzec."
+    },
+    {
+      "type": "explanation",
+      "text": "Para dar indicaciones a un desconocido, lo más cómodo y educado es proszę + infinitivo: Proszę iść prosto (siga recto), proszę skręcić w lewo (gire a la izquierda), proszę jechać do końca (siga hasta el final). Entre amigos se usa el imperativo: idź prosto, skręć w prawo, jedź tramwajem. Para preguntar: Jak dojść do…? (cómo llegar a pie) o Jak dojechać do…? (en vehículo)."
+    },
+    {
+      "type": "table",
+      "caption": "Dar indicaciones: formal e informal",
+      "columns": ["Formal (pan / pani)", "Informal (ty)", "Español"],
+      "rows": [
+        ["Proszę iść prosto.", "Idź prosto.", "Siga / sigue recto."],
+        ["Proszę skręcić w lewo.", "Skręć w lewo.", "Gire / gira a la izquierda."],
+        ["Proszę jechać tramwajem.", "Jedź tramwajem.", "Vaya / ve en tranvía."],
+        ["Proszę przejść przez most.", "Przejdź przez most.", "Cruce / cruza el puente."],
+        [
+          "Proszę wysiąść na trzecim przystanku.",
+          "Wysiądź na trzecim przystanku.",
+          "Bájese / bájate en la tercera parada."
+        ]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Dwa ulica w prawo. / Proszę skręcić prawo.",
+      "right": "Druga ulica w prawo. / Proszę skręcić w prawo.",
+      "explanation": "Para contar calles se usan los ordinales en femenino, porque ulica es femenino: pierwsza, druga, trzecia ulica. Y «a la derecha / a la izquierda» lleva siempre w: w prawo, w lewo. Recto, en cambio, es solo prosto."
+    },
+    { "type": "section", "phase": "sound", "title": "La entonación: preguntar y confirmar" },
+    {
+      "type": "explanation",
+      "text": "Las preguntas con czy (sí o no) suben al final, como en español: Czy to daleko? ↗. Las preguntas con palabra interrogativa (jak, gdzie, który, dokąd) empiezan altas y bajan al final: Jak dojść do Floriańskiej? ↘. Para confirmar lo que has entendido, repite la información con czyli («o sea») y sube la voz al final: Czyli druga w prawo? ↗. Es la mejor estrategia cuando te dan indicaciones: el polaco te corregirá si te equivocas, como hace el señor con Javier."
+    },
+    {
+      "type": "table",
+      "caption": "Tres melodías",
+      "columns": ["Tipo", "Ejemplo", "Melodía"],
+      "rows": [
+        ["Pregunta de sí o no", "Czy to daleko?", "sube al final ↗"],
+        ["Pregunta con jak / gdzie / który", "Który tramwaj jedzie do centrum?", "baja al final ↘"],
+        ["Confirmación con czyli", "Czyli najpierw w lewo?", "sube al final ↗"],
+        ["Afirmación", "Przystanek jest naprzeciwko banku.", "baja al final ↘"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Moverse por una ciudad polaca" },
+    {
+      "type": "reading",
+      "title": "Jak dojechać do mnie?",
+      "paragraphs": [
+        "Cześć, Javier! Jutro zapraszam cię do mnie na obiad. Oto jak dojechać z dworca.",
+        "Na Dworcu Głównym idziesz na przystanek tramwajowy. Jedziesz piątką, w stronę centrum. Bilet kupujesz w automacie albo w aplikacji i od razu go kasujesz.",
+        "Wysiadasz na czwartym przystanku. Potem idziesz prosto, około pięciu minut, i skręcasz w drugą ulicę w lewo.",
+        "Mój blok jest za sklepem, naprzeciwko małego parku. Mieszkam na trzecim piętrze, pod numerem dwanaście. Do zobaczenia! Tomek"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Casi todas las grandes ciudades polacas tienen tranvía, y es el transporte más habitual. Los polacos llaman a las líneas por su número en femenino: jadę piątką (voy en el cinco), czekam na dwójkę (espero al dos). Varsovia es la única ciudad del país con metro.",
+        "El billete se compra en máquinas en las paradas o dentro del vehículo, o en aplicaciones del móvil. Un billete de papel hay que validarlo (skasować) nada más subir. Los revisores son frecuentes y la multa por viajar sin billete válido es alta.",
+        "Los cascos antiguos (Stare Miasto) suelen ser peatonales. En Cracovia, el casco antiguo está rodeado por los Planty, un parque en forma de anillo donde estaban las murallas: si caminas por él, siempre acabas volviendo al punto de partida.",
+        "Para preguntar por la calle, empieza con Przepraszam pana / panią… La mayoría de los jóvenes habla algo de inglés, pero si preguntas en polaco te ayudarán con mucha más simpatía. Y si no entiendes, pide Proszę powtórzyć, wolniej (repita, más despacio, por favor)."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: explica cómo llegar" },
+    {
+      "type": "mission",
+      "title": "Pide y da indicaciones en una ciudad polaca",
+      "steps": [
+        "Para a una persona por la calle con educación (Przepraszam pana / panią) y pregunta cómo llegar a un lugar: Jak dojść do…? / Jak dojechać do…?",
+        "Repite las indicaciones para confirmarlas con czyli y entonación de pregunta.",
+        "Pregunta si está lejos y si se puede ir andando o hay que ir en tranvía o autobús.",
+        "Explica a un amigo polaco cómo llegar de tu casa a una tienda cercana, con al menos cuatro indicaciones (idź prosto, skręć w…, druga ulica…).",
+        "Di cómo vas cada día al trabajo o a clase y cuánto tardas: jadę tramwajem / idę pieszo, dziesięć minut.",
+        "Da las gracias, despídete (Miłego dnia!) y grábate con la entonación correcta de una pregunta con czy y de otra con jak."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Przepraszam pana, jak dojść do dworca?",
+          "translation": "Perdone, señor, ¿cómo se llega a la estación?"
+        },
+        {
+          "text": "Proszę iść prosto, a potem skręcić w lewo.",
+          "translation": "Siga recto y luego gire a la izquierda."
+        },
+        { "text": "Druga ulica w prawo.", "translation": "La segunda calle a la derecha." },
+        { "text": "Czyli najpierw w lewo?", "translation": "O sea, ¿primero a la izquierda?" },
+        {
+          "text": "Czy to daleko? — Nie, pieszo dziesięć minut.",
+          "translation": "¿Está lejos? — No, diez minutos andando."
+        },
+        { "text": "Który tramwaj jedzie do centrum?", "translation": "¿Qué tranvía va al centro?" },
+        {
+          "text": "Idę do pracy pieszo, a wracam tramwajem.",
+          "translation": "Voy al trabajo andando y vuelvo en tranvía."
+        },
+        { "text": "Jadę do Warszawy pociągiem.", "translation": "Voy a Varsovia en tren." }
+      ],
+      "canDo": [
+        "preguntar por el camino a pie o en transporte",
+        "entender y dar indicaciones: prosto, w prawo, w lewo, druga ulica…",
+        "elegir entre iść y jechać y conjugarlos",
+        "decir adónde voy con do + genitivo",
+        "decir en qué medio de transporte voy con el instrumental",
+        "confirmar lo que entiendo con czyli y la entonación adecuada"
+      ]
+    }
+  ]
+}

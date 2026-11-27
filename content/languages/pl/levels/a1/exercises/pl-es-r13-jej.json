@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-jej",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4010,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 82,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Marta tiene un marido. ¿Cómo dices «su marido» (de Marta)?",
+  "explanation": "Dueña mujer: jej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "jej mąż"
+      },
+      {
+        "id": "opt-b",
+        "text": "jego mąż"
+      },
+      {
+        "id": "opt-c",
+        "text": "swój mąż jej"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

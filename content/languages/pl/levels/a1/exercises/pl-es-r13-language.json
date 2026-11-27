@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-language",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3950,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 76,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. ¿Cuál es correcto?",
+  "explanation": "Con mówić: po + -sku / -cku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mówię po hiszpańsku i trochę po polsku."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mówię hiszpański i trochę polski."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mówię po hiszpański."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

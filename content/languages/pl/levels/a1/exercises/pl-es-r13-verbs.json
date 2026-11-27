@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-verbs",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3960,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 77,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con mówić, mieszkać y pracować.",
+  "explanation": "Ty mówisz; oni mieszkają; my pracujemy.",
+  "configuration": {
+    "text": "Czy ty ___ po angielsku? Moi rodzice ___ w Madrycie. My ___ w hotelu.",
+    "gaps": [
+      {
+        "accepted": ["mówisz"]
+      },
+      {
+        "accepted": ["mieszkają"]
+      },
+      {
+        "accepted": ["pracujemy"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

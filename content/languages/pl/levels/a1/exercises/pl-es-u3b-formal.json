@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-formal",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "Un turista mayor te pregunta el camino. ¿Cómo le dices «gire a la derecha»?",
+  "explanation": "Formal: proszę + infinitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Proszę skręcić w prawo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Skręć w prawo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Skręcić prawo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

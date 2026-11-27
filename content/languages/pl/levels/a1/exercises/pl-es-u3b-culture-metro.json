@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-culture-metro",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 3770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: Cracovia y Varsovia tienen metro.",
+  "explanation": "Solo Varsovia tiene metro; en Cracovia y casi todas las grandes ciudades el transporte principal es el tranvía.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

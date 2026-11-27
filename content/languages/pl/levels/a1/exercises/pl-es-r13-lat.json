@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-lat",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3990,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 80,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con rok, lata o lat.",
+  "explanation": "1 rok; 2–4 (no 12–14) lata; el resto lat.",
+  "configuration": {
+    "text": "Hugo ma ___ (1), Zosia ma pięć ___, a Kasia ma trzydzieści dwa ___.",
+    "gaps": [
+      {
+        "accepted": ["rok"]
+      },
+      {
+        "accepted": ["lat"]
+      },
+      {
+        "accepted": ["lata"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

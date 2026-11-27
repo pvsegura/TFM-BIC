@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-sound-czyli",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 3730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "Para confirmar una indicación (Czyli druga w prawo?) la voz sube al final.",
+  "explanation": "Sí: es una pregunta de confirmación, como las de sí o no.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

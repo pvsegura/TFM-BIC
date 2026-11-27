@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-order-question",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 3700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 41,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿Qué tranvía va al centro?",
+  "explanation": "Który tramwaj + jedzie + do centrum?",
+  "configuration": {
+    "items": ["Który", "tramwaj", "jedzie", "do", "centrum?"],
+    "joiner": " "
+  }
+}

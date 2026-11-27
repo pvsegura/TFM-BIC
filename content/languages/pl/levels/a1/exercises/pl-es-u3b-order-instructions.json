@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-order-instructions",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 3690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 40,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Siga recto y luego gire a la izquierda.",
+  "explanation": "Proszę iść prosto + a potem skręcić w lewo.",
+  "configuration": {
+    "items": ["Proszę", "iść", "prosto,", "a", "potem", "skręcić", "w", "lewo."],
+    "joiner": " "
+  }
+}

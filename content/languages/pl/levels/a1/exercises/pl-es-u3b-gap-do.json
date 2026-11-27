@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-gap-do",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3630,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 34,
+    "phase": "structure"
+  },
+  "prompt": "Completa con do + genitivo.",
+  "explanation": "Bank → do banku; apteka → do apteki; kino → do kina.",
+  "configuration": {
+    "text": "Idę do ___ (bank), potem do ___ (apteka), a wieczorem do ___ (kino).",
+    "gaps": [
+      {
+        "accepted": ["banku"]
+      },
+      {
+        "accepted": ["apteki"]
+      },
+      {
+        "accepted": ["kina"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

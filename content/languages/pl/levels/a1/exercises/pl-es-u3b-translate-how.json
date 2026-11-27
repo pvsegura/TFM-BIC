@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-translate-how",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Perdone, señora, ¿cómo se llega a la estación (a pie)?",
+  "explanation": "Przepraszam panią + jak dojść do dworca?",
+  "configuration": {
+    "acceptedAnswers": [
+      "Przepraszam panią, jak dojść do dworca?",
+      "Przepraszam, jak dojść do dworca?"
+    ],
+    "caseSensitive": false
+  }
+}

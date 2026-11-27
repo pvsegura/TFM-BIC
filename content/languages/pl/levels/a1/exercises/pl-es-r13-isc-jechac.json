@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-isc-jechac",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4080,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 89,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con idę o jadę.",
+  "explanation": "A pie idę; en vehículo jadę.",
+  "configuration": {
+    "text": "Do piekarni ___ pieszo, a do Poznania ___ pociągiem.",
+    "gaps": [
+      {
+        "accepted": ["idę"]
+      },
+      {
+        "accepted": ["jadę"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

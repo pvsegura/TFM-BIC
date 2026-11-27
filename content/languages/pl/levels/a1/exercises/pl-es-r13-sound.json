@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-sound",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4100,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 91,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. ¿Qué letra o grupo suena igual que ż?",
+  "explanation": "Rz y ż suenan igual.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "rz"
+      },
+      {
+        "id": "opt-b",
+        "text": "sz"
+      },
+      {
+        "id": "opt-c",
+        "text": "cz"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

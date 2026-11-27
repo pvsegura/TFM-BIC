@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-obok",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4070,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 88,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa: Apteka jest obok ___.",
+  "explanation": "Obok + genitivo: bank → banku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "banku"
+      },
+      {
+        "id": "opt-b",
+        "text": "bank"
+      },
+      {
+        "id": "opt-c",
+        "text": "bankiem"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-reading-flat",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿dónde está el bloque de Tomek?",
+  "explanation": "Mój blok jest za sklepem, naprzeciwko małego parku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Detrás de una tienda, enfrente de un parque."
+      },
+      {
+        "id": "opt-b",
+        "text": "Al lado de la estación."
+      },
+      {
+        "id": "opt-c",
+        "text": "Enfrente de una iglesia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

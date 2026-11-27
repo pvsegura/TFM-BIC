@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-listen-first",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tiene que hacer Javier primero?",
+  "explanation": "Proszę iść prosto do końca tej ulicy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ir recto hasta el final de la calle."
+      },
+      {
+        "id": "opt-b",
+        "text": "Girar a la derecha."
+      },
+      {
+        "id": "opt-c",
+        "text": "Coger el tranvía."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

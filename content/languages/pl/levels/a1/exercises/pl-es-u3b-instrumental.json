@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-instrumental",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "El vehículo va en instrumental, sin preposición.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jadę do pracy autobusem."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jadę do pracy w autobusie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idę do pracy autobus."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

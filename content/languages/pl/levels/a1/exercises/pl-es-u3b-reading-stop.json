@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-reading-stop",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿en qué parada se baja?",
+  "explanation": "Wysiadasz na czwartym przystanku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En la cuarta."
+      },
+      {
+        "id": "opt-b",
+        "text": "En la segunda."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la última."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

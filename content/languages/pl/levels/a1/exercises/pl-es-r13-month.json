@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-month",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4040,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 85,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con w / we + mes.",
+  "explanation": "Luty → w lutym; wrzesień → we wrześniu.",
+  "configuration": {
+    "text": "Mam urodziny ___ (luty), a imieniny ___ (wrzesień).",
+    "gaps": [
+      {
+        "accepted": ["w lutym"]
+      },
+      {
+        "accepted": ["we wrześniu"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

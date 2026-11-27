@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-culture-tram-number",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 57,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: un polaco dice czekam na piątkę en la parada. ¿Qué espera?",
+  "explanation": "Las líneas se nombran en femenino: piątka = la línea cinco.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El tranvía o autobús número cinco."
+      },
+      {
+        "id": "opt-b",
+        "text": "A cinco amigos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Las cinco en punto."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

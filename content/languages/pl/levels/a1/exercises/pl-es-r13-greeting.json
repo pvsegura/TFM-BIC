@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-greeting",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3910,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 72,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Son las ocho de la tarde y entras en una tienda. ¿Qué dices?",
+  "explanation": "Por la tarde-noche: dobry wieczór.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dobry wieczór."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dzień dobry wieczór."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dobranoc."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-sound-jak",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo termina la melodía de Jak dojść do dworca?",
+  "explanation": "Pregunta con palabra interrogativa: baja al final.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Baja al final."
+      },
+      {
+        "id": "opt-b",
+        "text": "Sube al final."
+      },
+      {
+        "id": "opt-c",
+        "text": "Sube y baja dos veces."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

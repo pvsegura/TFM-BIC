@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-write-way",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 3840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 70,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Un amigo polaco llega en tren a tu ciudad. Escríbele cómo llegar desde la estación hasta tu casa: transporte, parada y al menos tres indicaciones a pie.",
+  "explanation": "Revisa: jedziesz + instrumental, wysiadasz na…, idziesz prosto, skręcasz w prawo / w lewo, druga ulica…",
+  "configuration": {
+    "modelAnswer": "Cześć, Ania! Na dworcu idziesz na przystanek autobusowy. Jedziesz autobusem numer dwadzieścia trzy. Wysiadasz na piątym przystanku, obok dużego parku. Potem idziesz prosto do końca ulicy i na światłach skręcasz w prawo. Mój blok jest na rogu, naprzeciwko apteki. Mieszkam na drugim piętrze. Do zobaczenia!",
+    "checklist": ["transporte", "parada", "tres indicaciones", "dónde está tu casa"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

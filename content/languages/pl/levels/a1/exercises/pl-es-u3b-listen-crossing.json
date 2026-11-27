@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-listen-crossing",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué hace en el cruce?",
+  "explanation": "Na skrzyżowaniu proszę skręcić w lewo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Gira a la izquierda."
+      },
+      {
+        "id": "opt-b",
+        "text": "Gira a la derecha."
+      },
+      {
+        "id": "opt-c",
+        "text": "Cruza el puente."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

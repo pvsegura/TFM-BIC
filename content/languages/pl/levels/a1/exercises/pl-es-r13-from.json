@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-from",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3940,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 75,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. ¿Cómo dices «soy de México, de Guadalajara»?",
+  "explanation": "Z + genitivo: z Meksyku, z Guadalajary.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jestem z Meksyku, z Guadalajary."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem z Meksyk, z Guadalajara."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem w Meksyku, w Guadalajarze."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

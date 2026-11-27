@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-match-directions",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 3560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada indicación con su traducción.",
+  "explanation": "Na światłach = en el semáforo; za rogiem = a la vuelta de la esquina.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "prosto",
+        "right": "recto"
+      },
+      {
+        "left": "w lewo",
+        "right": "a la izquierda"
+      },
+      {
+        "left": "na skrzyżowaniu",
+        "right": "en el cruce"
+      },
+      {
+        "left": "na światłach",
+        "right": "en el semáforo"
+      },
+      {
+        "left": "za rogiem",
+        "right": "a la vuelta de la esquina"
+      },
+      {
+        "left": "przez most",
+        "right": "cruzando el puente"
+      }
+    ]
+  }
+}

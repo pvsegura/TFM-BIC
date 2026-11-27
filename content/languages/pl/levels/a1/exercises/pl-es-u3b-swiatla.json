@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-swiatla",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa literalmente światła (el semáforo)?",
+  "explanation": "Światła = las luces.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Las luces."
+      },
+      {
+        "id": "opt-b",
+        "text": "La cruz."
+      },
+      {
+        "id": "opt-c",
+        "text": "La esquina."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

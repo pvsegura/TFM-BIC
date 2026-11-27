@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-listen-far",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 3510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: la calle Floriańska está muy lejos.",
+  "explanation": "To niedaleko — andando son unos diez minutos.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

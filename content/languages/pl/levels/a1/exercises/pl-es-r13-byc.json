@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-byc",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3930,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 74,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Completa con być.",
+  "explanation": "Ja jestem, ona jest, my jesteśmy.",
+  "configuration": {
+    "text": "Ja ___ z Hiszpanii, ona ___ z Polski, a my ___ przyjaciółmi.",
+    "gaps": [
+      {
+        "accepted": ["jestem"]
+      },
+      {
+        "accepted": ["jest"]
+      },
+      {
+        "accepted": ["jesteśmy"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

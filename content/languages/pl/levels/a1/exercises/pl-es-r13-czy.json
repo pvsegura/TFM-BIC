@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-r13-czy",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3970,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 78,
+    "phase": "review"
+  },
+  "prompt": "Repaso 1–3. Transforma en pregunta de sí o no: Mieszkasz w Krakowie.",
+  "explanation": "Czy al principio, sin cambiar el orden.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Czy mieszkasz w Krakowie?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Mieszkasz czy w Krakowie?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Gdzie mieszkasz w Krakowie?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-translate-walk",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 66,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Vamos al parque andando.",
+  "explanation": "Idziemy do parku pieszo.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Idziemy do parku pieszo.",
+      "Idziemy pieszo do parku.",
+      "Idziemy do parku na piechotę."
+    ],
+    "caseSensitive": false
+  }
+}

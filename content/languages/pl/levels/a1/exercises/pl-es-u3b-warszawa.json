@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-warszawa",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "Vives en Cracovia y vas a Varsovia el fin de semana. ¿Qué dices?",
+  "explanation": "Entre ciudades: jechać + do + genitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jadę do Warszawy."
+      },
+      {
+        "id": "opt-b",
+        "text": "Idę do Warszawy."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jadę w Warszawie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

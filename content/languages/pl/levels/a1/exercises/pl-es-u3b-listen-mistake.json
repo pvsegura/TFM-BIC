@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-listen-mistake",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿en qué se equivoca Javier al repetir?",
+  "explanation": "Dice druga ulica w lewo, pero es druga w prawo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dice izquierda en vez de derecha."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dice tercera en vez de segunda."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dice tranvía en vez de autobús."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

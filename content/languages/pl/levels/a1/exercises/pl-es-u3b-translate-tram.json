@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-translate-tram",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 65,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Voy al trabajo en tranvía.",
+  "explanation": "Jadę (vehículo) do pracy (genitivo) tramwajem (instrumental).",
+  "configuration": {
+    "acceptedAnswers": ["Jadę do pracy tramwajem.", "Jadę tramwajem do pracy."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-write-commute",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 3850,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 71,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Explica cómo vas cada día al trabajo (o a donde vayas): a pie o en qué transporte, cuánto tardas y qué ves por el camino.",
+  "explanation": "Iść o jechać según el caso, do + genitivo, el vehículo en instrumental.",
+  "configuration": {
+    "modelAnswer": "Codziennie jadę do pracy tramwajem. Przystanek jest blisko, pięć minut pieszo. Jadę dwadzieścia minut. Potem idę przez park i jestem w biurze. W piątek czasami jadę rowerem.",
+    "checklist": ["cómo vas", "cuánto tardas", "camino"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

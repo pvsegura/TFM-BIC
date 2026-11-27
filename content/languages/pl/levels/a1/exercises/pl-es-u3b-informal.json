@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3b-informal",
+  "lessonId": "pl-es-unit-3-directions",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "Explicas el camino a un amigo. ¿Cómo le dices «sigue recto»?",
+  "explanation": "Informal: imperativo idź.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Idź prosto."
+      },
+      {
+        "id": "opt-b",
+        "text": "Proszę iść prosto, pan."
+      },
+      {
+        "id": "opt-c",
+        "text": "Idziesz w prosto."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
