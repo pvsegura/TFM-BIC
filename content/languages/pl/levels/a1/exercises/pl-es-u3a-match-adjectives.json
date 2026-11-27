@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-match-adjectives",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 3170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada adjetivo con su contrario.",
+  "explanation": "Duży ↔ mały; tani ↔ drogi; blisko ↔ daleko.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "duży",
+        "right": "mały"
+      },
+      {
+        "left": "tani",
+        "right": "drogi"
+      },
+      {
+        "left": "nowy",
+        "right": "stary"
+      },
+      {
+        "left": "blisko",
+        "right": "daleko"
+      }
+    ]
+  }
+}

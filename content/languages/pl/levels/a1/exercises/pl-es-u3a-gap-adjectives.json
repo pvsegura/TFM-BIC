@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-gap-adjectives",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 21,
+    "phase": "structure"
+  },
+  "prompt": "Completa el adjetivo con la terminación del género.",
+  "explanation": "Sklep (m) mały; kawiarnia (f) droga; kino (n) nowe.",
+  "configuration": {
+    "text": "To jest mał___ sklep, drog___ kawiarnia i now___ kino.",
+    "gaps": [
+      {
+        "accepted": ["y"]
+      },
+      {
+        "accepted": ["a"]
+      },
+      {
+        "accepted": ["e"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

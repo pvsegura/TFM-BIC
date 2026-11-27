@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-write-note",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 3460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 36,
+    "phase": "express",
+    "lines": 5
+  },
+  "prompt": "Un amigo polaco viene a tu casa. Escríbele una nota: dónde hay una panadería, una farmacia y una parada de autobús cerca de tu casa.",
+  "explanation": "Usa jest + na rogu / obok / naprzeciwko / niedaleko + genitivo.",
+  "configuration": {
+    "modelAnswer": "Cześć, Piotrek! Piekarnia jest na rogu, obok banku. Apteka jest naprzeciwko kościoła, pięć minut stąd. Przystanek autobusowy jest niedaleko parku. Do zobaczenia!",
+    "checklist": ["panadería", "farmacia", "parada"],
+    "minWords": 20,
+    "maxWords": 60
+  }
+}

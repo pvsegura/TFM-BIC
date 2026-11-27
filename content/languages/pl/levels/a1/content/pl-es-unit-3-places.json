@@ -1,0 +1,323 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1100,
+  "unit": 3,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 3A. Co jest w okolicy? — el barrio, los lugares y dónde están",
+  "description": "Preguntas qué hay en el barrio y dónde está cada cosa, y entiendes la respuesta: czy jest tu…?, gdzie jest…?, nie ma + genitivo, w / na + locativo, obok, naprzeciwko y los adjetivos para describir lugares.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "La vecina del primero" },
+    {
+      "type": "explanation",
+      "text": "Javier acaba de mudarse a un piso en un edificio antiguo de Cracovia. En la escalera se encuentra con su vecina, la señora Halina, y le pregunta qué hay en el barrio. Como es una persona mayor a la que no conoce, la trata de pani. Primera escucha: ¿qué tiendas y servicios hay cerca? Segunda: ¿qué no hay en el barrio? Tercera: fíjate en las palabras que indican dónde está cada cosa: na rogu, obok, naprzeciwko, niedaleko."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u3-neighbour.png",
+      "alt": "Una señora mayor y un hombre joven con una caja de cartón conversan en el rellano de la escalera de un edificio antiguo."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "Dzień dobry! Jestem Javier, mieszkam pod numerem siedem.",
+          "translation": "¡Buenos días! Soy Javier, vivo en el número siete."
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Dzień dobry, miło mi. Halina Nowicka. Witamy w kamienicy!",
+          "translation": "Buenos días, encantada. Halina Nowicka. ¡Bienvenido al edificio!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dziękuję. Przepraszam, czy jest tu blisko jakiś sklep?",
+          "translation": "Gracias. Perdone, ¿hay alguna tienda cerca de aquí?"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Tak, na rogu jest mały sklep spożywczy, a obok jest piekarnia. Chleb jest tam bardzo dobry.",
+          "translation": "Sí, en la esquina hay una pequeña tienda de alimentación y al lado hay una panadería. El pan allí es muy bueno."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A apteka? Gdzie jest apteka?",
+          "translation": "¿Y una farmacia? ¿Dónde hay una farmacia?"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Apteka jest naprzeciwko kościoła, na ulicy Długiej.",
+          "translation": "La farmacia está enfrente de la iglesia, en la calle Długa."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Czy jest tu też bank?",
+          "translation": "¿Hay también un banco por aquí?"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Banku tu nie ma, ale bankomat jest w supermarkecie, przy przystanku.",
+          "translation": "Banco aquí no hay, pero hay un cajero en el supermercado, junto a la parada."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A przystanek tramwajowy jest daleko?",
+          "translation": "¿Y la parada del tranvía está lejos?"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Nie, niedaleko, pięć minut stąd, obok parku. Tramwaj jedzie prosto do centrum.",
+          "translation": "No, cerca, a cinco minutos de aquí, al lado del parque. El tranvía va directo al centro."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Świetnie. A czy w okolicy są jakieś kawiarnie?",
+          "translation": "Estupendo. ¿Y hay cafeterías por la zona?"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Oj, są! Na rynku jest dużo kawiarni i restauracji. Ale są drogie.",
+          "translation": "¡Uy, sí que hay! En la plaza mayor hay muchas cafeterías y restaurantes. Pero son caros."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Bardzo pani dziękuję. Jest pani bardzo miła!",
+          "translation": "Muchísimas gracias. ¡Es usted muy amable!"
+        },
+        {
+          "speaker": "Pani Halina",
+          "text": "Nie ma za co. Mieszkam pod numerem jeden. Zapraszam na kawę!",
+          "translation": "De nada. Vivo en el número uno. ¡Le invito a un café!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Lugares del barrio" },
+    {
+      "type": "table",
+      "caption": "Tiendas y servicios",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["sklep (spożywczy)", "la tienda (de alimentación)", "supermarket", "el supermercado"],
+        ["piekarnia", "la panadería", "apteka", "la farmacia"],
+        ["bank", "el banco", "bankomat", "el cajero automático"],
+        ["poczta", "la oficina de correos", "kantor", "la casa de cambio"],
+        ["kawiarnia", "la cafetería", "restauracja", "el restaurante"],
+        ["przychodnia", "el centro de salud", "szpital", "el hospital"],
+        ["fryzjer", "la peluquería", "siłownia", "el gimnasio"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "La ciudad",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["ulica", "la calle", "rynek", "la plaza mayor"],
+        ["plac", "la plaza", "róg (na rogu)", "la esquina (en la esquina)"],
+        ["park", "el parque", "kościół", "la iglesia"],
+        ["muzeum", "el museo", "kino", "el cine"],
+        ["biblioteka", "la biblioteca", "teatr", "el teatro"],
+        ["przystanek", "la parada", "dworzec", "la estación"],
+        [
+          "kamienica",
+          "el edificio antiguo de pisos",
+          "osiedle",
+          "la urbanización, el barrio de bloques"
+        ],
+        ["okolica", "la zona, los alrededores", "centrum", "el centro"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cómo es un lugar",
+      "columns": ["Polaco (m / f / n)", "Español", "Polaco (m / f / n)", "Español"],
+      "rows": [
+        ["duży / duża / duże", "grande", "mały / mała / małe", "pequeño"],
+        ["nowy / nowa / nowe", "nuevo", "stary / stara / stare", "viejo, antiguo"],
+        ["tani / tania / tanie", "barato", "drogi / droga / drogie", "caro"],
+        ["ładny / ładna / ładne", "bonito", "brzydki / brzydka / brzydkie", "feo"],
+        ["blisko", "cerca", "daleko", "lejos"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — muchas palabras te sonarán: bank, park, muzeum, teatr, kino (cine), supermarket. Otras tienen truco: APTEKA es la «botica» griega (apotheke), la misma raíz que «apotecario». PIEKARNIA viene de piec (horno, cocer): piensa en «piel de pan cocido». KANTOR es el mostrador donde se cuentan monedas, como el «cantor» que canta los números de un sorteo. RYNEK es primo del alemán Ring: la plaza «anillo» alrededor de la cual crecía la ciudad. Y KOŚCIÓŁ viene del latín castellum, castillo: las iglesias eran también fortalezas."
+    },
+    { "type": "section", "phase": "structure", "title": "Hay, no hay, está en…" },
+    {
+      "type": "explanation",
+      "text": "Para decir que algo existe o está en un lugar, el polaco usa el verbo być: jest (hay / está, singular) y są (hay / están, plural). Czy jest tu apteka? (¿Hay una farmacia aquí?), Gdzie jest apteka? (¿Dónde está la farmacia?), W okolicy są dwa parki (En la zona hay dos parques). El español distingue «hay» y «está»; el polaco usa lo mismo para los dos."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Czy jest tu kawiarnie? / Gdzie jest przystanki?",
+      "right": "Czy są tu kawiarnie? / Gdzie są przystanki?",
+      "explanation": "Jest acompaña a una sola cosa y są a varias, igual que «está / están». No hay una palabra invariable como «hay»."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir que algo no hay, el polaco no usa nie jest, sino una expresión fija: nie ma + genitivo. Nie ma tu banku (aquí no hay banco), w okolicy nie ma apteki (en la zona no hay farmacia). Es el mismo genitivo que viste con nie mam en la unidad 2: el femenino termina en -y / -i, el masculino en -u o -a, el neutro en -a. Algunas palabras extranjeras como muzeum no cambian."
+    },
+    {
+      "type": "table",
+      "caption": "Jest… / Nie ma… (genitivo)",
+      "columns": ["Jest…", "Nie ma…", "Jest…", "Nie ma…"],
+      "rows": [
+        ["bank", "banku", "apteka", "apteki"],
+        ["sklep", "sklepu", "poczta", "poczty"],
+        ["park", "parku", "piekarnia", "piekarni"],
+        ["kościół", "kościoła", "ulica", "ulicy"],
+        ["szpital", "szpitala", "kino", "kina"],
+        ["przystanek", "przystanku", "muzeum", "muzeum"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Tu nie jest bank. / Nie ma bank.",
+      "right": "Tu nie ma banku.",
+      "explanation": "«No hay» es siempre nie ma, para cualquier persona y número (nie ma kawiarni = no hay cafeterías), y lo que falta va en genitivo. Al masculino hay que aprenderle la terminación: banku, sklepu, parku, pero kościoła, szpitala."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir en qué lugar está algo se usan w (en, dentro de) o na (en, sobre) con otro caso, el locativo: w banku, w parku, na poczcie, na rynku. Las terminaciones más frecuentes son -e (con un cambio de la consonante anterior: sklep → w sklepie, apteka → w aptece, poczta → na poczcie), -u (bank → w banku, rynek → na rynku) e -i (kawiarnia → w kawiarni, restauracja → w restauracji). No hace falta aprender la regla ahora: memoriza la expresión entera para cada lugar."
+    },
+    {
+      "type": "table",
+      "caption": "¿Dónde? w + locativo o na + locativo",
+      "columns": ["Lugar", "Gdzie? (w…)", "Lugar", "Gdzie? (na…)"],
+      "rows": [
+        ["sklep", "w sklepie", "poczta", "na poczcie"],
+        ["bank", "w banku", "dworzec", "na dworcu"],
+        ["park", "w parku", "przystanek", "na przystanku"],
+        ["kino", "w kinie", "rynek", "na rynku"],
+        ["apteka", "w aptece", "ulica", "na ulicy"],
+        ["kawiarnia", "w kawiarni", "plac", "na placu"],
+        ["restauracja", "w restauracji", "róg", "na rogu"],
+        ["centrum", "w centrum", "osiedle", "na osiedlu"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "w poczcie, w ulicy, w dworcu",
+      "right": "na poczcie, na ulicy, na dworcu",
+      "explanation": "Algunos lugares van con na aunque en español digamos «en» y estés dentro: las calles, plazas y espacios abiertos (na ulicy, na rynku, na placu), las estaciones y paradas (na dworcu, na przystanku) y unos cuantos más, como na poczcie. Apréndelos como bloque, con su preposición."
+    },
+    {
+      "type": "table",
+      "caption": "Cerca de qué: estas preposiciones piden genitivo",
+      "columns": ["Polaco", "Español", "Ejemplo"],
+      "rows": [
+        ["obok", "al lado de", "obok parku"],
+        ["naprzeciwko", "enfrente de", "naprzeciwko kościoła"],
+        ["koło / przy", "junto a", "koło apteki / przy przystanku (przy + locativo)"],
+        ["niedaleko", "no lejos de", "niedaleko rynku"],
+        ["daleko od", "lejos de", "daleko od centrum"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Przepraszam, gdzie jest apteka? Ty wiesz? (a una señora mayor desconocida)",
+      "right": "Przepraszam, czy pani wie, gdzie jest apteka?",
+      "explanation": "Con desconocidos, y más con personas mayores, se usa pan / pani con el verbo en tercera persona. Ty y jesteś sonarían demasiado familiares. Por eso Javier dice Bardzo pani dziękuję y Jest pani bardzo miła."
+    },
+    { "type": "section", "phase": "sound", "title": "El acento: siempre en la penúltima" },
+    {
+      "type": "explanation",
+      "text": "La gran ventaja del polaco: el acento cae casi siempre en la penúltima sílaba, y la tilde (´) de ó, ś, ć… no marca el acento, sino otro sonido. Ojo, porque cuando la palabra crece al añadir una terminación, el acento se mueve para seguir en la penúltima: KRA-ków → w kra-KO-wie, AP-te-ka → w ap-TE-ce, RY-nek → na RYN-ku. Las pocas excepciones son palabras extranjeras como mu-ZE-um o ma-te-MA-ty-ka, y algunas formas del pasado que verás más adelante. Lee despacio y golpea siempre la penúltima."
+    },
+    {
+      "type": "table",
+      "caption": "El acento se mueve con la terminación (sílaba fuerte en mayúsculas)",
+      "columns": ["Palabra", "Acento", "Con terminación", "Acento"],
+      "rows": [
+        ["Kraków", "KRA-kuf", "w Krakowie", "w kra-KO-vie"],
+        ["apteka", "ap-TE-ka", "naprzeciwko apteki", "ap-TE-ki"],
+        ["kościół", "KOŚ-ciuw", "naprzeciwko kościoła", "koś-CIO-wa"],
+        ["przystanek", "pshy-STA-nek", "na przystanku", "na pshy-STAN-ku"],
+        ["restauracja", "res-taw-RA-cja", "w restauracji", "w res-taw-RA-cji"],
+        ["muzeum", "mu-ZE-um", "w muzeum", "w mu-ZE-um (excepción)"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Vivir en una ciudad polaca" },
+    {
+      "type": "reading",
+      "title": "Moja dzielnica: Kazimierz",
+      "paragraphs": [
+        "Mieszkam w Krakowie, na Kazimierzu. To stara dzielnica niedaleko centrum, dziesięć minut od Rynku Głównego.",
+        "Na Kazimierzu są stare kamienice, synagogi, kościoły i dużo małych kawiarni. Wieczorem na placu Nowym jest dużo ludzi, bo tam są dobre i tanie zapiekanki.",
+        "W mojej okolicy jest wszystko: piekarnia, apteka, mały sklep i przystanek tramwajowy. Nie ma tu dużego supermarketu, ale to nie jest problem: supermarket jest dwa przystanki dalej.",
+        "W niedzielę większość sklepów jest zamknięta. Otwarte są tylko małe sklepy, apteki i piekarnie. Dlatego w sobotę robię duże zakupy."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "El corazón de las ciudades polacas es el rynek, la plaza del mercado medieval, rodeada de casas de colores. El Rynek Główny de Cracovia es una de las plazas medievales más grandes de Europa. A su alrededor están las kamienice, edificios antiguos de pisos; en las afueras, los osiedla, barrios de bloques construidos sobre todo en la época comunista.",
+        "Desde 2018 en Polonia está prohibido abrir la mayoría de las tiendas los domingos, salvo unos pocos domingos al año. Siguen abiertas las tiendas pequeñas atendidas por sus dueños, las farmacias, las panaderías y las gasolineras. Conviene hacer la compra el sábado.",
+        "Por todas partes verás tiendas pequeñas de conveniencia abiertas hasta tarde, y kantory, casas de cambio con tipos mucho mejores que los de los bancos o el aeropuerto. Las farmacias se reconocen por una cruz verde.",
+        "En Polonia la planta baja es el parter y el «primer piso» (pierwsze piętro) es el que está encima, como en España. Los pisos se identifican por número (mieszkanie numer siedem), y la gente dice que vive pod siódemką o pod numerem siedem, «bajo el número siete»."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: tu barrio nuevo" },
+    {
+      "type": "mission",
+      "title": "Preséntate a un vecino y pregunta por el barrio",
+      "steps": [
+        "Preséntate a tu nuevo vecino o vecina (de pan / pani): nombre y número de tu piso (mieszkam pod numerem…).",
+        "Pregunta por tres lugares con czy jest tu…? y gdzie jest…?",
+        "Entiende y repite una respuesta negativa con nie ma + genitivo: Banku tu nie ma.",
+        "Describe dónde está algo con w / na + locativo y con obok, naprzeciwko o niedaleko: apteka jest naprzeciwko kościoła.",
+        "Describe tu barrio real en cuatro frases: qué hay, qué no hay y cómo es (duży, stary, tani…).",
+        "Da las gracias con educación (Bardzo pani dziękuję) y grábate leyendo w Krakowie, w aptece y na przystanku con el acento en la penúltima."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Przepraszam, czy jest tu blisko apteka?",
+          "translation": "Perdone, ¿hay una farmacia cerca de aquí?"
+        },
+        {
+          "text": "Gdzie jest przystanek tramwajowy?",
+          "translation": "¿Dónde está la parada del tranvía?"
+        },
+        { "text": "Banku tu nie ma.", "translation": "Aquí no hay banco." },
+        {
+          "text": "Apteka jest naprzeciwko kościoła.",
+          "translation": "La farmacia está enfrente de la iglesia."
+        },
+        {
+          "text": "Bankomat jest w supermarkecie, a kantor na rynku.",
+          "translation": "El cajero está en el supermercado, y la casa de cambio, en la plaza mayor."
+        },
+        {
+          "text": "W okolicy są dwa parki i dużo kawiarni.",
+          "translation": "En la zona hay dos parques y muchas cafeterías."
+        },
+        {
+          "text": "To jest niedaleko, pięć minut stąd.",
+          "translation": "Está cerca, a cinco minutos de aquí."
+        },
+        {
+          "text": "Czy pani wie, gdzie jest poczta?",
+          "translation": "¿Sabe usted dónde está correos?"
+        }
+      ],
+      "canDo": [
+        "nombrar las tiendas, servicios y lugares de una ciudad",
+        "preguntar qué hay y dónde está algo con jest y są",
+        "decir que algo no hay con nie ma + genitivo",
+        "decir dónde está algo con w / na + locativo",
+        "situar un lugar con obok, naprzeciwko, koło y niedaleko",
+        "poner el acento en la penúltima sílaba aunque la palabra cambie"
+      ]
+    }
+  ]
+}

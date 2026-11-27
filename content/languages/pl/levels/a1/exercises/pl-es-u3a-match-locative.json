@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-match-locative",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 3250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "Une cada lugar con su forma de locativo.",
+  "explanation": "Apteka → w aptece; rynek → na rynku; kawiarnia → w kawiarni.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "apteka",
+        "right": "w aptece"
+      },
+      {
+        "left": "rynek",
+        "right": "na rynku"
+      },
+      {
+        "left": "kawiarnia",
+        "right": "w kawiarni"
+      },
+      {
+        "left": "sklep",
+        "right": "w sklepie"
+      },
+      {
+        "left": "przystanek",
+        "right": "na przystanku"
+      }
+    ]
+  }
+}

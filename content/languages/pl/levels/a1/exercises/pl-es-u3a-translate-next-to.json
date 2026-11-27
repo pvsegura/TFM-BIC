@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-translate-next-to",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 32,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: La panadería está al lado del banco.",
+  "explanation": "Obok + genitivo: banku.",
+  "configuration": {
+    "acceptedAnswers": ["Piekarnia jest obok banku."],
+    "caseSensitive": false
+  }
+}

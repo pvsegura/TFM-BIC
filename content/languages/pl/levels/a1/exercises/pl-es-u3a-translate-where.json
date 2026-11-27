@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-translate-where",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 30,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Dónde está la parada?",
+  "explanation": "Gdzie jest + przystanek?",
+  "configuration": {
+    "acceptedAnswers": ["Gdzie jest przystanek?"],
+    "caseSensitive": false
+  }
+}

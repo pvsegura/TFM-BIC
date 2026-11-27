@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-translate-two-parks",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 3440,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 34,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: En mi barrio hay dos parques y una biblioteca.",
+  "explanation": "Są + plural; dwa parki. «Mi barrio»: w mojej okolicy / na moim osiedlu.",
+  "configuration": {
+    "acceptedAnswers": [
+      "W mojej okolicy są dwa parki i biblioteka.",
+      "W mojej okolicy są dwa parki i jedna biblioteka.",
+      "Na moim osiedlu są dwa parki i biblioteka."
+    ],
+    "caseSensitive": false
+  }
+}

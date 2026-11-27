@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-order-atm",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 3300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 20,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: El cajero está en el supermercado.",
+  "explanation": "Bankomat jest + w + locativo.",
+  "configuration": {
+    "items": ["Bankomat", "jest", "w", "supermarkecie."],
+    "joiner": " "
+  }
+}

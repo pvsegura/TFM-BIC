@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-rynek",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es el rynek de una ciudad polaca?",
+  "explanation": "Rynek = la plaza mayor, la antigua plaza del mercado.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La plaza mayor."
+      },
+      {
+        "id": "opt-b",
+        "text": "El mercado de abastos."
+      },
+      {
+        "id": "opt-c",
+        "text": "La estación de tren."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

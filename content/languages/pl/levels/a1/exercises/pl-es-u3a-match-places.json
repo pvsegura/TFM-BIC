@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-match-places",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 3160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada lugar con su traducción.",
+  "explanation": "Apteka = farmacia; poczta = correos; kantor = casa de cambio.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "apteka",
+        "right": "la farmacia"
+      },
+      {
+        "left": "poczta",
+        "right": "correos"
+      },
+      {
+        "left": "kantor",
+        "right": "la casa de cambio"
+      },
+      {
+        "left": "piekarnia",
+        "right": "la panadería"
+      },
+      {
+        "left": "przystanek",
+        "right": "la parada"
+      },
+      {
+        "left": "kościół",
+        "right": "la iglesia"
+      }
+    ]
+  }
+}

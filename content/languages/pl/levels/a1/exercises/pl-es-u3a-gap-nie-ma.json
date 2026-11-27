@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-gap-nie-ma",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3210,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 11,
+    "phase": "structure"
+  },
+  "prompt": "Completa en genitivo después de nie ma.",
+  "explanation": "Bank → banku, apteka → apteki, kino → kina.",
+  "configuration": {
+    "text": "Tu nie ma ___ (bank), nie ma ___ (apteka) i nie ma ___ (kino).",
+    "gaps": [
+      {
+        "accepted": ["banku"]
+      },
+      {
+        "accepted": ["apteki"]
+      },
+      {
+        "accepted": ["kina"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

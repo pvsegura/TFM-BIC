@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-sound-krakowie",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 22,
+    "phase": "sound"
+  },
+  "prompt": "¿Dónde va el acento en w Krakowie?",
+  "explanation": "En la penúltima: w kra-KO-wie. Se mueve respecto a KRA-ków.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "kra-KO-wie"
+      },
+      {
+        "id": "opt-b",
+        "text": "KRA-ko-wie"
+      },
+      {
+        "id": "opt-c",
+        "text": "kra-ko-WIE"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

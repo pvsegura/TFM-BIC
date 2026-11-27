@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-order-question",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 3290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 19,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Perdone, ¿hay una farmacia cerca de aquí?",
+  "explanation": "Przepraszam + czy jest tu blisko + apteka?",
+  "configuration": {
+    "items": ["Przepraszam,", "czy", "jest", "tu", "blisko", "apteka?"],
+    "joiner": " "
+  }
+}

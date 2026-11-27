@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-listen-pharmacy",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿dónde está la farmacia?",
+  "explanation": "Apteka jest naprzeciwko kościoła, na ulicy Długiej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Enfrente de la iglesia."
+      },
+      {
+        "id": "opt-b",
+        "text": "Al lado del parque."
+      },
+      {
+        "id": "opt-c",
+        "text": "En el supermercado."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

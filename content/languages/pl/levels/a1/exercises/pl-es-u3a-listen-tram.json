@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-listen-tram",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué distancia está la parada del tranvía?",
+  "explanation": "Niedaleko, pięć minut stąd, obok parku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A cinco minutos, al lado del parque."
+      },
+      {
+        "id": "opt-b",
+        "text": "Muy lejos, en el centro."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la esquina."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

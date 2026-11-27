@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-nie-ma-poczty",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «aquí no hay oficina de correos»?",
+  "explanation": "Nie ma + genitivo: poczta → poczty.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tu nie ma poczty."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tu nie jest poczta."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tu nie ma poczta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

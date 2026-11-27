@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-culture-sunday",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué suele estar abierto en Polonia un domingo normal?",
+  "explanation": "La mayoría de las tiendas cierra; abren farmacias, panaderías, gasolineras y tiendas pequeñas atendidas por sus dueños.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Farmacias, panaderías y gasolineras."
+      },
+      {
+        "id": "opt-b",
+        "text": "Todos los supermercados."
+      },
+      {
+        "id": "opt-c",
+        "text": "Solo los bancos."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

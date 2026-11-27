@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-write-district",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 3450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 35,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Describe tu barrio para un amigo polaco: dónde está, qué hay, qué no hay, dónde está cada cosa y cómo es.",
+  "explanation": "Revisa: jest / są, nie ma + genitivo, w / na + locativo, obok / naprzeciwko + genitivo, adjetivos concordados.",
+  "configuration": {
+    "modelAnswer": "Mieszkam w Madrycie, w dzielnicy Lavapiés. To stara dzielnica w centrum. W mojej okolicy jest dużo małych sklepów i restauracji. Na rogu jest piekarnia, a obok jest apteka. Naprzeciwko mojej kamienicy jest mały park. Nie ma tu dużego supermarketu, ale jest stacja metra.",
+    "checklist": ["dónde está", "qué hay", "qué no hay", "dónde está cada cosa", "cómo es"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

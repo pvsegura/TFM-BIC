@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-na-poczcie",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3230,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 13,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Poczta va con na: na poczcie.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jestem na poczcie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem w poczcie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem na poczta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

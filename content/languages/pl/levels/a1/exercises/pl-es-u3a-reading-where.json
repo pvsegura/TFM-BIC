@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-reading-where",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 25,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿dónde está Kazimierz?",
+  "explanation": "To stara dzielnica niedaleko centrum, dziesięć minut od Rynku Głównego.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Cerca del centro de Cracovia."
+      },
+      {
+        "id": "opt-b",
+        "text": "En Varsovia."
+      },
+      {
+        "id": "opt-c",
+        "text": "Lejos de la ciudad, en el campo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

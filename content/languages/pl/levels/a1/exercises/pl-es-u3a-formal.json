@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-formal",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "Preguntas a una señora mayor por la calle. ¿Qué dices?",
+  "explanation": "Con desconocidos: pani + tercera persona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Przepraszam, czy pani wie, gdzie jest poczta?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Przepraszam, czy wiesz, gdzie jest poczta?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Hej, gdzie jest poczta?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

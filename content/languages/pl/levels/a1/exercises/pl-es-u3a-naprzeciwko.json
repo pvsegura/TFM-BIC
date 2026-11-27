@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-naprzeciwko",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3270,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 17,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Bank jest naprzeciwko ___.",
+  "explanation": "Naprzeciwko pide genitivo: kościół → kościoła.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "kościoła"
+      },
+      {
+        "id": "opt-b",
+        "text": "kościół"
+      },
+      {
+        "id": "opt-c",
+        "text": "kościele"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-gap-jest-sa",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 3200,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 10,
+    "phase": "structure"
+  },
+  "prompt": "Completa con jest o są.",
+  "explanation": "Jest + una cosa; są + varias.",
+  "configuration": {
+    "text": "W okolicy ___ apteka i ___ dwie piekarnie. Gdzie ___ przystanek?",
+    "gaps": [
+      {
+        "accepted": ["jest"]
+      },
+      {
+        "accepted": ["są"]
+      },
+      {
+        "accepted": ["jest"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

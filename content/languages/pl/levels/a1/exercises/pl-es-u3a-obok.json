@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-obok",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Piekarnia jest obok ___.",
+  "explanation": "Obok pide genitivo: park → parku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "parku"
+      },
+      {
+        "id": "opt-b",
+        "text": "park"
+      },
+      {
+        "id": "opt-c",
+        "text": "parkiem"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

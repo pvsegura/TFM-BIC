@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u3a-reading-saturday",
+  "lessonId": "pl-es-unit-3-places",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 3370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 3,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿por qué hace la compra grande el sábado?",
+  "explanation": "W niedzielę większość sklepów jest zamknięta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Porque el domingo casi todas las tiendas están cerradas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Porque el sábado es más barato."
+      },
+      {
+        "id": "opt-c",
+        "text": "Porque trabaja el domingo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
