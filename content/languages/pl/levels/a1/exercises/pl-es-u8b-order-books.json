@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-order-books",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 8700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 42,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Deja los libros en el suelo junto a la estantería.",
+  "explanation": "Połóż książki na podłodze obok półki.",
+  "configuration": {
+    "items": ["Połóż", "książki", "na", "podłodze", "obok", "półki."],
+    "joiner": " "
+  }
+}

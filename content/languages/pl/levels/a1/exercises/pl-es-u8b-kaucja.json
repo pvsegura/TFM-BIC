@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-kaucja",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es la kaucja?",
+  "explanation": "Kaucja = la fianza del alquiler.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La fianza."
+      },
+      {
+        "id": "opt-b",
+        "text": "La llave."
+      },
+      {
+        "id": "opt-c",
+        "text": "El contador."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

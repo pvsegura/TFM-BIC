@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-listen-tomek",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tiene que hacer Tomek primero?",
+  "explanation": "Zanieś te kartony do samochodu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Llevar las cajas al coche."
+      },
+      {
+        "id": "opt-b",
+        "text": "Colgar el cuadro."
+      },
+      {
+        "id": "opt-c",
+        "text": "Hacer café."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

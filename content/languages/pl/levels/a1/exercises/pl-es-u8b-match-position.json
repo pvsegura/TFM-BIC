@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-match-position",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Une cada posición con su verbo para colocar.",
+  "explanation": "Stoi → postawić; leży → położyć; wisi → powiesić.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "stoi",
+        "right": "postawić"
+      },
+      {
+        "left": "leży",
+        "right": "położyć"
+      },
+      {
+        "left": "wisi",
+        "right": "powiesić"
+      }
+    ]
+  }
+}

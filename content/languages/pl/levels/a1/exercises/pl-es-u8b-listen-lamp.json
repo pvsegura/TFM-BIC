@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-listen-lamp",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿dónde deja Javier la lámpara?",
+  "explanation": "Postaw ją przy drzwiach.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Junto a la puerta."
+      },
+      {
+        "id": "opt-b",
+        "text": "Encima del escritorio."
+      },
+      {
+        "id": "opt-c",
+        "text": "En la ventana."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

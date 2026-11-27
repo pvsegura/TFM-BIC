@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-gdzie-mam",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo preguntas «¿dónde pongo el sillón?» (está de pie)?",
+  "explanation": "Gdzie mam + postawić + acusativo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Gdzie mam postawić fotel?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Gdzie mam powiesić fotel?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Gdzie stoi mam fotel?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

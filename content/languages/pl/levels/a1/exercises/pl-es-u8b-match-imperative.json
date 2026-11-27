@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-match-imperative",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 34,
+    "phase": "structure"
+  },
+  "prompt": "Une cada infinitivo con su imperativo (ty).",
+  "explanation": "Pomóc → pomóż; wziąć → weź; przynieść → przynieś; odpocząć → odpocznij.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "pomóc",
+        "right": "pomóż"
+      },
+      {
+        "left": "wziąć",
+        "right": "weź"
+      },
+      {
+        "left": "przynieść",
+        "right": "przynieś"
+      },
+      {
+        "left": "odpocząć",
+        "right": "odpocznij"
+      },
+      {
+        "left": "uważać",
+        "right": "uważaj"
+      }
+    ]
+  }
+}

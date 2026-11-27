@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-sound-poloz",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo termina połóż?",
+  "explanation": "Ż final se ensordece y suena como sz dura: [powusz].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En sz dura."
+      },
+      {
+        "id": "opt-b",
+        "text": "En ś suave."
+      },
+      {
+        "id": "opt-c",
+        "text": "En ż sonora."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

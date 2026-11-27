@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-obraz",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "El cuadro quedará colgado: powieś.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Powieś obraz na ścianie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Postaw obraz na ścianie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Połóż obraz na ścianie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

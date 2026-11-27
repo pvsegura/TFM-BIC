@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-reading-tomek",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿por qué Kasia pide ayuda a Tomek?",
+  "explanation": "Tomek ma duży samochód.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Porque tiene un coche grande."
+      },
+      {
+        "id": "opt-b",
+        "text": "Porque es muy fuerte."
+      },
+      {
+        "id": "opt-c",
+        "text": "Porque vive al lado."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

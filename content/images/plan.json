@@ -138,5 +138,9 @@
   {
     "asset": "a1-u8-moving.png",
     "prompt": "a young man surrounded by cardboard boxes assembles a bookshelf while talking on a video call with a smiling young woman whose face is on a smartphone propped up on a box, in the background another young man cooks in an open kitchen, no text on boxes or screens"
+  },
+  {
+    "asset": "a1-pl-u8-moving.png",
+    "prompt": "a young woman points and gives directions to two young men carrying cardboard boxes in an apartment, a floor lamp stands by the door and a framed painting leans against the wall, no text on the boxes, no signs"
   }
 ]

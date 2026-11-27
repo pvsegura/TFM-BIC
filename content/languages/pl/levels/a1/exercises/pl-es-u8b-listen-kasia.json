@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-listen-kasia",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué está haciendo Kasia al final?",
+  "explanation": "Właśnie robię kawę dla was.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Café para los chicos."
+      },
+      {
+        "id": "opt-b",
+        "text": "Las cajas."
+      },
+      {
+        "id": "opt-c",
+        "text": "La cena."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-translate-now",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 66,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Qué estás haciendo ahora? — Estoy haciendo las cajas.",
+  "explanation": "Co teraz robisz? — Właśnie pakuję kartony.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Co teraz robisz? Właśnie pakuję kartony.",
+      "Co teraz robisz? — Właśnie pakuję kartony.",
+      "Co teraz robisz? Pakuję kartony."
+    ],
+    "caseSensitive": false
+  }
+}

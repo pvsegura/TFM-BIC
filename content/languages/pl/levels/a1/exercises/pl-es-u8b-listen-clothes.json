@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-listen-clothes",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿dónde pone Javier la ropa del armario?",
+  "explanation": "Wyjmij ubrania i połóż je na łóżku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En la cama."
+      },
+      {
+        "id": "opt-b",
+        "text": "En el coche."
+      },
+      {
+        "id": "opt-c",
+        "text": "En el suelo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

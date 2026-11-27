@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-match-words",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Przeprowadzka = mudanza; podłoga = suelo; ściana = pared.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "przeprowadzka",
+        "right": "la mudanza"
+      },
+      {
+        "left": "podłoga",
+        "right": "el suelo"
+      },
+      {
+        "left": "ściana",
+        "right": "la pared"
+      },
+      {
+        "left": "karton",
+        "right": "la caja de cartón"
+      },
+      {
+        "left": "ciężki",
+        "right": "pesado"
+      },
+      {
+        "left": "właścicielka",
+        "right": "la casera"
+      }
+    ]
+  }
+}

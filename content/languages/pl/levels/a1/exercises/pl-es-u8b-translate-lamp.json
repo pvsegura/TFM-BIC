@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-translate-lamp",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Pon la lámpara junto a la ventana.",
+  "explanation": "Postaw lampę przy oknie.",
+  "configuration": {
+    "acceptedAnswers": ["Postaw lampę przy oknie.", "Postaw lampę obok okna."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-translate-help",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 62,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¡Ayúdame, por favor!",
+  "explanation": "Pomóż mi, proszę!",
+  "configuration": {
+    "acceptedAnswers": ["Pomóż mi, proszę!", "Proszę, pomóż mi!", "Pomóż mi proszę!"],
+    "caseSensitive": false
+  }
+}

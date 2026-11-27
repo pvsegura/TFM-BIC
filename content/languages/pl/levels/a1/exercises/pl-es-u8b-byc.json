@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-byc",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8680,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «el piso es precioso y Kasia está cansada»?",
+  "explanation": "Być para los dos: jest piękne, jest zmęczona.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mieszkanie jest piękne, a Kasia jest zmęczona."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mieszkanie jest piękne, a Kasia ma zmęczona."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mieszkanie piękne jest, a Kasia stoi zmęczona."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

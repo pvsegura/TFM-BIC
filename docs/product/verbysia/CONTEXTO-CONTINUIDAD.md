@@ -167,8 +167,10 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 - **Unidad 7B** «¿Me pone un kilo?» (`es-unit-7-market`, order 165): Mercado Central de Valencia,
   cantidades con de, mucho/poco, otro, precios con céntimos, hiato. Unidad 7: 83 ejercicios.
 - **Unidad 8A** «Se alquila piso» (`es-unit-8-home` reescrita, order 170): hay/está, preposiciones de lugar,
-  comparativos, primer/tercer piso, la x. Unidad 8: 46 ejercicios. Falta la 8B (order 175).
-- Libros A1: Podręcznik **138 páginas** y Zeszyt **108**. Objetivo: unas 170–190 y 160–180.
+  comparativos, primer/tercer piso, la x.
+- **Unidad 8B** «¿Qué estás haciendo?» (`es-unit-8-moving-in`, order 175): estar + gerundio, ser/estar,
+  ¡Qué…! Unidad 8: 80 ejercicios.
+- Libros A1: Podręcznik **142 páginas** y Zeszyt **114**. Objetivo: unas 170–190 y 160–180.
 
 ### Polaco para hispanohablantes (pl-es)
 
@@ -185,14 +187,16 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   - 7A «Ile kosztuje ta kurtka?» (1140: szukam + genitivo, ten/tę, pasować, go/ją/je) y 7B «Poproszę kilo
     ziemniaków» (1145: cantidades + genitivo singular y plural, deka, 2–4 / 5+); unidad 7: 69 ejercicios.
   - 8A «Parapetówka» (1150: stoi/leży/wisi, nad/pod/między + instrumental, comparativos -szy,
-    na drugim piętrze); 36 ejercicios.
+    na drugim piętrze) y 8B «Przeprowadzka» (1155: imperativo ty/wy, postawić/położyć/powiesić,
+    właśnie + presente); unidad 8: 70 ejercicios.
   - Personajes fijos: Javier (español en una oficina de Cracovia), Kasia, Tomek, Ola, Lucía.
   - Ejercicios por unidad: 1 = 55, 2 = 76, 3 = 95 (con repaso), 4 = 73, 5 = 71, 6 = 72.
 - **Apéndices explicados en español:** vocabulario temático (15 categorías `es-*`, 389 entradas,
   `pl-es-vocabulary-a1.mjs`) y gramática (20 temas `pl-es-ref-*`, `pl-es-grammar-a1.mjs`).
   Los crucigramas de polaco mantienen Ą, Ę, Ł… (`CROSSWORD_KEEPS_LETTERS` en `book-i18n.mts`).
-- **Libros pl-es A1 (para Lulu):** Podręcznik **130 páginas** y Zeszyt **104**.
-- Alternancia: siguiente 8B de español (lección nueva, order 175), luego 8B de polaco (order 1155).
+- **Libros pl-es A1 (para Lulu):** Podręcznik **136 páginas** y Zeszyt **108**.
+- Alternancia: siguiente 9A de español (el tiempo: reescribir `es-unit-9-weather`, order 180; ir a +
+  infinitivo), luego 9A de polaco (order 1160). Después, repaso de las unidades 4–6 en los dos cursos.
 - Después: unidades 8–12 en los dos cursos (en español hay que reescribir las lecciones finas),
   repasos tras las unidades 6, 9 y 12, unidad 0 y examen final.
 - Diálogos de la 1A (recepción de hotel) y la 1B (primer día en la oficina) ya están en contextos

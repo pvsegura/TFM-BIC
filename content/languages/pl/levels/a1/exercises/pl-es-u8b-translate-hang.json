@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-translate-hang",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Cuélgalo (el cuadro) encima de la cama.",
+  "explanation": "Powieś go nad łóżkiem.",
+  "configuration": {
+    "acceptedAnswers": ["Powieś go nad łóżkiem."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-write-now",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 8840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 70,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Imagina que estás en tu piso nuevo: escribe qué estás haciendo ahora tú y otras personas, cómo es el piso y cómo estás.",
+  "explanation": "Właśnie / teraz + presente; być + adjetivo.",
+  "configuration": {
+    "modelAnswer": "Teraz jestem w nowym mieszkaniu. Właśnie rozpakowuję kartony, a mój brat wiesza obrazy. Mama robi herbatę w kuchni. Mieszkanie jest małe, ale bardzo jasne. Jestem zmęczony, ale szczęśliwy.",
+    "checklist": ["qué haces ahora", "qué hacen otros", "cómo es el piso", "cómo estás"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-sound-wez",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena weź?",
+  "explanation": "Ź final se ensordece en ś suave: [weś].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[weś]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[wesz]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[wez]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

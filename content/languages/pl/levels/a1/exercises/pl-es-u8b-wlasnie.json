@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-wlasnie",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 39,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «estoy haciendo la cena»?",
+  "explanation": "Presente + właśnie / teraz; no hay forma especial.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Właśnie robię kolację."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem robiąc kolację."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem robię kolację."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

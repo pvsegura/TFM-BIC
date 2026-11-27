@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-rozpakowac",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa rozpakować?",
+  "explanation": "Pakować = hacer las cajas; rozpakować = desempaquetar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Desempaquetar."
+      },
+      {
+        "id": "opt-b",
+        "text": "Empaquetar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pagar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

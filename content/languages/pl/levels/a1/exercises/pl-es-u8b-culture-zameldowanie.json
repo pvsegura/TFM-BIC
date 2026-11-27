@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-culture-zameldowanie",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué es el zameldowanie?",
+  "explanation": "El empadronamiento en la dirección donde vives.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El empadronamiento."
+      },
+      {
+        "id": "opt-b",
+        "text": "La fianza."
+      },
+      {
+        "id": "opt-c",
+        "text": "La fiesta del piso nuevo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

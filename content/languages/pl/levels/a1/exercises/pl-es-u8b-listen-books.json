@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-listen-books",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 8540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Tomek coloca los libros en la estantería.",
+  "explanation": "Połóż je na podłodze obok półki — los deja en el suelo; luego Kasia los coloca.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

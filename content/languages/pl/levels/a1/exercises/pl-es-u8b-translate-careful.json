@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-translate-careful",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 65,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¡Cuidado, esto pesa!",
+  "explanation": "Uważaj, to jest ciężkie!",
+  "configuration": {
+    "acceptedAnswers": ["Uważaj, to jest ciężkie!", "Uważaj, to ciężkie!"],
+    "caseSensitive": false
+  }
+}

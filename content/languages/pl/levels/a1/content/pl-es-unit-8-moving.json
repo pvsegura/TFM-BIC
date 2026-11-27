@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1155,
+  "unit": 8,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 8B. Przeprowadzka — la mudanza, dar instrucciones y colocar las cosas",
+  "description": "Ayudas en una mudanza: das y entiendes instrucciones, dices dónde poner cada cosa y qué estás haciendo: el imperativo (połóż, postaw, powieś, pomóż), gdzie to postawić?, właśnie + presente y być con adjetivos.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Cajas, una lámpara y un cuadro" },
+    {
+      "type": "explanation",
+      "text": "Kasia se muda a su propio piso y Javier y Tomek la ayudan. Primero vacían su habitación en el piso de Ola y después colocan las cosas en la casa nueva. Primera escucha: ¿qué tiene que hacer cada uno? Segunda: ¿dónde ponen la lámpara, los libros y el cuadro? Tercera: fíjate en las órdenes: zanieś, pomóż, połóż, postaw, powieś."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u8-moving.png",
+      "alt": "Una mujer joven da indicaciones a dos hombres que cargan cajas de cartón en un piso con una lámpara de pie y un cuadro apoyado en la pared."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Dzięki, że jesteście! Wszystko jest już w kartonach.",
+          "translation": "¡Gracias por venir! Ya está todo en cajas."
+        },
+        { "speaker": "Tomek", "text": "Co mamy robić?", "translation": "¿Qué hacemos?" },
+        {
+          "speaker": "Kasia",
+          "text": "Tomek, zanieś te kartony do samochodu. Są ciężkie, uważaj!",
+          "translation": "Tomek, lleva estas cajas al coche. Pesan, ¡ten cuidado!"
+        },
+        { "speaker": "Javier", "text": "A ja?", "translation": "¿Y yo?" },
+        {
+          "speaker": "Kasia",
+          "text": "Ty pomóż mi z szafą. Najpierw wyjmij ubrania i połóż je na łóżku.",
+          "translation": "Tú ayúdame con el armario. Primero saca la ropa y ponla en la cama."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Gdzie mam postawić lampę?",
+          "translation": "¿Dónde pongo la lámpara?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Postaw ją przy drzwiach. Zabieramy ją na końcu.",
+          "translation": "Ponla junto a la puerta. Nos la llevamos al final."
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Kasiu, jesteśmy w nowym mieszkaniu. Gdzie położyć książki?",
+          "translation": "Kasia, ya estamos en el piso nuevo. ¿Dónde dejo los libros?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Połóż je na podłodze obok półki. Potem je ułożę.",
+          "translation": "Déjalos en el suelo junto a la estantería. Luego los coloco yo."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A obraz? Powiesić go nad biurkiem?",
+          "translation": "¿Y el cuadro? ¿Lo cuelgo encima del escritorio?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Tak, powieś go nad biurkiem. Super!",
+          "translation": "Sí, cuélgalo encima del escritorio. ¡Genial!"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "A ty co teraz robisz?",
+          "translation": "¿Y tú qué estás haciendo ahora?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Właśnie robię kawę dla was. Odpocznijcie chwilę!",
+          "translation": "Estoy haciendo café para vosotros. ¡Descansad un rato!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Twoje nowe mieszkanie jest piękne. Ale ty jesteś bardzo zmęczona!",
+          "translation": "Tu piso nuevo es precioso. ¡Pero tú estás muy cansada!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Jestem zmęczona, ale szczęśliwa. Dziękuję wam!",
+          "translation": "Estoy cansada, pero feliz. ¡Gracias a los dos!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "La mudanza" },
+    {
+      "type": "table",
+      "caption": "Palabras de la mudanza",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["przeprowadzka", "la mudanza", "przeprowadzać się", "mudarse"],
+        ["karton", "la caja de cartón", "samochód", "el coche"],
+        ["ciężki / lekki", "pesado / ligero", "pusty / pełny", "vacío / lleno"],
+        ["pakować", "empaquetar, hacer las cajas", "rozpakować", "desempaquetar"],
+        ["nosić / zanieść", "llevar (cargando)", "przynieść", "traer"],
+        ["podłoga", "el suelo", "ściana", "la pared"],
+        [
+          "właściciel / właścicielka",
+          "el casero / la casera",
+          "umowa najmu",
+          "el contrato de alquiler"
+        ]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Colocar las cosas: el verbo depende de la posición",
+      "columns": ["Está…", "Colocar (perfectivo)", "¡Hazlo!", "Español"],
+      "rows": [
+        ["stoi (de pie)", "postawić", "postaw!", "poner de pie, colocar"],
+        ["leży (tumbado)", "położyć", "połóż!", "poner tumbado, dejar"],
+        ["wisi (colgado)", "powiesić", "powieś!", "colgar"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — los verbos para colocar salen de los de posición que ya conoces: stoi → postawić, leży → położyć, wisi → powiesić. Si algo stoi, lo has postawić; si leży, lo has położyć; si wisi, lo has powiesić. PRZEPROWADZKA es «llevar a través» (prze- + prowadzić, conducir): llevar tu vida de un piso a otro. Y KARTON es tu «cartón»: la caja más fácil del curso."
+    },
+    { "type": "section", "phase": "structure", "title": "El imperativo, colocar y el presente" },
+    {
+      "type": "explanation",
+      "text": "Entre amigos y en familia, las instrucciones se dan con el imperativo. Para ty suele salir de la tercera persona del presente sin la vocal final (czeka → czekaj, pisze → pisz, robi → rób), pero hay muchas formas especiales: aprende las más útiles como vocabulario. Para wy se añade -cie: połóż → połóżcie, odpocznij → odpocznijcie. Para pan / pani sigue valiendo proszę + infinitivo (unidad 3): proszę postawić tutaj."
+    },
+    {
+      "type": "table",
+      "caption": "Imperativos útiles",
+      "columns": ["Infinitivo", "Ty", "Wy", "Español (tú)"],
+      "rows": [
+        ["położyć", "połóż", "połóżcie", "pon, deja (tumbado)"],
+        ["postawić", "postaw", "postawcie", "pon (de pie)"],
+        ["powiesić", "powieś", "powieście", "cuelga"],
+        ["pomóc", "pomóż", "pomóżcie", "ayuda"],
+        ["przynieść", "przynieś", "przynieście", "trae"],
+        ["zanieść", "zanieś", "zanieście", "lleva"],
+        ["wziąć", "weź", "weźcie", "coge, toma"],
+        ["uważać", "uważaj", "uważajcie", "ten cuidado"],
+        ["odpocząć", "odpocznij", "odpocznijcie", "descansa"],
+        ["poczekać", "poczekaj", "poczekajcie", "espera"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Pomagasz mi! / Ty kładziesz to na stole. (para dar una orden)",
+      "right": "Pomóż mi! / Połóż to na stole.",
+      "explanation": "Con el presente describes lo que alguien hace; para pedirlo o mandarlo usas el imperativo. Si quieres suavizar, añade proszę o dobrze?: Połóż to tutaj, proszę. Pomożesz mi? (¿me ayudas?) también es una forma muy amable de pedir."
+    },
+    {
+      "type": "explanation",
+      "text": "Con postawić, położyć y powiesić el lugar se dice igual que con stoi, leży y wisi: na + locativo (na stole, na łóżku, na podłodze), przy + locativo (przy drzwiach), nad / pod / obok… Y la prenda o el objeto va en acusativo, a menudo sustituido por go, ją o je, que van justo detrás del imperativo: postaw ją, połóż je, powieś go."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Postaw obraz na ścianie. / Połóż lampę w kącie (una lámpara de pie).",
+      "right": "Powieś obraz na ścianie. / Postaw lampę w kącie.",
+      "explanation": "El verbo describe cómo quedará el objeto: colgado → powiesić; de pie → postawić; tumbado o apoyado en plano → położyć. Es la misma lógica que stoi / leży / wisi de la lección anterior."
+    },
+    {
+      "type": "explanation",
+      "text": "El polaco no tiene una forma especial como «estoy haciendo»: el presente sirve para lo que pasa ahora y para lo habitual. Para subrayar que es justo ahora se añade właśnie (justo ahora) o teraz (ahora): Właśnie robię kawę (estoy haciendo café). Co teraz robisz? (¿qué estás haciendo ahora?)."
+    },
+    {
+      "type": "comparison",
+      "source": "¿Qué estás haciendo? — Estoy haciendo café. Normalmente hago café a las ocho.",
+      "target": "Co robisz? — Właśnie robię kawę. Zwykle robię kawę o ósmej.",
+      "note": "La misma forma (robię) sirve para «estoy haciendo» y para «hago»; lo distinguen palabras como właśnie, teraz, zwykle o codziennie."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jestem robiąc kawę. / Jestem robię kawę.",
+      "right": "Właśnie robię kawę.",
+      "explanation": "No traduzcas «estar + gerundio»: en polaco basta el presente. Y para cómo es o cómo está algo, el polaco usa siempre być: Mieszkanie jest piękne (es precioso), Kasia jest zmęczona (está cansada). No hay que elegir entre ser y estar."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Al final: ż y ź, sz y ś (połóż, weź, powieś)"
+    },
+    {
+      "type": "explanation",
+      "text": "Muchos imperativos terminan en consonantes «silbantes». Recuerda dos reglas. Primero, al final de palabra pierden la voz: połóż suena [powusz] con sz final, weź suena [weś]. Segundo, se mantiene la diferencia entre dura y suave: połóż, pomóż terminan en una sh dura [sz]; weź, powieś, przynieś terminan en una ś suave, con la lengua en el paladar. Cambiar una por otra suena raro, aunque se entienda."
+    },
+    {
+      "type": "table",
+      "caption": "Duras y suaves al final (pronunciación aproximada)",
+      "columns": ["Palabra", "Se escribe", "Suena", "Tipo"],
+      "rows": [
+        ["połóż", "ż final", "[powusz]", "dura (sz)"],
+        ["pomóż", "ż final", "[pomusz]", "dura (sz)"],
+        ["weź", "ź final", "[weś]", "suave (ś)"],
+        ["powieś", "ś final", "[powieś]", "suave (ś)"],
+        ["przynieś", "ś final", "[pszynieś]", "suave (ś)"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Mudarse en Polonia" },
+    {
+      "type": "reading",
+      "title": "Lista Kasi",
+      "paragraphs": [
+        "Przed przeprowadzką Kasia pisze listę. Po pierwsze: spakować książki, ubrania i kuchnię do kartonów. Kartony z kuchni są ciężkie, więc są małe.",
+        "Po drugie: zapytać Tomka i Javiera o pomoc. Tomek ma duży samochód, a Javier jest silny i zawsze uśmiechnięty.",
+        "Po trzecie: podpisać umowę najmu z właścicielką, zapłacić kaucję i wziąć klucze. Sprawdzić licznik prądu i wody.",
+        "Po czwarte: zamówić pizzę dla przyjaciół. W Polsce kto pomaga w przeprowadzce, dostaje jedzenie i coś do picia!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "En Polonia es muy habitual que los amigos ayuden en la mudanza, sobre todo si alguien tiene coche grande. A cambio, el que se muda invita a pizza y algo de beber, y más tarde organiza la parapetówka.",
+        "Los pisos de alquiler se buscan sobre todo en portales de internet. Al firmar el contrato (umowa najmu) se paga normalmente una fianza (kaucja) de uno o dos meses y se apuntan los contadores de luz, agua y gas.",
+        "En Polonia existe la obligación de empadronarse (zameldowanie) en la dirección donde vives; los extranjeros de la UE también deben registrarse. Se hace en la oficina municipal (urząd) o por internet.",
+        "Muchos estudiantes viven en residencias universitarias (akademik) o alquilan una habitación en un piso compartido (pokój do wynajęcia). Pedir ayuda a un amigo se hace con fórmulas amables: Pomożesz mi? Masz chwilę?"
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: organiza una mudanza" },
+    {
+      "type": "mission",
+      "title": "Dirige a tus amigos en tu mudanza",
+      "steps": [
+        "Pide ayuda a dos amigos con una fórmula amable: Pomożecie mi w sobotę?",
+        "Da tres instrucciones con imperativo de ty y dos de wy: zanieś, przynieś, uważajcie…",
+        "Di dónde poner tres objetos con postaw, połóż y powieś y el lugar correcto (na stole, nad łóżkiem…).",
+        "Usa go, ją o je detrás del imperativo: postaw ją tutaj, połóż je na podłodze.",
+        "Responde a Co teraz robisz? con właśnie + presente y describe con być cómo es el piso y cómo estás tú.",
+        "Grábate diciendo połóż, pomóż, weź y powieś con la diferencia entre sz y ś al final."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Pomóż mi, proszę!", "translation": "¡Ayúdame, por favor!" },
+        { "text": "Zanieś te kartony do samochodu.", "translation": "Lleva estas cajas al coche." },
+        {
+          "text": "Gdzie mam postawić lampę? — Postaw ją przy drzwiach.",
+          "translation": "¿Dónde pongo la lámpara? — Ponla junto a la puerta."
+        },
+        { "text": "Połóż książki na podłodze.", "translation": "Deja los libros en el suelo." },
+        {
+          "text": "Powieś obraz nad biurkiem.",
+          "translation": "Cuelga el cuadro encima del escritorio."
+        },
+        { "text": "Uważaj, to jest ciężkie!", "translation": "¡Cuidado, esto pesa!" },
+        {
+          "text": "Co teraz robisz? — Właśnie robię kawę.",
+          "translation": "¿Qué estás haciendo? — Estoy haciendo café."
+        },
+        { "text": "Jestem zmęczona, ale szczęśliwa.", "translation": "Estoy cansada, pero feliz." }
+      ],
+      "canDo": [
+        "dar y entender instrucciones con el imperativo de ty y wy",
+        "elegir entre postawić, położyć y powiesić",
+        "decir dónde poner algo y sustituirlo por go, ją o je",
+        "decir lo que está pasando ahora con właśnie + presente",
+        "describir con być sin distinguir ser y estar",
+        "pronunciar ż / ź y sz / ś al final de palabra"
+      ]
+    }
+  ]
+}

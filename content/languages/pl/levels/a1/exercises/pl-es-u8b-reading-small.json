@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-reading-small",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 53,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿por qué las cajas de la cocina son pequeñas?",
+  "explanation": "Kartony z kuchni są ciężkie, więc są małe.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Porque pesan mucho."
+      },
+      {
+        "id": "opt-b",
+        "text": "Porque no hay más cajas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Porque la cocina es pequeña."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-gap-put",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 8600,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 32,
+    "phase": "structure"
+  },
+  "prompt": "Completa con postaw, połóż o powieś.",
+  "explanation": "Lámpara de pie → postaw; libros en el suelo → połóż; cuadro → powieś.",
+  "configuration": {
+    "text": "___ lampę w kącie, ___ książki na stole i ___ obraz nad kanapą.",
+    "gaps": [
+      {
+        "accepted": ["Postaw"]
+      },
+      {
+        "accepted": ["Połóż"]
+      },
+      {
+        "accepted": ["Powieś"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

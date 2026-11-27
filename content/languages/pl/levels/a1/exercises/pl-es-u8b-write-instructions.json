@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-write-instructions",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 8830,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 69,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Escribe un mensaje a dos amigos que te ayudan con la mudanza: qué tiene que hacer cada uno y dónde poner tres cosas en el piso nuevo.",
+  "explanation": "Revisa: imperativo de ty y de wy, postaw / połóż / powieś con el lugar correcto, go / ją / je.",
+  "configuration": {
+    "modelAnswer": "Cześć, Ania i Piotr! Dziękuję za pomoc! Piotr, zanieś kartony z kuchni do samochodu, są ciężkie. Ania, pomóż mi z szafą. W nowym mieszkaniu połóżcie książki na podłodze, lampę postawcie w salonie, a lustro powieście w przedpokoju. Potem odpocznijcie: pizza jest moja!",
+    "checklist": [
+      "tareas de cada uno",
+      "imperativo ty y wy",
+      "tres cosas y dónde",
+      "agradecimiento"
+    ],
+    "minWords": 30,
+    "maxWords": 100
+  }
+}

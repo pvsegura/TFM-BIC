@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-order-boxes",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 8690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 41,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Lleva estas cajas al coche.",
+  "explanation": "Zanieś + te kartony + do samochodu.",
+  "configuration": {
+    "items": ["Zanieś", "te", "kartony", "do", "samochodu."],
+    "joiner": " "
+  }
+}

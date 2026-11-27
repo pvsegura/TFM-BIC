@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8b-order-vs-present",
+  "lessonId": "pl-es-unit-8-moving",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8640,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "Quieres pedirle a un amigo que te ayude. ¿Qué dices?",
+  "explanation": "Orden: imperativo (o la pregunta amable pomożesz mi?).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pomóż mi, proszę!"
+      },
+      {
+        "id": "opt-b",
+        "text": "Pomagasz mi."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pomagać mi."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
