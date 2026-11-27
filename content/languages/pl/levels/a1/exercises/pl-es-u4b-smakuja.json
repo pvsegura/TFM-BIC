@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-smakuja",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4680,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «me gustan los pierogi» (al comerlos)?",
+  "explanation": "Smakować como «gustar»: smakują mi pierogi.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Smakują mi pierogi."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja smakuję pierogi."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pierogi smakuję mi."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

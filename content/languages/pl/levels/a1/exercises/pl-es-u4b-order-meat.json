@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-order-meat",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 4710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 43,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿El żurek lleva carne?",
+  "explanation": "Czy + żurek jest + z mięsem?",
+  "configuration": {
+    "items": ["Czy", "żurek", "jest", "z", "mięsem?"],
+    "joiner": " "
+  }
+}

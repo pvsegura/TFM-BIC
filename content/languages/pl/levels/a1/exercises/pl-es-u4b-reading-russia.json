@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-reading-russia",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: los pierogi ruskie vienen de Rusia.",
+  "explanation": "To nieprawda: el nombre viene de Ruś, una región histórica del este.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

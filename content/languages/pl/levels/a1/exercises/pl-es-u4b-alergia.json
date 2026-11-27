@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-alergia",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «tengo alergia a la leche»?",
+  "explanation": "Mam alergię na + acusativo: na mleko.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mam alergię na mleko."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mam alergię z mlekiem."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mam alergia mleka."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

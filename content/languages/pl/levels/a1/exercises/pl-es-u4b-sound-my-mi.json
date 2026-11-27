@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-sound-my-mi",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 49,
+    "phase": "sound"
+  },
+  "prompt": "¿Cuál significa «nosotros»?",
+  "explanation": "My (con y) = nosotros; mi (con i) = a mí.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "my"
+      },
+      {
+        "id": "opt-b",
+        "text": "mi"
+      },
+      {
+        "id": "opt-c",
+        "text": "mój"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-gap-negation",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4640,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "Completa en genitivo después del verbo en negativo.",
+  "explanation": "Mięso → mięsa; alkohol → alkoholu; kawa → kawy.",
+  "configuration": {
+    "text": "Nie jem ___ (mięso), nie piję ___ (alkohol) i nie piję ___ (kawa).",
+    "gaps": [
+      {
+        "accepted": ["mięsa"]
+      },
+      {
+        "accepted": ["alkoholu"]
+      },
+      {
+        "accepted": ["kawy"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

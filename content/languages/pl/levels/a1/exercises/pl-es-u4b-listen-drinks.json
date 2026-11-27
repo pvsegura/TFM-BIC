@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-listen-drinks",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué piden de beber?",
+  "explanation": "Dwa kompoty i butelkę wody.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dos compotas y una botella de agua."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dos cervezas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dos zumos y un café."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

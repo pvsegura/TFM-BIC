@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-listen-zurek",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: el żurek no lleva carne.",
+  "explanation": "Żurek jest z kiełbasą — lleva salchicha.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

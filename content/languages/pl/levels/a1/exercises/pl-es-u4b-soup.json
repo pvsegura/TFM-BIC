@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-soup",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 34,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "La sopa se come: jem zupę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jem zupę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Piję zupę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Biorę zupę pić."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

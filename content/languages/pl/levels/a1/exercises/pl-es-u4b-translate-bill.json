@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-translate-bill",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 69,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Los pierogi están riquísimos. La cuenta, por favor.",
+  "explanation": "Pierogi są pyszne. Poproszę rachunek.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Pierogi są pyszne. Poproszę rachunek.",
+      "Pierogi są pyszne, poproszę rachunek."
+    ],
+    "caseSensitive": false
+  }
+}

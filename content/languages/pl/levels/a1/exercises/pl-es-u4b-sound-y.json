@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-sound-y",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 48,
+    "phase": "sound"
+  },
+  "prompt": "La y polaca suena igual que la i española.",
+  "explanation": "No: es más grave y oscura, con la lengua más atrás.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

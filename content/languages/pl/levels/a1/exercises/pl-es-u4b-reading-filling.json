@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-reading-filling",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿con qué se comen los pierogi ruskie?",
+  "explanation": "Je się je z cebulką albo ze śmietaną.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Con cebolla o con nata agria."
+      },
+      {
+        "id": "opt-b",
+        "text": "Con azúcar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Con ketchup."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

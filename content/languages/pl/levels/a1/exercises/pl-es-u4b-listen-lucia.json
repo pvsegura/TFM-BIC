@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-listen-lucia",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué pide Lucía de segundo?",
+  "explanation": "Pierogi ruskie — de queso y patata.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pierogi ruskie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kotlet schabowy."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pierogi z mięsem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

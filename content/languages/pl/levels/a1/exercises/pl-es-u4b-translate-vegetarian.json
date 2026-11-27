@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-translate-vegetarian",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 66,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco (habla un hombre): Soy vegetariano. No como carne.",
+  "explanation": "Jestem wegetarianinem. Nie jem mięsa.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Jestem wegetarianinem. Nie jem mięsa.",
+      "Jestem wegetarianinem, nie jem mięsa."
+    ],
+    "caseSensitive": false
+  }
+}

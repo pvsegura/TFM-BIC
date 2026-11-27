@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-nie-jem",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4630,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 35,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «no como pescado»?",
+  "explanation": "Negación + genitivo: ryba → ryby.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie jem ryby."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie jem rybę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie jem ryba."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

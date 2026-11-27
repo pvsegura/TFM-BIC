@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-match-dishes",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada plato con su descripción.",
+  "explanation": "Barszcz = sopa de remolacha; gołąbki = col rellena; bigos = guiso de chucrut.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "barszcz czerwony",
+        "right": "sopa de remolacha"
+      },
+      {
+        "left": "rosół",
+        "right": "caldo de pollo"
+      },
+      {
+        "left": "gołąbki",
+        "right": "hojas de col rellenas"
+      },
+      {
+        "left": "bigos",
+        "right": "guiso de chucrut y carne"
+      },
+      {
+        "left": "kotlet schabowy",
+        "right": "filete empanado de cerdo"
+      }
+    ]
+  }
+}

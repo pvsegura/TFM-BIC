@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-sound-byc",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "¿Qué significa bić (con i)?",
+  "explanation": "Być (con y) = ser; bić (con i) = pegar.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pegar."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ser."
+      },
+      {
+        "id": "opt-c",
+        "text": "Beber."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

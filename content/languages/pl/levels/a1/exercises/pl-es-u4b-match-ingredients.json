@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-match-ingredients",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Une cada ingrediente con su traducción.",
+  "explanation": "Ziemniaki = patatas; kapusta = col; grzyby = setas.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "ziemniaki",
+        "right": "las patatas"
+      },
+      {
+        "left": "kapusta",
+        "right": "la col"
+      },
+      {
+        "left": "grzyby",
+        "right": "las setas"
+      },
+      {
+        "left": "ryba",
+        "right": "el pescado"
+      },
+      {
+        "left": "orzechy",
+        "right": "los frutos secos"
+      },
+      {
+        "left": "jajko",
+        "right": "el huevo"
+      }
+    ]
+  }
+}

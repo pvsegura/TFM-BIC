@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-write-food",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 4860,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 73,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe qué comes y bebes en un día normal y qué platos polacos o españoles te gustan y cuáles no.",
+  "explanation": "Jem / piję + acusativo, nie jem + genitivo, smakuje mi / smakują mi.",
+  "configuration": {
+    "modelAnswer": "Rano piję kawę i jem kanapkę. Na obiad jem zupę i drugie danie. Wieczorem piję herbatę. Smakuje mi żurek, a pierogi ruskie są pyszne. Nie smakuje mi bigos: jest za kwaśny. Nie piję alkoholu.",
+    "checklist": ["mañana", "obiad", "gustos"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

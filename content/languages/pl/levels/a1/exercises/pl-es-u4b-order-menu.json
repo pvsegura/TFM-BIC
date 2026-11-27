@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-order-menu",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 4700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 42,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: De primero rosół y de segundo pierogi.",
+  "explanation": "Na pierwsze danie… a na drugie…",
+  "configuration": {
+    "items": ["Na", "pierwsze", "danie", "rosół,", "a", "na", "drugie", "pierogi."],
+    "joiner": " "
+  }
+}

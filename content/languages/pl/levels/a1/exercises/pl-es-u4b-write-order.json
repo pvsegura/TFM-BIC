@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-write-order",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 4850,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 72,
+    "phase": "express",
+    "lines": 7
+  },
+  "prompt": "Escribe el diálogo entre tú y un camarero: pide primero, segundo y bebida para ti y para un amigo que no come carne o tiene una alergia.",
+  "explanation": "Revisa: na pierwsze / na drugie danie, z / bez, nie jem + genitivo, mam alergię na + acusativo.",
+  "configuration": {
+    "modelAnswer": "Kelner: Co dla państwa? Ja: Na pierwsze danie poproszę rosół, a na drugie kotlet schabowy z ziemniakami. Mój kolega nie je mięsa. Czy pierogi z kapustą są bez mięsa? Kelner: Tak, są z kapustą i grzybami. Ja: To dla kolegi barszcz i pierogi z kapustą. Do picia dwa kompoty, poproszę.",
+    "checklist": ["primero", "segundo", "dieta o alergia", "bebida"],
+    "minWords": 30,
+    "maxWords": 90
+  }
+}

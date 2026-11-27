@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-reading-best",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 57,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuáles son los mejores pierogi?",
+  "explanation": "Najlepsze są domowe, robione przez babcię.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Los caseros, hechos por la abuela."
+      },
+      {
+        "id": "opt-b",
+        "text": "Los del restaurante."
+      },
+      {
+        "id": "opt-c",
+        "text": "Los congelados."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

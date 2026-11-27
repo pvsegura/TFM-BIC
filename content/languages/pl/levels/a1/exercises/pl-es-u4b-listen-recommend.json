@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-listen-recommend",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué recomienda el camarero?",
+  "explanation": "Dzisiaj polecam żurek i pierogi z mięsem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Żurek y pierogi de carne."
+      },
+      {
+        "id": "opt-b",
+        "text": "Barszcz y sernik."
+      },
+      {
+        "id": "opt-c",
+        "text": "Rosół y bigos."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

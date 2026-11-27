@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-translate-soup",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4830,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 68,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Esta sopa lleva carne?",
+  "explanation": "Czy ta zupa jest z mięsem?",
+  "configuration": {
+    "acceptedAnswers": ["Czy ta zupa jest z mięsem?", "Czy zupa jest z mięsem?"],
+    "caseSensitive": false
+  }
+}

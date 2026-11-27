@@ -1,0 +1,305 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1115,
+  "unit": 4,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 4B. Co pan poleca? — en el restaurante, platos polacos y alergias",
+  "description": "Pides la comida en un restaurante, preguntas qué lleva un plato, explicas que no comes algo o que tienes una alergia y dices si te gusta: jeść y pić, na pierwsze danie, nie jem mięsa, mam alergię na…, smakuje mi.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Pierogi para una vegetariana" },
+    {
+      "type": "explanation",
+      "text": "Lucía, la hermana de Javier, ha venido de Sevilla a visitarlo. Javier la lleva a comer a un restaurante polaco. Lucía es vegetariana, tiene alergia a los frutos secos y todavía habla muy poco polaco, así que Javier la ayuda. Primera escucha: ¿qué recomienda el camarero? Segunda: ¿qué piden de primero, de segundo y de beber? Tercera: fíjate en cómo preguntan qué lleva un plato: czy… jest z mięsem?, czy są orzechy?"
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u4-restaurant.png",
+      "alt": "Un camarero con delantal sirve platos de pierogi a un hombre y una mujer sentados a una mesa con mantel de cuadros y dos cuencos de sopa."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kelner",
+          "text": "Dzień dobry. Proszę, menu. Co dla państwa?",
+          "translation": "Buenos días. Aquí tienen la carta. ¿Qué les pongo?"
+        },
+        { "speaker": "Javier", "text": "Co pan poleca?", "translation": "¿Qué nos recomienda?" },
+        {
+          "speaker": "Kelner",
+          "text": "Dzisiaj polecam żurek i pierogi z mięsem. Mamy też zestaw dnia: zupa i drugie danie za trzydzieści pięć złotych.",
+          "translation": "Hoy les recomiendo el żurek y los pierogi de carne. También tenemos el menú del día: sopa y segundo plato por treinta y cinco złotys."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Moja siostra jest wegetarianką. Czy żurek jest z mięsem?",
+          "translation": "Mi hermana es vegetariana. ¿El żurek lleva carne?"
+        },
+        {
+          "speaker": "Kelner",
+          "text": "Tak, żurek jest z kiełbasą. Ale barszcz czerwony jest bez mięsa.",
+          "translation": "Sí, el żurek lleva salchicha. Pero el borsch rojo no lleva carne."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "To poproszę barszcz. A na drugie danie… pierogi ruskie?",
+          "translation": "Entonces, un borsch, por favor. Y de segundo… ¿pierogi ruskie?"
+        },
+        {
+          "speaker": "Kelner",
+          "text": "Bardzo dobry wybór. Pierogi ruskie są z serem i z ziemniakami.",
+          "translation": "Muy buena elección. Los pierogi ruskie son de queso y patata."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Siostra ma też alergię na orzechy. Czy w deserach są orzechy?",
+          "translation": "Mi hermana también tiene alergia a los frutos secos. ¿Los postres llevan frutos secos?"
+        },
+        {
+          "speaker": "Kelner",
+          "text": "W serniku nie ma orzechów, ale w makowcu są.",
+          "translation": "La tarta de queso no lleva frutos secos, pero el bizcocho de amapola sí."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dobrze. Dla mnie żurek, a na drugie danie kotlet schabowy z ziemniakami i surówką.",
+          "translation": "Bien. Para mí el żurek, y de segundo un filete empanado de cerdo con patatas y ensalada."
+        },
+        { "speaker": "Kelner", "text": "A do picia?", "translation": "¿Y de beber?" },
+        {
+          "speaker": "Javier",
+          "text": "Dwa kompoty i butelkę wody, poproszę.",
+          "translation": "Dos compotas y una botella de agua, por favor."
+        },
+        { "speaker": "Kelner", "text": "Smakuje państwu?", "translation": "¿Les gusta la comida?" },
+        {
+          "speaker": "Lucía",
+          "text": "Tak, bardzo! Pierogi są pyszne.",
+          "translation": "¡Sí, mucho! Los pierogi están riquísimos."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dziękujemy. Poproszę rachunek.",
+          "translation": "Gracias. La cuenta, por favor."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "La carta" },
+    {
+      "type": "table",
+      "caption": "Una carta polaca",
+      "columns": ["Plato", "Qué es", "Plato", "Qué es"],
+      "rows": [
+        [
+          "żurek",
+          "sopa agria de centeno, con salchicha y huevo",
+          "barszcz czerwony",
+          "borsch: sopa de remolacha"
+        ],
+        ["rosół", "caldo de pollo con fideos", "pomidorowa", "sopa de tomate"],
+        [
+          "pierogi ruskie",
+          "empanadillas de patata y queso fresco",
+          "pierogi z mięsem",
+          "empanadillas de carne"
+        ],
+        [
+          "kotlet schabowy",
+          "filete empanado de cerdo",
+          "gołąbki",
+          "hojas de col rellenas de carne y arroz"
+        ],
+        ["bigos", "guiso de chucrut, col y carne", "placki ziemniaczane", "tortitas de patata"],
+        ["surówka", "ensalada de verdura cruda rallada", "kompot", "bebida de fruta cocida"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Ingredientes",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["mięso", "la carne", "ryba", "el pescado"],
+        ["kurczak", "el pollo", "wieprzowina", "el cerdo"],
+        ["ziemniaki", "las patatas", "kapusta", "la col"],
+        ["ser", "el queso", "jajko", "el huevo"],
+        ["grzyby", "las setas", "orzechy", "los frutos secos, las nueces"],
+        ["chleb", "el pan", "masło", "la mantequilla"],
+        ["warzywa", "las verduras", "owoce", "la fruta"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "¿Qué tal está?",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["smaczny / pyszny", "sabroso / riquísimo", "niedobry", "malo, que no está bueno"],
+        ["słony", "salado", "słodki", "dulce"],
+        ["ostry", "picante", "kwaśny", "ácido, agrio"],
+        ["gorący", "caliente", "zimny", "frío"],
+        ["Smacznego!", "¡Que aproveche!", "Smakuje mi.", "Me gusta (la comida)."]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — ŻUREK y el alemán sauer («agrio») son parientes: la sopa más agria de Polonia. BARSZCZ es nuestro «borsch», la sopa roja de remolacha. Los PIEROGI RUSKIE no son «rusos»: el nombre viene de la Rutenia (Ruś), la región histórica del este, hoy en Ucrania. KAPUSTA es «col» y suena a «capucha»: la col tiene hojas como capas. Y ZIEMNIAKI viene de ziemia, tierra: son las «frutas de la tierra», como la pomme de terre francesa."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Comer, beber, gustar y decir lo que no tomas"
+    },
+    {
+      "type": "explanation",
+      "text": "En español «tomamos» un café, una sopa o un bocadillo. En polaco hay que elegir: jeść (comer) para lo sólido y para la sopa, que se come con cuchara; pić (beber) para los líquidos. Jem zupę, piję kawę. Los dos son irregulares; apréndelos de memoria."
+    },
+    {
+      "type": "table",
+      "caption": "Jeść (comer) y pić (beber)",
+      "columns": ["Persona", "jeść", "pić"],
+      "rows": [
+        ["ja", "jem", "piję"],
+        ["ty", "jesz", "pijesz"],
+        ["on / ona / pan / pani", "je", "pije"],
+        ["my", "jemy", "pijemy"],
+        ["wy", "jecie", "pijecie"],
+        ["oni / one / państwo", "jedzą", "piją"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Piję zupę. / Jem kawę.",
+      "right": "Jem zupę. / Piję kawę.",
+      "explanation": "La sopa se come (jeść), no se bebe; el café, el té, el zumo y el kompot se beben (pić). No existe un verbo comodín como «tomar»; en el bar usa poproszę y no tendrás que elegir."
+    },
+    {
+      "type": "explanation",
+      "text": "Para ordenar la comida: na pierwsze danie (de primero, casi siempre una sopa), na drugie danie (de segundo), na deser (de postre), do picia (de beber). Los ingredientes de un plato van con z + instrumental: pierogi z mięsem, z serem, z kapustą i grzybami; sin algo, bez + genitivo: bez mięsa, bez cebuli."
+    },
+    {
+      "type": "explanation",
+      "text": "Para hablar de tu dieta tienes tres fórmulas. Jestem wegetarianinem / wegetarianką (soy vegetariano / vegetariana: el instrumental que ya viste con las nacionalidades). Nie jem mięsa / ryby (no como carne / pescado: tras la negación, genitivo). Mam alergię na + acusativo: na orzechy, na mleko, na gluten. Y para preguntar: Czy to jest z mięsem? Czy w tym są orzechy?"
+    },
+    {
+      "type": "table",
+      "caption": "Dieta y alergias",
+      "columns": ["Polaco", "Español"],
+      "rows": [
+        ["Jestem wegetarianinem / wegetarianką.", "Soy vegetariano / vegetariana."],
+        ["Jestem weganinem / weganką.", "Soy vegano / vegana."],
+        ["Nie jem mięsa. Nie piję alkoholu.", "No como carne. No bebo alcohol."],
+        ["Mam alergię na orzechy / na mleko.", "Tengo alergia a los frutos secos / a la leche."],
+        ["Czy to jest bez glutenu?", "¿Esto es sin gluten?"],
+        ["Czy to jest ostre?", "¿Esto pica?"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nie jem mięso. / Nie piję alkohol.",
+      "right": "Nie jem mięsa. / Nie piję alkoholu.",
+      "explanation": "Es la misma regla que nie mam y nie ma: con un verbo en negativo, el complemento directo pasa al genitivo. Jem mięso → nie jem mięsa; piję kawę → nie piję kawy."
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir si te gusta lo que comes se usa smakować, que funciona como «gustar»: lo que se come es el sujeto y la persona va en dativo. Smakuje mi zupa (me gusta la sopa), smakują mi pierogi (me gustan los pierogi). El camarero pregunta Smakuje państwu? (¿les gusta?) o Smakowało? (¿les ha gustado?). Los dativos más útiles: mi (a mí), ci (a ti), panu, pani, państwu."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Ja smakuję pierogi. / Pierogi mi smakuje.",
+      "right": "Smakują mi pierogi. / Pierogi mi smakują.",
+      "explanation": "Smakować concuerda con la comida, como «gustar»: una cosa → smakuje, varias → smakują. Ja smakuję pierogi significaría «pruebo los pierogi» (los saboreo para ver qué tal están)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Jestem wegetarianka. / Jestem wegetarianin.",
+      "right": "Jestem wegetarianką. / Jestem wegetarianinem.",
+      "explanation": "Detrás de jestem, el sustantivo va en instrumental, como con las nacionalidades (jestem Hiszpanem): -ą para una mujer, -em para un hombre."
+    },
+    { "type": "section", "phase": "sound", "title": "La y y la i: ryba, być, my" },
+    {
+      "type": "explanation",
+      "text": "La y polaca no es una i. Es una vocal más grave y oscura, que se pronuncia con la lengua más atrás: algo entre la i y la e española, sin sonreír. Cambiarla por i puede cambiar la palabra: być (ser) y bić (pegar), my (nosotros) y mi (a mí), był (fue) y bił (pegaba). Además, la i ablanda la consonante anterior (ci, si, ni) y la y nunca lo hace: syn [syn] frente a siny [śiny]."
+    },
+    {
+      "type": "table",
+      "caption": "Pares mínimos: y frente a i",
+      "columns": ["Con y", "Significa", "Con i", "Significa"],
+      "rows": [
+        ["być", "ser, estar", "bić", "pegar"],
+        ["my", "nosotros", "mi", "a mí"],
+        ["ryba", "el pescado", "riba (no existe)", "— (suena mal)"],
+        ["syn", "el hijo", "sin (no existe)", "— (suena a «ś»)"],
+        ["ty", "tú", "ci", "a ti"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Comer en Polonia" },
+    {
+      "type": "reading",
+      "title": "Pierogi ruskie — skąd ta nazwa?",
+      "paragraphs": [
+        "Pierogi to jedno z najbardziej znanych polskich dań. Są pierogi z mięsem, z kapustą i grzybami, z owocami i oczywiście ruskie.",
+        "Wiele osób myśli, że pierogi ruskie są z Rosji. To nieprawda. Nazwa jest od Rusi, historycznej krainy na wschodzie dawnej Polski. W Rosji tych pierogów nie znają.",
+        "Pierogi ruskie są z ziemniakami, białym serem i cebulą. Je się je z cebulką albo ze śmietaną.",
+        "W Polsce pierogi je się na obiad albo na kolację. Najlepsze są domowe, robione przez babcię."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "El obiad, la comida principal, se toma entre las 13:00 y las 16:00 y tiene casi siempre dos platos: una sopa (zupa) y un segundo de carne o pescado con patatas y surówka, una ensalada de verdura rallada. Se acompaña a menudo con kompot, una bebida casera de fruta cocida.",
+        "Muchos restaurantes ofrecen a mediodía un zestaw dnia o obiad dnia, parecido al menú del día español, a buen precio. La cena (kolacja) suele ser ligera: pan, embutido, queso, verduras.",
+        "La Nochebuena (Wigilia) se celebra con doce platos sin carne: barszcz con uszka (pequeños raviolis de setas), carpa, pierogi de col y setas, y kompot de frutas secas. Se deja un plato vacío en la mesa para un huésped inesperado.",
+        "Para pedir la cuenta se dice Poproszę rachunek. No se suele dejar la propina en la mesa: se dice al pagar cuánto quieres pagar en total, o se deja en efectivo. En Polonia es habitual que cada uno pague lo suyo (osobno), salvo que alguien diga ja zapraszam."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: pide para alguien con una alergia" },
+    {
+      "type": "mission",
+      "title": "Comida en un restaurante polaco con un amigo que no come de todo",
+      "steps": [
+        "Pide la carta y pregunta qué recomienda el camarero: Co pan / pani poleca?",
+        "Explica la dieta o la alergia de tu acompañante: Mój kolega jest wegetarianinem, ma alergię na…",
+        "Pregunta qué lleva un plato (czy to jest z…?, czy są tu orzechy?) y entiende la respuesta.",
+        "Pide para los dos: na pierwsze danie, na drugie danie, do picia, y quizá un deser.",
+        "Responde cuando el camarero pregunte si os gusta: Smakuje nam / Pierogi są pyszne.",
+        "Pide la cuenta, decide si pagáis razem u osobno, y grábate diciendo być, my, ryba y syn con una y bien oscura."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Co pan poleca?", "translation": "¿Qué recomienda usted?" },
+        {
+          "text": "Na pierwsze danie barszcz, a na drugie pierogi ruskie.",
+          "translation": "De primero borsch, y de segundo pierogi ruskie."
+        },
+        { "text": "Czy to jest z mięsem?", "translation": "¿Esto lleva carne?" },
+        {
+          "text": "Jestem wegetarianką. Nie jem mięsa.",
+          "translation": "Soy vegetariana. No como carne."
+        },
+        { "text": "Mam alergię na orzechy.", "translation": "Tengo alergia a los frutos secos." },
+        { "text": "Jem zupę i piję kompot.", "translation": "Como sopa y bebo compota." },
+        {
+          "text": "Smakuje mi. Pierogi są pyszne!",
+          "translation": "Me gusta. ¡Los pierogi están riquísimos!"
+        },
+        { "text": "Poproszę rachunek.", "translation": "La cuenta, por favor." }
+      ],
+      "canDo": [
+        "pedir un menú completo: primero, segundo, postre y bebida",
+        "preguntar qué lleva un plato y entender los ingredientes",
+        "explicar que no como algo o que tengo una alergia",
+        "conjugar jeść y pić y saber cuál usar",
+        "decir si me gusta la comida con smakować",
+        "distinguir la y de la i al pronunciar"
+      ]
+    }
+  ]
+}

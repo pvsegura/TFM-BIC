@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-translate-allergy",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 4820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 67,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Mi hermana tiene alergia a los frutos secos.",
+  "explanation": "Moja siostra ma alergię na orzechy.",
+  "configuration": {
+    "acceptedAnswers": ["Moja siostra ma alergię na orzechy."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-match-taste",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 4590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "Une cada adjetivo con su contrario.",
+  "explanation": "Słony ↔ słodki; gorący ↔ zimny; pyszny ↔ niedobry.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "słony",
+        "right": "słodki"
+      },
+      {
+        "left": "gorący",
+        "right": "zimny"
+      },
+      {
+        "left": "pyszny",
+        "right": "niedobry"
+      }
+    ]
+  }
+}

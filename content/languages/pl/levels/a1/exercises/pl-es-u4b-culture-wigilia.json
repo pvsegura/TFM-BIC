@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-culture-wigilia",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 4790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 59,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: en la cena de Nochebuena (Wigilia) se sirven doce platos sin carne.",
+  "explanation": "Sí: barszcz con uszka, carpa, pierogi… y un plato vacío para un huésped inesperado.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

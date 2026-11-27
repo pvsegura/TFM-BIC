@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-ruskie",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "¿De qué son los pierogi ruskie?",
+  "explanation": "Pierogi ruskie: patata, queso fresco y cebolla.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "De patata y queso."
+      },
+      {
+        "id": "opt-b",
+        "text": "De carne."
+      },
+      {
+        "id": "opt-c",
+        "text": "De col y setas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

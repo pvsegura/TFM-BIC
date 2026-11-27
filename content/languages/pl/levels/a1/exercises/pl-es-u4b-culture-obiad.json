@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-culture-obiad",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 58,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué suele tener un obiad polaco?",
+  "explanation": "Sopa y segundo plato (carne o pescado con patatas y surówka), a menudo con kompot.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Sopa y segundo plato."
+      },
+      {
+        "id": "opt-b",
+        "text": "Solo un bocadillo."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tres platos de carne."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

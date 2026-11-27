@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-wegetarianka",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "Eres mujer y vegetariana. ¿Qué dices?",
+  "explanation": "Jestem + instrumental: wegetarianką.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jestem wegetarianką."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jestem wegetarianka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jestem wegetarianinem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

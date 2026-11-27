@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-gap-conj",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 4610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "Completa con jeść o pić.",
+  "explanation": "Oni jedzą; ty pijesz; my jemy.",
+  "configuration": {
+    "text": "Polacy ___ (jeść) dużo zupy. Co ___ (pić, ty)? My ___ (jeść) pierogi.",
+    "gaps": [
+      {
+        "accepted": ["jedzą"]
+      },
+      {
+        "accepted": ["pijesz"]
+      },
+      {
+        "accepted": ["jemy"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

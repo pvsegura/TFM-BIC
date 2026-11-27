@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u4b-listen-nuts",
+  "lessonId": "pl-es-unit-4-restaurant",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 4540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 4,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué postre lleva frutos secos?",
+  "explanation": "W serniku nie ma orzechów, ale w makowcu są.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El makowiec."
+      },
+      {
+        "id": "opt-b",
+        "text": "El sernik."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ninguno."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
