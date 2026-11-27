@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-translate-sofa",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 31,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Debajo de la ventana está el sofá.",
+  "explanation": "Pod oknem stoi kanapa (o: jest kanapa).",
+  "configuration": {
+    "acceptedAnswers": [
+      "Pod oknem stoi kanapa.",
+      "Pod oknem jest kanapa.",
+      "Kanapa stoi pod oknem."
+    ],
+    "caseSensitive": false
+  }
+}

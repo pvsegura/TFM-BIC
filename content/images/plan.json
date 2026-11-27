@@ -130,5 +130,9 @@
   {
     "asset": "a1-u8-flat.png",
     "prompt": "a middle-aged woman shows a bright furnished living room to a young man, a sofa, a dining table with chairs, a tall window with a small balcony and sunlight, tiled floor, no text or signs"
+  },
+  {
+    "asset": "a1-pl-u8-housewarming.png",
+    "prompt": "at the open door of an apartment a young woman hands a young man a round loaf of bread with a small salt cellar on top, both smiling, behind them a living room with a sofa under a window and a painting above it, no text or signs"
   }
 ]

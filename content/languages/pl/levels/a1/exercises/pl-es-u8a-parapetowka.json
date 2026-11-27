@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-parapetowka",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es una parapetówka?",
+  "explanation": "La fiesta para inaugurar un piso nuevo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La fiesta de inauguración de un piso."
+      },
+      {
+        "id": "opt-b",
+        "text": "El alféizar de la ventana."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una mudanza."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-bardziej",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «mejor» (dobry)?",
+  "explanation": "Irregular: lepszy, nunca bardziej dobry.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "lepszy"
+      },
+      {
+        "id": "opt-b",
+        "text": "bardziej dobry"
+      },
+      {
+        "id": "opt-c",
+        "text": "dobrzejszy"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

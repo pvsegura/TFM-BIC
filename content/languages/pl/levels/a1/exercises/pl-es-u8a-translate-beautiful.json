@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-translate-beautiful",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8440,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 34,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¡Qué bonito está esto!",
+  "explanation": "Jak tu ładnie!",
+  "configuration": {
+    "acceptedAnswers": ["Jak tu ładnie!", "Jak tu pięknie!"],
+    "caseSensitive": false
+  }
+}

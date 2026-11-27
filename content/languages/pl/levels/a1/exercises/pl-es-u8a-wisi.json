@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-wisi",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8210,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 11,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es lo más natural?",
+  "explanation": "La lámpara del techo cuelga: wisi.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nad stołem wisi lampa."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nad stołem leży lampa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nad stołem stoi lampa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

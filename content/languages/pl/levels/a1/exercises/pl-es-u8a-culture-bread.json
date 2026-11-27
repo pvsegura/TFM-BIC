@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-culture-bread",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8390,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 29,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué simbolizan el pan y la sal en una casa nueva?",
+  "explanation": "Que en esa casa nunca faltará nada.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Que nunca faltará nada."
+      },
+      {
+        "id": "opt-b",
+        "text": "Que la casa es vieja."
+      },
+      {
+        "id": "opt-c",
+        "text": "Que el anfitrión debe cocinar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

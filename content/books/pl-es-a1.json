@@ -1,7 +1,7 @@
 {
   "course": "pl-es-a1",
   "podrecznik": {
-    "pages": 122,
+    "pages": 130,
     "index": {
       "unit:1": 5,
       "lesson:pl-es-unit-1-hello": 6,
@@ -65,11 +65,19 @@
       "section:7/sound": 91,
       "section:7/culture": 91,
       "section:7/express": 92,
-      "lesson:pl-es-unit-7-market": 93
+      "lesson:pl-es-unit-7-market": 93,
+      "unit:8": 101,
+      "lesson:pl-es-unit-8-home": 102,
+      "section:8/perceive": 102,
+      "section:8/connect": 103,
+      "section:8/structure": 104,
+      "section:8/sound": 105,
+      "section:8/culture": 105,
+      "section:8/express": 106
     }
   },
   "zeszyt": {
-    "pages": 94,
+    "pages": 104,
     "index": {
       "unit:1": 7,
       "lesson:pl-es-unit-1-hello": 7,
@@ -602,7 +610,45 @@
       "exercise:7.66": 72,
       "exercise:7.67": 73,
       "exercise:7.68": 73,
-      "exercise:7.69": 74
+      "exercise:7.69": 74,
+      "unit:8": 77,
+      "lesson:pl-es-unit-8-home": 77,
+      "exercise:8.1": 77,
+      "exercise:8.2": 77,
+      "exercise:8.3": 77,
+      "exercise:8.4": 77,
+      "exercise:8.5": 77,
+      "exercise:8.6": 77,
+      "exercise:8.7": 77,
+      "exercise:8.8": 77,
+      "exercise:8.9": 77,
+      "exercise:8.10": 78,
+      "exercise:8.11": 78,
+      "exercise:8.12": 78,
+      "exercise:8.13": 78,
+      "exercise:8.14": 78,
+      "exercise:8.15": 78,
+      "exercise:8.16": 78,
+      "exercise:8.17": 78,
+      "exercise:8.18": 78,
+      "exercise:8.19": 78,
+      "exercise:8.20": 78,
+      "exercise:8.21": 79,
+      "exercise:8.22": 79,
+      "exercise:8.23": 79,
+      "exercise:8.24": 79,
+      "exercise:8.25": 79,
+      "exercise:8.26": 79,
+      "exercise:8.27": 79,
+      "exercise:8.28": 79,
+      "exercise:8.29": 79,
+      "exercise:8.30": 79,
+      "exercise:8.31": 79,
+      "exercise:8.32": 79,
+      "exercise:8.33": 80,
+      "exercise:8.34": 80,
+      "exercise:8.35": 80,
+      "exercise:8.36": 80
     }
   }
 }

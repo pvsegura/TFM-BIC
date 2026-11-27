@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-pietro",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 20,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «vivo en el tercer piso»?",
+  "explanation": "Na + locativo: na trzecim piętrze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mieszkam na trzecim piętrze."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mieszkam w trzecie piętro."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mieszkam na trzy piętro."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

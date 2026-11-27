@@ -1,0 +1,301 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1150,
+  "unit": 8,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 8A. Parapetówka — la casa, dónde están las cosas y comparar",
+  "description": "Enseñas tu piso, dices dónde está cada cosa y comparas: pokój, kuchnia, łazienka, stoi / leży / wisi, nad, pod, przed, za, między + instrumental, większy, tańszy, lepszy niż…",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Pan y sal para el piso nuevo" },
+    {
+      "type": "explanation",
+      "text": "Javier se ha mudado a un piso más grande y organiza una parapetówka, la fiesta para inaugurar la casa. Kasia llega la primera, con pan y sal, como manda la tradición. Primera escucha: ¿cuántas habitaciones tiene el piso? Segunda: ¿dónde están el sofá, el cuadro y el dormitorio? Tercera: fíjate en las comparaciones: większe, jaśniejsze, mniejsza, droższe, lepsze."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u8-housewarming.png",
+      "alt": "En la puerta de un piso, una mujer joven entrega a un hombre una hogaza de pan con un salero encima; al fondo se ve un salón con un sofá."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Kasia",
+          "text": "Cześć, Javier! Wszystkiego dobrego na nowym miejscu! Mam dla ciebie chleb i sól.",
+          "translation": "¡Hola, Javier! ¡Que te vaya muy bien en tu casa nueva! Te traigo pan y sal."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dziękuję! Wejdź. To jest moje nowe mieszkanie.",
+          "translation": "¡Gracias! Pasa. Este es mi piso nuevo."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Jak tu ładnie! Jest większe niż twoje stare mieszkanie?",
+          "translation": "¡Qué bonito! ¿Es más grande que tu piso de antes?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Tak, jest większe i jaśniejsze. Ma dwa pokoje, kuchnię i łazienkę.",
+          "translation": "Sí, es más grande y más luminoso. Tiene dos habitaciones, cocina y baño."
+        },
+        { "speaker": "Kasia", "text": "A to jest salon?", "translation": "¿Y esto es el salón?" },
+        {
+          "speaker": "Javier",
+          "text": "Tak. Pod oknem stoi kanapa, a nad kanapą wisi obraz z Sewilli.",
+          "translation": "Sí. Debajo de la ventana está el sofá, y encima del sofá cuelga un cuadro de Sevilla."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Piękny! A gdzie śpisz?",
+          "translation": "¡Precioso! ¿Y dónde duermes?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Sypialnia jest obok łazienki, na końcu korytarza. Jest mniejsza niż salon, ale cichsza.",
+          "translation": "El dormitorio está al lado del baño, al final del pasillo. Es más pequeño que el salón, pero más tranquilo."
+        },
+        { "speaker": "Kasia", "text": "A kuchnia?", "translation": "¿Y la cocina?" },
+        {
+          "speaker": "Javier",
+          "text": "Kuchnia jest mała, ale ma wszystko: lodówkę, kuchenkę i zmywarkę. A na stole leżą przekąski dla gości!",
+          "translation": "La cocina es pequeña, pero tiene de todo: nevera, cocina y lavavajillas. ¡Y en la mesa hay aperitivos para los invitados!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Super. Drogo płacisz?",
+          "translation": "Genial. ¿Pagas mucho?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Trochę drożej niż za stare, ale to mieszkanie jest dużo lepsze. I jest na drugim piętrze, nie na parterze.",
+          "translation": "Un poco más que por el de antes, pero este piso es mucho mejor. Y está en el segundo piso, no en la planta baja."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Wspaniale. A kiedy przychodzą inni goście?",
+          "translation": "Estupendo. ¿Y cuándo llegan los demás invitados?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "O siódmej. Jesteś pierwsza, więc pomożesz mi z sałatką!",
+          "translation": "A las siete. Eres la primera, ¡así que me ayudarás con la ensalada!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "El piso y los muebles" },
+    {
+      "type": "table",
+      "caption": "Las partes de la casa",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["mieszkanie", "el piso", "dom", "la casa"],
+        ["pokój", "la habitación", "salon", "el salón"],
+        ["sypialnia", "el dormitorio", "kuchnia", "la cocina"],
+        ["łazienka", "el baño", "toaleta", "el aseo, el váter"],
+        ["przedpokój", "el recibidor", "korytarz", "el pasillo"],
+        ["balkon", "el balcón", "piwnica", "el trastero, el sótano"],
+        ["parter", "la planta baja", "piętro", "el piso, la planta"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Muebles y aparatos",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["łóżko", "la cama", "szafa", "el armario"],
+        ["kanapa", "el sofá", "fotel", "el sillón"],
+        ["stół", "la mesa", "krzesło", "la silla"],
+        ["biurko", "el escritorio", "półka", "la estantería"],
+        ["lampa", "la lámpara", "obraz", "el cuadro"],
+        ["lodówka", "la nevera", "kuchenka", "la cocina (el fogón)"],
+        ["pralka", "la lavadora", "zmywarka", "el lavavajillas"],
+        ["okno", "la ventana", "drzwi", "la puerta (solo plural)"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cómo es",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["jasny", "luminoso", "ciemny", "oscuro"],
+        ["cichy", "tranquilo", "głośny", "ruidoso"],
+        ["wygodny", "cómodo", "niewygodny", "incómodo"],
+        ["nowoczesny", "moderno", "stary", "viejo, antiguo"],
+        ["umeblowany", "amueblado", "wynajem / czynsz", "el alquiler / la cuota mensual"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — PARAPETÓWKA viene de parapet, el alféizar de la ventana: la fiesta en la que uno se sienta en el alféizar de su piso nuevo, aún sin muebles. PRZEDPOKÓJ es literalmente «antes de la habitación» (przed + pokój). SYPIALNIA lleva dentro spać, dormir. LODÓWKA viene de lód, hielo: «la del hielo». Y ZMYWARKA viene de zmywać, que ya conoces de la unidad 5: fregar los platos."
+    },
+    { "type": "section", "phase": "structure", "title": "Stoi, leży, wisi; dónde; comparar" },
+    {
+      "type": "explanation",
+      "text": "Para decir dónde está un objeto, el español usa «estar» o «hay». El polaco puede usar jest, pero lo más natural es decir cómo está colocado: stoi (está de pie: muebles, botellas, la casa), leży (está tumbado: libros, llaves, comida en la mesa, una alfombra) y wisi (cuelga: cuadros, lámparas, ropa en el armario). En plural: stoją, leżą, wiszą."
+    },
+    {
+      "type": "table",
+      "caption": "Stać, leżeć, wisieć",
+      "columns": ["Verbo", "Singular", "Plural", "Ejemplo"],
+      "rows": [
+        ["stać (estar de pie)", "stoi", "stoją", "Pod oknem stoi kanapa."],
+        ["leżeć (estar tumbado)", "leży", "leżą", "Na stole leżą klucze."],
+        ["wisieć (colgar)", "wisi", "wiszą", "Nad kanapą wisi obraz."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Na ścianie stoi obraz. / Na stole wisi książka.",
+      "right": "Na ścianie wisi obraz. / Na stole leży książka.",
+      "explanation": "El verbo describe la posición real: lo colgado wisi, lo plano o tumbado leży, lo que tiene patas o está vertical stoi. Si dudas, jest siempre es correcto: na stole jest książka."
+    },
+    {
+      "type": "explanation",
+      "text": "Para situar las cosas, cinco preposiciones piden instrumental: nad (encima de, sin tocar), pod (debajo de), przed (delante de), za (detrás de) y między (entre). Na (sobre, tocando) y w (dentro) piden locativo, como ya sabes; obok (al lado de) pide genitivo."
+    },
+    {
+      "type": "table",
+      "caption": "¿Dónde está?",
+      "columns": ["Preposición", "Caso", "Español", "Ejemplo"],
+      "rows": [
+        ["na", "locativo", "sobre (tocando)", "na stole, na półce"],
+        ["w", "locativo", "en, dentro de", "w szafie, w kuchni"],
+        ["nad", "instrumental", "encima de (sin tocar)", "nad kanapą, nad stołem"],
+        ["pod", "instrumental", "debajo de", "pod oknem, pod łóżkiem"],
+        ["przed / za", "instrumental", "delante de / detrás de", "przed domem, za drzwiami"],
+        ["między", "instrumental", "entre", "między szafą a oknem"],
+        ["obok", "genitivo", "al lado de", "obok łazienki"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Kanapa stoi pod okno. / Obraz wisi nad kanapa.",
+      "right": "Kanapa stoi pod oknem. / Obraz wisi nad kanapą.",
+      "explanation": "Detrás de nad, pod, przed, za y między va el instrumental: -em para masculino y neutro (oknem, stołem, łóżkiem), -ą para femenino (kanapą, szafą)."
+    },
+    {
+      "type": "explanation",
+      "text": "Para comparar, el adjetivo polaco cambia de forma, como el inglés big → bigger. La terminación más común es -szy (nowy → nowszy, tani → tańszy, cichy → cichszy) o -ejszy cuando hay grupos de consonantes (jasny → jaśniejszy, ładny → ładniejszy). Cuatro son irregulares: duży → większy, mały → mniejszy, dobry → lepszy, zły → gorszy. «Que» se dice niż: Moje mieszkanie jest większe niż twoje."
+    },
+    {
+      "type": "table",
+      "caption": "Comparativos",
+      "columns": ["Adjetivo", "Comparativo", "Adjetivo", "Comparativo"],
+      "rows": [
+        ["duży", "większy", "mały", "mniejszy"],
+        ["dobry", "lepszy", "zły", "gorszy"],
+        ["tani", "tańszy", "drogi", "droższy"],
+        ["nowy", "nowszy", "stary", "starszy"],
+        ["cichy", "cichszy", "jasny", "jaśniejszy"],
+        ["ładny", "ładniejszy", "wygodny", "wygodniejszy"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Mi piso es más grande que el tuyo. El salón es tan grande como el dormitorio.",
+      "target": "Moje mieszkanie jest większe niż twoje. Salon jest tak duży jak sypialnia.",
+      "note": "El comparativo concuerda como cualquier adjetivo: większy (m), większa (f), większe (n). «Tan… como» es tak… jak. Para adverbios también existe: drogo → drożej (más caro), dużo → więcej (más)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Bardziej duży. / Bardziej dobry. / Większy od ja.",
+      "right": "Większy. / Lepszy. / Większy niż ja (o: większy ode mnie).",
+      "explanation": "Con los adjetivos cortos no se usa bardziej (más): se cambia la terminación. Bardziej se reserva para adjetivos largos o participios: bardziej nowoczesny, bardziej zmęczony. Y después de niż va el nominativo: niż ja, niż twoje."
+    },
+    {
+      "type": "explanation",
+      "text": "Para el piso donde vives se usa na + locativo del ordinal: na parterze (en la planta baja), na pierwszym piętrze, na drugim piętrze, na trzecim piętrze. Igual que en España, el pierwsze piętro es el que está encima de la planta baja."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Exclamaciones: Jak tu ładnie! Jaki piękny obraz!"
+    },
+    {
+      "type": "explanation",
+      "text": "Para admirar algo, el polaco usa jak + adverbio (Jak tu ładnie! ¡Qué bonito está esto!) o jaki / jaka / jakie + adjetivo y sustantivo (Jaki piękny obraz! Jaka duża kuchnia! Jakie jasne mieszkanie!). La entonación sube con fuerza en la palabra que admiras y baja al final. En una parapetówka se dicen muchas: el anfitrión espera que admires su casa."
+    },
+    {
+      "type": "table",
+      "caption": "Admirar una casa",
+      "columns": ["Exclamación", "Español", "Dónde sube la voz"],
+      "rows": [
+        ["Jak tu ładnie!", "¡Qué bonito está esto!", "ŁAD-nie"],
+        ["Jaki piękny obraz!", "¡Qué cuadro tan bonito!", "PIĘK-ny"],
+        ["Jaka duża kuchnia!", "¡Qué cocina tan grande!", "DU-ża"],
+        ["Jakie jasne mieszkanie!", "¡Qué piso tan luminoso!", "JAS-ne"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Vivir en un piso polaco" },
+    {
+      "type": "reading",
+      "title": "Mieszkanie do wynajęcia",
+      "paragraphs": [
+        "Wynajmę dwupokojowe mieszkanie w Krakowie, na Grzegórzkach. Mieszkanie jest na drugim piętrze w nowym bloku z windą. Ma czterdzieści osiem metrów kwadratowych.",
+        "W salonie jest aneks kuchenny: lodówka, kuchenka, piekarnik i zmywarka. Sypialnia jest mniejsza, ale cichsza, bo okno jest od podwórza. Łazienka ma prysznic i pralkę.",
+        "Mieszkanie jest umeblowane i jasne, z balkonem. Obok bloku jest przystanek tramwajowy, sklep i park.",
+        "Czynsz: dwa tysiące osiemset złotych miesięcznie plus media. Kaucja: jeden miesiąc. Zwierzęta po uzgodnieniu."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "La parapetówka (o parapet) es la fiesta para inaugurar un piso nuevo. Los invitados traen pan y sal, símbolo de que en esa casa nunca faltará nada, o un detalle útil para la casa. El anfitrión enseña todas las habitaciones y espera elogios.",
+        "Muchos polacos viven en bloques de pisos (blok), a menudo de la época comunista, o en edificios nuevos con aparcamiento y portero automático. En los anuncios el tamaño se da en metros cuadrados y el número de habitaciones (dwupokojowe = de dos habitaciones) cuenta el salón como habitación.",
+        "En Polonia es muy común el aneks kuchenny, una cocina abierta dentro del salón. Al alquiler se suman los media (luz, agua, gas, calefacción). La calefacción suele ser central y fuerte: en invierno, dentro de casa se está en manga corta.",
+        "Como ya sabes, en casa se quitan los zapatos. Y en un bloque conviene respetar la cisza nocna (de 22:00 a 6:00): una parapetówka ruidosa a medianoche puede acabar con un vecino llamando a la puerta."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: enseña tu casa" },
+    {
+      "type": "mission",
+      "title": "Enseña tu piso a un compañero polaco en tu parapetówka",
+      "steps": [
+        "Da la bienvenida (Wejdź! To jest moje mieszkanie) y di cuántas habitaciones tiene y en qué piso está (na drugim piętrze).",
+        "Describe el salón con stoi, leży y wisi y tres preposiciones con instrumental (pod oknem, nad kanapą…).",
+        "Di dónde está el dormitorio, la cocina y el baño (obok, na końcu korytarza, w…).",
+        "Compara tu piso nuevo con el anterior con tres comparativos (większy, jaśniejszy, droższy, lepszy…) y niż.",
+        "Responde a los elogios del invitado y haz tú dos exclamaciones sobre su regalo: Jaki piękny…! Jak miło!",
+        "Grábate diciendo Jak tu ładnie! y Jaka duża kuchnia! con la entonación de admiración."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Wejdź! To jest moje nowe mieszkanie.",
+          "translation": "¡Pasa! Este es mi piso nuevo."
+        },
+        { "text": "Mieszkam na drugim piętrze.", "translation": "Vivo en el segundo piso." },
+        { "text": "Pod oknem stoi kanapa.", "translation": "Debajo de la ventana está el sofá." },
+        { "text": "Nad kanapą wisi obraz.", "translation": "Encima del sofá cuelga un cuadro." },
+        { "text": "Na stole leżą klucze.", "translation": "Las llaves están en la mesa." },
+        {
+          "text": "Sypialnia jest mniejsza niż salon, ale cichsza.",
+          "translation": "El dormitorio es más pequeño que el salón, pero más tranquilo."
+        },
+        {
+          "text": "To mieszkanie jest lepsze niż stare.",
+          "translation": "Este piso es mejor que el anterior."
+        },
+        { "text": "Jak tu ładnie!", "translation": "¡Qué bonito está esto!" }
+      ],
+      "canDo": [
+        "nombrar las partes de la casa, los muebles y los aparatos",
+        "decir dónde está algo con stoi, leży y wisi",
+        "usar nad, pod, przed, za y między con instrumental",
+        "comparar con -szy / -ejszy, los irregulares y niż",
+        "decir en qué piso vivo (na pierwszym piętrze, na parterze)",
+        "hacer exclamaciones de admiración con jak y jaki"
+      ]
+    }
+  ]
+}

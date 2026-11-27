@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-write-invite",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 8460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 36,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe una invitación a tu parapetówka: dirección, piso, día, hora y qué pueden traer los invitados.",
+  "explanation": "Zapraszam na parapetówkę…; mieszkam na … piętrze; o której; możecie przynieść…",
+  "configuration": {
+    "modelAnswer": "Cześć wszystkim! Zapraszam na parapetówkę w sobotę o dziewiętnastej. Mój nowy adres to ulica Długa 15, mieszkanie numer 8, na drugim piętrze. Nie ma windy! Możecie przynieść coś do picia. Jedzenie jest moje. Do zobaczenia!",
+    "checklist": ["invitación", "dirección y piso", "día y hora", "qué traer"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-niz",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Niż + nominativo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mój pokój jest większy niż twój."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mój pokój jest większy od twój."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mój pokój jest więcej duży niż twój."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

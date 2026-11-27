@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-listen-rooms",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tiene el piso?",
+  "explanation": "Ma dwa pokoje, kuchnię i łazienkę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dos habitaciones, cocina y baño."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tres habitaciones y dos baños."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una habitación y cocina."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

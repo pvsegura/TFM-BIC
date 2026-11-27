@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-listen-floor",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿en qué piso está el nuevo piso de Javier?",
+  "explanation": "Jest na drugim piętrze, nie na parterze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En el segundo."
+      },
+      {
+        "id": "opt-b",
+        "text": "En la planta baja."
+      },
+      {
+        "id": "opt-c",
+        "text": "En el cuarto."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

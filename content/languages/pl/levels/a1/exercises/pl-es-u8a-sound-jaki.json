@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-sound-jaki",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8330,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 23,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo dices «¡Qué cocina tan grande!»?",
+  "explanation": "Jaka (kuchnia es femenino) + adjetivo + sustantivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jaka duża kuchnia!"
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak duża kuchnia!"
+      },
+      {
+        "id": "opt-c",
+        "text": "Jaki duży kuchnia!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

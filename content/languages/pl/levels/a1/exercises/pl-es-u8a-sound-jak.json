@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-sound-jak",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 25,
+    "phase": "sound"
+  },
+  "prompt": "¿Qué exclamación usa jak (no jaki)?",
+  "explanation": "Jak + adverbio: Jak tu ładnie!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jak tu ładnie!"
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak piękny obraz!"
+      },
+      {
+        "id": "opt-c",
+        "text": "Jak jasne mieszkanie!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

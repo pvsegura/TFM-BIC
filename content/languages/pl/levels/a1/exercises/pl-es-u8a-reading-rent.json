@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-reading-rent",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 8380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: el alquiler de 2800 zł ya incluye luz, agua y calefacción.",
+  "explanation": "Plus media — se pagan aparte.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

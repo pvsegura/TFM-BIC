@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-order-compare",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 8320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 22,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: El dormitorio es más pequeño que el salón.",
+  "explanation": "Sypialnia jest mniejsza niż salon.",
+  "configuration": {
+    "items": ["Sypialnia", "jest", "mniejsza", "niż", "salon."],
+    "joiner": " "
+  }
+}

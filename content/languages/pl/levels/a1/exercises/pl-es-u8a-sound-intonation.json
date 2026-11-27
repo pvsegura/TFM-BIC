@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-sound-intonation",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 8340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 24,
+    "phase": "sound"
+  },
+  "prompt": "En Jak tu ładnie! la voz sube con fuerza en ŁAD- y baja al final.",
+  "explanation": "Sí: se resalta la palabra que se admira.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

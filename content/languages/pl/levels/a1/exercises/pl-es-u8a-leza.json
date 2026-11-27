@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-leza",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8220,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 12,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Na stole ___ klucze.",
+  "explanation": "Klucze (plural, tumbadas): leżą.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "leżą"
+      },
+      {
+        "id": "opt-b",
+        "text": "leży"
+      },
+      {
+        "id": "opt-c",
+        "text": "wiszą"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

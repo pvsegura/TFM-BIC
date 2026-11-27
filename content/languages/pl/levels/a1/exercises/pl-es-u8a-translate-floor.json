@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-translate-floor",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 8400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 30,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Vivo en el segundo piso.",
+  "explanation": "Mieszkam na drugim piętrze.",
+  "configuration": {
+    "acceptedAnswers": ["Mieszkam na drugim piętrze."],
+    "caseSensitive": false
+  }
+}

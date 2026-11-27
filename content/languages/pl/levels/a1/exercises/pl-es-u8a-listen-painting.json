@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-listen-painting",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿dónde está el cuadro de Sevilla?",
+  "explanation": "Nad kanapą wisi obraz z Sewilli.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Encima del sofá."
+      },
+      {
+        "id": "opt-b",
+        "text": "En el dormitorio."
+      },
+      {
+        "id": "opt-c",
+        "text": "Debajo de la ventana."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

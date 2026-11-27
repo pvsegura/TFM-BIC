@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-reading-kitchen",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿dónde está la cocina?",
+  "explanation": "W salonie jest aneks kuchenny.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Abierta, en el salón."
+      },
+      {
+        "id": "opt-b",
+        "text": "En una habitación aparte."
+      },
+      {
+        "id": "opt-c",
+        "text": "En el balcón."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

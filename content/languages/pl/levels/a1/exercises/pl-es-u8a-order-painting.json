@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-order-painting",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 8310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 21,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Encima del sofá cuelga un cuadro.",
+  "explanation": "Nad kanapą + wisi + obraz.",
+  "configuration": {
+    "items": ["Nad", "kanapą", "wisi", "obraz."],
+    "joiner": " "
+  }
+}

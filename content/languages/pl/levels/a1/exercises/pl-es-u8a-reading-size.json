@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-reading-size",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8360,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 26,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuántos metros tiene el piso del anuncio?",
+  "explanation": "Ma czterdzieści osiem metrów kwadratowych.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "48 m²."
+      },
+      {
+        "id": "opt-b",
+        "text": "84 m²."
+      },
+      {
+        "id": "opt-c",
+        "text": "28 m²."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

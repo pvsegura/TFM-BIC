@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-drzwi",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8190,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 9,
+    "phase": "connect"
+  },
+  "prompt": "Completa: Te ___ są nowe. (drzwi)",
+  "explanation": "Drzwi solo existe en plural: te drzwi są.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "drzwi"
+      },
+      {
+        "id": "opt-b",
+        "text": "drzwa"
+      },
+      {
+        "id": "opt-c",
+        "text": "drzwia"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

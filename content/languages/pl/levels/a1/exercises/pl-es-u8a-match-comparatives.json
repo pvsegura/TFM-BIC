@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-match-comparatives",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "Une cada adjetivo con su comparativo.",
+  "explanation": "Duży → większy, dobry → lepszy, tani → tańszy, jasny → jaśniejszy.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "duży",
+        "right": "większy"
+      },
+      {
+        "left": "dobry",
+        "right": "lepszy"
+      },
+      {
+        "left": "mały",
+        "right": "mniejszy"
+      },
+      {
+        "left": "tani",
+        "right": "tańszy"
+      },
+      {
+        "left": "jasny",
+        "right": "jaśniejszy"
+      }
+    ]
+  }
+}

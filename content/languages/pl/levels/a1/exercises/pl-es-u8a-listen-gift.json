@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-listen-gift",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8110,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 1,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué le trae Kasia a Javier?",
+  "explanation": "Mam dla ciebie chleb i sól.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pan y sal."
+      },
+      {
+        "id": "opt-b",
+        "text": "Flores."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una botella de vino."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

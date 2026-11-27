@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-obok",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 8250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Sypialnia jest obok ___ (łazienka).",
+  "explanation": "Obok + genitivo: łazienki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "łazienki"
+      },
+      {
+        "id": "opt-b",
+        "text": "łazienką"
+      },
+      {
+        "id": "opt-c",
+        "text": "łazience"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

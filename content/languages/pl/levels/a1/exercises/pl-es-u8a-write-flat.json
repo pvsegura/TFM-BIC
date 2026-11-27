@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-write-flat",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 8450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 35,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Describe tu piso (real o imaginario) para un amigo polaco: piso, habitaciones, dónde están los muebles y una comparación con tu piso anterior.",
+  "explanation": "Revisa: na … piętrze, stoi / leży / wisi, nad / pod / między + instrumental, comparativos con niż.",
+  "configuration": {
+    "modelAnswer": "Mieszkam na trzecim piętrze w starej kamienicy. Mieszkanie ma dwa pokoje, kuchnię i łazienkę. W salonie pod oknem stoi kanapa, a nad kanapą wisi duży obraz. Między szafą a oknem stoi biurko. Sypialnia jest mniejsza niż salon, ale cichsza. To mieszkanie jest droższe niż moje stare, ale jaśniejsze i lepsze.",
+    "checklist": ["piso y habitaciones", "posición de los muebles", "preposiciones", "comparación"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

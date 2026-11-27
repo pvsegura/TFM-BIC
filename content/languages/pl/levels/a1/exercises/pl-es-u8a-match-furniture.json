@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-match-furniture",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Une cada mueble o aparato con su traducción.",
+  "explanation": "Szafa = armario; lodówka = nevera; biurko = escritorio.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "szafa",
+        "right": "el armario"
+      },
+      {
+        "left": "lodówka",
+        "right": "la nevera"
+      },
+      {
+        "left": "biurko",
+        "right": "el escritorio"
+      },
+      {
+        "left": "półka",
+        "right": "la estantería"
+      },
+      {
+        "left": "zmywarka",
+        "right": "el lavavajillas"
+      },
+      {
+        "left": "obraz",
+        "right": "el cuadro"
+      }
+    ]
+  }
+}

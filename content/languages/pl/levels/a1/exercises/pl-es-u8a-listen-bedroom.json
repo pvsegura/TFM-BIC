@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-listen-bedroom",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 8140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: el dormitorio es más grande que el salón.",
+  "explanation": "Jest mniejsza niż salon, ale cichsza.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

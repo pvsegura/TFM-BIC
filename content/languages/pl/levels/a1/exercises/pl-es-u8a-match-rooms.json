@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u8a-match-rooms",
+  "lessonId": "pl-es-unit-8-home",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 8160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 8,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Sypialnia = dormitorio; przedpokój = recibidor; piwnica = trastero.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "sypialnia",
+        "right": "el dormitorio"
+      },
+      {
+        "left": "przedpokój",
+        "right": "el recibidor"
+      },
+      {
+        "left": "korytarz",
+        "right": "el pasillo"
+      },
+      {
+        "left": "piwnica",
+        "right": "el trastero"
+      },
+      {
+        "left": "parter",
+        "right": "la planta baja"
+      }
+    ]
+  }
+}
