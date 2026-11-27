@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-order-birthday",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 2700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 46,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿Cuándo es tu cumpleaños?",
+  "explanation": "Kiedy + masz + urodziny?",
+  "configuration": {
+    "items": ["Kiedy", "masz", "urodziny?"],
+    "joiner": " "
+  }
+}

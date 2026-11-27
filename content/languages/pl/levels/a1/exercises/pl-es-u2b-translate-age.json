@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-translate-age",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2830,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 71,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Mi padre tiene sesenta y cuatro años.",
+  "explanation": "64 termina en 4: lata.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Mój tata ma sześćdziesiąt cztery lata.",
+      "Mój ojciec ma sześćdziesiąt cztery lata."
+    ],
+    "caseSensitive": false
+  }
+}

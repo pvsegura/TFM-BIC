@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-culture-flowers",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 62,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: en Polonia, un ramo de cumpleaños debe tener un número par de flores.",
+  "explanation": "No: número impar. Los ramos pares se asocian a los funerales.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

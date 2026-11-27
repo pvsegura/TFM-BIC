@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-write-48",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 19,
+    "phase": "connect",
+    "lines": 1
+  },
+  "prompt": "Escribe con letras: 48.",
+  "explanation": "Sin «y»: czterdzieści osiem.",
+  "configuration": {
+    "acceptedAnswers": ["czterdzieści osiem"],
+    "caseSensitive": false
+  }
+}

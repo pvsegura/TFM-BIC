@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-order-date",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 2710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 47,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Mi santo es el veinticinco de noviembre.",
+  "explanation": "Mam imieniny + ordinal en genitivo + mes en genitivo.",
+  "configuration": {
+    "items": ["Mam", "imieniny", "dwudziestego", "piątego", "listopada."],
+    "joiner": " "
+  }
+}

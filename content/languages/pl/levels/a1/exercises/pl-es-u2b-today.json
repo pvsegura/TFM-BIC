@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-today",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "Hoy es 5 de octubre. ¿Qué dices?",
+  "explanation": "Który jest dzisiaj? → nominativo: piąty października.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dzisiaj jest piąty października."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dzisiaj jest piątego października."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dzisiaj jest pięć październik."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

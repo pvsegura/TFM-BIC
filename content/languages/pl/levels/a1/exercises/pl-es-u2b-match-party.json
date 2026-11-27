@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-match-party",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2600,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 21,
+    "phase": "connect"
+  },
+  "prompt": "Une las palabras de la fiesta.",
+  "explanation": "Tort = tarta; świeczki = velas; życzenia = felicitaciones.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "tort",
+        "right": "la tarta"
+      },
+      {
+        "left": "świeczki",
+        "right": "las velas"
+      },
+      {
+        "left": "prezent",
+        "right": "el regalo"
+      },
+      {
+        "left": "życzenia",
+        "right": "las felicitaciones"
+      },
+      {
+        "left": "impreza",
+        "right": "la fiesta"
+      }
+    ]
+  }
+}

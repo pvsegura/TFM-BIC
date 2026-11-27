@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-sound-groups",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 53,
+    "phase": "sound"
+  },
+  "prompt": "Une cada grupo con cómo suena.",
+  "explanation": "Szcz = shch, trz = tsh, cz = ch.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "szcz (szczęście)",
+        "right": "[shch]"
+      },
+      {
+        "left": "trz (trzydzieści)",
+        "right": "[tsh]"
+      },
+      {
+        "left": "cz (czternaście)",
+        "right": "[ch]"
+      }
+    ]
+  }
+}

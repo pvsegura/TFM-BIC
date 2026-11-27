@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-translate-september",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 72,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Mi santo es en septiembre.",
+  "explanation": "W + septiembre → we wrześniu.",
+  "configuration": {
+    "acceptedAnswers": ["Mam imieniny we wrześniu."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-listen-today",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué día están hoy?",
+  "explanation": "Czternasty maja.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "14 de mayo."
+      },
+      {
+        "id": "opt-b",
+        "text": "25 de noviembre."
+      },
+      {
+        "id": "opt-c",
+        "text": "18 de mayo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-reading-marta",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 60,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuántos años tiene Marta, la hermana de Kasia?",
+  "explanation": "Ma dwadzieścia sześć lat.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Veintiséis."
+      },
+      {
+        "id": "opt-b",
+        "text": "Treinta."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dieciséis."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

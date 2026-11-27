@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-write-wishes",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 2850,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 75,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe un mensaje de felicitación a un compañero de trabajo que cumple años: felicítalo, pregunta si hay fiesta, di cuándo es tu cumpleaños y propón tomar algo juntos.",
+  "explanation": "Revisa: Wszystkiego najlepszego / Sto lat, la fecha con ordinal en genitivo y el mes en genitivo.",
+  "configuration": {
+    "modelAnswer": "Cześć, Tomek! Wszystkiego najlepszego i sto lat! Czy masz dzisiaj imprezę? Ja mam urodziny dwudziestego marca, więc za dwa miesiące. Może w piątek idziemy na kawę? Zapraszam! Javier",
+    "checklist": ["felicitación", "pregunta por la fiesta", "tu fecha de cumpleaños", "propuesta"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-month-genitive",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 41,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "El mes en la fecha va en genitivo: maja, no maj.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pierwszego maja."
+      },
+      {
+        "id": "opt-b",
+        "text": "Pierwszego maj."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pierwszy maj."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

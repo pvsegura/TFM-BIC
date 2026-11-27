@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-write-family-dates",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 2860,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 76,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe cuándo son los cumpleaños de tres personas de tu familia y cuántos años cumplen este año.",
+  "explanation": "Mój brat ma urodziny… i kończy … lat / lata.",
+  "configuration": {
+    "modelAnswer": "Moja mama ma urodziny piątego lutego i kończy sześćdziesiąt lat. Mój brat ma urodziny dwunastego lipca. Kończy trzydzieści cztery lata. Moja babcia ma urodziny w grudniu, trzeciego grudnia, i kończy osiemdziesiąt dziewięć lat.",
+    "checklist": ["tres personas", "fechas con ordinal", "lat / lata"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

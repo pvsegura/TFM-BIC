@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-culture-who-pays",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 61,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: en una oficina polaca, ¿quién trae la tarta el día del cumpleaños?",
+  "explanation": "La persona que cumple años invita a sus compañeros.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La persona que cumple años."
+      },
+      {
+        "id": "opt-b",
+        "text": "El jefe."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nadie: no se celebra en el trabajo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

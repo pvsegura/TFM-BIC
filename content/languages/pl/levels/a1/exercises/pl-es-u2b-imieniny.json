@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-imieniny",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 20,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué son las imieniny?",
+  "explanation": "Imieniny = el santo, el día de tu nombre en el calendario.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El santo (día del nombre)."
+      },
+      {
+        "id": "opt-b",
+        "text": "El cumpleaños."
+      },
+      {
+        "id": "opt-c",
+        "text": "El aniversario de boda."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

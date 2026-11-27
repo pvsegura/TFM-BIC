@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-reading-gifts",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 59,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Kasia pide a sus invitados regalos caros.",
+  "explanation": "Nie potrzebuję prezentów — no necesita regalos; como mucho, música o flores.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

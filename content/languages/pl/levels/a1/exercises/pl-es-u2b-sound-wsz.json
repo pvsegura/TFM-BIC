@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-sound-wsz",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 51,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo empieza a sonar wszystkiego?",
+  "explanation": "W ante consonante sorda suena f: [fshystkiego].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[fsh…]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[vs…]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[us…]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

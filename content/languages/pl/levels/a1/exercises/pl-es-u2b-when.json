@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-when",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "Tu cumpleaños es el 3 de junio. ¿Qué dices?",
+  "explanation": "Kiedy? → genitivo: trzeciego czerwca.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mam urodziny trzeciego czerwca."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mam urodziny trzeci czerwca."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mam urodziny w trzy czerwiec."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

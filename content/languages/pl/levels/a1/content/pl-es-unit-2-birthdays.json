@@ -1,0 +1,313 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1095,
+  "unit": 2,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 2B. Wszystkiego najlepszego! — cumpleaños, números hasta el 100 y fechas",
+  "description": "Felicitas a alguien, dices cuándo es tu cumpleaños y tu santo, cuentas hasta cien y dices la fecha: kiedy masz urodziny?, dwudziestego marca, w maju, który jest dzisiaj?, sto lat!",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Una tarta en la oficina" },
+    {
+      "type": "explanation",
+      "text": "Hoy es el cumpleaños de Kasia y, como es costumbre en Polonia, ella ha traído una tarta a la oficina para sus compañeros. Primera escucha: ¿cuántos años cumple Kasia? Segunda: ¿cuándo es el cumpleaños de Javier y cuándo son los santos de Tomek y de Kasia? Tercera: fíjate en cómo se dicen las fechas: dwudziestego marca, czternasty maja."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u2-cake.png",
+      "alt": "Tres compañeros de oficina alrededor de una mesa con una tarta de cumpleaños con velas y unas tazas de café."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Javier",
+          "text": "Kasiu, wszystkiego najlepszego! Dzisiaj masz urodziny, prawda?",
+          "translation": "Kasia, ¡felicidades! Hoy es tu cumpleaños, ¿verdad?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Tak, dziękuję! Mam tort dla wszystkich. Częstujcie się!",
+          "translation": "Sí, ¡gracias! Tengo tarta para todos. ¡Servíos!"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Sto lat, Kasiu! Ile lat kończysz, jeśli można zapytać?",
+          "translation": "¡Felicidades, Kasia! ¿Cuántos años cumples, si se puede preguntar?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Trzydzieści. Okrągła liczba!",
+          "translation": "Treinta. ¡Un número redondo!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Naprawdę? Wyglądasz na dwadzieścia pięć!",
+          "translation": "¿De verdad? ¡Aparentas veinticinco!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Jesteś bardzo miły. A ty, Javier, kiedy masz urodziny?",
+          "translation": "Eres muy amable. ¿Y tú, Javier, cuándo es tu cumpleaños?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dwudziestego marca. A w Polsce obchodzicie też imieniny, prawda?",
+          "translation": "El veinte de marzo. Y en Polonia también celebráis el santo, ¿verdad?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Tak! Ja mam imieniny dwudziestego pierwszego grudnia.",
+          "translation": "¡Sí! Yo celebro mi santo el veintiuno de diciembre."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "A ja dwudziestego piątego listopada. Wtedy też jest tort!",
+          "translation": "Y yo, el veinticinco de noviembre. ¡Ese día también hay tarta!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Super. A który jest dzisiaj?",
+          "translation": "Genial. ¿Y a qué día estamos hoy?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Czternasty maja. A w piątek są urodziny szefa: kończy pięćdziesiąt lat!",
+          "translation": "Catorce de mayo. Y el viernes es el cumpleaños del jefe: ¡cumple cincuenta!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Pięćdziesiąt? To kupujemy prezent razem. Kto ma pomysł?",
+          "translation": "¿Cincuenta? Entonces le compramos un regalo entre todos. ¿Quién tiene una idea?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Może kwiaty i dobre wino z Hiszpanii?",
+          "translation": "¿Quizá unas flores y un buen vino de España?"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Números, meses y fiestas" },
+    {
+      "type": "table",
+      "caption": "Las decenas hasta el 100",
+      "columns": ["Nº", "Polaco", "Nº", "Polaco"],
+      "rows": [
+        ["20", "dwadzieścia", "60", "sześćdziesiąt"],
+        ["30", "trzydzieści", "70", "siedemdziesiąt"],
+        ["40", "czterdzieści", "80", "osiemdziesiąt"],
+        ["50", "pięćdziesiąt", "90", "dziewięćdziesiąt"],
+        ["21", "dwadzieścia jeden", "100", "sto"],
+        ["35", "trzydzieści pięć", "99", "dziewięćdziesiąt dziewięć"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Las decenas siguen un patrón: 20 termina en -dzieścia (dwa + dzieścia) y 30 y 40, en -dzieści (trzy + dzieści, cztery + dzieści); de 50 a 90 terminan en -dziesiąt (pięć + dziesiąt, sześć + dziesiąt…). Los números compuestos se forman como en inglés, sin «y»: dwadzieścia jeden (21), czterdzieści osiem (48). Y sto es cien: de ahí la canción Sto lat, «cien años»."
+    },
+    {
+      "type": "table",
+      "caption": "Los meses: el nombre, la fecha (de…) y «en…»",
+      "columns": ["Español", "El mes", "Fecha: 1 de…", "En…"],
+      "rows": [
+        ["enero", "styczeń", "pierwszego stycznia", "w styczniu"],
+        ["febrero", "luty", "pierwszego lutego", "w lutym"],
+        ["marzo", "marzec", "pierwszego marca", "w marcu"],
+        ["abril", "kwiecień", "pierwszego kwietnia", "w kwietniu"],
+        ["mayo", "maj", "pierwszego maja", "w maju"],
+        ["junio", "czerwiec", "pierwszego czerwca", "w czerwcu"],
+        ["julio", "lipiec", "pierwszego lipca", "w lipcu"],
+        ["agosto", "sierpień", "pierwszego sierpnia", "w sierpniu"],
+        ["septiembre", "wrzesień", "pierwszego września", "we wrześniu"],
+        ["octubre", "październik", "pierwszego października", "w październiku"],
+        ["noviembre", "listopad", "pierwszego listopada", "w listopadzie"],
+        ["diciembre", "grudzień", "pierwszego grudnia", "w grudniu"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cumpleaños y fiestas",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["urodziny", "el cumpleaños", "imieniny", "el santo, la onomástica"],
+        ["tort", "la tarta", "świeczki", "las velas"],
+        ["prezent", "el regalo", "kwiaty", "las flores"],
+        ["życzenia", "las felicitaciones", "impreza", "la fiesta"],
+        [
+          "Wszystkiego najlepszego!",
+          "¡Felicidades! (lo mejor)",
+          "Sto lat!",
+          "¡Felicidades! (canción)"
+        ],
+        ["kończyć … lat", "cumplir … años", "zapraszać", "invitar"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — los meses polacos no vienen del latín, sino de la naturaleza. LIPIEC viene de lipa, el tilo, que florece en julio; SIERPIEŃ, de sierp, la hoz de la siega de agosto; LISTOPAD es literalmente «caída de hojas» (liść + padać); GRUDZIEŃ viene de gruda, la tierra helada en terrones; KWIECIEŃ, de kwiat, flor; y PAŹDZIERNIK, de paździerz, los restos del lino que se trabajaba en otoño. Si los imaginas como estampas del año, los recordarás antes que de memoria."
+    },
+    { "type": "section", "phase": "structure", "title": "Fechas, ordinales y edad" },
+    {
+      "type": "explanation",
+      "text": "Para las fechas el polaco usa números ordinales (primero, segundo…), no cardinales como el español. Hay dos formas según la pregunta. ¿A qué día estamos? — Który jest dzisiaj? — Dzisiaj jest czternasty maja (nominativo: -y / -i). ¿Cuándo? — Kiedy? — Czternastego maja (genitivo: -ego). El mes va siempre en genitivo (maja, marca, grudnia) y se escribe con minúscula, como en español."
+    },
+    {
+      "type": "table",
+      "caption": "Ordinales para las fechas",
+      "columns": ["Día", "Który jest dzisiaj? (es…)", "Kiedy? (el día…)"],
+      "rows": [
+        ["1", "pierwszy", "pierwszego"],
+        ["2", "drugi", "drugiego"],
+        ["3", "trzeci", "trzeciego"],
+        ["4", "czwarty", "czwartego"],
+        ["5", "piąty", "piątego"],
+        ["6", "szósty", "szóstego"],
+        ["7", "siódmy", "siódmego"],
+        ["8", "ósmy", "ósmego"],
+        ["9", "dziewiąty", "dziewiątego"],
+        ["10", "dziesiąty", "dziesiątego"],
+        ["11–19", "jedenasty… dziewiętnasty", "jedenastego… dziewiętnastego"],
+        ["20", "dwudziesty", "dwudziestego"],
+        ["21", "dwudziesty pierwszy", "dwudziestego pierwszego"],
+        ["30", "trzydziesty", "trzydziestego"],
+        ["31", "trzydziesty pierwszy", "trzydziestego pierwszego"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Mi cumpleaños es el 20 de marzo. Hoy es 14 de mayo.",
+      "target": "Mam urodziny dwudziestego marca. Dzisiaj jest czternasty maja.",
+      "note": "En polaco no hay «el» ni «de»: el día es un ordinal y el mes va en genitivo. Además, el cumpleaños se «tiene»: mam urodziny (literalmente «tengo cumpleaños»), y urodziny e imieniny son siempre plurales."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mam urodziny dwadzieścia marzec. / Mam urodziny w dwudziesty marca.",
+      "right": "Mam urodziny dwudziestego marca.",
+      "explanation": "Tres cambios a la vez: ordinal (dwudziesty, no dwadzieścia), en genitivo (-ego) y el mes también en genitivo (marca). Sin preposición: la terminación -ego ya significa «el día…»."
+    },
+    {
+      "type": "explanation",
+      "text": "Si solo dices el mes, usa w + la forma de la cuarta columna: Mam urodziny w marcu (en marzo), Kasia ma imieniny w listopadzie. Delante de wrzesień se dice we: we wrześniu. Para los años de una persona repasa la regla de la unidad 1: con números acabados en 2, 3 y 4 (salvo 12, 13 y 14) se dice lata; con los demás, lat. Ahora ya puedes aplicarla a números más altos."
+    },
+    {
+      "type": "table",
+      "caption": "¿Lata o lat? Ile masz lat?",
+      "columns": ["Termina en…", "Ejemplos", "Palabra"],
+      "rows": [
+        ["1 (solo el número 1)", "mam rok", "rok"],
+        ["2, 3, 4 (no 12–14)", "22, 33, 44, 52, 93", "lata"],
+        ["0, 1, 5–9 y 12–19", "21, 25, 30, 41, 50, 68, 100", "lat"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Mam dwadzieścia jeden lata. / Kończę trzydzieści dwa lat.",
+      "right": "Mam dwadzieścia jeden lat. / Kończę trzydzieści dwa lata.",
+      "explanation": "Mira solo la última cifra: 21 termina en 1 y lleva lat; 32 termina en 2 y lleva lata. Para cumplir años se usa kończyć (terminar): kończę trzydzieści lat — termino mis treinta años de vida."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "— Sto lat! — Nie, mam trzydzieści lat.",
+      "right": "— Sto lat! — Dziękuję!",
+      "explanation": "Sto lat (cien años) no habla de tu edad: es la felicitación y la canción que desea que vivas cien años, como nuestro «cumpleaños feliz». Se responde simplemente dziękuję."
+    },
+    {
+      "type": "section",
+      "phase": "sound",
+      "title": "Grupos de consonantes: wszystkiego, trzydzieści, pierwszy"
+    },
+    {
+      "type": "explanation",
+      "text": "En polaco se juntan a menudo tres o cuatro consonantes, algo raro en español. El truco es no meter vocales entre ellas y leer cada grupo como un solo bloque: szcz [shch], trz [tsh], prz [psh], wsz [fsh]. La w delante de una consonante sorda suena f: wszystkiego [fshystkiego], wtorek [ftorek]. Practica primero despacio, sílaba a sílaba, y luego deprisa."
+    },
+    {
+      "type": "table",
+      "caption": "Grupos difíciles de esta lección (pronunciación aproximada)",
+      "columns": ["Palabra", "Cómo suena", "Qué practicar"],
+      "rows": [
+        ["wszystkiego", "[fshystkiego]", "wsz = fsh"],
+        ["najlepszego", "[naylepshego]", "j = y, sz = sh"],
+        ["trzydzieści", "[tshydźeśći]", "trz = tsh, dzie suave"],
+        ["pierwszy", "[pierfshy]", "rwsz = rfsh"],
+        ["czternasty", "[chternasty]", "cz = ch española"],
+        ["szczęście", "[shchęśće]", "szcz = shch"],
+        ["pięćdziesiąt", "[pieńdźeśont]", "ęć se simplifica en [eń]"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Cumpleaños, santos y Sto lat" },
+    {
+      "type": "reading",
+      "title": "Zaproszenie na urodziny",
+      "paragraphs": [
+        "Cześć, Javier! W sobotę, osiemnastego maja, mam imprezę urodzinową. Kończę trzydzieści lat i chcę świętować z przyjaciółmi.",
+        "Zapraszam do mnie, na ulicę Długą 12, o dziewiętnastej. Mam dużo jedzenia: pierogi, sałatki i oczywiście tort.",
+        "Nie potrzebuję prezentów! Ale jeśli chcesz coś przynieść, możesz przynieść dobrą muzykę albo kwiaty.",
+        "Moja siostra, Marta, też przyjdzie. Ma dwadzieścia sześć lat i mówi trochę po hiszpańsku. Do zobaczenia! Kasia"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "En Polonia es quien cumple años el que invita: lleva una tarta o dulces a la oficina, o invita a sus amigos a tomar algo. Los compañeros a menudo hacen una colecta para un regalo común, como en el diálogo.",
+        "Las imieniny (el santo) se celebran tanto como el cumpleaños, sobre todo entre las personas mayores y en el trabajo. Cada día del calendario tiene sus nombres: el 25 de noviembre es el de Katarzyna, el 21 de diciembre uno de los de Tomasz. Muchos calendarios y periódicos polacos indican cada día de quién es el santo.",
+        "Sto lat es la canción de felicitación: «Sto lat, sto lat, niech żyje, żyje nam» — «cien años, que viva, que viva con nosotros». Se canta en cumpleaños, santos, bodas y cualquier celebración, a veces de pie y con una copa en la mano.",
+        "Si regalas flores, lleva un número impar: los ramos con número par se asocian a los funerales. Y los dieciocho años (osiemnastka) son un cumpleaños muy especial: es la mayoría de edad y suele celebrarse con una gran fiesta."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: felicita y organiza un regalo" },
+    {
+      "type": "mission",
+      "title": "El cumpleaños de un compañero de trabajo",
+      "steps": [
+        "Felicita a un compañero polaco por su cumpleaños con dos fórmulas: Wszystkiego najlepszego! y Sto lat!",
+        "Pregúntale cuántos años cumple (con educación: jeśli można zapytać) y responde a su respuesta usando lat o lata correctamente.",
+        "Di cuándo es tu cumpleaños con la fecha completa (dwudziestego marca) y en qué mes es tu santo, si lo celebras (w listopadzie).",
+        "Pregunta y responde: Który jest dzisiaj? — Dzisiaj jest…",
+        "Propón un regalo para otro compañero: Kupujemy prezent razem? Może kwiaty / książkę / wino?",
+        "Grábate leyendo Wszystkiego najlepszego, trzydzieści, pierwszego y szczęście sin añadir vocales."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Wszystkiego najlepszego! / Sto lat!",
+          "translation": "¡Felicidades! / ¡Cumpleaños feliz!"
+        },
+        { "text": "Kiedy masz urodziny?", "translation": "¿Cuándo es tu cumpleaños?" },
+        {
+          "text": "Mam urodziny dwudziestego marca.",
+          "translation": "Mi cumpleaños es el veinte de marzo."
+        },
+        { "text": "Mam imieniny w listopadzie.", "translation": "Mi santo es en noviembre." },
+        {
+          "text": "Który jest dzisiaj? — Czternasty maja.",
+          "translation": "¿A qué día estamos? — A catorce de mayo."
+        },
+        { "text": "Ile lat kończysz?", "translation": "¿Cuántos años cumples?" },
+        {
+          "text": "Kończę trzydzieści dwa lata.",
+          "translation": "Cumplo treinta y dos años."
+        },
+        {
+          "text": "Kupujemy prezent razem?",
+          "translation": "¿Compramos un regalo entre todos?"
+        }
+      ],
+      "canDo": [
+        "felicitar a alguien y responder a una felicitación",
+        "contar hasta cien",
+        "decir la fecha de hoy y la de mi cumpleaños con ordinales",
+        "nombrar los meses y decir «en marzo» (w marcu)",
+        "decir edades altas con lata o lat",
+        "pronunciar grupos de consonantes como wsz, trz y szcz"
+      ]
+    }
+  ]
+}

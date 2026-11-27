@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-listen-age",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuántos años cumple Kasia?",
+  "explanation": "Trzydzieści. Okrągła liczba!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Treinta."
+      },
+      {
+        "id": "opt-b",
+        "text": "Veinticinco."
+      },
+      {
+        "id": "opt-c",
+        "text": "Cincuenta."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

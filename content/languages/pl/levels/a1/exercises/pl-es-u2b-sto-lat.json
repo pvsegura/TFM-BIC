@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-sto-lat",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 45,
+    "phase": "structure"
+  },
+  "prompt": "Alguien te canta Sto lat! ¿Qué respondes?",
+  "explanation": "Sto lat es una felicitación, no una pregunta: dziękuję.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dziękuję!"
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie, mam trzydzieści lat."
+      },
+      {
+        "id": "opt-c",
+        "text": "Sto lat też!"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

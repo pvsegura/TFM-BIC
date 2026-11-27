@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-21",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 43,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "21 termina en 1 (no es el número 1 solo): lat.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Mam dwadzieścia jeden lat."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mam dwadzieścia jeden lata."
+      },
+      {
+        "id": "opt-c",
+        "text": "Mam dwadzieścia jeden rok."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

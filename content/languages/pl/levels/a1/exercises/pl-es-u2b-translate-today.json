@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-translate-today",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 2820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 70,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Hoy es 20 de agosto.",
+  "explanation": "Nominativo: dwudziesty sierpnia.",
+  "configuration": {
+    "acceptedAnswers": ["Dzisiaj jest dwudziesty sierpnia.", "Dziś jest dwudziesty sierpnia."],
+    "caseSensitive": false
+  }
+}

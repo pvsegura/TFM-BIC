@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-sound-vowels",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 52,
+    "phase": "sound"
+  },
+  "prompt": "Para pronunciar trzydzieści es útil meter una vocal: [te-ry-dzieści].",
+  "explanation": "No: los grupos se leen en bloque, sin vocales añadidas: [tshydźeśći].",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

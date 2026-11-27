@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-reading-when",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 58,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuándo es la fiesta de Kasia?",
+  "explanation": "W sobotę, osiemnastego maja, o dziewiętnastej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El sábado 18 de mayo a las 19:00."
+      },
+      {
+        "id": "opt-b",
+        "text": "El viernes 14 de mayo."
+      },
+      {
+        "id": "opt-c",
+        "text": "El domingo 18 de marzo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

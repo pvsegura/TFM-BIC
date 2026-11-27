@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-match-tens",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "Une cada número con su nombre.",
+  "explanation": "20 -dzieścia; 30, 40 -dzieści; 50–90 -dziesiąt.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "20",
+        "right": "dwadzieścia"
+      },
+      {
+        "left": "40",
+        "right": "czterdzieści"
+      },
+      {
+        "left": "50",
+        "right": "pięćdziesiąt"
+      },
+      {
+        "left": "70",
+        "right": "siedemdziesiąt"
+      },
+      {
+        "left": "90",
+        "right": "dziewięćdziesiąt"
+      },
+      {
+        "left": "100",
+        "right": "sto"
+      }
+    ]
+  }
+}

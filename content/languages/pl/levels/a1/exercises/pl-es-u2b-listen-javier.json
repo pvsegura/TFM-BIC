@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-listen-javier",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuándo es el cumpleaños de Javier?",
+  "explanation": "Dwudziestego marca — el 20 de marzo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El 20 de marzo."
+      },
+      {
+        "id": "opt-b",
+        "text": "El 14 de mayo."
+      },
+      {
+        "id": "opt-c",
+        "text": "El 21 de diciembre."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

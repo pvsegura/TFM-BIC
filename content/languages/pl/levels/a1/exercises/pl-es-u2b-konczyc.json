@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-konczyc",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 2680,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 44,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «cumplo cuarenta años»?",
+  "explanation": "Cumplir años = kończyć … lat.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kończę czterdzieści lat."
+      },
+      {
+        "id": "opt-b",
+        "text": "Mam czterdzieści lat urodziny."
+      },
+      {
+        "id": "opt-c",
+        "text": "Robię czterdzieści lat."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

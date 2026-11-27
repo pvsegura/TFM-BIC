@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-match-months",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 2570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "Une cada mes con su nombre en español.",
+  "explanation": "Lipiec (tilo) = julio; listopad (caída de hojas) = noviembre.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "lipiec",
+        "right": "julio"
+      },
+      {
+        "left": "listopad",
+        "right": "noviembre"
+      },
+      {
+        "left": "sierpień",
+        "right": "agosto"
+      },
+      {
+        "left": "kwiecień",
+        "right": "abril"
+      },
+      {
+        "left": "październik",
+        "right": "octubre"
+      },
+      {
+        "left": "luty",
+        "right": "febrero"
+      }
+    ]
+  }
+}

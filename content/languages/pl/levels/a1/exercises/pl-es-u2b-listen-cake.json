@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u2b-listen-cake",
+  "lessonId": "pl-es-unit-2-birthdays",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 2520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 2,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: los compañeros han comprado una tarta para Kasia.",
+  "explanation": "No: Kasia trae la tarta — Mam tort dla wszystkich.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}
