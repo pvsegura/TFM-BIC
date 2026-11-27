@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-listen-tatry",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6150,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 5,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿adónde va Ola a menudo en verano?",
+  "explanation": "Latem często jeżdżę w Tatry.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A los Tatras."
+      },
+      {
+        "id": "opt-b",
+        "text": "Al mar."
+      },
+      {
+        "id": "opt-c",
+        "text": "A España."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-sound-dz",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6320,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 22,
+    "phase": "sound"
+  },
+  "prompt": "Une cada palabra con su sonido.",
+  "explanation": "Bardzo: dz; jeżdżę: dż; dziękuję: dź.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "bardzo",
+        "right": "dz (ds en un golpe)"
+      },
+      {
+        "left": "jeżdżę",
+        "right": "dż (j inglesa dura)"
+      },
+      {
+        "left": "dziękuję",
+        "right": "dź (y enfática)"
+      }
+    ]
+  }
+}

@@ -1,0 +1,319 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1130,
+  "unit": 6,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 6A. Co lubisz robić? — gustos y tiempo libre",
+  "description": "Dices lo que te gusta, lo que te encanta y lo que no soportas, y reaccionas a los gustos de los demás: lubię + infinitivo o acusativo, nie lubię + genitivo, uwielbiam, podoba mi się, ja też, ja też nie, grać w y grać na.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Un intercambio de idiomas" },
+    {
+      "type": "explanation",
+      "text": "Ola, la compañera de piso de Kasia, aprende español, y Javier quiere practicar polaco: quedan en un parque para hacer un intercambio de idiomas. Hoy toca hablar en polaco. Primera escucha: ¿qué le gusta hacer a cada uno? Segunda: ¿en qué coinciden y en qué no? Tercera: fíjate en cómo reaccionan: ja też, ja też nie, bardzo."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u6-tandem.png",
+      "alt": "Un hombre y una mujer jóvenes charlan y se ríen en un banco de un parque en otoño; ella tiene un libro y él unos auriculares."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "Javier, co lubisz robić w wolnym czasie?",
+          "translation": "Javier, ¿qué te gusta hacer en tu tiempo libre?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Lubię biegać i gotować. Uwielbiam też polską kuchnię!",
+          "translation": "Me gusta correr y cocinar. ¡Y me encanta la cocina polaca!"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Naprawdę? A ja nie lubię gotować. Wolę jeść w restauracji.",
+          "translation": "¿De verdad? Pues a mí no me gusta cocinar. Prefiero comer en un restaurante."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A co ty lubisz robić?",
+          "translation": "¿Y a ti qué te gusta hacer?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Lubię czytać kryminały i słuchać muzyki. Uwielbiam jazz.",
+          "translation": "Me gusta leer novela negra y escuchar música. Me encanta el jazz."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Ja też lubię jazz! W Krakowie są świetne kluby jazzowe.",
+          "translation": "¡A mí también me gusta el jazz! En Cracovia hay clubes de jazz estupendos."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Tak! A lubisz piłkę nożną?",
+          "translation": "¡Sí! ¿Y te gusta el fútbol?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Nie, nie lubię piłki nożnej. Jest nudna.",
+          "translation": "No, no me gusta el fútbol. Es aburrido."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Ja też nie! Ale mój brat ogląda wszystkie mecze.",
+          "translation": "¡A mí tampoco! Pero mi hermano ve todos los partidos."
+        },
+        {
+          "speaker": "Javier",
+          "text": "A góry? Lubisz chodzić po górach?",
+          "translation": "¿Y la montaña? ¿Te gusta hacer senderismo?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Bardzo! Latem często jeżdżę w Tatry. A ty?",
+          "translation": "¡Mucho! En verano voy a menudo a los Tatras. ¿Y tú?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jeszcze nie znam Tatr, ale podobają mi się zdjęcia z Zakopanego.",
+          "translation": "Todavía no conozco los Tatras, pero me gustan las fotos de Zakopane."
+        },
+        {
+          "speaker": "Ola",
+          "text": "To musisz pojechać! Może razem, w lipcu?",
+          "translation": "¡Pues tienes que ir! ¿Quizá juntos, en julio?"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "El tiempo libre" },
+    {
+      "type": "table",
+      "caption": "Actividades",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["czytać (książki)", "leer (libros)", "słuchać muzyki", "escuchar música"],
+        ["oglądać filmy / seriale", "ver películas / series", "chodzić do kina", "ir al cine"],
+        ["gotować", "cocinar", "tańczyć", "bailar"],
+        ["śpiewać", "cantar", "rysować", "dibujar"],
+        ["podróżować", "viajar", "spacerować", "pasear"],
+        ["biegać", "correr", "pływać", "nadar"],
+        [
+          "chodzić po górach",
+          "hacer senderismo de montaña",
+          "jeździć na rowerze",
+          "montar en bici"
+        ],
+        ["robić zdjęcia", "hacer fotos", "spotykać się z przyjaciółmi", "quedar con amigos"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Grać w… (juegos y deportes) y grać na… (instrumentos)",
+      "columns": ["Grać w + acusativo", "Español", "Grać na + locativo", "Español"],
+      "rows": [
+        ["grać w piłkę nożną", "jugar al fútbol", "grać na gitarze", "tocar la guitarra"],
+        ["grać w tenisa", "jugar al tenis", "grać na pianinie", "tocar el piano"],
+        ["grać w szachy", "jugar al ajedrez", "grać na skrzypcach", "tocar el violín"],
+        ["grać w gry komputerowe", "jugar a videojuegos", "grać na perkusji", "tocar la batería"],
+        ["grać w karty", "jugar a las cartas", "grać na flecie", "tocar la flauta"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cosas que gustan",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        [
+          "muzyka (klasyczna, rockowa)",
+          "la música (clásica, rock)",
+          "kryminały",
+          "las novelas negras"
+        ],
+        ["film / serial", "la película / la serie", "mecz", "el partido"],
+        ["góry", "la montaña", "morze", "el mar"],
+        ["sport", "el deporte", "taniec", "el baile"],
+        ["koty / psy", "los gatos / los perros", "zima / lato", "el invierno / el verano"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — LUBIĆ está emparentado con lubov (amor en ruso), el inglés love y el alemán lieb: gustar y amar tienen la misma raíz. Piensa en lubię como un «love» suave: lo que te gusta, lo quieres un poco. GRAĆ es jugar y tocar a la vez, como el inglés play; lo que cambia es la preposición: w para jugar, na para tocar («encima del» instrumento). Y KRYMINAŁ suena a «criminal»: la novela de crímenes."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Lubić, uwielbiać, podobać się y reacciones"
+    },
+    {
+      "type": "explanation",
+      "text": "La gran diferencia con el español: en polaco «me gusta» se dice con un verbo normal, lubić, cuyo sujeto es la persona que gusta, como «amar» o «preferir»: lubię (me gusta), lubisz (te gusta), lubi (le gusta). Detrás puede ir un infinitivo (lubię czytać) o un sustantivo en acusativo (lubię kawę, lubię jazz, lubię Kasię)."
+    },
+    {
+      "type": "table",
+      "caption": "Lubić — el verbo de los gustos",
+      "columns": ["Persona", "lubić", "Ejemplo"],
+      "rows": [
+        ["ja", "lubię", "Lubię gotować."],
+        ["ty", "lubisz", "Lubisz jazz?"],
+        ["on / ona / pan / pani", "lubi", "Ola lubi kryminały."],
+        ["my", "lubimy", "Lubimy góry."],
+        ["wy", "lubicie", "Lubicie tańczyć?"],
+        ["oni / one / państwo", "lubią", "Moi rodzice lubią spacerować."]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "Me gusta el jazz. Me gustan los gatos. A Ola le gusta leer.",
+      "target": "Lubię jazz. Lubię koty. Ola lubi czytać.",
+      "note": "En español lo que gusta es el sujeto y el verbo concuerda con ello (gusta / gustan). En polaco el sujeto es la persona y el verbo concuerda con ella: lubię koty, sin cambiar por el plural. ¡Es más fácil que el español!"
+    },
+    {
+      "type": "table",
+      "caption": "De «me encanta» a «no lo soporto»",
+      "columns": ["Polaco", "Español", "Caso"],
+      "rows": [
+        ["Uwielbiam…", "Me encanta…", "acusativo / infinitivo"],
+        ["Bardzo lubię…", "Me gusta mucho…", "acusativo / infinitivo"],
+        ["Lubię…", "Me gusta…", "acusativo / infinitivo"],
+        ["Nie bardzo lubię…", "No me gusta mucho…", "genitivo / infinitivo"],
+        ["Nie lubię…", "No me gusta…", "genitivo / infinitivo"],
+        ["Nie znoszę… / Nienawidzę…", "No soporto… / Odio…", "genitivo / infinitivo"],
+        ["Wolę…", "Prefiero…", "acusativo / infinitivo"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nie lubię piłkę nożną. / Nie lubię kawę.",
+      "right": "Nie lubię piłki nożnej. / Nie lubię kawy.",
+      "explanation": "La regla de siempre: verbo en negativo + genitivo. Lubię kawę → nie lubię kawy. Nienawidzić pide genitivo incluso sin negación: nienawidzę poniedziałków."
+    },
+    {
+      "type": "explanation",
+      "text": "Para lo que te gusta por su aspecto o por una impresión concreta (una ciudad que visitas, una foto, una prenda, una película que acabas de ver), el polaco usa podobać się, que funciona como «gustar»: Podoba mi się Kraków (me gusta Cracovia: me causa buena impresión), podobają mi się te zdjęcia. Lubić es para los gustos habituales: lubię jazz, lubię gotować. Por eso un polaco dice Kraków bardzo mi się podoba al llegar a la ciudad, y lubię Kraków cuando ya la conoce bien."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Ja podobam Kraków. / Lubi mi się ta sukienka.",
+      "right": "Podoba mi się Kraków. / Podoba mi się ta sukienka.",
+      "explanation": "Podobać się concuerda con lo que gusta, como «gustar»: podoba (una cosa), podobają (varias), y la persona va en dativo (mi, ci, mu, jej). Ja się podobam significaría «yo gusto (a alguien)»."
+    },
+    {
+      "type": "explanation",
+      "text": "Para reaccionar a los gustos de otra persona, el polaco es mucho más sencillo que el español, porque lubić es un verbo normal: ja też (yo también), ja też nie (yo tampoco), a ja tak (pues yo sí), a ja nie (pues yo no). Sirve igual con lubić, con mieć, con mieszkać o con cualquier verbo."
+    },
+    {
+      "type": "table",
+      "caption": "Reaccionar",
+      "columns": ["Alguien dice", "Tú piensas igual", "Tú piensas distinto"],
+      "rows": [
+        ["Lubię jazz.", "Ja też.", "A ja nie."],
+        ["Nie lubię piłki nożnej.", "Ja też nie.", "A ja tak."],
+        ["Uwielbiam koty.", "Ja też!", "A ja wolę psy."],
+        ["Nie znoszę poniedziałków.", "Ja też nie!", "A ja je lubię."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Słucham muzykę. / Gram gitarę. / Gram w gitarze.",
+      "right": "Słucham muzyki. / Gram na gitarze. / Gram w tenisa.",
+      "explanation": "Słuchać (escuchar) pide genitivo, aunque no haya negación: słucham muzyki, słucham radia. Grać w + acusativo es jugar (w piłkę, w szachy); grać na + locativo es tocar un instrumento (na gitarze, na pianinie). Como jugar y tocar en español."
+    },
+    { "type": "section", "phase": "sound", "title": "Dz, dż y dź: tres sonidos distintos" },
+    {
+      "type": "explanation",
+      "text": "El polaco tiene tres «ds» diferentes. Dz suena como ds pegadas, igual que en la italiana zero: dzwon (campana), bardzo. Dż es dura, con la lengua hacia atrás, como la j inglesa de «jungle»: jeżdżę, dżem (mermelada). Dź (o dzi delante de vocal) es suave, con la lengua en el paladar, como una «y» muy enfática: dźwięk, dziękuję, dzień. Comparar los tres es la mejor manera de oír la diferencia."
+    },
+    {
+      "type": "table",
+      "caption": "Los tres sonidos (pronunciación aproximada)",
+      "columns": ["Sonido", "Ejemplo", "Cómo suena", "Truco"],
+      "rows": [
+        ["dz", "bardzo", "[bardso] con voz", "como «ds» de «adsorber» pero en un solo golpe"],
+        ["dż", "jeżdżę", "[yeżdże]", "j inglesa dura de «jungle»"],
+        ["dź / dzi", "dziękuję", "[dźeŋkuje]", "«y» enfática de «¡yo!», lengua en el paladar"],
+        ["dz + dź", "dzień dobry", "[dźeń dobry]", "dzie = dź + e"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Montaña, setas y jazz" },
+    {
+      "type": "reading",
+      "title": "Grzybobranie — polska pasja",
+      "paragraphs": [
+        "Wielu Polaków lubi chodzić do lasu. Jesienią, we wrześniu i w październiku, w lasach jest dużo ludzi z koszykami: zbierają grzyby. To grzybobranie.",
+        "Moja babcia uwielbia grzybobranie. Wstaje o piątej rano i jedzie do lasu z dziadkiem. Zna wszystkie grzyby: borowiki, kurki, maślaki.",
+        "Ja nie znam dobrze grzybów, więc zawsze pytam babcię. Niektóre grzyby są bardzo trujące! Nie wolno zbierać grzybów, jeśli ich nie znasz.",
+        "Potem babcia robi zupę grzybową i suszy grzyby na święta. Ja nie lubię wstawać tak wcześnie, ale bardzo lubię jej zupę grzybową!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Los Tatras (Tatry) son las montañas más altas de Polonia, en la frontera con Eslovaquia, y Zakopane es su capital turística. En verano se llenan de senderistas; en invierno, de esquiadores. Chodzić po górach (andar por la montaña) es una de las aficiones favoritas de los polacos.",
+        "El grzybobranie, la recogida de setas en otoño, es casi un deporte nacional: familias enteras salen al bosque al amanecer con cestas. La regla de oro: no recoger nunca una seta que no conoces, porque algunas son mortales.",
+        "Cracovia tiene una larga tradición de jazz, con clubes en sótanos del casco antiguo. Polonia ha dado grandes jazzistas, como el trompetista Tomasz Stańko o el compositor Krzysztof Komeda.",
+        "El fútbol es el deporte más popular, pero también son muy seguidos el voleibol, donde la selección polaca está entre las mejores del mundo, y los saltos de esquí, que cada invierno reúnen a millones de espectadores frente al televisor."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misión: tu perfil para un intercambio de idiomas"
+    },
+    {
+      "type": "mission",
+      "title": "Preséntate y habla de tus gustos con un compañero polaco",
+      "steps": [
+        "Escribe un perfil corto para un intercambio de idiomas: nombre, de dónde eres y tres cosas que te gusta hacer (lubię + infinitivo).",
+        "Añade algo que te encanta (uwielbiam + acusativo) y algo que no soportas (nie znoszę + genitivo).",
+        "Di qué deporte practicas o qué instrumento tocas con grać w… / grać na…",
+        "Lee tres frases de un compañero (o del diálogo) y reacciona a cada una: ja też, ja też nie, a ja tak, a ja nie.",
+        "Di algo de Polonia que te gusta por su aspecto con podoba mi się / podobają mi się.",
+        "Pregunta dos cosas (Lubisz…? Co lubisz robić w weekend?) y grábate diciendo bardzo, jeżdżę y dziękuję."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Co lubisz robić w wolnym czasie?",
+          "translation": "¿Qué te gusta hacer en tu tiempo libre?"
+        },
+        {
+          "text": "Lubię czytać i słuchać muzyki.",
+          "translation": "Me gusta leer y escuchar música."
+        },
+        { "text": "Uwielbiam jazz.", "translation": "Me encanta el jazz." },
+        { "text": "Nie lubię piłki nożnej.", "translation": "No me gusta el fútbol." },
+        {
+          "text": "— Lubię koty. — Ja też.",
+          "translation": "— Me gustan los gatos. — A mí también."
+        },
+        {
+          "text": "— Nie lubię gotować. — A ja tak.",
+          "translation": "— No me gusta cocinar. — Pues a mí sí."
+        },
+        {
+          "text": "Gram w tenisa i gram na gitarze.",
+          "translation": "Juego al tenis y toco la guitarra."
+        },
+        { "text": "Kraków bardzo mi się podoba.", "translation": "Cracovia me gusta mucho." }
+      ],
+      "canDo": [
+        "decir lo que me gusta, me encanta y no soporto",
+        "usar lubić con infinitivo, acusativo y, en negativo, genitivo",
+        "distinguir lubić y podobać się",
+        "reaccionar con ja też, ja też nie, a ja tak, a ja nie",
+        "distinguir grać w y grać na",
+        "pronunciar dz, dż y dź"
+      ]
+    }
+  ]
+}

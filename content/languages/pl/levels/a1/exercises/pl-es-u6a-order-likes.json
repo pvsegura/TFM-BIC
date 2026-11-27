@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-order-likes",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 6300,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 20,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Me gusta mucho bailar, pero prefiero cantar.",
+  "explanation": "Bardzo lubię + infinitivo, ale wolę + infinitivo.",
+  "configuration": {
+    "items": ["Bardzo", "lubię", "tańczyć,", "ale", "wolę", "śpiewać."],
+    "joiner": " "
+  }
+}

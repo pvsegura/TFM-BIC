@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-translate-me-neither",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6420,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 32,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Responde en polaco que tú tampoco: — Nie lubię zimy.",
+  "explanation": "Coincides con una negación: ja też nie.",
+  "configuration": {
+    "acceptedAnswers": ["Ja też nie.", "Ja też nie lubię zimy.", "Ja też nie!"],
+    "caseSensitive": false
+  }
+}

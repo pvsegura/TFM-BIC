@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-translate-piano",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6430,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 33,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Toco el piano, pero no juego al fútbol.",
+  "explanation": "Gram na pianinie, ale nie gram w piłkę nożną.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Gram na pianinie, ale nie gram w piłkę nożną.",
+      "Gram na pianinie, ale nie gram w piłkę."
+    ],
+    "caseSensitive": false
+  }
+}

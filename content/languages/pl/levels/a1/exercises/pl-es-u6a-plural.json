@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-plural",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6210,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 11,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «me gustan los gatos»?",
+  "explanation": "Lubić concuerda con la persona, no con lo que gusta: lubię koty.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Lubię koty."
+      },
+      {
+        "id": "opt-b",
+        "text": "Lubią mi koty."
+      },
+      {
+        "id": "opt-c",
+        "text": "Koty mi lubię."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

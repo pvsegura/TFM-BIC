@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-podoba",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6240,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 14,
+    "phase": "structure"
+  },
+  "prompt": "Llegas a Cracovia por primera vez y te encanta lo que ves. ¿Qué dices?",
+  "explanation": "Impresión de algo que ves: podobać się.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kraków bardzo mi się podoba."
+      },
+      {
+        "id": "opt-b",
+        "text": "Lubię Kraków od zawsze."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ja podobam Kraków."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

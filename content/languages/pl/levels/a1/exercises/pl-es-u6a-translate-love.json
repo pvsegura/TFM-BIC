@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-translate-love",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6400,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 30,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Me encanta la montaña.",
+  "explanation": "Uwielbiam + acusativo: góry.",
+  "configuration": {
+    "acceptedAnswers": ["Uwielbiam góry."],
+    "caseSensitive": false
+  }
+}

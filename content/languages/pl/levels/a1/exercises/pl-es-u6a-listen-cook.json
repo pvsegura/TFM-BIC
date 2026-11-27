@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-listen-cook",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6120,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 2,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: a Ola le encanta cocinar.",
+  "explanation": "Nie lubię gotować. Wolę jeść w restauracji.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

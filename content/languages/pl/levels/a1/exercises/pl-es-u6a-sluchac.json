@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-sluchac",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6290,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 19,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Słuchać + genitivo: muzyki.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Słucham muzyki."
+      },
+      {
+        "id": "opt-b",
+        "text": "Słucham muzykę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Słucham na muzyce."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

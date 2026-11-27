@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-write-profile",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 6450,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 35,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Escribe tu perfil para un intercambio de idiomas con un polaco: quién eres, qué te gusta, qué te encanta, qué no soportas y qué buscas.",
+  "explanation": "Revisa: lubię + infinitivo o acusativo, nie lubię + genitivo, uwielbiam, grać w / grać na.",
+  "configuration": {
+    "modelAnswer": "Cześć! Mam na imię Lucía i jestem z Sewilli. Mieszkam w Warszawie. W wolnym czasie lubię czytać, gotować i spacerować po parku. Uwielbiam koty i polskie filmy. Gram na gitarze. Nie znoszę zimy! Szukam osoby do rozmowy po polsku i po hiszpańsku, na przykład we wtorek wieczorem.",
+    "checklist": [
+      "presentación",
+      "tres gustos",
+      "uwielbiam",
+      "nie znoszę / nie lubię",
+      "qué buscas"
+    ],
+    "minWords": 35,
+    "maxWords": 100
+  }
+}

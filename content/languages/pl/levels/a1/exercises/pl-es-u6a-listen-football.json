@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-listen-football",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6140,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 4,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué piensan los dos del fútbol?",
+  "explanation": "Javier: nie lubię piłki nożnej. Ola: ja też nie!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "No les gusta a ninguno."
+      },
+      {
+        "id": "opt-b",
+        "text": "Les encanta a los dos."
+      },
+      {
+        "id": "opt-c",
+        "text": "A Ola sí, a Javier no."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

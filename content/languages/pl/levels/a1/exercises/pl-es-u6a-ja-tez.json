@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-ja-tez",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6260,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 16,
+    "phase": "structure"
+  },
+  "prompt": "— Lubię góry. Tú también. ¿Qué dices?",
+  "explanation": "Coincides con una afirmación: ja też.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ja też."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja też nie."
+      },
+      {
+        "id": "opt-c",
+        "text": "A ja nie."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

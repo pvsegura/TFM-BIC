@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-listen-jazz",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6130,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 3,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué música le encanta a Ola?",
+  "explanation": "Uwielbiam jazz — y a Javier también le gusta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El jazz."
+      },
+      {
+        "id": "opt-b",
+        "text": "El rock."
+      },
+      {
+        "id": "opt-c",
+        "text": "La música clásica."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

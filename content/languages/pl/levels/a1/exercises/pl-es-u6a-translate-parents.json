@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-translate-parents",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6410,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 31,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: A mis padres les gusta pasear.",
+  "explanation": "Sujeto = mis padres: moi rodzice lubią spacerować.",
+  "configuration": {
+    "acceptedAnswers": ["Moi rodzice lubią spacerować."],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-reading-when",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6350,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 25,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuándo se recogen setas en Polonia?",
+  "explanation": "Jesienią, we wrześniu i w październiku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En otoño, en septiembre y octubre."
+      },
+      {
+        "id": "opt-b",
+        "text": "En verano."
+      },
+      {
+        "id": "opt-c",
+        "text": "En invierno."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

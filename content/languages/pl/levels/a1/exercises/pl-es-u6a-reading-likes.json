@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-reading-likes",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6370,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 27,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué le gusta mucho a la nieta (la narradora)?",
+  "explanation": "Bardzo lubię jej zupę grzybową.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La sopa de setas de la abuela."
+      },
+      {
+        "id": "opt-b",
+        "text": "Levantarse temprano."
+      },
+      {
+        "id": "opt-c",
+        "text": "Recoger setas sola."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

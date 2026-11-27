@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-gram-na",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6170,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 7,
+    "phase": "connect"
+  },
+  "prompt": "Completa: Mój brat gra ___ gitarze i ___ piłkę nożną.",
+  "explanation": "Grać na + instrumento (locativo); grać w + juego (acusativo).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "na / w"
+      },
+      {
+        "id": "opt-b",
+        "text": "w / na"
+      },
+      {
+        "id": "opt-c",
+        "text": "na / na"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

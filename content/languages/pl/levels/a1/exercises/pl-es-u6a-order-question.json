@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-order-question",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 6310,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 21,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: ¿Qué te gusta hacer el fin de semana?",
+  "explanation": "Co + lubisz + robić + w weekend?",
+  "configuration": {
+    "items": ["Co", "lubisz", "robić", "w", "weekend?"],
+    "joiner": " "
+  }
+}

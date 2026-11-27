@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-sound-dzem",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6340,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 24,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo se escribe la palabra «mermelada» que suena [dżem]?",
+  "explanation": "Dż dura: dżem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "dżem"
+      },
+      {
+        "id": "opt-b",
+        "text": "dźem"
+      },
+      {
+        "id": "opt-c",
+        "text": "dzem"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

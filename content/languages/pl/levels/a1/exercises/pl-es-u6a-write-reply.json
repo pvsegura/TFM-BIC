@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-write-reply",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 6460,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 36,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Responde a este mensaje: «Uwielbiam kino, ale nie lubię sportu. A ty?». Reacciona a las dos cosas y añade dos gustos tuyos.",
+  "explanation": "Ja też / ja też nie / a ja tak / a ja nie, y una pregunta.",
+  "configuration": {
+    "modelAnswer": "Cześć, Ola! Ja też uwielbiam kino, zwłaszcza polskie filmy. A ja lubię sport: biegam i gram w tenisa. Bardzo lubię też gotować. Lubisz góry?",
+    "checklist": ["reacción al cine", "reacción al deporte", "dos gustos", "pregunta"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

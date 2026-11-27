@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-podobaja",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6250,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 15,
+    "phase": "structure"
+  },
+  "prompt": "Completa: ___ mi się te zdjęcia.",
+  "explanation": "Varias cosas: podobają.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Podobają"
+      },
+      {
+        "id": "opt-b",
+        "text": "Podoba"
+      },
+      {
+        "id": "opt-c",
+        "text": "Lubią"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

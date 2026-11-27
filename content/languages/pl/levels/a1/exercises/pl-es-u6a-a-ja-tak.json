@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-a-ja-tak",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6280,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 18,
+    "phase": "structure"
+  },
+  "prompt": "— Nie lubię gotować. A ti sí te gusta. ¿Qué dices?",
+  "explanation": "No coincides con una negación: a ja tak.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A ja tak."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ja też nie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Ja też."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

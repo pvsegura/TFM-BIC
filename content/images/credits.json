@@ -123,5 +123,10 @@
     "source": "ai",
     "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
     "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
+  },
+  "a1-pl-u6-tandem.png": {
+    "source": "ai",
+    "tool": "Google Gemini API (gemini-3.1-flash-lite-image)",
+    "licence": "Generated for Verbysia with the Gemini API; carries Google's SynthID watermark."
   }
 }

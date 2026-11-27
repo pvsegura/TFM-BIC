@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-match-hobbies",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6160,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 6,
+    "phase": "connect"
+  },
+  "prompt": "Une cada actividad con su traducción.",
+  "explanation": "Słuchać muzyki = escuchar música; chodzić po górach = hacer senderismo.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "słuchać muzyki",
+        "right": "escuchar música"
+      },
+      {
+        "left": "chodzić po górach",
+        "right": "hacer senderismo"
+      },
+      {
+        "left": "tańczyć",
+        "right": "bailar"
+      },
+      {
+        "left": "podróżować",
+        "right": "viajar"
+      },
+      {
+        "left": "robić zdjęcia",
+        "right": "hacer fotos"
+      },
+      {
+        "left": "spotykać się z przyjaciółmi",
+        "right": "quedar con amigos"
+      }
+    ]
+  }
+}

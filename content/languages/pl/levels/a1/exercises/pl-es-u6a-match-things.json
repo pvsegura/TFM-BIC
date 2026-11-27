@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-match-things",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6180,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 8,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Kryminały = novela negra; morze = el mar; taniec = el baile.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "kryminały",
+        "right": "la novela negra"
+      },
+      {
+        "left": "morze",
+        "right": "el mar"
+      },
+      {
+        "left": "góry",
+        "right": "la montaña"
+      },
+      {
+        "left": "taniec",
+        "right": "el baile"
+      },
+      {
+        "left": "mecz",
+        "right": "el partido"
+      }
+    ]
+  }
+}

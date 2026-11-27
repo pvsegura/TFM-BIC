@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6a-culture-tatry",
+  "lessonId": "pl-es-unit-6-likes",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6380,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 28,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué son los Tatras?",
+  "explanation": "Las montañas más altas de Polonia, en la frontera con Eslovaquia.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Las montañas más altas de Polonia."
+      },
+      {
+        "id": "opt-b",
+        "text": "Un lago del norte."
+      },
+      {
+        "id": "opt-c",
+        "text": "Un barrio de Cracovia."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}
