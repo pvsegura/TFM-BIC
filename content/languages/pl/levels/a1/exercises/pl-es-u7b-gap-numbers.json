@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-gap-numbers",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 7640,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 35,
+    "phase": "structure"
+  },
+  "prompt": "Completa: 2–4 → plural; 5 o más → genitivo plural.",
+  "explanation": "Dwa pomidory; pięć pomidorów; trzy jajka; dziesięć jajek.",
+  "configuration": {
+    "text": "Dwa ___ (pomidor), pięć ___ (pomidor), trzy ___ (jajko) i dziesięć ___ (jajko).",
+    "gaps": [
+      {
+        "accepted": ["pomidory"]
+      },
+      {
+        "accepted": ["pomidorów"]
+      },
+      {
+        "accepted": ["jajka"]
+      },
+      {
+        "accepted": ["jajek"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

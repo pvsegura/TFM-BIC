@@ -122,5 +122,9 @@
   {
     "asset": "a1-u7-market.png",
     "prompt": "a young woman with a wicker basket buys oranges and tomatoes at a fruit and vegetable stall inside a large covered market hall with iron columns and a glass dome, a smiling middle-aged vendor weighs fruit, no signs or price labels with text"
+  },
+  {
+    "asset": "a1-pl-u7-market.png",
+    "prompt": "a young man buys potatoes and tomatoes at an open-air vegetable stall in an old European market square, a smiling middle-aged saleswoman weighs tomatoes on a scale, crates of apples and cucumbers, no signs or price labels with text"
   }
 ]

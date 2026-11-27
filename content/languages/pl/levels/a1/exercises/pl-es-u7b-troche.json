@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-troche",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "Completa: Poproszę trochę ___ (ser).",
+  "explanation": "Trochę + genitivo singular: sera.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "sera"
+      },
+      {
+        "id": "opt-b",
+        "text": "ser"
+      },
+      {
+        "id": "opt-c",
+        "text": "serów"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-sound-kilo",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 45,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo suena la k de kilo?",
+  "explanation": "Ante i, la k se suaviza: [kʲilo].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Suave, con la lengua hacia el paladar."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dura, como la k española de «kilo»."
+      },
+      {
+        "id": "opt-c",
+        "text": "Como una ch."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

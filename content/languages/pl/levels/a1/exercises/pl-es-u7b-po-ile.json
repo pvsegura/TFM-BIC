@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-po-ile",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7680,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 39,
+    "phase": "structure"
+  },
+  "prompt": "La vendedora dice: Po osiem złotych za kilo. ¿Qué significa?",
+  "explanation": "Po … złotych za kilo = a … złotys el kilo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A ocho złotys el kilo."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ocho kilos por un złoty."
+      },
+      {
+        "id": "opt-c",
+        "text": "Después de las ocho."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

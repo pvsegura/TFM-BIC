@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-kilo-jablek",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Kilo + genitivo plural: jabłek.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kilo jabłek."
+      },
+      {
+        "id": "opt-b",
+        "text": "Kilo jabłka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Kilo z jabłek."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

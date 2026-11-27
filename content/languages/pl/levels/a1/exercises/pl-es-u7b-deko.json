@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-deko",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "¿Cuántos gramos son dziesięć deka?",
+  "explanation": "Deko = 10 g; dziesięć deka = 100 g.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "100 g."
+      },
+      {
+        "id": "opt-b",
+        "text": "10 g."
+      },
+      {
+        "id": "opt-c",
+        "text": "1 kg."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

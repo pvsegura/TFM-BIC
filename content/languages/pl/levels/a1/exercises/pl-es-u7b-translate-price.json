@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-translate-price",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Cuánto cuestan las fresas?",
+  "explanation": "Ile kosztują truskawki?",
+  "configuration": {
+    "acceptedAnswers": ["Ile kosztują truskawki?"],
+    "caseSensitive": false
+  }
+}

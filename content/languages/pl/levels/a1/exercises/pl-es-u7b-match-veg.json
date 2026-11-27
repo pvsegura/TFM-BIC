@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-match-veg",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 7560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada palabra con su traducción.",
+  "explanation": "Ziemniak = patata; marchewka = zanahoria; czosnek = ajo.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "ziemniak",
+        "right": "la patata"
+      },
+      {
+        "left": "marchewka",
+        "right": "la zanahoria"
+      },
+      {
+        "left": "czosnek",
+        "right": "el ajo"
+      },
+      {
+        "left": "ogórek",
+        "right": "el pepino"
+      },
+      {
+        "left": "gruszka",
+        "right": "la pera"
+      },
+      {
+        "left": "śliwka",
+        "right": "la ciruela"
+      }
+    ]
+  }
+}

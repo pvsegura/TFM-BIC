@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-listen-potatoes",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué pide primero?",
+  "explanation": "Poproszę kilo ziemniaków i dwie cebule.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Un kilo de patatas y dos cebollas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Medio kilo de tomates."
+      },
+      {
+        "id": "opt-c",
+        "text": "Diez huevos."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

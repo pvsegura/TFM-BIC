@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-sound-kielbasa",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 7720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "Kiełbasa tiene cuatro sílabas: ki-eł-ba-sa.",
+  "explanation": "No: la i tras k no forma sílaba: kieł-ba-sa, tres sílabas.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,314 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1145,
+  "unit": 7,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 7B. Poproszę kilo ziemniaków — en el mercado: cantidades y genitivo",
+  "description": "Compras comida en el mercado: pides una cantidad, preguntas el precio por kilo y pagas: kilo + genitivo, deka, dwa / pięć + plural, dużo, trochę, coś jeszcze?, to wszystko.",
+  "blocks": [
+    {
+      "type": "section",
+      "phase": "perceive",
+      "title": "Una tortilla española para los compañeros"
+    },
+    {
+      "type": "explanation",
+      "text": "Javier quiere preparar una tortilla de patatas para sus compañeros de oficina. El sábado por la mañana va al Stary Kleparz, un mercado antiguo de Cracovia. Primera escucha: ¿qué compra? Segunda: ¿cuánto de cada cosa? ¿Qué tomates elige y por qué? Tercera: fíjate en cómo cambian las palabras después de kilo, pół kilo y dziesięć: ziemniaków, jajek, sera."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u7-market.png",
+      "alt": "Un hombre joven compra patatas y tomates en un puesto de verduras al aire libre; la vendedora pesa los tomates en una balanza."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Dzień dobry! Co podać?",
+          "translation": "¡Buenos días! ¿Qué le pongo?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dzień dobry. Poproszę kilo ziemniaków i dwie cebule.",
+          "translation": "Buenos días. Un kilo de patatas y dos cebollas, por favor."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Proszę bardzo. Coś jeszcze?",
+          "translation": "Aquí tiene. ¿Algo más?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Tak. Ile kosztują pomidory?",
+          "translation": "Sí. ¿Cuánto cuestan los tomates?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Te malinowe są po dwanaście złotych za kilo, a te zwykłe po osiem.",
+          "translation": "Estos de tipo frambuesa están a doce złotys el kilo, y estos normales, a ocho."
+        },
+        {
+          "speaker": "Javier",
+          "text": "To poproszę pół kilo malinowych. Są polskie?",
+          "translation": "Entonces, medio kilo de los de frambuesa. ¿Son polacos?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Tak, z Małopolski. Bardzo słodkie. Coś jeszcze?",
+          "translation": "Sí, de la Pequeña Polonia. Muy dulces. ¿Algo más?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Jeszcze dziesięć jajek i kawałek sera… Ile to jest dwadzieścia deka?",
+          "translation": "También diez huevos y un trozo de queso… ¿Cuánto es «veinte deka»?"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Dwadzieścia deka to dwieście gramów. Wystarczy na kanapki.",
+          "translation": "Veinte deka son doscientos gramos. Basta para unos bocadillos."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dobrze, to dwadzieścia deka sera.",
+          "translation": "Vale, entonces veinte deka de queso."
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "Robi pan jakieś przyjęcie?",
+          "translation": "¿Organiza usted alguna fiesta?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Tak, robię hiszpańską tortillę dla kolegów z pracy. Potrzebuję dużo jajek i ziemniaków!",
+          "translation": "Sí, hago una tortilla española para mis compañeros de trabajo. ¡Necesito muchos huevos y muchas patatas!"
+        },
+        {
+          "speaker": "Sprzedawczyni",
+          "text": "To smacznego! To wszystko? Razem trzydzieści cztery złote.",
+          "translation": "¡Pues que aproveche! ¿Es todo? En total, treinta y cuatro złotys."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Tak, to wszystko. Płacę kartą.",
+          "translation": "Sí, es todo. Pago con tarjeta."
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Frutas, verduras y cantidades" },
+    {
+      "type": "table",
+      "caption": "Frutas y verduras",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["jabłko", "la manzana", "pomidor", "el tomate"],
+        ["gruszka", "la pera", "ziemniak", "la patata"],
+        ["banan", "el plátano", "cebula", "la cebolla"],
+        ["truskawka", "la fresa", "czosnek", "el ajo"],
+        ["śliwka", "la ciruela", "ogórek", "el pepino"],
+        ["wiśnia", "la guinda", "marchewka", "la zanahoria"],
+        ["cytryna", "el limón", "papryka", "el pimiento"],
+        ["arbuz", "la sandía", "kapusta", "la col"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Otros productos",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["chleb (bochenek)", "el pan (la hogaza)", "bułka", "el panecillo"],
+        ["mleko", "la leche", "masło", "la mantequilla"],
+        ["jajko (jajka)", "el huevo", "ser", "el queso"],
+        ["szynka", "el jamón (cocido)", "kiełbasa", "la salchicha, el embutido"],
+        ["mąka", "la harina", "ryż", "el arroz"],
+        ["olej", "el aceite", "sól", "la sal"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Cantidades y envases (+ genitivo)",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["kilo / kilogram", "un kilo", "pół kilo", "medio kilo"],
+        ["deko / deka (10 g)", "diez gramos", "dwadzieścia deka", "doscientos gramos"],
+        ["litr", "un litro", "butelka", "la botella"],
+        ["paczka", "el paquete", "puszka", "la lata"],
+        ["opakowanie", "el envase", "kawałek", "el trozo"],
+        ["bochenek", "la hogaza", "pęczek", "el manojo"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — DEKO es la abreviatura de dekagram, diez gramos: los polacos piden embutido y queso «por decas», no por gramos. ZIEMNIAK viene de ziemia, tierra (como ya viste en la unidad 4). MARCHEWKA suena a «marcha»: la zanahoria que marcha recta como un soldado. TRUSKAWKA tiene la k crujiente de una fresa al morderla. Y PĘCZEK, «manojo», viene de pęk, ramillete: un pęczek pietruszki es un manojo de perejil."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Cantidad + genitivo, números y dużo / trochę"
+    },
+    {
+      "type": "explanation",
+      "text": "Después de una cantidad o un envase, el polaco usa siempre el genitivo: kilo, pół kilo, deka, litr, butelka, paczka, kawałek… Si el producto es «incontable» (leche, queso, pan, agua), va en genitivo singular: litr mleka, kawałek sera, bochenek chleba, butelka wody. Si es «contable» (patatas, huevos, manzanas, tomates), en genitivo plural: kilo ziemniaków, dziesięć jajek, kilo jabłek."
+    },
+    {
+      "type": "table",
+      "caption": "Genitivo singular de productos incontables",
+      "columns": ["Producto", "Genitivo", "Ejemplo"],
+      "rows": [
+        ["mleko", "mleka", "litr mleka"],
+        ["ser", "sera", "dwadzieścia deka sera"],
+        ["chleb", "chleba", "bochenek chleba"],
+        ["woda", "wody", "butelka wody"],
+        ["masło", "masła", "kostka masła"],
+        ["cukier", "cukru", "kilo cukru"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "El genitivo plural es nuevo. Para este nivel basta con tres modelos. Los masculinos añaden -ów: pomidor → pomidorów, ziemniak → ziemniaków, banan → bananów. Los femeninos y neutros pierden la terminación, y a menudo aparece una e para poder pronunciarlos: jabłko → jabłek, jajko → jajek, truskawka → truskawek, cytryna → cytryn. Lo mismo con cebula → cebul."
+    },
+    {
+      "type": "table",
+      "caption": "Genitivo plural de productos contables",
+      "columns": ["Singular", "Plural (2, 3, 4)", "Genitivo plural (5…, kilo, dużo)"],
+      "rows": [
+        ["pomidor", "pomidory", "pomidorów"],
+        ["ziemniak", "ziemniaki", "ziemniaków"],
+        ["banan", "banany", "bananów"],
+        ["jabłko", "jabłka", "jabłek"],
+        ["jajko", "jajka", "jajek"],
+        ["truskawka", "truskawki", "truskawek"],
+        ["cytryna", "cytryny", "cytryn"],
+        ["cebula", "cebule", "cebul"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Kilo jabłka. / Litr mleko. / Kilo pomidory.",
+      "right": "Kilo jabłek. / Litr mleka. / Kilo pomidorów.",
+      "explanation": "Donde el español pone «de» (un kilo de manzanas), el polaco cambia la terminación al genitivo. Sin la terminación correcta te entenderán, pero suena muy extraño: practica las ocho palabras de la tabla."
+    },
+    {
+      "type": "explanation",
+      "text": "Con los números funciona la misma regla que ya conoces de lat / lata y złote / złotych. Con 2, 3 y 4 el sustantivo va en nominativo plural: dwa pomidory, trzy jajka, cztery banany (con femeninos, dwie: dwie cebule, dwie cytryny). Con 5 o más, en genitivo plural: pięć pomidorów, dziesięć jajek, dwadzieścia bananów. Y dużo, mało, trochę y ile también piden genitivo: dużo jajek, trochę sera, ile jabłek?"
+    },
+    {
+      "type": "table",
+      "caption": "Dos, cinco, mucho",
+      "columns": ["Uno", "Dos, tres, cuatro", "Cinco o más", "Dużo / trochę / ile"],
+      "rows": [
+        ["jeden pomidor", "dwa pomidory", "pięć pomidorów", "dużo pomidorów"],
+        ["jedno jajko", "trzy jajka", "dziesięć jajek", "ile jajek?"],
+        ["jedna cebula", "dwie cebule", "sześć cebul", "mało cebul"],
+        ["—", "—", "—", "trochę sera / dużo mleka"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Pięć jajka. / Dwa cebule. / Dużo jajka.",
+      "right": "Pięć jajek. / Dwie cebule. / Dużo jajek.",
+      "explanation": "Mira el número: 2–4 → plural normal (jajka, cebule; con femeninos dwie); 5 o más, y dużo, mało, ile → genitivo plural (jajek, cebul)."
+    },
+    {
+      "type": "explanation",
+      "text": "Las fórmulas del mercado: Co podać? (¿qué le pongo?), Coś jeszcze? (¿algo más?) — To wszystko (es todo) o Jeszcze… (también…). Para el precio por kilo: Ile kosztują pomidory? — Po dwanaście złotych za kilo (a doce el kilo). Y para pedir: Poproszę… (+ cantidad + genitivo)."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Proszę mi dać kilogram z jabłek.",
+      "right": "Poproszę kilo jabłek.",
+      "explanation": "No hay preposición entre la cantidad y el producto: el genitivo ya hace de «de». Y en el mercado la fórmula natural es poproszę + cantidad: poproszę pół kilo truskawek."
+    },
+    { "type": "section", "phase": "sound", "title": "K y g ante i y e: kilo, kiełbasa, ogórki" },
+    {
+      "type": "explanation",
+      "text": "Delante de i y de e, las letras k y g se suavizan un poco: la lengua se acerca al paladar, como si sonara una i muy breve: kilo [kʲilo], kiełbasa [kʲewbasa], ogórki [ogurkʲi], drogie [drogʲe]. No es un sonido distinto, pero si lo pronuncias con la k dura del español sonará extranjero. La i detrás de k y g se escribe pero no forma sílaba: kiełbasa tiene tres sílabas, kieł-ba-sa."
+    },
+    {
+      "type": "table",
+      "caption": "K y g suaves (pronunciación aproximada)",
+      "columns": ["Palabra", "Cómo suena", "Sílabas"],
+      "rows": [
+        ["kilo", "[kʲilo]", "ki-lo"],
+        ["kiełbasa", "[kʲewbasa]", "kieł-ba-sa"],
+        ["ogórki", "[ogurkʲi]", "o-gór-ki"],
+        ["drogie", "[drogʲe]", "dro-gie"],
+        ["jabłek", "[jabwek]", "ja-błek (la k final es dura)"]
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "culture",
+      "title": "Mercados, tiendas de barrio y el pan polaco"
+    },
+    {
+      "type": "reading",
+      "title": "Stary Kleparz",
+      "paragraphs": [
+        "Stary Kleparz to jeden z najstarszych targów w Krakowie. Jest niedaleko Rynku Głównego, ale turystów jest tu mało: kupują tu głównie mieszkańcy.",
+        "Na straganach są owoce i warzywa od rolników z okolic Krakowa, a także kwiaty, chleb, sery, wędliny i miód. Latem są truskawki i czereśnie, a jesienią jabłka, śliwki i grzyby.",
+        "Wiele osób ma tu swoją ulubioną sprzedawczynię. „Pani Basiu, poproszę jak zawsze: kilo ziemniaków i pęczek koperku!”",
+        "Ceny są czasem wyższe niż w supermarkecie, ale produkty są świeże i polskie. W sobotę rano jest tu bardzo dużo ludzi."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "En las ciudades polacas conviven los mercados tradicionales (targ, targowisko), las pequeñas fruterías de barrio (warzywniak), las tiendas de conveniencia abiertas hasta muy tarde y los supermercados. En los mercados se compra mucho producto de temporada: fresas polacas en junio, setas y manzanas en otoño.",
+        "Los polacos piden el embutido y el queso al peso en decas: dziesięć deka szynki (cien gramos de jamón cocido), dwadzieścia deka sera. Los tomates malinowe, grandes, rosados y dulces, son los favoritos y más caros.",
+        "Polonia es uno de los mayores productores de manzanas del mundo, y la variedad de pan es enorme: pan de centeno (żytni), con semillas, bułki para el desayuno. Muchos polacos compran el pan cada día en la panadería del barrio.",
+        "En muchas tiendas las bolsas de plástico se pagan, así que la gente lleva su propia bolsa de tela. Y en el mercado está bien preguntar si el producto es polaco: Czy to jest polskie?"
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: compra para una cena" },
+    {
+      "type": "mission",
+      "title": "Compra los ingredientes de un plato de tu país en un mercado polaco",
+      "steps": [
+        "Escribe la lista de la compra en polaco con cantidades: kilo ziemniaków, litr mleka, dziesięć jajek…",
+        "Saluda y pide tres productos con poproszę + cantidad + genitivo.",
+        "Pregunta el precio por kilo de un producto (Ile kosztują…?) y entiende la respuesta po … złotych za kilo.",
+        "Pide queso o embutido en decas: dwadzieścia deka sera.",
+        "Responde a coś jeszcze? y termina con to wszystko; repite el precio total.",
+        "Explica para qué compras (robię… dla…) y grábate diciendo kilo, kiełbasa y ogórki con la k suave."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Poproszę kilo ziemniaków i dwie cebule.",
+          "translation": "Un kilo de patatas y dos cebollas, por favor."
+        },
+        { "text": "Ile kosztują pomidory?", "translation": "¿Cuánto cuestan los tomates?" },
+        { "text": "Po dwanaście złotych za kilo.", "translation": "A doce złotys el kilo." },
+        {
+          "text": "Dziesięć jajek i dwadzieścia deka sera.",
+          "translation": "Diez huevos y doscientos gramos de queso."
+        },
+        {
+          "text": "Litr mleka i bochenek chleba.",
+          "translation": "Un litro de leche y una hogaza de pan."
+        },
+        { "text": "Coś jeszcze? — To wszystko.", "translation": "¿Algo más? — Es todo." },
+        { "text": "Potrzebuję dużo jajek.", "translation": "Necesito muchos huevos." },
+        { "text": "Czy to jest polskie?", "translation": "¿Esto es polaco?" }
+      ],
+      "canDo": [
+        "nombrar frutas, verduras y productos básicos",
+        "pedir una cantidad con el genitivo singular o plural",
+        "usar deka para pedir al peso",
+        "poner bien el sustantivo después de 2–4 y de 5 o más",
+        "usar dużo, mało, trochę e ile con genitivo",
+        "pronunciar la k y la g suaves ante i y e"
+      ]
+    }
+  ]
+}

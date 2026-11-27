@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-reading-prices",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 7760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: los precios del mercado siempre son más bajos que en el supermercado.",
+  "explanation": "Ceny są czasem wyższe — a veces son más altos, pero el producto es fresco.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

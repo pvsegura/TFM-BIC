@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-translate-end",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7820,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 65,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Algo más? — No, es todo.",
+  "explanation": "Coś jeszcze? — Nie, to wszystko.",
+  "configuration": {
+    "acceptedAnswers": ["Coś jeszcze? Nie, to wszystko.", "Coś jeszcze? — Nie, to wszystko."],
+    "caseSensitive": false
+  }
+}

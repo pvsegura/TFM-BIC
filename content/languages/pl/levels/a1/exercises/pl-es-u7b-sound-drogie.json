@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-sound-drogie",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "¿En qué palabra la g suena suave?",
+  "explanation": "G ante e: drogie [drogʲe].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "drogie"
+      },
+      {
+        "id": "opt-b",
+        "text": "drogo"
+      },
+      {
+        "id": "opt-c",
+        "text": "gruszka"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-listen-why",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿para qué compra Javier?",
+  "explanation": "Robię hiszpańską tortillę dla kolegów z pracy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Para hacer una tortilla para sus compañeros."
+      },
+      {
+        "id": "opt-b",
+        "text": "Para una boda."
+      },
+      {
+        "id": "opt-c",
+        "text": "Para el desayuno de su hermana."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

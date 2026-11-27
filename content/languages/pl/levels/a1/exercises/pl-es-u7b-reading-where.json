@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-reading-where",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 52,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿quién compra sobre todo en el Stary Kleparz?",
+  "explanation": "Turystów jest tu mało: kupują tu głównie mieszkańcy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Los vecinos de Cracovia."
+      },
+      {
+        "id": "opt-b",
+        "text": "Los turistas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Los restaurantes."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

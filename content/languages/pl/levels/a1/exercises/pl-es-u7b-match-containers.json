@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-match-containers",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 7570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Une cada envase con su producto.",
+  "explanation": "Litr mleka, bochenek chleba, butelka wody, paczka ryżu.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "litr",
+        "right": "mleka"
+      },
+      {
+        "left": "bochenek",
+        "right": "chleba"
+      },
+      {
+        "left": "butelka",
+        "right": "wody"
+      },
+      {
+        "left": "paczka",
+        "right": "ryżu"
+      }
+    ]
+  }
+}

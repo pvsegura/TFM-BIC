@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-match-genpl",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 7630,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 34,
+    "phase": "structure"
+  },
+  "prompt": "Une cada palabra con su genitivo plural.",
+  "explanation": "Masculino -ów; femenino y neutro sin terminación (a veces con e).",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "ziemniak",
+        "right": "ziemniaków"
+      },
+      {
+        "left": "banan",
+        "right": "bananów"
+      },
+      {
+        "left": "truskawka",
+        "right": "truskawek"
+      },
+      {
+        "left": "cytryna",
+        "right": "cytryn"
+      },
+      {
+        "left": "cebula",
+        "right": "cebul"
+      }
+    ]
+  }
+}

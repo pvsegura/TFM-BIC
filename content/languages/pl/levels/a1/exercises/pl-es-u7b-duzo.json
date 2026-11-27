@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-duzo",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «necesito muchos huevos»?",
+  "explanation": "Dużo + genitivo plural: jajek.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Potrzebuję dużo jajek."
+      },
+      {
+        "id": "opt-b",
+        "text": "Potrzebuję dużo jajka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Potrzebuję dużych jajka."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

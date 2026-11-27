@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-reading-autumn",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 53,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué hay en otoño?",
+  "explanation": "Jesienią jabłka, śliwki i grzyby.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Manzanas, ciruelas y setas."
+      },
+      {
+        "id": "opt-b",
+        "text": "Fresas y cerezas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Sandías."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

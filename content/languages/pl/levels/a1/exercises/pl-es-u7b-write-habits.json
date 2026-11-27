@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-write-habits",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 7840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 69,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe dónde y cada cuánto haces la compra, qué compras siempre y qué no compras nunca.",
+  "explanation": "Kupuję + acusativo; dużo / mało + genitivo; nigdy nie kupuję + genitivo.",
+  "configuration": {
+    "modelAnswer": "Zakupy robię dwa razy w tygodniu w supermarkecie obok domu. W sobotę chodzę na targ. Zawsze kupuję chleb, mleko i dużo owoców. Nigdy nie kupuję słodyczy, bo mają za dużo cukru.",
+    "checklist": ["dónde", "frecuencia", "qué compras", "qué no compras"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

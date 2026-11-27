@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-culture-malinowe",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué son los tomates malinowe?",
+  "explanation": "Tomates grandes, rosados y dulces, los favoritos de los polacos.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tomates rosados, grandes y dulces."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tomates verdes para freír."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tomates secos importados."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

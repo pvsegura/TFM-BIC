@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-translate-kilo",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 61,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Un kilo de manzanas, por favor.",
+  "explanation": "Poproszę kilo jabłek.",
+  "configuration": {
+    "acceptedAnswers": ["Poproszę kilo jabłek.", "Kilo jabłek, poproszę."],
+    "caseSensitive": false
+  }
+}

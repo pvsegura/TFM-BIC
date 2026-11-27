@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-write-list",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 7830,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 68,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Escribe la lista de la compra para un plato de tu país (al menos seis productos con cantidades) y un diálogo corto en el mercado.",
+  "explanation": "Revisa: cantidad + genitivo, 2–4 / 5+, deka, coś jeszcze? / to wszystko.",
+  "configuration": {
+    "modelAnswer": "Lista: kilo ziemniaków, dwie cebule, dziesięć jajek, litr mleka, butelka oleju i dwadzieścia deka sera. — Dzień dobry, poproszę kilo ziemniaków i dwie cebule. — Coś jeszcze? — Tak, dziesięć jajek. Ile kosztują pomidory? — Po dziesięć złotych za kilo. — To pół kilo pomidorów. To wszystko.",
+    "checklist": ["lista con cantidades", "petición", "precio", "fin de la compra"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}

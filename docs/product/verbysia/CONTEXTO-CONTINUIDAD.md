@@ -163,8 +163,10 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 - Hay apéndices de gramática (17 temas) y de vocabulario temático (hotel, viajes, profesiones,
   comida, cuerpo, calendario, adjetivos), además de crucigramas.
 - **Unidad 7A** «¿Me lo pruebo?» (`es-unit-7-shopping` reescrita, order 160): ropa, colores, este/ese/aquel,
-  quedar, lo/la/los/las, números hasta 1000; unidad 7: 49 ejercicios. Falta la 7B (order 165).
-- Libros A1: Podręcznik **126 páginas** y Zeszyt **98**. Objetivo: unas 170–190 y 160–180.
+  quedar, lo/la/los/las, números hasta 1000.
+- **Unidad 7B** «¿Me pone un kilo?» (`es-unit-7-market`, order 165): Mercado Central de Valencia,
+  cantidades con de, mucho/poco, otro, precios con céntimos, hiato. Unidad 7: 83 ejercicios.
+- Libros A1: Podręcznik **132 páginas** y Zeszyt **104**. Objetivo: unas 170–190 y 160–180.
 
 ### Polaco para hispanohablantes (pl-es)
 
@@ -178,14 +180,15 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
   - 5A «Mój dzień» (1120: się, la hora) y 5B «W tym tygodniu» (1125: días, musieć/móc);
   - 6A «Co lubisz robić?» (1130: lubić/podobać się, grać w/na) y 6B «Umówmy się!» (1135:
     umieć/wiedzieć/znać/móc, iść na).
-  - 7A «Ile kosztuje ta kurtka?» (1140: szukam + genitivo, ten/tę, pasować, go/ją/je); 35 ejercicios.
+  - 7A «Ile kosztuje ta kurtka?» (1140: szukam + genitivo, ten/tę, pasować, go/ją/je) y 7B «Poproszę kilo
+    ziemniaków» (1145: cantidades + genitivo singular y plural, deka, 2–4 / 5+); unidad 7: 69 ejercicios.
   - Personajes fijos: Javier (español en una oficina de Cracovia), Kasia, Tomek, Ola, Lucía.
   - Ejercicios por unidad: 1 = 55, 2 = 76, 3 = 95 (con repaso), 4 = 73, 5 = 71, 6 = 72.
 - **Apéndices explicados en español:** vocabulario temático (15 categorías `es-*`, 389 entradas,
   `pl-es-vocabulary-a1.mjs`) y gramática (20 temas `pl-es-ref-*`, `pl-es-grammar-a1.mjs`).
   Los crucigramas de polaco mantienen Ą, Ę, Ł… (`CROSSWORD_KEEPS_LETTERS` en `book-i18n.mts`).
-- **Libros pl-es A1 (para Lulu):** Podręcznik **116 páginas** y Zeszyt **90**.
-- Alternancia: siguiente 7B de español (compras de comida: mercado, cantidades), luego 7B de polaco.
+- **Libros pl-es A1 (para Lulu):** Podręcznik **122 páginas** y Zeszyt **94**.
+- Alternancia: siguiente 8A de español (la casa: reescribir `es-unit-8-home`), luego 8A de polaco.
 - Después: unidades 8–12 en los dos cursos (en español hay que reescribir las lecciones finas),
   repasos tras las unidades 6, 9 y 12, unidad 0 y examen final.
 - Diálogos de la 1A (recepción de hotel) y la 1B (primer día en la oficina) ya están en contextos

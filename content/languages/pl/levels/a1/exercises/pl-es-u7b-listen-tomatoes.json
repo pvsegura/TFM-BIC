@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-listen-tomatoes",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿qué tomates elige y cuánto?",
+  "explanation": "To poproszę pół kilo malinowych.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Medio kilo de los malinowe."
+      },
+      {
+        "id": "opt-b",
+        "text": "Un kilo de los normales."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dos kilos de los malinowe."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

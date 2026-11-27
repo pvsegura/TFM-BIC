@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-dwie",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «dos cebollas»?",
+  "explanation": "Cebula es femenino: dwie + plural.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "dwie cebule"
+      },
+      {
+        "id": "opt-b",
+        "text": "dwa cebule"
+      },
+      {
+        "id": "opt-c",
+        "text": "dwie cebul"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

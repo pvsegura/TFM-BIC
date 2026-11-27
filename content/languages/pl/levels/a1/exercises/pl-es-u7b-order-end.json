@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-order-end",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 7700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 41,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Sí, es todo. Pago con tarjeta.",
+  "explanation": "Tak, to wszystko. Płacę kartą.",
+  "configuration": {
+    "items": ["Tak,", "to", "wszystko.", "Płacę", "kartą."],
+    "joiner": " "
+  }
+}

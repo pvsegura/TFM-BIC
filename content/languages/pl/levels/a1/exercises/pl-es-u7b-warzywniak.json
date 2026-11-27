@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-warzywniak",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 7590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué es un warzywniak?",
+  "explanation": "Una frutería de barrio (warzywa = verduras).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Una frutería de barrio."
+      },
+      {
+        "id": "opt-b",
+        "text": "Una panadería."
+      },
+      {
+        "id": "opt-c",
+        "text": "Una carnicería."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

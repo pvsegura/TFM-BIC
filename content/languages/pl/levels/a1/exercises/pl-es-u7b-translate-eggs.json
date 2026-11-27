@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u7b-translate-eggs",
+  "lessonId": "pl-es-unit-7-market",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 7800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 7,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: diez huevos y doscientos gramos de queso",
+  "explanation": "Dziesięć jajek i dwadzieścia deka sera.",
+  "configuration": {
+    "acceptedAnswers": [
+      "dziesięć jajek i dwadzieścia deka sera",
+      "dziesięć jajek i dwieście gramów sera"
+    ],
+    "caseSensitive": false
+  }
+}
