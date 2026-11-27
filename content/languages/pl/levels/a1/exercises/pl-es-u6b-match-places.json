@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-match-places",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 16,
+    "phase": "connect"
+  },
+  "prompt": "Une cada lugar o cosa con su traducción.",
+  "explanation": "Basen = piscina; boisko = cancha; strój sportowy = ropa de deporte.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "basen",
+        "right": "la piscina"
+      },
+      {
+        "left": "boisko",
+        "right": "la cancha"
+      },
+      {
+        "left": "siłownia",
+        "right": "el gimnasio"
+      },
+      {
+        "left": "strój sportowy",
+        "right": "la ropa de deporte"
+      },
+      {
+        "left": "drużyna",
+        "right": "el equipo"
+      }
+    ]
+  }
+}

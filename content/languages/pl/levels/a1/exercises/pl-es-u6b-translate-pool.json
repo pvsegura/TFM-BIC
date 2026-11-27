@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-translate-pool",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 68,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: El martes voy a la piscina.",
+  "explanation": "We wtorek idę na basen.",
+  "configuration": {
+    "acceptedAnswers": [
+      "We wtorek idę na basen.",
+      "Idę na basen we wtorek.",
+      "We wtorek chodzę na basen."
+    ],
+    "caseSensitive": false
+  }
+}

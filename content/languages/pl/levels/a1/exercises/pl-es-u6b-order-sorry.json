@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-order-sorry",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 6710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 42,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Por desgracia, el sábado no puedo.",
+  "explanation": "Niestety + w sobotę + nie mogę.",
+  "configuration": {
+    "items": ["Niestety", "w", "sobotę", "nie", "mogę."],
+    "joiner": " "
+  }
+}

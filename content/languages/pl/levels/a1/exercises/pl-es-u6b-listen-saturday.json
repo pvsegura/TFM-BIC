@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-listen-saturday",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿por qué Javier no puede el sábado?",
+  "explanation": "Muszę pomóc koledze w przeprowadzce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Tiene que ayudar a un amigo con una mudanza."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tiene que trabajar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Va a casa de sus padres."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

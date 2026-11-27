@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-listen-when",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuándo y dónde quedan?",
+  "explanation": "W niedzielę o dziesiątej w hali przy parku.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "El domingo a las diez en el pabellón junto al parque."
+      },
+      {
+        "id": "opt-b",
+        "text": "El sábado a las diez en la oficina."
+      },
+      {
+        "id": "opt-c",
+        "text": "El domingo a las doce en un bar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

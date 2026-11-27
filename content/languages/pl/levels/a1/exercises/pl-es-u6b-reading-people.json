@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-reading-people",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cuántas personas necesitan para jugar?",
+  "explanation": "Potrzebujemy dwunastu osób.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Doce."
+      },
+      {
+        "id": "opt-b",
+        "text": "Diez."
+      },
+      {
+        "id": "opt-c",
+        "text": "Seis."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

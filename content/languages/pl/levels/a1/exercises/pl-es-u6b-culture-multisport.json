@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-culture-multisport",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 58,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: muchas empresas polacas dan a sus empleados una tarjeta para gimnasios y piscinas.",
+  "explanation": "Sí: tarjetas como Multisport son un beneficio muy común.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

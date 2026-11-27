@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-znam",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «conozco a Tomek»?",
+  "explanation": "Persona: znać + acusativo (Tomek → Tomka).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Znam Tomka."
+      },
+      {
+        "id": "opt-b",
+        "text": "Wiem Tomka."
+      },
+      {
+        "id": "opt-c",
+        "text": "Umiem Tomka."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

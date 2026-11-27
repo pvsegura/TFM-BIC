@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-translate-invite",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 6800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Te apetece jugar al tenis el sábado?",
+  "explanation": "Masz ochotę + zagrać / grać w tenisa + w sobotę?",
+  "configuration": {
+    "acceptedAnswers": [
+      "Masz ochotę zagrać w tenisa w sobotę?",
+      "Masz ochotę grać w tenisa w sobotę?",
+      "Masz ochotę w sobotę zagrać w tenisa?"
+    ],
+    "caseSensitive": false
+  }
+}

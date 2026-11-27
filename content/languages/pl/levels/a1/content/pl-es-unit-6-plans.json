@@ -1,0 +1,298 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1135,
+  "unit": 6,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 6B. Umówmy się! — deporte, invitaciones y planes",
+  "description": "Invitas, aceptas o rechazas con educación y quedas un día, a una hora y en un lugar: masz ochotę…?, chętnie, niestety nie mogę, o której się spotykamy?, umieć, móc, wiedzieć y znać, iść na + acusativo.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Voleibol con los compañeros" },
+    {
+      "type": "explanation",
+      "text": "Tomek, compañero de oficina de Javier, juega al voleibol los fines de semana con otros compañeros e invita a Javier. Primera escucha: ¿a qué le invita? ¿Sabe jugar Javier? Segunda: ¿por qué no puede el sábado y cuándo quedan al final? Tercera: fíjate en las palabras para quedar: masz ochotę…?, chętnie, niestety nie mogę, o której się spotykamy?"
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u6-volleyball.png",
+      "alt": "Dos compañeros de trabajo charlan junto a una mesa de oficina; uno lleva un balón de voleibol bajo el brazo."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Tomek",
+          "text": "Javier, masz ochotę zagrać w siatkówkę w sobotę? Gramy z kolegami z biura.",
+          "translation": "Javier, ¿te apetece jugar al voleibol el sábado? Jugamos con unos compañeros de la oficina."
+        },
+        {
+          "speaker": "Javier",
+          "text": "W siatkówkę? Chętnie, ale nie umiem grać za dobrze.",
+          "translation": "¿Al voleibol? Con mucho gusto, pero no sé jugar muy bien."
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Nic nie szkodzi. Gramy dla przyjemności, nie na mistrzostwa!",
+          "translation": "No pasa nada. Jugamos por diversión, ¡no para un campeonato!"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Ale w sobotę niestety nie mogę. Muszę pomóc koledze w przeprowadzce.",
+          "translation": "Pero el sábado, por desgracia, no puedo. Tengo que ayudar a un amigo con la mudanza."
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Szkoda! A w niedzielę? Możesz w niedzielę rano?",
+          "translation": "¡Qué pena! ¿Y el domingo? ¿Puedes el domingo por la mañana?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "W niedzielę tak. O której się spotykamy?",
+          "translation": "El domingo sí. ¿A qué hora quedamos?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "O dziesiątej. Gramy półtorej godziny, a potem idziemy na piwo. Pasuje ci?",
+          "translation": "A las diez. Jugamos hora y media y luego vamos a tomar una cerveza. ¿Te va bien?"
+        },
+        { "speaker": "Javier", "text": "Pasuje. A gdzie?", "translation": "Me va bien. ¿Y dónde?" },
+        {
+          "speaker": "Tomek",
+          "text": "W hali sportowej przy parku, niedaleko biura. Wiesz, gdzie to jest?",
+          "translation": "En el pabellón deportivo junto al parque, cerca de la oficina. ¿Sabes dónde está?"
+        },
+        {
+          "speaker": "Javier",
+          "text": "Tak, znam to miejsce. Chodzę tam na basen we wtorki. Muszę wziąć piłkę?",
+          "translation": "Sí, conozco el sitio. Voy allí a la piscina los martes. ¿Tengo que llevar balón?"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Nie, mamy piłkę. Weź tylko strój sportowy, buty i wodę.",
+          "translation": "No, tenemos balón. Trae solo ropa de deporte, zapatillas y agua."
+        },
+        {
+          "speaker": "Javier",
+          "text": "Dobra. Czyli w niedzielę o dziesiątej w hali przy parku. Do niedzieli!",
+          "translation": "Vale. O sea, el domingo a las diez en el pabellón junto al parque. ¡Hasta el domingo!"
+        },
+        {
+          "speaker": "Tomek",
+          "text": "Do niedzieli! I nie spóźnij się!",
+          "translation": "¡Hasta el domingo! ¡Y no llegues tarde!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Deporte y planes" },
+    {
+      "type": "table",
+      "caption": "Deportes",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["grać w siatkówkę", "jugar al voleibol", "grać w koszykówkę", "jugar al baloncesto"],
+        ["grać w piłkę ręczną", "jugar al balonmano", "grać w tenisa", "jugar al tenis"],
+        ["pływać", "nadar", "biegać", "correr"],
+        ["jeździć na nartach", "esquiar", "jeździć na łyżwach", "patinar sobre hielo"],
+        ["jeździć na rowerze", "montar en bici", "chodzić na siłownię", "ir al gimnasio"],
+        ["ćwiczyć jogę", "hacer yoga", "uprawiać sport", "hacer deporte"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Lugares y cosas",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["hala sportowa", "el pabellón deportivo", "basen", "la piscina"],
+        ["siłownia", "el gimnasio", "boisko", "el campo, la cancha"],
+        ["kort", "la pista de tenis", "stadion", "el estadio"],
+        ["piłka", "el balón, la pelota", "rakieta", "la raqueta"],
+        ["strój sportowy", "la ropa de deporte", "buty sportowe", "las zapatillas de deporte"],
+        ["mecz", "el partido", "drużyna", "el equipo"],
+        ["wygrywać", "ganar", "przegrywać", "perder"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — SIATKÓWKA viene de siatka, la red: el deporte «de la red». KOSZYKÓWKA viene de kosz, la cesta: el baloncesto. PIŁKA RĘCZNA es «pelota de mano» (ręka, mano), igual que «balonmano». NARTY (esquís) suena a «narices» largas que salen de los pies. Y CHĘTNIE (con gusto) viene de chęć, las ganas: chętnie = «con ganas»."
+    },
+    { "type": "section", "phase": "structure", "title": "Invitar, saber y poder, quedar" },
+    {
+      "type": "explanation",
+      "text": "Para invitar se dice Masz ochotę + infinitivo? (¿te apetece…?): masz ochotę zagrać w tenisa? O con na + acusativo: masz ochotę na kawę?, na spacer? También: Chcesz…? (¿quieres…?), Idziemy na…? (¿vamos a…?) o Może pójdziemy do kina? (¿y si vamos al cine?). Para preguntar por los planes, como en español, se usa el presente: Co robisz w sobotę?"
+    },
+    {
+      "type": "table",
+      "caption": "Proponer, aceptar, rechazar",
+      "columns": ["Propones", "Aceptas", "Rechazas con educación"],
+      "rows": [
+        ["Masz ochotę na kawę?", "Chętnie!", "Niestety nie mogę."],
+        ["Chcesz zagrać w tenisa?", "Jasne! / Pewnie!", "Dzisiaj nie mam czasu, przepraszam."],
+        ["Idziemy w piątek do kina?", "Dobry pomysł!", "W piątek nie mogę. Może innym razem?"],
+        ["Może spotkamy się w niedzielę?", "Pasuje mi.", "Szkoda, muszę pracować."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "— Masz ochotę na kawę? — Nie.",
+      "right": "— Masz ochotę na kawę? — Niestety nie mogę, muszę wracać do pracy. Może jutro?",
+      "explanation": "Un «nie» seco suena brusco. Se suele añadir niestety (desgraciadamente) o przepraszam, dar un motivo con bo o muszę… y proponer otro momento: może innym razem? (¿quizá otro día?)."
+    },
+    {
+      "type": "explanation",
+      "text": "El español «saber» se reparte en polaco en dos verbos, y «conocer» tiene el suyo. Umieć es saber hacer algo, una habilidad: umiem pływać (sé nadar). Wiedzieć es saber un dato: wiem, gdzie to jest (sé dónde está). Znać es conocer a una persona, un lugar o una cosa: znam Kraków, znam Tomka. Y móc, que ya conoces, es poder: hoy no puedo = dzisiaj nie mogę."
+    },
+    {
+      "type": "table",
+      "caption": "Umieć, wiedzieć, znać y móc",
+      "columns": ["Persona", "umieć (saber hacer)", "wiedzieć (saber un dato)", "znać (conocer)"],
+      "rows": [
+        ["ja", "umiem", "wiem", "znam"],
+        ["ty", "umiesz", "wiesz", "znasz"],
+        ["on / ona", "umie", "wie", "zna"],
+        ["my", "umiemy", "wiemy", "znamy"],
+        ["wy", "umiecie", "wiecie", "znacie"],
+        ["oni / one", "umieją", "wiedzą", "znają"]
+      ]
+    },
+    {
+      "type": "comparison",
+      "source": "No sé nadar. Hoy no puedo nadar. ¿Sabes dónde está la piscina? Conozco esa piscina.",
+      "target": "Nie umiem pływać. Dzisiaj nie mogę pływać. Wiesz, gdzie jest basen? Znam ten basen.",
+      "note": "Umieć + infinitivo (habilidad), móc + infinitivo (posibilidad), wiedzieć + dato o pregunta (gdzie, kiedy, że…), znać + sustantivo en acusativo."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nie mogę jeździć na nartach (queriendo decir que nunca has aprendido). / Wiem Kraków.",
+      "right": "Nie umiem jeździć na nartach. / Znam Kraków.",
+      "explanation": "Si te falta la habilidad, es nie umiem; nie mogę significa que hoy, ahora, por algún motivo, no puedes. Y para lugares y personas se usa znać, nunca wiedzieć: znam Kraków, znasz Kasię?"
+    },
+    {
+      "type": "explanation",
+      "text": "Para quedar se usan spotykać się (verse, encontrarse) y umawiać się (quedar, citarse). Las preguntas: Kiedy się spotykamy?, O której?, Gdzie? Y la respuesta en una sola frase: Spotykamy się w niedzielę o dziesiątej przed halą (delante del pabellón: przed + instrumental). Para confirmar que una hora le va bien a alguien: Pasuje ci? — Pasuje mi."
+    },
+    {
+      "type": "table",
+      "caption": "Quedar: cuándo, a qué hora, dónde",
+      "columns": ["Pregunta", "Respuesta", "Español"],
+      "rows": [
+        ["Kiedy się spotykamy?", "W niedzielę rano.", "El domingo por la mañana."],
+        ["O której?", "O dziesiątej. / Około dziesiątej.", "A las diez. / Hacia las diez."],
+        [
+          "Gdzie?",
+          "Przed kinem. / W hali przy parku.",
+          "Delante del cine. / En el pabellón junto al parque."
+        ],
+        [
+          "Pasuje ci o dziesiątej?",
+          "Tak, pasuje. / Wolę o jedenastej.",
+          "Sí, me va bien. / Prefiero a las once."
+        ],
+        ["Z kim się spotykasz?", "Z kolegami z pracy.", "Con unos compañeros de trabajo."]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Para decir adónde vas a hacer una actividad o a un evento, se usa na + acusativo: idę na basen (voy a la piscina), na mecz (al partido), na koncert, na spacer (a dar un paseo), na piwo (a tomar una cerveza), na siłownię. Para entrar en un edificio o un lugar cerrado, do + genitivo, como viste en la unidad 3: idę do kina, do kawiarni, do sklepu."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Idę do basenu na pływanie. / Idziemy do meczu.",
+      "right": "Idę na basen. / Idziemy na mecz.",
+      "explanation": "Actividades, eventos y algunos lugares van con na + acusativo: na basen, na siłownię, na mecz, na koncert, na spacer. Edificios a los que entras: do + genitivo (do kina, do teatru). Hay que aprender cada palabra con su preposición, como en la unidad 3 con na poczcie."
+    },
+    { "type": "section", "phase": "sound", "title": "W y z se pegan a la palabra siguiente" },
+    {
+      "type": "explanation",
+      "text": "Las preposiciones de una sola letra, w y z, no se pronuncian aparte: forman una sílaba con la palabra siguiente, como si fueran una sola. Además, se ensordecen ante consonante sorda: w parku [fparku], z kolegą [skolegõ], w sobotę [fsobote]; y suenan sonoras ante consonante sonora o vocal: w domu [vdomu], z bratem [zbratem], w oknie [vokńe]. Cuando la palabra siguiente empieza por un grupo difícil, se añade una e: we wtorek, ze Stanów, ze mną."
+    },
+    {
+      "type": "table",
+      "caption": "Preposiciones pegadas (pronunciación aproximada)",
+      "columns": ["Se escribe", "Se dice", "Qué pasa"],
+      "rows": [
+        ["w parku", "[fparku]", "w ante p → f"],
+        ["w domu", "[vdomu]", "w sonora ante d"],
+        ["z kolegą", "[skolegõ]", "z ante k → s"],
+        ["z bratem", "[zbratem]", "z sonora ante b"],
+        ["w hali", "[fhali]", "w ante h (sorda) → f"],
+        ["we wtorek", "[veftorek]", "se añade e"],
+        ["ze mną", "[zemnõ]", "se añade e"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Deporte y planes en Polonia" },
+    {
+      "type": "reading",
+      "title": "Grupa „Siatkówka w niedzielę”",
+      "paragraphs": [
+        "Tomek: Cześć wszystkim! Kto gra w niedzielę o dziesiątej? Potrzebujemy dwunastu osób.",
+        "Javier: Ja! Ale nie umiem grać za dobrze i nie mam butów sportowych.",
+        "Ania: Ja niestety nie mogę, w niedzielę jadę do rodziców. Może za tydzień?",
+        "Piotr: Ja gram! I mam dodatkowe buty, rozmiar czterdzieści trzy. Javier, jaki masz rozmiar?",
+        "Javier: Czterdzieści trzy! Super, dziękuję!",
+        "Kasia: Ja nie gram, bo boli mnie noga, ale chętnie przyjdę popatrzeć. Kto idzie potem na piwo?",
+        "Tomek: Wszyscy! Spotykamy się o dziesiątej przed halą, a o dwunastej w barze obok parku."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "Muchas empresas polacas ofrecen a sus empleados una tarjeta deportiva (como Multisport) que da acceso a gimnasios, piscinas y pistas. Por eso es muy común quedar con los compañeros para hacer deporte después del trabajo o el fin de semana.",
+        "El voleibol (siatkówka) es uno de los deportes favoritos de Polonia: la selección masculina ha ganado varios campeonatos del mundo y los partidos llenan pabellones y bares. En verano se juega mucho al voley playa a orillas de los lagos y del Báltico.",
+        "Los polacos suelen ser puntuales: si quedas a las diez, se espera que estés a las diez, sobre todo para el deporte, el trabajo o el médico. Un retraso de más de diez minutos sin avisar se considera descortés. Por eso Tomek dice: nie spóźnij się!",
+        "Para rechazar una invitación, se espera un motivo y, a ser posible, una alternativa: Może innym razem? o Może za tydzień? En Polonia es también muy habitual decir chętnie (con gusto) para aceptar: es amable y entusiasta a la vez."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misión: queda con un compañero" },
+    {
+      "type": "mission",
+      "title": "Invita, responde a un rechazo y fija los detalles",
+      "steps": [
+        "Elige un deporte o un plan (basen, siatkówka, kino, spacer) e invita a un compañero de trabajo polaco: Masz ochotę…? / Chcesz…?",
+        "Imagina que no puede ese día. Escribe su respuesta: Niestety nie mogę, bo muszę…",
+        "Propón otro día: A w niedzielę? / Może za tydzień?",
+        "Fija la hora y el lugar: O której się spotykamy? Gdzie? Pasuje ci o…?",
+        "Di qué sabes y qué no sabes hacer (umiem… / nie umiem…) y qué hay que llevar: weź…",
+        "Resume en una frase: Spotykamy się w … o … w / przed … — y léela en voz alta pegando w y z a la palabra siguiente."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        { "text": "Masz ochotę zagrać w tenisa?", "translation": "¿Te apetece jugar al tenis?" },
+        {
+          "text": "Chętnie! / Niestety nie mogę.",
+          "translation": "¡Con mucho gusto! / Por desgracia, no puedo."
+        },
+        {
+          "text": "Muszę pracować. Może innym razem?",
+          "translation": "Tengo que trabajar. ¿Quizá otro día?"
+        },
+        { "text": "Nie umiem jeździć na nartach.", "translation": "No sé esquiar." },
+        {
+          "text": "Wiesz, gdzie jest basen? — Tak, znam ten basen.",
+          "translation": "¿Sabes dónde está la piscina? — Sí, conozco esa piscina."
+        },
+        { "text": "O której się spotykamy?", "translation": "¿A qué hora quedamos?" },
+        { "text": "Pasuje ci o dziesiątej?", "translation": "¿Te va bien a las diez?" },
+        {
+          "text": "Idziemy na mecz, a potem na piwo.",
+          "translation": "Vamos al partido y luego a tomar una cerveza."
+        }
+      ],
+      "canDo": [
+        "invitar a alguien con masz ochotę…?, chcesz…?, idziemy…?",
+        "aceptar una invitación o rechazarla con un motivo",
+        "distinguir umieć, wiedzieć, znać y móc",
+        "quedar para un día, una hora y un lugar con spotykać się",
+        "elegir entre iść na + acusativo e iść do + genitivo",
+        "pronunciar w y z pegadas a la palabra siguiente"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-listen-ball",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier tiene que llevar balón.",
+  "explanation": "Nie, mamy piłkę — solo ropa de deporte, zapatillas y agua.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-moge-today",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "Sabes nadar, pero hoy te duele la espalda. ¿Qué dices?",
+  "explanation": "Habilidad sí, posibilidad no: dzisiaj nie mogę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Dzisiaj nie mogę pływać."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dzisiaj nie umiem pływać."
+      },
+      {
+        "id": "opt-c",
+        "text": "Dzisiaj nie znam pływać."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

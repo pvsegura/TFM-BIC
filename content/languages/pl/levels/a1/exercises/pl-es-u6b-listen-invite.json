@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-listen-invite",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿a qué invita Tomek a Javier?",
+  "explanation": "Masz ochotę zagrać w siatkówkę w sobotę?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A jugar al voleibol."
+      },
+      {
+        "id": "opt-b",
+        "text": "A ir a la piscina."
+      },
+      {
+        "id": "opt-c",
+        "text": "A ver un partido de fútbol."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

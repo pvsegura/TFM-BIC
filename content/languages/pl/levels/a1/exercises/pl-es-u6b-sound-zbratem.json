@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-sound-zbratem",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo se pronuncia z bratem?",
+  "explanation": "Ante consonante sonora, z se mantiene sonora y se pega: [zbratem].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[zbratem]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[sbratem]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[ze-bratem]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

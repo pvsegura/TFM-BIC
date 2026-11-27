@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-match-sports",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 15,
+    "phase": "connect"
+  },
+  "prompt": "Une cada deporte con su traducción.",
+  "explanation": "Siatkówka (siatka, red) = voleibol; koszykówka (kosz, cesta) = baloncesto.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "siatkówka",
+        "right": "el voleibol"
+      },
+      {
+        "left": "koszykówka",
+        "right": "el baloncesto"
+      },
+      {
+        "left": "piłka ręczna",
+        "right": "el balonmano"
+      },
+      {
+        "left": "jeździć na nartach",
+        "right": "esquiar"
+      },
+      {
+        "left": "jeździć na łyżwach",
+        "right": "patinar sobre hielo"
+      },
+      {
+        "left": "pływać",
+        "right": "nadar"
+      }
+    ]
+  }
+}

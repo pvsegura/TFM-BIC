@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-match-know",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 6660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "Une cada frase con el verbo que necesita.",
+  "explanation": "Habilidad: umieć; dato: wiedzieć; lugar o persona: znać; posibilidad: móc.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "… pływać (sé nadar)",
+        "right": "umiem"
+      },
+      {
+        "left": "…, gdzie to jest (sé dónde está)",
+        "right": "wiem"
+      },
+      {
+        "left": "… Kraków (conozco Cracovia)",
+        "right": "znam"
+      },
+      {
+        "left": "Dzisiaj nie … (hoy no puedo)",
+        "right": "mogę"
+      }
+    ]
+  }
+}

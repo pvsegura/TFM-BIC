@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-write-invite",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 6850,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 71,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe un mensaje a un compañero de trabajo: invítale a hacer deporte u otro plan, propón día, hora y lugar, y di qué tiene que llevar.",
+  "explanation": "Revisa: masz ochotę…?, spotykamy się w … o … przed / w …, iść na + acusativo, weź…",
+  "configuration": {
+    "modelAnswer": "Cześć, Marta! Masz ochotę pograć w koszykówkę w sobotę rano? Gramy w hali przy parku. Spotykamy się o dziesiątej przed halą. Weź strój sportowy i wodę. Potem idziemy na kawę. Pasuje ci?",
+    "checklist": ["invitación", "día y hora", "lugar", "qué llevar", "pregunta final"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

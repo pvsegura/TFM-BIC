@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-order-meet",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 6700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 41,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Quedamos el domingo a las diez delante del pabellón.",
+  "explanation": "Spotykamy się + kiedy + o której + gdzie.",
+  "configuration": {
+    "items": ["Spotykamy", "się", "w", "niedzielę", "o", "dziesiątej", "przed", "halą."],
+    "joiner": " "
+  }
+}

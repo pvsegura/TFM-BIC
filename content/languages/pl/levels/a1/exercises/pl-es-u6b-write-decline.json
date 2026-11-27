@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-write-decline",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 6860,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 72,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Responde a la invitación «Masz ochotę iść na koncert w piątek?»: recházala con educación, explica por qué y propón otro plan.",
+  "explanation": "Niestety nie mogę, bo…; może…?; pasuje ci…?",
+  "configuration": {
+    "modelAnswer": "Dziękuję za zaproszenie! Niestety w piątek nie mogę, bo muszę pracować do dwudziestej. Może w sobotę pójdziemy na spacer albo do kina? Pasuje ci o osiemnastej?",
+    "checklist": ["agradecimiento", "motivo", "otro plan", "hora"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

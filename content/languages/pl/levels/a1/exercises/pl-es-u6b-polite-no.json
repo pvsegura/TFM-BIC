@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-polite-no",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 32,
+    "phase": "structure"
+  },
+  "prompt": "— Idziemy w piątek do kina? No puedes. ¿Cuál es la respuesta más educada?",
+  "explanation": "Lástima + motivo + otro momento.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Szkoda, w piątek muszę pracować. Może innym razem?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie chcę iść z tobą."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

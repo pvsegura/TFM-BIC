@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-ochota",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6600,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 31,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Masz ochotę + na + acusativo o + infinitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Masz ochotę na kawę?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Masz ochotę kawa?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Masz ochotę z kawą?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-listen-skill",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6520,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: Javier juega muy bien al voleibol.",
+  "explanation": "Nie umiem grać za dobrze — no sabe jugar muy bien.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

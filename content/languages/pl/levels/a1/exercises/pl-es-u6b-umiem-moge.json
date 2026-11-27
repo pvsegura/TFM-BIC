@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-umiem-moge",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6640,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 35,
+    "phase": "structure"
+  },
+  "prompt": "Nunca has aprendido a esquiar. ¿Qué dices?",
+  "explanation": "Falta de habilidad: nie umiem.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie umiem jeździć na nartach."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie mogę jeździć na nartach."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie wiem jeździć na nartach."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

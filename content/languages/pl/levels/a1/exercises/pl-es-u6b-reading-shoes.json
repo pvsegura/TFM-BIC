@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-reading-shoes",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿cómo resuelve Javier el problema de las zapatillas?",
+  "explanation": "Piotr ma dodatkowe buty, rozmiar czterdzieści trzy.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Piotr le presta unas del 43."
+      },
+      {
+        "id": "opt-b",
+        "text": "Se compra unas nuevas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Juega descalzo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

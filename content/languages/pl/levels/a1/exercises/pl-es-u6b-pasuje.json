@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-pasuje",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo preguntas a un amigo «¿te va bien a las seis?»?",
+  "explanation": "Pasuje ci + o + hora en locativo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pasuje ci o szóstej?"
+      },
+      {
+        "id": "opt-b",
+        "text": "Pasujesz o szóstej?"
+      },
+      {
+        "id": "opt-c",
+        "text": "Pasuje ty o sześć?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

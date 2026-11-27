@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-sound-wparku",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "¿Cómo se pronuncia w parku?",
+  "explanation": "W se pega y se ensordece ante p: [fparku].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[fparku]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[v] — pausa — [parku]"
+      },
+      {
+        "id": "opt-c",
+        "text": "[u-parku]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

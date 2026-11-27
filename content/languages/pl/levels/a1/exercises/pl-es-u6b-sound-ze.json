@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-sound-ze",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 48,
+    "phase": "sound"
+  },
+  "prompt": "Delante de mną se dice ze (ze mną) para poder pronunciarlo.",
+  "explanation": "Sí: ante grupos difíciles se añade e: ze mną, we wtorek.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

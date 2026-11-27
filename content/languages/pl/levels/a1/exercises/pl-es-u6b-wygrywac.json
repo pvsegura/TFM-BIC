@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-wygrywac",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "Completa: Nasza drużyna zawsze ___ — nigdy nie wygrywa!",
+  "explanation": "Przegrywać = perder (lo contrario de wygrywać).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "przegrywa"
+      },
+      {
+        "id": "opt-b",
+        "text": "wygrywa"
+      },
+      {
+        "id": "opt-c",
+        "text": "gra"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-chetnie",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "¿Qué significa chętnie?",
+  "explanation": "Chętnie = con gusto, con ganas (de chęć).",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Con mucho gusto."
+      },
+      {
+        "id": "opt-b",
+        "text": "Por desgracia."
+      },
+      {
+        "id": "opt-c",
+        "text": "Quizá otro día."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

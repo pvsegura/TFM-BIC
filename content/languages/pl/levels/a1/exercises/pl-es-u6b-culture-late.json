@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-culture-late",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 6780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 57,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: has quedado con polacos a las diez para jugar. ¿Cuándo llegas?",
+  "explanation": "Los polacos suelen ser puntuales, sobre todo para el deporte y el trabajo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "A las diez."
+      },
+      {
+        "id": "opt-b",
+        "text": "A las diez y media: es normal."
+      },
+      {
+        "id": "opt-c",
+        "text": "Cuando quieras."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

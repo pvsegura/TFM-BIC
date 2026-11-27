@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u6b-reading-kasia",
+  "lessonId": "pl-es-unit-6-plans",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 6770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 6,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Kasia no juega porque le duele la pierna, pero irá a mirar.",
+  "explanation": "Boli mnie noga, ale chętnie przyjdę popatrzeć.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}
