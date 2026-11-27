@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-pienso",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 410,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 41,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Pensar + bezokolicznik, bez a.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pienso ir a la playa."
+      },
+      {
+        "id": "opt-b",
+        "text": "Pienso a ir a la playa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pienso de ir a la playa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-listen-lucia",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 310,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 6,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: dokąd jedzie Lucía?",
+  "explanation": "Pienso ir a Polonia en agosto: Cracovia y Gdansk.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Do Polski: Kraków i Gdańsk."
+      },
+      {
+        "id": "opt-b",
+        "text": "Do Andaluzji."
+      },
+      {
+        "id": "opt-c",
+        "text": "Do Meksyku."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

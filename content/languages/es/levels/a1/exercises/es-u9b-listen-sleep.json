@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-listen-sleep",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 330,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 8,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: gdzie Lucía będzie spać w Gdańsku?",
+  "explanation": "En un apartamento cerca de la playa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "W apartamencie blisko plaży."
+      },
+      {
+        "id": "opt-b",
+        "text": "W hotelu w centrum."
+      },
+      {
+        "id": "opt-c",
+        "text": "W schronisku."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

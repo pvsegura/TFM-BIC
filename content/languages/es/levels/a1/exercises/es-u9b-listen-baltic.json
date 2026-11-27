@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-listen-baltic",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 340,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: według Marka Bałtyk jest ciepły.",
+  "explanation": "El Báltico está frío: a unos dieciocho grados.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

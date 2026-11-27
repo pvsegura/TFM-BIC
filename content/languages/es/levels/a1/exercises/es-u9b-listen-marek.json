@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-listen-marek",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 350,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: co Marek będzie robić w Andaluzji po południu?",
+  "explanation": "Por la tarde vamos a descansar en la piscina.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Odpoczywać na basenie."
+      },
+      {
+        "id": "opt-b",
+        "text": "Zwiedzać zabytki."
+      },
+      {
+        "id": "opt-c",
+        "text": "Pracować."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

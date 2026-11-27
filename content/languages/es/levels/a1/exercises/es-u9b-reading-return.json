@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-reading-return",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 560,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 63,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: Lucía wraca do Madrytu 15 sierpnia.",
+  "explanation": "El quince de agosto vuelve a Madrid.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

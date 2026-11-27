@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-culture-august",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 570,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 64,
+    "phase": "culture"
+  },
+  "prompt": "Kultura: co dzieje się w Madrycie w sierpniu?",
+  "explanation": "Wiele firm i sklepów się zamyka, miasto pustoszeje.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Miasto pustoszeje, ludzie wyjeżdżają."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jest najwięcej pracy."
+      },
+      {
+        "id": "opt-c",
+        "text": "Zaczyna się rok szkolny."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

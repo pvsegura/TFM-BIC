@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-order-dream",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 500,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 50,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Chciałabym poznać Grenadę.",
+  "explanation": "Me gustaría + conocer + Granada.",
+  "configuration": {
+    "items": ["Me", "gustaría", "conocer", "Granada."],
+    "joiner": " "
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-llego-a",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 450,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 45,
+    "phase": "structure"
+  },
+  "prompt": "Które zdanie jest poprawne?",
+  "explanation": "Llegar a + miejsce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Llego a Madrid a las doce."
+      },
+      {
+        "id": "opt-b",
+        "text": "Llego en Madrid a las doce."
+      },
+      {
+        "id": "opt-c",
+        "text": "Llego para Madrid a las doce."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

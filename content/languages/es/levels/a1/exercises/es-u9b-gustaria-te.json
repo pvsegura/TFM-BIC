@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-gustaria-te",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 430,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 43,
+    "phase": "structure"
+  },
+  "prompt": "Jak zapytasz: „Chciałbyś pojechać do Polski?”",
+  "explanation": "Me gustaría działa jak gustar: ¿te gustaría…?",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "¿Te gustaría ir a Polonia?"
+      },
+      {
+        "id": "opt-b",
+        "text": "¿Gustarías ir a Polonia?"
+      },
+      {
+        "id": "opt-c",
+        "text": "¿Tú gustaría ir a Polonia?"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

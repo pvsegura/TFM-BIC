@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-translate-plan",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 580,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 72,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Co będziesz robić na urlopie?",
+  "explanation": "¿Qué vas a hacer en vacaciones?",
+  "configuration": {
+    "acceptedAnswers": ["¿Qué vas a hacer en vacaciones?", "¿Qué vas a hacer en las vacaciones?"],
+    "caseSensitive": false
+  }
+}

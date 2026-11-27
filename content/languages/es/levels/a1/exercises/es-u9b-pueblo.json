@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-pueblo",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 380,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 23,
+    "phase": "connect"
+  },
+  "prompt": "Hiszpan mówi: En agosto voy al pueblo. Co to zwykle znaczy?",
+  "explanation": "El pueblo = rodzinna miejscowość rodziców albo dziadków.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jedzie do rodzinnej miejscowości."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jedzie do dużego miasta."
+      },
+      {
+        "id": "opt-c",
+        "text": "Jedzie za granicę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

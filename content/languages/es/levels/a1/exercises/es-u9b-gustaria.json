@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-gustaria",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 420,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 42,
+    "phase": "structure"
+  },
+  "prompt": "Marzysz o podróży do Meksyku. Co mówisz?",
+  "explanation": "Marzenie: me gustaría + bezokolicznik.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Me gustaría viajar a México."
+      },
+      {
+        "id": "opt-b",
+        "text": "Me gusta viajar a México."
+      },
+      {
+        "id": "opt-c",
+        "text": "Yo gustaría viajar a México."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

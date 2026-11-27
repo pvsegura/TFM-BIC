@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-listen-transport",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 320,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Dialog: jak Lucía dostanie się do Gdańska?",
+  "explanation": "Voy a volar a Cracovia y después voy a ir en tren a Gdansk.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pociągiem z Krakowa."
+      },
+      {
+        "id": "opt-b",
+        "text": "Samolotem z Madrytu."
+      },
+      {
+        "id": "opt-c",
+        "text": "Samochodem."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

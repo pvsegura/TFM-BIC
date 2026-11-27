@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-reading-train",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 550,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 62,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ile trwa podróż pociągiem do Gdańska?",
+  "explanation": "El viaje dura unas cinco horas.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Około pięciu godzin."
+      },
+      {
+        "id": "opt-b",
+        "text": "Dwie godziny."
+      },
+      {
+        "id": "opt-c",
+        "text": "Cały dzień."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

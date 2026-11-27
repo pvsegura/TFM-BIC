@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-muy-mucho",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 480,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 48,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: El tren es ___ cómodo y hay ___ gente.",
+  "explanation": "Muy przed przymiotnikiem; mucha przed rzeczownikiem żeńskim.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "muy / mucha"
+      },
+      {
+        "id": "opt-b",
+        "text": "mucho / muy"
+      },
+      {
+        "id": "opt-c",
+        "text": "muy / muy"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

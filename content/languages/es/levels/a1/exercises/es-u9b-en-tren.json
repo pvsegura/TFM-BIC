@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-en-tren",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 460,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 46,
+    "phase": "structure"
+  },
+  "prompt": "Jak powiesz „Jadę pociągiem z przyjaciółmi”?",
+  "explanation": "Pojazd: en; towarzystwo: con.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Viajo en tren con mis amigos."
+      },
+      {
+        "id": "opt-b",
+        "text": "Viajo con tren en mis amigos."
+      },
+      {
+        "id": "opt-c",
+        "text": "Viajo con tren con mis amigos."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

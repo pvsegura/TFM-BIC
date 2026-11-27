@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-order-plan",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 490,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 49,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ułóż: Zamierzam pojechać do Polski w sierpniu.",
+  "explanation": "Pienso ir + a Polonia + en agosto.",
+  "configuration": {
+    "items": ["Pienso", "ir", "a", "Polonia", "en", "agosto."],
+    "joiner": " "
+  }
+}

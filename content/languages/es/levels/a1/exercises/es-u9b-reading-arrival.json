@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-reading-arrival",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 540,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 61,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: o której Lucía przylatuje do Krakowa?",
+  "explanation": "Sale a las ocho y llega a Cracovia a las doce.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "O dwunastej."
+      },
+      {
+        "id": "opt-b",
+        "text": "O ósmej."
+      },
+      {
+        "id": "opt-c",
+        "text": "O piętnastej."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

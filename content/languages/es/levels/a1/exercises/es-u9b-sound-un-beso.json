@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-sound-un-beso",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 520,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 55,
+    "phase": "sound"
+  },
+  "prompt": "W un beso n brzmi jak m: [um beso].",
+  "explanation": "Tak: przed b, v, p, m n zmienia się w m.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

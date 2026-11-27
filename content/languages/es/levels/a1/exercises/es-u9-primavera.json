@@ -8,7 +8,7 @@
   "status": "published",
   "order": 110,
   "instructionLanguage": "pl",
-  "book": { "unit": 9, "number": 10, "phase": "connect" },
+  "book": { "unit": 9, "number": 15, "phase": "connect" },
   "prompt": "Która pora roku to la primavera?",
   "explanation": "La primavera — wiosna.",
   "configuration": {

@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-gap-plans",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 400,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 40,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij: a albo de.",
+  "explanation": "Ir a + bezokolicznik; pensar + bezokolicznik; tener ganas de + bezokolicznik.",
+  "configuration": {
+    "text": "Voy ___ viajar a Gdansk y tengo ganas ___ ver el mar.",
+    "gaps": [
+      {
+        "accepted": ["a"]
+      },
+      {
+        "accepted": ["de"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

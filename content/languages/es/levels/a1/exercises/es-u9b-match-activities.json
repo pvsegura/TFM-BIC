@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-match-activities",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 370,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 22,
+    "phase": "connect"
+  },
+  "prompt": "Połącz czynności z tłumaczeniem.",
+  "explanation": "Tomar el sol = opalać się; bañarse = kąpać się.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "tomar el sol",
+        "right": "opalać się"
+      },
+      {
+        "left": "bañarse",
+        "right": "kąpać się"
+      },
+      {
+        "left": "visitar monumentos",
+        "right": "zwiedzać zabytki"
+      },
+      {
+        "left": "descansar",
+        "right": "odpoczywać"
+      }
+    ]
+  }
+}

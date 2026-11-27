@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-gap-isimo",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 470,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 47,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij formą na -ísimo.",
+  "explanation": "Caro → carísimo; mucho → muchísimo; bonita → bonitísima.",
+  "configuration": {
+    "text": "El hotel es ___ (caro), hace ___ (mucho) calor, pero la ciudad es ___ (bonita).",
+    "gaps": [
+      {
+        "accepted": ["carísimo"]
+      },
+      {
+        "accepted": ["muchísimo"]
+      },
+      {
+        "accepted": ["bonitísima"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

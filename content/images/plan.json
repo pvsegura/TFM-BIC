@@ -150,5 +150,9 @@
   {
     "asset": "a1-pl-u9-snow.png",
     "prompt": "a young man and a young woman in winter hats and scarves walk along a snowy street of a mountain village with wooden houses, snowy mountain peaks in the background, snowflakes falling, no signs or text"
+  },
+  {
+    "asset": "a1-u9-holidays.png",
+    "prompt": "a man and a woman eat lunch at a table in a bright office kitchen, the woman enthusiastically shows something on her phone, a closed travel guidebook without visible text lies on the table, no maps, no text"
   }
 ]

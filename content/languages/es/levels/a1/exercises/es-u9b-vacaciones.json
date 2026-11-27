@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-vacaciones",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 390,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 24,
+    "phase": "connect"
+  },
+  "prompt": "Które jest poprawne?",
+  "explanation": "Vacaciones zawsze w liczbie mnogiej.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "las vacaciones"
+      },
+      {
+        "id": "opt-b",
+        "text": "la vacación"
+      },
+      {
+        "id": "opt-c",
+        "text": "el vacaciones"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

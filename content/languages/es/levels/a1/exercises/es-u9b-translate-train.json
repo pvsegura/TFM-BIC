@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-translate-train",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 600,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 74,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Pojadę pociągiem do Sewilli.",
+  "explanation": "Voy a ir / viajar en tren a Sevilla.",
+  "configuration": {
+    "acceptedAnswers": [
+      "Voy a ir en tren a Sevilla.",
+      "Voy a viajar en tren a Sevilla.",
+      "Voy a ir a Sevilla en tren."
+    ],
+    "caseSensitive": false
+  }
+}

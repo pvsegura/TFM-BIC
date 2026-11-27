@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-write-recommend",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 640,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 80,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Hiszpański znajomy jedzie do twojego miasta w Polsce. Napisz, co musi zobaczyć i spróbować, jaka będzie pogoda i czym ma tam pojechać.",
+  "explanation": "Tienes que + bezokolicznik; va a hacer…; en tren / en avión.",
+  "configuration": {
+    "modelAnswer": "Si vas a ir a Gdansk en julio, tienes que ver la calle Długa y el puerto. Tienes que probar el pescado y los pierogi. En julio va a hacer buen tiempo, unos veinticinco grados, pero el mar va a estar frío. Desde Varsovia puedes ir en tren: es rápido y cómodo.",
+    "checklist": ["co zobaczyć", "co spróbować", "pogoda", "transport"],
+    "minWords": 25,
+    "maxWords": 80
+  }
+}

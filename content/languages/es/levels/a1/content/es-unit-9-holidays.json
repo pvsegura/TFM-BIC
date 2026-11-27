@@ -1,0 +1,296 @@
+{
+  "schemaVersion": 1,
+  "id": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 185,
+  "unit": 9,
+  "instructionLanguage": "pl",
+  "title": "Jednostka 9B. ¿Qué vas a hacer en vacaciones? — urlop, podróże i marzenia",
+  "description": "Opowiadasz o planach urlopowych, mówisz, dokąd, czym i na jak długo jedziesz, i czego chciałbyś: pensar + bezokolicznik, tener ganas de, me gustaría, ir a / estar en / viajar en tren i muchísimo.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "Lato w Polsce, lato w Andaluzji" },
+    {
+      "type": "explanation",
+      "text": "W przerwie na lunch Marek i Lucía rozmawiają o wakacjach. Lucía pierwszy raz jedzie do Polski, a Marek w tym roku zostaje w Hiszpanii. Za pierwszym razem posłuchaj, dokąd jedzie każde z nich. Za drugim zaznacz, czym będzie podróżować Lucía i gdzie będzie spać. Za trzecim wyłap, jak mówią o planach i marzeniach: pienso ir, me gustaría conocer, tengo ganas de."
+    },
+    {
+      "type": "image",
+      "asset": "a1-u9-holidays.png",
+      "alt": "Kobieta i mężczyzna jedzą lunch przy stole w biurowej kuchni; kobieta z entuzjazmem pokazuje coś w telefonie, na stole leży przewodnik bez napisów."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Marek",
+          "text": "Lucía, ¿qué vas a hacer en vacaciones?",
+          "translation": "Lucía, co będziesz robić na urlopie?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Pienso ir a Polonia en agosto. ¡Me gustaría conocer Cracovia y Gdansk!",
+          "translation": "Zamierzam pojechać do Polski w sierpniu. Chciałabym poznać Kraków i Gdańsk!"
+        },
+        {
+          "speaker": "Marek",
+          "text": "¡Qué bien! ¿Cuántos días vas a estar?",
+          "translation": "Super! Na ile dni jedziesz?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Dos semanas. Voy a volar a Cracovia y después voy a ir en tren a Gdansk.",
+          "translation": "Dwa tygodnie. Polecę do Krakowa, a potem pojadę pociągiem do Gdańska."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Buena idea. El tren es cómodo y no es muy caro. ¿Dónde vas a dormir?",
+          "translation": "Dobry pomysł. Pociąg jest wygodny i niezbyt drogi. Gdzie będziesz spać?"
+        },
+        {
+          "speaker": "Lucía",
+          "text": "En Cracovia, en un hotel del centro; en Gdansk, en un apartamento cerca de la playa.",
+          "translation": "W Krakowie w hotelu w centrum, w Gdańsku w apartamencie blisko plaży."
+        },
+        {
+          "speaker": "Marek",
+          "text": "¿En la playa? El Báltico está frío, ¿eh? A unos dieciocho grados.",
+          "translation": "Na plaży? Bałtyk jest zimny, wiesz? Ma około osiemnastu stopni."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¡Uf! Entonces voy a tomar el sol, pero no voy a bañarme mucho. ¿Y tú? ¿Vas a ir a Polonia?",
+          "translation": "Uff! To będę się opalać, ale nie będę się dużo kąpać. A ty? Jedziesz do Polski?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Este año no. Tengo muchas ganas de conocer Andalucía: voy a ir a Sevilla y a Granada con unos amigos.",
+          "translation": "W tym roku nie. Bardzo chcę poznać Andaluzję: jadę do Sewilli i Grenady z przyjaciółmi."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "¿En agosto? ¡Va a hacer muchísimo calor! Cuarenta grados.",
+          "translation": "W sierpniu? Będzie strasznie gorąco! Czterdzieści stopni."
+        },
+        {
+          "speaker": "Marek",
+          "text": "Ya lo sé. Por eso vamos a visitar los monumentos por la mañana y por la tarde vamos a descansar en la piscina.",
+          "translation": "Wiem. Dlatego będziemy zwiedzać zabytki rano, a po południu odpoczywać na basenie."
+        },
+        {
+          "speaker": "Lucía",
+          "text": "Muy bien pensado. Oye, ¿qué me recomiendas en Cracovia?",
+          "translation": "Bardzo dobrze przemyślane. Słuchaj, co mi polecasz w Krakowie?"
+        },
+        {
+          "speaker": "Marek",
+          "text": "Tienes que ver el Rynek y el castillo de Wawel y probar los pierogi. ¡Y aprender a decir dziękuję!",
+          "translation": "Musisz zobaczyć Rynek i Wawel i spróbować pierogów. I nauczyć się mówić „dziękuję”!"
+        }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "Urlop i podróże" },
+    {
+      "type": "table",
+      "caption": "Podróż",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["las vacaciones", "wakacje, urlop", "el viaje", "podróż"],
+        ["viajar", "podróżować", "volar", "lecieć (samolotem)"],
+        ["el avión", "samolot", "el aeropuerto", "lotnisko"],
+        ["el tren", "pociąg", "la estación", "dworzec"],
+        ["el billete (de ida y vuelta)", "bilet (w obie strony)", "la maleta", "walizka"],
+        ["reservar", "rezerwować", "la reserva", "rezerwacja"],
+        ["salir (de)", "wyjeżdżać (z)", "llegar (a)", "przyjeżdżać (do)"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Gdzie i co robić",
+      "columns": ["Hiszpański", "Polski", "Hiszpański", "Polski"],
+      "rows": [
+        ["el hotel", "hotel", "el apartamento", "apartament"],
+        ["el albergue", "schronisko, hostel", "el camping", "kemping"],
+        ["la playa", "plaża", "la montaña", "góry"],
+        ["el pueblo", "wieś, miasteczko; rodzinna miejscowość", "la costa", "wybrzeże"],
+        ["tomar el sol", "opalać się", "bañarse", "kąpać się (w morzu)"],
+        ["visitar monumentos", "zwiedzać zabytki", "hacer fotos", "robić zdjęcia"],
+        ["conocer", "poznać (miejsce, osobę)", "descansar", "odpocząć"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Łącz i zapamiętuj — VACACIONES to zawsze liczba mnoga, jak polskie „wakacje”: las vacaciones, ¡felices vacaciones! MALETA brzmi jak „maleńka”, a wcale nie jest mała, gdy pakujesz się na dwa tygodnie. ALBERGUE kojarz z angielskim „harbour” — przystań dla wędrowców. A VOLAR (lecieć) kojarz z siatkarskim „wolejem” (volley) — piłka odbita w locie (o → ue: vuelo, vuelas)."
+    },
+    {
+      "type": "section",
+      "phase": "structure",
+      "title": "Plany i marzenia; dokąd i czym; muchísimo"
+    },
+    {
+      "type": "explanation",
+      "text": "O planach mówisz kilkoma konstrukcjami z bezokolicznikiem. Ir a + bezokolicznik — plan albo przewidywanie (voy a viajar). Pensar + bezokolicznik — „zamierzam” (pienso ir, e → ie). Querer + bezokolicznik — „chcę”. Tener ganas de + bezokolicznik — „mam ochotę, nie mogę się doczekać”. Me gustaría + bezokolicznik — „chciałbym / chciałabym”, marzenie albo grzeczna prośba; to tryb warunkowy gustar i działa jak gustar (me, te, le…)."
+    },
+    {
+      "type": "table",
+      "caption": "Plany i marzenia",
+      "columns": ["Konstrukcja", "Przykład", "Polski"],
+      "rows": [
+        ["ir a + bezokolicznik", "Voy a volar a Cracovia.", "Polecę do Krakowa."],
+        ["pensar + bezokolicznik", "Pienso ir a Polonia.", "Zamierzam pojechać do Polski."],
+        ["querer + bezokolicznik", "Quiero ver el mar.", "Chcę zobaczyć morze."],
+        [
+          "tener ganas de + bezokolicznik",
+          "Tengo ganas de conocer Andalucía.",
+          "Bardzo chcę poznać Andaluzję."
+        ],
+        [
+          "me gustaría + bezokolicznik",
+          "Me gustaría viajar a México.",
+          "Chciałbym pojechać do Meksyku."
+        ]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Pienso a ir a Polonia. / Tengo ganas conocer Granada.",
+      "right": "Pienso ir a Polonia. / Tengo ganas de conocer Granada.",
+      "explanation": "Każda konstrukcja ma swoje „klocki”: ir a + bezokolicznik, ale pensar + bezokolicznik bez a; tener ganas de + bezokolicznik z de. Ucz się ich w całości."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Me gusta ir a México. (gdy mówisz o marzeniu)",
+      "right": "Me gustaría ir a México.",
+      "explanation": "Me gusta to „lubię” (coś, co już znasz i robisz). Me gustaría to „chciałbym / chciałabym” — o czymś, czego jeszcze nie ma. To dokładnie polskie chciałbym, które znasz z kawiarni: Me gustaría un café = Chciałbym kawę."
+    },
+    {
+      "type": "explanation",
+      "text": "W podróży ważne są przyimki. Dokąd? — a: voy a Polonia, llego a Madrid. Gdzie? — en: estoy en Cracovia, duermo en un hotel. Skąd? — de: salgo de Madrid, soy de Polonia. Czym? — en + pojazd: en tren, en avión, en coche, en autobús, ale a pie (pieszo). Na jak długo? — dos semanas, del uno al quince de agosto, durante diez días."
+    },
+    {
+      "type": "table",
+      "caption": "A, en, de w podróży",
+      "columns": ["Pytanie", "Przyimek", "Przykład"],
+      "rows": [
+        ["¿Adónde? (dokąd)", "a", "Voy a Polonia. Llego a Gdansk el lunes."],
+        ["¿Dónde? (gdzie)", "en", "Estoy en Cracovia. Duermo en un hotel."],
+        ["¿De dónde? (skąd)", "de", "Salgo de Madrid a las siete."],
+        ["¿Cómo? (czym)", "en / a", "Viajo en tren. Voy a pie."],
+        ["¿Cuánto tiempo?", "—, del… al…", "Dos semanas, del uno al quince de agosto."]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Voy en Polonia. / Llego en Madrid. / Viajo con tren.",
+      "right": "Voy a Polonia. / Llego a Madrid. / Viajo en tren.",
+      "explanation": "Kierunek (ir, llegar, viajar a…) to zawsze a — także z llegar, choć po polsku „przyjeżdżam do / w”. Środek transportu to en, nie con: con znaczy „z kimś”: viajo en tren con mis amigos."
+    },
+    {
+      "type": "explanation",
+      "text": "Żeby coś wzmocnić, możesz dodać do przymiotnika końcówkę -ísimo / -ísima: caro → carísimo (strasznie drogi), bonito → bonitísimo, mucho → muchísimo. Hace muchísimo calor (jest strasznie gorąco), el hotel es carísimo. Przymiotnik na -o traci -o, na spółgłoskę dodaje -ísimo: fácil → facilísimo."
+    },
+    {
+      "type": "table",
+      "caption": "Muy, mucho i -ísimo",
+      "columns": ["Przed czym", "Słowo", "Przykład"],
+      "rows": [
+        ["przed przymiotnikiem i przysłówkiem", "muy", "muy caro, muy bien"],
+        ["przed rzeczownikiem (zgodne)", "mucho / mucha", "mucho calor, mucha gente"],
+        ["po czasowniku", "mucho", "Viajo mucho."],
+        ["sam przymiotnik, bardzo mocno", "-ísimo", "carísimo, muchísimo"]
+      ]
+    },
+    { "type": "section", "phase": "sound", "title": "N przed b, p, m: en Bilbao, un beso" },
+    {
+      "type": "explanation",
+      "text": "Hiszpańskie n dopasowuje się do następnej głoski. Przed b, v, p, m — także na granicy słów — brzmi jak m: en Bilbao [em bilbao], un vaso [um baso], en Polonia [em polonia], un beso [um beso]. Przed g, c, j (k) brzmi jak polskie n w „bank” [ŋ]: un gato, en casa. To naturalne ułatwienie wymowy; jeśli wymówisz wyraźne n, zrozumieją cię, ale m brzmi bardziej po hiszpańsku."
+    },
+    {
+      "type": "table",
+      "caption": "Jak brzmi n",
+      "columns": ["Przed", "Przykład", "Brzmi"],
+      "rows": [
+        ["b, v", "en Bilbao, un vaso", "[em bilbao], [um baso]"],
+        ["p", "en Polonia, un pueblo", "[em polonia], [um pueblo]"],
+        ["m", "un mes", "[um mes]"],
+        ["g, c (k), j", "un gato, en casa", "[uŋ gato], [eŋ kasa]"],
+        ["samogłoska, d, t", "en España, un día", "zwykłe n"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "Urlop po hiszpańsku" },
+    {
+      "type": "reading",
+      "title": "El plan de viaje de Lucía",
+      "paragraphs": [
+        "Primer día, uno de agosto: Lucía sale de Madrid en avión a las ocho de la mañana y llega a Cracovia a las doce. Va a dormir cinco noches en un hotel del centro, cerca del Rynek.",
+        "En Cracovia piensa visitar el castillo de Wawel, el barrio de Kazimierz y la mina de sal de Wieliczka. También quiere tomar un café en una cafetería con tarta de queso polaca.",
+        "El seis de agosto va a ir en tren a Gdansk. El viaje dura unas cinco horas. En Gdansk tiene un apartamento cerca del mar, para una semana.",
+        "Le gustaría ver también Sopot y el castillo de Malbork. El quince de agosto vuelve a Madrid. ¡Ya tiene muchísimas ganas de viajar!"
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Co warto wiedzieć",
+      "paragraphs": [
+        "Dla Hiszpanów sierpień to miesiąc urlopu. Wiele firm i małych sklepów zamyka się na dwa, trzy tygodnie, a miasta takie jak Madryt pustoszeją. Na drogach jest wtedy tzw. operación salida — wielki wyjazd na wakacje.",
+        "Hiszpanie często spędzają urlop w kraju: na wybrzeżu, na wyspach albo w el pueblo, rodzinnej miejscowości rodziców czy dziadków, gdzie spotyka się cała rodzina.",
+        "Pracownicy w Hiszpanii mają zwykle trzydzieści dni kalendarzowych urlopu w roku. Do tego dochodzą święta i puentes, długie weekendy, gdy święto wypada we wtorek albo w czwartek.",
+        "Polska staje się dla Hiszpanów coraz popularniejszym kierunkiem: Kraków, Gdańsk i Warszawa przyciągają ich historią, dobrą kuchnią i niższymi cenami niż w zachodniej Europie."
+      ]
+    },
+    { "type": "section", "phase": "express", "title": "Misja: twój plan urlopowy" },
+    {
+      "type": "mission",
+      "title": "Opowiedz znajomemu z Hiszpanii o planach na urlop",
+      "steps": [
+        "Powiedz, dokąd jedziesz, kiedy i na jak długo: Pienso ir a… en…, dos semanas.",
+        "Powiedz, czym podróżujesz i skąd wyjeżdżasz: Voy a volar / viajar en tren, salgo de…, llego a…",
+        "Powiedz, gdzie będziesz spać i co zamierzasz robić (trzy rzeczy z ir a / pensar / querer).",
+        "Dodaj jedno marzenie z me gustaría i jedną rzecz, na którą masz ochotę: tengo ganas de…",
+        "Zapytaj znajomego o jego plany i poleć mu dwie rzeczy w Polsce: Tienes que ver…, tienes que probar…",
+        "Nagraj się, mówiąc en Polonia, en Bilbao i un beso z n brzmiącym jak m."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "¿Qué vas a hacer en vacaciones?",
+          "translation": "Co będziesz robić na urlopie?"
+        },
+        {
+          "text": "Pienso ir a Polonia en agosto.",
+          "translation": "Zamierzam pojechać do Polski w sierpniu."
+        },
+        {
+          "text": "Me gustaría conocer Cracovia.",
+          "translation": "Chciałbym / chciałabym poznać Kraków."
+        },
+        {
+          "text": "Tengo muchas ganas de ver el mar.",
+          "translation": "Nie mogę się doczekać, żeby zobaczyć morze."
+        },
+        {
+          "text": "Voy a viajar en tren y llego a Gdansk el lunes.",
+          "translation": "Pojadę pociągiem i w poniedziałek przyjeżdżam do Gdańska."
+        },
+        { "text": "Voy a estar dos semanas.", "translation": "Będę tam dwa tygodnie." },
+        {
+          "text": "En agosto hace muchísimo calor.",
+          "translation": "W sierpniu jest strasznie gorąco."
+        },
+        { "text": "¿Qué me recomiendas?", "translation": "Co mi polecasz?" }
+      ],
+      "canDo": [
+        "mówić o planach z ir a, pensar, querer i tener ganas de",
+        "wyrazić marzenie albo życzenie z me gustaría",
+        "powiedzieć, dokąd, gdzie, skąd i czym podróżuję (a, en, de)",
+        "powiedzieć, na jak długo jadę",
+        "wzmocnić przymiotnik końcówką -ísimo",
+        "wymówić n jak m przed b, p, m"
+      ]
+    }
+  ]
+}

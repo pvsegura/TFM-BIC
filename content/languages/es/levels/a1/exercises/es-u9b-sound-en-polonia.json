@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-sound-en-polonia",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 510,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 54,
+    "phase": "sound"
+  },
+  "prompt": "Jak naturalnie brzmi en Polonia?",
+  "explanation": "N przed p brzmi jak m: [em polonia].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "[em polonia]"
+      },
+      {
+        "id": "opt-b",
+        "text": "[en polonia] z mocnym n"
+      },
+      {
+        "id": "opt-c",
+        "text": "[e polonia]"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

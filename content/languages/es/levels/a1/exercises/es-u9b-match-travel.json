@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-match-travel",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 360,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 21,
+    "phase": "connect"
+  },
+  "prompt": "Połącz słowa z tłumaczeniem.",
+  "explanation": "La maleta = walizka; el billete de ida y vuelta = bilet w obie strony.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "la maleta",
+        "right": "walizka"
+      },
+      {
+        "left": "el billete de ida y vuelta",
+        "right": "bilet w obie strony"
+      },
+      {
+        "left": "el aeropuerto",
+        "right": "lotnisko"
+      },
+      {
+        "left": "volar",
+        "right": "lecieć"
+      },
+      {
+        "left": "el albergue",
+        "right": "schronisko, hostel"
+      },
+      {
+        "left": "la reserva",
+        "right": "rezerwacja"
+      }
+    ]
+  }
+}

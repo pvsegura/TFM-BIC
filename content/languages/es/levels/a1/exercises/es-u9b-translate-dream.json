@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-translate-dream",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 590,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 73,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Chciałbym zobaczyć morze.",
+  "explanation": "Me gustaría ver el mar.",
+  "configuration": {
+    "acceptedAnswers": ["Me gustaría ver el mar."],
+    "caseSensitive": false
+  }
+}

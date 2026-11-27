@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-sound-en-casa",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 530,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 56,
+    "phase": "sound"
+  },
+  "prompt": "Jak brzmi n w en casa?",
+  "explanation": "Przed k (c) — jak polskie n w „bank”: [eŋ kasa].",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Jak n w „bank”."
+      },
+      {
+        "id": "opt-b",
+        "text": "Jak m."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie słychać go."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

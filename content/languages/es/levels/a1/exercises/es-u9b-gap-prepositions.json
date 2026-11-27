@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-gap-prepositions",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 440,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 44,
+    "phase": "structure"
+  },
+  "prompt": "Uzupełnij przyimkiem: a, en, de.",
+  "explanation": "Dokąd: a; gdzie: en; skąd: de; czym: en.",
+  "configuration": {
+    "text": "Salgo ___ Madrid, viajo ___ avión, llego ___ Cracovia y duermo ___ un hotel.",
+    "gaps": [
+      {
+        "accepted": ["de"]
+      },
+      {
+        "accepted": ["en"]
+      },
+      {
+        "accepted": ["a"]
+      },
+      {
+        "accepted": ["en"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

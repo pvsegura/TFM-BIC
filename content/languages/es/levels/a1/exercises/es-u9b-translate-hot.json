@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-translate-hot",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 620,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 76,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Napisz po hiszpańsku: Hotel jest strasznie drogi.",
+  "explanation": "El hotel es carísimo.",
+  "configuration": {
+    "acceptedAnswers": ["El hotel es carísimo."],
+    "caseSensitive": false
+  }
+}

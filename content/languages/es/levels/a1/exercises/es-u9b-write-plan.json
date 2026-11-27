@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "es-u9b-write-plan",
+  "lessonId": "es-unit-9-holidays",
+  "languageId": "es",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 630,
+  "instructionLanguage": "pl",
+  "book": {
+    "unit": 9,
+    "number": 79,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Napisz wiadomość do znajomego z Hiszpanii o swoich planach urlopowych: dokąd, kiedy, na jak długo, czym, gdzie będziesz spać, co będziesz robić i o czym marzysz.",
+  "explanation": "Sprawdź: ir a / pensar / tener ganas de, me gustaría, przyimki a / en / de, czas trwania.",
+  "configuration": {
+    "modelAnswer": "¡Hola, Carmen! En julio pienso ir a Asturias con mi novio. Vamos a estar diez días. Vamos a viajar en coche desde Madrid y vamos a dormir en un camping cerca de la playa. Vamos a hacer senderismo y probar la comida típica. Tengo muchas ganas de ver el mar. ¡Y me gustaría volver a Polonia en Navidad!",
+    "checklist": ["dokąd i kiedy", "czym i na jak długo", "nocleg", "plany", "marzenie"],
+    "minWords": 35,
+    "maxWords": 110
+  }
+}
