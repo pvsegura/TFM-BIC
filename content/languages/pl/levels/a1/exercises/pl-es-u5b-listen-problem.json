@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-listen-problem",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5510,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 7,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿cuál es el problema?",
+  "explanation": "W kuchni jest bałagan!",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "La cocina está hecha un desastre."
+      },
+      {
+        "id": "opt-b",
+        "text": "No funciona la lavadora."
+      },
+      {
+        "id": "opt-c",
+        "text": "No hay comida en casa."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-write-message",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 5850,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 71,
+    "phase": "express",
+    "lines": 6
+  },
+  "prompt": "Escribe un mensaje a tu compañero de piso: no puedes hacer tu tarea esta semana, explica por qué y propón otro día.",
+  "explanation": "Przepraszam, w … nie mogę, bo…; mogę w…; czy możesz…?",
+  "configuration": {
+    "modelAnswer": "Cześć, Marek! Przepraszam, w czwartek nie mogę wynieść śmieci, bo mam spotkanie w pracy do dwudziestej. Mogę wynieść je w środę wieczorem. A w sobotę mogę odkurzać za ciebie. Czy to dobrze?",
+    "checklist": ["disculpa", "motivo", "otro día", "pregunta"],
+    "minWords": 20,
+    "maxWords": 70
+  }
+}

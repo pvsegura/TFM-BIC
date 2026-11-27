@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-niedziela",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5580,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 18,
+    "phase": "connect"
+  },
+  "prompt": "¿De dónde viene niedziela (domingo)?",
+  "explanation": "Nie + działać: el día en que no se trabaja.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "De «no hacer, no trabajar»."
+      },
+      {
+        "id": "opt-b",
+        "text": "De «nueve»."
+      },
+      {
+        "id": "opt-c",
+        "text": "De «sábado»."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

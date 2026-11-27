@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-nie-musze",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5660,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 37,
+    "phase": "structure"
+  },
+  "prompt": "¿Qué significa nie muszę gotować?",
+  "explanation": "Nie muszę = no tengo que, no hace falta.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "No tengo que cocinar."
+      },
+      {
+        "id": "opt-b",
+        "text": "No puedo cocinar."
+      },
+      {
+        "id": "opt-c",
+        "text": "No quiero cocinar."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

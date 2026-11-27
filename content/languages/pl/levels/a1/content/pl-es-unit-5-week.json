@@ -1,0 +1,279 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "lesson",
+  "status": "published",
+  "order": 1125,
+  "unit": 5,
+  "instructionLanguage": "es",
+  "access": "free",
+  "title": "Unidad 5B. W tym tygodniu — los días de la semana, las tareas de casa y las obligaciones",
+  "description": "Organizas la semana, repartes las tareas de casa y dices lo que tienes que hacer y lo que puedes hacer: w poniedziałek, we wtorek, w środę, od poniedziałku do piątku, muszę, mogę, nie mam czasu.",
+  "blocks": [
+    { "type": "section", "phase": "perceive", "title": "El cuadrante de limpieza" },
+    {
+      "type": "explanation",
+      "text": "Kasia comparte piso con Ola. La cocina está hecha un desastre y Ola propone organizar un cuadrante semanal de tareas. Primera escucha: ¿qué tareas se reparten? Segunda: ¿qué días friega los platos cada una y quién saca la basura? ¿Por qué Kasia no puede el sábado? Tercera: fíjate en cómo se dicen los días: w poniedziałek, we wtorek, w środę."
+    },
+    {
+      "type": "image",
+      "asset": "a1-pl-u5-flatmates.png",
+      "alt": "Dos mujeres jóvenes se ríen en una cocina pequeña: una friega los platos y la otra sostiene una aspiradora."
+    },
+    {
+      "type": "dialogue",
+      "lines": [
+        {
+          "speaker": "Ola",
+          "text": "Kasia, musimy porozmawiać o sprzątaniu. W kuchni jest bałagan!",
+          "translation": "Kasia, tenemos que hablar de la limpieza. ¡La cocina está hecha un desastre!"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Wiem, przepraszam. W tym tygodniu mam dużo pracy i nie mam czasu.",
+          "translation": "Lo sé, perdona. Esta semana tengo mucho trabajo y no tengo tiempo."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Może zrobimy grafik?",
+          "translation": "¿Y si hacemos un cuadrante?"
+        },
+        {
+          "speaker": "Kasia",
+          "text": "Dobry pomysł. Ja mogę zmywać naczynia w poniedziałek, w środę i w piątek.",
+          "translation": "Buena idea. Yo puedo fregar los platos el lunes, el miércoles y el viernes."
+        },
+        {
+          "speaker": "Ola",
+          "text": "Super. To ja zmywam we wtorek, w czwartek i w sobotę.",
+          "translation": "Genial. Entonces yo friego el martes, el jueves y el sábado."
+        },
+        { "speaker": "Kasia", "text": "A w niedzielę?", "translation": "¿Y el domingo?" },
+        {
+          "speaker": "Ola",
+          "text": "W niedzielę zmywamy razem, po obiedzie. Ja mogę też odkurzać w sobotę rano.",
+          "translation": "El domingo fregamos juntas, después de comer. Yo también puedo pasar la aspiradora el sábado por la mañana."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "A kto wynosi śmieci?",
+          "translation": "¿Y quién saca la basura?"
+        },
+        { "speaker": "Ola", "text": "Ty, dobrze?", "translation": "Tú, ¿vale?" },
+        {
+          "speaker": "Kasia",
+          "text": "Dobrze. Śmieci wywożą we wtorek i w piątek, więc wynoszę je w poniedziałek i w czwartek wieczorem.",
+          "translation": "Vale. Recogen la basura el martes y el viernes, así que la saco el lunes y el jueves por la noche."
+        },
+        {
+          "speaker": "Ola",
+          "text": "A łazienka? Musimy sprzątać łazienkę raz w tygodniu.",
+          "translation": "¿Y el baño? Tenemos que limpiar el baño una vez a la semana."
+        },
+        {
+          "speaker": "Kasia",
+          "text": "W tę sobotę nie mogę, jadę do rodziców do Tarnowa. Może w niedzielę?",
+          "translation": "Este sábado no puedo, voy a casa de mis padres a Tarnów. ¿Quizá el domingo?"
+        },
+        {
+          "speaker": "Ola",
+          "text": "Dobrze, w niedzielę sprzątamy łazienkę razem. A potem kawa i ciasto!",
+          "translation": "Vale, el domingo limpiamos el baño juntas. ¡Y luego café y tarta!"
+        },
+        { "speaker": "Kasia", "text": "Umowa stoi!", "translation": "¡Trato hecho!" }
+      ]
+    },
+    { "type": "section", "phase": "connect", "title": "La semana y la casa" },
+    {
+      "type": "table",
+      "caption": "Los días de la semana (con minúscula)",
+      "columns": ["Español", "Polaco", "¿Cuándo? (el…)", "Desde… hasta…"],
+      "rows": [
+        ["lunes", "poniedziałek", "w poniedziałek", "od poniedziałku"],
+        ["martes", "wtorek", "we wtorek", "od wtorku"],
+        ["miércoles", "środa", "w środę", "od środy"],
+        ["jueves", "czwartek", "w czwartek", "od czwartku"],
+        ["viernes", "piątek", "w piątek", "do piątku"],
+        ["sábado", "sobota", "w sobotę", "do soboty"],
+        ["domingo", "niedziela", "w niedzielę", "do niedzieli"]
+      ]
+    },
+    {
+      "type": "explanation",
+      "text": "Une y memoriza — los nombres de los días cuentan una historia. NIEDZIELA es el día en que «no se hace» (nie + działać, hacer, trabajar). PONIEDZIAŁEK es «después del domingo» (po + niedziela). WTOREK viene de wtóry, «segundo»; ŚRODA es «el medio» (środek), el centro de la semana; CZWARTEK es el cuarto día (cztery) y PIĄTEK el quinto (pięć). SOBOTA viene del hebreo sabbat, como nuestro «sábado». Si cuentas desde el lunes, la semana se aprende sola."
+    },
+    {
+      "type": "table",
+      "caption": "Las tareas de casa",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["sprzątać", "limpiar, ordenar", "odkurzać", "pasar la aspiradora"],
+        ["zmywać naczynia", "fregar los platos", "prać", "lavar la ropa"],
+        ["prasować", "planchar", "wynosić śmieci", "sacar la basura"],
+        ["gotować", "cocinar", "robić zakupy", "hacer la compra"],
+        ["myć okna", "limpiar las ventanas", "podlewać kwiaty", "regar las plantas"],
+        ["bałagan", "el desorden, el desastre", "grafik", "el cuadrante, el horario"]
+      ]
+    },
+    {
+      "type": "table",
+      "caption": "Expresiones de tiempo",
+      "columns": ["Polaco", "Español", "Polaco", "Español"],
+      "rows": [
+        ["dzisiaj / dziś", "hoy", "jutro", "mañana"],
+        ["pojutrze", "pasado mañana", "wczoraj", "ayer"],
+        ["w tym tygodniu", "esta semana", "w przyszłym tygodniu", "la semana que viene"],
+        ["w weekend", "el fin de semana", "w dni robocze", "los días laborables"],
+        [
+          "od poniedziałku do piątku",
+          "de lunes a viernes",
+          "dwa razy w tygodniu",
+          "dos veces a la semana"
+        ]
+      ]
+    },
+    { "type": "section", "phase": "structure", "title": "Los días, musieć y móc" },
+    {
+      "type": "explanation",
+      "text": "Para decir qué día haces algo se usa w + acusativo: w poniedziałek, w czwartek. Los días masculinos (poniedziałek, wtorek, czwartek, piątek) no cambian; los femeninos en -a (środa, sobota, niedziela) cambian a -ę, como kawa → kawę: w środę, w sobotę, w niedzielę. Delante de wtorek se dice we para poder pronunciarlo: we wtorek. Para «desde… hasta…» se usan od y do con genitivo: od poniedziałku do piątku."
+    },
+    {
+      "type": "pitfall",
+      "wrong": "w środa, w sobota, w wtorek",
+      "right": "w środę, w sobotę, we wtorek",
+      "explanation": "Los días femeninos cambian -a por -ę, y wtorek lleva we. Y nunca se pone artículo ni «el» como en español: Kasia sprząta w niedzielę = Kasia limpia el domingo."
+    },
+    {
+      "type": "explanation",
+      "text": "Musieć (tener que, deber) y móc (poder) van seguidos de infinitivo, como en español: muszę sprzątać (tengo que limpiar), mogę zmywać (puedo fregar). Los dos son irregulares. Nie muszę significa «no tengo que, no hace falta», igual que en español; para «no se puede» se dice nie można."
+    },
+    {
+      "type": "table",
+      "caption": "Musieć (tener que) y móc (poder)",
+      "columns": ["Persona", "musieć", "móc"],
+      "rows": [
+        ["ja", "muszę", "mogę"],
+        ["ty", "musisz", "możesz"],
+        ["on / ona / pan / pani", "musi", "może"],
+        ["my", "musimy", "możemy"],
+        ["wy", "musicie", "możecie"],
+        ["oni / one / państwo", "muszą", "mogą"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Muszę sprzątam łazienkę. / Mogę zmywam.",
+      "right": "Muszę sprzątać łazienkę. / Mogę zmywać.",
+      "explanation": "Después de muszę, mogę, chcę (y lubię, que verás en la unidad 6) el segundo verbo va en infinitivo, que en polaco termina casi siempre en -ć: sprzątać, zmywać, gotować."
+    },
+    {
+      "type": "explanation",
+      "text": "Repasa los tres modelos de presente que ya conoces, ahora con verbos de la casa. Tipo -am / -asz: sprzątam, sprzątasz, sprząta (también zmywam, odkurzam; wynosić es de otro tipo: wynoszę, wynosisz). Tipo -uję / -ujesz: gotuję, gotujesz, gotuje (también prasuję). Y algunos irregulares que hay que memorizar: prać → piorę, pierzesz, pierze."
+    },
+    {
+      "type": "table",
+      "caption": "Verbos de la casa en presente",
+      "columns": ["Persona", "sprzątać (-am)", "gotować (-uję)", "prać (irregular)"],
+      "rows": [
+        ["ja", "sprzątam", "gotuję", "piorę"],
+        ["ty", "sprzątasz", "gotujesz", "pierzesz"],
+        ["on / ona", "sprząta", "gotuje", "pierze"],
+        ["my", "sprzątamy", "gotujemy", "pierzemy"],
+        ["wy", "sprzątacie", "gotujecie", "pierzecie"],
+        ["oni / one", "sprzątają", "gotują", "piorą"]
+      ]
+    },
+    {
+      "type": "pitfall",
+      "wrong": "Nie mam czas.",
+      "right": "Nie mam czasu.",
+      "explanation": "Otra vez la negación con genitivo: mam czas → nie mam czasu. Es una de las frases que más vas a decir, así que apréndela entera: Przepraszam, dzisiaj nie mam czasu."
+    },
+    { "type": "section", "phase": "sound", "title": "La ę y la ą al final: w środę, mogą" },
+    {
+      "type": "explanation",
+      "text": "Al final de palabra, ę se pronuncia casi como una e normal, apenas nasal: w środę [fśrode], w sobotę [fsobote], muszę [mushe]. En cambio, ą final mantiene su nasalidad, como un «on» francés: mogą [mogõ], muszą [muszõ], piorą [piorõ]. Es importante porque distingue personas: muszę (tengo que) frente a muszą (tienen que), mogę (puedo) frente a mogą (pueden)."
+    },
+    {
+      "type": "table",
+      "caption": "Yo frente a ellos",
+      "columns": ["Ja (ę ≈ e)", "Cómo suena", "Oni (ą = on nasal)", "Cómo suena"],
+      "rows": [
+        ["muszę", "[mushe]", "muszą", "[mushõ]"],
+        ["mogę", "[moge]", "mogą", "[mogõ]"],
+        ["piorę", "[piore]", "piorą", "[piorõ]"],
+        ["gotuję", "[gotuye]", "gotują", "[gotuyõ]"]
+      ]
+    },
+    { "type": "section", "phase": "culture", "title": "La semana polaca" },
+    {
+      "type": "reading",
+      "title": "Grafik w mieszkaniu Kasi i Oli",
+      "paragraphs": [
+        "Od poniedziałku do piątku Kasia i Ola pracują, więc w tygodniu nie mają dużo czasu. Dlatego mają grafik.",
+        "Kasia zmywa naczynia w poniedziałek, w środę i w piątek, a Ola we wtorek, w czwartek i w sobotę. W niedzielę zmywają razem.",
+        "Ola odkurza w sobotę rano i podlewa kwiaty dwa razy w tygodniu. Kasia wynosi śmieci i segreguje je: papier do niebieskiego pojemnika, szkło do zielonego, plastik i metal do żółtego.",
+        "Pranie robią w weekend. W niedzielę wieczorem mieszkanie jest czyste, a one piją kawę i planują następny tydzień."
+      ]
+    },
+    {
+      "type": "culture",
+      "title": "Para saber",
+      "paragraphs": [
+        "En Polonia la separación de residuos es obligatoria y usa el mismo código de colores en todo el país: azul para papel, verde para vidrio, amarillo para plástico y metal, marrón para restos orgánicos y negro o gris para el resto. En los edificios hay un cuarto o una caseta con los contenedores, y la recogida tiene días fijos.",
+        "El viernes es el día más esperado: los polacos lo llaman cariñosamente piąteczek. El fin de semana muchas familias van a la działka, una parcela con huerto y caseta a las afueras, o visitan a los padres en otra ciudad, como Kasia.",
+        "La semana empieza el lunes, y los calendarios polacos ponen el lunes en la primera columna. Los días y los meses se escriben con minúscula, igual que en español.",
+        "En muchas casas polacas el sábado es el día de la limpieza general (sprzątanie), y el domingo, el de la comida familiar. Antes de Navidad y de Pascua se hace una limpieza a fondo, las porządki świąteczne."
+      ]
+    },
+    {
+      "type": "section",
+      "phase": "express",
+      "title": "Misión: organiza la semana de un piso compartido"
+    },
+    {
+      "type": "mission",
+      "title": "Reparte las tareas con un compañero de piso polaco",
+      "steps": [
+        "Di qué tienes que hacer esta semana con muszę + infinitivo (tres cosas).",
+        "Propón qué tareas puedes hacer tú y qué días (mogę… w poniedziałek, we wtorek…).",
+        "Pregunta a tu compañero qué puede hacer él o ella: Co możesz robić w sobotę?",
+        "Di un día en que no puedes y por qué: W piątek nie mogę, bo…; nie mam czasu.",
+        "Escribid juntos el cuadrante: quién hace qué, qué día y cuántas veces a la semana.",
+        "Cerrad el trato (Umowa stoi!) y grábate diciendo muszę / muszą y mogę / mogą para notar la diferencia."
+      ]
+    },
+    {
+      "type": "summary",
+      "phrases": [
+        {
+          "text": "Od poniedziałku do piątku pracuję.",
+          "translation": "De lunes a viernes trabajo."
+        },
+        {
+          "text": "W środę i w sobotę zmywam naczynia.",
+          "translation": "El miércoles y el sábado friego los platos."
+        },
+        { "text": "We wtorek wynoszę śmieci.", "translation": "El martes saco la basura." },
+        { "text": "Muszę sprzątać łazienkę.", "translation": "Tengo que limpiar el baño." },
+        { "text": "W tę sobotę nie mogę.", "translation": "Este sábado no puedo." },
+        { "text": "Przepraszam, nie mam czasu.", "translation": "Lo siento, no tengo tiempo." },
+        {
+          "text": "Odkurzam raz w tygodniu.",
+          "translation": "Paso la aspiradora una vez a la semana."
+        },
+        { "text": "Umowa stoi!", "translation": "¡Trato hecho!" }
+      ],
+      "canDo": [
+        "decir los días de la semana y qué día hago algo (w + acusativo)",
+        "hablar de las tareas de casa",
+        "expresar obligación con musieć y posibilidad con móc",
+        "usar od… do… para periodos",
+        "decir que no tengo tiempo con el genitivo",
+        "distinguir al oír la ę final de la ą final (muszę / muszą)"
+      ]
+    }
+  ]
+}

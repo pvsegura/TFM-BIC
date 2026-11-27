@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-sound-musza",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5710,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 45,
+    "phase": "sound"
+  },
+  "prompt": "Oyes [mushõ], con nasal al final. ¿Quién habla de obligación?",
+  "explanation": "Ą final nasal: muszą = ellos tienen que.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Ellos (muszą)."
+      },
+      {
+        "id": "opt-b",
+        "text": "Yo (muszę)."
+      },
+      {
+        "id": "opt-c",
+        "text": "Tú (musisz)."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

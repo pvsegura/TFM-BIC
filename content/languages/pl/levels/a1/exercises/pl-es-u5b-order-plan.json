@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-order-plan",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 5690,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 40,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: El martes y el jueves friego los platos.",
+  "explanation": "We wtorek i w czwartek + zmywam naczynia.",
+  "configuration": {
+    "items": ["We", "wtorek", "i", "w", "czwartek", "zmywam", "naczynia."],
+    "joiner": " "
+  }
+}

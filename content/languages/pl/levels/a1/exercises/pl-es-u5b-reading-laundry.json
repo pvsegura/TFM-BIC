@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-reading-laundry",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5760,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 55,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: lavan la ropa entre semana.",
+  "explanation": "Pranie robią w weekend.",
+  "configuration": {
+    "correctAnswer": false
+  }
+}

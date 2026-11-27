@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-czasu",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5670,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 38,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «no tengo tiempo»?",
+  "explanation": "Negación + genitivo: czas → czasu.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Nie mam czasu."
+      },
+      {
+        "id": "opt-b",
+        "text": "Nie mam czas."
+      },
+      {
+        "id": "opt-c",
+        "text": "Nie jestem czas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

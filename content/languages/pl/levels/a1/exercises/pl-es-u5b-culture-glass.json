@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-culture-glass",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5770,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 56,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿de qué color es en Polonia el contenedor del vidrio?",
+  "explanation": "Verde para vidrio; amarillo para plástico y metal; marrón para orgánico.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Verde."
+      },
+      {
+        "id": "opt-b",
+        "text": "Azul."
+      },
+      {
+        "id": "opt-c",
+        "text": "Marrón."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

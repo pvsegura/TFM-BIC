@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-order-cant",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 5700,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 41,
+    "phase": "structure",
+    "lines": 1
+  },
+  "prompt": "Ordena: Lo siento, el viernes no puedo.",
+  "explanation": "Przepraszam + w piątek nie mogę.",
+  "configuration": {
+    "items": ["Przepraszam,", "w", "piątek", "nie", "mogę."],
+    "joiner": " "
+  }
+}

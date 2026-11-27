@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-match-time",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5590,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 19,
+    "phase": "connect"
+  },
+  "prompt": "Une cada expresión con su traducción.",
+  "explanation": "Jutro = mañana; wczoraj = ayer; w przyszłym tygodniu = la semana que viene.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "jutro",
+        "right": "mañana"
+      },
+      {
+        "left": "wczoraj",
+        "right": "ayer"
+      },
+      {
+        "left": "pojutrze",
+        "right": "pasado mañana"
+      },
+      {
+        "left": "w przyszłym tygodniu",
+        "right": "la semana que viene"
+      }
+    ]
+  }
+}

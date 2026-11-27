@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-infinitive",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5650,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 36,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Muszę + infinitivo: sprzątać.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Muszę sprzątać łazienkę."
+      },
+      {
+        "id": "opt-b",
+        "text": "Muszę sprzątam łazienkę."
+      },
+      {
+        "id": "opt-c",
+        "text": "Muszę do sprzątać łazienkę."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

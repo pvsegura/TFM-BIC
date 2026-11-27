@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-order-week",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "ordering",
+  "status": "published",
+  "order": 5560,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 16,
+    "phase": "connect",
+    "lines": 1
+  },
+  "prompt": "Ordena los días de la semana empezando por el lunes.",
+  "explanation": "Poniedziałek (después del domingo), wtorek (segundo), środa (medio), czwartek (cuarto), piątek (quinto), sobota, niedziela.",
+  "configuration": {
+    "items": ["poniedziałek", "wtorek", "środa", "czwartek", "piątek", "sobota", "niedziela"],
+    "joiner": ", "
+  }
+}

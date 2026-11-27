@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-culture-dzialka",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5780,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 57,
+    "phase": "culture"
+  },
+  "prompt": "Cultura: ¿qué es una działka?",
+  "explanation": "Una parcela con huerto y caseta a las afueras de la ciudad.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Una parcela con huerto a las afueras."
+      },
+      {
+        "id": "opt-b",
+        "text": "Un piso compartido."
+      },
+      {
+        "id": "opt-c",
+        "text": "Un día festivo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

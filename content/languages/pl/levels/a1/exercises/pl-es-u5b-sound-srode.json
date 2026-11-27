@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-sound-srode",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5720,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 46,
+    "phase": "sound"
+  },
+  "prompt": "En w środę, la ę final se pronuncia casi como una e normal.",
+  "explanation": "Sí: [fśrode]. La ą final, en cambio, sí mantiene la nasalidad.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

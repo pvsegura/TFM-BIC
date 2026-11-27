@@ -1,0 +1,21 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-listen-sunday",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "true-false",
+  "status": "published",
+  "order": 5530,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 9,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: el domingo friegan juntas después de comer.",
+  "explanation": "W niedzielę zmywamy razem, po obiedzie.",
+  "configuration": {
+    "correctAnswer": true
+  }
+}

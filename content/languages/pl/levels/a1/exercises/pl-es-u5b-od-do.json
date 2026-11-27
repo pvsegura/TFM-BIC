@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-od-do",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5620,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 33,
+    "phase": "structure"
+  },
+  "prompt": "¿Cómo dices «de lunes a viernes»?",
+  "explanation": "Od + genitivo, do + genitivo.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "od poniedziałku do piątku"
+      },
+      {
+        "id": "opt-b",
+        "text": "od poniedziałek do piątek"
+      },
+      {
+        "id": "opt-c",
+        "text": "w poniedziałek do piątek"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

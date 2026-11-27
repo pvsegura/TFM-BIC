@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-sound-pairs",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5730,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 47,
+    "phase": "sound"
+  },
+  "prompt": "Une cada forma con su persona.",
+  "explanation": "-ę final = ja; -ą final = oni.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "mogę",
+        "right": "ja"
+      },
+      {
+        "left": "mogą",
+        "right": "oni"
+      },
+      {
+        "left": "gotuję",
+        "right": "ja (cocino)"
+      },
+      {
+        "left": "gotują",
+        "right": "oni (cocinan)"
+      }
+    ]
+  }
+}

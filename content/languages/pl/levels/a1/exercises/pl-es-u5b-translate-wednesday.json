@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-translate-wednesday",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 5790,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 63,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: El miércoles limpio el baño.",
+  "explanation": "W środę + sprzątam łazienkę.",
+  "configuration": {
+    "acceptedAnswers": ["W środę sprzątam łazienkę.", "Sprzątam łazienkę w środę."],
+    "caseSensitive": false
+  }
+}

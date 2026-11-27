@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-write-week",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "open-writing",
+  "status": "published",
+  "order": 5840,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 70,
+    "phase": "express",
+    "lines": 8
+  },
+  "prompt": "Escribe tu semana: qué haces cada día, qué tareas de casa tienes que hacer y qué día no puedes hacer nada.",
+  "explanation": "Revisa: w + acusativo (w środę, we wtorek), muszę / mogę + infinitivo, nie mam czasu.",
+  "configuration": {
+    "modelAnswer": "Od poniedziałku do piątku pracuję. W poniedziałek i w czwartek chodzę na siłownię. We wtorek robię zakupy, a w środę gotuję dla całego tygodnia. W piątek wieczorem nie mam czasu, bo spotykam się z przyjaciółmi. W sobotę muszę sprzątać mieszkanie i prać. W niedzielę odpoczywam.",
+    "checklist": ["días de la semana", "tareas", "muszę / mogę", "un día sin tiempo"],
+    "minWords": 35,
+    "maxWords": 100
+  }
+}

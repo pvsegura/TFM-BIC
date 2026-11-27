@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-gap-moc",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 5640,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 35,
+    "phase": "structure"
+  },
+  "prompt": "Completa con móc.",
+  "explanation": "Ja mogę, ty możesz, my możemy.",
+  "configuration": {
+    "text": "Czy ty ___ odkurzać w sobotę? Ja nie ___. My ___ to zrobić w niedzielę.",
+    "gaps": [
+      {
+        "accepted": ["możesz"]
+      },
+      {
+        "accepted": ["mogę"]
+      },
+      {
+        "accepted": ["możemy"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}

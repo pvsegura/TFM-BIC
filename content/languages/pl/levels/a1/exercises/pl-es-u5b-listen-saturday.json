@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-listen-saturday",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5550,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 11,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿por qué Kasia no puede este sábado?",
+  "explanation": "Jadę do rodziców do Tarnowa.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Va a casa de sus padres a Tarnów."
+      },
+      {
+        "id": "opt-b",
+        "text": "Tiene que trabajar."
+      },
+      {
+        "id": "opt-c",
+        "text": "Va al gimnasio."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

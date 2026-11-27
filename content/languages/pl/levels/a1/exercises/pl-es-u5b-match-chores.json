@@ -1,0 +1,46 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-match-chores",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "matching",
+  "status": "published",
+  "order": 5570,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 17,
+    "phase": "connect"
+  },
+  "prompt": "Une cada tarea con su traducción.",
+  "explanation": "Odkurzać = pasar la aspiradora; zmywać naczynia = fregar los platos.",
+  "configuration": {
+    "pairs": [
+      {
+        "left": "odkurzać",
+        "right": "pasar la aspiradora"
+      },
+      {
+        "left": "zmywać naczynia",
+        "right": "fregar los platos"
+      },
+      {
+        "left": "prać",
+        "right": "lavar la ropa"
+      },
+      {
+        "left": "prasować",
+        "right": "planchar"
+      },
+      {
+        "left": "wynosić śmieci",
+        "right": "sacar la basura"
+      },
+      {
+        "left": "podlewać kwiaty",
+        "right": "regar las plantas"
+      }
+    ]
+  }
+}

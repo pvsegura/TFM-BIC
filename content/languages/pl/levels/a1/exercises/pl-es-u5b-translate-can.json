@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-translate-can",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 5810,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 65,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: ¿Puedes sacar la basura?",
+  "explanation": "Czy możesz + wynieść / wynosić śmieci?",
+  "configuration": {
+    "acceptedAnswers": [
+      "Czy możesz wynieść śmieci?",
+      "Możesz wynieść śmieci?",
+      "Czy możesz wynosić śmieci?"
+    ],
+    "caseSensitive": false
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-translate-must",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "text-answer",
+  "status": "published",
+  "order": 5800,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 64,
+    "phase": "transform",
+    "lines": 1
+  },
+  "prompt": "Escribe en polaco: Tengo que hacer la compra.",
+  "explanation": "Muszę + robić zakupy.",
+  "configuration": {
+    "acceptedAnswers": ["Muszę robić zakupy.", "Muszę zrobić zakupy."],
+    "caseSensitive": false
+  }
+}

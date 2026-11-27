@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-reading-ola",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5740,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 53,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿qué hace Ola el sábado por la mañana?",
+  "explanation": "Ola odkurza w sobotę rano.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Pasa la aspiradora."
+      },
+      {
+        "id": "opt-b",
+        "text": "Lava la ropa."
+      },
+      {
+        "id": "opt-c",
+        "text": "Va a casa de sus padres."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

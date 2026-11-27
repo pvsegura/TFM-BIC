@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-niedziele",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5610,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 32,
+    "phase": "structure"
+  },
+  "prompt": "¿Cuál es correcto?",
+  "explanation": "Niedziela (f) → w niedzielę.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "w niedzielę"
+      },
+      {
+        "id": "opt-b",
+        "text": "w niedziela"
+      },
+      {
+        "id": "opt-c",
+        "text": "we niedzieli"
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-reading-paper",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5750,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 54,
+    "phase": "culture"
+  },
+  "prompt": "Lectura: ¿en qué contenedor va el papel?",
+  "explanation": "Papier do niebieskiego pojemnika — azul.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "En el azul."
+      },
+      {
+        "id": "opt-b",
+        "text": "En el verde."
+      },
+      {
+        "id": "opt-c",
+        "text": "En el amarillo."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

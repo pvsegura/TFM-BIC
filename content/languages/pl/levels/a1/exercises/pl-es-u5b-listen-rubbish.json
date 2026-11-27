@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-listen-rubbish",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "multiple-choice",
+  "status": "published",
+  "order": 5540,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 10,
+    "phase": "perceive"
+  },
+  "prompt": "Diálogo: ¿quién saca la basura?",
+  "explanation": "A kto wynosi śmieci? — Ty, dobrze? — Dobrze.",
+  "configuration": {
+    "options": [
+      {
+        "id": "opt-a",
+        "text": "Kasia."
+      },
+      {
+        "id": "opt-b",
+        "text": "Ola."
+      },
+      {
+        "id": "opt-c",
+        "text": "Las dos juntas."
+      }
+    ],
+    "correctOptionId": "opt-a"
+  }
+}

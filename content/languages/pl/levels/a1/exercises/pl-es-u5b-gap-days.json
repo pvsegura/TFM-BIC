@@ -1,0 +1,33 @@
+{
+  "schemaVersion": 1,
+  "id": "pl-es-u5b-gap-days",
+  "lessonId": "pl-es-unit-5-week",
+  "languageId": "pl",
+  "levelId": "a1",
+  "type": "gap-fill",
+  "status": "published",
+  "order": 5600,
+  "instructionLanguage": "es",
+  "book": {
+    "unit": 5,
+    "number": 31,
+    "phase": "structure"
+  },
+  "prompt": "Completa con w / we + día en acusativo.",
+  "explanation": "Środa → w środę; wtorek → we wtorek; sobota → w sobotę.",
+  "configuration": {
+    "text": "Sprzątam ___ (środa), piorę ___ (wtorek), a odpoczywam ___ (sobota).",
+    "gaps": [
+      {
+        "accepted": ["w środę"]
+      },
+      {
+        "accepted": ["we wtorek"]
+      },
+      {
+        "accepted": ["w sobotę"]
+      }
+    ],
+    "caseSensitive": false
+  }
+}
