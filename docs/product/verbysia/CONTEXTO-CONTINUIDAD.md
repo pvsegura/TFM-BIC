@@ -166,27 +166,35 @@ CLI) exactamente donde se dejó. Léelo entero antes de tocar nada.
 
 ### Polaco para hispanohablantes (pl-es)
 
-- **Hechas:**
-  - **1A** «Cześć! Mam na imię…» (`pl-es-unit-1-hello`, order 1080);
-  - **1B** «Skąd jesteś?» (`pl-es-unit-1-countries`, order 1085). Unidad 1: 55 ejercicios.
-  - **2A** «To moja rodzina» (`pl-es-unit-2-family`, order 1090): familia, género, posesivos
-    (jego/jej/ich), mam + acusativo, nie mam + genitivo, adjetivos; 40 ejercicios.
-- Libros: Podręcznik 32 páginas y Zeszyt 22.
-- Siguiente en polaco: **2B** (cumpleaños, números 20–100, fechas, como la 2B de español).
-- Siguiente en español: **7A** (unidad 7, compras: reescribir la lección fina).
-- **Decisión pendiente del usuario:** el diálogo de la 1A ocurre en la recepción de una escuela
-  («Chcę zapisać się na kurs polskiego»), y un ejercicio de comprensión (`pl-es-u1a-listen-why`)
-  pregunta por ello. La misión ya se cambió a registrarse en un hotel. Hay que preguntar si se pasa
-  también el diálogo al hotel, lo que requiere una imagen nueva.
+- **Al mismo nivel que español (unidades 1–6 con la plantilla completa + repaso 1–3):**
+  - 1A «Cześć! Mam na imię…» (order 1080) y 1B «Skąd jesteś?» (1085);
+  - 2A «To moja rodzina» (1090) y 2B «Wszystkiego najlepszego!» (1095: números hasta 100, fechas);
+  - 3A «Co jest w okolicy?» (1100: jest/są, nie ma, w/na + locativo) y 3B «Jak dojść do…?» (1105:
+    iść/jechać, do + genitivo, transporte); repaso 1–3 (24 ejercicios, fase review, con la 3B);
+  - 4A «Poproszę kawę» (1110: acusativo, chciałbym/chciałabym, złoty) y 4B «Co pan poleca?» (1115:
+    jeść/pić, dieta, smakować);
+  - 5A «Mój dzień» (1120: się, la hora) y 5B «W tym tygodniu» (1125: días, musieć/móc);
+  - 6A «Co lubisz robić?» (1130: lubić/podobać się, grać w/na) y 6B «Umówmy się!» (1135:
+    umieć/wiedzieć/znać/móc, iść na).
+  - Personajes fijos: Javier (español en una oficina de Cracovia), Kasia, Tomek, Ola, Lucía.
+  - Ejercicios por unidad: 1 = 55, 2 = 76, 3 = 95 (con repaso), 4 = 73, 5 = 71, 6 = 72.
+- **Apéndices explicados en español:** vocabulario temático (15 categorías `es-*`, 389 entradas,
+  `pl-es-vocabulary-a1.mjs`) y gramática (20 temas `pl-es-ref-*`, `pl-es-grammar-a1.mjs`).
+  Los crucigramas de polaco mantienen Ą, Ę, Ł… (`CROSSWORD_KEEPS_LETTERS` en `book-i18n.mts`).
+- **Libros pl-es A1 (para Lulu):** Podręcznik **108 páginas** y Zeszyt **84**.
+- Siguiente: unidades 7–12 en los dos cursos (en español hay que reescribir las lecciones finas),
+  repasos tras las unidades 6, 9 y 12, unidad 0 y examen final.
+- **Decisiones pendientes del usuario:** los diálogos de la 1A (recepción de una escuela de idiomas)
+  y de la 1B (primera clase de un curso de polaco) ocurren en una escuela. La misión de la 1A ya es
+  un hotel. Preguntar si se pasan los dos diálogos a un contexto neutro (hotel, oficina); hay que
+  regenerar dos imágenes y no cambiar ids de ejercicios.
+- Las respuestas aceptadas con diacríticos polacos deben ir primero (lo exige
+  `shipped-exercises.test.ts`).
 
 ### Git
 
-- Hay 5 commits locales sin subir en `chore/rename-to-verbysia`:
-  - selector de cursos;
-  - unidad 6A;
-  - unidad 1B de polaco;
-  - misión de la 1A como hotel;
-  - unidad 6B.
+- Commits locales sin subir en `chore/rename-to-verbysia` desde el último push (2026-11-26):
+  unidades 2A–6B de polaco, repaso 1–3, vocabulario, gramática y crucigramas.
 - Para verlos en la web: el usuario debe decir «sube con --no-verify». Después se hace
   fast-forward de `main` y se sube `main` para que Render despliegue.
 
